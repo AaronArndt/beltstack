@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.19",
+    "@headlessui/react": "^2.2.9",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
