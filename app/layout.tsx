@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "StackToolBelt – Build the Right Software Stack for Your Trade Business",
+  title: "BeltStack – Build the Right Software Stack for Your Trade Business",
   description:
     "Compare, evaluate, and choose the right tools for your business. Software reviews and comparisons for contractors.",
 };

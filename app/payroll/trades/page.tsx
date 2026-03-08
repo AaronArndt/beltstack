@@ -3,19 +3,71 @@ import Link from "next/link";
 export default function TradesPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-2xl font-semibold mb-4">Payroll by Trade</h1>
+      <h1 className="text-2xl font-semibold mb-4">Best Payroll by Trade</h1>
       <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-        Payroll software recommendations tailored to blue-collar trades. Compare top providers for your industry—seasonal crews, field techs, and contractor payroll.
+        Payroll software recommendations by trade. We cover these in our best-for guides—use the links below to find the right fit for your industry.
       </p>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-medium mb-2">Best payroll by trade</h2>
+        <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
+          <li><Link href="/payroll/best-for/electricians" className="hover:underline">Best for electricians</Link></li>
+          <li><Link href="/payroll/best-for/plumbing" className="hover:underline">Best for plumbing</Link></li>
+          <li><Link href="/payroll/best-for/landscaping" className="hover:underline">Best for landscaping</Link></li>
+          <li><Link href="/payroll/best-for/construction" className="hover:underline">Best for construction</Link></li>
+          <li><Link href="/payroll/best-for/roofing" className="hover:underline">Best for roofing</Link></li>
+          <li><Link href="/payroll/best-for/hvac" className="hover:underline">Best for HVAC</Link></li>
+          <li><Link href="/payroll/best-for/contractors" className="hover:underline">Best for contractors (general)</Link></li>
+          <li><Link href="/payroll/best-for/cleaning-business" className="hover:underline">Best for cleaning</Link></li>
+          <li><Link href="/payroll/best-for/painters" className="hover:underline">Best for painters</Link></li>
+          <li><Link href="/payroll/best-for/pest-control" className="hover:underline">Best for pest control</Link></li>
+          <li><Link href="/payroll/best-for/lawn-care" className="hover:underline">Best for lawn care</Link></li>
+          <li><Link href="/payroll/best-for/tree-service" className="hover:underline">Best for tree service</Link></li>
+          <li><Link href="/payroll/best-for/remodeling-contractors" className="hover:underline">Best for remodeling contractors</Link></li>
+          <li><Link href="/payroll/best-for/general-contractors" className="hover:underline">Best for general contractors</Link></li>
+          <li><Link href="/payroll/best-for/handyman-business" className="hover:underline">Best for handyman business</Link></li>
+          <li><Link href="/payroll/best-for/pool-service" className="hover:underline">Best for pool service</Link></li>
+          <li><Link href="/payroll/best-for/home-services" className="hover:underline">Best for home services</Link></li>
+          <li><Link href="/payroll/best-for/property-management" className="hover:underline">Best for property management</Link></li>
+          <li><Link href="/payroll/best-for/maintenance-companies" className="hover:underline">Best for maintenance companies</Link></li>
+          <li><Link href="/payroll/best-for/auto-repair" className="hover:underline">Best for auto repair</Link></li>
+          <li><Link href="/payroll/best-for/restaurants" className="hover:underline">Best for restaurants</Link></li>
+          <li><Link href="/payroll/best-for/retail" className="hover:underline">Best for retail</Link></li>
+          <li><Link href="/payroll/best-for/agriculture" className="hover:underline">Best for agriculture</Link></li>
+          <li><Link href="/payroll/best-for/nonprofits" className="hover:underline">Best for nonprofits</Link></li>
+          <li><Link href="/payroll/best-for/small-business" className="hover:underline">Best for small business</Link></li>
+        </ul>
+      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-medium mb-2">Related links</h2>
         <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
           <li><Link href="/payroll" className="hover:underline">Payroll hub</Link></li>
-          <li><Link href="/payroll/trades/landscaping" className="hover:underline">Best payroll for landscaping</Link></li>
-          <li><Link href="/payroll/trades/hvac" className="hover:underline">Best payroll for HVAC</Link></li>
-          <li><Link href="/payroll/providers/gusto" className="hover:underline">Gusto review</Link></li>
-          <li><Link href="/payroll/best-for" className="hover:underline">Best payroll for...</Link></li>
+          <li><Link href="/payroll/best-payroll-software" className="hover:underline">Best payroll software (roundup)</Link></li>
+          <li><Link href="/payroll/compare" className="hover:underline">Compare payroll software</Link></li>
+          <li><Link href="/payroll/best-for" className="hover:underline">Best payroll by scenario</Link></li>
+          <li><Link href="/payroll/best-for/landscaping" className="hover:underline">Best payroll for landscaping</Link></li>
+          <li><Link href="/payroll/best-for/hvac" className="hover:underline">Best payroll for HVAC</Link></li>
+          <li><Link href="/payroll/best-for/cleaning-business" className="hover:underline">Best payroll for cleaning</Link></li>
+          <li><Link href="/payroll/best-for/painters" className="hover:underline">Best payroll for painters</Link></li>
+          <li><Link href="/payroll/best-for/pest-control" className="hover:underline">Best payroll for pest control</Link></li>
+          <li><Link href="/payroll/best-for/lawn-care" className="hover:underline">Best payroll for lawn care</Link></li>
+          <li><Link href="/payroll/best-for/tree-service" className="hover:underline">Best payroll for tree service</Link></li>
+          <li><Link href="/payroll/best-for/remodeling-contractors" className="hover:underline">Best payroll for remodeling contractors</Link></li>
+          <li><Link href="/payroll/best-for/general-contractors" className="hover:underline">Best payroll for general contractors</Link></li>
+          <li><Link href="/payroll/best-for/handyman-business" className="hover:underline">Best payroll for handyman</Link></li>
+          <li><Link href="/payroll/best-for/pool-service" className="hover:underline">Best payroll for pool service</Link></li>
+          <li><Link href="/payroll/best-for/home-services" className="hover:underline">Best payroll for home services</Link></li>
+          <li><Link href="/payroll/best-for/property-management" className="hover:underline">Best payroll for property management</Link></li>
+          <li><Link href="/payroll/best-for/maintenance-companies" className="hover:underline">Best payroll for maintenance companies</Link></li>
+          <li><Link href="/payroll/best-for/auto-repair" className="hover:underline">Best payroll for auto repair</Link></li>
+          <li><Link href="/payroll/best-for/restaurants" className="hover:underline">Best payroll for restaurants</Link></li>
+          <li><Link href="/payroll/best-for/retail" className="hover:underline">Best payroll for retail</Link></li>
+          <li><Link href="/payroll/best-for/agriculture" className="hover:underline">Best payroll for agriculture</Link></li>
+          <li><Link href="/payroll/best-for/nonprofits" className="hover:underline">Best payroll for nonprofits</Link></li>
+          <li><Link href="/payroll/best-for/contractors" className="hover:underline">Best payroll for contractors</Link></li>
+          <li><Link href="/payroll/review/gusto" className="hover:underline">Gusto review</Link></li>
+          <li><Link href="/payroll/compare/gusto-vs-paychex" className="hover:underline">Gusto vs Paychex</Link></li>
         </ul>
       </section>
     </main>

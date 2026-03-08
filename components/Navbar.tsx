@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   useFloating,
@@ -93,16 +94,14 @@ const navItemClass =
 
 function LogoIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M1.03403 29.6414V23.2948C1.03403 23.0024 1.32902 22.8024 1.60061 22.9105L20.8294 30.5646C21.7975 30.95 22.8754 30.9558 23.8476 30.5808L43.4878 23.0053C43.7587 22.9008 44.0502 23.1008 44.0502 23.3912V29.7416C44.0502 29.9132 43.9442 30.067 43.7838 30.1281L23.8314 37.729C22.8688 38.0958 21.804 38.0901 20.8454 37.7131L1.29629 30.0264C1.13806 29.9641 1.03403 29.8114 1.03403 29.6414Z" fill="#1A2D48"/>
-      <path d="M33.6064 27.6737V33.5284C33.6064 33.7859 33.4474 34.0166 33.2068 34.1082L29.019 35.7036C28.6129 35.8583 28.1777 35.5584 28.1777 35.1238V29.289C28.1777 29.0325 28.3355 28.8025 28.5748 28.7101L32.7627 27.0948C33.1692 26.938 33.6064 27.238 33.6064 27.6737Z" fill="#1A2D48"/>
-      <path d="M23.9473 29.3439L42.4577 22.2074C42.7243 22.1046 42.7219 21.7265 42.454 21.6271L23.8973 14.7445C22.9607 14.3971 21.9301 14.4004 20.9958 14.7538L2.82047 21.6278C2.55502 21.7282 2.55259 22.1028 2.81671 22.2067L20.9461 29.334C21.91 29.7129 22.981 29.7165 23.9473 29.3439Z" fill="white"/>
-      <path d="M23.8111 28.9498L43.269 21.5837C43.538 21.4819 43.5356 21.1005 43.2653 21.0021L23.7616 13.8991C22.839 13.563 21.8268 13.5662 20.9063 13.9081L1.80201 21.0028C1.53423 21.1022 1.5318 21.4801 1.79829 21.583L20.8572 28.9402C21.8071 29.3068 22.8589 29.3103 23.8111 28.9498Z" fill="#10B981"/>
-      <path d="M23.9473 23.7601L42.4577 16.6236C42.7243 16.5208 42.7219 16.1427 42.454 16.0433L23.8973 9.16068C22.9607 8.8133 21.9301 8.81661 20.9958 9.16998L2.82047 16.044C2.55502 16.1444 2.55259 16.519 2.81671 16.6229L20.9461 23.7502C21.91 24.1291 22.981 24.1327 23.9473 23.7601Z" fill="white"/>
-      <path d="M23.8111 22.1251L43.269 14.759C43.538 14.6572 43.5356 14.2758 43.2653 14.1774L23.7616 7.07439C22.839 6.73836 21.8268 6.74156 20.9063 7.08342L1.80201 14.1781C1.53423 14.2775 1.5318 14.6554 1.79829 14.7583L20.8572 22.1155C21.8071 22.4822 22.8589 22.4856 23.8111 22.1251Z" fill="#10B981"/>
-      <path d="M23.9473 16.9354L42.4577 9.79895C42.7243 9.69615 42.7219 9.31803 42.454 9.21865L23.8973 2.336C22.9607 1.98863 21.9301 1.99193 20.9958 2.3453L2.82047 9.21934C2.55502 9.31973 2.55259 9.69436 2.81671 9.79819L20.9461 16.9255C21.91 17.3045 22.981 17.308 23.9473 16.9354Z" fill="white"/>
-      <path d="M23.8111 15.3004L43.269 7.93435C43.538 7.83252 43.5356 7.45116 43.2653 7.35274L23.7616 0.249714C22.839 -0.0863148 21.8268 -0.0831149 20.9063 0.25874L1.80201 7.35341C1.53423 7.45285 1.5318 7.83074 1.79829 7.93361L20.8572 15.2908C21.8071 15.6575 22.8589 15.6609 23.8111 15.3004Z" fill="#1A2D48"/>
-    </svg>
+    <img
+      src="/Logos/BS_Logo_B.svg"
+      alt=""
+      className={className}
+      width={45}
+      height={38}
+      aria-hidden
+    />
   );
 }
 
@@ -349,6 +348,12 @@ export default function Navbar() {
 
   const { getReferenceProps, getFloatingProps } = useInteractions([hover, focus, dismiss, role, click]);
 
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+    setMobileOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     if (!open) return;
 
@@ -383,7 +388,7 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
           <LogoIcon className="h-9 w-auto shrink-0" />
-          <span className="text-[#1A2D48] text-base font-bold">StackToolBelt</span>
+          <span className="text-[#1A2D48] text-base font-bold">BeltStack</span>
         </Link>
 
         <div className="flex items-center">
@@ -423,8 +428,11 @@ export default function Navbar() {
               </button>
             </div>
             {SIMPLE_LINKS.map(({ label, href }) => (
-              <Link key={href} href={href} className={`px-3 py-2 ${navItemClass}`}>
-                {label}
+              <Link key={href} href={href} className={`group relative inline-flex items-center px-3 py-2 ${navItemClass}`}>
+                <span className="relative inline-block">
+                  {label}
+                  <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#10B981] scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
+                </span>
               </Link>
             ))}
           </nav>

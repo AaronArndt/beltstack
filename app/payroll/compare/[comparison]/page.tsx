@@ -1,26 +1,31 @@
-import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getPayrollComparisonBySlug, getPayrollComparisonSlugs } from "@/lib/data/payrollComparisons";
+import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
 
 type Props = { params: Promise<{ comparison: string }> };
 
 export default async function ComparePage({ params }: Props) {
   const { comparison } = await params;
-  const displayName = comparison.replace(/-/g, " ");
-  return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-2xl font-semibold mb-4 capitalize">Compare: {displayName}</h1>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-        Side-by-side comparison of payroll providers. Compare pricing, features, and suitability for your blue-collar business.
-      </p>
+  const data = getPayrollComparisonBySlug(comparison);
 
-      <section className="mb-10">
-        <h2 className="text-lg font-medium mb-2">Related links</h2>
-        <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
-          <li><Link href="/payroll" className="hover:underline">Payroll hub</Link></li>
-          <li><Link href="/payroll/trades" className="hover:underline">Payroll by trade</Link></li>
-          <li><Link href="/payroll/providers/gusto" className="hover:underline">Gusto review</Link></li>
-          <li><Link href="/payroll/best-for" className="hover:underline">Best payroll for...</Link></li>
-        </ul>
-      </section>
-    </main>
-  );
+  if (data == null) {
+    notFound();
+  }
+
+  return <ComparisonTemplate {...data} />;
+}
+
+export function generateStaticParams() {
+  return getPayrollComparisonSlugs().map((comparison) => ({ comparison }));
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { comparison } = await params;
+  const data = getPayrollComparisonBySlug(comparison);
+  if (data == null) return { title: "Compare Payroll" };
+  const year = new Date().getFullYear();
+  const title = `${data.productA.name} vs ${data.productB.name} (${year}): Features, Pricing & Which Is Better`;
+  const description =
+    `Compare ${data.productA.name} vs ${data.productB.name}. See pricing, features, pros & cons, and which payroll software is best for contractors and small businesses.`;
+  return { title, description };
 }

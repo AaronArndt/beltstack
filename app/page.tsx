@@ -87,18 +87,14 @@ function LogoIcon({ className }: { className?: string }) {
 
 function FooterLogo({ className }: { className?: string }) {
   return (
-    <svg className={className} width="120" height="105" viewBox="0 0 213 187" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M5 144.637V113.949C5 112.535 6.42639 111.568 7.73967 112.091L100.718 149.101C105.399 150.965 110.611 150.993 115.312 149.18L210.28 112.549C211.591 112.044 213 113.011 213 114.415V145.122C213 145.952 212.488 146.695 211.712 146.991L115.234 183.744C110.58 185.517 105.431 185.49 100.796 183.667L6.26814 146.499C5.50306 146.198 5 145.459 5 144.637Z" fill="white"/>
-      <path d="M157.521 129.991C161.124 128.601 165 131.261 165 135.123V163.433C165 165.715 163.591 167.76 161.458 168.572L141.208 176.286C137.608 177.658 133.75 174.999 133.75 171.146V142.934C133.75 140.66 135.149 138.62 137.271 137.802L157.521 129.991Z" fill="white" stroke="white" strokeWidth="5"/>
-      <path d="M2.5 113.949C2.5 110.868 5.51204 108.728 8.38672 109.667L8.66406 109.768L29.7842 118.175C31.8768 119.008 33.25 121.033 33.25 123.285V151.722C33.25 155.599 29.3456 158.26 25.7373 156.841L5.35352 148.825C3.63219 148.148 2.50014 146.487 2.5 144.638V113.949Z" fill="white" stroke="white" strokeWidth="5"/>
-      <circle cx="144.5" cy="155.5" r="2.5" fill="white"/>
-      <path d="M115.795 143.199L205.299 108.691C206.589 108.194 206.577 106.366 205.281 105.885L115.553 72.605C111.024 70.9253 106.04 70.9413 101.523 72.65L13.638 105.889C12.3545 106.374 12.3427 108.186 13.6198 108.688L101.283 143.151C105.943 144.983 111.122 145 115.795 143.199Z" fill="white"/>
-      <path d="M115.136 141.293L209.222 105.675C210.523 105.183 210.511 103.339 209.205 102.863L114.897 68.517C110.435 66.8922 105.541 66.9077 101.09 68.5607L8.7134 102.866C7.41856 103.347 7.40685 105.174 8.69542 105.672L100.853 141.247C105.446 143.02 110.531 143.036 115.136 141.293Z" fill="#10B981"/>
-      <path d="M115.795 116.199L205.299 81.6913C206.589 81.1942 206.577 79.3658 205.281 78.8853L115.553 45.605C111.024 43.9253 106.04 43.9413 101.523 45.65L13.638 78.8886C12.3545 79.374 12.3427 81.1855 13.6198 81.6876L101.283 116.151C105.943 117.983 111.122 118 115.795 116.199Z" fill="white"/>
-      <path d="M115.136 108.293L209.222 72.6752C210.523 72.1828 210.511 70.3388 209.205 69.8629L114.897 35.517C110.435 33.8922 105.541 33.9077 101.09 35.5607L8.7134 69.8661C7.41856 70.347 7.40685 72.1743 8.69542 72.6717L100.853 108.247C105.446 110.02 110.531 110.036 115.136 108.293Z" fill="#10B981"/>
-      <path d="M115.795 83.1989L205.299 48.6913C206.589 48.1942 206.577 46.3658 205.281 45.8853L115.553 12.605C111.024 10.9253 106.04 10.9413 101.523 12.65L13.638 45.8886C12.3545 46.374 12.3427 48.1855 13.6198 48.6876L101.283 83.151C105.943 84.9834 111.122 85.0004 115.795 83.1989Z" fill="white"/>
-      <path d="M115.136 75.293L209.222 39.6752C210.523 39.1828 210.511 37.3388 209.205 36.8629L114.897 2.51705C110.435 0.892214 105.541 0.907687 101.09 2.56069L8.7134 36.8661C7.41856 37.347 7.40685 39.1743 8.69542 39.6717L100.853 75.2466C105.446 77.0196 110.531 77.0362 115.136 75.293Z" fill="white"/>
-    </svg>
+    <img
+      src="/Logos/BS_Logo_W.svg"
+      alt=""
+      className={className}
+      width={120}
+      height={105}
+      aria-hidden
+    />
   );
 }
 
@@ -514,7 +510,7 @@ export default function Home() {
                 <Link href="/" className="inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                   <FooterLogo className="h-12 w-auto" />
                 </Link>
-                <p className="mt-3 text-white/70 text-sm leading-relaxed">StackToolBelt helps trade businesses compare and choose the right software.</p>
+                <p className="mt-3 text-white/70 text-sm leading-relaxed">BeltStack helps trade businesses compare and choose the right software.</p>
               </div>
               <div>
                 <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Product</h4>
@@ -550,7 +546,7 @@ export default function Home() {
                 We may earn commissions from links on this page. This does not influence our evaluations.
               </p>
               <p className="mt-1 text-white/50 text-xs leading-relaxed">
-                StackToolBelt provides independent software reviews and comparisons. Methodology link above explains how we review. Prices and offers are subject to change.
+                BeltStack provides independent software reviews and comparisons. Methodology link above explains how we review. Prices and offers are subject to change.
               </p>
             </div>
           </div>

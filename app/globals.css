@@ -4,6 +4,12 @@
   --background: #F8FAFC;
   --foreground: #1A2D48;
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  /* Offsets for sticky/fixed bars (navbar = 64px mobile, 72px desktop) */
+  --header-offset: 72px;
+  --navbar-h: 72px;
+  --stackfinder-h: 0px;
+  --sectionnav-h: 48px;
+  --scroll-margin-below-sticky: calc(var(--navbar-h) + var(--sectionnav-h) + 16px);
 }
 
 @theme inline {
@@ -20,6 +26,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Section targets: scroll-margin so anchors don't hide under sticky nav */
+.scroll-mt-section {
+  scroll-margin-top: var(--scroll-margin-below-sticky);
 }
 
 /* Focus visible for accessibility */
