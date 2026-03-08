@@ -31,7 +31,7 @@ function GuideCard({ title, href, description }: GuideCardProps) {
   );
 }
 
-const PAYROLL_GUIDES: GuideCardProps[] = [
+export const PAYROLL_GUIDES: GuideCardProps[] = [
   {
     title: "How Payroll Software Works",
     href: "/payroll/guides/how-payroll-software-works",
