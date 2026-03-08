@@ -54,10 +54,10 @@ function groupComparisonsByProduct(slugs: string[]) {
 
 export default function PayrollCompareHubPage() {
   const allSlugs = getPayrollComparisonSlugs();
-  const popularData = POPULAR_SLUGS.map((slug) => {
+  const popularData = POPULAR_SLUGS.flatMap((slug) => {
     const data = getPayrollComparisonBySlug(slug);
-    return data ? { slug, data } : null;
-  }).filter((x): x is { slug: string; data: NonNullable<ReturnType<typeof getPayrollComparisonBySlug>> } => x != null);
+    return data ? [{ slug, data }] : [];
+  });
   const bySoftware = groupComparisonsByProduct(allSlugs);
 
   return (
