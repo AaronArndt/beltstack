@@ -99,6 +99,8 @@ const reviews: Record<string, ReviewData> = {
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused option with good automation and ecosystem if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for businesses that don't need advanced features.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting tools for SMBs; less mindshare than QuickBooks or Xero.", logoSrc: "/Logos/sage.png" },
+      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses already using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simple bookkeeping for small businesses.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
     faqs: [
       { q: "Is QuickBooks Online good for small businesses?", a: "Yes. QuickBooks Online is built for small business accounting: invoicing, expenses, reporting, and tax prep in one place. It's widely used and supported by accountants." },
@@ -454,6 +456,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Full accounting with more depth; paid.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; paid with stronger time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Low-cost paid option with more features.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simple bookkeeping; another straightforward option.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
     faqs: [
       { q: "Is Wave really free?", a: "Yes. Wave's accounting and invoicing features are free. Payment processing and payroll are paid add-ons. There's no subscription required for core bookkeeping and invoicing." },
@@ -552,6 +555,183 @@ const reviews: Record<string, ReviewData> = {
     compareLinks: [
       { label: "Sage vs QuickBooks", href: getAccountingCompareUrl("sage-vs-quickbooks") },
       { label: "Sage vs Xero", href: getAccountingCompareUrl("sage-vs-xero") },
+    ],
+    bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
+    compareHubHref: ACCOUNTING_COMPARE_HUB,
+    compareSectionTitle: "Compare with other accounting software",
+    compareHubLabel: "Compare accounting software",
+    bestRoundupLabel: "Best accounting software (2026) — full roundup",
+    bestForSectionTitle: "Best accounting software for different use cases",
+    bestForSectionSub: "Find accounting software by scenario.",
+    scenarioLinks: ACCOUNTING_SCENARIO_LINKS,
+  },
+
+  "odoo-accounting": {
+    toolName: "Odoo Accounting",
+    category: "Accounting",
+    categoryHref: "/accounting",
+    rating: "4.2",
+    startingPrice: "Quote",
+    bestFor: "businesses already using the Odoo ERP ecosystem",
+    visitUrl: "https://www.odoo.com/app/accounting",
+    logoSrc: "/Logos/odoo.jpeg",
+    quickVerdict:
+      "Odoo Accounting is the accounting module within the Odoo ERP suite—best for businesses that already run Odoo for CRM, inventory, or other operations and want books in the same system.",
+    quickVerdictParagraphs: [
+      "Odoo Accounting fits companies that have already adopted Odoo for other parts of their business. The accounting app integrates natively with Odoo's invoicing, inventory, and project modules, so sales orders, bills, and bank feeds flow into one platform. If you're not on Odoo yet, the value is less clear—you're buying into a full suite.",
+      "We like Odoo for unified data: one login, one database, and no syncing between separate accounting and ERP tools. Reporting can pull from across modules. The trade-off is that accounting is one piece of a larger product; pricing and complexity reflect the full Odoo ecosystem.",
+      "Best for existing Odoo users who want to consolidate accounting into the same stack. New adopters should compare standalone accounting tools unless they need Odoo's breadth.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.3", explanation: "Full accounting within Odoo: invoicing, expenses, bank feeds, and reporting. Strong when combined with other Odoo apps." },
+      { category: "Pricing", score: "4.0", explanation: "Odoo uses per-app or suite pricing; accounting is one module. Cost depends on how many Odoo apps you use." },
+      { category: "Ease of Use", score: "4.2", explanation: "Familiar if you already use Odoo; learning curve for new users adopting the full suite." },
+      { category: "Support", score: "4.1", explanation: "Community and enterprise support options; quality varies by plan and partner." },
+      { category: "Integrations", score: "4.4", explanation: "Deep integration with other Odoo apps. Third-party integrations via Odoo ecosystem." },
+    ],
+    pros: [
+      "Native integration with Odoo CRM, inventory, and projects",
+      "Single platform for operations and accounting",
+      "Unified reporting across modules",
+      "Scalable with the rest of Odoo",
+    ],
+    cons: [
+      "Best value for businesses already on Odoo",
+      "Pricing and complexity tied to full suite",
+      "Standalone accounting tools may be simpler if you don't need ERP",
+    ],
+    bestForEditorial:
+      "Odoo Accounting is best for businesses already using the Odoo ERP ecosystem who want accounting in the same system. It suits companies that run Odoo for sales, inventory, or projects and prefer one integrated platform over separate accounting software.",
+    whoShouldAvoid:
+      "Businesses that only need accounting and don't use Odoo elsewhere will likely find a dedicated accounting product like QuickBooks or Xero simpler and more focused.",
+    pricingSummary:
+      "Odoo pricing is per app or by suite; the Accounting app is one module. Cost depends on which other Odoo apps you use. Check Odoo's site for current pricing and editions.",
+    pricingTiers:
+      "Odoo offers free community edition and paid enterprise; accounting features may vary by edition. Compare total cost to standalone accounting if you're adding multiple apps.",
+    costVsCompetitors:
+      "Odoo can be cost-effective when you use several Odoo apps; as a standalone accounting purchase it's less comparable. Evaluate against QuickBooks or Xero if you're not committed to the Odoo ecosystem.",
+    features: [
+      "Invoicing and bills",
+      "Bank feeds and reconciliation",
+      "Expense tracking",
+      "Reporting and dashboards",
+      "Integration with Odoo CRM, inventory, projects",
+    ],
+    keyFeatures: [
+      { name: "Odoo integration", description: "Accounting data flows from and to other Odoo apps—invoices from sales, bills from purchase, inventory valuation." },
+      { name: "Bank feeds", description: "Connect banks and reconcile transactions within the same interface as the rest of Odoo." },
+      { name: "Reporting", description: "Financial reports plus cross-module reporting for a full view of the business." },
+      { name: "Multi-company", description: "Odoo supports multiple companies and consolidated reporting for groups." },
+    ],
+    integrations: ["Odoo CRM", "Odoo Inventory", "Odoo Projects", "Odoo Invoicing", "Bank feeds", "Ecommerce (Odoo)"],
+    integrationsIntro:
+      "Odoo Accounting integrates natively with other Odoo applications. Third-party integrations are available through the Odoo app store and connectors.",
+    alternatives: [
+      { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem; no ERP required.", logoSrc: "/Logos/quickbooks.png" },
+      { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Dedicated accounting with large app marketplace.", logoSrc: "/Logos/xero.png" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; strong if you use Zoho ecosystem.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs; recognized brand.", logoSrc: "/Logos/sage.png" },
+      { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simpler bookkeeping; good for small teams.", logoSrc: "/Logos/kashoo.jpeg" },
+    ],
+    faqs: [
+      { q: "What is Odoo Accounting?", a: "Odoo Accounting is the accounting module within the Odoo business suite. It handles invoicing, expenses, bank feeds, and reporting and integrates with other Odoo apps like CRM and inventory." },
+      { q: "Do I need other Odoo apps to use Odoo Accounting?", a: "No. You can use the Accounting app alone, but the main benefit is integration with Odoo CRM, inventory, projects, and other modules. Many users adopt several Odoo apps together." },
+      { q: "How much does Odoo Accounting cost?", a: "Odoo pricing is per app or by suite. Check Odoo's website for current pricing for the Accounting app and any bundle you need." },
+      { q: "How does Odoo Accounting compare to QuickBooks?", a: "QuickBooks is standalone accounting with a large third-party ecosystem. Odoo Accounting is built for businesses that want accounting inside the Odoo ERP; choose by whether you need a suite or a single accounting tool." },
+    ],
+    methodology: ACCOUNTING_METHODOLOGY,
+    compareLinks: [
+      { label: "Odoo vs QuickBooks", href: getAccountingCompareUrl("odoo-vs-quickbooks") },
+      { label: "Odoo vs Xero", href: getAccountingCompareUrl("odoo-vs-xero") },
+    ],
+    bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
+    compareHubHref: ACCOUNTING_COMPARE_HUB,
+    compareSectionTitle: "Compare with other accounting software",
+    compareHubLabel: "Compare accounting software",
+    bestRoundupLabel: "Best accounting software (2026) — full roundup",
+    bestForSectionTitle: "Best accounting software for different use cases",
+    bestForSectionSub: "Find accounting software by scenario.",
+    scenarioLinks: ACCOUNTING_SCENARIO_LINKS,
+  },
+
+  kashoo: {
+    toolName: "Kashoo",
+    category: "Accounting",
+    categoryHref: "/accounting",
+    rating: "4.2",
+    startingPrice: "Quote",
+    bestFor: "simple bookkeeping for small businesses",
+    visitUrl: "https://kashoo.com",
+    logoSrc: "/Logos/kashoo.jpeg",
+    quickVerdict:
+      "Kashoo offers straightforward cloud accounting aimed at small businesses that want simple bookkeeping without the complexity of larger platforms.",
+    quickVerdictParagraphs: [
+      "Kashoo focuses on simplicity: invoicing, expense tracking, and bank feeds in a clean interface. It's a good fit for solopreneurs and very small businesses that don't need advanced reporting or a large app ecosystem. Setup is quick, and the learning curve is modest.",
+      "We like Kashoo for ease of use and a clear focus on the basics. You get double-entry bookkeeping, tax categories, and reports that are sufficient for many small businesses. The trade-off is fewer integrations and less depth than QuickBooks or Xero.",
+      "If you want simple bookkeeping without extra bells and whistles, Kashoo is worth a look. If you need heavy integrations or industry-specific features, consider QuickBooks, Xero, or Zoho Books.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.1", explanation: "Solid basics: invoicing, expenses, bank feeds, and reporting. Fewer advanced features than top competitors." },
+      { category: "Pricing", score: "4.2", explanation: "Pricing is straightforward; check Kashoo's site for current plans. Often competitive for simple needs." },
+      { category: "Ease of Use", score: "4.5", explanation: "One of the simpler accounting tools to learn. Good for first-time users and minimal workflows." },
+      { category: "Support", score: "4.0", explanation: "Support and help resources available; smaller vendor than QuickBooks or Xero." },
+      { category: "Integrations", score: "3.9", explanation: "Limited third-party integrations compared to QuickBooks or Xero. Covers many basic needs." },
+    ],
+    pros: [
+      "Simple, easy-to-learn interface",
+      "Straightforward invoicing and expense tracking",
+      "Bank feeds and basic reporting",
+      "Good for very small businesses and solos",
+    ],
+    cons: [
+      "Fewer integrations than QuickBooks or Xero",
+      "Less depth for complex or growing businesses",
+      "Smaller ecosystem and community",
+    ],
+    bestForEditorial:
+      "Kashoo is best for simple bookkeeping for small businesses—solopreneurs and micro businesses that want straightforward invoicing, expenses, and reports without the complexity of full-featured suites.",
+    whoShouldAvoid:
+      "Businesses that need extensive integrations, advanced reporting, or a large app marketplace may find Kashoo limiting. QuickBooks or Xero offer more breadth.",
+    pricingSummary:
+      "Kashoo offers subscription pricing; check their website for current plans and any free tier or trial. Pricing is typically aimed at small business budgets.",
+    pricingTiers:
+      "Plans may vary by features and number of users. Compare to Wave (free), Zoho Books, and FreshBooks for similar simplicity.",
+    costVsCompetitors:
+      "Kashoo is often positioned as an affordable option for simple bookkeeping. Compare to Wave for free basics and to Zoho Books or FreshBooks for low-cost paid options.",
+    features: [
+      "Invoicing",
+      "Expense tracking",
+      "Bank feeds",
+      "Basic financial reports",
+      "Tax categories",
+    ],
+    keyFeatures: [
+      { name: "Invoicing", description: "Create and send invoices; track payments and overdue amounts in a simple workflow." },
+      { name: "Expense tracking", description: "Log expenses and categorize for reports and tax prep. Keeps records organized." },
+      { name: "Bank feeds", description: "Connect bank accounts and import transactions for reconciliation." },
+      { name: "Reporting", description: "Profit and loss and other basic reports for management and tax filing." },
+    ],
+    integrations: ["Bank feeds", "Payment processors", "Some third-party apps"],
+    integrationsIntro:
+      "Kashoo connects to banks and selected third-party tools. The integration list is smaller than QuickBooks or Xero but sufficient for many small business needs.",
+    alternatives: [
+      { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "More features and integrations; higher cost.", logoSrc: "/Logos/quickbooks.png" },
+      { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Full accounting with larger app marketplace.", logoSrc: "/Logos/xero.png" },
+      { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for basic needs.", logoSrc: "/Logos/wave.jpeg" },
+      { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; strong invoicing and time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
+    ],
+    faqs: [
+      { q: "What is Kashoo?", a: "Kashoo is cloud-based accounting software for small businesses. It offers invoicing, expense tracking, bank feeds, and basic reporting in a simple interface." },
+      { q: "Is Kashoo good for small business?", a: "Yes. Kashoo is aimed at small businesses and solopreneurs who want straightforward bookkeeping without the complexity of larger platforms like QuickBooks or Xero." },
+      { q: "How much does Kashoo cost?", a: "Check Kashoo's website for current pricing. Plans are typically aimed at small business budgets and may include a free tier or trial." },
+      { q: "How does Kashoo compare to QuickBooks?", a: "QuickBooks has more features, integrations, and market share. Kashoo is simpler and often cheaper; choose Kashoo for ease of use and basic needs, QuickBooks for depth and ecosystem." },
+    ],
+    methodology: ACCOUNTING_METHODOLOGY,
+    compareLinks: [
+      { label: "Kashoo vs QuickBooks", href: getAccountingCompareUrl("kashoo-vs-quickbooks") },
+      { label: "Kashoo vs Wave", href: getAccountingCompareUrl("kashoo-vs-wave") },
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,

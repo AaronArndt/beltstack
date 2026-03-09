@@ -98,6 +98,8 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Zoho Books", bestFor: "Value & projects", price: "$15/mo", rating: "4.4", slug: "zoho-books", logoSrc: "/Logos/zoho.jpeg" },
   { tool: "Wave", bestFor: "Free accounting", price: "Free", rating: "4.3", slug: "wave", logoSrc: "/Logos/wave.jpeg" },
   { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
+  { tool: "Odoo Accounting", bestFor: "Odoo ERP users", price: "Quote", rating: "4.2", slug: "odoo-accounting", logoSrc: "/Logos/odoo.jpeg" },
+  { tool: "Kashoo", bestFor: "Simple bookkeeping", price: "Quote", rating: "4.2", slug: "kashoo", logoSrc: "/Logos/kashoo.jpeg" },
 ];
 
 const ACCOUNTING_GUIDES = [
@@ -110,9 +112,9 @@ const ACCOUNTING_GUIDES = [
 
 const MORE_ACCOUNTING_OPTIONS = [
   { name: "Kashoo", description: "Simple cloud accounting for small business.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/kashoo` },
-  { name: "FreeAgent", description: "Accounting for freelancers and small agencies.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/freeagent` },
-  { name: "Sage", description: "Accounting and compliance for growing SMBs.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage` },
+  { name: "Sage Accounting", description: "Accounting and compliance for growing SMBs.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-accounting` },
   { name: "Odoo Accounting", description: "Accounting module in the Odoo business suite.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/odoo-accounting` },
+  { name: "FreeAgent", description: "Accounting for freelancers and small agencies.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/freeagent` },
   { name: "Patriot Accounting", description: "Affordable accounting for small business.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/patriot-accounting` },
 ];
 
@@ -245,7 +247,9 @@ function AccountingGuidesSection() {
         <Link href={`${ACCOUNTING_REVIEW_BASE}/freshbooks`} className={linkGreen}>FreshBooks</Link>,{" "}
         <Link href={`${ACCOUNTING_REVIEW_BASE}/zoho-books`} className={linkGreen}>Zoho Books</Link>,{" "}
         <Link href={`${ACCOUNTING_REVIEW_BASE}/wave`} className={linkGreen}>Wave</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/sage-accounting`} className={linkGreen}>Sage Accounting</Link>.
+        <Link href={`${ACCOUNTING_REVIEW_BASE}/sage-accounting`} className={linkGreen}>Sage Accounting</Link>,{" "}
+        <Link href={`${ACCOUNTING_REVIEW_BASE}/odoo-accounting`} className={linkGreen}>Odoo Accounting</Link>,{" "}
+        <Link href={`${ACCOUNTING_REVIEW_BASE}/kashoo`} className={linkGreen}>Kashoo</Link>.
       </p>
     </>
   );
