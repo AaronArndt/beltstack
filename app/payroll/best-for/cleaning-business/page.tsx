@@ -1,6 +1,6 @@
-import { BestForTemplate } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { CLEANING_PAGE_PROPS } from "@/lib/data/payrollBestForCleaning";
 
 export default function BestPayrollForCleaningBusinessPage() {
-  return <BestForTemplate {...CLEANING_PAGE_PROPS} />;
+  return <BestForPageWithStructuredData {...CLEANING_PAGE_PROPS} />;
 }

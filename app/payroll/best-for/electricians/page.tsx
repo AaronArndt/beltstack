@@ -1,6 +1,6 @@
-import { BestForTemplate } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { ELECTRICIANS_PAGE_PROPS } from "@/lib/data/payrollBestForElectricians";
 
 export default function BestPayrollForElectriciansPage() {
-  return <BestForTemplate {...ELECTRICIANS_PAGE_PROPS} />;
+  return <BestForPageWithStructuredData {...ELECTRICIANS_PAGE_PROPS} />;
 }

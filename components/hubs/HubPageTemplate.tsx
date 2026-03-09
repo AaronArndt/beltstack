@@ -1,5 +1,18 @@
 "use client";
 
+/**
+ * Shared layout template for software category hub pages (e.g. /payroll, /accounting).
+ * Use this for all category hubs so section order, spacing, typography, and UI stay consistent.
+ *
+ * Section order: Hero → Best roundup block → Section nav → How to choose (optional) →
+ * Top picks → Comparison table → Guides (optional) → Finder (optional) →
+ * By scenario → By trade/industry → Popular comparisons (optional) →
+ * Education (optional) → FAQ → Methodology
+ *
+ * Future categories (CRM, scheduling, invoicing, field-service, time-tracking) should
+ * pass the same prop shape with category-specific data.
+ */
+
 import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
@@ -35,6 +48,8 @@ export type FeaturedPick = {
   reviewHref: string;
   compareHref: string;
   logoSrc?: string;
+  /** Optional: when set, show "Visit site" button (e.g. for accounting hub). */
+  visitUrl?: string;
 };
 
 export type ComparisonTableRow = {
@@ -373,6 +388,16 @@ export function HubPageTemplate({
                     ))}
                   </ul>
                   <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-100 pt-4">
+                    {pick.visitUrl != null && (
+                      <a
+                        href={pick.visitUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={btnPrimary}
+                      >
+                        Visit site
+                      </a>
+                    )}
                     <Link
                       href={pick.reviewHref}
                       className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"

@@ -1,6 +1,6 @@
-import { BestForTemplate } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { PROPERTY_MANAGEMENT_PAGE_PROPS } from "@/lib/data/payrollBestForPropertyManagement";
 
 export default function BestPayrollForPropertyManagementPage() {
-  return <BestForTemplate {...PROPERTY_MANAGEMENT_PAGE_PROPS} />;
+  return <BestForPageWithStructuredData {...PROPERTY_MANAGEMENT_PAGE_PROPS} />;
 }

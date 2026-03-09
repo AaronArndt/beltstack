@@ -1,6 +1,6 @@
-import { BestForTemplate } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { HVAC_PAGE_PROPS } from "@/lib/data/payrollBestForHvac";
 
 export default function BestPayrollForHvacPage() {
-  return <BestForTemplate {...HVAC_PAGE_PROPS} />;
+  return <BestForPageWithStructuredData {...HVAC_PAGE_PROPS} />;
 }

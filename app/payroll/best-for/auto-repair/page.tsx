@@ -1,6 +1,6 @@
-import { BestForTemplate } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { AUTO_REPAIR_PAGE_PROPS } from "@/lib/data/payrollBestForAutoRepair";
 
 export default function BestPayrollForAutoRepairPage() {
-  return <BestForTemplate {...AUTO_REPAIR_PAGE_PROPS} />;
+  return <BestForPageWithStructuredData {...AUTO_REPAIR_PAGE_PROPS} />;
 }

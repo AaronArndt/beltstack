@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -10,9 +11,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BeltStack – Build the Right Software Stack for Your Trade Business",
+  metadataBase: new URL(SITE_URL),
+  title: "BeltStack – Software Stack for Trade Businesses",
   description:
-    "Compare, evaluate, and choose the right tools for your business. Software reviews and comparisons for contractors.",
+    "Compare and discover the best software for trade businesses including payroll, accounting, and field service tools.",
 };
 
 export default function RootLayout({

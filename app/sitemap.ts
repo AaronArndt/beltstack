@@ -2,9 +2,8 @@ import type { MetadataRoute } from "next";
 import { getPayrollComparisonSlugs } from "@/lib/data/payrollComparisons";
 import { getPayrollReviewSlugs } from "@/lib/data/payrollReviews";
 import { getPayrollBestForUrl } from "@/lib/routes";
-import { PAYROLL_GUIDES } from "@/app/payroll/guides/page";
-
-const BASE_URL = "https://www.beltstack.com";
+import { SITE_URL } from "@/lib/site";
+import { PAYROLL_GUIDES } from "@/lib/data/payrollGuides";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
 const PAYROLL_BEST_FOR_SCENARIOS = [
@@ -42,7 +41,7 @@ const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
 ): MetadataRoute.Sitemap[number] => ({
-  url: `${BASE_URL}${path}`,
+  url: `${SITE_URL}${path}`,
   lastModified: new Date(),
   changeFrequency: options?.changeFrequency ?? "weekly",
   priority: options?.priority ?? 0.8,
