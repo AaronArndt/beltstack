@@ -46,6 +46,11 @@ export type BestForComparisonLink = {
   href: string;
 };
 
+export type BestForGuideLink = {
+  label: string;
+  href: string;
+};
+
 export type BestForFaqItem = {
   q: string;
   a: string;
@@ -59,12 +64,22 @@ export type BestForTemplateProps = {
   categoryLabel: string;
   introParagraph?: string;
   freshnessText?: string;
+  /** Override section sub for "Top picks" (default: payroll copy). */
+  topPicksSub?: string;
+  /** Override section sub for "Editorial guidance" (default: payroll copy). */
+  editorialSub?: string;
+  /** Override section sub for "Why these picks" (default: payroll copy). */
+  whyThesePicksSub?: string;
+  /** Override "See also" block; when set, replaces default payroll roundup/compare links. */
+  seeAlsoBlock?: { roundupLabel: string; roundupHref: string; compareLabel: string; compareHref: string } | null;
   featuredProducts: BestForFeaturedProduct[];
   comparisonTableRows: BestForTableRow[];
   editorialGuidance: BestForEditorialBlock[];
   whyThesePicks: BestForEditorialBlock[];
   relatedReviews: BestForReviewLink[];
   relatedComparisons: BestForComparisonLink[];
+  /** Optional: guide links (e.g. accounting-for-contractors) to show after comparisons. */
+  relatedGuides?: BestForGuideLink[] | null;
   faqItems: BestForFaqItem[];
 };
 
@@ -160,18 +175,26 @@ export function BestForTemplate({
   categoryLabel,
   introParagraph,
   freshnessText = "Updated regularly",
+  topPicksSub,
+  editorialSub,
+  whyThesePicksSub,
+  seeAlsoBlock,
   featuredProducts,
   comparisonTableRows,
   editorialGuidance,
   whyThesePicks,
   relatedReviews,
   relatedComparisons,
+  relatedGuides,
   faqItems,
 }: BestForTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [affiliateOpen, setAffiliateOpen] = useState(false);
 
   const breadcrumbLabel = useCase.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const defaultTopPicksSub = `Our top payroll picks for ${breadcrumbLabel.toLowerCase()}.`;
+  const defaultEditorialSub = `What to look for when you're choosing payroll as ${breadcrumbLabel.toLowerCase()}.`;
+  const defaultWhySub = `Why we chose these tools for ${breadcrumbLabel.toLowerCase()}.`;
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
@@ -234,7 +257,7 @@ export function BestForTemplate({
         {/* ——— 2) Top picks for this use case ——— */}
         <section id="top-picks" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub={`Our top payroll picks for ${breadcrumbLabel.toLowerCase()}.`}>
+            <SectionTitle sub={topPicksSub ?? defaultTopPicksSub}>
               Top picks for this use case
             </SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -296,7 +319,7 @@ export function BestForTemplate({
         {/* ——— 4) Editorial guidance for this audience ——— */}
         <section id="editorial-guidance" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub={`What to look for when you're choosing payroll as ${breadcrumbLabel.toLowerCase()}.`}>
+            <SectionTitle sub={editorialSub ?? defaultEditorialSub}>
               Editorial guidance for this audience
             </SectionTitle>
             <div className="mt-4 space-y-4 text-[#6E6E6E] text-sm leading-relaxed">
@@ -313,7 +336,7 @@ export function BestForTemplate({
         {/* ——— 5) Why these picks work for this use case ——— */}
         <section id="why-these-picks" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub={`Why we chose these tools for ${breadcrumbLabel.toLowerCase()}.`}>
+            <SectionTitle sub={whyThesePicksSub ?? defaultWhySub}>
               Why these picks work for this use case
             </SectionTitle>
             <div className="mt-4 space-y-4 text-[#6E6E6E] text-sm leading-relaxed">
@@ -368,22 +391,61 @@ export function BestForTemplate({
           </div>
         </section>
 
-        {/* ——— See also: best payroll roundup + comparisons ——— */}
+        {/* ——— See also: best roundup + comparisons (or category overrides) ——— */}
         <section id="see-also" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <p className="text-[#6E6E6E] text-sm leading-relaxed">
-              For more options across all use cases, see our{" "}
-              <Link href="/payroll/best-payroll-software" className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                best payroll software roundup
-              </Link>
-              . To compare platforms side-by-side, see our{" "}
-              <Link href="/payroll/compare" className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                payroll software comparisons
-              </Link>
-              .
+              {seeAlsoBlock != null ? (
+                <>
+                  For more options across all use cases, see our{" "}
+                  <Link href={seeAlsoBlock.roundupHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    {seeAlsoBlock.roundupLabel}
+                  </Link>
+                  . To compare platforms side-by-side, see our{" "}
+                  <Link href={seeAlsoBlock.compareHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    {seeAlsoBlock.compareLabel}
+                  </Link>
+                  .
+                </>
+              ) : (
+                <>
+                  For more options across all use cases, see our{" "}
+                  <Link href="/payroll/best-payroll-software" className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    best payroll software roundup
+                  </Link>
+                  . To compare platforms side-by-side, see our{" "}
+                  <Link href="/payroll/compare" className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    payroll software comparisons
+                  </Link>
+                  .
+                </>
+              )}
             </p>
           </div>
         </section>
+
+        {/* ——— Related guides (optional) ——— */}
+        {relatedGuides != null && relatedGuides.length > 0 && (
+          <section id="related-guides" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <SectionTitle sub="More reading for this use case.">
+                Related guides
+              </SectionTitle>
+              <ul className="mt-4 flex flex-wrap gap-2.5">
+                {relatedGuides.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* ——— 8) FAQ ——— */}
         <section id="faqs" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">

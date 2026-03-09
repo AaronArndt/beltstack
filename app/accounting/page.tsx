@@ -33,7 +33,7 @@ const TOP_PICKS: FeaturedPick[] = [
     price: "$30/mo",
     features: ["Invoicing & payments", "P&L and reports", "Bank sync"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/quickbooks-online`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-xero`,
+    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero`,
     logoSrc: "/Logos/quickbooks.png",
     visitUrl: "https://quickbooks.intuit.com",
   },
@@ -46,7 +46,7 @@ const TOP_PICKS: FeaturedPick[] = [
     price: "$15/mo",
     features: ["Dashboard & reports", "Invoicing", "700+ integrations"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/xero`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-xero`,
+    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero`,
     logoSrc: "/Logos/xero.png",
     visitUrl: "https://www.xero.com",
   },
@@ -59,7 +59,7 @@ const TOP_PICKS: FeaturedPick[] = [
     price: "$19/mo",
     features: ["Time tracking", "Invoicing", "Expenses"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/freshbooks`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-freshbooks`,
+    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-freshbooks`,
     logoSrc: "/Logos/freshbooks.jpeg",
     visitUrl: "https://www.freshbooks.com",
   },
@@ -72,7 +72,7 @@ const TOP_PICKS: FeaturedPick[] = [
     price: "$15/mo",
     features: ["Invoicing", "Projects", "Client portal"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/zoho-books`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/zoho-books-vs-xero`,
+    compareHref: `${ACCOUNTING_COMPARE_BASE}/xero-vs-zoho-books`,
     logoSrc: "/Logos/zoho.jpeg",
     visitUrl: "https://www.zoho.com/books",
   },
@@ -85,7 +85,7 @@ const TOP_PICKS: FeaturedPick[] = [
     price: "Free",
     features: ["Free invoicing", "Expense tracking", "Receipt scan"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/wave`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/wave-vs-quickbooks`,
+    compareHref: `${ACCOUNTING_COMPARE_BASE}/wave-vs-quickbooks-online`,
     logoSrc: "/Logos/wave.jpeg",
     visitUrl: "https://www.waveapps.com",
   },
@@ -142,12 +142,14 @@ const BY_INDUSTRY_GROUPS = [
   { groupLabel: "Other industries", links: BY_INDUSTRY.slice(3) },
 ];
 
+/** High-priority comparisons only — full directory at /accounting/compare */
 const RELATED_COMPARISONS = [
-  { label: "QuickBooks vs Xero", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-xero` },
+  { label: "QuickBooks Online vs Xero", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero` },
+  { label: "QuickBooks Online vs FreshBooks", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-freshbooks` },
+  { label: "QuickBooks Online vs Zoho Books", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-zoho-books` },
+  { label: "QuickBooks Online vs Wave", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-wave` },
   { label: "Xero vs FreshBooks", href: `${ACCOUNTING_COMPARE_BASE}/xero-vs-freshbooks` },
-  { label: "QuickBooks vs FreshBooks", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-freshbooks` },
-  { label: "Wave vs QuickBooks", href: `${ACCOUNTING_COMPARE_BASE}/wave-vs-quickbooks` },
-  { label: "Zoho Books vs Xero", href: `${ACCOUNTING_COMPARE_BASE}/zoho-books-vs-xero` },
+  { label: "Xero vs Zoho Books", href: `${ACCOUNTING_COMPARE_BASE}/xero-vs-zoho-books` },
 ];
 
 const FAQ_ITEMS: FaqItem[] = [
@@ -272,6 +274,11 @@ function AccountingPopularComparisonsSection() {
           </Link>
         ))}
       </div>
+      <p className="mt-3 text-sm text-[#6E6E6E]">
+        <Link href="/accounting/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
+          View all accounting comparisons →
+        </Link>
+      </p>
     </>
   );
 }
