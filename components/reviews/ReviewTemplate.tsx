@@ -75,14 +75,28 @@ export type ReviewTemplateProps = {
   };
   /** Optional: "Compare with other payroll software" — links to comparison pages */
   compareLinks?: { label: string; href: string }[];
+  /** Optional: section title override (e.g. "Compare with other accounting software") */
+  compareSectionTitle?: string;
   /** Optional: link to main best payroll roundup */
   bestPayrollSoftwareHref?: string;
   /** Optional: link to compare hub (e.g. /payroll/compare) */
   compareHubHref?: string;
+  /** Optional: link label for compare hub (e.g. "Compare accounting software") */
+  compareHubLabel?: string;
+  /** Optional: link label for best roundup (e.g. "Best accounting software (2026) — full roundup") */
+  bestRoundupLabel?: string;
   /** Optional: "Best payroll software for different use cases" — links to best-for pages */
   useCaseLinks?: { label: string; href: string }[];
+  /** Optional: section title override (e.g. "Best accounting software for different use cases") */
+  bestForSectionTitle?: string;
+  /** Optional: section sub override (e.g. "Find accounting software by scenario.") */
+  bestForSectionSub?: string;
   /** Optional: "Popular industries" — 6 trade links (construction, electricians, etc.) */
   popularIndustryLinks?: { label: string; href: string }[];
+  /** Optional: section title override for industry links */
+  industrySectionTitle?: string;
+  /** Optional: section sub override for industry links */
+  industrySectionSub?: string;
   scenarioLinks?: { label: string; href: string }[];
   tradeLinks?: { label: string; href: string }[];
 };
@@ -300,10 +314,17 @@ export function ReviewTemplate({
   faqs,
   methodology,
   compareLinks,
+  compareSectionTitle,
   bestPayrollSoftwareHref,
   compareHubHref,
+  compareHubLabel,
+  bestRoundupLabel,
   useCaseLinks,
+  bestForSectionTitle,
+  bestForSectionSub,
   popularIndustryLinks,
+  industrySectionTitle,
+  industrySectionSub,
   scenarioLinks,
   tradeLinks,
 }: ReviewTemplateProps) {
@@ -314,6 +335,14 @@ export function ReviewTemplate({
   const showContractorUse = contractorUse && contractorUse.length > 0;
   const showRatingBreakdown = ratingBreakdown && ratingBreakdown.length > 0;
   const sectionNavItems = getSectionNavItems(!!showRatingBreakdown, !!showContractorUse);
+
+  const compareTitle = compareSectionTitle ?? "Compare with other payroll software";
+  const bestForTitle = bestForSectionTitle ?? "Best payroll software for different use cases";
+  const bestForSub = bestForSectionSub ?? "Find payroll software by scenario.";
+  const hubCompareLabel = compareHubLabel ?? "Compare payroll software";
+  const roundupLabel = bestRoundupLabel ?? "Best payroll software (2026) — full roundup";
+  const industryTitle = industrySectionTitle ?? "Popular industries";
+  const industrySub = industrySectionSub ?? "Payroll guides by industry.";
 
   // Sticky offsets: align with site navbar and add gap below "On this page" bar
   const STICKY_NAV_OFFSET = 72;
@@ -576,10 +605,10 @@ export function ReviewTemplate({
                 </ul>
               </section>
 
-              {/* Compare with other payroll software */}
+              {/* Compare with other [category] software */}
               {compareLinks != null && compareLinks.length > 0 && (
                 <section id="compare-with-others" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub={`See how ${toolName} stacks up head-to-head.`}>Compare with other payroll software</SectionTitle>
+                  <SectionTitle sub={`See how ${toolName} stacks up head-to-head.`}>{compareTitle}</SectionTitle>
                   <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
                     {compareLinks.map((c) => (
                       <li key={c.href}>
@@ -592,22 +621,22 @@ export function ReviewTemplate({
                 </section>
               )}
 
-              {/* Best payroll software for different use cases — roundup + scenarios only (no full trade list) */}
+              {/* Best [category] software for different use cases — roundup + scenarios only (no full trade list) */}
               {(bestPayrollSoftwareHref != null || compareHubHref != null || (scenarioLinks != null && scenarioLinks.length > 0)) && (
                 <section id="best-for-use-cases" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Find payroll software by scenario.">Best payroll software for different use cases</SectionTitle>
+                  <SectionTitle sub={bestForSub}>{bestForTitle}</SectionTitle>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                     {compareHubHref != null && (
                       <li>
                         <Link href={compareHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          Compare payroll software
+                          {hubCompareLabel}
                         </Link>
                       </li>
                     )}
                     {bestPayrollSoftwareHref != null && (
                       <li>
                         <Link href={bestPayrollSoftwareHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          Best payroll software (2026) — full roundup
+                          {roundupLabel}
                         </Link>
                       </li>
                     )}
@@ -622,10 +651,10 @@ export function ReviewTemplate({
                 </section>
               )}
 
-              {/* Popular industries — 6 contextual trade links */}
+              {/* Popular industries / by use case — contextual links */}
               {popularIndustryLinks != null && popularIndustryLinks.length > 0 && (
                 <section id="popular-industries" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Payroll guides by industry.">Popular industries</SectionTitle>
+                  <SectionTitle sub={industrySub}>{industryTitle}</SectionTitle>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                     {popularIndustryLinks.map((link) => (
                       <li key={link.href}>

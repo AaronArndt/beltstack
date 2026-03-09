@@ -47,7 +47,7 @@ const TOP_PICKS: FeaturedPick[] = [
     features: ["Dashboard & reports", "Invoicing", "700+ integrations"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/xero`,
     compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-xero`,
-    logoSrc: "/Logos/quickbooks.png", // placeholder
+    logoSrc: "/Logos/xero.png",
     visitUrl: "https://www.xero.com",
   },
   {
@@ -60,7 +60,7 @@ const TOP_PICKS: FeaturedPick[] = [
     features: ["Time tracking", "Invoicing", "Expenses"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/freshbooks`,
     compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-vs-freshbooks`,
-    logoSrc: "/Logos/quickbooks.png", // placeholder
+    logoSrc: "/Logos/freshbooks.jpeg",
     visitUrl: "https://www.freshbooks.com",
   },
   {
@@ -73,7 +73,7 @@ const TOP_PICKS: FeaturedPick[] = [
     features: ["Invoicing", "Projects", "Client portal"],
     reviewHref: `${ACCOUNTING_REVIEW_BASE}/zoho-books`,
     compareHref: `${ACCOUNTING_COMPARE_BASE}/zoho-books-vs-xero`,
-    logoSrc: "/Logos/quickbooks.png", // placeholder
+    logoSrc: "/Logos/zoho.jpeg",
     visitUrl: "https://www.zoho.com/books",
   },
   {
@@ -93,11 +93,11 @@ const TOP_PICKS: FeaturedPick[] = [
 
 const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "QuickBooks Online", bestFor: "Small business all-in-one", price: "$30/mo", rating: "4.6", slug: "quickbooks-online", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "Xero", bestFor: "QuickBooks alternative", price: "$15/mo", rating: "4.5", slug: "xero", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "FreshBooks", bestFor: "Freelancers", price: "$19/mo", rating: "4.5", slug: "freshbooks", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "Zoho Books", bestFor: "Value & projects", price: "$15/mo", rating: "4.4", slug: "zoho-books", logoSrc: "/Logos/quickbooks.png" },
+  { tool: "Xero", bestFor: "QuickBooks alternative", price: "$15/mo", rating: "4.5", slug: "xero", logoSrc: "/Logos/xero.png" },
+  { tool: "FreshBooks", bestFor: "Freelancers", price: "$19/mo", rating: "4.5", slug: "freshbooks", logoSrc: "/Logos/freshbooks.jpeg" },
+  { tool: "Zoho Books", bestFor: "Value & projects", price: "$15/mo", rating: "4.4", slug: "zoho-books", logoSrc: "/Logos/zoho.jpeg" },
   { tool: "Wave", bestFor: "Free accounting", price: "Free", rating: "4.3", slug: "wave", logoSrc: "/Logos/wave.jpeg" },
-  { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/quickbooks.png" },
+  { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
 ];
 
 const ACCOUNTING_GUIDES = [
@@ -244,7 +244,8 @@ function AccountingGuidesSection() {
         <Link href={`${ACCOUNTING_REVIEW_BASE}/xero`} className={linkGreen}>Xero</Link>,{" "}
         <Link href={`${ACCOUNTING_REVIEW_BASE}/freshbooks`} className={linkGreen}>FreshBooks</Link>,{" "}
         <Link href={`${ACCOUNTING_REVIEW_BASE}/zoho-books`} className={linkGreen}>Zoho Books</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/wave`} className={linkGreen}>Wave</Link>.
+        <Link href={`${ACCOUNTING_REVIEW_BASE}/wave`} className={linkGreen}>Wave</Link>,{" "}
+        <Link href={`${ACCOUNTING_REVIEW_BASE}/sage-accounting`} className={linkGreen}>Sage Accounting</Link>.
       </p>
     </>
   );

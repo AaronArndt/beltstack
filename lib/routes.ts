@@ -54,3 +54,24 @@ export function getPayrollTradeUrl(tradeSlug: string): string {
   const scenario = TRADE_TO_BEST_FOR[tradeSlug] ?? tradeSlug;
   return `/payroll/best-for/${scenario}`;
 }
+
+// ——— Accounting ———
+
+/** Accounting review detail page: /accounting/review/[slug] */
+export function getAccountingReviewUrl(slug: string): string {
+  return `/accounting/review/${slug}`;
+}
+
+/** Accounting hub */
+export const ACCOUNTING_HUB_URL = "/accounting" as const;
+
+/** Accounting compare page (optional comparison slug) */
+export function getAccountingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/accounting/compare/${comparisonSlug}`;
+  return "/accounting/compare";
+}
+
+/** Accounting best-for scenario */
+export function getAccountingBestForUrl(scenarioSlug: string): string {
+  return `/accounting/best-for/${scenarioSlug}`;
+}
