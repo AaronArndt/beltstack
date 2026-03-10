@@ -201,6 +201,8 @@ export function ComparisonTemplate({
 
   const hasDecisionGuide = (decisionGuideA != null && decisionGuideA.length > 0) || (decisionGuideB != null && decisionGuideB.length > 0);
   const hasRatingsComparison = ratingsComparison != null && ratingsComparison.length > 0;
+  const isAccounting = categoryHref === "/accounting";
+  const isInvoicing = categoryHref === "/invoicing";
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -211,7 +213,7 @@ export function ComparisonTemplate({
     { label: "Best for", href: "#best-for" },
     { label: "Alternatives", href: "#alternatives" },
     { label: "Read full reviews", href: "#read-full-reviews" },
-    { label: "Best payroll guides", href: "#best-payroll-guides" },
+    { label: isAccounting ? "Best accounting guides" : isInvoicing ? "Best invoicing guides" : "Best payroll guides", href: "#best-payroll-guides" },
     { label: "FAQs", href: "#faqs" },
   ];
 
@@ -600,59 +602,129 @@ export function ComparisonTemplate({
                   </ul>
                 </section>
 
-                {/* Best payroll software guides — roundup + contextual trade links (3–6) */}
-                <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Find the right fit by use case or trade.">Best payroll software guides</SectionTitle>
-                  <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
-                    <li>
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        Best payroll software (2026) — full roundup
-                      </Link>
-                    </li>
-                    {relevantTradeLinks != null && relevantTradeLinks.length > 0
-                      ? relevantTradeLinks.map((link) => (
-                          <li key={link.href}>
-                            <Link href={link.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              {link.label}
-                            </Link>
-                          </li>
-                        ))
-                      : (
-                        <>
-                          <li>
-                            <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for contractors
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/payroll/best-for/construction" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for construction
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/payroll/best-for/hvac" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for HVAC
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/payroll/best-for/plumbing" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for plumbing
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/payroll/best-for/landscaping" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for landscaping
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/payroll/best-for/electricians" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              Best for electricians
-                            </Link>
-                          </li>
-                        </>
-                      )}
-                  </ul>
-                </section>
+                {/* Best [category] software guides — roundup + compare hub + guides + contextual trade links (3–6) */}
+                {(() => {
+                  const isAccounting = categoryHref === "/accounting";
+                  const isInvoicing = categoryHref === "/invoicing";
+                  const roundupHref = isAccounting ? "/accounting/best-accounting-software" : isInvoicing ? "/invoicing/best-invoicing-software" : "/payroll/best-payroll-software";
+                  const roundupLabel = isAccounting ? "Best accounting software (2026) — full roundup" : isInvoicing ? "Best invoicing software (2026) — full roundup" : "Best payroll software (2026) — full roundup";
+                  const sectionTitle = isAccounting ? "Best accounting software guides" : isInvoicing ? "Best invoicing software guides" : "Best payroll software guides";
+                  const compareHubHref = `${categoryHref}/compare`;
+                  const guidesHref = `${categoryHref}/guides`;
+                  const guidesLabel = isAccounting ? "Accounting guides" : isInvoicing ? "Invoicing guides" : "Payroll guides";
+                  return (
+                    <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                      <SectionTitle sub="Find the right fit by use case or trade.">{sectionTitle}</SectionTitle>
+                      <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
+                        <li>
+                          <Link href={roundupHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                            {roundupLabel}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={compareHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                            Compare {categoryLabel.toLowerCase()} software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={guidesHref} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                            {guidesLabel}
+                          </Link>
+                        </li>
+                        {relevantTradeLinks != null && relevantTradeLinks.length > 0
+                          ? relevantTradeLinks.map((link) => (
+                              <li key={link.href}>
+                                <Link href={link.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  {link.label}
+                                </Link>
+                              </li>
+                            ))
+                          : !isAccounting && !isInvoicing && (
+                              <>
+                                <li>
+                                  <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for contractors
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/payroll/best-for/construction" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for construction
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/payroll/best-for/hvac" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for HVAC
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/payroll/best-for/plumbing" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for plumbing
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/payroll/best-for/landscaping" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for landscaping
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/payroll/best-for/electricians" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                    Best for electricians
+                                  </Link>
+                                </li>
+                              </>
+                            )}
+                        {isAccounting && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link href="/accounting/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for freelancers
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/accounting/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/accounting/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for contractors
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {isInvoicing && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link href="/invoicing/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for freelancers
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/invoicing/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/invoicing/best-for/agencies" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for agencies
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/invoicing/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/invoicing/best-for/consultants" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for consultants
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                      </ul>
+                    </section>
+                  );
+                })()}
 
                 {/* 7. FAQs — structured { q, a } for accordion and future FAQPage schema */}
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

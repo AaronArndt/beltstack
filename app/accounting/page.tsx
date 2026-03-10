@@ -130,16 +130,16 @@ const BEST_FOR_SCENARIOS = [
 ];
 
 const BY_INDUSTRY = [
-  { label: "Construction", href: `${ACCOUNTING_BEST_FOR_BASE}/construction` },
-  { label: "Landscaping", href: `${ACCOUNTING_BEST_FOR_BASE}/landscaping` },
-  { label: "Electricians", href: `${ACCOUNTING_BEST_FOR_BASE}/electricians` },
-  { label: "Consultants", href: `${ACCOUNTING_BEST_FOR_BASE}/consultants` },
-  { label: "Restaurants", href: `${ACCOUNTING_BEST_FOR_BASE}/restaurants` },
+  { label: "Freelancers", href: `${ACCOUNTING_BEST_FOR_BASE}/freelancers` },
+  { label: "Contractors", href: `${ACCOUNTING_BEST_FOR_BASE}/contractors` },
+  { label: "Small businesses", href: `${ACCOUNTING_BEST_FOR_BASE}/small-business` },
+  { label: "Ecommerce", href: `${ACCOUNTING_BEST_FOR_BASE}/ecommerce` },
+  { label: "Agencies", href: `${ACCOUNTING_BEST_FOR_BASE}/agencies` },
 ];
 
 const BY_INDUSTRY_GROUPS = [
-  { groupLabel: "Contractor & trade", links: BY_INDUSTRY.slice(0, 3) },
-  { groupLabel: "Other industries", links: BY_INDUSTRY.slice(3) },
+  { groupLabel: "By business type", links: BY_INDUSTRY.slice(0, 3) },
+  { groupLabel: "By use case", links: BY_INDUSTRY.slice(3) },
 ];
 
 /** High-priority comparisons only — full directory at /accounting/compare */
@@ -441,8 +441,8 @@ export default function AccountingPage() {
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Accounting by industry",
-        sectionSub: "Accounting recommendations by industry.",
+        sectionTitle: "Accounting by use case",
+        sectionSub: "Best accounting software by business type and scenario.",
         links: BY_INDUSTRY,
         groups: BY_INDUSTRY_GROUPS,
       }}

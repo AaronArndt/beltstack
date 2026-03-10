@@ -4,6 +4,7 @@ import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
 const BEST_PAYROLL_SOFTWARE_HREF = "/payroll/best-payroll-software";
+const PAYROLL_GUIDES_HUB = "/payroll/guides";
 /** Popular industries — 6 links for review pages (limit trade links per page) */
 const POPULAR_INDUSTRY_LINKS: { label: string; href: string }[] = [
   { label: "Best for construction", href: getPayrollBestForUrl("construction") },
@@ -288,6 +289,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -531,6 +534,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -539,6 +544,10 @@ const reviews: Record<string, ReviewData> = {
       { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
       { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+    ],
+    relatedReading: [
+      { label: "QuickBooks Online (accounting) review", href: "/accounting/review/quickbooks-online" },
+      { label: "Accounting software hub", href: "/accounting" },
     ],
     tradeLinks: [
       { label: "HVAC", href: getPayrollTradeUrl("hvac") },
@@ -770,6 +779,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1005,6 +1016,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1239,6 +1252,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1402,6 +1417,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1514,6 +1531,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1625,6 +1644,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1736,6 +1757,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1846,6 +1869,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -1953,6 +1978,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [
@@ -2061,6 +2088,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_PAYROLL_SOFTWARE_HREF,
     compareHubHref: "/payroll/compare",
+    guideHubHref: PAYROLL_GUIDES_HUB,
+    guideHubLabel: "Payroll guides",
     popularIndustryLinks: POPULAR_INDUSTRY_LINKS,
     useCaseLinks: USE_CASE_LINKS,
     scenarioLinks: [

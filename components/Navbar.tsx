@@ -41,6 +41,7 @@ const SOFTWARE_COLUMNS: {
     items: [
       { title: "Payroll", description: "Pay teams, contractors, filings", href: "/payroll" },
       { title: "Accounting", description: "Bookkeeping, invoicing, expenses", href: "/accounting" },
+      { title: "Invoicing", description: "Invoices, payments, recurring billing", href: "/invoicing" },
       { title: "Banking", description: "Business accounts, cash flow", href: "/banking" },
       { title: "Credit Cards", description: "Cashback and financing", href: "/credit-cards" },
     ],

@@ -9,6 +9,7 @@ type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: st
 
 const BEST_ACCOUNTING_SOFTWARE_HREF = "/accounting/best-accounting-software";
 const ACCOUNTING_COMPARE_HUB = "/accounting/compare";
+const ACCOUNTING_GUIDES_HUB = "/accounting/guides";
 
 /** Scenario / best-for links for accounting review pages (only link to routes that exist or are planned). */
 const ACCOUNTING_SCENARIO_LINKS: { label: string; href: string }[] = [
@@ -16,6 +17,7 @@ const ACCOUNTING_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for small business", href: getAccountingBestForUrl("small-business") },
   { label: "Best for contractors", href: getAccountingBestForUrl("contractors") },
   { label: "Best for ecommerce", href: getAccountingBestForUrl("ecommerce") },
+  { label: "Best for agencies", href: getAccountingBestForUrl("agencies") },
 ];
 
 const ACCOUNTING_METHODOLOGY = {
@@ -117,12 +119,18 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
     bestForSectionTitle: "Best accounting software for different use cases",
     bestForSectionSub: "Find accounting software by scenario.",
     scenarioLinks: ACCOUNTING_SCENARIO_LINKS,
+    relatedReading: [
+      { label: "QuickBooks Payroll review", href: "/payroll/review/quickbooks-payroll" },
+      { label: "Payroll software hub", href: "/payroll" },
+    ],
   },
 
   xero: {
@@ -209,6 +217,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -301,6 +311,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -391,6 +403,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -483,6 +497,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -571,6 +587,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -659,6 +677,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",
@@ -748,6 +768,8 @@ const reviews: Record<string, ReviewData> = {
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
+    guideHubHref: ACCOUNTING_GUIDES_HUB,
+    guideHubLabel: "Accounting guides",
     compareSectionTitle: "Compare with other accounting software",
     compareHubLabel: "Compare accounting software",
     bestRoundupLabel: "Best accounting software (2026) — full roundup",

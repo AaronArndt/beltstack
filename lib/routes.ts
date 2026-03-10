@@ -75,3 +75,24 @@ export function getAccountingCompareUrl(comparisonSlug?: string): string {
 export function getAccountingBestForUrl(scenarioSlug: string): string {
   return `/accounting/best-for/${scenarioSlug}`;
 }
+
+// ——— Invoicing ———
+
+/** Invoicing review detail page: /invoicing/review/[slug] */
+export function getInvoicingReviewUrl(slug: string): string {
+  return `/invoicing/review/${slug}`;
+}
+
+/** Invoicing hub */
+export const INVOICING_HUB_URL = "/invoicing" as const;
+
+/** Invoicing compare page (optional comparison slug) */
+export function getInvoicingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/invoicing/compare/${comparisonSlug}`;
+  return "/invoicing/compare";
+}
+
+/** Invoicing best-for scenario */
+export function getInvoicingBestForUrl(scenarioSlug: string): string {
+  return `/invoicing/best-for/${scenarioSlug}`;
+}

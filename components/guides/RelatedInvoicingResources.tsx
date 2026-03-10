@@ -1,21 +1,21 @@
 import Link from "next/link";
-import { getPayrollReviewUrl } from "@/lib/routes";
+import { getInvoicingReviewUrl } from "@/lib/routes";
 
-export type RelatedResourceItem = { label: string; href: string };
+export type RelatedInvoicingResourceItem = { label: string; href: string };
 
-const DEFAULT_RELATED_RESOURCES: RelatedResourceItem[] = [
-  { label: "Payroll Software Hub", href: "/payroll" },
-  { label: "Best Payroll Software", href: "/payroll/best-payroll-software" },
-  { label: "Payroll Software Comparisons", href: "/payroll/compare" },
-  { label: "Payroll Guides", href: "/payroll/guides" },
-  { label: "Gusto Review", href: getPayrollReviewUrl("gusto") },
-  { label: "QuickBooks Payroll Review", href: getPayrollReviewUrl("quickbooks-payroll") },
-  { label: "Rippling Review", href: getPayrollReviewUrl("rippling") },
-  { label: "Justworks Review", href: getPayrollReviewUrl("justworks") },
-  { label: "Deel Review", href: getPayrollReviewUrl("deel") },
-  { label: "Wave Review", href: getPayrollReviewUrl("wave") },
-  { label: "Payroll for Contractors guide", href: "/payroll/guides/payroll-for-contractors" },
-  { label: "Payroll Software Pricing guide", href: "/payroll/guides/payroll-software-pricing" },
+const DEFAULT_RELATED_INVOICING_RESOURCES: RelatedInvoicingResourceItem[] = [
+  { label: "Invoicing Software Hub", href: "/invoicing" },
+  { label: "Best Invoicing Software (2026)", href: "/invoicing/best-invoicing-software" },
+  { label: "Compare Invoicing Software", href: "/invoicing/compare" },
+  { label: "Invoicing Guides", href: "/invoicing/guides" },
+  { label: "FreshBooks Review", href: getInvoicingReviewUrl("freshbooks") },
+  { label: "QuickBooks Review", href: getInvoicingReviewUrl("quickbooks") },
+  { label: "Wave Review", href: getInvoicingReviewUrl("wave") },
+  { label: "Zoho Invoice Review", href: getInvoicingReviewUrl("zoho-invoice") },
+  { label: "Xero Review", href: getInvoicingReviewUrl("xero") },
+  { label: "Invoice Ninja Review", href: getInvoicingReviewUrl("invoice-ninja") },
+  { label: "HoneyBook Review", href: getInvoicingReviewUrl("honeybook") },
+  { label: "Bonsai Review", href: getInvoicingReviewUrl("bonsai") },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -28,20 +28,17 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
-type RelatedPayrollResourcesProps = {
-  /** Optional: links to show instead of default set */
-  items?: RelatedResourceItem[];
-  /** Optional: href to exclude (e.g. current page) */
+type RelatedInvoicingResourcesProps = {
+  items?: RelatedInvoicingResourceItem[];
   excludeHref?: string;
-  /** Optional: use compact layout (e.g. for sidebar) */
   compact?: boolean;
 };
 
-export function RelatedPayrollResources({
-  items = DEFAULT_RELATED_RESOURCES,
+export function RelatedInvoicingResources({
+  items = DEFAULT_RELATED_INVOICING_RESOURCES,
   excludeHref,
   compact = false,
-}: RelatedPayrollResourcesProps) {
+}: RelatedInvoicingResourcesProps) {
   const filtered = excludeHref ? items.filter((item) => item.href !== excludeHref) : items;
 
   if (compact) {
@@ -67,8 +64,8 @@ export function RelatedPayrollResources({
       className="scroll-mt-section border-t border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle sub="More ways to explore payroll software.">
-          Related Payroll Resources
+        <SectionTitle sub="More ways to explore invoicing software.">
+          Related Invoicing Resources
         </SectionTitle>
         <ul className="mt-4 space-y-3">
           {filtered.map(({ label, href }) => (

@@ -5,7 +5,9 @@ export type RelatedAccountingResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_ACCOUNTING_RESOURCES: RelatedAccountingResourceItem[] = [
   { label: "Accounting Software Hub", href: "/accounting" },
+  { label: "Best Accounting Software (2026)", href: "/accounting/best-accounting-software" },
   { label: "Accounting Software Comparisons", href: "/accounting/compare" },
+  { label: "Accounting Guides", href: "/accounting/guides" },
   { label: "QuickBooks Online Review", href: getAccountingReviewUrl("quickbooks-online") },
   { label: "Xero Review", href: getAccountingReviewUrl("xero") },
   { label: "FreshBooks Review", href: getAccountingReviewUrl("freshbooks") },

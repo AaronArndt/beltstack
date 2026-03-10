@@ -93,6 +93,8 @@ const RELEVANT_LINKS = [
   { label: "Best for freelancers", href: getAccountingBestForUrl("freelancers") },
   { label: "Best for small business", href: getAccountingBestForUrl("small-business") },
   { label: "Best for contractors", href: getAccountingBestForUrl("contractors") },
+  { label: "Best for ecommerce", href: getAccountingBestForUrl("ecommerce") },
+  { label: "Best for agencies", href: getAccountingBestForUrl("agencies") },
 ];
 
 function buildComparison(
