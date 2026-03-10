@@ -346,7 +346,7 @@ function InvoicingEducationSection() {
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Simplicity and speed</h3>
             <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed">
-              Good invoicing software lets you create and send professional invoices quickly. Look for templates, recurring invoice options, and a clear view of what’s sent, viewed, and paid.
+              Good invoicing software lets you create and send professional invoices quickly. Businesses that pay employees may also use <Link href="/payroll" className={linkGreen}>payroll software</Link> to keep pay runs and billing in sync. Look for templates, recurring invoice options, and a clear view of what’s sent, viewed, and paid.
             </p>
           </div>
           <div>
@@ -364,7 +364,7 @@ function InvoicingEducationSection() {
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Integrations with accounting software</h3>
             <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed">
-              If you use QuickBooks, Xero, or other accounting tools, check that your invoicing software syncs so paid invoices flow into your books. Some businesses prefer all-in-one accounting with built-in invoicing.
+              If you use QuickBooks, Xero, or other <Link href="/accounting" className={linkGreen}>accounting software</Link>, check that your invoicing software syncs so paid invoices flow into your books. Some businesses prefer all-in-one accounting with built-in invoicing.
             </p>
           </div>
         </div>

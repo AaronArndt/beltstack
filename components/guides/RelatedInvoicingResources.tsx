@@ -5,6 +5,8 @@ export type RelatedInvoicingResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_INVOICING_RESOURCES: RelatedInvoicingResourceItem[] = [
   { label: "Invoicing Software Hub", href: "/invoicing" },
+  { label: "Payroll Software Hub", href: "/payroll" },
+  { label: "Accounting Software Hub", href: "/accounting" },
   { label: "Best Invoicing Software (2026)", href: "/invoicing/best-invoicing-software" },
   { label: "Compare Invoicing Software", href: "/invoicing/compare" },
   { label: "Invoicing Guides", href: "/invoicing/guides" },

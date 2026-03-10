@@ -112,7 +112,7 @@ export default function HowInvoicingSoftwareWorksPage() {
                       <li><strong className="text-[#1A2D48]">Create the invoice</strong> — Add client, line items, amounts, and payment terms. Many tools offer estimates or proposals that convert to invoices.</li>
                       <li><strong className="text-[#1A2D48]">Send the invoice</strong> — Email from the platform or share a link. Clients often get a portal where they can view and pay.</li>
                       <li><strong className="text-[#1A2D48]">Track status</strong> — See when the invoice was viewed and when it was paid. Set up automatic reminders for overdue invoices.</li>
-                      <li><strong className="text-[#1A2D48]">Collect payment</strong> — Via link, bank transfer, or check. Paid amounts sync into your records for reporting.</li>
+                      <li><strong className="text-[#1A2D48]">Collect payment</strong> — Via link, bank transfer, or check. Paid amounts sync into your records for reporting. Many invoicing platforms integrate with <Link href="/accounting" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">accounting software</Link> for your books; businesses that pay employees may also use <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software</Link>.</li>
                     </ol>
                   </div>
                 </section>

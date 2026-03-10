@@ -124,7 +124,7 @@ export default function AccountingForContractorsGuidePage() {
                     <p>
                       Whether you are an independent contractor or manage a small crew, you want a system that makes it
                       easy to see which jobs are profitable, which customers owe money, and whether you have enough cash
-                      to cover payroll and materials for upcoming work.
+                      to cover payroll and materials for upcoming work. Many contractors also use <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software</Link> for their crew and <Link href="/invoicing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">invoicing software</Link> for client billing.
                     </p>
                   </div>
                 </section>

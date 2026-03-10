@@ -152,7 +152,7 @@ export default function AccountingForSmallBusinessGuidePage() {
                       >
                         Zoho Books
                       </Link>{" "}
-                      make that possible even if you are not finance-trained.
+                      make that possible even if you are not finance-trained. Many accounting platforms integrate with <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software</Link>; if you mainly send bills, see our <Link href="/invoicing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">invoicing software</Link> hub for dedicated billing tools.
                     </p>
                   </div>
                 </section>

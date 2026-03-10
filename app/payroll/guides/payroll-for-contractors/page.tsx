@@ -196,9 +196,12 @@ export default function PayrollForContractorsPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Integrate with accounting software</strong> — Sync to QuickBooks, Xero, or other tools so payroll flows into your books and, where supported, job costing.</span>
+                        <span><strong className="text-[#1A2D48]">Integrate with accounting software</strong> — Sync to QuickBooks, Xero, or other <Link href="/accounting" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">accounting</Link> tools so payroll flows into your books and, where supported, job costing.</span>
                       </li>
                     </ul>
+                    <p>
+                      Many contractors also use accounting software for bookkeeping and <Link href="/invoicing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">invoicing software</Link> for billing clients.
+                    </p>
                     <p>
                       Platforms like <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>, <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>, <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link>, and <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link> support both employee and contractor payroll, with varying depth of contractor features and integrations. Our reviews break down how each handles 1099 payments and reporting.
                     </p>

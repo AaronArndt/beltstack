@@ -5,6 +5,8 @@ export type RelatedAccountingResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_ACCOUNTING_RESOURCES: RelatedAccountingResourceItem[] = [
   { label: "Accounting Software Hub", href: "/accounting" },
+  { label: "Payroll Software Hub", href: "/payroll" },
+  { label: "Invoicing Software Hub", href: "/invoicing" },
   { label: "Best Accounting Software (2026)", href: "/accounting/best-accounting-software" },
   { label: "Accounting Software Comparisons", href: "/accounting/compare" },
   { label: "Accounting Guides", href: "/accounting/guides" },

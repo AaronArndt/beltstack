@@ -160,7 +160,7 @@ const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-no
 function PayrollIntroExtended() {
   return (
     <p>
-      Find top picks, side-by-side comparisons, payroll guides, and industry-specific recommendations.
+      Find top picks, side-by-side comparisons, payroll guides, and industry-specific recommendations. Businesses that invoice clients may also use <Link href="/invoicing" className={linkGreen}>invoicing software</Link> like <Link href="/invoicing/review/freshbooks" className={linkGreen}>FreshBooks</Link> for billing.
     </p>
   );
 }
@@ -178,7 +178,7 @@ function PayrollHowToChooseSection() {
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
           <li><strong className="text-[#1A2D48]">Team size</strong> — Pricing often scales by headcount; small teams need different features than growing or multi-state teams.</li>
           <li><strong className="text-[#1A2D48]">Employees vs contractors</strong> — If you pay 1099s, look for contractor self-service and 1099 e-file. See our <Link href="/payroll/guides/payroll-for-contractors" className={linkGreen}>payroll for contractors</Link> guide.</li>
-          <li><strong className="text-[#1A2D48]">Accounting integrations</strong> — Sync with QuickBooks, Xero, or your books so labor costs flow into job costing and P&amp;L.</li>
+          <li><strong className="text-[#1A2D48]">Accounting integrations</strong> — Sync with <Link href="/accounting" className={linkGreen}>accounting software</Link> such as QuickBooks or Xero so labor costs flow into job costing and P&amp;L.</li>
         </ul>
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
           <li><strong className="text-[#1A2D48]">Tax automation</strong> — Full-service payroll handles withholdings, deposits, and filing; understand what’s included. <Link href="/payroll/guides/how-payroll-software-works" className={linkGreen}>How payroll software works</Link>.</li>

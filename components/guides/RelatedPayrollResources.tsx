@@ -5,6 +5,8 @@ export type RelatedResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_RESOURCES: RelatedResourceItem[] = [
   { label: "Payroll Software Hub", href: "/payroll" },
+  { label: "Accounting Software Hub", href: "/accounting" },
+  { label: "Invoicing Software Hub", href: "/invoicing" },
   { label: "Best Payroll Software", href: "/payroll/best-payroll-software" },
   { label: "Payroll Software Comparisons", href: "/payroll/compare" },
   { label: "Payroll Guides", href: "/payroll/guides" },

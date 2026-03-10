@@ -209,9 +209,9 @@ function AccountingHowToChooseSection() {
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
-          <li><strong className="text-[#1A2D48]">Business type</strong> — Freelancers often need simple invoicing; small businesses need full books, reports, and tax prep. Match the tool to your size and complexity.</li>
+          <li><strong className="text-[#1A2D48]">Business type</strong> — Freelancers often need simple invoicing; small businesses need full books, reports, and tax prep. Some businesses prefer dedicated <Link href="/invoicing" className={linkGreen}>invoicing software</Link> instead of full accounting tools. Match the tool to your size and complexity.</li>
           <li><strong className="text-[#1A2D48]">Invoicing and expenses</strong> — Look for clear invoicing, expense tracking, and receipt capture. See our <Link href={`${ACCOUNTING_GUIDES_BASE}/accounting-for-small-business`} className={linkGreen}>accounting for small business</Link> guide.</li>
-          <li><strong className="text-[#1A2D48]">Integrations</strong> — Bank feeds, payroll, and ecommerce integrations keep books in sync. Check that your accounting software connects to the tools you already use.</li>
+          <li><strong className="text-[#1A2D48]">Integrations</strong> — Bank feeds, <Link href="/payroll" className={linkGreen}>payroll</Link>, and ecommerce integrations keep books in sync. Check that your accounting software connects to the tools you already use.</li>
         </ul>
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
           <li><strong className="text-[#1A2D48]">Reporting and tax</strong> — P&amp;L, balance sheet, and tax-ready reports matter for year-end and filing. <Link href={`${ACCOUNTING_GUIDES_BASE}/how-accounting-software-works`} className={linkGreen}>How accounting software works</Link>.</li>
