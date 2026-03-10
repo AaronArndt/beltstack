@@ -138,8 +138,8 @@ const BY_INDUSTRY = [
 ];
 
 const BY_INDUSTRY_GROUPS = [
-  { groupLabel: "By business type", links: BY_INDUSTRY.slice(0, 3) },
-  { groupLabel: "By use case", links: BY_INDUSTRY.slice(3) },
+  { groupLabel: "Primary business types", links: BY_INDUSTRY.slice(0, 3) },
+  { groupLabel: "Other business types", links: BY_INDUSTRY.slice(3) },
 ];
 
 /** High-priority comparisons only — full directory at /accounting/compare */
@@ -343,9 +343,9 @@ function AccountingEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What small businesses should look for in accounting software</h2>
+        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in accounting software</h2>
         <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">What matters when small businesses and freelancers choose accounting tools.</p>
+        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">What matters when businesses choose accounting tools.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
@@ -441,8 +441,8 @@ export default function AccountingPage() {
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Accounting by use case",
-        sectionSub: "Best accounting software by business type and scenario.",
+        sectionTitle: "Accounting by business type",
+        sectionSub: "Best accounting software by business type.",
         links: BY_INDUSTRY,
         groups: BY_INDUSTRY_GROUPS,
       }}

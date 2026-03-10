@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
@@ -202,25 +203,14 @@ export function BestForTemplate({
         {/* ——— 1) Hero ——— */}
         <section className="bg-[#F8FAFC]">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-            <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
-                <li>
-                  <Link href="/" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                    Home
-                  </Link>
-                </li>
-                <li aria-hidden>/</li>
-                <li>
-                  <Link href={categoryHref} className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                    {categoryLabel}
-                  </Link>
-                </li>
-                <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
-                  {breadcrumbLabel}
-                </li>
-              </ol>
-            </nav>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: categoryLabel, href: categoryHref },
+                { label: breadcrumbLabel },
+              ]}
+              className="mb-4"
+            />
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {title}
             </h1>

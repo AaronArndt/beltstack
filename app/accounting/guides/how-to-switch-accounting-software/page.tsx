@@ -71,7 +71,7 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/"
-                        className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         Home
                       </Link>
@@ -80,7 +80,7 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/accounting"
-                        className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         Accounting
                       </Link>
@@ -89,13 +89,13 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/accounting/guides"
-                        className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         Guides
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
-                    <li className="text-[#1A2D48] font-medium" aria-current="page">
+                    <li className="text-gray-700 font-medium" aria-current="page">
                       How to Switch Accounting Software
                     </li>
                   </ol>

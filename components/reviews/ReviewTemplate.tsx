@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 
@@ -374,23 +375,14 @@ export function ReviewTemplate({
         <section id="overview" className="scroll-mt-section border-b border-neutral-200/60">
           <div className="pt-8 pb-6 sm:pt-10 sm:pb-8 lg:pt-12 lg:pb-8">
             <div className="max-w-[720px]">
-            <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
-                <li>
-                  <Link href="/" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                    Home
-                  </Link>
-                </li>
-                <li aria-hidden>/</li>
-                <li>
-                  <Link href={categoryHref} className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                    {category}
-                  </Link>
-                </li>
-                <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">{toolName}</li>
-              </ol>
-            </nav>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: category, href: categoryHref },
+                { label: toolName },
+              ]}
+              className="mb-4"
+            />
             {logoSrc != null && (
               <img
                 src={logoSrc}

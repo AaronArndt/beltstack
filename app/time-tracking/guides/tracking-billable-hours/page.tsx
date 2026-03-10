@@ -1,0 +1,86 @@
+import Link from "next/link";
+import { Footer } from "@/components/Footer";
+import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
+import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
+import { RelatedTimeTrackingResources } from "@/components/guides/RelatedTimeTrackingResources";
+import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
+import { getTimeTrackingReviewUrl } from "@/lib/routes";
+
+function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
+  return (
+    <header className="mb-5 mt-0">
+      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
+    </header>
+  );
+}
+
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+
+const FAQ_ITEMS = [
+  { q: "What is billable vs non-billable time?", a: "Billable time is hours you can charge to a client; non-billable time is internal work, admin, or learning. Good time tracking lets you tag and report on both so you can invoice accurately and see real utilization." },
+  { q: "How do I set billable rates in time tracking software?", a: "Most tools let you set hourly rates per project, client, or user. Tracked time is then multiplied by the rate for reporting and for exporting to invoicing or accounting software." },
+];
+
+const SIDEBAR_ITEMS: GuideSidebarItem[] = [
+  { name: "Toggl Track", logoSrc: "/Logos/toggl.jpeg", rating: 4.6, bestFor: "Reporting", reviewHref: getTimeTrackingReviewUrl("toggl") },
+  { name: "Harvest", logoSrc: "/Logos/harvest.png", rating: 4.4, bestFor: "Billable + invoices", reviewHref: getTimeTrackingReviewUrl("harvest") },
+  { name: "Clockify", logoSrc: "/Logos/clockify.jpeg", rating: 4.3, bestFor: "Free tracking", reviewHref: getTimeTrackingReviewUrl("clockify") },
+];
+
+export default function TrackingBillableHoursPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <main>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-8 lg:pb-16">
+            <article className="min-w-0 lg:col-span-8">
+              <div className="max-w-[720px]">
+                <nav aria-label="Breadcrumb" className="pt-8 pb-4">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                    <li aria-hidden>/</li>
+                    <li><Link href="/time-tracking" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Time Tracking</Link></li>
+                    <li aria-hidden>/</li>
+                    <li><Link href="/time-tracking/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li aria-hidden>/</li>
+                    <li className="text-gray-700 font-medium" aria-current="page">Tracking Billable Hours</li>
+                  </ol>
+                </nav>
+                <section className="pb-6 border-b border-neutral-200/60">
+                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Tracking Billable Hours</h1>
+                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">Best practices for tracking billable vs non-billable time, setting hourly rates, and avoiding missed revenue.</p>
+                  <GuideLastUpdated date="March 8, 2026" />
+                </section>
+                <section className="pt-8 pb-8">
+                  <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
+                    <p>Accurate billable time is the basis for invoicing clients and understanding profitability. Use time tracking software to separate client work from internal work, set rates per project or client, and export data to your <Link href="/invoicing" className={linkGreen}>invoicing</Link> or <Link href="/accounting" className={linkGreen}>accounting</Link> tool.</p>
+                    <p>See our <Link href="/time-tracking/guides/how-time-tracking-software-works" className={linkGreen}>how time tracking software works</Link> and <Link href="/time-tracking/best-time-tracking-software" className={linkGreen}>best time tracking software</Link> for tool picks and comparisons.</p>
+                  </div>
+                </section>
+                <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                  <SectionTitle sub="Quick answers.">FAQs</SectionTitle>
+                  <div className="max-w-[720px]"><GuideFaqSection faqs={FAQ_ITEMS} /></div>
+                </section>
+              </div>
+            </article>
+            <div className="hidden lg:block lg:col-span-4 lg:pt-8">
+              <GuideSidebar title="Recommended Time Tracking Software" items={SIDEBAR_ITEMS} stickyTop={88} />
+            </div>
+          </div>
+        </div>
+        <RelatedTimeTrackingResources excludeHref="/time-tracking/guides/tracking-billable-hours" />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export function generateMetadata() {
+  return {
+    title: "Tracking Billable Hours | BeltStack Guide",
+    description: "Best practices for tracking billable vs non-billable time, setting hourly rates, and avoiding missed revenue.",
+  };
+}

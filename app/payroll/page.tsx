@@ -129,11 +129,11 @@ const BY_TRADE = [
 
 const BY_TRADE_GROUPS = [
   {
-    groupLabel: "Contractor & trade",
+    groupLabel: "Primary business types",
     links: BY_TRADE.slice(0, 18),
   },
   {
-    groupLabel: "Other industries",
+    groupLabel: "Other business types",
     links: BY_TRADE.slice(18),
   },
 ];
@@ -240,6 +240,14 @@ function PayrollPopularComparisonsSection() {
           </Link>
         ))}
       </div>
+      <p className="mt-3 text-sm text-[#6E6E6E]">
+        <Link
+          href="/payroll/compare"
+          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+        >
+          View all payroll comparisons →
+        </Link>
+      </p>
     </>
   );
 }
@@ -344,9 +352,9 @@ function PayrollEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What contractors should look for in payroll software</h2>
+        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in payroll software</h2>
         <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">What matters when contractors choose payroll.</p>
+        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">What matters when businesses choose payroll software.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
@@ -435,14 +443,14 @@ export default function PayrollPage() {
       featuredPicksRankingsLink={{ label: "See full rankings →", href: "/payroll/best-payroll-software" }}
       comparisonTableRankingsLink={{ label: "See our full rankings →", href: "/payroll/best-payroll-software" }}
       scenarioLinks={{
-        sectionTitle: "Best payroll software by scenario",
+        sectionTitle: "Best payroll software by use case",
         sectionSub: "Find payroll software that fits your situation.",
-        description: "Choose a scenario to see our top picks for that use case.",
+        description: "Choose a use case to see our top picks.",
         links: BEST_FOR_SCENARIOS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Payroll by trade",
+        sectionTitle: "Payroll by business type",
         sectionSub: "Payroll recommendations by trade. All trade pages in one directory.",
         links: BY_TRADE,
         groups: BY_TRADE_GROUPS,

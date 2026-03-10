@@ -85,13 +85,13 @@ export default function BestAccountingSoftwarePage() {
             <nav aria-label="Breadcrumb" className="mb-4">
               <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
                 <li>
-                  <Link href="/" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/accounting" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                     Accounting
                   </Link>
                 </li>
@@ -232,7 +232,7 @@ export default function BestAccountingSoftwarePage() {
                   <div className="flex items-center gap-2">
                     <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
                     <h3 className="text-[#1A2D48] text-lg font-bold">
-                      <Link href={opt.reviewHref} className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href={opt.reviewHref} className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                         {opt.name}
                       </Link>
                     </h3>

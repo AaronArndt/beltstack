@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 
@@ -203,6 +204,7 @@ export function ComparisonTemplate({
   const hasRatingsComparison = ratingsComparison != null && ratingsComparison.length > 0;
   const isAccounting = categoryHref === "/accounting";
   const isInvoicing = categoryHref === "/invoicing";
+  const isTimeTracking = categoryHref === "/time-tracking";
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -213,7 +215,16 @@ export function ComparisonTemplate({
     { label: "Best for", href: "#best-for" },
     { label: "Alternatives", href: "#alternatives" },
     { label: "Read full reviews", href: "#read-full-reviews" },
-    { label: isAccounting ? "Best accounting guides" : isInvoicing ? "Best invoicing guides" : "Best payroll guides", href: "#best-payroll-guides" },
+    {
+      label: isAccounting
+        ? "Best accounting guides"
+        : isInvoicing
+        ? "Best invoicing guides"
+        : isTimeTracking
+        ? "Best time tracking guides"
+        : "Best payroll guides",
+      href: "#best-payroll-guides",
+    },
     { label: "FAQs", href: "#faqs" },
   ];
 
@@ -230,23 +241,14 @@ export function ComparisonTemplate({
           <section id="overview" className="scroll-mt-section border-b border-neutral-200/60">
             <div className="pt-8 pb-6 sm:pt-10 sm:pb-8 lg:pt-12 lg:pb-8">
               <div className="max-w-[720px]">
-                <nav aria-label="Breadcrumb" className="mb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
-                    <li>
-                      <Link href="/" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        Home
-                      </Link>
-                    </li>
-                    <li aria-hidden>/</li>
-                    <li>
-                      <Link href={categoryHref} className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        {categoryLabel}
-                      </Link>
-                    </li>
-                    <li aria-hidden>/</li>
-                    <li className="text-[#1A2D48] font-medium" aria-current="page">{title}</li>
-                  </ol>
-                </nav>
+                <Breadcrumb
+                  items={[
+                    { label: "Home", href: "/" },
+                    { label: categoryLabel, href: categoryHref },
+                    { label: title },
+                  ]}
+                  className="mb-4"
+                />
                 <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                   {title} ({currentYear})
                 </h1>
@@ -606,12 +608,37 @@ export function ComparisonTemplate({
                 {(() => {
                   const isAccounting = categoryHref === "/accounting";
                   const isInvoicing = categoryHref === "/invoicing";
-                  const roundupHref = isAccounting ? "/accounting/best-accounting-software" : isInvoicing ? "/invoicing/best-invoicing-software" : "/payroll/best-payroll-software";
-                  const roundupLabel = isAccounting ? "Best accounting software (2026) — full roundup" : isInvoicing ? "Best invoicing software (2026) — full roundup" : "Best payroll software (2026) — full roundup";
-                  const sectionTitle = isAccounting ? "Best accounting software guides" : isInvoicing ? "Best invoicing software guides" : "Best payroll software guides";
+                  const isTimeTracking = categoryHref === "/time-tracking";
+                  const roundupHref = isAccounting
+                    ? "/accounting/best-accounting-software"
+                    : isInvoicing
+                    ? "/invoicing/best-invoicing-software"
+                    : isTimeTracking
+                    ? "/time-tracking/best-time-tracking-software"
+                    : "/payroll/best-payroll-software";
+                  const roundupLabel = isAccounting
+                    ? "Best accounting software (2026) — full roundup"
+                    : isInvoicing
+                    ? "Best invoicing software (2026) — full roundup"
+                    : isTimeTracking
+                    ? "Best time tracking software (2026) — full roundup"
+                    : "Best payroll software (2026) — full roundup";
+                  const sectionTitle = isAccounting
+                    ? "Best accounting software guides"
+                    : isInvoicing
+                    ? "Best invoicing software guides"
+                    : isTimeTracking
+                    ? "Best time tracking software guides"
+                    : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
-                  const guidesLabel = isAccounting ? "Accounting guides" : isInvoicing ? "Invoicing guides" : "Payroll guides";
+                  const guidesLabel = isAccounting
+                    ? "Accounting guides"
+                    : isInvoicing
+                    ? "Invoicing guides"
+                    : isTimeTracking
+                    ? "Time tracking guides"
+                    : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                       <SectionTitle sub="Find the right fit by use case or trade.">{sectionTitle}</SectionTitle>

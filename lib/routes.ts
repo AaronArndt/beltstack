@@ -96,3 +96,24 @@ export function getInvoicingCompareUrl(comparisonSlug?: string): string {
 export function getInvoicingBestForUrl(scenarioSlug: string): string {
   return `/invoicing/best-for/${scenarioSlug}`;
 }
+
+// ——— Time Tracking ———
+
+/** Time tracking review detail page: /time-tracking/review/[slug] */
+export function getTimeTrackingReviewUrl(slug: string): string {
+  return `/time-tracking/review/${slug}`;
+}
+
+/** Time tracking hub */
+export const TIME_TRACKING_HUB_URL = "/time-tracking" as const;
+
+/** Time tracking compare page (optional comparison slug) */
+export function getTimeTrackingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/time-tracking/compare/${comparisonSlug}`;
+  return "/time-tracking/compare";
+}
+
+/** Time tracking best-for scenario */
+export function getTimeTrackingBestForUrl(scenarioSlug: string): string {
+  return `/time-tracking/best-for/${scenarioSlug}`;
+}

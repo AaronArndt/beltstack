@@ -28,12 +28,12 @@ export default function MethodologyPage() {
             <nav aria-label="Breadcrumb" className="mb-4">
               <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
                 <li>
-                  <Link href="/" className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-gray-700 font-medium" aria-current="page">
                   How We Review Software
                 </li>
               </ol>
