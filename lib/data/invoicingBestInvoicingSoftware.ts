@@ -13,6 +13,9 @@ export type BestInvoicingPick = {
   compareSlugs: string[];
   standoutFeature: string;
   editorialParagraph: string;
+  pros: string[];
+  cons: string[];
+  pricingSummary: string;
 };
 
 /** Row for comparison table (logoSrc optional for tools without logo asset). */
@@ -42,6 +45,19 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     standoutFeature: "Invoicing, time tracking, client billing",
     editorialParagraph:
       "FreshBooks is our top pick for most freelancers and service-based businesses. It combines professional invoicing, recurring billing, time tracking, and payment collection in an easy-to-use package. Client portals and estimates round out the workflow. If you want to get paid faster and look professional without spreadsheets, FreshBooks is the default choice.",
+    pros: [
+      "Professional invoicing, recurring billing, and payment collection",
+      "Time tracking and client portals in one place",
+      "Estimates and proposals that convert to invoices",
+      "Easy to use; built for freelancers and service businesses",
+    ],
+    cons: [
+      "Client and project limits on lower tiers",
+      "Less suited to product or inventory-heavy businesses",
+      "Reporting depth below full accounting tools",
+    ],
+    pricingSummary:
+      "FreshBooks uses tiered plans starting around $19/month; pricing scales by client count and features. Check current plans on FreshBooks' site.",
   },
   {
     slug: "quickbooks",
@@ -58,6 +74,19 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     standoutFeature: "Native QuickBooks integration; books and invoices in one place",
     editorialParagraph:
       "QuickBooks is the obvious fit when you already run your books in QuickBooks. Invoicing, payment links, and estimates are built in, and paid invoices flow straight into your accounts. No sync or export. If you're not on QuickBooks, a dedicated invoicing tool like FreshBooks or Wave may be simpler and cheaper.",
+    pros: [
+      "Invoicing, payment links, and estimates built in",
+      "Paid invoices flow straight into books; no sync",
+      "Familiar if you already use QuickBooks",
+      "Strong reporting and tax prep alongside invoicing",
+    ],
+    cons: [
+      "Heavy and expensive if you only need invoicing",
+      "Add-ons and higher tiers increase cost",
+      "Overkill for freelancers who don't need full accounting",
+    ],
+    pricingSummary:
+      "QuickBooks Online plans start around $30/month; invoicing is included. Higher tiers add more users and features. Compare with dedicated invoicing tools if you don't need full accounting.",
   },
   {
     slug: "wave",
@@ -74,6 +103,19 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     standoutFeature: "Free core invoicing and receipt scan",
     editorialParagraph:
       "Wave is the best free invoicing option. You get professional invoices, payment tracking, and receipt scanning without a subscription; Wave makes money on payment processing. It's a good way to start or run a very small business on a tight budget. For more features or client workflows, paid options like FreshBooks or Zoho Invoice are worth considering.",
+    pros: [
+      "Free core invoicing and receipt scanning; no monthly fee",
+      "Good for freelancers and very small businesses",
+      "Payment tracking and basic reporting included",
+      "Low barrier to start",
+    ],
+    cons: [
+      "Fewer features and client workflows than paid tools",
+      "Support more limited than paid options",
+      "Revenue from payment processing",
+    ],
+    pricingSummary:
+      "Wave's core invoicing is free; payment processing has its own fees. No subscription for the free plan. Compare with paid tools if you need more clients or features.",
   },
   {
     slug: "zoho-invoice",
@@ -90,6 +132,19 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     standoutFeature: "Automation, client portal, value pricing",
     editorialParagraph:
       "Zoho Invoice delivers strong value: good automation, project and client tracking, and a client portal at a lower price than FreshBooks or QuickBooks. It's especially compelling if you already use other Zoho apps. The free tier is generous for light use; paid plans add more invoices and features.",
+    pros: [
+      "Strong automation and client portal at lower price",
+      "Free tier generous for light use",
+      "Good fit if you already use Zoho apps",
+      "Project and client tracking included",
+    ],
+    cons: [
+      "Invoice limits on free tier",
+      "Less brand recognition than FreshBooks or QuickBooks",
+      "Smaller ecosystem than QuickBooks",
+    ],
+    pricingSummary:
+      "Zoho Invoice offers a free tier and paid plans; paid plans add more invoices and features. Compare tiers for your volume and needs.",
   },
   {
     slug: "xero",
@@ -106,6 +161,19 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     standoutFeature: "Invoicing plus full accounting, 700+ integrations",
     editorialParagraph:
       "Xero is the pick when you want invoicing and full accounting in one place. Invoices, quotes, and payments tie into the same books and reports. The interface is clean and the app marketplace is large. If you need more than just invoicing—bank feeds, reporting, multi-currency—Xero is a strong choice. For invoicing-only, FreshBooks or Wave can be simpler.",
+    pros: [
+      "Invoicing plus full accounting in one place",
+      "Clean interface and large app marketplace",
+      "Bank feeds, reporting, multi-currency",
+      "Competitive entry-level pricing",
+    ],
+    cons: [
+      "User limits on lower plans",
+      "Heavier than invoicing-only tools",
+      "Some features require higher tiers",
+    ],
+    pricingSummary:
+      "Xero offers tiered plans starting around $15/month; higher tiers add more users and features. Compare with invoicing-only tools if you don't need full accounting.",
   },
 ];
 

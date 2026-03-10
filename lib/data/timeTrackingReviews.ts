@@ -138,6 +138,10 @@ const reviews: Record<string, ReviewData> = {
     bestPayrollSoftwareHref: BEST_TIME_TRACKING_HREF,
     guideHubHref: TIME_TRACKING_GUIDES_HUB,
     guideHubLabel: "Time tracking guides",
+    relatedReading: [
+      { label: "Invoicing software hub", href: "/invoicing" },
+      { label: "Accounting software hub", href: "/accounting" },
+    ],
   },
   harvest: {
     toolName: "Harvest",
@@ -243,6 +247,10 @@ const reviews: Record<string, ReviewData> = {
     bestPayrollSoftwareHref: BEST_TIME_TRACKING_HREF,
     guideHubHref: TIME_TRACKING_GUIDES_HUB,
     guideHubLabel: "Time tracking guides",
+    relatedReading: [
+      { label: "Best invoicing software (2026)", href: "/invoicing/best-invoicing-software" },
+      { label: "Accounting software hub", href: "/accounting" },
+    ],
   },
   clockify: {
     toolName: "Clockify",

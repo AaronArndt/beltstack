@@ -13,6 +13,9 @@ export type BestAccountingPick = {
   compareSlugs: string[];
   standoutFeature: string;
   editorialParagraph: string;
+  pros: string[];
+  cons: string[];
+  pricingSummary: string;
 };
 
 /** Row for comparison table only (includes all 8 tools). */
@@ -42,6 +45,19 @@ export const TOP_PICKS: BestAccountingPick[] = [
     standoutFeature: "Full bookkeeping, reporting, and ecosystem",
     editorialParagraph:
       "QuickBooks Online is our top pick for most small businesses that need full accounting. It covers invoicing, expense tracking, bank feeds, reporting, and tax prep in one place, and most accountants know it. It can feel heavy for very small or freelancer-only needs, but it scales well and integrates with almost everything.",
+    pros: [
+      "Full bookkeeping, invoicing, reporting, and tax prep in one place",
+      "Most accountants know it; easy handoff",
+      "Large app marketplace and integrations",
+      "Scales from small to growing businesses",
+    ],
+    cons: [
+      "Can feel heavy and expensive for very small or freelancer-only needs",
+      "Add-ons and higher tiers increase cost",
+      "Learning curve for first-time users",
+    ],
+    pricingSummary:
+      "QuickBooks Online uses tiered plans starting around $20/month; higher tiers add more users and features. Add-ons for payroll, time tracking, and payment processing increase total cost.",
   },
   {
     slug: "xero",
@@ -58,6 +74,19 @@ export const TOP_PICKS: BestAccountingPick[] = [
     standoutFeature: "Clean UI, reporting, accountant-friendly",
     editorialParagraph:
       "Xero is the go-to QuickBooks alternative for many businesses. The interface is modern, reporting is strong, and the app marketplace gives you flexibility for ecommerce, inventory, and industry-specific tools. It's a solid choice if you want full accounting without the QuickBooks brand.",
+    pros: [
+      "Clean, modern interface and strong reporting",
+      "Large app marketplace; accountant-friendly",
+      "Good for ecommerce and multi-currency",
+      "Competitive entry-level pricing",
+    ],
+    cons: [
+      "Some features require higher tiers or add-ons",
+      "Less brand recognition than QuickBooks in the US",
+      "User limits on lower plans",
+    ],
+    pricingSummary:
+      "Xero offers tiered plans starting around $19/month; higher tiers add more users and features. Compare plans for your business size and needs.",
   },
   {
     slug: "freshbooks",
@@ -74,6 +103,19 @@ export const TOP_PICKS: BestAccountingPick[] = [
     standoutFeature: "Invoicing, time tracking, client billing",
     editorialParagraph:
       "FreshBooks is our top pick for freelancers and service-based businesses. It focuses on invoicing, time tracking, and client billing in an easy-to-use package. It's less suited to product businesses or complex inventory, but for consultants, agencies, and solo pros it's a strong fit.",
+    pros: [
+      "Invoicing, time tracking, and client billing in one place",
+      "Easy to use; built for freelancers and service businesses",
+      "Good client portal and payment collection",
+      "Estimates and proposals that convert to invoices",
+    ],
+    cons: [
+      "Less suited to product businesses or complex inventory",
+      "Reporting depth below QuickBooks or Xero",
+      "Client and project limits on lower tiers",
+    ],
+    pricingSummary:
+      "FreshBooks uses tiered plans starting around $19/month; pricing scales by client count and features. Check current plans on FreshBooks' site.",
   },
   {
     slug: "zoho-books",
@@ -90,6 +132,19 @@ export const TOP_PICKS: BestAccountingPick[] = [
     standoutFeature: "Automation, client portal, value pricing",
     editorialParagraph:
       "Zoho Books delivers strong value: good automation, project and client tracking, and a client portal at a lower price than QuickBooks or Xero. It's especially compelling if you already use other Zoho apps. The feature set is competitive for small businesses that don't need the largest brand names.",
+    pros: [
+      "Strong automation and client portal at lower price",
+      "Good fit if you already use Zoho apps",
+      "Competitive feature set for small businesses",
+      "Solid project and client tracking",
+    ],
+    cons: [
+      "Less brand recognition than QuickBooks or Xero",
+      "Some accountants less familiar with Zoho",
+      "Smaller ecosystem than QuickBooks",
+    ],
+    pricingSummary:
+      "Zoho Books offers plans starting around $15/month; lower entry cost than QuickBooks or Xero. Compare tiers for your user count and feature needs.",
   },
   {
     slug: "wave",
@@ -106,6 +161,19 @@ export const TOP_PICKS: BestAccountingPick[] = [
     standoutFeature: "Free core accounting and invoicing",
     editorialParagraph:
       "Wave is the best free accounting option. You get real double-entry accounting and invoicing without a subscription; Wave makes money on payment processing and payroll add-ons. It's a good way to start or run a very small business on a tight budget. You may outgrow it as complexity increases.",
+    pros: [
+      "Free core accounting and invoicing; no monthly fee",
+      "Good for very small businesses and freelancers",
+      "Receipt scanning and basic reporting included",
+      "Low barrier to start",
+    ],
+    cons: [
+      "You may outgrow it as complexity increases",
+      "Support and features more limited than paid tools",
+      "Revenue from payment processing and add-ons",
+    ],
+    pricingSummary:
+      "Wave's core accounting and invoicing are free; payment processing and optional payroll add-ons have their own fees. No subscription for the free plan.",
   },
 ];
 

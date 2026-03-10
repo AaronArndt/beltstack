@@ -17,7 +17,7 @@ import { getAccountingCompareUrl } from "@/lib/routes";
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-lg border border-[#10B981]/70 bg-[#10B981]/[0.14] px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-[#10B981]/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-lg border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 function EmeraldIcon({ className }: { className?: string }) {
   return (
@@ -158,6 +158,27 @@ export default function BestAccountingSoftwarePage() {
                   </p>
                   <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
                     {pick.editorialParagraph}
+                  </p>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <h4 className="text-[#1A2D48] text-sm font-bold">Pros</h4>
+                      <ul className="mt-1 list-inside list-disc space-y-0.5 text-[#6E6E6E] text-sm">
+                        {pick.pros.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-[#1A2D48] text-sm font-bold">Cons</h4>
+                      <ul className="mt-1 list-inside list-disc space-y-0.5 text-[#6E6E6E] text-sm">
+                        {pick.cons.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
+                    <strong className="text-[#1A2D48]">Pricing:</strong> {pick.pricingSummary}
                   </p>
                   <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-200 pt-4">
                     <a href={pick.visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>

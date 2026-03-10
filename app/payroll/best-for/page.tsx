@@ -13,7 +13,8 @@ export default function BestForPage() {
         <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
           <li><Link href="/payroll" className="hover:underline">Payroll hub</Link></li>
           <li><Link href="/payroll/best-payroll-software" className="hover:underline">Best payroll software (roundup)</Link></li>
-          <li><Link href="/payroll/compare" className="hover:underline">Compare payroll software</Link></li>
+          <li><Link href="/payroll/compare" className="hover:underline">Payroll software comparisons</Link></li>
+          <li><Link href="/payroll/guides" className="hover:underline">Payroll software guides</Link></li>
           <li><Link href="/payroll/best-for" className="hover:underline">Best payroll by scenario</Link></li>
           <li><Link href="/payroll/best-for/landscaping" className="hover:underline">Best for landscaping</Link></li>
           <li><Link href="/payroll/best-for/plumbing" className="hover:underline">Best for plumbing</Link></li>

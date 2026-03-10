@@ -13,6 +13,9 @@ export type BestTimeTrackingPick = {
   compareSlugs: string[];
   standoutFeature: string;
   editorialParagraph: string;
+  pros: string[];
+  cons: string[];
+  pricingSummary: string;
 };
 
 export type TimeTrackingComparisonTableRow = {
@@ -41,6 +44,19 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     standoutFeature: "Clean UX and powerful reporting",
     editorialParagraph:
       "Toggl Track is our top pick for most teams that want simple, accurate time tracking with strong analytics. The interface is easy enough that people actually use it, while reports make it clear where time and money go. The free plan works for small teams; paid plans add billable rates, more granular reporting, and advanced permissions.",
+    pros: [
+      "Simple, intuitive interface; people actually use it",
+      "Strong reporting and analytics",
+      "Generous free plan for small teams",
+      "Wide integrations and API",
+    ],
+    cons: [
+      "Paid plans needed for billable rates and advanced permissions",
+      "Less built-in invoicing than Harvest",
+      "Some features only on higher tiers",
+    ],
+    pricingSummary:
+      "Toggl Track offers a free tier; paid plans start around $10/user/month and add billable rates, more reporting, and advanced permissions. Check current pricing on Toggl's site.",
   },
   {
     slug: "harvest",
@@ -57,6 +73,19 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     standoutFeature: "Time tracking tied to invoices",
     editorialParagraph:
       "Harvest is a strong choice when time tracking and billing live close together. You log time against projects and tasks, then turn that time into invoices inside the same tool. Expense tracking and lightweight reporting round things out. It’s especially good for small agencies and studios that want to keep their stack simple.",
+    pros: [
+      "Time tracking and invoicing in one place",
+      "Project-based tracking; turn hours into invoices",
+      "Expense tracking and reporting included",
+      "Good for agencies and service businesses",
+    ],
+    cons: [
+      "Less flexible than Toggl for non-billing use cases",
+      "Per-user pricing can add up for large teams",
+      "Reporting depth below dedicated analytics tools",
+    ],
+    pricingSummary:
+      "Harvest charges per user (around $12/user/month); free tier is limited. Compare with Toggl or Clockify if you don't need built-in invoicing.",
   },
   {
     slug: "clockify",
@@ -73,6 +102,19 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     standoutFeature: "Unlimited free users",
     editorialParagraph:
       "Clockify is compelling if you need basic time tracking across a larger team at low cost. The free plan supports unlimited users and projects; paid tiers add approvals, reminders, and more detailed controls. It’s less opinionated than Toggl or Harvest, which can be a pro or con depending on how much structure you want.",
+    pros: [
+      "Unlimited users and projects on free plan",
+      "Low cost for basic time tracking",
+      "Approvals and reminders on paid tiers",
+      "Flexible; less opinionated structure",
+    ],
+    cons: [
+      "UX and reporting less polished than Toggl",
+      "No built-in invoicing like Harvest",
+      "Paid features needed for advanced controls",
+    ],
+    pricingSummary:
+      "Clockify's free plan supports unlimited users; paid plans start around $4/user/month for extra features. Best value for teams that need many seats on a budget.",
   },
   {
     slug: "hubstaff",
@@ -89,6 +131,19 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     standoutFeature: "Activity and location tracking",
     editorialParagraph:
       "Hubstaff is designed for teams that care about both hours and how they’re spent. It includes activity scores, optional screenshots, GPS/location tracking, and simple payroll for contractors and employees. That makes it powerful for remote and field teams—but it’s also more intrusive than lighter tools like Toggl or Clockify.",
+    pros: [
+      "Activity scores, optional screenshots, GPS tracking",
+      "Simple payroll for contractors and employees",
+      "Built for remote and field teams",
+      "Strong accountability features",
+    ],
+    cons: [
+      "More intrusive than lighter tools",
+      "Privacy and culture considerations",
+      "Overkill for teams that only need simple tracking",
+    ],
+    pricingSummary:
+      "Hubstaff starts around $4.99/user/month; higher tiers add more monitoring and payroll features. Compare with Toggl or Clockify if you don't need monitoring.",
   },
 ];
 

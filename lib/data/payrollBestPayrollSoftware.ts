@@ -17,6 +17,9 @@ export type BestPayrollPick = {
   standoutFeature: string;
   /** Editorial paragraph for the individual section */
   editorialParagraph: string;
+  pros: string[];
+  cons: string[];
+  pricingSummary: string;
 };
 
 export const TOP_PICKS: BestPayrollPick[] = [
@@ -35,6 +38,19 @@ export const TOP_PICKS: BestPayrollPick[] = [
     standoutFeature: "All-in-one payroll, benefits, and HR; transparent pricing",
     editorialParagraph:
       "Gusto is our top pick for most small businesses and growing teams. It combines payroll, benefits, and HR in one platform with published pricing—no sales call required. Setup is straightforward, tax filing is automatic, and contractor support is built in. If you want a single place to run payroll, offer benefits, and manage onboarding, Gusto is the default choice.",
+    pros: [
+      "All-in-one payroll, benefits, and HR with transparent pricing",
+      "Automatic tax filing and contractor self-service",
+      "Modern interface and straightforward setup",
+      "No sales call required; published plans",
+    ],
+    cons: [
+      "Can get expensive with add-ons and higher headcount",
+      "Some advanced HR features on higher tiers only",
+      "Less hand-holding than traditional providers",
+    ],
+    pricingSummary:
+      "Gusto uses base-plus-per-person pricing; plans often start around $40/month base plus per-employee fees. Add-ons for time tracking, benefits, and contractor payments may apply. Check current pricing for your team size.",
   },
   {
     slug: "quickbooks-payroll",
@@ -51,6 +67,19 @@ export const TOP_PICKS: BestPayrollPick[] = [
     standoutFeature: "Native QuickBooks integration; job costing and books in one place",
     editorialParagraph:
       "QuickBooks Payroll is the obvious fit when you already run your books in QuickBooks. Payroll posts to the right accounts and jobs with no sync or export, and labor cost flows straight into job costing. Pricing is competitive at entry, and the workflow is seamless for anyone who lives in QuickBooks. If you're not on QuickBooks, other options often offer better standalone value.",
+    pros: [
+      "Native QuickBooks integration; payroll and books in one place",
+      "Labor cost flows into job costing automatically",
+      "Familiar to many small businesses and accountants",
+      "Same-day direct deposit available",
+    ],
+    cons: [
+      "Tied to QuickBooks; not ideal if you use other accounting software",
+      "Add-ons and higher tiers can increase cost",
+      "Less all-in-one HR than Gusto or Rippling",
+    ],
+    pricingSummary:
+      "QuickBooks Payroll plans start around $30/month; pricing varies by tier and add-ons like time tracking or tax filing. Compare plans on Intuit's site for your user count.",
   },
   {
     slug: "onpay",
@@ -67,6 +96,19 @@ export const TOP_PICKS: BestPayrollPick[] = [
     standoutFeature: "Flat pricing; one plan with no add-on maze",
     editorialParagraph:
       "OnPay stands out for value and clarity. One main plan, base-plus-per-person pricing you can see upfront, and solid payroll plus benefits without the complexity of tiered plans. It's a strong alternative to Gusto if you want similar ease of use with a simpler pricing structure. Support is included, and it works with any accounting software.",
+    pros: [
+      "Flat pricing; one plan with no add-on maze",
+      "Unlimited pay runs and solid support included",
+      "Works with any accounting software",
+      "Straightforward setup and predictable costs",
+    ],
+    cons: [
+      "Smaller brand than Gusto or ADP",
+      "Fewer advanced HR modules than enterprise tools",
+      "Less name recognition with some accountants",
+    ],
+    pricingSummary:
+      "OnPay uses base-plus-per-person pricing, often around $40/month base. One main plan covers payroll and benefits; compare total cost at your headcount on OnPay's site.",
   },
   {
     slug: "adp",
@@ -83,6 +125,19 @@ export const TOP_PICKS: BestPayrollPick[] = [
     standoutFeature: "Scale and enterprise features; multi-country option",
     editorialParagraph:
       "ADP is the pick when you need to scale. It handles large headcounts, multi-state payroll, and optional global payroll. Pricing is custom—you get a quote—and you can get dedicated account management. For very small teams, Gusto or OnPay are often simpler; for growing or midsize businesses that want a full-service provider, ADP is a top option.",
+    pros: [
+      "Scales to large headcounts and multi-state payroll",
+      "Optional dedicated support and account management",
+      "Enterprise-grade compliance and global payroll options",
+      "Strong reputation and long track record",
+    ],
+    cons: [
+      "Custom pricing; no transparent published plans",
+      "Can feel heavy and sales-driven for very small teams",
+      "Implementation may require more time than self-serve tools",
+    ],
+    pricingSummary:
+      "ADP uses custom pricing—you request a quote based on headcount, state, and needs. Total cost varies; compare quotes with Gusto or OnPay at your size.",
   },
   {
     slug: "paychex",
@@ -99,6 +154,19 @@ export const TOP_PICKS: BestPayrollPick[] = [
     standoutFeature: "Dedicated support; compliance and benefits advisory",
     editorialParagraph:
       "Paychex is the full-service alternative: custom pricing, optional dedicated reps, and a reputation for hands-on support. If you want someone to guide you through compliance, benefits, and setup—rather than running everything yourself—Paychex is a strong choice. Compare with ADP if you're weighing two traditional providers.",
+    pros: [
+      "Dedicated support and compliance advisory",
+      "Full-service payroll and benefits",
+      "Good for businesses that want a partner",
+      "Strong reputation for hand-holding",
+    ],
+    cons: [
+      "Custom pricing; no published self-serve plans",
+      "Can be more expensive than Gusto or OnPay for small teams",
+      "Sales process may be slower than self-serve signup",
+    ],
+    pricingSummary:
+      "Paychex uses custom pricing—you get a quote based on headcount and services. Compare with ADP and with Gusto or OnPay for your team size.",
   },
 ];
 

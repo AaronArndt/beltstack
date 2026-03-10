@@ -117,3 +117,24 @@ export function getTimeTrackingCompareUrl(comparisonSlug?: string): string {
 export function getTimeTrackingBestForUrl(scenarioSlug: string): string {
   return `/time-tracking/best-for/${scenarioSlug}`;
 }
+
+// ——— CRM ———
+
+/** CRM review detail page: /crm/review/[slug] */
+export function getCrmReviewUrl(slug: string): string {
+  return `/crm/review/${slug}`;
+}
+
+/** CRM hub */
+export const CRM_HUB_URL = "/crm" as const;
+
+/** CRM compare page (optional comparison slug) */
+export function getCrmCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/crm/compare/${comparisonSlug}`;
+  return "/crm/compare";
+}
+
+/** CRM best-for scenario */
+export function getCrmBestForUrl(scenarioSlug: string): string {
+  return `/crm/best-for/${scenarioSlug}`;
+}

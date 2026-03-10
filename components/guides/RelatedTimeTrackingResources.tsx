@@ -9,6 +9,7 @@ const DEFAULT_RELATED_TIME_TRACKING_RESOURCES: RelatedTimeTrackingResourceItem[]
   { label: "Accounting Software Hub", href: "/accounting" },
   { label: "Invoicing Software Hub", href: "/invoicing" },
   { label: "Best Time Tracking Software (2026)", href: "/time-tracking/best-time-tracking-software" },
+  { label: "Best Time Tracking Software by Use Case", href: "/time-tracking/best-for" },
   { label: "Compare Time Tracking Software", href: "/time-tracking/compare" },
   { label: "Time Tracking Guides", href: "/time-tracking/guides" },
   { label: "Toggl Track Review", href: getTimeTrackingReviewUrl("toggl") },
