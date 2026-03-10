@@ -57,7 +57,7 @@ export function StickyStackFinder({
     <>
       <div
         aria-hidden
-        className={`fixed left-0 right-0 z-40 flex min-h-[72px] items-center border-b border-neutral-200/70 bg-white py-4 shadow-sm transition-all duration-200 ease-out md:min-h-[88px] md:py-5 ${
+        className={`fixed left-0 right-0 z-40 hidden min-h-[72px] items-center border-b border-neutral-200/70 bg-white py-4 shadow-sm transition-all duration-200 ease-out md:flex md:min-h-[88px] md:py-5 ${
           visible
             ? "translate-y-0 opacity-100"
             : "-translate-y-2 opacity-0 pointer-events-none"
@@ -65,7 +65,7 @@ export function StickyStackFinder({
         style={{ top: "var(--header-offset, 72px)" }}
       >
         <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 pb-2 sm:px-6 lg:px-8">
-          {/* Desktop: full form */}
+          {/* Desktop: full form (mobile sticky bar hidden; in-page form + drawer used on mobile) */}
           <form
             onSubmit={handleSubmit}
             className="hidden w-full items-center gap-4 md:flex"

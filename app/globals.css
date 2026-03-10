@@ -5,11 +5,18 @@
   --foreground: #1A2D48;
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   /* Offsets for sticky/fixed bars (navbar = 64px mobile, 72px desktop) */
-  --header-offset: 72px;
-  --navbar-h: 72px;
+  --header-offset: 64px;
+  --navbar-h: 64px;
   --stackfinder-h: 0px;
   --sectionnav-h: 48px;
   --scroll-margin-below-sticky: calc(var(--navbar-h) + var(--sectionnav-h) + 16px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-offset: 72px;
+    --navbar-h: 72px;
+  }
 }
 
 @theme inline {

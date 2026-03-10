@@ -19,10 +19,14 @@ export function ReviewSectionNav({
   stickyTop = NAVBAR_HEIGHT_PX,
   className = "",
 }: ReviewSectionNavProps) {
+  const topValue =
+    stickyTop !== undefined && stickyTop !== NAVBAR_HEIGHT_PX
+      ? `${stickyTop}px`
+      : "var(--navbar-h)";
   return (
     <div
       className={`sticky z-30 w-full border-y border-neutral-200/70 bg-white py-3 ${className}`}
-      style={{ top: `${stickyTop}px` }}
+      style={{ top: topValue }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="On this page" className="flex flex-wrap items-center gap-1 overflow-x-auto">

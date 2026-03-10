@@ -25,7 +25,9 @@ export function SectionNav({
   className = "",
 }: SectionNavProps) {
   const topPx = stickyTop ?? offsetTop;
-  const style = sticky ? { top: `${topPx}px` } as React.CSSProperties : undefined;
+  const topValue =
+    topPx === NAVBAR_HEIGHT ? "var(--navbar-h)" : `${topPx}px`;
+  const style = sticky ? { top: topValue } as React.CSSProperties : undefined;
 
   return (
     <nav
