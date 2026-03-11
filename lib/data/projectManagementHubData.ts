@@ -118,18 +118,18 @@ export const PROJECT_MANAGEMENT_SCENARIO_LINKS = [
 ] as const;
 
 /** Project management by business type (trade-style links). */
-export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE = [
+export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
   { label: "Agencies", href: getProjectManagementBestForUrl("agencies") },
   { label: "Startups", href: getProjectManagementBestForUrl("startups") },
   { label: "Consultants", href: getProjectManagementBestForUrl("consultants") },
   { label: "Freelancers", href: getProjectManagementBestForUrl("freelancers") },
   { label: "Remote teams", href: getProjectManagementBestForUrl("remote-teams") },
-] as const;
+];
 
-export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS = [
+export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
   { groupLabel: "Primary business types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(0, 3) },
   { groupLabel: "Other business types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(3) },
-] as const;
+];
 
 /** Card data for Popular project management comparisons (logos + vs + summary + link). */
 export type ProjectManagementPopularComparisonCard = {
@@ -184,7 +184,7 @@ export const PROJECT_MANAGEMENT_POPULAR_COMPARISONS: ProjectManagementPopularCom
 ] as ProjectManagementPopularComparisonCard[];
 
 /** FAQ items for the hub. */
-export const PROJECT_MANAGEMENT_FAQ_ITEMS = [
+export const PROJECT_MANAGEMENT_FAQ_ITEMS: { q: string; a: string }[] = [
   {
     q: "What is project management software?",
     a: "Project management software helps teams plan work, assign tasks, track progress, and collaborate. It replaces scattered spreadsheets and email threads with shared boards, timelines, and checklists so everyone knows who is doing what, by when.",
@@ -201,10 +201,15 @@ export const PROJECT_MANAGEMENT_FAQ_ITEMS = [
     q: "What project management software is easiest to use?",
     a: "Trello is one of the easiest tools to start with, thanks to its simple boards and cards. Asana and Monday are also approachable but add more structure; ClickUp is powerful but can feel busier until you streamline your setup.",
   },
-] as const;
+];
 
 /** Methodology for the hub. */
-export const PROJECT_MANAGEMENT_METHODOLOGY = {
+export const PROJECT_MANAGEMENT_METHODOLOGY: {
+  title: string;
+  sub: string;
+  introParagraph: string;
+  bullets: string[];
+} = {
   title: "How we review project management software",
   sub: "Transparent process, small-business–focused criteria.",
   introParagraph:
@@ -214,5 +219,5 @@ export const PROJECT_MANAGEMENT_METHODOLOGY = {
     "We compare pricing tiers, user limits, and automation caps so you understand total cost at your team size.",
     "We look at collaboration, reporting, and integrations with tools like time tracking, CRM, and documentation.",
   ],
-} as const;
+};
 
