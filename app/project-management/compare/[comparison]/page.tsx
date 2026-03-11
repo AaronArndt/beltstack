@@ -10,20 +10,22 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ comparison: slug }));
 }
 
-export default function ProjectManagementComparisonPage({
+export default async function ProjectManagementComparisonPage({
   params,
 }: {
-  params: { comparison: string };
+  params: Promise<{ comparison: string }>;
 }) {
-  const data = getProjectManagementComparison(params.comparison);
+  const { comparison } = await params;
+  const data = getProjectManagementComparison(comparison);
   if (!data) {
     notFound();
   }
   return <ComparisonTemplate {...data} />;
 }
 
-export function generateMetadata({ params }: { params: { comparison: string } }) {
-  const data = getProjectManagementComparison(params.comparison);
+export async function generateMetadata({ params }: { params: Promise<{ comparison: string }> }) {
+  const { comparison } = await params;
+  const data = getProjectManagementComparison(comparison);
   if (!data) {
     return {
       title: "Project Management Software Comparison | BeltStack",
