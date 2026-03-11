@@ -31,10 +31,10 @@ export type CrmGuideItem = {
 const CRM_GUIDES_BASE = "/crm/guides";
 
 export const CRM_HUB_GUIDES: CrmGuideItem[] = [
-  { slug: "how-crm-software-works", title: "How CRM Software Works", description: "What CRM software does, from contact and lead management to pipeline stages and reporting.", href: `${CRM_GUIDES_BASE}/how-crm-software-works` },
+  { slug: "what-is-crm-software", title: "What is CRM Software", description: "What CRM software is, who uses it, and how it helps manage contacts, leads, and pipelines.", href: `${CRM_GUIDES_BASE}/what-is-crm-software` },
   { slug: "crm-for-small-business", title: "CRM for Small Business", description: "Choosing and using CRM when you're a small team or startup.", href: `${CRM_GUIDES_BASE}/crm-for-small-business` },
   { slug: "crm-vs-marketing-automation", title: "CRM vs Marketing Automation", description: "When you need CRM, marketing automation, or both.", href: `${CRM_GUIDES_BASE}/crm-vs-marketing-automation` },
-  { slug: "how-to-choose-crm", title: "How to Choose CRM Software", description: "Key factors when comparing CRM platforms for your team.", href: `${CRM_GUIDES_BASE}/how-to-choose-crm` },
+  { slug: "how-to-choose-crm-software", title: "How to Choose CRM Software", description: "Key factors when comparing CRM platforms for your team.", href: `${CRM_GUIDES_BASE}/how-to-choose-crm-software` },
 ];
 
 /** Top CRM picks for the hub hero section. */

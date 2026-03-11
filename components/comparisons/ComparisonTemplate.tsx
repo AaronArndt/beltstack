@@ -205,6 +205,7 @@ export function ComparisonTemplate({
   const isAccounting = categoryHref === "/accounting";
   const isInvoicing = categoryHref === "/invoicing";
   const isTimeTracking = categoryHref === "/time-tracking";
+  const isCrm = categoryHref === "/crm";
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -222,6 +223,8 @@ export function ComparisonTemplate({
         ? "Best invoicing guides"
         : isTimeTracking
         ? "Best time tracking guides"
+        : isCrm
+        ? "Best CRM guides"
         : "Best payroll guides",
       href: "#best-payroll-guides",
     },
@@ -609,12 +612,15 @@ export function ComparisonTemplate({
                   const isAccounting = categoryHref === "/accounting";
                   const isInvoicing = categoryHref === "/invoicing";
                   const isTimeTracking = categoryHref === "/time-tracking";
+                  const isCrm = categoryHref === "/crm";
                   const roundupHref = isAccounting
                     ? "/accounting/best-accounting-software"
                     : isInvoicing
                     ? "/invoicing/best-invoicing-software"
                     : isTimeTracking
                     ? "/time-tracking/best-time-tracking-software"
+                    : isCrm
+                    ? "/crm/best-crm-software"
                     : "/payroll/best-payroll-software";
                   const roundupLabel = isAccounting
                     ? "Best accounting software (2026) — full roundup"
@@ -622,6 +628,8 @@ export function ComparisonTemplate({
                     ? "Best invoicing software (2026) — full roundup"
                     : isTimeTracking
                     ? "Best time tracking software (2026) — full roundup"
+                    : isCrm
+                    ? "Best CRM software (2026) — full roundup"
                     : "Best payroll software (2026) — full roundup";
                   const sectionTitle = isAccounting
                     ? "Best accounting software guides"
@@ -629,6 +637,8 @@ export function ComparisonTemplate({
                     ? "Best invoicing software guides"
                     : isTimeTracking
                     ? "Best time tracking software guides"
+                    : isCrm
+                    ? "Best CRM software guides"
                     : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
@@ -638,6 +648,8 @@ export function ComparisonTemplate({
                     ? "Invoicing guides"
                     : isTimeTracking
                     ? "Time tracking guides"
+                    : isCrm
+                    ? "CRM guides"
                     : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -666,7 +678,7 @@ export function ComparisonTemplate({
                                 </Link>
                               </li>
                             ))
-                          : !isAccounting && !isInvoicing && (
+                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && (
                               <>
                                 <li>
                                   <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -744,6 +756,35 @@ export function ComparisonTemplate({
                             <li>
                               <Link href="/invoicing/best-for/consultants" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                                 Best for consultants
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {isCrm && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link href="/crm/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for freelancers
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/crm/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/crm/best-for/startups" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for startups
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/crm/best-for/agencies" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for agencies
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/crm/best-for/sales-teams" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for sales teams
                               </Link>
                             </li>
                           </>

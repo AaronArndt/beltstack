@@ -58,11 +58,11 @@ function CrmHowToChooseSection() {
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
           <li><strong className="text-[#1A2D48]">Ease of use</strong> — Your team will use the CRM daily. Look for a clear pipeline and simple contact and deal entry. Free trials help you judge fit.</li>
-          <li><strong className="text-[#1A2D48]">Pipeline and stages</strong> — Deal stages and activity tracking should match how you sell. See our <Link href="/crm/guides/how-to-choose-crm" className={linkGreen}>how to choose CRM</Link> guide.</li>
+          <li><strong className="text-[#1A2D48]">Pipeline and stages</strong> — Deal stages and activity tracking should match how you sell. See our <Link href="/crm/guides/how-to-choose-crm-software" className={linkGreen}>how to choose CRM software</Link> guide.</li>
           <li><strong className="text-[#1A2D48]">Integrations</strong> — CRM often sits alongside email, calendar, and marketing tools. Check that your CRM integrates with the apps you already use.</li>
         </ul>
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
-          <li><strong className="text-[#1A2D48]">Automation</strong> — Workflow automation can move deals, send reminders, and assign tasks. Compare how much is included at each price tier. <Link href="/crm/guides/how-crm-software-works" className={linkGreen}>How CRM software works</Link>.</li>
+          <li><strong className="text-[#1A2D48]">Automation</strong> — Workflow automation can move deals, send reminders, and assign tasks. Compare how much is included at each price tier. <Link href="/crm/guides/what-is-crm-software" className={linkGreen}>What is CRM software</Link>.</li>
           <li><strong className="text-[#1A2D48]">Pricing</strong> — Many CRMs offer a free tier; paid plans scale by user or feature. Compare total cost at your team size.</li>
           <li><strong className="text-[#1A2D48]">Reporting</strong> — Pipeline value, conversion by stage, and activity reports matter; <Link href="/crm/guides/crm-for-small-business" className={linkGreen}>CRM for small business</Link> covers fit by size.</li>
         </ul>

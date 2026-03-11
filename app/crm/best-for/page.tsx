@@ -1,37 +1,37 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
-import { getAccountingBestForUrl } from "@/lib/routes";
+import { getCrmBestForUrl } from "@/lib/routes";
 
 const SCENARIOS = [
   {
-    label: "Best accounting software overall",
-    href: "/accounting/best-accounting-software",
-    description: "Our full rankings of the best accounting software for small businesses, freelancers, and growing companies.",
+    label: "Best CRM software overall",
+    href: "/crm/best-crm-software",
+    description: "Our full rankings of the best CRM software for small businesses, sales teams, and growing companies.",
   },
   {
-    label: "Best accounting software for freelancers",
-    href: getAccountingBestForUrl("freelancers"),
-    description: "Simple bookkeeping and reporting for solo freelancers who need clean books and tax-ready records.",
+    label: "Best CRM software for freelancers",
+    href: getCrmBestForUrl("freelancers"),
+    description: "Lightweight CRM for client tracking, leads, and follow-ups without enterprise complexity.",
   },
   {
-    label: "Best accounting software for contractors",
-    href: getAccountingBestForUrl("contractors"),
-    description: "Accounting for contractors and trade businesses with job costing and reporting.",
+    label: "Best CRM software for small business",
+    href: getCrmBestForUrl("small-business"),
+    description: "CRM that scales with your team: lead management, automation, and reporting without big budgets.",
   },
   {
-    label: "Best accounting software for small business",
-    href: getAccountingBestForUrl("small-business"),
-    description: "Full bookkeeping, invoicing, and reporting for small teams without enterprise complexity.",
+    label: "Best CRM software for startups",
+    href: getCrmBestForUrl("startups"),
+    description: "Affordable CRM with fast setup and room to grow as you add sales and marketing.",
   },
   {
-    label: "Best accounting software for ecommerce",
-    href: getAccountingBestForUrl("ecommerce"),
-    description: "Accounting that connects to sales channels, inventory, and multi-currency for online sellers.",
+    label: "Best CRM software for agencies",
+    href: getCrmBestForUrl("agencies"),
+    description: "Manage clients, deals, and pipeline across multiple accounts with reporting and collaboration.",
   },
   {
-    label: "Best accounting software for agencies",
-    href: getAccountingBestForUrl("agencies"),
-    description: "Accounting across clients and projects with time tracking and client reporting.",
+    label: "Best CRM software for sales teams",
+    href: getCrmBestForUrl("sales-teams"),
+    description: "Pipeline-focused CRM for inside and field sales, with reporting and forecasting.",
   },
 ];
 
@@ -45,7 +45,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
-export default function AccountingBestForPage() {
+export default function CrmBestForIndexPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       <main>
@@ -64,10 +64,10 @@ export default function AccountingBestForPage() {
                 <li aria-hidden>/</li>
                 <li>
                   <Link
-                    href="/accounting"
+                    href="/crm"
                     className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                   >
-                    Accounting
+                    CRM
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
@@ -77,10 +77,10 @@ export default function AccountingBestForPage() {
               </ol>
             </nav>
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Best Accounting Software by Use Case
+              Best CRM Software by Use Case
             </h1>
             <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
-              Find accounting software that fits your situation—freelancers, contractors, small business, ecommerce, and agencies.
+              Find CRM software that fits your situation—freelancers, small business, startups, agencies, and sales teams.
             </p>
           </div>
         </section>
@@ -88,7 +88,7 @@ export default function AccountingBestForPage() {
         <section className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Choose a use case to see our top picks and guidance.">
-              Accounting by use case
+              CRM by use case
             </SectionTitle>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {SCENARIOS.map((item) => (
@@ -110,23 +110,23 @@ export default function AccountingBestForPage() {
 
         <section className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub="More accounting resources.">
+            <SectionTitle sub="More CRM resources.">
               Related links
             </SectionTitle>
             <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
               <li>
-                <Link href="/accounting" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                  Accounting hub
+                <Link href="/crm" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  CRM hub
                 </Link>
               </li>
               <li>
-                <Link href="/accounting/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                  Compare accounting software
+                <Link href="/crm/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  Compare CRM software
                 </Link>
               </li>
               <li>
-                <Link href="/accounting/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                  Accounting guides
+                <Link href="/crm/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  CRM guides
                 </Link>
               </li>
             </ul>
@@ -141,8 +141,8 @@ export default function AccountingBestForPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Accounting Software by Use Case | BeltStack",
+    title: "Best CRM Software by Use Case | BeltStack",
     description:
-      "Browse our best accounting software picks by use case: freelancers, contractors, small business, ecommerce, and agencies. Find the right accounting for your situation.",
+      "Browse our best CRM software picks by use case: freelancers, small business, startups, agencies, and sales teams. Find the right CRM for your situation.",
   };
 }
