@@ -38,8 +38,8 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export default function ProjectManagementReviewPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function ProjectManagementReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const data = getProjectManagementReviewBySlug(slug);
   if (!data) notFound();
   const currentYear = new Date().getFullYear();
@@ -58,8 +58,8 @@ export default function ProjectManagementReviewPage({ params }: { params: { slug
   );
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const data = getProjectManagementReviewBySlug(slug);
   if (!data) {
     return { title: "Project Management Software Review" };
