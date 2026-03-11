@@ -32,6 +32,7 @@ const SOFTWARE_COLUMNS: {
     label: "Operations",
     items: [
       { title: "Field Service", description: "Scheduling, dispatch, estimates", href: "/field-service" },
+      { title: "Project Management", description: "Projects, tasks, collaboration", href: "/project-management" },
       { title: "CRM", description: "Leads, pipelines, follow-up", href: "/crm" },
     ],
   },

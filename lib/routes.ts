@@ -138,3 +138,24 @@ export function getCrmCompareUrl(comparisonSlug?: string): string {
 export function getCrmBestForUrl(scenarioSlug: string): string {
   return `/crm/best-for/${scenarioSlug}`;
 }
+
+// ——— Project Management ———
+
+/** Project management review detail page: /project-management/review/[slug] */
+export function getProjectManagementReviewUrl(slug: string): string {
+  return `/project-management/review/${slug}`;
+}
+
+/** Project management hub */
+export const PROJECT_MANAGEMENT_HUB_URL = "/project-management" as const;
+
+/** Project management compare page (optional comparison slug) */
+export function getProjectManagementCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/project-management/compare/${comparisonSlug}`;
+  return "/project-management/compare";
+}
+
+/** Project management best-for scenario */
+export function getProjectManagementBestForUrl(scenarioSlug: string): string {
+  return `/project-management/best-for/${scenarioSlug}`;
+}
