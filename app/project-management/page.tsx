@@ -15,6 +15,7 @@ import {
   PROJECT_MANAGEMENT_FAQ_ITEMS,
   PROJECT_MANAGEMENT_METHODOLOGY,
 } from "@/lib/data/projectManagementHubData";
+import { PROJECT_MANAGEMENT_GUIDES } from "@/lib/data/projectManagementGuides";
 
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
@@ -341,44 +342,34 @@ function ProjectManagementHowToChooseSection() {
 }
 
 function ProjectManagementGuidesSection() {
-  const guides = [
-    {
-      title: "How to choose project management software",
-      href: "#how-to-choose",
-      description: "Key questions to ask about views, collaboration, automation, and integrations before you commit.",
-    },
-    {
-      title: "Project management by use case",
-      href: "#by-scenario",
-      description: "See recommendations for freelancers, small businesses, agencies, startups, and remote teams.",
-    },
-    {
-      title: "Project management by business type",
-      href: "#by-trade",
-      description: "Browse picks organized by business type so you can jump straight to what fits your situation.",
-    },
-  ];
-
   return (
     <>
       <HubSectionTitle sub="Guides to choosing and using project management tools.">
         Project Management Guides
       </HubSectionTitle>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {guides.map((guide) => (
+        {PROJECT_MANAGEMENT_GUIDES.map((guide) => (
           <Link
             key={guide.href}
             href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
           >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
+            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">{guide.title}</h3>
             <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
               {guide.description}
             </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">Read guide →</span>
           </Link>
         ))}
       </div>
+      <p className="mt-3 text-sm text-[#6E6E6E]">
+        <Link
+          href="/project-management/guides"
+          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+        >
+          View all project management guides →
+        </Link>
+      </p>
     </>
   );
 }
