@@ -1,4 +1,4 @@
-import { getProjectManagementReviewUrl, getProjectManagementBestForUrl } from "@/lib/routes";
+import { getProjectManagementReviewUrl, getProjectManagementCompareUrl, getProjectManagementBestForUrl } from "@/lib/routes";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 
 export function getProjectManagementCompareUrlFromSlug(slug: string): string {
@@ -225,7 +225,11 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { label: "Winner for ease of use", winner: "A" },
       { label: "Winner for customization", winner: "B" },
     ],
-    moreComparisons: [],
+    moreComparisons: [
+      { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
+      { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
+      { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
       {
@@ -289,7 +293,10 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { label: "Winner for classic projects", winner: "A" },
       { label: "Winner for visual workflows", winner: "B" },
     ],
-    moreComparisons: [],
+    moreComparisons: [
+      { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+      { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
+    ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [],
   }),
@@ -352,7 +359,10 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { label: "Winner for simplicity", winner: "B" },
       { label: "Winner for long-term flexibility", winner: "A" },
     ],
-    moreComparisons: [],
+    moreComparisons: [
+      { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+      { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [],
   }),
@@ -387,7 +397,10 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     alternatives: [],
     faqs: [],
     sidebarWinners: [],
-    moreComparisons: [],
+    moreComparisons: [
+      { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
+      { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+    ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [],
   }),
@@ -422,7 +435,11 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     alternatives: [],
     faqs: [],
     sidebarWinners: [],
-    moreComparisons: [],
+    moreComparisons: [
+      { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
+      { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+      { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
+    ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [],
   }),

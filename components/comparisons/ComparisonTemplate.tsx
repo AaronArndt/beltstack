@@ -206,6 +206,7 @@ export function ComparisonTemplate({
   const isInvoicing = categoryHref === "/invoicing";
   const isTimeTracking = categoryHref === "/time-tracking";
   const isCrm = categoryHref === "/crm";
+  const isProjectManagement = categoryHref === "/project-management";
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -225,6 +226,8 @@ export function ComparisonTemplate({
         ? "Best time tracking guides"
         : isCrm
         ? "Best CRM guides"
+        : isProjectManagement
+        ? "Best project management guides"
         : "Best payroll guides",
       href: "#best-payroll-guides",
     },
@@ -613,6 +616,7 @@ export function ComparisonTemplate({
                   const isInvoicing = categoryHref === "/invoicing";
                   const isTimeTracking = categoryHref === "/time-tracking";
                   const isCrm = categoryHref === "/crm";
+                  const isProjectManagement = categoryHref === "/project-management";
                   const roundupHref = isAccounting
                     ? "/accounting/best-accounting-software"
                     : isInvoicing
@@ -621,6 +625,8 @@ export function ComparisonTemplate({
                     ? "/time-tracking/best-time-tracking-software"
                     : isCrm
                     ? "/crm/best-crm-software"
+                    : isProjectManagement
+                    ? "/project-management/best-project-management-software"
                     : "/payroll/best-payroll-software";
                   const roundupLabel = isAccounting
                     ? "Best accounting software (2026) — full roundup"
@@ -630,6 +636,8 @@ export function ComparisonTemplate({
                     ? "Best time tracking software (2026) — full roundup"
                     : isCrm
                     ? "Best CRM software (2026) — full roundup"
+                    : isProjectManagement
+                    ? "Best project management software (2026) — full roundup"
                     : "Best payroll software (2026) — full roundup";
                   const sectionTitle = isAccounting
                     ? "Best accounting software guides"
@@ -639,6 +647,8 @@ export function ComparisonTemplate({
                     ? "Best time tracking software guides"
                     : isCrm
                     ? "Best CRM software guides"
+                    : isProjectManagement
+                    ? "Best project management software guides"
                     : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
@@ -650,6 +660,8 @@ export function ComparisonTemplate({
                     ? "Time tracking guides"
                     : isCrm
                     ? "CRM guides"
+                    : isProjectManagement
+                    ? "Project management guides"
                     : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -678,7 +690,7 @@ export function ComparisonTemplate({
                                 </Link>
                               </li>
                             ))
-                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && (
+                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && !isProjectManagement && (
                               <>
                                 <li>
                                   <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">

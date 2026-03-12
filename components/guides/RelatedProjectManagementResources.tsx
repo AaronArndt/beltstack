@@ -5,13 +5,14 @@ export type RelatedProjectManagementResourceItem = { label: string; href: string
 
 const DEFAULT_RELATED_PROJECT_MANAGEMENT_RESOURCES: RelatedProjectManagementResourceItem[] = [
   { label: "Project Management Software Hub", href: "/project-management" },
-  { label: "Payroll Software Hub", href: "/payroll" },
-  { label: "Accounting Software Hub", href: "/accounting" },
-  { label: "CRM Software Hub", href: "/crm" },
-  { label: "Time Tracking Software Hub", href: "/time-tracking" },
   { label: "Best Project Management Software (2026)", href: "/project-management/best-project-management-software" },
   { label: "Compare Project Management Software", href: "/project-management/compare" },
   { label: "Project Management Guides", href: "/project-management/guides" },
+  { label: "Time Tracking Software Hub", href: "/time-tracking" },
+  { label: "CRM Software Hub", href: "/crm" },
+  { label: "Invoicing Software Hub", href: "/invoicing" },
+  { label: "Accounting Software Hub", href: "/accounting" },
+  { label: "Payroll Software Hub", href: "/payroll" },
   { label: "Asana Review", href: getProjectManagementReviewUrl("asana") },
   { label: "ClickUp Review", href: getProjectManagementReviewUrl("clickup") },
   { label: "Monday Review", href: getProjectManagementReviewUrl("monday") },

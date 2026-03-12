@@ -159,3 +159,24 @@ export function getProjectManagementCompareUrl(comparisonSlug?: string): string 
 export function getProjectManagementBestForUrl(scenarioSlug: string): string {
   return `/project-management/best-for/${scenarioSlug}`;
 }
+
+// ——— Field Service Management ———
+
+/** Field service review detail page: /field-service/review/[slug] */
+export function getFieldServiceReviewUrl(slug: string): string {
+  return `/field-service/review/${slug}`;
+}
+
+/** Field service hub */
+export const FIELD_SERVICE_HUB_URL = "/field-service" as const;
+
+/** Field service compare page (optional comparison slug) */
+export function getFieldServiceCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/field-service/compare/${comparisonSlug}`;
+  return "/field-service/compare";
+}
+
+/** Field service best-for scenario */
+export function getFieldServiceBestForUrl(scenarioSlug: string): string {
+  return `/field-service/best-for/${scenarioSlug}`;
+}

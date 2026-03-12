@@ -121,9 +121,9 @@ export const PROJECT_MANAGEMENT_SCENARIO_LINKS = [
 export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
   { label: "Agencies", href: getProjectManagementBestForUrl("agencies") },
   { label: "Startups", href: getProjectManagementBestForUrl("startups") },
-  { label: "Consultants", href: getProjectManagementBestForUrl("consultants") },
   { label: "Freelancers", href: getProjectManagementBestForUrl("freelancers") },
   { label: "Remote teams", href: getProjectManagementBestForUrl("remote-teams") },
+  { label: "Small business", href: getProjectManagementBestForUrl("small-business") },
 ];
 
 export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [

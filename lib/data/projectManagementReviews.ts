@@ -148,6 +148,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   clickup: {
@@ -269,6 +270,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   monday: {
@@ -392,6 +394,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   trello: {
@@ -520,6 +523,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   notion: {
@@ -647,6 +651,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   wrike: {
@@ -729,6 +734,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   teamwork: {
@@ -797,7 +803,10 @@ const reviews: Record<string, ProjectManagementReviewData> = {
       { q: "How does Teamwork compare to Monday?", a: "Teamwork is focused on client projects and time; Monday is more general-purpose and visual. Choose Teamwork if client and billing context are central; choose Monday if you need maximum workflow flexibility." },
     ],
     methodology: PROJECT_MANAGEMENT_METHODOLOGY,
-    compareLinks: [],
+    compareLinks: [
+      { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
+      { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
+    ],
     compareSectionTitle: "Compare Teamwork with other project management software",
     bestPayrollSoftwareHref: BEST_PROJECT_MANAGEMENT_HREF,
     compareHubHref: PROJECT_MANAGEMENT_COMPARE_HUB,
@@ -811,6 +820,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   basecamp: {
@@ -878,7 +888,10 @@ const reviews: Record<string, ProjectManagementReviewData> = {
       { q: "How does Basecamp compare to Trello?", a: "Basecamp is flatter and more communication-focused; Trello is board-based and more visual for task flow. Both are simple. Choose Basecamp for flat pricing and minimal structure; choose Trello for Kanban-style boards." },
     ],
     methodology: PROJECT_MANAGEMENT_METHODOLOGY,
-    compareLinks: [],
+    compareLinks: [
+      { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
+      { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    ],
     compareSectionTitle: "Compare Basecamp with other project management software",
     bestPayrollSoftwareHref: BEST_PROJECT_MANAGEMENT_HREF,
     compareHubHref: PROJECT_MANAGEMENT_COMPARE_HUB,
@@ -892,6 +905,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
   smartsheet: {
@@ -960,7 +974,10 @@ const reviews: Record<string, ProjectManagementReviewData> = {
       { q: "Does Smartsheet have a free plan?", a: "Smartsheet offers a free trial. Paid plans are per user; check current pricing and trial terms on Smartsheet's site." },
     ],
     methodology: PROJECT_MANAGEMENT_METHODOLOGY,
-    compareLinks: [],
+    compareLinks: [
+      { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
+      { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
+    ],
     compareSectionTitle: "Compare Smartsheet with other project management software",
     bestPayrollSoftwareHref: BEST_PROJECT_MANAGEMENT_HREF,
     compareHubHref: PROJECT_MANAGEMENT_COMPARE_HUB,
@@ -974,6 +991,7 @@ const reviews: Record<string, ProjectManagementReviewData> = {
     relatedReading: [
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
+      { label: "Invoicing software hub", href: "/invoicing" },
     ],
   },
 };

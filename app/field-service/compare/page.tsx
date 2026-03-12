@@ -1,17 +1,17 @@
 import Link from "next/link";
 import {
-  getProjectManagementCompareUrlFromSlug,
-  getProjectManagementComparison,
-  getProjectManagementComparisonSlugs,
-} from "@/lib/data/projectManagementComparisons";
+  getFieldServiceCompareUrlFromSlug,
+  getFieldServiceComparisonBySlug,
+  getFieldServiceComparisonSlugs,
+} from "@/lib/data/fieldServiceComparisons";
 import { Footer } from "@/components/Footer";
 
 const POPULAR_SLUGS = [
-  "asana-vs-clickup",
-  "asana-vs-monday",
-  "clickup-vs-trello",
-  "notion-vs-trello",
-  "monday-vs-wrike",
+  "jobber-vs-housecall-pro",
+  "housecall-pro-vs-servicetitan",
+  "jobber-vs-workiz",
+  "servicetitan-vs-service-fusion",
+  "kickserv-vs-jobber",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -28,7 +28,7 @@ function groupComparisonsByProduct(slugs: string[]) {
   const byProduct: Record<string, { label: string; slugs: { slug: string; label: string }[] }> = {};
 
   for (const slug of slugs) {
-    const data = getProjectManagementComparison(slug);
+    const data = getFieldServiceComparisonBySlug(slug);
     if (!data) continue;
     const a = data.productA.slug;
     const b = data.productB.slug;
@@ -40,14 +40,14 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
   }
 
-  const order = ["asana", "clickup", "monday", "trello", "notion", "wrike"];
+  const order = ["jobber", "housecall-pro", "servicetitan", "service-fusion", "workiz", "kickserv"];
   return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
 }
 
-export default function ProjectManagementCompareHubPage() {
-  const allSlugs = getProjectManagementComparisonSlugs();
+export default function FieldServiceCompareHubPage() {
+  const allSlugs = getFieldServiceComparisonSlugs();
   const popularData = POPULAR_SLUGS.flatMap((slug) => {
-    const data = getProjectManagementComparison(slug);
+    const data = getFieldServiceComparisonBySlug(slug);
     return data ? [{ slug, data }] : [];
   });
   const bySoftware = groupComparisonsByProduct(allSlugs);
@@ -71,10 +71,10 @@ export default function ProjectManagementCompareHubPage() {
                 <li aria-hidden>/</li>
                 <li>
                   <Link
-                    href="/project-management"
+                    href="/field-service"
                     className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                   >
-                    Project Management
+                    Field Service
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
@@ -84,29 +84,29 @@ export default function ProjectManagementCompareHubPage() {
               </ol>
             </nav>
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Project Management Software Comparisons
+              Compare Field Service Management Software
             </h1>
             <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
-              Compare popular project management tools side by side—including Asana, ClickUp, Monday, Trello, Notion,
-              Wrike, and more. These head-to-head matchups break down features, pricing, and fit so you can choose the
-              right platform for your team.
+              Side-by-side comparisons of popular field service tools for contractors, service companies, and field
+              teams. See how Jobber, Housecall Pro, ServiceTitan, Service Fusion, Workiz, Kickserv, and others stack up
+              on scheduling, dispatch, mobile apps, invoicing, and reporting.
             </p>
             <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
-              See our{" "}
+              For rankings across the whole category, see our{" "}
               <Link
-                href="/project-management/best-project-management-software"
+                href="/field-service/best-field-service-software"
                 className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
               >
-                best project management software
+                best field service management software
               </Link>{" "}
-              roundup for top picks and our{" "}
+              roundup. For guides on how FSM tools work and how to choose, visit our{" "}
               <Link
-                href="/project-management/guides"
+                href="/field-service/guides"
                 className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
               >
-                project management guides
-              </Link>{" "}
-              for how to choose and use tools.
+                field service guides
+              </Link>
+              .
             </p>
           </div>
         </section>
@@ -123,7 +123,7 @@ export default function ProjectManagementCompareHubPage() {
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {popularData.map(({ slug, data }) => {
                 const title = `${data.productA.name} vs ${data.productB.name}`;
-                const compareHref = getProjectManagementCompareUrlFromSlug(slug);
+                const compareHref = getFieldServiceCompareUrlFromSlug(slug);
                 const summary =
                   data.summaryParagraph.length > 140
                     ? data.summaryParagraph.slice(0, 140).trim() + "…"
@@ -185,7 +185,7 @@ export default function ProjectManagementCompareHubPage() {
                     {slugs.map(({ slug, label: linkLabel }) => (
                       <li key={slug}>
                         <Link
-                          href={getProjectManagementCompareUrlFromSlug(slug)}
+                          href={getFieldServiceCompareUrlFromSlug(slug)}
                           className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                         >
                           {linkLabel}
@@ -206,41 +206,48 @@ export default function ProjectManagementCompareHubPage() {
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Consistent criteria so you can compare with confidence.">
-              How We Compare Project Management Software
+              How We Compare Field Service Management Software
             </SectionTitle>
             <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
-              Our project management comparisons use the same evaluation criteria across every head-to-head. We look at
-              task and project structure, collaboration, views, automation, reporting, pricing, and integrations—so you
-              see how each platform really stacks up for small businesses and growing teams.
+              Our field service comparisons use the same evaluation criteria across every head-to-head. We look at
+              scheduling and dispatch, mobile app experience, estimates and invoicing, payments, customer management,
+              reporting, and pricing—so you see how each platform really stacks up for contractors and service teams.
             </p>
             <ul className="mt-4 space-y-2 text-[#6E6E6E] text-sm leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Task and project structure</strong> — How each tool models projects,
-                tasks, subtasks, and dependencies.
+                <strong className="text-[#1A2D48]">Scheduling and dispatch</strong> — How each tool handles calendars,
+                dispatch boards, and routing for busy crews.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Collaboration and views</strong> — Comments, files, notifications, and
-                the quality of board, list, timeline, and calendar views.
+                <strong className="text-[#1A2D48]">Mobile apps</strong> — Whether technicians can see jobs, capture
+                photos and notes, and mark work complete from the field.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Automation and reporting</strong> — How well automations reduce manual
-                updates and whether managers get clear visibility into workload and project status.
+                <strong className="text-[#1A2D48]">Invoicing and payments</strong> — How quickly you can turn jobs into
+                estimates and invoices, collect payments, and sync with accounting.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Pricing and limits</strong> — Free tiers, per-seat pricing, automation
-                caps, and storage limits at common team sizes.
+                <strong className="text-[#1A2D48]">Customer management</strong> — Quality of customer and property
+                history, service agreements, and follow-up communication.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#10B981] shrink-0" aria-hidden>
+                  •
+                </span>
+                <strong className="text-[#1A2D48]">Pricing and value</strong> — Published vs custom pricing, per-user
+                or per-job costs, and total value at typical crew sizes.
               </li>
             </ul>
             <p className="mt-5 text-[#6E6E6E] text-sm leading-relaxed">
@@ -251,12 +258,12 @@ export default function ProjectManagementCompareHubPage() {
               >
                 methodology page
               </Link>
-              . For deeper guides on how project management software works and how to choose tools, see our{" "}
+              . For deeper guides on FSM tools, see our{" "}
               <Link
-                href="/project-management/guides"
+                href="/field-service/guides"
                 className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
               >
-                project management guides
+                field service guides
               </Link>
               .
             </p>
@@ -269,11 +276,9 @@ export default function ProjectManagementCompareHubPage() {
   );
 }
 
-export function generateMetadata() {
-  return {
-    title: "Project Management Software Comparisons | BeltStack",
-    description:
-      "Compare project management tools side-by-side. See matchups like Asana vs ClickUp, Asana vs Monday, ClickUp vs Trello, Notion vs Trello, and Monday vs Wrike.",
-  };
-}
+export const metadata = {
+  title: "Field Service Management Software Comparisons (2026) | BeltStack",
+  description:
+    "Compare field service management software side by side. See matchups like Jobber vs Housecall Pro, Housecall Pro vs ServiceTitan, Jobber vs Workiz, ServiceTitan vs Service Fusion, and Kickserv vs Jobber.",
+};
 

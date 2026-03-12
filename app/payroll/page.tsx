@@ -32,6 +32,7 @@ const TOP_PICKS: FeaturedPick[] = [
     reviewHref: getPayrollReviewUrl("gusto"),
     compareHref: getPayrollCompareUrl("gusto-vs-quickbooks-payroll"),
     logoSrc: "/Logos/gusto.jpeg",
+    visitUrl: "https://gusto.com",
   },
   {
     slug: "quickbooks-payroll",
@@ -44,6 +45,7 @@ const TOP_PICKS: FeaturedPick[] = [
     reviewHref: getPayrollReviewUrl("quickbooks-payroll"),
     compareHref: getPayrollCompareUrl("gusto-vs-quickbooks-payroll"),
     logoSrc: "/Logos/quickbooks.png",
+    visitUrl: "https://quickbooks.intuit.com/payroll/",
   },
   {
     slug: "onpay",
@@ -56,6 +58,7 @@ const TOP_PICKS: FeaturedPick[] = [
     reviewHref: getPayrollReviewUrl("onpay"),
     compareHref: getPayrollCompareUrl("gusto-vs-onpay"),
     logoSrc: "/Logos/onpay.jpeg",
+    visitUrl: "https://www.onpay.com",
   },
   {
     slug: "adp",
@@ -68,6 +71,7 @@ const TOP_PICKS: FeaturedPick[] = [
     reviewHref: getPayrollReviewUrl("adp"),
     compareHref: getPayrollCompareUrl("gusto-vs-adp"),
     logoSrc: "/Logos/adp.jpeg",
+    visitUrl: "https://www.adp.com",
   },
 ];
 
