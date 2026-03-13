@@ -35,7 +35,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
 }
 
 type RelatedInventoryResourcesProps = {
-  items?: RelatedInventoryResourceItem[];
+  items?: readonly RelatedInventoryResourceItem[];
   excludeHref?: string;
   compact?: boolean;
 };

@@ -14,7 +14,7 @@ export type GuideSidebarItem = {
 
 type GuideSidebarProps = {
   title: string;
-  items: GuideSidebarItem[];
+  items: readonly GuideSidebarItem[];
   /** Sticky top offset in px (e.g. below navbar). Default 24. */
   stickyTop?: number;
 };

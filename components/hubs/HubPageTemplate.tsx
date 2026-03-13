@@ -84,7 +84,7 @@ export type HubPageTemplateProps = {
     sectionTitle: string;
     sectionSub: string;
     description?: string;
-    links: ScenarioLink[];
+    links: readonly ScenarioLink[];
     /** When true, first scenario pill gets stronger emphasis (e.g. roundup link) */
     highlightFirstLink?: boolean;
   };

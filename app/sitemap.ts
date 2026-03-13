@@ -27,7 +27,15 @@ import {
   getFieldServiceBestForUrl,
   getSchedulingBestForUrl,
   getHrBestForUrl,
+  getPosBestForUrl,
+  getInventoryBestForUrl,
 } from "@/lib/routes";
+import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
+import { getPosReviewSlugs } from "@/lib/data/posReviews";
+import { POS_GUIDES } from "@/lib/data/posGuides";
+import { getInventoryComparisonSlugs } from "@/lib/data/inventoryComparisons";
+import { getInventoryReviewSlugs } from "@/lib/data/inventoryReviews";
+import { INVENTORY_GUIDES } from "@/lib/data/inventoryGuides";
 import { SITE_URL } from "@/lib/site";
 import { PAYROLL_GUIDES } from "@/lib/data/payrollGuides";
 import { ACCOUNTING_GUIDES } from "@/lib/data/accountingGuides";
@@ -143,6 +151,24 @@ const HR_BEST_FOR_SCENARIOS = [
   "global-teams",
 ] as const;
 
+/** Static POS best-for scenario slugs (matches app/pos/best-for/[scenario]). */
+const POS_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "retail",
+  "restaurants",
+  "ecommerce",
+  "multi-location",
+] as const;
+
+/** Static Inventory best-for scenario slugs (matches app/inventory/best-for/[scenario]). */
+const INVENTORY_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "ecommerce",
+  "retail",
+  "manufacturing",
+  "warehouses",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -212,6 +238,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/hr/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/hr/guides", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/hr/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    // POS
+    defaultEntry("/pos", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/pos/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/pos/best-pos-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/pos/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/pos/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Inventory
+    defaultEntry("/inventory", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/inventory/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/inventory/best-inventory-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/inventory/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/inventory/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   // Payroll comparisons
@@ -417,6 +455,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // POS comparisons
+  const posComparisonSlugs = getPosComparisonSlugs();
+  const posComparisonEntries: MetadataRoute.Sitemap = posComparisonSlugs.map((slug) =>
+    defaultEntry(`/pos/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // POS reviews
+  const posReviewSlugs = getPosReviewSlugs();
+  const posReviewEntries: MetadataRoute.Sitemap = posReviewSlugs.map((slug) =>
+    defaultEntry(`/pos/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // POS best-for
+  const posBestForEntries: MetadataRoute.Sitemap = POS_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getPosBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // POS guides
+  const posGuideEntries: MetadataRoute.Sitemap = POS_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Inventory comparisons
+  const inventoryComparisonSlugs = getInventoryComparisonSlugs();
+  const inventoryComparisonEntries: MetadataRoute.Sitemap = inventoryComparisonSlugs.map((slug) =>
+    defaultEntry(`/inventory/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Inventory reviews
+  const inventoryReviewSlugs = getInventoryReviewSlugs();
+  const inventoryReviewEntries: MetadataRoute.Sitemap = inventoryReviewSlugs.map((slug) =>
+    defaultEntry(`/inventory/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Inventory best-for
+  const inventoryBestForEntries: MetadataRoute.Sitemap = INVENTORY_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getInventoryBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Inventory guides
+  const inventoryGuideEntries: MetadataRoute.Sitemap = INVENTORY_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...comparisonEntries,
@@ -456,5 +538,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hrReviewEntries,
     ...hrBestForEntries,
     ...hrGuideEntries,
+    ...posComparisonEntries,
+    ...posReviewEntries,
+    ...posBestForEntries,
+    ...posGuideEntries,
+    ...inventoryComparisonEntries,
+    ...inventoryReviewEntries,
+    ...inventoryBestForEntries,
+    ...inventoryGuideEntries,
   ];
 }

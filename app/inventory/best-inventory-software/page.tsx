@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import {
   TOP_PICKS,
@@ -13,11 +12,6 @@ import {
   MORE_INVENTORY_OPTIONS,
 } from "@/lib/data/inventoryBestSoftware";
 import { getInventoryCompareUrl } from "@/lib/routes";
-
-export const metadata: Metadata = {
-  title: "Best Inventory Management Software (2026) | BeltStack",
-  description: "Compare the best inventory management software for small businesses, ecommerce stores, and manufacturers.",
-};
 
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
