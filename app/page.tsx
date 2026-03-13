@@ -20,10 +20,13 @@ const btnPill =
 const CATEGORY_CHIPS = [
   { label: "Payroll", href: "/payroll" },
   { label: "Accounting / Bookkeeping", href: "/accounting" },
+  { label: "Invoicing", href: "/invoicing" },
+  { label: "Time Tracking", href: "/time-tracking" },
+  { label: "CRM", href: "/crm" },
+  { label: "Project Management", href: "/project-management" },
   { label: "Field Service Management", href: "/field-service" },
-  { label: "Customer Management", href: "/customer-management" },
-  { label: "Banking", href: "/banking" },
-  { label: "Credit Cards", href: "/credit-cards" },
+  { label: "Scheduling", href: "/scheduling" },
+  { label: "HR Software", href: "/hr" },
 ];
 
 type TopPick = {
@@ -46,22 +49,68 @@ const TOP_PICKS: TopPick[] = [
 ];
 
 const ARTICLES = [
-  { category: "Payroll", title: "Payroll vs Accounting Software: What Contractors Need", excerpt: "Learn when to use dedicated payroll vs all-in-one accounting so you stay compliant and save time.", href: "/blog/payroll-vs-accounting", updated: "Feb 2026", readMins: 6 },
-  { category: "Guides", title: "Best Software for HVAC Contractors in 2025", excerpt: "Compare top tools for scheduling, dispatching, and invoicing for HVAC businesses.", href: "/blog/best-software-hvac", updated: "Feb 2026", readMins: 6 },
-  { category: "Comparisons", title: "QuickBooks vs Xero for Trade Businesses", excerpt: "A side-by-side look at features, pricing, and trade-specific fit.", href: "/blog/quickbooks-vs-xero", updated: "Feb 2026", readMins: 5 },
-  { category: "Guides", title: "How to Choose Field Service Management Software", excerpt: "Key features and questions to ask before you commit.", href: "/blog/choose-fsm-software", updated: "Feb 2026", readMins: 7 },
-  { category: "Banking", title: "Business Banking and Credit for Contractors", excerpt: "Accounts and cards that work well with contractor cash flow.", href: "/blog/banking-for-contractors", updated: "Feb 2026", readMins: 5 },
-  { category: "Guides", title: "Setting Up Your First Trade Business Software Stack", excerpt: "A step-by-step approach to payroll, accounting, and job management.", href: "/blog/first-software-stack", updated: "Feb 2026", readMins: 8 },
+  {
+    category: "Payroll",
+    title: "How Payroll Software Works for Small Trade Businesses",
+    excerpt:
+      "Learn how payroll software automates pay runs, tax filings, and contractor payments for crews and job-based work.",
+    href: "/payroll/guides/how-payroll-software-works",
+    updated: "March 2026",
+    readMins: 7,
+  },
+  {
+    category: "Accounting",
+    title: "Accounting Software for Contractors",
+    excerpt:
+      "See how accounting tools handle job costing, invoicing, and expenses for contractors and trades.",
+    href: "/accounting/guides/accounting-for-contractors",
+    updated: "March 2026",
+    readMins: 7,
+  },
+  {
+    category: "Comparisons",
+    title: "Gusto vs QuickBooks for Contractor Payroll",
+    excerpt: "Compare QuickBooks Online and Xero for contractor and trade-business bookkeeping.",
+    href: "/accounting/compare/quickbooks-online-vs-xero",
+    updated: "March 2026",
+    readMins: 6,
+  },
+  {
+    category: "Field Service",
+    title: "How to Choose Field Service Management Software",
+    excerpt: "See our top picks for HVAC field service software, plus what features to prioritize.",
+    href: "/field-service/best-for/hvac",
+    updated: "March 2026",
+    readMins: 7,
+  },
+  {
+    category: "Project Management",
+    title: "Project Management for Small Trade Businesses",
+    excerpt:
+      "A practical overview of using project management tools for jobs, crews, and client work.",
+    href: "/project-management/guides/project-management-for-small-business",
+    updated: "March 2026",
+    readMins: 7,
+  },
+  {
+    category: "HR",
+    title: "Best HR Software for Small Trade Businesses",
+    excerpt:
+      "How small trade businesses use HR software for payroll, benefits, and onboarding.",
+    href: "/hr/guides/best-hr-software-for-small-business",
+    updated: "March 2026",
+    readMins: 8,
+  },
 ];
 
 const TRADES = [
-  { label: "HVAC", href: "/hvac" },
-  { label: "Plumbing", href: "/plumbing" },
-  { label: "Electrical", href: "/electrical" },
-  { label: "Landscaping", href: "/landscaping" },
-  { label: "Roofing", href: "/roofing" },
-  { label: "Concrete & Masonry", href: "/concrete-masonry" },
-  { label: "Cleaning Services", href: "/cleaning" },
+  { label: "HVAC", href: "/field-service/best-for/hvac" },
+  { label: "Plumbing", href: "/field-service/best-for/plumbing" },
+  { label: "Electrical", href: "/field-service/best-for/electricians" },
+  { label: "Landscaping", href: "/field-service/best-for/small-business" },
+  { label: "Roofing", href: "/payroll/best-for/roofing" },
+  { label: "Concrete & Masonry", href: "/payroll/best-for/construction" },
+  { label: "Cleaning Services", href: "/payroll/best-for/cleaning-business" },
 ];
 
 const METHODOLOGY_ITEMS = [
@@ -179,9 +228,26 @@ export default function Home() {
     const params = new URLSearchParams();
     if (stackTrade) params.set("trade", stackTrade);
     if (stackCategory) {
-      router.push(`/${stackCategory}${params.toString() ? `?${params.toString()}` : ""}`);
+      // Map stack categories to current cluster hubs
+      switch (stackCategory) {
+        case "payroll":
+          router.push(`/payroll${params.toString() ? `?${params.toString()}` : ""}`);
+          break;
+        case "bookkeeping":
+          router.push(`/accounting${params.toString() ? `?${params.toString()}` : ""}`);
+          break;
+        case "field-service":
+          router.push(`/field-service${params.toString() ? `?${params.toString()}` : ""}`);
+          break;
+        case "crm":
+          router.push(`/crm${params.toString() ? `?${params.toString()}` : ""}`);
+          break;
+        default:
+          router.push(`/${stackCategory}${params.toString() ? `?${params.toString()}` : ""}`);
+      }
     } else {
-      router.push(`/software?${params.toString()}`);
+      // Fallback: send to payroll hub if no specific category is chosen
+      router.push(`/payroll${params.toString() ? `?${params.toString()}` : ""}`);
     }
   };
 
@@ -228,11 +294,11 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <Link href="/software" className={btnPrimary}>
-                    Explore Software
+                  <Link href="/payroll" className={btnPrimary}>
+                    Explore Payroll Software
                   </Link>
-                  <Link href="/comparisons" className="rounded-lg border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-neutral-50 hover:border-[#10B981]/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2">
-                    View Comparisons
+                  <Link href="/payroll/compare" className="rounded-lg border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-neutral-50 hover:border-[#10B981]/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2">
+                    View Payroll Comparisons
                   </Link>
                 </div>
               </div>
@@ -254,13 +320,35 @@ export default function Home() {
                         </div>
                         <div className="mt-2 flex items-center justify-between pl-10">
                           <span className="text-[#6E6E6E] text-xs">{item.bestFor}</span>
-                          <Link href={`/providers/${item.tool.toLowerCase().replace(/\s/g, "-")}`} className="text-xs font-bold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Details</Link>
+                    <Link
+                      href={
+                        item.tool === "Gusto"
+                          ? "/payroll/review/gusto"
+                          : item.tool === "QuickBooks Online"
+                          ? "/accounting/review/quickbooks-online"
+                          : item.tool === "ServiceTitan"
+                          ? "/field-service/review/servicetitan"
+                          : item.tool === "Jobber"
+                          ? "/field-service/review/jobber"
+                          : item.tool === "Housecall Pro"
+                          ? "/field-service/review/housecall-pro"
+                          : "/"
+                      }
+                      className="text-xs font-bold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Details
+                    </Link>
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3">
-                    <Link href="/comparisons" className="text-sm font-bold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">See full comparison →</Link>
+                    <Link
+                      href="/payroll/compare"
+                      className="text-sm font-bold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      See payroll comparisons →
+                    </Link>
                     <a href="#methodology" className="text-xs text-[#6E6E6E] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Methodology</a>
                   </div>
                 </div>
@@ -278,8 +366,11 @@ export default function Home() {
                   {label}
                 </Link>
               ))}
-              <Link href="/software" className="shrink-0 text-sm font-semibold text-[#10B981] hover:text-[#6E6E6E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                See more
+              <Link
+                href="/payroll/best-payroll-software"
+                className="shrink-0 text-sm font-semibold text-[#10B981] hover:text-[#6E6E6E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+              >
+                See all picks
               </Link>
             </div>
           </div>
@@ -372,7 +463,22 @@ export default function Home() {
                       <td className="px-4 py-3.5 text-[#6E6E6E]">{row.price}</td>
                       <td className="px-4 py-3.5 font-semibold text-[#10B981]">{row.rating}</td>
                       <td className="px-4 py-3.5">
-                        <Link href={`/providers/${row.tool.toLowerCase().replace(/\s/g, "-")}`} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link
+                          href={
+                            row.tool === "Gusto"
+                              ? "/payroll/review/gusto"
+                              : row.tool === "QuickBooks Online"
+                              ? "/accounting/review/quickbooks-online"
+                              : row.tool === "ServiceTitan"
+                              ? "/field-service/review/servicetitan"
+                              : row.tool === "Jobber"
+                              ? "/field-service/review/jobber"
+                              : row.tool === "Housecall Pro"
+                              ? "/field-service/review/housecall-pro"
+                              : "/"
+                          }
+                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        >
                           Details
                         </Link>
                       </td>
@@ -515,13 +621,30 @@ export default function Home() {
               <div>
                 <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Product</h4>
                 <ul className="mt-2 space-y-1.5">
-                  {["Software", "Comparisons", "Blog"].map((label) => (
-                    <li key={label}>
-                      <Link href={label === "Software" ? "/software" : label === "Comparisons" ? "/comparisons" : "/blog"} className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
+                  <li>
+                    <Link
+                      href="/payroll/best-payroll-software"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Best payroll software
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/payroll/compare"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Payroll comparisons
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/payroll/guides"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Payroll guides
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
@@ -535,9 +658,38 @@ export default function Home() {
               <div>
                 <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Categories</h4>
                 <ul className="mt-2 space-y-1.5">
-                  <li><Link href="/payroll" className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link></li>
-                  <li><Link href="/accounting" className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
-                  <li><Link href="/trades" className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">By Trade</Link></li>
+                  <li>
+                    <Link
+                      href="/payroll"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Payroll
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/accounting"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Accounting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/field-service"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Field service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/hr"
+                      className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      HR software
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
