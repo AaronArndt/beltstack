@@ -621,6 +621,7 @@ export function ComparisonTemplate({
                   const isCrm = categoryHref === "/crm";
                   const isProjectManagement = categoryHref === "/project-management";
                   const isScheduling = categoryHref === "/scheduling";
+                  const isPos = categoryHref === "/pos";
                   const roundupHref = isAccounting
                     ? "/accounting/best-accounting-software"
                     : isInvoicing
@@ -633,6 +634,8 @@ export function ComparisonTemplate({
                     ? "/project-management/best-project-management-software"
                     : isScheduling
                     ? "/scheduling/best-scheduling-software"
+                    : isPos
+                    ? "/pos/best-pos-software"
                     : "/payroll/best-payroll-software";
                   const roundupLabel = isAccounting
                     ? "Best accounting software (2026) — full roundup"
@@ -646,6 +649,8 @@ export function ComparisonTemplate({
                     ? "Best project management software (2026) — full roundup"
                     : isScheduling
                     ? "Best scheduling software (2026) — full roundup"
+                    : isPos
+                    ? "Best POS software (2026) — full roundup"
                     : "Best payroll software (2026) — full roundup";
                   const sectionTitle = isAccounting
                     ? "Best accounting software guides"
@@ -659,6 +664,8 @@ export function ComparisonTemplate({
                     ? "Best project management software guides"
                     : isScheduling
                     ? "Best scheduling software guides"
+                    : isPos
+                    ? "Best POS software guides"
                     : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
@@ -674,6 +681,8 @@ export function ComparisonTemplate({
                     ? "Project management guides"
                     : isScheduling
                     ? "Scheduling guides"
+                    : isPos
+                    ? "POS guides"
                     : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -702,7 +711,7 @@ export function ComparisonTemplate({
                                 </Link>
                               </li>
                             ))
-                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && !isProjectManagement && !isScheduling && (
+                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && !isProjectManagement && !isScheduling && !isPos && (
                               <>
                                 <li>
                                   <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">

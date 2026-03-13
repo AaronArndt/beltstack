@@ -222,3 +222,45 @@ export function getHrCompareUrl(comparisonSlug?: string): string {
 export function getHrBestForUrl(scenarioSlug: string): string {
   return `/hr/best-for/${scenarioSlug}`;
 }
+
+// ——— Inventory Management ———
+
+/** Inventory review detail page: /inventory/review/[slug] */
+export function getInventoryReviewUrl(slug: string): string {
+  return `/inventory/review/${slug}`;
+}
+
+/** Inventory hub */
+export const INVENTORY_HUB_URL = "/inventory" as const;
+
+/** Inventory compare page (optional comparison slug) */
+export function getInventoryCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/inventory/compare/${comparisonSlug}`;
+  return "/inventory/compare";
+}
+
+/** Inventory best-for scenario */
+export function getInventoryBestForUrl(scenarioSlug: string): string {
+  return `/inventory/best-for/${scenarioSlug}`;
+}
+
+// ——— POS (Point of Sale) ———
+
+/** POS review detail page: /pos/review/[slug] */
+export function getPosReviewUrl(slug: string): string {
+  return `/pos/review/${slug}`;
+}
+
+/** POS hub */
+export const POS_HUB_URL = "/pos" as const;
+
+/** POS compare page (optional comparison slug) */
+export function getPosCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/pos/compare/${comparisonSlug}`;
+  return "/pos/compare";
+}
+
+/** POS best-for scenario */
+export function getPosBestForUrl(scenarioSlug: string): string {
+  return `/pos/best-for/${scenarioSlug}`;
+}
