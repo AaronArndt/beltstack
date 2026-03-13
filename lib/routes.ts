@@ -180,3 +180,45 @@ export function getFieldServiceCompareUrl(comparisonSlug?: string): string {
 export function getFieldServiceBestForUrl(scenarioSlug: string): string {
   return `/field-service/best-for/${scenarioSlug}`;
 }
+
+// ——— Scheduling ———
+
+/** Scheduling review detail page: /scheduling/review/[slug] */
+export function getSchedulingReviewUrl(slug: string): string {
+  return `/scheduling/review/${slug}`;
+}
+
+/** Scheduling hub */
+export const SCHEDULING_HUB_URL = "/scheduling" as const;
+
+/** Scheduling compare page (optional comparison slug) */
+export function getSchedulingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/scheduling/compare/${comparisonSlug}`;
+  return "/scheduling/compare";
+}
+
+/** Scheduling best-for scenario */
+export function getSchedulingBestForUrl(scenarioSlug: string): string {
+  return `/scheduling/best-for/${scenarioSlug}`;
+}
+
+// ——— HR ———
+
+/** HR review detail page: /hr/review/[slug] */
+export function getHrReviewUrl(slug: string): string {
+  return `/hr/review/${slug}`;
+}
+
+/** HR hub */
+export const HR_HUB_URL = "/hr" as const;
+
+/** HR compare page (optional comparison slug) */
+export function getHrCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/hr/compare/${comparisonSlug}`;
+  return "/hr/compare";
+}
+
+/** HR best-for scenario */
+export function getHrBestForUrl(scenarioSlug: string): string {
+  return `/hr/best-for/${scenarioSlug}`;
+}

@@ -31,6 +31,7 @@ const SOFTWARE_COLUMNS: {
     id: "operations",
     label: "Operations",
     items: [
+      { title: "Scheduling", description: "Appointments, booking, calendars", href: "/scheduling" },
       { title: "Field Service", description: "Scheduling, dispatch, estimates", href: "/field-service" },
       { title: "Project Management", description: "Projects, tasks, collaboration", href: "/project-management" },
       { title: "CRM", description: "Leads, pipelines, follow-up", href: "/crm" },
@@ -44,8 +45,7 @@ const SOFTWARE_COLUMNS: {
       { title: "Accounting", description: "Bookkeeping, invoicing, expenses", href: "/accounting" },
       { title: "Invoicing", description: "Invoices, payments, recurring billing", href: "/invoicing" },
       { title: "Time Tracking", description: "Billable hours, teams, reporting", href: "/time-tracking" },
-      { title: "Banking", description: "Business accounts, cash flow", href: "/banking" },
-      { title: "Credit Cards", description: "Cashback and financing", href: "/credit-cards" },
+      { title: "HR Software", description: "HR, payroll, benefits, hiring", href: "/hr" },
     ],
   },
   {
