@@ -1,10 +1,13 @@
 import type { MetadataRoute } from "next";
 import { getPayrollComparisonSlugs } from "@/lib/data/payrollComparisons";
 import { getPayrollReviewSlugs } from "@/lib/data/payrollReviews";
+import { getPayrollAlternativesSlugs } from "@/lib/data/payrollAlternatives";
 import { getAccountingComparisonSlugs } from "@/lib/data/accountingComparisons";
 import { getAccountingReviewSlugs } from "@/lib/data/accountingReviews";
+import { getAccountingAlternativesSlugs } from "@/lib/data/accountingAlternatives";
 import { getInvoicingComparisonSlugs } from "@/lib/data/invoicingComparisons";
 import { getInvoicingReviewSlugs } from "@/lib/data/invoicingReviews";
+import { getInvoicingAlternativesSlugs } from "@/lib/data/invoicingAlternatives";
 import { getTimeTrackingComparisonSlugs } from "@/lib/data/timeTrackingComparisons";
 import { getTimeTrackingReviewSlugs } from "@/lib/data/timeTrackingReviews";
 import { getCrmComparisonSlugs } from "@/lib/data/crmComparisons";
@@ -19,6 +22,9 @@ import { getHrComparisonSlugs } from "@/lib/data/hrComparisons";
 import { getHrReviewSlugs } from "@/lib/data/hrReviews";
 import {
   getPayrollBestForUrl,
+  getPayrollAlternativeUrl,
+  getAccountingAlternativeUrl,
+  getInvoicingAlternativeUrl,
   getAccountingBestForUrl,
   getInvoicingBestForUrl,
   getTimeTrackingBestForUrl,
@@ -298,6 +304,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Payroll alternatives
+  const alternativeSlugs = getPayrollAlternativesSlugs();
+  const alternativeEntries: MetadataRoute.Sitemap = alternativeSlugs.map((slug) =>
+    defaultEntry(getPayrollAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // Accounting comparisons
   const accountingComparisonSlugs = getAccountingComparisonSlugs();
   const accountingComparisonEntries: MetadataRoute.Sitemap = accountingComparisonSlugs.map((slug) =>
@@ -320,6 +332,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Accounting alternatives
+  const accountingAlternativeSlugs = getAccountingAlternativesSlugs();
+  const accountingAlternativeEntries: MetadataRoute.Sitemap = accountingAlternativeSlugs.map((slug) =>
+    defaultEntry(getAccountingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // Invoicing comparisons
   const invoicingComparisonSlugs = getInvoicingComparisonSlugs();
   const invoicingComparisonEntries: MetadataRoute.Sitemap = invoicingComparisonSlugs.map((slug) =>
@@ -340,6 +358,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Invoicing guides
   const invoicingGuideEntries: MetadataRoute.Sitemap = INVOICING_GUIDES.map((guide) =>
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Invoicing alternatives
+  const invoicingAlternativeSlugs = getInvoicingAlternativesSlugs();
+  const invoicingAlternativeEntries: MetadataRoute.Sitemap = invoicingAlternativeSlugs.map((slug) =>
+    defaultEntry(getInvoicingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // Time tracking comparisons
@@ -547,14 +571,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...providerEntries,
     ...bestForEntries,
     ...guideEntries,
+    ...alternativeEntries,
     ...accountingComparisonEntries,
     ...accountingReviewEntries,
     ...accountingBestForEntries,
     ...accountingGuideEntries,
+    ...accountingAlternativeEntries,
     ...invoicingComparisonEntries,
     ...invoicingReviewEntries,
     ...invoicingBestForEntries,
     ...invoicingGuideEntries,
+    ...invoicingAlternativeEntries,
     ...timeTrackingComparisonEntries,
     ...timeTrackingReviewEntries,
     ...timeTrackingBestForEntries,

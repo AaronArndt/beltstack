@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPayrollReviewBySlug, getPayrollReviewSlugs } from "@/lib/data/payrollReviews";
-import { getPayrollReviewUrl } from "@/lib/routes";
+import { getPayrollAlternativesPage } from "@/lib/data/payrollAlternatives";
+import { getPayrollReviewUrl, getPayrollAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -34,10 +35,18 @@ export default async function PayrollReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getPayrollReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getPayrollAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getPayrollAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

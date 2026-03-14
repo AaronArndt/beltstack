@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getAccountingReviewBySlug, getAccountingReviewSlugs } from "@/lib/data/accountingReviews";
-import { getAccountingReviewUrl } from "@/lib/routes";
+import { getAccountingAlternativesPage } from "@/lib/data/accountingAlternatives";
+import { getAccountingReviewUrl, getAccountingAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -34,10 +35,18 @@ export default async function AccountingReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getAccountingReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getAccountingAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getAccountingAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

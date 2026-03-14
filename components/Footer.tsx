@@ -29,13 +29,12 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Product</h4>
             <ul className="mt-2 space-y-1.5">
-              {["Software", "Comparisons", "Blog"].map((label) => (
-                <li key={label}>
-                  <Link href={label === "Software" ? "/software" : label === "Comparisons" ? "/comparisons" : "/blog"} className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/software" className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Software</Link>
+              </li>
+              <li>
+                <Link href="/comparisons" className="text-sm text-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Comparisons</Link>
+              </li>
             </ul>
           </div>
           <div>

@@ -22,6 +22,11 @@ export function getPayrollBestForUrl(scenarioSlug: string): string {
   return `/payroll/best-for/${scenarioSlug}`;
 }
 
+/** Payroll alternatives page: /payroll/alternatives/[slug] */
+export function getPayrollAlternativeUrl(slug: string): string {
+  return `/payroll/alternatives/${slug}`;
+}
+
 /** Trade slug → best-for scenario slug (replaces legacy /payroll/trades/*) */
 const TRADE_TO_BEST_FOR: Record<string, string> = {
   electrical: "electricians",
@@ -76,6 +81,11 @@ export function getAccountingBestForUrl(scenarioSlug: string): string {
   return `/accounting/best-for/${scenarioSlug}`;
 }
 
+/** Accounting alternatives page: /accounting/alternatives/[slug] */
+export function getAccountingAlternativeUrl(slug: string): string {
+  return `/accounting/alternatives/${slug}`;
+}
+
 // ——— Invoicing ———
 
 /** Invoicing review detail page: /invoicing/review/[slug] */
@@ -95,6 +105,11 @@ export function getInvoicingCompareUrl(comparisonSlug?: string): string {
 /** Invoicing best-for scenario */
 export function getInvoicingBestForUrl(scenarioSlug: string): string {
   return `/invoicing/best-for/${scenarioSlug}`;
+}
+
+/** Invoicing alternatives page: /invoicing/alternatives/[slug] */
+export function getInvoicingAlternativeUrl(slug: string): string {
+  return `/invoicing/alternatives/${slug}`;
 }
 
 // ——— Time Tracking ———

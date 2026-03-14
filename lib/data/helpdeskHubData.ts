@@ -12,15 +12,15 @@ import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPage
 
 // ——— Logo paths (place under /public/Logos/) ———
 export const HELPDESK_LOGOS = {
-  zendesk: "/Logos/zendesk.png",
-  freshdesk: "/Logos/freshdesk.png",
-  helpScout: "/Logos/helpscout.png",
+  zendesk: "/Logos/zendesk.jpeg",
+  freshdesk: "/Logos/freshsales.jpeg", // Freshworks; same company as Freshsales
+  helpScout: "/Logos/helpscout.jpeg",
   intercom: "/Logos/intercom.png",
-  zohoDesk: "/Logos/zohodesk.png",
-  gorgias: "/Logos/gorgias.png",
-  liveAgent: "/Logos/liveagent.png",
-  kayako: "/Logos/kayako.png",
-  front: "/Logos/front.png",
+  zohoDesk: "/Logos/zohodesk.jpeg",
+  gorgias: "/Logos/gorgias.jpeg",
+  liveAgent: "/Logos/liveagent.jpeg",
+  kayako: "/Logos/kayako.jpeg",
+  front: "/Logos/front.jpeg",
 } as const;
 
 /** Top helpdesk picks for the hub hero section. */

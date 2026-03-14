@@ -105,6 +105,10 @@ export type ReviewTemplateProps = {
   guideHubLabel?: string;
   /** Optional: cross-cluster or related reading links (e.g. payroll from accounting review) */
   relatedReading?: { label: string; href: string }[];
+  /** Optional: link to alternatives page (e.g. /payroll/alternatives/gusto) */
+  alternativesPageHref?: string;
+  /** Optional: label for alternatives link (e.g. "Best Gusto alternatives") */
+  alternativesPageLabel?: string;
   tradeLinks?: { label: string; href: string }[];
 };
 
@@ -336,6 +340,8 @@ export function ReviewTemplate({
   guideHubHref,
   guideHubLabel,
   relatedReading,
+  alternativesPageHref,
+  alternativesPageLabel,
   tradeLinks,
 }: ReviewTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -575,6 +581,14 @@ export function ReviewTemplate({
               {/* 9. Alternatives — simple list, link hover only; logo slot fixed width so rows align with or without logo */}
               <section id="alternatives" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                 <SectionTitle sub="Other options we review.">Alternatives</SectionTitle>
+                {alternativesPageHref != null && alternativesPageLabel != null && (
+                  <p className="mb-4 text-sm text-neutral-700 leading-relaxed">
+                    <Link href={alternativesPageHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
+                      {alternativesPageLabel}
+                    </Link>
+                    {" — full comparison, pricing, and who each option suits."}
+                  </p>
+                )}
                 <ul className="space-y-4">
                   {alternatives.map((alt) => (
                     <li key={alt.href} className="flex items-start gap-3">
@@ -623,7 +637,7 @@ export function ReviewTemplate({
               )}
 
               {/* Best [category] software for different use cases — roundup + scenarios only (no full trade list) */}
-              {(bestPayrollSoftwareHref != null || compareHubHref != null || guideHubHref != null || (scenarioLinks != null && scenarioLinks.length > 0) || (relatedReading != null && relatedReading.length > 0)) && (
+              {(bestPayrollSoftwareHref != null || compareHubHref != null || guideHubHref != null || alternativesPageHref != null || (scenarioLinks != null && scenarioLinks.length > 0) || (relatedReading != null && relatedReading.length > 0)) && (
                 <section id="best-for-use-cases" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub={bestForSub}>{bestForTitle}</SectionTitle>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
@@ -645,6 +659,13 @@ export function ReviewTemplate({
                       <li>
                         <Link href={guideHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                           {guideHubLabel}
+                        </Link>
+                      </li>
+                    )}
+                    {alternativesPageHref != null && alternativesPageLabel != null && (
+                      <li>
+                        <Link href={alternativesPageHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                          {alternativesPageLabel}
                         </Link>
                       </li>
                     )}

@@ -84,7 +84,6 @@ const TOP_PICKS_MINI = [
 ];
 
 const SIMPLE_LINKS = [
-  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

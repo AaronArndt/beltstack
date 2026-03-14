@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getInvoicingReviewBySlug, getInvoicingReviewSlugs } from "@/lib/data/invoicingReviews";
-import { getInvoicingReviewUrl } from "@/lib/routes";
+import { getInvoicingAlternativesPage } from "@/lib/data/invoicingAlternatives";
+import { getInvoicingReviewUrl, getInvoicingAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -34,10 +35,18 @@ export default async function InvoicingReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getInvoicingReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getInvoicingAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getInvoicingAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }
