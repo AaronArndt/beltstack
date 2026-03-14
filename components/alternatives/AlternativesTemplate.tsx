@@ -152,6 +152,15 @@ export function AlternativesTemplate({
               ]}
               className="mb-4"
             />
+            {comparisonTableRows[0] && (
+              <div className="mb-4">
+                <img
+                  src={comparisonTableRows[0].logoSrc}
+                  alt=""
+                  className="h-14 w-auto max-w-[140px] object-contain sm:h-16 sm:max-w-[160px]"
+                />
+              </div>
+            )}
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {title}
             </h1>

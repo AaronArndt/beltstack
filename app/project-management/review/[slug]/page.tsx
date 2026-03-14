@@ -4,7 +4,8 @@ import {
   getProjectManagementReviewBySlug,
   getProjectManagementReviewSlugs,
 } from "@/lib/data/projectManagementReviews";
-import { getProjectManagementReviewUrl } from "@/lib/routes";
+import { getProjectManagementAlternativesPage } from "@/lib/data/projectManagementAlternatives";
+import { getProjectManagementReviewUrl, getProjectManagementAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -42,7 +43,15 @@ export default async function ProjectManagementReviewPage({ params }: { params: 
   const { slug } = await params;
   const data = getProjectManagementReviewBySlug(slug);
   if (!data) notFound();
-  const currentYear = new Date().getFullYear();
+  const alternativesPage = getProjectManagementAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    quickVerdict: data.quickVerdict,
+    ...(alternativesPage && {
+      alternativesPageHref: getProjectManagementAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
 
   return (
     <>
@@ -53,7 +62,7 @@ export default async function ProjectManagementReviewPage({ params }: { params: 
           __html: JSON.stringify(softwareApplicationSchema(slug, data)),
         }}
       />
-      <ReviewTemplate {...data} quickVerdict={data.quickVerdict} />
+      <ReviewTemplate {...reviewProps} />
     </>
   );
 }

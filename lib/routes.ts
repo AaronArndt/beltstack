@@ -175,6 +175,11 @@ export function getProjectManagementBestForUrl(scenarioSlug: string): string {
   return `/project-management/best-for/${scenarioSlug}`;
 }
 
+/** Project management alternatives page: /project-management/alternatives/[slug] */
+export function getProjectManagementAlternativeUrl(slug: string): string {
+  return `/project-management/alternatives/${slug}`;
+}
+
 // ——— Field Service Management ———
 
 /** Field service review detail page: /field-service/review/[slug] */

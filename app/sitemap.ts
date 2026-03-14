@@ -14,6 +14,7 @@ import { getCrmComparisonSlugs } from "@/lib/data/crmComparisons";
 import { getCrmReviewSlugs } from "@/lib/data/crmReviews";
 import { getProjectManagementComparisonSlugs } from "@/lib/data/projectManagementComparisons";
 import { getProjectManagementReviewSlugs } from "@/lib/data/projectManagementReviews";
+import { getProjectManagementAlternativesSlugs } from "@/lib/data/projectManagementAlternatives";
 import { getFieldServiceComparisonSlugs } from "@/lib/data/fieldServiceComparisons";
 import { getFieldServiceReviewSlugs } from "@/lib/data/fieldServiceReviews";
 import { getSchedulingComparisonSlugs } from "@/lib/data/schedulingComparisons";
@@ -30,6 +31,7 @@ import {
   getTimeTrackingBestForUrl,
   getCrmBestForUrl,
   getProjectManagementBestForUrl,
+  getProjectManagementAlternativeUrl,
   getFieldServiceBestForUrl,
   getSchedulingBestForUrl,
   getHrBestForUrl,
@@ -432,6 +434,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Project management alternatives
+  const pmAlternativeSlugs = getProjectManagementAlternativesSlugs();
+  const pmAlternativeEntries: MetadataRoute.Sitemap = pmAlternativeSlugs.map((slug) =>
+    defaultEntry(getProjectManagementAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // Field service comparisons
   const fsComparisonSlugs = getFieldServiceComparisonSlugs();
   const fsComparisonEntries: MetadataRoute.Sitemap = fsComparisonSlugs.map((slug) =>
@@ -594,6 +602,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pmReviewEntries,
     ...pmBestForEntries,
     ...pmGuideEntries,
+    ...pmAlternativeEntries,
     ...fsComparisonEntries,
     ...fsReviewEntries,
     ...fsBestForEntries,
