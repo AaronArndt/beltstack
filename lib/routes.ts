@@ -264,3 +264,21 @@ export function getPosCompareUrl(comparisonSlug?: string): string {
 export function getPosBestForUrl(scenarioSlug: string): string {
   return `/pos/best-for/${scenarioSlug}`;
 }
+
+// ——— Helpdesk ———
+
+/** Helpdesk review detail page: /helpdesk/review/[slug] */
+export function getHelpdeskReviewUrl(slug: string): string {
+  return `/helpdesk/review/${slug}`;
+}
+
+/** Helpdesk compare page (optional comparison slug) */
+export function getHelpdeskCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/helpdesk/compare/${comparisonSlug}`;
+  return "/helpdesk/compare";
+}
+
+/** Helpdesk best-for scenario */
+export function getHelpdeskBestForUrl(scenarioSlug: string): string {
+  return `/helpdesk/best-for/${scenarioSlug}`;
+}

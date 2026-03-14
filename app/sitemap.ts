@@ -29,6 +29,7 @@ import {
   getHrBestForUrl,
   getPosBestForUrl,
   getInventoryBestForUrl,
+  getHelpdeskBestForUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
@@ -46,6 +47,9 @@ import { PROJECT_MANAGEMENT_GUIDES } from "@/lib/data/projectManagementGuides";
 import { FIELD_SERVICE_GUIDES } from "@/lib/data/fieldServiceGuides";
 import { SCHEDULING_GUIDES } from "@/lib/data/schedulingGuides";
 import { HR_GUIDES } from "@/lib/data/hrGuides";
+import { getHelpdeskComparisonSlugs } from "@/lib/data/helpdeskComparisons";
+import { getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
+import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
 const PAYROLL_BEST_FOR_SCENARIOS = [
@@ -169,6 +173,15 @@ const INVENTORY_BEST_FOR_SCENARIOS = [
   "warehouses",
 ] as const;
 
+/** Static Helpdesk best-for scenario slugs (matches app/helpdesk/best-for/[scenario]). */
+const HELPDESK_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "startups",
+  "ecommerce",
+  "saas",
+  "growing-teams",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -250,6 +263,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/inventory/best-inventory-software", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/inventory/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/inventory/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Helpdesk
+    defaultEntry("/helpdesk", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/helpdesk/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/helpdesk/best-helpdesk-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/helpdesk/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/helpdesk/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   // Payroll comparisons
@@ -499,6 +518,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Helpdesk comparisons
+  const helpdeskComparisonSlugs = getHelpdeskComparisonSlugs();
+  const helpdeskComparisonEntries: MetadataRoute.Sitemap = helpdeskComparisonSlugs.map((slug) =>
+    defaultEntry(`/helpdesk/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Helpdesk reviews
+  const helpdeskReviewSlugs = getHelpdeskReviewSlugs();
+  const helpdeskReviewEntries: MetadataRoute.Sitemap = helpdeskReviewSlugs.map((slug) =>
+    defaultEntry(`/helpdesk/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Helpdesk best-for
+  const helpdeskBestForEntries: MetadataRoute.Sitemap = HELPDESK_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getHelpdeskBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Helpdesk guides
+  const helpdeskGuideEntries: MetadataRoute.Sitemap = HELPDESK_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...comparisonEntries,
@@ -546,5 +587,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...inventoryReviewEntries,
     ...inventoryBestForEntries,
     ...inventoryGuideEntries,
+    ...helpdeskComparisonEntries,
+    ...helpdeskReviewEntries,
+    ...helpdeskBestForEntries,
+    ...helpdeskGuideEntries,
   ];
 }

@@ -36,6 +36,7 @@ const SOFTWARE_COLUMNS: {
       { title: "Project Management", description: "Projects, tasks, collaboration", href: "/project-management" },
       { title: "Inventory Management", description: "Inventory, stock, and product tracking", href: "/inventory" },
       { title: "CRM", description: "Leads, pipelines, follow-up", href: "/crm" },
+      { title: "Helpdesk", description: "Support tickets, live chat, customer messaging", href: "/helpdesk" },
     ],
   },
   {

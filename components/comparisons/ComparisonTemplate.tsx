@@ -622,6 +622,7 @@ export function ComparisonTemplate({
                   const isProjectManagement = categoryHref === "/project-management";
                   const isScheduling = categoryHref === "/scheduling";
                   const isPos = categoryHref === "/pos";
+                  const isHelpdesk = categoryHref === "/helpdesk";
                   const roundupHref = isAccounting
                     ? "/accounting/best-accounting-software"
                     : isInvoicing
@@ -636,6 +637,8 @@ export function ComparisonTemplate({
                     ? "/scheduling/best-scheduling-software"
                     : isPos
                     ? "/pos/best-pos-software"
+                    : isHelpdesk
+                    ? "/helpdesk/best-helpdesk-software"
                     : "/payroll/best-payroll-software";
                   const roundupLabel = isAccounting
                     ? "Best accounting software (2026) — full roundup"
@@ -651,6 +654,8 @@ export function ComparisonTemplate({
                     ? "Best scheduling software (2026) — full roundup"
                     : isPos
                     ? "Best POS software (2026) — full roundup"
+                    : isHelpdesk
+                    ? "Best helpdesk software (2026) — full roundup"
                     : "Best payroll software (2026) — full roundup";
                   const sectionTitle = isAccounting
                     ? "Best accounting software guides"
@@ -666,6 +671,8 @@ export function ComparisonTemplate({
                     ? "Best scheduling software guides"
                     : isPos
                     ? "Best POS software guides"
+                    : isHelpdesk
+                    ? "Best helpdesk software guides"
                     : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
@@ -683,6 +690,8 @@ export function ComparisonTemplate({
                     ? "Scheduling guides"
                     : isPos
                     ? "POS guides"
+                    : isHelpdesk
+                    ? "Helpdesk guides"
                     : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
