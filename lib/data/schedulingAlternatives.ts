@@ -421,7 +421,7 @@ const zohoBookingsPage: AlternativesTemplateProps = {
   whyPeopleLookForAlternatives: [
     { heading: "Not using Zoho", body: "Calendly, Acuity, and others are standalone or integrate with many stacks. For teams that don't use Zoho." },
     { heading: "More features", body: "Acuity offers more intake and packages; Calendly has more integrations. For teams that need more than Zoho Bookings provides." },
-    { heading: "Team scheduling", body: "YouCanBook.me offers strong team and round-robin scheduling. For non-Zoho users who need team booking.", reviewHref: getSchedulingReviewUrl("youcanbookme") },
+    { heading: "Team scheduling", body: "YouCanBook.me offers strong team and round-robin scheduling. For non-Zoho users who need team booking." },
   ],
   topAlternatives: ZOHO_BOOKINGS_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
