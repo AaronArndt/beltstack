@@ -37,6 +37,7 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
     reviewHref: getInventoryReviewUrl("zoho-inventory"),
     compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7"),
     logoSrc: INVENTORY_LOGOS.zoho,
+    visitUrl: "https://www.zoho.com/inventory",
   },
   {
     slug: "cin7",
@@ -49,6 +50,7 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
     reviewHref: getInventoryReviewUrl("cin7"),
     compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7"),
     logoSrc: INVENTORY_LOGOS.cin7,
+    visitUrl: "https://www.cin7.com",
   },
   {
     slug: "inflow-inventory",
@@ -62,6 +64,7 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
     reviewHref: getInventoryReviewUrl("inflow-inventory"),
     compareHref: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory"),
     logoSrc: INVENTORY_LOGOS.inflow,
+    visitUrl: "https://www.inflowinventory.com",
   },
   {
     slug: "katana",
@@ -74,6 +77,7 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
     reviewHref: getInventoryReviewUrl("katana"),
     compareHref: getInventoryCompareUrl("cin7-vs-katana"),
     logoSrc: INVENTORY_LOGOS.katana,
+    visitUrl: "https://katanamrp.com",
   },
   {
     slug: "sortly",
@@ -86,6 +90,7 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
     reviewHref: getInventoryReviewUrl("sortly"),
     compareHref: getInventoryCompareUrl("sortly-vs-inflow-inventory"),
     logoSrc: INVENTORY_LOGOS.sortly,
+    visitUrl: "https://www.sortly.com",
   },
 ] as FeaturedPick[];
 

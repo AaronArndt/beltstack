@@ -4,7 +4,8 @@ import {
   getSchedulingReviewBySlug,
   getSchedulingReviewSlugs,
 } from "@/lib/data/schedulingReviews";
-import { getSchedulingReviewUrl } from "@/lib/routes";
+import { getSchedulingAlternativesPage } from "@/lib/data/schedulingAlternatives";
+import { getSchedulingReviewUrl, getSchedulingAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -42,6 +43,15 @@ export default async function SchedulingReviewPage({ params }: { params: Promise
   const { slug } = await params;
   const data = getSchedulingReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getSchedulingAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    quickVerdict: data.quickVerdict,
+    ...(alternativesPage && {
+      alternativesPageHref: getSchedulingAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
 
   return (
     <>
@@ -52,7 +62,7 @@ export default async function SchedulingReviewPage({ params }: { params: Promise
           __html: JSON.stringify(softwareApplicationSchema(slug, data)),
         }}
       />
-      <ReviewTemplate {...data} quickVerdict={data.quickVerdict} />
+      <ReviewTemplate {...reviewProps} />
     </>
   );
 }

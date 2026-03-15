@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getInventoryReviewBySlug, getInventoryReviewSlugs } from "@/lib/data/inventoryReviews";
-import { getInventoryReviewUrl } from "@/lib/routes";
+import { getInventoryAlternativesPage } from "@/lib/data/inventoryAlternatives";
+import { getInventoryReviewUrl, getInventoryAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -37,10 +38,18 @@ export default async function InventoryReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getInventoryReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getInventoryAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getInventoryAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

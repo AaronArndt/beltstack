@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getHelpdeskReviewBySlug, getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
-import { getHelpdeskReviewUrl } from "@/lib/routes";
+import { getHelpdeskAlternativesPage } from "@/lib/data/helpdeskAlternatives";
+import { getHelpdeskReviewUrl, getHelpdeskAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -37,10 +38,18 @@ export default async function HelpdeskReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getHelpdeskReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getHelpdeskAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getHelpdeskAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

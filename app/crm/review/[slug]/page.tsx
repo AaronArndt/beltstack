@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCrmReviewBySlug, getCrmReviewSlugs } from "@/lib/data/crmReviews";
-import { getCrmReviewUrl } from "@/lib/routes";
+import { getCrmAlternativesPage } from "@/lib/data/crmAlternatives";
+import { getCrmReviewUrl, getCrmAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -34,10 +35,18 @@ export default async function CrmReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getCrmReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getCrmAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getCrmAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

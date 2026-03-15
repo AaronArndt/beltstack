@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getPosReviewBySlug, getPosReviewSlugs } from "@/lib/data/posReviews";
-import { getPosReviewUrl } from "@/lib/routes";
+import { getPosAlternativesPage } from "@/lib/data/posAlternatives";
+import { getPosReviewUrl, getPosAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -37,10 +38,18 @@ export default async function PosReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getPosReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getPosAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getPosAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

@@ -4,7 +4,8 @@ import {
   getFieldServiceReviewBySlug,
   getFieldServiceReviewSlugs,
 } from "@/lib/data/fieldServiceReviews";
-import { getFieldServiceReviewUrl } from "@/lib/routes";
+import { getFieldServiceAlternativesPage } from "@/lib/data/fieldServiceAlternatives";
+import { getFieldServiceReviewUrl, getFieldServiceAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -42,6 +43,15 @@ export default async function FieldServiceReviewPage({ params }: { params: Promi
   const { slug } = await params;
   const data = getFieldServiceReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getFieldServiceAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    quickVerdict: data.quickVerdict,
+    ...(alternativesPage && {
+      alternativesPageHref: getFieldServiceAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
 
   return (
     <>
@@ -52,7 +62,7 @@ export default async function FieldServiceReviewPage({ params }: { params: Promi
           __html: JSON.stringify(softwareApplicationSchema(slug, data)),
         }}
       />
-      <ReviewTemplate {...data} quickVerdict={data.quickVerdict} />
+      <ReviewTemplate {...reviewProps} />
     </>
   );
 }

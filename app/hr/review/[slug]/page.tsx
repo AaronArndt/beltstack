@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { ReviewTemplate } from "@/components/reviews/ReviewTemplate";
 import { getHrReviewBySlug, getHrReviewSlugs } from "@/lib/data/hrReviews";
-import { getHrReviewUrl } from "@/lib/routes";
+import { getHrAlternativesPage } from "@/lib/data/hrAlternatives";
+import { getHrReviewUrl, getHrAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -39,6 +40,15 @@ export default async function HrReviewPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const data = getHrReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getHrAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    quickVerdict: data.quickVerdict,
+    ...(alternativesPage && {
+      alternativesPageHref: getHrAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
 
   return (
     <>
@@ -49,7 +59,7 @@ export default async function HrReviewPage({ params }: { params: Promise<{ slug:
           __html: JSON.stringify(softwareApplicationSchema(slug, data)),
         }}
       />
-      <ReviewTemplate {...data} quickVerdict={data.quickVerdict} />
+      <ReviewTemplate {...reviewProps} />
     </>
   );
 }

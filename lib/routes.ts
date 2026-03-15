@@ -133,6 +133,11 @@ export function getTimeTrackingBestForUrl(scenarioSlug: string): string {
   return `/time-tracking/best-for/${scenarioSlug}`;
 }
 
+/** Time tracking alternatives page: /time-tracking/alternatives/[slug] */
+export function getTimeTrackingAlternativeUrl(slug: string): string {
+  return `/time-tracking/alternatives/${slug}`;
+}
+
 // ——— CRM ———
 
 /** CRM review detail page: /crm/review/[slug] */
@@ -152,6 +157,11 @@ export function getCrmCompareUrl(comparisonSlug?: string): string {
 /** CRM best-for scenario */
 export function getCrmBestForUrl(scenarioSlug: string): string {
   return `/crm/best-for/${scenarioSlug}`;
+}
+
+/** CRM alternatives page: /crm/alternatives/[slug] */
+export function getCrmAlternativeUrl(slug: string): string {
+  return `/crm/alternatives/${slug}`;
 }
 
 // ——— Project Management ———
@@ -201,6 +211,11 @@ export function getFieldServiceBestForUrl(scenarioSlug: string): string {
   return `/field-service/best-for/${scenarioSlug}`;
 }
 
+/** Field service alternatives page: /field-service/alternatives/[slug] */
+export function getFieldServiceAlternativeUrl(slug: string): string {
+  return `/field-service/alternatives/${slug}`;
+}
+
 // ——— Scheduling ———
 
 /** Scheduling review detail page: /scheduling/review/[slug] */
@@ -220,6 +235,11 @@ export function getSchedulingCompareUrl(comparisonSlug?: string): string {
 /** Scheduling best-for scenario */
 export function getSchedulingBestForUrl(scenarioSlug: string): string {
   return `/scheduling/best-for/${scenarioSlug}`;
+}
+
+/** Scheduling alternatives page: /scheduling/alternatives/[slug] */
+export function getSchedulingAlternativeUrl(slug: string): string {
+  return `/scheduling/alternatives/${slug}`;
 }
 
 // ——— HR ———
@@ -243,6 +263,11 @@ export function getHrBestForUrl(scenarioSlug: string): string {
   return `/hr/best-for/${scenarioSlug}`;
 }
 
+/** HR alternatives page: /hr/alternatives/[slug] */
+export function getHrAlternativeUrl(slug: string): string {
+  return `/hr/alternatives/${slug}`;
+}
+
 // ——— Inventory Management ———
 
 /** Inventory review detail page: /inventory/review/[slug] */
@@ -262,6 +287,11 @@ export function getInventoryCompareUrl(comparisonSlug?: string): string {
 /** Inventory best-for scenario */
 export function getInventoryBestForUrl(scenarioSlug: string): string {
   return `/inventory/best-for/${scenarioSlug}`;
+}
+
+/** Inventory alternatives page: /inventory/alternatives/[slug] */
+export function getInventoryAlternativeUrl(slug: string): string {
+  return `/inventory/alternatives/${slug}`;
 }
 
 // ——— POS (Point of Sale) ———
@@ -285,6 +315,11 @@ export function getPosBestForUrl(scenarioSlug: string): string {
   return `/pos/best-for/${scenarioSlug}`;
 }
 
+/** POS alternatives page: /pos/alternatives/[slug] */
+export function getPosAlternativeUrl(slug: string): string {
+  return `/pos/alternatives/${slug}`;
+}
+
 // ——— Helpdesk ———
 
 /** Helpdesk review detail page: /helpdesk/review/[slug] */
@@ -301,4 +336,9 @@ export function getHelpdeskCompareUrl(comparisonSlug?: string): string {
 /** Helpdesk best-for scenario */
 export function getHelpdeskBestForUrl(scenarioSlug: string): string {
   return `/helpdesk/best-for/${scenarioSlug}`;
+}
+
+/** Helpdesk alternatives page: /helpdesk/alternatives/[slug] */
+export function getHelpdeskAlternativeUrl(slug: string): string {
+  return `/helpdesk/alternatives/${slug}`;
 }

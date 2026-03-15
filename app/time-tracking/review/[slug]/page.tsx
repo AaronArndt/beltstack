@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getTimeTrackingReviewBySlug, getTimeTrackingReviewSlugs } from "@/lib/data/timeTrackingReviews";
-import { getTimeTrackingReviewUrl } from "@/lib/routes";
+import { getTimeTrackingAlternativesPage } from "@/lib/data/timeTrackingAlternatives";
+import { getTimeTrackingReviewUrl, getTimeTrackingAlternativeUrl } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -34,10 +35,18 @@ export default async function TimeTrackingReviewPage({ params }: Props) {
   const { slug } = await params;
   const data = getTimeTrackingReviewBySlug(slug);
   if (!data) notFound();
+  const alternativesPage = getTimeTrackingAlternativesPage(slug);
+  const reviewProps = {
+    ...data,
+    ...(alternativesPage && {
+      alternativesPageHref: getTimeTrackingAlternativeUrl(slug),
+      alternativesPageLabel: `Best ${data.toolName} alternatives`,
+    }),
+  };
   return (
     <>
       <StructuredData data={softwareApplicationSchema(slug, data)} />
-      <ReviewPageClient {...data} />
+      <ReviewPageClient {...reviewProps} />
     </>
   );
 }

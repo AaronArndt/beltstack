@@ -10,17 +10,22 @@ import { getInvoicingReviewSlugs } from "@/lib/data/invoicingReviews";
 import { getInvoicingAlternativesSlugs } from "@/lib/data/invoicingAlternatives";
 import { getTimeTrackingComparisonSlugs } from "@/lib/data/timeTrackingComparisons";
 import { getTimeTrackingReviewSlugs } from "@/lib/data/timeTrackingReviews";
+import { getTimeTrackingAlternativesSlugs } from "@/lib/data/timeTrackingAlternatives";
 import { getCrmComparisonSlugs } from "@/lib/data/crmComparisons";
 import { getCrmReviewSlugs } from "@/lib/data/crmReviews";
+import { getCrmAlternativesSlugs } from "@/lib/data/crmAlternatives";
 import { getProjectManagementComparisonSlugs } from "@/lib/data/projectManagementComparisons";
 import { getProjectManagementReviewSlugs } from "@/lib/data/projectManagementReviews";
 import { getProjectManagementAlternativesSlugs } from "@/lib/data/projectManagementAlternatives";
 import { getFieldServiceComparisonSlugs } from "@/lib/data/fieldServiceComparisons";
 import { getFieldServiceReviewSlugs } from "@/lib/data/fieldServiceReviews";
+import { getFieldServiceAlternativesSlugs } from "@/lib/data/fieldServiceAlternatives";
 import { getSchedulingComparisonSlugs } from "@/lib/data/schedulingComparisons";
 import { getSchedulingReviewSlugs } from "@/lib/data/schedulingReviews";
+import { getSchedulingAlternativesSlugs } from "@/lib/data/schedulingAlternatives";
 import { getHrComparisonSlugs } from "@/lib/data/hrComparisons";
 import { getHrReviewSlugs } from "@/lib/data/hrReviews";
+import { getHrAlternativesSlugs } from "@/lib/data/hrAlternatives";
 import {
   getPayrollBestForUrl,
   getPayrollAlternativeUrl,
@@ -29,21 +34,31 @@ import {
   getAccountingBestForUrl,
   getInvoicingBestForUrl,
   getTimeTrackingBestForUrl,
+  getTimeTrackingAlternativeUrl,
   getCrmBestForUrl,
+  getCrmAlternativeUrl,
   getProjectManagementBestForUrl,
   getProjectManagementAlternativeUrl,
   getFieldServiceBestForUrl,
+  getFieldServiceAlternativeUrl,
   getSchedulingBestForUrl,
+  getSchedulingAlternativeUrl,
   getHrBestForUrl,
+  getHrAlternativeUrl,
   getPosBestForUrl,
+  getPosAlternativeUrl,
   getInventoryBestForUrl,
+  getInventoryAlternativeUrl,
   getHelpdeskBestForUrl,
+  getHelpdeskAlternativeUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
+import { getPosAlternativesSlugs } from "@/lib/data/posAlternatives";
 import { POS_GUIDES } from "@/lib/data/posGuides";
 import { getInventoryComparisonSlugs } from "@/lib/data/inventoryComparisons";
 import { getInventoryReviewSlugs } from "@/lib/data/inventoryReviews";
+import { getInventoryAlternativesSlugs } from "@/lib/data/inventoryAlternatives";
 import { INVENTORY_GUIDES } from "@/lib/data/inventoryGuides";
 import { SITE_URL } from "@/lib/site";
 import { PAYROLL_GUIDES } from "@/lib/data/payrollGuides";
@@ -57,6 +72,7 @@ import { SCHEDULING_GUIDES } from "@/lib/data/schedulingGuides";
 import { HR_GUIDES } from "@/lib/data/hrGuides";
 import { getHelpdeskComparisonSlugs } from "@/lib/data/helpdeskComparisons";
 import { getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
+import { getHelpdeskAlternativesSlugs } from "@/lib/data/helpdeskAlternatives";
 import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -390,6 +406,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Time tracking alternatives
+  const timeTrackingAlternativeSlugs = getTimeTrackingAlternativesSlugs();
+  const timeTrackingAlternativeEntries: MetadataRoute.Sitemap = timeTrackingAlternativeSlugs.map((slug) =>
+    defaultEntry(getTimeTrackingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // CRM comparisons
   const crmComparisonSlugs = getCrmComparisonSlugs();
   const crmComparisonEntries: MetadataRoute.Sitemap = crmComparisonSlugs.map((slug) =>
@@ -400,6 +422,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const crmReviewSlugs = getCrmReviewSlugs();
   const crmReviewEntries: MetadataRoute.Sitemap = crmReviewSlugs.map((slug) =>
     defaultEntry(`/crm/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // CRM alternatives
+  const crmAlternativeSlugs = getCrmAlternativesSlugs();
+  const crmAlternativeEntries: MetadataRoute.Sitemap = crmAlternativeSlugs.map((slug) =>
+    defaultEntry(getCrmAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // CRM best-for
@@ -462,6 +490,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Field service alternatives
+  const fsAlternativeSlugs = getFieldServiceAlternativesSlugs();
+  const fsAlternativeEntries: MetadataRoute.Sitemap = fsAlternativeSlugs.map((slug) =>
+    defaultEntry(getFieldServiceAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // Scheduling comparisons
   const schedulingComparisonSlugs = getSchedulingComparisonSlugs();
   const schedulingComparisonEntries: MetadataRoute.Sitemap = schedulingComparisonSlugs.map((slug) =>
@@ -482,6 +516,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Scheduling guides
   const schedulingGuideEntries: MetadataRoute.Sitemap = SCHEDULING_GUIDES.map((guide) =>
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Scheduling alternatives
+  const schedulingAlternativeSlugs = getSchedulingAlternativesSlugs();
+  const schedulingAlternativeEntries: MetadataRoute.Sitemap = schedulingAlternativeSlugs.map((slug) =>
+    defaultEntry(getSchedulingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // HR comparisons
@@ -506,6 +546,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // HR alternatives
+  const hrAlternativeSlugs = getHrAlternativesSlugs();
+  const hrAlternativeEntries: MetadataRoute.Sitemap = hrAlternativeSlugs.map((slug) =>
+    defaultEntry(getHrAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // POS comparisons
   const posComparisonSlugs = getPosComparisonSlugs();
   const posComparisonEntries: MetadataRoute.Sitemap = posComparisonSlugs.map((slug) =>
@@ -528,6 +574,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // POS alternatives
+  const posAlternativeSlugs = getPosAlternativesSlugs();
+  const posAlternativeEntries: MetadataRoute.Sitemap = posAlternativeSlugs.map((slug) =>
+    defaultEntry(getPosAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
   // Inventory comparisons
   const inventoryComparisonSlugs = getInventoryComparisonSlugs();
   const inventoryComparisonEntries: MetadataRoute.Sitemap = inventoryComparisonSlugs.map((slug) =>
@@ -538,6 +590,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const inventoryReviewSlugs = getInventoryReviewSlugs();
   const inventoryReviewEntries: MetadataRoute.Sitemap = inventoryReviewSlugs.map((slug) =>
     defaultEntry(`/inventory/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Inventory alternatives
+  const inventoryAlternativeSlugs = getInventoryAlternativesSlugs();
+  const inventoryAlternativeEntries: MetadataRoute.Sitemap = inventoryAlternativeSlugs.map((slug) =>
+    defaultEntry(getInventoryAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // Inventory best-for
@@ -560,6 +618,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const helpdeskReviewSlugs = getHelpdeskReviewSlugs();
   const helpdeskReviewEntries: MetadataRoute.Sitemap = helpdeskReviewSlugs.map((slug) =>
     defaultEntry(`/helpdesk/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Helpdesk alternatives
+  const helpdeskAlternativeSlugs = getHelpdeskAlternativesSlugs();
+  const helpdeskAlternativeEntries: MetadataRoute.Sitemap = helpdeskAlternativeSlugs.map((slug) =>
+    defaultEntry(getHelpdeskAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // Helpdesk best-for
@@ -594,8 +658,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...timeTrackingReviewEntries,
     ...timeTrackingBestForEntries,
     ...timeTrackingGuideEntries,
+    ...timeTrackingAlternativeEntries,
     ...crmComparisonEntries,
     ...crmReviewEntries,
+    ...crmAlternativeEntries,
     ...crmBestForEntries,
     ...crmGuideEntries,
     ...pmComparisonEntries,
@@ -607,24 +673,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...fsReviewEntries,
     ...fsBestForEntries,
     ...fsGuideEntries,
+    ...fsAlternativeEntries,
     ...schedulingComparisonEntries,
     ...schedulingReviewEntries,
     ...schedulingBestForEntries,
     ...schedulingGuideEntries,
+    ...schedulingAlternativeEntries,
     ...hrComparisonEntries,
     ...hrReviewEntries,
     ...hrBestForEntries,
     ...hrGuideEntries,
+    ...hrAlternativeEntries,
     ...posComparisonEntries,
     ...posReviewEntries,
     ...posBestForEntries,
     ...posGuideEntries,
+    ...posAlternativeEntries,
     ...inventoryComparisonEntries,
     ...inventoryReviewEntries,
+    ...inventoryAlternativeEntries,
     ...inventoryBestForEntries,
     ...inventoryGuideEntries,
     ...helpdeskComparisonEntries,
     ...helpdeskReviewEntries,
+    ...helpdeskAlternativeEntries,
     ...helpdeskBestForEntries,
     ...helpdeskGuideEntries,
   ];
