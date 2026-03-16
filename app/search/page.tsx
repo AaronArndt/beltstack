@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { searchContent } from "@/lib/search/search";
 import type { SearchResult } from "@/lib/search/search";
@@ -9,7 +9,7 @@ import { SearchAutocomplete } from "@/components/search/SearchAutocomplete";
 
 const sectionOrder = ["Review", "Comparison", "Alternatives", "Best Software", "Best For", "Guide", "Category"] as const;
 
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const query = searchParams.get("q") ?? "";
@@ -36,9 +36,8 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
-      <main>
-        <section className="border-b border-slate-200 bg-[#F8FAFC]">
+    <>
+      <section className="border-b border-slate-200 bg-[#F8FAFC]">
           <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Search Results
@@ -88,6 +87,42 @@ export default function SearchPage() {
             })}
           </div>
         </section>
+    </>
+  );
+}
+
+function SearchPageFallback() {
+  return (
+    <>
+      <section className="border-b border-slate-200 bg-[#F8FAFC]">
+        <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+          <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            Search Results
+          </h1>
+          <p className="mt-2 text-center text-[#6E6E6E] text-sm sm:text-base">
+            Type to search reviews, comparisons, roundups, and guides.
+          </p>
+          <SearchAutocomplete initialQuery="" autoNavigateToResults={false} onSubmitQuery={() => {}} />
+        </div>
+      </section>
+      <section className="py-8 sm:py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-[#6E6E6E] text-sm">
+            Start by searching for a software name, category, or use case.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <div className="min-h-screen bg-[#F8FAFC]">
+      <main>
+        <Suspense fallback={<SearchPageFallback />}>
+          <SearchPageContent />
+        </Suspense>
       </main>
     </div>
   );
