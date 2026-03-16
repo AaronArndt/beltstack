@@ -21,6 +21,7 @@ export type FeaturedSoftwareCard = {
   logoSrc: string;
   features: string[];
   reviewHref: string;
+  visitUrl: string;
 };
 
 export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
@@ -31,6 +32,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/gusto.jpeg",
     features: ["Full-service payroll", "Contractor payments", "HR onboarding"],
     reviewHref: "/payroll/review/gusto",
+    visitUrl: "https://gusto.com",
   },
   {
     name: "QuickBooks Online",
@@ -39,6 +41,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/quickbooks.png",
     features: ["Bookkeeping", "Invoicing", "Reporting"],
     reviewHref: "/accounting/review/quickbooks-online",
+    visitUrl: "https://quickbooks.intuit.com",
   },
   {
     name: "HubSpot",
@@ -47,6 +50,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/hubspot.jpeg",
     features: ["Sales pipeline", "Contact management", "Marketing integrations"],
     reviewHref: "/crm/review/hubspot",
+    visitUrl: "https://www.hubspot.com",
   },
   {
     name: "Zendesk",
@@ -55,6 +59,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/zendesk.jpeg",
     features: ["Ticketing workflows", "Multi-channel support", "Automation"],
     reviewHref: "/helpdesk/review/zendesk",
+    visitUrl: "https://www.zendesk.com",
   },
   {
     name: "ServiceTitan",
@@ -63,6 +68,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/servicetitan.png",
     features: ["Dispatching", "Estimates & invoicing", "Revenue growth"],
     reviewHref: "/field-service/review/servicetitan",
+    visitUrl: "https://www.servicetitan.com",
   },
   {
     name: "Square POS",
@@ -71,6 +77,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/square.jpeg",
     features: ["POS + payments", "Inventory tracking", "Easy SMB setup"],
     reviewHref: "/pos/review/square-pos",
+    visitUrl: "https://squareup.com",
   },
 ];
 

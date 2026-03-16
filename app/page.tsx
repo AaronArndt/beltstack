@@ -230,12 +230,12 @@ export default function Home() {
                   className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-white">
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden">
                       <Image
                         src={item.logoSrc}
                         alt=""
                         fill
-                        className="object-contain p-1"
+                        className="object-contain"
                         sizes="48px"
                       />
                     </div>
@@ -252,12 +252,22 @@ export default function Home() {
                       <li key={f}>{f}</li>
                     ))}
                   </ul>
-                  <Link
-                    href={item.reviewHref}
-                    className="mt-4 inline-block text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                  >
-                    Read review →
-                  </Link>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <a
+                      href={item.visitUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Visit site
+                    </a>
+                    <Link
+                      href={item.reviewHref}
+                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Read review →
+                    </Link>
+                  </div>
                 </article>
               ))}
             </div>
