@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { StickyStackFinder } from "@/components/StickyStackFinder";
+import { SearchAutocomplete } from "@/components/search/SearchAutocomplete";
 import {
   HERO_CATEGORY_CHIPS,
   FEATURED_SOFTWARE,
@@ -15,7 +16,6 @@ import {
   TRADES,
   LATEST_GUIDES,
   TRUST_ITEMS,
-  SEARCH_DESTINATIONS,
 } from "@/lib/data/homePageData";
 
 // ——— Design tokens (reference) ———
@@ -66,7 +66,6 @@ function EmeraldIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function AffiliateModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
@@ -95,31 +94,13 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
-function resolveSearchQuery(query: string): string {
-  const normalized = query.trim().toLowerCase().replace(/\s+/g, " ");
-  if (!normalized) return "/payroll";
-  if (SEARCH_DESTINATIONS[normalized]) return SEARCH_DESTINATIONS[normalized];
-  const words = normalized.split(" ");
-  for (const word of words) {
-    if (SEARCH_DESTINATIONS[word]) return SEARCH_DESTINATIONS[word];
-  }
-  return "/payroll";
-}
-
 export default function Home() {
   const router = useRouter();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [affiliateModalOpen, setAffiliateModalOpen] = useState(false);
   const [stackCategory, setStackCategory] = useState("");
   const [stackTrade, setStackTrade] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
   const stackFinderSentinelRef = useRef<HTMLDivElement>(null);
-
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const url = resolveSearchQuery(searchQuery);
-    router.push(url);
-  };
 
   const handleStackFastSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -187,26 +168,7 @@ export default function Home() {
                 Affiliate disclosure
               </button>
             </div>
-            <form onSubmit={handleSearchSubmit} className="mx-auto mt-8 max-w-2xl">
-              <label htmlFor="hero-search" className="sr-only">Search software or category</label>
-              <div className="flex flex-col gap-3 sm:flex-row sm:rounded-xl sm:border sm:border-slate-200 sm:bg-white sm:shadow-sm sm:overflow-hidden">
-                <input
-                  id="hero-search"
-                  type="search"
-                  placeholder="Search software or category..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-[#1A2D48] placeholder:text-[#6E6E6E] focus:border-[#10B981] focus:ring-2 focus:ring-[#10B981]/20 focus:outline-none sm:rounded-none sm:border-0"
-                  aria-describedby="hero-search-hint"
-                />
-                <button type="submit" className={btnPrimary + " sm:rounded-none sm:mx-1 sm:my-1 sm:shrink-0"}>
-                  Search
-                </button>
-              </div>
-              <p id="hero-search-hint" className="mt-2 text-center text-[#6E6E6E] text-sm">
-                Try: Gusto, CRM software, payroll for contractors
-              </p>
-            </form>
+            <SearchAutocomplete autoNavigateToResults />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
               {HERO_CATEGORY_CHIPS.map(({ label, href }) => (
                 <Link key={href} href={href} className={btnPill}>

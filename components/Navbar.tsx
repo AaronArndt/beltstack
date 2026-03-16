@@ -473,7 +473,7 @@ export default function Navbar() {
         })()}
 
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center rounded-lg border border-neutral-200 bg-white px-3 py-2 text-[#1A2D48] focus-within:border-neutral-300 focus-within:ring-1 focus-within:ring-neutral-200">
+          <div className="searchContainer hidden sm:flex items-center rounded-xl border border-neutral-200 bg-white px-3 py-2 text-[#1A2D48] transition-all duration-150 focus-within:border-[#10B981]">
             <svg className="h-4 w-4 shrink-0 text-[#6E6E6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
@@ -482,7 +482,7 @@ export default function Navbar() {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-32 border-0 bg-transparent pl-2 text-sm outline-none placeholder:text-[#6E6E6E] md:w-40"
+              className="searchInput w-32 border-0 bg-transparent pl-2 text-sm focus:outline-none focus:ring-0 focus:shadow-none placeholder:text-[#6E6E6E] md:w-40"
               aria-label="Search"
             />
           </div>
@@ -559,9 +559,9 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <div className="mt-2 flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-3 py-2">
-              <svg className="h-4 w-4 text-[#6E6E6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              <input type="search" placeholder="Search..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="flex-1 border-0 bg-transparent py-1 text-sm outline-none" />
+            <div className="searchContainer mt-2 flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
+              <svg className="h-4 w-4 shrink-0 text-[#6E6E6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              <input type="search" placeholder="Search..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="searchInput flex-1 border-0 bg-transparent py-1 text-sm focus:outline-none focus:ring-0 focus:shadow-none" />
             </div>
             <Link href="/software" onClick={() => setMobileOpen(false)} className={`mt-2 inline-block text-center ${btnPrimary}`}>
               Explore

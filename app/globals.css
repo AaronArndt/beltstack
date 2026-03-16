@@ -45,3 +45,10 @@ html {
   outline: 2px solid #10B981;
   outline-offset: 2px;
 }
+
+/* Search bar: container shows one focus highlight via focus-within; suppress inner outline so input/button don't get a second green box */
+.searchContainer input:focus-visible,
+.searchContainer button:focus-visible {
+  outline: none;
+  outline-offset: 0;
+}
