@@ -252,12 +252,12 @@ export default function Home() {
                       <li key={f}>{f}</li>
                     ))}
                   </ul>
-                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-100 pt-4">
                     <a
                       href={item.visitUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      className={btnPrimary}
                     >
                       Visit site
                     </a>
