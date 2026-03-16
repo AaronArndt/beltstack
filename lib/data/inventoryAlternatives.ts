@@ -239,11 +239,248 @@ const finalePage: AlternativesTemplateProps = {
   ],
 };
 
+// ——— Cin7 alternatives ———
+const CIN7_ALTERNATIVES: AlternativesTopPick[] = [
+  { slug: "zoho-inventory", name: "Zoho Inventory", logoSrc: INVENTORY_LOGOS.zoho, rating: "4.6", bestFor: "overall SMB", description: "Lower cost and free tier; good for lighter multi-channel.", reviewHref: getInventoryReviewUrl("zoho-inventory"), compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7"), startingPrice: "Free tier", standoutFeature: "Balance; value" },
+  { slug: "inflow-inventory", name: "inFlow Inventory", logoSrc: INVENTORY_LOGOS.inflow, rating: "4.4", bestFor: "small business", description: "Straightforward SMB tracking at much lower cost.", reviewHref: getInventoryReviewUrl("inflow-inventory"), startingPrice: "From ~$89/mo", standoutFeature: "SMB; simple" },
+  { slug: "finale-inventory", name: "Finale Inventory", logoSrc: INVENTORY_LOGOS.finale, rating: "4.4", bestFor: "ecommerce", description: "Ecommerce and warehouse focus; often lower cost than Cin7.", reviewHref: getInventoryReviewUrl("finale-inventory"), startingPrice: "From ~$99/mo", standoutFeature: "Ecommerce; warehouse" },
+  { slug: "katana", name: "Katana", logoSrc: INVENTORY_LOGOS.katana, rating: "4.5", bestFor: "manufacturing", description: "Manufacturing and production planning; different focus.", reviewHref: getInventoryReviewUrl("katana"), compareHref: getInventoryCompareUrl("cin7-vs-katana"), startingPrice: "From ~$129/mo", standoutFeature: "Manufacturing" },
+];
+
+const cin7Page: AlternativesTemplateProps = {
+  ...zohoPage,
+  title: "Best Cin7 Alternatives (2026)",
+  subtitle: "If Cin7 isn't the right fit—because of cost, complexity, or focus—these inventory management alternatives offer strong options for multi-channel and SMB teams.",
+  productName: "Cin7",
+  productSlug: "cin7",
+  originalReviewHref: getInventoryReviewUrl("cin7"),
+  quickAnswerParagraphs: [
+    "Cin7 is built for multi-channel operations; alternatives include Zoho Inventory for lower cost and free tier, inFlow for straightforward SMB tracking, Finale for ecommerce and warehouse at lower cost, and Katana for manufacturing focus. Zoho and inFlow are common alternatives when Cin7 is too much.",
+  ],
+  whyPeopleLookForAlternatives: [
+    { heading: "Cost", body: "Cin7 starts at a higher price point. Zoho Inventory and inFlow offer similar core capabilities at much lower cost for smaller teams." },
+    { heading: "Simpler needs", body: "Single-channel or light multi-channel teams often find Zoho, inFlow, or Sortly easier and cheaper." },
+    { heading: "Manufacturing focus", body: "Katana is built for manufacturing and production planning; Cin7 is channel-centric." },
+  ],
+  topAlternatives: CIN7_ALTERNATIVES,
+  comparisonTableRows: buildTableRows(
+    { slug: "cin7", name: "Cin7", logoSrc: INVENTORY_LOGOS.cin7, bestFor: "multi-channel", startingPrice: "From ~$349/mo", standoutFeature: "Multi-channel", reviewHref: getInventoryReviewUrl("cin7") },
+    CIN7_ALTERNATIVES
+  ),
+  detailedAlternatives: [
+    { productName: "Zoho Inventory", heading: "Best for value", body: "Zoho Inventory offers strong multi-channel and integrations at lower cost and a free tier.", reviewHref: getInventoryReviewUrl("zoho-inventory"), compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    { productName: "inFlow Inventory", heading: "Best for SMB", body: "inFlow is straightforward inventory and ordering for small businesses at much lower cost.", reviewHref: getInventoryReviewUrl("inflow-inventory") },
+    { productName: "Finale Inventory", heading: "Best for ecommerce", body: "Finale targets ecommerce and warehouse operations; often more affordable than Cin7.", reviewHref: getInventoryReviewUrl("finale-inventory") },
+    { productName: "Katana", heading: "Best for manufacturing", body: "Katana is built for manufacturing and production; compare if your priority is production over channels.", reviewHref: getInventoryReviewUrl("katana"), compareHref: getInventoryCompareUrl("cin7-vs-katana") },
+  ],
+  relatedComparisons: [
+    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
+  ],
+  relatedResources: defaultRelatedResources("Cin7", getInventoryReviewUrl("cin7")),
+  faqItems: [
+    { q: "What is the best Cin7 alternative?", a: "Zoho Inventory for value and free tier; inFlow for SMB tracking; Finale for ecommerce; Katana for manufacturing. Choose by budget and focus." },
+    { q: "Is Cin7 too expensive for small business?", a: "For many small teams, yes. Zoho Inventory and inFlow offer strong alternatives at much lower cost. Cin7 fits when you have significant multi-channel volume." },
+    { q: "Cin7 vs Zoho Inventory?", a: "Cin7 is built for heavier multi-channel and retail; Zoho is more SMB-friendly with a free tier. Compare by channel count and budget." },
+  ],
+};
+
+// ——— Fishbowl alternatives ———
+const FISHBOWL_ALTERNATIVES: AlternativesTopPick[] = [
+  { slug: "katana", name: "Katana", logoSrc: INVENTORY_LOGOS.katana, rating: "4.5", bestFor: "manufacturing", description: "Modern cloud manufacturing and production planning.", reviewHref: getInventoryReviewUrl("katana"), compareHref: getInventoryCompareUrl("fishbowl-vs-katana"), startingPrice: "From ~$129/mo", standoutFeature: "Manufacturing" },
+  { slug: "zoho-inventory", name: "Zoho Inventory", logoSrc: INVENTORY_LOGOS.zoho, rating: "4.6", bestFor: "SMB", description: "Full inventory with free tier; less warehouse-specific.", reviewHref: getInventoryReviewUrl("zoho-inventory"), startingPrice: "Free tier", standoutFeature: "Value" },
+  { slug: "inflow-inventory", name: "inFlow Inventory", logoSrc: INVENTORY_LOGOS.inflow, rating: "4.4", bestFor: "small business", description: "Straightforward SMB inventory and ordering.", reviewHref: getInventoryReviewUrl("inflow-inventory"), startingPrice: "From ~$89/mo", standoutFeature: "SMB" },
+  { slug: "unleashed", name: "Unleashed", logoSrc: INVENTORY_LOGOS.unleashed, rating: "4.4", bestFor: "inventory & manufacturing", description: "Strong inventory and manufacturing in one platform.", reviewHref: getInventoryReviewUrl("unleashed"), startingPrice: "Quote", standoutFeature: "Inventory; manufacturing" },
+];
+
+const fishbowlPage: AlternativesTemplateProps = {
+  ...zohoPage,
+  title: "Best Fishbowl Alternatives (2026)",
+  subtitle: "If Fishbowl isn't the right fit—because of deployment, cost, or features—these inventory and manufacturing alternatives offer strong options.",
+  productName: "Fishbowl",
+  productSlug: "fishbowl",
+  originalReviewHref: getInventoryReviewUrl("fishbowl"),
+  quickAnswerParagraphs: [
+    "Fishbowl is strong for warehouses and manufacturing; alternatives include Katana for modern cloud manufacturing, Zoho Inventory for value and free tier, inFlow for SMB tracking, and Unleashed for inventory and manufacturing. Katana and Zoho are common alternatives.",
+  ],
+  whyPeopleLookForAlternatives: [
+    { heading: "Cloud and simplicity", body: "Katana and Zoho offer modern cloud apps; Fishbowl has desktop roots. Teams often compare for deployment and ease of use." },
+    { heading: "Cost", body: "Zoho and inFlow are typically more affordable. Fishbowl is quote-based; compare total cost." },
+    { heading: "Manufacturing focus", body: "Katana and Unleashed are strong manufacturing alternatives with different strengths." },
+  ],
+  topAlternatives: FISHBOWL_ALTERNATIVES,
+  comparisonTableRows: buildTableRows(
+    { slug: "fishbowl", name: "Fishbowl", logoSrc: INVENTORY_LOGOS.fishbowl, bestFor: "warehouse & manufacturing", startingPrice: "Quote", standoutFeature: "Warehouse; manufacturing", reviewHref: getInventoryReviewUrl("fishbowl") },
+    FISHBOWL_ALTERNATIVES
+  ),
+  detailedAlternatives: [
+    { productName: "Katana", heading: "Best for manufacturing", body: "Katana is modern cloud manufacturing and production planning. Compare for manufacturing depth.", reviewHref: getInventoryReviewUrl("katana"), compareHref: getInventoryCompareUrl("fishbowl-vs-katana") },
+    { productName: "Zoho Inventory", heading: "Best for value", body: "Zoho Inventory offers full inventory with a free tier; less warehouse-specific than Fishbowl.", reviewHref: getInventoryReviewUrl("zoho-inventory") },
+    { productName: "inFlow Inventory", heading: "Best for SMB", body: "inFlow is straightforward inventory for small businesses.", reviewHref: getInventoryReviewUrl("inflow-inventory") },
+    { productName: "Unleashed", heading: "Best for inventory and manufacturing", body: "Unleashed combines inventory and manufacturing in one platform.", reviewHref: getInventoryReviewUrl("unleashed") },
+  ],
+  relatedComparisons: [
+    { label: "Fishbowl vs Katana", href: getInventoryCompareUrl("fishbowl-vs-katana") },
+    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+  ],
+  relatedResources: defaultRelatedResources("Fishbowl", getInventoryReviewUrl("fishbowl")),
+  faqItems: [
+    { q: "What is the best Fishbowl alternative?", a: "Katana for cloud manufacturing; Zoho for value; inFlow for SMB; Unleashed for inventory and manufacturing. Choose by deployment and focus." },
+    { q: "Is Fishbowl cloud-based?", a: "Fishbowl has desktop and cloud options. Katana and Zoho are cloud-native. Compare by your deployment preference." },
+    { q: "Fishbowl vs Katana?", a: "Both serve manufacturing and warehouse. Katana is modern cloud and production-focused; Fishbowl has strong warehouse roots. Compare features and pricing." },
+  ],
+};
+
+// ——— Katana alternatives ———
+const KATANA_ALTERNATIVES: AlternativesTopPick[] = [
+  { slug: "cin7", name: "Cin7", logoSrc: INVENTORY_LOGOS.cin7, rating: "4.5", bestFor: "multi-channel", description: "Multi-channel inventory and orders; different focus.", reviewHref: getInventoryReviewUrl("cin7"), compareHref: getInventoryCompareUrl("cin7-vs-katana"), startingPrice: "From ~$349/mo", standoutFeature: "Multi-channel" },
+  { slug: "unleashed", name: "Unleashed", logoSrc: INVENTORY_LOGOS.unleashed, rating: "4.4", bestFor: "inventory & manufacturing", description: "Strong inventory and manufacturing combined.", reviewHref: getInventoryReviewUrl("unleashed"), startingPrice: "Quote", standoutFeature: "Inventory; manufacturing" },
+  { slug: "zoho-inventory", name: "Zoho Inventory", logoSrc: INVENTORY_LOGOS.zoho, rating: "4.6", bestFor: "SMB", description: "Full inventory at lower cost; lighter manufacturing.", reviewHref: getInventoryReviewUrl("zoho-inventory"), startingPrice: "Free tier", standoutFeature: "Value" },
+  { slug: "fishbowl", name: "Fishbowl", logoSrc: INVENTORY_LOGOS.fishbowl, rating: "4.3", bestFor: "warehouse", description: "Warehouse and manufacturing; different deployment.", reviewHref: getInventoryReviewUrl("fishbowl"), compareHref: getInventoryCompareUrl("fishbowl-vs-katana"), startingPrice: "Quote", standoutFeature: "Warehouse" },
+];
+
+const katanaPage: AlternativesTemplateProps = {
+  ...zohoPage,
+  title: "Best Katana Alternatives (2026)",
+  subtitle: "If Katana isn't the right fit—because of focus, cost, or deployment—these manufacturing and inventory alternatives offer strong options.",
+  productName: "Katana",
+  productSlug: "katana",
+  originalReviewHref: getInventoryReviewUrl("katana"),
+  quickAnswerParagraphs: [
+    "Katana is our top pick for manufacturing inventory; alternatives include Cin7 for multi-channel focus, Unleashed for inventory and manufacturing, Zoho Inventory for value and lighter needs, and Fishbowl for warehouse and manufacturing. Cin7 and Unleashed are common alternatives when manufacturing isn't the main driver.",
+  ],
+  whyPeopleLookForAlternatives: [
+    { heading: "Multi-channel over manufacturing", body: "Cin7 is built for multi-channel sales; Katana is manufacturing-first. Choose by primary need." },
+    { heading: "Cost or simplicity", body: "Zoho Inventory offers full inventory at lower cost with lighter manufacturing features." },
+    { heading: "Different manufacturing stack", body: "Unleashed and Fishbowl are strong manufacturing alternatives with different strengths." },
+  ],
+  topAlternatives: KATANA_ALTERNATIVES,
+  comparisonTableRows: buildTableRows(
+    { slug: "katana", name: "Katana", logoSrc: INVENTORY_LOGOS.katana, bestFor: "manufacturing", startingPrice: "From ~$129/mo", standoutFeature: "Manufacturing", reviewHref: getInventoryReviewUrl("katana") },
+    KATANA_ALTERNATIVES
+  ),
+  detailedAlternatives: [
+    { productName: "Cin7", heading: "Best for multi-channel", body: "Cin7 is built for multi-channel inventory and orders; compare if channels matter more than production.", reviewHref: getInventoryReviewUrl("cin7"), compareHref: getInventoryCompareUrl("cin7-vs-katana") },
+    { productName: "Unleashed", heading: "Best for inventory and manufacturing", body: "Unleashed combines inventory and manufacturing in one platform.", reviewHref: getInventoryReviewUrl("unleashed") },
+    { productName: "Zoho Inventory", heading: "Best for value", body: "Zoho Inventory offers full inventory at lower cost; manufacturing features are lighter than Katana.", reviewHref: getInventoryReviewUrl("zoho-inventory") },
+    { productName: "Fishbowl", heading: "Best for warehouse", body: "Fishbowl is strong for warehouse and manufacturing; compare deployment and features.", reviewHref: getInventoryReviewUrl("fishbowl"), compareHref: getInventoryCompareUrl("fishbowl-vs-katana") },
+  ],
+  relatedComparisons: [
+    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
+    { label: "Fishbowl vs Katana", href: getInventoryCompareUrl("fishbowl-vs-katana") },
+  ],
+  relatedResources: defaultRelatedResources("Katana", getInventoryReviewUrl("katana")),
+  faqItems: [
+    { q: "What is the best Katana alternative?", a: "Cin7 for multi-channel; Unleashed for inventory and manufacturing; Zoho for value; Fishbowl for warehouse. Choose by primary focus." },
+    { q: "Is Katana only for manufacturing?", a: "Katana is built for manufacturing and production planning. For buy-and-resell or multi-channel without production, Cin7 or Zoho may fit better." },
+    { q: "Katana vs Cin7?", a: "Katana is manufacturing-first; Cin7 is multi-channel and order management. Choose by whether production or channels drive your operations." },
+  ],
+};
+
+// ——— Sortly alternatives ———
+const SORTLY_ALTERNATIVES: AlternativesTopPick[] = [
+  { slug: "inflow-inventory", name: "inFlow Inventory", logoSrc: INVENTORY_LOGOS.inflow, rating: "4.4", bestFor: "small business", description: "Deeper purchasing and sales; still SMB-friendly.", reviewHref: getInventoryReviewUrl("inflow-inventory"), compareHref: getInventoryCompareUrl("sortly-vs-inflow-inventory"), startingPrice: "From ~$89/mo", standoutFeature: "SMB; orders" },
+  { slug: "zoho-inventory", name: "Zoho Inventory", logoSrc: INVENTORY_LOGOS.zoho, rating: "4.6", bestFor: "overall SMB", description: "Full inventory with free tier.", reviewHref: getInventoryReviewUrl("zoho-inventory"), startingPrice: "Free tier", standoutFeature: "Value" },
+  { slug: "finale-inventory", name: "Finale Inventory", logoSrc: INVENTORY_LOGOS.finale, rating: "4.4", bestFor: "ecommerce", description: "Ecommerce and warehouse as you grow.", reviewHref: getInventoryReviewUrl("finale-inventory"), startingPrice: "From ~$99/mo", standoutFeature: "Ecommerce" },
+  { slug: "quickbooks-commerce", name: "QuickBooks Commerce", logoSrc: INVENTORY_LOGOS.quickbooksCommerce, rating: "4.2", bestFor: "QuickBooks users", description: "Inventory tied to QuickBooks.", reviewHref: getInventoryReviewUrl("quickbooks-commerce"), startingPrice: "Quote", standoutFeature: "QuickBooks" },
+];
+
+const sortlyPage: AlternativesTemplateProps = {
+  ...zohoPage,
+  title: "Best Sortly Alternatives (2026)",
+  subtitle: "If Sortly isn't the right fit—because you need more ordering, reporting, or scale—these inventory management alternatives offer strong options.",
+  productName: "Sortly",
+  productSlug: "sortly",
+  originalReviewHref: getInventoryReviewUrl("sortly"),
+  quickAnswerParagraphs: [
+    "Sortly is best for simple visual tracking; alternatives include inFlow Inventory for fuller purchasing and sales, Zoho Inventory for full inventory and free tier, Finale for ecommerce growth, and QuickBooks Commerce for QuickBooks users. inFlow and Zoho are common alternatives when you need more than tracking.",
+  ],
+  whyPeopleLookForAlternatives: [
+    { heading: "More ordering and workflows", body: "inFlow and Zoho add purchase orders, sales orders, and deeper workflows. Sortly is tracking-focused." },
+    { heading: "Free tier", body: "Zoho Inventory has a free tier; Sortly starts paid. Compare cost for your team size." },
+    { heading: "Ecommerce or scale", body: "Finale and Cin7 support higher-volume and multi-channel; Sortly stays simple." },
+  ],
+  topAlternatives: SORTLY_ALTERNATIVES,
+  comparisonTableRows: buildTableRows(
+    { slug: "sortly", name: "Sortly", logoSrc: INVENTORY_LOGOS.sortly, bestFor: "simple tracking", startingPrice: "From ~$39/mo", standoutFeature: "Visual; simple", reviewHref: getInventoryReviewUrl("sortly") },
+    SORTLY_ALTERNATIVES
+  ),
+  detailedAlternatives: [
+    { productName: "inFlow Inventory", heading: "Best for small business", body: "inFlow adds purchase and sales orders while staying SMB-friendly. Compare when you need more than tracking.", reviewHref: getInventoryReviewUrl("inflow-inventory"), compareHref: getInventoryCompareUrl("sortly-vs-inflow-inventory") },
+    { productName: "Zoho Inventory", heading: "Best for value", body: "Zoho Inventory offers full inventory with a free tier and strong integrations.", reviewHref: getInventoryReviewUrl("zoho-inventory") },
+    { productName: "Finale Inventory", heading: "Best for ecommerce", body: "Finale is built for ecommerce and warehouse as you grow beyond simple tracking.", reviewHref: getInventoryReviewUrl("finale-inventory") },
+    { productName: "QuickBooks Commerce", heading: "Best for QuickBooks users", body: "QuickBooks Commerce extends QuickBooks into inventory and orders.", reviewHref: getInventoryReviewUrl("quickbooks-commerce") },
+  ],
+  relatedComparisons: [
+    { label: "Sortly vs inFlow Inventory", href: getInventoryCompareUrl("sortly-vs-inflow-inventory") },
+    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+  ],
+  relatedResources: defaultRelatedResources("Sortly", getInventoryReviewUrl("sortly")),
+  faqItems: [
+    { q: "What is the best Sortly alternative?", a: "inFlow for fuller SMB inventory; Zoho for value and free tier; Finale for ecommerce; QuickBooks Commerce for QuickBooks. Choose by need for orders vs tracking." },
+    { q: "Does Sortly do purchase orders?", a: "Sortly focuses on tracking and visual catalog. inFlow and Zoho add purchase orders, sales orders, and reordering." },
+    { q: "Sortly vs inFlow?", a: "Sortly is simpler and more visual; inFlow adds purchasing and sales workflows. Many teams outgrow Sortly and move to inFlow or Zoho." },
+  ],
+};
+
+// ——— Unleashed alternatives ———
+const UNLEASHED_ALTERNATIVES: AlternativesTopPick[] = [
+  { slug: "katana", name: "Katana", logoSrc: INVENTORY_LOGOS.katana, rating: "4.5", bestFor: "manufacturing", description: "Modern cloud manufacturing and production.", reviewHref: getInventoryReviewUrl("katana"), startingPrice: "From ~$129/mo", standoutFeature: "Manufacturing" },
+  { slug: "cin7", name: "Cin7", logoSrc: INVENTORY_LOGOS.cin7, rating: "4.5", bestFor: "multi-channel", description: "Multi-channel inventory and orders.", reviewHref: getInventoryReviewUrl("cin7"), startingPrice: "From ~$349/mo", standoutFeature: "Multi-channel" },
+  { slug: "zoho-inventory", name: "Zoho Inventory", logoSrc: INVENTORY_LOGOS.zoho, rating: "4.6", bestFor: "SMB", description: "Full inventory at lower cost; free tier.", reviewHref: getInventoryReviewUrl("zoho-inventory"), startingPrice: "Free tier", standoutFeature: "Value" },
+  { slug: "inflow-inventory", name: "inFlow Inventory", logoSrc: INVENTORY_LOGOS.inflow, rating: "4.4", bestFor: "small business", description: "Straightforward SMB inventory.", reviewHref: getInventoryReviewUrl("inflow-inventory"), startingPrice: "From ~$89/mo", standoutFeature: "SMB" },
+  { slug: "finale-inventory", name: "Finale Inventory", logoSrc: INVENTORY_LOGOS.finale, rating: "4.4", bestFor: "ecommerce", description: "Ecommerce and warehouse focus.", reviewHref: getInventoryReviewUrl("finale-inventory"), startingPrice: "From ~$99/mo", standoutFeature: "Ecommerce" },
+];
+
+const unleashedPage: AlternativesTemplateProps = {
+  ...zohoPage,
+  title: "Best Unleashed Alternatives (2026)",
+  subtitle: "If Unleashed isn't the right fit—because of cost, focus, or deployment—these inventory and manufacturing alternatives offer strong options.",
+  productName: "Unleashed",
+  productSlug: "unleashed",
+  originalReviewHref: getInventoryReviewUrl("unleashed"),
+  quickAnswerParagraphs: [
+    "Unleashed combines inventory and manufacturing; alternatives include Katana for modern cloud manufacturing, Cin7 for multi-channel focus, Zoho Inventory for value and free tier, inFlow for SMB tracking, and Finale for ecommerce. Katana and Cin7 are common alternatives.",
+  ],
+  whyPeopleLookForAlternatives: [
+    { heading: "Modern cloud", body: "Katana is built as a modern cloud manufacturing app; compare for UX and deployment." },
+    { heading: "Multi-channel", body: "Cin7 is built for multi-channel sales; Unleashed is strong on inventory and manufacturing." },
+    { heading: "Cost", body: "Zoho and inFlow are typically more affordable for SMBs; Unleashed is quote-based." },
+  ],
+  topAlternatives: UNLEASHED_ALTERNATIVES,
+  comparisonTableRows: buildTableRows(
+    { slug: "unleashed", name: "Unleashed", logoSrc: INVENTORY_LOGOS.unleashed, bestFor: "inventory & manufacturing", startingPrice: "Quote", standoutFeature: "Inventory; manufacturing", reviewHref: getInventoryReviewUrl("unleashed") },
+    UNLEASHED_ALTERNATIVES
+  ),
+  detailedAlternatives: [
+    { productName: "Katana", heading: "Best for manufacturing", body: "Katana is modern cloud manufacturing and production planning.", reviewHref: getInventoryReviewUrl("katana") },
+    { productName: "Cin7", heading: "Best for multi-channel", body: "Cin7 is built for multi-channel inventory and orders.", reviewHref: getInventoryReviewUrl("cin7") },
+    { productName: "Zoho Inventory", heading: "Best for value", body: "Zoho Inventory offers full inventory at lower cost with a free tier.", reviewHref: getInventoryReviewUrl("zoho-inventory") },
+    { productName: "inFlow Inventory", heading: "Best for SMB", body: "inFlow is straightforward inventory for small businesses.", reviewHref: getInventoryReviewUrl("inflow-inventory") },
+    { productName: "Finale Inventory", heading: "Best for ecommerce", body: "Finale targets ecommerce and warehouse operations.", reviewHref: getInventoryReviewUrl("finale-inventory") },
+  ],
+  relatedComparisons: [
+    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
+  ],
+  relatedResources: defaultRelatedResources("Unleashed", getInventoryReviewUrl("unleashed")),
+  faqItems: [
+    { q: "What is the best Unleashed alternative?", a: "Katana for cloud manufacturing; Cin7 for multi-channel; Zoho for value; inFlow for SMB. Choose by manufacturing vs channel focus." },
+    { q: "Unleashed vs Katana?", a: "Both combine inventory and manufacturing. Katana is modern cloud and production-focused; Unleashed has strong inventory and costing. Compare features and pricing." },
+    { q: "Is Unleashed good for small business?", a: "Unleashed can suit SMBs but is often quote-based. Zoho and inFlow are more affordable for smaller teams; compare total cost." },
+  ],
+};
+
 const PAGES: Record<string, AlternativesTemplateProps> = {
   "zoho-inventory": zohoPage,
   "inflow-inventory": inflowPage,
   "quickbooks-commerce": quickbooksCommercePage,
   "finale-inventory": finalePage,
+  cin7: cin7Page,
+  fishbowl: fishbowlPage,
+  katana: katanaPage,
+  sortly: sortlyPage,
+  unleashed: unleashedPage,
 };
 
 export function getInventoryAlternativesPage(slug: string): AlternativesTemplateProps | null {
