@@ -7,6 +7,8 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { getTimeTrackingComparison } from "@/lib/data/timeTrackingComparisons";
+import { getTimeTrackingCompareUrl } from "@/lib/routes";
 
 // ——— Time tracking placeholder routes ———
 const TIME_REVIEW_BASE = "/time-tracking/review";
@@ -139,12 +141,13 @@ const BY_INDUSTRY_GROUPS = [
   { groupLabel: "Other business types", links: BY_INDUSTRY.slice(3) },
 ];
 
-const RELATED_COMPARISONS = [
-  { label: "Toggl vs Harvest", href: `${TIME_COMPARE_BASE}/toggl-vs-harvest` },
-  { label: "Clockify vs Toggl", href: `${TIME_COMPARE_BASE}/clockify-vs-toggl` },
-  { label: "Hubstaff vs Time Doctor", href: `${TIME_COMPARE_BASE}/hubstaff-vs-time-doctor` },
-  { label: "Everhour vs Harvest", href: `${TIME_COMPARE_BASE}/everhour-vs-harvest` },
-  { label: "Timely vs Toggl", href: `${TIME_COMPARE_BASE}/timely-vs-toggl` },
+/** Slugs for Popular Time Tracking Comparisons cards; data from getTimeTrackingComparison. */
+const POPULAR_TIME_TRACKING_COMPARISON_SLUGS = [
+  "toggl-vs-harvest",
+  "clockify-vs-toggl",
+  "hubstaff-vs-time-doctor",
+  "everhour-vs-harvest",
+  "timely-vs-toggl",
 ];
 
 const FAQ_ITEMS: FaqItem[] = [
@@ -370,26 +373,80 @@ function TimeTrackingGuidesSection() {
   );
 }
 
+function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
+  return (
+    <div className="mb-4 sm:mb-5">
+      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+    </div>
+  );
+}
+
 function TimeTrackingPopularComparisonsSection() {
+  const cards = POPULAR_TIME_TRACKING_COMPARISON_SLUGS.map((slug) => {
+    const data = getTimeTrackingComparison(slug);
+    return data ? { slug, data } : null;
+  }).filter(Boolean) as { slug: string; data: NonNullable<ReturnType<typeof getTimeTrackingComparison>> }[];
+
   return (
     <>
-      <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">Popular Time Tracking Comparisons</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">
-          Head-to-head comparisons that help you decide between leading time tracking tools.
-        </p>
-      </div>
-      <div className="mt-4 flex flex-wrap items-center gap-2.5">
-        {RELATED_COMPARISONS.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            {item.label}
-          </Link>
-        ))}
+      <HubSectionTitle sub="Side-by-side time tracking features, pricing, and recommendations.">
+        Popular Time Tracking Comparisons
+      </HubSectionTitle>
+      <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {cards.map(({ slug, data }) => {
+          const title = `${data.productA.name} vs ${data.productB.name}`;
+          const summary =
+            data.summaryParagraph.length > 140
+              ? data.summaryParagraph.slice(0, 140).trim() + "…"
+              : data.summaryParagraph;
+          const compareHref = getTimeTrackingCompareUrl(slug);
+          return (
+            <Link
+              key={slug}
+              href={compareHref}
+              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+            >
+              <div className="flex items-center gap-3">
+                {data.productA.logoSrc ? (
+                  <img
+                    src={data.productA.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productA.name}</span>
+                )}
+                <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
+                {data.productB.logoSrc ? (
+                  <img
+                    src={data.productB.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productB.name}</span>
+                )}
+              </div>
+              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                {title}
+              </h3>
+              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+                {summary}
+              </p>
+              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                Compare →
+              </span>
+            </Link>
+          );
+        })}
       </div>
       <p className="mt-3 text-sm text-[#6E6E6E]">
         <Link

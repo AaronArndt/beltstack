@@ -14,6 +14,9 @@ const POPULAR_SLUGS = [
   "quickbooks-online-vs-wave",
   "xero-vs-freshbooks",
   "xero-vs-zoho-books",
+  "odoo-vs-quickbooks-online",
+  "odoo-vs-xero",
+  "odoo-vs-netsuite",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -26,6 +29,13 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
+/** Map alias slugs to a canonical key so we show one box per product (e.g. odoo + odoo-accounting → one "Odoo Accounting" box). */
+function canonicalProductKey(slug: string): string {
+  if (slug === "odoo") return "odoo-accounting";
+  if (slug === "sage") return "sage-accounting";
+  return slug;
+}
+
 function groupComparisonsByProduct(slugs: string[]) {
   const byProduct: Record<string, { label: string; slugs: { slug: string; label: string }[] }> = {};
   for (const slug of slugs) {
@@ -33,15 +43,23 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!data) continue;
     const a = data.productA.slug;
     const b = data.productB.slug;
+    const canonA = canonicalProductKey(a);
+    const canonB = canonicalProductKey(b);
     const labelA = `${data.productA.name} vs ${data.productB.name}`;
     const labelB = `${data.productB.name} vs ${data.productA.name}`;
-    if (!byProduct[a]) byProduct[a] = { label: data.productA.name, slugs: [] };
-    if (!byProduct[b]) byProduct[b] = { label: data.productB.name, slugs: [] };
-    if (!byProduct[a].slugs.some((s) => s.slug === slug)) byProduct[a].slugs.push({ slug, label: labelA });
-    if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
+    if (!byProduct[canonA]) byProduct[canonA] = { label: data.productA.name, slugs: [] };
+    if (!byProduct[canonB]) byProduct[canonB] = { label: data.productB.name, slugs: [] };
+    if (!byProduct[canonA].slugs.some((s) => s.slug === slug)) byProduct[canonA].slugs.push({ slug, label: labelA });
+    if (!byProduct[canonB].slugs.some((s) => s.slug === slug)) byProduct[canonB].slugs.push({ slug, label: labelB });
   }
-  const order = ["quickbooks-online", "xero", "freshbooks", "zoho-books", "wave", "sage-accounting", "odoo-accounting", "kashoo"];
-  return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
+  const order = [
+    "quickbooks-online", "xero", "freshbooks", "zoho-books", "wave",
+    "sage-accounting", "odoo-accounting", "kashoo",
+    "netsuite", "sage-intacct", "acumatica", "microsoft-dynamics", "zipbooks", "akaunting",
+  ];
+  const ordered = order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
+  const remaining = Object.keys(byProduct).filter((key) => !order.includes(key));
+  return [...ordered, ...remaining.map((key) => ({ key, ...byProduct[key] }))];
 }
 
 export default function AccountingCompareHubPage() {
@@ -105,17 +123,25 @@ export default function AccountingCompareHubPage() {
                     className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
-                      <img
-                        src={data.productA.logoSrc ?? ""}
-                        alt=""
-                        className="h-10 w-auto max-w-[80px] object-contain object-left"
-                      />
+                      {data.productA.logoSrc ? (
+                        <img
+                          src={data.productA.logoSrc}
+                          alt=""
+                          className="h-10 w-auto max-w-[80px] object-contain object-left"
+                        />
+                      ) : (
+                        <span className="flex h-10 min-w-[80px] items-center text-sm font-medium text-[#6E6E6E]">{data.productA.name}</span>
+                      )}
                       <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
-                      <img
-                        src={data.productB.logoSrc ?? ""}
-                        alt=""
-                        className="h-10 w-auto max-w-[80px] object-contain object-left"
-                      />
+                      {data.productB.logoSrc ? (
+                        <img
+                          src={data.productB.logoSrc}
+                          alt=""
+                          className="h-10 w-auto max-w-[80px] object-contain object-left"
+                        />
+                      ) : (
+                        <span className="flex h-10 min-w-[80px] items-center text-sm font-medium text-[#6E6E6E]">{data.productB.name}</span>
+                      )}
                     </div>
                     <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                       {title}

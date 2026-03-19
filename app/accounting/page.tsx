@@ -8,6 +8,7 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { getAccountingComparisonBySlug, getAccountingCompareUrlFromSlug } from "@/lib/data/accountingComparisons";
 
 // ——— Accounting placeholder routes ———
 const ACCOUNTING_REVIEW_BASE = "/accounting/review";
@@ -100,6 +101,12 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
   { tool: "Odoo Accounting", bestFor: "Odoo ERP users", price: "Quote", rating: "4.2", slug: "odoo-accounting", logoSrc: "/Logos/odoo.jpeg" },
   { tool: "Kashoo", bestFor: "Simple bookkeeping", price: "Quote", rating: "4.2", slug: "kashoo", logoSrc: "/Logos/kashoo.jpeg" },
+  { tool: "NetSuite", bestFor: "ERP-integrated accounting", price: "Quote", rating: "4.1", slug: "netsuite", logoSrc: "/Logos/netsuite.jpeg" },
+  { tool: "Sage Intacct", bestFor: "Scalable finance & reporting", price: "Quote", rating: "4.1", slug: "sage-intacct", logoSrc: "/Logos/sage.png" },
+  { tool: "Acumatica", bestFor: "ERP-connected workflows", price: "Quote", rating: "4.0", slug: "acumatica", logoSrc: "/Logos/acumatica.jpeg" },
+  { tool: "Microsoft Dynamics 365", bestFor: "Microsoft ERP ecosystem", price: "Quote", rating: "4.0", slug: "microsoft-dynamics", logoSrc: "/Logos/microsoft.png" },
+  { tool: "ZipBooks", bestFor: "Simplicity-first accounting", price: "Quote", rating: "4.0", slug: "zipbooks", logoSrc: "/Logos/zipbooks.jpeg" },
+  { tool: "Akaunting", bestFor: "Lightweight accounting", price: "Quote", rating: "4.0", slug: "akaunting", logoSrc: "/Logos/akaunting.jpeg" },
 ];
 
 const ACCOUNTING_GUIDES = [
@@ -114,8 +121,12 @@ const MORE_ACCOUNTING_OPTIONS = [
   { name: "Kashoo", description: "Simple cloud accounting for small business.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/kashoo` },
   { name: "Sage Accounting", description: "Accounting and compliance for growing SMBs.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-accounting` },
   { name: "Odoo Accounting", description: "Accounting module in the Odoo business suite.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/odoo-accounting` },
-  { name: "FreeAgent", description: "Accounting for freelancers and small agencies.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/freeagent` },
-  { name: "Patriot Accounting", description: "Affordable accounting for small business.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/patriot-accounting` },
+  { name: "NetSuite", description: "ERP-integrated accounting for mid-market and enterprise.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/netsuite` },
+  { name: "Sage Intacct", description: "Scalable accounting and multi-dimensional reporting.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-intacct` },
+  { name: "Acumatica", description: "ERP-connected accounting and workflow automation.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/acumatica` },
+  { name: "Microsoft Dynamics 365", description: "Accounting inside the Microsoft ERP ecosystem.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/microsoft-dynamics` },
+  { name: "ZipBooks", description: "Modern, simplicity-first accounting for growing teams.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/zipbooks` },
+  { name: "Akaunting", description: "Lightweight accounting for practical invoicing and reporting.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/akaunting` },
 ];
 
 const BEST_FOR_SCENARIOS = [
@@ -142,14 +153,17 @@ const BY_INDUSTRY_GROUPS = [
   { groupLabel: "Other business types", links: BY_INDUSTRY.slice(3) },
 ];
 
-/** High-priority comparisons only — full directory at /accounting/compare */
-const RELATED_COMPARISONS = [
-  { label: "QuickBooks Online vs Xero", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero` },
-  { label: "QuickBooks Online vs FreshBooks", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-freshbooks` },
-  { label: "QuickBooks Online vs Zoho Books", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-zoho-books` },
-  { label: "QuickBooks Online vs Wave", href: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-wave` },
-  { label: "Xero vs FreshBooks", href: `${ACCOUNTING_COMPARE_BASE}/xero-vs-freshbooks` },
-  { label: "Xero vs Zoho Books", href: `${ACCOUNTING_COMPARE_BASE}/xero-vs-zoho-books` },
+/** Slugs for Popular Accounting Comparisons cards; data from getAccountingComparisonBySlug. */
+const POPULAR_ACCOUNTING_COMPARISON_SLUGS = [
+  "quickbooks-online-vs-xero",
+  "quickbooks-online-vs-freshbooks",
+  "quickbooks-online-vs-zoho-books",
+  "quickbooks-online-vs-wave",
+  "xero-vs-freshbooks",
+  "xero-vs-zoho-books",
+  "odoo-vs-quickbooks-online",
+  "odoo-vs-xero",
+  "odoo-vs-netsuite",
 ];
 
 const FAQ_ITEMS: FaqItem[] = [
@@ -258,21 +272,69 @@ function AccountingGuidesSection() {
 }
 
 function AccountingPopularComparisonsSection() {
+  const cards = POPULAR_ACCOUNTING_COMPARISON_SLUGS.map((slug) => {
+    const data = getAccountingComparisonBySlug(slug);
+    return data ? { slug, data } : null;
+  }).filter(Boolean) as { slug: string; data: NonNullable<ReturnType<typeof getAccountingComparisonBySlug>> }[];
+
   return (
     <>
-      <HubSectionTitle sub="Side-by-side feature and pricing comparisons.">
+      <HubSectionTitle sub="Side-by-side accounting features, pricing, and recommendations.">
         Popular Accounting Comparisons
       </HubSectionTitle>
-      <div className="mt-4 flex flex-wrap items-center gap-2.5">
-        {RELATED_COMPARISONS.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {cards.map(({ slug, data }) => {
+          const title = `${data.productA.name} vs ${data.productB.name}`;
+          const summary =
+            data.summaryParagraph.length > 140
+              ? data.summaryParagraph.slice(0, 140).trim() + "…"
+              : data.summaryParagraph;
+          const compareHref = getAccountingCompareUrlFromSlug(slug);
+          return (
+            <Link
+              key={slug}
+              href={compareHref}
+              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+            >
+              <div className="flex items-center gap-3">
+                {data.productA.logoSrc ? (
+                  <img
+                    src={data.productA.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productA.name}</span>
+                )}
+                <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
+                {data.productB.logoSrc ? (
+                  <img
+                    src={data.productB.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productB.name}</span>
+                )}
+              </div>
+              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                {title}
+              </h3>
+              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+                {summary}
+              </p>
+              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                Compare →
+              </span>
+            </Link>
+          );
+        })}
       </div>
       <p className="mt-3 text-sm text-[#6E6E6E]">
         <Link href="/accounting/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">

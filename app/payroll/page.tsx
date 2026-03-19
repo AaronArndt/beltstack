@@ -10,6 +10,7 @@ import {
 } from "@/components/hubs/HubPageTemplate";
 import { getPayrollReviewUrl, getPayrollCompareUrl } from "@/lib/routes";
 import { PAYROLL_HUB_GUIDES, PAYROLL_HUB_POPULAR_COMPARISONS } from "@/lib/data/payrollHubData";
+import { getPayrollComparisonBySlug } from "@/lib/data/payrollComparisons";
 
 // ——— Payroll-specific data ———
 
@@ -228,21 +229,68 @@ function PayrollGuidesSection() {
 }
 
 function PayrollPopularComparisonsSection() {
+  const cards = PAYROLL_HUB_POPULAR_COMPARISONS.map((item) => {
+    const data = getPayrollComparisonBySlug(item.slug);
+    return data ? { slug: item.slug, href: item.href, data } : null;
+  }).filter(Boolean) as { slug: string; href: string; data: NonNullable<ReturnType<typeof getPayrollComparisonBySlug>> }[];
+
   return (
     <>
-      <HubSectionTitle sub="Side-by-side feature and pricing comparisons.">
+      <HubSectionTitle sub="Side-by-side payroll features, pricing, and recommendations.">
         Popular Payroll Comparisons
       </HubSectionTitle>
-      <div className="mt-4 flex flex-wrap items-center gap-2.5">
-        {PAYROLL_HUB_POPULAR_COMPARISONS.map((item) => (
-          <Link
-            key={item.slug}
-            href={item.href}
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {cards.map(({ slug, href, data }) => {
+          const title = `${data.productA.name} vs ${data.productB.name}`;
+          const summary =
+            data.summaryParagraph.length > 140
+              ? data.summaryParagraph.slice(0, 140).trim() + "…"
+              : data.summaryParagraph;
+          return (
+            <Link
+              key={slug}
+              href={href}
+              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+            >
+              <div className="flex items-center gap-3">
+                {data.productA.logoSrc ? (
+                  <img
+                    src={data.productA.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productA.name}</span>
+                )}
+                <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
+                {data.productB.logoSrc ? (
+                  <img
+                    src={data.productB.logoSrc}
+                    alt=""
+                    className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productB.name}</span>
+                )}
+              </div>
+              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                {title}
+              </h3>
+              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+                {summary}
+              </p>
+              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                Compare →
+              </span>
+            </Link>
+          );
+        })}
       </div>
       <p className="mt-3 text-sm text-[#6E6E6E]">
         <Link

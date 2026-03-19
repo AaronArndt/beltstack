@@ -458,6 +458,9 @@ const kashooPage: AlternativesTemplateProps = {
 const ACCOUNTING_ALTERNATIVES_SLUGS = [
   "quickbooks-online", "xero", "freshbooks", "zoho-books", "wave",
   "sage-accounting", "odoo-accounting", "kashoo",
+  // Aliases + additional competitors required by Odoo comparison pages
+  "sage", "odoo",
+  "netsuite", "sage-intacct", "acumatica", "microsoft-dynamics", "zipbooks", "akaunting",
 ] as const;
 
 const PAGES: Record<string, AlternativesTemplateProps> = {
@@ -469,6 +472,188 @@ const PAGES: Record<string, AlternativesTemplateProps> = {
   "sage-accounting": sagePage,
   "odoo-accounting": odooPage,
   kashoo: kashooPage,
+  // ——— Aliases ———
+  sage: {
+    ...sagePage,
+    title: "Best Sage Alternatives (2026)",
+    subtitle: "If Sage Accounting isn’t the right fit—because you want different workflows, pricing, or onboarding experience—these alternatives cover the most common accounting requirements.",
+    productName: "Sage Accounting",
+    productSlug: "sage",
+    originalReviewHref: getAccountingReviewUrl("sage"),
+    quickAnswerParagraphs: [
+      "Sage-style teams look for alternatives when they need more transparent tier pricing, broader ecosystem depth, or a different onboarding experience.",
+    ],
+    whyPeopleLookForAlternatives: [
+      { heading: "More ecosystem breadth", body: "QuickBooks and Xero typically have larger app marketplaces and more third-party coverage." },
+      { heading: "Transparent pricing tiers", body: "Alternatives with published pricing can reduce planning friction." },
+      { heading: "Standalone simplicity or freelancer workflows", body: "FreshBooks and Wave are often preferred for simple invoicing and low complexity." },
+    ],
+    faqItems: [
+      { q: "What is the best Sage alternative?", a: "QuickBooks Online and Xero are usually the best alternatives when you want broader ecosystem depth and strong cloud accounting." },
+      { q: "Is Xero better than Sage?", a: "For many teams, Xero is a strong Sage alternative due to cleaner UI and strong reporting. The right choice depends on your workflows and region." },
+      { q: "When should you consider FreshBooks or Wave?", a: "Choose FreshBooks for freelancer-style billing and client tools. Choose Wave for very small needs or basic accounting." },
+    ],
+  },
+  odoo: {
+    ...odooPage,
+    title: "Best Odoo Alternatives (2026)",
+    subtitle: "If Odoo Accounting isn’t the right fit—because you don’t use Odoo ERP, want standalone accounting, or prefer a different workflow—these alternatives provide practical options.",
+    productName: "Odoo Accounting",
+    productSlug: "odoo",
+    originalReviewHref: getAccountingReviewUrl("odoo"),
+    quickAnswerParagraphs: [
+      "Teams look for Odoo alternatives when they don’t use the broader Odoo suite or prefer standalone accounting workflows with simpler day-to-day setup.",
+    ],
+    whyPeopleLookForAlternatives: [
+      { heading: "Not using Odoo ERP", body: "Standalone tools like QuickBooks and Xero fit best when you want accounting without ERP suite dependencies." },
+      { heading: "Standalone ecosystem depth", body: "QuickBooks Online and Xero provide strong integration coverage for banking, invoicing, and reporting." },
+      { heading: "Simplicity for small teams", body: "FreshBooks and Wave are popular when you want lower complexity and quicker onboarding." },
+    ],
+    faqItems: [
+      { q: "What is the best Odoo alternative?", a: "QuickBooks Online and Xero are the most common strong alternatives for standalone accounting. Choose based on your ecosystem needs and preference for UI and workflows." },
+      { q: "Is Odoo worth it if I only need accounting?", a: "Odoo is usually best when you already use Odoo elsewhere. If you only need accounting, standalone tools typically offer a simpler path." },
+      { q: "Can ERP alternatives be a fit too?", a: "Yes. If you want ERP-connected accounting, you can also compare Odoo to NetSuite, Acumatica, or Microsoft Dynamics." },
+    ],
+  },
+  // ——— Additional competitors ———
+  netsuite: {
+    ...quickbooksPage,
+    title: "Best NetSuite Alternatives (2026)",
+    subtitle: "If NetSuite isn’t the right fit—because you need a different ERP-integrated approach, pricing model, or accounting workflow—these alternatives cover common accounting requirements.",
+    productName: "NetSuite",
+    productSlug: "netsuite",
+    originalReviewHref: getAccountingReviewUrl("netsuite"),
+    comparisonTableRows: buildTableRows(
+      { slug: "netsuite", name: "NetSuite", logoSrc: "/Logos/netsuite.jpeg", bestFor: "ERP-integrated accounting", startingPrice: "Quote", standoutFeature: "ERP suite", reviewHref: getAccountingReviewUrl("netsuite") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["NetSuite is best when you need ERP-connected accounting workflows and suite-wide governance.", "Alternatives are often chosen for simpler onboarding, different module pricing, or broader standalone accounting options."],
+    whyPeopleLookForAlternatives: [
+      { heading: "Suite integration vs standalone", body: "NetSuite is ERP-connected. Standalone accounting tools can be better if you don’t need ERP-level workflows." },
+      { heading: "Pricing and implementation scope", body: "ERP tools are often quote-based and require implementation planning. Some alternatives offer clearer tier pricing." },
+      { heading: "Ecosystem and integrations", body: "Compare integration breadth and bank connectivity for your workflows." },
+    ],
+    faqItems: [
+      { q: "Is NetSuite good for accounting?", a: "Yes when you need ERP-connected accounting, governance controls, and suite-wide workflows. If you need simpler accounting, standalone tools may be better." },
+      { q: "What are the best NetSuite alternatives?", a: "Strong alternatives typically include other ERP-connected options (like Odoo or Acumatica) or standalone accounting leaders like QuickBooks Online and Xero—depending on your workflow needs." },
+      { q: "How do I choose between alternatives?", a: "Compare total cost, implementation complexity, and which workflows you need supported end-to-end." },
+    ],
+  },
+  "sage-intacct": {
+    ...quickbooksPage,
+    title: "Best Sage Intacct Alternatives (2026)",
+    subtitle: "If Sage Intacct isn’t the right fit—because you need a different reporting model, deployment approach, or accounting workflow—these alternatives cover common finance and accounting requirements.",
+    productName: "Sage Intacct",
+    productSlug: "sage-intacct",
+    originalReviewHref: getAccountingReviewUrl("sage-intacct"),
+    comparisonTableRows: buildTableRows(
+      { slug: "sage-intacct", name: "Sage Intacct", logoSrc: "/Logos/sage.png", bestFor: "Scalable finance & reporting", startingPrice: "Quote", standoutFeature: "Multi-dimensional reporting", reviewHref: getAccountingReviewUrl("sage-intacct") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["Sage Intacct is built for scalable accounting and finance reporting workflows.", "Alternatives are often chosen when teams want a different balance of reporting depth, ecosystem integrations, or ERP-suite coverage."],
+    whyPeopleLookForAlternatives: [
+      { heading: "Reporting depth vs workflow fit", body: "Compare the exact reporting and close workflows you need, not just the tool category." },
+      { heading: "Suite-wide ERP integration needs", body: "If you want ERP operations connected to accounting, ERP-connected tools can be a better fit." },
+      { heading: "Standalone ecosystem preferences", body: "If you need standalone accounting with a broad marketplace, QuickBooks and Xero are common choices." },
+    ],
+    faqItems: [
+      { q: "Who should consider Sage Intacct?", a: "Teams that need scalable accounting, multi-dimensional reporting, and structured finance workflows." },
+      { q: "What is the best alternative to Intacct?", a: "It depends on whether you want ERP-suite integrations (Odoo, NetSuite, Acumatica, Dynamics) or standalone accounting leaders (QuickBooks, Xero, Zoho)." },
+      { q: "How do pricing and implementation differ?", a: "ERP and advanced accounting tools are often quote-based. Compare implementation scope and total cost." },
+    ],
+  },
+  acumatica: {
+    ...quickbooksPage,
+    title: "Best Acumatica Alternatives (2026)",
+    subtitle: "If Acumatica isn’t the right fit—because you need a different ERP-connected accounting approach or accounting workflow—these alternatives cover common accounting requirements.",
+    productName: "Acumatica",
+    productSlug: "acumatica",
+    originalReviewHref: getAccountingReviewUrl("acumatica"),
+    comparisonTableRows: buildTableRows(
+      { slug: "acumatica", name: "Acumatica", logoSrc: "/Logos/acumatica.jpeg", bestFor: "ERP-connected workflows", startingPrice: "Quote", standoutFeature: "ERP suite", reviewHref: getAccountingReviewUrl("acumatica") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["Acumatica is best when you want ERP-connected accounting workflows and automation tied to your operations.", "Alternatives are often chosen when teams prefer different suite costs, implementation scope, or standalone accounting simplicity."],
+    whyPeopleLookForAlternatives: [
+      { heading: "ERP suite alignment", body: "ERP-connected accounting options can be strong, but standalone tools may be better if you don’t need suite-level workflows." },
+      { heading: "Implementation planning", body: "Compare how complex and costly setup feels for your required modules and users." },
+      { heading: "Integration breadth", body: "Validate bank connectivity and third-party integrations you rely on." },
+    ],
+    faqItems: [
+      { q: "Is Acumatica a good accounting option?", a: "It’s usually best for teams that need ERP-connected workflows and suite-wide reporting and automation." },
+      { q: "What are strong Acumatica alternatives?", a: "Alternatives can include ERP-connected options like Odoo and NetSuite or standalone accounting leaders like QuickBooks Online and Xero—depending on your suite needs." },
+      { q: "How should I compare alternatives?", a: "Compare total cost, implementation complexity, and which workflows you need supported from invoicing through reporting." },
+    ],
+  },
+  "microsoft-dynamics": {
+    ...quickbooksPage,
+    title: "Best Microsoft Dynamics Alternatives (2026)",
+    subtitle: "If Microsoft Dynamics isn’t the right fit—because you want different ERP-connected accounting workflows or a simpler approach—these alternatives cover core accounting needs.",
+    productName: "Microsoft Dynamics 365",
+    productSlug: "microsoft-dynamics",
+    originalReviewHref: getAccountingReviewUrl("microsoft-dynamics"),
+    comparisonTableRows: buildTableRows(
+      { slug: "microsoft-dynamics", name: "Microsoft Dynamics 365", logoSrc: "/Logos/microsoft.png", bestFor: "Microsoft ERP ecosystem", startingPrice: "Quote", standoutFeature: "ERP suite", reviewHref: getAccountingReviewUrl("microsoft-dynamics") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["Dynamics is best when you need accounting tied into a Microsoft ERP ecosystem.", "Alternatives are often selected for simpler onboarding, different deployment requirements, or broader standalone accounting support."],
+    whyPeopleLookForAlternatives: [
+      { heading: "Microsoft ecosystem fit", body: "Choose Dynamics if you’re already invested in Microsoft tools. Otherwise consider standalone accounting or other ERP suites." },
+      { heading: "Total solution scope", body: "Compare total cost across modules, users, and implementation scope." },
+      { heading: "Workflow coverage", body: "Ensure alternatives support your invoicing, expenses, and reporting workflows end-to-end." },
+    ],
+    faqItems: [
+      { q: "Is Dynamics good for accounting?", a: "It’s strong when you want ERP-integrated accounting workflows. If you only need accounting, standalone tools may be easier." },
+      { q: "What are good Dynamics alternatives?", a: "Depending on your suite needs, alternatives can include Odoo, NetSuite, Acumatica, or standalone options like QuickBooks Online and Xero." },
+      { q: "How do I pick the right option?", a: "Match the tool to your required workflow scope and your current ecosystem commitments." },
+    ],
+  },
+  zipbooks: {
+    ...quickbooksPage,
+    title: "Best ZipBooks Alternatives (2026)",
+    subtitle: "If ZipBooks isn’t the right fit—because you need more feature breadth, a different pricing model, or deeper ecosystem coverage—these alternatives cover common accounting requirements.",
+    productName: "ZipBooks",
+    productSlug: "zipbooks",
+    originalReviewHref: getAccountingReviewUrl("zipbooks"),
+    comparisonTableRows: buildTableRows(
+      { slug: "zipbooks", name: "ZipBooks", logoSrc: "/Logos/zipbooks.jpeg", bestFor: "Simplicity-first accounting", startingPrice: "Quote", standoutFeature: "Modern UX", reviewHref: getAccountingReviewUrl("zipbooks") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["ZipBooks is often chosen for a simpler, modern accounting experience.", "Alternatives are selected when teams want broader ecosystems, more advanced reporting, or deeper integrations."],
+    whyPeopleLookForAlternatives: [
+      { heading: "Broader ecosystem", body: "QuickBooks and Xero provide larger app marketplaces and integration depth." },
+      { heading: "Advanced reporting needs", body: "If you need more complex reporting, compare your report requirements and accountant access." },
+      { heading: "ERP vs accounting-first workflows", body: "If you need ERP-level automation, compare against ERP-connected options." },
+    ],
+    faqItems: [
+      { q: "Is ZipBooks a good option?", a: "It’s a good fit for teams that want simpler accounting-first workflows with modern UX." },
+      { q: "What are the best ZipBooks alternatives?", a: "Common alternatives include QuickBooks Online and Xero for broader ecosystem and reporting depth, plus FreshBooks for freelancer-style invoicing." },
+      { q: "When do you need more than ZipBooks?", a: "When you require ERP-level workflows, deeper reporting, or a more extensive integration marketplace." },
+    ],
+  },
+  akaunting: {
+    ...quickbooksPage,
+    title: "Best Akaunting Alternatives (2026)",
+    subtitle: "If Akaunting isn’t the right fit—because you need deeper integrations, stronger reporting, or more ecosystem coverage—these alternatives cover common accounting needs.",
+    productName: "Akaunting",
+    productSlug: "akaunting",
+    originalReviewHref: getAccountingReviewUrl("akaunting"),
+    comparisonTableRows: buildTableRows(
+      { slug: "akaunting", name: "Akaunting", logoSrc: "/Logos/akaunting.jpeg", bestFor: "Lightweight accounting", startingPrice: "Quote", standoutFeature: "Flexible", reviewHref: getAccountingReviewUrl("akaunting") },
+      QUICKBOOKS_ALTERNATIVES
+    ),
+    quickAnswerParagraphs: ["Akaunting is chosen by teams that want a lightweight accounting approach.", "Alternatives are often chosen when you need a broader ecosystem, deeper reporting, or ERP-level workflows."],
+    whyPeopleLookForAlternatives: [
+      { heading: "Ecosystem breadth", body: "QuickBooks and Xero generally offer more integrations and marketplace coverage." },
+      { heading: "Advanced reporting", body: "If your finance team needs deeper reporting, validate the reports and data model you get." },
+      { heading: "ERP workflow needs", body: "If you need ERP-connected automation, compare against ERP suite tools." },
+    ],
+    faqItems: [
+      { q: "Is Akaunting good for small business accounting?", a: "It can be. Akaunting works best for lighter workflows and simpler accounting-first needs." },
+      { q: "What are strong Akaunting alternatives?", a: "QuickBooks Online and Xero are common alternatives when you want ecosystem depth and stronger integration coverage." },
+      { q: "Do I need ERP for accounting?", a: "Usually no. ERP is needed only if you want suite-wide workflows and accounting tied into broader operations." },
+    ],
+  },
 };
 
 export function getAccountingAlternativesPage(slug: string): AlternativesTemplateProps | null {

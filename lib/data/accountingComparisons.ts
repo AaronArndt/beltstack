@@ -1,4 +1,4 @@
-import { getAccountingReviewUrl, getAccountingCompareUrl, getAccountingBestForUrl } from "@/lib/routes";
+import { getAccountingReviewUrl, getAccountingCompareUrl, getAccountingBestForUrl, getAccountingAlternativeUrl } from "@/lib/routes";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 
 export function getAccountingCompareUrlFromSlug(slug: string): string {
@@ -75,6 +75,87 @@ const P = {
     visitUrl: "https://www.odoo.com/app/accounting",
     bestForSummary: "Businesses already using the Odoo ERP ecosystem.",
     rating: "4.2",
+    startingPrice: "Quote",
+  },
+  // Aliases used by /accounting/compare/odoo-vs-* specs
+  odoo: {
+    name: "Odoo Accounting",
+    slug: "odoo",
+    reviewHref: getAccountingReviewUrl("odoo"),
+    logoSrc: "/Logos/odoo.jpeg",
+    visitUrl: "https://www.odoo.com/app/accounting",
+    bestForSummary: "Businesses already using the Odoo ERP ecosystem.",
+    rating: "4.2",
+    startingPrice: "Quote",
+  },
+  sage: {
+    name: "Sage Accounting",
+    slug: "sage",
+    reviewHref: getAccountingReviewUrl("sage"),
+    logoSrc: "/Logos/sage.png",
+    visitUrl: "https://www.sage.com/en-us/products/sage-business-cloud-accounting",
+    bestForSummary: "Small businesses that prefer Sage and need core accounting.",
+    rating: "4.3",
+    startingPrice: "Quote",
+  },
+  netsuite: {
+    name: "NetSuite",
+    slug: "netsuite",
+    reviewHref: getAccountingReviewUrl("netsuite"),
+    logoSrc: "/Logos/netsuite.jpeg",
+    visitUrl: "https://www.netsuite.com",
+    bestForSummary: "ERP-integrated accounting for mid-market to enterprise teams.",
+    rating: "4.1",
+    startingPrice: "Quote",
+  },
+  "sage-intacct": {
+    name: "Sage Intacct",
+    slug: "sage-intacct",
+    reviewHref: getAccountingReviewUrl("sage-intacct"),
+    logoSrc: "/Logos/sage.png",
+    visitUrl: "https://www.sageintacct.com",
+    bestForSummary: "Scalable accounting and multi-dimensional finance reporting.",
+    rating: "4.1",
+    startingPrice: "Quote",
+  },
+  acumatica: {
+    name: "Acumatica",
+    slug: "acumatica",
+    reviewHref: getAccountingReviewUrl("acumatica"),
+    logoSrc: "/Logos/acumatica.jpeg",
+    visitUrl: "https://www.acumatica.com",
+    bestForSummary: "ERP-connected accounting workflow and automation.",
+    rating: "4.0",
+    startingPrice: "Quote",
+  },
+  "microsoft-dynamics": {
+    name: "Microsoft Dynamics 365",
+    slug: "microsoft-dynamics",
+    reviewHref: getAccountingReviewUrl("microsoft-dynamics"),
+    logoSrc: "/Logos/microsoft.png",
+    visitUrl: "https://www.microsoft.com/dynamics365",
+    bestForSummary: "ERP-integrated accounting inside a Microsoft ecosystem.",
+    rating: "4.0",
+    startingPrice: "Quote",
+  },
+  zipbooks: {
+    name: "ZipBooks",
+    slug: "zipbooks",
+    reviewHref: getAccountingReviewUrl("zipbooks"),
+    logoSrc: "/Logos/zipbooks.jpeg",
+    visitUrl: "https://zipbooks.com",
+    bestForSummary: "Modern, simpler accounting-first workflows for growing teams.",
+    rating: "4.0",
+    startingPrice: "Quote",
+  },
+  akaunting: {
+    name: "Akaunting",
+    slug: "akaunting",
+    reviewHref: getAccountingReviewUrl("akaunting"),
+    logoSrc: "/Logos/akaunting.jpeg",
+    visitUrl: "https://akaunting.com",
+    bestForSummary: "Lightweight accounting for practical invoicing and reporting needs.",
+    rating: "4.0",
     startingPrice: "Quote",
   },
   kashoo: {
@@ -158,7 +239,116 @@ function minimalComparison(
   });
 }
 
+function odooVsComparison(
+  slug: string,
+  productBKey: keyof typeof P,
+  competitorLabel: string
+): [string, ComparisonTemplateProps] {
+  const competitorAltHref = getAccountingAlternativeUrl(P[productBKey].slug);
+
+  return buildComparison(slug, "odoo", productBKey, {
+    summaryParagraph: `Odoo Accounting and ${competitorLabel} are accounting options that help businesses manage invoicing, expenses, and reporting. This comparison focuses on fit—especially workflow integration, pricing model expectations, and how each tool supports day-to-day accounting.`,
+    quickRecommendationA: "Best for teams already on Odoo who want accounting inside the broader ERP workflow.",
+    quickRecommendationB: `Best for teams choosing ${competitorLabel} for their preferred accounting workflows and ecosystem.`,
+    quickVerdictParagraphs: [
+      "Odoo Accounting stands out when you want accounting connected to Odoo’s wider operational modules. When invoicing, inventory, and projects live together in the same system, accounting can be less about syncing and more about unified data.",
+      `Choose ${competitorLabel} when you want a different approach to accounting workflows—whether that’s a standalone accounting experience, a finance-first platform, or an ERP ecosystem with different strengths.`,
+      "The best choice depends on how you operate today: if your business already uses Odoo ERP, Odoo tends to be the simplest path to integrated books. If you want standalone accounting or a different suite, ${competitorLabel} can be a better match.",
+    ],
+    decisionGuideA: [
+      "You already use Odoo ERP (CRM, inventory, or projects) and want accounting in the same system.",
+      "You want unified data to reduce syncing between tools.",
+      "You value suite-wide reporting across operational and financial workflows.",
+    ],
+    decisionGuideB: [
+      `You prefer ${competitorLabel} for your accounting workflow and ecosystem.`,
+      "You want standalone accounting depth (or a different suite integration approach).",
+      "You want an option with a pricing model and onboarding experience that matches your team’s needs.",
+    ],
+    ratingsComparison: [
+      { category: "Workflow fit", productA: "4.5", productB: "4.3" },
+      { category: "Ease of use", productA: "4.2", productB: "4.4" },
+      { category: "Pricing expectations", productA: "4.0", productB: "4.1" },
+      { category: "Integrations", productA: "4.6", productB: "4.4" },
+      { category: "Reporting", productA: "4.4", productB: "4.3" },
+    ],
+    featureComparison: [
+      { feature: "Invoicing and bills", productA: "Invoicing and bills tied into Odoo workflows", productB: "Invoicing and billing workflows in your chosen accounting tool", supportA: "supported", supportB: "supported" },
+      { feature: "Bank feeds and reconciliation", productA: "Bank connectivity and reconciliation as configured", productB: "Bank connectivity and reconciliation in the platform", supportA: "supported", supportB: "supported" },
+      { feature: "Operational integrations", productA: "Deep integration with Odoo CRM, inventory, and projects", productB: "Integrations based on the vendor’s ecosystem", supportA: "supported", supportB: "supported" },
+      { feature: "Reporting and dashboards", productA: "Cross-module reporting plus accounting reports", productB: "Strong reporting for your accounting and finance needs", supportA: "supported", supportB: "supported" },
+      { feature: "Implementation complexity", productA: "Best when you’re already using Odoo ERP", productB: "Often simpler if you’re adopting a standalone tool", supportA: "supported", supportB: "supported" },
+    ],
+    pricingComparison:
+      "Odoo Accounting is typically priced as part of an Odoo app suite approach, so total cost depends on how many Odoo apps you use and which edition/workflows you require. " +
+      `${competitorLabel} usually follows its own pricing model (often tiered or quote-based depending on the product). Compare cost using your expected users, required modules, and implementation scope.`,
+    prosConsA: {
+      pros: [
+        "ERP-integrated accounting when you already use Odoo",
+        "Unified data flows across invoicing, inventory, and projects",
+        "Scales with broader Odoo adoption",
+        "Centralized reporting across the suite",
+      ],
+      cons: [
+        "Best value is strongest when the rest of Odoo is already in place",
+        "Complexity can be higher than standalone accounting tools",
+        "Total pricing depends on your broader Odoo stack and setup",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        `Strong accounting workflows in ${competitorLabel}’s ecosystem`,
+        "Often straightforward to adopt depending on your needs",
+        "Reporting and accounting depth aligned to the platform’s strengths",
+        "Good option when you want a different suite or standalone model",
+      ],
+      cons: [
+        "Ecosystem fit depends on how your business systems connect",
+        "Cost and module scope can vary as needs grow",
+        "May require more data syncing if you use other systems outside the suite",
+      ],
+    },
+    bestFor: [
+      { heading: "Best for Odoo-first operations", body: "Odoo Accounting is usually the best fit when your business already uses Odoo modules and you want accounting inside the same operational data model." },
+      { heading: "Best for your preferred accounting ecosystem", body: `Choose ${competitorLabel} if your workflow, reporting approach, or ecosystem preference aligns better with that platform.` },
+      { heading: "Best for teams comparing integrated vs standalone", body: "If you’re deciding between ERP-integrated accounting and standalone/finance-first options, use this comparison to match fit, onboarding effort, and total cost." },
+    ],
+    alternatives: [
+      { name: "Odoo Accounting", href: getAccountingAlternativeUrl("odoo"), description: "ERP-integrated accounting alternatives for Odoo-first teams." },
+      { name: competitorLabel, href: competitorAltHref, description: "Alternative options aligned to your chosen ecosystem." },
+      { name: "Wave", href: getAccountingAlternativeUrl("wave"), description: "Free core accounting option for very small needs." },
+    ],
+    faqs: [
+      { q: "When is Odoo Accounting the better choice?", a: "Odoo Accounting is usually best when you already use Odoo ERP and want accounting connected to the same operational workflows and data model." },
+      { q: `When should you choose ${competitorLabel}?`, a: `Choose ${competitorLabel} when its accounting workflow, reporting model, and ecosystem fit your team’s needs better—especially if you’re not already running Odoo.` },
+      { q: "How do I compare pricing fairly?", a: "Compare total cost using the users, modules, and implementation scope you need. Don’t rely only on a base starting price—look at required add-ons and setup." },
+    ],
+    sidebarWinners: [
+      { label: "Winner for Odoo ecosystem fit", winner: "A" },
+      { label: "Winner for standalone adoption preference", winner: "B" },
+      { label: "Winner for unified data approach", winner: "A" },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+  });
+}
+
+const odooComparisonEntries: [string, ComparisonTemplateProps][] = [
+  odooVsComparison("odoo-vs-quickbooks-online", "quickbooks-online", "QuickBooks Online"),
+  odooVsComparison("odoo-vs-xero", "xero", "Xero"),
+  odooVsComparison("odoo-vs-zoho-books", "zoho-books", "Zoho Books"),
+  odooVsComparison("odoo-vs-freshbooks", "freshbooks", "FreshBooks"),
+  odooVsComparison("odoo-vs-wave", "wave", "Wave"),
+  odooVsComparison("odoo-vs-sage", "sage", "Sage Accounting"),
+  odooVsComparison("odoo-vs-netsuite", "netsuite", "NetSuite"),
+  odooVsComparison("odoo-vs-sage-intacct", "sage-intacct", "Sage Intacct"),
+  odooVsComparison("odoo-vs-acumatica", "acumatica", "Acumatica"),
+  odooVsComparison("odoo-vs-microsoft-dynamics", "microsoft-dynamics", "Microsoft Dynamics 365"),
+  odooVsComparison("odoo-vs-zipbooks", "zipbooks", "ZipBooks"),
+  odooVsComparison("odoo-vs-akaunting", "akaunting", "Akaunting"),
+];
+
 const comparisonEntries: [string, ComparisonTemplateProps][] = [
+  ...odooComparisonEntries,
   buildComparison(
     "quickbooks-online-vs-xero",
     "quickbooks-online",
