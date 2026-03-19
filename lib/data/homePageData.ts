@@ -101,7 +101,7 @@ export const POPULAR_COMPARISONS = [
   { label: "HubSpot vs Salesforce", href: "/crm/compare/hubspot-vs-salesforce" },
   { label: "Zendesk vs Freshdesk", href: "/helpdesk/compare/zendesk-vs-freshdesk" },
   { label: "Square POS vs Shopify POS", href: "/pos/compare/square-pos-vs-shopify-pos" },
-  { label: "ServiceTitan vs Jobber", href: "/field-service/compare/servicetitan-vs-jobber" },
+  { label: "Housecall Pro vs ServiceTitan", href: "/field-service/compare/housecall-pro-vs-servicetitan" },
 ] as const;
 
 export const COMPARE_HUB_LINKS = [

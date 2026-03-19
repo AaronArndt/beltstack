@@ -17,6 +17,10 @@ import {
   LATEST_GUIDES,
   TRUST_ITEMS,
 } from "@/lib/data/homePageData";
+import { CRM_POPULAR_COMPARISONS } from "@/lib/data/crmHubData";
+import { HELPDESK_POPULAR_COMPARISONS } from "@/lib/data/helpdeskHubData";
+import { POS_POPULAR_COMPARISONS } from "@/lib/data/posHubData";
+import { FIELD_SERVICE_POPULAR_COMPARISONS } from "@/lib/data/fieldServiceHubData";
 
 // ——— Design tokens (reference) ———
 // BG: #F8FAFC | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #6E6E6E
@@ -93,6 +97,35 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
     </div>
   );
 }
+
+type PopularComparisonCard = {
+  slug: string;
+  href: string;
+  productA: { name: string; logoSrc?: string };
+  productB: { name: string; logoSrc?: string };
+  summaryParagraph: string;
+};
+
+const HOMEPAGE_PAYROLL_POPULAR_CARD: PopularComparisonCard = {
+  slug: "gusto-vs-onpay",
+  href: "/payroll/compare/gusto-vs-onpay",
+  productA: { name: "Gusto", logoSrc: "/Logos/gusto.jpeg" },
+  productB: { name: "OnPay", logoSrc: "/Logos/onpay.jpeg" },
+  summaryParagraph:
+    "Gusto and OnPay both serve small businesses with payroll, tax filing, and benefits, but they take different approaches. Gusto offers more HR depth and tiered plans; OnPay emphasizes simplicity and flat, transparent pricing. This comparison breaks down features, pricing, and who each tool fits best.",
+};
+
+const HOMEPAGE_POPULAR_COMPARISON_CARDS: PopularComparisonCard[] = POPULAR_COMPARISONS.map((item) => {
+  const href = item.href;
+  const category = href.split("/")[1];
+
+  if (category === "payroll") return HOMEPAGE_PAYROLL_POPULAR_CARD;
+  if (category === "crm") return CRM_POPULAR_COMPARISONS.find((c) => c.href === href) ?? null;
+  if (category === "helpdesk") return HELPDESK_POPULAR_COMPARISONS.find((c) => c.href === href) ?? null;
+  if (category === "pos") return POS_POPULAR_COMPARISONS.find((c) => c.href === href) ?? null;
+  if (category === "field-service") return FIELD_SERVICE_POPULAR_COMPARISONS.find((c) => c.href === href) ?? null;
+  return null;
+}).filter(Boolean) as PopularComparisonCard[];
 
 export default function Home() {
   const router = useRouter();
@@ -259,12 +292,62 @@ export default function Home() {
         <section className="border-b border-slate-200 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side comparisons to help you decide.">Popular Software Comparisons</SectionTitle>
-            <div className="mt-4 flex flex-wrap gap-2.5">
-              {POPULAR_COMPARISONS.map(({ label, href }) => (
-                <Link key={href} href={href} className={btnPill}>
-                  {label}
-                </Link>
-              ))}
+            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {HOMEPAGE_POPULAR_COMPARISON_CARDS.map((card) => {
+                const category = card.href.split("/")[1];
+                const title = `${card.productA.name} vs ${card.productB.name}`;
+                const summary =
+                  category === "crm"
+                    ? card.summaryParagraph
+                    : card.summaryParagraph.length > 140
+                      ? card.summaryParagraph.slice(0, 140).trim() + "…"
+                      : card.summaryParagraph;
+
+                return (
+                  <Link
+                    key={card.slug}
+                    href={card.href}
+                    className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  >
+                    <div className="flex items-center gap-3">
+                      {card.productA.logoSrc ? (
+                        <img
+                          src={card.productA.logoSrc}
+                          alt=""
+                          className="h-10 w-auto max-w-[80px] object-contain object-left"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      ) : (
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{card.productA.name}</span>
+                      )}
+                      <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>
+                        vs
+                      </span>
+                      {card.productB.logoSrc ? (
+                        <img
+                          src={card.productB.logoSrc}
+                          alt=""
+                          className="h-10 w-auto max-w-[80px] object-contain object-left"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      ) : (
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{card.productB.name}</span>
+                      )}
+                    </div>
+                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                      {title}
+                    </h3>
+                    <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">{summary}</p>
+                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                      Compare →
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
               <span className="text-[#6E6E6E]">More:</span>
