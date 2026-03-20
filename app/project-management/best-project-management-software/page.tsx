@@ -123,11 +123,6 @@ export default function BestProjectManagementSoftwarePage() {
                 Affiliate disclosure
               </button>
             </div>
-            <div className="mt-5">
-              <a href="#best-project-management-picks" className={btnPrimary}>
-                Jump to picks
-              </a>
-            </div>
           </div>
         </section>
 

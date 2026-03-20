@@ -149,11 +149,6 @@ export default function BestHrSoftwarePage() {
                 Affiliate disclosure
               </button>
             </div>
-            <div className="mt-5">
-              <a href="#best-hr-picks" className={btnPrimary}>
-                Jump to picks
-              </a>
-            </div>
           </div>
         </section>
 

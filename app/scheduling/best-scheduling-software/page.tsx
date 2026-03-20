@@ -149,11 +149,6 @@ export default function BestSchedulingSoftwarePage() {
                 Affiliate disclosure
               </button>
             </div>
-            <div className="mt-5">
-              <a href="#best-scheduling-picks" className={btnPrimary}>
-                Jump to picks
-              </a>
-            </div>
           </div>
         </section>
 

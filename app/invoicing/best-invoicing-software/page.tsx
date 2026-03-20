@@ -124,11 +124,6 @@ export default function BestInvoicingSoftwarePage() {
                 Affiliate disclosure
               </button>
             </div>
-            <div className="mt-5">
-              <a href="#best-invoicing-picks" className={btnPrimary}>
-                Jump to picks
-              </a>
-            </div>
           </div>
         </section>
 

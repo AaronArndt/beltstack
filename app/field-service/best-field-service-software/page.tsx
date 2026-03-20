@@ -150,11 +150,6 @@ export default function BestFieldServiceSoftwarePage() {
                 Affiliate disclosure
               </button>
             </div>
-            <div className="mt-5">
-              <a href="#best-field-service-picks" className={btnPrimary}>
-                Jump to picks
-              </a>
-            </div>
           </div>
         </section>
 
