@@ -95,7 +95,7 @@ const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const navItemClass =
-  "text-[14px] font-medium text-[#1A2D48] hover:text-[#0f2440] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "text-[14px] font-semibold text-[#1A2D48] hover:text-[#0f2440] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function LogoIcon({ className }: { className?: string }) {
   return (
@@ -112,47 +112,63 @@ function LogoIcon({ className }: { className?: string }) {
 
 function Chevron({ open }: { open: boolean }) {
   return (
-    <svg className={`ml-1 h-3.5 w-3.5 shrink-0 text-[#6E6E6E] transition-transform duration-200 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    <svg
+      className={`ml-1 h-3.5 w-3.5 shrink-0 text-[#6E6E6E] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path d="M19 9l-7 7-7-7" />
     </svg>
   );
 }
 
-// ——— Software panel: columns, no icons, emerald links, column header underline ———
+// ——— Software panel: columns, Stripe-style full-width header rule + green accent ———
 function SoftwarePanelContent({
   activeColumn,
   onColumnHover,
 }: {
-  activeColumn: string;
+  activeColumn: string | null;
   onColumnHover: (id: string) => void;
 }) {
   return (
     <div className="w-full min-w-0 shrink-0">
       <div className="grid grid-cols-3 gap-8">
         {SOFTWARE_COLUMNS.map((col) => (
-          <div key={col.id} onPointerEnter={() => onColumnHover(col.id)}>
-            <div className="inline-block">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">
+          <div key={col.id} className="min-w-0" onPointerEnter={() => onColumnHover(col.id)}>
+            <div className="w-full">
+              <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">
                 {col.label}
               </p>
-              <div
-                className={`mt-2 h-0.5 w-full bg-[#10B981] transition-all duration-200 origin-left ${
-                  activeColumn === col.id ? "scale-x-100" : "scale-x-0"
-                }`}
-              />
+              {/* Full-width grey rule; green accent scales across entire column width (Stripe-style) */}
+              <div className="relative w-full pt-px">
+                <div className="h-px w-full bg-neutral-200" aria-hidden />
+                <div
+                  className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-[#10B981] transition-transform duration-200 ease-out ${
+                    activeColumn === col.id ? "scale-x-100" : "scale-x-0"
+                  }`}
+                  aria-hidden
+                />
+              </div>
             </div>
-            <div className="mt-3 space-y-1">
+            <div className="mt-3 space-y-0">
               {col.items.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   role="menuitem"
-                  className="block rounded-lg py-2 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                  className="group block rounded-lg py-1 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
                 >
-                  <span className="text-sm font-medium text-[#10B981] hover:underline hover:text-[#0d9668]">
+                  <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#1A2D48]">
                     {item.title}
                   </span>
-                  <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E]">{item.description}</p>
+                  <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E] transition-colors group-hover:text-[#3d4550]">
+                    {item.description}
+                  </p>
                 </Link>
               ))}
               {col.tradeLinks && (
@@ -162,7 +178,7 @@ function SoftwarePanelContent({
                       <Link
                         role="menuitem"
                         href={link.href}
-                        className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         {link.label}
                       </Link>
@@ -175,7 +191,7 @@ function SoftwarePanelContent({
         ))}
       </div>
       <div className="mt-4 border-t border-neutral-200/70 pt-4">
-        <Link href="/software" className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/software" className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           View all software categories →
         </Link>
       </div>
@@ -190,18 +206,20 @@ function ComparisonsPanelContent() {
       <div className="grid grid-cols-2 gap-8">
         <div>
           <p className="text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">Types</p>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-3 space-y-0">
             {COMPARISON_TYPES.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 role="menuitem"
-                className="block rounded-lg py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                className="group block rounded-lg py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
               >
-                <span className="text-sm font-medium text-[#10B981] hover:underline hover:text-[#0d9668]">
+                <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#1A2D48]">
                   {item.title}
                 </span>
-                <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E]">{item.description}</p>
+                <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E] transition-colors group-hover:text-[#3d4550]">
+                  {item.description}
+                </p>
               </Link>
             ))}
           </ul>
@@ -214,7 +232,7 @@ function ComparisonsPanelContent() {
                 <Link
                   role="menuitem"
                   href="/comparisons"
-                  className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                 >
                   {item.tool}
                 </Link>
@@ -222,13 +240,13 @@ function ComparisonsPanelContent() {
               </li>
             ))}
           </ul>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
             How we review
           </Link>
         </div>
       </div>
       <div className="mt-4 border-t border-neutral-200/70 pt-4">
-        <Link href="/comparisons" className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/comparisons" className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           See all comparisons →
         </Link>
       </div>
@@ -245,7 +263,7 @@ function MegaMenuViewport({
   onColumnHover,
 }: {
   activeMenu: "software" | "comparisons";
-  activeSoftwareColumn: string;
+  activeSoftwareColumn: string | null;
   onColumnHover: (id: string) => void;
 }) {
   const [softwareRef, softwareSize] = useMeasure<HTMLDivElement>();
@@ -313,7 +331,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<"software" | "comparisons">("software");
-  const [activeSoftwareColumn, setActiveSoftwareColumn] = useState("operations");
+  const [activeSoftwareColumn, setActiveSoftwareColumn] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSoftwareOpen, setMobileSoftwareOpen] = useState(false);
   const [mobileComparisonsOpen, setMobileComparisonsOpen] = useState(false);
@@ -360,7 +378,10 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      setActiveSoftwareColumn(null);
+      return;
+    }
 
     const updateRect = () => {
       if (!containerRef.current) return;
@@ -382,7 +403,7 @@ export default function Navbar() {
   const openMenu = useCallback((menu: "software" | "comparisons") => {
     setActiveMenu(menu);
     setOpen(true);
-    if (menu === "software") setActiveSoftwareColumn("operations");
+    if (menu === "software") setActiveSoftwareColumn(null);
   }, []);
 
   return (
@@ -405,7 +426,10 @@ export default function Navbar() {
             >
               <button
                 type="button"
-                onPointerEnter={() => setActiveMenu("software")}
+                onPointerEnter={() => {
+                  setActiveMenu("software");
+                  setActiveSoftwareColumn(null);
+                }}
                 onClick={() => openMenu("software")}
                 className={`relative inline-flex items-center px-3 py-2 ${navItemClass} ${open && activeMenu === "software" ? "text-[#0f2440]" : ""}`}
                 aria-expanded={open && activeMenu === "software"}
@@ -419,7 +443,10 @@ export default function Navbar() {
               </button>
               <button
                 type="button"
-                onPointerEnter={() => setActiveMenu("comparisons")}
+                onPointerEnter={() => {
+                  setActiveMenu("comparisons");
+                  setActiveSoftwareColumn(null);
+                }}
                 onClick={() => openMenu("comparisons")}
                 className={`relative inline-flex items-center px-3 py-2 ${navItemClass} ${open && activeMenu === "comparisons" ? "text-[#0f2440]" : ""}`}
                 aria-expanded={open && activeMenu === "comparisons"}
