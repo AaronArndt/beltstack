@@ -1,6 +1,7 @@
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_ACCOUNTING_OPTIONS } from "@/lib/data/accountingBestAccountingSoftware";
+import { getAccountingReviewUrl } from "@/lib/routes";
 import type { Metadata } from "next";
 
 function bestAccountingSoftwareItemListSchema() {
@@ -12,7 +13,7 @@ function bestAccountingSoftwareItemListSchema() {
         "@type": "SoftwareApplication" as const,
         name: p.name,
         applicationCategory: "BusinessApplication" as const,
-        url: `${SITE_URL}${p.reviewHref}`,
+        url: `${SITE_URL}${getAccountingReviewUrl(p.slug)}`,
       },
     })),
     ...MORE_ACCOUNTING_OPTIONS.map((p, i) => ({
@@ -22,7 +23,7 @@ function bestAccountingSoftwareItemListSchema() {
         "@type": "SoftwareApplication" as const,
         name: p.name,
         applicationCategory: "BusinessApplication" as const,
-        url: `${SITE_URL}${p.reviewHref}`,
+        url: `${SITE_URL}${getAccountingReviewUrl(p.slug)}`,
       },
     })),
   ];

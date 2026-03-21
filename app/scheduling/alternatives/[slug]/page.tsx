@@ -11,7 +11,7 @@ export default async function SchedulingAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getSchedulingAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="scheduling" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

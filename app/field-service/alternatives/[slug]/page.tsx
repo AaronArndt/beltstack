@@ -11,7 +11,7 @@ export default async function FieldServiceAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getFieldServiceAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="field-service" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

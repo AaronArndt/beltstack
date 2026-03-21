@@ -8,24 +8,10 @@ import {
   getPosCompareUrl,
   getPosBestForUrl,
 } from "@/lib/routes";
-import { POS_LOGOS } from "@/lib/data/posHubData";
+import { POS_LOGOS } from "@/lib/data/posLogos";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestPosPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestPosPick = SoftwarePickCardContent;
 
 export type PosComparisonTableRow = {
   slug: string;
@@ -50,7 +36,9 @@ export const TOP_PICKS: BestPosPick[] = [
       "Simple, flexible POS for small businesses with in-person and online payments, inventory, and reporting.",
     rating: "4.6",
     startingPrice: "Free software, hardware from $49",
-    reviewHref: getPosReviewUrl("square-pos"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://squareup.com",
     logoSrc: POS_LOGOS.square,
     compareSlugs: ["square-pos-vs-shopify-pos", "square-pos-vs-clover-pos"],
@@ -78,7 +66,9 @@ export const TOP_PICKS: BestPosPick[] = [
       "Unified POS for stores that sell online and in-person, with inventory sync and Shopify’s ecommerce ecosystem.",
     rating: "4.5",
     startingPrice: "From $39/mo (with Shopify plan)",
-    reviewHref: getPosReviewUrl("shopify-pos"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.shopify.com/pos",
     logoSrc: POS_LOGOS.shopify,
     compareSlugs: ["square-pos-vs-shopify-pos", "shopify-pos-vs-lightspeed-pos"],
@@ -106,7 +96,9 @@ export const TOP_PICKS: BestPosPick[] = [
       "Retail-focused POS with robust inventory, multi-location support, and advanced retail workflows.",
     rating: "4.4",
     startingPrice: "From ~$69/mo",
-    reviewHref: getPosReviewUrl("lightspeed-pos"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.lightspeedhq.com",
     logoSrc: POS_LOGOS.lightspeed,
     compareSlugs: ["shopify-pos-vs-lightspeed-pos", "lightspeed-pos-vs-vend-pos"],
@@ -134,7 +126,9 @@ export const TOP_PICKS: BestPosPick[] = [
       "Restaurant-specific POS with table management, kitchen display, online ordering, and hospitality reporting.",
     rating: "4.5",
     startingPrice: "Quote (restaurant-focused)",
-    reviewHref: getPosReviewUrl("toast-pos"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://pos.toasttab.com",
     logoSrc: POS_LOGOS.toast,
     compareSlugs: ["toast-pos-vs-square-pos"],
@@ -162,7 +156,9 @@ export const TOP_PICKS: BestPosPick[] = [
       "Flexible POS with a wide range of terminals, registers, and add-ons for various business types.",
     rating: "4.3",
     startingPrice: "From ~$69/mo (with hardware)",
-    reviewHref: getPosReviewUrl("clover-pos"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.clover.com",
     logoSrc: POS_LOGOS.clover,
     compareSlugs: ["square-pos-vs-clover-pos"],

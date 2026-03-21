@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   HubPageTemplate,
-  type FeaturedPick,
+  type FeaturedPickRef,
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
 import { getInvoicingComparisonBySlug } from "@/lib/data/invoicingComparisons";
 import { getInvoicingCompareUrl } from "@/lib/routes";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Invoicing placeholder routes ———
 const INVOICING_REVIEW_BASE = "/invoicing/review";
@@ -25,80 +26,16 @@ const KEY_TAKEAWAYS = [
   { label: "Best value invoicing software: Zoho Invoice", anchor: "#pick-zoho-invoice" },
 ];
 
-const TOP_PICKS: FeaturedPick[] = [
-  {
-    slug: "freshbooks",
-    name: "FreshBooks",
-    badge: "Best overall",
-    descriptor: "Invoicing, time tracking, and expense management built for freelancers and service businesses.",
-    rating: "4.5",
-    price: "$19/mo",
-    features: ["Professional invoices", "Recurring billing", "Time tracking"],
-    reviewHref: `${INVOICING_REVIEW_BASE}/freshbooks`,
-    compareHref: `${INVOICING_COMPARE_BASE}/freshbooks-vs-quickbooks`,
-    logoSrc: "/Logos/freshbooks.jpeg",
-    visitUrl: "https://www.freshbooks.com",
-  },
-  {
-    slug: "quickbooks",
-    name: "QuickBooks",
-    badge: "Best for QuickBooks users",
-    descriptor: "Invoicing inside QuickBooks for businesses already on the platform.",
-    rating: "4.6",
-    price: "$30/mo",
-    features: ["Integrated with QB books", "Payment links", "Estimates"],
-    reviewHref: `${INVOICING_REVIEW_BASE}/quickbooks`,
-    compareHref: `${INVOICING_COMPARE_BASE}/freshbooks-vs-quickbooks`,
-    logoSrc: "/Logos/quickbooks.png",
-    visitUrl: "https://quickbooks.intuit.com",
-  },
-  {
-    slug: "wave",
-    name: "Wave",
-    badge: "Best free",
-    descriptor: "Free invoicing and receipt scanning for small businesses and freelancers.",
-    rating: "4.3",
-    price: "Free",
-    features: ["Free invoicing", "Receipt scan", "Payment processing"],
-    reviewHref: `${INVOICING_REVIEW_BASE}/wave`,
-    compareHref: `${INVOICING_COMPARE_BASE}/freshbooks-vs-wave`,
-    logoSrc: "/Logos/wave.jpeg",
-    visitUrl: "https://www.waveapps.com",
-  },
-  {
-    slug: "zoho-invoice",
-    name: "Zoho Invoice",
-    badge: "Best value",
-    descriptor: "Affordable invoicing with projects, client portal, and automation.",
-    rating: "4.4",
-    price: "Free tier",
-    features: ["Invoicing", "Projects", "Client portal"],
-    reviewHref: `${INVOICING_REVIEW_BASE}/zoho-invoice`,
-    compareHref: `${INVOICING_COMPARE_BASE}/zoho-invoice-vs-freshbooks`,
-    logoSrc: "/Logos/zoho.jpeg",
-    visitUrl: "https://www.zoho.com/invoice",
-  },
-  {
-    slug: "xero",
-    name: "Xero",
-    badge: "Best for growing teams",
-    descriptor: "Cloud invoicing and quoting with strong accounting integration.",
-    rating: "4.5",
-    price: "$15/mo",
-    features: ["Invoicing & quotes", "Dashboard", "700+ integrations"],
-    reviewHref: `${INVOICING_REVIEW_BASE}/xero`,
-    compareHref: `${INVOICING_COMPARE_BASE}/xero-vs-quickbooks`,
-    logoSrc: "/Logos/xero.png",
-    visitUrl: "https://www.xero.com",
-  },
+const HUB_TOP_PICK_REFS: FeaturedPickRef[] = [
+  { slug: "freshbooks", badge: "Best overall" },
+  { slug: "quickbooks", badge: "Best for QuickBooks users" },
+  { slug: "wave", badge: "Best free" },
+  { slug: "zoho-invoice", badge: "Best value" },
+  { slug: "xero", badge: "Best for growing teams" },
 ];
 
 const TABLE_ROWS: ComparisonTableRow[] = [
-  { tool: "FreshBooks", bestFor: "Freelancers & service businesses", price: "$19/mo", rating: "4.5", slug: "freshbooks", logoSrc: "/Logos/freshbooks.jpeg" },
-  { tool: "QuickBooks", bestFor: "QuickBooks ecosystem", price: "$30/mo", rating: "4.6", slug: "quickbooks", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "Wave", bestFor: "Free invoicing", price: "Free", rating: "4.3", slug: "wave", logoSrc: "/Logos/wave.jpeg" },
-  { tool: "Zoho Invoice", bestFor: "Value & projects", price: "Free tier", rating: "4.4", slug: "zoho-invoice", logoSrc: "/Logos/zoho.jpeg" },
-  { tool: "Xero", bestFor: "Accounting integration", price: "$15/mo", rating: "4.5", slug: "xero", logoSrc: "/Logos/xero.png" },
+  ...listSoftwarePicksBySlugs("invoicing", ["freshbooks", "quickbooks", "wave", "zoho-invoice", "xero"]).map(toHubComparisonTableRow),
   { tool: "Invoice Ninja", bestFor: "Self-hosted & open source", price: "Free / paid", rating: "4.3", slug: "invoice-ninja", logoSrc: "/Logos/invoiceninja.jpeg" },
   { tool: "HoneyBook", bestFor: "Creative professionals", price: "Quote", rating: "4.4", slug: "honeybook", logoSrc: "/Logos/honeybook.jpeg" },
   { tool: "Bonsai", bestFor: "Freelancers & contracts", price: "Quote", rating: "4.3", slug: "bonsai", logoSrc: "/Logos/bonsai.jpeg" },
@@ -462,7 +399,8 @@ export default function InvoicingPage() {
       intro="Compare invoicing tools for freelancers, agencies, contractors, and small businesses."
       breadcrumbLabel="Invoicing"
       keyTakeaways={KEY_TAKEAWAYS}
-      featuredPicks={TOP_PICKS}
+      softwarePickCategory="invoicing"
+      featuredPicks={HUB_TOP_PICK_REFS}
       featuredPicksTitle="Top invoicing picks"
       featuredPicksSub="Hand-picked for freelancers and small businesses. Updated monthly."
       comparisonTable={{

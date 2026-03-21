@@ -16,7 +16,6 @@ import {
   PROJECT_MANAGEMENT_METHODOLOGY,
 } from "@/lib/data/projectManagementHubData";
 import { PROJECT_MANAGEMENT_GUIDES } from "@/lib/data/projectManagementGuides";
-
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
   { label: "Best overall for most teams: Asana", anchor: "#pick-asana" },
@@ -381,6 +380,7 @@ export default function ProjectManagementPage() {
       intro="Compare project management tools that help small businesses, agencies, and remote teams plan work, track tasks, and collaborate."
       breadcrumbLabel="Project Management"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="project-management"
       featuredPicks={PROJECT_MANAGEMENT_FEATURED_PICKS}
       featuredPicksTitle="Top project management picks"
       featuredPicksSub="Hand-picked for small teams, agencies, and remote work. Updated regularly."

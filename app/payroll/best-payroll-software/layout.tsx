@@ -1,6 +1,7 @@
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_PAYROLL_OPTIONS } from "@/lib/data/payrollBestPayrollSoftware";
+import { getPayrollReviewUrl } from "@/lib/routes";
 
 function bestPayrollSoftwareItemListSchema() {
   const items = [
@@ -11,7 +12,7 @@ function bestPayrollSoftwareItemListSchema() {
         "@type": "SoftwareApplication" as const,
         name: p.name,
         applicationCategory: "BusinessApplication" as const,
-        url: `${SITE_URL}${p.reviewHref}`,
+        url: `${SITE_URL}${getPayrollReviewUrl(p.slug)}`,
       },
     })),
     ...MORE_PAYROLL_OPTIONS.map((p, i) => ({

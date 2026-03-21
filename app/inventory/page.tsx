@@ -15,7 +15,6 @@ import {
   INVENTORY_FAQ_ITEMS,
   INVENTORY_METHODOLOGY,
 } from "@/lib/data/inventoryHubData";
-
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -396,6 +395,7 @@ export default function InventoryPage() {
       intro="Compare inventory management tools that help small businesses, ecommerce brands, retailers, manufacturers, and warehouses track stock and orders accurately."
       breadcrumbLabel="Inventory Management"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="inventory"
       featuredPicks={INVENTORY_FEATURED_PICKS}
       featuredPicksTitle="Top inventory management picks"
       featuredPicksSub="Hand-picked for small businesses, ecommerce, retail, and manufacturing. Updated regularly."

@@ -1,4 +1,7 @@
 import { getHrReviewUrl, getHrCompareUrl, getHrBestForUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
+
+export type BestHrPick = SoftwarePickCardContent;
 
 const LOGOS = {
   gusto: "/Logos/gusto.jpeg",
@@ -11,23 +14,6 @@ const LOGOS = {
   justworks: "/Logos/justworks.jpeg",
   zenefits: "/Logos/zenefits.jpeg",
 } as const;
-
-export type BestHrPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
 
 export type HrComparisonTableRow = {
   slug: string;
@@ -48,7 +34,9 @@ export const TOP_PICKS: BestHrPick[] = [
       "Payroll, benefits, hiring, and HR in one place for small and midsize businesses.",
     rating: "4.8",
     startingPrice: "From ~$40/mo",
-    reviewHref: getHrReviewUrl("gusto"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://gusto.com",
     logoSrc: LOGOS.gusto,
     compareSlugs: ["gusto-vs-bamboohr", "rippling-vs-gusto"],
@@ -74,7 +62,9 @@ export const TOP_PICKS: BestHrPick[] = [
       "People-focused HRIS with hiring, onboarding, time tracking, and culture tools.",
     rating: "4.6",
     startingPrice: "Quote",
-    reviewHref: getHrReviewUrl("bamboohr"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.bamboohr.com",
     logoSrc: LOGOS.bamboohr,
     compareSlugs: ["gusto-vs-bamboohr", "bamboohr-vs-rippling"],
@@ -100,7 +90,9 @@ export const TOP_PICKS: BestHrPick[] = [
       "Unified HR, payroll, benefits, and IT provisioning in one platform.",
     rating: "4.6",
     startingPrice: "Quote",
-    reviewHref: getHrReviewUrl("rippling"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.rippling.com",
     logoSrc: LOGOS.rippling,
     compareSlugs: ["rippling-vs-gusto", "bamboohr-vs-rippling", "deel-vs-rippling"],
@@ -126,7 +118,9 @@ export const TOP_PICKS: BestHrPick[] = [
       "Hire, pay, and manage global employees and contractors in one system.",
     rating: "4.6",
     startingPrice: "Quote",
-    reviewHref: getHrReviewUrl("deel"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.deel.com",
     logoSrc: LOGOS.deel,
     compareSlugs: ["deel-vs-rippling"],
@@ -152,7 +146,9 @@ export const TOP_PICKS: BestHrPick[] = [
       "PEO with payroll, benefits, compliance, and HR support for growing teams.",
     rating: "4.5",
     startingPrice: "Quote",
-    reviewHref: getHrReviewUrl("justworks"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://justworks.com",
     logoSrc: LOGOS.justworks,
     compareSlugs: ["gusto-vs-justworks"],
@@ -169,6 +165,122 @@ export const TOP_PICKS: BestHrPick[] = [
     ],
     pricingSummary:
       "Justworks pricing is quote-based and typically includes per-employee fees for PEO services, payroll, and benefits. Contact Justworks for current plans.",
+  },
+  {
+    slug: "adp-workforce-now",
+    name: "ADP Workforce Now",
+    badge: "Enterprise HR & payroll",
+    comparisonTableBestFor: "Enterprise HR & payroll",
+    description:
+      "Enterprise-grade payroll and HR platform for larger organizations with complex compliance and multi-state needs.",
+    rating: "4.5",
+    startingPrice: "Quote",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.adp.com",
+    logoSrc: LOGOS.adp,
+    compareSlugs: ["adp-vs-paychex"],
+    editorialParagraph:
+      "ADP Workforce Now is built for mid-market and enterprise teams that need deep payroll, HR, and compliance capabilities. It suits organizations with complex rules, multiple locations, and dedicated HR staff. Expect sales-led onboarding and quote-based pricing.",
+    pros: [
+      "Deep payroll and HR for large teams",
+      "Strong compliance and reporting",
+      "Broad integrations and services ecosystem",
+    ],
+    cons: [
+      "Quote-based pricing; longer implementation",
+      "Heavier than SMB-focused platforms",
+    ],
+    pricingSummary:
+      "ADP Workforce Now uses quote-based pricing based on headcount, modules, and services. Contact ADP for a tailored quote.",
+  },
+  {
+    slug: "paychex",
+    name: "Paychex",
+    badge: "Full-service payroll & HR",
+    comparisonTableBestFor: "Full-service payroll & HR",
+    description:
+      "Full-service payroll and HR with optional dedicated support for businesses that want hands-on help.",
+    rating: "4.4",
+    startingPrice: "Quote",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.paychex.com",
+    logoSrc: LOGOS.paychex,
+    compareSlugs: ["adp-vs-paychex"],
+    editorialParagraph:
+      "Paychex is a strong fit when you want full-service payroll with optional HR tools and human support. It’s widely used by SMBs and mid-market teams that prefer a traditional provider with broad coverage.",
+    pros: [
+      "Full-service payroll and HR options",
+      "Strong support and service footprint",
+      "Scales with growing headcount",
+    ],
+    cons: [
+      "Quote-based pricing",
+      "Can feel less modern than newer HR platforms",
+    ],
+    pricingSummary:
+      "Paychex pricing is quote-based and varies by services, headcount, and add-ons. Request a quote for your configuration.",
+  },
+  {
+    slug: "trinet",
+    name: "TriNet",
+    badge: "PEO for mid-market",
+    comparisonTableBestFor: "PEO for mid-market",
+    description:
+      "Professional employer organization (PEO) for mid-market companies that want enterprise benefits and compliance support.",
+    rating: "4.4",
+    startingPrice: "Quote",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.trinet.com",
+    logoSrc: LOGOS.trinet,
+    compareSlugs: ["justworks-vs-trinet"],
+    editorialParagraph:
+      "TriNet bundles payroll, benefits, and HR under a PEO model for mid-sized companies. It’s ideal when you want richer benefits and compliance offload without building an internal HR org.",
+    pros: [
+      "PEO benefits and compliance support",
+      "Strong for mid-market teams",
+      "Broad HR services",
+    ],
+    cons: [
+      "Co-employment model isn’t for every company",
+      "Quote-based pricing",
+    ],
+    pricingSummary:
+      "TriNet pricing is quote-based and depends on headcount, location mix, and plan. Contact TriNet for current PEO pricing.",
+  },
+  {
+    slug: "zenefits",
+    name: "Zenefits",
+    badge: "All-in-one HR platform",
+    comparisonTableBestFor: "All-in-one HR platform",
+    description:
+      "All-in-one HR, benefits, and payroll platform aimed at SMBs that want a single system at a lower entry price.",
+    rating: "4.3",
+    startingPrice: "From ~$8/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.zenefits.com",
+    logoSrc: LOGOS.zenefits,
+    compareSlugs: ["gusto-vs-bamboohr", "bamboohr-vs-rippling", "deel-vs-rippling"],
+    editorialParagraph:
+      "Zenefits combines HR, benefits, and payroll options in one platform with approachable pricing for growing SMBs. It fits teams that want core HR workflows without enterprise complexity.",
+    pros: [
+      "Lower entry price than many competitors",
+      "HR and benefits in one place",
+      "Good for growing SMBs",
+    ],
+    cons: [
+      "May feel less flexible at very large scale",
+      "Some features vary by plan",
+    ],
+    pricingSummary:
+      "Zenefits pricing often starts around $8/employee/month depending on plan and modules; payroll and benefits add-ons may apply.",
   },
 ];
 

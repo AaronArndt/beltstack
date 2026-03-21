@@ -8,24 +8,10 @@ import {
   getHelpdeskCompareUrl,
   getHelpdeskBestForUrl,
 } from "@/lib/routes";
-import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
+import { HELPDESK_LOGOS } from "@/lib/data/helpdeskLogos";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestHelpdeskPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestHelpdeskPick = SoftwarePickCardContent;
 
 export type HelpdeskComparisonTableRow = {
   slug: string;
@@ -50,7 +36,9 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
       "Full-featured helpdesk with ticketing, multi-channel support, automation, and reporting for teams of all sizes.",
     rating: "4.5",
     startingPrice: "From ~$19/agent/mo",
-    reviewHref: getHelpdeskReviewUrl("zendesk"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.zendesk.com",
     logoSrc: HELPDESK_LOGOS.zendesk,
     compareSlugs: ["zendesk-vs-freshdesk", "help-scout-vs-zendesk", "intercom-vs-zendesk", "gorgias-vs-zendesk"],
@@ -78,7 +66,9 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
       "Affordable helpdesk with ticketing, automation, and solid multi-channel support for small to midsize support teams.",
     rating: "4.5",
     startingPrice: "From ~$15/agent/mo",
-    reviewHref: getHelpdeskReviewUrl("freshdesk"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.freshdesk.com",
     logoSrc: HELPDESK_LOGOS.freshdesk,
     compareSlugs: ["zendesk-vs-freshdesk", "freshdesk-vs-zoho-desk"],
@@ -106,7 +96,9 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
       "Shared inbox and helpdesk built around email-first support with a simple, team-friendly workflow.",
     rating: "4.6",
     startingPrice: "From ~$20/user/mo",
-    reviewHref: getHelpdeskReviewUrl("help-scout"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.helpscout.com",
     logoSrc: HELPDESK_LOGOS.helpScout,
     compareSlugs: ["help-scout-vs-zendesk"],
@@ -134,7 +126,9 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
       "Messaging-first platform that combines live chat, bots, and help center for customer conversations.",
     rating: "4.4",
     startingPrice: "From ~$39/mo",
-    reviewHref: getHelpdeskReviewUrl("intercom"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.intercom.com",
     logoSrc: HELPDESK_LOGOS.intercom,
     compareSlugs: ["intercom-vs-zendesk"],
@@ -162,7 +156,9 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
       "Helpdesk built for ecommerce with deep Shopify and Magento integration and order context.",
     rating: "4.5",
     startingPrice: "From ~$60/mo",
-    reviewHref: getHelpdeskReviewUrl("gorgias"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.gorgias.com",
     logoSrc: HELPDESK_LOGOS.gorgias,
     compareSlugs: ["gorgias-vs-zendesk"],

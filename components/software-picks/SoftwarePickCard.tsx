@@ -10,7 +10,7 @@ const RED_X = "#FF0000";
 
 /* Same height + width for primary / secondary CTAs (matches hub button feel) */
 const btnBase =
-  "inline-flex w-full min-h-[48px] min-w-[220px] items-center justify-center rounded-lg px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:text-base";
+  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-lg px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
 
 const btnPrimary = `${btnBase} bg-[#10B981] text-white hover:bg-[#0d9668]`;
 
@@ -87,9 +87,9 @@ function IconInfo({ className }: { className?: string }) {
       >
         i
       </button>
-      {/* pt-2 bridges the gap so hover isn’t lost between the button and the panel */}
+      {/* pt-2 bridges the gap; right-0 keeps panel from extending past viewport (avoids horizontal scroll on mobile) */}
       <div
-        className="invisible absolute left-1/2 top-full z-[100] w-[min(calc(100vw-2rem),20rem)] -translate-x-1/2 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 sm:w-80"
+        className="invisible absolute right-0 top-full z-[100] w-[min(calc(100vw-2rem),20rem)] max-w-[calc(100vw-1.5rem)] pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 sm:w-80"
       >
         <div
           id={tooltipId}
@@ -126,7 +126,7 @@ function StarRatingRow({ rating }: { rating?: string }) {
   });
 
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex min-w-0 max-w-full flex-wrap items-center gap-2">
       <div className="flex items-center gap-0.5" aria-hidden>
         {stars.map((kind, i) => (
           <svg
@@ -332,7 +332,7 @@ export function SoftwarePickCard({
   return (
     <article
       id={id}
-      className="rounded-xl border border-slate-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
+      className="min-w-0 max-w-full rounded-xl border border-slate-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
     >
       <div
         className={`px-6 pt-6 ${paragraphs.length > 0 ? "pb-2" : "pb-6"}`}
@@ -359,28 +359,28 @@ export function SoftwarePickCard({
           </div>
         ) : null}
 
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-6 xl:gap-8">
+        <div className="flex min-w-0 flex-col gap-6 lg:flex-row lg:items-center lg:gap-6 xl:gap-8">
           {/* Product name + rating */}
-          <div className="flex min-w-0 shrink-0 items-start gap-4 lg:max-w-[min(100%,26rem)]">
+          <div className="flex min-w-0 max-w-full shrink-0 items-start gap-4 lg:max-w-[min(100%,26rem)]">
             {logoSrc ? (
               <img
                 src={logoSrc}
                 alt=""
-                className="h-28 w-auto max-w-[360px] shrink-0 object-contain object-left sm:h-[112px]"
+                className="h-[84px] w-auto max-w-[270px] shrink-0 object-contain object-left sm:h-[84px]"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
               />
             ) : (
               <div
-                className="flex h-28 w-28 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 font-sans text-sm font-bold text-[#6E6E6E]"
+                className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 font-sans text-sm font-bold text-[#6E6E6E]"
                 aria-hidden
               >
                 {name.slice(0, 2).toUpperCase()}
               </div>
             )}
             <div className="min-w-0">
-              <h3 className="text-[32px] font-bold leading-tight tracking-tight text-[#1A2D48]">
+              <h3 className="break-words text-[32px] font-bold leading-tight tracking-tight text-[#1A2D48]">
                 {name}
               </h3>
               <div className="mt-1.5">
@@ -408,7 +408,7 @@ export function SoftwarePickCard({
           </div>
 
           {/* CTAs — equal sizing */}
-          <div className="flex w-full shrink-0 flex-col items-stretch gap-2.5 lg:w-auto lg:min-w-[220px] xl:min-w-[260px]">
+          <div className="flex w-full min-w-0 max-w-full shrink-0 flex-col items-stretch gap-2.5 lg:w-auto lg:min-w-[220px] xl:min-w-[260px]">
             {visitUrl ? (
               <a href={visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
                 Learn More

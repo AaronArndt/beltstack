@@ -11,7 +11,7 @@ export default async function HrAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getHrAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="hr" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

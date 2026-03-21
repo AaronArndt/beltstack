@@ -11,7 +11,7 @@ export default async function TimeTrackingAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getTimeTrackingAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="time-tracking" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

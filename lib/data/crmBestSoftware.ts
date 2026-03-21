@@ -4,6 +4,7 @@
  */
 
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
@@ -17,22 +18,7 @@ const LOGOS = {
   keap: "/Logos/keap.jpeg",
 } as const;
 
-export type BestCrmPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestCrmPick = SoftwarePickCardContent;
 
 export type CrmComparisonTableRow = {
   slug: string;
@@ -53,7 +39,9 @@ export const TOP_PICKS: BestCrmPick[] = [
       "All-in-one CRM with marketing, sales, and service hubs. Strong free tier and clear upgrade path for small and mid-size teams.",
     rating: "4.6",
     startingPrice: "Free tier",
-    reviewHref: getCrmReviewUrl("hubspot"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.hubspot.com",
     logoSrc: LOGOS.hubspot,
     compareSlugs: ["hubspot-vs-salesforce", "hubspot-vs-zoho-crm", "monday-crm-vs-hubspot"],
@@ -81,7 +69,9 @@ export const TOP_PICKS: BestCrmPick[] = [
       "Enterprise-grade CRM with extensive customization, AppExchange, and scale. Best when you need deep control and large teams.",
     rating: "4.5",
     startingPrice: "From $25/user/mo",
-    reviewHref: getCrmReviewUrl("salesforce"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.salesforce.com",
     logoSrc: LOGOS.salesforce,
     compareSlugs: ["hubspot-vs-salesforce"],
@@ -109,7 +99,9 @@ export const TOP_PICKS: BestCrmPick[] = [
       "Full-featured CRM at competitive pricing. Good for SMBs and teams already in the Zoho ecosystem.",
     rating: "4.4",
     startingPrice: "Free tier",
-    reviewHref: getCrmReviewUrl("zoho-crm"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.zoho.com/crm",
     logoSrc: LOGOS.zoho,
     compareSlugs: ["hubspot-vs-zoho-crm", "zoho-crm-vs-pipedrive"],
@@ -137,7 +129,9 @@ export const TOP_PICKS: BestCrmPick[] = [
       "Sales-pipeline-focused CRM with clear deal stages and activity tracking. Built for teams that live in the pipeline.",
     rating: "4.5",
     startingPrice: "From $14.90/user/mo",
-    reviewHref: getCrmReviewUrl("pipedrive"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.pipedrive.com",
     logoSrc: LOGOS.pipedrive,
     compareSlugs: ["zoho-crm-vs-pipedrive", "freshsales-vs-pipedrive"],
@@ -165,7 +159,9 @@ export const TOP_PICKS: BestCrmPick[] = [
       "Work OS with CRM capabilities. Customizable boards and workflows suit teams that want flexibility beyond a traditional pipeline.",
     rating: "4.4",
     startingPrice: "From $10/user/mo",
-    reviewHref: getCrmReviewUrl("monday-crm"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://monday.com",
     logoSrc: LOGOS.monday,
     compareSlugs: ["monday-crm-vs-hubspot"],

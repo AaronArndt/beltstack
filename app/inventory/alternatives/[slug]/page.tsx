@@ -11,7 +11,7 @@ export default async function InventoryAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getInventoryAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="inventory" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

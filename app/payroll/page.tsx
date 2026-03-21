@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   HubPageTemplate,
-  type FeaturedPick,
+  type FeaturedPickRef,
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
 import { getPayrollReviewUrl, getPayrollCompareUrl } from "@/lib/routes";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 import { PAYROLL_HUB_GUIDES, PAYROLL_HUB_POPULAR_COMPARISONS } from "@/lib/data/payrollHubData";
 import { getPayrollComparisonBySlug } from "@/lib/data/payrollComparisons";
 
@@ -21,67 +22,15 @@ const KEY_TAKEAWAYS = [
   { label: "Best for larger teams: ADP", anchor: "#pick-adp" },
 ];
 
-const TOP_PICKS: FeaturedPick[] = [
-  {
-    slug: "gusto",
-    name: "Gusto",
-    badge: "Best overall",
-    descriptor: "All-in-one payroll, benefits, and HR for small teams.",
-    rating: "4.8",
-    price: "$40/mo",
-    features: ["W-2 and 1099 support", "Auto tax filing", "Contractor self-service"],
-    reviewHref: getPayrollReviewUrl("gusto"),
-    compareHref: getPayrollCompareUrl("gusto-vs-quickbooks-payroll"),
-    logoSrc: "/Logos/gusto.jpeg",
-    visitUrl: "https://gusto.com",
-  },
-  {
-    slug: "quickbooks-payroll",
-    name: "QuickBooks Payroll",
-    badge: "Best for QuickBooks users",
-    descriptor: "Seamless payroll inside QuickBooks for contractors already on the platform.",
-    rating: "4.6",
-    price: "$30/mo",
-    features: ["Integrated with QB books", "Same-day direct deposit", "Time tracking"],
-    reviewHref: getPayrollReviewUrl("quickbooks-payroll"),
-    compareHref: getPayrollCompareUrl("gusto-vs-quickbooks-payroll"),
-    logoSrc: "/Logos/quickbooks.png",
-    visitUrl: "https://quickbooks.intuit.com/payroll/",
-  },
-  {
-    slug: "onpay",
-    name: "OnPay",
-    badge: "Best value",
-    descriptor: "Full-service payroll and benefits at a straightforward price.",
-    rating: "4.7",
-    price: "$40/mo",
-    features: ["Unlimited pay runs", "Health benefits", "Compliance support"],
-    reviewHref: getPayrollReviewUrl("onpay"),
-    compareHref: getPayrollCompareUrl("gusto-vs-onpay"),
-    logoSrc: "/Logos/onpay.jpeg",
-    visitUrl: "https://www.onpay.com",
-  },
-  {
-    slug: "adp",
-    name: "ADP",
-    badge: "Best for larger teams",
-    descriptor: "Enterprise-grade payroll and HR for scaling contractor businesses.",
-    rating: "4.5",
-    price: "Custom",
-    features: ["Multi-state payroll", "Advanced reporting", "Dedicated support"],
-    reviewHref: getPayrollReviewUrl("adp"),
-    compareHref: getPayrollCompareUrl("gusto-vs-adp"),
-    logoSrc: "/Logos/adp.jpeg",
-    visitUrl: "https://www.adp.com",
-  },
+const HUB_TOP_PICK_REFS: FeaturedPickRef[] = [
+  { slug: "gusto" },
+  { slug: "quickbooks-payroll" },
+  { slug: "onpay" },
+  { slug: "adp" },
 ];
 
 const TABLE_ROWS: ComparisonTableRow[] = [
-  { tool: "Gusto", bestFor: "Small trade businesses", price: "$40/mo", rating: "4.8", slug: "gusto", logoSrc: "/Logos/gusto.jpeg" },
-  { tool: "QuickBooks Payroll", bestFor: "QuickBooks users", price: "$30/mo", rating: "4.6", slug: "quickbooks-payroll", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "OnPay", bestFor: "Value-focused teams", price: "$40/mo", rating: "4.7", slug: "onpay", logoSrc: "/Logos/onpay.jpeg" },
-  { tool: "ADP", bestFor: "Larger teams", price: "Custom", rating: "4.5", slug: "adp", logoSrc: "/Logos/adp.jpeg" },
-  { tool: "Paychex", bestFor: "Enterprise needs", price: "Custom", rating: "4.4", slug: "paychex", logoSrc: "/Logos/paychex.jpeg" },
+  ...listSoftwarePicksBySlugs("payroll", ["gusto", "quickbooks-payroll", "onpay", "adp", "paychex"]).map(toHubComparisonTableRow),
   { tool: "Rippling", bestFor: "Payroll + HR + IT in one", price: "Quote", rating: "4.6", slug: "rippling", logoSrc: "/Logos/rippling.jpeg" },
   { tool: "Square Payroll", bestFor: "Square ecosystem users", price: "$35/mo", rating: "4.3", slug: "square-payroll", logoSrc: "/Logos/square.jpeg" },
   { tool: "Patriot Payroll", bestFor: "Budget-conscious small business", price: "$17/mo", rating: "4.2", slug: "patriot-payroll", logoSrc: "/Logos/patriot.jpeg" },
@@ -472,7 +421,8 @@ export default function PayrollPage() {
       intro="Compare payroll tools for small businesses, contractors, and trade teams."
       breadcrumbLabel="Payroll"
       keyTakeaways={KEY_TAKEAWAYS}
-      featuredPicks={TOP_PICKS}
+      softwarePickCategory="payroll"
+      featuredPicks={HUB_TOP_PICK_REFS}
       featuredPicksTitle="Top payroll picks"
       featuredPicksSub="Hand-picked for trade businesses. Updated monthly."
       comparisonTable={{

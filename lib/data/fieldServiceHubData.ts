@@ -4,7 +4,8 @@
  */
 
 import { getFieldServiceReviewUrl, getFieldServiceCompareUrl, getFieldServiceBestForUrl } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths (place under /public/Logos/) ———
 const LOGOS = {
@@ -19,86 +20,28 @@ const LOGOS = {
   mhelpdesk: "/Logos/mhelpdesk.png",
 } as const;
 
-/** Top field service management picks for the hub hero section. */
-export const FIELD_SERVICE_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "jobber",
-    name: "Jobber",
-    badge: "Best overall",
-    descriptor: "All-in-one field service software for scheduling, dispatch, invoicing, and customer management.",
-    rating: "4.6",
-    price: "From ~$69/mo",
-    features: ["Scheduling & dispatch", "Invoicing & payments", "Mobile app"],
-    reviewHref: getFieldServiceReviewUrl("jobber"),
-    compareHref: getFieldServiceCompareUrl("jobber-vs-housecall-pro"),
-    logoSrc: LOGOS.jobber,
-    visitUrl: "https://getjobber.com",
-  },
-  {
-    slug: "housecall-pro",
-    name: "Housecall Pro",
-    badge: "Best for home service pros",
-    descriptor: "Scheduling, dispatching, and payment tools built for home service contractors.",
-    rating: "4.5",
-    price: "From ~$49/mo",
-    features: ["Dispatching", "Estimates & invoicing", "Customer portal"],
-    reviewHref: getFieldServiceReviewUrl("housecall-pro"),
-    compareHref: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan"),
-    logoSrc: LOGOS.housecallpro,
-    visitUrl: "https://housecallpro.com",
-  },
-  {
-    slug: "servicetitan",
-    name: "ServiceTitan",
-    badge: "Best for growing companies",
-    descriptor: "Enterprise-grade FSM with dispatch, pricing, marketing, and reporting for larger teams.",
-    rating: "4.5",
-    price: "Custom pricing",
-    features: ["Dispatch & routing", "Estimating & invoicing", "Marketing suite"],
-    reviewHref: getFieldServiceReviewUrl("servicetitan"),
-    compareHref: getFieldServiceCompareUrl("servicetitan-vs-service-fusion"),
-    logoSrc: LOGOS.servicetitan,
-    visitUrl: "https://servicetitan.com",
-  },
-  {
-    slug: "service-fusion",
-    name: "Service Fusion",
-    badge: "Best for HVAC & plumbing",
-    descriptor: "Field service software with scheduling, dispatch, and integration with trade-specific workflows.",
-    rating: "4.4",
-    price: "From ~$99/mo",
-    features: ["Scheduling", "Dispatch board", "Invoicing"],
-    reviewHref: getFieldServiceReviewUrl("service-fusion"),
-    compareHref: getFieldServiceCompareUrl("servicetitan-vs-service-fusion"),
-    logoSrc: LOGOS.servicefusion,
-    visitUrl: "https://servicefusion.com",
-  },
-  {
-    slug: "workiz",
-    name: "Workiz",
-    badge: "Best for field teams",
-    descriptor: "Scheduling, job management, and invoicing for cleaning, HVAC, and home service businesses.",
-    rating: "4.4",
-    price: "From ~$29/mo",
-    features: ["Scheduling", "Job management", "Invoicing"],
-    reviewHref: getFieldServiceReviewUrl("workiz"),
-    compareHref: getFieldServiceCompareUrl("jobber-vs-workiz"),
-    logoSrc: LOGOS.workiz,
-    visitUrl: "https://workiz.com",
-  },
+/** Top field service picks — slugs resolve to canonical `fieldServiceBestSoftware` data */
+export const FIELD_SERVICE_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "jobber" },
+  { slug: "housecall-pro" },
+  { slug: "servicetitan" },
+  { slug: "service-fusion" },
+  { slug: "workiz" },
 ];
 
-/** Comparison table rows for the hub (field service tools). */
+/** Comparison table rows for the hub (field service tools) — canonical pick data. */
 export const FIELD_SERVICE_COMPARISON_ROWS: ComparisonTableRow[] = [
-  { tool: "Jobber", bestFor: "Best overall for contractors", price: "From ~$69/mo", rating: "4.6", slug: "jobber", logoSrc: LOGOS.jobber },
-  { tool: "Housecall Pro", bestFor: "Home service pros", price: "From ~$49/mo", rating: "4.5", slug: "housecall-pro", logoSrc: LOGOS.housecallpro },
-  { tool: "ServiceTitan", bestFor: "Growing service companies", price: "Custom pricing", rating: "4.5", slug: "servicetitan", logoSrc: LOGOS.servicetitan },
-  { tool: "Service Fusion", bestFor: "HVAC & plumbing", price: "From ~$99/mo", rating: "4.4", slug: "service-fusion", logoSrc: LOGOS.servicefusion },
-  { tool: "Workiz", bestFor: "Field teams", price: "From ~$29/mo", rating: "4.4", slug: "workiz", logoSrc: LOGOS.workiz },
-  { tool: "Kickserv", bestFor: "Small service businesses", price: "From ~$55/mo", rating: "4.3", slug: "kickserv", logoSrc: LOGOS.kickserv },
-  { tool: "ServiceM8", bestFor: "Mobile-first field service", price: "From ~$29/mo", rating: "4.3", slug: "servicem8", logoSrc: LOGOS.servicem8 },
-  { tool: "FieldEdge", bestFor: "HVAC & plumbing", price: "Custom pricing", rating: "4.3", slug: "fieldedge", logoSrc: LOGOS.fieldedge },
-  { tool: "mHelpDesk", bestFor: "Contractors & technicians", price: "From ~$49/mo", rating: "4.2", slug: "mhelpdesk", logoSrc: LOGOS.mhelpdesk },
+  ...listSoftwarePicksBySlugs("field-service", [
+    "jobber",
+    "housecall-pro",
+    "servicetitan",
+    "service-fusion",
+    "workiz",
+    "kickserv",
+    "servicem8",
+    "fieldedge",
+    "mhelpdesk",
+  ]).map(toHubComparisonTableRow),
 ];
 
 /** Best field service software by use case (scenario) links. */

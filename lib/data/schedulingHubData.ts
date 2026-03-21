@@ -4,7 +4,8 @@
  */
 
 import { getSchedulingReviewUrl, getSchedulingCompareUrl, getSchedulingBestForUrl } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths (public/Logos/) ———
 const LOGOS = {
@@ -18,85 +19,27 @@ const LOGOS = {
   zoho: "/Logos/zoho.jpeg",
 } as const;
 
-/** Top scheduling picks for the hub hero section. */
-export const SCHEDULING_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "calendly",
-    name: "Calendly",
-    badge: "Best overall",
-    descriptor: "Automated appointment scheduling and calendar sync for individuals and teams.",
-    rating: "4.7",
-    price: "Free tier; from ~$10/mo",
-    features: ["Calendar sync", "Meeting types", "Reminders & follow-up"],
-    reviewHref: getSchedulingReviewUrl("calendly"),
-    compareHref: getSchedulingCompareUrl("calendly-vs-acuity-scheduling"),
-    logoSrc: LOGOS.calendly,
-    visitUrl: "https://calendly.com",
-  },
-  {
-    slug: "acuity-scheduling",
-    name: "Acuity Scheduling",
-    badge: "Best for flexibility",
-    descriptor: "Scheduling with intake forms, packages, and strong customization for consultants and coaches.",
-    rating: "4.6",
-    price: "From ~$16/mo",
-    features: ["Intake forms", "Packages & memberships", "Payments"],
-    reviewHref: getSchedulingReviewUrl("acuity-scheduling"),
-    compareHref: getSchedulingCompareUrl("calendly-vs-acuity-scheduling"),
-    logoSrc: LOGOS.acuity,
-    visitUrl: "https://www.acuityscheduling.com",
-  },
-  {
-    slug: "youcanbookme",
-    name: "YouCanBook.me",
-    badge: "Best for teams",
-    descriptor: "Team scheduling with round-robin, buffer time, and calendar integrations.",
-    rating: "4.5",
-    price: "From ~$10/mo",
-    features: ["Team availability", "Round-robin booking", "Integrations"],
-    reviewHref: getSchedulingReviewUrl("youcanbookme"),
-    compareHref: getSchedulingCompareUrl("calendly-vs-youcanbookme"),
-    logoSrc: LOGOS.youcanbookme,
-    visitUrl: "https://youcanbook.me",
-  },
-  {
-    slug: "setmore",
-    name: "Setmore",
-    badge: "Best for service businesses",
-    descriptor: "Appointment booking for salons, clinics, and service providers with payments and reminders.",
-    rating: "4.4",
-    price: "Free tier; from ~$9/mo",
-    features: ["Recurring appointments", "Payments", "Customer reminders"],
-    reviewHref: getSchedulingReviewUrl("setmore"),
-    compareHref: getSchedulingCompareUrl("acuity-scheduling-vs-setmore"),
-    logoSrc: LOGOS.setmore,
-    visitUrl: "https://www.setmore.com",
-  },
-  {
-    slug: "simplybookme",
-    name: "SimplyBook.me",
-    badge: "Best for customization",
-    descriptor: "Scheduling with custom booking forms, multiple staff, and industry templates.",
-    rating: "4.4",
-    price: "From ~$8/mo",
-    features: ["Custom forms", "Multi-staff", "Industry templates"],
-    reviewHref: getSchedulingReviewUrl("simplybookme"),
-    compareHref: getSchedulingCompareUrl("simplybookme-vs-setmore"),
-    logoSrc: LOGOS.simplybookme,
-    visitUrl: "https://simplybook.me",
-  },
+/** Top scheduling picks — slugs resolve to canonical `schedulingBestSoftware` data */
+export const SCHEDULING_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "calendly" },
+  { slug: "acuity-scheduling" },
+  { slug: "youcanbookme" },
+  { slug: "setmore" },
+  { slug: "simplybookme" },
 ];
 
-/** Comparison table rows for the hub. */
+/** Comparison table rows for the hub — canonical pick data. */
 export const SCHEDULING_COMPARISON_ROWS: ComparisonTableRow[] = [
-  { tool: "Calendly", bestFor: "Best overall for most users", price: "Free; from ~$10/mo", rating: "4.7", slug: "calendly", logoSrc: LOGOS.calendly },
-  { tool: "Acuity Scheduling", bestFor: "Consultants & coaches", price: "From ~$16/mo", rating: "4.6", slug: "acuity-scheduling", logoSrc: LOGOS.acuity },
-  { tool: "YouCanBook.me", bestFor: "Teams & round-robin", price: "From ~$10/mo", rating: "4.5", slug: "youcanbookme", logoSrc: LOGOS.youcanbookme },
-  { tool: "Setmore", bestFor: "Service businesses", price: "Free; from ~$9/mo", rating: "4.4", slug: "setmore", logoSrc: LOGOS.setmore },
-  { tool: "SimplyBook.me", bestFor: "Custom booking flows", price: "From ~$8/mo", rating: "4.4", slug: "simplybookme", logoSrc: LOGOS.simplybookme },
-  { tool: "Square Appointments", bestFor: "Square POS users", price: "Included with Square", rating: "4.3", slug: "square-appointments", logoSrc: LOGOS.square },
-  { tool: "Appointy", bestFor: "Multi-location & staff", price: "From ~$10/mo", rating: "4.3", slug: "appointy", logoSrc: LOGOS.appointy },
-  { tool: "Zoho Bookings", bestFor: "Zoho ecosystem", price: "From ~$8/mo", rating: "4.2", slug: "zoho-bookings", logoSrc: LOGOS.zoho },
+  ...listSoftwarePicksBySlugs("scheduling", [
+    "calendly",
+    "acuity-scheduling",
+    "youcanbookme",
+    "setmore",
+    "simplybookme",
+    "square-appointments",
+    "appointy",
+    "zoho-bookings",
+  ]).map(toHubComparisonTableRow),
 ];
 
 /** Best scheduling software by use case. */

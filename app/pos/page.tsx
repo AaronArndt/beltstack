@@ -15,7 +15,6 @@ import {
   POS_FAQ_ITEMS,
   POS_METHODOLOGY,
 } from "@/lib/data/posHubData";
-
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -310,6 +309,7 @@ export default function PosPage() {
       intro="Compare POS software that helps retail stores, restaurants, ecommerce businesses, and small businesses process sales, accept payments, and manage inventory and reporting."
       breadcrumbLabel="POS Software"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="pos"
       featuredPicks={POS_FEATURED_PICKS}
       featuredPicksTitle="Top POS picks"
       featuredPicksSub="Hand-picked for small businesses, retail, restaurants, and ecommerce. Updated regularly."

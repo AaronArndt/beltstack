@@ -4,8 +4,9 @@
  */
 
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
-import type { FeaturedPick } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef } from "@/components/hubs/HubPageTemplate";
 import type { ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths ———
 const LOGOS = {
@@ -37,86 +38,28 @@ export const CRM_HUB_GUIDES: CrmGuideItem[] = [
   { slug: "how-to-choose-crm-software", title: "How to Choose CRM Software", description: "Key factors when comparing CRM platforms for your team.", href: `${CRM_GUIDES_BASE}/how-to-choose-crm-software` },
 ];
 
-/** Top CRM picks for the hub hero section. */
-export const CRM_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "hubspot",
-    name: "HubSpot",
-    badge: "Best overall",
-    descriptor: "All-in-one CRM with marketing, sales, and service hubs. Strong for small and mid-size teams.",
-    rating: "4.6",
-    price: "Free tier",
-    features: ["Contact & deal pipeline", "Marketing automation", "Free CRM core"],
-    reviewHref: getCrmReviewUrl("hubspot"),
-    compareHref: getCrmCompareUrl("hubspot-vs-salesforce"),
-    logoSrc: LOGOS.hubspot,
-    visitUrl: "https://www.hubspot.com",
-  },
-  {
-    slug: "salesforce",
-    name: "Salesforce",
-    badge: "Best for scale",
-    descriptor: "Enterprise-grade CRM with extensive customization and app ecosystem.",
-    rating: "4.5",
-    price: "From $25/user/mo",
-    features: ["Leads, contacts, opportunities", "Reports & dashboards", "AppExchange"],
-    reviewHref: getCrmReviewUrl("salesforce"),
-    compareHref: getCrmCompareUrl("hubspot-vs-salesforce"),
-    logoSrc: LOGOS.salesforce,
-    visitUrl: "https://www.salesforce.com",
-  },
-  {
-    slug: "zoho-crm",
-    name: "Zoho CRM",
-    badge: "Best value",
-    descriptor: "Full-featured CRM at competitive pricing. Good for SMBs already in the Zoho ecosystem.",
-    rating: "4.4",
-    price: "Free tier",
-    features: ["Pipeline & automation", "Zoho suite integration", "Mobile apps"],
-    reviewHref: getCrmReviewUrl("zoho-crm"),
-    compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm"),
-    logoSrc: LOGOS.zoho,
-    visitUrl: "https://www.zoho.com/crm",
-  },
-  {
-    slug: "pipedrive",
-    name: "Pipedrive",
-    badge: "Best for sales teams",
-    descriptor: "Sales-pipeline-focused CRM with clear deal stages and activity tracking.",
-    rating: "4.5",
-    price: "From $14.90/user/mo",
-    features: ["Deal pipeline", "Activity-based selling", "Reporting"],
-    reviewHref: getCrmReviewUrl("pipedrive"),
-    compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive"),
-    logoSrc: LOGOS.pipedrive,
-    visitUrl: "https://www.pipedrive.com",
-  },
-  {
-    slug: "monday-crm",
-    name: "Monday CRM",
-    badge: "Best for flexibility",
-    descriptor: "Work OS with CRM capabilities. Suits teams that want boards and workflows in one place.",
-    rating: "4.4",
-    price: "From $10/user/mo",
-    features: ["Customizable boards", "Automations", "Project + CRM"],
-    reviewHref: getCrmReviewUrl("monday-crm"),
-    compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"),
-    logoSrc: LOGOS.monday,
-    visitUrl: "https://monday.com",
-  },
+/** Top CRM picks — slugs resolve to canonical `crmBestSoftware` card data */
+export const CRM_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "hubspot" },
+  { slug: "salesforce" },
+  { slug: "zoho-crm" },
+  { slug: "pipedrive" },
+  { slug: "monday-crm" },
 ];
 
-/** Comparison table rows for the hub (all CRM tools). */
+/** Comparison table rows for the hub (all CRM tools) — canonical pick data. */
 export const CRM_COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
-  { tool: "HubSpot", bestFor: "All-in-one marketing & sales", price: "Free tier", rating: "4.6", slug: "hubspot", logoSrc: LOGOS.hubspot },
-  { tool: "Salesforce", bestFor: "Enterprise & scale", price: "From $25/user/mo", rating: "4.5", slug: "salesforce", logoSrc: LOGOS.salesforce },
-  { tool: "Zoho CRM", bestFor: "Value & Zoho ecosystem", price: "Free tier", rating: "4.4", slug: "zoho-crm", logoSrc: LOGOS.zoho },
-  { tool: "Pipedrive", bestFor: "Sales pipeline focus", price: "From $14.90/user/mo", rating: "4.5", slug: "pipedrive", logoSrc: LOGOS.pipedrive },
-  { tool: "Monday CRM", bestFor: "Flexible boards & workflows", price: "From $10/user/mo", rating: "4.4", slug: "monday-crm", logoSrc: LOGOS.monday },
-  { tool: "Freshsales", bestFor: "AI-powered sales", price: "From $15/user/mo", rating: "4.3", slug: "freshsales", logoSrc: LOGOS.freshsales },
-  { tool: "Copper", bestFor: "Google Workspace users", price: "From $29/user/mo", rating: "4.4", slug: "copper", logoSrc: LOGOS.copper },
-  { tool: "Close", bestFor: "Inside sales & calling", price: "From $49/user/mo", rating: "4.5", slug: "close", logoSrc: LOGOS.close },
-  { tool: "Keap", bestFor: "Small business marketing + CRM", price: "From $159/mo", rating: "4.3", slug: "keap", logoSrc: LOGOS.keap },
+  ...listSoftwarePicksBySlugs("crm", [
+    "hubspot",
+    "salesforce",
+    "zoho-crm",
+    "pipedrive",
+    "monday-crm",
+    "freshsales",
+    "copper",
+    "close",
+    "keap",
+  ]).map(toHubComparisonTableRow),
 ];
 
 /** Card data for Popular CRM comparisons (logos + vs + summary + link). */

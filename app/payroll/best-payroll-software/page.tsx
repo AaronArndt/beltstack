@@ -12,9 +12,8 @@ import {
   FAQ_ITEMS,
   MORE_PAYROLL_OPTIONS,
 } from "@/lib/data/payrollBestPayrollSoftware";
-import { getPayrollCompareUrl } from "@/lib/data/payrollComparisons";
-import { getPayrollAlternativeUrl } from "@/lib/routes";
-import { formatComparisonLinkLabelFromSlug } from "@/lib/utils/formatComparisonLinkLabel";
+import { getPayrollReviewUrl } from "@/lib/routes";
+import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 
 // ——— Design tokens (match hub / compare pages) ———
 const btnPrimary =
@@ -74,6 +73,8 @@ function FaqAccordionItem({
     </div>
   );
 }
+
+const payrollPickRoutes = getSoftwarePickCategoryRoutes("payroll");
 
 export default function BestPayrollSoftwarePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -140,24 +141,7 @@ export default function BestPayrollSoftwarePage() {
               {TOP_PICKS.map((pick) => (
                 <SoftwarePickCard
                   key={pick.slug}
-                  id={`pick-${pick.slug}`}
-                  name={pick.name}
-                  logoSrc={pick.logoSrc}
-                  badgeText={pick.badge}
-                  rating={pick.rating}
-                  summary={pick.description}
-                  highlightsExtra={pick.editorialParagraph}
-                  visitUrl={pick.visitUrl}
-                  reviewUrl={pick.reviewHref}
-                  pricingStartLabel={pick.startingPrice}
-                  pricingDetails={pick.pricingSummary}
-                  pros={pick.pros}
-                  cons={pick.cons}
-                  alternativesUrl={getPayrollAlternativeUrl(pick.slug)}
-                  comparisonLinks={pick.compareSlugs.slice(0, 3).map((slug) => ({
-                    href: getPayrollCompareUrl(slug),
-                    label: formatComparisonLinkLabelFromSlug(slug),
-                  }))}
+                  {...toSoftwarePickCardProps(pick, payrollPickRoutes, { id: `pick-${pick.slug}` })}
                 />
               ))}
             </div>
@@ -196,7 +180,7 @@ export default function BestPayrollSoftwarePage() {
                       <td className="px-4 py-4 text-[#6E6E6E]">{pick.payrollTypes}</td>
                       <td className="px-4 py-4 text-[#6E6E6E]">{pick.standoutFeature}</td>
                       <td className="px-4 py-4">
-                        <Link href={pick.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={getPayrollReviewUrl(pick.slug)} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                           Read review
                         </Link>
                       </td>

@@ -8,24 +8,10 @@ import {
   getInventoryCompareUrl,
   getInventoryBestForUrl,
 } from "@/lib/routes";
-import { INVENTORY_LOGOS } from "@/lib/data/inventoryHubData";
+import { INVENTORY_LOGOS } from "@/lib/data/inventoryLogos";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestInventoryPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestInventoryPick = SoftwarePickCardContent;
 
 export type InventoryComparisonTableRow = {
   slug: string;
@@ -50,7 +36,9 @@ export const TOP_PICKS: BestInventoryPick[] = [
       "Well-rounded inventory management for small and midsize businesses, especially if you already use Zoho apps.",
     rating: "4.6",
     startingPrice: "Free tier",
-    reviewHref: getInventoryReviewUrl("zoho-inventory"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.zoho.com/inventory",
     logoSrc: INVENTORY_LOGOS.zoho,
     compareSlugs: ["zoho-inventory-vs-cin7", "inflow-inventory-vs-zoho-inventory"],
@@ -78,7 +66,9 @@ export const TOP_PICKS: BestInventoryPick[] = [
       "Inventory and order management built for businesses selling across ecommerce, retail, and wholesale channels.",
     rating: "4.5",
     startingPrice: "From ~$349/mo",
-    reviewHref: getInventoryReviewUrl("cin7"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.cin7.com",
     logoSrc: INVENTORY_LOGOS.cin7,
     compareSlugs: ["zoho-inventory-vs-cin7", "cin7-vs-katana"],
@@ -106,7 +96,9 @@ export const TOP_PICKS: BestInventoryPick[] = [
       "Straightforward stock and order tracking for small businesses that need practical control over products and reordering.",
     rating: "4.4",
     startingPrice: "From ~$89/mo",
-    reviewHref: getInventoryReviewUrl("inflow-inventory"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.inflowinventory.com",
     logoSrc: INVENTORY_LOGOS.inflow,
     compareSlugs: ["inflow-inventory-vs-zoho-inventory", "sortly-vs-inflow-inventory"],
@@ -134,7 +126,9 @@ export const TOP_PICKS: BestInventoryPick[] = [
       "Inventory and production planning for manufacturers that need to track materials, work orders, and finished goods.",
     rating: "4.5",
     startingPrice: "From ~$129/mo",
-    reviewHref: getInventoryReviewUrl("katana"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://katanamrp.com",
     logoSrc: INVENTORY_LOGOS.katana,
     compareSlugs: ["cin7-vs-katana", "fishbowl-vs-katana"],
@@ -162,7 +156,9 @@ export const TOP_PICKS: BestInventoryPick[] = [
       "Easy-to-use inventory tracking for small teams that want visual item records, barcodes, and basic stock control.",
     rating: "4.3",
     startingPrice: "From ~$39/mo",
-    reviewHref: getInventoryReviewUrl("sortly"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.sortly.com",
     logoSrc: INVENTORY_LOGOS.sortly,
     compareSlugs: ["sortly-vs-inflow-inventory"],

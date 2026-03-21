@@ -268,6 +268,7 @@ export default function CrmPage() {
       intro="Compare CRM tools for small businesses, sales teams, startups, and agencies. Find the right platform for leads, pipelines, and customer relationships."
       breadcrumbLabel="CRM"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="crm"
       featuredPicks={CRM_FEATURED_PICKS}
       featuredPicksTitle="Top CRM picks"
       featuredPicksSub="Hand-picked for small businesses and sales teams. Updated regularly."

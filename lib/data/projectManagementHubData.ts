@@ -4,7 +4,8 @@
  */
 
 import { getProjectManagementReviewUrl, getProjectManagementCompareUrl, getProjectManagementBestForUrl } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths ———
 const LOGOS = {
@@ -19,93 +20,28 @@ const LOGOS = {
   smartsheet: "/Logos/smartsheet.jpeg",
 } as const;
 
-/** Top project management picks for the hub hero section. */
-export const PROJECT_MANAGEMENT_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "asana",
-    name: "Asana",
-    badge: "Best overall",
-    descriptor: "Well-rounded project management for small teams and growing companies.",
-    rating: "4.6",
-    price: "Free tier",
-    features: ["Tasks & projects", "Multiple views", "Automations"],
-    reviewHref: getProjectManagementReviewUrl("asana"),
-    compareHref: getProjectManagementCompareUrl("asana-vs-clickup"),
-    logoSrc: LOGOS.asana,
-    visitUrl: "https://asana.com",
-  },
-  {
-    slug: "clickup",
-    name: "ClickUp",
-    badge: "Best for customization",
-    descriptor: "Highly flexible workspace with tasks, docs, goals, and dashboards in one tool.",
-    rating: "4.5",
-    price: "Free tier",
-    features: ["Custom fields", "Views & dashboards", "Docs & whiteboards"],
-    reviewHref: getProjectManagementReviewUrl("clickup"),
-    compareHref: getProjectManagementCompareUrl("asana-vs-clickup"),
-    logoSrc: LOGOS.clickup,
-    visitUrl: "https://clickup.com",
-  },
-  {
-    slug: "monday",
-    name: "Monday",
-    badge: "Best for visual workflows",
-    descriptor: "Board-based project management that adapts to many processes and teams.",
-    rating: "4.4",
-    price: "From ~$10/user/mo",
-    features: ["Boards & automations", "Multiple views", "Integrations"],
-    reviewHref: getProjectManagementReviewUrl("monday"),
-    compareHref: getProjectManagementCompareUrl("asana-vs-monday"),
-    logoSrc: LOGOS.monday,
-    visitUrl: "https://monday.com",
-  },
-  {
-    slug: "trello",
-    name: "Trello",
-    badge: "Best for simple boards",
-    descriptor: "Kanban-style boards for lightweight task and project tracking.",
-    rating: "4.3",
-    price: "Free tier",
-    features: ["Kanban boards", "Checklists", "Power-Ups"],
-    reviewHref: getProjectManagementReviewUrl("trello"),
-    compareHref: getProjectManagementCompareUrl("clickup-vs-trello"),
-    logoSrc: LOGOS.trello,
-    visitUrl: "https://trello.com",
-  },
-  {
-    slug: "notion",
-    name: "Notion",
-    badge: "Best for docs + projects",
-    descriptor: "Flexible docs, databases, and task views for teams that live in knowledge bases.",
-    rating: "4.4",
-    price: "Free tier",
-    features: ["Docs & wikis", "Databases & views", "Templates"],
-    reviewHref: getProjectManagementReviewUrl("notion"),
-    compareHref: getProjectManagementCompareUrl("notion-vs-trello"),
-    logoSrc: LOGOS.notion,
-    visitUrl: "https://www.notion.so",
-  },
-] as FeaturedPick[];
+/** Top project management picks — slugs resolve to canonical `projectManagementBestSoftware` data */
+export const PROJECT_MANAGEMENT_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "asana" },
+  { slug: "clickup" },
+  { slug: "monday" },
+  { slug: "trello" },
+  { slug: "notion" },
+];
 
-/** Comparison table rows for the hub (project management tools). */
+/** Comparison table rows for the hub (project management tools) — canonical pick data. */
 export const PROJECT_MANAGEMENT_COMPARISON_ROWS: ComparisonTableRow[] = [
-  { tool: "Asana", bestFor: "Most small teams overall", price: "Free tier", rating: "4.6", slug: "asana", logoSrc: LOGOS.asana },
-  { tool: "ClickUp", bestFor: "Customizable workspaces", price: "Free tier", rating: "4.5", slug: "clickup", logoSrc: LOGOS.clickup },
-  {
-    tool: "Monday",
-    bestFor: "Visual workflows and boards",
-    price: "From ~$10/user/mo",
-    rating: "4.4",
-    slug: "monday",
-    logoSrc: LOGOS.monday,
-  },
-  { tool: "Trello", bestFor: "Simple Kanban boards", price: "Free tier", rating: "4.3", slug: "trello", logoSrc: LOGOS.trello },
-  { tool: "Notion", bestFor: "Docs + project databases", price: "Free tier", rating: "4.4", slug: "notion", logoSrc: LOGOS.notion },
-  { tool: "Wrike", bestFor: "Complex project portfolios", price: "From ~$9.80/user/mo", rating: "4.3", slug: "wrike", logoSrc: LOGOS.wrike },
-  { tool: "Teamwork", bestFor: "Client projects & agencies", price: "From ~$5.99/user/mo", rating: "4.2", slug: "teamwork", logoSrc: LOGOS.teamwork },
-  { tool: "Basecamp", bestFor: "Simple team communication", price: "Flat monthly", rating: "4.1", slug: "basecamp", logoSrc: LOGOS.basecamp },
-  { tool: "Smartsheet", bestFor: "Spreadsheet-style projects", price: "From ~$7/user/mo", rating: "4.4", slug: "smartsheet", logoSrc: LOGOS.smartsheet },
+  ...listSoftwarePicksBySlugs("project-management", [
+    "asana",
+    "clickup",
+    "monday",
+    "trello",
+    "notion",
+    "wrike",
+    "teamwork",
+    "basecamp",
+    "smartsheet",
+  ]).map(toHubComparisonTableRow),
 ] as ComparisonTableRow[];
 
 /** Best project management by use case (scenario) links. */

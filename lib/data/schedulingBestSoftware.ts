@@ -1,4 +1,5 @@
 import { getSchedulingReviewUrl, getSchedulingCompareUrl, getSchedulingBestForUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
 const LOGOS = {
   calendly: "/Logos/calendly.png",
@@ -11,22 +12,7 @@ const LOGOS = {
   zoho: "/Logos/zoho.jpeg",
 } as const;
 
-export type BestSchedulingPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestSchedulingPick = SoftwarePickCardContent;
 
 export type SchedulingComparisonTableRow = {
   slug: string;
@@ -47,7 +33,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Automated appointment scheduling and calendar sync for individuals and teams.",
     rating: "4.7",
     startingPrice: "Free tier; from ~$10/mo",
-    reviewHref: getSchedulingReviewUrl("calendly"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://calendly.com",
     logoSrc: LOGOS.calendly,
     compareSlugs: ["calendly-vs-acuity-scheduling", "calendly-vs-youcanbookme"],
@@ -73,7 +61,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Scheduling with intake forms, packages, and strong customization for consultants and coaches.",
     rating: "4.6",
     startingPrice: "From ~$16/mo",
-    reviewHref: getSchedulingReviewUrl("acuity-scheduling"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.acuityscheduling.com",
     logoSrc: LOGOS.acuity,
     compareSlugs: ["calendly-vs-acuity-scheduling", "acuity-scheduling-vs-setmore"],
@@ -99,7 +89,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Team scheduling with round-robin, buffer time, and calendar integrations.",
     rating: "4.5",
     startingPrice: "From ~$10/mo",
-    reviewHref: getSchedulingReviewUrl("youcanbookme"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://youcanbook.me",
     logoSrc: LOGOS.youcanbookme,
     compareSlugs: ["calendly-vs-youcanbookme"],
@@ -125,7 +117,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Appointment booking for salons, clinics, and service providers with payments and reminders.",
     rating: "4.4",
     startingPrice: "Free tier; from ~$9/mo",
-    reviewHref: getSchedulingReviewUrl("setmore"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.setmore.com",
     logoSrc: LOGOS.setmore,
     compareSlugs: ["acuity-scheduling-vs-setmore", "simplybookme-vs-setmore"],
@@ -151,7 +145,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Scheduling with custom booking forms, multiple staff, and industry templates.",
     rating: "4.4",
     startingPrice: "From ~$8/mo",
-    reviewHref: getSchedulingReviewUrl("simplybookme"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://simplybook.me",
     logoSrc: LOGOS.simplybookme,
     compareSlugs: ["simplybookme-vs-setmore"],
@@ -177,7 +173,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Appointment scheduling built into Square for businesses that already use Square for payments.",
     rating: "4.3",
     startingPrice: "Included with Square",
-    reviewHref: getSchedulingReviewUrl("square-appointments"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://squareup.com",
     logoSrc: LOGOS.square,
     compareSlugs: ["square-appointments-vs-acuity-scheduling"],
@@ -203,7 +201,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Scheduling for businesses with multiple staff, locations, or high booking volume.",
     rating: "4.3",
     startingPrice: "From ~$10/mo",
-    reviewHref: getSchedulingReviewUrl("appointy"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.appointy.com",
     logoSrc: LOGOS.appointy,
     compareSlugs: [],
@@ -229,7 +229,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Scheduling from Zoho for businesses already using Zoho CRM, Mail, or other Zoho apps.",
     rating: "4.2",
     startingPrice: "From ~$8/mo",
-    reviewHref: getSchedulingReviewUrl("zoho-bookings"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.zoho.com/bookings",
     logoSrc: LOGOS.zoho,
     compareSlugs: [],

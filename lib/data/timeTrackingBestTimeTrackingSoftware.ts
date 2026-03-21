@@ -1,21 +1,8 @@
 import { getTimeTrackingReviewUrl, getTimeTrackingCompareUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestTimeTrackingPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
+export type BestTimeTrackingPick = SoftwarePickCardContent & {
   standoutFeature: string;
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
 };
 
 export type TimeTrackingComparisonTableRow = {
@@ -37,7 +24,9 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Intuitive time tracking with strong reporting and integrations. Great default for freelancers, agencies, and small teams.",
     rating: "4.6",
     startingPrice: "Free tier",
-    reviewHref: getTimeTrackingReviewUrl("toggl"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://toggl.com/track",
     logoSrc: "/Logos/toggl.jpeg",
     compareSlugs: ["toggl-vs-harvest", "clockify-vs-toggl", "timely-vs-toggl"],
@@ -66,7 +55,9 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Project-based time tracking with built-in invoicing and expenses. Ideal for agencies and service businesses that bill by the hour.",
     rating: "4.4",
     startingPrice: "$12/user/mo",
-    reviewHref: getTimeTrackingReviewUrl("harvest"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.getharvest.com",
     logoSrc: "/Logos/harvest.png",
     compareSlugs: ["toggl-vs-harvest", "harvest-vs-clockify", "everhour-vs-harvest"],
@@ -95,7 +86,9 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Popular freemium time tracker with unlimited users on the free plan. Good for teams that want time tracking without a big budget.",
     rating: "4.3",
     startingPrice: "Free",
-    reviewHref: getTimeTrackingReviewUrl("clockify"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://clockify.me",
     logoSrc: "/Logos/clockify.jpeg",
     compareSlugs: ["clockify-vs-toggl", "harvest-vs-clockify"],
@@ -124,7 +117,9 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Time tracking with productivity monitoring, GPS, and payroll. Built for distributed and field teams that need accountability.",
     rating: "4.4",
     startingPrice: "$4.99/user/mo",
-    reviewHref: getTimeTrackingReviewUrl("hubstaff"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://hubstaff.com",
     logoSrc: "/Logos/hubstaff.jpeg",
     compareSlugs: ["hubstaff-vs-time-doctor"],

@@ -11,7 +11,9 @@ export default async function PayrollAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getPayrollAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} showPayrollTypesColumn />;
+  return (
+    <AlternativesTemplate {...pageProps} showPayrollTypesColumn softwarePickCategory="payroll" />
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

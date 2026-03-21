@@ -8,164 +8,34 @@ import {
   getPosCompareUrl,
   getPosBestForUrl,
 } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
+import { POS_LOGOS } from "@/lib/data/posLogos";
 
-// ——— Logo paths (place under /public/Logos/) ———
-export const POS_LOGOS = {
-  square: "/Logos/square.jpeg",
-  shopify: "/Logos/shopify.jpeg",
-  lightspeed: "/Logos/lightspeed.png",
-  clover: "/Logos/clover.png",
-  toast: "/Logos/toast.png",
-  revel: "/Logos/revel.png",
-  vend: "/Logos/vend.jpeg",
-  touchbistro: "/Logos/touchbistro.jpeg",
-  eposNow: "/Logos/eposnow.jpeg",
-} as const;
+export { POS_LOGOS };
 
-/** Top POS picks for the hub hero section. */
-export const POS_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "square-pos",
-    name: "Square POS",
-    badge: "Best overall",
-    descriptor: "Best overall POS for small businesses: simple setup, flexible hardware, and strong payment and reporting.",
-    rating: "4.6",
-    price: "Free software, hardware from $49",
-    features: ["In-person and online payments", "Inventory and reporting", "Hardware options"],
-    reviewHref: getPosReviewUrl("square-pos"),
-    compareHref: getPosCompareUrl("square-pos-vs-shopify-pos"),
-    logoSrc: POS_LOGOS.square,
-    visitUrl: "https://squareup.com",
-  },
-  {
-    slug: "shopify-pos",
-    name: "Shopify POS",
-    badge: "Best for ecommerce",
-    descriptor: "Best POS for ecommerce stores: unified online and in-person sales, orders, and inventory with Shopify.",
-    rating: "4.5",
-    price: "From $39/mo (with Shopify plan)",
-    features: ["Unified online and retail", "Inventory sync", "Shopify ecosystem"],
-    reviewHref: getPosReviewUrl("shopify-pos"),
-    compareHref: getPosCompareUrl("square-pos-vs-shopify-pos"),
-    logoSrc: POS_LOGOS.shopify,
-    visitUrl: "https://www.shopify.com/pos",
-  },
-  {
-    slug: "lightspeed-pos",
-    name: "Lightspeed POS",
-    badge: "Best for retail",
-    descriptor: "Best POS for retail stores: robust inventory, multi-location, and advanced retail workflows.",
-    rating: "4.4",
-    price: "From ~$69/mo",
-    features: ["Retail-focused inventory", "Multi-location", "Reporting and analytics"],
-    reviewHref: getPosReviewUrl("lightspeed-pos"),
-    compareHref: getPosCompareUrl("shopify-pos-vs-lightspeed-pos"),
-    logoSrc: POS_LOGOS.lightspeed,
-    visitUrl: "https://www.lightspeedhq.com",
-  },
-  {
-    slug: "toast-pos",
-    name: "Toast POS",
-    badge: "Best for restaurants",
-    descriptor: "Best POS for restaurants: table management, kitchen display, online ordering, and restaurant-specific reporting.",
-    rating: "4.5",
-    price: "Quote (restaurant-focused)",
-    features: ["Table and order management", "Kitchen display", "Online ordering"],
-    reviewHref: getPosReviewUrl("toast-pos"),
-    compareHref: getPosCompareUrl("toast-pos-vs-square-pos"),
-    logoSrc: POS_LOGOS.toast,
-    visitUrl: "https://pos.toasttab.com",
-  },
-  {
-    slug: "clover-pos",
-    name: "Clover POS",
-    badge: "Best hardware ecosystem",
-    descriptor: "Best POS hardware ecosystem: flexible terminals, registers, and add-ons for various business types.",
-    rating: "4.3",
-    price: "From ~$69/mo (with hardware)",
-    features: ["Multiple hardware options", "App market", "Payments and reporting"],
-    reviewHref: getPosReviewUrl("clover-pos"),
-    compareHref: getPosCompareUrl("square-pos-vs-clover-pos"),
-    logoSrc: POS_LOGOS.clover,
-    visitUrl: "https://www.clover.com",
-  },
-] as FeaturedPick[];
+/** Top POS picks — slugs resolve to canonical `posBestSoftware` data */
+export const POS_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "square-pos" },
+  { slug: "shopify-pos" },
+  { slug: "lightspeed-pos" },
+  { slug: "toast-pos" },
+  { slug: "clover-pos" },
+];
 
-/** Comparison table rows for the hub (POS tools). */
+/** Comparison table rows for the hub (POS tools) — canonical pick data. */
 export const POS_COMPARISON_ROWS: ComparisonTableRow[] = [
-  {
-    tool: "Square POS",
-    bestFor: "Best overall POS for small businesses",
-    price: "Free software, hardware from $49",
-    rating: "4.6",
-    slug: "square-pos",
-    logoSrc: POS_LOGOS.square,
-  },
-  {
-    tool: "Shopify POS",
-    bestFor: "Best POS for ecommerce stores",
-    price: "From $39/mo (with Shopify plan)",
-    rating: "4.5",
-    slug: "shopify-pos",
-    logoSrc: POS_LOGOS.shopify,
-  },
-  {
-    tool: "Lightspeed POS",
-    bestFor: "Best POS for retail stores",
-    price: "From ~$69/mo",
-    rating: "4.4",
-    slug: "lightspeed-pos",
-    logoSrc: POS_LOGOS.lightspeed,
-  },
-  {
-    tool: "Clover POS",
-    bestFor: "Best POS hardware ecosystem",
-    price: "From ~$69/mo (with hardware)",
-    rating: "4.3",
-    slug: "clover-pos",
-    logoSrc: POS_LOGOS.clover,
-  },
-  {
-    tool: "Toast POS",
-    bestFor: "Best POS for restaurants",
-    price: "Quote (restaurant-focused)",
-    rating: "4.5",
-    slug: "toast-pos",
-    logoSrc: POS_LOGOS.toast,
-  },
-  {
-    tool: "Revel Systems",
-    bestFor: "Enterprise retail and restaurant POS",
-    price: "Quote",
-    rating: "4.2",
-    slug: "revel-systems",
-    logoSrc: POS_LOGOS.revel,
-  },
-  {
-    tool: "Vend POS (Lightspeed Retail)",
-    bestFor: "Retail POS with inventory and multi-store",
-    price: "From ~$69/mo",
-    rating: "4.3",
-    slug: "vend-pos",
-    logoSrc: POS_LOGOS.vend,
-  },
-  {
-    tool: "TouchBistro",
-    bestFor: "Restaurant and hospitality POS",
-    price: "From ~$69/mo",
-    rating: "4.4",
-    slug: "touchbistro",
-    logoSrc: POS_LOGOS.touchbistro,
-  },
-  {
-    tool: "Epos Now",
-    bestFor: "Flexible POS for retail and hospitality",
-    price: "From ~$29/mo",
-    rating: "4.2",
-    slug: "epos-now",
-    logoSrc: POS_LOGOS.eposNow,
-  },
+  ...listSoftwarePicksBySlugs("pos", [
+    "square-pos",
+    "shopify-pos",
+    "lightspeed-pos",
+    "clover-pos",
+    "toast-pos",
+    "revel-systems",
+    "vend-pos",
+    "touchbistro",
+    "epos-now",
+  ]).map(toHubComparisonTableRow),
 ] as ComparisonTableRow[];
 
 /** Best POS software by use case (scenario) links. */

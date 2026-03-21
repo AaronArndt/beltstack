@@ -8,6 +8,7 @@ import {
   getProjectManagementCompareUrl,
   getProjectManagementBestForUrl,
 } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
 // Match hub logo paths (existing filenames in /public/Logos/)
 const LOGOS = {
@@ -22,22 +23,7 @@ const LOGOS = {
   smartsheet: "/Logos/smartsheet.jpeg",
 } as const;
 
-export type BestProjectManagementPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestProjectManagementPick = SoftwarePickCardContent;
 
 export type ProjectManagementComparisonTableRow = {
   slug: string;
@@ -58,7 +44,9 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
       "Well-rounded project management for small teams and growing companies. Tasks, multiple views, and automations in one place.",
     rating: "4.6",
     startingPrice: "Free tier",
-    reviewHref: getProjectManagementReviewUrl("asana"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://asana.com",
     logoSrc: LOGOS.asana,
     compareSlugs: ["asana-vs-clickup", "asana-vs-monday"],
@@ -86,7 +74,9 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
       "Highly flexible workspace with tasks, docs, goals, and dashboards in one tool. Strong for teams that want everything in one place.",
     rating: "4.5",
     startingPrice: "Free tier",
-    reviewHref: getProjectManagementReviewUrl("clickup"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://clickup.com",
     logoSrc: LOGOS.clickup,
     compareSlugs: ["asana-vs-clickup", "clickup-vs-trello"],
@@ -114,7 +104,9 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
       "Board-based project management that adapts to many processes and teams. Visual workflows and strong automation.",
     rating: "4.4",
     startingPrice: "From ~$10/user/mo",
-    reviewHref: getProjectManagementReviewUrl("monday"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://monday.com",
     logoSrc: LOGOS.monday,
     compareSlugs: ["asana-vs-monday", "monday-vs-wrike"],
@@ -142,7 +134,9 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
       "Kanban-style boards for lightweight task and project tracking. Easy to start and easy for everyone to use.",
     rating: "4.3",
     startingPrice: "Free tier",
-    reviewHref: getProjectManagementReviewUrl("trello"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://trello.com",
     logoSrc: LOGOS.trello,
     compareSlugs: ["clickup-vs-trello", "notion-vs-trello"],
@@ -170,7 +164,9 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
       "Flexible docs, databases, and task views for teams that live in knowledge bases. Combines wikis with project tracking.",
     rating: "4.4",
     startingPrice: "Free tier",
-    reviewHref: getProjectManagementReviewUrl("notion"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.notion.so",
     logoSrc: LOGOS.notion,
     compareSlugs: ["notion-vs-trello"],

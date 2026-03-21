@@ -11,7 +11,7 @@ export default async function HelpdeskAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getHelpdeskAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="helpdesk" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -11,7 +11,7 @@ export default async function AccountingAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getAccountingAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="accounting" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

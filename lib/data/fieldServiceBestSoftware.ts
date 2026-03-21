@@ -1,4 +1,5 @@
 import { getFieldServiceReviewUrl, getFieldServiceCompareUrl, getFieldServiceBestForUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
 const LOGOS = {
   jobber: "/Logos/jobber.png",
@@ -12,22 +13,7 @@ const LOGOS = {
   mhelpdesk: "/Logos/mhelpdesk.png",
 } as const;
 
-export type BestFieldServicePick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
-};
+export type BestFieldServicePick = SoftwarePickCardContent;
 
 export type FieldServiceComparisonTableRow = {
   slug: string;
@@ -48,7 +34,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "All-in-one field service platform with scheduling, dispatch, invoicing, and customer management for home service businesses.",
     rating: "4.6",
     startingPrice: "From ~$69/mo",
-    reviewHref: getFieldServiceReviewUrl("jobber"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://getjobber.com",
     logoSrc: LOGOS.jobber,
     compareSlugs: ["jobber-vs-housecall-pro", "jobber-vs-workiz", "kickserv-vs-jobber"],
@@ -76,7 +64,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Scheduling, dispatch, and payments for home service businesses that want a modern, mobile-friendly FSM platform.",
     rating: "4.5",
     startingPrice: "From ~$49/mo",
-    reviewHref: getFieldServiceReviewUrl("housecall-pro"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://housecallpro.com",
     logoSrc: LOGOS.housecallpro,
     compareSlugs: ["jobber-vs-housecall-pro", "housecall-pro-vs-servicetitan"],
@@ -104,7 +94,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Enterprise-grade field service software with advanced dispatch, pricing, marketing, and reporting for larger trade businesses.",
     rating: "4.5",
     startingPrice: "Custom pricing",
-    reviewHref: getFieldServiceReviewUrl("servicetitan"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://servicetitan.com",
     logoSrc: LOGOS.servicetitan,
     compareSlugs: ["housecall-pro-vs-servicetitan", "servicetitan-vs-service-fusion"],
@@ -132,7 +124,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Field service management with scheduling, dispatch, and invoicing for HVAC, plumbing, and other trade businesses.",
     rating: "4.4",
     startingPrice: "From ~$99/mo",
-    reviewHref: getFieldServiceReviewUrl("service-fusion"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://servicefusion.com",
     logoSrc: LOGOS.servicefusion,
     compareSlugs: ["servicetitan-vs-service-fusion"],
@@ -159,7 +153,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "FSM platform for cleaning, locksmith, junk removal, and other service businesses that want straightforward job and schedule management.",
     rating: "4.4",
     startingPrice: "From ~$29/mo",
-    reviewHref: getFieldServiceReviewUrl("workiz"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://workiz.com",
     logoSrc: LOGOS.workiz,
     compareSlugs: ["jobber-vs-workiz"],
@@ -186,7 +182,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Field service CRM and job management for small service businesses that want simple scheduling and customer tracking.",
     rating: "4.3",
     startingPrice: "From ~$55/mo",
-    reviewHref: getFieldServiceReviewUrl("kickserv"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.kickserv.com",
     logoSrc: LOGOS.kickserv,
     compareSlugs: ["kickserv-vs-jobber"],
@@ -213,7 +211,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Mobile-first field service management built for small field teams that live on their phones and tablets.",
     rating: "4.3",
     startingPrice: "From ~$29/mo",
-    reviewHref: getFieldServiceReviewUrl("servicem8"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.servicem8.com",
     logoSrc: LOGOS.servicem8,
     compareSlugs: [],
@@ -240,7 +240,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Trade-focused FSM with deep features for HVAC and plumbing businesses that need strong dispatch and flat-rate pricing.",
     rating: "4.3",
     startingPrice: "Custom pricing",
-    reviewHref: getFieldServiceReviewUrl("fieldedge"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://fieldedge.com",
     logoSrc: LOGOS.fieldedge,
     compareSlugs: [],
@@ -267,7 +269,9 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Field service software for contractors and technicians that need job, schedule, and invoicing tools in one platform.",
     rating: "4.2",
     startingPrice: "From ~$49/mo",
-    reviewHref: getFieldServiceReviewUrl("mhelpdesk"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.mhelpdesk.com",
     logoSrc: LOGOS.mhelpdesk,
     compareSlugs: [],

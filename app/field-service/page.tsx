@@ -16,7 +16,6 @@ import {
   FIELD_SERVICE_METHODOLOGY,
 } from "@/lib/data/fieldServiceHubData";
 import { FIELD_SERVICE_GUIDES } from "@/lib/data/fieldServiceGuides";
-
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
   { label: "Best overall: Jobber", anchor: "#pick-jobber" },
@@ -331,6 +330,7 @@ export default function FieldServicePage() {
       intro="Field service management (FSM) software helps contractors and service businesses schedule jobs, dispatch technicians, manage customers, and handle invoicing and payments. HVAC, plumbing, electrical, repair services, and other field teams use FSM tools to replace spreadsheets and paper with one system—so you can see who is going where, what jobs are due, and get paid faster."
       breadcrumbLabel="Field Service"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="field-service"
       featuredPicks={FIELD_SERVICE_FEATURED_PICKS}
       featuredPicksTitle="Top field service picks"
       featuredPicksSub="Hand-picked for contractors, service teams, and field businesses. Updated regularly."

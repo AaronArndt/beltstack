@@ -4,7 +4,8 @@
  */
 
 import { getHrReviewUrl, getHrCompareUrl, getHrBestForUrl } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths (public/Logos/) ———
 const LOGOS = {
@@ -19,86 +20,28 @@ const LOGOS = {
   zenefits: "/Logos/zenefits.jpeg",
 } as const;
 
-/** Top HR picks for the hub hero section. */
-export const HR_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "gusto",
-    name: "Gusto",
-    badge: "Best overall HR platform for SMBs",
-    descriptor: "Payroll, benefits, hiring, and HR in one place for small and midsize businesses.",
-    rating: "4.8",
-    price: "From ~$40/mo",
-    features: ["Payroll & tax", "Benefits", "Onboarding"],
-    reviewHref: getHrReviewUrl("gusto"),
-    compareHref: getHrCompareUrl("gusto-vs-bamboohr"),
-    logoSrc: LOGOS.gusto,
-    visitUrl: "https://gusto.com",
-  },
-  {
-    slug: "bamboohr",
-    name: "BambooHR",
-    badge: "Best HR management system",
-    descriptor: "People-focused HRIS with hiring, onboarding, time tracking, and culture tools.",
-    rating: "4.6",
-    price: "Quote",
-    features: ["Applicant tracking", "Onboarding", "Time & PTO"],
-    reviewHref: getHrReviewUrl("bamboohr"),
-    compareHref: getHrCompareUrl("gusto-vs-bamboohr"),
-    logoSrc: LOGOS.bamboohr,
-    visitUrl: "https://www.bamboohr.com",
-  },
-  {
-    slug: "rippling",
-    name: "Rippling",
-    badge: "Best HR + IT automation",
-    descriptor: "Unified HR, payroll, benefits, and IT provisioning in one platform.",
-    rating: "4.6",
-    price: "Quote",
-    features: ["HR & payroll", "IT & devices", "Integrations"],
-    reviewHref: getHrReviewUrl("rippling"),
-    compareHref: getHrCompareUrl("rippling-vs-gusto"),
-    logoSrc: LOGOS.rippling,
-    visitUrl: "https://www.rippling.com",
-  },
-  {
-    slug: "deel",
-    name: "Deel",
-    badge: "Best for global hiring and payroll",
-    descriptor: "Hire, pay, and manage global employees and contractors in one system.",
-    rating: "4.6",
-    price: "Quote",
-    features: ["Global payroll", "EOR & contractors", "Compliance"],
-    reviewHref: getHrReviewUrl("deel"),
-    compareHref: getHrCompareUrl("deel-vs-rippling"),
-    logoSrc: LOGOS.deel,
-    visitUrl: "https://www.deel.com",
-  },
-  {
-    slug: "justworks",
-    name: "Justworks",
-    badge: "Best PEO solution",
-    descriptor: "PEO with payroll, benefits, compliance, and HR support for growing teams.",
-    rating: "4.5",
-    price: "Quote",
-    features: ["PEO benefits", "Payroll", "Compliance"],
-    reviewHref: getHrReviewUrl("justworks"),
-    compareHref: getHrCompareUrl("gusto-vs-justworks"),
-    logoSrc: LOGOS.justworks,
-    visitUrl: "https://justworks.com",
-  },
+/** Top HR picks — slugs resolve to canonical `hrBestSoftware` data */
+export const HR_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "gusto" },
+  { slug: "bamboohr" },
+  { slug: "rippling" },
+  { slug: "deel" },
+  { slug: "justworks" },
 ];
 
-/** Comparison table rows for the hub. */
+/** Comparison table rows for the hub — canonical pick data. */
 export const HR_COMPARISON_ROWS: ComparisonTableRow[] = [
-  { tool: "Gusto", bestFor: "Best overall for SMBs", price: "From ~$40/mo", rating: "4.8", slug: "gusto", logoSrc: LOGOS.gusto },
-  { tool: "BambooHR", bestFor: "HR management system", price: "Quote", rating: "4.6", slug: "bamboohr", logoSrc: LOGOS.bamboohr },
-  { tool: "Rippling", bestFor: "HR + IT automation", price: "Quote", rating: "4.6", slug: "rippling", logoSrc: LOGOS.rippling },
-  { tool: "Deel", bestFor: "Global hiring & payroll", price: "Quote", rating: "4.6", slug: "deel", logoSrc: LOGOS.deel },
-  { tool: "ADP Workforce Now", bestFor: "Enterprise HR & payroll", price: "Quote", rating: "4.5", slug: "adp-workforce-now", logoSrc: LOGOS.adp },
-  { tool: "Paychex", bestFor: "Full-service payroll & HR", price: "Quote", rating: "4.4", slug: "paychex", logoSrc: LOGOS.paychex },
-  { tool: "TriNet", bestFor: "PEO for mid-market", price: "Quote", rating: "4.4", slug: "trinet", logoSrc: LOGOS.trinet },
-  { tool: "Justworks", bestFor: "PEO solution", price: "Quote", rating: "4.5", slug: "justworks", logoSrc: LOGOS.justworks },
-  { tool: "Zenefits", bestFor: "All-in-one HR platform", price: "From ~$8/mo", rating: "4.3", slug: "zenefits", logoSrc: LOGOS.zenefits },
+  ...listSoftwarePicksBySlugs("hr", [
+    "gusto",
+    "bamboohr",
+    "rippling",
+    "deel",
+    "adp-workforce-now",
+    "paychex",
+    "trinet",
+    "justworks",
+    "zenefits",
+  ]).map(toHubComparisonTableRow),
 ];
 
 /** Best HR software by use case. */

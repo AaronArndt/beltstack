@@ -1,25 +1,11 @@
 import { getPayrollReviewUrl, getPayrollBestForUrl } from "@/lib/routes";
 import { getPayrollCompareUrl } from "@/lib/data/payrollComparisons";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestPayrollPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
-  /** For comparison table */
+/** Canonical payroll pick = shared SoftwarePickCard body + payroll comparison table fields */
+export type BestPayrollPick = SoftwarePickCardContent & {
   payrollTypes: string;
   standoutFeature: string;
-  /** Editorial paragraph for the individual section */
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
 };
 
 export const TOP_PICKS: BestPayrollPick[] = [
@@ -27,10 +13,13 @@ export const TOP_PICKS: BestPayrollPick[] = [
     slug: "gusto",
     name: "Gusto",
     badge: "Best overall",
+    comparisonTableBestFor: "Small trade businesses",
     description: "All-in-one payroll, benefits, and HR with transparent pricing and a modern interface. Strong for small businesses and contractors.",
     rating: "4.8",
     startingPrice: "$40/mo",
-    reviewHref: getPayrollReviewUrl("gusto"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://gusto.com",
     logoSrc: "/Logos/gusto.jpeg",
     compareSlugs: ["gusto-vs-quickbooks-payroll", "gusto-vs-onpay", "gusto-vs-adp", "gusto-vs-paychex"],
@@ -56,10 +45,13 @@ export const TOP_PICKS: BestPayrollPick[] = [
     slug: "quickbooks-payroll",
     name: "QuickBooks Payroll",
     badge: "Best for QuickBooks users",
+    comparisonTableBestFor: "QuickBooks users",
     description: "Payroll that runs inside QuickBooks so your books and pay runs stay in one place. Ideal if you already use QuickBooks for accounting.",
     rating: "4.6",
     startingPrice: "$30/mo",
-    reviewHref: getPayrollReviewUrl("quickbooks-payroll"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://quickbooks.intuit.com/payroll",
     logoSrc: "/Logos/quickbooks.png",
     compareSlugs: ["gusto-vs-quickbooks-payroll", "quickbooks-payroll-vs-onpay"],
@@ -85,10 +77,13 @@ export const TOP_PICKS: BestPayrollPick[] = [
     slug: "onpay",
     name: "OnPay",
     badge: "Best value",
+    comparisonTableBestFor: "Value-focused teams",
     description: "Straightforward payroll with flat pricing and no tier maze. Good for small teams that want simplicity and predictable costs.",
     rating: "4.5",
     startingPrice: "$40/mo",
-    reviewHref: getPayrollReviewUrl("onpay"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://onpay.com",
     logoSrc: "/Logos/onpay.jpeg",
     compareSlugs: ["gusto-vs-onpay", "quickbooks-payroll-vs-onpay", "paychex-vs-onpay"],
@@ -114,10 +109,13 @@ export const TOP_PICKS: BestPayrollPick[] = [
     slug: "adp",
     name: "ADP",
     badge: "Best for larger teams",
+    comparisonTableBestFor: "Larger teams",
     description: "Enterprise-grade payroll and HR that scales. Custom pricing and optional dedicated support for growing and multi-state businesses.",
     rating: "4.4",
     startingPrice: "Custom pricing",
-    reviewHref: getPayrollReviewUrl("adp"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.adp.com/small-business",
     logoSrc: "/Logos/adp.jpeg",
     compareSlugs: ["gusto-vs-adp", "adp-vs-paychex"],
@@ -143,10 +141,13 @@ export const TOP_PICKS: BestPayrollPick[] = [
     slug: "paychex",
     name: "Paychex",
     badge: "Best for payroll + HR support",
+    comparisonTableBestFor: "Enterprise needs",
     description: "Full-service payroll with strong support and advisory. Good for businesses that want a partner for compliance and benefits.",
     rating: "4.3",
     startingPrice: "Custom pricing",
-    reviewHref: getPayrollReviewUrl("paychex"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.paychex.com/small-business",
     logoSrc: "/Logos/paychex.jpeg",
     compareSlugs: ["gusto-vs-paychex", "adp-vs-paychex", "paychex-vs-onpay"],

@@ -1,21 +1,8 @@
 import { getAccountingReviewUrl, getAccountingBestForUrl, getAccountingCompareUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestAccountingPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
+export type BestAccountingPick = SoftwarePickCardContent & {
   standoutFeature: string;
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
 };
 
 /** Row for comparison table only (includes all 8 tools). */
@@ -38,7 +25,9 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "Full accounting for small businesses: bookkeeping, invoicing, reporting, and a huge ecosystem. The default choice for many SMBs and their accountants.",
     rating: "4.7",
     startingPrice: "$20/mo",
-    reviewHref: getAccountingReviewUrl("quickbooks-online"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://quickbooks.intuit.com",
     logoSrc: "/Logos/quickbooks.png",
     compareSlugs: ["quickbooks-online-vs-xero", "quickbooks-online-vs-freshbooks", "quickbooks-online-vs-zoho-books", "quickbooks-online-vs-wave"],
@@ -67,7 +56,9 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "Strong accounting with a clean interface and accountant-friendly workflows. Good reporting and a large app marketplace.",
     rating: "4.6",
     startingPrice: "$19/mo",
-    reviewHref: getAccountingReviewUrl("xero"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.xero.com",
     logoSrc: "/Logos/xero.png",
     compareSlugs: ["quickbooks-online-vs-xero", "xero-vs-freshbooks", "xero-vs-zoho-books"],
@@ -96,7 +87,9 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "Invoicing-first accounting with time tracking and client billing. Built for solo pros and service businesses who want to get paid and stay organized.",
     rating: "4.5",
     startingPrice: "$19/mo",
-    reviewHref: getAccountingReviewUrl("freshbooks"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.freshbooks.com",
     logoSrc: "/Logos/freshbooks.jpeg",
     compareSlugs: ["quickbooks-online-vs-freshbooks", "xero-vs-freshbooks"],
@@ -125,7 +118,9 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "Affordable accounting with strong automation and client portal. Good fit for businesses that want solid features without premium pricing.",
     rating: "4.4",
     startingPrice: "$15/mo",
-    reviewHref: getAccountingReviewUrl("zoho-books"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.zoho.com/books/",
     logoSrc: "/Logos/zoho.jpeg",
     compareSlugs: ["quickbooks-online-vs-zoho-books", "xero-vs-zoho-books"],
@@ -154,7 +149,9 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "Free accounting and invoicing with no monthly fee. Ideal for very small businesses and freelancers who want to keep costs down.",
     rating: "4.3",
     startingPrice: "Free",
-    reviewHref: getAccountingReviewUrl("wave"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://waveapps.com",
     logoSrc: "/Logos/wave.jpeg",
     compareSlugs: ["quickbooks-online-vs-wave", "wave-vs-freshbooks"],

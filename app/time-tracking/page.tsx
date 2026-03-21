@@ -3,12 +3,13 @@
 import Link from "next/link";
 import {
   HubPageTemplate,
-  type FeaturedPick,
+  type FeaturedPickRef,
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
 import { getTimeTrackingComparison } from "@/lib/data/timeTrackingComparisons";
 import { getTimeTrackingCompareUrl } from "@/lib/routes";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Time tracking placeholder routes ———
 const TIME_REVIEW_BASE = "/time-tracking/review";
@@ -24,66 +25,15 @@ const KEY_TAKEAWAYS = [
   { label: "Best for remote teams: Hubstaff", anchor: "#pick-hubstaff" },
 ];
 
-const TOP_PICKS: FeaturedPick[] = [
-  {
-    slug: "toggl",
-    name: "Toggl Track",
-    badge: "Best overall",
-    descriptor: "Simple, flexible time tracking with strong reporting and integrations.",
-    rating: "4.6",
-    price: "Free tier",
-    features: ["Timers & timesheets", "Tags & projects", "Detailed reports"],
-    reviewHref: `${TIME_REVIEW_BASE}/toggl`,
-    compareHref: `${TIME_COMPARE_BASE}/clockify-vs-toggl`,
-    logoSrc: "/Logos/toggl.jpeg",
-    visitUrl: "https://toggl.com/track",
-  },
-  {
-    slug: "harvest",
-    name: "Harvest",
-    badge: "Best for time + invoicing",
-    descriptor: "Time tracking, expenses, and invoicing in one tool.",
-    rating: "4.4",
-    price: "$12/user/mo",
-    features: ["Time & expenses", "Invoices", "Project budgets"],
-    reviewHref: `${TIME_REVIEW_BASE}/harvest`,
-    compareHref: `${TIME_COMPARE_BASE}/toggl-vs-harvest`,
-    logoSrc: "/Logos/harvest.png",
-    visitUrl: "https://www.getharvest.com",
-  },
-  {
-    slug: "clockify",
-    name: "Clockify",
-    badge: "Best free",
-    descriptor: "Popular freemium time tracker with unlimited users on the free plan.",
-    rating: "4.3",
-    price: "Free",
-    features: ["Unlimited users", "Projects & tasks", "Approvals (paid)"],
-    reviewHref: `${TIME_REVIEW_BASE}/clockify`,
-    compareHref: `${TIME_COMPARE_BASE}/clockify-vs-toggl`,
-    logoSrc: "/Logos/clockify.jpeg",
-    visitUrl: "https://clockify.me",
-  },
-  {
-    slug: "hubstaff",
-    name: "Hubstaff",
-    badge: "Best for remote teams",
-    descriptor: "Time tracking with monitoring, GPS, and payroll options.",
-    rating: "4.4",
-    price: "$4.99/user/mo",
-    features: ["Screenshots & activity", "GPS & job sites", "Payroll (paid)"],
-    reviewHref: `${TIME_REVIEW_BASE}/hubstaff`,
-    compareHref: `${TIME_COMPARE_BASE}/hubstaff-vs-time-doctor`,
-    logoSrc: "/Logos/hubstaff.jpeg",
-    visitUrl: "https://hubstaff.com",
-  },
+const HUB_TOP_PICK_REFS: FeaturedPickRef[] = [
+  { slug: "toggl", badge: "Best overall" },
+  { slug: "harvest", badge: "Best for time + invoicing" },
+  { slug: "clockify", badge: "Best free" },
+  { slug: "hubstaff", badge: "Best for remote teams" },
 ];
 
 const TABLE_ROWS: ComparisonTableRow[] = [
-  { tool: "Toggl Track", bestFor: "Best overall", price: "Free tier", rating: "4.6", slug: "toggl", logoSrc: "/Logos/toggl.jpeg" },
-  { tool: "Harvest", bestFor: "Time + invoicing", price: "$12/user/mo", rating: "4.4", slug: "harvest", logoSrc: "/Logos/harvest.png" },
-  { tool: "Clockify", bestFor: "Free teams", price: "Free", rating: "4.3", slug: "clockify", logoSrc: "/Logos/clockify.jpeg" },
-  { tool: "Hubstaff", bestFor: "Remote & field teams", price: "$4.99/user/mo", rating: "4.4", slug: "hubstaff", logoSrc: "/Logos/hubstaff.jpeg" },
+  ...listSoftwarePicksBySlugs("time-tracking", ["toggl", "harvest", "clockify", "hubstaff"]).map(toHubComparisonTableRow),
   { tool: "Time Doctor", bestFor: "Strict monitoring", price: "From ~$7/user/mo", rating: "4.2", slug: "time-doctor", logoSrc: "/Logos/timedoctor.jpeg" },
   { tool: "RescueTime", bestFor: "Personal productivity", price: "Free tier", rating: "4.1", slug: "rescuetime", logoSrc: "/Logos/rescuetime.jpeg" },
   { tool: "Everhour", bestFor: "Project teams", price: "From ~$8.50/user/mo", rating: "4.3", slug: "everhour", logoSrc: "/Logos/everhour.png" },
@@ -502,7 +452,8 @@ export default function TimeTrackingPage() {
       intro="Compare time tracking tools for freelancers, agencies, remote teams, and small businesses."
       breadcrumbLabel="Time Tracking"
       keyTakeaways={KEY_TAKEAWAYS}
-      featuredPicks={TOP_PICKS}
+      softwarePickCategory="time-tracking"
+      featuredPicks={HUB_TOP_PICK_REFS}
       featuredPicksTitle="Top time tracking picks"
       featuredPicksSub="Hand-picked for freelancers, agencies, and small teams. Updated regularly."
       comparisonTable={{

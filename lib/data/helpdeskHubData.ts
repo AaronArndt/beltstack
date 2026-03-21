@@ -8,164 +8,34 @@ import {
   getHelpdeskCompareUrl,
   getHelpdeskBestForUrl,
 } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
+import { HELPDESK_LOGOS } from "@/lib/data/helpdeskLogos";
 
-// ——— Logo paths (place under /public/Logos/) ———
-export const HELPDESK_LOGOS = {
-  zendesk: "/Logos/zendesk.jpeg",
-  freshdesk: "/Logos/freshsales.jpeg", // Freshworks; same company as Freshsales
-  helpScout: "/Logos/helpscout.jpeg",
-  intercom: "/Logos/intercom.png",
-  zohoDesk: "/Logos/zohodesk.jpeg",
-  gorgias: "/Logos/gorgias.jpeg",
-  liveAgent: "/Logos/liveagent.jpeg",
-  kayako: "/Logos/kayako.jpeg",
-  front: "/Logos/front.jpeg",
-} as const;
+export { HELPDESK_LOGOS };
 
-/** Top helpdesk picks for the hub hero section. */
-export const HELPDESK_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "zendesk",
-    name: "Zendesk",
-    badge: "Best overall helpdesk software",
-    descriptor: "Full-featured helpdesk with ticketing, multi-channel support, and strong automation for teams of all sizes.",
-    rating: "4.5",
-    price: "From ~$19/agent/mo",
-    features: ["Ticketing and workflows", "Multi-channel support", "Automation and reporting"],
-    reviewHref: getHelpdeskReviewUrl("zendesk"),
-    compareHref: getHelpdeskCompareUrl("zendesk-vs-freshdesk"),
-    logoSrc: HELPDESK_LOGOS.zendesk,
-    visitUrl: "https://www.zendesk.com",
-  },
-  {
-    slug: "freshdesk",
-    name: "Freshdesk",
-    badge: "Best value helpdesk for growing teams",
-    descriptor: "Affordable helpdesk with ticketing, automation, and solid support for small to midsize support teams.",
-    rating: "4.5",
-    price: "From ~$15/agent/mo",
-    features: ["Ticketing and automation", "Multi-channel", "Good value"],
-    reviewHref: getHelpdeskReviewUrl("freshdesk"),
-    compareHref: getHelpdeskCompareUrl("zendesk-vs-freshdesk"),
-    logoSrc: HELPDESK_LOGOS.freshdesk,
-    visitUrl: "https://www.freshdesk.com",
-  },
-  {
-    slug: "help-scout",
-    name: "Help Scout",
-    badge: "Best for email-based support teams",
-    descriptor: "Shared inbox and helpdesk built around email-first support with a simple, team-friendly workflow.",
-    rating: "4.6",
-    price: "From ~$20/user/mo",
-    features: ["Shared inbox", "Email-first workflows", "Customer context"],
-    reviewHref: getHelpdeskReviewUrl("help-scout"),
-    compareHref: getHelpdeskCompareUrl("help-scout-vs-zendesk"),
-    logoSrc: HELPDESK_LOGOS.helpScout,
-    visitUrl: "https://www.helpscout.com",
-  },
-  {
-    slug: "intercom",
-    name: "Intercom",
-    badge: "Best for customer messaging and support",
-    descriptor: "Messaging-first platform that combines live chat, bots, and help center for customer conversations.",
-    rating: "4.4",
-    price: "From ~$39/mo",
-    features: ["Live chat and messaging", "Bots and automation", "Unified inbox"],
-    reviewHref: getHelpdeskReviewUrl("intercom"),
-    compareHref: getHelpdeskCompareUrl("intercom-vs-zendesk"),
-    logoSrc: HELPDESK_LOGOS.intercom,
-    visitUrl: "https://www.intercom.com",
-  },
-  {
-    slug: "gorgias",
-    name: "Gorgias",
-    badge: "Best for ecommerce support teams",
-    descriptor: "Helpdesk built for ecommerce with deep Shopify and Magento integration and order context.",
-    rating: "4.5",
-    price: "From ~$60/mo",
-    features: ["Ecommerce integrations", "Order context", "Macros and automation"],
-    reviewHref: getHelpdeskReviewUrl("gorgias"),
-    compareHref: getHelpdeskCompareUrl("gorgias-vs-zendesk"),
-    logoSrc: HELPDESK_LOGOS.gorgias,
-    visitUrl: "https://www.gorgias.com",
-  },
+/** Top helpdesk picks — slugs resolve to canonical `helpdeskBestSoftware` data */
+export const HELPDESK_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "zendesk" },
+  { slug: "freshdesk" },
+  { slug: "help-scout" },
+  { slug: "intercom" },
+  { slug: "gorgias" },
 ];
 
-/** Comparison table rows for the hub (helpdesk tools). */
+/** Comparison table rows for the hub (helpdesk tools) — canonical pick data. */
 export const HELPDESK_COMPARISON_ROWS: ComparisonTableRow[] = [
-  {
-    tool: "Zendesk",
-    bestFor: "Best overall helpdesk software",
-    price: "From ~$19/agent/mo",
-    rating: "4.5",
-    slug: "zendesk",
-    logoSrc: HELPDESK_LOGOS.zendesk,
-  },
-  {
-    tool: "Freshdesk",
-    bestFor: "Best value for growing teams",
-    price: "From ~$15/agent/mo",
-    rating: "4.5",
-    slug: "freshdesk",
-    logoSrc: HELPDESK_LOGOS.freshdesk,
-  },
-  {
-    tool: "Help Scout",
-    bestFor: "Email-based support teams",
-    price: "From ~$20/user/mo",
-    rating: "4.6",
-    slug: "help-scout",
-    logoSrc: HELPDESK_LOGOS.helpScout,
-  },
-  {
-    tool: "Intercom",
-    bestFor: "Customer messaging and support",
-    price: "From ~$39/mo",
-    rating: "4.4",
-    slug: "intercom",
-    logoSrc: HELPDESK_LOGOS.intercom,
-  },
-  {
-    tool: "Zoho Desk",
-    bestFor: "Zoho ecosystem and SMB support",
-    price: "From ~$14/agent/mo",
-    rating: "4.4",
-    slug: "zoho-desk",
-    logoSrc: HELPDESK_LOGOS.zohoDesk,
-  },
-  {
-    tool: "Gorgias",
-    bestFor: "Ecommerce support teams",
-    price: "From ~$60/mo",
-    rating: "4.5",
-    slug: "gorgias",
-    logoSrc: HELPDESK_LOGOS.gorgias,
-  },
-  {
-    tool: "LiveAgent",
-    bestFor: "Omnichannel and live chat",
-    price: "From ~$15/agent/mo",
-    rating: "4.3",
-    slug: "liveagent",
-    logoSrc: HELPDESK_LOGOS.liveAgent,
-  },
-  {
-    tool: "Kayako",
-    bestFor: "Unified conversations and history",
-    price: "From ~$15/agent/mo",
-    rating: "4.2",
-    slug: "kayako",
-    logoSrc: HELPDESK_LOGOS.kayako,
-  },
-  {
-    tool: "Front",
-    bestFor: "Shared inbox and collaboration",
-    price: "From ~$19/user/mo",
-    rating: "4.5",
-    slug: "front",
-    logoSrc: HELPDESK_LOGOS.front,
-  },
+  ...listSoftwarePicksBySlugs("helpdesk", [
+    "zendesk",
+    "freshdesk",
+    "help-scout",
+    "intercom",
+    "zoho-desk",
+    "gorgias",
+    "liveagent",
+    "kayako",
+    "front",
+  ]).map(toHubComparisonTableRow),
 ];
 
 /** Best helpdesk software by use case (scenario) links. */

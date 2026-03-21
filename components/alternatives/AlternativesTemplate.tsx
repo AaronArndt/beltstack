@@ -1,9 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
+import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import {
+  getSoftwarePick,
+  getSoftwarePickCategoryRoutes,
+  toSoftwarePickCardProps,
+  type SoftwarePickCategory,
+} from "@/lib/data/softwarePickCards";
 
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
@@ -69,6 +76,8 @@ export type AlternativesTemplateProps = {
   faqItems: AlternativesFaqItem[];
   /** Optional: show payroll types column in comparison table */
   showPayrollTypesColumn?: boolean;
+  /** When set, “Top alternatives” uses canonical SoftwarePickCard data from the registry (with `bestFor` as badge override); missing slugs fall back to compact cards. */
+  softwarePickCategory?: SoftwarePickCategory;
 };
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -133,8 +142,14 @@ export function AlternativesTemplate({
   relatedResources,
   faqItems,
   showPayrollTypesColumn = false,
+  softwarePickCategory,
 }: AlternativesTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const pickRoutes = useMemo(
+    () => (softwarePickCategory != null ? getSoftwarePickCategoryRoutes(softwarePickCategory) : null),
+    [softwarePickCategory]
+  );
 
   const breadcrumbLabel = `Best ${productName} alternatives`;
 
@@ -218,37 +233,66 @@ export function AlternativesTemplate({
             <SectionTitle sub="Editorially ranked alternatives we recommend.">
               Top {productName} alternatives
             </SectionTitle>
-            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {topAlternatives.map((alt) => (
-                <article key={alt.slug} className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <img src={alt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                    <span className="text-[#10B981] font-bold">{alt.rating}</span>
-                    {alt.startingPrice && (
-                      <span className="rounded-md border border-slate-200 bg-white px-2 py-0.5 text-xs font-medium text-[#6E6E6E]">
-                        {alt.startingPrice}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="mt-3 text-[#1A2D48] text-xl font-bold">
-                    <Link href={alt.reviewHref} className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                      {alt.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-[#6E6E6E] text-sm font-medium">Best for: {alt.bestFor}</p>
-                  <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">{alt.description}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-slate-200 pt-4">
-                    <Link href={alt.reviewHref} className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                      Read review →
-                    </Link>
-                    {alt.compareHref && (
-                      <Link href={alt.compareHref} className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        Compare →
+            <div className="mt-6 space-y-10">
+              {topAlternatives.map((alt) => {
+                const canonical =
+                  softwarePickCategory != null && pickRoutes != null
+                    ? getSoftwarePick(softwarePickCategory, alt.slug)
+                    : undefined;
+                if (canonical != null && pickRoutes != null) {
+                  return (
+                    <SoftwarePickCard
+                      key={alt.slug}
+                      {...toSoftwarePickCardProps(canonical, pickRoutes, {
+                        id: `alt-${alt.slug}`,
+                        badgeText: alt.bestFor,
+                      })}
+                    />
+                  );
+                }
+                return (
+                  <article
+                    key={alt.slug}
+                    className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md"
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      <img src={alt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
+                      <span className="text-[#10B981] font-bold">{alt.rating}</span>
+                      {alt.startingPrice && (
+                        <span className="rounded-md border border-slate-200 bg-white px-2 py-0.5 text-xs font-medium text-[#6E6E6E]">
+                          {alt.startingPrice}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold">
+                      <Link
+                        href={alt.reviewHref}
+                        className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      >
+                        {alt.name}
                       </Link>
-                    )}
-                  </div>
-                </article>
-              ))}
+                    </h3>
+                    <p className="mt-1 text-[#6E6E6E] text-sm font-medium">Best for: {alt.bestFor}</p>
+                    <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">{alt.description}</p>
+                    <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-slate-200 pt-4">
+                      <Link
+                        href={alt.reviewHref}
+                        className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      >
+                        Read review →
+                      </Link>
+                      {alt.compareHref && (
+                        <Link
+                          href={alt.compareHref}
+                          className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        >
+                          Compare →
+                        </Link>
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>

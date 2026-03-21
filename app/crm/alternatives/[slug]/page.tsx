@@ -11,7 +11,7 @@ export default async function CrmAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getCrmAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="crm" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

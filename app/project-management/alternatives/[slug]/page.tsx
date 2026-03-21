@@ -11,7 +11,7 @@ export default async function ProjectManagementAlternativesPage({ params }: Prop
   const { slug } = await params;
   const pageProps = getProjectManagementAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="project-management" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

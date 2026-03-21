@@ -325,6 +325,7 @@ export default function HrPage() {
       intro="HR software helps businesses manage people operations in one place: employee data, hiring and onboarding, payroll, benefits, time off, and compliance. Small businesses, startups, and growing teams use it to streamline admin, stay compliant, and scale hiring without outgrowing their tools."
       breadcrumbLabel="HR"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="hr"
       featuredPicks={HR_FEATURED_PICKS}
       featuredPicksTitle="Top HR picks"
       featuredPicksSub="Hand-picked for small businesses, startups, and growing teams. Updated regularly."

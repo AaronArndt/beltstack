@@ -335,6 +335,7 @@ export default function SchedulingPage() {
       intro="Scheduling software automates appointment booking and calendar management so consultants, service businesses, freelancers, and teams can let clients book time without back-and-forth emails or calls. These tools sync with your calendar, send reminders, and often support payments and intake forms—reducing no-shows and freeing up admin time."
       breadcrumbLabel="Scheduling"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="scheduling"
       featuredPicks={SCHEDULING_FEATURED_PICKS}
       featuredPicksTitle="Top scheduling picks"
       featuredPicksSub="Hand-picked for consultants, service businesses, and teams. Updated regularly."

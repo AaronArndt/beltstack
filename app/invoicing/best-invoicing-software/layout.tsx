@@ -1,6 +1,7 @@
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_INVOICING_OPTIONS } from "@/lib/data/invoicingBestInvoicingSoftware";
+import { getInvoicingReviewUrl } from "@/lib/routes";
 import type { Metadata } from "next";
 
 function bestInvoicingSoftwareItemListSchema() {
@@ -12,7 +13,7 @@ function bestInvoicingSoftwareItemListSchema() {
         "@type": "SoftwareApplication" as const,
         name: p.name,
         applicationCategory: "BusinessApplication" as const,
-        url: `${SITE_URL}${p.reviewHref}`,
+        url: `${SITE_URL}${getInvoicingReviewUrl(p.slug)}`,
       },
     })),
     ...MORE_INVOICING_OPTIONS.map((p, i) => ({
@@ -22,7 +23,7 @@ function bestInvoicingSoftwareItemListSchema() {
         "@type": "SoftwareApplication" as const,
         name: p.name,
         applicationCategory: "BusinessApplication" as const,
-        url: `${SITE_URL}${p.reviewHref}`,
+        url: `${SITE_URL}${getInvoicingReviewUrl(p.slug)}`,
       },
     })),
   ];

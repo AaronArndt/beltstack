@@ -8,166 +8,34 @@ import {
   getInventoryCompareUrl,
   getInventoryBestForUrl,
 } from "@/lib/routes";
-import type { FeaturedPick, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
+import { INVENTORY_LOGOS } from "@/lib/data/inventoryLogos";
 
-// ——— Logo paths (place under /public/Logos/) ———
-export const INVENTORY_LOGOS = {
-  zoho: "/Logos/zoho.jpeg",
-  cin7: "/Logos/cin7.jpeg",
-  inflow: "/Logos/inflow.jpeg",
-  katana: "/Logos/katana.png",
-  fishbowl: "/Logos/fishbowl.jpeg",
-  sortly: "/Logos/sortly.png",
-  // QuickBooks Commerce reuses the existing QuickBooks logo
-  quickbooksCommerce: "/Logos/quickbooks.png",
-  unleashed: "/Logos/unleashed.png",
-  finale: "/Logos/finale.jpeg",
-} as const;
+export { INVENTORY_LOGOS };
 
-/** Top inventory management picks for the hub hero section. */
-export const INVENTORY_FEATURED_PICKS: FeaturedPick[] = [
-  {
-    slug: "zoho-inventory",
-    name: "Zoho Inventory",
-    badge: "Best overall",
-    descriptor: "Well-rounded inventory software for small and midsize businesses, especially if you already use Zoho.",
-    rating: "4.6",
-    price: "Free tier",
-    features: ["Stock & order management", "Multi-warehouse support", "Integrations with Zoho apps"],
-    reviewHref: getInventoryReviewUrl("zoho-inventory"),
-    compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7"),
-    logoSrc: INVENTORY_LOGOS.zoho,
-    visitUrl: "https://www.zoho.com/inventory",
-  },
-  {
-    slug: "cin7",
-    name: "Cin7",
-    badge: "Best for multi-channel",
-    descriptor: "Inventory and order management built for businesses selling across ecommerce, retail, and wholesale channels.",
-    rating: "4.5",
-    price: "From ~$349/mo",
-    features: ["Multi-channel inventory", "Retail & wholesale workflows", "Built-in POS options"],
-    reviewHref: getInventoryReviewUrl("cin7"),
-    compareHref: getInventoryCompareUrl("zoho-inventory-vs-cin7"),
-    logoSrc: INVENTORY_LOGOS.cin7,
-    visitUrl: "https://www.cin7.com",
-  },
-  {
-    slug: "inflow-inventory",
-    name: "inFlow Inventory",
-    badge: "Best for small business tracking",
-    descriptor:
-      "Simple, practical inventory tracking for small businesses that need to track stock, orders, and reordering.",
-    rating: "4.4",
-    price: "From ~$89/mo",
-    features: ["Stock & reorder alerts", "Sales & purchase orders", "Barcode support"],
-    reviewHref: getInventoryReviewUrl("inflow-inventory"),
-    compareHref: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory"),
-    logoSrc: INVENTORY_LOGOS.inflow,
-    visitUrl: "https://www.inflowinventory.com",
-  },
-  {
-    slug: "katana",
-    name: "Katana",
-    badge: "Best for manufacturing",
-    descriptor: "Inventory and production planning for manufacturers that need to track materials, work orders, and finished goods.",
-    rating: "4.5",
-    price: "From ~$129/mo",
-    features: ["Bill of materials", "Production planning", "Shop floor tracking"],
-    reviewHref: getInventoryReviewUrl("katana"),
-    compareHref: getInventoryCompareUrl("cin7-vs-katana"),
-    logoSrc: INVENTORY_LOGOS.katana,
-    visitUrl: "https://katanamrp.com",
-  },
-  {
-    slug: "sortly",
-    name: "Sortly",
-    badge: "Best for simple tracking",
-    descriptor: "Easy-to-use inventory tracking for small teams that want barcodes, photos, and basic stock control.",
-    rating: "4.3",
-    price: "From ~$39/mo",
-    features: ["Visual item catalog", "Barcode & QR labels", "Mobile apps"],
-    reviewHref: getInventoryReviewUrl("sortly"),
-    compareHref: getInventoryCompareUrl("sortly-vs-inflow-inventory"),
-    logoSrc: INVENTORY_LOGOS.sortly,
-    visitUrl: "https://www.sortly.com",
-  },
-] as FeaturedPick[];
+/** Top inventory picks — slugs resolve to canonical `inventoryBestSoftware` data */
+export const INVENTORY_FEATURED_PICKS: FeaturedPickRef[] = [
+  { slug: "zoho-inventory" },
+  { slug: "cin7" },
+  { slug: "inflow-inventory" },
+  { slug: "katana" },
+  { slug: "sortly" },
+];
 
-/** Comparison table rows for the hub (inventory tools). */
+/** Comparison table rows for the hub (inventory tools) — canonical pick data. */
 export const INVENTORY_COMPARISON_ROWS: ComparisonTableRow[] = [
-  {
-    tool: "Zoho Inventory",
-    bestFor: "Best overall inventory software for SMBs",
-    price: "Free tier",
-    rating: "4.6",
-    slug: "zoho-inventory",
-    logoSrc: INVENTORY_LOGOS.zoho,
-  },
-  {
-    tool: "Cin7",
-    bestFor: "Multi-channel inventory management",
-    price: "From ~$349/mo",
-    rating: "4.5",
-    slug: "cin7",
-    logoSrc: INVENTORY_LOGOS.cin7,
-  },
-  {
-    tool: "inFlow Inventory",
-    bestFor: "Small business inventory tracking",
-    price: "From ~$89/mo",
-    rating: "4.4",
-    slug: "inflow-inventory",
-    logoSrc: INVENTORY_LOGOS.inflow,
-  },
-  {
-    tool: "Katana",
-    bestFor: "Manufacturing inventory management",
-    price: "From ~$129/mo",
-    rating: "4.5",
-    slug: "katana",
-    logoSrc: INVENTORY_LOGOS.katana,
-  },
-  {
-    tool: "Fishbowl",
-    bestFor: "Inventory and manufacturing for QuickBooks users",
-    price: "Quote",
-    rating: "4.3",
-    slug: "fishbowl",
-    logoSrc: INVENTORY_LOGOS.fishbowl,
-  },
-  {
-    tool: "Sortly",
-    bestFor: "Simple inventory tracking",
-    price: "From ~$39/mo",
-    rating: "4.3",
-    slug: "sortly",
-    logoSrc: INVENTORY_LOGOS.sortly,
-  },
-  {
-    tool: "QuickBooks Commerce",
-    bestFor: "Inventory for QuickBooks-centric teams",
-    price: "Quote",
-    rating: "4.2",
-    slug: "quickbooks-commerce",
-    logoSrc: INVENTORY_LOGOS.quickbooksCommerce,
-  },
-  {
-    tool: "Unleashed",
-    bestFor: "Wholesalers and manufacturers",
-    price: "From ~$349/mo",
-    rating: "4.4",
-    slug: "unleashed",
-    logoSrc: INVENTORY_LOGOS.unleashed,
-  },
-  {
-    tool: "Finale Inventory",
-    bestFor: "High-volume ecommerce and warehouses",
-    price: "From ~$99/mo",
-    rating: "4.4",
-    slug: "finale-inventory",
-    logoSrc: INVENTORY_LOGOS.finale,
-  },
+  ...listSoftwarePicksBySlugs("inventory", [
+    "zoho-inventory",
+    "cin7",
+    "inflow-inventory",
+    "katana",
+    "fishbowl",
+    "sortly",
+    "quickbooks-commerce",
+    "unleashed",
+    "finale-inventory",
+  ]).map(toHubComparisonTableRow),
 ] as ComparisonTableRow[];
 
 /** Best inventory software by use case (scenario) links. */

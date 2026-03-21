@@ -11,8 +11,9 @@ import {
   RELATED_COMPARISONS,
   FAQ_ITEMS,
 } from "@/lib/data/hrBestSoftware";
-import { getHrAlternativeUrl, getHrCompareUrl } from "@/lib/routes";
-import { formatComparisonLinkLabelFromSlug } from "@/lib/utils/formatComparisonLinkLabel";
+import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+
+const hrPickRoutes = getSoftwarePickCategoryRoutes("hr");
 
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
@@ -167,24 +168,7 @@ export default function BestHrSoftwarePage() {
               {TOP_PICKS.map((pick) => (
                 <SoftwarePickCard
                   key={pick.slug}
-                  id={`pick-${pick.slug}`}
-                  name={pick.name}
-                  logoSrc={pick.logoSrc}
-                  badgeText={pick.badge}
-                  rating={pick.rating}
-                  summary={pick.description}
-                  highlightsExtra={pick.editorialParagraph}
-                  visitUrl={pick.visitUrl}
-                  reviewUrl={pick.reviewHref}
-                  pricingStartLabel={pick.startingPrice}
-                  pricingDetails={pick.pricingSummary}
-                  pros={pick.pros}
-                  cons={pick.cons}
-                  alternativesUrl={getHrAlternativeUrl(pick.slug)}
-                  comparisonLinks={pick.compareSlugs.slice(0, 3).map((slug) => ({
-                    href: getHrCompareUrl(slug),
-                    label: formatComparisonLinkLabelFromSlug(slug),
-                  }))}
+                  {...toSoftwarePickCardProps(pick, hrPickRoutes, { id: `pick-${pick.slug}` })}
                 />
               ))}
             </div>

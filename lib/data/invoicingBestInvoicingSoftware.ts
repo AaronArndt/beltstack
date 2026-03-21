@@ -1,21 +1,8 @@
 import { getInvoicingReviewUrl, getInvoicingBestForUrl, getInvoicingCompareUrl } from "@/lib/routes";
+import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 
-export type BestInvoicingPick = {
-  slug: string;
-  name: string;
-  badge: string;
-  description: string;
-  rating: string;
-  startingPrice: string;
-  reviewHref: string;
-  visitUrl: string;
-  logoSrc: string;
-  compareSlugs: string[];
+export type BestInvoicingPick = SoftwarePickCardContent & {
   standoutFeature: string;
-  editorialParagraph: string;
-  pros: string[];
-  cons: string[];
-  pricingSummary: string;
 };
 
 /** Row for comparison table (logoSrc optional for tools without logo asset). */
@@ -38,7 +25,9 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Invoicing, time tracking, and expense management built for freelancers and service businesses. Professional invoices and recurring billing.",
     rating: "4.5",
     startingPrice: "$19/mo",
-    reviewHref: getInvoicingReviewUrl("freshbooks"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.freshbooks.com",
     logoSrc: "/Logos/freshbooks.jpeg",
     compareSlugs: ["freshbooks-vs-quickbooks", "freshbooks-vs-wave", "zoho-invoice-vs-freshbooks"],
@@ -67,7 +56,9 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Invoicing inside QuickBooks for businesses already on the platform. Books and invoices stay in one place.",
     rating: "4.6",
     startingPrice: "$30/mo",
-    reviewHref: getInvoicingReviewUrl("quickbooks"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://quickbooks.intuit.com",
     logoSrc: "/Logos/quickbooks.png",
     compareSlugs: ["freshbooks-vs-quickbooks", "quickbooks-vs-wave", "xero-vs-quickbooks"],
@@ -96,7 +87,9 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Free invoicing and receipt scanning with no monthly fee. Ideal for freelancers and very small businesses.",
     rating: "4.3",
     startingPrice: "Free",
-    reviewHref: getInvoicingReviewUrl("wave"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.waveapps.com",
     logoSrc: "/Logos/wave.jpeg",
     compareSlugs: ["freshbooks-vs-wave", "quickbooks-vs-wave"],
@@ -125,7 +118,9 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Affordable invoicing with projects, client portal, and automation. Good fit for value-focused teams.",
     rating: "4.4",
     startingPrice: "Free tier",
-    reviewHref: getInvoicingReviewUrl("zoho-invoice"),
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
     visitUrl: "https://www.zoho.com/invoice",
     logoSrc: "/Logos/zoho.jpeg",
     compareSlugs: ["zoho-invoice-vs-freshbooks", "zoho-invoice-vs-quickbooks"],
@@ -154,7 +149,9 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Cloud invoicing and quoting with full accounting. Strong for growing teams that want one platform.",
     rating: "4.5",
     startingPrice: "$15/mo",
-    reviewHref: getInvoicingReviewUrl("xero"),
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
     visitUrl: "https://www.xero.com",
     logoSrc: "/Logos/xero.png",
     compareSlugs: ["xero-vs-quickbooks", "xero-vs-freshbooks"],

@@ -1,0 +1,14 @@
+/** Verticals that have canonical SoftwarePickCard data in `lib/data/*Best*.ts` */
+export type SoftwarePickCategory =
+  | "payroll"
+  | "accounting"
+  | "invoicing"
+  | "crm"
+  | "helpdesk"
+  | "field-service"
+  | "inventory"
+  | "project-management"
+  | "scheduling"
+  | "pos"
+  | "time-tracking"
+  | "hr";

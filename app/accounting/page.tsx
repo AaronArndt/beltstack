@@ -4,11 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   HubPageTemplate,
-  type FeaturedPick,
+  type FeaturedPickRef,
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
 import { getAccountingComparisonBySlug, getAccountingCompareUrlFromSlug } from "@/lib/data/accountingComparisons";
+import { getAccountingReviewUrl } from "@/lib/routes";
+import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Accounting placeholder routes ———
 const ACCOUNTING_REVIEW_BASE = "/accounting/review";
@@ -24,80 +26,16 @@ const KEY_TAKEAWAYS = [
   { label: "Best free accounting software: Wave", anchor: "#pick-wave" },
 ];
 
-const TOP_PICKS: FeaturedPick[] = [
-  {
-    slug: "quickbooks-online",
-    name: "QuickBooks Online",
-    badge: "Best overall",
-    descriptor: "Full-featured accounting for small businesses with invoicing, reporting, and tax tools.",
-    rating: "4.6",
-    price: "$30/mo",
-    features: ["Invoicing & payments", "P&L and reports", "Bank sync"],
-    reviewHref: `${ACCOUNTING_REVIEW_BASE}/quickbooks-online`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero`,
-    logoSrc: "/Logos/quickbooks.png",
-    visitUrl: "https://quickbooks.intuit.com",
-  },
-  {
-    slug: "xero",
-    name: "Xero",
-    badge: "Best QuickBooks alternative",
-    descriptor: "Cloud accounting with strong invoicing and multi-currency for growing businesses.",
-    rating: "4.5",
-    price: "$15/mo",
-    features: ["Dashboard & reports", "Invoicing", "700+ integrations"],
-    reviewHref: `${ACCOUNTING_REVIEW_BASE}/xero`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-xero`,
-    logoSrc: "/Logos/xero.png",
-    visitUrl: "https://www.xero.com",
-  },
-  {
-    slug: "freshbooks",
-    name: "FreshBooks",
-    badge: "Best for freelancers",
-    descriptor: "Simple invoicing and expense tracking built for freelancers and solopreneurs.",
-    rating: "4.5",
-    price: "$19/mo",
-    features: ["Time tracking", "Invoicing", "Expenses"],
-    reviewHref: `${ACCOUNTING_REVIEW_BASE}/freshbooks`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/quickbooks-online-vs-freshbooks`,
-    logoSrc: "/Logos/freshbooks.jpeg",
-    visitUrl: "https://www.freshbooks.com",
-  },
-  {
-    slug: "zoho-books",
-    name: "Zoho Books",
-    badge: "Best value",
-    descriptor: "Affordable accounting with projects, inventory, and client portal.",
-    rating: "4.4",
-    price: "$15/mo",
-    features: ["Invoicing", "Projects", "Client portal"],
-    reviewHref: `${ACCOUNTING_REVIEW_BASE}/zoho-books`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/xero-vs-zoho-books`,
-    logoSrc: "/Logos/zoho.jpeg",
-    visitUrl: "https://www.zoho.com/books",
-  },
-  {
-    slug: "wave",
-    name: "Wave",
-    badge: "Best free",
-    descriptor: "Free accounting and invoicing for small businesses and freelancers.",
-    rating: "4.3",
-    price: "Free",
-    features: ["Free invoicing", "Expense tracking", "Receipt scan"],
-    reviewHref: `${ACCOUNTING_REVIEW_BASE}/wave`,
-    compareHref: `${ACCOUNTING_COMPARE_BASE}/wave-vs-quickbooks-online`,
-    logoSrc: "/Logos/wave.jpeg",
-    visitUrl: "https://www.waveapps.com",
-  },
+const HUB_TOP_PICK_REFS: FeaturedPickRef[] = [
+  { slug: "quickbooks-online" },
+  { slug: "xero" },
+  { slug: "freshbooks" },
+  { slug: "zoho-books" },
+  { slug: "wave" },
 ];
 
 const TABLE_ROWS: ComparisonTableRow[] = [
-  { tool: "QuickBooks Online", bestFor: "Small business all-in-one", price: "$30/mo", rating: "4.6", slug: "quickbooks-online", logoSrc: "/Logos/quickbooks.png" },
-  { tool: "Xero", bestFor: "QuickBooks alternative", price: "$15/mo", rating: "4.5", slug: "xero", logoSrc: "/Logos/xero.png" },
-  { tool: "FreshBooks", bestFor: "Freelancers", price: "$19/mo", rating: "4.5", slug: "freshbooks", logoSrc: "/Logos/freshbooks.jpeg" },
-  { tool: "Zoho Books", bestFor: "Value & projects", price: "$15/mo", rating: "4.4", slug: "zoho-books", logoSrc: "/Logos/zoho.jpeg" },
-  { tool: "Wave", bestFor: "Free accounting", price: "Free", rating: "4.3", slug: "wave", logoSrc: "/Logos/wave.jpeg" },
+  ...listSoftwarePicksBySlugs("accounting", ["quickbooks-online", "xero", "freshbooks", "zoho-books", "wave"]).map(toHubComparisonTableRow),
   { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
   { tool: "Odoo Accounting", bestFor: "Odoo ERP users", price: "Quote", rating: "4.2", slug: "odoo-accounting", logoSrc: "/Logos/odoo.jpeg" },
   { tool: "Kashoo", bestFor: "Simple bookkeeping", price: "Quote", rating: "4.2", slug: "kashoo", logoSrc: "/Logos/kashoo.jpeg" },
@@ -473,7 +411,8 @@ export default function AccountingPage() {
       intro="Compare accounting tools for bookkeeping, invoicing, reporting, and tax preparation."
       breadcrumbLabel="Accounting"
       keyTakeaways={KEY_TAKEAWAYS}
-      featuredPicks={TOP_PICKS}
+      softwarePickCategory="accounting"
+      featuredPicks={HUB_TOP_PICK_REFS}
       featuredPicksTitle="Top accounting picks"
       featuredPicksSub="Hand-picked for small businesses and freelancers. Updated monthly."
       comparisonTable={{

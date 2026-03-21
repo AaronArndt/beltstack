@@ -11,7 +11,7 @@ export default async function PosAlternativesPage({ params }: Props) {
   const { slug } = await params;
   const pageProps = getPosAlternativesPage(slug);
   if (!pageProps) notFound();
-  return <AlternativesTemplate {...pageProps} />;
+  return <AlternativesTemplate {...pageProps} softwarePickCategory="pos" />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

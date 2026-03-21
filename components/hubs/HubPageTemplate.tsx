@@ -18,6 +18,13 @@ import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { SectionNav } from "@/components/SectionNav";
+import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import {
+  getSoftwarePick,
+  getSoftwarePickCategoryRoutes,
+  toSoftwarePickCardProps,
+  type SoftwarePickCategory,
+} from "@/lib/data/softwarePickCards";
 
 // ——— Design tokens (match homepage) ———
 const btnPrimary =
@@ -38,19 +45,10 @@ const JUMP_LINKS_HOW_TO_CHOOSE = { label: "How to choose", href: "#how-to-choose
 const JUMP_LINKS_GUIDES = { label: "Guides", href: "#payroll-guides" };
 const JUMP_LINKS_COMPARISONS = { label: "Comparisons", href: "#popular-comparisons" };
 
-export type FeaturedPick = {
+/** Hub “top picks” = canonical product slugs; optional `badge` overrides the default crown label */
+export type FeaturedPickRef = {
   slug: string;
-  name: string;
-  badge: string;
-  descriptor: string;
-  rating: string;
-  price: string;
-  features: string[];
-  reviewHref: string;
-  compareHref: string;
-  logoSrc?: string;
-  /** Optional: when set, show "Visit site" button (e.g. for accounting hub). */
-  visitUrl?: string;
+  badge?: string;
 };
 
 export type ComparisonTableRow = {
@@ -71,7 +69,8 @@ export type HubPageTemplateProps = {
   intro: string;
   breadcrumbLabel: string;
   keyTakeaways: { label: string; anchor: string }[];
-  featuredPicks: FeaturedPick[];
+  softwarePickCategory: SoftwarePickCategory;
+  featuredPicks: FeaturedPickRef[];
   featuredPicksTitle: string;
   featuredPicksSub: string;
   comparisonTable: {
@@ -191,6 +190,7 @@ export function HubPageTemplate({
   intro,
   breadcrumbLabel,
   keyTakeaways,
+  softwarePickCategory,
   featuredPicks,
   featuredPicksTitle,
   featuredPicksSub,
@@ -213,6 +213,7 @@ export function HubPageTemplate({
   featuredPicksRankingsLink,
   comparisonTableRankingsLink,
 }: HubPageTemplateProps) {
+  const pickRoutes = getSoftwarePickCategoryRoutes(softwarePickCategory);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [affiliateOpen, setAffiliateOpen] = useState(false);
   const jumpLinks = [
@@ -342,74 +343,20 @@ export function HubPageTemplate({
                 </Link>
               )}
             </div>
-            <div className="mt-4 grid gap-5 sm:grid-cols-2">
-              {featuredPicks.map((pick) => (
-                <article
-                  key={pick.slug}
-                  id={`pick-${pick.slug}`}
-                  className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md"
-                >
-                  <div className="flex flex-wrap items-center gap-2">
-                    {pick.logoSrc != null ? (
-                      <Link
-                        href={pick.reviewHref}
-                        className="hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-                      >
-                        <img
-                          src={pick.logoSrc}
-                          alt=""
-                          className="h-10 w-auto max-w-[120px] object-contain object-left"
-                        />
-                      </Link>
-                    ) : null}
-                    <span className="rounded-md bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20">
-                      {pick.badge}
-                    </span>
-                    <span className="text-[#10B981] font-bold">{pick.rating}</span>
-                    <span className="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs font-medium text-[#6E6E6E]">
-                      From {pick.price}
-                    </span>
-                  </div>
-                  <h3 className="mt-3 text-[#1A2D48] text-xl font-bold">
-                    <Link
-                      href={pick.reviewHref}
-                      className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      {pick.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed">{pick.descriptor}</p>
-                  <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-[#6E6E6E]">
-                    {pick.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-100 pt-4">
-                    {pick.visitUrl != null && (
-                      <a
-                        href={pick.visitUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={btnPrimary}
-                      >
-                        Visit site
-                      </a>
-                    )}
-                    <Link
-                      href={pick.reviewHref}
-                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      Read review →
-                    </Link>
-                    <Link
-                      href={pick.compareHref}
-                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      Compare →
-                    </Link>
-                  </div>
-                </article>
-              ))}
+            <div className="mt-6 space-y-10">
+              {featuredPicks.map((ref) => {
+                const canonical = getSoftwarePick(softwarePickCategory, ref.slug);
+                if (canonical == null) return null;
+                return (
+                  <SoftwarePickCard
+                    key={ref.slug}
+                    {...toSoftwarePickCardProps(canonical, pickRoutes, {
+                      id: `pick-${ref.slug}`,
+                      badgeText: ref.badge,
+                    })}
+                  />
+                );
+              })}
             </div>
           </div>
         </section>

@@ -15,7 +15,6 @@ import {
   HELPDESK_FAQ_ITEMS,
   HELPDESK_METHODOLOGY,
 } from "@/lib/data/helpdeskHubData";
-
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -301,6 +300,7 @@ export default function HelpdeskPage() {
       intro="Compare helpdesk software that helps support teams manage tickets, conversations, and customer history across email, chat, and other channels."
       breadcrumbLabel="Helpdesk Software"
       keyTakeaways={KEY_TAKEAWAYS}
+      softwarePickCategory="helpdesk"
       featuredPicks={HELPDESK_FEATURED_PICKS}
       featuredPicksTitle="Top helpdesk picks"
       featuredPicksSub="Hand-picked for small businesses, startups, ecommerce, and growing support teams. Updated regularly."
