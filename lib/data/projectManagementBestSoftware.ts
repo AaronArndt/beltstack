@@ -186,9 +186,129 @@ export const TOP_PICKS: BestProjectManagementPick[] = [
     pricingSummary:
       "Notion offers a free tier; paid plans add more collaborators, history, and features. Per-seat pricing—check current plans.",
   },
+  {
+    slug: "wrike",
+    name: "Wrike",
+    badge: "Best for complex portfolios",
+    description:
+      "Project and portfolio management for teams that need dependencies, approvals, and reporting beyond simple task lists.",
+    rating: "4.3",
+    startingPrice: "From ~$9.80/user/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.wrike.com",
+    logoSrc: LOGOS.wrike,
+    compareSlugs: ["monday-vs-wrike", "asana-vs-monday", "asana-vs-clickup"],
+    editorialParagraph:
+      "Wrike is built for teams that outgrow lightweight boards and need portfolio views, dependencies, and governance. It’s a stronger fit for PMOs and cross-functional programs than Trello or basic Kanban tools. Expect more setup than simpler PM apps—but more control once workflows are modeled.",
+    pros: [
+      "Strong for dependencies, approvals, and portfolio reporting",
+      "Scales to larger teams and more complex programs",
+      "Useful for agencies and enterprises with structured PM processes",
+      "Integrates with common work and file tools",
+    ],
+    cons: [
+      "Steeper learning curve than Asana or Trello",
+      "Can feel heavy for very small teams",
+      "Pricing climbs with advanced features and seats",
+    ],
+    pricingSummary:
+      "Wrike uses per-user pricing with multiple tiers; enterprise plans add security and advanced reporting. Compare with Monday and Asana for your required governance and reporting depth.",
+  },
+  {
+    slug: "teamwork",
+    name: "Teamwork",
+    badge: "Best for client projects & agencies",
+    description:
+      "Project management with client work in mind: tasks, time tracking, and billing-friendly workflows for agencies and services teams.",
+    rating: "4.2",
+    startingPrice: "From ~$5.99/user/mo",
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
+    visitUrl: "https://www.teamwork.com",
+    logoSrc: LOGOS.teamwork,
+    compareSlugs: ["asana-vs-monday", "asana-vs-clickup", "notion-vs-trello"],
+    editorialParagraph:
+      "Teamwork targets agencies and client-facing teams that need projects, time, and billing signals in one place. It’s less generic than pure task tools and more focused on billable work than Notion. If you run retainers and client delivery, it’s worth comparing with Asana and Monday for workflow fit.",
+    pros: [
+      "Client and project templates geared toward agency delivery",
+      "Time tracking and invoicing-friendly workflows",
+      "Collaboration features for distributed teams",
+      "Competitive entry pricing for growing agencies",
+    ],
+    cons: [
+      "Less brand recognition than Asana or Monday",
+      "Some teams prefer a simpler board-first tool",
+      "Reporting depth varies by tier",
+    ],
+    pricingSummary:
+      "Teamwork offers free and paid tiers; paid plans add more projects, users, and features. Compare per-seat pricing with Asana and ClickUp for your agency size.",
+  },
+  {
+    slug: "basecamp",
+    name: "Basecamp",
+    badge: "Best for simple team communication",
+    description:
+      "Flat-structure project spaces with message boards, to-dos, and schedules—minimal complexity for teams that dislike heavy PM overhead.",
+    rating: "4.1",
+    startingPrice: "Flat monthly",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://basecamp.com",
+    logoSrc: LOGOS.basecamp,
+    compareSlugs: ["asana-vs-monday", "asana-vs-clickup", "notion-vs-trello"],
+    editorialParagraph:
+      "Basecamp keeps projects human-readable: fewer fields, more emphasis on communication and clarity. It suits small teams that want shared context without configuring automations all day. If you need dependencies, Gantt, or portfolio analytics, Asana or Wrike are stronger; for straightforward delivery, Basecamp stays approachable.",
+    pros: [
+      "Flat pricing model for many small business plans",
+      "Simple onboarding; easy for non-PM stakeholders",
+      "Message boards and schedules reduce tool sprawl",
+      "Good when collaboration matters more than advanced PM controls",
+    ],
+    cons: [
+      "Less structured than Asana or Monday for complex portfolios",
+      "Limited advanced reporting compared to enterprise PM tools",
+      "Not ideal for heavy dependency tracking",
+    ],
+    pricingSummary:
+      "Basecamp uses flat monthly pricing for a business account (check current plans). Compare with per-seat tools if your headcount is large or you need granular permissions.",
+  },
+  {
+    slug: "smartsheet",
+    name: "Smartsheet",
+    badge: "Best for spreadsheet-style PM",
+    description:
+      "Grid-first work management for teams that think in spreadsheets but need collaboration, automation, and reporting at scale.",
+    rating: "4.4",
+    startingPrice: "From ~$7/user/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.smartsheet.com",
+    logoSrc: LOGOS.smartsheet,
+    compareSlugs: ["asana-vs-monday", "asana-vs-clickup", "notion-vs-trello"],
+    editorialParagraph:
+      "Smartsheet bridges spreadsheets and project management: grids, sheets, and automations for teams that already live in Excel-like workflows. It’s a strong fit for operations, marketing, and programs that need structured rollups. If you want a board-first UX, Monday or Asana may feel more natural; for sheet-native teams, Smartsheet clicks.",
+    pros: [
+      "Familiar spreadsheet-style grids with collaboration",
+      "Automation and reporting for cross-functional programs",
+      "Strong for operations and portfolio visibility",
+      "Integrates with common enterprise tools",
+    ],
+    cons: [
+      "Can feel dense for teams that dislike spreadsheets",
+      "Pricing scales with licensed users and advanced features",
+      "Less ‘modern PM’ feel than Asana or ClickUp for some users",
+    ],
+    pricingSummary:
+      "Smartsheet uses per-user pricing with multiple tiers; higher plans add control center, resource management, and advanced automation. Compare with Monday and Wrike for portfolio needs.",
+  },
 ];
 
-/** Comparison table: all 9 PM tools. Columns: Tool, Best for, Starting price, Rating, Read review */
+/** Comparison table: all PM tools. Columns: Tool, Best for, Starting price, Rating, Read review */
 export const COMPARISON_TABLE_ROWS: ProjectManagementComparisonTableRow[] = [
   { slug: "asana", name: "Asana", logoSrc: LOGOS.asana, bestFor: "Best overall", startingPrice: "Free tier", rating: "4.6", reviewHref: getProjectManagementReviewUrl("asana") },
   { slug: "clickup", name: "ClickUp", logoSrc: LOGOS.clickup, bestFor: "All-in-one value", startingPrice: "Free tier", rating: "4.5", reviewHref: getProjectManagementReviewUrl("clickup") },
@@ -202,12 +322,7 @@ export const COMPARISON_TABLE_ROWS: ProjectManagementComparisonTableRow[] = [
 ];
 
 /** More project management options (secondary tools, same card pattern as other roundups) */
-export const MORE_PROJECT_MANAGEMENT_OPTIONS: { slug: string; name: string; description: string; reviewHref: string; logoSrc: string }[] = [
-  { slug: "wrike", name: "Wrike", description: "Project and portfolio management for complex workflows. Strong reporting and dependencies.", reviewHref: getProjectManagementReviewUrl("wrike"), logoSrc: LOGOS.wrike },
-  { slug: "teamwork", name: "Teamwork", description: "Client-focused project management for agencies. Time tracking, billing, and project templates.", reviewHref: getProjectManagementReviewUrl("teamwork"), logoSrc: LOGOS.teamwork },
-  { slug: "basecamp", name: "Basecamp", description: "Simple team communication and to-dos. Flat pricing and minimal complexity.", reviewHref: getProjectManagementReviewUrl("basecamp"), logoSrc: LOGOS.basecamp },
-  { slug: "smartsheet", name: "Smartsheet", description: "Spreadsheet-style project and work management. Good for grid lovers and reporting.", reviewHref: getProjectManagementReviewUrl("smartsheet"), logoSrc: LOGOS.smartsheet },
-];
+export const MORE_PROJECT_MANAGEMENT_OPTIONS: { slug: string; name: string; description: string; reviewHref: string; logoSrc: string }[] = [];
 
 export type UseCaseLink = { label: string; href: string; description: string };
 export type ComparisonLink = { label: string; href: string };

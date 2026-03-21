@@ -172,6 +172,99 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     pricingSummary:
       "Xero offers tiered plans starting around $15/month; higher tiers add more users and features. Compare with invoicing-only tools if you don't need full accounting.",
   },
+  {
+    slug: "invoice-ninja",
+    name: "Invoice Ninja",
+    badge: "Best for open-source & self-hosted",
+    description:
+      "Open-source invoicing with cloud or self-hosted options. Strong for teams that want control, customization, and minimal vendor lock-in.",
+    rating: "4.3",
+    startingPrice: "Free / paid",
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
+    visitUrl: "https://www.invoiceninja.com",
+    logoSrc: "/Logos/invoiceninja.jpeg",
+    compareSlugs: ["invoice-ninja-vs-freshbooks", "freshbooks-vs-wave", "zoho-invoice-vs-freshbooks"],
+    standoutFeature: "Self-hosted option; open-source flexibility",
+    editorialParagraph:
+      "Invoice Ninja appeals to teams that want invoicing without being tied to a single SaaS vendor. You can run it in the cloud or self-host for more control. The trade-off is more operational responsibility than polished all-in-one tools like FreshBooks. Compare features and support needs before choosing self-hosted.",
+    pros: [
+      "Open-source with cloud and self-hosted deployment options",
+      "Flexible for developers and technical teams",
+      "Can reduce long-term vendor lock-in when self-hosted",
+      "Solid invoicing and client-facing basics",
+    ],
+    cons: [
+      "Self-hosting requires hosting and maintenance",
+      "Less hand-holding than mainstream SaaS invoicing leaders",
+      "Ecosystem smaller than QuickBooks or FreshBooks",
+    ],
+    pricingSummary:
+      "Invoice Ninja offers free and paid tiers; self-hosted setups add hosting and ops costs. Compare total cost of ownership with FreshBooks or Zoho Invoice.",
+  },
+  {
+    slug: "honeybook",
+    name: "HoneyBook",
+    badge: "Best for creative client workflows",
+    description:
+      "Proposals, contracts, scheduling, and invoicing for creative and service professionals who want client work in one place.",
+    rating: "4.4",
+    startingPrice: "Quote",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.honeybook.com",
+    logoSrc: "/Logos/honeybook.jpeg",
+    compareSlugs: ["honeybook-vs-bonsai", "freshbooks-vs-wave", "freshbooks-vs-quickbooks"],
+    standoutFeature: "Proposals, contracts, and client experience",
+    editorialParagraph:
+      "HoneyBook is built for creatives and service businesses that sell projects, not just invoices. Proposals, contracts, and payments live in one client-facing workflow. Pricing is often quote-based; compare with Bonsai for a similar freelancer-focused model or FreshBooks if you prioritize time tracking and accounting depth.",
+    pros: [
+      "End-to-end client workflow: proposals through payment",
+      "Strong fit for photographers, designers, and coaches",
+      "Polished experience for clients and prospects",
+      "Combines scheduling and communication in one hub",
+    ],
+    cons: [
+      "Less pure accounting depth than QuickBooks or Xero",
+      "Quote-based pricing can be harder to compare upfront",
+      "May be more than you need for invoice-only use cases",
+    ],
+    pricingSummary:
+      "HoneyBook typically uses subscription pricing with tiers or quotes depending on plan. Compare with Bonsai and FreshBooks for total cost at your client volume.",
+  },
+  {
+    slug: "bonsai",
+    name: "Bonsai",
+    badge: "Best for freelancer contracts + invoicing",
+    description:
+      "Contracts, proposals, and invoicing tailored to freelancers and small creative businesses that want paperwork and billing together.",
+    rating: "4.3",
+    startingPrice: "Quote",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.hellobonsai.com",
+    logoSrc: "/Logos/bonsai.jpeg",
+    compareSlugs: ["honeybook-vs-bonsai", "freshbooks-vs-wave", "invoice-ninja-vs-freshbooks"],
+    standoutFeature: "Contracts, proposals, and invoicing for freelancers",
+    editorialParagraph:
+      "Bonsai focuses on freelancers who need contracts and invoices in one workflow. It’s lighter than full accounting platforms but stronger than invoice-only tools for legal-style documents and client onboarding. Compare with HoneyBook for a similar creative workflow or FreshBooks if time tracking and reporting matter more.",
+    pros: [
+      "Contracts and proposals paired with invoicing",
+      "Built for freelancers and small creative shops",
+      "Streamlined onboarding from lead to paid invoice",
+      "Less complexity than full accounting suites",
+    ],
+    cons: [
+      "Not a replacement for full bookkeeping in QuickBooks or Xero",
+      "Quote-based or tiered pricing—verify current plans",
+      "Narrower ecosystem than mainstream accounting tools",
+    ],
+    pricingSummary:
+      "Bonsai uses tiered or quote-based plans depending on edition. Compare with HoneyBook and FreshBooks for freelancer workflows and total cost.",
+  },
 ];
 
 export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
@@ -252,29 +345,7 @@ export const MORE_INVOICING_OPTIONS: {
   description: string;
   reviewHref: string;
   logoSrc?: string;
-}[] = [
-  {
-    slug: "invoice-ninja",
-    name: "Invoice Ninja",
-    description: "Open-source invoicing with optional self-hosting. Strong for teams that want control and no vendor lock-in.",
-    reviewHref: getInvoicingReviewUrl("invoice-ninja"),
-    logoSrc: "/Logos/invoiceninja.jpeg",
-  },
-  {
-    slug: "honeybook",
-    name: "HoneyBook",
-    description: "Client workflows, proposals, and invoicing for creative and service professionals. Good for client-heavy businesses.",
-    reviewHref: getInvoicingReviewUrl("honeybook"),
-    logoSrc: "/Logos/honeybook.jpeg",
-  },
-  {
-    slug: "bonsai",
-    name: "Bonsai",
-    description: "Contracts, proposals, and invoicing in one place. Built for freelancers and small creative businesses.",
-    reviewHref: getInvoicingReviewUrl("bonsai"),
-    logoSrc: "/Logos/bonsai.jpeg",
-  },
-];
+}[] = [];
 
 export type UseCaseLink = { label: string; href: string; description: string };
 export type ComparisonLink = { label: string; href: string };

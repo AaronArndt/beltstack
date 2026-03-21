@@ -189,33 +189,35 @@ export default function BestProjectManagementSoftwarePage() {
         </section>
 
         {/* ——— 4) More project management software options ——— */}
-        <section id="more-options" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub="Additional project management tools worth considering.">
-              More project management software options
-            </SectionTitle>
-            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {MORE_PROJECT_MANAGEMENT_OPTIONS.map((opt) => (
-                <article key={opt.slug} className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md">
-                  <div className="flex items-center gap-2">
-                    <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">
-                      <Link href={opt.reviewHref} className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                        {opt.name}
+        {MORE_PROJECT_MANAGEMENT_OPTIONS.length > 0 && (
+          <section id="more-options" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <SectionTitle sub="Additional project management tools worth considering.">
+                More project management software options
+              </SectionTitle>
+              <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {MORE_PROJECT_MANAGEMENT_OPTIONS.map((opt) => (
+                  <article key={opt.slug} className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md">
+                    <div className="flex items-center gap-2">
+                      <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
+                      <h3 className="text-[#1A2D48] text-lg font-bold">
+                        <Link href={opt.reviewHref} className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                          {opt.name}
+                        </Link>
+                      </h3>
+                    </div>
+                    <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">{opt.description}</p>
+                    <div className="mt-4 border-t border-slate-200 pt-4">
+                      <Link href={opt.reviewHref} className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        Read review →
                       </Link>
-                    </h3>
-                  </div>
-                  <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">{opt.description}</p>
-                  <div className="mt-4 border-t border-slate-200 pt-4">
-                    <Link href={opt.reviewHref} className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                      Read review →
-                    </Link>
-                  </div>
-                </article>
-              ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* ——— 5) How to choose project management software ——— */}
         <section id="how-to-choose" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">

@@ -178,6 +178,36 @@ export const TOP_PICKS: BestHelpdeskPick[] = [
     pricingSummary:
       "Gorgias typically starts around $60/month and scales with order volume and features. Check current plans for your store platform.",
   },
+  {
+    slug: "zoho-desk",
+    name: "Zoho Desk",
+    badge: "Best value helpdesk for Zoho users",
+    description:
+      "Full-featured ticketing and multi-channel support at a competitive price. Especially strong if you already use Zoho CRM, Books, or other Zoho apps.",
+    rating: "4.4",
+    startingPrice: "From ~$14/agent/mo",
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
+    visitUrl: "https://www.zoho.com/desk",
+    logoSrc: HELPDESK_LOGOS.zohoDesk,
+    compareSlugs: ["freshdesk-vs-zoho-desk", "zendesk-vs-freshdesk", "help-scout-vs-zendesk"],
+    editorialParagraph:
+      "Zoho Desk is the value pick for teams that want solid ticketing, automation, and multi-channel support without enterprise pricing. It integrates tightly with Zoho CRM and the broader Zoho suite, which makes it compelling if you already run Zoho apps. Compared with Zendesk, the ecosystem is smaller globally—but pricing and free-tier options often win for budget-conscious SMBs.",
+    pros: [
+      "Competitive per-agent pricing and a usable free tier",
+      "Strong fit for teams already in the Zoho ecosystem",
+      "Ticketing, automation, and knowledge base in one product",
+      "Multi-channel support on paid tiers",
+    ],
+    cons: [
+      "Less ubiquitous than Zendesk in some markets",
+      "UI can feel busy compared to Help Scout",
+      "Deepest enterprise features may lag top-tier competitors",
+    ],
+    pricingSummary:
+      "Zoho Desk offers a free tier for small teams; paid plans scale by agents and features. Compare current tiers with Freshdesk and Zendesk for your channel and automation needs.",
+  },
 ];
 
 export const COMPARISON_TABLE_ROWS: HelpdeskComparisonTableRow[] = [
@@ -271,14 +301,6 @@ export const MORE_HELPDESK_OPTIONS: {
   reviewHref: string;
   logoSrc: string;
 }[] = [
-  {
-    slug: "zoho-desk",
-    name: "Zoho Desk",
-    description:
-      "Affordable helpdesk from the Zoho suite. Good for teams already using Zoho apps who want ticketing and multi-channel support.",
-    reviewHref: getHelpdeskReviewUrl("zoho-desk"),
-    logoSrc: HELPDESK_LOGOS.zohoDesk,
-  },
   {
     slug: "liveagent",
     name: "LiveAgent",

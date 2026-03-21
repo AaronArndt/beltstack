@@ -172,6 +172,41 @@ export const TOP_PICKS: BestAccountingPick[] = [
     pricingSummary:
       "Wave's core accounting and invoicing are free; payment processing and optional payroll add-ons have their own fees. No subscription for the free plan.",
   },
+  {
+    slug: "sage-accounting",
+    name: "Sage Accounting",
+    badge: "Best for Sage-aligned SMBs",
+    description:
+      "Core cloud accounting and invoicing for small businesses that prefer Sage’s approach and familiarity with compliance-focused basics.",
+    rating: "4.3",
+    startingPrice: "Quote",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.sage.com",
+    logoSrc: "/Logos/sage.png",
+    compareSlugs: [
+      "sage-accounting-vs-quickbooks-online",
+      "sage-accounting-vs-xero",
+      "sage-accounting-vs-freshbooks",
+    ],
+    standoutFeature: "Core bookkeeping, invoicing, compliance focus",
+    editorialParagraph:
+      "Sage Accounting fits teams that want established SMB accounting with a compliance-minded setup. Pricing is often quote-based, and the ecosystem is smaller than QuickBooks or Xero in the US—but for businesses already aligned with Sage or regional Sage offerings, it can be a solid fit. Compare against QuickBooks and Xero if you want a larger app marketplace or more transparent tier pricing.",
+    pros: [
+      "Core bookkeeping, invoicing, and reporting for SMBs",
+      "Familiar brand for businesses that already use Sage products",
+      "Compliance and regional options depending on edition",
+      "Suitable when you want Sage-style workflows over generic SMB tools",
+    ],
+    cons: [
+      "Often quote-based pricing; less transparent than QuickBooks or Xero tiers",
+      "Smaller US third-party marketplace than QuickBooks",
+      "May feel less modern than Xero or Zoho Books for some teams",
+    ],
+    pricingSummary:
+      "Sage Accounting typically uses quote-based or plan-based pricing depending on region and edition. Compare published tiers (if available) with QuickBooks and Xero for your user count and feature needs.",
+  },
 ];
 
 /** All tools for comparison table (top 5 + more options). */
@@ -257,13 +292,6 @@ export const MORE_ACCOUNTING_OPTIONS: {
   reviewHref: string;
   logoSrc: string;
 }[] = [
-  {
-    slug: "sage-accounting",
-    name: "Sage Accounting",
-    description: "Core accounting and invoicing for small businesses. Solid basics and SMB familiarity.",
-    reviewHref: getAccountingReviewUrl("sage-accounting"),
-    logoSrc: "/Logos/sage.png",
-  },
   {
     slug: "odoo-accounting",
     name: "Odoo Accounting",

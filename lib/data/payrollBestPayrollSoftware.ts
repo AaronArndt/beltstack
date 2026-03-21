@@ -169,17 +169,76 @@ export const TOP_PICKS: BestPayrollPick[] = [
     pricingSummary:
       "Paychex uses custom pricing—you get a quote based on headcount and services. Compare with ADP and with Gusto or OnPay for your team size.",
   },
+  {
+    slug: "rippling",
+    name: "Rippling",
+    badge: "Best for payroll + HR + IT",
+    comparisonTableBestFor: "Unified workforce platform",
+    description:
+      "Payroll combined with HR, benefits, and IT device management in one modern platform. Strong for growing companies that want one system for people operations.",
+    rating: "4.6",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.rippling.com",
+    logoSrc: "/Logos/rippling.jpeg",
+    compareSlugs: ["rippling-vs-gusto", "rippling-vs-quickbooks-payroll", "deel-vs-rippling"],
+    payrollTypes: "W-2, 1099",
+    standoutFeature: "Payroll, HR, benefits, and IT in one platform",
+    editorialParagraph:
+      "Rippling is the pick when you want payroll plus HR and IT in a single, automation-heavy platform. It suits growing companies that need onboarding, app provisioning, and device management alongside pay runs—not just a payroll-only tool. Pricing is typically custom; compare with Gusto or OnPay if you want simpler published rates and a narrower feature set.",
+    pros: [
+      "Unified payroll, HR, benefits, and IT in one platform",
+      "Strong automation for onboarding and app access",
+      "Scales with growing and distributed teams",
+      "Modern interface compared with legacy payroll providers",
+    ],
+    cons: [
+      "Custom pricing; less transparent than Gusto or OnPay",
+      "Can be more complex than payroll-only tools",
+      "May be more than very small teams need",
+    ],
+    pricingSummary:
+      "Rippling uses custom pricing based on modules, headcount, and regions. Request a quote and compare total cost with Gusto, OnPay, or ADP at your size.",
+  },
+  {
+    slug: "wave",
+    name: "Wave Payroll",
+    badge: "Best for micro businesses on Wave",
+    comparisonTableBestFor: "Micro businesses",
+    description:
+      "Payroll add-on paired with Wave’s free accounting. Fits solopreneurs and very small teams that want minimal cost and simple pay runs.",
+    rating: "4.3",
+    startingPrice: "Payroll add-on",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.waveapps.com/payroll",
+    logoSrc: "/Logos/wave.jpeg",
+    compareSlugs: ["wave-vs-gusto", "wave-vs-quickbooks-payroll", "gusto-vs-onpay"],
+    payrollTypes: "W-2, 1099",
+    standoutFeature: "Free accounting plus payroll add-on",
+    editorialParagraph:
+      "Wave pairs free accounting with a payroll add-on, which appeals to micro businesses and solopreneurs who want to keep monthly software cost low. It’s not as deep on HR and benefits as Gusto or Rippling—but for very small teams that already use Wave for books, it’s a practical path to run payroll without switching platforms.",
+    pros: [
+      "Works with Wave’s free accounting and invoicing",
+      "Straightforward for very small teams and simple pay runs",
+      "Lower total software cost when you lean on the free accounting tier",
+      "Good fit when you don’t need a full HR suite",
+    ],
+    cons: [
+      "Less HR and benefits depth than Gusto or Rippling",
+      "Not ideal for larger headcounts or complex workforce needs",
+      "Payroll is an add-on—features scale differently than all-in-one payroll leaders",
+    ],
+    pricingSummary:
+      "Wave offers a payroll add-on with fees separate from free accounting; pricing depends on your state and features. Compare total cost with Gusto or OnPay once you add multiple employees or need richer HR.",
+  },
 ];
 
 /** More options — review links for additional payroll tools (not in top picks) */
 export const MORE_PAYROLL_OPTIONS: { slug: string; name: string; description: string; reviewHref: string; logoSrc: string }[] = [
-  {
-    slug: "rippling",
-    name: "Rippling",
-    description: "Payroll, HR, and IT in one platform. Strong for growing businesses that want automation and breadth.",
-    reviewHref: getPayrollReviewUrl("rippling"),
-    logoSrc: "/Logos/rippling.jpeg",
-  },
   {
     slug: "square-payroll",
     name: "Square Payroll",
@@ -214,13 +273,6 @@ export const MORE_PAYROLL_OPTIONS: { slug: string; name: string; description: st
     description: "Simple small-business payroll with optional full-service. Part of the Paychex family.",
     reviewHref: getPayrollReviewUrl("surepayroll"),
     logoSrc: "/Logos/surepayroll.jpeg",
-  },
-  {
-    slug: "wave",
-    name: "Wave",
-    description: "Free accounting plus payroll add-on. Good for micro businesses and solopreneurs who want books and pay in one place.",
-    reviewHref: getPayrollReviewUrl("wave"),
-    logoSrc: "/Logos/wave.jpeg",
   },
 ];
 
