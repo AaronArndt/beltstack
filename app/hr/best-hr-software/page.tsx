@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
+import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import {
   TOP_PICKS,
@@ -11,6 +12,7 @@ import {
   RELATED_COMPARISONS,
   FAQ_ITEMS,
 } from "@/lib/data/hrBestSoftware";
+import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 
 const hrPickRoutes = getSoftwarePickCategoryRoutes("hr");
@@ -91,6 +93,7 @@ function FaqAccordionItem({
 }
 
 export default function BestHrSoftwarePage() {
+  const useCaseEditorialItems = resolveBestOfUseCaseEditorials("HR software", USE_CASE_LINKS);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [affiliateOpen, setAffiliateOpen] = useState(false);
 
@@ -288,31 +291,12 @@ export default function BestHrSoftwarePage() {
         </section>
 
         {/* ——— 5) Best HR software by use case ——— */}
-        <section
-          id="by-use-case"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
-        >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub="Find HR tools that fit your situation.">
-              Best HR software by use case
-            </SectionTitle>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {USE_CASE_LINKS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-                >
-                  <h3 className="text-[#1A2D48] font-bold">{item.label}</h3>
-                  <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed">{item.description}</p>
-                  <span className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline">
-                    See picks →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <BestOfUseCaseEditorialSection
+          headingCategoryLabel="HR software"
+          sectionSub="Find HR tools that fit your situation."
+          items={useCaseEditorialItems}
+          sectionClassName="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+        />
 
         {/* ——— 6) Related comparisons ——— */}
         <section
