@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
+import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -11,7 +12,8 @@ import {
   FAQ_ITEMS,
   MORE_INVENTORY_OPTIONS,
 } from "@/lib/data/inventoryBestSoftware";
-import { getInventoryCompareUrl } from "@/lib/routes";
+import { getInventoryAlternativeUrl, getInventoryCompareUrl } from "@/lib/routes";
+import { formatComparisonLinkLabelFromSlug } from "@/lib/utils/formatComparisonLinkLabel";
 
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
@@ -156,63 +158,27 @@ export default function BestInventorySoftwarePage() {
             </SectionTitle>
             <div className="mt-6 space-y-10">
               {TOP_PICKS.map((pick) => (
-                <article
+                <SoftwarePickCard
                   key={pick.slug}
                   id={`pick-${pick.slug}`}
-                  className="rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 sm:p-6"
-                >
-                  <div className="flex flex-wrap items-center gap-3">
-                    <img src={pick.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                    <span className="rounded-md bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20">
-                      {pick.badge}
-                    </span>
-                    <span className="text-[#10B981] font-bold">{pick.rating}</span>
-                    <span className="rounded-md border border-slate-200 bg-white px-2 py-0.5 text-xs font-medium text-[#6E6E6E]">
-                      From {pick.startingPrice}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-[#1A2D48] text-xl font-bold">{pick.name}</h3>
-                  <p className="mt-1 text-[#6E6E6E] text-sm font-medium">Best for: {pick.badge}</p>
-                  <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">{pick.description}</p>
-                  <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">{pick.editorialParagraph}</p>
-                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                    <div>
-                      <h4 className="text-[#1A2D48] text-sm font-bold">Pros</h4>
-                      <ul className="mt-1 list-inside list-disc space-y-0.5 text-[#6E6E6E] text-sm">
-                        {pick.pros.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-[#1A2D48] text-sm font-bold">Cons</h4>
-                      <ul className="mt-1 list-inside list-disc space-y-0.5 text-[#6E6E6E] text-sm">
-                        {pick.cons.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
-                    <strong className="text-[#1A2D48]">Pricing:</strong> {pick.pricingSummary}
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-200 pt-4">
-                    <a href={pick.visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
-                      Visit site
-                    </a>
-                    <Link href={pick.reviewHref} className={btnSecondary}>
-                      Read review
-                    </Link>
-                    {pick.compareSlugs.length > 0 && (
-                      <Link
-                        href={getInventoryCompareUrl(pick.compareSlugs[0])}
-                        className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                      >
-                        Compare →
-                      </Link>
-                    )}
-                  </div>
-                </article>
+                  name={pick.name}
+                  logoSrc={pick.logoSrc}
+                  badgeText={pick.badge}
+                  rating={pick.rating}
+                  summary={pick.description}
+                  highlightsExtra={pick.editorialParagraph}
+                  visitUrl={pick.visitUrl}
+                  reviewUrl={pick.reviewHref}
+                  pricingStartLabel={pick.startingPrice}
+                  pricingDetails={pick.pricingSummary}
+                  pros={pick.pros}
+                  cons={pick.cons}
+                  alternativesUrl={getInventoryAlternativeUrl(pick.slug)}
+                  comparisonLinks={pick.compareSlugs.slice(0, 3).map((slug) => ({
+                    href: getInventoryCompareUrl(slug),
+                    label: formatComparisonLinkLabelFromSlug(slug),
+                  }))}
+                />
               ))}
             </div>
           </div>
