@@ -5,6 +5,8 @@
  */
 
 import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from "@/lib/routes";
+import { getPayrollComparisonBySlug } from "@/lib/data/payrollComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -43,6 +45,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function payRel(slug: string) {
+  return toAlternativesRelatedComparison(getPayrollCompareUrl(slug), getPayrollComparisonBySlug(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -99,10 +105,10 @@ const gustoPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Gusto vs OnPay", href: getPayrollCompareUrl("gusto-vs-onpay") },
-    { label: "Gusto vs ADP", href: getPayrollCompareUrl("gusto-vs-adp") },
-    { label: "Gusto vs Paychex", href: getPayrollCompareUrl("gusto-vs-paychex") },
-    { label: "Rippling vs Gusto", href: getPayrollCompareUrl("rippling-vs-gusto") },
+    payRel("gusto-vs-onpay"),
+    payRel("gusto-vs-adp"),
+    payRel("gusto-vs-paychex"),
+    payRel("rippling-vs-gusto"),
   ],
   relatedResources: defaultRelatedResources("Gusto", getPayrollReviewUrl("gusto")),
   faqItems: [
@@ -148,8 +154,8 @@ const onpayPage: AlternativesTemplateProps = {
     { productName: "Wave", heading: "Best for micro businesses", body: "Wave provides free accounting and a payroll add-on. Best for solopreneurs and very small teams.", reviewHref: getPayrollReviewUrl("wave") },
   ],
   relatedComparisons: [
-    { label: "Gusto vs OnPay", href: getPayrollCompareUrl("gusto-vs-onpay") },
-    { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
+    payRel("gusto-vs-onpay"),
+    payRel("adp-vs-paychex"),
   ],
   relatedResources: defaultRelatedResources("OnPay", getPayrollReviewUrl("onpay")),
   faqItems: [
@@ -195,9 +201,9 @@ const adpPage: AlternativesTemplateProps = {
     { productName: "SurePayroll", heading: "Best for small business payroll", body: "SurePayroll is ADP-owned and focused on small business with simpler pricing. An option if you want the ADP ecosystem at a smaller scale.", reviewHref: getPayrollReviewUrl("surepayroll"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp") },
   ],
   relatedComparisons: [
-    { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
-    { label: "Gusto vs ADP", href: getPayrollCompareUrl("gusto-vs-adp") },
-    { label: "SurePayroll vs ADP", href: getPayrollCompareUrl("surepayroll-vs-adp") },
+    payRel("adp-vs-paychex"),
+    payRel("gusto-vs-adp"),
+    payRel("surepayroll-vs-adp"),
   ],
   relatedResources: defaultRelatedResources("ADP", getPayrollReviewUrl("adp")),
   faqItems: [
@@ -243,8 +249,8 @@ const paychexPage: AlternativesTemplateProps = {
     { productName: "SurePayroll", heading: "Best for small business", body: "SurePayroll focuses on small business with simpler pricing. An option if you want a lighter full-service alternative.", reviewHref: getPayrollReviewUrl("surepayroll") },
   ],
   relatedComparisons: [
-    { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
-    { label: "Gusto vs Paychex", href: getPayrollCompareUrl("gusto-vs-paychex") },
+    payRel("adp-vs-paychex"),
+    payRel("gusto-vs-paychex"),
   ],
   relatedResources: defaultRelatedResources("Paychex", getPayrollReviewUrl("paychex")),
   faqItems: [
@@ -290,9 +296,9 @@ const ripplingPage: AlternativesTemplateProps = {
     { productName: "Deel", heading: "Best for global payroll and contractors", body: "Deel focuses on global payroll and contractor payments. For distributed and international teams that need more than domestic-only payroll.", reviewHref: getPayrollReviewUrl("deel"), compareHref: getPayrollCompareUrl("deel-vs-rippling") },
   ],
   relatedComparisons: [
-    { label: "Rippling vs Gusto", href: getPayrollCompareUrl("rippling-vs-gusto") },
-    { label: "Justworks vs Rippling", href: getPayrollCompareUrl("justworks-vs-rippling") },
-    { label: "Deel vs Rippling", href: getPayrollCompareUrl("deel-vs-rippling") },
+    payRel("rippling-vs-gusto"),
+    payRel("justworks-vs-rippling"),
+    payRel("deel-vs-rippling"),
   ],
   relatedResources: defaultRelatedResources("Rippling", getPayrollReviewUrl("rippling")),
   faqItems: [
@@ -338,8 +344,8 @@ const justworksPage: AlternativesTemplateProps = {
     { productName: "OnPay", heading: "Best for value and flat pricing", body: "OnPay delivers flat pricing and straightforward payroll. Good for small teams that don't need PEO.", reviewHref: getPayrollReviewUrl("onpay") },
   ],
   relatedComparisons: [
-    { label: "Justworks vs Gusto", href: getPayrollCompareUrl("justworks-vs-gusto") },
-    { label: "Justworks vs Rippling", href: getPayrollCompareUrl("justworks-vs-rippling") },
+    payRel("justworks-vs-gusto"),
+    payRel("justworks-vs-rippling"),
   ],
   relatedResources: defaultRelatedResources("Justworks", getPayrollReviewUrl("justworks")),
   faqItems: [
@@ -385,8 +391,8 @@ const deelPage: AlternativesTemplateProps = {
     { productName: "OnPay", heading: "Best for value and flat pricing", body: "OnPay delivers flat pricing and straightforward domestic payroll. Good for small US-only teams.", reviewHref: getPayrollReviewUrl("onpay") },
   ],
   relatedComparisons: [
-    { label: "Deel vs Rippling", href: getPayrollCompareUrl("deel-vs-rippling") },
-    { label: "Deel vs Gusto", href: getPayrollCompareUrl("deel-vs-gusto") },
+    payRel("deel-vs-rippling"),
+    payRel("deel-vs-gusto"),
   ],
   relatedResources: defaultRelatedResources("Deel", getPayrollReviewUrl("deel")),
   faqItems: [
@@ -432,8 +438,8 @@ const surepayrollPage: AlternativesTemplateProps = {
     { productName: "Paychex", heading: "Best for traditional full-service", body: "Paychex offers full-service payroll and HR with strong support. For teams that want more hand-holding.", reviewHref: getPayrollReviewUrl("paychex") },
   ],
   relatedComparisons: [
-    { label: "SurePayroll vs Gusto", href: getPayrollCompareUrl("surepayroll-vs-gusto") },
-    { label: "SurePayroll vs ADP", href: getPayrollCompareUrl("surepayroll-vs-adp") },
+    payRel("surepayroll-vs-gusto"),
+    payRel("surepayroll-vs-adp"),
   ],
   relatedResources: defaultRelatedResources("SurePayroll", getPayrollReviewUrl("surepayroll")),
   faqItems: [
@@ -479,7 +485,7 @@ const wavePage: AlternativesTemplateProps = {
     { productName: "Paychex", heading: "Best for traditional full-service", body: "Paychex offers full-service payroll and HR with strong support. Another full-service alternative.", reviewHref: getPayrollReviewUrl("paychex") },
   ],
   relatedComparisons: [
-    { label: "Wave vs Gusto", href: getPayrollCompareUrl("wave-vs-gusto") },
+    payRel("wave-vs-gusto"),
   ],
   relatedResources: defaultRelatedResources("Wave", getPayrollReviewUrl("wave")),
   faqItems: [
@@ -525,10 +531,10 @@ const quickbooksPayrollPage: AlternativesTemplateProps = {
     { productName: "Wave", heading: "Best for micro businesses", body: "Wave provides free accounting and a payroll add-on. For solopreneurs and very small teams that want low cost.", reviewHref: getPayrollReviewUrl("wave"), compareHref: getPayrollCompareUrl("wave-vs-quickbooks-payroll") },
   ],
   relatedComparisons: [
-    { label: "Gusto vs QuickBooks Payroll", href: getPayrollCompareUrl("gusto-vs-quickbooks-payroll") },
-    { label: "QuickBooks Payroll vs OnPay", href: getPayrollCompareUrl("quickbooks-payroll-vs-onpay") },
-    { label: "Square Payroll vs QuickBooks Payroll", href: getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll") },
-    { label: "Wave vs QuickBooks Payroll", href: getPayrollCompareUrl("wave-vs-quickbooks-payroll") },
+    payRel("gusto-vs-quickbooks-payroll"),
+    payRel("quickbooks-payroll-vs-onpay"),
+    payRel("square-payroll-vs-quickbooks-payroll"),
+    payRel("wave-vs-quickbooks-payroll"),
   ],
   relatedResources: defaultRelatedResources("QuickBooks Payroll", getPayrollReviewUrl("quickbooks-payroll")),
   faqItems: [
@@ -574,8 +580,8 @@ const squarePayrollPage: AlternativesTemplateProps = {
     { productName: "Wave", heading: "Best for micro businesses", body: "Wave provides free accounting and a payroll add-on. For solopreneurs and very small teams.", reviewHref: getPayrollReviewUrl("wave") },
   ],
   relatedComparisons: [
-    { label: "Square Payroll vs Gusto", href: getPayrollCompareUrl("square-payroll-vs-gusto") },
-    { label: "Square Payroll vs QuickBooks Payroll", href: getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll") },
+    payRel("square-payroll-vs-gusto"),
+    payRel("square-payroll-vs-quickbooks-payroll"),
   ],
   relatedResources: defaultRelatedResources("Square Payroll", getPayrollReviewUrl("square-payroll")),
   faqItems: [
@@ -621,8 +627,8 @@ const patriotPayrollPage: AlternativesTemplateProps = {
     { productName: "SurePayroll", heading: "Best for small business payroll", body: "SurePayroll offers small business payroll with slightly more features. Another step up from Patriot.", reviewHref: getPayrollReviewUrl("surepayroll") },
   ],
   relatedComparisons: [
-    { label: "Patriot Payroll vs Gusto", href: getPayrollCompareUrl("patriot-payroll-vs-gusto") },
-    { label: "Patriot Payroll vs OnPay", href: getPayrollCompareUrl("patriot-payroll-vs-onpay") },
+    payRel("patriot-payroll-vs-gusto"),
+    payRel("patriot-payroll-vs-onpay"),
   ],
   relatedResources: defaultRelatedResources("Patriot Payroll", getPayrollReviewUrl("patriot-payroll")),
   faqItems: [

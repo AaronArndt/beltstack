@@ -11,6 +11,14 @@ const LOGOS = {
   servicem8: "/Logos/servicem8.png",
   fieldedge: "/Logos/fieldedge.jpeg",
   mhelpdesk: "/Logos/mhelpdesk.png",
+  fieldpulse: "/Logos/fieldpulse.png",
+  servicetrade: "/Logos/servicetrade.jpeg",
+  "workwave-service": "/Logos/workwave.jpeg",
+  buildops: "/Logos/buildops.jpeg",
+  connecteam: "/Logos/connecteam.jpeg",
+  "oracle-field-service": "/Logos/oracle.png",
+  simpro: "/Logos/simpro.jpeg",
+  zuper: "/Logos/zuper.jpeg",
 } as const;
 
 export type BestFieldServicePick = SoftwarePickCardContent;
@@ -290,19 +298,259 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     pricingSummary:
       "mHelpDesk typically starts around $49/month with plans scaling by users and features. Confirm current pricing and limits before you commit.",
   },
+  {
+    slug: "fieldpulse",
+    name: "FieldPulse",
+    badge: "Strong for growing contractor ops",
+    description:
+      "Field service and contractor platform with scheduling, dispatch, CRM-style customer records, and mobile workflows for trades that want structure without enterprise overhead.",
+    rating: "4.4",
+    startingPrice: "From ~$99/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://fieldpulse.com",
+    logoSrc: LOGOS.fieldpulse,
+    compareSlugs: ["fieldpulse-vs-jobber", "fieldpulse-vs-housecall-pro"],
+    editorialParagraph:
+      "FieldPulse targets contractors who want dispatch, job costing visibility, and customer history in one place—often HVAC, plumbing, and electrical shops moving off spreadsheets. It emphasizes operational control and technician mobile experience rather than lightweight scheduling-only apps.",
+    pros: [
+      "Solid dispatch and job workflows for trade contractors",
+      "Mobile tools for technicians with job documentation",
+      "CRM-style customer and equipment context on jobs",
+    ],
+    cons: [
+      "Less household name recognition than Jobber or Housecall Pro",
+      "Pricing mid-tier—verify ROI vs simpler tools",
+      "Implementation effort higher than bare-bones apps",
+    ],
+    pricingSummary:
+      "FieldPulse typically uses tiered monthly pricing in the mid range for SMB FSM; exact tiers vary by users and modules. Request a quote for your crew size and required features.",
+  },
+  {
+    slug: "servicetrade",
+    name: "ServiceTrade",
+    badge: "Best for commercial & fire-life-safety workflows",
+    description:
+      "Field service platform focused on commercial service contractors, inspections, compliance documentation, and recurring contract work—not just residential truck rolls.",
+    rating: "4.5",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://servicetrade.com",
+    logoSrc: LOGOS.servicetrade,
+    compareSlugs: ["servicetrade-vs-servicetitan"],
+    editorialParagraph:
+      "ServiceTrade shines where documentation, inspection rounds, and contract SLAs matter as much as dispatch—think fire/life safety, commercial mechanical, and facility service. It is a different buyer than pure residential home service; teams choose it when compliance and customer portals need to tie cleanly to work orders.",
+    pros: [
+      "Strong inspection and compliance-oriented workflows",
+      "Built for commercial service and recurring contract models",
+      "Customer-facing reporting and documentation depth",
+    ],
+    cons: [
+      "Not the default pick for small residential-only shops",
+      "Custom pricing and longer sales cycle",
+      "Heavier than tools built only for quick home visits",
+    ],
+    pricingSummary:
+      "ServiceTrade uses custom, account-based pricing. Evaluate alongside other commercial-focused FSM when job packets and compliance drive revenue.",
+  },
+  {
+    slug: "workwave-service",
+    name: "WorkWave Service",
+    badge: "Route & fleet-aware field ops",
+    description:
+      "Field service solution from WorkWave aimed at route-based and fleet-heavy operations—pest, lawn, cleaning, and related trades—with emphasis on scheduling density and back-office coordination.",
+    rating: "4.3",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.workwave.com",
+    logoSrc: LOGOS["workwave-service"],
+    compareSlugs: ["workwave-service-vs-jobber"],
+    editorialParagraph:
+      "WorkWave Service fits organizations that think in routes and territories more than one-off residential tickets. It pairs with WorkWave’s broader ecosystem for businesses that need operational scale, recurring stops, and coordination between office and field at higher volume.",
+    pros: [
+      "Route and recurring-stop mindset for high-volume service",
+      "Suited to pest, lawn, and similar route-driven trades",
+      "Back-office and fleet coordination features",
+    ],
+    cons: [
+      "Custom pricing—not the simplest SMB entry point",
+      "May be more than solos and micro-teams need",
+      "Best when route density is core to the business model",
+    ],
+    pricingSummary:
+      "WorkWave Service is typically sold with custom quotes based on seats, routes, and modules. Compare total cost including implementation for your fleet size.",
+  },
+  {
+    slug: "buildops",
+    name: "BuildOps",
+    badge: "Commercial mechanical & construction-adjacent",
+    description:
+      "Operations platform for commercial mechanical and specialty contractors—jobs, change orders, and field execution aligned with larger projects and service departments.",
+    rating: "4.4",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://buildops.com",
+    logoSrc: LOGOS.buildops,
+    compareSlugs: ["buildops-vs-servicetitan", "buildops-vs-service-fusion", "buildops-vs-simpro"],
+    editorialParagraph:
+      "BuildOps targets commercial mechanical and construction-adjacent teams that need project-aware job management, not only residential service tickets. If you run service departments with complex jobs, change orders, and multi-craft coordination, it competes in the same conversation as heavy FSM—evaluate fit against ServiceTitan-class depth.",
+    pros: [
+      "Commercial and project-oriented workflows",
+      "Suited to mechanical and specialty contractors at scale",
+      "Field execution tied to operational and financial visibility",
+    ],
+    cons: [
+      "Not aimed at small residential-only operators",
+      "Custom pricing and implementation expectations",
+      "Requires organizational maturity to get value",
+    ],
+    pricingSummary:
+      "BuildOps uses custom enterprise-style pricing. Budget for demos, scoping, and rollout alongside other commercial FSM options.",
+  },
+  {
+    slug: "connecteam",
+    name: "Connecteam",
+    badge: "Workforce & ops for deskless teams",
+    description:
+      "All-in-one employee app for scheduling, time tracking, forms, and communication—often paired with a separate FSM or CRM when contractors need job costing and invoicing depth.",
+    rating: "4.3",
+    startingPrice: "From ~$29/mo (varies by plan)",
+    hasFreeTrial: true,
+    hasFreePlan: true,
+    hasIntegrations: true,
+    visitUrl: "https://connecteam.com",
+    logoSrc: LOGOS.connecteam,
+    compareSlugs: ["connecteam-vs-jobber"],
+    editorialParagraph:
+      "Connecteam is not a full replacement for contractor FSM on its own—it shines when you need strong frontline workforce tools: shifts, time clocks, checklists, and internal comms across techs and crews. Many trade businesses pair it with Jobber-class software or use it when the pain is labor compliance and coordination more than estimating.",
+    pros: [
+      "Strong mobile-first workforce and scheduling tools",
+      "Forms, checklists, and time tracking for field teams",
+      "Often faster adoption than heavy FSM for pure ops/HR needs",
+    ],
+    cons: [
+      "Not a complete FSM for quotes, dispatch depth, and invoicing vs dedicated contractor platforms",
+      "Pairing with another tool adds integration and admin overhead",
+      "Pricing scales with features and headcount—model TCO carefully",
+    ],
+    pricingSummary:
+      "Connecteam publishes tiered pricing with free and paid plans; enterprise add-ons vary. Compare all-in cost if you still need a full FSM for jobs and billing.",
+  },
+  {
+    slug: "oracle-field-service",
+    name: "Oracle Field Service",
+    badge: "Enterprise field service & asset",
+    description:
+      "Enterprise field service platform for complex scheduling, workforce management, and asset-centric service—typically sold with Oracle’s broader cloud stack.",
+    rating: "4.4",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.oracle.com/industries/field-service-management/",
+    logoSrc: LOGOS["oracle-field-service"],
+    compareSlugs: ["oracle-field-service-vs-servicetitan"],
+    editorialParagraph:
+      "Oracle Field Service targets large organizations with sophisticated routing, SLA-driven work, and integration into ERP and asset systems. It is a different evaluation than SMB contractor SaaS—expect formal procurement, SI involvement, and long implementation horizons compared to tools like Jobber or Housecall Pro.",
+    pros: [
+      "Built for enterprise scale, SLAs, and complex scheduling constraints",
+      "Strong fit when Oracle cloud footprint already exists",
+      "Asset and work management depth for regulated or capital-intensive industries",
+    ],
+    cons: [
+      "Not a fit for small shops—cost and complexity dominate",
+      "Requires IT and integration planning",
+      "Longer time-to-value than SMB-focused FSM",
+    ],
+    pricingSummary:
+      "Oracle Field Service is sold with custom enterprise pricing. Budget implementation, integrations, and ongoing platform costs—not per-seat SMB tiers.",
+  },
+  {
+    slug: "simpro",
+    name: "Simpro",
+    badge: "Trade & project-heavy field ops",
+    description:
+      "End-to-end operations platform for trade contractors—jobs, quotes, service, projects, and inventory—popular with HVAC, plumbing, electrical, and commercial service teams.",
+    rating: "4.5",
+    startingPrice: "Custom pricing",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.simprogroup.com",
+    logoSrc: LOGOS.simpro,
+    compareSlugs: ["simpro-vs-servicetitan", "simpro-vs-service-fusion", "buildops-vs-simpro"],
+    editorialParagraph:
+      "Simpro competes where field work ties tightly to quoting, inventory, recurring service, and multi-stage jobs—not only one-off tickets. Teams in Australia, NZ, the US, and UK often shortlist it against ServiceTitan and Service Fusion when they need operational depth across office and field.",
+    pros: [
+      "Strong job, project, and service workflow for trade businesses",
+      "Inventory and purchasing visibility for materials-heavy work",
+      "Scales with growing commercial and residential mix",
+    ],
+    cons: [
+      "Custom pricing and implementation vs lighter SMB tools",
+      "Heavier than solos need—validate adoption and admin capacity",
+      "Regional packaging and partners vary—confirm local support",
+    ],
+    pricingSummary:
+      "Simpro typically uses custom quotes by users, modules, and regions. Compare total cost with ServiceTitan-class alternatives using your real job mix.",
+  },
+  {
+    slug: "zuper",
+    name: "Zuper",
+    badge: "Modern FSM & field workflows",
+    description:
+      "Configurable field service platform with scheduling, mobile workflows, and integrations—aimed at teams that want flexible automation without legacy UI baggage.",
+    rating: "4.4",
+    startingPrice: "Custom / tiered (verify)",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.zuper.co",
+    logoSrc: LOGOS.zuper,
+    compareSlugs: ["zuper-vs-jobber"],
+    editorialParagraph:
+      "Zuper positions as a flexible FSM layer for dispatch, recurring work, and technician apps, often winning evaluations where integration and workflow automation matter as much as core scheduling. Compare it directly with Jobber when you need deeper customization or connect it alongside CRM and accounting stacks.",
+    pros: [
+      "Flexible workflows and integration-forward design",
+      "Mobile experience aimed at modern field teams",
+      "Useful when you outgrow spreadsheets but resist rigid legacy FSM",
+    ],
+    cons: [
+      "Smaller brand footprint than Jobber or ServiceTitan in some markets",
+      "Pricing may be quote-based—clarify modules early",
+      "Requires ownership to configure automations well",
+    ],
+    pricingSummary:
+      "Zuper often uses tiered or custom pricing depending on modules and seats. Request a quote aligned to your crew size and integration needs.",
+  },
 ];
 
-/** Comparison table: all 9 FSM tools. */
+/** Comparison table: major FSM tools (canonical picks). */
 export const COMPARISON_TABLE_ROWS: FieldServiceComparisonTableRow[] = [
   { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "Best overall for contractors", startingPrice: "From ~$69/mo", rating: "4.6", reviewHref: getFieldServiceReviewUrl("jobber") },
   { slug: "housecall-pro", name: "Housecall Pro", logoSrc: LOGOS.housecallpro, bestFor: "Home service pros", startingPrice: "From ~$49/mo", rating: "4.5", reviewHref: getFieldServiceReviewUrl("housecall-pro") },
   { slug: "servicetitan", name: "ServiceTitan", logoSrc: LOGOS.servicetitan, bestFor: "Growing service companies", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("servicetitan") },
   { slug: "service-fusion", name: "Service Fusion", logoSrc: LOGOS.servicefusion, bestFor: "HVAC & plumbing value", startingPrice: "From ~$99/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("service-fusion") },
+  { slug: "fieldpulse", name: "FieldPulse", logoSrc: LOGOS.fieldpulse, bestFor: "Growing trade contractors", startingPrice: "From ~$99/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("fieldpulse") },
+  { slug: "servicetrade", name: "ServiceTrade", logoSrc: LOGOS.servicetrade, bestFor: "Commercial & compliance-heavy", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("servicetrade") },
+  { slug: "workwave-service", name: "WorkWave Service", logoSrc: LOGOS["workwave-service"], bestFor: "Route & fleet-heavy ops", startingPrice: "Custom pricing", rating: "4.3", reviewHref: getFieldServiceReviewUrl("workwave-service") },
+  { slug: "buildops", name: "BuildOps", logoSrc: LOGOS.buildops, bestFor: "Commercial mechanical scale", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("buildops") },
   { slug: "workiz", name: "Workiz", logoSrc: LOGOS.workiz, bestFor: "Small field teams", startingPrice: "From ~$29/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("workiz") },
   { slug: "kickserv", name: "Kickserv", logoSrc: LOGOS.kickserv, bestFor: "Small service businesses", startingPrice: "From ~$55/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("kickserv") },
   { slug: "servicem8", name: "ServiceM8", logoSrc: LOGOS.servicem8, bestFor: "Mobile-first field service", startingPrice: "From ~$29/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("servicem8") },
   { slug: "fieldedge", name: "FieldEdge", logoSrc: LOGOS.fieldedge, bestFor: "HVAC & plumbing depth", startingPrice: "Custom pricing", rating: "4.3", reviewHref: getFieldServiceReviewUrl("fieldedge") },
   { slug: "mhelpdesk", name: "mHelpDesk", logoSrc: LOGOS.mhelpdesk, bestFor: "Contractors & technicians", startingPrice: "From ~$49/mo", rating: "4.2", reviewHref: getFieldServiceReviewUrl("mhelpdesk") },
+  { slug: "connecteam", name: "Connecteam", logoSrc: LOGOS.connecteam, bestFor: "Deskless workforce & ops", startingPrice: "From ~$29/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("connecteam") },
+  { slug: "oracle-field-service", name: "Oracle Field Service", logoSrc: LOGOS["oracle-field-service"], bestFor: "Enterprise field & asset", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("oracle-field-service") },
+  { slug: "simpro", name: "Simpro", logoSrc: LOGOS.simpro, bestFor: "Trade & project-heavy ops", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("simpro") },
+  { slug: "zuper", name: "Zuper", logoSrc: LOGOS.zuper, bestFor: "Flexible modern FSM", startingPrice: "Custom / tiered", rating: "4.4", reviewHref: getFieldServiceReviewUrl("zuper") },
 ];
 
 export type UseCaseLink = { label: string; href: string; description: string };
@@ -343,6 +591,18 @@ export const RELATED_COMPARISONS: ComparisonLink[] = [
   { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
   { label: "ServiceTitan vs Service Fusion", href: getFieldServiceCompareUrl("servicetitan-vs-service-fusion") },
   { label: "Kickserv vs Jobber", href: getFieldServiceCompareUrl("kickserv-vs-jobber") },
+  { label: "FieldPulse vs Jobber", href: getFieldServiceCompareUrl("fieldpulse-vs-jobber") },
+  { label: "FieldPulse vs Housecall Pro", href: getFieldServiceCompareUrl("fieldpulse-vs-housecall-pro") },
+  { label: "ServiceTrade vs ServiceTitan", href: getFieldServiceCompareUrl("servicetrade-vs-servicetitan") },
+  { label: "WorkWave Service vs Jobber", href: getFieldServiceCompareUrl("workwave-service-vs-jobber") },
+  { label: "BuildOps vs ServiceTitan", href: getFieldServiceCompareUrl("buildops-vs-servicetitan") },
+  { label: "BuildOps vs Service Fusion", href: getFieldServiceCompareUrl("buildops-vs-service-fusion") },
+  { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+  { label: "Zuper vs Jobber", href: getFieldServiceCompareUrl("zuper-vs-jobber") },
+  { label: "Simpro vs ServiceTitan", href: getFieldServiceCompareUrl("simpro-vs-servicetitan") },
+  { label: "Oracle Field Service vs ServiceTitan", href: getFieldServiceCompareUrl("oracle-field-service-vs-servicetitan") },
+  { label: "Simpro vs Service Fusion", href: getFieldServiceCompareUrl("simpro-vs-service-fusion") },
+  { label: "BuildOps vs Simpro", href: getFieldServiceCompareUrl("buildops-vs-simpro") },
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
@@ -356,7 +616,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "What is the best field service software for small businesses?",
-    a: "Jobber and Housecall Pro are strong defaults for many small service companies, thanks to their balance of features and ease of use. Workiz and Kickserv are also good options when you want something more affordable. Larger, growing teams may prefer ServiceTitan or FieldEdge for deeper trade-specific capabilities.",
+    a: "Jobber and Housecall Pro are strong defaults for many small service companies, thanks to their balance of features and ease of use. Workiz and Kickserv are also good options when you want something more affordable. FieldPulse fits growing trade contractors; commercial-heavy teams may evaluate ServiceTrade or BuildOps; route-based operations often look at WorkWave Service. Larger, growing teams may prefer ServiceTitan or FieldEdge for deeper trade-specific capabilities.",
   },
   {
     q: "Do field service tools combine scheduling, dispatch, invoicing, and CRM?",

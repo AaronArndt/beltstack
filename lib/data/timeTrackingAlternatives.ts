@@ -5,6 +5,8 @@
  */
 
 import { getTimeTrackingReviewUrl, getTimeTrackingCompareUrl, getTimeTrackingBestForUrl } from "@/lib/routes";
+import { getTimeTrackingComparison } from "@/lib/data/timeTrackingComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -42,6 +44,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function ttRel(slug: string) {
+  return toAlternativesRelatedComparison(getTimeTrackingCompareUrl(slug), getTimeTrackingComparison(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -95,9 +101,9 @@ const togglPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
-    { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
-    { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+    ttRel("toggl-vs-harvest"),
+    ttRel("clockify-vs-toggl"),
+    ttRel("timely-vs-toggl"),
   ],
   relatedResources: defaultRelatedResources("Toggl Track", getTimeTrackingReviewUrl("toggl")),
   faqItems: [
@@ -144,9 +150,9 @@ const harvestPage: AlternativesTemplateProps = {
     { productName: "Timely", heading: "Best for automatic tracking", body: "Timely uses AI for automatic time tracking. Different workflow from manual timers.", reviewHref: getTimeTrackingReviewUrl("timely") },
   ],
   relatedComparisons: [
-    { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
-    { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
-    { label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") },
+    ttRel("toggl-vs-harvest"),
+    ttRel("harvest-vs-clockify"),
+    ttRel("everhour-vs-harvest"),
   ],
   relatedResources: defaultRelatedResources("Harvest", getTimeTrackingReviewUrl("harvest")),
   faqItems: [
@@ -193,8 +199,8 @@ const clockifyPage: AlternativesTemplateProps = {
     { productName: "Hubstaff", heading: "Best for monitoring", body: "Hubstaff adds optional monitoring and GPS. For remote or field teams.", reviewHref: getTimeTrackingReviewUrl("hubstaff") },
   ],
   relatedComparisons: [
-    { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
-    { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
+    ttRel("clockify-vs-toggl"),
+    ttRel("harvest-vs-clockify"),
   ],
   relatedResources: defaultRelatedResources("Clockify", getTimeTrackingReviewUrl("clockify")),
   faqItems: [
@@ -240,9 +246,7 @@ const hubstaffPage: AlternativesTemplateProps = {
     { productName: "Harvest", heading: "Best for invoicing", body: "Harvest adds built-in invoicing. For agencies that need time and billing in one tool.", reviewHref: getTimeTrackingReviewUrl("harvest") },
     { productName: "Everhour", heading: "Best for project integration", body: "Everhour integrates inside project tools. For teams that want tracking in context.", reviewHref: getTimeTrackingReviewUrl("everhour") },
   ],
-  relatedComparisons: [
-    { label: "Hubstaff vs Time Doctor", href: getTimeTrackingCompareUrl("hubstaff-vs-time-doctor") },
-  ],
+  relatedComparisons: [ttRel("hubstaff-vs-time-doctor")],
   relatedResources: defaultRelatedResources("Hubstaff", getTimeTrackingReviewUrl("hubstaff")),
   faqItems: [
     { q: "What is the best Hubstaff alternative?", a: "Time Doctor for stricter monitoring; Toggl and Clockify for tracking without monitoring; Harvest for invoicing." },
@@ -287,9 +291,7 @@ const timeDoctorPage: AlternativesTemplateProps = {
     { productName: "RescueTime", heading: "Best for passive productivity", body: "RescueTime tracks activity passively and offers focus insights. Different approach from strict monitoring.", reviewHref: getTimeTrackingReviewUrl("rescuetime") },
     { productName: "Harvest", heading: "Best for invoicing", body: "Harvest adds built-in invoicing. For teams that need time and billing in one tool.", reviewHref: getTimeTrackingReviewUrl("harvest") },
   ],
-  relatedComparisons: [
-    { label: "Hubstaff vs Time Doctor", href: getTimeTrackingCompareUrl("hubstaff-vs-time-doctor") },
-  ],
+  relatedComparisons: [ttRel("hubstaff-vs-time-doctor")],
   relatedResources: defaultRelatedResources("Time Doctor", getTimeTrackingReviewUrl("time-doctor")),
   faqItems: [
     { q: "What is the best Time Doctor alternative?", a: "Hubstaff for similar monitoring with GPS; Toggl and Clockify for no monitoring; RescueTime for passive productivity; Harvest for invoicing." },
@@ -379,9 +381,7 @@ const everhourPage: AlternativesTemplateProps = {
     { productName: "Timely", heading: "Best for automatic tracking", body: "Timely uses AI for automatic time tracking.", reviewHref: getTimeTrackingReviewUrl("timely") },
     { productName: "Hubstaff", heading: "Best for monitoring", body: "Hubstaff adds optional monitoring. For remote teams that need oversight.", reviewHref: getTimeTrackingReviewUrl("hubstaff") },
   ],
-  relatedComparisons: [
-    { label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") },
-  ],
+  relatedComparisons: [ttRel("everhour-vs-harvest")],
   relatedResources: defaultRelatedResources("Everhour", getTimeTrackingReviewUrl("everhour")),
   faqItems: [
     { q: "What is the best Everhour alternative?", a: "Harvest for invoicing; Toggl and Clockify for standalone tracking; Timely for automatic tracking." },
@@ -426,9 +426,7 @@ const timelyPage: AlternativesTemplateProps = {
     { productName: "Harvest", heading: "Best for invoicing", body: "Harvest adds built-in invoicing. For teams that need to bill by time.", reviewHref: getTimeTrackingReviewUrl("harvest") },
     { productName: "Everhour", heading: "Best for project integration", body: "Everhour lives inside project tools. For teams that want tracking in context.", reviewHref: getTimeTrackingReviewUrl("everhour") },
   ],
-  relatedComparisons: [
-    { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
-  ],
+  relatedComparisons: [ttRel("timely-vs-toggl")],
   relatedResources: defaultRelatedResources("Timely", getTimeTrackingReviewUrl("timely")),
   faqItems: [
     { q: "What is the best Timely alternative?", a: "Toggl Track and Clockify for manual tracking; RescueTime for passive productivity; Harvest for invoicing." },

@@ -33,7 +33,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         heading: "Field service & dispatch",
         body:
           "Dispatch, capacity planning, and technician mobile apps turn calls into revenue without losing details. Strong HVAC field service software ties tune-ups, warranty work, and replacements to photos, forms, and line items on the customer record. Prioritize routing by skill and territory, offline-friendly mobile, and job costing so margin is visible before you invoice.",
-        productSlugs: ["servicetitan", "jobber"],
+        productSlugs: ["servicetitan", "simpro", "jobber"],
       },
       {
         id: "crm",
@@ -256,7 +256,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         heading: "Field service & job management",
         body:
           "Dispatch-heavy work—emergencies, callbacks, multi-stop days—needs a clear board, mobile apps, and status from dispatch to invoice. Capture line items, photos, and notes on site so billing matches the job. Prioritize estimates, work orders, and repeat customers—not just a calendar.",
-        productSlugs: ["jobber", "housecall-pro"],
+        productSlugs: ["jobber", "housecall-pro", "fieldpulse"],
       },
       {
         id: "payroll",
@@ -422,7 +422,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         heading: "Field service & projects",
         body:
           "You juggle service tickets, small installs, and longer mini-projects. Field service should support structured jobs, checklists, and mobile photos, as-builts, or site notes—not one-line tickets. On commercial work, watch permissions, job folders, and change orders tied to scope.",
-        productSlugs: ["housecall-pro", "servicetitan"],
+        productSlugs: ["housecall-pro", "servicetitan", "fieldpulse"],
       },
       {
         id: "payroll",
@@ -577,7 +577,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         heading: "Field service & routing",
         body:
           "Route density and recurring visits decide whether crews earn or burn fuel. Field software should handle recurring templates, crew assignments, and visit notes per property. Design/build may need costing hooks and change tracking as scopes shift.",
-        productSlugs: ["jobber", "workiz"],
+        productSlugs: ["jobber", "workiz", "workwave-service"],
       },
       {
         id: "invoicing",
@@ -749,7 +749,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         heading: "Field service (lightweight)",
         body:
           "Even without heavy construction workflows, cleaning businesses benefit from checklists, time on site, and photo proof for quality disputes or commercial SLAs. Lightweight field tools help franchise or multi-crew operations enforce standards without turning every visit into a complex job file. Choose mobile flows cleaners will actually complete between rooms.",
-        productSlugs: ["workiz", "jobber"],
+        productSlugs: ["connecteam", "workiz", "jobber"],
       },
       {
         id: "payroll",

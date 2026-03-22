@@ -5,6 +5,8 @@
  */
 
 import { getInvoicingReviewUrl, getInvoicingCompareUrl, getInvoicingBestForUrl } from "@/lib/routes";
+import { getInvoicingComparisonBySlug } from "@/lib/data/invoicingComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -27,6 +29,10 @@ const HOW_TO_CHOOSE: AlternativesEditorialBlock[] = [
   { heading: "Accounting integration", body: "Invoicing data should sync to your accounting software. QuickBooks and Xero have built-in books; FreshBooks and Wave connect to accounting tools." },
   { heading: "Pricing and limits", body: "Compare base price, client or invoice limits, and payment processing fees. Free options (Wave, Zoho Invoice free tier) suit very small needs; paid tiers add capacity." },
 ];
+
+function invRel(slug: string) {
+  return toAlternativesRelatedComparison(getInvoicingCompareUrl(slug), getInvoicingComparisonBySlug(slug));
+}
 
 function buildTableRows(
   originalRow: AlternativesTableRow,
@@ -95,11 +101,11 @@ const freshbooksPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "FreshBooks vs QuickBooks", href: getInvoicingCompareUrl("freshbooks-vs-quickbooks") },
-    { label: "FreshBooks vs Wave", href: getInvoicingCompareUrl("freshbooks-vs-wave") },
-    { label: "Zoho Invoice vs FreshBooks", href: getInvoicingCompareUrl("zoho-invoice-vs-freshbooks") },
-    { label: "FreshBooks vs Xero", href: getInvoicingCompareUrl("freshbooks-vs-xero") },
-    { label: "Invoice Ninja vs FreshBooks", href: getInvoicingCompareUrl("invoice-ninja-vs-freshbooks") },
+    invRel("freshbooks-vs-quickbooks"),
+    invRel("freshbooks-vs-wave"),
+    invRel("zoho-invoice-vs-freshbooks"),
+    invRel("freshbooks-vs-xero"),
+    invRel("invoice-ninja-vs-freshbooks"),
   ],
   relatedResources: defaultRelatedResources("FreshBooks", getInvoicingReviewUrl("freshbooks")),
   faqItems: [
@@ -146,9 +152,9 @@ const quickbooksPage: AlternativesTemplateProps = {
     { productName: "Invoice Ninja", heading: "Best for self-hosted", body: "Invoice Ninja offers cloud and self-hosted options. For teams that want flexibility and no vendor lock-in.", reviewHref: getInvoicingReviewUrl("invoice-ninja") },
   ],
   relatedComparisons: [
-    { label: "FreshBooks vs QuickBooks", href: getInvoicingCompareUrl("freshbooks-vs-quickbooks") },
-    { label: "Xero vs QuickBooks", href: getInvoicingCompareUrl("xero-vs-quickbooks") },
-    { label: "QuickBooks vs Wave", href: getInvoicingCompareUrl("quickbooks-vs-wave") },
+    invRel("freshbooks-vs-quickbooks"),
+    invRel("xero-vs-quickbooks"),
+    invRel("quickbooks-vs-wave"),
   ],
   relatedResources: defaultRelatedResources("QuickBooks", getInvoicingReviewUrl("quickbooks")),
   faqItems: [
@@ -195,9 +201,9 @@ const wavePage: AlternativesTemplateProps = {
     { productName: "Invoice Ninja", heading: "Best for self-hosted", body: "Invoice Ninja offers cloud and self-hosted options. For teams that want flexibility.", reviewHref: getInvoicingReviewUrl("invoice-ninja") },
   ],
   relatedComparisons: [
-    { label: "FreshBooks vs Wave", href: getInvoicingCompareUrl("freshbooks-vs-wave") },
-    { label: "QuickBooks vs Wave", href: getInvoicingCompareUrl("quickbooks-vs-wave") },
-    { label: "Wave vs Zoho Invoice", href: getInvoicingCompareUrl("wave-vs-zoho-invoice") },
+    invRel("freshbooks-vs-wave"),
+    invRel("quickbooks-vs-wave"),
+    invRel("wave-vs-zoho-invoice"),
   ],
   relatedResources: defaultRelatedResources("Wave", getInvoicingReviewUrl("wave")),
   faqItems: [
@@ -244,8 +250,8 @@ const zohoInvoicePage: AlternativesTemplateProps = {
     { productName: "Invoice Ninja", heading: "Best for self-hosted", body: "Invoice Ninja offers cloud and self-hosted options.", reviewHref: getInvoicingReviewUrl("invoice-ninja") },
   ],
   relatedComparisons: [
-    { label: "Zoho Invoice vs FreshBooks", href: getInvoicingCompareUrl("zoho-invoice-vs-freshbooks") },
-    { label: "Wave vs Zoho Invoice", href: getInvoicingCompareUrl("wave-vs-zoho-invoice") },
+    invRel("zoho-invoice-vs-freshbooks"),
+    invRel("wave-vs-zoho-invoice"),
   ],
   relatedResources: defaultRelatedResources("Zoho Invoice", getInvoicingReviewUrl("zoho-invoice")),
   faqItems: [
@@ -292,8 +298,8 @@ const xeroPage: AlternativesTemplateProps = {
     { productName: "Invoice Ninja", heading: "Best for self-hosted", body: "Invoice Ninja offers cloud and self-hosted options.", reviewHref: getInvoicingReviewUrl("invoice-ninja") },
   ],
   relatedComparisons: [
-    { label: "Xero vs QuickBooks", href: getInvoicingCompareUrl("xero-vs-quickbooks") },
-    { label: "FreshBooks vs Xero", href: getInvoicingCompareUrl("freshbooks-vs-xero") },
+    invRel("xero-vs-quickbooks"),
+    invRel("freshbooks-vs-xero"),
   ],
   relatedResources: defaultRelatedResources("Xero", getInvoicingReviewUrl("xero")),
   faqItems: [
@@ -340,7 +346,7 @@ const invoiceNinjaPage: AlternativesTemplateProps = {
     { productName: "Xero", heading: "Best for accounting integration", body: "Xero combines invoicing with full cloud accounting.", reviewHref: getInvoicingReviewUrl("xero") },
   ],
   relatedComparisons: [
-    { label: "Invoice Ninja vs FreshBooks", href: getInvoicingCompareUrl("invoice-ninja-vs-freshbooks") },
+    invRel("invoice-ninja-vs-freshbooks"),
   ],
   relatedResources: defaultRelatedResources("Invoice Ninja", getInvoicingReviewUrl("invoice-ninja")),
   faqItems: [
@@ -387,7 +393,7 @@ const honeybookPage: AlternativesTemplateProps = {
     { productName: "Xero", heading: "Best for accounting integration", body: "Xero combines invoicing with full accounting.", reviewHref: getInvoicingReviewUrl("xero") },
   ],
   relatedComparisons: [
-    { label: "HoneyBook vs Bonsai", href: getInvoicingCompareUrl("honeybook-vs-bonsai") },
+    invRel("honeybook-vs-bonsai"),
   ],
   relatedResources: defaultRelatedResources("HoneyBook", getInvoicingReviewUrl("honeybook")),
   faqItems: [
@@ -434,7 +440,7 @@ const bonsaiPage: AlternativesTemplateProps = {
     { productName: "Invoice Ninja", heading: "Best for self-hosted", body: "Invoice Ninja offers cloud and self-hosted options.", reviewHref: getInvoicingReviewUrl("invoice-ninja") },
   ],
   relatedComparisons: [
-    { label: "HoneyBook vs Bonsai", href: getInvoicingCompareUrl("honeybook-vs-bonsai") },
+    invRel("honeybook-vs-bonsai"),
   ],
   relatedResources: defaultRelatedResources("Bonsai", getInvoicingReviewUrl("bonsai")),
   faqItems: [

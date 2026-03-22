@@ -9,6 +9,8 @@ import {
   getInventoryCompareUrl,
   getInventoryBestForUrl,
 } from "@/lib/routes";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
+import { getInventoryComparison } from "@/lib/data/inventoryComparisons";
 import { INVENTORY_LOGOS } from "@/lib/data/inventoryHubData";
 import type {
   AlternativesTemplateProps,
@@ -46,6 +48,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function invAltRel(slug: string) {
+  return toAlternativesRelatedComparison(getInventoryCompareUrl(slug), getInventoryComparison(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -96,8 +102,8 @@ const zohoPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
-    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+    invAltRel("zoho-inventory-vs-cin7"),
+    invAltRel("inflow-inventory-vs-zoho-inventory"),
   ],
   relatedResources: defaultRelatedResources("Zoho Inventory", getInventoryReviewUrl("zoho-inventory")),
   faqItems: [
@@ -140,8 +146,8 @@ const inflowPage: AlternativesTemplateProps = {
     { productName: "Finale Inventory", heading: "Best for higher-volume ecommerce", body: "Finale is built for ecommerce and warehouse operations with more scale and multi-channel sync.", reviewHref: getInventoryReviewUrl("finale-inventory") },
   ],
   relatedComparisons: [
-    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    invAltRel("inflow-inventory-vs-zoho-inventory"),
+    invAltRel("zoho-inventory-vs-cin7"),
   ],
   relatedResources: defaultRelatedResources("inFlow Inventory", getInventoryReviewUrl("inflow-inventory")),
   faqItems: [
@@ -184,8 +190,8 @@ const quickbooksCommercePage: AlternativesTemplateProps = {
     { productName: "Finale Inventory", heading: "Best for higher-volume ecommerce", body: "Finale targets ecommerce and warehouse operations with more scale and multi-channel sync.", reviewHref: getInventoryReviewUrl("finale-inventory") },
   ],
   relatedComparisons: [
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
-    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+    invAltRel("zoho-inventory-vs-cin7"),
+    invAltRel("inflow-inventory-vs-zoho-inventory"),
   ],
   relatedResources: defaultRelatedResources("QuickBooks Commerce", getInventoryReviewUrl("quickbooks-commerce")),
   faqItems: [
@@ -228,8 +234,8 @@ const finalePage: AlternativesTemplateProps = {
     { productName: "QuickBooks Commerce", heading: "Best for QuickBooks users", body: "QuickBooks Commerce extends QuickBooks into inventory and orders. For accounting alignment over operational depth.", reviewHref: getInventoryReviewUrl("quickbooks-commerce") },
   ],
   relatedComparisons: [
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
-    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+    invAltRel("zoho-inventory-vs-cin7"),
+    invAltRel("inflow-inventory-vs-zoho-inventory"),
   ],
   relatedResources: defaultRelatedResources("Finale Inventory", getInventoryReviewUrl("finale-inventory")),
   faqItems: [
@@ -274,8 +280,8 @@ const cin7Page: AlternativesTemplateProps = {
     { productName: "Katana", heading: "Best for manufacturing", body: "Katana is built for manufacturing and production; compare if your priority is production over channels.", reviewHref: getInventoryReviewUrl("katana"), compareHref: getInventoryCompareUrl("cin7-vs-katana") },
   ],
   relatedComparisons: [
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
-    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
+    invAltRel("zoho-inventory-vs-cin7"),
+    invAltRel("cin7-vs-katana"),
   ],
   relatedResources: defaultRelatedResources("Cin7", getInventoryReviewUrl("cin7")),
   faqItems: [
@@ -320,8 +326,8 @@ const fishbowlPage: AlternativesTemplateProps = {
     { productName: "Unleashed", heading: "Best for inventory and manufacturing", body: "Unleashed combines inventory and manufacturing in one platform.", reviewHref: getInventoryReviewUrl("unleashed") },
   ],
   relatedComparisons: [
-    { label: "Fishbowl vs Katana", href: getInventoryCompareUrl("fishbowl-vs-katana") },
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    invAltRel("fishbowl-vs-katana"),
+    invAltRel("zoho-inventory-vs-cin7"),
   ],
   relatedResources: defaultRelatedResources("Fishbowl", getInventoryReviewUrl("fishbowl")),
   faqItems: [
@@ -366,8 +372,8 @@ const katanaPage: AlternativesTemplateProps = {
     { productName: "Fishbowl", heading: "Best for warehouse", body: "Fishbowl is strong for warehouse and manufacturing; compare deployment and features.", reviewHref: getInventoryReviewUrl("fishbowl"), compareHref: getInventoryCompareUrl("fishbowl-vs-katana") },
   ],
   relatedComparisons: [
-    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
-    { label: "Fishbowl vs Katana", href: getInventoryCompareUrl("fishbowl-vs-katana") },
+    invAltRel("cin7-vs-katana"),
+    invAltRel("fishbowl-vs-katana"),
   ],
   relatedResources: defaultRelatedResources("Katana", getInventoryReviewUrl("katana")),
   faqItems: [
@@ -412,8 +418,8 @@ const sortlyPage: AlternativesTemplateProps = {
     { productName: "QuickBooks Commerce", heading: "Best for QuickBooks users", body: "QuickBooks Commerce extends QuickBooks into inventory and orders.", reviewHref: getInventoryReviewUrl("quickbooks-commerce") },
   ],
   relatedComparisons: [
-    { label: "Sortly vs inFlow Inventory", href: getInventoryCompareUrl("sortly-vs-inflow-inventory") },
-    { label: "inFlow Inventory vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+    invAltRel("sortly-vs-inflow-inventory"),
+    invAltRel("inflow-inventory-vs-zoho-inventory"),
   ],
   relatedResources: defaultRelatedResources("Sortly", getInventoryReviewUrl("sortly")),
   faqItems: [
@@ -460,8 +466,8 @@ const unleashedPage: AlternativesTemplateProps = {
     { productName: "Finale Inventory", heading: "Best for ecommerce", body: "Finale targets ecommerce and warehouse operations.", reviewHref: getInventoryReviewUrl("finale-inventory") },
   ],
   relatedComparisons: [
-    { label: "Zoho Inventory vs Cin7", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
-    { label: "Cin7 vs Katana", href: getInventoryCompareUrl("cin7-vs-katana") },
+    invAltRel("zoho-inventory-vs-cin7"),
+    invAltRel("cin7-vs-katana"),
   ],
   relatedResources: defaultRelatedResources("Unleashed", getInventoryReviewUrl("unleashed")),
   faqItems: [

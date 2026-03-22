@@ -5,6 +5,8 @@
  */
 
 import { getPosReviewUrl, getPosCompareUrl, getPosBestForUrl } from "@/lib/routes";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
+import { getPosComparison } from "@/lib/data/posComparisons";
 import { POS_LOGOS } from "@/lib/data/posHubData";
 import type {
   AlternativesTemplateProps,
@@ -42,6 +44,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function posRel(slug: string) {
+  return toAlternativesRelatedComparison(getPosCompareUrl(slug), getPosComparison(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -95,9 +101,9 @@ const squarePage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
-    { label: "Square POS vs Clover POS", href: getPosCompareUrl("square-pos-vs-clover-pos") },
-    { label: "Toast POS vs Square POS", href: getPosCompareUrl("toast-pos-vs-square-pos") },
+    posRel("square-pos-vs-shopify-pos"),
+    posRel("square-pos-vs-clover-pos"),
+    posRel("toast-pos-vs-square-pos"),
   ],
   relatedResources: defaultRelatedResources("Square POS", getPosReviewUrl("square-pos")),
   faqItems: [
@@ -144,8 +150,8 @@ const shopifyPage: AlternativesTemplateProps = {
     { productName: "Toast POS", heading: "Best for restaurants", body: "Toast is built for restaurants. For food service that doesn't need Shopify.", reviewHref: getPosReviewUrl("toast-pos") },
   ],
   relatedComparisons: [
-    { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
-    { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+    posRel("square-pos-vs-shopify-pos"),
+    posRel("shopify-pos-vs-lightspeed-pos"),
   ],
   relatedResources: defaultRelatedResources("Shopify POS", getPosReviewUrl("shopify-pos")),
   faqItems: [
@@ -192,8 +198,8 @@ const lightspeedPage: AlternativesTemplateProps = {
     { productName: "Toast POS", heading: "Best for restaurants", body: "Toast is built for restaurants. For food service instead of retail.", reviewHref: getPosReviewUrl("toast-pos") },
   ],
   relatedComparisons: [
-    { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
-    { label: "Lightspeed POS vs Vend POS", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+    posRel("shopify-pos-vs-lightspeed-pos"),
+    posRel("lightspeed-pos-vs-vend-pos"),
   ],
   relatedResources: defaultRelatedResources("Lightspeed POS", getPosReviewUrl("lightspeed-pos")),
   faqItems: [
@@ -240,7 +246,7 @@ const cloverPage: AlternativesTemplateProps = {
     { productName: "Vend POS", heading: "Best for retail", body: "Vend (Lightspeed Retail) is retail-focused with multi-store support.", reviewHref: getPosReviewUrl("vend-pos") },
   ],
   relatedComparisons: [
-    { label: "Square POS vs Clover POS", href: getPosCompareUrl("square-pos-vs-clover-pos") },
+    posRel("square-pos-vs-clover-pos"),
   ],
   relatedResources: defaultRelatedResources("Clover POS", getPosReviewUrl("clover-pos")),
   faqItems: [
@@ -287,7 +293,7 @@ const toastPage: AlternativesTemplateProps = {
     { productName: "Shopify POS", heading: "Best for ecommerce", body: "Shopify POS unifies online and in-store. For ecommerce-first with some in-person.", reviewHref: getPosReviewUrl("shopify-pos") },
   ],
   relatedComparisons: [
-    { label: "Toast POS vs Square POS", href: getPosCompareUrl("toast-pos-vs-square-pos") },
+    posRel("toast-pos-vs-square-pos"),
   ],
   relatedResources: defaultRelatedResources("Toast POS", getPosReviewUrl("toast-pos")),
   faqItems: [
@@ -379,7 +385,7 @@ const vendPage: AlternativesTemplateProps = {
     { productName: "Toast POS", heading: "Best for restaurants", body: "Toast is built for restaurants. For food service instead of retail.", reviewHref: getPosReviewUrl("toast-pos") },
   ],
   relatedComparisons: [
-    { label: "Lightspeed POS vs Vend POS", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+    posRel("lightspeed-pos-vs-vend-pos"),
   ],
   relatedResources: defaultRelatedResources("Vend POS (Lightspeed Retail)", getPosReviewUrl("vend-pos")),
   faqItems: [

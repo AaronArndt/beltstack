@@ -3,7 +3,12 @@
  * Used by app/field-service/page.tsx.
  */
 
-import { getFieldServiceReviewUrl, getFieldServiceCompareUrl, getFieldServiceBestForUrl } from "@/lib/routes";
+import {
+  getFieldServiceReviewUrl,
+  getFieldServiceCompareUrl,
+  getFieldServiceBestForUrl,
+  getFieldServiceAlternativeUrl,
+} from "@/lib/routes";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
@@ -19,6 +24,14 @@ const LOGOS = {
   servicem8: "/Logos/servicem8.png",
   fieldedge: "/Logos/fieldedge.jpeg",
   mhelpdesk: "/Logos/mhelpdesk.png",
+  fieldpulse: "/Logos/fieldpulse.png",
+  servicetrade: "/Logos/servicetrade.jpeg",
+  "workwave-service": "/Logos/workwave.jpeg",
+  buildops: "/Logos/buildops.jpeg",
+  connecteam: "/Logos/connecteam.jpeg",
+  "oracle-field-service": "/Logos/oracle.png",
+  simpro: "/Logos/simpro.jpeg",
+  zuper: "/Logos/zuper.jpeg",
 } as const;
 
 /** Top field service picks — slugs resolve to canonical `fieldServiceBestSoftware` data */
@@ -27,7 +40,10 @@ export const FIELD_SERVICE_FEATURED_PICKS: FeaturedPickRef[] = [
   { slug: "housecall-pro" },
   { slug: "servicetitan" },
   { slug: "service-fusion" },
+  { slug: "simpro" },
   { slug: "workiz" },
+  { slug: "fieldpulse" },
+  { slug: "zuper" },
 ];
 
 /** Comparison table rows for the hub (field service tools) — canonical pick data. */
@@ -37,6 +53,10 @@ export const FIELD_SERVICE_COMPARISON_ROWS: ComparisonTableRow[] = [
     "housecall-pro",
     "servicetitan",
     "service-fusion",
+    "fieldpulse",
+    "servicetrade",
+    "workwave-service",
+    "buildops",
     "workiz",
     "kickserv",
     "servicem8",
@@ -87,6 +107,17 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     links: [
       { label: "Full rankings & picks for growing teams →", href: "/field-service/best-field-service-software" },
       { label: "Housecall Pro vs ServiceTitan →", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+      { label: "FieldPulse vs Jobber (ops-heavy trades) →", href: getFieldServiceCompareUrl("fieldpulse-vs-jobber") },
+    ],
+  },
+  {
+    title: "Commercial service, inspections, and mechanical scale",
+    body:
+      "When your revenue looks like contracts, inspection rounds, SLAs, or commercial mechanical work—not only homeowner tickets—your shortlist shifts. Documentation, customer-facing reporting, and job complexity matter as much as dispatch speed. Compare platforms on real commercial workflows, not residential demos alone.",
+    links: [
+      { label: "ServiceTrade vs ServiceTitan →", href: getFieldServiceCompareUrl("servicetrade-vs-servicetitan") },
+      { label: "BuildOps vs Service Fusion →", href: getFieldServiceCompareUrl("buildops-vs-service-fusion") },
+      { label: "Simpro vs ServiceTitan →", href: getFieldServiceCompareUrl("simpro-vs-servicetitan") },
     ],
   },
   {
@@ -162,6 +193,50 @@ export const FIELD_SERVICE_POPULAR_COMPARISONS: FieldServicePopularComparisonCar
       "Kickserv and Jobber both help contractors manage jobs and customers. Jobber is more all-in-one; Kickserv suits small service businesses that want straightforward scheduling and CRM.",
     href: getFieldServiceCompareUrl("kickserv-vs-jobber"),
   },
+  {
+    slug: "fieldpulse-vs-jobber",
+    productA: { name: "FieldPulse", logoSrc: LOGOS.fieldpulse },
+    productB: { name: "Jobber", logoSrc: LOGOS.jobber },
+    summaryParagraph:
+      "FieldPulse and Jobber both serve trade contractors with dispatch and mobile workflows. Jobber is the broader SMB default; FieldPulse leans into operational field execution for growing crews.",
+    href: getFieldServiceCompareUrl("fieldpulse-vs-jobber"),
+  },
+  {
+    slug: "servicetrade-vs-servicetitan",
+    productA: { name: "ServiceTrade", logoSrc: LOGOS.servicetrade },
+    productB: { name: "ServiceTitan", logoSrc: LOGOS.servicetitan },
+    summaryParagraph:
+      "ServiceTrade and ServiceTitan compete for serious field budgets: ServiceTitan leads many large home-service evaluations, while ServiceTrade aligns to commercial inspection and documentation-heavy service models.",
+    href: getFieldServiceCompareUrl("servicetrade-vs-servicetitan"),
+  },
+  {
+    slug: "simpro-vs-servicetitan",
+    productA: { name: "Simpro", logoSrc: LOGOS.simpro },
+    productB: { name: "ServiceTitan", logoSrc: LOGOS.servicetitan },
+    summaryParagraph:
+      "Simpro and ServiceTitan both serve trade contractors at scale: ServiceTitan is the US home-service enterprise benchmark, while Simpro emphasizes job, inventory, and project workflows across mixed work types.",
+    href: getFieldServiceCompareUrl("simpro-vs-servicetitan"),
+  },
+  {
+    slug: "zuper-vs-jobber",
+    productA: { name: "Zuper", logoSrc: LOGOS.zuper },
+    productB: { name: "Jobber", logoSrc: LOGOS.jobber },
+    summaryParagraph:
+      "Zuper and Jobber both run field operations for contractors: Jobber is the common SMB default, while Zuper fits teams that need flexible workflows and integration-heavy setups.",
+    href: getFieldServiceCompareUrl("zuper-vs-jobber"),
+  },
+];
+
+/** Cross-links for “alternatives to X” pages (hub, guides footer, compare hero). */
+export const FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS: { label: string; href: string }[] = [
+  { label: "FieldPulse", href: getFieldServiceAlternativeUrl("fieldpulse") },
+  { label: "ServiceTrade", href: getFieldServiceAlternativeUrl("servicetrade") },
+  { label: "WorkWave Service", href: getFieldServiceAlternativeUrl("workwave-service") },
+  { label: "BuildOps", href: getFieldServiceAlternativeUrl("buildops") },
+  { label: "Connecteam", href: getFieldServiceAlternativeUrl("connecteam") },
+  { label: "Oracle Field Service", href: getFieldServiceAlternativeUrl("oracle-field-service") },
+  { label: "Simpro", href: getFieldServiceAlternativeUrl("simpro") },
+  { label: "Zuper", href: getFieldServiceAlternativeUrl("zuper") },
 ];
 
 /** FAQ items for the hub. */
@@ -172,7 +247,7 @@ export const FIELD_SERVICE_FAQ_ITEMS: { q: string; a: string }[] = [
   },
   {
     q: "What software do contractors use to manage jobs?",
-    a: "Contractors often use field service software like Jobber, Housecall Pro, ServiceTitan, Service Fusion, or Workiz. These tools combine scheduling, dispatch, customer records, estimates, and invoicing so plumbers, HVAC techs, electricians, and other field teams can run jobs from one place.",
+    a: "Contractors often use field service software like Jobber, Housecall Pro, ServiceTitan, Service Fusion, Simpro, FieldPulse, Zuper, Workiz, or WorkWave Service. These tools combine scheduling, dispatch, customer records, estimates, and invoicing so plumbers, HVAC techs, electricians, and other field teams can run jobs from one place.",
   },
   {
     q: "What is the best field service software for small businesses?",
@@ -181,6 +256,10 @@ export const FIELD_SERVICE_FAQ_ITEMS: { q: string; a: string }[] = [
   {
     q: "Do field service tools include invoicing and scheduling?",
     a: "Yes. Most field service management tools include both scheduling and invoicing. You can assign jobs to technicians, track status, and send estimates and invoices from the same platform. Many also support online payments and recurring billing for maintenance contracts.",
+  },
+  {
+    q: "Where can I find alternatives to a specific field service platform?",
+    a: "BeltStack publishes dedicated alternatives pages for major FSM tools—each lists comparable products with pricing context, comparison links, and paths to full reviews. Start from the field service hub links to FieldPulse, ServiceTrade, WorkWave Service, BuildOps, Connecteam, Oracle Field Service, Simpro, or Zuper alternatives, or open the same pages from product reviews and SoftwarePick cards.",
   },
 ];
 

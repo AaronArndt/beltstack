@@ -12,6 +12,7 @@ import {
   RELATED_COMPARISONS,
   FAQ_ITEMS,
 } from "@/lib/data/fieldServiceBestSoftware";
+import { FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS } from "@/lib/data/fieldServiceHubData";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 
@@ -316,6 +317,18 @@ export default function BestFieldServiceSoftwarePage() {
               >
                 field service guides
               </Link>
+              . Replacing a specific tool? See{" "}
+              {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
+                <span key={item.href}>
+                  {i > 0 && (i === FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.length - 1 ? ", or " : ", ")}
+                  <Link
+                    href={item.href}
+                    className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  >
+                    {item.label} alternatives
+                  </Link>
+                </span>
+              ))}
               .
             </p>
             <div className="mt-4 flex flex-wrap gap-2.5">

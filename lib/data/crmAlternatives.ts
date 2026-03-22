@@ -9,6 +9,8 @@ import {
   getCrmCompareUrl,
   getCrmBestForUrl,
 } from "@/lib/routes";
+import { getCrmComparisonBySlug } from "@/lib/data/crmComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -71,6 +73,10 @@ function defaultRelatedResources(productName: string, originalReviewHref: string
   ];
 }
 
+function crmRel(slug: string) {
+  return toAlternativesRelatedComparison(getCrmCompareUrl(slug), getCrmComparisonBySlug(slug));
+}
+
 // ——— HubSpot alternatives ———
 const HUBSPOT_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise scale", description: "Maximum customization and app ecosystem for large teams.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise; AppExchange" },
@@ -111,11 +117,11 @@ const hubspotPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
-    { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-    { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
-    { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
-    { label: "Copper vs HubSpot", href: getCrmCompareUrl("copper-vs-hubspot") },
+    crmRel("hubspot-vs-salesforce"),
+    crmRel("hubspot-vs-zoho-crm"),
+    crmRel("hubspot-vs-pipedrive"),
+    crmRel("monday-crm-vs-hubspot"),
+    crmRel("copper-vs-hubspot"),
   ],
   relatedResources: defaultRelatedResources("HubSpot", getCrmReviewUrl("hubspot")),
   faqItems: [
@@ -161,10 +167,7 @@ const salesforcePage: AlternativesTemplateProps = {
     { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
     { productName: "Freshsales", heading: "Best for AI and value", body: "Freshsales adds AI and automation at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
   ],
-  relatedComparisons: [
-    { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
-    { label: "Salesforce vs Zoho CRM", href: getCrmCompareUrl("salesforce-vs-zoho-crm") },
-  ],
+  relatedComparisons: [crmRel("hubspot-vs-salesforce"), crmRel("salesforce-vs-zoho-crm")],
   relatedResources: defaultRelatedResources("Salesforce", getCrmReviewUrl("salesforce")),
   faqItems: [
     { q: "What is the best Salesforce alternative?", a: "HubSpot for SMB and free tier; Zoho CRM for value; Pipedrive for pipeline focus; Monday CRM for flexibility. Choose by team size and budget." },
@@ -210,9 +213,9 @@ const zohoCrmPage: AlternativesTemplateProps = {
     { productName: "Freshsales", heading: "Best for AI", body: "Freshsales adds AI and built-in communication at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
   ],
   relatedComparisons: [
-    { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-    { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
-    { label: "Salesforce vs Zoho CRM", href: getCrmCompareUrl("salesforce-vs-zoho-crm") },
+    crmRel("hubspot-vs-zoho-crm"),
+    crmRel("zoho-crm-vs-pipedrive"),
+    crmRel("salesforce-vs-zoho-crm"),
   ],
   relatedResources: defaultRelatedResources("Zoho CRM", getCrmReviewUrl("zoho-crm")),
   faqItems: [
@@ -259,10 +262,10 @@ const pipedrivePage: AlternativesTemplateProps = {
     { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows beyond a traditional pipeline.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
   relatedComparisons: [
-    { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
-    { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
-    { label: "Freshsales vs Pipedrive", href: getCrmCompareUrl("freshsales-vs-pipedrive") },
-    { label: "Close vs Pipedrive", href: getCrmCompareUrl("close-vs-pipedrive") },
+    crmRel("hubspot-vs-pipedrive"),
+    crmRel("zoho-crm-vs-pipedrive"),
+    crmRel("freshsales-vs-pipedrive"),
+    crmRel("close-vs-pipedrive"),
   ],
   relatedResources: defaultRelatedResources("Pipedrive", getCrmReviewUrl("pipedrive")),
   faqItems: [
@@ -309,9 +312,9 @@ const mondayCrmPage: AlternativesTemplateProps = {
     { productName: "Freshsales", heading: "Best for AI", body: "Freshsales adds AI and automation at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
   ],
   relatedComparisons: [
-    { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
-    { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
-    { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
+    crmRel("monday-crm-vs-hubspot"),
+    crmRel("hubspot-vs-salesforce"),
+    crmRel("zoho-crm-vs-pipedrive"),
   ],
   relatedResources: defaultRelatedResources("Monday CRM", getCrmReviewUrl("monday-crm")),
   faqItems: [
@@ -357,10 +360,7 @@ const freshsalesPage: AlternativesTemplateProps = {
     { productName: "Close", heading: "Best for inside sales", body: "Close bundles calling and email for inside sales.", reviewHref: getCrmReviewUrl("close") },
     { productName: "Salesforce", heading: "Best for enterprise", body: "Salesforce scales to enterprise with maximum customization.", reviewHref: getCrmReviewUrl("salesforce") },
   ],
-  relatedComparisons: [
-    { label: "Freshsales vs Pipedrive", href: getCrmCompareUrl("freshsales-vs-pipedrive") },
-    { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
-  ],
+  relatedComparisons: [crmRel("freshsales-vs-pipedrive"), crmRel("zoho-crm-vs-pipedrive")],
   relatedResources: defaultRelatedResources("Freshsales", getCrmReviewUrl("freshsales")),
   faqItems: [
     { q: "What is the best Freshsales alternative?", a: "HubSpot for free and marketing; Pipedrive for pipeline simplicity; Zoho CRM for value; Close for inside sales. Choose by need for free tier, AI, or calling." },
@@ -405,10 +405,7 @@ const copperPage: AlternativesTemplateProps = {
     { productName: "Salesforce", heading: "Best for enterprise", body: "Salesforce scales to enterprise with Google integrations.", reviewHref: getCrmReviewUrl("salesforce") },
     { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
-  relatedComparisons: [
-    { label: "Copper vs HubSpot", href: getCrmCompareUrl("copper-vs-hubspot") },
-    { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
-  ],
+  relatedComparisons: [crmRel("copper-vs-hubspot"), crmRel("hubspot-vs-salesforce")],
   relatedResources: defaultRelatedResources("Copper", getCrmReviewUrl("copper")),
   faqItems: [
     { q: "What is the best Copper alternative?", a: "HubSpot for free and marketing; Zoho CRM for value; Pipedrive for pipeline. Choose by whether you need Google-native or broader ecosystem." },
@@ -453,10 +450,7 @@ const closePage: AlternativesTemplateProps = {
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM has a free tier and full CRM.", reviewHref: getCrmReviewUrl("zoho-crm") },
     { productName: "Salesforce", heading: "Best for enterprise", body: "Salesforce scales to enterprise; add dialer via AppExchange.", reviewHref: getCrmReviewUrl("salesforce") },
   ],
-  relatedComparisons: [
-    { label: "Close vs Pipedrive", href: getCrmCompareUrl("close-vs-pipedrive") },
-    { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
-  ],
+  relatedComparisons: [crmRel("close-vs-pipedrive"), crmRel("hubspot-vs-pipedrive")],
   relatedResources: defaultRelatedResources("Close", getCrmReviewUrl("close")),
   faqItems: [
     { q: "What is the best Close alternative?", a: "Pipedrive for pipeline-only and lower cost; Freshsales for AI and dialer; HubSpot for free and marketing. Choose by need for calling vs cost." },
@@ -501,10 +495,7 @@ const keapPage: AlternativesTemplateProps = {
     { productName: "Freshsales", heading: "Best for AI and sales", body: "Freshsales adds AI to sales CRM at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
     { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
-  relatedComparisons: [
-    { label: "Keap vs HubSpot", href: getCrmCompareUrl("keap-vs-hubspot") },
-    { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-  ],
+  relatedComparisons: [crmRel("keap-vs-hubspot"), crmRel("hubspot-vs-zoho-crm")],
   relatedResources: defaultRelatedResources("Keap", getCrmReviewUrl("keap")),
   faqItems: [
     { q: "What is the best Keap alternative?", a: "HubSpot for free CRM and scale; Zoho CRM for value; Pipedrive for sales-only. Choose by need for marketing automation vs cost." },

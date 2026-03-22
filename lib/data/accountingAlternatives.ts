@@ -5,6 +5,8 @@
  */
 
 import { getAccountingReviewUrl, getAccountingCompareUrl, getAccountingBestForUrl } from "@/lib/routes";
+import { getAccountingComparisonBySlug } from "@/lib/data/accountingComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -27,6 +29,10 @@ const HOW_TO_CHOOSE: AlternativesEditorialBlock[] = [
   { heading: "Pricing and scale", body: "Free options (Wave) suit very small needs; paid tiers add users and features. Compare base price plus per-user or per-client limits before committing." },
   { heading: "Ecosystem lock-in", body: "QuickBooks and Zoho tie you to their ecosystem; Xero and FreshBooks are more standalone. Choose based on whether you want one vendor or best-of-breed." },
 ];
+
+function accRel(slug: string) {
+  return toAlternativesRelatedComparison(getAccountingCompareUrl(slug), getAccountingComparisonBySlug(slug));
+}
 
 function buildTableRows(
   originalRow: AlternativesTableRow,
@@ -95,10 +101,10 @@ const quickbooksPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "QuickBooks Online vs Xero", href: getAccountingCompareUrl("quickbooks-online-vs-xero") },
-    { label: "QuickBooks Online vs FreshBooks", href: getAccountingCompareUrl("quickbooks-online-vs-freshbooks") },
-    { label: "QuickBooks Online vs Zoho Books", href: getAccountingCompareUrl("quickbooks-online-vs-zoho-books") },
-    { label: "QuickBooks Online vs Wave", href: getAccountingCompareUrl("quickbooks-online-vs-wave") },
+    accRel("quickbooks-online-vs-xero"),
+    accRel("quickbooks-online-vs-freshbooks"),
+    accRel("quickbooks-online-vs-zoho-books"),
+    accRel("quickbooks-online-vs-wave"),
   ],
   relatedResources: defaultRelatedResources("QuickBooks Online", getAccountingReviewUrl("quickbooks-online")),
   faqItems: [
@@ -145,10 +151,10 @@ const xeroPage: AlternativesTemplateProps = {
     { productName: "Sage Accounting", heading: "Best for SMBs and compliance", body: "Sage Accounting offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero") },
   ],
   relatedComparisons: [
-    { label: "QuickBooks Online vs Xero", href: getAccountingCompareUrl("quickbooks-online-vs-xero") },
-    { label: "Xero vs FreshBooks", href: getAccountingCompareUrl("xero-vs-freshbooks") },
-    { label: "Xero vs Zoho Books", href: getAccountingCompareUrl("xero-vs-zoho-books") },
-    { label: "Sage Accounting vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
+    accRel("quickbooks-online-vs-xero"),
+    accRel("xero-vs-freshbooks"),
+    accRel("xero-vs-zoho-books"),
+    accRel("sage-accounting-vs-xero"),
   ],
   relatedResources: defaultRelatedResources("Xero", getAccountingReviewUrl("xero")),
   faqItems: [
@@ -195,11 +201,11 @@ const freshbooksPage: AlternativesTemplateProps = {
     { productName: "Kashoo", heading: "Best for simple bookkeeping", body: "Kashoo offers straightforward bookkeeping. Simpler, often cheaper option.", reviewHref: getAccountingReviewUrl("kashoo"), compareHref: getAccountingCompareUrl("kashoo-vs-freshbooks") },
   ],
   relatedComparisons: [
-    { label: "QuickBooks Online vs FreshBooks", href: getAccountingCompareUrl("quickbooks-online-vs-freshbooks") },
-    { label: "Xero vs FreshBooks", href: getAccountingCompareUrl("xero-vs-freshbooks") },
-    { label: "Wave vs FreshBooks", href: getAccountingCompareUrl("wave-vs-freshbooks") },
-    { label: "Zoho Books vs FreshBooks", href: getAccountingCompareUrl("zoho-books-vs-freshbooks") },
-    { label: "Kashoo vs FreshBooks", href: getAccountingCompareUrl("kashoo-vs-freshbooks") },
+    accRel("quickbooks-online-vs-freshbooks"),
+    accRel("xero-vs-freshbooks"),
+    accRel("wave-vs-freshbooks"),
+    accRel("zoho-books-vs-freshbooks"),
+    accRel("kashoo-vs-freshbooks"),
   ],
   relatedResources: defaultRelatedResources("FreshBooks", getAccountingReviewUrl("freshbooks")),
   faqItems: [
@@ -246,10 +252,10 @@ const zohoBooksPage: AlternativesTemplateProps = {
     { productName: "Sage Accounting", heading: "Best for SMBs and compliance", body: "Sage Accounting offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting") },
   ],
   relatedComparisons: [
-    { label: "QuickBooks Online vs Zoho Books", href: getAccountingCompareUrl("quickbooks-online-vs-zoho-books") },
-    { label: "Xero vs Zoho Books", href: getAccountingCompareUrl("xero-vs-zoho-books") },
-    { label: "Zoho Books vs FreshBooks", href: getAccountingCompareUrl("zoho-books-vs-freshbooks") },
-    { label: "Zoho Books vs Wave", href: getAccountingCompareUrl("zoho-books-vs-wave") },
+    accRel("quickbooks-online-vs-zoho-books"),
+    accRel("xero-vs-zoho-books"),
+    accRel("zoho-books-vs-freshbooks"),
+    accRel("zoho-books-vs-wave"),
   ],
   relatedResources: defaultRelatedResources("Zoho Books", getAccountingReviewUrl("zoho-books")),
   faqItems: [
@@ -296,10 +302,10 @@ const wavePage: AlternativesTemplateProps = {
     { productName: "Kashoo", heading: "Best for simple bookkeeping", body: "Kashoo is a simple paid bookkeeping option. For teams that want straightforward paid software.", reviewHref: getAccountingReviewUrl("kashoo"), compareHref: getAccountingCompareUrl("kashoo-vs-wave") },
   ],
   relatedComparisons: [
-    { label: "Wave vs QuickBooks Online", href: getAccountingCompareUrl("wave-vs-quickbooks-online") },
-    { label: "Wave vs FreshBooks", href: getAccountingCompareUrl("wave-vs-freshbooks") },
-    { label: "Zoho Books vs Wave", href: getAccountingCompareUrl("zoho-books-vs-wave") },
-    { label: "Kashoo vs Wave", href: getAccountingCompareUrl("kashoo-vs-wave") },
+    accRel("wave-vs-quickbooks-online"),
+    accRel("wave-vs-freshbooks"),
+    accRel("zoho-books-vs-wave"),
+    accRel("kashoo-vs-wave"),
   ],
   relatedResources: defaultRelatedResources("Wave", getAccountingReviewUrl("wave")),
   faqItems: [
@@ -346,9 +352,9 @@ const sagePage: AlternativesTemplateProps = {
     { productName: "Wave", heading: "Best for free accounting", body: "Wave provides free accounting and invoicing.", reviewHref: getAccountingReviewUrl("wave") },
   ],
   relatedComparisons: [
-    { label: "Sage Accounting vs QuickBooks Online", href: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online") },
-    { label: "Sage Accounting vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
-    { label: "Sage Accounting vs FreshBooks", href: getAccountingCompareUrl("sage-accounting-vs-freshbooks") },
+    accRel("sage-accounting-vs-quickbooks-online"),
+    accRel("sage-accounting-vs-xero"),
+    accRel("sage-accounting-vs-freshbooks"),
   ],
   relatedResources: defaultRelatedResources("Sage Accounting", getAccountingReviewUrl("sage-accounting")),
   faqItems: [
@@ -395,8 +401,8 @@ const odooPage: AlternativesTemplateProps = {
     { productName: "Wave", heading: "Best for free accounting", body: "Wave provides free accounting and invoicing.", reviewHref: getAccountingReviewUrl("wave") },
   ],
   relatedComparisons: [
-    { label: "Odoo Accounting vs QuickBooks Online", href: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online") },
-    { label: "Odoo Accounting vs Xero", href: getAccountingCompareUrl("odoo-accounting-vs-xero") },
+    accRel("odoo-accounting-vs-quickbooks-online"),
+    accRel("odoo-accounting-vs-xero"),
   ],
   relatedResources: defaultRelatedResources("Odoo Accounting", getAccountingReviewUrl("odoo-accounting")),
   faqItems: [
@@ -443,8 +449,8 @@ const kashooPage: AlternativesTemplateProps = {
     { productName: "Zoho Books", heading: "Best for value", body: "Zoho Books offers strong value and automation.", reviewHref: getAccountingReviewUrl("zoho-books") },
   ],
   relatedComparisons: [
-    { label: "Kashoo vs Wave", href: getAccountingCompareUrl("kashoo-vs-wave") },
-    { label: "Kashoo vs FreshBooks", href: getAccountingCompareUrl("kashoo-vs-freshbooks") },
+    accRel("kashoo-vs-wave"),
+    accRel("kashoo-vs-freshbooks"),
   ],
   relatedResources: defaultRelatedResources("Kashoo", getAccountingReviewUrl("kashoo")),
   faqItems: [

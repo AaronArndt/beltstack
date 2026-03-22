@@ -5,6 +5,8 @@
  */
 
 import { getHrReviewUrl, getHrCompareUrl, getHrBestForUrl } from "@/lib/routes";
+import { getHrComparisonBySlug } from "@/lib/data/hrComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -53,6 +55,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function hrRel(slug: string) {
+  return toAlternativesRelatedComparison(getHrCompareUrl(slug), getHrComparisonBySlug(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -106,9 +112,9 @@ const gustoPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Gusto vs BambooHR", href: getHrCompareUrl("gusto-vs-bamboohr") },
-    { label: "Rippling vs Gusto", href: getHrCompareUrl("rippling-vs-gusto") },
-    { label: "Gusto vs Rippling", href: getHrCompareUrl("gusto-vs-rippling") },
+    hrRel("gusto-vs-bamboohr"),
+    hrRel("rippling-vs-gusto"),
+    hrRel("gusto-vs-rippling"),
   ],
   relatedResources: defaultRelatedResources("Gusto", getHrReviewUrl("gusto")),
   faqItems: [
@@ -155,8 +161,8 @@ const bamboohrPage: AlternativesTemplateProps = {
     { productName: "ADP Workforce Now", heading: "Best for enterprise", body: "ADP Workforce Now is enterprise payroll and HR. For larger organizations.", reviewHref: getHrReviewUrl("adp-workforce-now") },
   ],
   relatedComparisons: [
-    { label: "Gusto vs BambooHR", href: getHrCompareUrl("gusto-vs-bamboohr") },
-    { label: "BambooHR vs Rippling", href: getHrCompareUrl("bamboohr-vs-rippling") },
+    hrRel("gusto-vs-bamboohr"),
+    hrRel("bamboohr-vs-rippling"),
   ],
   relatedResources: defaultRelatedResources("BambooHR", getHrReviewUrl("bamboohr")),
   faqItems: [
@@ -203,10 +209,10 @@ const ripplingPage: AlternativesTemplateProps = {
     { productName: "ADP Workforce Now", heading: "Best for enterprise", body: "ADP Workforce Now is enterprise payroll and HR. For larger organizations.", reviewHref: getHrReviewUrl("adp-workforce-now") },
   ],
   relatedComparisons: [
-    { label: "Rippling vs Gusto", href: getHrCompareUrl("rippling-vs-gusto") },
-    { label: "Gusto vs Rippling", href: getHrCompareUrl("gusto-vs-rippling") },
-    { label: "BambooHR vs Rippling", href: getHrCompareUrl("bamboohr-vs-rippling") },
-    { label: "Deel vs Rippling", href: getHrCompareUrl("deel-vs-rippling") },
+    hrRel("rippling-vs-gusto"),
+    hrRel("gusto-vs-rippling"),
+    hrRel("bamboohr-vs-rippling"),
+    hrRel("deel-vs-rippling"),
   ],
   relatedResources: defaultRelatedResources("Rippling", getHrReviewUrl("rippling")),
   faqItems: [
@@ -252,9 +258,7 @@ const deelPage: AlternativesTemplateProps = {
     { productName: "ADP Workforce Now", heading: "Best for enterprise", body: "ADP offers enterprise payroll and HR with global options. For larger organizations.", reviewHref: getHrReviewUrl("adp-workforce-now") },
     { productName: "Paychex", heading: "Best for full-service", body: "Paychex provides full-service payroll and HR. For teams that want more support.", reviewHref: getHrReviewUrl("paychex") },
   ],
-  relatedComparisons: [
-    { label: "Deel vs Rippling", href: getHrCompareUrl("deel-vs-rippling") },
-  ],
+  relatedComparisons: [hrRel("deel-vs-rippling")],
   relatedResources: defaultRelatedResources("Deel", getHrReviewUrl("deel")),
   faqItems: [
     { q: "What is the best Deel alternative?", a: "Rippling for HR+IT with global; Gusto for domestic; BambooHR for HRIS; ADP for enterprise." },
@@ -299,9 +303,7 @@ const adpPage: AlternativesTemplateProps = {
     { productName: "BambooHR", heading: "Best for HRIS", body: "BambooHR is best-in-class HRIS with payroll via integration. For teams that want strongest HR.", reviewHref: getHrReviewUrl("bamboohr") },
     { productName: "TriNet", heading: "Best for PEO", body: "TriNet is a PEO for mid-market. For companies that want co-employment benefits.", reviewHref: getHrReviewUrl("trinet") },
   ],
-  relatedComparisons: [
-    { label: "ADP vs Paychex", href: getHrCompareUrl("adp-vs-paychex") },
-  ],
+  relatedComparisons: [hrRel("adp-vs-paychex")],
   relatedResources: defaultRelatedResources("ADP Workforce Now", getHrReviewUrl("adp-workforce-now")),
   faqItems: [
     { q: "What is the best ADP alternative?", a: "Paychex for full-service; Rippling for modern platform; Gusto for SMB; BambooHR for HRIS; TriNet for PEO." },
@@ -346,9 +348,7 @@ const paychexPage: AlternativesTemplateProps = {
     { productName: "BambooHR", heading: "Best for HRIS", body: "BambooHR is HRIS-first with payroll via integration. For best-in-class HR.", reviewHref: getHrReviewUrl("bamboohr") },
     { productName: "Zenefits", heading: "Best for value", body: "Zenefits offers all-in-one HR at lower entry price. For cost-conscious teams.", reviewHref: getHrReviewUrl("zenefits") },
   ],
-  relatedComparisons: [
-    { label: "ADP vs Paychex", href: getHrCompareUrl("adp-vs-paychex") },
-  ],
+  relatedComparisons: [hrRel("adp-vs-paychex")],
   relatedResources: defaultRelatedResources("Paychex", getHrReviewUrl("paychex")),
   faqItems: [
     { q: "What is the best Paychex alternative?", a: "ADP for enterprise; Gusto for SMB; Rippling for modern HR+IT; BambooHR for HRIS; Zenefits for value." },
@@ -393,9 +393,7 @@ const trinetPage: AlternativesTemplateProps = {
     { productName: "Rippling", heading: "Best for HR + IT", body: "Rippling unifies HR and IT; no PEO. For companies that want one platform.", reviewHref: getHrReviewUrl("rippling") },
     { productName: "Zenefits", heading: "Best for all-in-one", body: "Zenefits offers all-in-one HR and benefits. For cost-conscious teams.", reviewHref: getHrReviewUrl("zenefits") },
   ],
-  relatedComparisons: [
-    { label: "Justworks vs TriNet", href: getHrCompareUrl("justworks-vs-trinet") },
-  ],
+  relatedComparisons: [hrRel("justworks-vs-trinet")],
   relatedResources: defaultRelatedResources("TriNet", getHrReviewUrl("trinet")),
   faqItems: [
     { q: "What is the best TriNet alternative?", a: "Justworks for PEO small business; Gusto for software-only; ADP for enterprise; Rippling for HR+IT; Zenefits for all-in-one." },
@@ -440,9 +438,7 @@ const justworksPage: AlternativesTemplateProps = {
     { productName: "Rippling", heading: "Best for HR + IT", body: "Rippling unifies HR and IT; no PEO. For growth companies.", reviewHref: getHrReviewUrl("rippling") },
     { productName: "Zenefits", heading: "Best for all-in-one", body: "Zenefits offers all-in-one HR and benefits. For cost-conscious teams.", reviewHref: getHrReviewUrl("zenefits") },
   ],
-  relatedComparisons: [
-    { label: "Justworks vs TriNet", href: getHrCompareUrl("justworks-vs-trinet") },
-  ],
+  relatedComparisons: [hrRel("justworks-vs-trinet")],
   relatedResources: defaultRelatedResources("Justworks", getHrReviewUrl("justworks")),
   faqItems: [
     { q: "What is the best Justworks alternative?", a: "TriNet for PEO mid-market; Gusto for software-only; ADP for enterprise; Rippling for HR+IT; Zenefits for all-in-one." },

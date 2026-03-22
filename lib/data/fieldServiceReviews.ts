@@ -17,6 +17,14 @@ const LOGOS = {
   servicem8: "/Logos/servicem8.png",
   fieldedge: "/Logos/fieldedge.jpeg",
   mhelpdesk: "/Logos/mhelpdesk.png",
+  fieldpulse: "/Logos/fieldpulse.png",
+  servicetrade: "/Logos/servicetrade.jpeg",
+  "workwave-service": "/Logos/workwave.jpeg",
+  buildops: "/Logos/buildops.jpeg",
+  connecteam: "/Logos/connecteam.jpeg",
+  "oracle-field-service": "/Logos/oracle.png",
+  simpro: "/Logos/simpro.jpeg",
+  zuper: "/Logos/zuper.jpeg",
 } as const;
 
 const FIELD_SERVICE_HUB = "/field-service";
@@ -1419,6 +1427,696 @@ const reviews: Record<string, FieldServiceReviewData> = {
       { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
     ],
     compareSectionTitle: "Compare mHelpDesk with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  fieldpulse: {
+    toolName: "FieldPulse",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.4",
+    startingPrice: "From ~$99/mo",
+    bestFor: "trade contractors that want dispatch, job documentation, and mobile workflows without enterprise FSM complexity",
+    visitUrl: "https://fieldpulse.com",
+    logoSrc: LOGOS.fieldpulse,
+    quickVerdict:
+      "FieldPulse is a strong mid-tier field service platform for contractors who care about dispatch boards, technician mobile experience, and tying customer and equipment context to every job—not only scheduling.",
+    quickVerdictParagraphs: [
+      "FieldPulse targets HVAC, plumbing, electrical, and similar trade businesses that have outgrown spreadsheets but do not want an oversized enterprise rollout. It combines scheduling and dispatch with job management patterns that reflect how real contractors run trucks: work orders, notes, photos, and follow-through from dispatch to invoice.",
+      "We like FieldPulse when your evaluation criteria sound like ‘can my techs run their day from the app?’ and ‘can the office see what is happening without calling the field?’ It is less about flashy homeowner marketing and more about operational control.",
+      "Compared with household names like Jobber or Housecall Pro, FieldPulse may require a sharper internal process to get value—but for the right team, that trade can be worth it.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.4", explanation: "Solid scheduling, dispatch, CRM-style customer context, and mobile workflows for trade teams." },
+      { category: "Pricing", score: "4.1", explanation: "Typically mid-tier monthly pricing; confirm modules and seats with the vendor." },
+      { category: "Ease of Use", score: "4.3", explanation: "Meant for operators who run real dispatch—not the lightest UI, but purposeful for field ops." },
+      { category: "Support", score: "4.2", explanation: "Implementation and onboarding expectations vary by account size." },
+      { category: "Integrations", score: "4.2", explanation: "Supports common accounting and payment patterns; verify your stack before you buy." },
+    ],
+    pros: [
+      "Dispatch- and technician-centric workflows for trade contractors",
+      "Customer and job history context on work orders",
+      "Mobile tools aimed at field adoption",
+      "Fits growing teams that need more than a basic calendar app",
+    ],
+    cons: [
+      "Less brand recognition than Jobber or Housecall Pro",
+      "Not the cheapest entry point for very small crews",
+      "Marketing and homeowner experience features may be lighter than home-service-first tools",
+    ],
+    bestForEditorial:
+      "FieldPulse is best for trade contractors—especially HVAC, plumbing, and electrical shops—that want structured dispatch and field documentation as the backbone of the business. It is a sensible shortlist tool when you are comparing mid-tier FSM and your pain is operations, not postcard campaigns.",
+    whoShouldAvoid:
+      "Solo operators with only a few jobs per week, or teams that primarily want review generation and homeowner marketing automation, may find simpler or more marketing-led tools a better match.",
+    pricingSummary:
+      "FieldPulse is generally sold in tiered monthly plans in the mid range for SMB FSM. Pricing scales with users, features, and sometimes vertical modules—get a written quote for your crew size.",
+    pricingTiers:
+      "Lower tiers focus on core scheduling and jobs; higher tiers add capacity, automation, and integrations. Confirm per-tech limits and onboarding costs.",
+    costVsCompetitors:
+      "FieldPulse often lands between budget tools like Workiz and premium platforms like ServiceTitan. Versus Jobber and Housecall Pro, total cost depends on user counts—compare feature bundles, not only list price.",
+    features: [],
+    keyFeatures: [
+      { name: "Scheduling and dispatch", description: "Assign jobs to techs, manage the board, and keep the office aligned with what is happening in the field." },
+      { name: "Mobile job workflows", description: "Technicians can view assignments, capture notes and photos, and progress jobs without paper packets." },
+      { name: "Customer and equipment context", description: "Tie recurring work to customer history so crews arrive with the right background." },
+      { name: "Estimates and invoicing", description: "Move work from quote to completion to billing with fewer handoffs." },
+    ],
+    integrations: ["Accounting platforms", "Payment processors"],
+    integrationsIntro:
+      "Confirm integrations for your accounting system and payment workflow—most teams need clean sync from jobs to books.",
+    contractorUse: [
+      "HVAC company coordinating multiple trucks and wanting dispatch visibility without enterprise FSM pricing.",
+      "Plumbing contractor standardizing work orders and job notes across techs.",
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "Broad all-in-one FSM for many contractor types.", logoSrc: LOGOS.jobber },
+      { name: "Housecall Pro", href: getFieldServiceReviewUrl("housecall-pro"), description: "Home-service FSM with strong customer communication.", logoSrc: LOGOS.housecallpro },
+    ],
+    faqs: [
+      { q: "Is FieldPulse good for small businesses?", a: "It can be, but it is best when you have enough job volume that dispatch and documentation matter. Very small teams may prefer a lighter tool unless they are growing fast." },
+      { q: "How does FieldPulse compare to Jobber?", a: "Jobber is the more common default generalist pick. FieldPulse can win when operational dispatch and field execution are the primary buying criteria—compare both with real workflows." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "FieldPulse vs Jobber", href: getFieldServiceCompareUrl("fieldpulse-vs-jobber") },
+      { label: "FieldPulse vs Housecall Pro", href: getFieldServiceCompareUrl("fieldpulse-vs-housecall-pro") },
+    ],
+    compareSectionTitle: "Compare FieldPulse with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  servicetrade: {
+    toolName: "ServiceTrade",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.5",
+    startingPrice: "Custom pricing",
+    bestFor: "commercial service contractors that need inspections, compliance documentation, and customer-facing reporting—not only residential truck rolls",
+    visitUrl: "https://servicetrade.com",
+    logoSrc: LOGOS.servicetrade,
+    quickVerdict:
+      "ServiceTrade is a field service platform built for commercial service workflows where documentation, inspection rounds, and contract performance matter as much as dispatch.",
+    quickVerdictParagraphs: [
+      "If your world looks like SLAs, facility managers, and recurring inspection revenue, ServiceTrade is more aligned than tools built primarily for quick residential visits. It helps teams prove work happened, share results with customers, and run operations that look closer to B2B service than consumer home service.",
+      "We recommend ServiceTrade when buyers mention compliance packets, inspection programs, or customer portals—not when the main goal is postcard marketing to homeowners.",
+      "Pricing is typically custom; expect a real sales process and implementation planning.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.6", explanation: "Strong orientation toward commercial service workflows, documentation, and customer reporting." },
+      { category: "Pricing", score: "3.9", explanation: "Custom enterprise-style pricing; not comparable to simple per-seat SMB apps." },
+      { category: "Ease of Use", score: "4.1", explanation: "Powerful but expects mature processes; not a ‘turn on in an afternoon’ product for every team." },
+      { category: "Support", score: "4.2", explanation: "Services-heavy buyers should validate onboarding and customer success expectations." },
+      { category: "Integrations", score: "4.2", explanation: "Integration needs vary widely in commercial service; validate your accounting and asset systems." },
+    ],
+    pros: [
+      "Built for commercial service and inspection-heavy models",
+      "Strong customer-facing documentation story",
+      "Fits recurring contract work—not only one-off tickets",
+    ],
+    cons: [
+      "Not aimed at tiny residential-only shops",
+      "Custom pricing and longer evaluation cycles",
+      "Heavier than tools built for simple scheduling",
+    ],
+    bestForEditorial:
+      "ServiceTrade is best for commercial service organizations—fire/life safety, commercial mechanical, facility service, and similar—where proof of service and inspection workflows are part of how you win and retain contracts.",
+    whoShouldAvoid:
+      "Owner-operators with a handful of residential jobs per week should look at mainstream SMB FSM first unless commercial contracts are already a major revenue line.",
+    pricingSummary:
+      "ServiceTrade is typically sold with custom quotes based on scope, users, and modules. Budget implementation alongside subscription costs.",
+    pricingTiers:
+      "Packaging varies by account. Ask for clear statements on user limits, inspection features, and customer portal capabilities.",
+    costVsCompetitors:
+      "Compare ServiceTrade alongside ServiceTitan and other heavy platforms in real commercial workflows—not against lightweight SMB apps on price alone.",
+    features: [],
+    keyFeatures: [
+      { name: "Inspection and service documentation", description: "Structure inspections and service events so customer reporting is consistent and auditable." },
+      { name: "Customer engagement", description: "Share results and history with customers in ways that fit B2B service relationships." },
+      { name: "Operations for recurring contracts", description: "Support ongoing programs rather than only reactive break/fix." },
+    ],
+    integrations: ["Accounting and ERP (varies)", "Customer systems (varies)"],
+    integrationsIntro:
+      "Commercial stacks vary; treat integrations as a discovery item during demos with your IT and finance stakeholders.",
+    contractorUse: [
+      "Commercial mechanical contractor running inspection routes across facilities with strict documentation requirements.",
+    ],
+    alternatives: [
+      { name: "ServiceTitan", href: getFieldServiceReviewUrl("servicetitan"), description: "Enterprise home-service FSM for large HVAC/plumbing operators.", logoSrc: LOGOS.servicetitan },
+      { name: "BuildOps", href: getFieldServiceReviewUrl("buildops"), description: "Commercial mechanical operations platform.", logoSrc: LOGOS.buildops },
+    ],
+    faqs: [
+      { q: "Is ServiceTrade only for enterprise?", a: "It is typically evaluated by organizations with commercial complexity and repeatable inspection/service programs—not casual residential use." },
+      { q: "How does ServiceTrade compare to ServiceTitan?", a: "ServiceTitan is often the default for large residential home service at scale; ServiceTrade is frequently stronger when commercial inspection and documentation workflows lead the evaluation." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "ServiceTrade vs ServiceTitan", href: getFieldServiceCompareUrl("servicetrade-vs-servicetitan") },
+    ],
+    compareSectionTitle: "Compare ServiceTrade with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  "workwave-service": {
+    toolName: "WorkWave Service",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.3",
+    startingPrice: "Custom pricing",
+    bestFor: "route-based and fleet-heavy field organizations that think in recurring stops, territories, and operational scale",
+    visitUrl: "https://www.workwave.com",
+    logoSrc: LOGOS["workwave-service"],
+    quickVerdict:
+      "WorkWave Service fits organizations where route density and recurring visits are the business model—often pest, lawn, cleaning, and similar industries—more than occasional residential service tickets.",
+    quickVerdictParagraphs: [
+      "If your operations sound like ‘how many stops per tech per day’ and ‘how do we reduce drive time,’ WorkWave is in the right category. It is built for organizations that coordinate lots of field activity, not only a simple job calendar.",
+      "Compared with general contractor FSM like Jobber, WorkWave is a different buying center: more operational scale, more customization, and typically custom pricing.",
+      "Small micro-businesses may find it heavy—evaluate honestly against your route volume and back-office needs.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.4", explanation: "Strong fit for route-oriented operations and fleet coordination when properly implemented." },
+      { category: "Pricing", score: "3.9", explanation: "Custom pricing; benchmark total cost including rollout." },
+      { category: "Ease of Use", score: "4.0", explanation: "Powerful, but not the lightest onboarding path for tiny teams." },
+      { category: "Support", score: "4.1", explanation: "Depends on segment and services package—validate for your industry." },
+      { category: "Integrations", score: "4.1", explanation: "Integrations should be validated for payroll, accounting, and fleet needs." },
+    ],
+    pros: [
+      "Aligned to high-volume route and recurring-stop operations",
+      "Useful when territories and fleet coordination matter",
+      "Pairs with WorkWave’s broader ecosystem for scaled field businesses",
+    ],
+    cons: [
+      "Not the simplest SMB entry point",
+      "Less ideal for low-volume general contracting workflows",
+      "Requires operational maturity to justify cost",
+    ],
+    bestForEditorial:
+      "WorkWave Service is best for route-heavy field businesses that need to run dense schedules and coordinate office-to-field operations at scale—especially when recurring visits are core to revenue.",
+    whoShouldAvoid:
+      "Solo contractors and tiny crews with only a few weekly jobs should usually start with lighter FSM unless route complexity is already painful.",
+    pricingSummary:
+      "WorkWave Service is typically custom-priced based on users, routes, and modules. Ask for an all-in estimate including implementation.",
+    pricingTiers:
+      "Packaging varies. Clarify per-route or per-tech assumptions and what is included in onboarding.",
+    costVsCompetitors:
+      "Compare WorkWave against other route-centric platforms and against Jobber-like generalist FSM by modeling a real week of routes—not feature lists alone.",
+    features: [],
+    keyFeatures: [
+      { name: "Route-oriented scheduling", description: "Plan and adjust high-volume schedules with operational realities in mind." },
+      { name: "Field coordination", description: "Keep back office and technicians aligned across many stops." },
+      { name: "Business operations", description: "Support the workflows that come with scaled field organizations." },
+    ],
+    integrations: ["Accounting", "Payments", "Industry-specific tools (varies)"],
+    integrationsIntro:
+      "Validate integrations for the systems you already run—route-heavy businesses often have more complex stacks.",
+    contractorUse: [
+      "Landscaping or route-maintenance business optimizing recurring visits across territories.",
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "Flexible contractor FSM for many trades.", logoSrc: LOGOS.jobber },
+      { name: "Workiz", href: getFieldServiceReviewUrl("workiz"), description: "Affordable FSM for smaller field teams.", logoSrc: LOGOS.workiz },
+    ],
+    faqs: [
+      { q: "Is WorkWave Service only for pest control?", a: "Pest and lawn are common fits, but the real criterion is route density and recurring stops—not a specific trade label." },
+      { q: "WorkWave Service vs Jobber—which is easier?", a: "Jobber is usually easier for typical SMB contractor workflows. WorkWave makes sense when route operations are already complex enough to justify custom implementation." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [{ label: "WorkWave Service vs Jobber", href: getFieldServiceCompareUrl("workwave-service-vs-jobber") }],
+    compareSectionTitle: "Compare WorkWave Service with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  buildops: {
+    toolName: "BuildOps",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.4",
+    startingPrice: "Custom pricing",
+    bestFor: "commercial mechanical and specialty contractors that need project-aware field operations—not only residential break/fix",
+    visitUrl: "https://buildops.com",
+    logoSrc: LOGOS.buildops,
+    quickVerdict:
+      "BuildOps is an operations platform for commercial mechanical contractors and similar trades where jobs, change orders, and field execution must align with larger operational and financial visibility.",
+    quickVerdictParagraphs: [
+      "BuildOps shows up when teams outgrow ‘ticket in, ticket out’ tools but are not a clean fit for pure residential FSM either. It is aimed at organizations where commercial workflows, coordination across crews, and job complexity are normal.",
+      "Expect enterprise-style evaluation: demos, scoping, integrations, and training. This is not a weekend self-serve purchase for most buyers.",
+      "Compare it alongside ServiceTitan and other heavy platforms using real job types from your business—not marketing screenshots.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.5", explanation: "Strong orientation toward commercial mechanical operations and complex job execution." },
+      { category: "Pricing", score: "3.8", explanation: "Custom pricing; oriented to larger contractors with implementation budgets." },
+      { category: "Ease of Use", score: "4.0", explanation: "Powerful; expects mature processes and admin ownership." },
+      { category: "Support", score: "4.1", explanation: "Validate services and onboarding for your rollout size." },
+      { category: "Integrations", score: "4.2", explanation: "Critical for ERP/accounting and project systems in commercial work—confirm early." },
+    ],
+    pros: [
+      "Built for commercial mechanical and construction-adjacent operations",
+      "Field execution tied to operational visibility",
+      "Strong fit when change orders and job complexity are daily reality",
+    ],
+    cons: [
+      "Not for small residential-only operators",
+      "Heavy implementation expectations",
+      "Requires organizational maturity and ownership",
+    ],
+    bestForEditorial:
+      "BuildOps is best for commercial mechanical contractors and large specialty service departments that need to coordinate complex work across the business—not for owner-operators seeking a lightweight scheduling app.",
+    whoShouldAvoid:
+      "Small home service businesses with a few techs and simple jobs will usually get value faster from mainstream SMB FSM like Jobber or Housecall Pro.",
+    pricingSummary:
+      "BuildOps uses custom enterprise-style pricing. Treat implementation, integrations, and training as part of TCO.",
+    pricingTiers:
+      "Packaging is account-based. Ask for clarity on modules, user limits, and ongoing support.",
+    costVsCompetitors:
+      "Compare BuildOps with ServiceTitan and Service Fusion in real workflows: residential share vs commercial share, job complexity, and integration needs.",
+    features: [],
+    keyFeatures: [
+      { name: "Operations for complex jobs", description: "Run field work with the structure commercial mechanical contractors need." },
+      { name: "Coordination across teams", description: "Align office and field when multiple crafts and stakeholders are involved." },
+      { name: "Visibility into execution", description: "Reduce gaps between what happened on site and what the business can bill and report." },
+    ],
+    integrations: ["ERP/accounting (varies)", "Project and financial systems (varies)"],
+    integrationsIntro:
+      "Commercial mechanical stacks are integration-heavy—bring your IT and finance stakeholders into evaluation early.",
+    contractorUse: [
+      "Mechanical contractor coordinating commercial service and project work with strict operational standards.",
+    ],
+    alternatives: [
+      { name: "ServiceTitan", href: getFieldServiceReviewUrl("servicetitan"), description: "Enterprise FSM for large home service operators.", logoSrc: LOGOS.servicetitan },
+      { name: "Service Fusion", href: getFieldServiceReviewUrl("service-fusion"), description: "Mid-market HVAC/plumbing FSM with approachable pricing.", logoSrc: LOGOS.servicefusion },
+      { name: "Simpro", href: getFieldServiceReviewUrl("simpro"), description: "Trade operations platform for jobs, inventory, and field execution.", logoSrc: LOGOS.simpro },
+    ],
+    faqs: [
+      { q: "Is BuildOps the same as residential FSM?", a: "Not exactly—it targets commercial mechanical and complex operations. Residential-only shops usually fit better elsewhere." },
+      { q: "BuildOps vs ServiceTitan?", a: "ServiceTitan is often the default for large residential home service. BuildOps is frequently stronger when commercial mechanical workflows and job complexity lead the evaluation." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "BuildOps vs ServiceTitan", href: getFieldServiceCompareUrl("buildops-vs-servicetitan") },
+      { label: "BuildOps vs Service Fusion", href: getFieldServiceCompareUrl("buildops-vs-service-fusion") },
+      { label: "BuildOps vs Simpro", href: getFieldServiceCompareUrl("buildops-vs-simpro") },
+    ],
+    compareSectionTitle: "Compare BuildOps with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  connecteam: {
+    toolName: "Connecteam",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.3",
+    startingPrice: "From ~$29/mo (varies by plan)",
+    bestFor: "deskless teams that need scheduling, time tracking, forms, and internal communication—often alongside a dedicated FSM for full job-to-cash workflows",
+    visitUrl: "https://connecteam.com",
+    logoSrc: LOGOS.connecteam,
+    quickVerdict:
+      "Connecteam is a strong workforce operations layer for field and deskless teams. It is not a full replacement for contractor FSM like Jobber on its own—pair it when your bottleneck is labor coordination, compliance-friendly time tracking, and team communication.",
+    quickVerdictParagraphs: [
+      "Connecteam wins when you need employees to actually use mobile workflows: clock-ins, checklists, announcements, and training—not only a calendar of jobs.",
+      "If you still need quotes, dispatch depth, invoicing, and customer portals, plan for either a second tool or choose a dedicated FSM instead.",
+      "Pricing can scale with headcount and modules—model total software spend before you assume it is cheaper than all-in-one FSM.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.2", explanation: "Strong workforce scheduling, time tracking, forms, and communication—not full FSM depth." },
+      { category: "Pricing", score: "4.3", explanation: "Accessible tiers; verify costs as you add modules and seats." },
+      { category: "Ease of Use", score: "4.4", explanation: "Mobile-first; adoption is often easier than heavy FSM for pure workforce needs." },
+      { category: "Support", score: "4.1", explanation: "Varies by plan—confirm onboarding for larger rollouts." },
+      { category: "Integrations", score: "4.0", explanation: "Integrations exist; confirm your accounting/FSM pairing early." },
+    ],
+    pros: [
+      "Excellent for deskless workforce coordination",
+      "Time clocks, forms, and checklists techs will actually use",
+      "Internal comms and training in one employee app",
+    ],
+    cons: [
+      "Not a complete contractor FSM for quotes through payment",
+      "Pairing with another tool adds integration overhead",
+      "Module creep can raise TCO",
+    ],
+    bestForEditorial:
+      "Best for contractors and service orgs where workforce operations—shifts, time tracking, and internal communication—are the primary pain, and where you will either keep a separate FSM or accept a two-tool stack.",
+    whoShouldAvoid:
+      "Teams that need one system for estimates, dispatch, invoicing, and customer management should prioritize Jobber-class FSM first—Connecteam is the wrong sole purchase for that outcome.",
+    pricingSummary:
+      "Connecteam offers free and paid tiers; paid plans scale with features and users. Compare all-in pricing if you also pay for FSM software.",
+    pricingTiers:
+      "Tiered by features and headcount—confirm forms, time tracking, and scheduling limits on the plan you evaluate.",
+    costVsCompetitors:
+      "Compare against Zuper or Jobber when you need full FSM; compare against pure time-tracking tools when workforce is the only gap.",
+    features: [],
+    keyFeatures: [
+      { name: "Shift & schedule management", description: "Plan coverage and communicate changes to field teams fast." },
+      { name: "Time tracking & attendance", description: "Clock-ins and accountability for distributed crews." },
+      { name: "Forms & checklists", description: "Standardize quality and safety workflows on mobile." },
+    ],
+    integrations: ["Accounting and FSM tools (varies)", "Payroll (varies)"],
+    integrationsIntro:
+      "If you pair Connecteam with an FSM, map the handoff between workforce data and job billing before rollout.",
+    contractorUse: [
+      "Cleaning and field services with large hourly teams needing time and attendance rigor.",
+      "Trade contractors that already have invoicing solved but struggle with crew coordination.",
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "All-in-one contractor FSM for quotes through payment.", logoSrc: LOGOS.jobber },
+      { name: "Zuper", href: getFieldServiceReviewUrl("zuper"), description: "Flexible modern FSM for configurable field workflows.", logoSrc: LOGOS.zuper },
+    ],
+    faqs: [
+      { q: "Can Connecteam replace Jobber?", a: "Usually not for full FSM. Use Connecteam for workforce operations and Jobber (or similar) for job lifecycle workflows—or pick one primary system based on your biggest gap." },
+      { q: "Connecteam vs Zuper?", a: "Zuper is FSM-first; Connecteam is workforce-first. Choose based on whether jobs/invoicing or labor coordination is the bottleneck." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+    ],
+    compareSectionTitle: "Compare Connecteam with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  "oracle-field-service": {
+    toolName: "Oracle Field Service",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.4",
+    startingPrice: "Custom pricing",
+    bestFor: "global enterprises that need enterprise field service integrated with Oracle cloud, asset management, and complex SLAs—not typical SMB contractors",
+    visitUrl: "https://www.oracle.com/industries/field-service-management/",
+    logoSrc: LOGOS["oracle-field-service"],
+    quickVerdict:
+      "Oracle Field Service is enterprise-grade scheduling and field execution software for organizations that already think in Oracle cloud roadmaps, ERP integration, and global SLAs. It is not the right shortlist for local contractor shops comparing Jobber or Housecall Pro.",
+    quickVerdictParagraphs: [
+      "Expect IT-led evaluation: security, integration architecture, data residency, and multi-country rollouts matter as much as technician UX.",
+      "Compared to contractor-first platforms, Oracle’s strength is breadth and governance across large field organizations—not fast SMB onboarding.",
+      "If you are a home service operator, you will usually get value faster from contractor FSM leaders unless Oracle is already your corporate standard.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.6", explanation: "Deep enterprise field capabilities when fully deployed with the broader Oracle stack." },
+      { category: "Pricing", score: "3.5", explanation: "Enterprise procurement; not comparable to SMB per-seat tiers." },
+      { category: "Ease of Use", score: "3.8", explanation: "Powerful; expects mature processes and admin governance." },
+      { category: "Support", score: "4.2", explanation: "Enterprise support models—validate SLAs for your regions." },
+      { category: "Integrations", score: "4.7", explanation: "Core value is integration with Oracle and enterprise systems." },
+    ],
+    pros: [
+      "Built for enterprise scale, SLAs, and complex scheduling constraints",
+      "Strong fit when Oracle cloud footprint already exists",
+      "Asset-centric service models benefit from enterprise integration patterns",
+    ],
+    cons: [
+      "Not accessible for typical SMB contractor buying cycles",
+      "Long implementations vs SMB SaaS",
+      "Overkill when you only need straightforward contractor FSM",
+    ],
+    bestForEditorial:
+      "Best for multinational organizations and capital-intensive industries where field service is part of a broader digital transformation—not for owner-operators choosing software in a weekend.",
+    whoShouldAvoid:
+      "Small contractors and local service businesses should compare ServiceTitan, Simpro, Jobber, or similar contractor-first tools instead.",
+    pricingSummary:
+      "Oracle Field Service is sold with custom enterprise pricing. Budget implementation, integrations, and ongoing platform governance.",
+    pricingTiers:
+      "Account-based packaging—negotiate modules, regions, and service entitlements with Oracle and implementation partners.",
+    costVsCompetitors:
+      "Compare against ServiceTitan only at similar operational scale; compare against ServiceTrade or Simpro when trade operations depth matters without full ERP programs.",
+    features: [],
+    keyFeatures: [
+      { name: "Enterprise scheduling & dispatch", description: "Handle complex constraints across large field organizations." },
+      { name: "Integration with Oracle ecosystem", description: "Align field execution with finance and asset data at enterprise depth." },
+      { name: "Governance & global rollout", description: "Support multi-country operations with IT-led controls." },
+    ],
+    integrations: ["Oracle Cloud applications", "ERP and asset systems (enterprise)"],
+    integrationsIntro:
+      "Bring IT, finance, and operations stakeholders early—this is a platform decision, not a single-team app purchase.",
+    contractorUse: [
+      "Enterprise service divisions where Oracle is already the corporate standard and field must align to global systems.",
+    ],
+    alternatives: [
+      { name: "ServiceTitan", href: getFieldServiceReviewUrl("servicetitan"), description: "Enterprise contractor FSM for large home service operators.", logoSrc: LOGOS.servicetitan },
+      { name: "Simpro", href: getFieldServiceReviewUrl("simpro"), description: "Trade operations platform for jobs and inventory.", logoSrc: LOGOS.simpro },
+    ],
+    faqs: [
+      { q: "Oracle Field Service vs ServiceTitan?", a: "ServiceTitan is contractor-operations-led for home service scale. Oracle Field Service is enterprise IT-led for global field programs—different buyers and budgets." },
+      { q: "Is Oracle Field Service for small businesses?", a: "Generally no—SMB contractors should look at mainstream FSM tools with faster onboarding and clearer pricing." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "Oracle Field Service vs ServiceTitan", href: getFieldServiceCompareUrl("oracle-field-service-vs-servicetitan") },
+    ],
+    compareSectionTitle: "Compare Oracle Field Service with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  simpro: {
+    toolName: "Simpro",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.5",
+    startingPrice: "Custom pricing",
+    bestFor: "trade contractors that need jobs, quotes, service, projects, and inventory tied together—often HVAC, plumbing, electrical, and commercial-heavy portfolios",
+    visitUrl: "https://www.simprogroup.com",
+    logoSrc: LOGOS.simpro,
+    quickVerdict:
+      "Simpro is a serious trade operations platform—not a lightweight scheduling app. Teams choose it when field work connects tightly to quoting, inventory, purchasing, and multi-stage jobs, and when they are ready for demos, implementation, and admin ownership.",
+    quickVerdictParagraphs: [
+      "Simpro competes in the same weight class as ServiceTitan and Service Fusion for many trade businesses, with particular strength when inventory and project workflows matter as much as dispatch.",
+      "Expect custom pricing and a real rollout plan. The payoff is operational visibility—if your team will maintain data discipline.",
+      "Compare it using your messiest jobs: change orders, materials, recurring service, and commercial tickets—not happy-path demos alone.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.6", explanation: "Strong job, service, and inventory workflows for trade contractors at scale." },
+      { category: "Pricing", score: "3.9", explanation: "Custom pricing—budget implementation and integrations." },
+      { category: "Ease of Use", score: "4.1", explanation: "Powerful; rewards mature processes and admin ownership." },
+      { category: "Support", score: "4.2", explanation: "Partner ecosystems vary by region—validate local implementation support." },
+      { category: "Integrations", score: "4.3", explanation: "Accounting and ecosystem integrations matter—confirm early with finance." },
+    ],
+    pros: [
+      "Deep trade workflows across jobs, projects, and service",
+      "Inventory and purchasing visibility for materials-heavy work",
+      "Strong fit for mixed commercial and residential portfolios",
+    ],
+    cons: [
+      "Not a quick SMB impulse purchase",
+      "Requires organizational maturity to get value",
+      "Regional packaging and partners vary",
+    ],
+    bestForEditorial:
+      "Best for growing trade contractors that outgrew spreadsheets and lighter FSM, especially when inventory and staged work are central to profitability.",
+    whoShouldAvoid:
+      "Solo operators and tiny teams with simple residential tickets may get faster ROI from Jobber or Housecall Pro.",
+    pricingSummary:
+      "Simpro uses custom quotes. Model users, modules, implementation, and integrations as one TCO conversation.",
+    pricingTiers:
+      "Packaging is account-based—ask for clarity on inventory, projects, mobile limits, and regional services.",
+    costVsCompetitors:
+      "Compare Simpro with ServiceTitan and Service Fusion on real workflows; compare with BuildOps when commercial mechanical complexity dominates.",
+    features: [],
+    keyFeatures: [
+      { name: "Jobs & projects", description: "Run service and install work with operational visibility from quote to completion." },
+      { name: "Inventory & purchasing", description: "Tie materials to jobs to protect margin." },
+      { name: "Field execution", description: "Mobile workflows aligned to how techs actually work on site." },
+    ],
+    integrations: ["Accounting (Xero, QuickBooks, etc.—varies)", "Suppliers and vendor workflows (varies)"],
+    integrationsIntro:
+      "Inventory and purchasing integrations are often evaluation-critical—bring finance into demos early.",
+    contractorUse: [
+      "HVAC/plumbing/electrical contractors with materials-heavy jobs and recurring service.",
+      "Commercial service teams that need structured job files and operational reporting.",
+    ],
+    alternatives: [
+      { name: "ServiceTitan", href: getFieldServiceReviewUrl("servicetitan"), description: "Enterprise home-service FSM for large operators.", logoSrc: LOGOS.servicetitan },
+      { name: "Service Fusion", href: getFieldServiceReviewUrl("service-fusion"), description: "Mid-market HVAC/plumbing FSM with approachable pricing.", logoSrc: LOGOS.servicefusion },
+    ],
+    faqs: [
+      { q: "Simpro vs ServiceTitan?", a: "ServiceTitan is a common US home-service enterprise pick. Simpro is a strong comparison when inventory and project workflows are as important as dispatch—especially across mixed work types." },
+      { q: "Simpro vs Service Fusion?", a: "Service Fusion often wins on mid-market value and simpler buying. Simpro can win when operational depth and inventory scenarios dominate." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "Simpro vs ServiceTitan", href: getFieldServiceCompareUrl("simpro-vs-servicetitan") },
+      { label: "Simpro vs Service Fusion", href: getFieldServiceCompareUrl("simpro-vs-service-fusion") },
+      { label: "BuildOps vs Simpro", href: getFieldServiceCompareUrl("buildops-vs-simpro") },
+    ],
+    compareSectionTitle: "Compare Simpro with other field service software",
+    bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
+    compareHubHref: FIELD_SERVICE_COMPARE_HUB,
+    compareHubLabel: "Compare field service software",
+    bestRoundupLabel: "Best field service management software (2026) — full roundup",
+    bestForSectionTitle: "Best field service software for different use cases",
+    bestForSectionSub: "Find FSM tools by trade and scenario.",
+    scenarioLinks: FIELD_SERVICE_SCENARIO_LINKS,
+    guideHubHref: FIELD_SERVICE_GUIDES_HUB,
+    guideHubLabel: "Field service guides",
+    relatedReading: [
+      { label: "Field service software hub", href: FIELD_SERVICE_HUB },
+      { label: "Best field service management software", href: FIELD_SERVICE_BEST_SOFTWARE },
+      { label: "Compare field service software", href: FIELD_SERVICE_COMPARE_HUB },
+      { label: "Field service guides", href: FIELD_SERVICE_GUIDES_HUB },
+    ],
+  },
+
+  zuper: {
+    toolName: "Zuper",
+    category: "Field service management",
+    categoryHref: FIELD_SERVICE_HUB,
+    rating: "4.4",
+    startingPrice: "Custom / tiered (verify)",
+    bestFor: "service businesses that want configurable field workflows, modern mobile UX, and integration flexibility—especially when your stack already includes CRM or accounting systems",
+    visitUrl: "https://www.zuper.co",
+    logoSrc: LOGOS.zuper,
+    quickVerdict:
+      "Zuper is a flexible field service platform for teams that want automation-friendly workflows and integrations without legacy FSM baggage. It competes with Jobber when customization matters—but Jobber still wins many SMB evaluations on simplicity and time-to-value.",
+    quickVerdictParagraphs: [
+      "Zuper makes sense when your requirements look like rules, integrations, and bespoke field flows—not only a default contractor template.",
+      "If your team does not want to own configuration and admin, a more opinionated SMB FSM may be easier to run day to day.",
+      "Pricing is often quote-based—compare totals including implementation and integrations, not headline tiers alone.",
+    ],
+    ratingBreakdown: [
+      { category: "Features", score: "4.4", explanation: "Configurable workflows and field execution with integration-forward design." },
+      { category: "Pricing", score: "3.9", explanation: "Often quote-based—clarify modules and seats for your scenario." },
+      { category: "Ease of Use", score: "4.2", explanation: "Modern UX; configuration depth can add admin work." },
+      { category: "Support", score: "4.1", explanation: "Validate onboarding for your integration scope." },
+      { category: "Integrations", score: "4.4", explanation: "Positioning emphasizes connecting to your existing stack." },
+    ],
+    pros: [
+      "Flexible workflows and automation-friendly design",
+      "Modern mobile experience for technicians",
+      "Strong when integrations lead the evaluation",
+    ],
+    cons: [
+      "Smaller brand footprint than Jobber in some markets",
+      "May require more admin ownership than templated SMB FSM",
+      "Pricing can be harder to benchmark without a quote",
+    ],
+    bestForEditorial:
+      "Best for teams that have outgrown spreadsheets and need a field layer that can adapt—especially when CRM, ERP, or custom processes are non-negotiable.",
+    whoShouldAvoid:
+      "Owner-operators who want the fastest, simplest contractor setup may prefer Jobber or Housecall Pro.",
+    pricingSummary:
+      "Zuper typically uses tiered or custom pricing depending on modules. Request a quote aligned to integrations and crew size.",
+    pricingTiers:
+      "Confirm what is included for dispatch, recurring work, mobile, and automations on the tier you evaluate.",
+    costVsCompetitors:
+      "Compare against Jobber for simplicity and FieldPulse for ops-heavy trade workflows; compare against Connecteam if your gap is workforce coordination rather than FSM.",
+    features: [],
+    keyFeatures: [
+      { name: "Configurable field workflows", description: "Adapt dispatch and job execution to how your business actually runs." },
+      { name: "Integrations", description: "Connect field operations to CRM, accounting, and internal systems." },
+      { name: "Technician mobile", description: "Keep techs productive with modern mobile workflows." },
+    ],
+    integrations: ["CRM and ERP connectors (varies)", "Accounting tools (varies)"],
+    integrationsIntro:
+      "Bring a clear integration map to demos—Zuper’s value often multiplies when the stack is well-defined.",
+    contractorUse: [
+      "Trade contractors integrating field ops with a defined CRM or accounting hub.",
+      "Multi-location service orgs that need consistent workflows across teams.",
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "Balanced SMB FSM for many contractors.", logoSrc: LOGOS.jobber },
+      { name: "FieldPulse", href: getFieldServiceReviewUrl("fieldpulse"), description: "Ops-forward FSM for growing trade crews.", logoSrc: LOGOS.fieldpulse },
+    ],
+    faqs: [
+      { q: "Zuper vs Jobber?", a: "Jobber is usually easier to adopt for standard contractor workflows. Zuper can win when customization and integrations are primary requirements." },
+      { q: "Is Zuper good for small businesses?", a: "It can be—especially if you will invest in configuration. If you want the simplest path, compare Jobber and Housecall Pro first." },
+    ],
+    methodology: FIELD_SERVICE_METHODOLOGY,
+    compareLinks: [
+      { label: "Zuper vs Jobber", href: getFieldServiceCompareUrl("zuper-vs-jobber") },
+    ],
+    compareSectionTitle: "Compare Zuper with other field service software",
     bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
     compareHubHref: FIELD_SERVICE_COMPARE_HUB,
     compareHubLabel: "Compare field service software",

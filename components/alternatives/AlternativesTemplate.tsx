@@ -55,6 +55,17 @@ export type AlternativesDetailBlock = {
 
 export type AlternativesLink = { label: string; href: string };
 
+/** Related comparisons grid — hub-style cards (logos + teaser), same pattern as field-service “Popular comparisons”. */
+export type AlternativesRelatedComparison = {
+  href: string;
+  /** e.g. "Jobber vs Housecall Pro" */
+  label: string;
+  /** Short teaser under the title; truncated in UI */
+  summary?: string;
+  productA?: { logoSrc?: string };
+  productB?: { logoSrc?: string };
+};
+
 export type AlternativesFaqItem = { q: string; a: string };
 
 export type AlternativesTemplateProps = {
@@ -71,7 +82,7 @@ export type AlternativesTemplateProps = {
   comparisonTableRows: AlternativesTableRow[];
   detailedAlternatives: AlternativesDetailBlock[];
   howToChoose: AlternativesEditorialBlock[];
-  relatedComparisons: AlternativesLink[];
+  relatedComparisons: AlternativesRelatedComparison[];
   relatedResources: AlternativesLink[];
   faqItems: AlternativesFaqItem[];
   /** Optional: show payroll types column in comparison table */
@@ -79,6 +90,9 @@ export type AlternativesTemplateProps = {
   /** When set, “Top alternatives” uses canonical SoftwarePickCard data from the registry (with `bestFor` as badge override); missing slugs fall back to compact cards. */
   softwarePickCategory?: SoftwarePickCategory;
 };
+
+const DEFAULT_RELATED_COMPARISON_SUMMARY =
+  "Side-by-side features, pricing, and recommendations to help you choose the right fit.";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -394,24 +408,59 @@ export function AlternativesTemplate({
         </section>
 
         {/* ——— 8) Related comparisons ——— */}
-        <section className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
-              Related comparisons
-            </SectionTitle>
-            <div className="mt-4 flex flex-wrap gap-2.5">
-              {relatedComparisons.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-                >
-                  {link.label}
-                </Link>
-              ))}
+        {relatedComparisons.length > 0 && (
+          <section className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
+                Related comparisons
+              </SectionTitle>
+              <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {relatedComparisons.map((item) => {
+                  const rawSummary = item.summary ?? DEFAULT_RELATED_COMPARISON_SUMMARY;
+                  const summary =
+                    rawSummary.length > 140 ? `${rawSummary.slice(0, 140).trim()}…` : rawSummary;
+                  const showLogoRow = Boolean(item.productA?.logoSrc && item.productB?.logoSrc);
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    >
+                      {showLogoRow && (
+                        <div className="flex items-center gap-3">
+                          <img
+                            src={item.productA!.logoSrc}
+                            alt=""
+                            className="h-10 w-auto max-w-[80px] object-contain object-left"
+                          />
+                          <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>
+                            vs
+                          </span>
+                          <img
+                            src={item.productB!.logoSrc}
+                            alt=""
+                            className="h-10 w-auto max-w-[80px] object-contain object-left"
+                          />
+                        </div>
+                      )}
+                      <h3
+                        className={`text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981] ${
+                          showLogoRow ? "mt-3" : ""
+                        }`}
+                      >
+                        {item.label}
+                      </h3>
+                      <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">{summary}</p>
+                      <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                        Compare →
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* ——— 9) Related resources ——— */}
         <section className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">

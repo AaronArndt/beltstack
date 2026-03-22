@@ -16,6 +16,7 @@ import {
   FIELD_SERVICE_FAQ_ITEMS,
   FIELD_SERVICE_METHODOLOGY,
   FIELD_SERVICE_USE_CASE_EDITORIAL,
+  FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS,
 } from "@/lib/data/fieldServiceHubData";
 import { FIELD_SERVICE_GUIDES } from "@/lib/data/fieldServiceGuides";
 // ——— Key takeaways ———
@@ -226,6 +227,19 @@ function FieldServiceHowToChooseSection() {
           </li>
         </ul>
       </div>
+      <p className="mt-6 text-sm text-[#6E6E6E] max-w-3xl leading-relaxed">
+        <span className="font-semibold text-[#1A2D48]">Alternatives guides: </span>
+        If you are evaluating a specific vendor, see substitutes and comparison links for{" "}
+        {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
+          <span key={item.href}>
+            {i > 0 && ", "}
+            <Link href={item.href} className={linkGreen}>
+              {item.label}
+            </Link>
+          </span>
+        ))}
+        .
+      </p>
     </>
   );
 }
@@ -258,6 +272,16 @@ function FieldServiceGuidesSection() {
           <Link href="/field-service/compare" className={linkGreen}>
             Comparisons
           </Link>
+          {" · "}
+          <span className="text-[#6E6E6E]">Alternatives: </span>
+          {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
+            <span key={item.href}>
+              {i > 0 && " · "}
+              <Link href={item.href} className={linkGreen}>
+                {item.label}
+              </Link>
+            </span>
+          ))}
         </>
       }
     />

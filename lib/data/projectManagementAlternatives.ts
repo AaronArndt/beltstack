@@ -5,6 +5,8 @@
  */
 
 import { getProjectManagementReviewUrl, getProjectManagementCompareUrl, getProjectManagementBestForUrl } from "@/lib/routes";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
+import { getProjectManagementComparison } from "@/lib/data/projectManagementComparisons";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -42,6 +44,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function pmRel(slug: string) {
+  return toAlternativesRelatedComparison(getProjectManagementCompareUrl(slug), getProjectManagementComparison(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -95,8 +101,8 @@ const asanaPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
-    { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
+    pmRel("asana-vs-clickup"),
+    pmRel("asana-vs-monday"),
   ],
   relatedResources: defaultRelatedResources("Asana", getProjectManagementReviewUrl("asana")),
   faqItems: [
@@ -143,8 +149,8 @@ const clickupPage: AlternativesTemplateProps = {
     { productName: "Wrike", heading: "Best for enterprise", body: "Wrike focuses on portfolios and dependencies. For larger teams that need enterprise depth.", reviewHref: getProjectManagementReviewUrl("wrike") },
   ],
   relatedComparisons: [
-    { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
-    { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
+    pmRel("asana-vs-clickup"),
+    pmRel("clickup-vs-trello"),
   ],
   relatedResources: defaultRelatedResources("ClickUp", getProjectManagementReviewUrl("clickup")),
   faqItems: [
@@ -191,8 +197,8 @@ const mondayPage: AlternativesTemplateProps = {
     { productName: "Notion", heading: "Best for docs + projects", body: "Notion combines docs, databases, and task views. Docs-first alternative to Monday.", reviewHref: getProjectManagementReviewUrl("notion") },
   ],
   relatedComparisons: [
-    { label: "Asana vs Monday", href: getProjectManagementCompareUrl("asana-vs-monday") },
-    { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
+    pmRel("asana-vs-monday"),
+    pmRel("monday-vs-wrike"),
   ],
   relatedResources: defaultRelatedResources("Monday", getProjectManagementReviewUrl("monday")),
   faqItems: [
@@ -239,8 +245,8 @@ const trelloPage: AlternativesTemplateProps = {
     { productName: "Basecamp", heading: "Best for simplicity and flat pricing", body: "Basecamp offers simple projects and communication with a flat fee. Another simple alternative.", reviewHref: getProjectManagementReviewUrl("basecamp") },
   ],
   relatedComparisons: [
-    { label: "ClickUp vs Trello", href: getProjectManagementCompareUrl("clickup-vs-trello") },
-    { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    pmRel("clickup-vs-trello"),
+    pmRel("notion-vs-trello"),
   ],
   relatedResources: defaultRelatedResources("Trello", getProjectManagementReviewUrl("trello")),
   faqItems: [
@@ -287,7 +293,7 @@ const notionPage: AlternativesTemplateProps = {
     { productName: "Basecamp", heading: "Best for simplicity", body: "Basecamp offers simple projects and communication with flat pricing.", reviewHref: getProjectManagementReviewUrl("basecamp") },
   ],
   relatedComparisons: [
-    { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    pmRel("notion-vs-trello"),
   ],
   relatedResources: defaultRelatedResources("Notion", getProjectManagementReviewUrl("notion")),
   faqItems: [
@@ -334,7 +340,7 @@ const wrikePage: AlternativesTemplateProps = {
     { productName: "Teamwork", heading: "Best for client projects", body: "Teamwork focuses on client projects and time tracking. Alternative for agencies and professional services.", reviewHref: getProjectManagementReviewUrl("teamwork") },
   ],
   relatedComparisons: [
-    { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
+    pmRel("monday-vs-wrike"),
   ],
   relatedResources: defaultRelatedResources("Wrike", getProjectManagementReviewUrl("wrike")),
   faqItems: [

@@ -9,6 +9,8 @@ import {
   getHelpdeskCompareUrl,
   getHelpdeskBestForUrl,
 } from "@/lib/routes";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
+import { getHelpdeskComparison } from "@/lib/data/helpdeskComparisons";
 import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
 import type {
   AlternativesTemplateProps,
@@ -46,6 +48,10 @@ function buildTableRows(
     reviewHref: a.reviewHref,
   }));
   return [originalRow, ...altRows];
+}
+
+function helpRel(slug: string) {
+  return toAlternativesRelatedComparison(getHelpdeskCompareUrl(slug), getHelpdeskComparison(slug));
 }
 
 function defaultRelatedResources(productName: string, originalReviewHref: string): AlternativesLink[] {
@@ -100,10 +106,10 @@ const zendeskPage: AlternativesTemplateProps = {
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
-    { label: "Help Scout vs Zendesk", href: getHelpdeskCompareUrl("help-scout-vs-zendesk") },
-    { label: "Intercom vs Zendesk", href: getHelpdeskCompareUrl("intercom-vs-zendesk") },
-    { label: "Gorgias vs Zendesk", href: getHelpdeskCompareUrl("gorgias-vs-zendesk") },
+    helpRel("zendesk-vs-freshdesk"),
+    helpRel("help-scout-vs-zendesk"),
+    helpRel("intercom-vs-zendesk"),
+    helpRel("gorgias-vs-zendesk"),
   ],
   relatedResources: defaultRelatedResources("Zendesk", getHelpdeskReviewUrl("zendesk")),
   faqItems: [
@@ -150,8 +156,8 @@ const freshdeskPage: AlternativesTemplateProps = {
     { productName: "LiveAgent", heading: "Best for live chat", body: "LiveAgent emphasizes live chat and omnichannel at competitive pricing.", reviewHref: getHelpdeskReviewUrl("liveagent") },
   ],
   relatedComparisons: [
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
-    { label: "Freshdesk vs Zoho Desk", href: getHelpdeskCompareUrl("freshdesk-vs-zoho-desk") },
+    helpRel("zendesk-vs-freshdesk"),
+    helpRel("freshdesk-vs-zoho-desk"),
   ],
   relatedResources: defaultRelatedResources("Freshdesk", getHelpdeskReviewUrl("freshdesk")),
   faqItems: [
@@ -198,8 +204,8 @@ const helpScoutPage: AlternativesTemplateProps = {
     { productName: "Intercom", heading: "Best for messaging", body: "Intercom is messaging-first with chat and in-app support.", reviewHref: getHelpdeskReviewUrl("intercom") },
   ],
   relatedComparisons: [
-    { label: "Help Scout vs Zendesk", href: getHelpdeskCompareUrl("help-scout-vs-zendesk") },
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    helpRel("help-scout-vs-zendesk"),
+    helpRel("zendesk-vs-freshdesk"),
   ],
   relatedResources: defaultRelatedResources("Help Scout", getHelpdeskReviewUrl("help-scout")),
   faqItems: [
@@ -246,8 +252,8 @@ const intercomPage: AlternativesTemplateProps = {
     { productName: "Zoho Desk", heading: "Best for value", body: "Zoho Desk offers low cost and Zoho suite integration.", reviewHref: getHelpdeskReviewUrl("zoho-desk") },
   ],
   relatedComparisons: [
-    { label: "Intercom vs Zendesk", href: getHelpdeskCompareUrl("intercom-vs-zendesk") },
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    helpRel("intercom-vs-zendesk"),
+    helpRel("zendesk-vs-freshdesk"),
   ],
   relatedResources: defaultRelatedResources("Intercom", getHelpdeskReviewUrl("intercom")),
   faqItems: [
@@ -294,8 +300,8 @@ const zohoDeskPage: AlternativesTemplateProps = {
     { productName: "Gorgias", heading: "Best for ecommerce", body: "Gorgias is built for Shopify and Magento.", reviewHref: getHelpdeskReviewUrl("gorgias") },
   ],
   relatedComparisons: [
-    { label: "Freshdesk vs Zoho Desk", href: getHelpdeskCompareUrl("freshdesk-vs-zoho-desk") },
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    helpRel("freshdesk-vs-zoho-desk"),
+    helpRel("zendesk-vs-freshdesk"),
   ],
   relatedResources: defaultRelatedResources("Zoho Desk", getHelpdeskReviewUrl("zoho-desk")),
   faqItems: [
@@ -342,8 +348,8 @@ const gorgiasPage: AlternativesTemplateProps = {
     { productName: "Help Scout", heading: "Best for email-first", body: "Help Scout is simpler and email-focused. For teams that don't need store integration.", reviewHref: getHelpdeskReviewUrl("help-scout") },
   ],
   relatedComparisons: [
-    { label: "Gorgias vs Zendesk", href: getHelpdeskCompareUrl("gorgias-vs-zendesk") },
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    helpRel("gorgias-vs-zendesk"),
+    helpRel("zendesk-vs-freshdesk"),
   ],
   relatedResources: defaultRelatedResources("Gorgias", getHelpdeskReviewUrl("gorgias")),
   faqItems: [
@@ -390,8 +396,8 @@ const liveagentPage: AlternativesTemplateProps = {
     { productName: "Gorgias", heading: "Best for ecommerce", body: "Gorgias is built for Shopify and Magento with order context.", reviewHref: getHelpdeskReviewUrl("gorgias") },
   ],
   relatedComparisons: [
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
-    { label: "Intercom vs Zendesk", href: getHelpdeskCompareUrl("intercom-vs-zendesk") },
+    helpRel("zendesk-vs-freshdesk"),
+    helpRel("intercom-vs-zendesk"),
   ],
   relatedResources: defaultRelatedResources("LiveAgent", getHelpdeskReviewUrl("liveagent")),
   faqItems: [
@@ -438,8 +444,8 @@ const kayakoPage: AlternativesTemplateProps = {
     { productName: "LiveAgent", heading: "Best for live chat", body: "LiveAgent emphasizes live chat and omnichannel at competitive pricing.", reviewHref: getHelpdeskReviewUrl("liveagent") },
   ],
   relatedComparisons: [
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
-    { label: "Freshdesk vs Zoho Desk", href: getHelpdeskCompareUrl("freshdesk-vs-zoho-desk") },
+    helpRel("zendesk-vs-freshdesk"),
+    helpRel("freshdesk-vs-zoho-desk"),
   ],
   relatedResources: defaultRelatedResources("Kayako", getHelpdeskReviewUrl("kayako")),
   faqItems: [
@@ -486,8 +492,8 @@ const frontPage: AlternativesTemplateProps = {
     { productName: "Zoho Desk", heading: "Best for value", body: "Zoho Desk offers low cost and Zoho suite integration.", reviewHref: getHelpdeskReviewUrl("zoho-desk") },
   ],
   relatedComparisons: [
-    { label: "Help Scout vs Zendesk", href: getHelpdeskCompareUrl("help-scout-vs-zendesk") },
-    { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    helpRel("help-scout-vs-zendesk"),
+    helpRel("zendesk-vs-freshdesk"),
   ],
   relatedResources: defaultRelatedResources("Front", getHelpdeskReviewUrl("front")),
   faqItems: [

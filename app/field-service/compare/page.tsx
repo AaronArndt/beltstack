@@ -4,6 +4,7 @@ import {
   getFieldServiceComparisonBySlug,
   getFieldServiceComparisonSlugs,
 } from "@/lib/data/fieldServiceComparisons";
+import { FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS } from "@/lib/data/fieldServiceHubData";
 import { Footer } from "@/components/Footer";
 
 const POPULAR_SLUGS = [
@@ -12,6 +13,11 @@ const POPULAR_SLUGS = [
   "jobber-vs-workiz",
   "servicetitan-vs-service-fusion",
   "kickserv-vs-jobber",
+  "fieldpulse-vs-jobber",
+  "servicetrade-vs-servicetitan",
+  "simpro-vs-servicetitan",
+  "zuper-vs-jobber",
+  "connecteam-vs-jobber",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -40,7 +46,22 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
   }
 
-  const order = ["jobber", "housecall-pro", "servicetitan", "service-fusion", "workiz", "kickserv"];
+  const order = [
+    "jobber",
+    "housecall-pro",
+    "servicetitan",
+    "service-fusion",
+    "fieldpulse",
+    "servicetrade",
+    "workwave-service",
+    "buildops",
+    "connecteam",
+    "oracle-field-service",
+    "simpro",
+    "zuper",
+    "workiz",
+    "kickserv",
+  ];
   return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
 }
 
@@ -88,8 +109,9 @@ export default function FieldServiceCompareHubPage() {
             </h1>
             <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons of popular field service tools for contractors, service companies, and field
-              teams. See how Jobber, Housecall Pro, ServiceTitan, Service Fusion, Workiz, Kickserv, and others stack up
-              on scheduling, dispatch, mobile apps, invoicing, and reporting.
+              teams. See how Jobber, Housecall Pro, ServiceTitan, Service Fusion, FieldPulse, ServiceTrade, WorkWave
+              Service, BuildOps, Workiz, Kickserv, and others stack up on scheduling, dispatch, mobile apps, invoicing,
+              and reporting.
             </p>
             <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
               For rankings across the whole category, see our{" "}
@@ -106,7 +128,19 @@ export default function FieldServiceCompareHubPage() {
               >
                 field service guides
               </Link>
-              .
+              . If you already know which product you might replace, our{" "}
+              {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
+                <span key={item.href}>
+                  {i > 0 && (i === FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.length - 1 ? ", or " : ", ")}
+                  <Link
+                    href={item.href}
+                    className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  >
+                    {item.label} alternatives
+                  </Link>
+                </span>
+              ))}{" "}
+              pages list vetted substitutes with reviews and head-to-head comparisons.
             </p>
           </div>
         </section>

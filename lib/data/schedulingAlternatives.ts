@@ -5,6 +5,8 @@
  */
 
 import { getSchedulingReviewUrl, getSchedulingCompareUrl, getSchedulingBestForUrl } from "@/lib/routes";
+import { getSchedulingComparisonBySlug } from "@/lib/data/schedulingComparisons";
+import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
   AlternativesTopPick,
@@ -65,6 +67,10 @@ function defaultRelatedResources(productName: string, originalReviewHref: string
   ];
 }
 
+function schedRel(slug: string) {
+  return toAlternativesRelatedComparison(getSchedulingCompareUrl(slug), getSchedulingComparisonBySlug(slug));
+}
+
 // ——— Calendly alternatives ———
 const CALENDLY_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "acuity-scheduling", name: "Acuity Scheduling", logoSrc: LOGOS.acuity, rating: "4.6", bestFor: "intake and packages", description: "More intake forms, packages, and customization for consultants and coaches.", reviewHref: getSchedulingReviewUrl("acuity-scheduling"), compareHref: getSchedulingCompareUrl("calendly-vs-acuity-scheduling"), startingPrice: "From ~$16/mo", standoutFeature: "Intake; packages" },
@@ -104,10 +110,7 @@ const calendlyPage: AlternativesTemplateProps = {
     { productName: "Square Appointments", heading: "Best for Square ecosystem", body: "Square Appointments fits businesses already using Square; payments and booking in one. For Square users.", reviewHref: getSchedulingReviewUrl("square-appointments") },
   ],
   howToChoose: HOW_TO_CHOOSE,
-  relatedComparisons: [
-    { label: "Calendly vs Acuity Scheduling", href: getSchedulingCompareUrl("calendly-vs-acuity-scheduling") },
-    { label: "Calendly vs YouCanBook.me", href: getSchedulingCompareUrl("calendly-vs-youcanbookme") },
-  ],
+  relatedComparisons: [schedRel("calendly-vs-acuity-scheduling"), schedRel("calendly-vs-youcanbookme")],
   relatedResources: defaultRelatedResources("Calendly", getSchedulingReviewUrl("calendly")),
   faqItems: [
     { q: "What is the best Calendly alternative?", a: "Acuity Scheduling for intake and packages; YouCanBook.me for teams; Setmore for free tier and service business; SimplyBook.me for customization." },
@@ -153,9 +156,9 @@ const acuityPage: AlternativesTemplateProps = {
     { productName: "YouCanBook.me", heading: "Best for teams", body: "YouCanBook.me offers strong team and round-robin scheduling. For teams that need collective booking.", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   ],
   relatedComparisons: [
-    { label: "Calendly vs Acuity Scheduling", href: getSchedulingCompareUrl("calendly-vs-acuity-scheduling") },
-    { label: "Acuity Scheduling vs Setmore", href: getSchedulingCompareUrl("acuity-scheduling-vs-setmore") },
-    { label: "Square Appointments vs Acuity Scheduling", href: getSchedulingCompareUrl("square-appointments-vs-acuity-scheduling") },
+    schedRel("calendly-vs-acuity-scheduling"),
+    schedRel("acuity-scheduling-vs-setmore"),
+    schedRel("square-appointments-vs-acuity-scheduling"),
   ],
   relatedResources: defaultRelatedResources("Acuity Scheduling", getSchedulingReviewUrl("acuity-scheduling")),
   faqItems: [
@@ -201,9 +204,7 @@ const youcanbookmePage: AlternativesTemplateProps = {
     { productName: "SimplyBook.me", heading: "Best for customization", body: "SimplyBook.me offers more customization and industry templates at similar pricing.", reviewHref: getSchedulingReviewUrl("simplybookme") },
     { productName: "Square Appointments", heading: "Best for Square", body: "Square Appointments fits Square users; payments and booking in one.", reviewHref: getSchedulingReviewUrl("square-appointments") },
   ],
-  relatedComparisons: [
-    { label: "Calendly vs YouCanBook.me", href: getSchedulingCompareUrl("calendly-vs-youcanbookme") },
-  ],
+  relatedComparisons: [schedRel("calendly-vs-youcanbookme")],
   relatedResources: defaultRelatedResources("YouCanBook.me", getSchedulingReviewUrl("youcanbookme")),
   faqItems: [
     { q: "What is the best YouCanBook.me alternative?", a: "Calendly for brand recognition; Acuity for intake; Setmore for free tier; SimplyBook.me for customization." },
@@ -248,10 +249,7 @@ const setmorePage: AlternativesTemplateProps = {
     { productName: "Square Appointments", heading: "Best for Square", body: "Square Appointments fits Square users; payments and booking in one.", reviewHref: getSchedulingReviewUrl("square-appointments") },
     { productName: "YouCanBook.me", heading: "Best for teams", body: "YouCanBook.me offers strong team and round-robin scheduling. For teams that need collective booking.", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   ],
-  relatedComparisons: [
-    { label: "Acuity Scheduling vs Setmore", href: getSchedulingCompareUrl("acuity-scheduling-vs-setmore") },
-    { label: "SimplyBook.me vs Setmore", href: getSchedulingCompareUrl("simplybookme-vs-setmore") },
-  ],
+  relatedComparisons: [schedRel("acuity-scheduling-vs-setmore"), schedRel("simplybookme-vs-setmore")],
   relatedResources: defaultRelatedResources("Setmore", getSchedulingReviewUrl("setmore")),
   faqItems: [
     { q: "What is the best Setmore alternative?", a: "Acuity for intake; Calendly for simplicity; SimplyBook.me for customization; Square Appointments for Square users." },
@@ -296,9 +294,7 @@ const simplybookmePage: AlternativesTemplateProps = {
     { productName: "Square Appointments", heading: "Best for Square", body: "Square Appointments fits Square users; payments and booking in one.", reviewHref: getSchedulingReviewUrl("square-appointments") },
     { productName: "YouCanBook.me", heading: "Best for teams", body: "YouCanBook.me offers strong team and round-robin scheduling.", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   ],
-  relatedComparisons: [
-    { label: "SimplyBook.me vs Setmore", href: getSchedulingCompareUrl("simplybookme-vs-setmore") },
-  ],
+  relatedComparisons: [schedRel("simplybookme-vs-setmore")],
   relatedResources: defaultRelatedResources("SimplyBook.me", getSchedulingReviewUrl("simplybookme")),
   faqItems: [
     { q: "What is the best SimplyBook.me alternative?", a: "Setmore for free tier; Acuity for intake; Calendly for simplicity; Square Appointments for Square users." },
@@ -343,9 +339,7 @@ const squareAppointmentsPage: AlternativesTemplateProps = {
     { productName: "SimplyBook.me", heading: "Best for customization", body: "SimplyBook.me offers more customization at lower price. For single-location businesses.", reviewHref: getSchedulingReviewUrl("simplybookme") },
     { productName: "YouCanBook.me", heading: "Best for teams", body: "YouCanBook.me offers strong team and round-robin scheduling for non-Square users.", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   ],
-  relatedComparisons: [
-    { label: "Square Appointments vs Acuity Scheduling", href: getSchedulingCompareUrl("square-appointments-vs-acuity-scheduling") },
-  ],
+  relatedComparisons: [schedRel("square-appointments-vs-acuity-scheduling")],
   relatedResources: defaultRelatedResources("Square Appointments", getSchedulingReviewUrl("square-appointments")),
   faqItems: [
     { q: "What is the best Square Appointments alternative?", a: "Calendly for standalone; Acuity for intake; Setmore for free tier; SimplyBook.me and YouCanBook.me for different features." },
