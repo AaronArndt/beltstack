@@ -79,10 +79,10 @@ export default function CrmCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare CRM Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons of the most popular CRM tools for small businesses, agencies, startups, and sales teams.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Whether you need an all-in-one marketing and sales CRM, a pipeline-focused tool, or the best value for your team, these head-to-head reviews help you see which platform fits your size, budget, and workflow.
             </p>
           </div>

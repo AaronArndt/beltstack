@@ -5,16 +5,20 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   HELPDESK_FEATURED_PICKS,
   HELPDESK_COMPARISON_ROWS,
   HELPDESK_SCENARIO_LINKS,
-  HELPDESK_BY_BUSINESS_TYPE,
   HELPDESK_BY_BUSINESS_TYPE_GROUPS,
   HELPDESK_POPULAR_COMPARISONS,
   HELPDESK_FAQ_ITEMS,
   HELPDESK_METHODOLOGY,
+  HELPDESK_USE_CASE_EDITORIAL,
 } from "@/lib/data/helpdeskHubData";
+import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
+import { getHelpdeskReviewUrl } from "@/lib/routes";
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -78,40 +82,27 @@ function HelpdeskHowToChooseSection() {
         How to choose helpdesk software
       </HubSectionTitle>
       <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
-        Helpdesk software centralizes customer support so your team can manage tickets, track conversations, and keep
-        responses consistent. This page is for{" "}
-        <Link href="/helpdesk/best-for/small-business" className={linkGreen}>
-          small businesses
+        Helpdesk software centralizes tickets and conversation history. Use the{" "}
+        <Link href="#compare" className={linkGreen}>
+          comparison table
         </Link>
-        ,{" "}
-        <Link href="/helpdesk/best-for/startups" className={linkGreen}>
-          startups
-        </Link>
-        ,{" "}
-        <Link href="/helpdesk/best-for/ecommerce" className={linkGreen}>
-          ecommerce teams
-        </Link>
-        ,{" "}
-        <Link href="/helpdesk/best-for/saas" className={linkGreen}>
-          SaaS support teams
-        </Link>
-        , and{" "}
-        <Link href="/helpdesk/best-for/growing-teams" className={linkGreen}>
-          growing support teams
-        </Link>
-        . Use the{" "}
+        , then{" "}
+        <a href="#by-scenario" className={linkGreen}>
+          scenario-based picks
+        </a>{" "}
+        when you know your channels and volume—or{" "}
+        <a href="#payroll-guides" className={linkGreen}>
+          guides
+        </a>{" "}
+        to learn pricing and workflow concepts first. Our{" "}
         <Link href="/helpdesk/best-helpdesk-software" className={linkGreen}>
-          best helpdesk software roundup
+          full rankings
         </Link>{" "}
-        for a curated shortlist, the{" "}
+        and{" "}
         <Link href="/helpdesk/compare" className={linkGreen}>
           comparison hub
         </Link>{" "}
-        for head‑to‑head matchups, our{" "}
-        <Link href="/helpdesk/guides" className={linkGreen}>
-          helpdesk guides
-        </Link>{" "}
-        for how to choose and use case deep dives, and the scenario links below to jump into specific use cases.
+        round out vendor research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
@@ -139,6 +130,50 @@ function HelpdeskHowToChooseSection() {
         </ul>
       </div>
     </>
+  );
+}
+
+function HelpdeskGuidesSection() {
+  return (
+    <HubGuidesGrid
+      sectionTitle="Helpdesk guides"
+      sectionSub="Learn how pricing, channels, and workflows fit together—before you shortlist vendors."
+      intro={
+        <>
+          These articles are educational: evaluation concepts and implementation—not duplicate product picks. For scenario-based recommendations, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best helpdesk software by use case
+          </a>
+          ; for org-type entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            helpdesk by company type
+          </a>
+          .
+        </>
+      }
+      guides={HELPDESK_GUIDES}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>
+            Zendesk
+          </Link>
+          ,{" "}
+          <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>
+            Freshdesk
+          </Link>
+          ,{" "}
+          <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>
+            Help Scout
+          </Link>
+          ,{" "}
+          <Link href={getHelpdeskReviewUrl("intercom")} className={linkGreen}>
+            Intercom
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -327,17 +362,39 @@ export default function HelpdeskPage() {
         label: "See our full rankings →",
         href: "/helpdesk/best-helpdesk-software",
       }}
+      guidesSection={<HelpdeskGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best helpdesk software by use case"
+          sectionSub="Scenario-based picks—channels, volume, and workflow—not your company label alone."
+          intro={
+            <>
+              Each blurb explains who it fits and what to prioritize. If you’re navigating by org type (SMB, ecommerce, SaaS), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                helpdesk by company type
+              </a>{" "}
+              below. For pricing and concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                helpdesk guides
+              </a>
+              .
+            </>
+          }
+          blocks={HELPDESK_USE_CASE_EDITORIAL}
+        />
+      }
       scenarioLinks={{
         sectionTitle: "Best helpdesk software by use case",
-        sectionSub: "Find helpdesk software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario-based recommendations and deep links.",
+        description: undefined,
         links: HELPDESK_SCENARIO_LINKS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Helpdesk by business type",
-        sectionSub: "Best helpdesk software by business type.",
-        links: HELPDESK_BY_BUSINESS_TYPE,
+        sectionTitle: "Helpdesk by company type",
+        sectionSub:
+          "Identity-based navigation: how you describe your support organization—SMB, ecommerce, SaaS—not channel strategy alone.",
+        links: [],
         groups: HELPDESK_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={HELPDESK_FAQ_ITEMS as FaqItem[]}

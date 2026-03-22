@@ -53,7 +53,7 @@ export default function HelpdeskPricingGuidePage() {
               <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 Helpdesk Software Pricing Guide
               </h1>
-              <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+              <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                 Pricing tiers, per-agent costs, automation and add-ons, hidden costs, and when advanced platforms make sense.
               </p>
               <GuideLastUpdated date="March 13, 2026" />

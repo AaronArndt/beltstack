@@ -71,7 +71,7 @@ export default function RecurringInvoicingExplainedPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Recurring Invoicing Explained
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     What recurring invoicing is, when businesses use it, and how tools automate subscriptions, retainers, and service agreements.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

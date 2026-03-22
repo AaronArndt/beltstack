@@ -83,7 +83,7 @@ export default function KanbanVsScrumToolsPage() {
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Kanban vs Scrum Tools</h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     When to use Kanban-style boards vs Scrum-style sprints, and which project management tools support each approach.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

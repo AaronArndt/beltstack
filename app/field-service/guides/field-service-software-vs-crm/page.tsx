@@ -98,7 +98,7 @@ export default function FieldServiceSoftwareVsCrmPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software vs CRM
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     How field service management (FSM) platforms differ from customer relationship management (CRM)
                     tools, where they overlap, and how service businesses use both to manage work and customer
                     relationships.

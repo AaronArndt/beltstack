@@ -65,7 +65,7 @@ export default function InventoryGuidesPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Inventory Management Software Guides
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Learn what inventory management software is, how businesses use it to track stock and orders across
               channels, and how these guides help ecommerce brands, retailers, manufacturers, and warehouses choose the
               right tools.

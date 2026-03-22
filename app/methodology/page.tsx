@@ -41,7 +41,7 @@ export default function MethodologyPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               How We Review Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               BeltStack provides independent software reviews and comparisons for trade businesses and contractors. This page explains how we evaluate products, score features, and keep our recommendations unbiased.
             </p>
           </div>

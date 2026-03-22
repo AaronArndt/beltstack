@@ -110,7 +110,7 @@ export default function HowAccountingSoftwareWorksPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Accounting Software Works
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn how accounting software tracks income and expenses, supports invoicing and reporting, and helps
                     you stay organized for taxes.
                   </p>

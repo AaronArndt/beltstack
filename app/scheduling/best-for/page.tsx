@@ -78,7 +78,7 @@ export default function SchedulingBestForIndexPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Scheduling Software by Use Case
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Find scheduling software that fits your situation—freelancers, consultants, small businesses, service
               businesses, and teams.
             </p>

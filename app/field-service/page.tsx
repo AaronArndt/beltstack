@@ -5,15 +5,17 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   FIELD_SERVICE_FEATURED_PICKS,
   FIELD_SERVICE_COMPARISON_ROWS,
   FIELD_SERVICE_SCENARIO_LINKS,
-  FIELD_SERVICE_BY_BUSINESS_TYPE,
   FIELD_SERVICE_BY_BUSINESS_TYPE_GROUPS,
   FIELD_SERVICE_POPULAR_COMPARISONS,
   FIELD_SERVICE_FAQ_ITEMS,
   FIELD_SERVICE_METHODOLOGY,
+  FIELD_SERVICE_USE_CASE_EDITORIAL,
 } from "@/lib/data/fieldServiceHubData";
 import { FIELD_SERVICE_GUIDES } from "@/lib/data/fieldServiceGuides";
 // ——— Key takeaways ———
@@ -165,16 +167,28 @@ function FieldServiceHowToChooseSection() {
       </HubSectionTitle>
       <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
         Field service software helps you schedule jobs, dispatch technicians, and keep invoicing and customer details
-        in one place. This page is for HVAC, plumbing, electrical, cleaning, lawn care, and other service businesses
-        that send teams into the field. Use our{" "}
+        in one place. This hub is for contractors and service businesses that send teams into the field. Start with
+        the{" "}
+        <Link href="#compare" className={linkGreen}>
+          comparison table
+        </Link>
+        , then use{" "}
+        <a href="#by-scenario" className={linkGreen}>
+          scenario-based picks
+        </a>{" "}
+        when you know your situation—or{" "}
+        <a href="#payroll-guides" className={linkGreen}>
+          guides
+        </a>{" "}
+        if you are still learning how to evaluate pricing and features. Our{" "}
         <Link href="/field-service/best-field-service-software" className={linkGreen}>
-          best field service software roundup
+          full rankings
         </Link>{" "}
-        for a curated shortlist, the{" "}
+        and{" "}
         <Link href="/field-service/compare" className={linkGreen}>
           comparison hub
         </Link>{" "}
-        for head-to-head matchups, and the scenario links below to jump into specific trades and use cases.
+        round out product research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
@@ -218,47 +232,35 @@ function FieldServiceHowToChooseSection() {
 
 function FieldServiceGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using field service management tools.">
-        Field Service Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {FIELD_SERVICE_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">
-              {guide.title}
-            </h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
-              {guide.description}
-            </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">
-              Read guide →
-            </span>
+    <HubGuidesGrid
+      sectionTitle="Field service guides"
+      sectionSub="Learn how FSM pricing, features, and workflows work—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles: evaluation criteria, pricing, and concepts—not duplicate product roundups. For scenario picks, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best field service software by use case
+          </a>
+          ; for trade entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            field service by business type
+          </a>
+          .
+        </>
+      }
+      guides={FIELD_SERVICE_GUIDES}
+      footer={
+        <>
+          <Link href="/field-service/guides" className={linkGreen}>
+            Guides index
           </Link>
-        ))}
-      </div>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
-        For more resources, see our{" "}
-        <Link
-          href="/field-service"
-          className={linkGreen}
-        >
-          field service hub
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="/field-service/compare"
-          className={linkGreen}
-        >
-          field service comparisons
-        </Link>
-        .
-      </p>
-    </>
+          {" · "}
+          <Link href="/field-service/compare" className={linkGreen}>
+            Comparisons
+          </Link>
+        </>
+      }
+    />
   );
 }
 
@@ -343,6 +345,26 @@ export default function FieldServicePage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular field service management platforms."
       howToChooseSection={<FieldServiceHowToChooseSection />}
       guidesSection={<FieldServiceGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best field service software by use case"
+          sectionSub="Scenario-based recommendations—team size, complexity, and budget—not your trade label."
+          intro={
+            <>
+              Decision-oriented blurbs: who each situation fits and what to prioritize. For trade-specific picks (HVAC, plumbing, electrical), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                field service by business type
+              </a>{" "}
+              below. For how-to content, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                field service guides
+              </a>
+              .
+            </>
+          }
+          blocks={FIELD_SERVICE_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best Field Service Software Overall",
         description:
@@ -360,19 +382,19 @@ export default function FieldServicePage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best field service software by use case",
-        sectionSub: "Find field service tools that fit your situation.",
-        description: "Choose a use case to see our top picks and guidance.",
+        sectionSub: "Scenario-based recommendations.",
+        description: undefined,
         links: [
           { label: "Best field service software (roundup)", href: "/field-service/best-field-service-software" },
-          { label: "Compare field service software", href: "/field-service/compare" },
           ...FIELD_SERVICE_SCENARIO_LINKS,
         ],
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Field service by business type",
-        sectionSub: "Best field service software by industry.",
-        links: FIELD_SERVICE_BY_BUSINESS_TYPE,
+        sectionTitle: "Field service software by business type",
+        sectionSub:
+          "Identity-based navigation: your trade or company type—not team size or budget. Different trades have different workflows; these links point to picks aligned with how HVAC, plumbing, electrical, and similar businesses actually run.",
+        links: [],
         groups: FIELD_SERVICE_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={FIELD_SERVICE_FAQ_ITEMS as FaqItem[]}

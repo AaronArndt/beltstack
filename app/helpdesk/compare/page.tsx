@@ -77,10 +77,10 @@ export default function HelpdeskCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare Helpdesk Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Compare the most popular helpdesk software platforms side-by-side.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Explore differences in pricing, ticketing features, automation, integrations, and support capabilities. For our full rankings see the{" "}
               <Link href="/helpdesk/best-helpdesk-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 best helpdesk software

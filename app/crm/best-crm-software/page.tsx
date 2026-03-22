@@ -109,7 +109,7 @@ export default function BestCrmSoftwarePage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best CRM Software (2026)
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Compare the best CRM software for small businesses, startups, and sales teams. See top picks, pricing, features, and who each platform is best for.
             </p>
             <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">

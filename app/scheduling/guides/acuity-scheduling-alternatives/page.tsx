@@ -62,7 +62,7 @@ export default function AcuitySchedulingAlternativesPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Acuity Scheduling Alternatives
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Alternatives to Acuity Scheduling when you want different pricing, simpler setup, or similar intake forms and packages from another provider.
                   </p>
                   <GuideLastUpdated date="March 12, 2026" />

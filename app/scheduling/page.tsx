@@ -5,17 +5,19 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import { getSchedulingReviewUrl } from "@/lib/routes";
 import {
   SCHEDULING_FEATURED_PICKS,
   SCHEDULING_COMPARISON_ROWS,
   SCHEDULING_SCENARIO_LINKS,
-  SCHEDULING_BY_BUSINESS_TYPE,
   SCHEDULING_BY_BUSINESS_TYPE_GROUPS,
   SCHEDULING_POPULAR_COMPARISONS,
   SCHEDULING_FAQ_ITEMS,
   SCHEDULING_METHODOLOGY,
   SCHEDULING_HUB_GUIDES,
+  SCHEDULING_USE_CASE_EDITORIAL,
 } from "@/lib/data/schedulingHubData";
 
 const KEY_TAKEAWAYS = [
@@ -107,49 +109,49 @@ function SchedulingHowToChooseSection() {
 
 function SchedulingGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using scheduling software.">
-        Scheduling Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {SCHEDULING_HUB_GUIDES.map((guide) => (
-          <Link
-            key={guide.slug}
-            href={guide.href}
-            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">
-              {guide.title}
-            </h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
-              {guide.description}
-            </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">
-              Read guide →
-            </span>
+    <HubGuidesGrid
+      sectionTitle="Scheduling guides"
+      sectionSub="Learn booking mechanics, pricing cliffs, and integration tradeoffs—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles—not duplicate scenario blurbs. For booking-situation picks, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best scheduling software by use case
+          </a>
+          ; for role-style entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            scheduling by role or environment
+          </a>
+          .
+        </>
+      }
+      guides={SCHEDULING_HUB_GUIDES.map((g) => ({
+        title: g.title,
+        href: g.href,
+        description: g.description,
+        slug: g.slug,
+      }))}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={getSchedulingReviewUrl("calendly")} className={linkGreen}>
+            Calendly
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={getSchedulingReviewUrl("calendly")} className={linkGreen}>Calendly</Link>,{" "}
-        <Link href={getSchedulingReviewUrl("acuity-scheduling")} className={linkGreen}>Acuity Scheduling</Link>,{" "}
-        <Link href={getSchedulingReviewUrl("youcanbookme")} className={linkGreen}>YouCanBook.me</Link>,{" "}
-        <Link href={getSchedulingReviewUrl("setmore")} className={linkGreen}>Setmore</Link>,{" "}
-        <Link href={getSchedulingReviewUrl("simplybookme")} className={linkGreen}>SimplyBook.me</Link>.
-      </p>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
-        For more resources, see our{" "}
-        <Link href="/scheduling" className={linkGreen}>
-          scheduling hub
-        </Link>{" "}
-        and{" "}
-        <Link href="/scheduling/compare" className={linkGreen}>
-          scheduling comparisons
-        </Link>
-        .
-      </p>
-    </>
+          ,{" "}
+          <Link href={getSchedulingReviewUrl("acuity-scheduling")} className={linkGreen}>
+            Acuity
+          </Link>
+          ,{" "}
+          <Link href={getSchedulingReviewUrl("youcanbookme")} className={linkGreen}>
+            YouCanBook.me
+          </Link>
+          .{" "}
+          <Link href="/scheduling/compare" className={linkGreen}>
+            Scheduling comparisons →
+          </Link>
+        </>
+      }
+    />
   );
 }
 
@@ -348,6 +350,26 @@ export default function SchedulingPage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular scheduling platforms."
       howToChooseSection={<SchedulingHowToChooseSection />}
       guidesSection={<SchedulingGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best scheduling software by use case"
+          sectionSub="Scenario-based picks—booking volume, team routing, and client experience—not your role label alone."
+          intro={
+            <>
+              Each blurb explains the booking problem first. For how you describe your business, use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                scheduling by role or environment
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                scheduling guides
+              </a>
+              .
+            </>
+          }
+          blocks={SCHEDULING_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best Scheduling Software Overall",
         description:
@@ -365,15 +387,16 @@ export default function SchedulingPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best scheduling software by use case",
-        sectionSub: "Find scheduling tools that fit your situation.",
-        description: "Choose a use case to see our top picks and guidance.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: [...SCHEDULING_SCENARIO_LINKS],
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Scheduling by business type",
-        sectionSub: "Best scheduling software by industry.",
-        links: SCHEDULING_BY_BUSINESS_TYPE,
+        sectionTitle: "Scheduling by role or environment",
+        sectionSub:
+          "Identity-based navigation: freelancer vs consultant vs team scheduling—how you work with clients day to day.",
+        links: [],
         groups: SCHEDULING_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={SCHEDULING_FAQ_ITEMS as FaqItem[]}

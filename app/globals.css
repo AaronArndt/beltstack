@@ -29,12 +29,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  overflow-x: hidden;
+  /* Do not set overflow-x on html/body — it breaks position: sticky for the navbar and
+     "On this page" section navs. Clip/hidden overflow on the scrollport creates a containing
+     block that prevents sticky from reaching the viewport. */
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* Section targets: scroll-margin so anchors don't hide under sticky nav */

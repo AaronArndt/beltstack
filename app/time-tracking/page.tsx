@@ -7,14 +7,17 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import { getTimeTrackingComparison } from "@/lib/data/timeTrackingComparisons";
-import { getTimeTrackingCompareUrl } from "@/lib/routes";
+import { TIME_TRACKING_USE_CASE_EDITORIAL } from "@/lib/data/timeTrackingHubData";
+import { TIME_TRACKING_GUIDES } from "@/lib/data/timeTrackingGuides";
+import { getTimeTrackingCompareUrl, getTimeTrackingReviewUrl } from "@/lib/routes";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Time tracking placeholder routes ———
 const TIME_REVIEW_BASE = "/time-tracking/review";
 const TIME_COMPARE_BASE = "/time-tracking/compare";
-const TIME_GUIDES_BASE = "/time-tracking/guides";
 const TIME_BEST_FOR_BASE = "/time-tracking/best-for";
 
 // ——— Hero & key takeaways ———
@@ -40,34 +43,6 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Timely", bestFor: "Automatic tracking", price: "From ~$11/user/mo", rating: "4.2", slug: "timely", logoSrc: "/Logos/timely.png" },
 ];
 
-const TIME_GUIDES = [
-  {
-    title: "How Time Tracking Software Works",
-    href: `${TIME_GUIDES_BASE}/how-time-tracking-software-works`,
-    description: "What time tracking software does, from timers to reports and approvals.",
-  },
-  {
-    title: "Time Tracking for Freelancers",
-    href: `${TIME_GUIDES_BASE}/time-tracking-for-freelancers`,
-    description: "How freelancers log billable hours, track projects, and bill clients accurately.",
-  },
-  {
-    title: "Time Tracking for Agencies",
-    href: `${TIME_GUIDES_BASE}/time-tracking-for-agencies`,
-    description: "How agencies track time across clients and projects and manage utilization.",
-  },
-  {
-    title: "Tracking Billable Hours",
-    href: `${TIME_GUIDES_BASE}/tracking-billable-hours`,
-    description: "Best practices for separating billable and non-billable time and avoiding leakage.",
-  },
-  {
-    title: "Time Tracking vs Timesheets",
-    href: `${TIME_GUIDES_BASE}/time-tracking-vs-timesheets`,
-    description: "Modern time tracking tools compared to traditional timesheets.",
-  },
-];
-
 const BEST_FOR_SCENARIOS = [
   { label: "Best time tracking software (roundup)", href: "/time-tracking/best-time-tracking-software" },
   { label: "Compare time tracking software", href: "/time-tracking/compare" },
@@ -87,8 +62,8 @@ const BY_INDUSTRY = [
 ];
 
 const BY_INDUSTRY_GROUPS = [
-  { groupLabel: "Primary business types", links: BY_INDUSTRY.slice(0, 3) },
-  { groupLabel: "Other business types", links: BY_INDUSTRY.slice(3) },
+  { groupLabel: "Browse by team type", links: BY_INDUSTRY.slice(0, 3) },
+  { groupLabel: "More team types", links: BY_INDUSTRY.slice(3) },
 ];
 
 /** Slugs for Popular Time Tracking Comparisons cards; data from getTimeTrackingComparison. */
@@ -298,28 +273,45 @@ function TimeTrackingEducationSection() {
 
 function TimeTrackingGuidesSection() {
   return (
-    <>
-      <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">Time Tracking Guides</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">
-          Guides that explain how time tracking works and how to use it for billing, budgeting, and productivity.
-        </p>
-      </div>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {TIME_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">{guide.description}</p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="Time tracking guides"
+      sectionSub="Learn billing workflows, monitoring tradeoffs, and payroll handoffs—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles—not duplicate scenario blurbs. For situation-based picks, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best time tracking software by use case
+          </a>
+          ; for team-type entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            time tracking by team type
+          </a>
+          .
+        </>
+      }
+      guides={TIME_TRACKING_GUIDES}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={getTimeTrackingReviewUrl("toggl")} className={linkGreen}>
+            Toggl
           </Link>
-        ))}
-      </div>
-    </>
+          ,{" "}
+          <Link href={getTimeTrackingReviewUrl("harvest")} className={linkGreen}>
+            Harvest
+          </Link>
+          ,{" "}
+          <Link href={getTimeTrackingReviewUrl("clockify")} className={linkGreen}>
+            Clockify
+          </Link>
+          ,{" "}
+          <Link href={getTimeTrackingReviewUrl("hubstaff")} className={linkGreen}>
+            Hubstaff
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -466,6 +458,26 @@ export default function TimeTrackingPage() {
       introExtended={<TimeTrackingIntroExtended />}
       howToChooseSection={<TimeTrackingHowToChooseSection />}
       guidesSection={<TimeTrackingGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best time tracking software by use case"
+          sectionSub="Scenario-based picks—billing, utilization, and monitoring—not your team label alone."
+          intro={
+            <>
+              Each blurb explains the time-data problem first. For identity-style entry points, use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                time tracking by team type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                time tracking guides
+              </a>
+              .
+            </>
+          }
+          blocks={TIME_TRACKING_USE_CASE_EDITORIAL}
+        />
+      }
       popularComparisonsSection={<TimeTrackingPopularComparisonsSection />}
       bestRoundupBlock={{
         title: "Best Time Tracking Software Overall",
@@ -481,15 +493,16 @@ export default function TimeTrackingPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best time tracking software by use case",
-        sectionSub: "Find time tracking software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: BEST_FOR_SCENARIOS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Time tracking by business type",
-        sectionSub: "Best time tracking software for different business types and team setups.",
-        links: BY_INDUSTRY,
+        sectionTitle: "Time tracking by team type",
+        sectionSub:
+          "Identity-based navigation: freelancer, agency, consultant, remote—how you staff work, not timer mechanics alone.",
+        links: [],
         groups: BY_INDUSTRY_GROUPS,
       }}
       faqItems={FAQ_ITEMS}

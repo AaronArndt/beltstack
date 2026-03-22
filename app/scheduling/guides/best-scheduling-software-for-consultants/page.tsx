@@ -62,7 +62,7 @@ export default function BestSchedulingSoftwareForConsultantsPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best Scheduling Software for Consultants
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     What consultants should look for in scheduling tools: intake forms, packages, payment at booking, and calendar integration.
                   </p>
                   <GuideLastUpdated date="March 12, 2026" />

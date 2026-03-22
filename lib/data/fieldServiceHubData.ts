@@ -5,6 +5,7 @@
 
 import { getFieldServiceReviewUrl, getFieldServiceCompareUrl, getFieldServiceBestForUrl } from "@/lib/routes";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
 // ——— Logo paths (place under /public/Logos/) ———
@@ -44,7 +45,7 @@ export const FIELD_SERVICE_COMPARISON_ROWS: ComparisonTableRow[] = [
   ]).map(toHubComparisonTableRow),
 ];
 
-/** Best field service software by use case (scenario) links. */
+/** Best field service software by use case (scenario) links — default pill hub UI; field-service hub uses editorial blocks instead. */
 export const FIELD_SERVICE_SCENARIO_LINKS = [
   { label: "Best for plumbing", href: getFieldServiceBestForUrl("plumbing") },
   { label: "Best for HVAC", href: getFieldServiceBestForUrl("hvac") },
@@ -53,17 +54,62 @@ export const FIELD_SERVICE_SCENARIO_LINKS = [
   { label: "Best for contractors", href: getFieldServiceBestForUrl("contractors") },
 ] as const;
 
-/** Field service by business type (industry links). */
+/**
+ * Trade / company-type entry points (identity navigation). Only routes that exist under /field-service/best-for/.
+ */
 export const FIELD_SERVICE_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
-  { label: "Plumbing", href: getFieldServiceBestForUrl("plumbing") },
-  { label: "HVAC", href: getFieldServiceBestForUrl("hvac") },
-  { label: "Electrical", href: getFieldServiceBestForUrl("electricians") },
-  { label: "Cleaning services", href: getFieldServiceBestForUrl("cleaning-services") },
-  { label: "Lawn care", href: getFieldServiceBestForUrl("lawn-care") },
+  { label: "HVAC companies", href: getFieldServiceBestForUrl("hvac") },
+  { label: "Plumbing businesses", href: getFieldServiceBestForUrl("plumbing") },
+  { label: "Electrical contractors", href: getFieldServiceBestForUrl("electricians") },
+  { label: "General & mixed contractors", href: getFieldServiceBestForUrl("contractors") },
 ];
 
+/** Optional: single group label for business-type section */
 export const FIELD_SERVICE_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
-  { groupLabel: "Primary industries", links: FIELD_SERVICE_BY_BUSINESS_TYPE },
+  { groupLabel: "Browse by trade or company type", links: FIELD_SERVICE_BY_BUSINESS_TYPE },
+];
+
+/** Editorial “by use case” blocks for the field service hub (scenario-based recommendations, not trade identity). */
+export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Best for small teams and local ops",
+    body:
+      "If you run a lean crew or solo operation, you need scheduling, dispatch, and invoicing without enterprise implementation drag. The goal is fewer tools and faster adoption—mobile apps that techs actually use and clear billing from the job. We focus on platforms that stay approachable at low headcount while still replacing spreadsheets.",
+    links: [
+      { label: "Best field service software for small business →", href: getFieldServiceBestForUrl("small-business") },
+      { label: "See our full rankings →", href: "/field-service/best-field-service-software" },
+    ],
+  },
+  {
+    title: "Best for growing, dispatch-heavy operations",
+    body:
+      "When call volume grows and you’re juggling multiple trucks, dispatch boards, capacity planning, and reporting become the bottleneck. Lightweight tools can feel underpowered; you need routing, job costing visibility, and often marketing or reporting depth. That’s where platforms built for scale—ServiceTitan is a common example—earn their place.",
+    links: [
+      { label: "Full rankings & picks for growing teams →", href: "/field-service/best-field-service-software" },
+      { label: "Housecall Pro vs ServiceTitan →", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+    ],
+  },
+  {
+    title: "Best for contractors coordinating jobs and crews",
+    body:
+      "General and mixed-trade contractors need one place for jobs, change orders, estimates, and customer communication—without losing visibility across crews. The right fit is less about a single trade and more about workflow: estimates to invoice, document storage, and how subs and techs get updates in the field.",
+    links: [{ label: "Best field service software for contractors →", href: getFieldServiceBestForUrl("contractors") }],
+  },
+  {
+    title: "Strong field ops on a tighter budget",
+    body:
+      "Not every shop needs a full enterprise stack. If price sensitivity matters, look for transparent per-user or per-tech pricing, solid core scheduling and invoicing, and room to grow without forced add-ons. Compare how lower-cost contenders stack up against all-in-one leaders before you commit.",
+    links: [
+      { label: "Jobber vs Workiz (value vs features) →", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
+      { label: "See our full rankings →", href: "/field-service/best-field-service-software" },
+    ],
+  },
+  {
+    title: "Trade-specific workflows (HVAC, plumbing, electrical)",
+    body:
+      "Team size and budget are one lens; your trade is another. HVAC, plumbing, and electrical shops often need industry-specific workflows—recurring maintenance, estimates tied to equipment, or code-aware job documentation. For identity-based “software for my trade” entry points, use the business-type section below rather than repeating those links here.",
+    links: [{ label: "Go to field service by business type →", href: "#by-trade" }],
+  },
 ];
 
 /** Card data for Popular field service comparisons. */

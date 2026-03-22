@@ -4,6 +4,7 @@
  */
 
 import { getSchedulingReviewUrl, getSchedulingCompareUrl, getSchedulingBestForUrl } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
@@ -54,17 +55,61 @@ export const SCHEDULING_SCENARIO_LINKS = [
   { label: "Best for teams", href: getSchedulingBestForUrl("teams") },
 ] as const;
 
-/** Scheduling by business type. */
+/** Identity-based entry points (routes exist under /scheduling/best-for/). */
 export const SCHEDULING_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
-  { label: "Consultants", href: getSchedulingBestForUrl("consultants") },
-  { label: "Coaches", href: getSchedulingBestForUrl("coaches") },
+  { label: "Freelancers & solos", href: getSchedulingBestForUrl("freelancers") },
+  { label: "Consultants & coaches", href: getSchedulingBestForUrl("consultants") },
   { label: "Service businesses", href: getSchedulingBestForUrl("service-business") },
-  { label: "Sales teams", href: getSchedulingBestForUrl("sales-teams") },
-  { label: "Customer support teams", href: getSchedulingBestForUrl("customer-support") },
+  { label: "Small business teams", href: getSchedulingBestForUrl("small-business") },
+  { label: "Multi-seat & pooled booking", href: getSchedulingBestForUrl("teams") },
 ];
 
 export const SCHEDULING_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
-  { groupLabel: "By business type", links: SCHEDULING_BY_BUSINESS_TYPE },
+  { groupLabel: "Browse by role or environment", links: SCHEDULING_BY_BUSINESS_TYPE },
+];
+
+/** Editorial “best scheduling by use case” — booking mechanics and volume, not identity label alone. */
+export const SCHEDULING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Solo calendars and simple client booking",
+    body: "Minimize friction: one link, reliable reminders, and payments only if you truly need them. Over-customizing meeting types early often slows adoption.",
+    links: [
+      { label: "Best scheduling for freelancers →", href: getSchedulingBestForUrl("freelancers") },
+      { label: "Calendly review →", href: getSchedulingReviewUrl("calendly") },
+    ],
+  },
+  {
+    title: "Consultants with intake, packages, or deposits",
+    body: "Forms, buffers, and paid bookings reduce no-shows and bad-fit calls. Compare whether clients can reschedule without creating email chains.",
+    links: [
+      { label: "Best scheduling for consultants →", href: getSchedulingBestForUrl("consultants") },
+      { label: "Calendly vs Acuity →", href: getSchedulingCompareUrl("calendly-vs-acuity-scheduling") },
+    ],
+  },
+  {
+    title: "Field and service businesses with routes",
+    body: "Travel time, capacity, and team dispatch are different problems than a solo calendar. Check mobile-first flows and whether job details carry into the appointment.",
+    links: [
+      { label: "Best scheduling for service businesses →", href: getSchedulingBestForUrl("service-business") },
+      { label: "Service businesses guide →", href: "/scheduling/guides/appointment-scheduling-for-service-businesses" },
+    ],
+  },
+  {
+    title: "Team and round-robin scheduling",
+    body: "Fairness rules, pooled availability, and CRM handoffs matter once multiple people book on behalf of the org. Pricing often jumps by seat—model your growth.",
+    links: [
+      { label: "Best scheduling for teams →", href: getSchedulingBestForUrl("teams") },
+      { label: "YouCanBook.me review →", href: getSchedulingReviewUrl("youcanbookme") },
+    ],
+  },
+  {
+    title: "SMBs standardizing inbound booking across staff",
+    body: "Once multiple people share inbound demand, you need pooled calendars, routing rules, and CRM hooks—not just a personal booking link. Compare seat pricing before you embed workflows.",
+    links: [
+      { label: "Best scheduling for small business →", href: getSchedulingBestForUrl("small-business") },
+      { label: "Calendly vs YouCanBook.me →", href: getSchedulingCompareUrl("calendly-vs-youcanbookme") },
+    ],
+  },
 ];
 
 /** Card data for Popular scheduling comparisons. */
@@ -151,10 +196,66 @@ const SCHEDULING_GUIDES_BASE = "/scheduling/guides";
 
 export const SCHEDULING_HUB_GUIDES: SchedulingGuideItem[] = [
   {
+    slug: "how-to-choose",
+    title: "How to Choose Scheduling Software",
+    href: `${SCHEDULING_GUIDES_BASE}/how-to-choose-scheduling-software`,
+    description:
+      "Evaluation framework: calendar sync, meeting types, reminders, team routing, and total cost.",
+  },
+  {
     slug: "scheduling-guides",
-    title: "Scheduling Guides",
-    description: "Browse guides on how to choose and use scheduling software for consultants, service businesses, and teams.",
+    title: "All Scheduling Guides",
+    description: "Browse the full library of scheduling articles and deep dives.",
     href: SCHEDULING_GUIDES_BASE,
+  },
+  {
+    slug: "freelancers",
+    title: "Best Scheduling Software for Freelancers",
+    href: `${SCHEDULING_GUIDES_BASE}/best-scheduling-software-for-freelancers`,
+    description:
+      "What solo pros need from booking links: simplicity, limits, and payment options—without enterprise bloat.",
+  },
+  {
+    slug: "consultants",
+    title: "Best Scheduling Software for Consultants",
+    href: `${SCHEDULING_GUIDES_BASE}/best-scheduling-software-for-consultants`,
+    description:
+      "Intake forms, buffer time, and package pricing—concepts for consultative sales and discovery calls.",
+  },
+  {
+    slug: "scheduling-teams",
+    title: "Scheduling Software for Teams",
+    href: `${SCHEDULING_GUIDES_BASE}/scheduling-software-for-teams`,
+    description:
+      "Round-robin, pooled availability, and admin controls when multiple people share inbound demand.",
+  },
+  {
+    slug: "small-business",
+    title: "Scheduling Tools for Small Business",
+    href: `${SCHEDULING_GUIDES_BASE}/scheduling-tools-for-small-business`,
+    description:
+      "How SMBs balance client experience with staff workload—implementation considerations, not vendor shortlists.",
+  },
+  {
+    slug: "scheduling-service",
+    title: "Appointment Scheduling for Service Businesses",
+    href: `${SCHEDULING_GUIDES_BASE}/appointment-scheduling-for-service-businesses`,
+    description:
+      "Field service, capacity, and reminders—what changes when appointments are operations-critical.",
+  },
+  {
+    slug: "calendly-alternatives",
+    title: "Calendly Alternatives",
+    href: `${SCHEDULING_GUIDES_BASE}/calendly-alternatives`,
+    description:
+      "When to look beyond the default Calendly path: pricing cliffs, feature gaps, and migration risk.",
+  },
+  {
+    slug: "acuity-alternatives",
+    title: "Acuity Scheduling Alternatives",
+    href: `${SCHEDULING_GUIDES_BASE}/acuity-scheduling-alternatives`,
+    description:
+      "Tradeoffs if you’re considering moving off Acuity: forms, packages, and payment workflows.",
   },
 ];
 

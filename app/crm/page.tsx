@@ -5,16 +5,18 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   CRM_FEATURED_PICKS,
   CRM_COMPARISON_TABLE_ROWS,
   CRM_POPULAR_COMPARISONS,
   CRM_SCENARIO_LINKS,
-  CRM_BY_BUSINESS_TYPE,
   CRM_BY_BUSINESS_TYPE_GROUPS,
   CRM_FAQ_ITEMS,
   CRM_METHODOLOGY,
   CRM_HUB_GUIDES,
+  CRM_USE_CASE_EDITORIAL,
 } from "@/lib/data/crmHubData";
 import { getCrmReviewUrl } from "@/lib/routes";
 
@@ -53,7 +55,27 @@ function CrmHowToChooseSection() {
         How to Choose CRM Software
       </HubSectionTitle>
       <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
-        CRM software helps you manage contacts, track leads and deals, and run your sales pipeline. This page is for <Link href="/crm/best-for/small-business" className={linkGreen}>small businesses</Link>, <Link href="/crm/best-for/startups" className={linkGreen}>startups</Link>, and <Link href="/crm/best-for/sales-teams" className={linkGreen}>sales teams</Link>. For a curated shortlist see our <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link> roundup; use the <Link href="/crm/compare" className={linkGreen}>comparison table</Link>, <Link href="/crm/guides" className={linkGreen}>guides</Link>, and scenario picks below.
+        CRM software helps you manage contacts, deals, and pipelines. Use the{" "}
+        <Link href="#compare" className={linkGreen}>
+          comparison table
+        </Link>
+        , then{" "}
+        <a href="#by-scenario" className={linkGreen}>
+          scenario-based picks
+        </a>{" "}
+        when you know your sales motion—or{" "}
+        <a href="#payroll-guides" className={linkGreen}>
+          guides
+        </a>{" "}
+        to learn evaluation criteria first. Our{" "}
+        <Link href="/crm/best-crm-software" className={linkGreen}>
+          full rankings
+        </Link>{" "}
+        and{" "}
+        <Link href="/crm/compare" className={linkGreen}>
+          comparison hub
+        </Link>{" "}
+        round out product research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
@@ -73,32 +95,52 @@ function CrmHowToChooseSection() {
 
 function CrmGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing, using, and getting more from CRM.">
-        CRM Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {CRM_HUB_GUIDES.map((guide) => (
-          <Link
-            key={guide.slug}
-            href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">{guide.description}</p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="CRM guides"
+      sectionSub="Learn how to evaluate CRM pricing, features, and stack fit—not another product list."
+      intro={
+        <>
+          Educational articles for top-of-funnel research. For picks by sales situation, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best CRM software by use case
+          </a>
+          ; for how you describe your team, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            CRM by team type
+          </a>
+          .
+        </>
+      }
+      guides={CRM_HUB_GUIDES}
+      footer={
+        <>
+          Reviews:{" "}
+          <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>
+            HubSpot
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>,{" "}
-        <Link href={getCrmReviewUrl("salesforce")} className={linkGreen}>Salesforce</Link>,{" "}
-        <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>,{" "}
-        <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link>,{" "}
-        <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday CRM</Link>.
-      </p>
-    </>
+          ,{" "}
+          <Link href={getCrmReviewUrl("salesforce")} className={linkGreen}>
+            Salesforce
+          </Link>
+          ,{" "}
+          <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>
+            Zoho CRM
+          </Link>
+          ,{" "}
+          <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>
+            Pipedrive
+          </Link>
+          ,{" "}
+          <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>
+            Monday CRM
+          </Link>
+          .{" "}
+          <Link href="/crm/guides" className={linkGreen}>
+            All CRM guides →
+          </Link>
+        </>
+      }
+    />
   );
 }
 
@@ -281,6 +323,26 @@ export default function CrmPage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular CRM platforms."
       howToChooseSection={<CrmHowToChooseSection />}
       guidesSection={<CrmGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best CRM software by use case"
+          sectionSub="Scenario-based picks—pipeline style, growth stage, and stack—not only org label."
+          intro={
+            <>
+              Who each scenario fits and what to prioritize. For team-identity entry points (freelancer vs agency vs sales org), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                CRM by team type
+              </a>{" "}
+              below. For concepts and definitions, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                CRM guides
+              </a>
+              .
+            </>
+          }
+          blocks={CRM_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best CRM Software Overall",
         description:
@@ -295,15 +357,16 @@ export default function CrmPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best CRM software by use case",
-        sectionSub: "Find CRM software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario-based recommendations.",
+        description: undefined,
         links: CRM_SCENARIO_LINKS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "CRM by business type",
-        sectionSub: "Best CRM software for different business types and team setups.",
-        links: CRM_BY_BUSINESS_TYPE,
+        sectionTitle: "CRM software by team type",
+        sectionSub:
+          "Identity-based navigation: how you describe your org (freelancer, startup, agency, sales team)—not the same lens as pipeline scenarios above.",
+        links: [],
         groups: CRM_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={CRM_FAQ_ITEMS as FaqItem[]}

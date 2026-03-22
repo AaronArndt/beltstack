@@ -5,17 +5,19 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import { getHrReviewUrl } from "@/lib/routes";
 import {
   HR_FEATURED_PICKS,
   HR_COMPARISON_ROWS,
   HR_SCENARIO_LINKS,
-  HR_BY_BUSINESS_TYPE,
   HR_BY_BUSINESS_TYPE_GROUPS,
   HR_POPULAR_COMPARISONS,
   HR_FAQ_ITEMS,
   HR_METHODOLOGY,
   HR_HUB_GUIDES,
+  HR_USE_CASE_EDITORIAL,
 } from "@/lib/data/hrHubData";
 
 const KEY_TAKEAWAYS = [
@@ -94,49 +96,48 @@ function HrHowToChooseSection() {
 
 function HrGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using HR software.">
-        HR Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {HR_HUB_GUIDES.map((guide) => (
-          <Link
-            key={guide.slug}
-            href={guide.href}
-            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">
-              {guide.title}
-            </h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
-              {guide.description}
-            </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">
-              Read guide →
-            </span>
+    <HubGuidesGrid
+      sectionTitle="HR guides"
+      sectionSub="Learn how payroll, HRIS, PEO, and global hiring models work—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles on evaluation and tradeoffs—not duplicate “best for” picks. For scenario blurbs, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best HR software by use case
+          </a>
+          ; for company-type entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            HR by business type
+          </a>
+          .
+        </>
+      }
+      guides={HR_HUB_GUIDES.map((g) => ({ title: g.title, href: g.href, description: g.description, slug: g.slug }))}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={getHrReviewUrl("gusto")} className={linkGreen}>
+            Gusto
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={getHrReviewUrl("gusto")} className={linkGreen}>Gusto</Link>,{" "}
-        <Link href={getHrReviewUrl("bamboohr")} className={linkGreen}>BambooHR</Link>,{" "}
-        <Link href={getHrReviewUrl("rippling")} className={linkGreen}>Rippling</Link>,{" "}
-        <Link href={getHrReviewUrl("deel")} className={linkGreen}>Deel</Link>,{" "}
-        <Link href={getHrReviewUrl("justworks")} className={linkGreen}>Justworks</Link>.
-      </p>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
-        For more resources, see our{" "}
-        <Link href="/hr" className={linkGreen}>
-          HR hub
-        </Link>{" "}
-        and{" "}
-        <Link href="/hr/compare" className={linkGreen}>
-          HR comparisons
-        </Link>
-        .
-      </p>
-    </>
+          ,{" "}
+          <Link href={getHrReviewUrl("bamboohr")} className={linkGreen}>
+            BambooHR
+          </Link>
+          ,{" "}
+          <Link href={getHrReviewUrl("rippling")} className={linkGreen}>
+            Rippling
+          </Link>
+          ,{" "}
+          <Link href={getHrReviewUrl("deel")} className={linkGreen}>
+            Deel
+          </Link>
+          .{" "}
+          <Link href="/hr/compare" className={linkGreen}>
+            HR comparisons →
+          </Link>
+        </>
+      }
+    />
   );
 }
 
@@ -338,6 +339,26 @@ export default function HrPage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular HR platforms."
       howToChooseSection={<HrHowToChooseSection />}
       guidesSection={<HrGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best HR software by use case"
+          sectionSub="Scenario-based picks—payroll, hiring, global footprint—not your company label alone."
+          intro={
+            <>
+              Each blurb explains the workforce problem first. For identity-style entry points (agency vs startup), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                HR by business type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                HR guides
+              </a>
+              .
+            </>
+          }
+          blocks={HR_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best HR Software Overall",
         description:
@@ -355,15 +376,16 @@ export default function HrPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best HR software by use case",
-        sectionSub: "Find HR tools that fit your situation.",
-        description: "Choose a use case to see our top picks and guidance.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: [...HR_SCENARIO_LINKS],
         highlightFirstLink: true,
       }}
       tradeLinks={{
         sectionTitle: "HR by business type",
-        sectionSub: "Best HR software by company type.",
-        links: HR_BY_BUSINESS_TYPE,
+        sectionSub:
+          "Identity-based navigation: how you describe your company (SMB, startup, global)—not workforce mechanics alone.",
+        links: [],
         groups: HR_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={HR_FAQ_ITEMS as FaqItem[]}

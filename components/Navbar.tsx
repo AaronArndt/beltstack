@@ -407,7 +407,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 h-16 border-b border-neutral-200 bg-white sm:h-[72px]">
+    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-neutral-200 bg-white sm:h-[72px]">
       <div
         ref={containerRef}
         className="relative mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"

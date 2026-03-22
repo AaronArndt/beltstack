@@ -8,6 +8,7 @@ import {
   getInventoryCompareUrl,
   getInventoryBestForUrl,
 } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 import { INVENTORY_LOGOS } from "@/lib/data/inventoryLogos";
@@ -63,12 +64,82 @@ export const INVENTORY_BY_BUSINESS_TYPE_GROUPS: {
   links: { label: string; href: string }[];
 }[] = [
   {
-    groupLabel: "Primary business types",
+    groupLabel: "Browse by operation type",
     links: INVENTORY_BY_BUSINESS_TYPE.slice(0, 3),
   },
   {
-    groupLabel: "Other business types",
+    groupLabel: "More operation types",
     links: INVENTORY_BY_BUSINESS_TYPE.slice(3),
+  },
+];
+
+/** Editorial “best inventory by use case” — ops reality (channels, BOM, warehouse depth), not org label alone. */
+export const INVENTORY_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Lean SMBs replacing spreadsheets",
+    body: "You need trustworthy on-hand counts, low training overhead, and affordable user limits before you add automation. Start with barcode basics and purchase orders—then layer channels once stock discipline sticks.",
+    links: [
+      { label: "Best inventory for small business →", href: getInventoryBestForUrl("small-business") },
+      { label: "Zoho Inventory review →", href: getInventoryReviewUrl("zoho-inventory") },
+    ],
+  },
+  {
+    title: "Ecommerce and multichannel stock sync",
+    body: "Marketplaces punish oversells: prioritize real-time sync, bundle/kit logic, and returns workflows. Compare integration breadth and whether inventory or your cart owns the product catalog.",
+    links: [
+      { label: "Best inventory for ecommerce →", href: getInventoryBestForUrl("ecommerce") },
+      { label: "Zoho Inventory vs Cin7 →", href: getInventoryCompareUrl("zoho-inventory-vs-cin7") },
+    ],
+  },
+  {
+    title: "Retail with stores and back rooms",
+    body: "You’re balancing POS pulls, transfers, and cycle counts. Look for multi-location permissions, receiving workflows, and how painful physical counts are on mobile.",
+    links: [
+      { label: "Best inventory for retail →", href: getInventoryBestForUrl("retail") },
+      { label: "Full rankings →", href: "/inventory/best-inventory-software" },
+    ],
+  },
+  {
+    title: "Manufacturing with BOMs and production",
+    body: "Raw materials, assemblies, and scrap change the software class. Evaluate whether you need true MRP features or lighter assembly—cost and complexity jump quickly.",
+    links: [
+      { label: "Best inventory for manufacturing →", href: getInventoryBestForUrl("manufacturing") },
+      { label: "Fishbowl vs Katana →", href: getInventoryCompareUrl("fishbowl-vs-katana") },
+    ],
+  },
+  {
+    title: "Warehouse-heavy receiving and fulfillment",
+    body: "At higher volume, bin locations, pick/pack, and transfer accuracy matter more than a slick UI. Plan for scanner workflows and whether you’re flirting with WMS territory.",
+    links: [
+      { label: "Best inventory for warehouses →", href: getInventoryBestForUrl("warehouses") },
+      { label: "Cin7 vs Katana →", href: getInventoryCompareUrl("cin7-vs-katana") },
+    ],
+  },
+];
+
+/** Educational hub guides (evaluation concepts). Exported for HubGuidesGrid on the inventory hub. */
+export const INVENTORY_HUB_GUIDES_GRID: {
+  title: string;
+  href: string;
+  description: string;
+}[] = [
+  {
+    href: "/inventory/guides/what-is-inventory-management-software",
+    title: "What is Inventory Management Software?",
+    description:
+      "Definitions and scope: when stock tracking is enough versus when you need manufacturing, WMS, or multichannel ops.",
+  },
+  {
+    href: "/inventory/guides/inventory-software-pricing",
+    title: "Inventory Software Pricing",
+    description:
+      "How vendors charge for users, locations, orders, and SKUs—so you can compare total cost, not teaser tiers.",
+  },
+  {
+    href: "/inventory/guides/inventory-for-ecommerce-and-retail",
+    title: "Inventory for Ecommerce and Retail",
+    description:
+      "Channel sync, returns, and fulfillment concepts—evaluation depth without duplicating product picks above.",
   },
 ];
 

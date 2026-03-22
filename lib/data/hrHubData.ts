@@ -4,6 +4,7 @@
  */
 
 import { getHrReviewUrl, getHrCompareUrl, getHrBestForUrl } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
@@ -67,7 +68,59 @@ export const HR_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
 ];
 
 export const HR_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
-  { groupLabel: "By business type", links: HR_BY_BUSINESS_TYPE },
+  { groupLabel: "Browse by company type", links: HR_BY_BUSINESS_TYPE },
+];
+
+/** Editorial “best HR by use case” — workforce model and compliance load, not org label alone. */
+export const HR_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Payroll + benefits in one SMB stack",
+    body: "If contractors are rare and W-2 payroll is central, evaluate onboarding quality, tax filing inclusion, and benefits admin—not just per-seat HR features. All-in-one pricing can beat piecing together payroll + HRIS.",
+    links: [
+      { label: "Best HR for small business →", href: getHrBestForUrl("small-business") },
+      { label: "Gusto review →", href: getHrReviewUrl("gusto") },
+    ],
+  },
+  {
+    title: "People operations and hiring-first teams",
+    body: "When ATS, performance, and culture tools matter more than running payroll in-app, an HRIS can be the spine—with payroll integrated or best-of-breed. Compare data model depth and employee self-service.",
+    links: [
+      { label: "BambooHR review →", href: getHrReviewUrl("bamboohr") },
+      { label: "Gusto vs BambooHR →", href: getHrCompareUrl("gusto-vs-bamboohr") },
+    ],
+  },
+  {
+    title: "Startups with changing roles and light process",
+    body: "Speed and flexibility beat enterprise modules you won’t staff. Watch how permissions scale and whether you’ll migrate when headcount jumps.",
+    links: [
+      { label: "Best HR for startups →", href: getHrBestForUrl("startups") },
+      { label: "Full rankings →", href: "/hr/best-hr-software" },
+    ],
+  },
+  {
+    title: "Global hiring and employer-of-record complexity",
+    body: "Contracts, currencies, and local compliance differ from domestic payroll. Evaluate whether you need EOR-first tooling versus HR with add-on global payroll.",
+    links: [
+      { label: "Best HR for global teams →", href: getHrBestForUrl("global-teams") },
+      { label: "Deel vs Rippling →", href: getHrCompareUrl("deel-vs-rippling") },
+    ],
+  },
+  {
+    title: "Distributed and remote-first companies",
+    body: "Async onboarding, equipment workflows, and clear time-off policies reduce friction. Prefer integrations with IT and payroll that match how async you really are.",
+    links: [
+      { label: "Best HR for remote teams →", href: getHrBestForUrl("remote-teams") },
+      { label: "Rippling review →", href: getHrReviewUrl("rippling") },
+    ],
+  },
+  {
+    title: "Agencies and project-based staffing",
+    body: "Contractor mixes, multiple entities, or rapid staffing swings stress lightweight HR. Map whether you need scheduling, permissions, or compliance help specific to client work.",
+    links: [
+      { label: "Best HR for agencies →", href: getHrBestForUrl("agencies") },
+      { label: "Rippling vs Gusto →", href: getHrCompareUrl("rippling-vs-gusto") },
+    ],
+  },
 ];
 
 /** Card data for Popular HR comparisons. */
@@ -154,9 +207,58 @@ const HR_GUIDES_BASE = "/hr/guides";
 
 export const HR_HUB_GUIDES: HrGuideItem[] = [
   {
+    slug: "how-to-choose-hr-software",
+    title: "How to Choose HR Software",
+    description:
+      "Evaluation framework: payroll vs HRIS vs PEO, compliance scope, and total cost—not just feature checklists.",
+    href: `${HR_GUIDES_BASE}/how-to-choose-hr-software`,
+  },
+  {
+    slug: "peo-vs-hr-software",
+    title: "PEO vs HR Software",
+    description:
+      "When co-employment and bundled benefits beat software-only approaches—and what you give up either way.",
+    href: `${HR_GUIDES_BASE}/peo-vs-hr-software`,
+  },
+  {
+    slug: "hr-software-for-startups",
+    title: "HR Software for Startups",
+    description:
+      "Lean hiring, role changes, and tool sprawl—implementation concepts for early-stage teams.",
+    href: `${HR_GUIDES_BASE}/hr-software-for-startups`,
+  },
+  {
+    slug: "hr-software-for-remote-teams",
+    title: "HR Software for Remote Teams",
+    description:
+      "Onboarding, equipment, and policy distribution when people rarely share an office.",
+    href: `${HR_GUIDES_BASE}/hr-software-for-remote-teams`,
+  },
+  {
+    slug: "hr-software-for-global-teams",
+    title: "HR Software for Global Teams",
+    description:
+      "Payroll currencies, contracts, and compliance across borders—what to validate before you buy.",
+    href: `${HR_GUIDES_BASE}/hr-software-for-global-teams`,
+  },
+  {
+    slug: "bamboohr-alternatives",
+    title: "BambooHR Alternatives",
+    description:
+      "Tradeoffs if you’re comparing or migrating off BambooHR: hiring depth, payroll partners, and pricing cliffs.",
+    href: `${HR_GUIDES_BASE}/bamboohr-alternatives`,
+  },
+  {
+    slug: "gusto-alternatives",
+    title: "Gusto Alternatives",
+    description:
+      "When payroll-first SMB stacks need different benefits, states, or global paths than Gusto optimizes for.",
+    href: `${HR_GUIDES_BASE}/gusto-alternatives`,
+  },
+  {
     slug: "hr-guides",
-    title: "HR Software Guides",
-    description: "Browse guides on how to choose and use HR software for small businesses, startups, and growing teams.",
+    title: "All HR Guides",
+    description: "Browse the full library of HR software guides and resources.",
     href: HR_GUIDES_BASE,
   },
 ];

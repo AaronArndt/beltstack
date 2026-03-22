@@ -62,7 +62,7 @@ export default function CrmForConsultantsPage() {
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">CRM for Consultants</h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     How consultants use CRM to manage clients, projects, and follow-up without overpaying for enterprise tools.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

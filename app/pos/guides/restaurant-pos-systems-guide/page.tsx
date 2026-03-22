@@ -58,7 +58,7 @@ export default function RestaurantPosSystemsGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Restaurant POS Systems Guide
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Restaurant workflows, menu management, table service, and order routing—and how to choose a POS built for food service.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />

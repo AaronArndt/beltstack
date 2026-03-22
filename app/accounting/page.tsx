@@ -8,6 +8,9 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
+import { ACCOUNTING_USE_CASE_EDITORIAL, ACCOUNTING_HUB_GUIDES } from "@/lib/data/accountingHubData";
 import { getAccountingComparisonBySlug, getAccountingCompareUrlFromSlug } from "@/lib/data/accountingComparisons";
 import { getAccountingReviewUrl } from "@/lib/routes";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
@@ -45,14 +48,6 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Microsoft Dynamics 365", bestFor: "Microsoft ERP ecosystem", price: "Quote", rating: "4.0", slug: "microsoft-dynamics", logoSrc: "/Logos/microsoft.png" },
   { tool: "ZipBooks", bestFor: "Simplicity-first accounting", price: "Quote", rating: "4.0", slug: "zipbooks", logoSrc: "/Logos/zipbooks.jpeg" },
   { tool: "Akaunting", bestFor: "Lightweight accounting", price: "Quote", rating: "4.0", slug: "akaunting", logoSrc: "/Logos/akaunting.jpeg" },
-];
-
-const ACCOUNTING_GUIDES = [
-  { title: "How Accounting Software Works", href: `${ACCOUNTING_GUIDES_BASE}/how-accounting-software-works`, description: "What accounting software does, from books to reports and tax prep." },
-  { title: "Accounting for Small Business", href: `${ACCOUNTING_GUIDES_BASE}/accounting-for-small-business`, description: "Choosing and using accounting software for small teams and sole props." },
-  { title: "QuickBooks Alternatives", href: `${ACCOUNTING_GUIDES_BASE}/quickbooks-alternatives`, description: "Compare Xero, FreshBooks, Zoho Books, and other options to QuickBooks." },
-  { title: "Accounting vs Bookkeeping", href: `${ACCOUNTING_GUIDES_BASE}/accounting-vs-bookkeeping`, description: "How accounting software differs from bookkeeping tools and when you need both." },
-  { title: "Invoicing Software vs Accounting", href: `${ACCOUNTING_GUIDES_BASE}/invoicing-software-vs-accounting`, description: "When to use invoicing-only tools versus full accounting software." },
 ];
 
 const MORE_ACCOUNTING_OPTIONS = [
@@ -177,35 +172,49 @@ function AccountingHowToChooseSection() {
 
 function AccountingGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using accounting software.">
-        Accounting Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {ACCOUNTING_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">{guide.description}</p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="Accounting guides"
+      sectionSub="Learn how pricing, reporting depth, and workflows fit together—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles on evaluation and concepts—not duplicate product picks. For scenario-based recommendations, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best accounting software by use case
+          </a>
+          ; for identity entry points (freelancer vs ecommerce), see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            accounting by business type
+          </a>
+          .
+        </>
+      }
+      guides={ACCOUNTING_HUB_GUIDES}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={`${ACCOUNTING_REVIEW_BASE}/quickbooks-online`} className={linkGreen}>
+            QuickBooks Online
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/quickbooks-online`} className={linkGreen}>QuickBooks Online</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/xero`} className={linkGreen}>Xero</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/freshbooks`} className={linkGreen}>FreshBooks</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/zoho-books`} className={linkGreen}>Zoho Books</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/wave`} className={linkGreen}>Wave</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/sage-accounting`} className={linkGreen}>Sage Accounting</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/odoo-accounting`} className={linkGreen}>Odoo Accounting</Link>,{" "}
-        <Link href={`${ACCOUNTING_REVIEW_BASE}/kashoo`} className={linkGreen}>Kashoo</Link>.
-      </p>
-    </>
+          ,{" "}
+          <Link href={`${ACCOUNTING_REVIEW_BASE}/xero`} className={linkGreen}>
+            Xero
+          </Link>
+          ,{" "}
+          <Link href={`${ACCOUNTING_REVIEW_BASE}/freshbooks`} className={linkGreen}>
+            FreshBooks
+          </Link>
+          ,{" "}
+          <Link href={`${ACCOUNTING_REVIEW_BASE}/zoho-books`} className={linkGreen}>
+            Zoho Books
+          </Link>
+          ,{" "}
+          <Link href={`${ACCOUNTING_REVIEW_BASE}/wave`} className={linkGreen}>
+            Wave
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -425,6 +434,26 @@ export default function AccountingPage() {
       introExtended={<AccountingIntroExtended />}
       howToChooseSection={<AccountingHowToChooseSection />}
       guidesSection={<AccountingGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best accounting software by use case"
+          sectionSub="Scenario-based picks—complexity, channels, and workforce mix—not your industry label alone."
+          intro={
+            <>
+              Each blurb explains who it fits and what to validate first. For industry-style entry points, use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                accounting by business type
+              </a>
+              ; for concepts and pricing, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                accounting guides
+              </a>
+              .
+            </>
+          }
+          blocks={ACCOUNTING_USE_CASE_EDITORIAL}
+        />
+      }
       popularComparisonsSection={<AccountingPopularComparisonsSection />}
       bestRoundupBlock={{
         title: "Best Accounting Software Overall",
@@ -436,15 +465,16 @@ export default function AccountingPage() {
       comparisonTableRankingsLink={{ label: "See our full rankings →", href: "/accounting/best-accounting-software" }}
       scenarioLinks={{
         sectionTitle: "Best accounting software by use case",
-        sectionSub: "Find accounting software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: BEST_FOR_SCENARIOS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
         sectionTitle: "Accounting by business type",
-        sectionSub: "Best accounting software by business type.",
-        links: BY_INDUSTRY,
+        sectionSub:
+          "Identity-based navigation: how you describe your business (freelancer, contractor, ecommerce)—not workflow complexity alone.",
+        links: [],
         groups: BY_INDUSTRY_GROUPS,
       }}
       faqItems={FAQ_ITEMS}

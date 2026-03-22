@@ -8,6 +8,10 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
+import { INVOICING_USE_CASE_EDITORIAL } from "@/lib/data/invoicingHubData";
+import { INVOICING_GUIDES } from "@/lib/data/invoicingGuides";
 import { getInvoicingComparisonBySlug } from "@/lib/data/invoicingComparisons";
 import { getInvoicingCompareUrl } from "@/lib/routes";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
@@ -39,14 +43,6 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Invoice Ninja", bestFor: "Self-hosted & open source", price: "Free / paid", rating: "4.3", slug: "invoice-ninja", logoSrc: "/Logos/invoiceninja.jpeg" },
   { tool: "HoneyBook", bestFor: "Creative professionals", price: "Quote", rating: "4.4", slug: "honeybook", logoSrc: "/Logos/honeybook.jpeg" },
   { tool: "Bonsai", bestFor: "Freelancers & contracts", price: "Quote", rating: "4.3", slug: "bonsai", logoSrc: "/Logos/bonsai.jpeg" },
-];
-
-const INVOICING_GUIDES = [
-  { title: "How Invoicing Software Works", href: `${INVOICING_GUIDES_BASE}/how-invoicing-software-works`, description: "What invoicing software does, from creating invoices to payment collection and reporting." },
-  { title: "Best Invoicing Software for Freelancers", href: `${INVOICING_GUIDES_BASE}/best-invoicing-software-for-freelancers`, description: "Choosing invoicing tools that fit solo pros and project-based billing." },
-  { title: "Invoicing Software vs Accounting Software", href: `${INVOICING_GUIDES_BASE}/invoicing-software-vs-accounting-software`, description: "When to use invoicing-only tools versus full accounting software." },
-  { title: "How to Choose Invoicing Software", href: `${INVOICING_GUIDES_BASE}/how-to-choose-invoicing-software`, description: "Key factors: recurring billing, payment processing, and integrations." },
-  { title: "Recurring Invoicing Explained", href: `${INVOICING_GUIDES_BASE}/recurring-invoicing-explained`, description: "How recurring invoices and subscription billing work in invoicing tools." },
 ];
 
 const BEST_FOR_SCENARIOS = [
@@ -159,35 +155,45 @@ function InvoicingHowToChooseSection() {
 
 function InvoicingGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using invoicing software.">
-        Invoicing Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {INVOICING_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">{guide.description}</p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="Invoicing guides"
+      sectionSub="Learn how pricing, payments, and accounting fit work together—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles on evaluation—not duplicate “best for” picks. For scenario blurbs, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best invoicing software by use case
+          </a>
+          ; for trade-style entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            invoicing by business type
+          </a>
+          .
+        </>
+      }
+      guides={INVOICING_GUIDES}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={`${INVOICING_REVIEW_BASE}/freshbooks`} className={linkGreen}>
+            FreshBooks
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/freshbooks`} className={linkGreen}>FreshBooks</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/quickbooks`} className={linkGreen}>QuickBooks</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/wave`} className={linkGreen}>Wave</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/zoho-invoice`} className={linkGreen}>Zoho Invoice</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/xero`} className={linkGreen}>Xero</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/invoice-ninja`} className={linkGreen}>Invoice Ninja</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/honeybook`} className={linkGreen}>HoneyBook</Link>,{" "}
-        <Link href={`${INVOICING_REVIEW_BASE}/bonsai`} className={linkGreen}>Bonsai</Link>.
-      </p>
-    </>
+          ,{" "}
+          <Link href={`${INVOICING_REVIEW_BASE}/quickbooks`} className={linkGreen}>
+            QuickBooks
+          </Link>
+          ,{" "}
+          <Link href={`${INVOICING_REVIEW_BASE}/wave`} className={linkGreen}>
+            Wave
+          </Link>
+          ,{" "}
+          <Link href={`${INVOICING_REVIEW_BASE}/zoho-invoice`} className={linkGreen}>
+            Zoho Invoice
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -413,6 +419,26 @@ export default function InvoicingPage() {
       introExtended={<InvoicingIntroExtended />}
       howToChooseSection={<InvoicingHowToChooseSection />}
       guidesSection={<InvoicingGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best invoicing software by use case"
+          sectionSub="Scenario-based picks—billing model, client volume, and growth stage—not your trade label alone."
+          intro={
+            <>
+              Each blurb explains who it fits and what to prioritize. For industry-style entry points (landscaping, electricians), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                invoicing by business type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                invoicing guides
+              </a>
+              .
+            </>
+          }
+          blocks={INVOICING_USE_CASE_EDITORIAL}
+        />
+      }
       popularComparisonsSection={<InvoicingPopularComparisonsSection />}
       bestRoundupBlock={{
         title: "Best Invoicing Software Overall",
@@ -424,15 +450,16 @@ export default function InvoicingPage() {
       comparisonTableRankingsLink={{ label: "See our full rankings →", href: "/invoicing/best-invoicing-software" }}
       scenarioLinks={{
         sectionTitle: "Best invoicing software by use case",
-        sectionSub: "Find invoicing software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: BEST_FOR_SCENARIOS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
         sectionTitle: "Invoicing by business type",
-        sectionSub: "Invoicing recommendations by business type.",
-        links: BY_INDUSTRY,
+        sectionSub:
+          "Identity-based navigation: your trade or client model (landscaping, agencies, consultants)—not billing mechanics alone.",
+        links: [],
         groups: BY_INDUSTRY_GROUPS,
       }}
       faqItems={FAQ_ITEMS}

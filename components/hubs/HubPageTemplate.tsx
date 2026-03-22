@@ -5,8 +5,8 @@
  * Use this for all category hubs so section order, spacing, typography, and UI stay consistent.
  *
  * Section order: Hero → Best roundup block → Section nav → How to choose (optional) →
- * Top picks → Comparison table → Guides (optional) → Finder (optional) →
- * By scenario → By trade/industry → Popular comparisons (optional) →
+ * Top picks → Comparison table → By scenario (optional custom content) → By trade
+ * → Guides (optional) → Finder (optional) → Popular comparisons (optional) →
  * Education (optional) → FAQ → Methodology
  *
  * Future categories (CRM, scheduling, invoicing, field-service, time-tracking) should
@@ -87,6 +87,8 @@ export type HubPageTemplateProps = {
     /** When true, first scenario pill gets stronger emphasis (e.g. roundup link) */
     highlightFirstLink?: boolean;
   };
+  /** When set, replaces the default scenario pill row (e.g. editorial “by use case” blocks on a hub). */
+  scenarioCustomContent?: React.ReactNode;
   tradeLinks: {
     sectionTitle: string;
     sectionSub: string;
@@ -115,9 +117,9 @@ export type HubPageTemplateProps = {
   howToChooseSection?: React.ReactNode;
   /** Optional: short line above comparison table */
   comparisonTableIntro?: string;
-  /** Optional: guides / resources section after comparison table */
+  /** Optional: guides / resources section (rendered after by-trade; educational / informational) */
   guidesSection?: React.ReactNode;
-  /** Optional: popular comparisons section after by-trade */
+  /** Optional: popular comparisons section (after guides / finder) */
   popularComparisonsSection?: React.ReactNode;
   /** Optional: primary CTA in hero (e.g. "View Best Payroll Software") */
   heroCta?: { label: string; href: string };
@@ -212,6 +214,7 @@ export function HubPageTemplate({
   bestRoundupBlock,
   featuredPicksRankingsLink,
   comparisonTableRankingsLink,
+  scenarioCustomContent,
 }: HubPageTemplateProps) {
   const pickRoutes = getSoftwarePickCategoryRoutes(softwarePickCategory);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -219,8 +222,8 @@ export function HubPageTemplate({
   const jumpLinks = [
     ...(howToChooseSection ? [JUMP_LINKS_HOW_TO_CHOOSE] : []),
     ...JUMP_LINKS_BASE.slice(0, 2), // Top picks, Compare
-    ...(guidesSection ? [JUMP_LINKS_GUIDES] : []),
     ...JUMP_LINKS_BASE.slice(2, 5), // Find your fit, By scenario, By trade
+    ...(guidesSection ? [JUMP_LINKS_GUIDES] : []),
     ...(popularComparisonsSection ? [JUMP_LINKS_COMPARISONS] : []),
     ...JUMP_LINKS_BASE.slice(5),
   ];
@@ -241,7 +244,7 @@ export function HubPageTemplate({
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
               {title}
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               {intro}
             </p>
             {introExtended != null && (
@@ -425,51 +428,38 @@ export function HubPageTemplate({
           </div>
         </section>
 
-        {/* ——— Guides section (optional) ——— */}
-        {guidesSection != null && (
-          <section id="payroll-guides" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              {guidesSection}
-            </div>
-          </section>
-        )}
-
-        {/* ——— C) Finder / filters (optional) ——— */}
-        {finderSection != null && (
-          <section id="find-fit" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-10">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <SectionTitle sub={finderSection.sub}>{finderSection.title}</SectionTitle>
-              {finderSection.content}
-            </div>
-          </section>
-        )}
-
-        {/* ——— D) Best by scenario ——— */}
+        {/* ——— C) Best by scenario ——— */}
         <section id="by-scenario" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle sub={scenarioLinks.sectionSub}>{scenarioLinks.sectionTitle}</SectionTitle>
-            {scenarioLinks.description != null && (
-              <p className="mt-1 text-[#6E6E6E] text-sm">{scenarioLinks.description}</p>
+            {scenarioCustomContent != null ? (
+              scenarioCustomContent
+            ) : (
+              <>
+                <SectionTitle sub={scenarioLinks.sectionSub}>{scenarioLinks.sectionTitle}</SectionTitle>
+                {scenarioLinks.description != null && (
+                  <p className="mt-1 text-[#6E6E6E] text-sm">{scenarioLinks.description}</p>
+                )}
+                <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                  {scenarioLinks.links.map(({ label, href }, index) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={
+                        scenarioLinks.highlightFirstLink === true && index === 0
+                          ? "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-[#10B981] bg-[#10B981]/10 px-4 py-2.5 text-sm font-bold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                          : btnPill
+                      }
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </>
             )}
-            <div className="mt-4 flex flex-wrap items-center gap-2.5">
-              {scenarioLinks.links.map(({ label, href }, index) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={
-                    scenarioLinks.highlightFirstLink === true && index === 0
-                      ? "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-[#10B981] bg-[#10B981]/10 px-4 py-2.5 text-sm font-bold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-                      : btnPill
-                  }
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
           </div>
         </section>
 
-        {/* ——— E) By trade ——— */}
+        {/* ——— D) By trade / business type ——— */}
         <section id="by-trade" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={tradeLinks.sectionSub}>{tradeLinks.sectionTitle}</SectionTitle>
@@ -501,6 +491,25 @@ export function HubPageTemplate({
             )}
           </div>
         </section>
+
+        {/* ——— Guides section (optional) ——— */}
+        {guidesSection != null && (
+          <section id="payroll-guides" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              {guidesSection}
+            </div>
+          </section>
+        )}
+
+        {/* ——— E) Finder / filters (optional) ——— */}
+        {finderSection != null && (
+          <section id="find-fit" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-10">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <SectionTitle sub={finderSection.sub}>{finderSection.title}</SectionTitle>
+              {finderSection.content}
+            </div>
+          </section>
+        )}
 
         {/* ——— Popular comparisons (optional) ——— */}
         {popularComparisonsSection != null && (

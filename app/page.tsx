@@ -180,7 +180,7 @@ export default function Home() {
             <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Find the Best Software for Your Business
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-[#6E6E6E] text-lg leading-relaxed">
+            <p className="mx-auto mt-3 max-w-2xl text-center text-[#6E6E6E] text-base leading-relaxed">
               Compare payroll, CRM, field service, helpdesk, POS, inventory, and more. Independent reviews and side-by-side comparisons.
             </p>
             <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">

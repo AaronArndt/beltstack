@@ -107,7 +107,7 @@ export default function PayrollTaxesExplainedPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll Taxes Explained
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Understand how payroll taxes work, what employers are responsible for, and how payroll software helps businesses file taxes correctly.
                   </p>
                   <GuideLastUpdated date="March 2026" />

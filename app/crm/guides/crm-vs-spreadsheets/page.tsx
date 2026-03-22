@@ -63,7 +63,7 @@ export default function CrmVsSpreadsheetsPage() {
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">CRM vs Spreadsheets</h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     When to move from spreadsheets to CRM and what you gain: automation, reporting, and team alignment without manual updates.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

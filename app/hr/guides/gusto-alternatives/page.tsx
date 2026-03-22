@@ -130,7 +130,7 @@ export default function GustoAlternativesGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Gusto Alternatives
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Gusto is one of the most popular HR and payroll platforms for small businesses—but it is not the
                     right fit for every team. This guide walks through where Gusto excels, where it falls short, and the
                     best alternatives to consider.

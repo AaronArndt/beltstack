@@ -99,7 +99,7 @@ export default function CheapestPayrollSoftwarePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Cheapest Payroll Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Find the most affordable payroll software for small businesses. Compare low-cost options, what you get for the price, and when it makes sense to pay more for extra features.
                   </p>
                   <GuideLastUpdated date="March 2026" />

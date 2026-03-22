@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -24,9 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} font-sans antialiased`}>
+      <body
+        className={`${plusJakarta.variable} font-sans antialiased pt-[var(--navbar-h)]`}
+      >
         <Navbar />
         {children}
+        <ScrollToTopButton />
       </body>
     </html>
   );

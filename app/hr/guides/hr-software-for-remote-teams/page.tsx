@@ -129,7 +129,7 @@ export default function HrSoftwareForRemoteTeamsGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     HR Software for Remote Teams
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     How remote and distributed teams use HR software to onboard people, manage time off, and stay
                     compliant across locations.
                   </p>

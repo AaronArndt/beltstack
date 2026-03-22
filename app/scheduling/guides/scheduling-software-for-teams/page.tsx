@@ -62,7 +62,7 @@ export default function SchedulingSoftwareForTeamsPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Scheduling Software for Teams
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     What to look for when multiple people take bookings: round-robin, collective availability, buffer time, and team-friendly pricing.
                   </p>
                   <GuideLastUpdated date="March 12, 2026" />

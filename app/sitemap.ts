@@ -74,6 +74,7 @@ import { getHelpdeskComparisonSlugs } from "@/lib/data/helpdeskComparisons";
 import { getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
 import { getHelpdeskAlternativesSlugs } from "@/lib/data/helpdeskAlternatives";
 import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
+import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
 const PAYROLL_BEST_FOR_SCENARIOS = [
@@ -294,6 +295,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/helpdesk/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/helpdesk/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
+
+  const tradeHubEntries: MetadataRoute.Sitemap = TRADE_HUB_SLUGS.map((slug) =>
+    defaultEntry(`/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
 
   // Payroll comparisons
   const comparisonSlugs = getPayrollComparisonSlugs();
@@ -638,6 +643,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes,
+    ...tradeHubEntries,
     ...comparisonEntries,
     ...reviewEntries,
     ...providerEntries,

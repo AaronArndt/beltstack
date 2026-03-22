@@ -4,6 +4,7 @@
  */
 
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef } from "@/components/hubs/HubPageTemplate";
 import type { ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
@@ -32,10 +33,53 @@ export type CrmGuideItem = {
 const CRM_GUIDES_BASE = "/crm/guides";
 
 export const CRM_HUB_GUIDES: CrmGuideItem[] = [
-  { slug: "what-is-crm-software", title: "What is CRM Software", description: "What CRM software is, who uses it, and how it helps manage contacts, leads, and pipelines.", href: `${CRM_GUIDES_BASE}/what-is-crm-software` },
-  { slug: "crm-for-small-business", title: "CRM for Small Business", description: "Choosing and using CRM when you're a small team or startup.", href: `${CRM_GUIDES_BASE}/crm-for-small-business` },
-  { slug: "crm-vs-marketing-automation", title: "CRM vs Marketing Automation", description: "When you need CRM, marketing automation, or both.", href: `${CRM_GUIDES_BASE}/crm-vs-marketing-automation` },
-  { slug: "how-to-choose-crm-software", title: "How to Choose CRM Software", description: "Key factors when comparing CRM platforms for your team.", href: `${CRM_GUIDES_BASE}/how-to-choose-crm-software` },
+  { slug: "how-to-choose-crm-software", title: "How to Choose CRM Software", description: "Evaluation criteria: pipeline design, automation depth, integrations, and total cost at your seat count.", href: `${CRM_GUIDES_BASE}/how-to-choose-crm-software` },
+  { slug: "what-is-crm-software", title: "What Is CRM Software?", description: "Definitions, core objects (contacts, deals), and how CRM fits next to email and support tools.", href: `${CRM_GUIDES_BASE}/what-is-crm-software` },
+  { slug: "crm-vs-marketing-automation", title: "CRM vs Marketing Automation", description: "Where each tool starts and stops—and how teams avoid duplicate systems.", href: `${CRM_GUIDES_BASE}/crm-vs-marketing-automation` },
+  { slug: "crm-for-small-business", title: "CRM Concepts for Small Teams", description: "Adoption, permissions, and scope control so a small team doesn’t drown in features.", href: `${CRM_GUIDES_BASE}/crm-for-small-business` },
+];
+
+/** Editorial “best CRM by use case” blocks (scenario-based). */
+export const CRM_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Small sales teams needing clear pipeline visibility",
+    body: "If your priority is a simple deal pipeline and activity history—not a full marketing suite—look for fast onboarding, clear stages, and email or calendar integration your reps will actually use.",
+    links: [
+      { label: "Best CRM for small business →", href: getCrmBestForUrl("small-business") },
+      { label: "Pipedrive vs Freshsales →", href: getCrmCompareUrl("freshsales-vs-pipedrive") },
+    ],
+  },
+  {
+    title: "Outbound-heavy and activity-driven selling",
+    body: "High-touch sales teams need tasks, call logging, and sequencing without admin overhead. The right CRM makes follow-ups visible and reporting honest about pipeline health.",
+    links: [{ label: "Best CRM for sales teams →", href: getCrmBestForUrl("sales-teams") }],
+  },
+  {
+    title: "All-in-one marketing + sales alignment",
+    body: "When marketing and sales must share one customer record, you need native email, forms, and automation—often where HubSpot-style platforms win—balanced against cost at scale.",
+    links: [
+      { label: "Monday CRM vs HubSpot →", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+      { label: "Full rankings →", href: "/crm/best-crm-software" },
+    ],
+  },
+  {
+    title: "Startups moving fast with lean ops",
+    body: "Early-stage teams need something teams adopt quickly, with room to add seats and automation without a six-month implementation.",
+    links: [{ label: "Best CRM for startups →", href: getCrmBestForUrl("startups") }],
+  },
+  {
+    title: "Agencies and multi-account workflows",
+    body: "Client businesses need visibility across accounts, retainers, and handoffs—without turning every contact into an unstructured list. Evaluate reporting and project tie-ins, not just CRM defaults.",
+    links: [{ label: "Best CRM for agencies →", href: getCrmBestForUrl("agencies") }],
+  },
+  {
+    title: "Solos and freelancers",
+    body: "A full enterprise CRM can overwhelm a solo operator; you still need reliable follow-up and deal tracking. The goal is lightweight pipeline discipline, not unused modules.",
+    links: [
+      { label: "Best CRM for freelancers →", href: getCrmBestForUrl("freelancers") },
+      { label: "Go to CRM by team type →", href: "#by-trade" },
+    ],
+  },
 ];
 
 /** Top CRM picks — slugs resolve to canonical `crmBestSoftware` card data */
@@ -125,18 +169,17 @@ export const CRM_SCENARIO_LINKS = [
   { label: "Sales teams", href: getCrmBestForUrl("sales-teams") },
 ];
 
-/** CRM by business type (trade links). */
+/** CRM by team / org identity (same routes as some scenarios—different section intent: how you describe your team). */
 export const CRM_BY_BUSINESS_TYPE = [
-  { label: "Agencies", href: getCrmBestForUrl("agencies") },
+  { label: "Freelancers & solos", href: getCrmBestForUrl("freelancers") },
+  { label: "Small businesses", href: getCrmBestForUrl("small-business") },
   { label: "Startups", href: getCrmBestForUrl("startups") },
-  { label: "Sales teams", href: getCrmBestForUrl("sales-teams") },
-  { label: "Consultants", href: getCrmBestForUrl("consultants") },
-  { label: "Freelancers", href: getCrmBestForUrl("freelancers") },
+  { label: "Agencies & client services", href: getCrmBestForUrl("agencies") },
+  { label: "Sales teams & pipeline orgs", href: getCrmBestForUrl("sales-teams") },
 ];
 
 export const CRM_BY_BUSINESS_TYPE_GROUPS = [
-  { groupLabel: "Primary business types", links: CRM_BY_BUSINESS_TYPE.slice(0, 3) },
-  { groupLabel: "Other business types", links: CRM_BY_BUSINESS_TYPE.slice(3) },
+  { groupLabel: "Browse by team type", links: CRM_BY_BUSINESS_TYPE },
 ];
 
 /** FAQ items for the hub. */

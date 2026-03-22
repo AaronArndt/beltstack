@@ -78,10 +78,10 @@ export default function InvoicingCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare Invoicing Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons of the most popular invoicing tools.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Whether you need simple invoicing for freelancers, free software, or tools that connect to your accounting stack, these head-to-head comparisons help you see which platform fits your workflow and budget.
             </p>
           </div>

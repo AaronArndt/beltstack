@@ -105,7 +105,7 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software for Plumbing Businesses
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     How plumbing companies use FSM tools to schedule jobs, dispatch plumbers, keep customers informed,
                     and turn every completed job into an invoice—without drowning in paperwork.
                   </p>

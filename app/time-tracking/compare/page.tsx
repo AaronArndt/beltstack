@@ -85,12 +85,12 @@ export default function TimeTrackingCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Time Tracking Software Comparisons
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Compare the top time tracking tools side-by-side—including Toggl Track, Harvest, Clockify, Hubstaff, Time Doctor,
               Everhour, and Timely. Our head-to-head comparisons break down features, pricing, monitoring, and integrations so
               you can choose the best fit for your team.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Whether you&apos;re tracking billable client work, payroll hours, or productivity, these matchups help you see how
               each platform handles rates, reporting, monitoring, and exports to your invoicing and accounting stack.
             </p>

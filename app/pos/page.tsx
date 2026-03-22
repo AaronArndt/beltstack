@@ -5,16 +5,20 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   POS_FEATURED_PICKS,
   POS_COMPARISON_ROWS,
   POS_SCENARIO_LINKS,
-  POS_BY_BUSINESS_TYPE,
   POS_BY_BUSINESS_TYPE_GROUPS,
   POS_POPULAR_COMPARISONS,
   POS_FAQ_ITEMS,
   POS_METHODOLOGY,
+  POS_HUB_GUIDES,
+  POS_USE_CASE_EDITORIAL,
 } from "@/lib/data/posHubData";
+import { getPosReviewUrl } from "@/lib/routes";
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -145,6 +149,50 @@ function PosHowToChooseSection() {
         </ul>
       </div>
     </>
+  );
+}
+
+function PosGuidesSection() {
+  return (
+    <HubGuidesGrid
+      sectionTitle="POS guides"
+      sectionSub="Learn pricing, payments, and hardware tradeoffs—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles on evaluation—not duplicate scenario blurbs. For operational picks, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best POS software by use case
+          </a>
+          ; for how you sell (retail vs restaurant), see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            POS by business type
+          </a>
+          .
+        </>
+      }
+      guides={POS_HUB_GUIDES}
+      footer={
+        <>
+          <Link href="/pos/guides" className={`${linkGreen} font-semibold`}>
+            View all POS guides →
+          </Link>
+          <span className="mx-2 text-[#6E6E6E]">·</span>
+          Reviews:{" "}
+          <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>
+            Square
+          </Link>
+          ,{" "}
+          <Link href={getPosReviewUrl("shopify-pos")} className={linkGreen}>
+            Shopify POS
+          </Link>
+          ,{" "}
+          <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>
+            Toast
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -321,6 +369,27 @@ export default function PosPage() {
       }}
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular POS platforms."
       howToChooseSection={<PosHowToChooseSection />}
+      guidesSection={<PosGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best POS software by use case"
+          sectionSub="Scenario-based picks—venue, payments, and ops load—not your org label alone."
+          intro={
+            <>
+              Each blurb explains the selling environment first. For storefront-model entry points, use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                POS by business type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                POS guides
+              </a>
+              .
+            </>
+          }
+          blocks={POS_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best POS Software Overall",
         description:
@@ -338,15 +407,16 @@ export default function PosPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best POS software by use case",
-        sectionSub: "Find POS software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: POS_SCENARIO_LINKS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
         sectionTitle: "POS by business type",
-        sectionSub: "Best POS software by business type.",
-        links: POS_BY_BUSINESS_TYPE,
+        sectionSub:
+          "Identity-based navigation: retail, restaurant, ecommerce, or multi-location—how you sell in the real world.",
+        links: [],
         groups: POS_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={POS_FAQ_ITEMS as FaqItem[]}

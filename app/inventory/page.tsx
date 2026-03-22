@@ -5,16 +5,20 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   INVENTORY_FEATURED_PICKS,
   INVENTORY_COMPARISON_ROWS,
   INVENTORY_SCENARIO_LINKS,
-  INVENTORY_BY_BUSINESS_TYPE,
   INVENTORY_BY_BUSINESS_TYPE_GROUPS,
   INVENTORY_POPULAR_COMPARISONS,
   INVENTORY_FAQ_ITEMS,
   INVENTORY_METHODOLOGY,
+  INVENTORY_USE_CASE_EDITORIAL,
+  INVENTORY_HUB_GUIDES_GRID,
 } from "@/lib/data/inventoryHubData";
+import { getInventoryReviewUrl } from "@/lib/routes";
 const btnPrimary =
   "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
@@ -22,27 +26,6 @@ const selectClass =
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
-
-const INVENTORY_HUB_GUIDES = [
-  {
-    href: "/inventory/guides/what-is-inventory-management-software",
-    title: "What is Inventory Management Software?",
-    description:
-      "What inventory software does, who uses it, and how it replaces spreadsheets with accurate, real-time stock tracking.",
-  },
-  {
-    href: "/inventory/guides/inventory-software-pricing",
-    title: "Inventory Software Pricing",
-    description:
-      "How inventory software pricing works: plans, order and user limits, and what small businesses and warehouses should budget.",
-  },
-  {
-    href: "/inventory/guides/inventory-for-ecommerce-and-retail",
-    title: "Inventory for Ecommerce and Retail",
-    description:
-      "How inventory tools support ecommerce stores, marketplaces, and retail locations as channels and order volume grow.",
-  },
-] as const;
 
 // ——— Shared hub section title (matches other hubs) ———
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -277,36 +260,45 @@ function InventoryEducationSection() {
 // ——— Inventory guides section (after comparison table) ———
 function InventoryGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using inventory tools.">
-        Inventory Management Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {INVENTORY_HUB_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
-              {guide.description}
-            </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">
-              Read guide →
-            </span>
+    <HubGuidesGrid
+      sectionTitle="Inventory guides"
+      sectionSub="Learn pricing models, channel sync, and ops concepts—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles—not duplicate scenario picks. For operational “what fits my volume” blurbs, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best inventory software by use case
+          </a>
+          ; for how you describe your operation, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            inventory by business type
+          </a>
+          .
+        </>
+      }
+      guides={INVENTORY_HUB_GUIDES_GRID}
+      footer={
+        <>
+          <Link href="/inventory/guides" className={`${linkGreen} font-semibold`}>
+            View all inventory guides →
           </Link>
-        ))}
-      </div>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
-        <Link
-          href="/inventory/guides"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        >
-          View all inventory guides →
-        </Link>
-      </p>
-    </>
+          <span className="mx-2 text-[#6E6E6E]">·</span>
+          Read reviews:{" "}
+          <Link href={getInventoryReviewUrl("zoho-inventory")} className={linkGreen}>
+            Zoho Inventory
+          </Link>
+          ,{" "}
+          <Link href={getInventoryReviewUrl("cin7")} className={linkGreen}>
+            Cin7
+          </Link>
+          ,{" "}
+          <Link href={getInventoryReviewUrl("inflow-inventory")} className={linkGreen}>
+            inFlow
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -408,6 +400,26 @@ export default function InventoryPage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular inventory management platforms."
       howToChooseSection={<InventoryHowToChooseSection />}
       guidesSection={<InventoryGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best inventory software by use case"
+          sectionSub="Scenario-based picks—channels, manufacturing depth, and warehouse load—not your org label alone."
+          intro={
+            <>
+              Each blurb explains the operational problem first. For identity-style entry points (retail vs ecommerce), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                inventory by business type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                inventory guides
+              </a>
+              .
+            </>
+          }
+          blocks={INVENTORY_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best Inventory Management Software Overall",
         description:
@@ -425,15 +437,16 @@ export default function InventoryPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best inventory software by use case",
-        sectionSub: "Find inventory software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: INVENTORY_SCENARIO_LINKS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
         sectionTitle: "Inventory by business type",
-        sectionSub: "Best inventory management software by business type.",
-        links: INVENTORY_BY_BUSINESS_TYPE,
+        sectionSub:
+          "Identity-based navigation: how you sell and operate (retail floor, ecommerce, manufacturing)—not scenario mechanics alone.",
+        links: [],
         groups: INVENTORY_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={INVENTORY_FAQ_ITEMS as FaqItem[]}

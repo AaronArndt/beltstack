@@ -86,7 +86,7 @@ export default function InventoryCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Inventory Software Comparisons
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Compare popular inventory management tools side by side—including Zoho Inventory, Cin7, inFlow Inventory,
               Sortly, Katana, Fishbowl, and more. These head-to-head matchups break down features, pricing, and fit so
               you can choose the right platform for your business.

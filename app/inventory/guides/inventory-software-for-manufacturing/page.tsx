@@ -91,7 +91,7 @@ export default function InventorySoftwareForManufacturingGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Inventory Software for Manufacturing
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn how manufacturers use inventory and production software to manage materials, work orders, and
                     finished goods—without jumping straight into a heavyweight ERP.
                   </p>

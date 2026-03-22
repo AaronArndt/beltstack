@@ -71,7 +71,7 @@ export default function HowToSwitchInvoicingSoftwarePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Switch Invoicing Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Why businesses switch invoicing platforms, how to export history and migrate contacts, and how to avoid disruption when you move.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

@@ -58,7 +58,7 @@ export default function RetailPosSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Retail POS Software Guide
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     How retail POS systems handle inventory management, reporting, and customer tracking—and which platforms fit single-location and multi-store retailers.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />

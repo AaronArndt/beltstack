@@ -10,7 +10,13 @@ import {
 } from "@/components/hubs/HubPageTemplate";
 import { getPayrollReviewUrl, getPayrollCompareUrl } from "@/lib/routes";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
-import { PAYROLL_HUB_GUIDES, PAYROLL_HUB_POPULAR_COMPARISONS } from "@/lib/data/payrollHubData";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
+import {
+  PAYROLL_HUB_GUIDES,
+  PAYROLL_HUB_POPULAR_COMPARISONS,
+  PAYROLL_USE_CASE_EDITORIAL,
+} from "@/lib/data/payrollHubData";
 import { getPayrollComparisonBySlug } from "@/lib/data/payrollComparisons";
 
 // ——— Payroll-specific data ———
@@ -126,7 +132,27 @@ function PayrollHowToChooseSection() {
         How to Choose Payroll Software
       </HubSectionTitle>
       <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
-        Payroll software automates pay runs, tax withholdings, tax filing, and pay stubs so you can focus on running your business. This page is for <Link href="/payroll/best-for/small-business" className={linkGreen}>small businesses</Link>, <Link href="/payroll/best-for/contractors" className={linkGreen}>contractors</Link>, and trade businesses. For a curated shortlist see our <Link href="/payroll/best-payroll-software" className={linkGreen}>best payroll software</Link> roundup; use the <Link href="/payroll/compare" className={linkGreen}>comparison table</Link>, <Link href="/payroll/guides/how-payroll-software-works" className={linkGreen}>guides</Link>, <Link href="/payroll/guides/payroll-software-pricing" className={linkGreen}>pricing</Link> and <Link href="/payroll/guides/payroll-taxes-explained" className={linkGreen}>tax</Link> resources, and scenario picks below.
+        Payroll software automates pay runs, tax withholdings, filing, and pay stubs. Use the{" "}
+        <Link href="#compare" className={linkGreen}>
+          comparison table
+        </Link>
+        , then{" "}
+        <a href="#by-scenario" className={linkGreen}>
+          scenario-based picks
+        </a>{" "}
+        when you know your situation—or{" "}
+        <a href="#payroll-guides" className={linkGreen}>
+          guides
+        </a>{" "}
+        to learn pricing and compliance first. Our{" "}
+        <Link href="/payroll/best-payroll-software" className={linkGreen}>
+          full rankings
+        </Link>{" "}
+        and{" "}
+        <Link href="/payroll/compare" className={linkGreen}>
+          comparison hub
+        </Link>{" "}
+        round out product research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
@@ -146,34 +172,60 @@ function PayrollHowToChooseSection() {
 
 function PayrollGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to pricing, taxes, switching, and industry-specific payroll.">
-        Payroll Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {PAYROLL_HUB_GUIDES.map((guide) => (
-          <Link
-            key={guide.slug}
-            href={guide.href}
-            className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">{guide.description}</p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981]">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="Payroll guides"
+      sectionSub="Learn how pricing, taxes, and workflows work—before you shortlist vendors."
+      intro={
+        <>
+          These articles are educational: evaluation, compliance, and cost—not duplicate product picks. For recommendations by situation, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best payroll software by use case
+          </a>
+          ; for industry entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            payroll by business type
+          </a>
+          .
+        </>
+      }
+      guides={PAYROLL_HUB_GUIDES}
+      footer={
+        <>
+          Read our full reviews:{" "}
+          <Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>
+            Gusto
           </Link>
-        ))}
-      </div>
-      <p className="mt-5 text-sm text-[#6E6E6E]">
-        Read our full reviews:{" "}
-        <Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto</Link>,{" "}
-        <Link href={getPayrollReviewUrl("quickbooks-payroll")} className={linkGreen}>QuickBooks Payroll</Link>,{" "}
-        <Link href={getPayrollReviewUrl("onpay")} className={linkGreen}>OnPay</Link>,{" "}
-        <Link href={getPayrollReviewUrl("adp")} className={linkGreen}>ADP</Link>,{" "}
-        <Link href={getPayrollReviewUrl("rippling")} className={linkGreen}>Rippling</Link>,{" "}
-        <Link href={getPayrollReviewUrl("square-payroll")} className={linkGreen}>Square Payroll</Link>,{" "}
-        <Link href={getPayrollReviewUrl("patriot-payroll")} className={linkGreen}>Patriot Payroll</Link>.
-      </p>
-    </>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("quickbooks-payroll")} className={linkGreen}>
+            QuickBooks Payroll
+          </Link>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("onpay")} className={linkGreen}>
+            OnPay
+          </Link>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("adp")} className={linkGreen}>
+            ADP
+          </Link>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("rippling")} className={linkGreen}>
+            Rippling
+          </Link>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("square-payroll")} className={linkGreen}>
+            Square Payroll
+          </Link>
+          ,{" "}
+          <Link href={getPayrollReviewUrl("patriot-payroll")} className={linkGreen}>
+            Patriot Payroll
+          </Link>
+          .{" "}
+          <Link href="/payroll/guides" className={linkGreen}>
+            All payroll guides →
+          </Link>
+        </>
+      }
+    />
   );
 }
 
@@ -435,6 +487,26 @@ export default function PayrollPage() {
       introExtended={<PayrollIntroExtended />}
       howToChooseSection={<PayrollHowToChooseSection />}
       guidesSection={<PayrollGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best payroll software by use case"
+          sectionSub="Scenario-based picks—workforce mix, growth stage, and budget—not your industry label alone."
+          intro={
+            <>
+              These blurbs explain who each situation fits and what to prioritize. For trade- or industry-specific entry points (HVAC, restaurants, nonprofits), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                payroll by business type
+              </a>{" "}
+              below. For how pricing and taxes work, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                payroll guides
+              </a>
+              .
+            </>
+          }
+          blocks={PAYROLL_USE_CASE_EDITORIAL}
+        />
+      }
       popularComparisonsSection={<PayrollPopularComparisonsSection />}
       bestRoundupBlock={{
         title: "Best Payroll Software Overall",
@@ -446,15 +518,16 @@ export default function PayrollPage() {
       comparisonTableRankingsLink={{ label: "See our full rankings →", href: "/payroll/best-payroll-software" }}
       scenarioLinks={{
         sectionTitle: "Best payroll software by use case",
-        sectionSub: "Find payroll software that fits your situation.",
-        description: "Choose a use case to see our top picks.",
+        sectionSub: "Scenario-based recommendations.",
+        description: undefined,
         links: BEST_FOR_SCENARIOS,
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Payroll by business type",
-        sectionSub: "Payroll recommendations by trade. All trade pages in one directory.",
-        links: BY_TRADE,
+        sectionTitle: "Payroll software by business type",
+        sectionSub:
+          "Identity-based navigation: your industry or business model—not team size alone. Different verticals have different tip rules, seasonality, and compliance quirks.",
+        links: [],
         groups: BY_TRADE_GROUPS,
       }}
       faqItems={FAQ_ITEMS}

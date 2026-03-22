@@ -82,7 +82,7 @@ export default function WhatIsCrmSoftwarePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What is CRM Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     CRM (customer relationship management) software helps businesses store contacts, track leads and deals, and manage the sales pipeline. This guide explains what CRM is, who uses it, and how it differs from spreadsheets or marketing automation.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

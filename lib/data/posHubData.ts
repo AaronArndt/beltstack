@@ -8,6 +8,7 @@ import {
   getPosCompareUrl,
   getPosBestForUrl,
 } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 import { POS_LOGOS } from "@/lib/data/posLogos";
@@ -64,12 +65,98 @@ export const POS_BY_BUSINESS_TYPE_GROUPS: {
   links: { label: string; href: string }[];
 }[] = [
   {
-    groupLabel: "Primary business types",
+    groupLabel: "Browse by storefront model",
     links: POS_BY_BUSINESS_TYPE.slice(0, 3),
   },
   {
-    groupLabel: "Other business types",
+    groupLabel: "More storefront models",
     links: POS_BY_BUSINESS_TYPE.slice(3),
+  },
+];
+
+const POS_GUIDES_BASE = "/pos/guides";
+
+/** Educational POS guides for the hub (pricing, fit concepts—not duplicate picks). */
+export const POS_HUB_GUIDES: { title: string; href: string; description: string }[] = [
+  {
+    title: "How to Choose a POS System",
+    href: `${POS_GUIDES_BASE}/how-to-choose-pos-system`,
+    description:
+      "Decision checklist: payments, hardware, inventory depth, and when bundled processing is worth it.",
+  },
+  {
+    title: "POS Software Pricing Explained",
+    href: `${POS_GUIDES_BASE}/pos-software-pricing-guide`,
+    description:
+      "Software fees vs interchange, hardware leases, and add-ons that inflate total cost of ownership.",
+  },
+  {
+    title: "POS vs Payment Processor",
+    href: `${POS_GUIDES_BASE}/pos-vs-payment-processor`,
+    description:
+      "What the register software does versus what the processor settles—so you don’t double-pay for the wrong layer.",
+  },
+  {
+    title: "Retail POS Software Guide",
+    href: `${POS_GUIDES_BASE}/retail-pos-software-guide`,
+    description:
+      "Inventory, variants, and multi-location realities for brick-and-mortar retail.",
+  },
+  {
+    title: "Restaurant POS Systems Guide",
+    href: `${POS_GUIDES_BASE}/restaurant-pos-systems-guide`,
+    description:
+      "Table service, kitchen workflows, and tipping rules—evaluation concepts for food & beverage.",
+  },
+  {
+    title: "POS for Ecommerce",
+    href: `${POS_GUIDES_BASE}/pos-system-for-ecommerce`,
+    description:
+      "Unified catalog and omnichannel inventory when online and in-person both matter.",
+  },
+];
+
+/** Editorial “best POS by use case” — venue, payments, and ops load—not org label alone. */
+export const POS_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Quick retail checkout with minimal IT",
+    body: "Prioritize reliable hardware, transparent processing, and inventory basics you’ll actually maintain. Free or low software tiers help you validate throughput before you commit to industry-specific modules.",
+    links: [
+      { label: "Best POS for small business →", href: getPosBestForUrl("small-business") },
+      { label: "Square POS review →", href: getPosReviewUrl("square-pos") },
+    ],
+  },
+  {
+    title: "Brick-and-mortar retail with deep inventory",
+    body: "Variants, transfers, and purchasing workflows separate retail POS from generic registers. Evaluate multi-location limits and whether your inventory hub or POS owns stock truth.",
+    links: [
+      { label: "Best POS for retail →", href: getPosBestForUrl("retail") },
+      { label: "Shopify POS vs Lightspeed →", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+    ],
+  },
+  {
+    title: "Restaurants, bars, and high-churn tables",
+    body: "Floor plans, coursing, and kitchen displays change the product class. Compare service models (counter vs full service) and whether online ordering is bundled or third-party.",
+    links: [
+      { label: "Best POS for restaurants →", href: getPosBestForUrl("restaurants") },
+      { label: "Toast vs Square →", href: getPosCompareUrl("toast-pos-vs-square-pos") },
+    ],
+  },
+  {
+    title: "Shopify-first ecommerce with in-person selling",
+    body: "If Shopify is your catalog source of truth, POS should reduce double-entry and stockouts across channels. Compare fees where Shopify Payments is required versus mixed gateways.",
+    links: [
+      { label: "Best POS for ecommerce →", href: getPosBestForUrl("ecommerce") },
+      { label: "Square vs Shopify POS →", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
+    ],
+  },
+  {
+    title: "Multi-location rollouts and franchised consistency",
+    body: "Permissions, reporting rollups, and hardware standards determine whether you can enforce process across sites. Plan for centralized item libraries and reconciliation overhead.",
+    links: [
+      { label: "Best POS for multi-location →", href: getPosBestForUrl("multi-location") },
+      { label: "Full rankings →", href: "/pos/best-pos-software" },
+    ],
   },
 ];
 

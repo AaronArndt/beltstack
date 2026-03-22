@@ -71,7 +71,7 @@ export default function HowInvoicingSoftwareWorksPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Invoicing Software Works
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn what invoicing software does, from creating and sending invoices to tracking payments, recurring billing, and online payments.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

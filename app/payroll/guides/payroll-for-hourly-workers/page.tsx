@@ -99,7 +99,7 @@ export default function PayrollForHourlyWorkersPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Hourly Workers
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn how payroll software handles hourly pay, overtime, and time tracking—and how to choose a platform that keeps hourly payroll accurate and compliant.
                   </p>
                   <GuideLastUpdated date="March 2026" />

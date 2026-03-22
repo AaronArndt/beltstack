@@ -8,6 +8,7 @@ import {
   getHelpdeskCompareUrl,
   getHelpdeskBestForUrl,
 } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 import { HELPDESK_LOGOS } from "@/lib/data/helpdeskLogos";
@@ -50,26 +51,52 @@ export const HELPDESK_SCENARIO_LINKS = [
   { label: "Growing teams", href: getHelpdeskBestForUrl("growing-teams") },
 ] as const;
 
-/** Helpdesk by business type. */
+/** Company / team identity (how you describe your support org)—same routes as some scenarios, different section role. */
 export const HELPDESK_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
-  { label: "Small businesses", href: getHelpdeskBestForUrl("small-business") },
+  { label: "SMB & lean support teams", href: getHelpdeskBestForUrl("small-business") },
   { label: "Startups", href: getHelpdeskBestForUrl("startups") },
-  { label: "Ecommerce businesses", href: getHelpdeskBestForUrl("ecommerce") },
-  { label: "SaaS companies", href: getHelpdeskBestForUrl("saas") },
-  { label: "Growing support teams", href: getHelpdeskBestForUrl("growing-teams") },
+  { label: "Ecommerce & DTC brands", href: getHelpdeskBestForUrl("ecommerce") },
+  { label: "SaaS product companies", href: getHelpdeskBestForUrl("saas") },
+  { label: "Scaling support organizations", href: getHelpdeskBestForUrl("growing-teams") },
 ];
 
 export const HELPDESK_BY_BUSINESS_TYPE_GROUPS: {
   groupLabel: string;
   links: { label: string; href: string }[];
-}[] = [
+}[] = [{ groupLabel: "Browse by company type", links: HELPDESK_BY_BUSINESS_TYPE }];
+
+/** Editorial “best helpdesk by use case” blocks (scenario: channels, volume, workflow—not org label alone). */
+export const HELPDESK_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
   {
-    groupLabel: "Primary business types",
-    links: HELPDESK_BY_BUSINESS_TYPE.slice(0, 3),
+    title: "Email-first teams with modest ticket volume",
+    body: "If you’re escaping a shared inbox, you need threading, assignment, and history—without enterprise complexity. The goal is fast adoption and clear ownership before you add every channel at once.",
+    links: [
+      { label: "Best helpdesk for small business →", href: getHelpdeskBestForUrl("small-business") },
+      { label: "Zendesk vs Freshdesk →", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+    ],
   },
   {
-    groupLabel: "Other business types",
-    links: HELPDESK_BY_BUSINESS_TYPE.slice(3),
+    title: "Multichannel support and SLAs",
+    body: "When chat, email, and social all matter, routing, macros, and reporting become non-negotiable. Compare automation limits and per-agent pricing before you commit—cost scales fast with headcount.",
+    links: [{ label: "Full rankings →", href: "/helpdesk/best-helpdesk-software" }],
+  },
+  {
+    title: "Ecommerce: orders, refunds, and customer context",
+    body: "Store-adjacent support needs order data in the ticket—not a generic email thread. Deep integrations and Shopify-style workflows separate ecommerce-focused tools from generic ticketing.",
+    links: [
+      { label: "Best helpdesk for ecommerce →", href: getHelpdeskBestForUrl("ecommerce") },
+      { label: "Gorgias vs Zendesk →", href: getHelpdeskCompareUrl("gorgias-vs-zendesk") },
+    ],
+  },
+  {
+    title: "SaaS: product context and lifecycle support",
+    body: "Product-led teams often blend in-app messaging, billing context, and bug triage. Evaluate integrations, tagging, and how well the tool fits engineering handoffs—not just email tickets.",
+    links: [{ label: "Best helpdesk for SaaS →", href: getHelpdeskBestForUrl("saas") }],
+  },
+  {
+    title: "Rapidly growing queues and more agents",
+    body: "Volume breaks informal processes: you need permissions, reporting, and workflow discipline. Plan for routing rules, QA sampling, and admin overhead as you add channels.",
+    links: [{ label: "Best helpdesk for growing teams →", href: getHelpdeskBestForUrl("growing-teams") }],
   },
 ];
 

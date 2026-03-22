@@ -106,7 +106,7 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Switch Accounting Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn how to plan a move from one accounting platform to another, migrate your data, and go live with
                     minimal disruption.
                   </p>

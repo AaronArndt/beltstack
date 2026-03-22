@@ -5,17 +5,20 @@ import {
   HubPageTemplate,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
+import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
+import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
 import {
   PROJECT_MANAGEMENT_FEATURED_PICKS,
   PROJECT_MANAGEMENT_COMPARISON_ROWS,
   PROJECT_MANAGEMENT_SCENARIO_LINKS,
-  PROJECT_MANAGEMENT_BY_BUSINESS_TYPE,
   PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS,
   PROJECT_MANAGEMENT_POPULAR_COMPARISONS,
   PROJECT_MANAGEMENT_FAQ_ITEMS,
   PROJECT_MANAGEMENT_METHODOLOGY,
+  PROJECT_MANAGEMENT_USE_CASE_EDITORIAL,
 } from "@/lib/data/projectManagementHubData";
 import { PROJECT_MANAGEMENT_GUIDES } from "@/lib/data/projectManagementGuides";
+import { getProjectManagementReviewUrl } from "@/lib/routes";
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
   { label: "Best overall for most teams: Asana", anchor: "#pick-asana" },
@@ -342,34 +345,45 @@ function ProjectManagementHowToChooseSection() {
 
 function ProjectManagementGuidesSection() {
   return (
-    <>
-      <HubSectionTitle sub="Guides to choosing and using project management tools.">
-        Project Management Guides
-      </HubSectionTitle>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {PROJECT_MANAGEMENT_GUIDES.map((guide) => (
-          <Link
-            key={guide.href}
-            href={guide.href}
-            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-          >
-            <h3 className="text-[#1A2D48] text-lg font-bold group-hover:text-[#10B981]">{guide.title}</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed line-clamp-2">
-              {guide.description}
-            </p>
-            <span className="mt-3 text-sm font-semibold text-[#10B981] group-hover:underline">Read guide →</span>
+    <HubGuidesGrid
+      sectionTitle="Project management guides"
+      sectionSub="Learn pricing models, methodologies, and collaboration tradeoffs—before you shortlist vendors."
+      intro={
+        <>
+          Educational articles—not duplicate scenario picks. For workflow-based recommendations, use{" "}
+          <a href="#by-scenario" className={linkGreen}>
+            best project management software by use case
+          </a>
+          ; for team-type entry points, see{" "}
+          <a href="#by-trade" className={linkGreen}>
+            project management by team type
+          </a>
+          .
+        </>
+      }
+      guides={PROJECT_MANAGEMENT_GUIDES}
+      footer={
+        <>
+          <Link href="/project-management/guides" className={`${linkGreen} font-semibold`}>
+            View all project management guides →
           </Link>
-        ))}
-      </div>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
-        <Link
-          href="/project-management/guides"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        >
-          View all project management guides →
-        </Link>
-      </p>
-    </>
+          <span className="mx-2 text-[#6E6E6E]">·</span>
+          Reviews:{" "}
+          <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>
+            Asana
+          </Link>
+          ,{" "}
+          <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>
+            ClickUp
+          </Link>
+          ,{" "}
+          <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>
+            Monday
+          </Link>
+          .
+        </>
+      }
+    />
   );
 }
 
@@ -393,6 +407,26 @@ export default function ProjectManagementPage() {
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular project management platforms."
       howToChooseSection={<ProjectManagementHowToChooseSection />}
       guidesSection={<ProjectManagementGuidesSection />}
+      scenarioCustomContent={
+        <HubEditorialUseCaseSection
+          sectionTitle="Best project management software by use case"
+          sectionSub="Scenario-based picks—collaboration load, methodology, and scale—not your team label alone."
+          intro={
+            <>
+              Each blurb explains the delivery problem first. For identity-style entry points (agency vs startup), use{" "}
+              <a href="#by-trade" className={linkGreen}>
+                project management by team type
+              </a>
+              ; for concepts, see{" "}
+              <a href="#payroll-guides" className={linkGreen}>
+                project management guides
+              </a>
+              .
+            </>
+          }
+          blocks={PROJECT_MANAGEMENT_USE_CASE_EDITORIAL}
+        />
+      }
       bestRoundupBlock={{
         title: "Best Project Management Software Overall",
         description:
@@ -410,8 +444,8 @@ export default function ProjectManagementPage() {
       }}
       scenarioLinks={{
         sectionTitle: "Best project management software by use case",
-        sectionSub: "Find project management tools that fit your situation.",
-        description: "Choose a use case to see our top picks and guidance.",
+        sectionSub: "Scenario links and deep dives.",
+        description: undefined,
         links: [
           { label: "Best project management software (roundup)", href: "/project-management/best-project-management-software" },
           { label: "Compare project management software", href: "/project-management/compare" },
@@ -420,9 +454,10 @@ export default function ProjectManagementPage() {
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Project management by business type",
-        sectionSub: "Best project management software by business type.",
-        links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE,
+        sectionTitle: "Project management by team type",
+        sectionSub:
+          "Identity-based navigation: how you describe your team (agency, startup, remote)—not workflow shape alone.",
+        links: [],
         groups: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS,
       }}
       faqItems={PROJECT_MANAGEMENT_FAQ_ITEMS as FaqItem[]}

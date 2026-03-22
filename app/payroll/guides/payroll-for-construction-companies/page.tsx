@@ -108,7 +108,7 @@ export default function PayrollForConstructionCompaniesPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Construction Companies
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Learn how construction companies manage payroll for field crews, office staff, and subcontractors, and how payroll software can simplify tax filing, labor tracking, and compliance.
                   </p>
                   <GuideLastUpdated date="March 2026" />

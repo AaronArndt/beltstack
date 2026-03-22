@@ -86,7 +86,7 @@ export default function FieldServiceCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare Field Service Management Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons of popular field service tools for contractors, service companies, and field
               teams. See how Jobber, Housecall Pro, ServiceTitan, Service Fusion, Workiz, Kickserv, and others stack up
               on scheduling, dispatch, mobile apps, invoicing, and reporting.

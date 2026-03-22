@@ -4,6 +4,7 @@
  */
 
 import { getProjectManagementReviewUrl, getProjectManagementCompareUrl, getProjectManagementBestForUrl } from "@/lib/routes";
+import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef, ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 
@@ -63,8 +64,52 @@ export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE: { label: string; href: string 
 ];
 
 export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
-  { groupLabel: "Primary business types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(0, 3) },
-  { groupLabel: "Other business types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(3) },
+  { groupLabel: "Browse by team type", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(0, 3) },
+  { groupLabel: "More team types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(3) },
+];
+
+/** Editorial “best PM by use case” — workflow shape and collaboration load, not org label alone. */
+export const PROJECT_MANAGEMENT_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
+  {
+    title: "Lightweight task boards for solos and tiny teams",
+    body: "Speed-to-capture and a single source of truth beat heavy process. Prefer tools your clients can use without training—and avoid paying for portfolio features you won’t staff.",
+    links: [
+      { label: "Best PM for freelancers →", href: getProjectManagementBestForUrl("freelancers") },
+      { label: "Trello review →", href: getProjectManagementReviewUrl("trello") },
+    ],
+  },
+  {
+    title: "Client work, retainers, and cross-functional delivery",
+    body: "Agencies need visibility across accounts, handoffs, and deadlines without burying creatives in admin. Compare permissions, client guest access, and whether time tracking is native or integrated.",
+    links: [
+      { label: "Best PM for agencies →", href: getProjectManagementBestForUrl("agencies") },
+      { label: "Asana vs Monday →", href: getProjectManagementCompareUrl("asana-vs-monday") },
+    ],
+  },
+  {
+    title: "Operational SMBs standardizing execution",
+    body: "Repeatable workflows, reporting, and admin controls matter once departments adopt the tool. Evaluate templates, approvals, and how painful cross-project reporting is.",
+    links: [
+      { label: "Best PM for small business →", href: getProjectManagementBestForUrl("small-business") },
+      { label: "Full rankings →", href: "/project-management/best-project-management-software" },
+    ],
+  },
+  {
+    title: "Startups moving fast with changing process",
+    body: "You’ll churn workflows—pick tools that tolerate restructuring and integrate with docs and comms. Watch seat growth pricing before you embed everything in one vendor.",
+    links: [
+      { label: "Best PM for startups →", href: getProjectManagementBestForUrl("startups") },
+      { label: "Notion vs Trello →", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    ],
+  },
+  {
+    title: "Distributed and remote teams",
+    body: "Async updates, timezone-friendly notifications, and clear ownership reduce standup bloat. Favor comment threading and integrations with chat without duplicating work in two systems.",
+    links: [
+      { label: "Best PM for remote teams →", href: getProjectManagementBestForUrl("remote-teams") },
+      { label: "Asana vs ClickUp →", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+    ],
+  },
 ];
 
 /** Card data for Popular project management comparisons (logos + vs + summary + link). */

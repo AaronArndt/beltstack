@@ -65,7 +65,7 @@ export default function PosGuidesPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               POS Software Guides
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               These guides help businesses understand POS systems, compare options, and choose the right system for
               retail stores, restaurants, ecommerce, and multi-location operations.
             </p>

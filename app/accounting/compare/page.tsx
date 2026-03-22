@@ -97,10 +97,10 @@ export default function AccountingCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Accounting Software Comparisons
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Compare accounting software side by side to evaluate pricing, features, and fit for your business.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
               Whether you need full accounting for a small business, simple invoicing for freelancers, or free bookkeeping, these side-by-side reviews help you see which platform fits your size, budget, and workflow.
             </p>
           </div>

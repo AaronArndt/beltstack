@@ -83,7 +83,7 @@ export default function ProjectManagementPricingGuidePage() {
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management Software Pricing Guide</h1>
-                  <p className="mt-3 text-[#6E6E6E] text-lg leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
                     Understand how project management tools are priced: free tiers, per-user plans, and what to expect at your team size.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
