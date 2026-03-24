@@ -91,7 +91,7 @@ export default function HrSoftwareForGlobalTeamsGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -128,7 +128,7 @@ export default function HrSoftwareForGlobalTeamsGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     HR Software for Global Teams
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     How global teams handle payroll, benefits, and compliance across countries using HR software and EOR
                     providers.
                   </p>

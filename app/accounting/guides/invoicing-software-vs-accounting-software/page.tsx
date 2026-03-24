@@ -67,7 +67,7 @@ export default function InvoicingVsAccountingSoftwareGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -106,7 +106,7 @@ export default function InvoicingVsAccountingSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Invoicing Software vs Accounting Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     Learn how invoicing tools differ from full accounting platforms, when a simple invoicing app is
                     enough, and when you need full double-entry accounting.
                   </p>

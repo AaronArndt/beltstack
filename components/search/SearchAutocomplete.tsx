@@ -109,7 +109,7 @@ export function SearchAutocomplete({
         <label htmlFor="global-search" className="sr-only">
           Search software or category
         </label>
-        <div className="searchContainer flex flex-col gap-3 sm:flex-row sm:rounded-xl border border-slate-200 bg-white transition-all duration-150 focus-within:border-[#10B981] sm:shadow-sm">
+        <div className="searchContainer flex flex-col gap-3 sm:flex-row sm:rounded-lg border border-stone-200 bg-white transition-all duration-150 focus-within:border-[#10B981] sm:shadow-sm">
           <input
             id="global-search"
             name="beltstack-search-input"
@@ -127,7 +127,7 @@ export function SearchAutocomplete({
               setTimeout(() => setIsFocused(false), 100);
             }}
             onKeyDown={handleKeyDown}
-            className="searchInput min-w-0 flex-1 rounded-xl border-0 bg-transparent px-4 py-3.5 text-[#1A2D48] placeholder:text-[#6E6E6E] focus:outline-none focus:ring-0 focus:shadow-none sm:rounded-none"
+            className="searchInput min-w-0 flex-1 rounded-lg border-0 bg-transparent px-4 py-3.5 text-[#1A2D48] placeholder:text-[#57534E] focus:outline-none focus:ring-0 focus:shadow-none sm:rounded-none"
             aria-autocomplete="list"
             aria-controls="global-search-suggestions"
             aria-expanded={hasSuggestions}
@@ -141,16 +141,16 @@ export function SearchAutocomplete({
         </div>
       </form>
       {hintText && (
-        <p className="mt-2 text-center text-[#6E6E6E] text-sm">
+        <p className="mt-2 text-center text-[#57534E] text-sm">
           {hintText}
         </p>
       )}
       {hasSuggestions && (
         <div
           id="global-search-suggestions"
-          className="absolute z-50 mt-2 w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg"
+          className="absolute z-50 mt-2 w-full overflow-hidden rounded-lg border border-stone-200 bg-white shadow-lg"
         >
-          <ul className="max-h-80 divide-y divide-slate-100 overflow-y-auto">
+          <ul className="max-h-80 divide-y divide-stone-100 overflow-y-auto">
             {suggestions.map((item, index) => (
               <li key={`${item.href}-${index}`}>
                 <button
@@ -162,13 +162,13 @@ export function SearchAutocomplete({
                     router.push(item.href);
                   }}
                   className={`flex w-full flex-col items-start px-4 py-2.5 text-left text-sm transition-colors ${
-                    index === activeIndex ? "bg-[#F8FAFC]" : "hover:bg-slate-50"
+                    index === activeIndex ? "bg-background" : "hover:bg-stone-50"
                   }`}
                 >
                   <span className="text-[#1A2D48] font-semibold">
                     {highlightMatch(item.title, query)}
                   </span>
-                  <span className="mt-0.5 flex items-center gap-2 text-[11px] text-[#6E6E6E]">
+                  <span className="mt-0.5 flex items-center gap-2 text-[11px] text-[#57534E]">
                     <span className={typeBadgeClass}>{item.type}</span>
                     <span>{item.category}</span>
                   </span>

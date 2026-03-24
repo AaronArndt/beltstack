@@ -25,7 +25,7 @@ function FaqAccordionItem({
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
         <span
-          className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

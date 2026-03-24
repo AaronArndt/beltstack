@@ -92,7 +92,7 @@ const SIMPLE_LINKS = [
 const SOFTWARE_CATEGORIES: SoftwareItem[] = SOFTWARE_COLUMNS.flatMap((col) => col.items);
 
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const navItemClass =
   "text-[14px] font-semibold text-[#1A2D48] hover:text-[#0f2440] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -113,7 +113,7 @@ function LogoIcon({ className }: { className?: string }) {
 function Chevron({ open }: { open: boolean }) {
   return (
     <svg
-      className={`ml-1 h-3.5 w-3.5 shrink-0 text-[#6E6E6E] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      className={`ml-1 h-3.5 w-3.5 shrink-0 text-[#57534E] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
       fill="none"
       stroke="currentColor"
       strokeWidth={2.75}
@@ -141,12 +141,12 @@ function SoftwarePanelContent({
         {SOFTWARE_COLUMNS.map((col) => (
           <div key={col.id} className="min-w-0" onPointerEnter={() => onColumnHover(col.id)}>
             <div className="w-full">
-              <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">
+              <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#57534E]">
                 {col.label}
               </p>
-              {/* Full-width grey rule; green accent scales across entire column width (Stripe-style) */}
+              {/* Full-width rule; subtle stone accent on hover column */}
               <div className="relative w-full pt-px">
-                <div className="h-px w-full bg-neutral-200" aria-hidden />
+                <div className="h-px w-full bg-stone-200" aria-hidden />
                 <div
                   className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-[#10B981] transition-transform duration-200 ease-out ${
                     activeColumn === col.id ? "scale-x-100" : "scale-x-0"
@@ -161,12 +161,12 @@ function SoftwarePanelContent({
                   key={item.href}
                   href={item.href}
                   role="menuitem"
-                  className="group block rounded-lg py-1 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                  className="group block rounded-md py-1 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
                 >
-                  <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#1A2D48]">
+                  <span className="text-sm font-semibold text-[#1A2D48] transition-colors group-hover:text-[#10B981]">
                     {item.title}
                   </span>
-                  <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E] transition-colors group-hover:text-[#3d4550]">
+                  <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#3d4550]">
                     {item.description}
                   </p>
                 </Link>
@@ -178,7 +178,7 @@ function SoftwarePanelContent({
                       <Link
                         role="menuitem"
                         href={link.href}
-                        className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-sm font-semibold text-[#1A2D48] transition-colors hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         {link.label}
                       </Link>
@@ -190,8 +190,8 @@ function SoftwarePanelContent({
           </div>
         ))}
       </div>
-      <div className="mt-4 border-t border-neutral-200/70 pt-4">
-        <Link href="/software" className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+      <div className="mt-4 border-t border-stone-200 pt-4">
+        <Link href="/software" className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           View all software categories →
         </Link>
       </div>
@@ -205,19 +205,19 @@ function ComparisonsPanelContent() {
     <div className="w-full min-w-0 shrink-0">
       <div className="grid grid-cols-2 gap-8">
         <div>
-          <p className="text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">Types</p>
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#57534E]">Types</p>
           <ul className="mt-3 space-y-0">
             {COMPARISON_TYPES.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 role="menuitem"
-                className="group block rounded-lg py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                className="group block rounded-md py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
               >
-                <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#1A2D48]">
+                <span className="text-sm font-semibold text-[#1A2D48] transition-colors group-hover:text-[#10B981]">
                   {item.title}
                 </span>
-                <p className="mt-0.5 text-[13px] leading-snug text-[#6E6E6E] transition-colors group-hover:text-[#3d4550]">
+                <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#3d4550]">
                   {item.description}
                 </p>
               </Link>
@@ -225,28 +225,28 @@ function ComparisonsPanelContent() {
           </ul>
         </div>
         <div>
-          <p className="text-[11px] font-medium uppercase tracking-wider text-[#6E6E6E]">Featured</p>
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#57534E]">Featured</p>
           <ul className="mt-3 space-y-2">
             {TOP_PICKS_MINI.map((item) => (
               <li key={item.tool} className="flex items-center justify-between gap-2">
                 <Link
                   role="menuitem"
                   href="/comparisons"
-                  className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                 >
                   {item.tool}
                 </Link>
-                <span className="text-sm text-[#6E6E6E] tabular-nums">{item.rating}</span>
+                <span className="text-sm text-[#57534E] tabular-nums">{item.rating}</span>
               </li>
             ))}
           </ul>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
             How we review
           </Link>
         </div>
       </div>
-      <div className="mt-4 border-t border-neutral-200/70 pt-4">
-        <Link href="/comparisons" className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+      <div className="mt-4 border-t border-stone-200 pt-4">
+        <Link href="/comparisons" className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           See all comparisons →
         </Link>
       </div>
@@ -298,7 +298,7 @@ function MegaMenuViewport({
   return (
     <div
       style={{ height: height > 0 ? height : 0 }}
-      className="w-full overflow-hidden rounded-none border border-neutral-200/70 border-b border-neutral-300/70 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition-[height] duration-200 ease-out"
+      className="w-full overflow-hidden rounded-none border border-stone-200 border-b border-stone-300/80 bg-white shadow-sm transition-[height] duration-200 ease-out"
     >
       <div className="size-full overflow-hidden" aria-hidden>
         <div
@@ -407,7 +407,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-neutral-200 bg-white sm:h-[72px]">
+    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-stone-200 bg-white sm:h-[72px]">
       <div
         ref={containerRef}
         className="relative mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
@@ -500,8 +500,8 @@ export default function Navbar() {
         })()}
 
         <div className="flex items-center gap-3">
-          <div className="searchContainer hidden sm:flex items-center rounded-xl border border-neutral-200 bg-white px-3 py-2 text-[#1A2D48] transition-all duration-150 focus-within:border-[#10B981]">
-            <svg className="h-4 w-4 shrink-0 text-[#6E6E6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+          <div className="searchContainer hidden sm:flex items-center rounded-md border border-stone-200 bg-white px-3 py-2 text-[#1A2D48] transition-all duration-150 focus-within:border-[#10B981]">
+            <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -509,7 +509,7 @@ export default function Navbar() {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="searchInput w-32 border-0 bg-transparent pl-2 text-sm focus:outline-none focus:ring-0 focus:shadow-none placeholder:text-[#6E6E6E] md:w-40"
+              className="searchInput w-32 border-0 bg-transparent pl-2 text-sm focus:outline-none focus:ring-0 focus:shadow-none placeholder:text-[#57534E] md:w-40"
               aria-label="Search"
             />
           </div>
@@ -533,7 +533,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-neutral-200 bg-white px-4 py-3 md:hidden">
+        <div className="border-t border-stone-200 bg-white px-4 py-3 md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             <div>
               <button
@@ -546,7 +546,7 @@ export default function Navbar() {
                 <Chevron open={mobileSoftwareOpen} />
               </button>
               {mobileSoftwareOpen && (
-                <div className="ml-3 space-y-1 border-l-2 border-neutral-100 pl-3 pb-2">
+                <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
                   {SOFTWARE_CATEGORIES.map((item) => (
                     <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm text-[#1A2D48] hover:text-[#10B981]">
                       {item.title}
@@ -569,7 +569,7 @@ export default function Navbar() {
                 <Chevron open={mobileComparisonsOpen} />
               </button>
               {mobileComparisonsOpen && (
-                <div className="ml-3 space-y-1 border-l-2 border-neutral-100 pl-3 pb-2">
+                <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
                   {COMPARISON_TYPES.map((item) => (
                     <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm text-[#1A2D48] hover:text-[#10B981]">
                       {item.title}
@@ -586,8 +586,8 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <div className="searchContainer mt-2 flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
-              <svg className="h-4 w-4 shrink-0 text-[#6E6E6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            <div className="searchContainer mt-2 flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
+              <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               <input type="search" placeholder="Search..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="searchInput flex-1 border-0 bg-transparent py-1 text-sm focus:outline-none focus:ring-0 focus:shadow-none" />
             </div>
             <Link href="/software" onClick={() => setMobileOpen(false)} className={`mt-2 inline-block text-center ${btnPrimary}`}>

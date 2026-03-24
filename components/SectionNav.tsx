@@ -32,16 +32,16 @@ export function SectionNav({
   return (
     <nav
       aria-label="On this page"
-      className={`flex items-center gap-1 border-t border-neutral-200/70 pt-1 pb-2 ${sticky ? "sticky z-30 border-b border-neutral-200/70 bg-white" : ""} ${className}`}
+      className={`flex items-center gap-1 border-t border-stone-200 pt-1 pb-2 ${sticky ? "sticky z-30 border-b border-stone-200 bg-white" : ""} ${className}`}
       style={style}
     >
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-1 px-4 sm:px-6 lg:px-8 overflow-x-auto">
         {items.map((item, i) => (
           <span key={item.href} className="flex shrink-0 items-center gap-1">
-            {i > 0 && <span className="text-slate-200" aria-hidden>|</span>}
+            {i > 0 && <span className="text-stone-300" aria-hidden>|</span>}
             <Link
               href={item.href}
-              className="rounded px-2 py-1.5 text-sm font-medium text-[#6E6E6E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+              className="rounded px-2 py-1.5 text-sm font-medium text-[#57534E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
               onClick={(e) => {
                 const id = item.href.replace(/^#/, "");
                 const el = document.getElementById(id);

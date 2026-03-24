@@ -57,7 +57,7 @@ export default function RecurringInvoicingExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
                     <li aria-hidden>/</li>
                     <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
@@ -71,7 +71,7 @@ export default function RecurringInvoicingExplainedPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Recurring Invoicing Explained
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     What recurring invoicing is, when businesses use it, and how tools automate subscriptions, retainers, and service agreements.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

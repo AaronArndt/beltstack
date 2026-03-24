@@ -37,12 +37,12 @@ function SearchPageContent() {
 
   return (
     <>
-      <section className="border-b border-slate-200 bg-[#F8FAFC]">
+      <section className="border-b border-stone-200 bg-stone-50">
           <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Search Results
             </h1>
-            <p className="mt-2 text-center text-[#6E6E6E] text-sm sm:text-base">
+            <p className="mt-2 text-center text-[#57534E] text-sm sm:text-base">
               {query ? (
                 <>
                   Results for <span className="font-semibold text-[#1A2D48]">"{query}"</span>
@@ -62,12 +62,12 @@ function SearchPageContent() {
         <section className="py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {query && results.length === 0 && (
-              <p className="text-center text-[#6E6E6E] text-sm">
+              <p className="text-center text-[#57534E] text-sm">
                 No results found. Try searching for a software name or category.
               </p>
             )}
             {!query && (
-              <p className="text-center text-[#6E6E6E] text-sm">
+              <p className="text-center text-[#57534E] text-sm">
                 Start by searching for a software name, category, or use case.
               </p>
             )}
@@ -94,12 +94,12 @@ function SearchPageContent() {
 function SearchPageFallback() {
   return (
     <>
-      <section className="border-b border-slate-200 bg-[#F8FAFC]">
+      <section className="border-b border-stone-200 bg-stone-50">
         <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
           <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             Search Results
           </h1>
-          <p className="mt-2 text-center text-[#6E6E6E] text-sm sm:text-base">
+          <p className="mt-2 text-center text-[#57534E] text-sm sm:text-base">
             Type to search reviews, comparisons, roundups, and guides.
           </p>
           <SearchAutocomplete initialQuery="" autoNavigateToResults={false} onSubmitQuery={() => {}} />
@@ -107,7 +107,7 @@ function SearchPageFallback() {
       </section>
       <section className="py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-[#6E6E6E] text-sm">
+          <p className="text-center text-[#57534E] text-sm">
             Start by searching for a software name, category, or use case.
           </p>
         </div>
@@ -118,7 +118,7 @@ function SearchPageFallback() {
 
 export default function SearchPage() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         <Suspense fallback={<SearchPageFallback />}>
           <SearchPageContent />

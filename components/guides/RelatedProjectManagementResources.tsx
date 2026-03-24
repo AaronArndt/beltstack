@@ -33,7 +33,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -71,7 +71,7 @@ export function RelatedProjectManagementResources({
   return (
     <section
       id="related-resources"
-      className="scroll-mt-section border-t border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+      className="scroll-mt-section border-t border-stone-200/80 bg-background py-8 sm:py-11"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle sub="More ways to explore project management software.">

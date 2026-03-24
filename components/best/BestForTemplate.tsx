@@ -4,10 +4,19 @@ import Link from "next/link";
 import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
+import {
+  sectionRuleAccent,
+  tableBodyRow,
+  tableHeadRow,
+  tableShell,
+  trustIndicatorAffiliateButtonClass,
+  trustIndicatorListClass,
+} from "@/lib/design-tokens";
+import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 export type BestForFeaturedProduct = {
   slug: string;
@@ -84,20 +93,12 @@ export type BestForTemplateProps = {
   faqItems: BestForFaqItem[];
 };
 
-function EmeraldIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M10 2L18 10L10 18L2 10L10 2Z" fill="#10B981" />
-    </svg>
-  );
-}
-
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      <div className={sectionRuleAccent} aria-hidden />
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -114,7 +115,7 @@ function FaqAccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-slate-200 last:border-b-0">
+    <div className="border-b border-stone-200 last:border-b-0">
       <button
         type="button"
         onClick={onToggle}
@@ -122,7 +123,7 @@ function FaqAccordionItem({
         aria-expanded={isOpen}
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
+        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M6 9l6 6 6-6" />
           </svg>
@@ -130,7 +131,7 @@ function FaqAccordionItem({
       </button>
       {isOpen && (
         <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#6E6E6E] text-sm leading-relaxed">{answer}</p>
+          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -139,14 +140,14 @@ function FaqAccordionItem({
 
 function FeaturedCard({ pick }: { pick: BestForFeaturedProduct }) {
   return (
-    <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md">
+    <article className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm">
       <div className="flex flex-wrap items-center gap-2">
         <img src={pick.logoSrc} alt="" className="h-10 w-auto max-w-[120px] object-contain object-left" />
         <span className="rounded-md bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20">
           {pick.badge}
         </span>
         <span className="text-[#10B981] font-bold">{pick.rating}</span>
-        <span className="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs font-medium text-[#6E6E6E]">
+        <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
           From {pick.startingPrice}
         </span>
       </div>
@@ -155,8 +156,8 @@ function FeaturedCard({ pick }: { pick: BestForFeaturedProduct }) {
           {pick.name}
         </Link>
       </h3>
-      <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed">{pick.description}</p>
-      <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
+      <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{pick.description}</p>
+      <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-stone-100 pt-4">
         <a href={pick.visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
           Visit site
         </a>
@@ -198,10 +199,10 @@ export function BestForTemplate({
   const defaultWhySub = `Why we chose these tools for ${breadcrumbLabel.toLowerCase()}.`;
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         {/* ——— 1) Hero ——— */}
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <Breadcrumb
               items={[
@@ -214,25 +215,25 @@ export function BestForTemplate({
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {title}
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               {subtitle}
             </p>
             {introParagraph != null && introParagraph !== "" && (
-              <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+              <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
                 {introParagraph}
               </p>
             )}
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">
+            <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 {freshnessText}
               </span>
               <button
                 type="button"
                 onClick={() => setAffiliateOpen(true)}
-                className="flex items-center gap-2 text-left text-[#6E6E6E] hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className={trustIndicatorAffiliateButtonClass}
               >
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Affiliate disclosure
               </button>
             </div>
@@ -245,7 +246,7 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 2) Top picks for this use case ——— */}
-        <section id="top-picks" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="top-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={topPicksSub ?? defaultTopPicksSub}>
               Top picks for this use case
@@ -259,15 +260,15 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 3) Comparison table ——— */}
-        <section id="comparison-table" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="comparison-table" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side at a glance.">
               Compare options
             </SectionTitle>
-            <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+            <div className={`mt-4 ${tableShell}`}>
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-[#F8FAFC]">
+                  <tr className={tableHeadRow}>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Software</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
@@ -280,19 +281,19 @@ export function BestForTemplate({
                 </thead>
                 <tbody>
                   {comparisonTableRows.map((row) => (
-                    <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/70">
+                    <tr key={row.slug} className={tableBodyRow}>
                       <td className="px-4 py-4 font-semibold text-[#1A2D48]">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
                       {comparisonTableRows.some((r) => r.payrollTypes != null) && (
-                        <td className="px-4 py-4 text-[#6E6E6E]">{row.payrollTypes ?? "—"}</td>
+                        <td className="px-4 py-4 text-[#57534E]">{row.payrollTypes ?? "—"}</td>
                       )}
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.standoutFeature}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
                         <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                           Read review
@@ -307,12 +308,12 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 4) Editorial guidance for this audience ——— */}
-        <section id="editorial-guidance" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="editorial-guidance" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={editorialSub ?? defaultEditorialSub}>
               Editorial guidance for this audience
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#6E6E6E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
               {editorialGuidance.map((block, i) => (
                 <div key={i}>
                   <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
@@ -324,12 +325,12 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 5) Why these picks work for this use case ——— */}
-        <section id="why-these-picks" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="why-these-picks" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={whyThesePicksSub ?? defaultWhySub}>
               Why these picks work for this use case
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#6E6E6E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
               {whyThesePicks.map((block, i) => (
                 <div key={i}>
                   <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
@@ -341,7 +342,7 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 6) Related reviews ——— */}
-        <section id="related-reviews" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="related-reviews" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Deep dives on each pick.">
               Related reviews
@@ -351,7 +352,7 @@ export function BestForTemplate({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="inline-flex items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                   >
                     {item.name} review
                   </Link>
@@ -362,7 +363,7 @@ export function BestForTemplate({
         </section>
 
         {/* ——— 7) Related comparisons ——— */}
-        <section id="related-comparisons" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
@@ -372,7 +373,7 @@ export function BestForTemplate({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -382,9 +383,9 @@ export function BestForTemplate({
         </section>
 
         {/* ——— See also: best roundup + comparisons (or category overrides) ——— */}
-        <section id="see-also" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="see-also" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="text-[#57534E] text-sm leading-relaxed">
               {seeAlsoBlock != null ? (
                 <>
                   For more options across all use cases, see our{" "}
@@ -416,7 +417,7 @@ export function BestForTemplate({
 
         {/* ——— Related guides (optional) ——— */}
         {relatedGuides != null && relatedGuides.length > 0 && (
-          <section id="related-guides" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+          <section id="related-guides" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub="More reading for this use case.">
                 Related guides
@@ -426,7 +427,7 @@ export function BestForTemplate({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                      className="inline-flex items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                     >
                       {item.label}
                     </Link>
@@ -438,12 +439,12 @@ export function BestForTemplate({
         )}
 
         {/* ——— 8) FAQ ——— */}
-        <section id="faqs" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="faqs" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Quick answers for this use case.">
               FAQs
             </SectionTitle>
-            <div className="mt-4 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+            <div className="mt-4 rounded-lg border border-stone-200 bg-white shadow-sm overflow-hidden">
               {faqItems.map((item, i) => (
                 <FaqAccordionItem
                   key={i}
@@ -464,7 +465,7 @@ export function BestForTemplate({
         <>
           <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
-            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-slate-200 bg-white p-6 shadow-lg"
+            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-for-affiliate-title"
             aria-modal="true"
@@ -472,7 +473,7 @@ export function BestForTemplate({
             <h3 id="best-for-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
               We may earn a commission when you purchase through our links. This does not affect our recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

@@ -5,11 +5,12 @@ import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
+import { sectionRuleAccent } from "@/lib/design-tokens";
 
 // ——— Design tokens (match review template) ———
 
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 export type ComparisonFeatureRow = {
   feature: string;
@@ -84,7 +85,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   return (
     <header className="mb-5 mt-0">
       <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -111,7 +112,7 @@ function FaqAccordionItem({
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
         <span
-          className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -266,11 +267,11 @@ export function ComparisonTemplate({
                 </p>
                 {/* Product summary cards */}
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
+                  <div className="rounded-lg border border-stone-200/80 bg-white p-6 shadow-sm">
                     {logoA && <img src={logoA} alt="" className="h-10 w-auto max-w-[100px] object-contain mb-3" />}
                     <h2 className="text-[#1A2D48] text-lg font-bold">{productA.name}</h2>
                     {productA.rating != null && productA.rating !== "" && (
-                      <p className="mt-1 text-sm text-[#6E6E6E]"><span className="text-[#10B981] font-semibold">{productA.rating}</span> rating</p>
+                      <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productA.rating}</span> rating</p>
                     )}
                     {productA.startingPrice != null && productA.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">From {productA.startingPrice}</p>
@@ -282,11 +283,11 @@ export function ComparisonTemplate({
                       </a>
                     )}
                   </div>
-                  <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
+                  <div className="rounded-lg border border-stone-200/80 bg-white p-6 shadow-sm">
                     {logoB && <img src={logoB} alt="" className="h-10 w-auto max-w-[100px] object-contain mb-3" />}
                     <h2 className="text-[#1A2D48] text-lg font-bold">{productB.name}</h2>
                     {productB.rating != null && productB.rating !== "" && (
-                      <p className="mt-1 text-sm text-[#6E6E6E]"><span className="text-[#10B981] font-semibold">{productB.rating}</span> rating</p>
+                      <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productB.rating}</span> rating</p>
                     )}
                     {productB.startingPrice != null && productB.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">From {productB.startingPrice}</p>
@@ -299,7 +300,7 @@ export function ComparisonTemplate({
                     )}
                   </div>
                 </div>
-                <div className="mt-6 rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-5">
+                <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-5">
                   <p className="text-[#1A2D48] text-sm font-semibold mb-3">Quick recommendation</p>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                     <li>
@@ -326,7 +327,7 @@ export function ComparisonTemplate({
                 {/* 1. Quick verdict */}
                 <section id="quick-verdict" className="scroll-mt-section pt-12 pb-12">
                   <SectionTitle sub="How these two tools differ.">Quick verdict</SectionTitle>
-                  <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6 sm:p-8">
+                  <div className="rounded-lg border border-stone-200/80 bg-white p-6 sm:p-8">
                     <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
                       {quickVerdictParagraphs.map((p, i) => (
                         <p key={i}>{p}</p>
@@ -350,9 +351,9 @@ export function ComparisonTemplate({
                           return (
                             <div
                               key={i}
-                              className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-4"
+                              className="rounded-lg border border-stone-200/80 bg-white p-4"
                             >
-                              <p className="text-[#6E6E6E] text-xs font-semibold uppercase tracking-wide mb-1">
+                              <p className="text-[#57534E] text-xs font-semibold uppercase tracking-wide mb-1">
                                 {item.label}
                               </p>
                               <p className="text-[#1A2D48] font-semibold text-sm mb-1">{winnerName}</p>
@@ -371,7 +372,7 @@ export function ComparisonTemplate({
                     <SectionTitle sub="Which product fits your situation.">Quick decision guide</SectionTitle>
                     <div className="grid gap-6 sm:grid-cols-2">
                       {decisionGuideA != null && decisionGuideA.length > 0 && (
-                        <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                        <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                           <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Choose {productA.name} if:</h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideA.map((item, i) => (
@@ -384,7 +385,7 @@ export function ComparisonTemplate({
                         </div>
                       )}
                       {decisionGuideB != null && decisionGuideB.length > 0 && (
-                        <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                        <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                           <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Choose {productB.name} if:</h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideB.map((item, i) => (
@@ -404,10 +405,10 @@ export function ComparisonTemplate({
                 {ratingsComparison != null && ratingsComparison.length > 0 && (
                   <section id="ratings-comparison" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                     <SectionTitle sub="How we score each product.">Ratings comparison</SectionTitle>
-                    <div className="overflow-x-auto rounded-lg border border-neutral-200/60">
+                    <div className="overflow-x-auto rounded-md border border-slate-200">
                       <table className="w-full min-w-[320px] text-sm">
                         <thead>
-                          <tr className="border-b border-neutral-200/60 bg-[#F8FAFC]">
+                          <tr className="border-b border-slate-200 bg-slate-50">
                             <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">Category</th>
                             <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productA.name}</th>
                             <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productB.name}</th>
@@ -415,7 +416,7 @@ export function ComparisonTemplate({
                         </thead>
                         <tbody>
                           {ratingsComparison.map((row, i) => (
-                            <tr key={i} className="border-b border-neutral-200/60 last:border-b-0">
+                            <tr key={i} className="border-b border-slate-100 last:border-b-0 transition-colors hover:bg-slate-50/80">
                               <td className="py-3 px-4 font-medium text-[#1A2D48] align-middle">{row.category}</td>
                               <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-[#10B981] font-semibold">{row.productA}</span></td>
                               <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-[#10B981] font-semibold">{row.productB}</span></td>
@@ -430,7 +431,7 @@ export function ComparisonTemplate({
                 {/* 2. Feature comparison table */}
                 <section id="feature-comparison" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Side-by-side feature check.">Feature comparison</SectionTitle>
-                  <p className="mb-4 text-xs text-[#6E6E6E]">
+                  <p className="mb-4 text-xs text-[#57534E]">
                     <span className="inline-flex items-center gap-1.5 mr-4">
                       <span className="text-[#10B981]" aria-hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="inline-block"><polyline points="20 6 9 17 4 12" /></svg></span>
                       Supported
@@ -444,10 +445,10 @@ export function ComparisonTemplate({
                       Not available
                     </span>
                   </p>
-                  <div className="overflow-x-auto rounded-lg border border-neutral-200/60">
+                  <div className="overflow-x-auto rounded-md border border-slate-200">
                     <table className="w-full min-w-[480px] text-sm">
                       <thead>
-                        <tr className="border-b border-neutral-200/60 bg-[#F8FAFC]">
+                        <tr className="border-b border-slate-200 bg-slate-50">
                           <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] w-[40%] align-middle">Feature</th>
                           <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productA.name}</th>
                           <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productB.name}</th>
@@ -455,7 +456,7 @@ export function ComparisonTemplate({
                       </thead>
                       <tbody>
                         {featureComparison.map((row, i) => (
-                          <tr key={i} className="border-b border-neutral-200/60 last:border-b-0">
+                          <tr key={i} className="border-b border-slate-100 last:border-b-0 transition-colors hover:bg-slate-50/80">
                             <td className="py-3 px-4 font-medium text-[#1A2D48] align-middle">{row.feature}</td>
                             <FeatureCell
                               support={row.supportA}
@@ -486,7 +487,7 @@ export function ComparisonTemplate({
                 <section id="pros-cons" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Strengths and trade-offs.">Pros and cons</SectionTitle>
                   <div className="grid gap-6 sm:grid-cols-2">
-                    <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                    <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                       <h3 className="text-[#1A2D48] text-lg font-semibold">{productA.name}</h3>
                       <div className="mt-3 grid gap-4">
                         <div>
@@ -513,7 +514,7 @@ export function ComparisonTemplate({
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                    <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                       <h3 className="text-[#1A2D48] text-lg font-semibold">{productB.name}</h3>
                       <div className="mt-3 grid gap-4">
                         <div>
@@ -564,7 +565,7 @@ export function ComparisonTemplate({
                       <Link
                         key={alt.href}
                         href={alt.href}
-                        className="flex flex-col rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)] hover:border-[#10B981]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                        className="flex flex-col rounded-lg border border-stone-200/80 bg-white p-5 shadow-sm hover:border-[#10B981]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                       >
                         {alt.logoSrc != null && alt.logoSrc !== "" && (
                           <img src={alt.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain mb-3" />
@@ -860,22 +861,22 @@ export function ComparisonTemplate({
               aria-label="Comparison summary"
               style={{ top: `${SIDEBAR_STICKY_TOP}px` }}
             >
-              <div className="border border-neutral-200/60 rounded-lg bg-white p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
+              <div className="border border-neutral-200/60 rounded-lg bg-white p-5 shadow-sm">
                 <p className="text-neutral-500 text-xs uppercase tracking-wide mb-4">Comparison summary</p>
                 {(productA.rating != null && productA.rating !== "") || (productB.rating != null && productB.rating !== "") ? (
                   <div className="space-y-2 mb-4">
                     {productA.rating != null && productA.rating !== "" && (
                       <p className="text-sm align-middle">
-                        <span className="text-[#6E6E6E] text-xs">{productA.name}:</span>{" "}
+                        <span className="text-[#57534E] text-xs">{productA.name}:</span>{" "}
                         <span className="text-[#10B981] font-semibold">{productA.rating}</span>
-                        <span className="text-[#6E6E6E] text-xs ml-1">rating</span>
+                        <span className="text-[#57534E] text-xs ml-1">rating</span>
                       </p>
                     )}
                     {productB.rating != null && productB.rating !== "" && (
                       <p className="text-sm align-middle">
-                        <span className="text-[#6E6E6E] text-xs">{productB.name}:</span>{" "}
+                        <span className="text-[#57534E] text-xs">{productB.name}:</span>{" "}
                         <span className="text-[#10B981] font-semibold">{productB.rating}</span>
-                        <span className="text-[#6E6E6E] text-xs ml-1">rating</span>
+                        <span className="text-[#57534E] text-xs ml-1">rating</span>
                       </p>
                     )}
                   </div>
@@ -929,7 +930,7 @@ export function ComparisonTemplate({
                   </div>
                   <Link
                     href={categoryHref}
-                    className="block w-full text-center text-sm font-medium text-[#6E6E6E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded pt-1"
+                    className="block w-full text-center text-sm font-medium text-[#57534E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded pt-1"
                   >
                     ← {categoryLabel} hub
                   </Link>

@@ -88,7 +88,7 @@ export default function PeoVsHrSoftwareGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -125,7 +125,7 @@ export default function PeoVsHrSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     PEO vs HR Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     Should you outsource HR to a PEO or run HR in-house with software? This guide explains how each
                     model works, what it costs, and which fits different company stages.
                   </p>

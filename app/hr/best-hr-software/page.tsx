@@ -15,35 +15,22 @@ import {
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 
+import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
+import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
+
 const hrPickRoutes = getSoftwarePickCategoryRoutes("hr");
 
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-lg border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-
-function EmeraldIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-    >
-      <path d="M10 2L18 10L10 18L2 10L10 2Z" fill="#10B981" />
-    </svg>
-  );
-}
+  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -60,7 +47,7 @@ function FaqAccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-slate-200 last:border-b-0">
+    <div className="border-b border-stone-200 last:border-b-0">
       <button
         type="button"
         onClick={onToggle}
@@ -68,7 +55,7 @@ function FaqAccordionItem({
         aria-expanded={isOpen}
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
+        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
           <svg
             width="20"
             height="20"
@@ -85,7 +72,7 @@ function FaqAccordionItem({
       </button>
       {isOpen && (
         <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#6E6E6E] text-sm leading-relaxed">{answer}</p>
+          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -98,13 +85,13 @@ export default function BestHrSoftwarePage() {
   const [affiliateOpen, setAffiliateOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         {/* ——— 1) Hero ——— */}
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                 <li>
                   <Link
                     href="/"
@@ -131,27 +118,27 @@ export default function BestHrSoftwarePage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best HR Software (2026)
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Compare the best HR software for small businesses, startups, and growing teams. See top picks, payroll
               integration, onboarding, compliance support, and who each platform is best for.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               HR software centralizes people operations—employee data, hiring and onboarding, payroll, benefits, time
               off, and compliance—so small businesses can manage their workforce in one place. The right tool connects
               payroll and benefits, streamlines onboarding, and helps you stay compliant without outgrowing your
               stack.
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">
+            <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Updated for 2026
               </span>
               <button
                 type="button"
                 onClick={() => setAffiliateOpen(true)}
-                className="flex items-center gap-2 text-left text-[#6E6E6E] hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className={trustIndicatorAffiliateButtonClass}
               >
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Affiliate disclosure
               </button>
             </div>
@@ -161,7 +148,7 @@ export default function BestHrSoftwarePage() {
         {/* ——— 2) Best HR software picks ——— */}
         <section
           id="best-hr-picks"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">
@@ -181,19 +168,19 @@ export default function BestHrSoftwarePage() {
         {/* ——— 3) Comparison Table ——— */}
         <section
           id="comparison-table"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side at a glance.">
               Compare HR software
             </SectionTitle>
-            <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               For full reviews, see our <Link href="/hr" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">HR hub</Link> and individual review pages linked below.
             </p>
-            <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+            <div className="mt-4 overflow-x-auto rounded-md border border-slate-200 bg-white shadow-sm">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-[#F8FAFC]">
+                  <tr className="border-b border-slate-200 bg-slate-50">
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
@@ -205,7 +192,7 @@ export default function BestHrSoftwarePage() {
                   {COMPARISON_TABLE_ROWS.map((row) => (
                     <tr
                       key={row.slug}
-                      className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/70"
+                      className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80"
                     >
                       <td className="px-4 py-4 font-semibold text-[#1A2D48]">
                         <div className="flex items-center gap-2">
@@ -213,8 +200,8 @@ export default function BestHrSoftwarePage() {
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
                       <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
@@ -235,13 +222,13 @@ export default function BestHrSoftwarePage() {
         {/* ——— 4) How to choose HR software ——— */}
         <section
           id="how-to-choose"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="What to look for when you compare options.">
               How to choose HR software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#6E6E6E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
               <div>
                 <h3 className="font-bold text-[#1A2D48] text-base">Company size</h3>
                 <p className="mt-1">
@@ -295,19 +282,19 @@ export default function BestHrSoftwarePage() {
           headingCategoryLabel="HR software"
           sectionSub="Find HR tools that fit your situation."
           items={useCaseEditorialItems}
-          sectionClassName="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+          sectionClassName="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
         />
 
         {/* ——— 6) Related comparisons ——— */}
         <section
           id="related-comparisons"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               <Link
                 href="/hr/compare"
                 className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
@@ -329,7 +316,7 @@ export default function BestHrSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -339,12 +326,12 @@ export default function BestHrSoftwarePage() {
         </section>
 
         {/* ——— 7) FAQ ——— */}
-        <section id="faqs" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="faqs" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Quick answers to common questions.">
               Best HR software FAQs
             </SectionTitle>
-            <div className="mt-4 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+            <div className="mt-4 rounded-lg border border-stone-200 bg-white shadow-sm overflow-hidden">
               {FAQ_ITEMS.map((item, i) => (
                 <FaqAccordionItem
                   key={i}
@@ -369,7 +356,7 @@ export default function BestHrSoftwarePage() {
             onClick={() => setAffiliateOpen(false)}
           />
           <div
-            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-slate-200 bg-white p-6 shadow-lg"
+            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-hr-affiliate-title"
             aria-modal="true"
@@ -377,7 +364,7 @@ export default function BestHrSoftwarePage() {
             <h3 id="best-hr-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
               We may earn a commission when you purchase through our links. This does not affect our recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

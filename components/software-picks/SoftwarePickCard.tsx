@@ -10,7 +10,7 @@ const RED_X = "#FF0000";
 
 /* Same height + width for primary / secondary CTAs (matches hub button feel) */
 const btnBase =
-  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-lg px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
+  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-md px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
 
 const btnPrimary = `${btnBase} bg-[#10B981] text-white hover:bg-[#0d9668]`;
 
@@ -81,7 +81,7 @@ function IconInfo({ className }: { className?: string }) {
     <div className={`group relative inline-flex shrink-0 ${className ?? ""}`}>
       <button
         type="button"
-        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-slate-300 font-sans text-[11px] font-bold text-[#6E6E6E] transition-colors hover:border-slate-400 hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-stone-300 font-sans text-[11px] font-bold text-[#57534E] transition-colors hover:border-slate-400 hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
         aria-describedby={tooltipId}
         aria-label="How we calculate ratings"
       >
@@ -94,10 +94,10 @@ function IconInfo({ className }: { className?: string }) {
         <div
           id={tooltipId}
           role="tooltip"
-          className="pointer-events-auto rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-left shadow-lg"
+          className="pointer-events-auto rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-left shadow-lg"
         >
           <p className="font-sans text-xs font-semibold text-[#1A2D48]">Rating methodology</p>
-          <p className="mt-1.5 font-sans text-xs leading-relaxed text-[#6E6E6E] sm:text-sm">
+          <p className="mt-1.5 font-sans text-xs leading-relaxed text-[#57534E] sm:text-sm">
             Scores reflect hands-on testing and research across pricing, features, ease of use, support, and fit for the category. Our recommendations are editorial—vendors don’t pay for higher ratings or placement.
           </p>
           <Link
@@ -245,7 +245,7 @@ function AccordionBlock({
       >
         <span className={sectionTitleClass}>{label}</span>
         <svg
-          className={`h-5 w-5 shrink-0 text-[#6E6E6E] transition-transform duration-200 ease-out ${
+          className={`h-5 w-5 shrink-0 text-[#57534E] transition-transform duration-200 ease-out ${
             isOpen ? "-rotate-180" : ""
           }`}
           viewBox="0 0 24 24"
@@ -264,7 +264,7 @@ function AccordionBlock({
           id={panelId}
           role="region"
           aria-labelledby={buttonId}
-          className="border-t border-slate-200/80 bg-white px-5 pb-5 pt-4 sm:px-6"
+          className="border-t border-stone-200/80 bg-white px-5 pb-5 pt-4 sm:px-6"
         >
           {children}
         </div>
@@ -332,7 +332,7 @@ export function SoftwarePickCard({
   return (
     <article
       id={id}
-      className="min-w-0 max-w-full rounded-xl border border-slate-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
+      className="min-w-0 max-w-full rounded-lg border border-stone-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
     >
       <div
         className={`px-6 pt-6 ${paragraphs.length > 0 ? "pb-2" : "pb-6"}`}
@@ -373,7 +373,7 @@ export function SoftwarePickCard({
               />
             ) : (
               <div
-                className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 font-sans text-sm font-bold text-[#6E6E6E]"
+                className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-lg border border-stone-200 bg-stone-50 font-sans text-sm font-bold text-[#57534E]"
                 aria-hidden
               >
                 {name.slice(0, 2).toUpperCase()}
@@ -424,7 +424,7 @@ export function SoftwarePickCard({
       {paragraphs.length > 0 ? (
         <div className="px-6 pb-6 pt-1">
           <p className={sectionTitleClass}>Highlights</p>
-          <div className="mt-3 space-y-3 text-[14px] leading-relaxed text-[#6E6E6E]">
+          <div className="mt-3 space-y-3 text-[14px] leading-relaxed text-[#57534E]">
             {paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -432,7 +432,7 @@ export function SoftwarePickCard({
         </div>
       ) : null}
 
-      <div className="divide-y divide-slate-200/90 border-t border-slate-200/90 rounded-b-xl">
+      <div className="divide-y divide-stone-200/90 border-t border-stone-200/90 rounded-b-lg">
         <AccordionBlock
           id="pros-cons"
           baseId={baseId}
@@ -441,7 +441,7 @@ export function SoftwarePickCard({
           onToggle={() => toggle("pros-cons")}
         >
           {pros.length === 0 && cons.length === 0 ? (
-            <p className="text-sm leading-relaxed text-[#6E6E6E]">
+            <p className="text-sm leading-relaxed text-[#57534E]">
               See the full review for detailed pros and cons.
             </p>
           ) : (
@@ -450,7 +450,7 @@ export function SoftwarePickCard({
                 <p className={sectionTitleClass}>Pros</p>
                 <ul className="mt-3 space-y-2.5">
                   {pros.map((item, idx) => (
-                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#6E6E6E]">
+                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#57534E]">
                       <span className="mt-0.5 shrink-0">
                         <IconCheck className="h-5 w-5" />
                       </span>
@@ -463,7 +463,7 @@ export function SoftwarePickCard({
                 <p className={sectionTitleClass}>Cons</p>
                 <ul className="mt-3 space-y-2.5">
                   {cons.map((item, idx) => (
-                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#6E6E6E]">
+                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#57534E]">
                       <span className="mt-0.5 shrink-0">
                         <IconX className="h-5 w-5" />
                       </span>
@@ -483,7 +483,7 @@ export function SoftwarePickCard({
           isOpen={openSection === "pricing"}
           onToggle={() => toggle("pricing")}
         >
-          <ul className="list-none space-y-2 text-sm leading-relaxed text-[#6E6E6E]">
+          <ul className="list-none space-y-2 text-sm leading-relaxed text-[#57534E]">
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
               <span>{hasFreeTrial ? "Free trial" : "No free trial"}</span>
@@ -517,7 +517,7 @@ export function SoftwarePickCard({
         >
           <div className="grid gap-6 sm:grid-cols-3 sm:gap-4">
             <div>
-              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#6E6E6E]">Review</p>
+              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#57534E]">Review</p>
               <Link
                 href={reviewUrl}
                 className="mt-2 inline-block font-sans text-sm font-semibold text-[#10B981] underline underline-offset-2 hover:text-[#0d9668]"
@@ -535,7 +535,7 @@ export function SoftwarePickCard({
                   {alternativesLinkLabel}
                 </Link>
               ) : (
-                <p className="mt-2 text-sm text-[#6E6E6E]">See the category hub for alternatives.</p>
+                <p className="mt-2 text-sm text-[#57534E]">See the category hub for alternatives.</p>
               )}
             </div>
             <div>
@@ -554,7 +554,7 @@ export function SoftwarePickCard({
                   ))}
                 </ul>
               ) : (
-                <p className="mt-2 text-sm text-[#6E6E6E]">Browse comparisons from the category compare hub.</p>
+                <p className="mt-2 text-sm text-[#57534E]">Browse comparisons from the category compare hub.</p>
               )}
             </div>
           </div>

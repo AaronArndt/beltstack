@@ -20,7 +20,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -52,13 +52,13 @@ export default function TimeTrackingCompareHubPage() {
   const bySoftware = groupComparisonsByProduct(allSlugs);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         {/* ——— Hero ——— */}
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                 <li>
                   <Link
                     href="/"
@@ -85,12 +85,12 @@ export default function TimeTrackingCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Time Tracking Software Comparisons
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Compare the top time tracking tools side-by-side—including Toggl Track, Harvest, Clockify, Hubstaff, Time Doctor,
               Everhour, and Timely. Our head-to-head comparisons break down features, pricing, monitoring, and integrations so
               you can choose the best fit for your team.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Whether you&apos;re tracking billable client work, payroll hours, or productivity, these matchups help you see how
               each platform handles rates, reporting, monitoring, and exports to your invoicing and accounting stack.
             </p>
@@ -98,7 +98,7 @@ export default function TimeTrackingCompareHubPage() {
         </section>
 
         {/* ——— Section 1: Popular Comparisons ——— */}
-        <section id="popular-comparisons" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="popular-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side features, pricing, and recommendations.">
               Popular Comparisons
@@ -112,7 +112,7 @@ export default function TimeTrackingCompareHubPage() {
                   <Link
                     key={slug}
                     href={compareHref}
-                    className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       {data.productA.logoSrc && (
@@ -122,7 +122,7 @@ export default function TimeTrackingCompareHubPage() {
                           className="h-10 w-auto max-w-[80px] object-contain object-left"
                         />
                       )}
-                      <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>
+                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       {data.productB.logoSrc && (
@@ -136,7 +136,7 @@ export default function TimeTrackingCompareHubPage() {
                     <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
                       {summary}
                     </p>
                     <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
@@ -152,7 +152,7 @@ export default function TimeTrackingCompareHubPage() {
         {/* ——— Section 2: Compare by Software ——— */}
         <section
           id="compare-by-software"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Find every comparison that includes a given platform.">
@@ -162,7 +162,7 @@ export default function TimeTrackingCompareHubPage() {
               {bySoftware.map(({ key, label, slugs }) => (
                 <div
                   key={key}
-                  className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+                  className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm"
                 >
                   <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
                   <ul className="mt-3 space-y-2">
@@ -184,17 +184,17 @@ export default function TimeTrackingCompareHubPage() {
         </section>
 
         {/* ——— Section 3: How We Compare Time Tracking Software ——— */}
-        <section id="how-we-compare" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="how-we-compare" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Consistent criteria so you can compare with confidence.">
               How We Compare Time Tracking Software
             </SectionTitle>
-            <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               Our time tracking comparisons use the same evaluation criteria across every head-to-head. We look at ease of use,
               billable and non-billable tracking, integrations with invoicing, accounting, and payroll, monitoring and
               reporting depth, pricing, and team limits—so you see how each platform really stacks up.
             </p>
-            <ul className="mt-4 space-y-2 text-[#6E6E6E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>
                   •
@@ -231,7 +231,7 @@ export default function TimeTrackingCompareHubPage() {
                 tiers, and how costs scale with your headcount.
               </li>
             </ul>
-            <p className="mt-5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
               For our full review process and affiliate disclosure, see our{" "}
               <Link
                 href="/methodology"

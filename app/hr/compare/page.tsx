@@ -19,7 +19,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -53,13 +53,13 @@ export default function HrCompareHubPage() {
   const bySoftware = groupComparisonsByProduct(allSlugs);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         {/* Hero */}
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                 <li>
                   <Link
                     href="/"
@@ -86,10 +86,10 @@ export default function HrCompareHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare HR Software
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons of popular HR software for small businesses, startups, and growing teams.
             </p>
-            <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               For rankings across the whole category, see our{" "}
               <Link
                 href="/hr/best-hr-software"
@@ -112,7 +112,7 @@ export default function HrCompareHubPage() {
         {/* Popular comparisons */}
         <section
           id="popular-comparisons"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side features, pricing, and recommendations.">
@@ -130,7 +130,7 @@ export default function HrCompareHubPage() {
                   <Link
                     key={slug}
                     href={compareHref}
-                    className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       <img
@@ -138,7 +138,7 @@ export default function HrCompareHubPage() {
                         alt=""
                         className="h-10 w-auto max-w-[80px] object-contain object-left"
                       />
-                      <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>
+                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       <img
@@ -150,7 +150,7 @@ export default function HrCompareHubPage() {
                     <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
                       {summary}
                     </p>
                     <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
@@ -166,7 +166,7 @@ export default function HrCompareHubPage() {
         {/* Compare by software */}
         <section
           id="compare-by-software"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Find every comparison that includes a given platform.">
@@ -176,7 +176,7 @@ export default function HrCompareHubPage() {
               {bySoftware.map(({ key, label, slugs }) => (
                 <div
                   key={key}
-                  className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+                  className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm"
                 >
                   <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
                   <ul className="mt-3 space-y-2">
@@ -200,19 +200,19 @@ export default function HrCompareHubPage() {
         {/* How we compare section */}
         <section
           id="how-we-compare"
-          className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Consistent criteria so you can compare with confidence.">
               How We Compare HR Software
             </SectionTitle>
-            <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               Our HR comparisons use the same evaluation criteria across every head-to-head. We look at ease of use,
               payroll and benefits integration, hiring and onboarding, compliance support, automation and
               integrations, and pricing—so you see how each platform stacks up for small businesses, startups, and
               growing teams.
             </p>
-            <ul className="mt-4 space-y-2 text-[#6E6E6E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
                 <strong className="text-[#1A2D48]">Ease of use</strong> — How simple each platform is to set up and
@@ -239,7 +239,7 @@ export default function HrCompareHubPage() {
                 headcount, and what’s included.
               </li>
             </ul>
-            <p className="mt-5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
               For our full review process and affiliate disclosure, see our{" "}
               <Link
                 href="/methodology"

@@ -74,7 +74,7 @@ export default function FieldServiceSoftwarePricingGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -112,7 +112,7 @@ export default function FieldServiceSoftwarePricingGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software Pricing Guide
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     How field service management (FSM) pricing works: common pricing models, what drives cost, and how
                     to decide when a more expensive platform actually makes sense for your business.
                   </p>

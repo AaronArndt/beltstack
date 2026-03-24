@@ -44,7 +44,7 @@ export default function RestaurantPosSystemsGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
                     <li aria-hidden>/</li>
                     <li><Link href="/pos" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">POS Software</Link></li>
@@ -58,7 +58,7 @@ export default function RestaurantPosSystemsGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Restaurant POS Systems Guide
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     Restaurant workflows, menu management, table service, and order routing—and how to choose a POS built for food service.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />

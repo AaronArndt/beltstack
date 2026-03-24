@@ -73,7 +73,7 @@ export default function BestAccountingSoftwareForStartupsPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                         Home
@@ -103,7 +103,7 @@ export default function BestAccountingSoftwareForStartupsPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best Accounting Software for Startups (2026)
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     Compare accounting tools that help startups manage expenses, invoicing, and financial reporting from day one.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />

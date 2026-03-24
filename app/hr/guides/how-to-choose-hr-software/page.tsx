@@ -95,7 +95,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -132,7 +132,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose HR Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     Key factors when comparing HR platforms: company size, payroll integration, hiring and onboarding
                     features, compliance support, and automation.
                   </p>

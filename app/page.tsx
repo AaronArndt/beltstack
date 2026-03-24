@@ -21,17 +21,19 @@ import { CRM_POPULAR_COMPARISONS } from "@/lib/data/crmHubData";
 import { HELPDESK_POPULAR_COMPARISONS } from "@/lib/data/helpdeskHubData";
 import { POS_POPULAR_COMPARISONS } from "@/lib/data/posHubData";
 import { FIELD_SERVICE_POPULAR_COMPARISONS } from "@/lib/data/fieldServiceHubData";
+import { sectionRuleAccent, trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
+import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 
 // ——— Design tokens (reference) ———
-// BG: #F8FAFC | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #6E6E6E
-// Borders: Tailwind neutrals (slate-200) only
+// BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
+// Borders: stone-200 / neutral (warm-neutral chrome)
 
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-lg border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-slate-50 hover:border-[#10B981]/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 hover:border-[#10B981]/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnPill =
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const STACK_FAST_CATEGORIES = [
   { value: "payroll", label: "Payroll" },
@@ -63,21 +65,14 @@ function FooterLogo({ className }: { className?: string }) {
   );
 }
 
-function EmeraldIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M10 2L18 10L10 18L2 10L10 2Z" fill="#10B981"/>
-    </svg>
-  );
-}
 function AffiliateModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
     <>
       <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={onClose} />
-      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-slate-200 bg-white p-6 shadow-lg" role="dialog" aria-labelledby="affiliate-title" aria-modal="true">
+      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-md" role="dialog" aria-labelledby="affiliate-title" aria-modal="true">
         <h3 id="affiliate-title" className="text-[#1A2D48] text-lg font-bold">Affiliate disclosure</h3>
-        <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
+        <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
           We may earn a commission when you purchase through our links. This does not affect our recommendations.
         </p>
         <button type="button" onClick={onClose} className={btnPrimary}>
@@ -92,8 +87,8 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   return (
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      <div className={sectionRuleAccent} aria-hidden />
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -162,7 +157,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <StickyStackFinder
         sentinelRef={stackFinderSentinelRef}
         stackCategory={stackCategory}
@@ -175,29 +170,29 @@ export default function Home() {
       />
       <main>
         {/* ——— 1) Hero: search-first discovery ——— */}
-        <section className="border-b border-slate-200 bg-[#F8FAFC]">
+        <section className="border-b border-stone-200 bg-stone-50">
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
             <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Find the Best Software for Your Business
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-[#6E6E6E] text-base leading-relaxed">
+            <p className="mx-auto mt-3 max-w-2xl text-center text-[#57534E] text-base leading-relaxed">
               Compare payroll, CRM, field service, helpdesk, POS, inventory, and more. Independent reviews and side-by-side comparisons.
             </p>
-            <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">
+            <div className={`mx-auto mt-6 justify-center ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Updated monthly
               </span>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Independent reviews
               </span>
               <button
                 type="button"
                 onClick={() => setAffiliateModalOpen(true)}
-                className="flex items-center gap-2 text-left text-[#6E6E6E] hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className={trustIndicatorAffiliateButtonClass}
               >
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Affiliate disclosure
               </button>
             </div>
@@ -215,14 +210,14 @@ export default function Home() {
         <div ref={stackFinderSentinelRef} className="h-px w-full" aria-hidden />
 
         {/* ——— 2) Featured Software ——— */}
-        <section className="border-b border-slate-200 bg-white py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Hand-picked tools with reviews, pricing, and comparisons.">Featured Software</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {FEATURED_SOFTWARE.map((item) => (
                 <article
                   key={item.name}
-                  className="flex flex-col rounded-xl border border-slate-200 bg-[#F8FAFC] p-5 shadow-sm transition-all duration-200 hover:shadow-md"
+                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm"
                 >
                   <div className="flex items-start gap-4">
                     <div className="relative h-12 w-12 shrink-0 overflow-hidden">
@@ -242,12 +237,12 @@ export default function Home() {
                       <p className="text-[#10B981] font-semibold">{item.rating}</p>
                     </div>
                   </div>
-                  <ul className="mt-3 list-inside list-disc text-[#6E6E6E] text-sm space-y-0.5">
+                  <ul className="mt-3 list-inside list-disc text-[#57534E] text-sm space-y-0.5">
                     {item.features.map((f) => (
                       <li key={f}>{f}</li>
                     ))}
                   </ul>
-                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-slate-100 pt-4">
+                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-stone-100 pt-4">
                     <a
                       href={item.visitUrl}
                       target="_blank"
@@ -270,7 +265,7 @@ export default function Home() {
         </section>
 
         {/* ——— 3) Software Categories ——— */}
-        <section className="border-b border-slate-200 bg-[#F8FAFC] py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Browse by category. Each hub includes reviews, comparisons, and guides.">Software Categories</SectionTitle>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -278,10 +273,10 @@ export default function Home() {
                 <Link
                   key={href}
                   href={href}
-                  className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-[#10B981]/40 hover:shadow-md"
+                  className="group flex flex-col rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-[#10B981]/40 hover:shadow-sm"
                 >
                   <span className="font-semibold text-[#1A2D48] group-hover:text-[#10B981]">{label}</span>
-                  {description && <span className="mt-0.5 text-[#6E6E6E] text-sm">{description}</span>}
+                  {description && <span className="mt-0.5 text-[#57534E] text-sm">{description}</span>}
                 </Link>
               ))}
             </div>
@@ -289,7 +284,7 @@ export default function Home() {
         </section>
 
         {/* ——— 4) Popular Comparisons ——— */}
-        <section className="border-b border-slate-200 bg-white py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Side-by-side comparisons to help you decide.">Popular Software Comparisons</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -307,7 +302,7 @@ export default function Home() {
                   <Link
                     key={card.slug}
                     href={card.href}
-                    className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       {card.productA.logoSrc ? (
@@ -320,9 +315,9 @@ export default function Home() {
                           }}
                         />
                       ) : (
-                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{card.productA.name}</span>
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{card.productA.name}</span>
                       )}
-                      <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>
+                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       {card.productB.logoSrc ? (
@@ -335,13 +330,13 @@ export default function Home() {
                           }}
                         />
                       ) : (
-                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{card.productB.name}</span>
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{card.productB.name}</span>
                       )}
                     </div>
                     <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">{summary}</p>
+                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
                     <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
                       Compare →
                     </span>
@@ -350,7 +345,7 @@ export default function Home() {
               })}
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
-              <span className="text-[#6E6E6E]">More:</span>
+              <span className="text-[#57534E]">More:</span>
               {COMPARE_HUB_LINKS.map(({ label, href }) => (
                 <Link
                   key={href}
@@ -365,7 +360,7 @@ export default function Home() {
         </section>
 
         {/* ——— 5) Best Software by Category ——— */}
-        <section className="border-b border-slate-200 bg-[#F8FAFC] py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Curated roundups by category with pricing and features.">Best Software by Category</SectionTitle>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -373,7 +368,7 @@ export default function Home() {
                 <Link
                   key={href}
                   href={href}
-                  className="rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-[#1A2D48] font-semibold shadow-sm transition-all hover:border-[#10B981]/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+                  className="rounded-lg border border-stone-200 bg-white px-4 py-3.5 text-[#1A2D48] font-semibold shadow-sm transition-all hover:border-[#10B981]/40 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
                 >
                   {label}
                 </Link>
@@ -383,7 +378,7 @@ export default function Home() {
         </section>
 
         {/* ——— 6) Best Software by Trade ——— */}
-        <section className="border-b border-slate-200 bg-white py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Software recommendations by trade so you see what fits your business.">Best Software by Trade</SectionTitle>
             <div className="mt-4 flex flex-wrap gap-2.5">
@@ -397,14 +392,14 @@ export default function Home() {
         </section>
 
         {/* ——— 7) Latest Software Guides ——— */}
-        <section className="border-b border-slate-200 bg-[#F8FAFC] py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Practical guides to choose and use software.">Latest Software Guides</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {LATEST_GUIDES.map((guide) => (
                 <article
                   key={guide.href}
-                  className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                  className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
                 >
                   <span className="rounded-md bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20 w-fit">
                     {guide.category}
@@ -427,11 +422,11 @@ export default function Home() {
         <section className="bg-[#1A2D48] py-14 sm:py-16" aria-label="Why trust us">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-white text-2xl font-bold sm:text-3xl">Why Trust BeltStack</h2>
-            <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+            <div className={sectionRuleAccent} aria-hidden />
             <div className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
               {TRUST_ITEMS.map((item) => (
                 <div key={item.heading} className="flex items-start gap-4">
-                  <span className="shrink-0" aria-hidden><EmeraldIcon className="h-5 w-5 text-[#10B981]" /></span>
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
                   <div>
                     <h3 className="text-white text-lg font-bold">{item.heading}</h3>
                     <p className="mt-1 text-white/80 text-sm leading-relaxed">{item.body}</p>
@@ -443,11 +438,11 @@ export default function Home() {
         </section>
 
         {/* ——— 9) Email capture ——— */}
-        <section className="border-b border-slate-200 bg-white py-8 sm:py-11">
+        <section className="border-b border-stone-200 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-xl rounded-xl border border-slate-200 bg-[#F8FAFC] p-7 text-center shadow-md">
+            <div className="mx-auto max-w-xl rounded-lg border border-stone-200 bg-background p-7 text-center shadow-sm">
               <h2 className="text-[#1A2D48] text-xl font-semibold sm:text-2xl">Get Monthly Software Picks for Your Business</h2>
-              <p className="mt-1.5 text-[#6E6E6E] text-sm">One email per month. No spam. Unsubscribe anytime.</p>
+              <p className="mt-1.5 text-[#57534E] text-sm">One email per month. No spam. Unsubscribe anytime.</p>
               <form
                 className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center"
                 onSubmit={(e) => e.preventDefault()}
@@ -460,7 +455,7 @@ export default function Home() {
                   placeholder="you@company.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-[#1A2D48] placeholder:text-[#6E6E6E] focus:border-slate-300 focus:ring-1 focus:ring-slate-200 focus:outline-none"
+                  className="min-w-0 flex-1 rounded-lg border border-stone-200 bg-white px-4 py-2.5 text-[#1A2D48] placeholder:text-[#57534E] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none"
                 />
                 <button type="submit" className={btnPrimary}>
                   Subscribe

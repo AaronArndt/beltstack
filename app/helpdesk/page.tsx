@@ -20,9 +20,9 @@ import {
 import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
 import { getHelpdeskReviewUrl } from "@/lib/routes";
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
-  "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-slate-300 focus:ring-1 focus:ring-slate-200 focus:outline-none";
+  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -33,7 +33,7 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -81,7 +81,7 @@ function HelpdeskHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating helpdesk systems.">
         How to choose helpdesk software
       </HubSectionTitle>
-      <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
         Helpdesk software centralizes tickets and conversation history. Use the{" "}
         <Link href="#compare" className={linkGreen}>
           comparison table
@@ -105,7 +105,7 @@ function HelpdeskHowToChooseSection() {
         round out vendor research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
+        <ul className="space-y-2.5 text-sm text-[#57534E]">
           <li>
             <strong className="text-[#1A2D48]">Ticketing and workflow</strong> — Look for clear ticket management, assignment, and status so nothing gets dropped.
           </li>
@@ -116,7 +116,7 @@ function HelpdeskHowToChooseSection() {
             <strong className="text-[#1A2D48]">Automation and routing</strong> — Rules and macros that route tickets and suggest replies save time as volume grows.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
+        <ul className="space-y-2.5 text-sm text-[#57534E]">
           <li>
             <strong className="text-[#1A2D48]">Reporting and history</strong> — Customer and ticket history, plus reports on volume and performance, help you improve.
           </li>
@@ -185,12 +185,12 @@ function HelpdeskEducationSection() {
           What businesses should look for in helpdesk software
         </h2>
         <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">
+        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
           What matters when businesses choose tools to manage support tickets, conversations, and customer history.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#6E6E6E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Ticketing and workflow management</h3>
             <p className="mt-1.5">
@@ -223,9 +223,9 @@ function HelpdeskEducationSection() {
           </div>
         </div>
         <div>
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
             <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#6E6E6E]">
+            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
                 Ticketing and assignment
@@ -271,7 +271,7 @@ function HelpdeskPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -284,7 +284,7 @@ function HelpdeskPopularComparisonsSection() {
                     }}
                   />
                 )}
-                <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
                 {item.productB.logoSrc && (
                   <img
                     src={item.productB.logoSrc}
@@ -299,7 +299,7 @@ function HelpdeskPopularComparisonsSection() {
               <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                 {title}
               </h3>
-              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
               <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
@@ -309,7 +309,7 @@ function HelpdeskPopularComparisonsSection() {
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
+      <p className="mt-3 text-sm text-[#57534E]">
         <Link
           href="/helpdesk/compare"
           className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"

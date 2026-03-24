@@ -18,27 +18,25 @@ import {
 } from "@/lib/data/tradeHubs";
 import type { TradeHubCategoryStackItem, TradeHubDefinition } from "@/lib/types/tradeHub";
 import type { SoftwarePickCategory } from "@/lib/data/softwarePickCards";
+import {
+  sectionRuleAccent,
+  trustIndicatorAffiliateButtonClass,
+  trustIndicatorListClass,
+} from "@/lib/design-tokens";
+import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
-
-function EmeraldIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M10 2L18 10L10 18L2 10L10 2Z" fill="#10B981" />
-    </svg>
-  );
-}
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      <div className={sectionRuleAccent} aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -55,7 +53,7 @@ function FaqAccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-slate-200 last:border-b-0">
+    <div className="border-b border-stone-200 last:border-b-0">
       <button
         type="button"
         onClick={onToggle}
@@ -63,7 +61,7 @@ function FaqAccordionItem({
         aria-expanded={isOpen}
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
+        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M6 9l6 6 6-6" />
           </svg>
@@ -71,7 +69,7 @@ function FaqAccordionItem({
       </button>
       {isOpen && (
         <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#6E6E6E] text-sm leading-relaxed">{answer}</p>
+          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -115,7 +113,7 @@ function CategoryStackGroup({ item, index }: { item: TradeHubCategoryStackItem; 
           {hubLabel}
         </Link>
       </div>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#6E6E6E] sm:text-[15px] sm:leading-relaxed">{item.body}</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-[15px] sm:leading-relaxed">{item.body}</p>
       <div className="mt-8 space-y-10 sm:mt-10">
         {picks.map(({ slug, pick }) => (
           <SoftwarePickCard
@@ -153,36 +151,36 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
   const navItems = buildNavItems(data);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <Breadcrumb items={[{ label: "Home", href: "/" }, { label: data.breadcrumbLabel }]} className="mb-4" />
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">{data.title}</h1>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#6E6E6E]">{data.intro}</p>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">{data.intro}</p>
             {data.heroCategoryLine != null && data.heroCategoryLine.length > 0 && (
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#6E6E6E]">{data.heroCategoryLine}</p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#57534E]">{data.heroCategoryLine}</p>
             )}
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">
+            <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Trade software stack guide
               </span>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Independent reviews
               </span>
               <button
                 type="button"
                 onClick={() => setAffiliateOpen(true)}
-                className="flex items-center gap-2 text-left text-[#6E6E6E] hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className={trustIndicatorAffiliateButtonClass}
               >
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Affiliate disclosure
               </button>
             </div>
 
-            <div className="mt-6 rounded-xl border border-neutral-200/70 bg-white p-4 shadow-sm sm:p-5">
+            <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-4 shadow-sm sm:p-5">
               <h2 className="text-sm font-bold uppercase tracking-wide text-[#1A2D48]">Key takeaways</h2>
               <ul className="mt-3 space-y-2">
                 {data.keyTakeaways.map((item) => (
@@ -203,11 +201,11 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
 
         <SectionNav items={navItems} sticky offsetTop={72} />
 
-        <section id="software-stack" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="software-stack" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={data.categoryStackSectionSub}>{data.categoryStackSectionTitle}</SectionTitle>
             {data.categoryStackIntro != null && data.categoryStackIntro.length > 0 && (
-              <p className="mt-1 max-w-3xl text-sm leading-relaxed text-[#6E6E6E] sm:text-base">{data.categoryStackIntro}</p>
+              <p className="mt-1 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">{data.categoryStackIntro}</p>
             )}
             <div className="mt-10">
               {data.categoryStack.map((item, index) => (
@@ -217,14 +215,14 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
           </div>
         </section>
 
-        <section id="use-cases" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="use-cases" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={data.useCaseSectionSub}>{data.useCaseSectionTitle}</SectionTitle>
             <div className="mt-8 max-w-3xl space-y-10">
               {data.useCases.map((block) => (
                 <div key={block.title}>
                   <h3 className="text-lg font-bold text-[#1A2D48] sm:text-xl">{block.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#6E6E6E] sm:text-base">{block.body}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[#57534E] sm:text-base">{block.body}</p>
                   <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                     {block.links.map((l) => (
                       <Link key={l.href + l.label} href={l.href} className={`text-sm ${linkGreen}`}>
@@ -238,14 +236,14 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
           </div>
         </section>
 
-        <section id="how-to-choose" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="how-to-choose" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={data.howToChooseSub}>{data.howToChooseTitle}</SectionTitle>
             <div className="mt-6 space-y-8">
               {data.howToChooseSubsections.map((sub) => (
                 <div key={sub.title}>
                   <h3 className="text-lg font-semibold text-[#1A2D48]">{sub.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#6E6E6E] sm:text-base">{sub.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#57534E] sm:text-base">{sub.body}</p>
                 </div>
               ))}
             </div>
@@ -253,14 +251,14 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
         </section>
 
         {data.identitySegments != null && data.identitySegments.length > 0 && (
-          <section id="operating-models" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+          <section id="operating-models" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub={data.identitySectionSub}>{data.identitySectionTitle ?? "Software by operating model"}</SectionTitle>
               <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {data.identitySegments.map((seg) => (
-                  <div key={seg.title} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div key={seg.title} className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
                     <h3 className="text-base font-bold text-[#1A2D48]">{seg.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#6E6E6E]">{seg.body}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{seg.body}</p>
                     <ul className="mt-3 space-y-1.5">
                       {seg.links.map((l) => (
                         <li key={l.href}>
@@ -277,7 +275,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
           </section>
         )}
 
-        <section id="next-steps" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="next-steps" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={data.nextStepsSub}>{data.nextStepsTitle}</SectionTitle>
             <div className="mt-6 space-y-8">
@@ -291,7 +289,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
                           {l.label}
                         </Link>
                         {l.description != null && l.description.length > 0 && (
-                          <p className="mt-1 text-sm text-[#6E6E6E]">{l.description}</p>
+                          <p className="mt-1 text-sm text-[#57534E]">{l.description}</p>
                         )}
                       </li>
                     ))}
@@ -303,10 +301,10 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
         </section>
 
         {data.faqs != null && data.faqs.length > 0 && (
-          <section id="faqs" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+          <section id="faqs" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub={data.faqSub}>{data.faqTitle ?? "FAQs"}</SectionTitle>
-              <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+              <div className="mt-4 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
                 {data.faqs.map((item, i) => (
                   <FaqAccordionItem
                     key={item.q}
@@ -322,10 +320,10 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
         )}
 
         {data.methodologyBullets != null && data.methodologyBullets.length > 0 && (
-          <section id="methodology" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+          <section id="methodology" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub={data.methodologySub}>{data.methodologyTitle ?? "How we review"}</SectionTitle>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#6E6E6E]">
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#57534E]">
                 {data.methodologyBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-[#10B981]" aria-hidden>
@@ -335,7 +333,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm leading-relaxed text-[#6E6E6E]">
+              <p className="mt-5 text-sm leading-relaxed text-[#57534E]">
                 We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
                 <Link href="/methodology" className={`font-semibold ${linkGreen}`}>
                   Affiliate disclosure & methodology
@@ -352,7 +350,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
         <>
           <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
-            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-slate-200 bg-white p-6 shadow-lg"
+            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="trade-affiliate-title"
             aria-modal="true"
@@ -360,7 +358,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             <h3 id="trade-affiliate-title" className="text-lg font-bold text-[#1A2D48]">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#6E6E6E]">
+            <p className="mt-3 text-sm leading-relaxed text-[#57534E]">
               We may earn a commission when you purchase through our links. This does not affect our recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

@@ -67,7 +67,7 @@ export default function FieldServiceSoftwareForHvacPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -105,7 +105,7 @@ export default function FieldServiceSoftwareForHvacPage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software for HVAC Companies
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     How HVAC contractors use field service management software to run installs, maintenance agreements,
                     and emergency calls—from dispatch and technician routing to quotes, invoices, and customer history.
                   </p>

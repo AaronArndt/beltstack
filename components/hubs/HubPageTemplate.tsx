@@ -25,12 +25,21 @@ import {
   toSoftwarePickCardProps,
   type SoftwarePickCategory,
 } from "@/lib/data/softwarePickCards";
+import {
+  sectionRuleAccent,
+  tableBodyRow,
+  tableHeadRow,
+  tableShell,
+  trustIndicatorAffiliateButtonClass,
+  trustIndicatorListClass,
+} from "@/lib/design-tokens";
+import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 
 // ——— Design tokens (match homepage) ———
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnPill =
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const JUMP_LINKS_BASE = [
   { label: "Top picks", href: "#top-picks" },
@@ -131,20 +140,12 @@ export type HubPageTemplateProps = {
   comparisonTableRankingsLink?: { label: string; href: string };
 };
 
-function EmeraldIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <path d="M10 2L18 10L10 18L2 10L10 2Z" fill="#10B981" />
-    </svg>
-  );
-}
-
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      <div className={sectionRuleAccent} aria-hidden />
+      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -161,7 +162,7 @@ function FaqAccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-slate-200 last:border-b-0">
+    <div className="border-b border-stone-200 last:border-b-0">
       <button
         type="button"
         onClick={onToggle}
@@ -170,7 +171,7 @@ function FaqAccordionItem({
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
         <span
-          className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -180,7 +181,7 @@ function FaqAccordionItem({
       </button>
       {isOpen && (
         <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#6E6E6E] text-sm leading-relaxed">{answer}</p>
+          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -229,10 +230,10 @@ export function HubPageTemplate({
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-background">
       <main>
         {/* ——— 1) Hub intro (breadcrumb + H1 + intro + trust badges + key takeaways) ——— */}
-        <section className="bg-[#F8FAFC]">
+        <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <Breadcrumb
               items={[
@@ -244,11 +245,11 @@ export function HubPageTemplate({
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
               {title}
             </h1>
-            <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               {intro}
             </p>
             {introExtended != null && (
-              <div className="mt-4 text-[#6E6E6E] text-base leading-relaxed max-w-3xl space-y-3">
+              <div className="mt-4 text-[#57534E] text-base leading-relaxed max-w-3xl space-y-3">
                 {introExtended}
               </div>
             )}
@@ -259,27 +260,27 @@ export function HubPageTemplate({
                 </Link>
               </div>
             )}
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-[#6E6E6E]">
+            <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Updated monthly
               </span>
               <span className="flex items-center gap-2">
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Independent reviews
               </span>
               <button
                 type="button"
                 onClick={() => setAffiliateOpen(true)}
-                className="flex items-center gap-2 text-left text-[#6E6E6E] hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className={trustIndicatorAffiliateButtonClass}
               >
-                <EmeraldIcon className="h-4 w-4 shrink-0" />
+                <TrustIndicatorMark />
                 Affiliate disclosure
               </button>
             </div>
 
             {/* Key takeaways card */}
-            <div className="mt-6 rounded-xl border border-neutral-200/70 bg-white p-4 shadow-sm sm:p-5">
+            <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
               <h2 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide">Key takeaways</h2>
               <ul className="mt-3 space-y-2">
                 {keyTakeaways.map((item) => (
@@ -300,10 +301,10 @@ export function HubPageTemplate({
 
         {/* ——— Best roundup block (optional) ——— */}
         {bestRoundupBlock != null && (
-          <section className="border-b border-neutral-200/70 bg-white py-6 sm:py-8">
+          <section className="border-b border-stone-200/80 bg-white py-6 sm:py-8">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">{bestRoundupBlock.title}</h2>
-              <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+              <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
                 {bestRoundupBlock.description}
               </p>
               <Link
@@ -321,7 +322,7 @@ export function HubPageTemplate({
 
         {/* ——— How to choose (optional) ——— */}
         {howToChooseSection != null && (
-          <section id="how-to-choose" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+          <section id="how-to-choose" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               {howToChooseSection}
             </div>
@@ -329,13 +330,13 @@ export function HubPageTemplate({
         )}
 
         {/* ——— A) Featured picks ——— */}
-        <section id="top-picks" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="top-picks" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-4 sm:mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
               <div>
                 <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{featuredPicksTitle}</h2>
-                <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-                <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{featuredPicksSub}</p>
+                <div className={sectionRuleAccent} aria-hidden />
+                <p className="mt-1 text-[#57534E] text-sm sm:text-base">{featuredPicksSub}</p>
               </div>
               {featuredPicksRankingsLink != null && (
                 <Link
@@ -365,11 +366,11 @@ export function HubPageTemplate({
         </section>
 
         {/* ——— B) Comparison table ——— */}
-        <section id="compare" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="compare" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={comparisonTable.subtitle}>{comparisonTable.title}</SectionTitle>
             {comparisonTableIntro != null && comparisonTableIntro.length > 0 && (
-              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+              <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
                 {comparisonTableIntro}
               </p>
             )}
@@ -383,10 +384,10 @@ export function HubPageTemplate({
                 </Link>
               </p>
             )}
-            <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+            <div className={`mt-4 ${tableShell}`}>
               <table className="w-full min-w-[600px] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-[#F8FAFC]">
+                  <tr className={tableHeadRow}>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
                     <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
@@ -396,7 +397,7 @@ export function HubPageTemplate({
                 </thead>
                 <tbody>
                   {comparisonTable.rows.map((row) => (
-                    <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/70">
+                    <tr key={row.slug} className={tableBodyRow}>
                       <td className="px-4 py-4 font-semibold text-[#1A2D48]">
                         <div className="flex items-center gap-2">
                           {row.logoSrc != null && (
@@ -409,8 +410,8 @@ export function HubPageTemplate({
                           <span>{row.tool}</span>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#6E6E6E]">{row.price}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-[#57534E]">{row.price}</td>
                       <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
@@ -429,7 +430,7 @@ export function HubPageTemplate({
         </section>
 
         {/* ——— C) Best by scenario ——— */}
-        <section id="by-scenario" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="by-scenario" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {scenarioCustomContent != null ? (
               scenarioCustomContent
@@ -437,7 +438,7 @@ export function HubPageTemplate({
               <>
                 <SectionTitle sub={scenarioLinks.sectionSub}>{scenarioLinks.sectionTitle}</SectionTitle>
                 {scenarioLinks.description != null && (
-                  <p className="mt-1 text-[#6E6E6E] text-sm">{scenarioLinks.description}</p>
+                  <p className="mt-1 text-[#57534E] text-sm">{scenarioLinks.description}</p>
                 )}
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {scenarioLinks.links.map(({ label, href }, index) => (
@@ -460,14 +461,14 @@ export function HubPageTemplate({
         </section>
 
         {/* ——— D) By trade / business type ——— */}
-        <section id="by-trade" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="by-trade" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={tradeLinks.sectionSub}>{tradeLinks.sectionTitle}</SectionTitle>
             {tradeLinks.groups != null && tradeLinks.groups.length > 0 ? (
               <div className="mt-4 space-y-6">
                 {tradeLinks.groups.map((group) => (
                   <div key={group.groupLabel}>
-                    <h3 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide text-[#6E6E6E] mb-2.5">
+                    <h3 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide text-[#57534E] mb-2.5">
                       {group.groupLabel}
                     </h3>
                     <div className="flex flex-wrap items-center gap-2.5">
@@ -494,7 +495,7 @@ export function HubPageTemplate({
 
         {/* ——— Guides section (optional) ——— */}
         {guidesSection != null && (
-          <section id="payroll-guides" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+          <section id="payroll-guides" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               {guidesSection}
             </div>
@@ -503,7 +504,7 @@ export function HubPageTemplate({
 
         {/* ——— E) Finder / filters (optional) ——— */}
         {finderSection != null && (
-          <section id="find-fit" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-10">
+          <section id="find-fit" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-10">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub={finderSection.sub}>{finderSection.title}</SectionTitle>
               {finderSection.content}
@@ -513,7 +514,7 @@ export function HubPageTemplate({
 
         {/* ——— Popular comparisons (optional) ——— */}
         {popularComparisonsSection != null && (
-          <section id="popular-comparisons" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+          <section id="popular-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               {popularComparisonsSection}
             </div>
@@ -522,7 +523,7 @@ export function HubPageTemplate({
 
         {/* ——— F) Education (optional) ——— */}
         {educationSection != null && (
-          <section className="border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+          <section className="border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               {educationSection}
             </div>
@@ -530,10 +531,10 @@ export function HubPageTemplate({
         )}
 
         {/* ——— G) FAQ ——— */}
-        <section id="faqs" className="scroll-mt-section border-b border-neutral-200/70 bg-[#F8FAFC] py-8 sm:py-11">
+        <section id="faqs" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={faqSub}>{faqTitle}</SectionTitle>
-            <div className="mt-4 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+            <div className="mt-4 rounded-lg border border-stone-200 bg-white shadow-sm overflow-hidden">
               {faqItems.map((item, i) => (
                 <FaqAccordionItem
                   key={i}
@@ -548,15 +549,15 @@ export function HubPageTemplate({
         </section>
 
         {/* ——— H) Methodology ——— */}
-        <section id="how-we-review" className="scroll-mt-section border-b border-neutral-200/70 bg-white py-8 sm:py-11">
+        <section id="how-we-review" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={methodology.sub}>{methodology.title}</SectionTitle>
             {methodology.introParagraph != null && (
-              <p className="mt-2 text-[#6E6E6E] text-sm leading-relaxed">
+              <p className="mt-2 text-[#57534E] text-sm leading-relaxed">
                 {methodology.introParagraph}
               </p>
             )}
-            <ul className="mt-4 space-y-2 text-[#6E6E6E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
               {methodology.bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
@@ -564,7 +565,7 @@ export function HubPageTemplate({
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
               We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
               <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 Affiliate disclosure
@@ -581,7 +582,7 @@ export function HubPageTemplate({
         <>
           <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
-            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-slate-200 bg-white p-6 shadow-lg"
+            className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-md"
             role="dialog"
             aria-labelledby="hub-affiliate-title"
             aria-modal="true"
@@ -589,7 +590,7 @@ export function HubPageTemplate({
             <h3 id="hub-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
               We may earn a commission when you purchase through our links. This does not affect our recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

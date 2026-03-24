@@ -25,7 +25,7 @@ export function ReviewSectionNav({
       : "var(--navbar-h)";
   return (
     <div
-      className={`sticky z-30 w-full border-y border-neutral-200/70 bg-white py-3 ${className}`}
+      className={`sticky z-30 w-full border-y border-stone-200/80 bg-white py-3 ${className}`}
       style={{ top: topValue }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ export function ReviewSectionNav({
               {i > 0 && <span className="text-slate-200" aria-hidden>|</span>}
               <Link
                 href={item.href}
-                className="rounded px-2 py-1.5 text-sm font-medium text-[#6E6E6E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                className="rounded px-2 py-1.5 text-sm font-medium text-[#57534E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
                 onClick={(e) => {
                   const id = item.href.replace(/^#/, "");
                   const el = document.getElementById(id);

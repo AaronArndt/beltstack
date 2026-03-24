@@ -52,7 +52,7 @@ export default function HowToChooseInventoryManagementSoftwareGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#6E6E6E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                     <li>
                       <Link
                         href="/"
@@ -91,7 +91,7 @@ export default function HowToChooseInventoryManagementSoftwareGuidePage() {
                   <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose Inventory Management Software
                   </h1>
-                  <p className="mt-3 text-[#6E6E6E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                     A practical framework for choosing inventory software based on your size, channels, warehouse needs,
                     production complexity, and budget.
                   </p>

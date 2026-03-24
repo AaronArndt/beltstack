@@ -50,14 +50,14 @@ export function StickyStackFinder({
   };
 
   const selectClass =
-    "w-full h-11 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-slate-300 focus:ring-1 focus:ring-slate-200 focus:outline-none";
+    "w-full h-11 rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
   const labelClass = "block text-xs font-semibold text-[#1A2D48] mb-1";
 
   return (
     <>
       <div
         aria-hidden
-        className={`fixed left-0 right-0 z-40 hidden min-h-[72px] items-center border-b border-neutral-200/70 bg-white py-4 shadow-sm transition-all duration-200 ease-out md:flex md:min-h-[88px] md:py-5 ${
+        className={`fixed left-0 right-0 z-40 hidden min-h-[72px] items-center border-b border-stone-200/80 bg-white py-4 shadow-sm transition-all duration-200 ease-out md:flex md:min-h-[88px] md:py-5 ${
           visible
             ? "translate-y-0 opacity-100"
             : "-translate-y-2 opacity-0 pointer-events-none"
@@ -110,7 +110,7 @@ export function StickyStackFinder({
             </div>
             <button
               type="submit"
-              className="shrink-0 self-end rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="shrink-0 self-end rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
             >
               See Results
             </button>
@@ -121,7 +121,7 @@ export function StickyStackFinder({
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="rounded-lg bg-[#10B981] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="rounded-md bg-[#10B981] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
             >
               Find your stack
             </button>
@@ -191,7 +191,7 @@ export function StickyStackFinder({
               </div>
               <button
                 type="submit"
-                className="rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                className="rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
               >
                 See Results
               </button>

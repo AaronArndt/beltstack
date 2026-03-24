@@ -110,7 +110,7 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
     <div className="mb-4 sm:mb-5">
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">{sub}</p>}
+      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -131,7 +131,7 @@ function PayrollHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating payroll tools">
         How to Choose Payroll Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
         Payroll software automates pay runs, tax withholdings, filing, and pay stubs. Use the{" "}
         <Link href="#compare" className={linkGreen}>
           comparison table
@@ -155,12 +155,12 @@ function PayrollHowToChooseSection() {
         round out product research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
+        <ul className="space-y-2.5 text-sm text-[#57534E]">
           <li><strong className="text-[#1A2D48]">Team size</strong> — Pricing often scales by headcount; small teams need different features than growing or multi-state teams.</li>
           <li><strong className="text-[#1A2D48]">Employees vs contractors</strong> — If you pay 1099s, look for contractor self-service and 1099 e-file. See our <Link href="/payroll/guides/payroll-for-contractors" className={linkGreen}>payroll for contractors</Link> guide.</li>
           <li><strong className="text-[#1A2D48]">Accounting integrations</strong> — Sync with <Link href="/accounting" className={linkGreen}>accounting software</Link> such as QuickBooks or Xero so labor costs flow into job costing and P&amp;L.</li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#6E6E6E]">
+        <ul className="space-y-2.5 text-sm text-[#57534E]">
           <li><strong className="text-[#1A2D48]">Tax automation</strong> — Full-service payroll handles withholdings, deposits, and filing; understand what’s included. <Link href="/payroll/guides/how-payroll-software-works" className={linkGreen}>How payroll software works</Link>.</li>
           <li><strong className="text-[#1A2D48]">Pricing</strong> — Base fee plus per-person costs are common; compare total cost at your headcount. <Link href="/payroll/guides/payroll-software-pricing" className={linkGreen}>Payroll software pricing</Link>.</li>
           <li><strong className="text-[#1A2D48]">Reporting and HR</strong> — Time tracking, PTO, benefits, and reports matter for scaling teams; <Link href="/payroll/guides/payroll-for-small-business" className={linkGreen}>payroll for small business</Link> covers fit by size.</li>
@@ -251,7 +251,7 @@ function PayrollPopularComparisonsSection() {
             <Link
               key={slug}
               href={href}
-              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -264,9 +264,9 @@ function PayrollPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
                 )}
-                <span className="text-[#6E6E6E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
                 {data.productB.logoSrc ? (
                   <img
                     src={data.productB.logoSrc}
@@ -277,13 +277,13 @@ function PayrollPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#6E6E6E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
                 )}
               </div>
               <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
                 {title}
               </h3>
-              <p className="mt-1 text-[#6E6E6E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
               <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
@@ -293,7 +293,7 @@ function PayrollPopularComparisonsSection() {
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#6E6E6E]">
+      <p className="mt-3 text-sm text-[#57534E]">
         <Link
           href="/payroll/compare"
           className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
@@ -330,9 +330,9 @@ const FAQ_ITEMS: FaqItem[] = [
 
 // Finder form needs these tokens (match template/homepage)
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const selectClass =
-  "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-slate-300 focus:ring-1 focus:ring-slate-200 focus:outline-none";
+  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 function PayrollFinderForm() {
   const [teamSize, setTeamSize] = useState("");
@@ -407,33 +407,33 @@ function PayrollEducationSection() {
       <div className="mb-4 sm:mb-5">
         <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in payroll software</h2>
         <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#6E6E6E] text-sm sm:text-base">What matters when businesses choose payroll software.</p>
+        <p className="mt-1 text-[#57534E] text-sm sm:text-base">What matters when businesses choose payroll software.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">W-2 vs 1099 support</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
               Trade businesses often mix employees (W-2) and subcontractors (1099). Your payroll software should handle both, run contractor payments, and file 1099-NEC forms. Look for clear 1099 workflows and state e-file support.
             </p>
           </div>
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Job costing and project tracking</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
               Allocating labor to jobs or projects helps you track profitability. Some payroll tools integrate with job-costing or accounting software so hours and wages flow into the right job—essential for contractors who bid by project.
             </p>
           </div>
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Multi-state compliance</h3>
-            <p className="mt-1.5 text-[#6E6E6E] text-sm leading-relaxed">
+            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
               If you have workers in more than one state, payroll must handle state withholding, unemployment, and local taxes. Choose a provider that supports multi-state registration and filing so you stay compliant as you grow.
             </p>
           </div>
         </div>
         <div>
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
             <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#6E6E6E]">
+            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
                 W-2 and 1099 payment runs

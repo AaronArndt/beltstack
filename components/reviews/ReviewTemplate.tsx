@@ -5,13 +5,14 @@ import { useState, useRef, useEffect } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
+import { sectionRuleAccent } from "@/lib/design-tokens";
 
 // ——— Design tokens (match payroll hub) ———
-// BG: #F8FAFC | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #6E6E6E
+// BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
 const btnPrimary =
-  "rounded-lg bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-base font-bold text-[#1A2D48] transition-colors hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-[#1A2D48] transition-colors hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 export type ReviewFaqItem = { q: string; a: string };
 export type ReviewAlternative = { name: string; href: string; description?: string; logoSrc?: string };
@@ -116,7 +117,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   return (
     <header className="mb-5 mt-0">
       <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -163,7 +164,7 @@ function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right" }) {
         aria-label="How we rate"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className="ml-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#6E6E6E]/50 bg-[#6E6E6E]/10 text-[#6E6E6E] text-[10px] font-semibold transition-colors hover:border-[#10B981] hover:bg-[#10B981]/10 hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+        className="ml-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#57534E]/50 bg-[#57534E]/10 text-[#57534E] text-[10px] font-semibold transition-colors hover:border-[#10B981] hover:bg-[#10B981]/10 hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
       >
         i
       </button>
@@ -174,7 +175,7 @@ function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right" }) {
           className={`absolute top-full z-50 mt-1.5 w-64 rounded-lg border border-neutral-200/60 bg-white p-3 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.08)] ${align === "right" ? "right-0 left-auto" : "left-0"}`}
         >
           <p className="text-[#1A2D48] text-sm font-semibold">How we rate</p>
-          <p className="mt-1 text-[#6E6E6E] text-xs leading-relaxed">
+          <p className="mt-1 text-[#57534E] text-xs leading-relaxed">
             Scores combine pricing, features, ease of use, support, and contractor fit. We review sources and update regularly.
           </p>
           <Link
@@ -211,7 +212,7 @@ function FaqAccordionItem({
       >
         <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
         <span
-          className={`shrink-0 text-[#6E6E6E] transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -400,7 +401,7 @@ export function ReviewTemplate({
               {toolName} Review ({currentYear})
             </h1>
             {/* Key stats row */}
-            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#6E6E6E]">
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#57534E]">
               <span className="flex items-center gap-1.5 align-baseline">
                 <span className="text-[#10B981] font-bold">{rating}</span>
                 <span>Rating</span>
@@ -431,7 +432,7 @@ export function ReviewTemplate({
               </div>
             )}
             {disclosureLine != null && disclosureLine !== "" && (
-              <p className="mt-2 text-xs text-[#6E6E6E]">{disclosureLine}</p>
+              <p className="mt-2 text-xs text-[#57534E]">{disclosureLine}</p>
             )}
             </div>
           </div>
@@ -450,7 +451,7 @@ export function ReviewTemplate({
               {/* 1. Quick Verdict — no divider above (first section) */}
               <section id="quick-verdict" className="scroll-mt-section pt-12 pb-12">
                 <SectionTitle sub="Our take in a nutshell.">Quick verdict</SectionTitle>
-                <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6 sm:p-8">
+                <div className="rounded-lg border border-stone-200/80 bg-white p-6 sm:p-8">
                   <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
                     {verdictParagraphs.map((p, i) => (
                       <p key={i}>{p}</p>
@@ -481,7 +482,7 @@ export function ReviewTemplate({
               <section id="pros-cons" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                 <SectionTitle sub="What we liked and what to watch for.">Pros and cons</SectionTitle>
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                  <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                     <h3 className="text-[#1A2D48] text-lg font-semibold">Pros</h3>
                     <ul className="mt-3 space-y-2 text-sm text-neutral-700 leading-relaxed">
                       {pros.map((item, i) => (
@@ -492,7 +493,7 @@ export function ReviewTemplate({
                       ))}
                     </ul>
                   </div>
-                  <div className="rounded-lg border border-neutral-200/60 bg-[#F8FAFC] p-6">
+                  <div className="rounded-lg border border-stone-200/80 bg-white p-6">
                     <h3 className="text-[#1A2D48] text-lg font-semibold">Cons</h3>
                     <ul className="mt-3 space-y-2 text-sm text-neutral-700 leading-relaxed">
                       {cons.map((item, i) => (

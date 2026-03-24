@@ -46,7 +46,7 @@ function SidebarItem({ item }: { item: GuideSidebarItem }) {
             <p className="text-[#10B981] font-semibold text-sm mt-0.5">{ratingStr} rating</p>
           )}
           {item.bestFor != null && item.bestFor !== "" && (
-            <p className="text-[#6E6E6E] text-xs leading-snug mt-1">{item.bestFor}</p>
+            <p className="text-[#57534E] text-xs leading-snug mt-1">{item.bestFor}</p>
           )}
           <Link
             href={item.reviewHref}
