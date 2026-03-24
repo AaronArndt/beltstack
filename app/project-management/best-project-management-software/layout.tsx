@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Best Project Management Software (2026) | BeltStack",
   description:
-    "Compare the best project management software for freelancers, agencies, remote teams, and small businesses. See top picks, reviews, and comparisons.",
+    "2026 best project management software for agencies and remote teams—tasks, timelines, automation, reviews, and PM comparisons.",
 };
 
 export default function BestProjectManagementSoftwareLayout({

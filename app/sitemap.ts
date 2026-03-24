@@ -51,6 +51,10 @@ import {
   getInventoryAlternativeUrl,
   getHelpdeskBestForUrl,
   getHelpdeskAlternativeUrl,
+  getLeadGenerationBestForUrl,
+  getLeadGenerationAlternativeUrl,
+  getWebsiteBuildersBestForUrl,
+  getWebsiteBuildersAlternativeUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
@@ -74,6 +78,15 @@ import { getHelpdeskComparisonSlugs } from "@/lib/data/helpdeskComparisons";
 import { getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
 import { getHelpdeskAlternativesSlugs } from "@/lib/data/helpdeskAlternatives";
 import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
+import { getLeadGenerationComparisonSlugs } from "@/lib/data/leadGenerationComparisons";
+import { getLeadGenerationReviewSlugs } from "@/lib/data/leadGenerationReviews";
+import { getLeadGenerationAlternativesSlugs } from "@/lib/data/leadGenerationAlternatives";
+import { LEAD_GENERATION_GUIDES } from "@/lib/data/leadGenerationGuides";
+import { getWebsiteBuildersComparisonSlugs } from "@/lib/data/websiteBuildersComparisons";
+import { getWebsiteBuildersReviewSlugs } from "@/lib/data/websiteBuildersReviews";
+import { getWebsiteBuildersAlternativesSlugs } from "@/lib/data/websiteBuildersAlternatives";
+import { WEBSITE_BUILDERS_GUIDES } from "@/lib/data/websiteBuildersGuides";
+import { getWebsiteBuildersBestForSlugs } from "@/lib/data/websiteBuildersBestFor";
 import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -207,6 +220,18 @@ const HELPDESK_BEST_FOR_SCENARIOS = [
   "growing-teams",
 ] as const;
 
+/** Static Lead Generation best-for scenario slugs (matches app/lead-generation/best-for/[scenario]). */
+const LEAD_GENERATION_BEST_FOR_SCENARIOS = [
+  "contractors",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "roofing",
+  "landscaping",
+  "cleaning-services",
+  "home-services",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -294,6 +319,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/helpdesk/best-helpdesk-software", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/helpdesk/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/helpdesk/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Lead generation
+    defaultEntry("/lead-generation", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/lead-generation/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/lead-generation/best-lead-generation-tools", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/lead-generation/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/lead-generation/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Website builders
+    defaultEntry("/website-builders", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/website-builders/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/website-builders/best-website-builders", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/website-builders/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/website-builders/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   const tradeHubEntries: MetadataRoute.Sitemap = TRADE_HUB_SLUGS.map((slug) =>
@@ -641,6 +678,63 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Lead generation comparisons
+  const leadGenerationComparisonSlugs = getLeadGenerationComparisonSlugs();
+  const leadGenerationComparisonEntries: MetadataRoute.Sitemap = leadGenerationComparisonSlugs.map((slug) =>
+    defaultEntry(`/lead-generation/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Lead generation reviews
+  const leadGenerationReviewSlugs = getLeadGenerationReviewSlugs();
+  const leadGenerationReviewEntries: MetadataRoute.Sitemap = leadGenerationReviewSlugs.map((slug) =>
+    defaultEntry(`/lead-generation/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Lead generation alternatives
+  const leadGenerationAlternativeSlugs = getLeadGenerationAlternativesSlugs();
+  const leadGenerationAlternativeEntries: MetadataRoute.Sitemap = leadGenerationAlternativeSlugs.map((slug) =>
+    defaultEntry(getLeadGenerationAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Lead generation best-for
+  const leadGenerationBestForEntries: MetadataRoute.Sitemap = LEAD_GENERATION_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getLeadGenerationBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Lead generation guides
+  const leadGenerationGuideEntries: MetadataRoute.Sitemap = LEAD_GENERATION_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Website builders comparisons
+  const websiteBuildersComparisonSlugs = getWebsiteBuildersComparisonSlugs();
+  const websiteBuildersComparisonEntries: MetadataRoute.Sitemap = websiteBuildersComparisonSlugs.map((slug) =>
+    defaultEntry(`/website-builders/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Website builders reviews
+  const websiteBuildersReviewSlugs = getWebsiteBuildersReviewSlugs();
+  const websiteBuildersReviewEntries: MetadataRoute.Sitemap = websiteBuildersReviewSlugs.map((slug) =>
+    defaultEntry(`/website-builders/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Website builders alternatives
+  const websiteBuildersAlternativeSlugs = getWebsiteBuildersAlternativesSlugs();
+  const websiteBuildersAlternativeEntries: MetadataRoute.Sitemap = websiteBuildersAlternativeSlugs.map((slug) =>
+    defaultEntry(getWebsiteBuildersAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Website builders best-for
+  const websiteBuildersBestForSlugs = getWebsiteBuildersBestForSlugs();
+  const websiteBuildersBestForEntries: MetadataRoute.Sitemap = websiteBuildersBestForSlugs.map((scenario) =>
+    defaultEntry(getWebsiteBuildersBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Website builders guides
+  const websiteBuildersGuideEntries: MetadataRoute.Sitemap = WEBSITE_BUILDERS_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...tradeHubEntries,
@@ -705,5 +799,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...helpdeskAlternativeEntries,
     ...helpdeskBestForEntries,
     ...helpdeskGuideEntries,
+    ...leadGenerationComparisonEntries,
+    ...leadGenerationReviewEntries,
+    ...leadGenerationAlternativeEntries,
+    ...leadGenerationBestForEntries,
+    ...leadGenerationGuideEntries,
+    ...websiteBuildersComparisonEntries,
+    ...websiteBuildersReviewEntries,
+    ...websiteBuildersAlternativeEntries,
+    ...websiteBuildersBestForEntries,
+    ...websiteBuildersGuideEntries,
   ];
 }

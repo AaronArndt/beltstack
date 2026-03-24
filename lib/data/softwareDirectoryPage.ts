@@ -80,6 +80,16 @@ export const SOFTWARE_DIRECTORY_POPULAR_CATEGORIES: PopularSoftwareCategory[] = 
     href: "/helpdesk",
   },
   {
+    name: "Website Builders",
+    description: "Build conversion-focused business websites with local SEO and lead-capture workflows.",
+    href: "/website-builders",
+  },
+  {
+    name: "Lead Generation Tools",
+    description: "Marketplaces, local ads, and paid channels that feed calls and booked jobs for service businesses.",
+    href: "/lead-generation",
+  },
+  {
     name: "HR Software",
     description: "Support hiring, onboarding, people operations, and HR compliance workflows.",
     href: "/hr",
@@ -143,6 +153,43 @@ export const SOFTWARE_DIRECTORY_CATEGORY_GROUPS: SoftwareCategoryGroup[] = [
         name: "POS Software",
         href: "/pos",
         secondaryLinks: [{ label: "Best POS software", href: "/pos/best-pos-software" }],
+      },
+    ],
+  },
+  {
+    title: "Growth",
+    categories: [
+      {
+        name: "Website Builders",
+        href: "/website-builders",
+        secondaryLinks: [
+          { label: "Best website builders", href: "/website-builders/best-website-builders" },
+          { label: "Compare website builders", href: "/website-builders/compare" },
+        ],
+      },
+      {
+        name: "SEO Tools",
+        href: "/growth/seo-tools",
+      },
+      {
+        name: "Lead Generation",
+        href: "/lead-generation",
+        secondaryLinks: [
+          { label: "Best lead generation tools", href: "/lead-generation/best-lead-generation-tools" },
+          { label: "Compare lead gen platforms", href: "/lead-generation/compare" },
+        ],
+      },
+      {
+        name: "Reputation Management",
+        href: "/growth/reputation-management",
+      },
+      {
+        name: "Email Marketing",
+        href: "/growth/email-marketing",
+      },
+      {
+        name: "Call Tracking",
+        href: "/growth/call-tracking",
       },
     ],
   },

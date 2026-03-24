@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -25,6 +26,8 @@ const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -32,41 +35,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
-    </div>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-stone-200 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -111,27 +79,33 @@ export default function BestPosSoftwarePage() {
               Best POS Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare the best POS software for retail stores, restaurants, and ecommerce businesses. See top picks,
-              pricing, features, and who each platform is best for.
+              The best POS software for retail, restaurants, and hybrid ecommerce is the checkout your staff can run during
+              rush hour—paired with inventory, tipping, and reporting that matches how you actually operate. This 2026
+              roundup compares systems on card-present reliability, hardware ecosystems, back-office depth, and whether the
+              product makes sense for one location or many.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              POS software runs your checkout: it processes sales, accepts payments, and often manages inventory and
-              reporting. We evaluate POS tools on payment processing, hardware support, inventory integration, and
-              fit for retail, restaurant, or ecommerce—so you can choose the right system for your business. See our{" "}
-              <Link
-                href="/pos/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-              >
-                POS guides
+              We evaluate processing costs, offline mode, kitchen or table workflows where relevant, staff permissions, and
+              integrations with accounting or ecommerce. Combine the list with our reviews and{" "}
+              <Link href="/pos/compare" className={linkGreen}>
+                POS software comparisons
               </Link>{" "}
-              for how to choose and use tools, and{" "}
-              <Link
-                href="/pos/best-for"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-              >
+              before you lock in terminals and rates.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Explore the{" "}
+              <Link href="/pos" className={linkGreen}>
+                POS software hub
+              </Link>
+              ,{" "}
+              <Link href="/pos/best-for" className={linkGreen}>
                 best POS by use case
+              </Link>
+              , and{" "}
+              <Link href="/pos/guides/best-pos-for-small-business" className={linkGreen}>
+                best POS for small business
               </Link>{" "}
-              for picks by business type.
+              for deeper guidance.
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -369,6 +343,8 @@ export default function BestPosSoftwarePage() {
                   answer={item.a}
                   isOpen={openFaqIndex === i}
                   onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  isFirst={i === 0}
+                  isLast={i === FAQ_ITEMS.length - 1}
                 />
               ))}
             </div>

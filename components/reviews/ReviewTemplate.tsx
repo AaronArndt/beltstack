@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { sectionRuleAccent } from "@/lib/design-tokens";
 
 // ——— Design tokens (match payroll hub) ———
@@ -188,44 +189,6 @@ function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right" }) {
         </div>
       )}
     </span>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-neutral-200/60 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span
-          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
-          aria-hidden
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-6 pr-8">
-          <p className="text-neutral-700 text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
-    </div>
   );
 }
 
@@ -722,6 +685,10 @@ export function ReviewTemplate({
                       answer={item.a}
                       isOpen={openFaqIndex === i}
                       onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                      isFirst={i === 0}
+                      isLast={i === faqs.length - 1}
+                      itemClassName="border-b border-neutral-200/60 last:border-b-0"
+                      answerClassName="text-neutral-700 text-sm leading-relaxed"
                     />
                   ))}
                 </div>

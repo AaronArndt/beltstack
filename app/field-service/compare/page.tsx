@@ -5,7 +5,10 @@ import {
   getFieldServiceComparisonSlugs,
 } from "@/lib/data/fieldServiceComparisons";
 import { FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS } from "@/lib/data/fieldServiceHubData";
+import { getLogoFromProductMap, productLogoMapFromComparisons } from "@/lib/data/productLogoMapFromComparisons";
 import { Footer } from "@/components/Footer";
+
+const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getFieldServiceComparisonSlugs, getFieldServiceComparisonBySlug);
 
 const POPULAR_SLUGS = [
   "jobber-vs-housecall-pro",
@@ -214,7 +217,14 @@ export default function FieldServiceCompareHubPage() {
                   key={key}
                   className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm"
                 >
-                  <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={getLogoFromProductMap(PRODUCT_LOGO_BY_SLUG, key)}
+                      alt=""
+                      className="h-10 w-auto max-w-[80px] object-contain object-left"
+                    />
+                    <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                  </div>
                   <ul className="mt-3 space-y-2">
                     {slugs.map(({ slug, label: linkLabel }) => (
                       <li key={slug}>

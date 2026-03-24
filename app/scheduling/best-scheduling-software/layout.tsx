@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Best Scheduling Software (2026) | BeltStack",
   description:
-    "Compare the best scheduling software for freelancers, consultants, service businesses, and teams.",
+    "2026 best scheduling and appointment software for consultants, service businesses, and teams—booking links, reminders, reviews, and comparisons.",
 };
 
 export default function BestSchedulingSoftwareLayout({

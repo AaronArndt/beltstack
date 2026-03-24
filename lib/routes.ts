@@ -342,3 +342,52 @@ export function getHelpdeskBestForUrl(scenarioSlug: string): string {
 export function getHelpdeskAlternativeUrl(slug: string): string {
   return `/helpdesk/alternatives/${slug}`;
 }
+
+// ——— Website Builders ———
+
+/** Website builders review detail page: /website-builders/review/[slug] */
+export function getWebsiteBuildersReviewUrl(slug: string): string {
+  return `/website-builders/review/${slug}`;
+}
+
+/** Website builders compare page (optional comparison slug) */
+export function getWebsiteBuildersCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/website-builders/compare/${comparisonSlug}`;
+  return "/website-builders/compare";
+}
+
+/** Website builders best-for scenario */
+export function getWebsiteBuildersBestForUrl(scenarioSlug: string): string {
+  return `/website-builders/best-for/${scenarioSlug}`;
+}
+
+/** Website builders alternatives page: /website-builders/alternatives/[slug] */
+export function getWebsiteBuildersAlternativeUrl(slug: string): string {
+  return `/website-builders/alternatives/${slug}`;
+}
+
+// ——— Lead generation ———
+
+/** Lead generation review detail page: /lead-generation/review/[slug] */
+export function getLeadGenerationReviewUrl(slug: string): string {
+  return `/lead-generation/review/${slug}`;
+}
+
+/** Lead generation hub */
+export const LEAD_GENERATION_HUB_URL = "/lead-generation" as const;
+
+/** Lead generation compare page (optional comparison slug) */
+export function getLeadGenerationCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/lead-generation/compare/${comparisonSlug}`;
+  return "/lead-generation/compare";
+}
+
+/** Lead generation best-for scenario */
+export function getLeadGenerationBestForUrl(scenarioSlug: string): string {
+  return `/lead-generation/best-for/${scenarioSlug}`;
+}
+
+/** Lead generation alternatives page: /lead-generation/alternatives/[slug] */
+export function getLeadGenerationAlternativeUrl(slug: string): string {
+  return `/lead-generation/alternatives/${slug}`;
+}

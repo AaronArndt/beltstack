@@ -30,7 +30,10 @@ export function toSoftwarePickCardProps(
     hasFreeTrial: pick.hasFreeTrial,
     hasFreePlan: pick.hasFreePlan,
     hasIntegrations: pick.hasIntegrations,
-    alternativesUrl: routes.getAlternativeUrl(pick.slug),
+    alternativesUrl:
+      pick.alternativesSlug === null
+        ? undefined
+        : routes.getAlternativeUrl(pick.alternativesSlug ?? pick.slug),
     comparisonLinks,
   };
 }

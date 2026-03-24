@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -24,6 +25,8 @@ const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -31,50 +34,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
-    </div>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-stone-200 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -119,14 +78,29 @@ export default function BestSchedulingSoftwarePage() {
               Best Scheduling Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare the best scheduling software for freelancers, consultants, service businesses, and teams. See top
-              picks, pricing, features, and who each platform is best for.
+              The best scheduling software for consultants, freelancers, and service businesses is the one clients actually
+              book through—without double bookings, timezone confusion, or reminder gaps that drive no-shows. This 2026
+              roundup compares appointment and booking tools on calendar sync, team and location routing, payments and
+              intake, and mobile-friendly client flows.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scheduling software automates appointments and bookings so clients can pick a time without back-and-forth
-              emails or calls. Consultants, service businesses, freelancers, and teams use it to sync calendars, send
-              reminders, and cut no-shows. The right tool lets you share a booking link, collect payments or intake
-              forms, and manage multiple staff or locations—all from one place.
+              We evaluate buffer rules, automations, branding, CRM and video integrations, and total cost at your expected
+              booking volume. Use the rankings with our reviews and{" "}
+              <Link href="/scheduling/compare" className={linkGreen}>
+                scheduling software comparisons
+              </Link>{" "}
+              when you are ready to pick a vendor for the year ahead.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Start from the{" "}
+              <Link href="/scheduling" className={linkGreen}>
+                scheduling software hub
+              </Link>
+              , or walk through{" "}
+              <Link href="/scheduling/guides/how-to-choose-scheduling-software" className={linkGreen}>
+                how to choose scheduling software
+              </Link>{" "}
+              before you commit.
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -332,6 +306,8 @@ export default function BestSchedulingSoftwarePage() {
                   answer={item.a}
                   isOpen={openFaqIndex === i}
                   onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  isFirst={i === 0}
+                  isLast={i === FAQ_ITEMS.length - 1}
                 />
               ))}
             </div>

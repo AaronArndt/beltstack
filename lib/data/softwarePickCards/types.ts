@@ -28,6 +28,11 @@ export type SoftwarePickCardContent = SoftwarePickCardFeatureFlags & {
   visitUrl: string;
   /** Comparison page slugs (e.g. gusto-vs-onpay); first 3 used on the card */
   compareSlugs: string[];
+  /**
+   * When `null`, SoftwarePickCard omits the alternatives link (no published alternatives page).
+   * When omitted, alternatives URL uses `slug`.
+   */
+  alternativesSlug?: string | null;
   pros: string[];
   cons: string[];
   /** Plain text for pricing accordion body */

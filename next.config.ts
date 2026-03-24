@@ -34,6 +34,8 @@ const nextConfig: NextConfig = {
       { source: "/payroll/trades/retail", destination: "/payroll/best-for/retail", permanent: true },
       { source: "/payroll/trades/agriculture", destination: "/payroll/best-for/agriculture", permanent: true },
       { source: "/payroll/trades/nonprofits", destination: "/payroll/best-for/nonprofits", permanent: true },
+      { source: "/website-builders/review/wordpress-com", destination: "/website-builders/review/wordpress", permanent: true },
+      { source: "/website-builders/review/wordpress-com/", destination: "/website-builders/review/wordpress", permanent: true },
     ];
   },
 };

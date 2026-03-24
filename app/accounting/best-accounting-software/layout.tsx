@@ -31,7 +31,8 @@ function bestAccountingSoftwareItemListSchema() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Best Accounting Software (2026)",
-    description: "Compare the best accounting software for small businesses, freelancers, contractors, and growing teams.",
+    description:
+      "2026 best accounting software for small business, freelancers, and contractors—bookkeeping, invoicing, tax readiness, reviews, and comparisons.",
     url: `${SITE_URL}/accounting/best-accounting-software`,
     numberOfItems: items.length,
     itemListElement: items,
@@ -41,7 +42,7 @@ function bestAccountingSoftwareItemListSchema() {
 export const metadata: Metadata = {
   title: "Best Accounting Software (2026) | BeltStack",
   description:
-    "Compare the best accounting software for small businesses, freelancers, contractors, and ecommerce businesses. See top picks, reviews, and comparisons.",
+    "2026 rankings of the best accounting software for small businesses and contractors—bookkeeping, bank feeds, invoicing, reviews, and accounting comparisons.",
 };
 
 export default function BestAccountingSoftwareLayout({

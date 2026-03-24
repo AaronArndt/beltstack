@@ -31,7 +31,8 @@ function bestInvoicingSoftwareItemListSchema() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Best Invoicing Software (2026)",
-    description: "Compare the best invoicing software for freelancers, agencies, contractors, and small businesses.",
+    description:
+      "2026 best invoicing software for freelancers, agencies, and small business—payments, recurring billing, reviews, and comparisons.",
     url: `${SITE_URL}/invoicing/best-invoicing-software`,
     numberOfItems: items.length,
     itemListElement: items,
@@ -41,7 +42,7 @@ function bestInvoicingSoftwareItemListSchema() {
 export const metadata: Metadata = {
   title: "Best Invoicing Software (2026) | BeltStack",
   description:
-    "Compare the best invoicing software for freelancers, agencies, contractors, and small businesses. See top picks, reviews, and comparisons.",
+    "2026 best invoicing software for freelancers, agencies, and contractors—online payments, estimates, reviews, and invoicing comparisons.",
 };
 
 export default function BestInvoicingSoftwareLayout({

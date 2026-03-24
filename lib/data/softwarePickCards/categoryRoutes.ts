@@ -36,6 +36,12 @@ import {
   getTimeTrackingAlternativeUrl,
   getTimeTrackingCompareUrl,
   getTimeTrackingReviewUrl,
+  getWebsiteBuildersAlternativeUrl,
+  getWebsiteBuildersCompareUrl,
+  getWebsiteBuildersReviewUrl,
+  getLeadGenerationAlternativeUrl,
+  getLeadGenerationCompareUrl,
+  getLeadGenerationReviewUrl,
 } from "@/lib/routes";
 
 export type SoftwarePickCategoryRouteHelpers = {
@@ -119,6 +125,18 @@ export function getSoftwarePickCategoryRoutes(
         getReviewUrl: getHrReviewUrl,
         getCompareUrl: getHrCompareUrl,
         getAlternativeUrl: getHrAlternativeUrl,
+      };
+    case "website-builders":
+      return {
+        getReviewUrl: getWebsiteBuildersReviewUrl,
+        getCompareUrl: getWebsiteBuildersCompareUrl,
+        getAlternativeUrl: getWebsiteBuildersAlternativeUrl,
+      };
+    case "lead-generation":
+      return {
+        getReviewUrl: getLeadGenerationReviewUrl,
+        getCompareUrl: getLeadGenerationCompareUrl,
+        getAlternativeUrl: getLeadGenerationAlternativeUrl,
       };
     default: {
       const _exhaustive: never = category;

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { sectionRuleAccent } from "@/lib/design-tokens";
 
 // ——— Design tokens (match review template) ———
@@ -91,44 +92,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-neutral-200/60 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span
-          className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`}
-          aria-hidden
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-6 pr-8">
-          <p className="text-neutral-700 text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
 /** Renders support icon + text for a feature cell. */
 function FeatureCell({
   support,
@@ -209,6 +172,7 @@ export function ComparisonTemplate({
   const isCrm = categoryHref === "/crm";
   const isProjectManagement = categoryHref === "/project-management";
   const isScheduling = categoryHref === "/scheduling";
+  const isLeadGeneration = categoryHref === "/lead-generation";
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -232,6 +196,8 @@ export function ComparisonTemplate({
         ? "Best project management guides"
         : isScheduling
         ? "Best scheduling guides"
+        : isLeadGeneration
+        ? "Best lead generation guides"
         : "Best payroll guides",
       href: "#best-payroll-guides",
     },
@@ -624,6 +590,7 @@ export function ComparisonTemplate({
                   const isScheduling = categoryHref === "/scheduling";
                   const isPos = categoryHref === "/pos";
                   const isHelpdesk = categoryHref === "/helpdesk";
+                  const isLeadGeneration = categoryHref === "/lead-generation";
                   const roundupHref = isAccounting
                     ? "/accounting/best-accounting-software"
                     : isInvoicing
@@ -640,6 +607,8 @@ export function ComparisonTemplate({
                     ? "/pos/best-pos-software"
                     : isHelpdesk
                     ? "/helpdesk/best-helpdesk-software"
+                    : isLeadGeneration
+                    ? "/lead-generation/best-lead-generation-tools"
                     : "/payroll/best-payroll-software";
                   const roundupLabel = isAccounting
                     ? "Best accounting software (2026) — full roundup"
@@ -657,6 +626,8 @@ export function ComparisonTemplate({
                     ? "Best POS software (2026) — full roundup"
                     : isHelpdesk
                     ? "Best helpdesk software (2026) — full roundup"
+                    : isLeadGeneration
+                    ? "Best lead generation tools (2026) — full roundup"
                     : "Best payroll software (2026) — full roundup";
                   const sectionTitle = isAccounting
                     ? "Best accounting software guides"
@@ -674,6 +645,8 @@ export function ComparisonTemplate({
                     ? "Best POS software guides"
                     : isHelpdesk
                     ? "Best helpdesk software guides"
+                    : isLeadGeneration
+                    ? "Best lead generation guides"
                     : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
@@ -693,6 +666,8 @@ export function ComparisonTemplate({
                     ? "POS guides"
                     : isHelpdesk
                     ? "Helpdesk guides"
+                    : isLeadGeneration
+                    ? "Lead generation guides"
                     : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -721,7 +696,14 @@ export function ComparisonTemplate({
                                 </Link>
                               </li>
                             ))
-                          : !isAccounting && !isInvoicing && !isCrm && !isTimeTracking && !isProjectManagement && !isScheduling && !isPos && (
+                          : !isAccounting &&
+                            !isInvoicing &&
+                            !isCrm &&
+                            !isTimeTracking &&
+                            !isProjectManagement &&
+                            !isScheduling &&
+                            !isPos &&
+                            !isLeadGeneration && (
                               <>
                                 <li>
                                   <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -803,6 +785,42 @@ export function ComparisonTemplate({
                             </li>
                           </>
                         )}
+                        {isLeadGeneration && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/lead-generation/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best lead generation for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/lead-generation/best-for/hvac"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best for HVAC
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/lead-generation/best-for/plumbing"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best for plumbing
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/lead-generation/best-for/home-services"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best for home services
+                              </Link>
+                            </li>
+                          </>
+                        )}
                         {isCrm && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
@@ -848,6 +866,10 @@ export function ComparisonTemplate({
                         answer={item.a}
                         isOpen={openFaqIndex === i}
                         onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                        isFirst={i === 0}
+                        isLast={i === faqs.length - 1}
+                        itemClassName="border-b border-neutral-200/60 last:border-b-0"
+                        answerClassName="text-neutral-700 text-sm leading-relaxed"
                       />
                     ))}
                   </div>

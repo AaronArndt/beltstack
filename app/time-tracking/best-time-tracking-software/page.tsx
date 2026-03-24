@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -24,6 +25,8 @@ const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -31,41 +34,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
-    </div>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-stone-200 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -110,13 +78,29 @@ export default function BestTimeTrackingSoftwarePage() {
               Best Time Tracking Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare the best time tracking tools for freelancers, agencies, remote teams, and small businesses. See top
-              picks, pricing, and who each platform is best for.
+              The best time tracking software for freelancers, agencies, and distributed teams is the tool people will start
+              and stop without resentment—then export clean data into invoices, payroll, or client reports. This 2026
+              roundup weighs timers vs automatic capture, billable rates, project budgets, compliance boundaries, and
+              pricing that stays fair as headcount grows.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate time tracking software for ease of use, reporting, pricing, and how well it supports billing,
-              payroll, and project visibility. Our picks suit different needs—whether you want a simple tracker like Toggl
-              Track, a billing-focused tool like Harvest, or monitoring-heavy options like Hubstaff and Time Doctor.
+              We compare integrations with accounting and PM stacks, mobile and desktop friction, approval workflows, and
+              reporting depth for managers. Use these picks with our reviews and{" "}
+              <Link href="/time-tracking/compare" className={linkGreen}>
+                time tracking software comparisons
+              </Link>{" "}
+              when you are standardizing how hours are recorded company-wide.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Start from the{" "}
+              <Link href="/time-tracking" className={linkGreen}>
+                time tracking software hub
+              </Link>
+              , or read{" "}
+              <Link href="/time-tracking/guides/how-time-tracking-software-works" className={linkGreen}>
+                how time tracking software works
+              </Link>{" "}
+              to align features with your policies.
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -337,6 +321,8 @@ export default function BestTimeTrackingSoftwarePage() {
                   answer={item.a}
                   isOpen={openFaqIndex === i}
                   onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  isFirst={i === 0}
+                  isLast={i === FAQ_ITEMS.length - 1}
                 />
               ))}
             </div>

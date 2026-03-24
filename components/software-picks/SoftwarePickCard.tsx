@@ -212,6 +212,7 @@ function AccordionBlock({
   label,
   isOpen,
   onToggle,
+  isLast,
   children,
 }: {
   id: AccordionId;
@@ -219,6 +220,8 @@ function AccordionBlock({
   label: string;
   isOpen: boolean;
   onToggle: () => void;
+  /** When true, bottom corners match the card (`rounded-lg`) so hover outline isn’t square past the frame. */
+  isLast?: boolean;
   children: ReactNode;
 }) {
   const panelId = `${baseId}-${id}-panel`;
@@ -226,6 +229,7 @@ function AccordionBlock({
   const [hover, setHover] = useState(false);
 
   const showGreenOutline = hover && !isOpen;
+  const bottomRadiusWhenClosed = isLast && !isOpen ? "rounded-b-lg" : "";
 
   return (
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
@@ -235,7 +239,7 @@ function AccordionBlock({
         aria-expanded={isOpen}
         aria-controls={panelId}
         onClick={onToggle}
-        className={`flex min-h-[52px] w-full items-center justify-between gap-4 px-5 py-3 text-left transition-[background-color,box-shadow] duration-150 sm:px-6 ${
+        className={`flex min-h-[52px] w-full items-center justify-between gap-4 px-5 py-3 text-left transition-[background-color,box-shadow] duration-150 sm:px-6 ${bottomRadiusWhenClosed} ${
           isOpen
             ? "bg-[#E7F8F2]"
             : showGreenOutline
@@ -264,7 +268,7 @@ function AccordionBlock({
           id={panelId}
           role="region"
           aria-labelledby={buttonId}
-          className="border-t border-stone-200/80 bg-white px-5 pb-5 pt-4 sm:px-6"
+          className={`border-t border-stone-200/80 bg-white px-5 pb-5 pt-4 sm:px-6${isLast ? " rounded-b-lg" : ""}`}
         >
           {children}
         </div>
@@ -332,7 +336,7 @@ export function SoftwarePickCard({
   return (
     <article
       id={id}
-      className="min-w-0 max-w-full rounded-lg border border-stone-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
+      className="min-w-0 max-w-full overflow-hidden rounded-lg border border-stone-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
     >
       <div
         className={`px-6 pt-6 ${paragraphs.length > 0 ? "pb-2" : "pb-6"}`}
@@ -432,7 +436,7 @@ export function SoftwarePickCard({
         </div>
       ) : null}
 
-      <div className="divide-y divide-stone-200/90 border-t border-stone-200/90 rounded-b-lg">
+      <div className="divide-y divide-stone-200/90 border-t border-stone-200/90">
         <AccordionBlock
           id="pros-cons"
           baseId={baseId}
@@ -514,10 +518,11 @@ export function SoftwarePickCard({
           label="Additional Resources"
           isOpen={openSection === "resources"}
           onToggle={() => toggle("resources")}
+          isLast
         >
           <div className="grid gap-6 sm:grid-cols-3 sm:gap-4">
             <div>
-              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#57534E]">Review</p>
+              <p className={sectionTitleClass}>Review</p>
               <Link
                 href={reviewUrl}
                 className="mt-2 inline-block font-sans text-sm font-semibold text-[#10B981] underline underline-offset-2 hover:text-[#0d9668]"

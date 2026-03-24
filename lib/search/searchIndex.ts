@@ -116,6 +116,20 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Invoicing",
     keywords: ["invoicing", "invoice software", "billing"],
   },
+  {
+    title: "Website Builders",
+    href: "/website-builders",
+    type: "Category",
+    category: "Website Builders",
+    keywords: ["website builders", "website builder", "small business website", "contractor website"],
+  },
+  {
+    title: "Lead Generation Tools",
+    href: "/lead-generation",
+    type: "Category",
+    category: "Lead Generation",
+    keywords: ["lead generation", "local leads", "contractor leads", "home services leads", "thumbtack", "angi"],
+  },
 
   // ——— Reviews (popular entities) ———
   {
@@ -197,6 +211,22 @@ export const searchIndex: SearchIndexItem[] = [
     category: "POS",
     entity: "Square POS",
     keywords: ["square", "square pos", "square review"],
+  },
+  {
+    title: "Thumbtack Review (2026)",
+    href: "/lead-generation/review/thumbtack",
+    type: "Review",
+    category: "Lead Generation",
+    entity: "Thumbtack",
+    keywords: ["thumbtack", "thumbtack review", "thumbtack leads"],
+  },
+  {
+    title: "Google Local Services Ads Review (2026)",
+    href: "/lead-generation/review/google-local-services-ads",
+    type: "Review",
+    category: "Lead Generation",
+    entity: "Google Local Services Ads",
+    keywords: ["google lsa", "local services ads", "google screened leads"],
   },
 
   // ——— Alternatives ———
@@ -280,6 +310,30 @@ export const searchIndex: SearchIndexItem[] = [
     entity: "Square POS",
     keywords: ["square", "square alternatives", "pos alternatives"],
   },
+  {
+    title: "Best Thumbtack Alternatives (2026)",
+    href: "/lead-generation/alternatives/thumbtack",
+    type: "Alternatives",
+    category: "Lead Generation",
+    entity: "Thumbtack",
+    keywords: ["thumbtack", "thumbtack alternatives", "lead gen alternatives"],
+  },
+  {
+    title: "Best Angi Alternatives (2026)",
+    href: "/lead-generation/alternatives/angi",
+    type: "Alternatives",
+    category: "Lead Generation",
+    entity: "Angi",
+    keywords: ["angi", "angi alternatives", "homeadvisor angi leads"],
+  },
+  {
+    title: "Best HomeAdvisor Alternatives (2026)",
+    href: "/lead-generation/alternatives/homeadvisor",
+    type: "Alternatives",
+    category: "Lead Generation",
+    entity: "HomeAdvisor",
+    keywords: ["homeadvisor", "homeadvisor alternatives", "home services leads"],
+  },
 
   // ——— Comparisons ———
   {
@@ -344,6 +398,20 @@ export const searchIndex: SearchIndexItem[] = [
     type: "Comparison",
     category: "POS",
     keywords: ["square pos", "shopify pos", "square vs shopify", "pos comparison"],
+  },
+  {
+    title: "Thumbtack vs Angi (2026)",
+    href: "/lead-generation/compare/thumbtack-vs-angi",
+    type: "Comparison",
+    category: "Lead Generation",
+    keywords: ["thumbtack", "angi", "thumbtack vs angi", "lead generation comparison"],
+  },
+  {
+    title: "Google LSA vs Yelp Ads (2026)",
+    href: "/lead-generation/compare/google-local-services-ads-vs-yelp-ads",
+    type: "Comparison",
+    category: "Lead Generation",
+    keywords: ["google lsa", "yelp ads", "local services ads vs yelp", "local lead ads"],
   },
 
   // ——— Best software roundups ———
@@ -417,6 +485,20 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Time Tracking",
     keywords: ["time tracking software", "best time tracking"],
   },
+  {
+    title: "Best Website Builders (2026)",
+    href: "/website-builders/best-website-builders",
+    type: "Best Software",
+    category: "Website Builders",
+    keywords: ["best website builders", "contractor website builder", "small business website builder"],
+  },
+  {
+    title: "Best Lead Generation Tools (2026)",
+    href: "/lead-generation/best-lead-generation-tools",
+    type: "Best Software",
+    category: "Lead Generation",
+    keywords: ["best lead generation tools", "contractor leads", "local service leads"],
+  },
 
   // ——— Best-for pages (selected high-intent) ———
   {
@@ -461,6 +543,13 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Inventory",
     keywords: ["inventory", "small business", "inventory software for small business"],
   },
+  {
+    title: "Best Website Builders for Contractors",
+    href: "/website-builders/best-for/contractors",
+    type: "Best For",
+    category: "Website Builders",
+    keywords: ["website builder", "contractors", "best website builder for contractors"],
+  },
 
   // ——— Guides (major) ———
   {
@@ -504,6 +593,41 @@ export const searchIndex: SearchIndexItem[] = [
     type: "Guide",
     category: "Inventory",
     keywords: ["inventory", "ecommerce", "inventory software for ecommerce"],
+  },
+  {
+    title: "How to Choose a Website Builder",
+    href: "/website-builders/guides/how-to-choose-a-website-builder",
+    type: "Guide",
+    category: "Website Builders",
+    keywords: ["how to choose a website builder", "website builder guide", "service business website"],
+  },
+  {
+    title: "How to Get Leads for Contractors",
+    href: "/lead-generation/guides/how-to-get-leads-for-contractors",
+    type: "Guide",
+    category: "Lead Generation",
+    keywords: ["contractor leads", "how to get leads", "trade lead generation"],
+  },
+  {
+    title: "How to Choose a Lead Generation Platform",
+    href: "/lead-generation/guides/how-to-choose-a-lead-generation-platform",
+    type: "Guide",
+    category: "Lead Generation",
+    keywords: ["lead generation platform", "choose lead gen software", "local leads guide"],
+  },
+  {
+    title: "Hostinger vs Wix",
+    href: "/website-builders/compare/hostinger-website-builder-vs-wix",
+    type: "Comparison",
+    category: "Website Builders",
+    keywords: ["hostinger website builder", "wix", "hostinger vs wix"],
+  },
+  {
+    title: "GoDaddy vs Hostinger",
+    href: "/website-builders/compare/godaddy-website-builder-vs-hostinger-website-builder",
+    type: "Comparison",
+    category: "Website Builders",
+    keywords: ["godaddy website builder", "hostinger", "godaddy vs hostinger"],
   },
 ];
 

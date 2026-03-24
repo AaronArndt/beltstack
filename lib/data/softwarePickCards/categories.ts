@@ -11,4 +11,6 @@ export type SoftwarePickCategory =
   | "scheduling"
   | "pos"
   | "time-tracking"
-  | "hr";
+  | "hr"
+  | "website-builders"
+  | "lead-generation";

@@ -149,4 +149,22 @@ export const BEST_OF_USE_CASE_EDITORIAL: Record<string, Record<string, string>> 
     "remote-teams":
       "Remote teams need visibility into work without micromanagement—time tracking should clarify capacity and delivery, not spy on keystrokes. Async-friendly reporting and fair policies matter as much as software. Integrations with project tools reduce duplicate entry. The remote-teams guide focuses on time tracking that supports distributed collaboration.",
   },
+  "lead-generation": {
+    contractors:
+      "Contractors live and die on phone speed and dispute discipline—paid marketplaces and Google Local Services Ads only work when someone answers fast and you track booked-job margin after credits. A pretty lead dashboard means nothing if gross profit per tech hour collapses. Prioritize channels that match how homeowners find you (search vs directory vs social), then scale the one or two vendors your CRM can actually support. Our contractor-focused guide highlights tools that fit typical mixed crews and subs, not generic B2B funnels.",
+    hvac:
+      "HVAC businesses see huge swings between emergency calls and planned installs—lead sources that win in July may flop in shoulder seasons. Budget needs monthly resets: pay for intent when compressors die, pull back when you’re booked six weeks. Compare LSA against marketplaces on real cost per booked appointment, not cost per form. The HVAC guide focuses on lead products that match seasonality and dispatch reality, not just top-of-funnel volume.",
+    plumbing:
+      "Plumbing leads often imply urgency—if your routing, on-call rules, and dispute muscle are weak, marketplaces feel like scams. Nail response workflows first, then test vendors with tight caps. Directory and search leads behave differently; don’t judge Google LSA with the same script as Thumbtack. The plumbing guide steers you toward lead products that match service-area density and ticket mix.",
+    "home-services":
+      "General home-services operators juggle many trades and zip codes—stacking five lead vendors before your CRM can tag duplicates is how you lose margin quietly. Start with one marketplace and one search channel if eligible; prove economics for 60 days before expanding. The home-services guide favors a focused stack you can measure honestly, including refund rates and true cost per booked job.",
+    "cleaning-services":
+      "Cleaning businesses need to know if a lead is a one-time deep clean or a recurring route—marketplace and ad leads rarely include that detail, so your first-call script matters as much as the vendor. Pricing power and tight geography beat chasing every cheap name. The cleaning guide compares lead channels that align with recurring revenue goals, not just one-off gigs.",
+    electricians:
+      "Electrical work spans quick service calls and large projects—buy leads that match the tickets your licensed crew wants. If panel upgrades are your aim, emergency cheap leads may distract the board. Map intent to crew skills before scaling spend. The electricians guide points to lead products that complement how customers actually hire in your market.",
+    roofing:
+      "Roofing mixes retail replacement and storm/event surges—don’t blend their economics. A lead that works for retail Monday may be garbage during CAT mode. Segment sources and measure close rates separately. The roofing guide helps you pick channels that match your retail vs storm strategy instead of chasing raw lead counts.",
+    landscaping:
+      "Landscaping is seasonal and route-driven—buying leads far outside your cluster burns truck time. Visual trust matters for design-heavy tickets; directories and portfolios can help there even when search leads dominate maintenance. The landscaping guide emphasizes geography discipline and channel fit for recurring routes versus one-off cleanups.",
+  },
 };

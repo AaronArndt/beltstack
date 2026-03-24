@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -25,6 +26,8 @@ const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -32,41 +35,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
-    </div>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-stone-200 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -111,15 +79,29 @@ export default function BestInventorySoftwarePage() {
               Best Inventory Management Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare the best inventory management tools for small businesses, ecommerce stores, manufacturers, and
-              warehouses. See top picks, pricing, features, and who each platform is best for.
+              The best inventory management software for small businesses, ecommerce, and light manufacturing is the system
+              that keeps on-hand counts trustworthy across warehouses and sales channels—without forcing a full ERP just to
+              avoid stockouts. This 2026 ranking highlights tools that handle SKUs, purchase orders, kitting or bundles where
+              needed, and integrations with Shopify, Amazon, or your POS.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Inventory software helps you track stock levels, orders, and reordering across locations and channels.
-              Small businesses, ecommerce brands, and manufacturers use it to replace spreadsheets with real-time
-              visibility—so you know what you have, what is on order, and what is ready to ship. We evaluate inventory
-              tools on tracking accuracy, multi-channel integrations, warehouse workflows, purchasing, and automation so
-              you can choose the right fit.
+              We compare receiving, cycle counting, demand signals, automation, and reporting depth at realistic order
+              volumes. Use the shortlist with our reviews and{" "}
+              <Link href="/inventory/compare" className={linkGreen}>
+                inventory software comparisons
+              </Link>{" "}
+              before you migrate off spreadsheets.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Start at the{" "}
+              <Link href="/inventory" className={linkGreen}>
+                inventory management hub
+              </Link>
+              , or read{" "}
+              <Link href="/inventory/guides/best-inventory-software-for-small-business" className={linkGreen}>
+                best inventory software for small business
+              </Link>{" "}
+              for a grounded buying framework.
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -361,6 +343,8 @@ export default function BestInventorySoftwarePage() {
                   answer={item.a}
                   isOpen={openFaqIndex === i}
                   onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  isFirst={i === 0}
+                  isLast={i === FAQ_ITEMS.length - 1}
                 />
               ))}
             </div>

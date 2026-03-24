@@ -21,6 +21,16 @@ export const SOFTWARE_CATEGORY_HUB: Record<
   pos: { href: "/pos", label: "POS software hub", shortLabel: "POS" },
   "time-tracking": { href: "/time-tracking", label: "Time tracking software hub", shortLabel: "Time tracking" },
   hr: { href: "/hr", label: "HR software hub", shortLabel: "HR" },
+  "website-builders": {
+    href: "/website-builders",
+    label: "Website builders software hub",
+    shortLabel: "Website builders",
+  },
+  "lead-generation": {
+    href: "/lead-generation",
+    label: "Lead generation software hub",
+    shortLabel: "Lead generation",
+  },
 };
 
 export function getSoftwareCategoryHubHref(category: SoftwarePickCategory): string {

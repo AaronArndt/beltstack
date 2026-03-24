@@ -1,0 +1,10 @@
+---
+description: When adding routes, include them in app/sitemap.ts unless the user opts out for a specific URL.
+alwaysApply: true
+---
+
+# Sitemap coverage
+
+- Whenever you add a new user-facing **page route** under `app/` (or equivalent), **add it to `app/sitemap.ts`** in the same way as existing verticals: static hub/section URLs plus dynamic entries driven by the canonical data getters (`get*Slugs()`, guide arrays, etc.).
+- If a new **software cluster** or **content vertical** is introduced, wire the full set (hub, roundup, compare index, reviews, comparisons, alternatives, best-for, guides) into the sitemap return array—do not leave whole sections out.
+- **Exception:** If the user **explicitly** says a given page or path must **not** be indexed or listed, omit only that path and note why.

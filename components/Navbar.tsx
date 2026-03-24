@@ -52,6 +52,18 @@ const SOFTWARE_COLUMNS: {
     ],
   },
   {
+    id: "growth",
+    label: "Growth",
+    items: [
+      { title: "Website Builders", description: "Build and launch your business site", href: "/website-builders" },
+      { title: "SEO Tools", description: "Rank higher with search optimization", href: "/growth/seo-tools" },
+      { title: "Lead Generation", description: "Capture and qualify more leads", href: "/lead-generation" },
+      { title: "Reputation Management", description: "Monitor and improve online reviews", href: "/growth/reputation-management" },
+      { title: "Email Marketing", description: "Automate campaigns and follow-ups", href: "/growth/email-marketing" },
+      { title: "Call Tracking", description: "Track call sources and campaign ROI", href: "/growth/call-tracking" },
+    ],
+  },
+  {
     id: "more",
     label: "More",
     items: [],
@@ -137,7 +149,7 @@ function SoftwarePanelContent({
 }) {
   return (
     <div className="w-full min-w-0 shrink-0">
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-4 gap-8">
         {SOFTWARE_COLUMNS.map((col) => (
           <div key={col.id} className="min-w-0" onPointerEnter={() => onColumnHover(col.id)}>
             <div className="w-full">

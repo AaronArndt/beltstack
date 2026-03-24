@@ -12,6 +12,11 @@ import { TOP_PICKS as SCHEDULING_TOP_PICKS } from "@/lib/data/schedulingBestSoft
 import { TOP_PICKS as POS_TOP_PICKS } from "@/lib/data/posBestSoftware";
 import { TOP_PICKS as TIME_TRACKING_TOP_PICKS } from "@/lib/data/timeTrackingBestTimeTrackingSoftware";
 import { TOP_PICKS as HR_TOP_PICKS } from "@/lib/data/hrBestSoftware";
+import { TOP_PICKS as WEBSITE_BUILDERS_TOP_PICKS } from "@/lib/data/websiteBuildersBestWebsiteBuilders";
+import {
+  TOP_PICKS as LEAD_GENERATION_TOP_PICKS,
+  LEAD_GENERATION_REGISTRY_SUPPLEMENT,
+} from "@/lib/data/leadGenerationBestLeadGenerationTools";
 
 function toMap(picks: SoftwarePickCardContent[]): Map<string, SoftwarePickCardContent> {
   return new Map(picks.map((p) => [p.slug, p]));
@@ -30,6 +35,8 @@ const REGISTRY: Record<SoftwarePickCategory, Map<string, SoftwarePickCardContent
   pos: toMap(POS_TOP_PICKS),
   "time-tracking": toMap(TIME_TRACKING_TOP_PICKS),
   hr: toMap(HR_TOP_PICKS),
+  "website-builders": toMap(WEBSITE_BUILDERS_TOP_PICKS),
+  "lead-generation": toMap([...LEAD_GENERATION_TOP_PICKS, ...LEAD_GENERATION_REGISTRY_SUPPLEMENT]),
 };
 
 export function getSoftwarePick(

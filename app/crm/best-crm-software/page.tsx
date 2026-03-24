@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
   COMPARISON_TABLE_ROWS,
@@ -25,6 +26,8 @@ const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+const linkGreen =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -32,41 +35,6 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
-    </div>
-  );
-}
-
-function FaqAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div className="border-b border-stone-200 last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
-        <span className={`shrink-0 text-[#57534E] transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </button>
-      {isOpen && (
-        <div className="px-4 pb-4 pr-8 sm:px-5">
-          <p className="text-[#57534E] text-sm leading-relaxed">{answer}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -105,10 +73,25 @@ export default function BestCrmSoftwarePage() {
               Best CRM Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare the best CRM software for small businesses, startups, and sales teams. See top picks, pricing, features, and who each platform is best for.
+              The best CRM software for small businesses, startups, and sales teams is the platform your reps will log into daily—without losing pipeline visibility, contact history, or automation that keeps follow-ups on track. This 2026 roundup focuses on SMB-friendly CRM: lead and deal management, email and task workflows, and reporting you can act on, not shelf-ware built only for enterprise.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              CRM software helps you manage contacts, track leads and deals, and run your sales pipeline in one place. Small businesses, startups, and sales teams use it to stay organized, automate follow-up, and close more deals. We test CRM tools for ease of use, pipeline features, automation, integrations, and reporting—so you can choose the right fit.
+              We evaluate pipeline design, records and segmentation, automation, integrations with inbox and marketing tools, mobile apps, per-seat pricing, and how cleanly each product scales as your team grows. Use the rankings below with our reviews and{" "}
+              <Link href="/crm/compare" className={linkGreen}>
+                CRM software comparisons
+              </Link>{" "}
+              to shortlist vendors for 2026.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Start from the{" "}
+              <Link href="/crm" className={linkGreen}>
+                CRM software hub
+              </Link>{" "}
+              for more context, or read{" "}
+              <Link href="/crm/guides/how-to-choose-crm-software" className={linkGreen}>
+                how to choose CRM software
+              </Link>{" "}
+              before you commit.
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -306,6 +289,8 @@ export default function BestCrmSoftwarePage() {
                   answer={item.a}
                   isOpen={openFaqIndex === i}
                   onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  isFirst={i === 0}
+                  isLast={i === FAQ_ITEMS.length - 1}
                 />
               ))}
             </div>
