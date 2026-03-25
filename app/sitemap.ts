@@ -55,6 +55,10 @@ import {
   getLeadGenerationAlternativeUrl,
   getWebsiteBuildersBestForUrl,
   getWebsiteBuildersAlternativeUrl,
+  getSeoToolsBestForUrl,
+  getSeoToolsAlternativeUrl,
+  getCallTrackingBestForUrl,
+  getCallTrackingAlternativeUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
@@ -87,6 +91,14 @@ import { getWebsiteBuildersReviewSlugs } from "@/lib/data/websiteBuildersReviews
 import { getWebsiteBuildersAlternativesSlugs } from "@/lib/data/websiteBuildersAlternatives";
 import { WEBSITE_BUILDERS_GUIDES } from "@/lib/data/websiteBuildersGuides";
 import { getWebsiteBuildersBestForSlugs } from "@/lib/data/websiteBuildersBestFor";
+import { getSeoToolsComparisonSlugs } from "@/lib/data/seoToolsComparisons";
+import { getSeoToolsReviewSlugs } from "@/lib/data/seoToolsReviews";
+import { getSeoToolsAlternativesSlugs } from "@/lib/data/seoToolsAlternatives";
+import { SEO_TOOLS_GUIDES } from "@/lib/data/seoToolsGuides";
+import { getCallTrackingComparisonSlugs } from "@/lib/data/callTrackingComparisons";
+import { getCallTrackingReviewSlugs } from "@/lib/data/callTrackingReviews";
+import { getCallTrackingAlternativesSlugs } from "@/lib/data/callTrackingAlternatives";
+import { CALL_TRACKING_GUIDES } from "@/lib/data/callTrackingGuides";
 import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -232,6 +244,29 @@ const LEAD_GENERATION_BEST_FOR_SCENARIOS = [
   "home-services",
 ] as const;
 
+/** Static SEO Tools best-for scenario slugs (matches app/seo-tools/best-for/[scenario]). */
+const SEO_TOOLS_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "contractors",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "roofing",
+  "landscaping",
+  "local-seo",
+] as const;
+
+/** Static Call Tracking best-for scenario slugs (matches app/call-tracking/best-for/[scenario]). */
+const CALL_TRACKING_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "contractors",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "roofing",
+  "home-services",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -245,6 +280,7 @@ const defaultEntry = (
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     defaultEntry("/", { changeFrequency: "weekly", priority: 1 }),
+    defaultEntry("/software", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/methodology", { changeFrequency: "monthly", priority: 0.7 }),
     // Payroll
     defaultEntry("/payroll", { changeFrequency: "weekly", priority: 0.9 }),
@@ -331,6 +367,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/website-builders/best-website-builders", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/website-builders/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/website-builders/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // SEO tools
+    defaultEntry("/seo-tools", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/seo-tools/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/seo-tools/best-seo-tools", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/seo-tools/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/seo-tools/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Call tracking
+    defaultEntry("/call-tracking", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/call-tracking/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/call-tracking/best-call-tracking-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/call-tracking/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/call-tracking/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   const tradeHubEntries: MetadataRoute.Sitemap = TRADE_HUB_SLUGS.map((slug) =>
@@ -735,6 +783,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // SEO tools comparisons
+  const seoToolsComparisonSlugs = getSeoToolsComparisonSlugs();
+  const seoToolsComparisonEntries: MetadataRoute.Sitemap = seoToolsComparisonSlugs.map((slug) =>
+    defaultEntry(`/seo-tools/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // SEO tools reviews
+  const seoToolsReviewSlugs = getSeoToolsReviewSlugs();
+  const seoToolsReviewEntries: MetadataRoute.Sitemap = seoToolsReviewSlugs.map((slug) =>
+    defaultEntry(`/seo-tools/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // SEO tools alternatives
+  const seoToolsAlternativeSlugs = getSeoToolsAlternativesSlugs();
+  const seoToolsAlternativeEntries: MetadataRoute.Sitemap = seoToolsAlternativeSlugs.map((slug) =>
+    defaultEntry(getSeoToolsAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // SEO tools best-for
+  const seoToolsBestForEntries: MetadataRoute.Sitemap = SEO_TOOLS_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getSeoToolsBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // SEO tools guides
+  const seoToolsGuideEntries: MetadataRoute.Sitemap = SEO_TOOLS_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Call tracking comparisons
+  const callTrackingComparisonSlugs = getCallTrackingComparisonSlugs();
+  const callTrackingComparisonEntries: MetadataRoute.Sitemap = callTrackingComparisonSlugs.map((slug) =>
+    defaultEntry(`/call-tracking/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Call tracking reviews
+  const callTrackingReviewSlugs = getCallTrackingReviewSlugs();
+  const callTrackingReviewEntries: MetadataRoute.Sitemap = callTrackingReviewSlugs.map((slug) =>
+    defaultEntry(`/call-tracking/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Call tracking alternatives
+  const callTrackingAlternativeSlugs = getCallTrackingAlternativesSlugs();
+  const callTrackingAlternativeEntries: MetadataRoute.Sitemap = callTrackingAlternativeSlugs.map((slug) =>
+    defaultEntry(getCallTrackingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Call tracking best-for
+  const callTrackingBestForEntries: MetadataRoute.Sitemap = CALL_TRACKING_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getCallTrackingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Call tracking guides
+  const callTrackingGuideEntries: MetadataRoute.Sitemap = CALL_TRACKING_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...tradeHubEntries,
@@ -809,5 +913,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...websiteBuildersAlternativeEntries,
     ...websiteBuildersBestForEntries,
     ...websiteBuildersGuideEntries,
+    ...seoToolsComparisonEntries,
+    ...seoToolsReviewEntries,
+    ...seoToolsAlternativeEntries,
+    ...seoToolsBestForEntries,
+    ...seoToolsGuideEntries,
+    ...callTrackingComparisonEntries,
+    ...callTrackingReviewEntries,
+    ...callTrackingAlternativeEntries,
+    ...callTrackingBestForEntries,
+    ...callTrackingGuideEntries,
   ];
 }

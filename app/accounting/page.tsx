@@ -140,7 +140,15 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
 function AccountingIntroExtended() {
   return (
     <p>
-      Accounting software helps businesses track income, manage expenses, generate financial reports, and prepare for taxes. This page compares the best accounting platforms for small businesses, freelancers, and contractors.
+      Accounting software helps businesses track income, manage expenses, generate financial reports, and prepare for taxes. This page compares the best accounting platforms for small businesses, freelancers, and contractors. For scenario entry points, start with our{" "}
+      <Link href="/accounting/best-for" className={linkGreen}>
+        best accounting software by use case
+      </Link>{" "}
+      hub; once payroll is in scope, see how it ties to the books in our{" "}
+      <Link href="/payroll" className={linkGreen}>
+        payroll software hub
+      </Link>
+      .
     </p>
   );
 }

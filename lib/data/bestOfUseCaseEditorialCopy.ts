@@ -167,4 +167,38 @@ export const BEST_OF_USE_CASE_EDITORIAL: Record<string, Record<string, string>> 
     landscaping:
       "Landscaping is seasonal and route-driven—buying leads far outside your cluster burns truck time. Visual trust matters for design-heavy tickets; directories and portfolios can help there even when search leads dominate maintenance. The landscaping guide emphasizes geography discipline and channel fit for recurring routes versus one-off cleanups.",
   },
+  "seo-tools": {
+    contractors:
+      "Contractors win local SEO when Google Business Profile, reviews, and service-area pages match how homeowners actually search—not when dashboards look busy. Software should highlight crawl issues, keyword gaps, and grid movement, but it cannot replace photos, categories, and fast review replies. Prioritize tools you will use weekly, verify Search Console on every property, and pair a research suite with a local platform if Map Pack and citations are your bottleneck. Our contractor guide focuses on execution rhythms that produce calls, not vanity national rankings.",
+    "local-seo":
+      "Local SEO for service businesses is mostly operations: accurate NAP, consistent categories, and review cadence across the ZIPs you truly serve. Rank trackers help diagnose markets, yet they do not fix thin pages or missing proof. Choose software that makes GBP and citation work accountable, export reports owners understand, and always cross-check with Search Console performance data. The local SEO guide explains how listings, on-site structure, and reputation interact so you do not buy duplicate tooling.",
+    "small-business":
+      "Small businesses should not stack enterprise SEO suites before habits exist. Start with Search Console, tighten core service pages, and add one primary paid tool when competitor research or audits justify the cost. Watch seat and keyword limits so annual renewals match real usage. The small-business path favors disciplined basics—clear titles, internal links, and honest service areas—before chasing exotic keyword universes.",
+    hvac:
+      "HVAC SEO swings between emergency intent and planned installs; your keyword groups and landing pages should reflect both without blending economics. Tools help you track seasonality and competitor coverage, but dispatch areas and GBP accuracy still drive Map Pack trust. Compare quarters when measuring progress, and avoid chasing rankings in cities your trucks cannot serve. The HVAC-focused guide ties SEO tasks to how demand actually arrives in heat waves and shoulder seasons.",
+    plumbing:
+      "Plumbing searches are often urgent—your pages and GBP should make calling effortless, not clever. SEO software surfaces crawl issues and content gaps, yet review velocity and accurate service areas frequently move the needle faster. Fix duplicate or suspended listings before buying more data. The plumbing guide emphasizes on-page clarity and local trust signals that convert high-intent traffic.",
+    electricians:
+      "Electrical contractors compete on licensure, safety proof, and specificity—generic city pages underperform when buyers compare credentials. Use SEO tools to audit migrations, benchmark competitor backlinks, and monitor keywords by county, but invest in trust content humans scan in seconds. The electricians guide maps software choices to commercial vs residential funnels.",
+    roofing:
+      "Roofing SEO mixes steady replacement demand with volatile storm cycles; segment landing pages and reporting accordingly. Tools can show who publishes storm content and earns links, yet GBP photos and documented service areas still anchor Map Pack performance. After acquisitions, audit listings before scaling spend. The roofing guide connects SEO measurement to retail vs event-driven lead behavior.",
+    landscaping:
+      "Landscaping buyers often want proof and proximity—portfolios and GBP imagery matter alongside keyword research. SEO platforms help prioritize maintenance vs design-build terms and catch technical regressions when you add crews or locations. Keep maps honest to drive times. The landscaping guide balances visual trust with geographic discipline.",
+  },
+  "call-tracking": {
+    "small-business":
+      "Small businesses should not buy two DNI stacks or enterprise conversation AI before CRM basics work. Start with one call tracking platform, verify swap scripts after site changes, and model minutes against peak season—not quiet weeks. The small-business guide favors honest cost-per-booked-job math tied to marketing sources, not raw ring counts.",
+    contractors:
+      "Contractors blend LSA, PPC, organic, and referrals—without dynamic numbers and CRM stages you cannot defend ad spend. Call tracking shows which touch produced the dial; your CRM shows whether it became revenue. The contractor guide emphasizes dispatch-friendly setup, duplicate lead discipline, and weekly reviews with ops—not dashboard vanity.",
+    hvac:
+      "HVAC marketers scale spend in summer; call tracking should prove which campaigns survive after-hours bursts and which only looked good in shoulder season. Segment repair, replace, and maintenance sources before judging ROI. The HVAC guide connects attribution to seasonal dispatch reality and LSA overlap.",
+    plumbing:
+      "Plumbing demand is urgent—calls from thin landing pages still need honest source tags. Fix GBP and website number alignment before trusting reports, and score outcomes in CRM so cheap clicks that never book do not masquerade as wins. The plumbing guide focuses on high-intent local programs and minute economics.",
+    electricians:
+      "Electrical contractors need clarity on which campaigns produce panel upgrades versus quick service calls—blend those in one bucket and you optimize for the wrong ticket. Call tracking plus CRM stages prevents that drift. The electricians guide maps tools to commercial vs residential funnels and multi-location brands.",
+    roofing:
+      "Roofing mixes retail replacement with storm surges—call tracking should tag funnels separately so CAT-mode volume does not hide weak retail programs. After acquisitions, reconcile numbers before trusting legacy reports. The roofing guide ties attribution to how roofers actually sell in calm and volatile markets.",
+    "home-services":
+      "Multi-trade operators need one attribution story across brands and ZIP codes—parallel DNI layers that disagree will poison leadership reviews. Tag marketplace, paid, and owned demand distinctly, and loop dispatch feedback on bad leads. The home-services guide favors a measurable stack you can explain in one CRM export.",
+  },
 };

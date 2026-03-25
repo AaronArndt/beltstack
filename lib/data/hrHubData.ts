@@ -64,7 +64,7 @@ export const HR_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
   { label: "Startups", href: getHrBestForUrl("startups") },
   { label: "Agencies", href: getHrBestForUrl("agencies") },
   { label: "Global teams", href: getHrBestForUrl("global-teams") },
-  { label: "Remote companies", href: getHrBestForUrl("remote-teams") },
+  { label: "Remote companies", href: "/hr/guides/hr-software-for-remote-teams" },
 ];
 
 export const HR_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
@@ -109,7 +109,7 @@ export const HR_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     title: "Distributed and remote-first companies",
     body: "Async onboarding, equipment workflows, and clear time-off policies reduce friction. Prefer integrations with IT and payroll that match how async you really are.",
     links: [
-      { label: "Best HR for remote teams →", href: getHrBestForUrl("remote-teams") },
+      { label: "Best HR for global & distributed teams →", href: getHrBestForUrl("global-teams") },
       { label: "Rippling review →", href: getHrReviewUrl("rippling") },
     ],
   },

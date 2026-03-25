@@ -48,6 +48,22 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
   );
 }
 
+function CrmIntroExtended() {
+  return (
+    <p>
+      When inbound improves, tag whether deals started from organic search, Map Pack, or paid programs—our{" "}
+      <Link href="/seo-tools" className={linkGreen}>
+        SEO tools hub
+      </Link>{" "}
+      covers visibility measurement, and our{" "}
+      <Link href="/lead-generation/best-lead-generation-tools" className={linkGreen}>
+        best lead generation tools
+      </Link>{" "}
+      roundup covers paid demand while CRM adoption matures.
+    </p>
+  );
+}
+
 function CrmHowToChooseSection() {
   return (
     <>
@@ -63,11 +79,15 @@ function CrmHowToChooseSection() {
         <a href="#by-scenario" className={linkGreen}>
           scenario-based picks
         </a>{" "}
-        when you know your sales motion—or{" "}
+        when you know your sales motion—or start from our{" "}
+        <Link href="/crm/best-for" className={linkGreen}>
+          CRM best-for hub
+        </Link>
+        . Prefer to read first? Use the{" "}
         <a href="#payroll-guides" className={linkGreen}>
           guides
         </a>{" "}
-        to learn evaluation criteria first. Our{" "}
+        section for evaluation criteria. Our{" "}
         <Link href="/crm/best-crm-software" className={linkGreen}>
           full rankings
         </Link>{" "}
@@ -321,6 +341,7 @@ export default function CrmPage() {
         detailsLinkBase: "/crm/review/",
       }}
       comparisonTableIntro="Use the table below to compare pricing, ratings, and standout features across popular CRM platforms."
+      introExtended={<CrmIntroExtended />}
       howToChooseSection={<CrmHowToChooseSection />}
       guidesSection={<CrmGuidesSection />}
       scenarioCustomContent={

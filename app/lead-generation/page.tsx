@@ -121,8 +121,47 @@ function LeadGenIntroExtended() {
   return (
     <p>
       Find pay-per-lead marketplaces, Google Local Services Ads, directory brands, and complementary paid social options.
-      Pair this hub with our <Link href="/website-builders" className={linkGreen}>website builders</Link> and{" "}
-      <Link href="/crm" className={linkGreen}>CRM software</Link> guides when you tighten follow-up and conversion.
+      Start from our{" "}
+      <Link href="/lead-generation/best-lead-generation-tools" className={linkGreen}>
+        best lead generation tools roundup
+      </Link>
+      , then explore{" "}
+      <Link href="/lead-generation/best-for/contractors" className={linkGreen}>
+        lead generation for contractors
+      </Link>
+      ,{" "}
+      <Link href="/lead-generation/best-for/hvac" className={linkGreen}>
+        HVAC
+      </Link>
+      , and{" "}
+      <Link href="/lead-generation/best-for/home-services" className={linkGreen}>
+        home services
+      </Link>{" "}
+      scenario picks. For education first, read{" "}
+      <Link href="/lead-generation/guides/how-to-get-leads-for-contractors" className={linkGreen}>
+        how to get leads for contractors
+      </Link>
+      ,{" "}
+      <Link href="/lead-generation/guides/how-to-choose-a-lead-generation-platform" className={linkGreen}>
+        how to choose a lead generation platform
+      </Link>
+      , and{" "}
+      <Link href="/lead-generation/guides/paid-vs-organic-leads" className={linkGreen}>
+        paid vs organic leads
+      </Link>
+      . Pair this hub with our{" "}
+      <Link href="/seo-tools/best-seo-tools" className={linkGreen}>
+        best SEO tools
+      </Link>{" "}
+      when you are building organic demand alongside paid leads, plus{" "}
+      <Link href="/website-builders/best-for/contractors" className={linkGreen}>
+        website builders for contractors
+      </Link>{" "}
+      and the{" "}
+      <Link href="/crm" className={linkGreen}>
+        CRM software hub
+      </Link>{" "}
+      when you tighten follow-up and conversion.
     </p>
   );
 }

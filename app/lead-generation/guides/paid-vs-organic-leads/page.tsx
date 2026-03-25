@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getLeadGenerationReviewUrl } from "@/lib/routes";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedLeadGenerationResources } from "@/components/guides/RelatedLeadGenerationResources";
 
@@ -20,12 +21,35 @@ export default function PaidVsOrganicLeadsPage() {
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">Paid vs Organic Leads</h1>
-              <p className="mt-3 text-[#57534E]">When to rent demand—and when to invest in inbound assets.</p>
+              <p className="mt-3 text-[#57534E]">
+                When to rent demand—and when to invest in inbound assets. Pair this with our{" "}
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                  best lead generation tools roundup
+                </Link>{" "}
+                for paid-channel shortlists.
+              </p>
               <GuideLastUpdated date="March 24, 2026" />
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
               <p>Paid leads fill this week; organic builds equity over months. Use paid while you strengthen site, reviews, and CRM—but never skip measurement on either side.</p>
-              <p><Link href="/website-builders" className="font-semibold text-[#10B981] hover:underline">Website builders</Link> support organic capture; marketplaces solve immediate pipeline gaps.</p>
+              <p>
+                <Link href="/website-builders/best-website-builders" className="font-semibold text-[#10B981] hover:underline">
+                  Best website builders
+                </Link>{" "}
+                support organic capture; marketplaces and search ads solve immediate pipeline gaps—see{" "}
+                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-[#10B981] hover:underline">
+                  Thumbtack
+                </Link>{" "}
+                and{" "}
+                <Link href={getLeadGenerationReviewUrl("angi")} className="font-semibold text-[#10B981] hover:underline">
+                  Angi
+                </Link>{" "}
+                reviews. For trade context, read{" "}
+                <Link href="/lead-generation/best-for/home-services" className="font-semibold text-[#10B981] hover:underline">
+                  best lead generation for home services
+                </Link>
+                .
+              </p>
             </section>
           </article>
         </div>

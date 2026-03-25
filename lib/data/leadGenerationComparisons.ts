@@ -1,5 +1,6 @@
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 import {
+  getLeadGenerationAlternativeUrl,
   getLeadGenerationBestForUrl,
   getLeadGenerationReviewUrl,
 } from "@/lib/routes";
@@ -88,6 +89,21 @@ const P = {
   },
 } as const;
 
+const ALTERNATIVES_PAGE_SLUGS = new Set<keyof typeof P>(["thumbtack", "angi", "homeadvisor"]);
+
+function alternativesPageLinksForSlugs(slugs: string[]): { label: string; href: string }[] {
+  const out: { label: string; href: string }[] = [];
+  for (const s of slugs) {
+    if (!ALTERNATIVES_PAGE_SLUGS.has(s as keyof typeof P)) continue;
+    const p = P[s as keyof typeof P];
+    out.push({
+      label: `Best ${p.name} alternatives (ranked)`,
+      href: getLeadGenerationAlternativeUrl(s),
+    });
+  }
+  return out;
+}
+
 function build(
   slug: string,
   a: keyof typeof P,
@@ -143,6 +159,7 @@ function build(
         { label: "Thumbtack vs Angi", href: getLeadGenerationCompareUrlFromSlug("thumbtack-vs-angi") },
         { label: "Angi vs HomeAdvisor", href: getLeadGenerationCompareUrlFromSlug("angi-vs-homeadvisor") },
         { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrlFromSlug("google-local-services-ads-vs-yelp-ads") },
+        ...alternativesPageLinksForSlugs([pa.slug, pb.slug]),
       ],
       relevantTradeLinks: LG_TRADE_LINKS,
       ...extra,

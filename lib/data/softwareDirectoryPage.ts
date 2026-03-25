@@ -169,7 +169,11 @@ export const SOFTWARE_DIRECTORY_CATEGORY_GROUPS: SoftwareCategoryGroup[] = [
       },
       {
         name: "SEO Tools",
-        href: "/growth/seo-tools",
+        href: "/seo-tools",
+        secondaryLinks: [
+          { label: "Best SEO tools", href: "/seo-tools/best-seo-tools" },
+          { label: "Compare SEO tools", href: "/seo-tools/compare" },
+        ],
       },
       {
         name: "Lead Generation",
@@ -189,7 +193,11 @@ export const SOFTWARE_DIRECTORY_CATEGORY_GROUPS: SoftwareCategoryGroup[] = [
       },
       {
         name: "Call Tracking",
-        href: "/growth/call-tracking",
+        href: "/call-tracking",
+        secondaryLinks: [
+          { label: "Best call tracking software", href: "/call-tracking/best-call-tracking-software" },
+          { label: "Compare call tracking", href: "/call-tracking/compare" },
+        ],
       },
     ],
   },

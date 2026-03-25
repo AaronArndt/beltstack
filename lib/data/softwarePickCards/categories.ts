@@ -13,4 +13,6 @@ export type SoftwarePickCategory =
   | "time-tracking"
   | "hr"
   | "website-builders"
-  | "lead-generation";
+  | "lead-generation"
+  | "seo-tools"
+  | "call-tracking";

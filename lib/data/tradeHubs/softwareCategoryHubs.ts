@@ -31,6 +31,16 @@ export const SOFTWARE_CATEGORY_HUB: Record<
     label: "Lead generation software hub",
     shortLabel: "Lead generation",
   },
+  "seo-tools": {
+    href: "/seo-tools",
+    label: "SEO tools hub",
+    shortLabel: "SEO tools",
+  },
+  "call-tracking": {
+    href: "/call-tracking",
+    label: "Call tracking hub",
+    shortLabel: "Call tracking",
+  },
 };
 
 export function getSoftwareCategoryHubHref(category: SoftwarePickCategory): string {

@@ -4,6 +4,7 @@
 
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 import {
+  getLeadGenerationAlternativeUrl,
   getLeadGenerationBestForUrl,
   getLeadGenerationCompareUrl,
   getLeadGenerationReviewUrl,
@@ -91,8 +92,9 @@ function rb(tool: string): NonNullable<LeadGenerationReviewData["ratingBreakdown
 }
 
 const RELATED_READING = [
-  { label: "CRM software hub", href: "/crm" },
-  { label: "Website builders hub", href: "/website-builders" },
+  { label: "Best website builders for contractors", href: "/website-builders/best-for/contractors" },
+  { label: "CRM software hub for lead follow-up", href: "/crm" },
+  { label: "Accounting software hub", href: "/accounting" },
 ];
 
 const reviews: Record<string, LeadGenerationReviewData> = {
@@ -139,6 +141,8 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       { q: "How do I reduce bad leads?", a: "Tighten service definitions, dispute out-of-scope matches per policy, and review duplicate rules." },
     ],
     relatedReading: RELATED_READING,
+    alternativesPageHref: getLeadGenerationAlternativeUrl("thumbtack"),
+    alternativesPageLabel: "Best Thumbtack alternatives (2026)",
   },
   angi: {
     ...LG_SHELL,
@@ -181,6 +185,8 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       { q: "Angi vs Thumbtack?", a: "Angi leans brand + bundles; Thumbtack leans flexible pay-per-lead—test both if budget allows." },
     ],
     relatedReading: RELATED_READING,
+    alternativesPageHref: getLeadGenerationAlternativeUrl("angi"),
+    alternativesPageLabel: "Best Angi alternatives (2026)",
   },
   "houzz-pro": {
     ...LG_SHELL,
@@ -196,7 +202,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       "Less ideal for ultra-urgent emergency trades that live on search volume alone.",
     ],
     ratingBreakdown: rb("Houzz Pro"),
-    compareLinks: [{ label: "Houzz Pro vs Thumbtack", href: getLeadGenerationCompareUrl("houzz-pro-vs-thumbtack") }],
+    compareLinks: [
+      { label: "Houzz Pro vs Thumbtack", href: getLeadGenerationCompareUrl("houzz-pro-vs-thumbtack") },
+      { label: "Thumbtack vs Angi", href: getLeadGenerationCompareUrl("thumbtack-vs-angi") },
+    ],
     pros: ["Visual discovery", "Project storytelling", "Pro marketing features"],
     cons: ["Heavier content upkeep", "Not a pure emergency-lead channel", "Subscription + ads stack"],
     bestForEditorial: "Remodelers and designers who win on portfolios.",
@@ -224,7 +233,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     quickVerdict: "Bark broadens categories beyond a single trade vertical in one account.",
     quickVerdictParagraphs: ["Useful for agencies or operators listing multiple services.", "Compare Bark vs Thumbtack when speed-to-launch matters."],
     ratingBreakdown: rb("Bark"),
-    compareLinks: [{ label: "Bark vs Thumbtack", href: getLeadGenerationCompareUrl("bark-vs-thumbtack") }],
+    compareLinks: [
+      { label: "Bark vs Thumbtack", href: getLeadGenerationCompareUrl("bark-vs-thumbtack") },
+      { label: "Angi vs HomeAdvisor", href: getLeadGenerationCompareUrl("angi-vs-homeadvisor") },
+    ],
     pros: ["Multi-category", "Credit model clarity for some teams"],
     cons: ["Quality variance", "Needs tight qualification"],
     bestForEditorial: "Operators testing several service lines or regions.",
@@ -255,7 +267,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       "Dispute bad leads early; competition swings cost per call.",
     ],
     ratingBreakdown: rb("Google Local Services Ads"),
-    compareLinks: [{ label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") }],
+    compareLinks: [
+      { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
+      { label: "Thumbtack vs Angi", href: getLeadGenerationCompareUrl("thumbtack-vs-angi") },
+    ],
     pros: ["High-intent Google traffic", "Screened badge", "Call-focused"],
     cons: ["Eligibility limits", "Auction pressure", "Setup discipline required"],
     bestForEditorial: "Trades eligible in their category with strong phone handling.",
@@ -283,7 +298,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     quickVerdict: "Yelp Ads amplify existing profile strength—weak profiles see weak returns.",
     quickVerdictParagraphs: ["Fix photos, reviews, and Q&A before raising spend.", "Compare to Google LSA with our head-to-head."],
     ratingBreakdown: rb("Yelp Ads"),
-    compareLinks: [{ label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") }],
+    compareLinks: [
+      { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
+      { label: "Angi vs HomeAdvisor", href: getLeadGenerationCompareUrl("angi-vs-homeadvisor") },
+    ],
     pros: ["Captures Yelp searchers", "Familiar local product"],
     cons: ["Platform-dependent", "Needs strong profile"],
     bestForEditorial: "Metro-heavy trades where consumers default to Yelp.",
@@ -316,7 +334,7 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     ratingBreakdown: rb("Facebook Lead Ads"),
     compareLinks: [
       { label: "Thumbtack vs Angi", href: getLeadGenerationCompareUrl("thumbtack-vs-angi") },
-      { label: "Paid vs organic leads (guide)", href: `${GUIDES_HREF}/paid-vs-organic-leads` },
+      { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
     ],
     pros: ["Granular audience control", "Fast form fills", "Scales with creative tests"],
     cons: ["Lead quality depends on targeting", "Needs quick follow-up", "Compliance and privacy care"],
@@ -332,7 +350,11 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Thumbtack", "thumbtack", "Marketplace leads", "/Logos/thumbtack.jpeg"),
     ],
     faqs: [{ q: "Are Facebook leads low quality?", a: "They can be—fix targeting, offers, and sub-5-minute follow-up." }],
-    relatedReading: RELATED_READING,
+    relatedReading: [
+      RELATED_READING[0],
+      RELATED_READING[1],
+      { label: "Paid vs organic leads guide", href: `${GUIDES_HREF}/paid-vs-organic-leads` },
+    ],
   },
   homeadvisor: {
     ...LG_SHELL,
@@ -367,6 +389,8 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     ],
     faqs: [{ q: "Angi vs HomeAdvisor for my zip?", a: "Test modest spend on both with identical scripts; keep the winner on booked-job margin." }],
     relatedReading: RELATED_READING,
+    alternativesPageHref: getLeadGenerationAlternativeUrl("homeadvisor"),
+    alternativesPageLabel: "Best HomeAdvisor alternatives (2026)",
   },
 };
 

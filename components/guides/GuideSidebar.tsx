@@ -17,6 +17,8 @@ type GuideSidebarProps = {
   items: readonly GuideSidebarItem[];
   /** Sticky top offset in px (e.g. below navbar). Default 24. */
   stickyTop?: number;
+  /** Accessible name for the aside; defaults to `title`. */
+  ariaLabel?: string;
 };
 
 function SidebarItem({ item }: { item: GuideSidebarItem }) {
@@ -60,12 +62,12 @@ function SidebarItem({ item }: { item: GuideSidebarItem }) {
   );
 }
 
-export function GuideSidebar({ title, items, stickyTop = 24 }: GuideSidebarProps) {
+export function GuideSidebar({ title, items, stickyTop = 24, ariaLabel }: GuideSidebarProps) {
   return (
     <aside
       className="hidden lg:block lg:sticky lg:self-start lg:w-full"
       style={{ top: `${stickyTop}px` }}
-      aria-label="Recommended payroll software"
+      aria-label={ariaLabel ?? title}
     >
       <div className="border border-neutral-200/60 rounded-lg bg-white p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
         <p className="text-neutral-500 text-xs uppercase tracking-wide mb-1">Related reviews</p>

@@ -5,6 +5,7 @@ export type RelatedProjectManagementResourceItem = { label: string; href: string
 
 const DEFAULT_RELATED_PROJECT_MANAGEMENT_RESOURCES: RelatedProjectManagementResourceItem[] = [
   { label: "Project Management Software Hub", href: "/project-management" },
+  { label: "Best project management software by use case", href: "/project-management/best-for" },
   { label: "Best Project Management Software (2026)", href: "/project-management/best-project-management-software" },
   { label: "Compare Project Management Software", href: "/project-management/compare" },
   { label: "Project Management Guides", href: "/project-management/guides" },

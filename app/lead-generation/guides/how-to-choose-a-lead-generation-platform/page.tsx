@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getLeadGenerationReviewUrl } from "@/lib/routes";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedLeadGenerationResources } from "@/components/guides/RelatedLeadGenerationResources";
 
@@ -20,12 +21,36 @@ export default function HowToChooseLeadGenPlatformPage() {
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">How to Choose a Lead Generation Platform</h1>
-              <p className="mt-3 text-[#57534E]">A decision checklist: intent, ops, disputes, and CPA—not feature laundry lists.</p>
+              <p className="mt-3 text-[#57534E]">
+                A decision checklist: intent, ops, disputes, and CPA—not feature laundry lists. Anchor picks using our{" "}
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                  best lead generation tools (2026) roundup
+                </Link>
+                .
+              </p>
               <GuideLastUpdated date="March 24, 2026" />
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
               <p>1) Map how customers find you today. 2) Verify you can staff inbound. 3) Pilot modest weekly caps. 4) Compare booked-job CPA after refunds—not lead volume.</p>
-              <p><Link href="/lead-generation/compare" className="font-semibold text-[#10B981] hover:underline">Comparison hub</Link></p>
+              <p>
+                Use the{" "}
+                <Link href="/lead-generation/compare" className="font-semibold text-[#10B981] hover:underline">
+                  lead generation comparison hub
+                </Link>
+                , then read{" "}
+                <Link href={getLeadGenerationReviewUrl("homeadvisor")} className="font-semibold text-[#10B981] hover:underline">
+                  HomeAdvisor
+                </Link>{" "}
+                and{" "}
+                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-[#10B981] hover:underline">
+                  Google Local Services Ads
+                </Link>{" "}
+                reviews for the vendors you’re considering. Scenario picks:{" "}
+                <Link href="/lead-generation/best-for/contractors" className="font-semibold text-[#10B981] hover:underline">
+                  contractors
+                </Link>
+                .
+              </p>
             </section>
           </article>
         </div>

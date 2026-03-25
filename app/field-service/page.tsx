@@ -349,11 +349,32 @@ function FieldServicePopularComparisonsSection() {
   );
 }
 
+function FieldServiceIntroExtended() {
+  return (
+    <p>
+      For scenario-based picks, use our{" "}
+      <Link href="/field-service/best-for" className={linkGreen}>
+        field service best-for hub
+      </Link>
+      . Many crews also run{" "}
+      <Link href="/scheduling" className={linkGreen}>
+        scheduling software
+      </Link>{" "}
+      for customer bookings and{" "}
+      <Link href="/crm" className={linkGreen}>
+        CRM software
+      </Link>{" "}
+      to track leads through the job lifecycle.
+    </p>
+  );
+}
+
 export default function FieldServicePage() {
   return (
     <HubPageTemplate
       title="Field Service Management Software for Contractors (2026)"
       intro="Field service management (FSM) software helps contractors and service businesses schedule jobs, dispatch technicians, manage customers, and handle invoicing and payments. HVAC, plumbing, electrical, repair services, and other field teams use FSM tools to replace spreadsheets and paper with one system—so you can see who is going where, what jobs are due, and get paid faster."
+      introExtended={<FieldServiceIntroExtended />}
       breadcrumbLabel="Field Service"
       keyTakeaways={KEY_TAKEAWAYS}
       softwarePickCategory="field-service"

@@ -296,9 +296,9 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
-      { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+      { label: "Seasonal businesses", href: "/payroll/guides/payroll-for-seasonal-businesses" },
     ],
     tradeLinks: [
       { label: "HVAC", href: getPayrollTradeUrl("hvac") },
@@ -541,9 +541,9 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
-      { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+      { label: "Seasonal businesses", href: "/payroll/guides/payroll-for-seasonal-businesses" },
     ],
     relatedReading: [
       { label: "QuickBooks Online (accounting) review", href: "/accounting/review/quickbooks-online" },
@@ -786,9 +786,9 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
-      { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+      { label: "Seasonal businesses", href: "/payroll/guides/payroll-for-seasonal-businesses" },
     ],
     tradeLinks: [
       { label: "HVAC", href: getPayrollTradeUrl("hvac") },
@@ -1023,9 +1023,9 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
-      { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+      { label: "Seasonal businesses", href: "/payroll/guides/payroll-for-seasonal-businesses" },
     ],
     tradeLinks: [
       { label: "HVAC", href: getPayrollTradeUrl("hvac") },
@@ -1259,9 +1259,9 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
-      { label: "Seasonal businesses", href: getPayrollBestForUrl("seasonal-businesses") },
+      { label: "Seasonal businesses", href: "/payroll/guides/payroll-for-seasonal-businesses" },
     ],
     tradeLinks: [
       { label: "HVAC", href: getPayrollTradeUrl("hvac") },
@@ -1424,7 +1424,7 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: [
       { label: "Small business", href: getPayrollBestForUrl("small-business") },
       { label: "1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
-      { label: "Multi-state", href: getPayrollBestForUrl("multi-state") },
+      { label: "Multi-state payroll", href: "/payroll/guides/payroll-for-small-business" },
       { label: "Hourly employees", href: getPayrollBestForUrl("hourly-employees") },
       { label: "Growing businesses", href: getPayrollBestForUrl("growing-businesses") },
     ],

@@ -107,9 +107,11 @@ export const POS_GUIDE_SIDEBAR_ITEMS: PosGuideSidebarItem[] = [
 
 export const POS_GUIDE_RELATED_ITEMS = [
   { label: "POS Software Hub", href: "/pos" },
+  { label: "Best POS software by use case", href: "/pos/best-for" },
   { label: "Best POS Software", href: "/pos/best-pos-software" },
   { label: "Compare POS Software", href: "/pos/compare" },
   { label: "POS Software Guides", href: "/pos/guides" },
+  { label: "Inventory Management Software Hub", href: "/inventory" },
   { label: "Square POS Review", href: getPosReviewUrl("square-pos") },
   { label: "Shopify POS Review", href: getPosReviewUrl("shopify-pos") },
   { label: "Lightspeed POS Review", href: getPosReviewUrl("lightspeed-pos") },

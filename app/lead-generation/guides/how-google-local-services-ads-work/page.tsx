@@ -25,8 +25,30 @@ export default function HowGoogleLsaWorkPage() {
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
               <p>LSA shows a Google Screened listing for eligible categories. You set a weekly budget, receive calls/messages as leads, and can dispute misfires per policy.</p>
-              <p><Link href="/lead-generation/review/google-local-services-ads" className="font-semibold text-[#10B981] hover:underline">Google LSA review</Link> ·{" "}
-                <Link href="/lead-generation/compare/google-local-services-ads-vs-yelp-ads" className="font-semibold text-[#10B981] hover:underline">LSA vs Yelp Ads</Link></p>
+              <p>
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                  Best lead generation tools roundup
+                </Link>{" "}
+                ·{" "}
+                <Link href="/lead-generation/review/google-local-services-ads" className="font-semibold text-[#10B981] hover:underline">
+                  Full Google LSA review
+                </Link>{" "}
+                ·{" "}
+                <Link href="/lead-generation/compare/google-local-services-ads-vs-yelp-ads" className="font-semibold text-[#10B981] hover:underline">
+                  Google LSA vs Yelp Ads comparison
+                </Link>
+              </p>
+              <p>
+                Marketplace contrast:{" "}
+                <Link href="/lead-generation/review/thumbtack" className="font-semibold text-[#10B981] hover:underline">
+                  Thumbtack review
+                </Link>
+                . Trade scenario:{" "}
+                <Link href="/lead-generation/best-for/plumbing" className="font-semibold text-[#10B981] hover:underline">
+                  best lead generation for plumbers
+                </Link>
+                .
+              </p>
             </section>
           </article>
         </div>

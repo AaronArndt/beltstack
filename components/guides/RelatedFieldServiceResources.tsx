@@ -5,6 +5,8 @@ export type RelatedFieldServiceResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_FIELD_SERVICE_RESOURCES: RelatedFieldServiceResourceItem[] = [
   { label: "Field Service Software Hub", href: "/field-service" },
+  { label: "Best field service software by use case", href: "/field-service/best-for" },
+  { label: "Scheduling Software Hub", href: "/scheduling" },
   { label: "Best Field Service Management Software (2026)", href: "/field-service/best-field-service-software" },
   { label: "Compare Field Service Software", href: "/field-service/compare" },
   { label: "Field Service Guides", href: "/field-service/guides" },

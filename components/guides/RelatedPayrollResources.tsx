@@ -12,6 +12,7 @@ const DEFAULT_RELATED_RESOURCES: RelatedResourceItem[] = [
   { label: "Best Payroll Software by Use Case", href: "/payroll/best-for" },
   { label: "Payroll Software Comparisons", href: "/payroll/compare" },
   { label: "Payroll Guides", href: "/payroll/guides" },
+  { label: "Payroll software by trade", href: "/payroll/trades" },
   { label: "Gusto Review", href: getPayrollReviewUrl("gusto") },
   { label: "QuickBooks Payroll Review", href: getPayrollReviewUrl("quickbooks-payroll") },
   { label: "Rippling Review", href: getPayrollReviewUrl("rippling") },

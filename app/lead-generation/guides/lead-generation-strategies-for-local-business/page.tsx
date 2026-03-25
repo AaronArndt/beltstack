@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getLeadGenerationReviewUrl } from "@/lib/routes";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedLeadGenerationResources } from "@/components/guides/RelatedLeadGenerationResources";
 
@@ -28,8 +29,28 @@ export default function LeadGenerationStrategiesPage() {
                 Local businesses should pair short-term paid leads with SEO, reviews, and referral loops. Start with one paid channel you can measure honestly—then add a second only after CPA stabilizes.
               </p>
               <p>
-                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">Best lead generation tools</Link> ·{" "}
-                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-[#10B981] hover:underline">Paid vs organic</Link>
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                  Best lead generation tools
+                </Link>{" "}
+                ·{" "}
+                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-[#10B981] hover:underline">
+                  Paid vs organic leads
+                </Link>{" "}
+                ·{" "}
+                <Link href="/lead-generation/best-for/home-services" className="font-semibold text-[#10B981] hover:underline">
+                  Best lead gen for home services
+                </Link>
+              </p>
+              <p>
+                Product deep dives:{" "}
+                <Link href={getLeadGenerationReviewUrl("yelp-ads")} className="font-semibold text-[#10B981] hover:underline">
+                  Yelp Ads review
+                </Link>{" "}
+                and{" "}
+                <Link href={getLeadGenerationReviewUrl("facebook-lead-ads")} className="font-semibold text-[#10B981] hover:underline">
+                  Facebook Lead Ads review
+                </Link>
+                .
               </p>
             </section>
           </article>

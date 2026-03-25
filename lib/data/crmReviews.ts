@@ -31,7 +31,7 @@ const CRM_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for startups", href: getCrmBestForUrl("startups") },
   { label: "Best for agencies", href: getCrmBestForUrl("agencies") },
   { label: "Best for sales teams", href: getCrmBestForUrl("sales-teams") },
-  { label: "Best for consultants", href: getCrmBestForUrl("consultants") },
+  { label: "Browse CRM by use case", href: "/crm/best-for" },
 ];
 
 const CRM_METHODOLOGY = {

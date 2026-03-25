@@ -16,7 +16,7 @@ import {
 } from "@/lib/data/websiteBuildersHubData";
 import { WEBSITE_BUILDERS_GUIDES } from "@/lib/data/websiteBuildersGuides";
 import { getWebsiteBuildersComparisonBySlug } from "@/lib/data/websiteBuildersComparisons";
-import { getWebsiteBuildersReviewUrl } from "@/lib/routes";
+import { getWebsiteBuildersReviewUrl, getLeadGenerationBestForUrl } from "@/lib/routes";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -43,11 +43,19 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
 function WebsiteBuildersIntroExtended() {
   return (
     <p>
-      Find top picks, comparisons, guides, and trade-specific best-for pages for service-business websites. After launch, most teams pair their site with{" "}
+      Find top picks, comparisons, guides, and our <Link href="/website-builders/best-for" className={linkGreen}>best website builders by use case</Link> hub for scenario-based picks. After launch, use our{" "}
+      <Link href="/seo-tools" className={linkGreen}>
+        SEO tools hub
+      </Link>{" "}
+      to measure queries and grow organic visibility, then pair the site with{" "}
       <Link href="/crm" className={linkGreen}>
         CRM software
       </Link>{" "}
-      for lead follow-up and{" "}
+      for lead follow-up,{" "}
+      <Link href={getLeadGenerationBestForUrl("contractors")} className={linkGreen}>
+        lead generation tools for contractors
+      </Link>{" "}
+      to fill the pipeline, and{" "}
       <Link href="/invoicing" className={linkGreen}>
         invoicing tools
       </Link>{" "}

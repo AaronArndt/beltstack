@@ -5,6 +5,7 @@ export type RelatedInventoryResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_INVENTORY_RESOURCES: RelatedInventoryResourceItem[] = [
   { label: "Inventory Management Software Hub", href: "/inventory" },
+  { label: "Best inventory software by use case", href: "/inventory/best-for" },
   { label: "Best Inventory Management Software (2026)", href: "/inventory/best-inventory-software" },
   { label: "Compare Inventory Software", href: "/inventory/compare" },
   { label: "Inventory Management Guides", href: "/inventory/guides" },

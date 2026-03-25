@@ -8,13 +8,17 @@ const DEFAULT_ITEMS: RelatedLeadGenResourceItem[] = [
   { label: "Best lead generation tools", href: "/lead-generation/best-lead-generation-tools" },
   { label: "Compare lead generation platforms", href: "/lead-generation/compare" },
   { label: "Lead generation guides", href: "/lead-generation/guides" },
+  { label: "Best lead gen tools by use case", href: "/lead-generation/best-for" },
   { label: "Best for contractors", href: "/lead-generation/best-for/contractors" },
+  { label: "How Google Local Services Ads work", href: "/lead-generation/guides/how-google-local-services-ads-work" },
+  { label: "Lead generation strategies for local business", href: "/lead-generation/guides/lead-generation-strategies-for-local-business" },
   { label: "Thumbtack review", href: getLeadGenerationReviewUrl("thumbtack") },
   { label: "Angi review", href: getLeadGenerationReviewUrl("angi") },
   { label: "Google Local Services Ads review", href: getLeadGenerationReviewUrl("google-local-services-ads") },
   { label: "HomeAdvisor review", href: getLeadGenerationReviewUrl("homeadvisor") },
   { label: "How to choose a lead platform", href: "/lead-generation/guides/how-to-choose-a-lead-generation-platform" },
   { label: "Paid vs organic leads", href: "/lead-generation/guides/paid-vs-organic-leads" },
+  { label: "Website builders for contractors (owned demand)", href: "/website-builders/best-for/contractors" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

@@ -82,6 +82,125 @@ export type ComparisonTemplateProps = {
   heroCallouts?: HeroCalloutItem[];
 };
 
+/** Roundup + guides block for comparison footers — one entry per vertical with comparison pages. */
+const COMPARISON_GUIDE_META: Record<
+  string,
+  { navLabel: string; roundupHref: string; roundupLabel: string; sectionTitle: string; guidesLabel: string }
+> = {
+  "/payroll": {
+    navLabel: "Best payroll guides",
+    roundupHref: "/payroll/best-payroll-software",
+    roundupLabel: "Best payroll software (2026) — full roundup",
+    sectionTitle: "Best payroll software guides",
+    guidesLabel: "Payroll guides",
+  },
+  "/accounting": {
+    navLabel: "Best accounting guides",
+    roundupHref: "/accounting/best-accounting-software",
+    roundupLabel: "Best accounting software (2026) — full roundup",
+    sectionTitle: "Best accounting software guides",
+    guidesLabel: "Accounting guides",
+  },
+  "/invoicing": {
+    navLabel: "Best invoicing guides",
+    roundupHref: "/invoicing/best-invoicing-software",
+    roundupLabel: "Best invoicing software (2026) — full roundup",
+    sectionTitle: "Best invoicing software guides",
+    guidesLabel: "Invoicing guides",
+  },
+  "/time-tracking": {
+    navLabel: "Best time tracking guides",
+    roundupHref: "/time-tracking/best-time-tracking-software",
+    roundupLabel: "Best time tracking software (2026) — full roundup",
+    sectionTitle: "Best time tracking software guides",
+    guidesLabel: "Time tracking guides",
+  },
+  "/crm": {
+    navLabel: "Best CRM guides",
+    roundupHref: "/crm/best-crm-software",
+    roundupLabel: "Best CRM software (2026) — full roundup",
+    sectionTitle: "Best CRM software guides",
+    guidesLabel: "CRM guides",
+  },
+  "/project-management": {
+    navLabel: "Best project management guides",
+    roundupHref: "/project-management/best-project-management-software",
+    roundupLabel: "Best project management software (2026) — full roundup",
+    sectionTitle: "Best project management software guides",
+    guidesLabel: "Project management guides",
+  },
+  "/scheduling": {
+    navLabel: "Best scheduling guides",
+    roundupHref: "/scheduling/best-scheduling-software",
+    roundupLabel: "Best scheduling software (2026) — full roundup",
+    sectionTitle: "Best scheduling software guides",
+    guidesLabel: "Scheduling guides",
+  },
+  "/pos": {
+    navLabel: "Best POS guides",
+    roundupHref: "/pos/best-pos-software",
+    roundupLabel: "Best POS software (2026) — full roundup",
+    sectionTitle: "Best POS software guides",
+    guidesLabel: "POS guides",
+  },
+  "/helpdesk": {
+    navLabel: "Best helpdesk guides",
+    roundupHref: "/helpdesk/best-helpdesk-software",
+    roundupLabel: "Best helpdesk software (2026) — full roundup",
+    sectionTitle: "Best helpdesk software guides",
+    guidesLabel: "Helpdesk guides",
+  },
+  "/field-service": {
+    navLabel: "Best field service guides",
+    roundupHref: "/field-service/best-field-service-software",
+    roundupLabel: "Best field service software (2026) — full roundup",
+    sectionTitle: "Best field service software guides",
+    guidesLabel: "Field service guides",
+  },
+  "/hr": {
+    navLabel: "Best HR guides",
+    roundupHref: "/hr/best-hr-software",
+    roundupLabel: "Best HR software (2026) — full roundup",
+    sectionTitle: "Best HR software guides",
+    guidesLabel: "HR guides",
+  },
+  "/inventory": {
+    navLabel: "Best inventory guides",
+    roundupHref: "/inventory/best-inventory-software",
+    roundupLabel: "Best inventory software (2026) — full roundup",
+    sectionTitle: "Best inventory software guides",
+    guidesLabel: "Inventory guides",
+  },
+  "/lead-generation": {
+    navLabel: "Best lead generation guides",
+    roundupHref: "/lead-generation/best-lead-generation-tools",
+    roundupLabel: "Best lead generation tools (2026) — full roundup",
+    sectionTitle: "Best lead generation guides",
+    guidesLabel: "Lead generation guides",
+  },
+  "/website-builders": {
+    navLabel: "Best website builder guides",
+    roundupHref: "/website-builders/best-website-builders",
+    roundupLabel: "Best website builders (2026) — full roundup",
+    sectionTitle: "Best website builder guides",
+    guidesLabel: "Website builder guides",
+  },
+  "/seo-tools": {
+    navLabel: "Best SEO tools guides",
+    roundupHref: "/seo-tools/best-seo-tools",
+    roundupLabel: "Best SEO tools (2026) — full roundup",
+    sectionTitle: "Best SEO tools guides",
+    guidesLabel: "SEO tools guides",
+  },
+  "/call-tracking": {
+    navLabel: "Best call tracking guides",
+    roundupHref: "/call-tracking/best-call-tracking-software",
+    roundupLabel: "Best call tracking software (2026) — full roundup",
+    sectionTitle: "Best call tracking guides",
+    guidesLabel: "Call tracking guides",
+  },
+};
+
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
@@ -166,13 +285,7 @@ export function ComparisonTemplate({
 
   const hasDecisionGuide = (decisionGuideA != null && decisionGuideA.length > 0) || (decisionGuideB != null && decisionGuideB.length > 0);
   const hasRatingsComparison = ratingsComparison != null && ratingsComparison.length > 0;
-  const isAccounting = categoryHref === "/accounting";
-  const isInvoicing = categoryHref === "/invoicing";
-  const isTimeTracking = categoryHref === "/time-tracking";
-  const isCrm = categoryHref === "/crm";
-  const isProjectManagement = categoryHref === "/project-management";
-  const isScheduling = categoryHref === "/scheduling";
-  const isLeadGeneration = categoryHref === "/lead-generation";
+  const guideSection = COMPARISON_GUIDE_META[categoryHref] ?? COMPARISON_GUIDE_META["/payroll"];
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
@@ -184,21 +297,7 @@ export function ComparisonTemplate({
     { label: "Alternatives", href: "#alternatives" },
     { label: "Read full reviews", href: "#read-full-reviews" },
     {
-      label: isAccounting
-        ? "Best accounting guides"
-        : isInvoicing
-        ? "Best invoicing guides"
-        : isTimeTracking
-        ? "Best time tracking guides"
-        : isCrm
-        ? "Best CRM guides"
-        : isProjectManagement
-        ? "Best project management guides"
-        : isScheduling
-        ? "Best scheduling guides"
-        : isLeadGeneration
-        ? "Best lead generation guides"
-        : "Best payroll guides",
+      label: guideSection.navLabel,
       href: "#best-payroll-guides",
     },
     { label: "FAQs", href: "#faqs" },
@@ -582,100 +681,15 @@ export function ComparisonTemplate({
 
                 {/* Best [category] software guides — roundup + compare hub + guides + contextual trade links (3–6) */}
                 {(() => {
-                  const isAccounting = categoryHref === "/accounting";
-                  const isInvoicing = categoryHref === "/invoicing";
-                  const isTimeTracking = categoryHref === "/time-tracking";
-                  const isCrm = categoryHref === "/crm";
-                  const isProjectManagement = categoryHref === "/project-management";
-                  const isScheduling = categoryHref === "/scheduling";
-                  const isPos = categoryHref === "/pos";
-                  const isHelpdesk = categoryHref === "/helpdesk";
-                  const isLeadGeneration = categoryHref === "/lead-generation";
-                  const roundupHref = isAccounting
-                    ? "/accounting/best-accounting-software"
-                    : isInvoicing
-                    ? "/invoicing/best-invoicing-software"
-                    : isTimeTracking
-                    ? "/time-tracking/best-time-tracking-software"
-                    : isCrm
-                    ? "/crm/best-crm-software"
-                    : isProjectManagement
-                    ? "/project-management/best-project-management-software"
-                    : isScheduling
-                    ? "/scheduling/best-scheduling-software"
-                    : isPos
-                    ? "/pos/best-pos-software"
-                    : isHelpdesk
-                    ? "/helpdesk/best-helpdesk-software"
-                    : isLeadGeneration
-                    ? "/lead-generation/best-lead-generation-tools"
-                    : "/payroll/best-payroll-software";
-                  const roundupLabel = isAccounting
-                    ? "Best accounting software (2026) — full roundup"
-                    : isInvoicing
-                    ? "Best invoicing software (2026) — full roundup"
-                    : isTimeTracking
-                    ? "Best time tracking software (2026) — full roundup"
-                    : isCrm
-                    ? "Best CRM software (2026) — full roundup"
-                    : isProjectManagement
-                    ? "Best project management software (2026) — full roundup"
-                    : isScheduling
-                    ? "Best scheduling software (2026) — full roundup"
-                    : isPos
-                    ? "Best POS software (2026) — full roundup"
-                    : isHelpdesk
-                    ? "Best helpdesk software (2026) — full roundup"
-                    : isLeadGeneration
-                    ? "Best lead generation tools (2026) — full roundup"
-                    : "Best payroll software (2026) — full roundup";
-                  const sectionTitle = isAccounting
-                    ? "Best accounting software guides"
-                    : isInvoicing
-                    ? "Best invoicing software guides"
-                    : isTimeTracking
-                    ? "Best time tracking software guides"
-                    : isCrm
-                    ? "Best CRM software guides"
-                    : isProjectManagement
-                    ? "Best project management software guides"
-                    : isScheduling
-                    ? "Best scheduling software guides"
-                    : isPos
-                    ? "Best POS software guides"
-                    : isHelpdesk
-                    ? "Best helpdesk software guides"
-                    : isLeadGeneration
-                    ? "Best lead generation guides"
-                    : "Best payroll software guides";
                   const compareHubHref = `${categoryHref}/compare`;
                   const guidesHref = `${categoryHref}/guides`;
-                  const guidesLabel = isAccounting
-                    ? "Accounting guides"
-                    : isInvoicing
-                    ? "Invoicing guides"
-                    : isTimeTracking
-                    ? "Time tracking guides"
-                    : isCrm
-                    ? "CRM guides"
-                    : isProjectManagement
-                    ? "Project management guides"
-                    : isScheduling
-                    ? "Scheduling guides"
-                    : isPos
-                    ? "POS guides"
-                    : isHelpdesk
-                    ? "Helpdesk guides"
-                    : isLeadGeneration
-                    ? "Lead generation guides"
-                    : "Payroll guides";
                   return (
                     <section id="best-payroll-guides" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                      <SectionTitle sub="Find the right fit by use case or trade.">{sectionTitle}</SectionTitle>
+                      <SectionTitle sub="Find the right fit by use case or trade.">{guideSection.sectionTitle}</SectionTitle>
                       <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                         <li>
-                          <Link href={roundupHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                            {roundupLabel}
+                          <Link href={guideSection.roundupHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                            {guideSection.roundupLabel}
                           </Link>
                         </li>
                         <li>
@@ -685,7 +699,7 @@ export function ComparisonTemplate({
                         </li>
                         <li>
                           <Link href={guidesHref} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                            {guidesLabel}
+                            {guideSection.guidesLabel}
                           </Link>
                         </li>
                         {relevantTradeLinks != null && relevantTradeLinks.length > 0
@@ -696,14 +710,7 @@ export function ComparisonTemplate({
                                 </Link>
                               </li>
                             ))
-                          : !isAccounting &&
-                            !isInvoicing &&
-                            !isCrm &&
-                            !isTimeTracking &&
-                            !isProjectManagement &&
-                            !isScheduling &&
-                            !isPos &&
-                            !isLeadGeneration && (
+                          : categoryHref === "/payroll" && (
                               <>
                                 <li>
                                   <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -737,7 +744,7 @@ export function ComparisonTemplate({
                                 </li>
                               </>
                             )}
-                        {isAccounting && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                        {categoryHref === "/accounting" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
                               <Link href="/accounting/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -756,7 +763,7 @@ export function ComparisonTemplate({
                             </li>
                           </>
                         )}
-                        {isInvoicing && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                        {categoryHref === "/invoicing" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
                               <Link href="/invoicing/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -785,7 +792,7 @@ export function ComparisonTemplate({
                             </li>
                           </>
                         )}
-                        {isLeadGeneration && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                        {categoryHref === "/lead-generation" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
                               <Link
@@ -821,7 +828,7 @@ export function ComparisonTemplate({
                             </li>
                           </>
                         )}
-                        {isCrm && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                        {categoryHref === "/crm" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
                               <Link href="/crm/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -846,6 +853,182 @@ export function ComparisonTemplate({
                             <li>
                               <Link href="/crm/best-for/sales-teams" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                                 Best for sales teams
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/lead-generation/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Lead generation tools for contractors
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/website-builders" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/website-builders/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best website builders for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/website-builders/best-for/small-business"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best website builders for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/website-builders/best-for/home-services"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best website builders for home services
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/seo-tools" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/seo-tools/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best SEO tools for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/seo-tools/best-for/local-seo"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best SEO tools for local SEO
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/seo-tools/best-for/small-business"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best SEO tools for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/seo-tools/best-for/hvac"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best SEO tools for HVAC
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/call-tracking" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/call-tracking/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best call tracking for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/call-tracking/best-for/small-business"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best call tracking for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/call-tracking/best-for/home-services"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best call tracking for home services
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/call-tracking/best-for/hvac"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best call tracking for HVAC
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/field-service" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/field-service/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best field service software for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/field-service/best-for/hvac" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for HVAC
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/field-service/best-for/plumbing" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for plumbing
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/field-service/best-for/electricians"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best for electricians
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/hr" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link href="/hr/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best HR software for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/hr/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for freelancers
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/hr/best-for/startups" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for startups
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/inventory" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link href="/inventory/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best inventory software for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/inventory/best-for/ecommerce" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for ecommerce
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/inventory/best-for/retail" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                Best for retail
                               </Link>
                             </li>
                           </>

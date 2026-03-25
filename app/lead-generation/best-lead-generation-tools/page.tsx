@@ -15,7 +15,7 @@ import {
   MORE_LEAD_GEN_OPTIONS,
 } from "@/lib/data/leadGenerationBestLeadGenerationTools";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
-import { getLeadGenerationReviewUrl } from "@/lib/routes";
+import { getLeadGenerationAlternativeUrl, getLeadGenerationReviewUrl } from "@/lib/routes";
 import { getSoftwarePick, getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -77,8 +77,63 @@ export default function BestLeadGenerationToolsPage() {
               Pair these picks with our{" "}
               <Link href="/lead-generation/compare" className={linkGreen}>
                 lead generation comparisons
+              </Link>
+              , the{" "}
+              <Link href="/lead-generation/best-for" className={linkGreen}>
+                best lead generation tools by scenario
+              </Link>
+              , and{" "}
+              <Link href="/lead-generation/guides" className={linkGreen}>
+                lead generation guides
               </Link>{" "}
-              and trade-specific best-for guides when you refine spend.
+              when you refine spend.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              Read full reviews for{" "}
+              <Link href={getLeadGenerationReviewUrl("thumbtack")} className={linkGreen}>
+                Thumbtack
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("angi")} className={linkGreen}>
+                Angi
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className={linkGreen}>
+                Google Local Services Ads
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("houzz-pro")} className={linkGreen}>
+                Houzz Pro
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("bark")} className={linkGreen}>
+                Bark
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("homeadvisor")} className={linkGreen}>
+                HomeAdvisor
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationReviewUrl("yelp-ads")} className={linkGreen}>
+                Yelp Ads
+              </Link>
+              , and{" "}
+              <Link href={getLeadGenerationReviewUrl("facebook-lead-ads")} className={linkGreen}>
+                Facebook Lead Ads
+              </Link>
+              . For ranked swap lists, see{" "}
+              <Link href={getLeadGenerationAlternativeUrl("thumbtack")} className={linkGreen}>
+                best Thumbtack alternatives
+              </Link>
+              ,{" "}
+              <Link href={getLeadGenerationAlternativeUrl("angi")} className={linkGreen}>
+                best Angi alternatives
+              </Link>
+              , and{" "}
+              <Link href={getLeadGenerationAlternativeUrl("homeadvisor")} className={linkGreen}>
+                best HomeAdvisor alternatives
+              </Link>
+              .
             </p>
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">

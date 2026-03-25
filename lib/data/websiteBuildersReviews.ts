@@ -60,6 +60,10 @@ const RELATED_SERVICE_SITE = {
   label: "How to build a service business website",
   href: "/website-builders/guides/how-to-build-a-service-business-website",
 };
+const RELATED_LEAD_GEN_HUB = {
+  label: "Lead generation tools hub (paid demand)",
+  href: "/lead-generation",
+};
 
 const logo = getWebsiteBuilderLogoSrc;
 
@@ -255,7 +259,7 @@ const reviews: Record<string, WebsiteBuilderReviewData> = {
       { label: "GoDaddy vs Wix", href: getWebsiteBuildersCompareUrl("godaddy-website-builder-vs-wix") },
       { label: "Hostinger vs Wix", href: getWebsiteBuildersCompareUrl("hostinger-website-builder-vs-wix") },
     ],
-    relatedReading: [RELATED_CHOOSE, RELATED_CONTRACTOR_FEATURES, RELATED_LOCAL_SEO, RELATED_SERVICE_SITE],
+    relatedReading: [RELATED_CHOOSE, RELATED_CONTRACTOR_FEATURES, RELATED_LOCAL_SEO, RELATED_LEAD_GEN_HUB],
     alternativesPageHref: getWebsiteBuildersAlternativeUrl("wix"),
     alternativesPageLabel: "Best Wix alternatives",
   },
@@ -407,7 +411,7 @@ const reviews: Record<string, WebsiteBuilderReviewData> = {
       { label: "Wix vs Squarespace", href: getWebsiteBuildersCompareUrl("wix-vs-squarespace") },
       { label: "Squarespace vs Shopify", href: getWebsiteBuildersCompareUrl("squarespace-vs-shopify") },
     ],
-    relatedReading: [RELATED_CHOOSE, RELATED_VS_WP, RELATED_CONTRACTOR_FEATURES, RELATED_SERVICE_SITE],
+    relatedReading: [RELATED_CHOOSE, RELATED_VS_WP, RELATED_CONTRACTOR_FEATURES, RELATED_LEAD_GEN_HUB],
     alternativesPageHref: getWebsiteBuildersAlternativeUrl("squarespace"),
     alternativesPageLabel: "Best Squarespace alternatives",
   },
@@ -548,7 +552,7 @@ const reviews: Record<string, WebsiteBuilderReviewData> = {
       { label: "Wix vs Shopify", href: getWebsiteBuildersCompareUrl("wix-vs-shopify") },
       { label: "Squarespace vs Shopify", href: getWebsiteBuildersCompareUrl("squarespace-vs-shopify") },
     ],
-    relatedReading: [RELATED_CHOOSE, RELATED_SERVICE_SITE, RELATED_LOCAL_SEO, RELATED_VS_WP],
+    relatedReading: [RELATED_CHOOSE, RELATED_SERVICE_SITE, RELATED_LOCAL_SEO, RELATED_LEAD_GEN_HUB],
     alternativesPageHref: getWebsiteBuildersAlternativeUrl("shopify"),
     alternativesPageLabel: "Best Shopify alternatives",
   },

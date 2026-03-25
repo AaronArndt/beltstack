@@ -120,7 +120,7 @@ const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-no
 function PayrollIntroExtended() {
   return (
     <p>
-      Find top picks, side-by-side comparisons, payroll guides, and industry-specific recommendations. Businesses that invoice clients may also use <Link href="/invoicing" className={linkGreen}>invoicing software</Link> like <Link href="/invoicing/review/freshbooks" className={linkGreen}>FreshBooks</Link> for billing.
+      Find top picks, side-by-side comparisons, payroll guides, and industry-specific recommendations. Browse <Link href="/payroll/trades" className={linkGreen}>payroll software by trade</Link> for a quick industry entry, or use <Link href="/payroll/best-for" className={linkGreen}>best payroll software by use case</Link> when you know your scenario. Businesses that invoice clients may also use <Link href="/invoicing" className={linkGreen}>invoicing software</Link> like <Link href="/invoicing/review/freshbooks" className={linkGreen}>FreshBooks</Link> for billing.
     </p>
   );
 }

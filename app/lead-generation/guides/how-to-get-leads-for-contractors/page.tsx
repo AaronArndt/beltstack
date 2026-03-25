@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getLeadGenerationReviewUrl } from "@/lib/routes";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedLeadGenerationResources } from "@/components/guides/RelatedLeadGenerationResources";
@@ -30,7 +31,11 @@ export default function HowToGetLeadsForContractorsPage() {
             <section className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Get Leads for Contractors</h1>
               <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-                A practical path for trade businesses evaluating marketplaces, Google Local Services Ads, and complementary channels.
+                A practical path for trade businesses evaluating marketplaces, Google Local Services Ads, and complementary channels. Use our{" "}
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                  best lead generation tools roundup
+                </Link>{" "}
+                for ranked picks, then dive into product reviews when you shortlist.
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </section>
@@ -40,8 +45,11 @@ export default function HowToGetLeadsForContractorsPage() {
                 Build a simple SLA (phone + SMS), then test one marketplace and one search channel where eligible.
               </p>
               <p>
-                Use our <Link href="/lead-generation/best-for/contractors" className="font-semibold text-[#10B981] hover:underline">best for contractors</Link> picks and{" "}
-                <Link href="/lead-generation/compare/thumbtack-vs-angi" className="font-semibold text-[#10B981] hover:underline">Thumbtack vs Angi</Link> comparison when you shortlist.
+                Use our <Link href="/lead-generation/best-for/contractors" className="font-semibold text-[#10B981] hover:underline">best lead generation tools for contractors</Link> picks, the{" "}
+                <Link href="/lead-generation/compare/thumbtack-vs-angi" className="font-semibold text-[#10B981] hover:underline">Thumbtack vs Angi comparison</Link>, and full reviews such as{" "}
+                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-[#10B981] hover:underline">Thumbtack</Link> and{" "}
+                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-[#10B981] hover:underline">Google Local Services Ads</Link> when you shortlist.
+                Once calls flow, tighten follow-up with our <Link href="/crm" className="font-semibold text-[#10B981] hover:underline">CRM software hub</Link>.
               </p>
             </section>
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

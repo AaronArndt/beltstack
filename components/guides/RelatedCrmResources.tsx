@@ -5,6 +5,8 @@ export type RelatedCrmResourceItem = { label: string; href: string };
 
 const DEFAULT_RELATED_CRM_RESOURCES: RelatedCrmResourceItem[] = [
   { label: "CRM Software Hub", href: "/crm" },
+  { label: "Best CRM software by use case", href: "/crm/best-for" },
+  { label: "Lead generation hub", href: "/lead-generation" },
   { label: "Payroll Software Hub", href: "/payroll" },
   { label: "Accounting Software Hub", href: "/accounting" },
   { label: "Invoicing Software Hub", href: "/invoicing" },

@@ -42,6 +42,12 @@ import {
   getLeadGenerationAlternativeUrl,
   getLeadGenerationCompareUrl,
   getLeadGenerationReviewUrl,
+  getSeoToolsAlternativeUrl,
+  getSeoToolsCompareUrl,
+  getSeoToolsReviewUrl,
+  getCallTrackingAlternativeUrl,
+  getCallTrackingCompareUrl,
+  getCallTrackingReviewUrl,
 } from "@/lib/routes";
 
 export type SoftwarePickCategoryRouteHelpers = {
@@ -137,6 +143,18 @@ export function getSoftwarePickCategoryRoutes(
         getReviewUrl: getLeadGenerationReviewUrl,
         getCompareUrl: getLeadGenerationCompareUrl,
         getAlternativeUrl: getLeadGenerationAlternativeUrl,
+      };
+    case "seo-tools":
+      return {
+        getReviewUrl: getSeoToolsReviewUrl,
+        getCompareUrl: getSeoToolsCompareUrl,
+        getAlternativeUrl: getSeoToolsAlternativeUrl,
+      };
+    case "call-tracking":
+      return {
+        getReviewUrl: getCallTrackingReviewUrl,
+        getCompareUrl: getCallTrackingCompareUrl,
+        getAlternativeUrl: getCallTrackingAlternativeUrl,
       };
     default: {
       const _exhaustive: never = category;

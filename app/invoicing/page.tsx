@@ -123,7 +123,15 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
 function InvoicingIntroExtended() {
   return (
     <p>
-      Invoicing software helps businesses create invoices, track payments, manage recurring billing, and stay organized without relying on spreadsheets. This page compares the best invoicing tools for different business types and workflows.
+      Invoicing software helps businesses create invoices, track payments, manage recurring billing, and stay organized without relying on spreadsheets. This page compares the best invoicing tools for different business types and workflows. Browse{" "}
+      <Link href="/invoicing/best-for" className={linkGreen}>
+        best invoicing software by use case
+      </Link>{" "}
+      for a faster shortlist, and pair it with{" "}
+      <Link href="/accounting" className={linkGreen}>
+        accounting software
+      </Link>{" "}
+      when you need full books beyond billing.
     </p>
   );
 }

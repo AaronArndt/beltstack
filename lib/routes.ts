@@ -391,3 +391,55 @@ export function getLeadGenerationBestForUrl(scenarioSlug: string): string {
 export function getLeadGenerationAlternativeUrl(slug: string): string {
   return `/lead-generation/alternatives/${slug}`;
 }
+
+// ——— SEO Tools ———
+
+/** SEO tools review detail page: /seo-tools/review/[slug] */
+export function getSeoToolsReviewUrl(slug: string): string {
+  return `/seo-tools/review/${slug}`;
+}
+
+/** SEO tools hub */
+export const SEO_TOOLS_HUB_URL = "/seo-tools" as const;
+
+/** SEO tools compare page (optional comparison slug) */
+export function getSeoToolsCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/seo-tools/compare/${comparisonSlug}`;
+  return "/seo-tools/compare";
+}
+
+/** SEO tools best-for scenario */
+export function getSeoToolsBestForUrl(scenarioSlug: string): string {
+  return `/seo-tools/best-for/${scenarioSlug}`;
+}
+
+/** SEO tools alternatives page: /seo-tools/alternatives/[slug] */
+export function getSeoToolsAlternativeUrl(slug: string): string {
+  return `/seo-tools/alternatives/${slug}`;
+}
+
+// ——— Call Tracking ———
+
+/** Call tracking review detail page: /call-tracking/review/[slug] */
+export function getCallTrackingReviewUrl(slug: string): string {
+  return `/call-tracking/review/${slug}`;
+}
+
+/** Call tracking hub */
+export const CALL_TRACKING_HUB_URL = "/call-tracking" as const;
+
+/** Call tracking compare page (optional comparison slug) */
+export function getCallTrackingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/call-tracking/compare/${comparisonSlug}`;
+  return "/call-tracking/compare";
+}
+
+/** Call tracking best-for scenario */
+export function getCallTrackingBestForUrl(scenarioSlug: string): string {
+  return `/call-tracking/best-for/${scenarioSlug}`;
+}
+
+/** Call tracking alternatives page: /call-tracking/alternatives/[slug] */
+export function getCallTrackingAlternativeUrl(slug: string): string {
+  return `/call-tracking/alternatives/${slug}`;
+}
