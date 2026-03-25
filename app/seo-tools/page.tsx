@@ -121,6 +121,10 @@ function SeoToolsIntroExtended() {
       <Link href="/lead-generation" className={linkGreen}>
         lead generation hub
       </Link>
+      ,{" "}
+      <Link href="/email-marketing" className={linkGreen}>
+        email marketing
+      </Link>
       , and{" "}
       <Link href="/crm" className={linkGreen}>
         CRM software hub

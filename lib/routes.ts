@@ -443,3 +443,55 @@ export function getCallTrackingBestForUrl(scenarioSlug: string): string {
 export function getCallTrackingAlternativeUrl(slug: string): string {
   return `/call-tracking/alternatives/${slug}`;
 }
+
+// ——— Reputation Management ———
+
+/** Reputation management review detail page: /reputation-management/review/[slug] */
+export function getReputationManagementReviewUrl(slug: string): string {
+  return `/reputation-management/review/${slug}`;
+}
+
+/** Reputation management hub */
+export const REPUTATION_MANAGEMENT_HUB_URL = "/reputation-management" as const;
+
+/** Reputation management compare page (optional comparison slug) */
+export function getReputationManagementCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/reputation-management/compare/${comparisonSlug}`;
+  return "/reputation-management/compare";
+}
+
+/** Reputation management best-for scenario */
+export function getReputationManagementBestForUrl(scenarioSlug: string): string {
+  return `/reputation-management/best-for/${scenarioSlug}`;
+}
+
+/** Reputation management alternatives page: /reputation-management/alternatives/[slug] */
+export function getReputationManagementAlternativeUrl(slug: string): string {
+  return `/reputation-management/alternatives/${slug}`;
+}
+
+// ——— Email Marketing ———
+
+/** Email marketing review detail page: /email-marketing/review/[slug] */
+export function getEmailMarketingReviewUrl(slug: string): string {
+  return `/email-marketing/review/${slug}`;
+}
+
+/** Email marketing hub */
+export const EMAIL_MARKETING_HUB_URL = "/email-marketing" as const;
+
+/** Email marketing compare page (optional comparison slug) */
+export function getEmailMarketingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/email-marketing/compare/${comparisonSlug}`;
+  return "/email-marketing/compare";
+}
+
+/** Email marketing best-for scenario */
+export function getEmailMarketingBestForUrl(scenarioSlug: string): string {
+  return `/email-marketing/best-for/${scenarioSlug}`;
+}
+
+/** Email marketing alternatives page: /email-marketing/alternatives/[slug] */
+export function getEmailMarketingAlternativeUrl(slug: string): string {
+  return `/email-marketing/alternatives/${slug}`;
+}

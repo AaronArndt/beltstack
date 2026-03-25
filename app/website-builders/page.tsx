@@ -55,7 +55,11 @@ function WebsiteBuildersIntroExtended() {
       <Link href={getLeadGenerationBestForUrl("contractors")} className={linkGreen}>
         lead generation tools for contractors
       </Link>{" "}
-      to fill the pipeline, and{" "}
+      to fill the pipeline,{" "}
+      <Link href="/email-marketing" className={linkGreen}>
+        email marketing software
+      </Link>{" "}
+      for subscriber lists and follow-up, and{" "}
       <Link href="/invoicing" className={linkGreen}>
         invoicing tools
       </Link>{" "}

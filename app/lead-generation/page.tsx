@@ -161,7 +161,11 @@ function LeadGenIntroExtended() {
       <Link href="/crm" className={linkGreen}>
         CRM software hub
       </Link>{" "}
-      when you tighten follow-up and conversion.
+      when you tighten follow-up and conversion. Email keeps slower inquiries warm—see our{" "}
+      <Link href="/email-marketing/best-email-marketing-software" className={linkGreen}>
+        best email marketing software
+      </Link>{" "}
+      roundup for tools that pair with call-first workflows.
     </p>
   );
 }

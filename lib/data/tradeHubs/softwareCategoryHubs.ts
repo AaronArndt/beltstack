@@ -41,6 +41,16 @@ export const SOFTWARE_CATEGORY_HUB: Record<
     label: "Call tracking hub",
     shortLabel: "Call tracking",
   },
+  "reputation-management": {
+    href: "/reputation-management",
+    label: "Reputation management hub",
+    shortLabel: "Reputation management",
+  },
+  "email-marketing": {
+    href: "/email-marketing",
+    label: "Email marketing hub",
+    shortLabel: "Email marketing",
+  },
 };
 
 export function getSoftwareCategoryHubHref(category: SoftwarePickCategory): string {

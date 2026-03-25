@@ -59,7 +59,11 @@ function CrmIntroExtended() {
       <Link href="/lead-generation/best-lead-generation-tools" className={linkGreen}>
         best lead generation tools
       </Link>{" "}
-      roundup covers paid demand while CRM adoption matures.
+      roundup covers paid demand while CRM adoption matures. Layer campaigns on the same contact records using our{" "}
+      <Link href="/email-marketing" className={linkGreen}>
+        email marketing hub
+      </Link>{" "}
+      so nurture stays aligned with pipeline stages and consent.
     </p>
   );
 }

@@ -199,6 +199,13 @@ const COMPARISON_GUIDE_META: Record<
     sectionTitle: "Best call tracking guides",
     guidesLabel: "Call tracking guides",
   },
+  "/email-marketing": {
+    navLabel: "Best email marketing guides",
+    roundupHref: "/email-marketing/best-email-marketing-software",
+    roundupLabel: "Best email marketing software (2026) — full roundup",
+    sectionTitle: "Best email marketing guides",
+    guidesLabel: "Email marketing guides",
+  },
 };
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

@@ -25,6 +25,14 @@ import {
   TOP_PICKS as CALL_TRACKING_TOP_PICKS,
   CALL_TRACKING_REGISTRY_SUPPLEMENT,
 } from "@/lib/data/callTrackingBestCallTrackingSoftware";
+import {
+  TOP_PICKS as REPUTATION_MANAGEMENT_TOP_PICKS,
+  REPUTATION_MANAGEMENT_REGISTRY_SUPPLEMENT,
+} from "@/lib/data/reputationManagementBestReputationManagementSoftware";
+import {
+  TOP_PICKS as EMAIL_MARKETING_TOP_PICKS,
+  EMAIL_MARKETING_REGISTRY_SUPPLEMENT,
+} from "@/lib/data/emailMarketingBestEmailMarketingSoftware";
 
 function toMap(picks: SoftwarePickCardContent[]): Map<string, SoftwarePickCardContent> {
   return new Map(picks.map((p) => [p.slug, p]));
@@ -47,6 +55,11 @@ const REGISTRY: Record<SoftwarePickCategory, Map<string, SoftwarePickCardContent
   "lead-generation": toMap([...LEAD_GENERATION_TOP_PICKS, ...LEAD_GENERATION_REGISTRY_SUPPLEMENT]),
   "seo-tools": toMap([...SEO_TOOLS_TOP_PICKS, ...SEO_TOOLS_REGISTRY_SUPPLEMENT]),
   "call-tracking": toMap([...CALL_TRACKING_TOP_PICKS, ...CALL_TRACKING_REGISTRY_SUPPLEMENT]),
+  "reputation-management": toMap([
+    ...REPUTATION_MANAGEMENT_TOP_PICKS,
+    ...REPUTATION_MANAGEMENT_REGISTRY_SUPPLEMENT,
+  ]),
+  "email-marketing": toMap([...EMAIL_MARKETING_TOP_PICKS, ...EMAIL_MARKETING_REGISTRY_SUPPLEMENT]),
 };
 
 export function getSoftwarePick(

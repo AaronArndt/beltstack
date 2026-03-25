@@ -48,6 +48,12 @@ import {
   getCallTrackingAlternativeUrl,
   getCallTrackingCompareUrl,
   getCallTrackingReviewUrl,
+  getReputationManagementAlternativeUrl,
+  getReputationManagementCompareUrl,
+  getReputationManagementReviewUrl,
+  getEmailMarketingAlternativeUrl,
+  getEmailMarketingCompareUrl,
+  getEmailMarketingReviewUrl,
 } from "@/lib/routes";
 
 export type SoftwarePickCategoryRouteHelpers = {
@@ -155,6 +161,18 @@ export function getSoftwarePickCategoryRoutes(
         getReviewUrl: getCallTrackingReviewUrl,
         getCompareUrl: getCallTrackingCompareUrl,
         getAlternativeUrl: getCallTrackingAlternativeUrl,
+      };
+    case "reputation-management":
+      return {
+        getReviewUrl: getReputationManagementReviewUrl,
+        getCompareUrl: getReputationManagementCompareUrl,
+        getAlternativeUrl: getReputationManagementAlternativeUrl,
+      };
+    case "email-marketing":
+      return {
+        getReviewUrl: getEmailMarketingReviewUrl,
+        getCompareUrl: getEmailMarketingCompareUrl,
+        getAlternativeUrl: getEmailMarketingAlternativeUrl,
       };
     default: {
       const _exhaustive: never = category;

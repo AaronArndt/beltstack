@@ -59,6 +59,10 @@ import {
   getSeoToolsAlternativeUrl,
   getCallTrackingBestForUrl,
   getCallTrackingAlternativeUrl,
+  getReputationManagementBestForUrl,
+  getReputationManagementAlternativeUrl,
+  getEmailMarketingBestForUrl,
+  getEmailMarketingAlternativeUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
@@ -99,6 +103,14 @@ import { getCallTrackingComparisonSlugs } from "@/lib/data/callTrackingCompariso
 import { getCallTrackingReviewSlugs } from "@/lib/data/callTrackingReviews";
 import { getCallTrackingAlternativesSlugs } from "@/lib/data/callTrackingAlternatives";
 import { CALL_TRACKING_GUIDES } from "@/lib/data/callTrackingGuides";
+import { getReputationManagementComparisonSlugs } from "@/lib/data/reputationManagementComparisons";
+import { getReputationManagementReviewSlugs } from "@/lib/data/reputationManagementReviews";
+import { getReputationManagementAlternativesSlugs } from "@/lib/data/reputationManagementAlternatives";
+import { REPUTATION_MANAGEMENT_GUIDES } from "@/lib/data/reputationManagementGuides";
+import { getEmailMarketingComparisonSlugs } from "@/lib/data/emailMarketingComparisons";
+import { getEmailMarketingReviewSlugs } from "@/lib/data/emailMarketingReviews";
+import { getEmailMarketingAlternativesSlugs } from "@/lib/data/emailMarketingAlternatives";
+import { EMAIL_MARKETING_GUIDES } from "@/lib/data/emailMarketingGuides";
 import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -267,6 +279,26 @@ const CALL_TRACKING_BEST_FOR_SCENARIOS = [
   "home-services",
 ] as const;
 
+const REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "contractors",
+  "hvac",
+  "plumbers",
+  "electricians",
+  "roofers",
+  "home-services",
+] as const;
+
+/** Static Email Marketing best-for scenario slugs (matches app/email-marketing/best-for/[scenario]). */
+const EMAIL_MARKETING_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "contractors",
+  "hvac",
+  "plumbers",
+  "electricians",
+  "home-services",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -379,6 +411,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/call-tracking/best-call-tracking-software", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/call-tracking/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/call-tracking/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Reputation management
+    defaultEntry("/reputation-management", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/reputation-management/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/reputation-management/best-reputation-management-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/reputation-management/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/reputation-management/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Email marketing
+    defaultEntry("/email-marketing", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/email-marketing/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/email-marketing/best-email-marketing-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/email-marketing/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/email-marketing/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   const tradeHubEntries: MetadataRoute.Sitemap = TRADE_HUB_SLUGS.map((slug) =>
@@ -839,6 +883,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Reputation management comparisons
+  const reputationManagementComparisonSlugs = getReputationManagementComparisonSlugs();
+  const reputationManagementComparisonEntries: MetadataRoute.Sitemap = reputationManagementComparisonSlugs.map((slug) =>
+    defaultEntry(`/reputation-management/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Reputation management reviews
+  const reputationManagementReviewSlugs = getReputationManagementReviewSlugs();
+  const reputationManagementReviewEntries: MetadataRoute.Sitemap = reputationManagementReviewSlugs.map((slug) =>
+    defaultEntry(`/reputation-management/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Reputation management alternatives
+  const reputationManagementAlternativeSlugs = getReputationManagementAlternativesSlugs();
+  const reputationManagementAlternativeEntries: MetadataRoute.Sitemap = reputationManagementAlternativeSlugs.map((slug) =>
+    defaultEntry(getReputationManagementAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Reputation management best-for
+  const reputationManagementBestForEntries: MetadataRoute.Sitemap = REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getReputationManagementBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Reputation management guides
+  const reputationManagementGuideEntries: MetadataRoute.Sitemap = REPUTATION_MANAGEMENT_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Email marketing comparisons
+  const emailMarketingComparisonSlugs = getEmailMarketingComparisonSlugs();
+  const emailMarketingComparisonEntries: MetadataRoute.Sitemap = emailMarketingComparisonSlugs.map((slug) =>
+    defaultEntry(`/email-marketing/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Email marketing reviews
+  const emailMarketingReviewSlugs = getEmailMarketingReviewSlugs();
+  const emailMarketingReviewEntries: MetadataRoute.Sitemap = emailMarketingReviewSlugs.map((slug) =>
+    defaultEntry(`/email-marketing/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Email marketing alternatives
+  const emailMarketingAlternativeSlugs = getEmailMarketingAlternativesSlugs();
+  const emailMarketingAlternativeEntries: MetadataRoute.Sitemap = emailMarketingAlternativeSlugs.map((slug) =>
+    defaultEntry(getEmailMarketingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Email marketing best-for
+  const emailMarketingBestForEntries: MetadataRoute.Sitemap = EMAIL_MARKETING_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getEmailMarketingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Email marketing guides
+  const emailMarketingGuideEntries: MetadataRoute.Sitemap = EMAIL_MARKETING_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...tradeHubEntries,
@@ -923,5 +1023,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...callTrackingAlternativeEntries,
     ...callTrackingBestForEntries,
     ...callTrackingGuideEntries,
+    ...reputationManagementComparisonEntries,
+    ...reputationManagementReviewEntries,
+    ...reputationManagementAlternativeEntries,
+    ...reputationManagementBestForEntries,
+    ...reputationManagementGuideEntries,
+    ...emailMarketingComparisonEntries,
+    ...emailMarketingReviewEntries,
+    ...emailMarketingAlternativeEntries,
+    ...emailMarketingBestForEntries,
+    ...emailMarketingGuideEntries,
   ];
 }

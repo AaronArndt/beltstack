@@ -185,11 +185,19 @@ export const SOFTWARE_DIRECTORY_CATEGORY_GROUPS: SoftwareCategoryGroup[] = [
       },
       {
         name: "Reputation Management",
-        href: "/growth/reputation-management",
+        href: "/reputation-management",
+        secondaryLinks: [
+          { label: "Best reputation management software", href: "/reputation-management/best-reputation-management-software" },
+          { label: "Compare reputation management software", href: "/reputation-management/compare" },
+        ],
       },
       {
         name: "Email Marketing",
-        href: "/growth/email-marketing",
+        href: "/email-marketing",
+        secondaryLinks: [
+          { label: "Best email marketing software", href: "/email-marketing/best-email-marketing-software" },
+          { label: "Compare email marketing software", href: "/email-marketing/compare" },
+        ],
       },
       {
         name: "Call Tracking",

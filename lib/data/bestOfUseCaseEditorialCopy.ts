@@ -201,4 +201,18 @@ export const BEST_OF_USE_CASE_EDITORIAL: Record<string, Record<string, string>> 
     "home-services":
       "Multi-trade operators need one attribution story across brands and ZIP codes—parallel DNI layers that disagree will poison leadership reviews. Tag marketplace, paid, and owned demand distinctly, and loop dispatch feedback on bad leads. The home-services guide favors a measurable stack you can explain in one CRM export.",
   },
+  "email-marketing": {
+    "small-business":
+      "Small service businesses win when email reflects operational truth: job completion, estimate aging, and seasonal tune-ups—not a random monthly newsletter nobody owns. Start with tools your named owner can publish weekly, then add automations only after post-job and post-lead sequences stay accurate. Hygiene beats vanity metrics; paying for contacts you never mail punishes renewals. Our small-business guide favors platforms that stay shippable between dispatch runs and bookkeeping.",
+    contractors:
+      "Contractors need email that mirrors the job lifecycle—appointment confirmations, estimate nudges, post-job thank-yous with review asks, and shoulder-season retention. If your CRM or field software cannot trigger or tag those events, you will fight your ESP more than customers benefit. Compare integration depth alongside template libraries. The contractor-focused guide emphasizes automation you can QA monthly without breaking customer trust.",
+    hvac:
+      "HVAC marketing is seasonally violent: membership renewals, tune-up pushes, and emergency-value education should not all sound the same. Good email software segments residential vs commercial, agreement status, and equipment age where data exists—then prevents duplicate blasts that annoy loyal customers during peaks. Pilot shoulder-season campaigns during quieter months so errors surface before heat waves. The HVAC guide connects ESP choice to maintenance economics and dispatch reality.",
+    plumbers:
+      "Plumbing demand mixes emergencies with planned repipes and water-quality upsells—email should reinforce trust after messy jobs, not just coupon clutter. Sequences that reference service history and warranty touchpoints outperform generic bursts. Make transactional messages (receipts, scheduling) distinct from marketing streams for compliance and deliverability. The plumbers guide maps tools to referral loops and rapid follow-up after high-stress calls.",
+    electricians:
+      "Electrical contractors often move from quick service calls to panel upgrades and commercial bids—email nurtures should respect longer sales cycles and safety education. Visual-heavy templates help when you explain code-aware upgrades, but clarity beats flash when homeowners compare bids. Tie campaigns to inspection outcomes and permit milestones when your stack allows. The electricians guide favors ESPs that support proof-heavy storytelling without drowning crews in admin.",
+    "home-services":
+      "Home-service brands with multiple trades struggle when each department emails the same household from disconnected lists. Consolidate subscriber truth in one ESP or tightly integrate CRM so customers do not get three ‘spring tune-up’ emails from three brands. Governance—approval flows, brand voice, and suppression rules—matters as much as creative. The home-services guide prioritizes stacks that scale multi-trade coordination without fragmenting consent.",
+  },
 };
