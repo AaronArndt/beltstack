@@ -154,9 +154,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     logoSrc: "/Logos/angi.jpeg",
     quickVerdict: "Angi pairs directory strength with paid lead formats for residential trades.",
     quickVerdictParagraphs: [
-      "Angi fits when homeowners already recognize the brand in your market.",
-      "Compare bundled packages to pure pay-per-lead tools using the same follow-up script.",
-      "Read Angi vs HomeAdvisor when you’re narrowing marketplaces.",
+      "Angi fits when homeowners already recognize the brand in your market and your team can operationalize lead response quickly.",
+      "Bundled programs can work, but they hide cost differences if you only track raw leads. Compare channels by booked-job margin and cancellation rates.",
+      "Read Angi vs HomeAdvisor and Thumbtack vs Angi before locking annual spend so your budget follows intent, not vendor inertia.",
+      "If Angi economics flatten in your zip codes, evaluate our Angi alternatives page to diversify into search-driven or more flexible marketplace channels.",
     ],
     ratingBreakdown: rb("Angi"),
     compareLinks: [
@@ -182,7 +183,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Yelp Ads", "yelp-ads", "Yelp-first metros", "/Logos/yelp.png"),
     ],
     faqs: [
-      { q: "Angi vs Thumbtack?", a: "Angi leans brand + bundles; Thumbtack leans flexible pay-per-lead—test both if budget allows." },
+      { q: "Angi vs Thumbtack: which is better for contractors?", a: "Angi leans brand + bundled programs; Thumbtack leans flexible self-serve lead buying. Run both with the same response SLA and keep the winner on booked-job economics." },
+      { q: "How do I evaluate Angi lead quality?", a: "Track close rate, average ticket, cancellations, and refund-adjusted cost per booked job by zip and service line." },
+      { q: "Should I run Angi and HomeAdvisor together?", a: "You can, but dedupe in CRM and audit overlap weekly so channel reporting stays honest." },
+      { q: "Where can I compare Angi alternatives quickly?", a: "Use our dedicated Angi alternatives page, then confirm fit with Angi vs HomeAdvisor and Thumbtack vs Angi." },
     ],
     relatedReading: RELATED_READING,
     alternativesPageHref: getLeadGenerationAlternativeUrl("angi"),
@@ -198,8 +202,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     logoSrc: "/Logos/houzz.jpeg",
     quickVerdict: "Houzz Pro wins when visuals and project stories drive trust—not emergency calls.",
     quickVerdictParagraphs: [
-      "Great for kitchen, bath, and full remodel pipelines where photos matter.",
-      "Less ideal for ultra-urgent emergency trades that live on search volume alone.",
+      "Great for kitchen, bath, and full remodel pipelines where project imagery and design trust move deals forward.",
+      "Houzz Pro underperforms when your jobs are urgent and search-first; those buyers often convert faster through Google or high-volume marketplaces.",
+      "Treat it as a channel for visual-consideration demand, not a universal lead source for every trade category.",
+      "If your portfolio motion is weakening, use our Houzz Pro alternatives page to compare Thumbtack, Google LSA, and Angi with clearer intent economics.",
     ],
     ratingBreakdown: rb("Houzz Pro"),
     compareLinks: [
@@ -219,7 +225,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Thumbtack", "thumbtack", "Fast marketplace testing", "/Logos/thumbtack.jpeg"),
       alt("Google Local Services Ads", "google-local-services-ads", "Search intent leads", "/Logos/google.jpeg"),
     ],
-    faqs: [{ q: "Is Houzz only for designers?", a: "It’s strongest when visuals drive your sales motion—even for contractors with strong photo libraries." }],
+    faqs: [
+      { q: "Is Houzz Pro only for designers?", a: "No, but it performs best when visuals drive trust and ticket size—remodelers and design-build contractors usually see the strongest fit." },
+      { q: "When should contractors avoid Houzz Pro?", a: "Avoid using it as your only channel if your pipeline depends on urgent emergency calls or categories with low visual consideration." },
+      { q: "How do I improve Houzz lead quality?", a: "Keep project galleries current, tighten service descriptions, and route inquiries into CRM quickly to protect close rates." },
+      { q: "What are the best Houzz Pro alternatives?", a: "Thumbtack for marketplace scale and Google Local Services Ads for high-intent search are common alternatives." },
+    ],
     relatedReading: RELATED_READING,
   },
   bark: {
@@ -231,7 +242,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     visitUrl: "https://www.bark.com",
     logoSrc: "/Logos/bark.jpeg",
     quickVerdict: "Bark broadens categories beyond a single trade vertical in one account.",
-    quickVerdictParagraphs: ["Useful for agencies or operators listing multiple services.", "Compare Bark vs Thumbtack when speed-to-launch matters."],
+    quickVerdictParagraphs: [
+      "Bark is useful for agencies or operators listing multiple services under one buying workflow.",
+      "The trade-off is consistency: category depth and lead quality can vary more than on US-focused marketplace channels.",
+      "Compare Bark vs Thumbtack when you want faster local trade traction and clearer lead economics by metro.",
+      "If Bark credits are underperforming, our Bark alternatives page maps where Thumbtack, Angi, or Google LSA may fit better.",
+    ],
     ratingBreakdown: rb("Bark"),
     compareLinks: [
       { label: "Bark vs Thumbtack", href: getLeadGenerationCompareUrl("bark-vs-thumbtack") },
@@ -250,7 +266,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Thumbtack", "thumbtack", "US local marketplace depth", "/Logos/thumbtack.jpeg"),
       alt("Angi", "angi", "Home services directories", "/Logos/angi.jpeg"),
     ],
-    faqs: [{ q: "Bark vs Thumbtack?", a: "Compare duplicate policies and category strength in your metro." }],
+    faqs: [
+      { q: "Bark vs Thumbtack: which should I choose?", a: "Use Bark for broader multi-category experimentation; use Thumbtack when you need deeper local trade density and faster qualification loops." },
+      { q: "How should I manage Bark credit spend?", a: "Set category-level caps and track accepted leads to booked jobs weekly. Credit efficiency varies sharply by service type." },
+      { q: "Are Bark leads lower quality?", a: "Not always, but quality variance is common by category and market. Qualification script discipline matters as much as platform choice." },
+      { q: "Where do I compare Bark alternatives?", a: "Use the Bark alternatives page, then validate against Bark vs Thumbtack and your own close-rate data." },
+    ],
     relatedReading: RELATED_READING,
   },
   "google-local-services-ads": {
@@ -263,8 +284,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     logoSrc: "/Logos/google.jpeg",
     quickVerdict: "LSA converts when homeowners pick Google first—and you keep profiles and budgets tight.",
     quickVerdictParagraphs: [
-      "Screened listings increase trust but require verification work.",
-      "Dispute bad leads early; competition swings cost per call.",
+      "Screened listings increase trust and call intent, but onboarding and verification require operational discipline.",
+      "Dispute low-fit leads quickly and review category economics weekly—auction pressure can move cost per booked job fast.",
+      "LSA is often strongest when paired with at least one secondary channel to reduce dependency and smooth seasonality.",
+      "If eligibility or auction costs block growth, see our Google LSA alternatives page for marketplace and social substitutes.",
     ],
     ratingBreakdown: rb("Google Local Services Ads"),
     compareLinks: [
@@ -284,7 +307,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Yelp Ads", "yelp-ads", "Yelp searchers", "/Logos/yelp.png"),
       alt("Thumbtack", "thumbtack", "Marketplace complement", "/Logos/thumbtack.jpeg"),
     ],
-    faqs: [{ q: "Are LSAs worth it?", a: "Often yes for eligible trades—test at small weekly caps and measure booked revenue." }],
+    faqs: [
+      { q: "Are Google Local Services Ads worth it?", a: "Often yes for eligible trades. Start with controlled weekly caps and evaluate booked revenue, not just call volume." },
+      { q: "Why are my LSA leads expensive?", a: "Category competition, service-area breadth, and profile quality all affect auction outcomes. Tighten targeting before raising spend." },
+      { q: "What is the best LSA alternative?", a: "Thumbtack and Angi are common marketplace alternatives; Yelp Ads can work in Yelp-heavy metros." },
+      { q: "Should I run LSA with other channels?", a: "Yes. Most strong operators blend LSA with one marketplace and owned channels to stabilize pipeline risk." },
+    ],
     relatedReading: RELATED_READING,
   },
   "yelp-ads": {
@@ -296,7 +324,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     visitUrl: "https://biz.yelp.com",
     logoSrc: "/Logos/yelp.png",
     quickVerdict: "Yelp Ads amplify existing profile strength—weak profiles see weak returns.",
-    quickVerdictParagraphs: ["Fix photos, reviews, and Q&A before raising spend.", "Compare to Google LSA with our head-to-head."],
+    quickVerdictParagraphs: [
+      "Yelp Ads amplify profile quality; weak reviews, sparse photos, and stale business details usually suppress returns.",
+      "In Yelp-heavy metros, profile optimization plus sponsored placement can work well. In Google-first markets, alternatives often outperform.",
+      "Treat Yelp Ads as one channel in a blended acquisition mix rather than a full pipeline strategy.",
+      "Use our Yelp Ads alternatives page to compare Google LSA, Thumbtack, and Angi against your booked-job economics.",
+    ],
     ratingBreakdown: rb("Yelp Ads"),
     compareLinks: [
       { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
@@ -315,7 +348,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Google Local Services Ads", "google-local-services-ads", "Google-first buyers", "/Logos/google.jpeg"),
       alt("Angi", "angi", "Directory + marketplace", "/Logos/angi.jpeg"),
     ],
-    faqs: [{ q: "Yelp vs Google?", a: "See our comparison—intent and profile behavior differ." }],
+    faqs: [
+      { q: "Yelp Ads vs Google LSA: which is better?", a: "It depends on market behavior. Yelp can win where profile trust is strong; LSA usually wins on urgent Google-first intent." },
+      { q: "How do I improve Yelp Ads performance?", a: "Upgrade profile completeness, review velocity, photos, and response speed before scaling ad budgets." },
+      { q: "When should I stop Yelp Ads?", a: "Pause or reduce when refund-adjusted cost per booked job stays above your margin threshold after profile improvements." },
+      { q: "What are strong Yelp Ads alternatives?", a: "Google LSA, Thumbtack, and Angi are the most common alternatives depending on category and zip." },
+    ],
     relatedReading: RELATED_READING,
   },
   "facebook-lead-ads": {
@@ -328,8 +366,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     logoSrc: "/Logos/facebook.jpeg",
     quickVerdict: "Facebook Lead Ads work when creative, targeting, and instant follow-up align.",
     quickVerdictParagraphs: [
-      "Great for offers, promos, and audiences you can target precisely.",
-      "Not a replacement for high-intent search—blend with LSA or marketplaces.",
+      "Great for offers, promos, and audience segments you can target precisely with strong creative and follow-up systems.",
+      "Lead quality varies with targeting and funnel design; social forms can underperform if teams are slow to qualify and respond.",
+      "Facebook Lead Ads works best as a complement to search-intent channels, not a full replacement.",
+      "If social economics are weak, our Facebook Lead Ads alternatives page outlines when to pivot toward LSA or marketplace channels.",
     ],
     ratingBreakdown: rb("Facebook Lead Ads"),
     compareLinks: [
@@ -349,7 +389,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Google Local Services Ads", "google-local-services-ads", "Search intent", "/Logos/google.jpeg"),
       alt("Thumbtack", "thumbtack", "Marketplace leads", "/Logos/thumbtack.jpeg"),
     ],
-    faqs: [{ q: "Are Facebook leads low quality?", a: "They can be—fix targeting, offers, and sub-5-minute follow-up." }],
+    faqs: [
+      { q: "Are Facebook leads low quality?", a: "They can be, especially with broad targeting. Tight audience filters, clearer offers, and sub-5-minute follow-up improve quality." },
+      { q: "When should I use Facebook Lead Ads?", a: "Use it for seasonal offers, promo campaigns, and retargeting where social creative can create demand." },
+      { q: "What is the best Facebook Lead Ads alternative?", a: "Google Local Services Ads is the top intent alternative for eligible categories; Thumbtack is a common marketplace backup." },
+      { q: "How do I reduce no-show Facebook leads?", a: "Add qualification fields, confirm by SMS quickly, and enforce CRM disposition tracking across reps." },
+    ],
     relatedReading: [
       RELATED_READING[0],
       RELATED_READING[1],
@@ -366,8 +411,10 @@ const reviews: Record<string, LeadGenerationReviewData> = {
     logoSrc: "/Logos/homeadvisor.jpeg",
     quickVerdict: "HomeAdvisor delivers scale when your ops can handle marketplace variance.",
     quickVerdictParagraphs: [
-      "Pair with CRM tagging to track duplicates across vendors.",
-      "Compare Angi vs HomeAdvisor before multi-year commitments.",
+      "HomeAdvisor can deliver volume when your team handles marketplace variance and responds quickly.",
+      "Always tag leads in CRM and monitor overlap with Angi/Thumbtack so duplicate economics do not hide true CAC.",
+      "Compare Angi vs HomeAdvisor before long commitments and keep spend tied to booked-job margin by zip.",
+      "If economics flatten, use our HomeAdvisor alternatives page for faster pivot options.",
     ],
     ratingBreakdown: rb("HomeAdvisor"),
     compareLinks: [
@@ -387,7 +434,12 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Angi", "angi", "Bundled competitor", "/Logos/angi.jpeg"),
       alt("Thumbtack", "thumbtack", "Flexible marketplace", "/Logos/thumbtack.jpeg"),
     ],
-    faqs: [{ q: "Angi vs HomeAdvisor for my zip?", a: "Test modest spend on both with identical scripts; keep the winner on booked-job margin." }],
+    faqs: [
+      { q: "Angi vs HomeAdvisor for my zip?", a: "Run a controlled split with identical scripts, response timing, and CRM tracking—keep the channel with higher booked-job margin." },
+      { q: "How do I reduce HomeAdvisor lead waste?", a: "Tighten service-area filters, qualify fast, and dispute out-of-scope leads per policy timelines." },
+      { q: "What are the best HomeAdvisor alternatives?", a: "Angi and Thumbtack are common marketplace alternatives; Google LSA is a strong intent complement where eligible." },
+      { q: "Should I run HomeAdvisor year-round?", a: "Only if seasonal margin supports it. Many teams pulse spend by service demand and staffing capacity." },
+    ],
     relatedReading: RELATED_READING,
     alternativesPageHref: getLeadGenerationAlternativeUrl("homeadvisor"),
     alternativesPageLabel: "Best HomeAdvisor alternatives (2026)",

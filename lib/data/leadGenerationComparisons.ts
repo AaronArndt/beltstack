@@ -89,7 +89,15 @@ const P = {
   },
 } as const;
 
-const ALTERNATIVES_PAGE_SLUGS = new Set<keyof typeof P>(["thumbtack", "angi", "homeadvisor"]);
+const ALTERNATIVES_PAGE_SLUGS = new Set<keyof typeof P>([
+  "thumbtack",
+  "angi",
+  "homeadvisor",
+  "bark",
+  "houzz-pro",
+  "google-local-services-ads",
+  "yelp-ads",
+]);
 
 function alternativesPageLinksForSlugs(slugs: string[]): { label: string; href: string }[] {
   const out: { label: string; href: string }[] = [];
@@ -113,6 +121,9 @@ function build(
 ): [string, ComparisonTemplateProps] {
   const pa = P[a];
   const pb = P[b];
+  const includesSearchIntent = a === "google-local-services-ads" || b === "google-local-services-ads";
+  const includesYelp = a === "yelp-ads" || b === "yelp-ads";
+  const includesPortfolio = a === "houzz-pro" || b === "houzz-pro";
   return [
     slug,
     {
@@ -123,12 +134,27 @@ function build(
       summaryParagraph: summary,
       quickRecommendationA: `Choose ${pa.name} if you prioritize ${pa.bestForSummary.toLowerCase()}`,
       quickRecommendationB: `Choose ${pb.name} if you prioritize ${pb.bestForSummary.toLowerCase()}`,
-      quickVerdictParagraphs: [summary],
+      quickVerdictParagraphs: [
+        summary,
+        `This ${pa.name} vs ${pb.name} matchup is usually decided by response operations and margin discipline, not by top-line lead counts. Teams that answer quickly and track booked-job outcomes in CRM outperform on either platform.`,
+        "Run a controlled 30-60 day split with identical scripts, service-area rules, and disposition stages. Keep the winner on booked-job margin after refunds, no-shows, and follow-up cost.",
+      ],
+      decisionGuideA: [
+        `Choose ${pa.name} when your workflow aligns with ${pa.bestForSummary.toLowerCase()}`,
+        "Choose this option if your team can consistently execute the response playbook it requires.",
+        "Choose this option when your best jobs map to the channel intent this platform captures.",
+      ],
+      decisionGuideB: [
+        `Choose ${pb.name} when your workflow aligns with ${pb.bestForSummary.toLowerCase()}`,
+        "Choose this option if your geography/category historically performs better on its buyer behavior.",
+        "Choose this option when your lead-quality economics beat the alternative over a full month.",
+      ],
       featureComparison: [
         { feature: "Lead model", productA: "Marketplace / platform", productB: "Marketplace / platform", supportA: "supported", supportB: "supported" },
-        { feature: "Local intent", productA: "Strong for local service", productB: "Strong for local service", supportA: "supported", supportB: "supported" },
+        { feature: "Local intent", productA: includesSearchIntent ? "High local search intent" : "Strong for local service", productB: includesSearchIntent ? "High local search intent" : "Strong for local service", supportA: "supported", supportB: "supported" },
         { feature: "Dispute / credit policies", productA: "Policy varies by product", productB: "Policy varies by product", supportA: "partial", supportB: "partial" },
         { feature: "CRM / follow-up tooling", productA: "Built-in basics", productB: "Built-in basics", supportA: "partial", supportB: "partial" },
+        { feature: "Best fit for urgent jobs", productA: includesSearchIntent ? "Very strong" : "Moderate to strong", productB: includesSearchIntent ? "Very strong" : "Moderate to strong", supportA: "supported", supportB: "supported" },
       ],
       pricingComparison: `Both products price on usage, geography, and category competition. Model blended cost per booked job—not cost per raw lead—and compare refund or credit rules before scaling spend.`,
       prosConsA: {
@@ -141,6 +167,14 @@ function build(
       },
       bestFor: [
         { heading: "Choose by lead economics", body: "Compare dispute policies, exclusivity, and how often leads match your service area before locking in a primary channel." },
+        {
+          heading: "Choose by search intent and operations",
+          body: includesPortfolio
+            ? "Portfolio-led channels fit planned projects; marketplace/search channels fit urgent demand. Match platform to your average ticket and sales cycle."
+            : includesYelp
+              ? "Yelp-heavy metros behave differently than Google-first metros. Pick based on where your best customers actually start research."
+              : "If your best jobs are urgent, prioritize high-intent channels and response speed. If projects are planned, optimize qualification and trust assets.",
+        },
       ],
       alternatives: [
         { name: "Thumbtack", href: getLeadGenerationReviewUrl("thumbtack"), logoSrc: "/Logos/thumbtack.jpeg", description: "Pay-per-lead marketplace for local pros." },
@@ -150,16 +184,23 @@ function build(
       faqs: [
         { q: `Which is better for contractors—${pa.name} or ${pb.name}?`, a: summary },
         { q: "How should I compare cost?", a: "Track cost per booked job and gross margin after refunds—not just cost per lead name." },
+        { q: "How long should I test each platform?", a: "Use a 30-60 day pilot with consistent scripts, response timing, and service-area filters before making a final call." },
+        { q: "What metric predicts winner quality fastest?", a: "Booked-job margin by zip and service line. Lead volume alone can hide poor close quality." },
+        { q: `Where can I see ${pa.name} and ${pb.name} alternatives?`, a: "Use the ranked alternatives links and full reviews below to compare substitutes by intent model, policy fit, and operational load." },
       ],
       sidebarWinners: [
         { label: "Speed to first lead", winner: "A" },
         { label: "Brand ecosystem depth", winner: "B" },
+        { label: "Best fit for most local teams", winner: "A" },
       ],
       moreComparisons: [
         { label: "Thumbtack vs Angi", href: getLeadGenerationCompareUrlFromSlug("thumbtack-vs-angi") },
         { label: "Angi vs HomeAdvisor", href: getLeadGenerationCompareUrlFromSlug("angi-vs-homeadvisor") },
         { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrlFromSlug("google-local-services-ads-vs-yelp-ads") },
         ...alternativesPageLinksForSlugs([pa.slug, pb.slug]),
+        { label: "How to choose a lead generation platform", href: "/lead-generation/guides/how-to-choose-a-lead-generation-platform" },
+        { label: "Paid vs organic leads", href: "/lead-generation/guides/paid-vs-organic-leads" },
+        { label: "Call tracking software hub", href: "/call-tracking" },
       ],
       relevantTradeLinks: LG_TRADE_LINKS,
       ...extra,

@@ -16,7 +16,7 @@ import {
 } from "@/lib/data/seoToolsBestSeoTools";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSeoToolsAlternativeUrl, getSeoToolsReviewUrl } from "@/lib/routes";
-import { getSoftwarePick, getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
 
@@ -216,45 +216,34 @@ export default function BestSeoToolsPage() {
         <section id="more-options" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Additional platforms worth reviewing.">More SEO tool options</SectionTitle>
-            <div className="mt-6 space-y-10">
-              {MORE_SEO_TOOLS_OPTIONS.map((opt) => {
-                const canonical = getSoftwarePick("seo-tools", opt.slug);
-                if (canonical != null) {
-                  return (
-                    <SoftwarePickCard
-                      key={opt.slug}
-                      {...toSoftwarePickCardProps(canonical, seoPickRoutes, { id: `pick-more-${opt.slug}` })}
-                    />
-                  );
-                }
-                return (
-                  <article
-                    key={opt.slug}
-                    className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm"
-                  >
-                    <div className="flex items-center gap-2">
-                      <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                      <h3 className="text-[#1A2D48] text-lg font-bold">
-                        <Link
-                          href={opt.reviewHref}
-                          className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                        >
-                          {opt.name}
-                        </Link>
-                      </h3>
-                    </div>
-                    <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{opt.description}</p>
-                    <div className="mt-4 border-t border-stone-200 pt-4">
+            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {MORE_SEO_TOOLS_OPTIONS.map((opt) => (
+                <article
+                  key={opt.slug}
+                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm"
+                >
+                  <div className="flex items-center gap-2">
+                    <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
+                    <h3 className="text-[#1A2D48] text-lg font-bold">
                       <Link
                         href={opt.reviewHref}
-                        className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
-                        Read review →
+                        {opt.name}
                       </Link>
-                    </div>
-                  </article>
-                );
-              })}
+                    </h3>
+                  </div>
+                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{opt.description}</p>
+                  <div className="mt-4 border-t border-stone-200 pt-4">
+                    <Link
+                      href={opt.reviewHref}
+                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      Read review →
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -265,15 +254,39 @@ export default function BestSeoToolsPage() {
             <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
               <div>
                 <h3 className="font-bold text-[#1A2D48] text-base">Search Console first</h3>
-                <p className="mt-1">Verify every site; free query and coverage data should anchor your stack before you subscribe.</p>
+                <p className="mt-1">
+                  Verify every property and use Google Search Console as your source of truth for queries, indexing, and page-level performance before adding paid layers.
+                </p>
               </div>
               <div>
                 <h3 className="font-bold text-[#1A2D48] text-base">Local vs content priorities</h3>
-                <p className="mt-1">Map Pack operators add BrightLocal or Whitespark; content-led teams lean on Semrush or Ahrefs for research depth.</p>
+                <p className="mt-1">
+                  If Map Pack visibility drives pipeline, prioritize local rank tracking and citation workflows (BrightLocal or Whitespark). If long-form content drives growth, prioritize keyword and backlink depth (Semrush or Ahrefs).
+                </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Adoption beats features</h3>
-                <p className="mt-1">Downgrade unused tiers until someone logs in weekly—SEO software compounds only with consistent execution.</p>
+                <h3 className="font-bold text-[#1A2D48] text-base">Match tool depth to operator capacity</h3>
+                <p className="mt-1">
+                  Choose the tool your team will actually use weekly. A lighter stack run consistently beats an enterprise suite that sits idle after setup.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#1A2D48] text-base">Track outcomes, not dashboard activity</h3>
+                <p className="mt-1">
+                  Define a monthly scorecard: qualified calls/forms, rankings for core service pages, and pages newly indexed. Tie wins to pipeline impact, not report volume.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#1A2D48] text-base">Run a 30-day workflow test</h3>
+                <p className="mt-1">
+                  Test one core workflow end-to-end: keyword research, page updates, rank tracking, and reporting. Keep the platform that reduces execution friction for your real team.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#1A2D48] text-base">Review total cost every quarter</h3>
+                <p className="mt-1">
+                  Re-evaluate seat usage, add-ons, and overlapping features every quarter. Consolidate where possible so budget stays focused on tools that move rankings and leads.
+                </p>
               </div>
             </div>
           </div>

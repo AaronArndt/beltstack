@@ -1,6 +1,8 @@
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 import {
   getWebsiteBuildersBestForUrl,
+  getWebsiteBuildersAlternativeUrl,
+  getWebsiteBuildersCompareUrl,
   getWebsiteBuildersReviewUrl,
 } from "@/lib/routes";
 import { getWebsiteBuilderLogoSrc } from "@/lib/data/websiteBuildersLogos";
@@ -88,28 +90,80 @@ function buildComparison(
   b: keyof typeof P,
   summary: string
 ): [string, ComparisonTemplateProps] {
+  const pa = P[a];
+  const pb = P[b];
+  const isCommerceMatchup = a === "shopify" || b === "shopify";
+  const hasWebflow = a === "webflow" || b === "webflow";
+  const hasBudgetBundle =
+    a === "hostinger-website-builder" ||
+    b === "hostinger-website-builder" ||
+    a === "godaddy-website-builder" ||
+    b === "godaddy-website-builder";
+
   return [
     slug,
     {
-      productA: P[a],
-      productB: P[b],
+      productA: pa,
+      productB: pb,
       categoryHref: "/website-builders",
       categoryLabel: "Website Builders",
       summaryParagraph: summary,
-      quickRecommendationA: `Choose ${P[a].name} if you prioritize ${P[a].bestForSummary.toLowerCase()}`,
-      quickRecommendationB: `Choose ${P[b].name} if you prioritize ${P[b].bestForSummary.toLowerCase()}`,
-      quickVerdictParagraphs: [summary],
-      featureComparison: [
-        { feature: "Ease of use", productA: "Strong", productB: "Strong", supportA: "supported", supportB: "supported" },
-        { feature: "Local SEO controls", productA: "Good", productB: "Good", supportA: "supported", supportB: "supported" },
-        { feature: "Design flexibility", productA: "Good", productB: "Good", supportA: "supported", supportB: "supported" },
-        { feature: "Integrations", productA: "Strong ecosystem", productB: "Solid ecosystem", supportA: "supported", supportB: "supported" },
+      quickRecommendationA: `Choose ${pa.name} if you prioritize ${pa.bestForSummary.toLowerCase()}`,
+      quickRecommendationB: `Choose ${pb.name} if you prioritize ${pb.bestForSummary.toLowerCase()}`,
+      quickVerdictParagraphs: [
+        summary,
+        `This ${pa.name} vs ${pb.name} comparison is most useful for teams deciding between speed of execution, design control, and long-term operating cost. For most local service businesses, the winner is usually the platform your team can update weekly without waiting on a specialist.`,
+        `Before migrating, map your top service pages, quote forms, and call-to-action paths first. Platform choice only improves results when your local SEO publishing rhythm and lead follow-up process stay consistent after launch.`,
       ],
-      pricingComparison: `Both products offer tiered plans; compare total cost at your expected page count, features, and growth stage.`,
-      prosConsA: { pros: ["Strong template coverage", "Good local business fit"], cons: ["Advanced custom logic can be limited"] },
-      prosConsB: { pros: ["Good performance and maintainability", "Useful for growing teams"], cons: ["May require more setup"] },
+      decisionGuideA: [
+        `Choose ${pa.name} if your team needs to publish and update service pages quickly.`,
+        `Choose ${pa.name} if non-technical owners or office staff will manage daily edits.`,
+        `Choose ${pa.name} if your near-term goal is better lead capture with lower operational friction.`,
+      ],
+      decisionGuideB: [
+        `Choose ${pb.name} if your team values ${pb.bestForSummary.toLowerCase()}`,
+        `Choose ${pb.name} if your workflow can support a slightly steeper setup or design process.`,
+        `Choose ${pb.name} if your roadmap depends on its strongest differentiator, not just launch speed.`,
+      ],
+      featureComparison: [
+        { feature: "Ease of use for non-technical teams", productA: "Strong", productB: hasWebflow ? "Moderate to strong" : "Strong", supportA: "supported", supportB: "supported" },
+        { feature: "Local SEO page publishing workflow", productA: "Good", productB: "Good", supportA: "supported", supportB: "supported" },
+        { feature: "Design and layout control", productA: hasWebflow ? "Advanced" : "Good", productB: hasWebflow ? "Advanced" : "Good", supportA: "supported", supportB: "supported" },
+        { feature: "Service-business conversion tooling", productA: "Strong", productB: isCommerceMatchup ? "Strong (commerce-leaning)" : "Strong", supportA: "supported", supportB: "supported" },
+        { feature: "Integrations and extensibility", productA: "Strong ecosystem", productB: hasBudgetBundle ? "Basic to solid" : "Solid ecosystem", supportA: "supported", supportB: "supported" },
+      ],
+      pricingComparison: `Both products use tiered pricing. Compare annual cost including premium templates/apps, team seats, ecommerce fees (if relevant), and migration effort. For local operators, the cheapest entry plan is often not the lowest 12-month operating cost.`,
+      prosConsA: {
+        pros: [
+          `${pa.name} aligns well with ${pa.bestForSummary.toLowerCase()}`,
+          "Strong fit for core service-page and lead-generation workflows",
+          "Clear path from launch to ongoing optimization",
+        ],
+        cons: [
+          "Can become expensive when add-ons and growth features stack",
+          "No platform fixes weak content or poor lead follow-up process",
+        ],
+      },
+      prosConsB: {
+        pros: [
+          `${pb.name} supports ${pb.bestForSummary.toLowerCase()}`,
+          "Useful differentiation when your business model matches it",
+          "Competitive option for teams with clear platform requirements",
+        ],
+        cons: [
+          "May require more setup discipline depending on stack complexity",
+          "Migration cost can erase short-term pricing advantages",
+        ],
+      },
       bestFor: [
-        { heading: "Best for different business models", body: "Pick based on lead generation workflow, editing ownership, and how much customization you need over the next 12-24 months." },
+        {
+          heading: "Best for different search intents",
+          body: `Choose based on the outcome you are trying to improve: "best website builder for local SEO," "easiest website builder for contractors," or "website builder for service + ecommerce." Match platform strengths to your actual growth bottleneck.`,
+        },
+        {
+          heading: "Best for operational ownership",
+          body: "Decide who owns weekly website updates. If one person can consistently publish service pages, offers, and trust content, that execution speed usually beats theoretical feature depth.",
+        },
       ],
       alternatives: [
         { name: "Wix", href: getWebsiteBuildersReviewUrl("wix"), logoSrc: getWebsiteBuilderLogoSrc("wix") },
@@ -117,17 +171,47 @@ function buildComparison(
         { name: "Shopify", href: getWebsiteBuildersReviewUrl("shopify"), logoSrc: getWebsiteBuilderLogoSrc("shopify") },
       ],
       faqs: [
-        { q: `How does ${P[a].name} compare with ${P[b].name}?`, a: summary },
-        { q: "Which is better for local service businesses?", a: "The right fit depends on design needs, lead workflow, and whether ecommerce is central to your business model." },
+        { q: `How does ${pa.name} compare with ${pb.name}?`, a: summary },
+        {
+          q: "Which is better for local service businesses?",
+          a: "The better fit depends on your lead workflow, publishing speed, and whether ecommerce is central. For most local operators, pick the platform your team can run weekly without delays.",
+        },
+        {
+          q: `Is ${pa.name} or ${pb.name} better for SEO?`,
+          a: "Both can perform for SEO when implemented well. Results usually depend more on content cadence, internal linking, and technical hygiene than builder branding alone.",
+        },
+        {
+          q: `What should I read after this ${pa.name} vs ${pb.name} comparison?`,
+          a: `Open both review pages, then check the best website builders roundup and the best-for pages to confirm fit by trade and operating model before migrating.`,
+        },
+        {
+          q: "How should I evaluate migration risk?",
+          a: "Audit page inventory, redirect mapping, form logic, analytics, and conversion tracking before moving. A clean migration plan protects rankings and lead flow during the switch.",
+        },
       ],
       sidebarWinners: [
         { label: "Ease of use", winner: "A" },
         { label: "Customization depth", winner: "B" },
+        { label: "Best fit for non-technical teams", winner: "A" },
+      ],
+      moreComparisons: [
+        { label: "Wix vs Squarespace", href: getWebsiteBuildersCompareUrl("wix-vs-squarespace") },
+        { label: "Wix vs Shopify", href: getWebsiteBuildersCompareUrl("wix-vs-shopify") },
+        { label: "Squarespace vs Shopify", href: getWebsiteBuildersCompareUrl("squarespace-vs-shopify") },
+        { label: "Webflow vs Wix", href: getWebsiteBuildersCompareUrl("webflow-vs-wix") },
+        { label: "GoDaddy vs Hostinger", href: getWebsiteBuildersCompareUrl("godaddy-website-builder-vs-hostinger-website-builder") },
+        { label: "Best Wix alternatives", href: getWebsiteBuildersAlternativeUrl("wix") },
+        { label: "Best Squarespace alternatives", href: getWebsiteBuildersAlternativeUrl("squarespace") },
+        { label: "Best Shopify alternatives", href: getWebsiteBuildersAlternativeUrl("shopify") },
+        { label: "Best Webflow alternatives", href: getWebsiteBuildersAlternativeUrl("webflow") },
+        { label: "Best website builder for local SEO", href: "/website-builders/guides/best-website-builder-for-local-seo" },
       ],
       relevantTradeLinks: [
         { label: "Best for contractors", href: getWebsiteBuildersBestForUrl("contractors") },
         { label: "Best for HVAC", href: getWebsiteBuildersBestForUrl("hvac") },
         { label: "Best for plumbers", href: getWebsiteBuildersBestForUrl("plumbers") },
+        { label: "Best for small business", href: getWebsiteBuildersBestForUrl("small-business") },
+        { label: "Best for home services", href: getWebsiteBuildersBestForUrl("home-services") },
       ],
     },
   ];

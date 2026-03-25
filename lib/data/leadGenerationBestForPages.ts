@@ -95,6 +95,14 @@ const relatedComparisons: BestForComparisonLink[] = [
   { label: "Google LSA vs Yelp Ads", href: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
 ];
 
+const SHARED_GUIDES: BestForGuideLink[] = [
+  { label: "How to choose a lead generation platform", href: `${GUIDES}/how-to-choose-a-lead-generation-platform` },
+  { label: "Paid vs organic leads", href: `${GUIDES}/paid-vs-organic-leads` },
+  { label: "How Google Local Services Ads work", href: `${GUIDES}/how-google-local-services-ads-work` },
+  { label: "Lead generation strategies for local business", href: `${GUIDES}/lead-generation-strategies-for-local-business` },
+  { label: "Best website builders for contractors (owned demand)", href: "/website-builders/best-for/contractors" },
+];
+
 function makePage(
   useCase: string,
   title: string,
@@ -106,6 +114,34 @@ function makePage(
   relatedGuides: BestForGuideLink[]
 ): BestForTemplateProps {
   const label = useCase.replace(/-/g, " ");
+  const mergedGuides = [...relatedGuides, ...SHARED_GUIDES].filter(
+    (item, index, arr) => arr.findIndex((x) => x.href === item.href) === index
+  );
+  const mergedEditorial = [
+    ...editorialGuidance,
+    {
+      heading: "Search intent match",
+      body: `Buy channels that match how ${label} customers search in your market. Urgent intent usually favors search/LSA; planned projects may favor directories and portfolios.`,
+    },
+  ];
+  const mergedWhyThesePicks = [
+    ...whyThesePicks,
+    {
+      heading: "Pipeline resilience",
+      body: "These channels can be blended so you are not dependent on one vendor or one auction cycle during seasonal swings.",
+    },
+  ];
+  const mergedFaqs = [
+    ...faqItems,
+    {
+      q: `What is the best lead generation channel for ${label}?`,
+      a: "For most teams, there is no single winner forever. Start with one high-intent source and one marketplace source, then keep the mix that produces the best booked-job margin.",
+    },
+    {
+      q: "What should I read next after this best-for page?",
+      a: "Use the lead generation comparison hub, then open the linked product reviews and guide pages on this page to validate channel fit before scaling spend.",
+    },
+  ];
   return {
     title,
     subtitle,
@@ -125,12 +161,12 @@ function makePage(
     },
     featuredProducts,
     comparisonTableRows,
-    editorialGuidance,
-    whyThesePicks,
+    editorialGuidance: mergedEditorial,
+    whyThesePicks: mergedWhyThesePicks,
     relatedReviews,
     relatedComparisons,
-    relatedGuides,
-    faqItems,
+    relatedGuides: mergedGuides,
+    faqItems: mergedFaqs,
   };
 }
 

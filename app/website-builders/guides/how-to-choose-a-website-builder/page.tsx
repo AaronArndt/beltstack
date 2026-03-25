@@ -2,6 +2,9 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
+import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
+import { RelatedWebsiteBuildersResources } from "@/components/guides/RelatedWebsiteBuildersResources";
+import { getWebsiteBuildersReviewUrl, getWebsiteBuildersCompareUrl } from "@/lib/routes";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -14,16 +17,27 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
 }
 
 const FAQ_ITEMS = [
-  { q: "What matters most for service businesses?", a: "Lead conversion, local SEO controls, mobile performance, and easy ongoing edits are the top priorities." },
+  { q: "What matters most for service businesses?", a: "Lead conversion architecture, local SEO controls, mobile performance, and operational ease of updates are the highest-impact criteria." },
   { q: "Should I prioritize design or conversion?", a: "Both matter, but conversion structure should come first: clear service pages, trust signals, and low-friction contact paths." },
+  { q: "What is the best website builder for most contractors?", a: "Wix is often the most practical default for contractor teams. Squarespace is stronger for design-heavy branding and Shopify is better when ecommerce is central." },
+  { q: "How should I shortlist builders quickly?", a: "Read the roundup, pick two comparisons, and review each product page for pricing and workflow fit before requesting migration work." },
+];
+
+const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
+  { name: "Wix", logoSrc: "/Logos/wix.png", rating: 4.6, bestFor: "Best overall service-business fit", reviewHref: getWebsiteBuildersReviewUrl("wix") },
+  { name: "Squarespace", logoSrc: "/Logos/squarespace.png", rating: 4.4, bestFor: "Best polished branding", reviewHref: getWebsiteBuildersReviewUrl("squarespace") },
+  { name: "Shopify", logoSrc: "/Logos/shopify.png", rating: 4.5, bestFor: "Best for service + ecommerce", reviewHref: getWebsiteBuildersReviewUrl("shopify") },
 ];
 
 export default function HowToChooseWebsiteBuilderGuidePage() {
+  const href = "/website-builders/guides/how-to-choose-a-website-builder";
   return (
     <div className="min-h-screen bg-white">
       <main>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <article className="max-w-[720px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-8 lg:pb-16">
+            <article className="min-w-0 lg:col-span-8">
+              <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
               <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
                 <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li><li aria-hidden>/</li>
@@ -37,7 +51,7 @@ export default function HowToChooseWebsiteBuilderGuidePage() {
               <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
                 A practical framework for contractors and service businesses choosing between Wix, Squarespace, Shopify, Webflow, and other platforms.
               </p>
-              <GuideLastUpdated date="March 24, 2026" />
+              <GuideLastUpdated date="March 25, 2026" />
             </section>
 
             <section className="pt-8 pb-8 space-y-4 text-[15px] leading-relaxed text-neutral-700">
@@ -82,12 +96,31 @@ export default function HowToChooseWebsiteBuilderGuidePage() {
               </ul>
             </section>
 
+            <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+              <SectionTitle sub="Use this 3-step path before committing.">Fast shortlist workflow</SectionTitle>
+              <p className="text-[15px] leading-relaxed text-neutral-700">
+                Step 1: choose your primary model (lead-gen only vs service + ecommerce). Step 2: compare{" "}
+                <Link href={getWebsiteBuildersCompareUrl("wix-vs-squarespace")} className="font-semibold text-[#10B981] hover:underline">Wix vs Squarespace</Link>{" "}
+                and{" "}
+                <Link href={getWebsiteBuildersCompareUrl("wix-vs-shopify")} className="font-semibold text-[#10B981] hover:underline">Wix vs Shopify</Link>
+                . Step 3: validate with full reviews before migration planning.
+              </p>
+            </section>
+
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
               <SectionTitle sub="Quick answers.">FAQs</SectionTitle>
               <GuideFaqSection faqs={FAQ_ITEMS} />
             </section>
-          </article>
+              </div>
+            </article>
+
+            <div className="hidden lg:block lg:col-span-4 lg:pt-8">
+              <GuideSidebar title="Website Builder Reviews" items={GUIDE_SIDEBAR_ITEMS} stickyTop={88} />
+            </div>
+          </div>
         </div>
+
+        <RelatedWebsiteBuildersResources excludeHref={href} />
       </main>
       <Footer />
     </div>
