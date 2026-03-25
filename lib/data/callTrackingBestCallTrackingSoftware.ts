@@ -1,4 +1,4 @@
-﻿import {
+import {
   getCallTrackingBestForUrl,
   getCallTrackingCompareUrl,
   getCallTrackingReviewUrl,
@@ -96,7 +96,7 @@ export const TOP_PICKS: BestCallTrackingPick[] = [
     pros: ["Conversation AI depth", "Enterprise integrations", "Strong for regulated verticals"],
     cons: ["Not self-serve cheap", "Implementation effort", "Heavy for solo trades"],
     pricingSummary: "Enterprise quotesâ€”budget implementation and ongoing admin.",
-    alternativesSlug: null,
+    alternativesSlug: "invoca",
   },
 ];
 
@@ -121,7 +121,7 @@ export const CALL_TRACKING_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     pros: ["Deep routing logic", "Built for scale", "Buyer-centric tooling"],
     cons: ["Complex for beginners", "Not a gentle SMB onboarding", "Ops overhead"],
     pricingSummary: "Typically customâ€”align with call volume economics.",
-    alternativesSlug: null,
+    alternativesSlug: "ringba",
   },
   {
     slug: "twilio",
@@ -143,7 +143,7 @@ export const CALL_TRACKING_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     pros: ["Maximum flexibility", "Huge global footprint", "Strong docs"],
     cons: ["You build and maintain it", "Attribution is DIY", "Cost surprises without guardrails"],
     pricingSummary: "Metered usageâ€”model per minute and per number.",
-    alternativesSlug: null,
+    alternativesSlug: "twilio",
   },
   {
     slug: "phonewagon",
@@ -165,7 +165,7 @@ export const CALL_TRACKING_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     pros: ["Simple UI", "Quick number provisioning", "Affordable entry"],
     cons: ["Fewer advanced analytics", "Smaller integration long tail", "May outgrow on complex accounts"],
     pricingSummary: "Check included numbers and minutes vs your ad footprint.",
-    alternativesSlug: null,
+    alternativesSlug: "phonewagon",
   },
   {
     slug: "nimbata",
@@ -187,7 +187,7 @@ export const CALL_TRACKING_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     pros: ["Privacy positioning", "Straightforward dashboards", "Website + ads focus"],
     cons: ["Smaller brand footprint", "Fewer telco power features", "Ecosystem varies by region"],
     pricingSummary: "Tiered plansâ€”confirm recording and storage rules for your region.",
-    alternativesSlug: null,
+    alternativesSlug: "nimbata",
   },
 ];
 

@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTrackingResources";
-import { getCallTrackingReviewUrl } from "@/lib/routes";
+import { getCallTrackingBestForUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/how-call-tracking-works";
 const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
@@ -57,15 +57,27 @@ export default function HowCallTrackingWorksPage() {
             <header className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Call Tracking Works</h1>
               <p className="mt-3 text-[#57534E] text-base leading-relaxed">
-                A practical overview of swap scripts, number pools, integrations, and QA—for teams that need trustworthy attribution, not vanity ring counts. Pair with{" "}
+                A practical overview of swap scripts, number pools, integrations, and QA—for teams that need trustworthy attribution, not vanity ring counts. Start from our{" "}
+                <Link href="/call-tracking/best-call-tracking-software" className={link}>
+                  best call tracking software
+                </Link>{" "}
+                rankings, then read{" "}
+                <Link href={getCallTrackingReviewUrl("callrail")} className={link}>
+                  CallRail
+                </Link>
+                ,{" "}
+                <Link href={getCallTrackingReviewUrl("whatconverts")} className={link}>
+                  WhatConverts
+                </Link>
+                , and{" "}
                 <Link href={getCallTrackingReviewUrl("calltrackingmetrics")} className={link}>
                   CallTrackingMetrics
                 </Link>{" "}
-                or{" "}
-                <Link href={getCallTrackingReviewUrl("callrail")} className={link}>
-                  CallRail
-                </Link>{" "}
-                reviews when you shortlist vendors.
+                reviews when you shortlist vendors. For a scenario lens, see{" "}
+                <Link href={getCallTrackingBestForUrl("home-services")} className={link}>
+                  best call tracking for home services
+                </Link>
+                .
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
@@ -83,7 +95,15 @@ export default function HowCallTrackingWorksPage() {
               <h2 className="text-[#1A2D48] text-xl font-bold mt-8">CRM and ads handoffs</h2>
               <p className="mt-2">
                 The best implementations push call events (and dispositions) into the CRM so marketing and ops share one definition of a qualified lead. Without that bridge, dashboards look busy while
-                pipeline truth stays opaque.
+                pipeline truth stays opaque. Send and manage call leads in your{" "}
+                <Link href="/crm" className={link}>
+                  CRM stack
+                </Link>
+                —and when organic pages feed the phone, measure those URLs with our{" "}
+                <Link href="/seo-tools" className={link}>
+                  SEO tools hub
+                </Link>
+                .
               </p>
             </div>
             <div className="mt-12">

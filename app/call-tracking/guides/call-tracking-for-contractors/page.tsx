@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTrackingResources";
-import { getCallTrackingBestForUrl, getCallTrackingCompareUrl } from "@/lib/routes";
+import { getCallTrackingBestForUrl, getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/call-tracking-for-contractors";
 const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
@@ -57,11 +57,19 @@ export default function CallTrackingForContractorsPage() {
             <header className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Call Tracking for Contractors</h1>
               <p className="mt-3 text-[#57534E] text-base leading-relaxed">
-                Dispatch-heavy trades need source truth on emergency and estimate calls. Use our{" "}
+                Dispatch-heavy trades need source truth on emergency and estimate calls. Our{" "}
+                <Link href="/call-tracking/best-call-tracking-software" className={link}>
+                  best call tracking software
+                </Link>{" "}
+                roundup ranks vendors; use{" "}
                 <Link href={getCallTrackingBestForUrl("contractors")} className={link}>
                   best call tracking for contractors
                 </Link>{" "}
-                scenario page for ranked picks, and{" "}
+                for trade-specific picks, read the{" "}
+                <Link href={getCallTrackingReviewUrl("callrail")} className={link}>
+                  CallRail review
+                </Link>
+                , and open{" "}
                 <Link href={getCallTrackingCompareUrl("callrail-vs-whatconverts")} className={link}>
                   CallRail vs WhatConverts
                 </Link>{" "}
@@ -73,7 +81,11 @@ export default function CallTrackingForContractorsPage() {
               <h2 className="text-[#1A2D48] text-xl font-bold">Start with CRM stages</h2>
               <p className="mt-2">
                 Tag the marketing source on create, then require reps to move deals to booked/won/lost with reasons. Call tracking fills the top of that funnel with honest channel names; CRM tells you
-                whether those channels produce revenue.
+                whether those channels produce revenue. Send inbound call leads into your{" "}
+                <Link href="/crm" className={link}>
+                  CRM
+                </Link>{" "}
+                with source tags intact—otherwise attribution stops at the dial.
               </p>
               <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Speed-to-lead still wins</h2>
               <p className="mt-2">
@@ -81,19 +93,15 @@ export default function CallTrackingForContractorsPage() {
               </p>
               <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Cross-links that matter</h2>
               <p className="mt-2">
-                When SEO pages and ads both drive calls, connect this hub with{" "}
-                <Link href="/seo-tools" className={link}>
-                  SEO tools
-                </Link>
-                ,{" "}
+                Track calls coming from your website and paid programs together: compare{" "}
                 <Link href="/lead-generation" className={link}>
-                  lead generation
-                </Link>
-                , and{" "}
+                  lead generation tools for contractors
+                </Link>{" "}
+                when you need more opportunities, and ship high-converting pages with{" "}
                 <Link href="/website-builders/best-for/contractors" className={link}>
                   website builders for contractors
-                </Link>{" "}
-                so spend decisions stay grounded in full-funnel context.
+                </Link>
+                .
               </p>
             </div>
             <div className="mt-12">

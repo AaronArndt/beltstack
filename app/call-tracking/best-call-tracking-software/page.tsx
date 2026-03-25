@@ -121,7 +121,7 @@ export default function BestCallTrackingSoftwarePage() {
               <Link href={getCallTrackingReviewUrl("nimbata")} className={linkGreen}>
                 Nimbata
               </Link>
-              . After pages are live, our{" "}
+              . Our{" "}
               <Link href="/website-builders/best-website-builders" className={linkGreen}>
                 best website builders
               </Link>{" "}
@@ -137,7 +137,7 @@ export default function BestCallTrackingSoftwarePage() {
               <Link href="/crm" className={linkGreen}>
                 CRM
               </Link>
-              . For ranked swap lists, see{" "}
+              . Ranked substitute lists include{" "}
               <Link href={getCallTrackingAlternativeUrl("callrail")} className={linkGreen}>
                 best CallRail alternatives
               </Link>
@@ -145,9 +145,29 @@ export default function BestCallTrackingSoftwarePage() {
               <Link href={getCallTrackingAlternativeUrl("calltrackingmetrics")} className={linkGreen}>
                 best CallTrackingMetrics alternatives
               </Link>
-              , and{" "}
+              ,{" "}
               <Link href={getCallTrackingAlternativeUrl("whatconverts")} className={linkGreen}>
                 best WhatConverts alternatives
+              </Link>
+              ,{" "}
+              <Link href={getCallTrackingAlternativeUrl("ringba")} className={linkGreen}>
+                best Ringba alternatives
+              </Link>
+              ,{" "}
+              <Link href={getCallTrackingAlternativeUrl("invoca")} className={linkGreen}>
+                best Invoca alternatives
+              </Link>
+              ,{" "}
+              <Link href={getCallTrackingAlternativeUrl("twilio")} className={linkGreen}>
+                best Twilio alternatives
+              </Link>
+              ,{" "}
+              <Link href={getCallTrackingAlternativeUrl("phonewagon")} className={linkGreen}>
+                best PhoneWagon alternatives
+              </Link>
+              , and{" "}
+              <Link href={getCallTrackingAlternativeUrl("nimbata")} className={linkGreen}>
+                best Nimbata alternatives
               </Link>
               .
             </p>

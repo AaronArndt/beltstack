@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTrackingResources";
-import { getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
+import { getCallTrackingBestForUrl, getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/what-is-call-tracking";
 const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
@@ -60,13 +60,25 @@ export default function WhatIsCallTrackingPage() {
                 Call tracking connects inbound phone calls to the marketing touch that caused them—search ads, SEO pages, directories, or campaigns—using dynamic numbers, session data, and integrations. For
                 product picks, start with our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
-                  best call tracking software
+                  best call tracking software (2026) roundup
                 </Link>{" "}
-                roundup and{" "}
+                roundup, then read our{" "}
                 <Link href={getCallTrackingReviewUrl("callrail")} className={link}>
                   CallRail review
+                </Link>{" "}
+                and{" "}
+                <Link href={getCallTrackingReviewUrl("whatconverts")} className={link}>
+                  WhatConverts review
                 </Link>
-                .
+                . Scenario entry points include{" "}
+                <Link href={getCallTrackingBestForUrl("small-business")} className={link}>
+                  best call tracking for small business
+                </Link>
+                —and once calls become pipeline, your{" "}
+                <Link href="/crm" className={link}>
+                  CRM
+                </Link>{" "}
+                should record booked-job outcomes, not just ring counts.
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
@@ -74,7 +86,15 @@ export default function WhatIsCallTrackingPage() {
               <h2 className="text-[#1A2D48] text-xl font-bold">Why service businesses use it</h2>
               <p className="mt-2">
                 Contractors live on the phone. Without attribution, every ring looks the same—so you cannot defend LSA spend, prune bad keywords, or prove which SEO pages earn booked jobs. Call tracking
-                makes source data operational, especially when paired with CRM stages.
+                makes source data operational, especially when paired with CRM stages. Track which lead sources drive phone calls with our{" "}
+                <Link href="/lead-generation" className={link}>
+                  lead generation tools hub
+                </Link>
+                , and measure organic landing pages that feed those calls via the{" "}
+                <Link href="/seo-tools" className={link}>
+                  SEO tools hub
+                </Link>
+                .
               </p>
               <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Dynamic number insertion (DNI)</h2>
               <p className="mt-2">

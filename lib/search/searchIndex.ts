@@ -444,6 +444,46 @@ export const searchIndex: SearchIndexItem[] = [
     entity: "WhatConverts",
     keywords: ["whatconverts alternatives", "lead reporting alternatives"],
   },
+  {
+    title: "Best Ringba Alternatives (2026)",
+    href: "/call-tracking/alternatives/ringba",
+    type: "Alternatives",
+    category: "Call Tracking",
+    entity: "Ringba",
+    keywords: ["ringba alternatives", "pay per call software alternatives"],
+  },
+  {
+    title: "Best Invoca Alternatives (2026)",
+    href: "/call-tracking/alternatives/invoca",
+    type: "Alternatives",
+    category: "Call Tracking",
+    entity: "Invoca",
+    keywords: ["invoca alternatives", "conversation intelligence alternatives"],
+  },
+  {
+    title: "Best Twilio Alternatives (2026)",
+    href: "/call-tracking/alternatives/twilio",
+    type: "Alternatives",
+    category: "Call Tracking",
+    entity: "Twilio",
+    keywords: ["twilio alternatives", "programmable voice alternatives"],
+  },
+  {
+    title: "Best PhoneWagon Alternatives (2026)",
+    href: "/call-tracking/alternatives/phonewagon",
+    type: "Alternatives",
+    category: "Call Tracking",
+    entity: "PhoneWagon",
+    keywords: ["phonewagon alternatives", "simple call tracking alternatives"],
+  },
+  {
+    title: "Best Nimbata Alternatives (2026)",
+    href: "/call-tracking/alternatives/nimbata",
+    type: "Alternatives",
+    category: "Call Tracking",
+    entity: "Nimbata",
+    keywords: ["nimbata alternatives", "gdpr call tracking alternatives"],
+  },
 
   // ——— Comparisons ———
   {

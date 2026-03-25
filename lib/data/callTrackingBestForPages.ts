@@ -96,6 +96,8 @@ const relatedComparisons: BestForComparisonLink[] = [
     label: "CallTrackingMetrics vs WhatConverts",
     href: getCallTrackingCompareUrl("calltrackingmetrics-vs-whatconverts"),
   },
+  { label: "Ringba vs CallRail", href: getCallTrackingCompareUrl("ringba-vs-callrail") },
+  { label: "Invoca vs CallRail", href: getCallTrackingCompareUrl("invoca-vs-callrail") },
 ];
 
 function makePage(

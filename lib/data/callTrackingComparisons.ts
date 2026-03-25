@@ -70,15 +70,37 @@ const P = {
   },
 } as const;
 
-const ALTERNATIVES_PAGE_SLUGS = new Set<keyof typeof P>(["callrail", "calltrackingmetrics", "whatconverts"]);
+/** Products with dedicated `/call-tracking/alternatives/[slug]` pages (may extend beyond `P` comparison roster). */
+const CALL_TRACKING_ALTERNATIVES_SLUGS = new Set([
+  "callrail",
+  "calltrackingmetrics",
+  "whatconverts",
+  "ringba",
+  "invoca",
+  "twilio",
+  "phonewagon",
+  "nimbata",
+]);
+
+const CALL_TRACKING_PRODUCT_NAMES: Record<string, string> = {
+  callrail: "CallRail",
+  calltrackingmetrics: "CallTrackingMetrics",
+  whatconverts: "WhatConverts",
+  ringba: "Ringba",
+  invoca: "Invoca",
+  twilio: "Twilio",
+  phonewagon: "PhoneWagon",
+  nimbata: "Nimbata",
+};
 
 function alternativesPageLinksForSlugs(slugs: string[]): { label: string; href: string }[] {
   const out: { label: string; href: string }[] = [];
   for (const s of slugs) {
-    if (!ALTERNATIVES_PAGE_SLUGS.has(s as keyof typeof P)) continue;
-    const p = P[s as keyof typeof P];
+    if (!CALL_TRACKING_ALTERNATIVES_SLUGS.has(s)) continue;
+    const name = CALL_TRACKING_PRODUCT_NAMES[s];
+    if (name == null) continue;
     out.push({
-      label: `Best ${p.name} alternatives (ranked)`,
+      label: `Best ${name} alternatives (ranked)`,
       href: getCallTrackingAlternativeUrl(s),
     });
   }
@@ -94,6 +116,7 @@ function buildMoreComparisons(pa: (typeof P)[keyof typeof P], pb: (typeof P)[key
   const crossCluster = [
     { label: "Best lead generation tools (2026)", href: "/lead-generation/best-lead-generation-tools" },
     { label: "CRM software hub", href: "/crm" },
+    { label: "Website builders for contractors", href: "/website-builders/best-for/contractors" },
   ];
   return [
     { label: "CallRail vs CallTrackingMetrics", href: getCallTrackingCompareUrl("callrail-vs-calltrackingmetrics") },

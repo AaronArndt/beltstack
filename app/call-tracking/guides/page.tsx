@@ -89,19 +89,19 @@ export default function CallTrackingGuidesPage() {
               <Link href={getCallTrackingBestForUrl("small-business")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 small business
               </Link>
-              . Pair with{" "}
+              .               Pair with{" "}
               <Link href="/lead-generation" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                lead generation
+                lead generation tools for contractors
               </Link>
               ,{" "}
-              <Link href="/seo-tools" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                SEO tools
+              <Link href="/website-builders/best-for/contractors" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                website builders for contractors
               </Link>
               , and your{" "}
               <Link href="/crm" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 CRM
-              </Link>
-              .
+              </Link>{" "}
+              so calls from your site and campaigns roll into one pipeline story.
             </p>
           </div>
         </section>

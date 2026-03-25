@@ -406,7 +406,15 @@ function CallTrackingEducationSection() {
           <div>
             <h3 className="text-[#1A2D48] text-lg font-semibold">Pair with SEO and lead gen</h3>
             <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
-              Call tracking proves which pages and campaigns earn phones—compare stacks in our SEO and lead generation hubs.
+              Call tracking proves which pages and campaigns earn phones—use our{" "}
+              <Link href="/seo-tools" className={linkGreen}>
+                SEO tools hub
+              </Link>{" "}
+              to grow organic demand and our{" "}
+              <Link href="/lead-generation" className={linkGreen}>
+                lead generation hub
+              </Link>{" "}
+              when you need more raw opportunities to attribute.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { GuideFaqSection } from "@/components/guides/GuideFaqSection";
 import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTrackingResources";
-import { getCallTrackingBestForUrl } from "@/lib/routes";
+import { getCallTrackingBestForUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/how-to-track-phone-call-conversions";
 const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
@@ -57,7 +57,19 @@ export default function HowToTrackPhoneCallConversionsPage() {
             <header className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Track Phone Call Conversions</h1>
               <p className="mt-3 text-[#57534E] text-base leading-relaxed">
-                Define what counts as a qualified call, push outcomes into your CRM, and reconcile marketing sources with booked revenue—not raw ring volume. Scenario picks:{" "}
+                Define what counts as a qualified call, push outcomes into your CRM, and reconcile marketing sources with booked revenue—not raw ring volume. Start from our{" "}
+                <Link href="/call-tracking/best-call-tracking-software" className={link}>
+                  best call tracking software
+                </Link>{" "}
+                roundup and vendor write-ups like the{" "}
+                <Link href={getCallTrackingReviewUrl("callrail")} className={link}>
+                  CallRail review
+                </Link>{" "}
+                and{" "}
+                <Link href={getCallTrackingReviewUrl("whatconverts")} className={link}>
+                  WhatConverts review
+                </Link>
+                . Scenario picks:{" "}
                 <Link href={getCallTrackingBestForUrl("small-business")} className={link}>
                   small business
                 </Link>{" "}
@@ -73,7 +85,11 @@ export default function HowToTrackPhoneCallConversionsPage() {
               <h2 className="text-[#1A2D48] text-xl font-bold">Define conversion stages</h2>
               <p className="mt-2">
                 Start with a written definition: is a conversion a booked estimate, a qualified homeowner, or simply an answered call over 30 seconds? The tighter the definition, the more honest your
-                cost-per-acquisition math becomes.
+                cost-per-acquisition math becomes. Track which lead sources are driving phone calls by pairing call data with{" "}
+                <Link href="/lead-generation/best-lead-generation-tools" className={link}>
+                  lead generation tools
+                </Link>{" "}
+                you already pay for.
               </p>
               <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Wire CRM fields</h2>
               <p className="mt-2">
