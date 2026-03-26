@@ -313,6 +313,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     defaultEntry("/", { changeFrequency: "weekly", priority: 1 }),
     defaultEntry("/software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/about", { changeFrequency: "monthly", priority: 0.7 }),
+    defaultEntry("/contact", { changeFrequency: "monthly", priority: 0.7 }),
     defaultEntry("/methodology", { changeFrequency: "monthly", priority: 0.7 }),
     // Payroll
     defaultEntry("/payroll", { changeFrequency: "weekly", priority: 0.9 }),
