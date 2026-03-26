@@ -156,7 +156,7 @@ export default function QuickBooksAlternativesGuidePage() {
                         href={getAccountingReviewUrl("sage-accounting")}
                         className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
-                        Sage Accounting
+                        Sage
                       </Link>{" "}
                       are worth a close look.
                     </p>
@@ -300,7 +300,7 @@ export default function QuickBooksAlternativesGuidePage() {
                     </p>
                     <p>
                       <strong className="text-[#1A2D48]">Wave</strong> and{" "}
-                      <strong className="text-[#1A2D48]">Sage Accounting</strong> are also common QuickBooks
+                      <strong className="text-[#1A2D48]">Sage</strong> are also common QuickBooks
                       considerations—Wave for free core accounting if you are very cost-sensitive, Sage for businesses that
                       prefer its ecosystem or have history with its desktop tools.
                     </p>

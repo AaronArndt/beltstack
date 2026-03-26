@@ -23,7 +23,7 @@ const linkGreen =
 const FAQ_ITEMS = [
   {
     q: "What is the best POS for restaurants?",
-    a: "Toast POS and TouchBistro are among the top choices for full-service and quick-service restaurants. They offer table management, kitchen display, and restaurant-specific reporting. For very simple cafes or counters, Square POS can be enough.",
+    a: "Toast and TouchBistro are among the top choices for full-service and quick-service restaurants. They offer table management, kitchen display, and restaurant-specific reporting. For very simple cafes or counters, Square can be enough.",
   },
   {
     q: "Do restaurant POS systems support table service?",
@@ -66,10 +66,10 @@ export default function RestaurantPosSystemsGuidePage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Restaurants have different needs than retail: tables, courses, modifiers, kitchen display, and often online ordering and delivery. A general-purpose POS can handle basic counter sales, but full-service or high-volume restaurants usually need a system designed for food service. <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast POS</Link> and <Link href={getPosReviewUrl("touchbistro")} className={linkGreen}>TouchBistro</Link> are built for that; <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link> can work for simple cafes. This guide explains restaurant workflows and what to look for when comparing systems.
+                      Restaurants have different needs than retail: tables, courses, modifiers, kitchen display, and often online ordering and delivery. A general-purpose POS can handle basic counter sales, but full-service or high-volume restaurants usually need a system designed for food service. <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast</Link> and <Link href={getPosReviewUrl("touchbistro")} className={linkGreen}>TouchBistro</Link> are built for that; <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link> can work for simple cafes. This guide explains restaurant workflows and what to look for when comparing systems.
                     </p>
                     <p>
-                      For a direct comparison, see <Link href={getPosCompareUrl("toast-pos-vs-square-pos")} className={linkGreen}>Toast POS vs Square POS</Link>; for restaurant-specific picks, our <Link href="/pos/best-for/restaurants" className={linkGreen}>best POS for restaurants</Link> and <Link href="/pos/best-pos-software" className={linkGreen}>best POS software</Link> roundup.
+                      For a direct comparison, see <Link href={getPosCompareUrl("toast-pos-vs-square-pos")} className={linkGreen}>Toast vs Square</Link>; for restaurant-specific picks, our <Link href="/pos/best-for/restaurants" className={linkGreen}>best POS for restaurants</Link> and <Link href="/pos/best-pos-software" className={linkGreen}>best POS software</Link> roundup.
                     </p>
                   </div>
                 </section>
@@ -97,7 +97,7 @@ export default function RestaurantPosSystemsGuidePage() {
                       In a full-service restaurant, the POS connects the front of house (tables, orders, payments) to the back (kitchen display, prep, expo). Servers send orders to the kitchen by course; the kitchen sees them on a KDS and marks them complete. The POS tracks open tabs, splits checks, and handles tips. Menu management includes items, modifiers (e.g. “no ice”), and course sequencing so tickets print or display in the right order.
                     </p>
                     <p>
-                      Quick-service and fast-casual often need faster throughput, drive-thru or pickup integration, and sometimes delivery aggregation. Toast and TouchBistro support these patterns; general POS systems may require add-ons or custom integration. When evaluating, confirm that table management, KDS, and online ordering match your service model—see our <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast POS</Link> and <Link href={getPosReviewUrl("touchbistro")} className={linkGreen}>TouchBistro</Link> reviews for detail.
+                      Quick-service and fast-casual often need faster throughput, drive-thru or pickup integration, and sometimes delivery aggregation. Toast and TouchBistro support these patterns; general POS systems may require add-ons or custom integration. When evaluating, confirm that table management, KDS, and online ordering match your service model—see our <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast</Link> and <Link href={getPosReviewUrl("touchbistro")} className={linkGreen}>TouchBistro</Link> reviews for detail.
                     </p>
                   </div>
                 </section>

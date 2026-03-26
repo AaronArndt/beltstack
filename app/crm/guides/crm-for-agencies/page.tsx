@@ -19,15 +19,15 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
 const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
-  { q: "What CRM is best for agencies?", a: "Agencies often need multi-client or multi-pipeline support. HubSpot, Zoho CRM, and Monday CRM are strong options; choose by whether you need strict client separation, project-style boards, or all-in-one marketing and sales. See our CRM for agencies guide and best CRM software roundup." },
-  { q: "Can agencies use one CRM for all clients?", a: "Yes. Many agencies use a single CRM with pipelines or segments per client, or use custom objects/tags to keep client data separate. Some tools offer dedicated agency or multi-tenant features. Monday CRM and HubSpot both support flexible structures." },
-  { q: "HubSpot vs Monday CRM for agencies?", a: "HubSpot offers all-in-one marketing and sales with pipelines and segments; Monday CRM emphasizes boards and project-style views. Choose HubSpot for strong marketing automation and sales in one place; Monday for visual boards and client workspaces. See our Monday CRM vs HubSpot comparison." },
-  { q: "Do agencies need separate tools for client work and sales?", a: "Not always. One CRM can handle both: use pipelines or boards per client for delivery/projects, and a separate pipeline or segment for your own sales (new business). Tools like HubSpot and Monday CRM support this with pipelines, filters, and reporting." },
+  { q: "What CRM is best for agencies?", a: "Agencies often need multi-client or multi-pipeline support. HubSpot, Zoho CRM, and Monday are strong options; choose by whether you need strict client separation, project-style boards, or all-in-one marketing and sales. See our CRM for agencies guide and best CRM software roundup." },
+  { q: "Can agencies use one CRM for all clients?", a: "Yes. Many agencies use a single CRM with pipelines or segments per client, or use custom objects/tags to keep client data separate. Some tools offer dedicated agency or multi-tenant features. Monday and HubSpot both support flexible structures." },
+  { q: "HubSpot vs Monday for agencies?", a: "HubSpot offers all-in-one marketing and sales with pipelines and segments; Monday emphasizes boards and project-style views. Choose HubSpot for strong marketing automation and sales in one place; Monday for visual boards and client workspaces. See our Monday vs HubSpot comparison." },
+  { q: "Do agencies need separate tools for client work and sales?", a: "Not always. One CRM can handle both: use pipelines or boards per client for delivery/projects, and a separate pipeline or segment for your own sales (new business). Tools like HubSpot and Monday support this with pipelines, filters, and reporting." },
 ];
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "HubSpot", logoSrc: "/Logos/hubspot.jpeg", rating: 4.6, bestFor: "All-in-one", reviewHref: getCrmReviewUrl("hubspot") },
-  { name: "Monday CRM", logoSrc: "/Logos/monday.jpeg", rating: 4.4, bestFor: "Boards & clients", reviewHref: getCrmReviewUrl("monday-crm") },
+  { name: "Monday", logoSrc: "/Logos/monday.jpeg", rating: 4.4, bestFor: "Boards & clients", reviewHref: getCrmReviewUrl("monday-crm") },
   { name: "Zoho CRM", logoSrc: "/Logos/zoho.jpeg", rating: 4.4, bestFor: "Value", reviewHref: getCrmReviewUrl("zoho-crm") },
 ];
 
@@ -36,7 +36,7 @@ const RELATED_ITEMS = [
   { label: "Best CRM Software", href: "/crm/best-crm-software" },
   { label: "Compare CRM Software", href: "/crm/compare" },
   { label: "CRM Guides", href: "/crm/guides" },
-  { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+  { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
   { label: "CRM for Small Business", href: "/crm/guides/crm-for-small-business" },
   { label: "How to Choose CRM Software", href: "/crm/guides/how-to-choose-crm-software" },
 ];
@@ -70,7 +70,7 @@ export default function CrmForAgenciesPage() {
                 <section className="pt-8 pb-8">
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Agencies need CRM that supports multiple clients or pipelines, keeps deal and contact data organized, and allows team collaboration without duplicate spreadsheets or siloed inboxes. Whether you run a marketing agency, design studio, or consulting shop, you're managing both your own sales pipeline (new business) and client work—follow-ups, deliverables, and renewals.</p>
-                    <p>Tools like <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> and <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday CRM</Link> offer flexible structures—pipelines per client, boards, or segments—so you can see pipeline and activity by client or team. <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> works for sales-focused agencies that want a simple pipeline. Compare in our <Link href="/crm/compare" className={linkGreen}>CRM comparisons</Link> and <Link href={getCrmCompareUrl("monday-crm-vs-hubspot")} className={linkGreen}>Monday CRM vs HubSpot</Link>.</p>
+                    <p>Tools like <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> and <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday</Link> offer flexible structures—pipelines per client, boards, or segments—so you can see pipeline and activity by client or team. <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> works for sales-focused agencies that want a simple pipeline. Compare in our <Link href="/crm/compare" className={linkGreen}>CRM comparisons</Link> and <Link href={getCrmCompareUrl("monday-crm-vs-hubspot")} className={linkGreen}>Monday vs HubSpot</Link>.</p>
                   </div>
                 </section>
                 <section id="agency-needs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -87,7 +87,7 @@ export default function CrmForAgenciesPage() {
                 <section id="agency-workflows" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="How agency workflows fit into CRM.">Agency Workflows: Client Work and Sales</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>Agency CRM use often splits into two streams: <strong className="text-[#1A2D48]">client management</strong>—tracking projects, follow-ups, renewals, and contacts per client—and <strong className="text-[#1A2D48]">your own sales pipeline</strong> for new business. A single CRM can handle both with pipelines or boards per client and a dedicated pipeline for inbound/outbound leads. Reporting then lets you see revenue and pipeline by client, by team member, or for new business. Tools like <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> (pipelines and segments) and <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday CRM</Link> (boards and workspaces) fit this pattern; <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> is a good fit if your agency is sales-led and you mainly need deal and activity tracking.</p>
+                    <p>Agency CRM use often splits into two streams: <strong className="text-[#1A2D48]">client management</strong>—tracking projects, follow-ups, renewals, and contacts per client—and <strong className="text-[#1A2D48]">your own sales pipeline</strong> for new business. A single CRM can handle both with pipelines or boards per client and a dedicated pipeline for inbound/outbound leads. Reporting then lets you see revenue and pipeline by client, by team member, or for new business. Tools like <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> (pipelines and segments) and <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday</Link> (boards and workspaces) fit this pattern; <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> is a good fit if your agency is sales-led and you mainly need deal and activity tracking.</p>
                   </div>
                 </section>
                 <section id="reporting-and-collab" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -97,9 +97,9 @@ export default function CrmForAgenciesPage() {
                   </div>
                 </section>
                 <section id="recommendations" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Where HubSpot, Monday CRM, and Pipedrive fit.">CRM Recommendations for Agencies</SectionTitle>
+                  <SectionTitle sub="Where HubSpot, Monday, and Pipedrive fit.">CRM Recommendations for Agencies</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> suits agencies that want all-in-one marketing and sales: pipelines, segments, email campaigns, and reporting in one platform. <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday CRM</Link> fits teams that prefer boards and project-style views and need clear client workspaces. <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link> offers value and multi-currency support for agencies with international clients. Compare <Link href={getCrmCompareUrl("monday-crm-vs-hubspot")} className={linkGreen}>Monday CRM vs HubSpot</Link> for a detailed breakdown, and see our <Link href="/crm/guides/crm-for-small-business" className={linkGreen}>CRM for small business</Link> guide if your agency is still small and evaluating simplicity vs features.</p>
+                    <p><Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> suits agencies that want all-in-one marketing and sales: pipelines, segments, email campaigns, and reporting in one platform. <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>Monday</Link> fits teams that prefer boards and project-style views and need clear client workspaces. <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link> offers value and multi-currency support for agencies with international clients. Compare <Link href={getCrmCompareUrl("monday-crm-vs-hubspot")} className={linkGreen}>Monday vs HubSpot</Link> for a detailed breakdown, and see our <Link href="/crm/guides/crm-for-small-business" className={linkGreen}>CRM for small business</Link> guide if your agency is still small and evaluating simplicity vs features.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -121,5 +121,5 @@ export default function CrmForAgenciesPage() {
 }
 
 export function generateMetadata() {
-  return { title: "CRM for Agencies | BeltStack Guide", description: "How agencies use CRM to manage multiple clients, pipelines, reporting, and team collaboration—with recommendations for HubSpot, Monday CRM, and more." };
+  return { title: "CRM for Agencies | BeltStack Guide", description: "How agencies use CRM to manage multiple clients, pipelines, reporting, and team collaboration—with recommendations for HubSpot, Monday, and more." };
 }

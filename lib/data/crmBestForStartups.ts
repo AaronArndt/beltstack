@@ -83,7 +83,7 @@ export const STARTUPS_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       badge: "Best for customizable startup workflows",
       description:
         "Board-based CRM you can adapt to your process. Suits startups that want flexibility and visual pipelines as the team grows.",
@@ -125,7 +125,7 @@ export const STARTUPS_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       logoSrc: LOGOS.monday,
       bestFor: "Custom workflows",
       startingPrice: "From $10/user/mo",
@@ -163,8 +163,8 @@ export const STARTUPS_PAGE_PROPS = {
       body: "Zoho CRM offers strong value with a free tier and affordable paid plans. Good for startups that want full CRM features and room to scale without the cost of HubSpot or Salesforce. Solid automation and reporting as you grow.",
     },
     {
-      heading: "Monday CRM",
-      body: "Monday CRM suits startups that prefer boards and custom views. You can model your pipeline and client work your way; good fit when you want flexibility and visual workflows as the team and process evolve.",
+      heading: "Monday",
+      body: "Monday suits startups that prefer boards and custom views. You can model your pipeline and client work your way; good fit when you want flexibility and visual workflows as the team and process evolve.",
     },
   ] as BestForEditorialBlock[],
 
@@ -172,13 +172,13 @@ export const STARTUPS_PAGE_PROPS = {
     { name: "HubSpot", href: getCrmReviewUrl("hubspot") },
     { name: "Pipedrive", href: getCrmReviewUrl("pipedrive") },
     { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm") },
-    { name: "Monday CRM", href: getCrmReviewUrl("monday-crm") },
+    { name: "Monday", href: getCrmReviewUrl("monday-crm") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
     { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
     { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-    { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+    { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
     { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
   ] as BestForComparisonLink[],
 

@@ -54,7 +54,7 @@ const P = {
     startingPrice: "From $14.90/user/mo",
   },
   "monday-crm": {
-    name: "Monday CRM",
+    name: "Monday",
     slug: "monday-crm",
     reviewHref: getCrmReviewUrl("monday-crm"),
     logoSrc: "/Logos/monday.jpeg",
@@ -285,7 +285,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "monday-crm-vs-hubspot",
     "monday-crm",
     "hubspot",
-    "Monday CRM brings customizable boards and project-style workflows; HubSpot is a full marketing and sales CRM. See which fits your team's way of working.",
+    "Monday brings customizable boards and project-style workflows; HubSpot is a full marketing and sales CRM. See which fits your team's way of working.",
     "Best for customizable workflows and CRM plus project management in one place.",
     "Best for full marketing and sales CRM with a traditional pipeline and strong free tier.",
     [

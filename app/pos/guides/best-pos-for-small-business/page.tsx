@@ -27,7 +27,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "What is the best POS for a very small business?",
-    a: "Square POS is a strong default: free software, low-cost hardware, and no long-term contract. Clover and Shopify POS are also popular—Clover for hardware choice and apps, Shopify POS when you already sell or plan to sell online on Shopify.",
+    a: "Square is a strong default: free software, low-cost hardware, and no long-term contract. Clover and Shopify POS are also popular—Clover for hardware choice and apps, Shopify POS when you already sell or plan to sell online on Shopify.",
   },
   {
     q: "Do small businesses need to pay monthly for POS software?",
@@ -74,13 +74,13 @@ export default function BestPosForSmallBusinessGuidePage() {
                     </p>
                     <p>
                       The right POS for a small business balances ease of use, transparent pricing, and enough features to support growth. Tools like{" "}
-                      <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link>,{" "}
-                      <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover POS</Link>, and{" "}
+                      <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link>,{" "}
+                      <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover</Link>, and{" "}
                       <Link href={getPosReviewUrl("shopify-pos")} className={linkGreen}>Shopify POS</Link>{" "}
                       are often at the top of the list because they’re approachable for small teams and scale as you add locations or channels. For a curated shortlist, see our{" "}
                       <Link href="/pos/best-pos-software" className={linkGreen}>best POS software</Link> roundup; for head-to-heads, try{" "}
-                      <Link href={getPosCompareUrl("square-pos-vs-shopify-pos")} className={linkGreen}>Square POS vs Shopify POS</Link> or{" "}
-                      <Link href={getPosCompareUrl("square-pos-vs-clover-pos")} className={linkGreen}>Square POS vs Clover POS</Link>.
+                      <Link href={getPosCompareUrl("square-pos-vs-shopify-pos")} className={linkGreen}>Square vs Shopify POS</Link> or{" "}
+                      <Link href={getPosCompareUrl("square-pos-vs-clover-pos")} className={linkGreen}>Square vs Clover</Link>.
                     </p>
                   </div>
                 </section>
@@ -119,7 +119,7 @@ export default function BestPosForSmallBusinessGuidePage() {
                       Prioritize <strong className="text-[#1A2D48]">ease of use</strong>: staff should be able to ring sales, apply discounts, and process refunds with minimal training. <strong className="text-[#1A2D48]">Pricing</strong> should be clear—whether that’s free software plus transaction fees (Square) or a monthly bundle (Clover). <strong className="text-[#1A2D48">Payment processing</strong> should be built in or easy to connect so you’re not maintaining a separate gateway. Basic <strong className="text-[#1A2D48]">inventory and reporting</strong> help you see what’s selling and what’s low in stock; you can add deeper inventory or multi-location later if needed.
                     </p>
                     <p>
-                      If you already sell online or plan to, consider a POS that unifies in-person and online sales (e.g. <Link href={getPosReviewUrl("shopify-pos")} className={linkGreen}>Shopify POS</Link>). If you’re in-person only and want the lowest commitment, <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link> or <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover POS</Link> are solid choices.
+                      If you already sell online or plan to, consider a POS that unifies in-person and online sales (e.g. <Link href={getPosReviewUrl("shopify-pos")} className={linkGreen}>Shopify POS</Link>). If you’re in-person only and want the lowest commitment, <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link> or <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover</Link> are solid choices.
                     </p>
                   </div>
                 </section>

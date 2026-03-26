@@ -344,10 +344,10 @@ function PosPopularComparisonsSection() {
 
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
-  { label: "Best overall for small businesses: Square POS", anchor: "#pick-square-pos" },
+  { label: "Best overall for small businesses: Square", anchor: "#pick-square-pos" },
   { label: "Best for ecommerce stores: Shopify POS", anchor: "#pick-shopify-pos" },
-  { label: "Best for retail stores: Lightspeed POS", anchor: "#pick-lightspeed-pos" },
-  { label: "Best for restaurants: Toast POS", anchor: "#pick-toast-pos" },
+  { label: "Best for retail stores: Lightspeed", anchor: "#pick-lightspeed-pos" },
+  { label: "Best for restaurants: Toast", anchor: "#pick-toast-pos" },
 ];
 
 export default function PosPage() {

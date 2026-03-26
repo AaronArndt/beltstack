@@ -18,7 +18,7 @@ const DEFAULT_RELATED_CRM_RESOURCES: RelatedCrmResourceItem[] = [
   { label: "Salesforce Review", href: getCrmReviewUrl("salesforce") },
   { label: "Zoho CRM Review", href: getCrmReviewUrl("zoho-crm") },
   { label: "Pipedrive Review", href: getCrmReviewUrl("pipedrive") },
-  { label: "Monday CRM Review", href: getCrmReviewUrl("monday-crm") },
+  { label: "Monday Review", href: getCrmReviewUrl("monday-crm") },
   { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
   { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
   { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },

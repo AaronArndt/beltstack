@@ -59,7 +59,7 @@ export const AGENCIES_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       badge: "Best for customizable agency workflows",
       description:
         "Board-based CRM with flexible views per client or project. Suits agencies that want pipeline plus project-style boards and collaboration.",
@@ -107,7 +107,7 @@ export const AGENCIES_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       logoSrc: LOGOS.monday,
       bestFor: "Custom workflows",
       startingPrice: "From $10/user/mo",
@@ -137,7 +137,7 @@ export const AGENCIES_PAGE_PROPS = {
   editorialGuidance: [
     {
       heading: "Agency sales pipeline and client management",
-      body: "Agencies often need both: a pipeline for new business (inbound leads, proposals) and a way to manage client work—deliverables, follow-ups, renewals. Look for a CRM that supports multiple pipelines or segments so you can separate client work from your own sales. HubSpot and Monday CRM both support this; Pipedrive is strongest when your main need is deal and activity tracking.",
+      body: "Agencies often need both: a pipeline for new business (inbound leads, proposals) and a way to manage client work—deliverables, follow-ups, renewals. Look for a CRM that supports multiple pipelines or segments so you can separate client work from your own sales. HubSpot and Monday both support this; Pipedrive is strongest when your main need is deal and activity tracking.",
     },
     {
       heading: "Reporting and collaboration",
@@ -145,7 +145,7 @@ export const AGENCIES_PAGE_PROPS = {
     },
     {
       heading: "Process customization",
-      body: "Agencies vary in how they track clients and deals. Some want traditional pipelines; others prefer boards or project-style views. Choose a tool that matches how you work: HubSpot for pipelines and segments, Monday CRM for boards and workspaces, Pipedrive for a strict sales pipeline. See our CRM for agencies guide for more on fit.",
+      body: "Agencies vary in how they track clients and deals. Some want traditional pipelines; others prefer boards or project-style views. Choose a tool that matches how you work: HubSpot for pipelines and segments, Monday for boards and workspaces, Pipedrive for a strict sales pipeline. See our CRM for agencies guide for more on fit.",
     },
   ] as BestForEditorialBlock[],
 
@@ -155,8 +155,8 @@ export const AGENCIES_PAGE_PROPS = {
       body: "HubSpot suits agencies that want all-in-one marketing and sales: pipelines, segments, email campaigns, and reporting in one platform. You can run client work and new-business pipeline with clear visibility and scale as you add team and clients.",
     },
     {
-      heading: "Monday CRM",
-      body: "Monday CRM fits agencies that prefer boards and project-style views. Customizable workspaces and views per client make it easy to model your process. Good when you want CRM plus project management in one place.",
+      heading: "Monday",
+      body: "Monday fits agencies that prefer boards and project-style views. Customizable workspaces and views per client make it easy to model your process. Good when you want CRM plus project management in one place.",
     },
     {
       heading: "Pipedrive",
@@ -170,13 +170,13 @@ export const AGENCIES_PAGE_PROPS = {
 
   relatedReviews: [
     { name: "HubSpot", href: getCrmReviewUrl("hubspot") },
-    { name: "Monday CRM", href: getCrmReviewUrl("monday-crm") },
+    { name: "Monday", href: getCrmReviewUrl("monday-crm") },
     { name: "Pipedrive", href: getCrmReviewUrl("pipedrive") },
     { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+    { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
     { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
     { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
   ] as BestForComparisonLink[],
@@ -189,15 +189,15 @@ export const AGENCIES_PAGE_PROPS = {
   faqItems: [
     {
       q: "What CRM is best for agencies?",
-      a: "HubSpot and Monday CRM are strong options: HubSpot for all-in-one marketing and sales with pipelines and segments; Monday CRM for boards and customizable client workspaces. Pipedrive fits sales-focused agencies; Zoho CRM offers value and multi-currency. See our CRM for agencies guide.",
+      a: "HubSpot and Monday are strong options: HubSpot for all-in-one marketing and sales with pipelines and segments; Monday for boards and customizable client workspaces. Pipedrive fits sales-focused agencies; Zoho CRM offers value and multi-currency. See our CRM for agencies guide.",
     },
     {
       q: "Can agencies use one CRM for all clients?",
-      a: "Yes. Many agencies use a single CRM with pipelines or segments per client, or custom objects/tags to keep client data separate. HubSpot and Monday CRM both support this; some tools offer dedicated agency or multi-tenant features.",
+      a: "Yes. Many agencies use a single CRM with pipelines or segments per client, or custom objects/tags to keep client data separate. HubSpot and Monday both support this; some tools offer dedicated agency or multi-tenant features.",
     },
     {
-      q: "HubSpot vs Monday CRM for agencies?",
-      a: "HubSpot offers all-in-one marketing and sales with pipelines and segments; Monday CRM emphasizes boards and project-style views. Choose HubSpot for strong marketing automation and sales in one place; Monday for visual boards and client workspaces. See our Monday CRM vs HubSpot comparison.",
+      q: "HubSpot vs Monday for agencies?",
+      a: "HubSpot offers all-in-one marketing and sales with pipelines and segments; Monday emphasizes boards and project-style views. Choose HubSpot for strong marketing automation and sales in one place; Monday for visual boards and client workspaces. See our Monday vs HubSpot comparison.",
     },
   ] as BestForFaqItem[],
 };

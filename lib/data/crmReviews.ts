@@ -115,7 +115,7 @@ const reviews: Record<string, CrmReviewData> = {
       { name: "Salesforce", href: getCrmReviewUrl("salesforce"), description: "Enterprise-grade CRM with maximum customization; better when you need scale and dedicated admin.", logoSrc: LOGOS.salesforce },
       { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm"), description: "Strong value and suite integration; good if you use Zoho or want lower cost.", logoSrc: LOGOS.zoho },
       { name: "Pipedrive", href: getCrmReviewUrl("pipedrive"), description: "Pipeline-first sales CRM; better if you want a strict sales focus without marketing hub.", logoSrc: LOGOS.pipedrive },
-      { name: "Monday CRM", href: getCrmReviewUrl("monday-crm"), description: "Customizable boards and workflows; fits teams that want CRM plus project management.", logoSrc: LOGOS.monday },
+      { name: "Monday", href: getCrmReviewUrl("monday-crm"), description: "Customizable boards and workflows; fits teams that want CRM plus project management.", logoSrc: LOGOS.monday },
       { name: "Freshsales", href: getCrmReviewUrl("freshsales"), description: "AI-powered sales CRM with built-in phone and email; good for sales teams that want automation.", logoSrc: LOGOS.freshsales },
       { name: "Copper", href: getCrmReviewUrl("copper"), description: "CRM built for Google Workspace; seamless if your team lives in Gmail and Google Calendar.", logoSrc: LOGOS.copper },
       { name: "Close", href: getCrmReviewUrl("close"), description: "Inside sales CRM with calling and pipeline; built for teams that spend time on the phone.", logoSrc: LOGOS.close },
@@ -132,7 +132,7 @@ const reviews: Record<string, CrmReviewData> = {
     compareLinks: [
       { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
       { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-      { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+      { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
       { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
       { label: "Copper vs HubSpot", href: getCrmCompareUrl("copper-vs-hubspot") },
       { label: "Keap vs HubSpot", href: getCrmCompareUrl("keap-vs-hubspot") },
@@ -216,7 +216,7 @@ const reviews: Record<string, CrmReviewData> = {
       { name: "HubSpot", href: getCrmReviewUrl("hubspot"), description: "Easier and more affordable for small and mid-size teams; strong free tier and marketing-sales alignment.", logoSrc: LOGOS.hubspot },
       { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm"), description: "Full-featured at lower cost; good for SMBs and teams already using Zoho.", logoSrc: LOGOS.zoho },
       { name: "Pipedrive", href: getCrmReviewUrl("pipedrive"), description: "Pipeline-focused; simpler and cheaper for sales-only teams.", logoSrc: LOGOS.pipedrive },
-      { name: "Monday CRM", href: getCrmReviewUrl("monday-crm"), description: "Customizable boards; good if you want flexibility without full Salesforce complexity.", logoSrc: LOGOS.monday },
+      { name: "Monday", href: getCrmReviewUrl("monday-crm"), description: "Customizable boards; good if you want flexibility without full Salesforce complexity.", logoSrc: LOGOS.monday },
       { name: "Freshsales", href: getCrmReviewUrl("freshsales"), description: "AI and built-in phone; modern alternative for sales teams.", logoSrc: LOGOS.freshsales },
     ],
     faqs: [
@@ -309,7 +309,7 @@ const reviews: Record<string, CrmReviewData> = {
       { name: "HubSpot", href: getCrmReviewUrl("hubspot"), description: "Stronger marketing focus and brand; better if you want all-in-one marketing and sales with a free tier.", logoSrc: LOGOS.hubspot },
       { name: "Salesforce", href: getCrmReviewUrl("salesforce"), description: "Larger ecosystem and customization; for enterprises that need maximum scale.", logoSrc: LOGOS.salesforce },
       { name: "Pipedrive", href: getCrmReviewUrl("pipedrive"), description: "Pipeline-only focus; simpler if you don't need full suite integration.", logoSrc: LOGOS.pipedrive },
-      { name: "Monday CRM", href: getCrmReviewUrl("monday-crm"), description: "Board-based flexibility; good if you want CRM plus project management.", logoSrc: LOGOS.monday },
+      { name: "Monday", href: getCrmReviewUrl("monday-crm"), description: "Board-based flexibility; good if you want CRM plus project management.", logoSrc: LOGOS.monday },
       { name: "Freshsales", href: getCrmReviewUrl("freshsales"), description: "AI and built-in communication tools; another value-oriented option.", logoSrc: LOGOS.freshsales },
     ],
     faqs: [
@@ -373,7 +373,7 @@ const reviews: Record<string, CrmReviewData> = {
     bestForEditorial:
       "Pipedrive is best for sales teams that want a pipeline-first CRM with activity tracking and clear deal stages. Ideal for inside sales, SMB sales teams, and anyone who measures success by pipeline movement. It fits teams that don't need heavy marketing automation and prefer a tool built around the deal process.",
     whoShouldAvoid:
-      "Teams that need strong marketing automation and full marketing-sales alignment in one platform should consider HubSpot. Organizations that need heavy customization and the largest app ecosystem may prefer Salesforce. If you want board-based flexibility and project management in the same tool, Monday CRM might fit better.",
+      "Teams that need strong marketing automation and full marketing-sales alignment in one platform should consider HubSpot. Organizations that need heavy customization and the largest app ecosystem may prefer Salesforce. If you want board-based flexibility and project management in the same tool, Monday might fit better.",
     pricingSummary:
       "Pipedrive uses per-user monthly pricing with several tiers. Entry tier covers pipeline and core features; higher plans add automation, reporting, and integrations. No free plan, but a trial is available. Check Pipedrive's site for current pricing and limits.",
     pricingTiers:
@@ -404,7 +404,7 @@ const reviews: Record<string, CrmReviewData> = {
       { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm"), description: "Broader suite and lower cost; good if you use Zoho or want more features for the price.", logoSrc: LOGOS.zoho },
       { name: "Freshsales", href: getCrmReviewUrl("freshsales"), description: "AI and built-in phone; similar sales focus with more automation.", logoSrc: LOGOS.freshsales },
       { name: "Close", href: getCrmReviewUrl("close"), description: "Built for inside sales and calling; another pipeline-focused option.", logoSrc: LOGOS.close },
-      { name: "Monday CRM", href: getCrmReviewUrl("monday-crm"), description: "Board-based; good if you want pipeline plus project management.", logoSrc: LOGOS.monday },
+      { name: "Monday", href: getCrmReviewUrl("monday-crm"), description: "Board-based; good if you want pipeline plus project management.", logoSrc: LOGOS.monday },
     ],
     faqs: [
       { q: "Is Pipedrive good for small sales teams?", a: "Yes. Pipedrive is well suited to small sales teams. The pipeline is easy to set up and use, and pricing is clear. Many small teams choose it over heavier CRMs because it stays focused on deals and activities." },
@@ -432,7 +432,7 @@ const reviews: Record<string, CrmReviewData> = {
   },
 
   "monday-crm": {
-    toolName: "Monday CRM",
+    toolName: "Monday",
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.4",
@@ -441,9 +441,9 @@ const reviews: Record<string, CrmReviewData> = {
     visitUrl: "https://monday.com",
     logoSrc: LOGOS.monday,
     quickVerdict:
-      "Monday CRM brings board-based flexibility to CRM: customize views, automate workflows, and combine deals with projects. Best when you want one place for pipeline and work management.",
+      "Monday brings board-based flexibility to CRM: customize views, automate workflows, and combine deals with projects. Best when you want one place for pipeline and work management.",
     quickVerdictParagraphs: [
-      "Monday CRM is part of Monday's Work OS: you get CRM capabilities on the same board and automation engine used for projects and other work. Deals, contacts, and pipeline can be modeled in customizable boards with multiple views—Kanban, list, timeline, and more. If you prefer to design your process rather than follow a fixed pipeline, Monday is a strong fit. Teams that already use Monday for project management can add CRM without adding another tool.",
+      "Monday is part of Monday's Work OS: you get CRM capabilities on the same board and automation engine used for projects and other work. Deals, contacts, and pipeline can be modeled in customizable boards with multiple views—Kanban, list, timeline, and more. If you prefer to design your process rather than follow a fixed pipeline, Monday is a strong fit. Teams that already use Monday for project management can add CRM without adding another tool.",
       "We like Monday for flexibility: you can adapt boards to your sales process, add custom columns, and automate steps across the board. The tradeoff is that it's less opinionated than Pipedrive or HubSpot—you may spend more time configuring. For teams that want CRM plus project management and don't mind some setup, Monday is a top choice.",
       "Limitations: less out-of-the-box sales structure than Pipedrive, and less marketing automation than HubSpot. If you want a traditional pipeline-only tool, Pipedrive or HubSpot may feel more focused. If you like building your own process and want CRM and projects in one place, Monday is worth a close look.",
     ],
@@ -466,7 +466,7 @@ const reviews: Record<string, CrmReviewData> = {
       "Pricing scales with seats and features",
     ],
     bestForEditorial:
-      "Monday CRM is best for teams that want customizable boards and workflows beyond a traditional pipeline. Ideal for teams that already use Monday for projects and want to add CRM, and for those who prefer to design their own process. It fits sales teams that also manage projects or want one work OS for pipeline and execution.",
+      "Monday is best for teams that want customizable boards and workflows beyond a traditional pipeline. Ideal for teams that already use Monday for projects and want to add CRM, and for those who prefer to design their own process. It fits sales teams that also manage projects or want one work OS for pipeline and execution.",
     whoShouldAvoid:
       "Teams that want a ready-made pipeline with minimal setup should consider Pipedrive or HubSpot. If you need heavy marketing automation, HubSpot is a better fit. Strict sales-only teams with no project component may find Monday more than they need.",
     pricingSummary:
@@ -501,14 +501,14 @@ const reviews: Record<string, CrmReviewData> = {
       { name: "Salesforce", href: getCrmReviewUrl("salesforce"), description: "Maximum customization; for enterprises that need scale and ecosystem.", logoSrc: LOGOS.salesforce },
     ],
     faqs: [
-      { q: "What is Monday CRM?", a: "Monday CRM is the CRM layer of Monday's Work OS. You get contact and deal management on customizable boards, with the same automation and views used for projects. It suits teams that want CRM and work management in one place." },
-      { q: "Is Monday CRM good for sales teams?", a: "Yes, if your team likes board-based workflows and customization. Sales teams that prefer a traditional pipeline may find Pipedrive or HubSpot faster to adopt. Monday is strong when you also manage projects or want to design your own process." },
-      { q: "How does Monday CRM compare to HubSpot?", a: "Monday offers board-based flexibility and project-CRM combination; HubSpot offers a full marketing and sales CRM with a more traditional pipeline. Choose Monday for customization and work OS; choose HubSpot for out-of-the-box marketing and sales alignment." },
+      { q: "What is Monday?", a: "Monday is the CRM layer of Monday's Work OS. You get contact and deal management on customizable boards, with the same automation and views used for projects. It suits teams that want CRM and work management in one place." },
+      { q: "Is Monday good for sales teams?", a: "Yes, if your team likes board-based workflows and customization. Sales teams that prefer a traditional pipeline may find Pipedrive or HubSpot faster to adopt. Monday is strong when you also manage projects or want to design your own process." },
+      { q: "How does Monday compare to HubSpot?", a: "Monday offers board-based flexibility and project-CRM combination; HubSpot offers a full marketing and sales CRM with a more traditional pipeline. Choose Monday for customization and work OS; choose HubSpot for out-of-the-box marketing and sales alignment." },
       { q: "Can I use Monday just for CRM?", a: "Yes. You can use Monday only for CRM with its templates and boards. Many users combine CRM with other boards for projects and operations." },
     ],
     methodology: CRM_METHODOLOGY,
     compareLinks: [
-      { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+      { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
       { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
       { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
     ],

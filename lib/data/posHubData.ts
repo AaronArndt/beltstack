@@ -123,7 +123,7 @@ export const POS_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     body: "Prioritize reliable hardware, transparent processing, and inventory basics you’ll actually maintain. Free or low software tiers help you validate throughput before you commit to industry-specific modules.",
     links: [
       { label: "Best POS for small business →", href: getPosBestForUrl("small-business") },
-      { label: "Square POS review →", href: getPosReviewUrl("square-pos") },
+      { label: "Square review →", href: getPosReviewUrl("square-pos") },
     ],
   },
   {
@@ -172,7 +172,7 @@ export type PosPopularComparisonCard = {
 export const POS_POPULAR_COMPARISONS: PosPopularComparisonCard[] = [
   {
     slug: "square-pos-vs-shopify-pos",
-    productA: { name: "Square POS", logoSrc: POS_LOGOS.square },
+    productA: { name: "Square", logoSrc: POS_LOGOS.square },
     productB: { name: "Shopify POS", logoSrc: POS_LOGOS.shopify },
     summaryParagraph:
       "Square offers a simple, flexible POS that works for many small businesses with low upfront cost; Shopify POS is the better fit when your primary channel is ecommerce and you want one system for online and in-person sales.",
@@ -180,8 +180,8 @@ export const POS_POPULAR_COMPARISONS: PosPopularComparisonCard[] = [
   },
   {
     slug: "square-pos-vs-clover-pos",
-    productA: { name: "Square POS", logoSrc: POS_LOGOS.square },
-    productB: { name: "Clover POS", logoSrc: POS_LOGOS.clover },
+    productA: { name: "Square", logoSrc: POS_LOGOS.square },
+    productB: { name: "Clover", logoSrc: POS_LOGOS.clover },
     summaryParagraph:
       "Square is known for easy setup and transparent pricing with a free software tier; Clover offers a wider range of hardware and built-in apps for businesses that want more customization and in-person terminal options.",
     href: getPosCompareUrl("square-pos-vs-clover-pos"),
@@ -189,23 +189,23 @@ export const POS_POPULAR_COMPARISONS: PosPopularComparisonCard[] = [
   {
     slug: "shopify-pos-vs-lightspeed-pos",
     productA: { name: "Shopify POS", logoSrc: POS_LOGOS.shopify },
-    productB: { name: "Lightspeed POS", logoSrc: POS_LOGOS.lightspeed },
+    productB: { name: "Lightspeed", logoSrc: POS_LOGOS.lightspeed },
     summaryParagraph:
       "Shopify POS shines for stores that sell online and in-person on Shopify; Lightspeed is built for retail-first businesses that need deeper inventory, multi-location, and advanced retail workflows.",
     href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos"),
   },
   {
     slug: "toast-pos-vs-square-pos",
-    productA: { name: "Toast POS", logoSrc: POS_LOGOS.toast },
-    productB: { name: "Square POS", logoSrc: POS_LOGOS.square },
+    productA: { name: "Toast", logoSrc: POS_LOGOS.toast },
+    productB: { name: "Square", logoSrc: POS_LOGOS.square },
     summaryParagraph:
       "Toast is purpose-built for restaurants with table management, kitchen display, and online ordering; Square is a general-purpose POS that can work for cafes and small restaurants with simpler needs.",
     href: getPosCompareUrl("toast-pos-vs-square-pos"),
   },
   {
     slug: "lightspeed-pos-vs-vend-pos",
-    productA: { name: "Lightspeed POS", logoSrc: POS_LOGOS.lightspeed },
-    productB: { name: "Vend POS", logoSrc: POS_LOGOS.vend },
+    productA: { name: "Lightspeed", logoSrc: POS_LOGOS.lightspeed },
+    productB: { name: "Vend", logoSrc: POS_LOGOS.vend },
     summaryParagraph:
       "Lightspeed and Vend (Lightspeed Retail) both serve retail with strong inventory and multi-location; Lightspeed has a broader product family while Vend focuses on retail POS with a clear upgrade path.",
     href: getPosCompareUrl("lightspeed-pos-vs-vend-pos"),
@@ -220,7 +220,7 @@ export const POS_FAQ_ITEMS: { q: string; a: string }[] = [
   },
   {
     q: "What POS system is best for small businesses?",
-    a: "Square POS is a strong choice for many small businesses because of its free software tier, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for a wide hardware ecosystem, Shopify POS when you already sell or plan to sell online with Shopify.",
+    a: "Square is a strong choice for many small businesses because of its free software tier, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for a wide hardware ecosystem, Shopify POS when you already sell or plan to sell online with Shopify.",
   },
   {
     q: "Can POS software integrate with inventory and accounting systems?",

@@ -58,7 +58,7 @@ const P = {
     startingPrice: "Free",
   },
   "sage-accounting": {
-    name: "Sage Accounting",
+    name: "Sage",
     slug: "sage-accounting",
     reviewHref: getAccountingReviewUrl("sage-accounting"),
     logoSrc: "/Logos/sage.png",
@@ -68,7 +68,7 @@ const P = {
     startingPrice: "Quote",
   },
   "odoo-accounting": {
-    name: "Odoo Accounting",
+    name: "Odoo",
     slug: "odoo-accounting",
     reviewHref: getAccountingReviewUrl("odoo-accounting"),
     logoSrc: "/Logos/odoo.jpeg",
@@ -79,7 +79,7 @@ const P = {
   },
   // Aliases used by /accounting/compare/odoo-vs-* specs
   odoo: {
-    name: "Odoo Accounting",
+    name: "Odoo",
     slug: "odoo",
     reviewHref: getAccountingReviewUrl("odoo"),
     logoSrc: "/Logos/odoo.jpeg",
@@ -89,7 +89,7 @@ const P = {
     startingPrice: "Quote",
   },
   sage: {
-    name: "Sage Accounting",
+    name: "Sage",
     slug: "sage",
     reviewHref: getAccountingReviewUrl("sage"),
     logoSrc: "/Logos/sage.png",
@@ -247,11 +247,11 @@ function odooVsComparison(
   const competitorAltHref = getAccountingAlternativeUrl(P[productBKey].slug);
 
   return buildComparison(slug, "odoo", productBKey, {
-    summaryParagraph: `Odoo Accounting and ${competitorLabel} are accounting options that help businesses manage invoicing, expenses, and reporting. This comparison focuses on fit—especially workflow integration, pricing model expectations, and how each tool supports day-to-day accounting.`,
+    summaryParagraph: `Odoo and ${competitorLabel} are accounting options that help businesses manage invoicing, expenses, and reporting. This comparison focuses on fit—especially workflow integration, pricing model expectations, and how each tool supports day-to-day accounting.`,
     quickRecommendationA: "Best for teams already on Odoo who want accounting inside the broader ERP workflow.",
     quickRecommendationB: `Best for teams choosing ${competitorLabel} for their preferred accounting workflows and ecosystem.`,
     quickVerdictParagraphs: [
-      "Odoo Accounting stands out when you want accounting connected to Odoo’s wider operational modules. When invoicing, inventory, and projects live together in the same system, accounting can be less about syncing and more about unified data.",
+      "Odoo stands out when you want accounting connected to Odoo’s wider operational modules. When invoicing, inventory, and projects live together in the same system, accounting can be less about syncing and more about unified data.",
       `Choose ${competitorLabel} when you want a different approach to accounting workflows—whether that’s a standalone accounting experience, a finance-first platform, or an ERP ecosystem with different strengths.`,
       "The best choice depends on how you operate today: if your business already uses Odoo ERP, Odoo tends to be the simplest path to integrated books. If you want standalone accounting or a different suite, ${competitorLabel} can be a better match.",
     ],
@@ -280,7 +280,7 @@ function odooVsComparison(
       { feature: "Implementation complexity", productA: "Best when you’re already using Odoo ERP", productB: "Often simpler if you’re adopting a standalone tool", supportA: "supported", supportB: "supported" },
     ],
     pricingComparison:
-      "Odoo Accounting is typically priced as part of an Odoo app suite approach, so total cost depends on how many Odoo apps you use and which edition/workflows you require. " +
+      "Odoo is typically priced as part of an Odoo app suite approach, so total cost depends on how many Odoo apps you use and which edition/workflows you require. " +
       `${competitorLabel} usually follows its own pricing model (often tiered or quote-based depending on the product). Compare cost using your expected users, required modules, and implementation scope.`,
     prosConsA: {
       pros: [
@@ -309,17 +309,17 @@ function odooVsComparison(
       ],
     },
     bestFor: [
-      { heading: "Best for Odoo-first operations", body: "Odoo Accounting is usually the best fit when your business already uses Odoo modules and you want accounting inside the same operational data model." },
+      { heading: "Best for Odoo-first operations", body: "Odoo is usually the best fit when your business already uses Odoo modules and you want accounting inside the same operational data model." },
       { heading: "Best for your preferred accounting ecosystem", body: `Choose ${competitorLabel} if your workflow, reporting approach, or ecosystem preference aligns better with that platform.` },
       { heading: "Best for teams comparing integrated vs standalone", body: "If you’re deciding between ERP-integrated accounting and standalone/finance-first options, use this comparison to match fit, onboarding effort, and total cost." },
     ],
     alternatives: [
-      { name: "Odoo Accounting", href: getAccountingAlternativeUrl("odoo"), description: "ERP-integrated accounting alternatives for Odoo-first teams." },
+      { name: "Odoo", href: getAccountingAlternativeUrl("odoo"), description: "ERP-integrated accounting alternatives for Odoo-first teams." },
       { name: competitorLabel, href: competitorAltHref, description: "Alternative options aligned to your chosen ecosystem." },
       { name: "Wave", href: getAccountingAlternativeUrl("wave"), description: "Free core accounting option for very small needs." },
     ],
     faqs: [
-      { q: "When is Odoo Accounting the better choice?", a: "Odoo Accounting is usually best when you already use Odoo ERP and want accounting connected to the same operational workflows and data model." },
+      { q: "When is Odoo the better choice?", a: "Odoo is usually best when you already use Odoo ERP and want accounting connected to the same operational workflows and data model." },
       { q: `When should you choose ${competitorLabel}?`, a: `Choose ${competitorLabel} when its accounting workflow, reporting model, and ecosystem fit your team’s needs better—especially if you’re not already running Odoo.` },
       { q: "How do I compare pricing fairly?", a: "Compare total cost using the users, modules, and implementation scope you need. Don’t rely only on a base starting price—look at required add-ons and setup." },
     ],
@@ -338,7 +338,7 @@ const odooComparisonEntries: [string, ComparisonTemplateProps][] = [
   odooVsComparison("odoo-vs-zoho-books", "zoho-books", "Zoho Books"),
   odooVsComparison("odoo-vs-freshbooks", "freshbooks", "FreshBooks"),
   odooVsComparison("odoo-vs-wave", "wave", "Wave"),
-  odooVsComparison("odoo-vs-sage", "sage", "Sage Accounting"),
+  odooVsComparison("odoo-vs-sage", "sage", "Sage"),
   odooVsComparison("odoo-vs-netsuite", "netsuite", "NetSuite"),
   odooVsComparison("odoo-vs-sage-intacct", "sage-intacct", "Sage Intacct"),
   odooVsComparison("odoo-vs-acumatica", "acumatica", "Acumatica"),
@@ -560,7 +560,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "sage-accounting-vs-quickbooks-online",
     "sage-accounting",
     "quickbooks-online",
-    "Sage Accounting provides core accounting for SMBs; QuickBooks Online has the larger US ecosystem.",
+    "Sage provides core accounting for SMBs; QuickBooks Online has the larger US ecosystem.",
     "Best for small businesses that need basic accounting and prefer Sage.",
     "Best for small businesses that want the most established US platform.",
     [
@@ -576,11 +576,11 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "odoo-accounting-vs-quickbooks-online",
     "odoo-accounting",
     "quickbooks-online",
-    "Odoo Accounting is the accounting module within Odoo ERP; QuickBooks Online is standalone accounting.",
+    "Odoo is the accounting module within Odoo ERP; QuickBooks Online is standalone accounting.",
     "Best for businesses already using Odoo for CRM, inventory, or other modules.",
     "Best for small businesses that want standalone accounting with a large ecosystem.",
     [
-      "Odoo Accounting fits when you already use Odoo; QuickBooks fits when you want dedicated accounting and the largest app marketplace. Choose Odoo for suite integration; QuickBooks for standalone.",
+      "Odoo fits when you already use Odoo; QuickBooks fits when you want dedicated accounting and the largest app marketplace. Choose Odoo for suite integration; QuickBooks for standalone.",
     ],
     "Odoo is per-app or suite pricing; QuickBooks starts around $30/month. Compare total cost for your stack.",
     [
@@ -608,7 +608,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "sage-accounting-vs-xero",
     "sage-accounting",
     "xero",
-    "Sage Accounting offers core SMB accounting; Xero is a leading cloud alternative with a large app ecosystem.",
+    "Sage offers core SMB accounting; Xero is a leading cloud alternative with a large app ecosystem.",
     "Best for small businesses that prefer Sage and need compliance basics.",
     "Best for businesses that want a modern cloud platform with strong integrations.",
     [
@@ -624,11 +624,11 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "odoo-accounting-vs-xero",
     "odoo-accounting",
     "xero",
-    "Odoo Accounting is part of the Odoo ERP suite; Xero is standalone cloud accounting.",
+    "Odoo is part of the Odoo ERP suite; Xero is standalone cloud accounting.",
     "Best for businesses already using Odoo for other modules.",
     "Best for businesses that want standalone accounting with a large app store.",
     [
-      "Odoo Accounting fits when you run Odoo for CRM or projects; Xero fits when you want best-of-breed accounting. Choose Odoo for suite integration; Xero for standalone depth.",
+      "Odoo fits when you run Odoo for CRM or projects; Xero fits when you want best-of-breed accounting. Choose Odoo for suite integration; Xero for standalone depth.",
     ],
     "Odoo is per-app pricing; Xero starts around $15/month. Compare total cost.",
     [
@@ -672,7 +672,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     "sage-accounting-vs-freshbooks",
     "sage-accounting",
     "freshbooks",
-    "Sage Accounting is core SMB accounting; FreshBooks is built for freelancers.",
+    "Sage is core SMB accounting; FreshBooks is built for freelancers.",
     "Best for small businesses that need core accounting and compliance.",
     "Best for freelancers and service businesses that want simple invoicing and time tracking.",
     [

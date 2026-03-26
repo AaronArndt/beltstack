@@ -71,7 +71,7 @@ const COMPARISON_DESCRIPTIONS: Record<string, string> = {
   "zoho-crm-vs-pipedrive":
     "Compare Zoho CRM vs Pipedrive: full CRM at lower cost vs pipeline-focused sales tool. Which fits your sales process?",
   "monday-crm-vs-hubspot":
-    "Compare Monday CRM vs HubSpot: customizable boards and workflows vs full marketing and sales CRM.",
+    "Compare Monday vs HubSpot: customizable boards and workflows vs full marketing and sales CRM.",
   "freshsales-vs-pipedrive":
     "Compare Freshsales vs Pipedrive: AI and built-in communication vs pipeline simplicity. Pricing and features compared.",
   "hubspot-vs-pipedrive":

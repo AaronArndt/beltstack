@@ -69,7 +69,7 @@ export default function PosVsPaymentProcessorGuidePage() {
                       POS software and payment processors are often sold together, but they do different jobs. The POS is the application that runs your register: it manages products, the shopping cart, discounts, inventory updates, and reporting. The payment processor (or gateway) is the service that authorizes and settles card and other electronic payments—it talks to card networks and banks so money moves from the customer’s account to yours.
                     </p>
                     <p>
-                      When you choose a POS like <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link>, <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover POS</Link>, or <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast</Link>, you’re often getting both: the POS sends the transaction to a processor (sometimes the same company’s), and you configure one system. This guide clarifies the roles so you know what you’re buying and when you need each piece.
+                      When you choose a POS like <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link>, <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover</Link>, or <Link href={getPosReviewUrl("toast-pos")} className={linkGreen}>Toast</Link>, you’re often getting both: the POS sends the transaction to a processor (sometimes the same company’s), and you configure one system. This guide clarifies the roles so you know what you’re buying and when you need each piece.
                     </p>
                   </div>
                 </section>

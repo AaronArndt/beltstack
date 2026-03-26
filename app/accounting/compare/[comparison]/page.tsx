@@ -83,21 +83,21 @@ const COMPARISON_DESCRIPTIONS: Record<string, string> = {
   "zoho-books-vs-freshbooks":
     "Compare Zoho Books vs FreshBooks: value and automation vs freelancer-focused invoicing and time tracking.",
   "sage-accounting-vs-quickbooks-online":
-    "Compare Sage Accounting vs QuickBooks Online: core SMB accounting vs the largest US accounting ecosystem.",
+    "Compare Sage vs QuickBooks Online: core SMB accounting vs the largest US accounting ecosystem.",
   "odoo-accounting-vs-quickbooks-online":
-    "Compare Odoo Accounting vs QuickBooks Online: ERP-integrated accounting vs standalone best-of-breed.",
+    "Compare Odoo vs QuickBooks Online: ERP-integrated accounting vs standalone best-of-breed.",
   "kashoo-vs-wave":
     "Compare Kashoo vs Wave: simple paid bookkeeping vs free accounting. Features and pricing compared.",
   "sage-accounting-vs-xero":
-    "Compare Sage Accounting vs Xero: traditional SMB accounting vs modern cloud platform.",
+    "Compare Sage vs Xero: traditional SMB accounting vs modern cloud platform.",
   "odoo-accounting-vs-xero":
-    "Compare Odoo Accounting vs Xero: Odoo ERP module vs standalone cloud accounting.",
+    "Compare Odoo vs Xero: Odoo ERP module vs standalone cloud accounting.",
   "kashoo-vs-freshbooks":
     "Compare Kashoo vs FreshBooks: simple bookkeeping vs freelancer-focused invoicing and time tracking.",
   "zoho-books-vs-wave":
     "Compare Zoho Books vs Wave: paid value-focused accounting vs free core accounting.",
   "sage-accounting-vs-freshbooks":
-    "Compare Sage Accounting vs FreshBooks: core accounting and compliance vs freelancer-focused tools.",
+    "Compare Sage vs FreshBooks: core accounting and compliance vs freelancer-focused tools.",
 };
 
 export async function generateMetadata({ params }: Props) {

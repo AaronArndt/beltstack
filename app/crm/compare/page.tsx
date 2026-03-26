@@ -225,5 +225,5 @@ export default function CrmCompareHubPage() {
 export const metadata = {
   title: "Compare CRM Software (2026) | BeltStack",
   description:
-    "Side-by-side comparisons of the most popular CRM tools: HubSpot, Salesforce, Zoho CRM, Pipedrive, Monday CRM, and more for small businesses and sales teams.",
+    "Side-by-side comparisons of the most popular CRM tools: HubSpot, Salesforce, Zoho CRM, Pipedrive, Monday, and more for small businesses and sales teams.",
 };

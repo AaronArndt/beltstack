@@ -67,7 +67,7 @@ const QUICKBOOKS_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "freshbooks", name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", rating: "4.5", bestFor: "freelancers", description: "Simple invoicing and time tracking for freelancers and service businesses.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-freshbooks"), startingPrice: "$19/mo", standoutFeature: "Freelancer-focused; time tracking" },
   { slug: "zoho-books", name: "Zoho Books", logoSrc: "/Logos/zoho.jpeg", rating: "4.4", bestFor: "value and Zoho ecosystem", description: "Affordable accounting with automation and projects. Good for Zoho users.", reviewHref: getAccountingReviewUrl("zoho-books"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-zoho-books"), startingPrice: "$15/mo", standoutFeature: "Value; automation" },
   { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", rating: "4.3", bestFor: "free accounting", description: "Free accounting and invoicing for small businesses and freelancers.", reviewHref: getAccountingReviewUrl("wave"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-wave"), startingPrice: "Free", standoutFeature: "Free core accounting" },
-  { slug: "sage-accounting", name: "Sage Accounting", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting for SMBs with compliance focus. Quote-based pricing.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
+  { slug: "sage-accounting", name: "Sage", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting for SMBs with compliance focus. Quote-based pricing.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
 ];
 
 const quickbooksOriginalRow: AlternativesTableRow = {
@@ -97,7 +97,7 @@ const quickbooksPage: AlternativesTemplateProps = {
     { productName: "FreshBooks", heading: "Best for freelancers", body: "FreshBooks focuses on invoicing and time tracking for freelancers and service businesses. Simpler than QuickBooks; strong client-facing tools.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-freshbooks") },
     { productName: "Zoho Books", heading: "Best for value and Zoho ecosystem", body: "Zoho Books offers strong value and automation. Best if you already use Zoho or want more for the price.", reviewHref: getAccountingReviewUrl("zoho-books"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-zoho-books") },
     { productName: "Wave", heading: "Best for free accounting", body: "Wave provides free accounting and invoicing. For very small businesses and freelancers that don't need advanced features.", reviewHref: getAccountingReviewUrl("wave"), compareHref: getAccountingCompareUrl("quickbooks-online-vs-wave") },
-    { productName: "Sage Accounting", heading: "Best for SMBs and compliance", body: "Sage Accounting offers core accounting with a compliance focus. Quote-based pricing; good for businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online") },
+    { productName: "Sage", heading: "Best for SMBs and compliance", body: "Sage offers core accounting with a compliance focus. Quote-based pricing; good for businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online") },
   ],
   howToChoose: HOW_TO_CHOOSE,
   relatedComparisons: [
@@ -120,7 +120,7 @@ const XERO_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "freshbooks", name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", rating: "4.5", bestFor: "freelancers", description: "Simple invoicing and time tracking for freelancers.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("xero-vs-freshbooks"), startingPrice: "$19/mo", standoutFeature: "Freelancer-focused; time tracking" },
   { slug: "zoho-books", name: "Zoho Books", logoSrc: "/Logos/zoho.jpeg", rating: "4.4", bestFor: "value and automation", description: "Affordable with strong automation. Good for Zoho users.", reviewHref: getAccountingReviewUrl("zoho-books"), compareHref: getAccountingCompareUrl("xero-vs-zoho-books"), startingPrice: "$15/mo", standoutFeature: "Value; automation" },
   { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", rating: "4.3", bestFor: "free accounting", description: "Free accounting and invoicing.", reviewHref: getAccountingReviewUrl("wave"), startingPrice: "Free", standoutFeature: "Free core accounting" },
-  { slug: "sage-accounting", name: "Sage Accounting", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting with compliance focus. Quote-based.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
+  { slug: "sage-accounting", name: "Sage", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting with compliance focus. Quote-based.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
 ];
 
 const xeroPage: AlternativesTemplateProps = {
@@ -136,7 +136,7 @@ const xeroPage: AlternativesTemplateProps = {
   whyPeopleLookForAlternatives: [
     { heading: "US ecosystem and mindshare", body: "QuickBooks has larger US market share and more accountants who use it. Some businesses prefer that familiarity." },
     { heading: "Simplicity or free", body: "FreshBooks and Wave offer simpler onboarding or free core accounting for very small teams." },
-    { heading: "Zoho or Sage ecosystem", body: "Zoho Books and Sage Accounting suit businesses already in those ecosystems." },
+    { heading: "Zoho or Sage ecosystem", body: "Zoho Books and Sage suit businesses already in those ecosystems." },
   ],
   topAlternatives: XERO_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
@@ -148,7 +148,7 @@ const xeroPage: AlternativesTemplateProps = {
     { productName: "FreshBooks", heading: "Best for freelancers", body: "FreshBooks focuses on freelancers with simple invoicing and time tracking. Lighter than Xero for solos.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("xero-vs-freshbooks") },
     { productName: "Zoho Books", heading: "Best for value and automation", body: "Zoho Books offers strong value and automation. Good for Zoho users or value-conscious teams.", reviewHref: getAccountingReviewUrl("zoho-books"), compareHref: getAccountingCompareUrl("xero-vs-zoho-books") },
     { productName: "Wave", heading: "Best for free accounting", body: "Wave provides free accounting and invoicing. For very small businesses that don't need paid features.", reviewHref: getAccountingReviewUrl("wave") },
-    { productName: "Sage Accounting", heading: "Best for SMBs and compliance", body: "Sage Accounting offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero") },
+    { productName: "Sage", heading: "Best for SMBs and compliance", body: "Sage offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero") },
   ],
   relatedComparisons: [
     accRel("quickbooks-online-vs-xero"),
@@ -221,7 +221,7 @@ const ZOHO_BOOKS_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "xero", name: "Xero", logoSrc: "/Logos/xero.png", rating: "4.5", bestFor: "QuickBooks alternative", description: "Cloud accounting with clean UI and 700+ integrations.", reviewHref: getAccountingReviewUrl("xero"), compareHref: getAccountingCompareUrl("xero-vs-zoho-books"), startingPrice: "$15/mo", standoutFeature: "Clean UI; integrations" },
   { slug: "freshbooks", name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", rating: "4.5", bestFor: "freelancers", description: "Simple invoicing and time tracking for freelancers.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("zoho-books-vs-freshbooks"), startingPrice: "$19/mo", standoutFeature: "Freelancer-focused" },
   { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", rating: "4.3", bestFor: "free accounting", description: "Free accounting and invoicing.", reviewHref: getAccountingReviewUrl("wave"), compareHref: getAccountingCompareUrl("zoho-books-vs-wave"), startingPrice: "Free", standoutFeature: "Free core accounting" },
-  { slug: "sage-accounting", name: "Sage Accounting", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting for SMBs. Quote-based.", reviewHref: getAccountingReviewUrl("sage-accounting"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
+  { slug: "sage-accounting", name: "Sage", logoSrc: "/Logos/sage.png", rating: "4.3", bestFor: "SMBs and compliance", description: "Core accounting for SMBs. Quote-based.", reviewHref: getAccountingReviewUrl("sage-accounting"), startingPrice: "Quote", standoutFeature: "Compliance-focused" },
 ];
 
 const zohoBooksPage: AlternativesTemplateProps = {
@@ -237,7 +237,7 @@ const zohoBooksPage: AlternativesTemplateProps = {
   whyPeopleLookForAlternatives: [
     { heading: "Not in Zoho", body: "If you don't use other Zoho apps, QuickBooks or Xero may offer better third-party integration breadth." },
     { heading: "Free or different value", body: "Wave is free for core accounting; FreshBooks may suit freelancers better." },
-    { heading: "Compliance or brand", body: "Sage Accounting suits businesses that prefer Sage; QuickBooks has more US mindshare." },
+    { heading: "Compliance or brand", body: "Sage suits businesses that prefer Sage; QuickBooks has more US mindshare." },
   ],
   topAlternatives: ZOHO_BOOKS_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
@@ -249,7 +249,7 @@ const zohoBooksPage: AlternativesTemplateProps = {
     { productName: "Xero", heading: "Best QuickBooks alternative", body: "Xero offers full cloud accounting with strong integrations. Similar price tier to Zoho with different ecosystem.", reviewHref: getAccountingReviewUrl("xero"), compareHref: getAccountingCompareUrl("xero-vs-zoho-books") },
     { productName: "FreshBooks", heading: "Best for freelancers", body: "FreshBooks focuses on freelancers with invoicing and time tracking. Simpler client-facing tools.", reviewHref: getAccountingReviewUrl("freshbooks"), compareHref: getAccountingCompareUrl("zoho-books-vs-freshbooks") },
     { productName: "Wave", heading: "Best for free accounting", body: "Wave provides free accounting and invoicing. For teams that want zero cost for core features.", reviewHref: getAccountingReviewUrl("wave"), compareHref: getAccountingCompareUrl("zoho-books-vs-wave") },
-    { productName: "Sage Accounting", heading: "Best for SMBs and compliance", body: "Sage Accounting offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting") },
+    { productName: "Sage", heading: "Best for SMBs and compliance", body: "Sage offers core accounting with compliance focus. For businesses that prefer Sage.", reviewHref: getAccountingReviewUrl("sage-accounting") },
   ],
   relatedComparisons: [
     accRel("quickbooks-online-vs-zoho-books"),
@@ -315,7 +315,7 @@ const wavePage: AlternativesTemplateProps = {
   ],
 };
 
-// ——— Sage Accounting alternatives ———
+// ——— Sage alternatives ———
 const SAGE_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "quickbooks-online", name: "QuickBooks Online", logoSrc: "/Logos/quickbooks.png", rating: "4.6", bestFor: "largest US ecosystem", description: "Market leader with broad features and app marketplace.", reviewHref: getAccountingReviewUrl("quickbooks-online"), compareHref: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online"), startingPrice: "$30/mo", standoutFeature: "Largest ecosystem" },
   { slug: "xero", name: "Xero", logoSrc: "/Logos/xero.png", rating: "4.5", bestFor: "QuickBooks alternative", description: "Cloud accounting with clean UI and integrations.", reviewHref: getAccountingReviewUrl("xero"), compareHref: getAccountingCompareUrl("sage-accounting-vs-xero"), startingPrice: "$15/mo", standoutFeature: "Clean UI; integrations" },
@@ -326,13 +326,13 @@ const SAGE_ALTERNATIVES: AlternativesTopPick[] = [
 
 const sagePage: AlternativesTemplateProps = {
   ...quickbooksPage,
-  title: "Best Sage Accounting Alternatives (2026)",
-  subtitle: "If Sage Accounting isn't the right fit—because of pricing, ecosystem, or features—these accounting alternatives offer strong options.",
-  productName: "Sage Accounting",
+  title: "Best Sage Alternatives (2026)",
+  subtitle: "If Sage isn't the right fit—because of pricing, ecosystem, or features—these accounting alternatives offer strong options.",
+  productName: "Sage",
   productSlug: "sage-accounting",
   originalReviewHref: getAccountingReviewUrl("sage-accounting"),
   quickAnswerParagraphs: [
-    "Sage Accounting suits SMBs that prefer Sage; teams look for alternatives when they want transparent pricing (QuickBooks, Xero, Zoho), free software (Wave), or freelancer focus (FreshBooks). QuickBooks and Xero are the main alternatives with larger US ecosystems.",
+    "Sage suits SMBs that prefer Sage; teams look for alternatives when they want transparent pricing (QuickBooks, Xero, Zoho), free software (Wave), or freelancer focus (FreshBooks). QuickBooks and Xero are the main alternatives with larger US ecosystems.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Pricing transparency", body: "Sage often uses quote-based pricing. QuickBooks, Xero, and Zoho Books have published tiers." },
@@ -341,7 +341,7 @@ const sagePage: AlternativesTemplateProps = {
   ],
   topAlternatives: SAGE_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
-    { slug: "sage-accounting", name: "Sage Accounting", logoSrc: "/Logos/sage.png", bestFor: "SMBs and compliance", startingPrice: "Quote", standoutFeature: "Compliance-focused", reviewHref: getAccountingReviewUrl("sage-accounting") },
+    { slug: "sage-accounting", name: "Sage", logoSrc: "/Logos/sage.png", bestFor: "SMBs and compliance", startingPrice: "Quote", standoutFeature: "Compliance-focused", reviewHref: getAccountingReviewUrl("sage-accounting") },
     SAGE_ALTERNATIVES
   ),
   detailedAlternatives: [
@@ -356,15 +356,15 @@ const sagePage: AlternativesTemplateProps = {
     accRel("sage-accounting-vs-xero"),
     accRel("sage-accounting-vs-freshbooks"),
   ],
-  relatedResources: defaultRelatedResources("Sage Accounting", getAccountingReviewUrl("sage-accounting")),
+  relatedResources: defaultRelatedResources("Sage", getAccountingReviewUrl("sage-accounting")),
   faqItems: [
-    { q: "What is the best Sage Accounting alternative?", a: "QuickBooks and Xero are the main alternatives with larger US ecosystems and published pricing. FreshBooks fits freelancers; Wave is free; Zoho Books offers value." },
-    { q: "Is Sage Accounting better than QuickBooks?", a: "Sage suits businesses that prefer Sage and compliance focus; QuickBooks has the larger US ecosystem and more transparent pricing. Choose by preference and region." },
+    { q: "What is the best Sage alternative?", a: "QuickBooks and Xero are the main alternatives with larger US ecosystems and published pricing. FreshBooks fits freelancers; Wave is free; Zoho Books offers value." },
+    { q: "Is Sage better than QuickBooks?", a: "Sage suits businesses that prefer Sage and compliance focus; QuickBooks has the larger US ecosystem and more transparent pricing. Choose by preference and region." },
     { q: "Which accounting software has transparent pricing like Sage?", a: "QuickBooks, Xero, Zoho Books, and FreshBooks have published pricing tiers. Sage often uses quote-based pricing." },
   ],
 };
 
-// ——— Odoo Accounting alternatives ———
+// ——— Odoo alternatives ———
 const ODOO_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "quickbooks-online", name: "QuickBooks Online", logoSrc: "/Logos/quickbooks.png", rating: "4.6", bestFor: "standalone accounting", description: "Market leader with largest ecosystem. No ERP lock-in.", reviewHref: getAccountingReviewUrl("quickbooks-online"), compareHref: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online"), startingPrice: "$30/mo", standoutFeature: "Largest ecosystem" },
   { slug: "xero", name: "Xero", logoSrc: "/Logos/xero.png", rating: "4.5", bestFor: "QuickBooks alternative", description: "Full cloud accounting with clean UI.", reviewHref: getAccountingReviewUrl("xero"), compareHref: getAccountingCompareUrl("odoo-accounting-vs-xero"), startingPrice: "$15/mo", standoutFeature: "Clean UI; integrations" },
@@ -375,22 +375,22 @@ const ODOO_ALTERNATIVES: AlternativesTopPick[] = [
 
 const odooPage: AlternativesTemplateProps = {
   ...quickbooksPage,
-  title: "Best Odoo Accounting Alternatives (2026)",
-  subtitle: "If Odoo Accounting isn't the right fit—because you don't use Odoo ERP, want standalone accounting, or prefer a different vendor—these alternatives offer strong options.",
-  productName: "Odoo Accounting",
+  title: "Best Odoo Alternatives (2026)",
+  subtitle: "If Odoo isn't the right fit—because you don't use Odoo ERP, want standalone accounting, or prefer a different vendor—these alternatives offer strong options.",
+  productName: "Odoo",
   productSlug: "odoo-accounting",
   originalReviewHref: getAccountingReviewUrl("odoo-accounting"),
   quickAnswerParagraphs: [
-    "Odoo Accounting is the accounting module within Odoo ERP. Teams look for alternatives when they don't use Odoo, want standalone accounting (QuickBooks, Xero), or prefer simpler tools (FreshBooks, Wave). QuickBooks and Xero are the main standalone alternatives.",
+    "Odoo is the accounting module within Odoo ERP. Teams look for alternatives when they don't use Odoo, want standalone accounting (QuickBooks, Xero), or prefer simpler tools (FreshBooks, Wave). QuickBooks and Xero are the main standalone alternatives.",
   ],
   whyPeopleLookForAlternatives: [
-    { heading: "Not using Odoo", body: "Odoo Accounting is best when you already use Odoo for CRM, inventory, or projects. Standalone accounting (QuickBooks, Xero) fits otherwise." },
+    { heading: "Not using Odoo", body: "Odoo is best when you already use Odoo for CRM, inventory, or projects. Standalone accounting (QuickBooks, Xero) fits otherwise." },
     { heading: "Standalone depth", body: "QuickBooks and Xero are built as best-of-breed accounting with larger app marketplaces." },
     { heading: "Simplicity or free", body: "FreshBooks and Wave offer simpler onboarding or free accounting." },
   ],
   topAlternatives: ODOO_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
-    { slug: "odoo-accounting", name: "Odoo Accounting", logoSrc: "/Logos/odoo.jpeg", bestFor: "Odoo ERP users", startingPrice: "Quote", standoutFeature: "ERP integration", reviewHref: getAccountingReviewUrl("odoo-accounting") },
+    { slug: "odoo-accounting", name: "Odoo", logoSrc: "/Logos/odoo.jpeg", bestFor: "Odoo ERP users", startingPrice: "Quote", standoutFeature: "ERP integration", reviewHref: getAccountingReviewUrl("odoo-accounting") },
     ODOO_ALTERNATIVES
   ),
   detailedAlternatives: [
@@ -404,10 +404,10 @@ const odooPage: AlternativesTemplateProps = {
     accRel("odoo-accounting-vs-quickbooks-online"),
     accRel("odoo-accounting-vs-xero"),
   ],
-  relatedResources: defaultRelatedResources("Odoo Accounting", getAccountingReviewUrl("odoo-accounting")),
+  relatedResources: defaultRelatedResources("Odoo", getAccountingReviewUrl("odoo-accounting")),
   faqItems: [
-    { q: "What is the best Odoo Accounting alternative?", a: "QuickBooks and Xero are the best standalone alternatives. FreshBooks fits freelancers; Wave is free; Zoho Books fits the Zoho suite." },
-    { q: "Is Odoo Accounting better than QuickBooks?", a: "Odoo Accounting fits when you already use Odoo ERP; QuickBooks is better for standalone accounting and has the larger US ecosystem. Choose by whether you need ERP integration." },
+    { q: "What is the best Odoo alternative?", a: "QuickBooks and Xero are the best standalone alternatives. FreshBooks fits freelancers; Wave is free; Zoho Books fits the Zoho suite." },
+    { q: "Is Odoo better than QuickBooks?", a: "Odoo fits when you already use Odoo ERP; QuickBooks is better for standalone accounting and has the larger US ecosystem. Choose by whether you need ERP integration." },
     { q: "Can I use accounting software without Odoo?", a: "Yes. QuickBooks, Xero, FreshBooks, Zoho Books, and Wave are all standalone accounting products. Choose based on your needs and budget." },
   ],
 };
@@ -482,8 +482,8 @@ const PAGES: Record<string, AlternativesTemplateProps> = {
   sage: {
     ...sagePage,
     title: "Best Sage Alternatives (2026)",
-    subtitle: "If Sage Accounting isn’t the right fit—because you want different workflows, pricing, or onboarding experience—these alternatives cover the most common accounting requirements.",
-    productName: "Sage Accounting",
+    subtitle: "If Sage isn’t the right fit—because you want different workflows, pricing, or onboarding experience—these alternatives cover the most common accounting requirements.",
+    productName: "Sage",
     productSlug: "sage",
     originalReviewHref: getAccountingReviewUrl("sage"),
     quickAnswerParagraphs: [
@@ -503,8 +503,8 @@ const PAGES: Record<string, AlternativesTemplateProps> = {
   odoo: {
     ...odooPage,
     title: "Best Odoo Alternatives (2026)",
-    subtitle: "If Odoo Accounting isn’t the right fit—because you don’t use Odoo ERP, want standalone accounting, or prefer a different workflow—these alternatives provide practical options.",
-    productName: "Odoo Accounting",
+    subtitle: "If Odoo isn’t the right fit—because you don’t use Odoo ERP, want standalone accounting, or prefer a different workflow—these alternatives provide practical options.",
+    productName: "Odoo",
     productSlug: "odoo",
     originalReviewHref: getAccountingReviewUrl("odoo"),
     quickAnswerParagraphs: [

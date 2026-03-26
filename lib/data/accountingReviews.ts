@@ -100,8 +100,8 @@ const reviews: Record<string, ReviewData> = {
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Better fit for freelancers and service businesses; simpler and focused on invoicing.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused option with good automation and ecosystem if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for businesses that don't need advanced features.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting tools for SMBs; less mindshare than QuickBooks or Xero.", logoSrc: "/Logos/sage.png" },
-      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses already using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting tools for SMBs; less mindshare than QuickBooks or Xero.", logoSrc: "/Logos/sage.png" },
+      { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses already using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
       { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simple bookkeeping for small businesses.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
     faqs: [
@@ -199,7 +199,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; simpler invoicing and time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value and automation; strong if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting and invoicing.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs.", logoSrc: "/Logos/sage.png" },
+      { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs.", logoSrc: "/Logos/sage.png" },
     ],
     faqs: [
       { q: "Is Xero a good QuickBooks alternative?", a: "Yes. Xero is one of the most popular QuickBooks alternatives, with full accounting features, a clean UI, and a large integration ecosystem. Many accountants support both." },
@@ -212,8 +212,8 @@ const reviews: Record<string, ReviewData> = {
       { label: "QuickBooks Online vs Xero", href: getAccountingCompareUrl("quickbooks-online-vs-xero") },
       { label: "Xero vs FreshBooks", href: getAccountingCompareUrl("xero-vs-freshbooks") },
       { label: "Xero vs Zoho Books", href: getAccountingCompareUrl("xero-vs-zoho-books") },
-      { label: "Sage Accounting vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
-      { label: "Odoo Accounting vs Xero", href: getAccountingCompareUrl("odoo-accounting-vs-xero") },
+      { label: "Sage vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
+      { label: "Odoo vs Xero", href: getAccountingCompareUrl("odoo-accounting-vs-xero") },
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
@@ -307,7 +307,7 @@ const reviews: Record<string, ReviewData> = {
       { label: "Wave vs FreshBooks", href: getAccountingCompareUrl("wave-vs-freshbooks") },
       { label: "Zoho Books vs FreshBooks", href: getAccountingCompareUrl("zoho-books-vs-freshbooks") },
       { label: "Kashoo vs FreshBooks", href: getAccountingCompareUrl("kashoo-vs-freshbooks") },
-      { label: "Sage Accounting vs FreshBooks", href: getAccountingCompareUrl("sage-accounting-vs-freshbooks") },
+      { label: "Sage vs FreshBooks", href: getAccountingCompareUrl("sage-accounting-vs-freshbooks") },
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
@@ -508,7 +508,7 @@ const reviews: Record<string, ReviewData> = {
   },
 
   "sage-accounting": {
-    toolName: "Sage Accounting",
+    toolName: "Sage",
     category: "Accounting",
     categoryHref: "/accounting",
     rating: "4.3",
@@ -517,9 +517,9 @@ const reviews: Record<string, ReviewData> = {
     visitUrl: "https://www.sage.com/en-us/products/sage-business-cloud-accounting",
     logoSrc: "/Logos/sage.png",
     quickVerdict:
-      "Sage Accounting provides core accounting tools for small businesses, with familiar bookkeeping and invoicing—though it has less momentum than QuickBooks or Xero in the US market.",
+      "Sage provides core accounting tools for small businesses, with familiar bookkeeping and invoicing—though it has less momentum than QuickBooks or Xero in the US market.",
     quickVerdictParagraphs: [
-      "Sage Accounting (Sage Business Cloud Accounting) offers invoicing, expense management, and reporting for small businesses. It's a recognized name in accounting software, especially in certain regions and industries.",
+      "Sage (Sage Business Cloud Accounting) offers invoicing, expense management, and reporting for small businesses. It's a recognized name in accounting software, especially in certain regions and industries.",
       "We like Sage for solid basics: you get real accounting, not just invoicing, and the product is familiar to many accountants. The downside is less mindshare and ecosystem buzz than QuickBooks or Xero in the US, so integrations and community support can feel thinner.",
       "If you're already considering Sage or need a straightforward accounting option with a known brand, it's worth a look. Otherwise, QuickBooks and Xero often have more third-party support and comparison content.",
     ],
@@ -541,11 +541,11 @@ const reviews: Record<string, ReviewData> = {
       "Smaller app ecosystem in some regions",
     ],
     bestForEditorial:
-      "Sage Accounting is best for small businesses that need core accounting tools—bookkeeping, invoicing, and reporting—and are comfortable with a recognized brand that has less US-focused buzz than QuickBooks or Xero.",
+      "Sage is best for small businesses that need core accounting tools—bookkeeping, invoicing, and reporting—and are comfortable with a recognized brand that has less US-focused buzz than QuickBooks or Xero.",
     whoShouldAvoid:
       "Businesses that want the largest ecosystem of integrations and community support may prefer QuickBooks or Xero. Those who need the simplest possible setup might look at FreshBooks or Wave.",
     pricingSummary:
-      "Sage Accounting pricing often varies by region and is sometimes quoted. Check Sage's site or a partner for current plans and pricing in your area.",
+      "Sage pricing often varies by region and is sometimes quoted. Check Sage's site or a partner for current plans and pricing in your area.",
     pricingTiers:
       "Plans and pricing differ by product and region. Compare features and support to QuickBooks and Xero for your location.",
     costVsCompetitors:
@@ -565,7 +565,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     integrations: ["Bank feeds", "Some payroll and productivity apps", "Sage ecosystem products"],
     integrationsIntro:
-      "Sage Accounting connects to banks and selected third-party apps. The integration list is smaller than QuickBooks or Xero in many markets.",
+      "Sage connects to banks and selected third-party apps. The integration list is smaller than QuickBooks or Xero in many markets.",
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Larger ecosystem and more US-focused content.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Strong alternative with large app marketplace.", logoSrc: "/Logos/xero.png" },
@@ -574,16 +574,16 @@ const reviews: Record<string, ReviewData> = {
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free option for basic needs.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [
-      { q: "What is Sage Accounting?", a: "Sage Accounting (Sage Business Cloud Accounting) is cloud-based accounting software for small businesses. It covers invoicing, expenses, bank feeds, and reporting." },
-      { q: "How much does Sage Accounting cost?", a: "Pricing often varies by region and is sometimes quoted. Check Sage's website or a local partner for current plans." },
-      { q: "Is Sage Accounting good for small business?", a: "Yes. Sage Accounting is aimed at small businesses and provides core accounting tools. It's a recognized brand, though QuickBooks and Xero have more visibility in the US." },
+      { q: "What is Sage?", a: "Sage (Sage Business Cloud Accounting) is cloud-based accounting software for small businesses. It covers invoicing, expenses, bank feeds, and reporting." },
+      { q: "How much does Sage cost?", a: "Pricing often varies by region and is sometimes quoted. Check Sage's website or a local partner for current plans." },
+      { q: "Is Sage good for small business?", a: "Yes. Sage is aimed at small businesses and provides core accounting tools. It's a recognized brand, though QuickBooks and Xero have more visibility in the US." },
       { q: "How does Sage compare to QuickBooks?", a: "Both offer small business accounting. QuickBooks has a larger US ecosystem and more third-party integrations; Sage is strong in certain regions and with accountants who already use Sage." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,
     compareLinks: [
-      { label: "Sage Accounting vs QuickBooks Online", href: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online") },
-      { label: "Sage Accounting vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
-      { label: "Sage Accounting vs FreshBooks", href: getAccountingCompareUrl("sage-accounting-vs-freshbooks") },
+      { label: "Sage vs QuickBooks Online", href: getAccountingCompareUrl("sage-accounting-vs-quickbooks-online") },
+      { label: "Sage vs Xero", href: getAccountingCompareUrl("sage-accounting-vs-xero") },
+      { label: "Sage vs FreshBooks", href: getAccountingCompareUrl("sage-accounting-vs-freshbooks") },
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
@@ -598,7 +598,7 @@ const reviews: Record<string, ReviewData> = {
   },
 
   "odoo-accounting": {
-    toolName: "Odoo Accounting",
+    toolName: "Odoo",
     category: "Accounting",
     categoryHref: "/accounting",
     rating: "4.2",
@@ -607,9 +607,9 @@ const reviews: Record<string, ReviewData> = {
     visitUrl: "https://www.odoo.com/app/accounting",
     logoSrc: "/Logos/odoo.jpeg",
     quickVerdict:
-      "Odoo Accounting is the accounting module within the Odoo ERP suite—best for businesses that already run Odoo for CRM, inventory, or other operations and want books in the same system.",
+      "Odoo is the accounting module within the Odoo ERP suite—best for businesses that already run Odoo for CRM, inventory, or other operations and want books in the same system.",
     quickVerdictParagraphs: [
-      "Odoo Accounting fits companies that have already adopted Odoo for other parts of their business. The accounting app integrates natively with Odoo's invoicing, inventory, and project modules, so sales orders, bills, and bank feeds flow into one platform. If you're not on Odoo yet, the value is less clear—you're buying into a full suite.",
+      "Odoo fits companies that have already adopted Odoo for other parts of their business. The accounting app integrates natively with Odoo's invoicing, inventory, and project modules, so sales orders, bills, and bank feeds flow into one platform. If you're not on Odoo yet, the value is less clear—you're buying into a full suite.",
       "We like Odoo for unified data: one login, one database, and no syncing between separate accounting and ERP tools. Reporting can pull from across modules. The trade-off is that accounting is one piece of a larger product; pricing and complexity reflect the full Odoo ecosystem.",
       "Best for existing Odoo users who want to consolidate accounting into the same stack. New adopters should compare standalone accounting tools unless they need Odoo's breadth.",
     ],
@@ -632,7 +632,7 @@ const reviews: Record<string, ReviewData> = {
       "Standalone accounting tools may be simpler if you don't need ERP",
     ],
     bestForEditorial:
-      "Odoo Accounting is best for businesses already using the Odoo ERP ecosystem who want accounting in the same system. It suits companies that run Odoo for sales, inventory, or projects and prefer one integrated platform over separate accounting software.",
+      "Odoo is best for businesses already using the Odoo ERP ecosystem who want accounting in the same system. It suits companies that run Odoo for sales, inventory, or projects and prefer one integrated platform over separate accounting software.",
     whoShouldAvoid:
       "Businesses that only need accounting and don't use Odoo elsewhere will likely find a dedicated accounting product like QuickBooks or Xero simpler and more focused.",
     pricingSummary:
@@ -656,24 +656,24 @@ const reviews: Record<string, ReviewData> = {
     ],
     integrations: ["Odoo CRM", "Odoo Inventory", "Odoo Projects", "Odoo Invoicing", "Bank feeds", "Ecommerce (Odoo)"],
     integrationsIntro:
-      "Odoo Accounting integrates natively with other Odoo applications. Third-party integrations are available through the Odoo app store and connectors.",
+      "Odoo integrates natively with other Odoo applications. Third-party integrations are available through the Odoo app store and connectors.",
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem; no ERP required.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Dedicated accounting with large app marketplace.", logoSrc: "/Logos/xero.png" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; strong if you use Zoho ecosystem.", logoSrc: "/Logos/zoho.jpeg" },
-      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs; recognized brand.", logoSrc: "/Logos/sage.png" },
+      { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs; recognized brand.", logoSrc: "/Logos/sage.png" },
       { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simpler bookkeeping; good for small teams.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
     faqs: [
-      { q: "What is Odoo Accounting?", a: "Odoo Accounting is the accounting module within the Odoo business suite. It handles invoicing, expenses, bank feeds, and reporting and integrates with other Odoo apps like CRM and inventory." },
-      { q: "Do I need other Odoo apps to use Odoo Accounting?", a: "No. You can use the Accounting app alone, but the main benefit is integration with Odoo CRM, inventory, projects, and other modules. Many users adopt several Odoo apps together." },
-      { q: "How much does Odoo Accounting cost?", a: "Odoo pricing is per app or by suite. Check Odoo's website for current pricing for the Accounting app and any bundle you need." },
-      { q: "How does Odoo Accounting compare to QuickBooks?", a: "QuickBooks is standalone accounting with a large third-party ecosystem. Odoo Accounting is built for businesses that want accounting inside the Odoo ERP; choose by whether you need a suite or a single accounting tool." },
+      { q: "What is Odoo?", a: "Odoo is the accounting module within the Odoo business suite. It handles invoicing, expenses, bank feeds, and reporting and integrates with other Odoo apps like CRM and inventory." },
+      { q: "Do I need other Odoo apps to use Odoo?", a: "No. You can use the Accounting app alone, but the main benefit is integration with Odoo CRM, inventory, projects, and other modules. Many users adopt several Odoo apps together." },
+      { q: "How much does Odoo cost?", a: "Odoo pricing is per app or by suite. Check Odoo's website for current pricing for the Accounting app and any bundle you need." },
+      { q: "How does Odoo compare to QuickBooks?", a: "QuickBooks is standalone accounting with a large third-party ecosystem. Odoo is built for businesses that want accounting inside the Odoo ERP; choose by whether you need a suite or a single accounting tool." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,
     compareLinks: [
-      { label: "Odoo Accounting vs QuickBooks Online", href: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online") },
-      { label: "Odoo Accounting vs Xero", href: getAccountingCompareUrl("odoo-accounting-vs-xero") },
+      { label: "Odoo vs QuickBooks Online", href: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online") },
+      { label: "Odoo vs Xero", href: getAccountingCompareUrl("odoo-accounting-vs-xero") },
     ],
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
     compareHubHref: ACCOUNTING_COMPARE_HUB,
@@ -753,7 +753,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for basic needs.", logoSrc: "/Logos/wave.jpeg" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; strong invoicing and time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
-      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
     ],
     faqs: [
       { q: "What is Kashoo?", a: "Kashoo is cloud-based accounting software for small businesses. It offers invoicing, expense tracking, bank feeds, and basic reporting in a simple interface." },
@@ -779,7 +779,7 @@ const reviews: Record<string, ReviewData> = {
   },
   // ——— Aliases required by Odoo comparison specs ———
   odoo: {
-    toolName: "Odoo Accounting",
+    toolName: "Odoo",
     category: "Accounting",
     categoryHref: "/accounting",
     rating: "4.2",
@@ -788,7 +788,7 @@ const reviews: Record<string, ReviewData> = {
     visitUrl: "https://www.odoo.com/app/accounting",
     logoSrc: "/Logos/odoo.jpeg",
     quickVerdict:
-      "Odoo Accounting is the accounting module within the Odoo ERP suite—best for teams that want books and operations in one system.",
+      "Odoo is the accounting module within the Odoo ERP suite—best for teams that want books and operations in one system.",
     pros: [
       "Native integration with Odoo CRM, inventory, and projects",
       "Unified reporting across Odoo modules",
@@ -811,25 +811,25 @@ const reviews: Record<string, ReviewData> = {
     ],
     integrations: ["Odoo CRM", "Odoo Inventory", "Odoo Projects", "Odoo Invoicing", "Bank feeds"],
     integrationsIntro:
-      "Odoo Accounting is strongest when it’s part of a broader Odoo stack. Native connections to Odoo’s sales, inventory, and project workflows reduce syncing and manual handoffs.",
+      "Odoo is strongest when it’s part of a broader Odoo stack. Native connections to Odoo’s sales, inventory, and project workflows reduce syncing and manual handoffs.",
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with a broad ecosystem.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "A clean cloud accounting alternative with strong reporting.", logoSrc: "/Logos/xero.png" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with strong Zoho ecosystem fit.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with compliance basics.", logoSrc: "/Logos/sage.png" },
+      { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with compliance basics.", logoSrc: "/Logos/sage.png" },
     ],
     faqs: [
       {
-        q: "Is Odoo Accounting good if you already use Odoo?",
-        a: "Yes. Odoo Accounting is designed for businesses that want accounting inside the Odoo suite so invoicing, inventory, and other operational data stay connected.",
+        q: "Is Odoo good if you already use Odoo?",
+        a: "Yes. Odoo is designed for businesses that want accounting inside the Odoo suite so invoicing, inventory, and other operational data stay connected.",
       },
       {
-        q: "How does Odoo Accounting compare to QuickBooks?",
-        a: "QuickBooks is standalone best-of-breed accounting with a large US ecosystem. Odoo Accounting is ERP-integrated, which is usually best when you already use Odoo beyond accounting.",
+        q: "How does Odoo compare to QuickBooks?",
+        a: "QuickBooks is standalone best-of-breed accounting with a large US ecosystem. Odoo is ERP-integrated, which is usually best when you already use Odoo beyond accounting.",
       },
       {
-        q: "Is Odoo Accounting expensive?",
+        q: "Is Odoo expensive?",
         a: "Pricing is typically quote-based and depends on edition and which Odoo apps you use. Compare total cost across your entire stack, not just the Accounting module.",
       },
     ],
@@ -846,7 +846,7 @@ const reviews: Record<string, ReviewData> = {
     scenarioLinks: ACCOUNTING_SCENARIO_LINKS,
   },
   sage: {
-    toolName: "Sage Accounting",
+    toolName: "Sage",
     category: "Accounting",
     categoryHref: "/accounting",
     rating: "4.3",
@@ -855,7 +855,7 @@ const reviews: Record<string, ReviewData> = {
     visitUrl: "https://www.sage.com/en-us/products/sage-business-cloud-accounting",
     logoSrc: "/Logos/sage.png",
     quickVerdict:
-      "Sage Accounting is solid core accounting for SMBs—best when you want familiar workflows and compliance-focused fundamentals.",
+      "Sage is solid core accounting for SMBs—best when you want familiar workflows and compliance-focused fundamentals.",
     pros: [
       "Core accounting features with compliance-minded workflows",
       "Recognized brand used by many accountants and bookkeepers",
@@ -868,7 +868,7 @@ const reviews: Record<string, ReviewData> = {
       "Advanced automation and app breadth may require add-ons or integrations",
     ],
     pricingSummary:
-      "Sage Accounting pricing often varies by region and plan. Expect quote-based or partner-driven pricing, so compare total cost against the features and users you need.",
+      "Sage pricing often varies by region and plan. Expect quote-based or partner-driven pricing, so compare total cost against the features and users you need.",
     features: ["Invoicing and estimates", "Expense and bill management", "Bank feeds and reconciliation", "Reporting"],
     keyFeatures: [
       { name: "Invoicing", description: "Create and send invoices with standard tracking and reminders." },
@@ -878,16 +878,16 @@ const reviews: Record<string, ReviewData> = {
     ],
     integrations: ["Bank feeds", "Some payroll and productivity apps", "Sage ecosystem connections"],
     integrationsIntro:
-      "Sage Accounting can connect to banks and selected third-party tools. For best results, match integrations to your region, plan, and required workflows.",
+      "Sage can connect to banks and selected third-party tools. For best results, match integrations to your region, plan, and required workflows.",
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Broader ecosystem and strong market familiarity.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud UI and strong reporting.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Simpler invoicing and time tracking for service teams.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting and invoicing.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-integrated accounting for existing Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-integrated accounting for existing Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
     ],
     faqs: [
-      { q: "What is Sage Accounting best for?", a: "Sage is best for SMBs that want core accounting features and familiar workflows, often paired with compliance-minded usage." },
+      { q: "What is Sage best for?", a: "Sage is best for SMBs that want core accounting features and familiar workflows, often paired with compliance-minded usage." },
       { q: "Is Sage a good QuickBooks alternative?", a: "It can be. If you want Sage-style workflows with core accounting basics, it’s a reasonable alternative—especially if your accountant supports Sage." },
       { q: "Why do people choose Sage?", a: "Many choose Sage for recognized brand value, compliance alignment, and core accounting functionality without needing the deepest ERP-level modules." },
     ],
@@ -937,12 +937,12 @@ const reviews: Record<string, ReviewData> = {
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting with strong reporting.", logoSrc: "/Logos/xero.png" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Sage Accounting", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with familiar workflows.", logoSrc: "/Logos/sage.png" },
+      { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with familiar workflows.", logoSrc: "/Logos/sage.png" },
     ],
     faqs: [
       { q: "Is NetSuite good for small business accounting?", a: "It can work, but it’s usually more complex than needed. NetSuite is typically best when you want ERP-integrated accounting and suite-wide workflows." },
       { q: "How does NetSuite pricing work?", a: "NetSuite pricing is usually quote-based and depends on modules, users, implementation scope, and required integrations." },
-      { q: "Is NetSuite better than Odoo Accounting?", a: "If you want ERP suite governance and connected modules, NetSuite can be a strong alternative. If you value Odoo’s broader open ERP stack, compare the stack you’ll actually use." },
+      { q: "Is NetSuite better than Odoo?", a: "If you want ERP suite governance and connected modules, NetSuite can be a strong alternative. If you value Odoo’s broader open ERP stack, compare the stack you’ll actually use." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
@@ -987,14 +987,14 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broader ecosystem reach.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting with strong reporting.", logoSrc: "/Logos/xero.png" },
-      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.jpeg" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [
       { q: "Is Sage Intacct better than QuickBooks?", a: "Intacct is often positioned for scalable finance workflows and deeper reporting. QuickBooks is frequently simpler and has broader mindshare with larger ecosystem reach." },
       { q: "Who should consider Sage Intacct?", a: "Teams that need advanced accounting and reporting with more structured finance workflows." },
-      { q: "How does Sage Intacct compare to Odoo Accounting?", a: "Intacct is more finance-first; Odoo is ERP-suite integrated. Choose by whether you want suite-wide ERP workflows or advanced accounting/reporting depth." },
+      { q: "How does Sage Intacct compare to Odoo?", a: "Intacct is more finance-first; Odoo is ERP-suite integrated. Choose by whether you want suite-wide ERP workflows or advanced accounting/reporting depth." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,
     bestPayrollSoftwareHref: BEST_ACCOUNTING_SOFTWARE_HREF,
@@ -1041,11 +1041,11 @@ const reviews: Record<string, ReviewData> = {
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting alternative.", logoSrc: "/Logos/xero.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting.", logoSrc: "/Logos/zoho.jpeg" },
-      { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
+      { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
     ],
     faqs: [
       { q: "Is Acumatica suitable for small business accounting?", a: "It can be, but it’s usually best when you want ERP-connected workflows and deeper reporting tied to operations." },
-      { q: "Is Acumatica an alternative to Odoo Accounting?", a: "Yes—both are ERP-suite integrated approaches. Compare which suite you want for automation, workflows, and reporting." },
+      { q: "Is Acumatica an alternative to Odoo?", a: "Yes—both are ERP-suite integrated approaches. Compare which suite you want for automation, workflows, and reporting." },
       { q: "How is Acumatica priced?", a: "Pricing is usually quote-based and depends on modules, users, and deployment scope." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,
@@ -1100,7 +1100,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     faqs: [
       { q: "Is Microsoft Dynamics good for accounting?", a: "It’s best for teams that need ERP-integrated accounting workflows. If you want simpler standalone accounting, tools like QuickBooks or Xero may fit better." },
-      { q: "How does Dynamics compare to Odoo Accounting?", a: "Both can provide ERP-connected accounting. Odoo is typically chosen for open suite integration, while Dynamics is often chosen when you’re invested in the Microsoft ecosystem." },
+      { q: "How does Dynamics compare to Odoo?", a: "Both can provide ERP-connected accounting. Odoo is typically chosen for open suite integration, while Dynamics is often chosen when you’re invested in the Microsoft ecosystem." },
       { q: "How does Dynamics pricing work?", a: "Pricing depends on deployment and modules. Compare based on the full scope of what you deploy and implement." },
     ],
     methodology: ACCOUNTING_METHODOLOGY,

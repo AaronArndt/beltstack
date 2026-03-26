@@ -233,11 +233,11 @@ export const searchIndex: SearchIndexItem[] = [
     keywords: ["zuper", "zuper review", "field service software"],
   },
   {
-    title: "Square POS Review (2026)",
+    title: "Square Review (2026)",
     href: "/pos/review/square-pos",
     type: "Review",
     category: "POS",
-    entity: "Square POS",
+    entity: "Square",
     keywords: ["square", "square pos", "square review"],
   },
   {
@@ -419,11 +419,11 @@ export const searchIndex: SearchIndexItem[] = [
     keywords: ["zuper", "zuper alternatives", "field service alternatives"],
   },
   {
-    title: "Best Square POS Alternatives (2026)",
+    title: "Best Square Alternatives (2026)",
     href: "/pos/alternatives/square-pos",
     type: "Alternatives",
     category: "POS",
-    entity: "Square POS",
+    entity: "Square",
     keywords: ["square", "square alternatives", "pos alternatives"],
   },
   {
@@ -669,7 +669,7 @@ export const searchIndex: SearchIndexItem[] = [
     keywords: ["connecteam", "jobber", "connecteam vs jobber", "field service comparison"],
   },
   {
-    title: "Square POS vs Shopify POS (2026)",
+    title: "Square vs Shopify POS (2026)",
     href: "/pos/compare/square-pos-vs-shopify-pos",
     type: "Comparison",
     category: "POS",

@@ -156,7 +156,7 @@ function CrmGuidesSection() {
           </Link>
           ,{" "}
           <Link href={getCrmReviewUrl("monday-crm")} className={linkGreen}>
-            Monday CRM
+            Monday
           </Link>
           .{" "}
           <Link href="/crm/guides" className={linkGreen}>

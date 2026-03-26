@@ -174,7 +174,7 @@ export const TOP_PICKS: BestAccountingPick[] = [
   },
   {
     slug: "sage-accounting",
-    name: "Sage Accounting",
+    name: "Sage",
     badge: "Best for Sage-aligned SMBs",
     description:
       "Core cloud accounting and invoicing for small businesses that prefer Sage’s approach and familiarity with compliance-focused basics.",
@@ -192,7 +192,7 @@ export const TOP_PICKS: BestAccountingPick[] = [
     ],
     standoutFeature: "Core bookkeeping, invoicing, compliance focus",
     editorialParagraph:
-      "Sage Accounting fits teams that want established SMB accounting with a compliance-minded setup. Pricing is often quote-based, and the ecosystem is smaller than QuickBooks or Xero in the US—but for businesses already aligned with Sage or regional Sage offerings, it can be a solid fit. Compare against QuickBooks and Xero if you want a larger app marketplace or more transparent tier pricing.",
+      "Sage fits teams that want established SMB accounting with a compliance-minded setup. Pricing is often quote-based, and the ecosystem is smaller than QuickBooks or Xero in the US—but for businesses already aligned with Sage or regional Sage offerings, it can be a solid fit. Compare against QuickBooks and Xero if you want a larger app marketplace or more transparent tier pricing.",
     pros: [
       "Core bookkeeping, invoicing, and reporting for SMBs",
       "Familiar brand for businesses that already use Sage products",
@@ -205,7 +205,7 @@ export const TOP_PICKS: BestAccountingPick[] = [
       "May feel less modern than Xero or Zoho Books for some teams",
     ],
     pricingSummary:
-      "Sage Accounting typically uses quote-based or plan-based pricing depending on region and edition. Compare published tiers (if available) with QuickBooks and Xero for your user count and feature needs.",
+      "Sage typically uses quote-based or plan-based pricing depending on region and edition. Compare published tiers (if available) with QuickBooks and Xero for your user count and feature needs.",
   },
 ];
 
@@ -258,7 +258,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
   },
   {
     slug: "sage-accounting",
-    name: "Sage Accounting",
+    name: "Sage",
     logoSrc: "/Logos/sage.png",
     bestFor: "SMB accounting basics",
     startingPrice: "From $10/mo",
@@ -267,7 +267,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
   },
   {
     slug: "odoo-accounting",
-    name: "Odoo Accounting",
+    name: "Odoo",
     logoSrc: "/Logos/odoo.jpeg",
     bestFor: "Broader ERP workflows",
     startingPrice: "From $24/user/mo",
@@ -294,7 +294,7 @@ export const MORE_ACCOUNTING_OPTIONS: {
 }[] = [
   {
     slug: "odoo-accounting",
-    name: "Odoo Accounting",
+    name: "Odoo",
     description: "Accounting as part of the Odoo suite. Best when you want ecommerce, inventory, and finance in one platform.",
     reviewHref: getAccountingReviewUrl("odoo-accounting"),
     logoSrc: "/Logos/odoo.jpeg",

@@ -9,6 +9,6 @@ export function generateMetadata() {
   return {
     title: "Best CRM Software for Agencies (2026) | BeltStack",
     description:
-      "Compare the best CRM software for agencies: HubSpot, Monday CRM, Pipedrive, Zoho CRM. Client management, pipelines, reporting, and collaboration.",
+      "Compare the best CRM software for agencies: HubSpot, Monday, Pipedrive, Zoho CRM. Client management, pipelines, reporting, and collaboration.",
   };
 }

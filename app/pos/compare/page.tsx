@@ -90,8 +90,8 @@ export default function PosCompareHubPage() {
               POS Software Comparisons
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Compare popular POS systems side by side—including Square POS, Shopify POS, Lightspeed POS, Clover POS,
-              Toast POS, Vend POS, and more. These head-to-head matchups break down features, pricing, and fit so you
+              Compare popular POS systems side by side—including Square, Shopify POS, Lightspeed, Clover,
+              Toast, Vend, and more. These head-to-head matchups break down features, pricing, and fit so you
               can choose the right platform for your business.
             </p>
             <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
@@ -292,6 +292,6 @@ export function generateMetadata() {
   return {
     title: "POS Software Comparisons | BeltStack",
     description:
-      "Compare POS systems side-by-side. See matchups like Square POS vs Shopify POS, Square POS vs Clover POS, Shopify POS vs Lightspeed POS, Toast POS vs Square POS, and Lightspeed POS vs Vend POS.",
+      "Compare POS systems side-by-side. See matchups like Square vs Shopify POS, Square vs Clover, Shopify POS vs Lightspeed, Toast vs Square, and Lightspeed vs Vend.",
   };
 }

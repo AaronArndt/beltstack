@@ -63,9 +63,9 @@ const REVIEW_DESCRIPTIONS: Record<string, string> = {
   wave:
     "Our Wave review covers its free accounting and invoicing features, limitations, and when to choose Wave vs paid options like QuickBooks or Xero.",
   "sage-accounting":
-    "Our Sage Accounting review covers core features, pricing, and how it compares to QuickBooks and Xero for small business accounting.",
+    "Our Sage review covers core features, pricing, and how it compares to QuickBooks and Xero for small business accounting.",
   "odoo-accounting":
-    "Our Odoo Accounting review covers the accounting module within Odoo ERP: pricing, features, integrations, and when it makes sense for businesses already using Odoo.",
+    "Our Odoo review covers the accounting module within Odoo ERP: pricing, features, integrations, and when it makes sense for businesses already using Odoo.",
   kashoo:
     "Our Kashoo review covers simple bookkeeping for small businesses: pricing, features, ease of use, and how it compares to Wave, QuickBooks, and other accounting tools.",
 };

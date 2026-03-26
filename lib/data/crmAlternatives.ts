@@ -42,7 +42,7 @@ const HOW_TO_CHOOSE: AlternativesEditorialBlock[] = [
   { heading: "Marketing vs sales-only", body: "HubSpot and Keap combine marketing automation and CRM. Pipedrive, Close, and Freshsales are sales-pipeline focused. Choose by whether you need marketing hub or just pipeline." },
   { heading: "Ecosystem and integrations", body: "Copper is built for Google Workspace; Zoho fits the Zoho suite. If you live in one ecosystem, that may dictate the best CRM alternative." },
   { heading: "Scale and complexity", body: "Salesforce scales to enterprise with heavy customization; HubSpot and Zoho suit SMBs. Match the tool to your team size and admin capacity." },
-  { heading: "Pipeline vs flexibility", body: "Pipedrive and Close are pipeline- and activity-focused. Monday CRM offers board-based flexibility. Choose by how structured your sales process is." },
+  { heading: "Pipeline vs flexibility", body: "Pipedrive and Close are pipeline- and activity-focused. Monday offers board-based flexibility. Choose by how structured your sales process is." },
 ];
 
 function buildTableRows(
@@ -82,7 +82,7 @@ const HUBSPOT_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise scale", description: "Maximum customization and app ecosystem for large teams.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise; AppExchange" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value & Zoho", description: "Full CRM at lower cost; strong for Zoho users.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value; Zoho suite" },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first CRM without marketing hub.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("hubspot-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Sales pipeline" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexible workflows", description: "Boards and CRM in one; customizable.", reviewHref: getCrmReviewUrl("monday-crm"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"), startingPrice: "From $10/user/mo", standoutFeature: "Flexibility; boards" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexible workflows", description: "Boards and CRM in one; customizable.", reviewHref: getCrmReviewUrl("monday-crm"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"), startingPrice: "From $10/user/mo", standoutFeature: "Flexibility; boards" },
   { slug: "copper", name: "Copper", logoSrc: LOGOS.copper, rating: "4.4", bestFor: "Google Workspace", description: "Native Gmail and Calendar integration.", reviewHref: getCrmReviewUrl("copper"), compareHref: getCrmCompareUrl("copper-vs-hubspot"), startingPrice: "From $29/user/mo", standoutFeature: "Google native" },
 ];
 
@@ -99,7 +99,7 @@ const hubspotPage: AlternativesTemplateProps = {
   categoryLabel: CATEGORY.label,
   originalReviewHref: getCrmReviewUrl("hubspot"),
   quickAnswerParagraphs: [
-    "HubSpot is a top CRM for many SMBs; alternatives include Salesforce for enterprise scale, Zoho CRM for value and Zoho ecosystem, Pipedrive for sales-only pipeline focus, Monday CRM for flexible boards and workflows, and Copper for Google Workspace. Salesforce, Zoho CRM, and Pipedrive are the most common alternatives.",
+    "HubSpot is a top CRM for many SMBs; alternatives include Salesforce for enterprise scale, Zoho CRM for value and Zoho ecosystem, Pipedrive for sales-only pipeline focus, Monday for flexible boards and workflows, and Copper for Google Workspace. Salesforce, Zoho CRM, and Pipedrive are the most common alternatives.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Cost at scale", body: "HubSpot's paid hubs add up. Zoho CRM and Pipedrive often cost less for similar core CRM; Salesforce is a different scale and price." },
@@ -112,7 +112,7 @@ const hubspotPage: AlternativesTemplateProps = {
     { productName: "Salesforce", heading: "Best for enterprise scale", body: "Salesforce offers maximum customization and the largest app ecosystem. For teams that need enterprise depth.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce") },
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM delivers full CRM at lower cost and fits Zoho suite users. For cost-conscious SMBs.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm") },
     { productName: "Pipedrive", heading: "Best for sales pipeline", body: "Pipedrive is built for deal pipeline and activity-based selling. For sales teams that don't need marketing hub.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("hubspot-vs-pipedrive") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM combines boards and CRM for customizable workflows. For teams that want to design their process.", reviewHref: getCrmReviewUrl("monday-crm"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday combines boards and CRM for customizable workflows. For teams that want to design their process.", reviewHref: getCrmReviewUrl("monday-crm"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot") },
     { productName: "Copper", heading: "Best for Google Workspace", body: "Copper is built for Gmail and Calendar. For teams that live in Google and want minimal context switching.", reviewHref: getCrmReviewUrl("copper"), compareHref: getCrmCompareUrl("copper-vs-hubspot") },
   ],
   howToChoose: HOW_TO_CHOOSE,
@@ -125,7 +125,7 @@ const hubspotPage: AlternativesTemplateProps = {
   ],
   relatedResources: defaultRelatedResources("HubSpot", getCrmReviewUrl("hubspot")),
   faqItems: [
-    { q: "What is the best HubSpot alternative?", a: "Salesforce for enterprise; Zoho CRM for value; Pipedrive for sales-only; Monday CRM for flexibility; Copper for Google Workspace. Choose by scale, budget, and ecosystem." },
+    { q: "What is the best HubSpot alternative?", a: "Salesforce for enterprise; Zoho CRM for value; Pipedrive for sales-only; Monday for flexibility; Copper for Google Workspace. Choose by scale, budget, and ecosystem." },
     { q: "Is HubSpot better than Salesforce?", a: "HubSpot is better for SMBs and free tier; Salesforce is better for enterprise and maximum customization. Most small teams prefer HubSpot; large teams often choose Salesforce." },
     { q: "Which CRM is cheaper than HubSpot?", a: "Zoho CRM and Pipedrive often cost less for similar core CRM. HubSpot's free tier is hard to beat for entry; paid hubs add cost." },
   ],
@@ -136,7 +136,7 @@ const SALESFORCE_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "SMB", description: "Free CRM and easier setup for small and mid-size teams.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce"), startingPrice: "Free tier", standoutFeature: "Free; ease of use" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at much lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value; Zoho" },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Focused pipeline CRM without enterprise complexity.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline focus" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards; workflows" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards; workflows" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & value", description: "AI-powered sales CRM at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI; value" },
 ];
 
@@ -148,7 +148,7 @@ const salesforcePage: AlternativesTemplateProps = {
   productSlug: "salesforce",
   originalReviewHref: getCrmReviewUrl("salesforce"),
   quickAnswerParagraphs: [
-    "Salesforce is the leader for enterprise CRM; alternatives include HubSpot for SMBs and free tier, Zoho CRM for value and lower cost, Pipedrive for sales pipeline focus, Monday CRM for flexibility, and Freshsales for AI and value. HubSpot and Zoho CRM are the most common alternatives for smaller teams.",
+    "Salesforce is the leader for enterprise CRM; alternatives include HubSpot for SMBs and free tier, Zoho CRM for value and lower cost, Pipedrive for sales pipeline focus, Monday for flexibility, and Freshsales for AI and value. HubSpot and Zoho CRM are the most common alternatives for smaller teams.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Cost and complexity", body: "HubSpot and Zoho CRM offer easier setup and lower cost. Better for teams without dedicated admins." },
@@ -164,13 +164,13 @@ const salesforcePage: AlternativesTemplateProps = {
     { productName: "HubSpot", heading: "Best for SMB", body: "HubSpot offers a free CRM and easier setup. For small and mid-size teams that don't need Salesforce's depth.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce") },
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM delivers full CRM at much lower cost. For cost-conscious teams.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm") },
     { productName: "Pipedrive", heading: "Best for sales pipeline", body: "Pipedrive is pipeline-focused without enterprise complexity.", reviewHref: getCrmReviewUrl("pipedrive") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday offers customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
     { productName: "Freshsales", heading: "Best for AI and value", body: "Freshsales adds AI and automation at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
   ],
   relatedComparisons: [crmRel("hubspot-vs-salesforce"), crmRel("salesforce-vs-zoho-crm")],
   relatedResources: defaultRelatedResources("Salesforce", getCrmReviewUrl("salesforce")),
   faqItems: [
-    { q: "What is the best Salesforce alternative?", a: "HubSpot for SMB and free tier; Zoho CRM for value; Pipedrive for pipeline focus; Monday CRM for flexibility. Choose by team size and budget." },
+    { q: "What is the best Salesforce alternative?", a: "HubSpot for SMB and free tier; Zoho CRM for value; Pipedrive for pipeline focus; Monday for flexibility. Choose by team size and budget." },
     { q: "Is Salesforce worth it for small business?", a: "Many small businesses find HubSpot or Zoho CRM easier and more affordable. Salesforce is worth it when you need maximum customization and scale." },
     { q: "Which CRM is cheaper than Salesforce?", a: "Zoho CRM and HubSpot (free tier) are typically much cheaper. Pipedrive and Freshsales also cost less for similar core features." },
   ],
@@ -181,7 +181,7 @@ const ZOHO_CRM_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "marketing-sales", description: "Stronger marketing hub and polish; free CRM.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Marketing; free tier" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum scale and app ecosystem.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first; cleaner sales focus.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI", description: "AI-powered sales and built-in communication.", reviewHref: getCrmReviewUrl("freshsales"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive"), startingPrice: "From $15/user/mo", standoutFeature: "AI; dialer" },
 ];
 
@@ -193,7 +193,7 @@ const zohoCrmPage: AlternativesTemplateProps = {
   productSlug: "zoho-crm",
   originalReviewHref: getCrmReviewUrl("zoho-crm"),
   quickAnswerParagraphs: [
-    "Zoho CRM is a strong value pick; alternatives include HubSpot for marketing-sales alignment and free tier, Salesforce for enterprise scale, Pipedrive for sales pipeline focus, Monday CRM for flexibility, and Freshsales for AI. HubSpot and Pipedrive are common alternatives.",
+    "Zoho CRM is a strong value pick; alternatives include HubSpot for marketing-sales alignment and free tier, Salesforce for enterprise scale, Pipedrive for sales pipeline focus, Monday for flexibility, and Freshsales for AI. HubSpot and Pipedrive are common alternatives.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Not in Zoho ecosystem", body: "HubSpot and Pipedrive are popular standalone choices. Better if you don't use other Zoho apps." },
@@ -209,7 +209,7 @@ const zohoCrmPage: AlternativesTemplateProps = {
     { productName: "HubSpot", heading: "Best for marketing-sales", body: "HubSpot offers stronger marketing hub and a free CRM. For teams that want all-in-one marketing and sales.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm") },
     { productName: "Salesforce", heading: "Best for enterprise", body: "Salesforce scales to enterprise with maximum customization.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm") },
     { productName: "Pipedrive", heading: "Best for sales pipeline", body: "Pipedrive is pipeline-first and activity-based. For sales-only focus.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
     { productName: "Freshsales", heading: "Best for AI", body: "Freshsales adds AI and built-in communication at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
   ],
   relatedComparisons: [
@@ -219,7 +219,7 @@ const zohoCrmPage: AlternativesTemplateProps = {
   ],
   relatedResources: defaultRelatedResources("Zoho CRM", getCrmReviewUrl("zoho-crm")),
   faqItems: [
-    { q: "What is the best Zoho CRM alternative?", a: "HubSpot for marketing and free tier; Pipedrive for pipeline focus; Salesforce for enterprise; Monday CRM for flexibility. Choose by ecosystem and focus." },
+    { q: "What is the best Zoho CRM alternative?", a: "HubSpot for marketing and free tier; Pipedrive for pipeline focus; Salesforce for enterprise; Monday for flexibility. Choose by ecosystem and focus." },
     { q: "Is Zoho CRM better than HubSpot?", a: "Zoho CRM often costs less and fits Zoho users; HubSpot has a stronger marketing hub and broader recognition. Compare by your stack and budget." },
     { q: "Which CRM is best for sales pipeline?", a: "Pipedrive is built for pipeline and activity. Zoho CRM and HubSpot also have pipelines; Pipedrive is the most pipeline-focused." },
   ],
@@ -231,7 +231,7 @@ const PIPEDRIVE_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at lower cost; free tier.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive"), startingPrice: "Free tier", standoutFeature: "Value" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & communication", description: "AI and built-in phone/email.", reviewHref: getCrmReviewUrl("freshsales"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive"), startingPrice: "From $15/user/mo", standoutFeature: "AI; dialer" },
   { slug: "close", name: "Close", logoSrc: LOGOS.close, rating: "4.5", bestFor: "inside sales", description: "Built-in calling and email for inside sales.", reviewHref: getCrmReviewUrl("close"), compareHref: getCrmCompareUrl("close-vs-pipedrive"), startingPrice: "From $49/user/mo", standoutFeature: "Calling; email" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows beyond pipeline.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows beyond pipeline.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
 ];
 
 const pipedrivePage: AlternativesTemplateProps = {
@@ -242,7 +242,7 @@ const pipedrivePage: AlternativesTemplateProps = {
   productSlug: "pipedrive",
   originalReviewHref: getCrmReviewUrl("pipedrive"),
   quickAnswerParagraphs: [
-    "Pipedrive is a top pipeline CRM; alternatives include HubSpot for free CRM and marketing, Zoho CRM for value and free tier, Freshsales for AI and built-in communication, Close for inside sales and calling, and Monday CRM for flexibility. HubSpot, Zoho CRM, and Freshsales are common alternatives.",
+    "Pipedrive is a top pipeline CRM; alternatives include HubSpot for free CRM and marketing, Zoho CRM for value and free tier, Freshsales for AI and built-in communication, Close for inside sales and calling, and Monday for flexibility. HubSpot, Zoho CRM, and Freshsales are common alternatives.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Free tier", body: "HubSpot and Zoho CRM offer free CRM. Pipedrive is paid from day one." },
@@ -259,7 +259,7 @@ const pipedrivePage: AlternativesTemplateProps = {
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM has a free tier and full CRM at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
     { productName: "Freshsales", heading: "Best for AI and communication", body: "Freshsales adds AI and built-in phone/email. Compare with Pipedrive for features and price.", reviewHref: getCrmReviewUrl("freshsales"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive") },
     { productName: "Close", heading: "Best for inside sales", body: "Close is built for inside sales with calling and email in one product.", reviewHref: getCrmReviewUrl("close"), compareHref: getCrmCompareUrl("close-vs-pipedrive") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows beyond a traditional pipeline.", reviewHref: getCrmReviewUrl("monday-crm") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday offers boards and customizable workflows beyond a traditional pipeline.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
   relatedComparisons: [
     crmRel("hubspot-vs-pipedrive"),
@@ -275,7 +275,7 @@ const pipedrivePage: AlternativesTemplateProps = {
   ],
 };
 
-// ——— Monday CRM alternatives ———
+// ——— Monday alternatives ———
 const MONDAY_CRM_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "full CRM", description: "Traditional CRM with marketing and sales; free tier.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"), startingPrice: "Free tier", standoutFeature: "Marketing; free" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
@@ -286,13 +286,13 @@ const MONDAY_CRM_ALTERNATIVES: AlternativesTopPick[] = [
 
 const mondayCrmPage: AlternativesTemplateProps = {
   ...hubspotPage,
-  title: "Best Monday CRM Alternatives (2026)",
-  subtitle: "If Monday CRM isn't the right fit—because you want traditional CRM, different pricing, or less customization—these CRM alternatives offer strong options.",
-  productName: "Monday CRM",
+  title: "Best Monday Alternatives (2026)",
+  subtitle: "If Monday isn't the right fit—because you want traditional CRM, different pricing, or less customization—these CRM alternatives offer strong options.",
+  productName: "Monday",
   productSlug: "monday-crm",
   originalReviewHref: getCrmReviewUrl("monday-crm"),
   quickAnswerParagraphs: [
-    "Monday CRM is strong for flexible workflows; alternatives include HubSpot for full marketing and sales CRM with free tier, Zoho CRM for value, Pipedrive for pipeline focus, Salesforce for enterprise, and Freshsales for AI. HubSpot and Pipedrive are common alternatives.",
+    "Monday is strong for flexible workflows; alternatives include HubSpot for full marketing and sales CRM with free tier, Zoho CRM for value, Pipedrive for pipeline focus, Salesforce for enterprise, and Freshsales for AI. HubSpot and Pipedrive are common alternatives.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Traditional CRM", body: "HubSpot and Pipedrive offer a more traditional pipeline. Better if you don't need board-based customization." },
@@ -301,7 +301,7 @@ const mondayCrmPage: AlternativesTemplateProps = {
   ],
   topAlternatives: MONDAY_CRM_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
-    { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, bestFor: "flexibility", startingPrice: "From $10/user/mo", standoutFeature: "Boards; workflows", reviewHref: getCrmReviewUrl("monday-crm") },
+    { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, bestFor: "flexibility", startingPrice: "From $10/user/mo", standoutFeature: "Boards; workflows", reviewHref: getCrmReviewUrl("monday-crm") },
     MONDAY_CRM_ALTERNATIVES
   ),
   detailedAlternatives: [
@@ -316,11 +316,11 @@ const mondayCrmPage: AlternativesTemplateProps = {
     crmRel("hubspot-vs-salesforce"),
     crmRel("zoho-crm-vs-pipedrive"),
   ],
-  relatedResources: defaultRelatedResources("Monday CRM", getCrmReviewUrl("monday-crm")),
+  relatedResources: defaultRelatedResources("Monday", getCrmReviewUrl("monday-crm")),
   faqItems: [
-    { q: "What is the best Monday CRM alternative?", a: "HubSpot for full CRM and free tier; Pipedrive for pipeline; Zoho CRM for value; Salesforce for enterprise. Choose by need for traditional CRM vs boards." },
-    { q: "Is Monday CRM good for sales?", a: "Monday CRM can be used for sales with customizable boards. Pipedrive and HubSpot are more purpose-built for sales pipeline." },
-    { q: "Which CRM has a free tier?", a: "HubSpot and Zoho CRM offer free CRM tiers. Monday CRM starts with a paid plan." },
+    { q: "What is the best Monday alternative?", a: "HubSpot for full CRM and free tier; Pipedrive for pipeline; Zoho CRM for value; Salesforce for enterprise. Choose by need for traditional CRM vs boards." },
+    { q: "Is Monday good for sales?", a: "Monday can be used for sales with customizable boards. Pipedrive and HubSpot are more purpose-built for sales pipeline." },
+    { q: "Which CRM has a free tier?", a: "HubSpot and Zoho CRM offer free CRM tiers. Monday starts with a paid plan." },
   ],
 };
 
@@ -375,7 +375,7 @@ const COPPER_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at lower cost; free tier.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline-focused; integrates with Google.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum scale; Google integrations.", reviewHref: getCrmReviewUrl("salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
 ];
 
 const copperPage: AlternativesTemplateProps = {
@@ -386,7 +386,7 @@ const copperPage: AlternativesTemplateProps = {
   productSlug: "copper",
   originalReviewHref: getCrmReviewUrl("copper"),
   quickAnswerParagraphs: [
-    "Copper is built for Google Workspace; alternatives include HubSpot for free CRM and marketing, Zoho CRM for value and free tier, Pipedrive for pipeline focus, Salesforce for enterprise, and Monday CRM for flexibility. HubSpot and Zoho CRM are common alternatives for non-Google or budget-conscious teams.",
+    "Copper is built for Google Workspace; alternatives include HubSpot for free CRM and marketing, Zoho CRM for value and free tier, Pipedrive for pipeline focus, Salesforce for enterprise, and Monday for flexibility. HubSpot and Zoho CRM are common alternatives for non-Google or budget-conscious teams.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Not on Google Workspace", body: "HubSpot and Pipedrive work across ecosystems. Better if you're not all-in on Google." },
@@ -403,7 +403,7 @@ const copperPage: AlternativesTemplateProps = {
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM has a free tier and full CRM at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm") },
     { productName: "Pipedrive", heading: "Best for pipeline", body: "Pipedrive is pipeline-focused and integrates with Google.", reviewHref: getCrmReviewUrl("pipedrive") },
     { productName: "Salesforce", heading: "Best for enterprise", body: "Salesforce scales to enterprise with Google integrations.", reviewHref: getCrmReviewUrl("salesforce") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
   relatedComparisons: [crmRel("copper-vs-hubspot"), crmRel("hubspot-vs-salesforce")],
   relatedResources: defaultRelatedResources("Copper", getCrmReviewUrl("copper")),
@@ -465,7 +465,7 @@ const KEAP_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM and marketing at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline focus; add marketing separately.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & sales", description: "AI-powered sales CRM.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI" },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
 ];
 
 const keapPage: AlternativesTemplateProps = {
@@ -476,7 +476,7 @@ const keapPage: AlternativesTemplateProps = {
   productSlug: "keap",
   originalReviewHref: getCrmReviewUrl("keap"),
   quickAnswerParagraphs: [
-    "Keap combines marketing automation and CRM for small businesses; alternatives include HubSpot for free CRM and scale, Zoho CRM for value, Pipedrive for sales pipeline focus, Freshsales for AI, and Monday CRM for flexibility. HubSpot and Zoho CRM are the most common alternatives.",
+    "Keap combines marketing automation and CRM for small businesses; alternatives include HubSpot for free CRM and scale, Zoho CRM for value, Pipedrive for sales pipeline focus, Freshsales for AI, and Monday for flexibility. HubSpot and Zoho CRM are the most common alternatives.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Free tier", body: "HubSpot has a free CRM; Keap starts paid. For teams that need zero upfront cost." },
@@ -493,7 +493,7 @@ const keapPage: AlternativesTemplateProps = {
     { productName: "Zoho CRM", heading: "Best for value", body: "Zoho CRM delivers full CRM and value at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm") },
     { productName: "Pipedrive", heading: "Best for sales pipeline", body: "Pipedrive is pipeline-focused; pair with a separate marketing tool if needed.", reviewHref: getCrmReviewUrl("pipedrive") },
     { productName: "Freshsales", heading: "Best for AI and sales", body: "Freshsales adds AI to sales CRM at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales") },
-    { productName: "Monday CRM", heading: "Best for flexibility", body: "Monday CRM offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
+    { productName: "Monday", heading: "Best for flexibility", body: "Monday offers boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm") },
   ],
   relatedComparisons: [crmRel("keap-vs-hubspot"), crmRel("hubspot-vs-zoho-crm")],
   relatedResources: defaultRelatedResources("Keap", getCrmReviewUrl("keap")),

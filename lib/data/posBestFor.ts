@@ -46,7 +46,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
   featuredProducts: [
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       badge: "Best overall for small businesses",
       description: "Free software, low-cost hardware, and straightforward pricing so you can start fast without long-term commitment.",
       rating: "4.6",
@@ -57,7 +57,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "clover-pos",
-      name: "Clover POS",
+      name: "Clover",
       badge: "Best hardware ecosystem",
       description: "Wide choice of terminals and an app market so you can tailor the register to your workflow.",
       rating: "4.3",
@@ -82,7 +82,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
   comparisonTableRows: [
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       logoSrc: LOGOS.square,
       bestFor: "Small businesses that want no monthly software fee",
       startingPrice: "Free software, hardware from $49",
@@ -91,7 +91,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "clover-pos",
-      name: "Clover POS",
+      name: "Clover",
       logoSrc: LOGOS.clover,
       bestFor: "SMBs that want hardware and app flexibility",
       startingPrice: "From ~$69/mo (with hardware)",
@@ -119,18 +119,18 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
       body: "Some systems charge no monthly software fee (Square); others bundle software and hardware (Clover). Processing is usually per transaction. Compare the full picture over a year—subscription, hardware, and processing—so you’re not surprised by hidden costs.",
     },
     {
-      heading: "When to choose Square POS vs Clover",
+      heading: "When to choose Square vs Clover",
       body: "Choose Square when you want the lowest upfront cost and no required monthly software fee; it’s ideal for in-person-first or multi-type small businesses. Choose Clover when you want more hardware options and an app market to extend functionality, and you’re okay with a monthly bundle. Both support retail, food service, and services.",
     },
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
     {
-      heading: "Square POS",
+      heading: "Square",
       body: "Square is the best default for many small businesses because it’s easy to start: free software, low-cost hardware, and pay-per-swipe processing. You get payments, basic inventory, and reporting without a long-term contract. It fits retailers, cafes, and service businesses that prioritize simplicity and transparent pricing.",
     },
     {
-      heading: "Clover POS",
+      heading: "Clover",
       body: "Clover suits small businesses that want a broader choice of terminals and add-on apps. You can run a simple counter or a full register and extend with loyalty, scheduling, or industry apps. The trade-off is a monthly fee that typically includes hardware; if that fits your budget, Clover’s flexibility is a strong fit.",
     },
     {
@@ -140,14 +140,14 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
   ] as BestForEditorialBlock[],
 
   relatedReviews: [
-    { name: "Square POS", href: getPosReviewUrl("square-pos") },
-    { name: "Clover POS", href: getPosReviewUrl("clover-pos") },
+    { name: "Square", href: getPosReviewUrl("square-pos") },
+    { name: "Clover", href: getPosReviewUrl("clover-pos") },
     { name: "Shopify POS", href: getPosReviewUrl("shopify-pos") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
-    { label: "Square POS vs Clover POS", href: getPosCompareUrl("square-pos-vs-clover-pos") },
+    { label: "Square vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
+    { label: "Square vs Clover", href: getPosCompareUrl("square-pos-vs-clover-pos") },
   ] as BestForComparisonLink[],
 
   relatedGuides: [
@@ -159,7 +159,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
   faqItems: [
     {
       q: "What POS system is best for small businesses?",
-      a: "Square POS is a top choice for many small businesses because of its free software, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for hardware and app choice, Shopify POS when you already sell or plan to sell online on Shopify.",
+      a: "Square is a top choice for many small businesses because of its free software, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for hardware and app choice, Shopify POS when you already sell or plan to sell online on Shopify.",
     },
     {
       q: "How much does a POS system cost for a small business?",
@@ -192,7 +192,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
   featuredProducts: [
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       badge: "Best for retail and multi-location",
       description: "Retail-focused inventory, multi-store support, and reporting built for stores that need more than basic POS.",
       rating: "4.4",
@@ -203,7 +203,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       badge: "Best for single-location retail",
       description: "Simple setup and transparent pricing for retailers that want to get started quickly without heavy commitment.",
       rating: "4.6",
@@ -214,7 +214,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "vend-pos",
-      name: "Vend POS (Lightspeed Retail)",
+      name: "Vend (Lightspeed Retail)",
       badge: "Best for retail-first operations",
       description: "Retail POS with strong inventory and multi-store support, now part of the Lightspeed family.",
       rating: "4.3",
@@ -228,7 +228,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
   comparisonTableRows: [
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       logoSrc: LOGOS.lightspeed,
       bestFor: "Retail with multi-location and deeper inventory",
       startingPrice: "From ~$69/mo",
@@ -237,7 +237,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       logoSrc: LOGOS.square,
       bestFor: "Single-location or straightforward retail",
       startingPrice: "Free software, hardware from $49",
@@ -246,7 +246,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "vend-pos",
-      name: "Vend POS",
+      name: "Vend",
       logoSrc: LOGOS.vend,
       bestFor: "Retail stores prioritizing inventory and multi-store",
       startingPrice: "From ~$69/mo",
@@ -272,29 +272,29 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
 
   whyThesePicks: [
     {
-      heading: "Lightspeed POS",
+      heading: "Lightspeed",
       body: "Lightspeed is built for retail. It offers robust inventory, multi-location support, purchasing, and reporting that fit stores with more than basic needs. If you’ve outgrown Square or a simple counter POS, Lightspeed is a strong next step.",
     },
     {
-      heading: "Square POS",
+      heading: "Square",
       body: "Square works well for single-location or straightforward retail when you want minimal cost and quick setup. You get payments, basic inventory, and reporting; add-ons extend capability. It’s a good fit until you need heavy multi-store or deeper retail workflows.",
     },
     {
-      heading: "Vend POS (Lightspeed Retail)",
+      heading: "Vend (Lightspeed Retail)",
       body: "Vend is retail-focused with strong inventory and multi-store support, now part of Lightspeed. It’s a good alternative when you want dedicated retail POS with a clear path into the Lightspeed ecosystem.",
     },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [
-    { name: "Lightspeed POS", href: getPosReviewUrl("lightspeed-pos") },
-    { name: "Square POS", href: getPosReviewUrl("square-pos") },
-    { name: "Vend POS", href: getPosReviewUrl("vend-pos") },
+    { name: "Lightspeed", href: getPosReviewUrl("lightspeed-pos") },
+    { name: "Square", href: getPosReviewUrl("square-pos") },
+    { name: "Vend", href: getPosReviewUrl("vend-pos") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
-    { label: "Lightspeed POS vs Vend POS", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
-    { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
+    { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+    { label: "Lightspeed vs Vend", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+    { label: "Square vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
   ] as BestForComparisonLink[],
 
   relatedGuides: [
@@ -305,7 +305,7 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
   faqItems: [
     {
       q: "What POS system is best for retail stores?",
-      a: "Lightspeed POS and Vend POS are strong for retail stores that need inventory and multi-location. Square POS is a good fit for single-location or simpler retail. The best choice depends on your store count, SKU complexity, and whether you need deep reporting and purchasing.",
+      a: "Lightspeed and Vend are strong for retail stores that need inventory and multi-location. Square is a good fit for single-location or simpler retail. The best choice depends on your store count, SKU complexity, and whether you need deep reporting and purchasing.",
     },
     {
       q: "Do retail POS systems include inventory management?",
@@ -338,7 +338,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
   featuredProducts: [
     {
       slug: "toast-pos",
-      name: "Toast POS",
+      name: "Toast",
       badge: "Best for full-service and quick-service restaurants",
       description: "Purpose-built for restaurants: table management, kitchen display, online ordering, and restaurant-specific reporting.",
       rating: "4.5",
@@ -360,7 +360,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       badge: "Best for simple cafes and counters",
       description: "General-purpose POS that works for basic food service when you don’t need full table or kitchen management.",
       rating: "4.6",
@@ -374,7 +374,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
   comparisonTableRows: [
     {
       slug: "toast-pos",
-      name: "Toast POS",
+      name: "Toast",
       logoSrc: LOGOS.toast,
       bestFor: "Full-service and complex quick-service restaurants",
       startingPrice: "Quote (restaurant-focused)",
@@ -392,7 +392,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       logoSrc: LOGOS.square,
       bestFor: "Simple cafes and counter service",
       startingPrice: "Free software, hardware from $49",
@@ -418,7 +418,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
 
   whyThesePicks: [
     {
-      heading: "Toast POS",
+      heading: "Toast",
       body: "Toast is purpose-built for restaurants. It handles tables, courses, kitchen display, online ordering, and restaurant-specific reporting. It’s the best fit for full-service and high-volume quick-service operations that need a single system for front and back of house.",
     },
     {
@@ -426,20 +426,20 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
       body: "TouchBistro is a strong alternative for independent and small-chain restaurants. It offers table management, menus, and optional KDS and online ordering with tiered pricing that many find more approachable than quote-only options.",
     },
     {
-      heading: "Square POS",
+      heading: "Square",
       body: "Square works for simple food service—cafes, food trucks, counters—when you don’t need table management or a full kitchen display. It’s the most cost-effective option for basic payments and item tracking.",
     },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [
-    { name: "Toast POS", href: getPosReviewUrl("toast-pos") },
+    { name: "Toast", href: getPosReviewUrl("toast-pos") },
     { name: "TouchBistro", href: getPosReviewUrl("touchbistro") },
-    { name: "Square POS", href: getPosReviewUrl("square-pos") },
+    { name: "Square", href: getPosReviewUrl("square-pos") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Toast POS vs Square POS", href: getPosCompareUrl("toast-pos-vs-square-pos") },
-    { label: "Square POS vs Clover POS", href: getPosCompareUrl("square-pos-vs-clover-pos") },
+    { label: "Toast vs Square", href: getPosCompareUrl("toast-pos-vs-square-pos") },
+    { label: "Square vs Clover", href: getPosCompareUrl("square-pos-vs-clover-pos") },
   ] as BestForComparisonLink[],
 
   relatedGuides: [
@@ -450,7 +450,7 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
   faqItems: [
     {
       q: "What POS system is best for restaurants?",
-      a: "Toast POS and TouchBistro are the top choices for restaurants. Toast is best for full-service and complex quick-service; TouchBistro is strong for independents and small chains with tiered pricing. Square can work for simple cafes or counters.",
+      a: "Toast and TouchBistro are the top choices for restaurants. Toast is best for full-service and complex quick-service; TouchBistro is strong for independents and small chains with tiered pricing. Square can work for simple cafes or counters.",
     },
     {
       q: "Do restaurant POS systems support table service?",
@@ -494,7 +494,7 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       badge: "Best for flexibility and low commitment",
       description: "POS with optional ecommerce and integrations so you can connect to multiple storefronts.",
       rating: "4.6",
@@ -505,7 +505,7 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       badge: "Best for retail + ecommerce integration",
       description: "Retail POS that connects to ecommerce platforms so inventory stays in sync across channels.",
       rating: "4.4",
@@ -528,7 +528,7 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "square-pos",
-      name: "Square POS",
+      name: "Square",
       logoSrc: LOGOS.square,
       bestFor: "In-person-first with optional ecommerce",
       startingPrice: "Free software, hardware from $49",
@@ -537,7 +537,7 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
     },
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       logoSrc: LOGOS.lightspeed,
       bestFor: "Retail with ecommerce integrations",
       startingPrice: "From ~$69/mo",
@@ -567,24 +567,24 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
       body: "Shopify POS is the best fit when your storefront is on Shopify. Online and in-store sales, inventory, and orders live in one system. There’s no sync delay or integration fragility—it’s one platform. The trade-off is the Shopify subscription; if you’re not on Shopify, Square or Lightspeed may be better.",
     },
     {
-      heading: "Square POS",
+      heading: "Square",
       body: "Square suits ecommerce businesses that want flexibility. You can add Square Online or connect to other storefronts; inventory can sync via integrations. You’re not locked into one ecommerce platform, and you get free POS software and straightforward pricing.",
     },
     {
-      heading: "Lightspeed POS",
+      heading: "Lightspeed",
       body: "Lightspeed fits retail businesses that also sell online and need deeper inventory and multi-location. It connects to ecommerce platforms so stock stays in sync. Choose it when you need more retail operational depth than Shopify POS or Square provide.",
     },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [
     { name: "Shopify POS", href: getPosReviewUrl("shopify-pos") },
-    { name: "Square POS", href: getPosReviewUrl("square-pos") },
-    { name: "Lightspeed POS", href: getPosReviewUrl("lightspeed-pos") },
+    { name: "Square", href: getPosReviewUrl("square-pos") },
+    { name: "Lightspeed", href: getPosReviewUrl("lightspeed-pos") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
-    { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+    { label: "Square vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
+    { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
   ] as BestForComparisonLink[],
 
   relatedGuides: [
@@ -628,7 +628,7 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
   featuredProducts: [
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       badge: "Best for retail multi-location",
       description: "Multi-store inventory, transfers, and consolidated reporting built for retail chains.",
       rating: "4.4",
@@ -664,7 +664,7 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
   comparisonTableRows: [
     {
       slug: "lightspeed-pos",
-      name: "Lightspeed POS",
+      name: "Lightspeed",
       logoSrc: LOGOS.lightspeed,
       bestFor: "Retail multi-location and multi-store",
       startingPrice: "From ~$69/mo",
@@ -708,7 +708,7 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
 
   whyThesePicks: [
     {
-      heading: "Lightspeed POS",
+      heading: "Lightspeed",
       body: "Lightspeed is built for retail multi-location. It offers multi-store inventory, transfers, and consolidated reporting so you can see performance by location and overall. It’s a strong fit for retail chains that have outgrown single-location POS.",
     },
     {
@@ -722,14 +722,14 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
   ] as BestForEditorialBlock[],
 
   relatedReviews: [
-    { name: "Lightspeed POS", href: getPosReviewUrl("lightspeed-pos") },
+    { name: "Lightspeed", href: getPosReviewUrl("lightspeed-pos") },
     { name: "Revel Systems", href: getPosReviewUrl("revel-systems") },
     { name: "Epos Now", href: getPosReviewUrl("epos-now") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
-    { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
-    { label: "Lightspeed POS vs Vend POS", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+    { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+    { label: "Lightspeed vs Vend", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
   ] as BestForComparisonLink[],
 
   relatedGuides: [
@@ -740,14 +740,14 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
   faqItems: [
     {
       q: "What POS systems support multiple locations?",
-      a: "Lightspeed POS, Revel Systems, Epos Now, Vend POS, and Square (with add-ons) all support multiple locations. Lightspeed and Vend are strong for retail multi-store; Revel for larger or mixed operations; Epos Now for flexible multi-location at a lower price.",
+      a: "Lightspeed, Revel Systems, Epos Now, Vend, and Square (with add-ons) all support multiple locations. Lightspeed and Vend are strong for retail multi-store; Revel for larger or mixed operations; Epos Now for flexible multi-location at a lower price.",
     },
     {
       q: "How do POS systems manage multiple stores?",
       a: "They typically let you set up each store as a location, assign terminals and users to locations, and run consolidated or per-location reporting. Inventory can be tracked per location with optional transfers between sites. The exact features depend on the vendor—compare multi-location depth and pricing before you commit.",
     },
     {
-      q: "Can Square POS handle multiple locations?",
+      q: "Can Square handle multiple locations?",
       a: "Yes. Square supports multiple locations with per-location reporting and optional inventory. For complex multi-store inventory and transfers, Lightspeed or Vend may offer more depth; for simpler multi-location at low cost, Square can work.",
     },
   ] as BestForFaqItem[],

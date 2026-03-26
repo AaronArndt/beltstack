@@ -70,7 +70,7 @@ export const ECOMMERCE_PAGE_PROPS = {
     },
     {
       slug: "odoo-accounting",
-      name: "Odoo Accounting",
+      name: "Odoo",
       badge: "Best for broader ERP workflows",
       description:
         "Accounting as part of the Odoo suite: inventory, sales, and operations in one system. Best when you want a single platform for ecommerce, orders, and finance.",
@@ -112,7 +112,7 @@ export const ECOMMERCE_PAGE_PROPS = {
     },
     {
       slug: "odoo-accounting",
-      name: "Odoo Accounting",
+      name: "Odoo",
       logoSrc: "/Logos/odoo.jpeg",
       bestFor: "Broader ERP workflows",
       startingPrice: "From $24/user/mo",
@@ -154,8 +154,8 @@ export const ECOMMERCE_PAGE_PROPS = {
       body: "Zoho Books offers good inventory and automation at a lower price. It’s a strong value choice for product businesses that don’t need the largest brand names.",
     },
     {
-      heading: "Odoo Accounting",
-      body: "Odoo Accounting fits when you want ecommerce, orders, inventory, and accounting in one ERP-style system. Best for businesses ready to standardize on the Odoo platform.",
+      heading: "Odoo",
+      body: "Odoo fits when you want ecommerce, orders, inventory, and accounting in one ERP-style system. Best for businesses ready to standardize on the Odoo platform.",
     },
   ] as BestForEditorialBlock[],
 
@@ -163,19 +163,19 @@ export const ECOMMERCE_PAGE_PROPS = {
     { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online") },
     { name: "Xero", href: getAccountingReviewUrl("xero") },
     { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books") },
-    { name: "Odoo Accounting", href: getAccountingReviewUrl("odoo-accounting") },
+    { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
     { label: "QuickBooks Online vs Xero", href: getAccountingCompareUrl("quickbooks-online-vs-xero") },
     { label: "QuickBooks Online vs Zoho Books", href: getAccountingCompareUrl("quickbooks-online-vs-zoho-books") },
-    { label: "Odoo Accounting vs QuickBooks Online", href: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online") },
+    { label: "Odoo vs QuickBooks Online", href: getAccountingCompareUrl("odoo-accounting-vs-quickbooks-online") },
   ] as BestForComparisonLink[],
 
   faqItems: [
     {
       q: "What is the best accounting software for ecommerce?",
-      a: "QuickBooks Online is our top pick for most ecommerce businesses: inventory, ecommerce integrations, and reporting. Xero is a strong alternative with a large app ecosystem. Zoho Books and Odoo Accounting suit value-focused or ERP-minded sellers.",
+      a: "QuickBooks Online is our top pick for most ecommerce businesses: inventory, ecommerce integrations, and reporting. Xero is a strong alternative with a large app ecosystem. Zoho Books and Odoo suit value-focused or ERP-minded sellers.",
     },
     {
       q: "Do I need special accounting software for ecommerce?",

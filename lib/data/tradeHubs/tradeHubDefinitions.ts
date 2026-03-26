@@ -952,7 +952,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
           "Standardize menus, permissions, and reporting before advanced analytics. Enterprise POS pricing and add-ons surprise fast—model per location with online ordering and loyalty. Comparisons show scale features vs lean setups.",
         links: [
           {
-            label: "Toast vs Square POS",
+            label: "Toast vs Square",
             href: "/pos/compare/toast-pos-vs-square-pos",
           },
         ],
@@ -1003,7 +1003,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
         groupTitle: "Comparisons",
         links: [
           {
-            label: "Toast vs Square POS",
+            label: "Toast vs Square",
             href: "/pos/compare/toast-pos-vs-square-pos",
           },
         ],

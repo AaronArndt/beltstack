@@ -445,7 +445,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     pricingComparison:
       "Square Appointments is typically included or low-cost as part of Square’s offerings; effective cost is often zero if you already pay for Square. Acuity has no free plan and typically starts around $16/month. If you’re not on Square, Acuity’s standalone pricing is comparable to other dedicated schedulers. The main decision is ecosystem: stay in Square or use a standalone tool with more booking features.",
     prosConsA: {
-      pros: ["Integrated with Square POS and payments.", "No extra subscription if you use Square.", "One place for schedule and revenue."],
+      pros: ["Integrated with Square and payments.", "No extra subscription if you use Square.", "One place for schedule and revenue."],
       cons: ["Best only if you use Square.", "Fewer advanced scheduling features than Acuity."],
     },
     prosConsB: {

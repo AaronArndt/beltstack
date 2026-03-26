@@ -9,6 +9,6 @@ export function generateMetadata() {
   return {
     title: "Best CRM Software for Freelancers (2026) | BeltStack",
     description:
-      "Compare the best CRM software for freelancers: HubSpot, Zoho CRM, Monday CRM, Keap. Client tracking, leads, follow-ups, and lightweight automation.",
+      "Compare the best CRM software for freelancers: HubSpot, Zoho CRM, Monday, Keap. Client tracking, leads, follow-ups, and lightweight automation.",
   };
 }

@@ -168,7 +168,7 @@ export const TOP_PICKS: BestSchedulingPick[] = [
   {
     slug: "square-appointments",
     name: "Square Appointments",
-    badge: "Best for Square POS users",
+    badge: "Best for Square users",
     description:
       "Appointment scheduling built into Square for businesses that already use Square for payments.",
     rating: "4.3",
@@ -182,7 +182,7 @@ export const TOP_PICKS: BestSchedulingPick[] = [
     editorialParagraph:
       "Square Appointments makes sense when you already run payments and point-of-sale with Square. Booking, reminders, and payments stay in one ecosystem, so you don’t add another vendor. It’s geared toward service businesses and is included or low-cost as part of Square’s tools.",
     pros: [
-      "Integrated with Square POS and payments",
+      "Integrated with Square and payments",
       "No extra subscription if you already use Square",
       "Straightforward for service businesses",
     ],
@@ -258,7 +258,7 @@ export const COMPARISON_TABLE_ROWS: SchedulingComparisonTableRow[] = [
   { slug: "youcanbookme", name: "YouCanBook.me", logoSrc: LOGOS.youcanbookme, bestFor: "Teams & round-robin", startingPrice: "From ~$10/mo", rating: "4.5", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   { slug: "setmore", name: "Setmore", logoSrc: LOGOS.setmore, bestFor: "Service businesses", startingPrice: "Free; from ~$9/mo", rating: "4.4", reviewHref: getSchedulingReviewUrl("setmore") },
   { slug: "simplybookme", name: "SimplyBook.me", logoSrc: LOGOS.simplybookme, bestFor: "Custom booking flows", startingPrice: "From ~$8/mo", rating: "4.4", reviewHref: getSchedulingReviewUrl("simplybookme") },
-  { slug: "square-appointments", name: "Square Appointments", logoSrc: LOGOS.square, bestFor: "Square POS users", startingPrice: "Included with Square", rating: "4.3", reviewHref: getSchedulingReviewUrl("square-appointments") },
+  { slug: "square-appointments", name: "Square Appointments", logoSrc: LOGOS.square, bestFor: "Square users", startingPrice: "Included with Square", rating: "4.3", reviewHref: getSchedulingReviewUrl("square-appointments") },
   { slug: "appointy", name: "Appointy", logoSrc: LOGOS.appointy, bestFor: "Multi-location & staff", startingPrice: "From ~$10/mo", rating: "4.3", reviewHref: getSchedulingReviewUrl("appointy") },
   { slug: "zoho-bookings", name: "Zoho Bookings", logoSrc: LOGOS.zoho, bestFor: "Zoho ecosystem", startingPrice: "From ~$8/mo", rating: "4.2", reviewHref: getSchedulingReviewUrl("zoho-bookings") },
 ];

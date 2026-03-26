@@ -58,7 +58,7 @@ export const CRM_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     title: "All-in-one marketing + sales alignment",
     body: "When marketing and sales must share one customer record, you need native email, forms, and automation—often where HubSpot-style platforms win—balanced against cost at scale.",
     links: [
-      { label: "Monday CRM vs HubSpot →", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+      { label: "Monday vs HubSpot →", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
       { label: "Full rankings →", href: "/crm/best-crm-software" },
     ],
   },
@@ -142,10 +142,10 @@ export const CRM_POPULAR_COMPARISONS: CrmPopularComparisonCard[] = [
   },
   {
     slug: "monday-crm-vs-hubspot",
-    productA: { name: "Monday CRM", logoSrc: LOGOS.monday },
+    productA: { name: "Monday", logoSrc: LOGOS.monday },
     productB: { name: "HubSpot", logoSrc: LOGOS.hubspot },
     summaryParagraph:
-      "Monday CRM brings customizable boards and project-style workflows; HubSpot is a full marketing and sales CRM. See which fits your team's way of working.",
+      "Monday brings customizable boards and project-style workflows; HubSpot is a full marketing and sales CRM. See which fits your team's way of working.",
     href: getCrmCompareUrl("monday-crm-vs-hubspot"),
   },
   {
@@ -198,7 +198,7 @@ export const CRM_FAQ_ITEMS = [
   },
   {
     q: "What CRM is easiest to use?",
-    a: "HubSpot and Pipedrive are often cited as among the easiest CRMs to adopt: both have clear pipelines and straightforward interfaces. Monday CRM is easy if you like board-based views. Ease of use depends on your workflow—try free trials to see which fits your team.",
+    a: "HubSpot and Pipedrive are often cited as among the easiest CRMs to adopt: both have clear pipelines and straightforward interfaces. Monday is easy if you like board-based views. Ease of use depends on your workflow—try free trials to see which fits your team.",
   },
 ];
 

@@ -17,8 +17,8 @@ const DEFAULT_RELATED_ACCOUNTING_RESOURCES: RelatedAccountingResourceItem[] = [
   { label: "FreshBooks Review", href: getAccountingReviewUrl("freshbooks") },
   { label: "Zoho Books Review", href: getAccountingReviewUrl("zoho-books") },
   { label: "Wave Review", href: getAccountingReviewUrl("wave") },
-  { label: "Sage Accounting Review", href: getAccountingReviewUrl("sage-accounting") },
-  { label: "Odoo Accounting Review", href: getAccountingReviewUrl("odoo-accounting") },
+  { label: "Sage review", href: getAccountingReviewUrl("sage-accounting") },
+  { label: "Odoo review", href: getAccountingReviewUrl("odoo-accounting") },
   { label: "Kashoo Review", href: getAccountingReviewUrl("kashoo") },
 ];
 

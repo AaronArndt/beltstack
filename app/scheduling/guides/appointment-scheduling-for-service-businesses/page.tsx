@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Setmore", logoSrc: "/Logos/setmore.jpeg", rating: "4.4", bestFor: "Service businesses & free tier", reviewHref: getSchedulingReviewUrl("setmore") },
   { name: "SimplyBook.me", logoSrc: "/Logos/simplybook.jpeg", rating: "4.4", bestFor: "Salons & customization", reviewHref: getSchedulingReviewUrl("simplybookme") },
-  { name: "Square Appointments", logoSrc: "/Logos/square.jpeg", rating: "4.3", bestFor: "Square POS users", reviewHref: getSchedulingReviewUrl("square-appointments") },
+  { name: "Square Appointments", logoSrc: "/Logos/square.jpeg", rating: "4.3", bestFor: "Square users", reviewHref: getSchedulingReviewUrl("square-appointments") },
 ];
 
 export default function AppointmentSchedulingForServiceBusinessesPage() {

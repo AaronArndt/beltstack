@@ -30,7 +30,7 @@ export type FaqItem = { q: string; a: string };
 export const TOP_PICKS: BestPosPick[] = [
   {
     slug: "square-pos",
-    name: "Square POS",
+    name: "Square",
     badge: "Best overall POS system",
     description:
       "Simple, flexible POS for small businesses with in-person and online payments, inventory, and reporting.",
@@ -43,7 +43,7 @@ export const TOP_PICKS: BestPosPick[] = [
     logoSrc: POS_LOGOS.square,
     compareSlugs: ["square-pos-vs-shopify-pos", "square-pos-vs-clover-pos"],
     editorialParagraph:
-      "Square POS is our top pick for most small businesses. It offers free software, straightforward pricing, and a range of hardware so you can start small and scale. Payments, basic inventory, and reporting are all in one place. If you want a POS that is easy to set up and doesn’t lock you into long-term contracts, Square is a strong default.",
+      "Square is our top pick for most small businesses. It offers free software, straightforward pricing, and a range of hardware so you can start small and scale. Payments, basic inventory, and reporting are all in one place. If you want a POS that is easy to set up and doesn’t lock you into long-term contracts, Square is a strong default.",
     pros: [
       "Free software tier and transparent pricing",
       "Wide range of hardware (terminals, stands, registers)",
@@ -90,7 +90,7 @@ export const TOP_PICKS: BestPosPick[] = [
   },
   {
     slug: "lightspeed-pos",
-    name: "Lightspeed POS",
+    name: "Lightspeed",
     badge: "Best POS for retail businesses",
     description:
       "Retail-focused POS with robust inventory, multi-location support, and advanced retail workflows.",
@@ -103,7 +103,7 @@ export const TOP_PICKS: BestPosPick[] = [
     logoSrc: POS_LOGOS.lightspeed,
     compareSlugs: ["shopify-pos-vs-lightspeed-pos", "lightspeed-pos-vs-vend-pos"],
     editorialParagraph:
-      "Lightspeed POS is built for retail. It offers deep inventory management, multi-location support, and reporting that fits stores with more complex operations. If you have (or plan to have) multiple locations, lots of SKUs, or need stronger purchasing and vendor management, Lightspeed is a strong choice. It’s more capable—and more involved—than general-purpose POS tools.",
+      "Lightspeed is built for retail. It offers deep inventory management, multi-location support, and reporting that fits stores with more complex operations. If you have (or plan to have) multiple locations, lots of SKUs, or need stronger purchasing and vendor management, Lightspeed is a strong choice. It’s more capable—and more involved—than general-purpose POS tools.",
     pros: [
       "Retail-focused inventory and reporting",
       "Multi-location and multi-store support",
@@ -120,7 +120,7 @@ export const TOP_PICKS: BestPosPick[] = [
   },
   {
     slug: "toast-pos",
-    name: "Toast POS",
+    name: "Toast",
     badge: "Best POS for restaurants",
     description:
       "Restaurant-specific POS with table management, kitchen display, online ordering, and hospitality reporting.",
@@ -150,7 +150,7 @@ export const TOP_PICKS: BestPosPick[] = [
   },
   {
     slug: "clover-pos",
-    name: "Clover POS",
+    name: "Clover",
     badge: "Best POS hardware ecosystem",
     description:
       "Flexible POS with a wide range of terminals, registers, and add-ons for various business types.",
@@ -183,7 +183,7 @@ export const TOP_PICKS: BestPosPick[] = [
 export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   {
     slug: "square-pos",
-    name: "Square POS",
+    name: "Square",
     logoSrc: POS_LOGOS.square,
     bestFor: "Best overall POS for small businesses",
     startingPrice: "Free software, hardware from $49",
@@ -201,7 +201,7 @@ export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   },
   {
     slug: "lightspeed-pos",
-    name: "Lightspeed POS",
+    name: "Lightspeed",
     logoSrc: POS_LOGOS.lightspeed,
     bestFor: "Best POS for retail businesses",
     startingPrice: "From ~$69/mo",
@@ -210,7 +210,7 @@ export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   },
   {
     slug: "clover-pos",
-    name: "Clover POS",
+    name: "Clover",
     logoSrc: POS_LOGOS.clover,
     bestFor: "Best POS hardware ecosystem",
     startingPrice: "From ~$69/mo (with hardware)",
@@ -219,7 +219,7 @@ export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   },
   {
     slug: "toast-pos",
-    name: "Toast POS",
+    name: "Toast",
     logoSrc: POS_LOGOS.toast,
     bestFor: "Best POS for restaurants",
     startingPrice: "Quote (restaurant-focused)",
@@ -237,7 +237,7 @@ export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   },
   {
     slug: "vend-pos",
-    name: "Vend POS (Lightspeed Retail)",
+    name: "Vend (Lightspeed Retail)",
     logoSrc: POS_LOGOS.vend,
     bestFor: "Retail POS with inventory and multi-store",
     startingPrice: "From ~$69/mo",
@@ -281,7 +281,7 @@ export const MORE_POS_OPTIONS: {
   },
   {
     slug: "vend-pos",
-    name: "Vend POS (Lightspeed Retail)",
+    name: "Vend (Lightspeed Retail)",
     description:
       "Retail POS with strong inventory and multi-store support, now part of the Lightspeed family.",
     reviewHref: getPosReviewUrl("vend-pos"),
@@ -334,11 +334,11 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [
-  { label: "Square POS vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
-  { label: "Square POS vs Clover POS", href: getPosCompareUrl("square-pos-vs-clover-pos") },
-  { label: "Shopify POS vs Lightspeed POS", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
-  { label: "Toast POS vs Square POS", href: getPosCompareUrl("toast-pos-vs-square-pos") },
-  { label: "Lightspeed POS vs Vend POS", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+  { label: "Square vs Shopify POS", href: getPosCompareUrl("square-pos-vs-shopify-pos") },
+  { label: "Square vs Clover", href: getPosCompareUrl("square-pos-vs-clover-pos") },
+  { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+  { label: "Toast vs Square", href: getPosCompareUrl("toast-pos-vs-square-pos") },
+  { label: "Lightspeed vs Vend", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
@@ -348,7 +348,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "What POS system is best for small businesses?",
-    a: "Square POS is a strong choice for many small businesses because of its free software tier, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for a wide hardware ecosystem, Shopify POS when you already sell or plan to sell online with Shopify.",
+    a: "Square is a strong choice for many small businesses because of its free software tier, simple setup, and flexible hardware. Clover and Shopify POS are also popular—Clover for a wide hardware ecosystem, Shopify POS when you already sell or plan to sell online with Shopify.",
   },
   {
     q: "Can POS software integrate with inventory management?",

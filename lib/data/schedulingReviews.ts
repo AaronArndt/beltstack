@@ -507,10 +507,10 @@ const reviews: Record<string, SchedulingReviewData> = {
       { category: "Pricing", score: "4.5", explanation: "Included or low-cost as part of Square; no separate subscription for many users." },
       { category: "Ease of Use", score: "4.4", explanation: "Simple if you already use Square. One dashboard for appointments and payments." },
       { category: "Support", score: "4.3", explanation: "Square’s support and help center cover appointments as part of the broader product." },
-      { category: "Integrations", score: "4.3", explanation: "Lives inside Square so it integrates with Square POS, payments, and invoicing. No need for separate calendar or payment connectors within Square." },
+      { category: "Integrations", score: "4.3", explanation: "Lives inside Square so it integrates with Square, payments, and invoicing. No need for separate calendar or payment connectors within Square." },
     ],
     pros: [
-      "Integrated with Square POS and payments",
+      "Integrated with Square and payments",
       "No extra subscription if you already use Square",
       "Straightforward for service businesses",
       "One place for schedule and revenue",
@@ -537,7 +537,7 @@ const reviews: Record<string, SchedulingReviewData> = {
       { name: "Square dashboard", description: "View appointments alongside sales, inventory, and other Square data in one dashboard." },
       { name: "Staff and services", description: "Set up multiple staff and service types so clients can book the right person and offering." },
     ],
-    integrations: ["Square POS", "Square Invoices", "Square Payroll", "Google Calendar"],
+    integrations: ["Square", "Square Invoices", "Square Payroll", "Google Calendar"],
     integrationsIntro:
       "Square Appointments is part of Square, so it works with Square’s payment, POS, and business tools without separate connectors.",
     alternatives: [

@@ -39,8 +39,8 @@ const HUB_TOP_PICK_REFS: FeaturedPickRef[] = [
 
 const TABLE_ROWS: ComparisonTableRow[] = [
   ...listSoftwarePicksBySlugs("accounting", ["quickbooks-online", "xero", "freshbooks", "zoho-books", "wave"]).map(toHubComparisonTableRow),
-  { tool: "Sage Accounting", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
-  { tool: "Odoo Accounting", bestFor: "Odoo ERP users", price: "Quote", rating: "4.2", slug: "odoo-accounting", logoSrc: "/Logos/odoo.jpeg" },
+  { tool: "Sage", bestFor: "SMBs & compliance", price: "Quote", rating: "4.3", slug: "sage-accounting", logoSrc: "/Logos/sage.png" },
+  { tool: "Odoo", bestFor: "Odoo ERP users", price: "Quote", rating: "4.2", slug: "odoo-accounting", logoSrc: "/Logos/odoo.jpeg" },
   { tool: "Kashoo", bestFor: "Simple bookkeeping", price: "Quote", rating: "4.2", slug: "kashoo", logoSrc: "/Logos/kashoo.jpeg" },
   { tool: "NetSuite", bestFor: "ERP-integrated accounting", price: "Quote", rating: "4.1", slug: "netsuite", logoSrc: "/Logos/netsuite.jpeg" },
   { tool: "Sage Intacct", bestFor: "Scalable finance & reporting", price: "Quote", rating: "4.1", slug: "sage-intacct", logoSrc: "/Logos/sage.png" },
@@ -52,8 +52,8 @@ const TABLE_ROWS: ComparisonTableRow[] = [
 
 const MORE_ACCOUNTING_OPTIONS = [
   { name: "Kashoo", description: "Simple cloud accounting for small business.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/kashoo` },
-  { name: "Sage Accounting", description: "Accounting and compliance for growing SMBs.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-accounting` },
-  { name: "Odoo Accounting", description: "Accounting module in the Odoo business suite.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/odoo-accounting` },
+  { name: "Sage", description: "Accounting and compliance for growing SMBs.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-accounting` },
+  { name: "Odoo", description: "Accounting module in the Odoo business suite.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/odoo-accounting` },
   { name: "NetSuite", description: "ERP-integrated accounting for mid-market and enterprise.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/netsuite` },
   { name: "Sage Intacct", description: "Scalable accounting and multi-dimensional reporting.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/sage-intacct` },
   { name: "Acumatica", description: "ERP-connected accounting and workflow automation.", reviewHref: `${ACCOUNTING_REVIEW_BASE}/acumatica` },

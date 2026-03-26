@@ -32,7 +32,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
-/** Map alias slugs to a canonical key so we show one box per product (e.g. odoo + odoo-accounting → one "Odoo Accounting" box). */
+/** Map alias slugs to a canonical key so we show one box per product (e.g. odoo + odoo-accounting → one "Odoo" box). */
 function canonicalProductKey(slug: string): string {
   if (slug === "odoo") return "odoo-accounting";
   if (slug === "sage") return "sage-accounting";

@@ -1489,14 +1489,14 @@ const reviews: Record<string, ReviewData> = {
       "Tax calculation and filing",
       "Direct deposit and pay stubs",
       "Employee self-service",
-      "Integrates with Square POS and payments",
+      "Integrates with Square and payments",
     ],
     keyFeatures: [
       { name: "Square ecosystem integration", description: "Payroll lives in your Square account alongside payments and other tools. One login, consistent experience." },
       { name: "Simple payroll", description: "Run pay for employees and contractors. Tax filing and deposits are handled. Focus on essentials rather than advanced HR." },
       { name: "1099 support", description: "Pay contractors and handle 1099-NEC. Suitable for small teams with a mix of W-2 and 1099." },
     ],
-    integrations: ["Square POS", "Square Invoices", "Square Dashboard", "Some accounting integrations"],
+    integrations: ["Square", "Square Invoices", "Square Dashboard", "Some accounting integrations"],
     integrationsIntro:
       "Square Payroll is strongest when used with Square's own products. If you run your business on Square, payroll fits in naturally. For non-Square users, integration options are more limited than with Gusto or QuickBooks Payroll.",
     contractorUse: [

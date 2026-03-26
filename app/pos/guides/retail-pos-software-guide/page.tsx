@@ -23,7 +23,7 @@ const linkGreen =
 const FAQ_ITEMS = [
   {
     q: "What is the best POS for a retail store?",
-    a: "It depends on size and complexity. Square POS and Lightspeed POS are strong for many retailers; Lightspeed adds deeper inventory and multi-location. Vend POS (Lightspeed Retail) is another retail-focused option. See our retail POS comparisons and best POS roundup for details.",
+    a: "It depends on size and complexity. Square and Lightspeed are strong for many retailers; Lightspeed adds deeper inventory and multi-location. Vend (Lightspeed Retail) is another retail-focused option. See our retail POS comparisons and best POS roundup for details.",
   },
   {
     q: "Do retail POS systems track inventory?",
@@ -66,10 +66,10 @@ export default function RetailPosSoftwareGuidePage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Retail POS software does more than process sales. It ties each transaction to products in your catalog, updates stock levels, and produces reports that help you understand what’s selling, what’s not, and when to reorder. For single-location stores, a straightforward system like <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link> may be enough. For multi-store or inventory-heavy retail, platforms like <Link href={getPosReviewUrl("lightspeed-pos")} className={linkGreen}>Lightspeed POS</Link> and <Link href={getPosReviewUrl("vend-pos")} className={linkGreen}>Vend POS</Link> add the depth you need.
+                      Retail POS software does more than process sales. It ties each transaction to products in your catalog, updates stock levels, and produces reports that help you understand what’s selling, what’s not, and when to reorder. For single-location stores, a straightforward system like <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link> may be enough. For multi-store or inventory-heavy retail, platforms like <Link href={getPosReviewUrl("lightspeed-pos")} className={linkGreen}>Lightspeed</Link> and <Link href={getPosReviewUrl("vend-pos")} className={linkGreen}>Vend</Link> add the depth you need.
                     </p>
                     <p>
-                      This guide covers what to look for in a retail POS—inventory, reporting, customer tracking, and integrations—and how to compare options. For head-to-heads, see <Link href={getPosCompareUrl("shopify-pos-vs-lightspeed-pos")} className={linkGreen}>Shopify POS vs Lightspeed POS</Link> and <Link href={getPosCompareUrl("lightspeed-pos-vs-vend-pos")} className={linkGreen}>Lightspeed POS vs Vend POS</Link>; for a shortlist, our <Link href="/pos/best-pos-software" className={linkGreen}>best POS software</Link> roundup and <Link href="/pos/best-for/retail" className={linkGreen}>best POS for retail</Link>.
+                      This guide covers what to look for in a retail POS—inventory, reporting, customer tracking, and integrations—and how to compare options. For head-to-heads, see <Link href={getPosCompareUrl("shopify-pos-vs-lightspeed-pos")} className={linkGreen}>Shopify POS vs Lightspeed</Link> and <Link href={getPosCompareUrl("lightspeed-pos-vs-vend-pos")} className={linkGreen}>Lightspeed vs Vend</Link>; for a shortlist, our <Link href="/pos/best-pos-software" className={linkGreen}>best POS software</Link> roundup and <Link href="/pos/best-for/retail" className={linkGreen}>best POS for retail</Link>.
                     </p>
                   </div>
                 </section>
@@ -97,7 +97,7 @@ export default function RetailPosSoftwareGuidePage() {
                       A retail POS should maintain a product catalog with SKUs, prices, and variants. Sales automatically decrement stock; receiving and adjustments keep counts accurate. Low-stock alerts help you reorder before you run out. For one store, this can be simple. For multiple locations, you need a system that supports per-store or centralized inventory and transfers—Lightspeed and Vend are built for that.
                     </p>
                     <p>
-                      Reporting should answer: What sold today? What’s selling by category? What’s low in stock? Export and accounting integrations (e.g. QuickBooks) keep your books in sync. Compare <Link href={getPosReviewUrl("lightspeed-pos")} className={linkGreen}>Lightspeed POS</Link>, <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square POS</Link>, and <Link href={getPosReviewUrl("vend-pos")} className={linkGreen}>Vend POS</Link> for retail-focused features and pricing.
+                      Reporting should answer: What sold today? What’s selling by category? What’s low in stock? Export and accounting integrations (e.g. QuickBooks) keep your books in sync. Compare <Link href={getPosReviewUrl("lightspeed-pos")} className={linkGreen}>Lightspeed</Link>, <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link>, and <Link href={getPosReviewUrl("vend-pos")} className={linkGreen}>Vend</Link> for retail-focused features and pricing.
                     </p>
                   </div>
                 </section>

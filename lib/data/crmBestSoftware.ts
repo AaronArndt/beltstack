@@ -153,7 +153,7 @@ export const TOP_PICKS: BestCrmPick[] = [
   },
   {
     slug: "monday-crm",
-    name: "Monday CRM",
+    name: "Monday",
     badge: "Best for customizable workflows",
     description:
       "Work OS with CRM capabilities. Customizable boards and workflows suit teams that want flexibility beyond a traditional pipeline.",
@@ -166,7 +166,7 @@ export const TOP_PICKS: BestCrmPick[] = [
     logoSrc: LOGOS.monday,
     compareSlugs: ["monday-crm-vs-hubspot"],
     editorialParagraph:
-      "Monday CRM brings board-based flexibility to CRM. You can model deals, contacts, and projects in custom views and automate workflows across the board. It suits teams that want CRM plus project management in one place. If you prefer a traditional pipeline-only tool, Pipedrive or HubSpot may feel more focused; if you like building your own process, Monday is a strong fit.",
+      "Monday brings board-based flexibility to CRM. You can model deals, contacts, and projects in custom views and automate workflows across the board. It suits teams that want CRM plus project management in one place. If you prefer a traditional pipeline-only tool, Pipedrive or HubSpot may feel more focused; if you like building your own process, Monday is a strong fit.",
     pros: [
       "Highly customizable boards and views",
       "CRM and project management in one platform",
@@ -189,7 +189,7 @@ export const COMPARISON_TABLE_ROWS: CrmComparisonTableRow[] = [
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, bestFor: "Enterprise teams", startingPrice: "From $25/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("salesforce") },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, bestFor: "Best value", startingPrice: "Free tier", rating: "4.4", reviewHref: getCrmReviewUrl("zoho-crm") },
   { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, bestFor: "Sales pipelines", startingPrice: "From $14.90/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("pipedrive") },
-  { slug: "monday-crm", name: "Monday CRM", logoSrc: LOGOS.monday, bestFor: "Customizable workflows", startingPrice: "From $10/user/mo", rating: "4.4", reviewHref: getCrmReviewUrl("monday-crm") },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, bestFor: "Customizable workflows", startingPrice: "From $10/user/mo", rating: "4.4", reviewHref: getCrmReviewUrl("monday-crm") },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, bestFor: "AI-powered sales", startingPrice: "From $15/user/mo", rating: "4.3", reviewHref: getCrmReviewUrl("freshsales") },
   { slug: "copper", name: "Copper", logoSrc: LOGOS.copper, bestFor: "Google Workspace users", startingPrice: "From $29/user/mo", rating: "4.4", reviewHref: getCrmReviewUrl("copper") },
   { slug: "close", name: "Close", logoSrc: LOGOS.close, bestFor: "Inside sales & calling", startingPrice: "From $49/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("close") },
@@ -220,7 +220,7 @@ export const RELATED_COMPARISONS: ComparisonLink[] = [
   { label: "HubSpot vs Salesforce", href: getCrmCompareUrl("hubspot-vs-salesforce") },
   { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
   { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
-  { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+  { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
   { label: "Freshsales vs Pipedrive", href: getCrmCompareUrl("freshsales-vs-pipedrive") },
 ];
 
@@ -239,7 +239,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "What CRM is easiest to use?",
-    a: "HubSpot and Pipedrive are often cited as among the easiest CRMs to adopt: both have clear pipelines and straightforward interfaces. Monday CRM is easy if you like board-based views. Ease of use depends on your workflow—try free trials to see which fits your team.",
+    a: "HubSpot and Pipedrive are often cited as among the easiest CRMs to adopt: both have clear pipelines and straightforward interfaces. Monday is easy if you like board-based views. Ease of use depends on your workflow—try free trials to see which fits your team.",
   },
   {
     q: "What CRM integrates with marketing tools?",

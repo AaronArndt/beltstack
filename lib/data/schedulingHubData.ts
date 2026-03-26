@@ -159,7 +159,7 @@ export const SCHEDULING_POPULAR_COMPARISONS: SchedulingPopularComparisonCard[] =
     productA: { name: "Square Appointments", logoSrc: LOGOS.square },
     productB: { name: "Acuity Scheduling", logoSrc: LOGOS.acuity },
     summaryParagraph:
-      "Square Appointments fits businesses already on Square POS; Acuity is a standalone scheduling tool with deeper forms and package options.",
+      "Square Appointments fits businesses already on Square; Acuity is a standalone scheduling tool with deeper forms and package options.",
     href: getSchedulingCompareUrl("square-appointments-vs-acuity-scheduling"),
   },
 ];

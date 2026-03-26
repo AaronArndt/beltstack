@@ -71,7 +71,7 @@ export const FREELANCERS_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       badge: "Best for flexible workflows",
       description:
         "Board-based CRM you can shape around clients and projects. Suits freelancers who like visual pipelines and custom views.",
@@ -116,7 +116,7 @@ export const FREELANCERS_PAGE_PROPS = {
     },
     {
       slug: "monday-crm",
-      name: "Monday CRM",
+      name: "Monday",
       logoSrc: LOGOS.monday,
       bestFor: "Flexible workflows",
       startingPrice: "From $10/user/mo",
@@ -159,8 +159,8 @@ export const FREELANCERS_PAGE_PROPS = {
       body: "Zoho CRM gives you a full CRM and free tier so you get pipeline, automation, and reporting at low or no cost. Strong value for freelancers who want more features without HubSpot-level spend.",
     },
     {
-      heading: "Monday CRM",
-      body: "Monday CRM fits freelancers who prefer boards and custom views over a traditional pipeline. You can model clients and projects your way; good if you like flexibility and visual workflows.",
+      heading: "Monday",
+      body: "Monday fits freelancers who prefer boards and custom views over a traditional pipeline. You can model clients and projects your way; good if you like flexibility and visual workflows.",
     },
     {
       heading: "Keap",
@@ -171,13 +171,13 @@ export const FREELANCERS_PAGE_PROPS = {
   relatedReviews: [
     { name: "HubSpot", href: getCrmReviewUrl("hubspot") },
     { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm") },
-    { name: "Monday CRM", href: getCrmReviewUrl("monday-crm") },
+    { name: "Monday", href: getCrmReviewUrl("monday-crm") },
     { name: "Keap", href: getCrmReviewUrl("keap") },
   ] as BestForReviewLink[],
 
   relatedComparisons: [
     { label: "HubSpot vs Zoho CRM", href: getCrmCompareUrl("hubspot-vs-zoho-crm") },
-    { label: "Monday CRM vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
+    { label: "Monday vs HubSpot", href: getCrmCompareUrl("monday-crm-vs-hubspot") },
     { label: "Keap vs HubSpot", href: getCrmCompareUrl("keap-vs-hubspot") },
   ] as BestForComparisonLink[],
 

@@ -71,7 +71,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     visitUrl: "https://www.servicetitan.com",
   },
   {
-    name: "Square POS",
+    name: "Square",
     categoryLabel: "POS",
     rating: "4.6",
     logoSrc: "/Logos/square.jpeg",
@@ -100,7 +100,7 @@ export const POPULAR_COMPARISONS = [
   { label: "Gusto vs OnPay", href: "/payroll/compare/gusto-vs-onpay" },
   { label: "HubSpot vs Salesforce", href: "/crm/compare/hubspot-vs-salesforce" },
   { label: "Zendesk vs Freshdesk", href: "/helpdesk/compare/zendesk-vs-freshdesk" },
-  { label: "Square POS vs Shopify POS", href: "/pos/compare/square-pos-vs-shopify-pos" },
+  { label: "Square vs Shopify POS", href: "/pos/compare/square-pos-vs-shopify-pos" },
   { label: "Housecall Pro vs ServiceTitan", href: "/field-service/compare/housecall-pro-vs-servicetitan" },
 ] as const;
 
