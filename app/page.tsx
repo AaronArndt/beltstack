@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { StickyStackFinder } from "@/components/StickyStackFinder";
@@ -157,18 +158,22 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <StickyStackFinder
-        sentinelRef={stackFinderSentinelRef}
-        stackCategory={stackCategory}
-        stackTrade={stackTrade}
-        onCategoryChange={setStackCategory}
-        onTradeChange={setStackTrade}
-        onSubmit={handleStackFastSubmit}
-        categoryOptions={STACK_FAST_CATEGORIES}
-        tradeOptions={STACK_FAST_TRADES}
-      />
-      <main>
+    <>
+      <Head>
+        <meta name="impact-site-verification" value="6e75958d-93bf-4790-9cae-18726ffe1354" />
+      </Head>
+      <div className="min-h-screen bg-background">
+        <StickyStackFinder
+          sentinelRef={stackFinderSentinelRef}
+          stackCategory={stackCategory}
+          stackTrade={stackTrade}
+          onCategoryChange={setStackCategory}
+          onTradeChange={setStackTrade}
+          onSubmit={handleStackFastSubmit}
+          categoryOptions={STACK_FAST_CATEGORIES}
+          tradeOptions={STACK_FAST_TRADES}
+        />
+        <main>
         {/* ——— 1) Hero: search-first discovery ——— */}
         <section className="border-b border-stone-200 bg-stone-50">
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
@@ -513,6 +518,7 @@ export default function Home() {
         </footer>
       </main>
       <AffiliateModal open={affiliateModalOpen} onClose={() => setAffiliateModalOpen(false)} />
-    </div>
+      </div>
+    </>
   );
 }
