@@ -29,7 +29,7 @@ export const providers: PayrollProvider[] = [
     name: "Gusto",
     slug: "gusto",
     logo_placeholder: "/placeholders/gusto.svg",
-    starting_price: "$40/mo",
+    starting_price: "$49/mo",
     key_features: ["Full-service payroll", "Benefits", "HR tools"],
     cta_url: "https://gusto.com",
   },

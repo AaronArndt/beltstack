@@ -15,7 +15,7 @@ const P = {
     visitUrl: "https://gusto.com",
     bestForSummary: "Best overall HR + payroll for SMBs; strong combination of payroll, benefits, and HR.",
     rating: "4.8",
-    startingPrice: "From ~$40/mo",
+    startingPrice: "From ~$49/mo",
   },
   bamboohr: {
     name: "BambooHR",
@@ -159,7 +159,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { feature: "Pricing model", productA: "Published tiers", productB: "Quote-based", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto typically starts around $40/month plus per-person fees with clear tier structure. BambooHR is quote-based and scales with employee count and modules; you also pay for a payroll provider. For all-in-one cost, Gusto is often easier to budget; for HR-only plus your choice of payroll, BambooHR’s value is in HR depth, not lower total cost.",
+      "Gusto typically starts around $49/month plus per-person fees with clear tier structure. BambooHR is quote-based and scales with employee count and modules; you also pay for a payroll provider. For all-in-one cost, Gusto is often easier to budget; for HR-only plus your choice of payroll, BambooHR’s value is in HR depth, not lower total cost.",
     prosConsA: {
       pros: ["All-in-one payroll and HR.", "Transparent pricing.", "Strong support and ease of use.", "Hiring and onboarding included."],
       cons: ["HRIS depth lags BambooHR.", "No IT/device provisioning."],
@@ -231,7 +231,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { feature: "Setup complexity", productA: "Higher", productB: "Lower", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Rippling is quote-based; cost depends on modules (HR, payroll, benefits, IT) and headcount. Gusto typically starts around $40/month plus per-person fees with published tiers. For simple payroll and HR, Gusto is usually cheaper and easier to budget; Rippling justifies its cost when you use HR and IT together.",
+      "Rippling is quote-based; cost depends on modules (HR, payroll, benefits, IT) and headcount. Gusto typically starts around $49/month plus per-person fees with published tiers. For simple payroll and HR, Gusto is usually cheaper and easier to budget; Rippling justifies its cost when you use HR and IT together.",
     prosConsA: {
       pros: ["HR, payroll, and IT in one.", "Strong automation.", "Device and app provisioning.", "Scales with complexity."],
       cons: ["Quote-based; can be complex.", "Heavier than Gusto for basic needs."],
@@ -519,7 +519,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { feature: "Pricing", productA: "Published", productB: "Quote", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto has published pricing (e.g. from ~$40/mo plus per person). Rippling is quote-based. For comparable payroll and HR, Gusto is often cheaper; Rippling’s cost includes potential IT and automation value.",
+      "Gusto has published pricing (e.g. from ~$49/mo plus per person). Rippling is quote-based. For comparable payroll and HR, Gusto is often cheaper; Rippling’s cost includes potential IT and automation value.",
     prosConsA: {
       pros: ["Transparent pricing.", "Simple setup.", "Strong SMB support.", "No IT complexity."],
       cons: ["No IT or device management.", "Less automation than Rippling."],

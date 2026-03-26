@@ -28,7 +28,7 @@ export const HOURLY_EMPLOYEES_PAGE_PROPS = {
       description:
         "Payroll with built-in time tracking and automatic overtime. Import hours from Gusto Time or integrate with other time apps. Handles hourly rates, overtime rules, and PTO—all in one platform.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -65,7 +65,7 @@ export const HOURLY_EMPLOYEES_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for hourly payroll",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "Built-in time tracking; automatic overtime",
       reviewHref: getPayrollReviewUrl("gusto"),
@@ -153,7 +153,7 @@ export const HOURLY_EMPLOYEES_PAGE_PROPS = {
     },
     {
       q: "How much does payroll software cost for hourly employees?",
-      a: "Cost is usually a base fee plus per employee per month. Time tracking may be included (Gusto) or an add-on (e.g. QuickBooks Time). Gusto and OnPay often start around $40/month base; QuickBooks Payroll around $30/month. Factor in time-tracking cost if you need it.",
+      a: "Cost is usually a base fee plus per employee per month. Time tracking may be included (Gusto) or an add-on (e.g. QuickBooks Time). Gusto often starts around $49/month base; OnPay often around $40/month base; QuickBooks Payroll around $30/month. Factor in time-tracking cost if you need it.",
     },
   ] as BestForFaqItem[],
 };

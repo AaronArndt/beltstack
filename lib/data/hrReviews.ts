@@ -46,7 +46,7 @@ const reviews: Record<string, HrReviewData> = {
     category: "HR",
     categoryHref: HR_HUB,
     rating: "4.8",
-    startingPrice: "From ~$40/mo",
+    startingPrice: "From ~$49/mo",
     bestFor: "small and midsize businesses that want one platform for payroll, benefits, hiring, and HR",
     visitUrl: "https://gusto.com",
     logoSrc: LOGOS.gusto,
@@ -79,7 +79,7 @@ const reviews: Record<string, HrReviewData> = {
     whoShouldAvoid:
       "Businesses that need deep HRIS-only features (e.g. advanced ATS or performance) without payroll may prefer BambooHR. Teams that want HR and IT provisioning in one system might choose Rippling. Global-only or heavily distributed workforces may look at Deel first.",
     pricingSummary:
-      "Gusto pricing typically starts around $40/month plus per-person fees; plans include payroll, tax filing, benefits, and HR tools. Check Gusto’s site for current tiers and add-ons.",
+      "Gusto pricing typically starts around $49/month plus per-person fees; plans include payroll, tax filing, benefits, and HR tools. Check Gusto’s site for current tiers and add-ons.",
     pricingTiers:
       "Base plans cover payroll and tax; higher tiers add benefits administration, hiring, and more HR features. Per-employee pricing is standard. Compare tiers based on headcount and whether you need benefits and hiring modules.",
     costVsCompetitors:

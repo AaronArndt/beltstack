@@ -28,7 +28,7 @@ export const RETAIL_PAGE_PROPS = {
       description:
         "All-in-one payroll with multiple pay rates, automatic tax forms, and built-in time tracking. Handles W-2 and 1099 in one system. No sales cycle—good for owners and managers running payroll.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -77,7 +77,7 @@ export const RETAIL_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for small retail",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "Time tracking; multiple rates; all-in-one",
       reviewHref: getPayrollReviewUrl("gusto"),

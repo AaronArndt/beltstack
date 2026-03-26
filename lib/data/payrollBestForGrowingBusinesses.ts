@@ -28,7 +28,7 @@ export const GROWING_BUSINESSES_PAGE_PROPS = {
       description:
         "Scales from a handful of employees to hundreds. Multi-state payroll, benefits, and HR in one platform. Add people and states without changing systems—transparent pricing as you grow.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -65,7 +65,7 @@ export const GROWING_BUSINESSES_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Scaling with a modern platform",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099, multi-state",
       standoutFeature: "Scales to hundreds; transparent pricing",
       reviewHref: getPayrollReviewUrl("gusto"),

@@ -28,7 +28,7 @@ export const CONTRACTORS_PAGE_PROPS = {
       description:
         "All-in-one payroll with strong 1099 support, contractor self-service, and automatic tax forms. No sales cycle—published pricing and fast setup.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -65,7 +65,7 @@ export const CONTRACTORS_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for contractors",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "Contractor portal; 1099-NEC; all-in-one",
       reviewHref: getPayrollReviewUrl("gusto"),
@@ -153,7 +153,7 @@ export const CONTRACTORS_PAGE_PROPS = {
     },
     {
       q: "How much does contractor payroll software cost?",
-      a: "Many providers charge a base fee plus per person per month (employees and often contractors). Gusto and OnPay typically start around $40/month base; QuickBooks Payroll around $30/month. Confirm that 1099 runs and e-file are included so you don't get hit with add-on fees.",
+      a: "Many providers charge a base fee plus per person per month (employees and often contractors). Gusto often starts around $49/month base; OnPay often around $40/month base; QuickBooks Payroll around $30/month. Confirm that 1099 runs and e-file are included so you don't get hit with add-on fees.",
     },
   ] as BestForFaqItem[],
 };

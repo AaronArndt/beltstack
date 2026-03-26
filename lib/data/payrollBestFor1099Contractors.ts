@@ -28,7 +28,7 @@ export const NINE_CONTRACTORS_PAGE_PROPS = {
       description:
         "Run 1099 contractor payments and W-2 payroll in one place. Contractor self-service portal, automatic 1099-NEC, and published pricing. No add-on fees for 1099 e-file.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -65,7 +65,7 @@ export const NINE_CONTRACTORS_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for 1099 contractors",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "Contractor portal; 1099-NEC included",
       reviewHref: getPayrollReviewUrl("gusto"),

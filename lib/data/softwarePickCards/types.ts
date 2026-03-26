@@ -22,7 +22,7 @@ export type SoftwarePickCardContent = SoftwarePickCardFeatureFlags & {
   /** Second paragraph under Highlights. */
   editorialParagraph: string;
   rating: string;
-  /** Shown next to pricing accordion opener, e.g. "$40/mo" */
+  /** Shown next to pricing accordion opener, e.g. "$49/mo" */
   startingPrice: string;
   logoSrc: string;
   visitUrl: string;

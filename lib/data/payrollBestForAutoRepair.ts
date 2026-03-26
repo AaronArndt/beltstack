@@ -28,7 +28,7 @@ export const AUTO_REPAIR_PAGE_PROPS = {
       description:
         "All-in-one payroll with 1099 support for subs, contractor self-service, and automatic tax forms. Handles W-2 and 1099 in one system. Built-in time tracking. No sales cycle—good for shop owners and office managers running payroll.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -77,7 +77,7 @@ export const AUTO_REPAIR_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for small auto repair",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "1099 subs; time tracking; all-in-one",
       reviewHref: getPayrollReviewUrl("gusto"),

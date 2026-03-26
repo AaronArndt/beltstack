@@ -28,7 +28,7 @@ export const RESTAURANTS_PAGE_PROPS = {
       description:
         "All-in-one payroll with tip reporting, multiple pay rates, and automatic tax forms. Handles W-2 and 1099 in one system. Built-in time tracking. No sales cycle—good for owners and managers running payroll.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -77,7 +77,7 @@ export const RESTAURANTS_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for small restaurants",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "Tip reporting; time tracking; all-in-one",
       reviewHref: getPayrollReviewUrl("gusto"),

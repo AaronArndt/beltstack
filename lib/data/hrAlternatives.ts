@@ -82,7 +82,7 @@ const GUSTO_ALTERNATIVES: AlternativesTopPick[] = [
 ];
 
 const gustoOriginalRow: AlternativesTableRow = {
-  slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, bestFor: "overall SMB", startingPrice: "From ~$40/mo", standoutFeature: "Payroll + HR; ease of use", reviewHref: getHrReviewUrl("gusto"),
+  slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, bestFor: "overall SMB", startingPrice: "From ~$49/mo", standoutFeature: "Payroll + HR; ease of use", reviewHref: getHrReviewUrl("gusto"),
 };
 
 const gustoPage: AlternativesTemplateProps = {
@@ -126,7 +126,7 @@ const gustoPage: AlternativesTemplateProps = {
 
 // ——— BambooHR alternatives ———
 const BAMBOOHR_ALTERNATIVES: AlternativesTopPick[] = [
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "all-in-one", description: "Payroll and HR in one place; one vendor.", reviewHref: getHrReviewUrl("gusto"), compareHref: getHrCompareUrl("gusto-vs-bamboohr"), startingPrice: "From ~$40/mo", standoutFeature: "Payroll + HR" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "all-in-one", description: "Payroll and HR in one place; one vendor.", reviewHref: getHrReviewUrl("gusto"), compareHref: getHrCompareUrl("gusto-vs-bamboohr"), startingPrice: "From ~$49/mo", standoutFeature: "Payroll + HR" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "HR, payroll, and IT in one platform.", reviewHref: getHrReviewUrl("rippling"), compareHref: getHrCompareUrl("bamboohr-vs-rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
   { slug: "zenefits", name: "Zenefits", logoSrc: LOGOS.zenefits, rating: "4.3", bestFor: "all-in-one", description: "HR and benefits with payroll options.", reviewHref: getHrReviewUrl("zenefits"), startingPrice: "From ~$8/mo", standoutFeature: "All-in-one; value" },
   { slug: "paychex", name: "Paychex", logoSrc: LOGOS.paychex, rating: "4.4", bestFor: "full-service", description: "Full-service payroll and HR.", reviewHref: getHrReviewUrl("paychex"), startingPrice: "Quote", standoutFeature: "Full-service" },
@@ -174,7 +174,7 @@ const bamboohrPage: AlternativesTemplateProps = {
 
 // ——— Rippling alternatives ———
 const RIPPLING_ALTERNATIVES: AlternativesTopPick[] = [
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "simplicity", description: "Simpler payroll and HR for SMBs.", reviewHref: getHrReviewUrl("gusto"), compareHref: getHrCompareUrl("rippling-vs-gusto"), startingPrice: "From ~$40/mo", standoutFeature: "Simple; transparent" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "simplicity", description: "Simpler payroll and HR for SMBs.", reviewHref: getHrReviewUrl("gusto"), compareHref: getHrCompareUrl("rippling-vs-gusto"), startingPrice: "From ~$49/mo", standoutFeature: "Simple; transparent" },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, rating: "4.6", bestFor: "HRIS", description: "Best-in-class HRIS; no IT module.", reviewHref: getHrReviewUrl("bamboohr"), compareHref: getHrCompareUrl("bamboohr-vs-rippling"), startingPrice: "Quote", standoutFeature: "HRIS; hiring" },
   { slug: "deel", name: "Deel", logoSrc: LOGOS.deel, rating: "4.6", bestFor: "global", description: "Global hiring and EOR; stronger international focus.", reviewHref: getHrReviewUrl("deel"), compareHref: getHrCompareUrl("deel-vs-rippling"), startingPrice: "Quote", standoutFeature: "Global; EOR" },
   { slug: "zenefits", name: "Zenefits", logoSrc: LOGOS.zenefits, rating: "4.3", bestFor: "value", description: "All-in-one HR at lower entry price.", reviewHref: getHrReviewUrl("zenefits"), startingPrice: "From ~$8/mo", standoutFeature: "Value" },
@@ -225,7 +225,7 @@ const ripplingPage: AlternativesTemplateProps = {
 // ——— Deel alternatives ———
 const DEEL_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "HR, payroll, and IT with global options.", reviewHref: getHrReviewUrl("rippling"), compareHref: getHrCompareUrl("deel-vs-rippling"), startingPrice: "Quote", standoutFeature: "HR + IT; domestic+global" },
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "domestic", description: "Domestic SMB payroll and HR.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "Domestic; simple" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "domestic", description: "Domestic SMB payroll and HR.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "Domestic; simple" },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, rating: "4.6", bestFor: "HRIS", description: "HRIS and hiring; payroll via integration.", reviewHref: getHrReviewUrl("bamboohr"), startingPrice: "Quote", standoutFeature: "HRIS" },
   { slug: "adp-workforce-now", name: "ADP Workforce Now", logoSrc: LOGOS.adp, rating: "4.5", bestFor: "enterprise", description: "Enterprise payroll and HR; global options.", reviewHref: getHrReviewUrl("adp-workforce-now"), startingPrice: "Quote", standoutFeature: "Enterprise" },
   { slug: "paychex", name: "Paychex", logoSrc: LOGOS.paychex, rating: "4.4", bestFor: "full-service", description: "Full-service payroll and HR.", reviewHref: getHrReviewUrl("paychex"), startingPrice: "Quote", standoutFeature: "Full-service" },
@@ -271,7 +271,7 @@ const deelPage: AlternativesTemplateProps = {
 const ADP_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "paychex", name: "Paychex", logoSrc: LOGOS.paychex, rating: "4.4", bestFor: "full-service", description: "Full-service payroll and HR; mid-market.", reviewHref: getHrReviewUrl("paychex"), compareHref: getHrCompareUrl("adp-vs-paychex"), startingPrice: "Quote", standoutFeature: "Full-service" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "modern platform", description: "Unified HR and IT; modern UX.", reviewHref: getHrReviewUrl("rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "SMB", description: "Self-serve payroll and HR with transparent pricing.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "SMB; transparent" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "SMB", description: "Self-serve payroll and HR with transparent pricing.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "SMB; transparent" },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, rating: "4.6", bestFor: "HRIS", description: "Best-in-class HRIS; payroll via integration.", reviewHref: getHrReviewUrl("bamboohr"), startingPrice: "Quote", standoutFeature: "HRIS" },
   { slug: "trinet", name: "TriNet", logoSrc: LOGOS.trinet, rating: "4.4", bestFor: "PEO", description: "PEO for mid-market; benefits and compliance.", reviewHref: getHrReviewUrl("trinet"), startingPrice: "Quote", standoutFeature: "PEO" },
 ];
@@ -315,7 +315,7 @@ const adpPage: AlternativesTemplateProps = {
 // ——— Paychex alternatives ———
 const PAYCHEX_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "adp-workforce-now", name: "ADP Workforce Now", logoSrc: LOGOS.adp, rating: "4.5", bestFor: "enterprise", description: "Enterprise payroll and HR.", reviewHref: getHrReviewUrl("adp-workforce-now"), compareHref: getHrCompareUrl("adp-vs-paychex"), startingPrice: "Quote", standoutFeature: "Enterprise" },
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "SMB", description: "Self-serve with transparent pricing.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "SMB; transparent" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "SMB", description: "Self-serve with transparent pricing.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "SMB; transparent" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "Unified HR and IT; modern UX.", reviewHref: getHrReviewUrl("rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, rating: "4.6", bestFor: "HRIS", description: "Best-in-class HRIS; payroll via integration.", reviewHref: getHrReviewUrl("bamboohr"), startingPrice: "Quote", standoutFeature: "HRIS" },
   { slug: "zenefits", name: "Zenefits", logoSrc: LOGOS.zenefits, rating: "4.3", bestFor: "value", description: "All-in-one HR at lower entry price.", reviewHref: getHrReviewUrl("zenefits"), startingPrice: "From ~$8/mo", standoutFeature: "Value" },
@@ -360,7 +360,7 @@ const paychexPage: AlternativesTemplateProps = {
 // ——— TriNet alternatives ———
 const TRINET_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "justworks", name: "Justworks", logoSrc: LOGOS.justworks, rating: "4.5", bestFor: "PEO small biz", description: "PEO with simpler UX for small businesses.", reviewHref: getHrReviewUrl("justworks"), compareHref: getHrCompareUrl("justworks-vs-trinet"), startingPrice: "Quote", standoutFeature: "PEO; simple" },
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "software-only", description: "Payroll and HR without PEO.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "Software-only" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "software-only", description: "Payroll and HR without PEO.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "Software-only" },
   { slug: "adp-workforce-now", name: "ADP Workforce Now", logoSrc: LOGOS.adp, rating: "4.5", bestFor: "enterprise", description: "Enterprise payroll and HR; some PEO options.", reviewHref: getHrReviewUrl("adp-workforce-now"), startingPrice: "Quote", standoutFeature: "Enterprise" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "Unified HR and IT; no PEO.", reviewHref: getHrReviewUrl("rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
   { slug: "zenefits", name: "Zenefits", logoSrc: LOGOS.zenefits, rating: "4.3", bestFor: "all-in-one", description: "All-in-one HR and benefits.", reviewHref: getHrReviewUrl("zenefits"), startingPrice: "From ~$8/mo", standoutFeature: "All-in-one" },
@@ -405,7 +405,7 @@ const trinetPage: AlternativesTemplateProps = {
 // ——— Justworks alternatives ———
 const JUSTWORKS_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "trinet", name: "TriNet", logoSrc: LOGOS.trinet, rating: "4.4", bestFor: "PEO mid-market", description: "PEO for mid-market; benefits and compliance.", reviewHref: getHrReviewUrl("trinet"), compareHref: getHrCompareUrl("justworks-vs-trinet"), startingPrice: "Quote", standoutFeature: "PEO; mid-market" },
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "software-only", description: "Payroll and HR without PEO.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "Software-only" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "software-only", description: "Payroll and HR without PEO.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "Software-only" },
   { slug: "adp-workforce-now", name: "ADP Workforce Now", logoSrc: LOGOS.adp, rating: "4.5", bestFor: "enterprise", description: "Enterprise payroll and HR; some PEO options.", reviewHref: getHrReviewUrl("adp-workforce-now"), startingPrice: "Quote", standoutFeature: "Enterprise" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "Unified HR and IT; no PEO.", reviewHref: getHrReviewUrl("rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
   { slug: "zenefits", name: "Zenefits", logoSrc: LOGOS.zenefits, rating: "4.3", bestFor: "all-in-one", description: "All-in-one HR and benefits.", reviewHref: getHrReviewUrl("zenefits"), startingPrice: "From ~$8/mo", standoutFeature: "All-in-one" },
@@ -449,7 +449,7 @@ const justworksPage: AlternativesTemplateProps = {
 
 // ——— Zenefits alternatives ———
 const ZENEFITS_ALTERNATIVES: AlternativesTopPick[] = [
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "overall SMB", description: "Payroll and HR with strong reputation.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$40/mo", standoutFeature: "Payroll + HR" },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, rating: "4.8", bestFor: "overall SMB", description: "Payroll and HR with strong reputation.", reviewHref: getHrReviewUrl("gusto"), startingPrice: "From ~$49/mo", standoutFeature: "Payroll + HR" },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, rating: "4.6", bestFor: "HR + IT", description: "HR, payroll, and IT in one platform.", reviewHref: getHrReviewUrl("rippling"), startingPrice: "Quote", standoutFeature: "HR + IT" },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, rating: "4.6", bestFor: "HRIS", description: "Best-in-class HRIS; payroll via integration.", reviewHref: getHrReviewUrl("bamboohr"), startingPrice: "Quote", standoutFeature: "HRIS" },
   { slug: "justworks", name: "Justworks", logoSrc: LOGOS.justworks, rating: "4.5", bestFor: "PEO", description: "PEO with payroll and benefits.", reviewHref: getHrReviewUrl("justworks"), startingPrice: "Quote", standoutFeature: "PEO" },

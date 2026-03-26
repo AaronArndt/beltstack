@@ -15,7 +15,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Businesses that want payroll and HR tools in one platform.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     productB: {
       name: "QuickBooks Payroll",
@@ -69,7 +69,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Very easy if you already use QuickBooks", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses published tiered pricing: a base fee (e.g. $40/month on Simple) plus per-person costs for employees and contractors. QuickBooks Payroll also uses tiered pricing with a base fee (around $30/month on Core) plus per-person fees. At entry level they're close; QuickBooks can be slightly cheaper for very small teams. Gusto's pricing is more transparent and consistent across plans; QuickBooks Payroll costs can rise with add-ons like time tracking and 1099 e-file. Compare total monthly cost at your headcount and factor in whether you need time tracking or benefits—both can affect the final bill.",
+      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs for employees and contractors. QuickBooks Payroll also uses tiered pricing with a base fee (around $30/month on Core) plus per-person fees. At entry level they're close; QuickBooks can be slightly cheaper for very small teams. Gusto's pricing is more transparent and consistent across plans; QuickBooks Payroll costs can rise with add-ons like time tracking and 1099 e-file. Compare total monthly cost at your headcount and factor in whether you need time tracking or benefits—both can affect the final bill.",
     prosConsA: {
       pros: [
         "All-in-one payroll, benefits, and HR",
@@ -129,7 +129,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is QuickBooks Payroll cheaper than Gusto?",
-        a: "At entry level they're close; QuickBooks Payroll can be slightly cheaper for very small teams (e.g. base around $30/month vs Gusto's $40/month). Total cost depends on headcount, add-ons (time tracking, benefits), and plan tier. Compare your specific scenario—Gusto's pricing is more transparent and easy to project.",
+        a: "At entry level they're close; QuickBooks Payroll can be slightly cheaper for very small teams (e.g. base around $30/month vs Gusto's $49/month). Total cost depends on headcount, add-ons (time tracking, benefits), and plan tier. Compare your specific scenario—Gusto's pricing is more transparent and easy to project.",
       },
       {
         q: "Which payroll tool is best for contractors?",
@@ -171,7 +171,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Businesses that want payroll, benefits, and HR in one platform.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     productB: {
       name: "OnPay",
@@ -194,7 +194,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Gusto and OnPay are two of the most popular payroll options for small businesses and contractors. Gusto is the all-in-one play: more hiring tools, PTO, and benefits administration, with tiered plans that add features as you go. OnPay keeps it simple: one main plan, flat base-plus-per-person pricing, and solid payroll and benefits without the complexity.",
       "Gusto wins on breadth—HR tools, contractor self-service, and a modern interface are hard to beat. OnPay wins on clarity: you get predictable pricing, included support, and a short learning curve. Both handle W-2 and 1099 payroll with automatic tax filing; both integrate with QuickBooks and Xero. The choice often comes down to whether you want more features (Gusto) or more simplicity (OnPay).",
-      "Pricing is similar at entry—both often start around $40/month base plus per-person fees. OnPay's flat structure can be easier to project; Gusto's tiers let you add time tracking, PTO, and more as you grow. Choose Gusto if you want one platform that can grow with you and don't mind navigating plans. Choose OnPay if you want one straightforward plan and flat pricing.",
+      "Pricing is similar at entry—Gusto often starts around $49/month base and OnPay often around $40/month base, both plus per-person fees. OnPay's flat structure can be easier to project; Gusto's tiers let you add time tracking, PTO, and more as you grow. Choose Gusto if you want one platform that can grow with you and don't mind navigating plans. Choose OnPay if you want one straightforward plan and flat pricing.",
     ],
     decisionGuideA: [
       "You want the most HR and benefits features in one platform (hiring, PTO, health, 401k).",
@@ -225,7 +225,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Simple setup; clean interface", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses tiered pricing: a base fee (e.g. $40/month on Simple) plus per-person costs. Higher tiers add time tracking, PTO, and more. OnPay uses one main plan with a base fee (often around $40/month) plus a flat per-person rate—no tiers for core payroll. At similar headcounts the total can be close; OnPay is often easier to project because the structure doesn't change. Gusto gives you more features on higher tiers; OnPay keeps pricing simple. Compare total monthly cost at your headcount.",
+      "Gusto uses tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. Higher tiers add time tracking, PTO, and more. OnPay uses one main plan with a base fee (often around $40/month) plus a flat per-person rate—no tiers for core payroll. At similar headcounts the total can be close; OnPay is often easier to project because the structure doesn't change. Gusto gives you more features on higher tiers; OnPay keeps pricing simple. Compare total monthly cost at your headcount.",
     prosConsA: {
       pros: [
         "All-in-one payroll, benefits, and HR",
@@ -284,7 +284,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is OnPay cheaper than Gusto?",
-        a: "At similar headcounts they can be close—both often start around $40/month base plus per-person fees. OnPay's flat structure is easier to project; Gusto's tiers mean your cost depends on which plan you're on. For straightforward payroll and benefits, OnPay often feels more predictable.",
+        a: "At similar headcounts they can be close—Gusto often starts around $49/month base and OnPay often around $40/month base, both plus per-person fees. OnPay's flat structure is easier to project; Gusto's tiers mean your cost depends on which plan you're on. For straightforward payroll and benefits, OnPay often feels more predictable.",
       },
       {
         q: "Does OnPay have HR tools like Gusto?",
@@ -326,7 +326,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want payroll, benefits, and HR in one platform with transparent pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     productB: {
       name: "ADP",
@@ -349,7 +349,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Gusto and ADP sit at different ends of the market. Gusto is the small-business favorite: published pricing, modern UI, and payroll plus benefits plus HR in one product. ADP is the enterprise staple: custom pricing, broad compliance and HR depth, and the ability to scale to thousands of employees. Both handle W-2 and 1099 payroll with automatic tax filing; both offer benefits administration.",
       "Gusto wins for small teams on clarity—you see the price, sign up, and run payroll without a sales cycle. ADP wins on scale and depth: multi-country payroll, advanced compliance, and dedicated account management when you need it. For very small businesses, Gusto is usually the better fit. For companies that are growing fast or already large, ADP's infrastructure and support can justify the custom pricing.",
-      "Pricing is the big differentiator: Gusto posts tiered rates (e.g. $40/month base plus per person); ADP typically quotes custom pricing. Gusto is easier to compare and budget for small headcounts. ADP can become competitive or advantageous at scale. Choose Gusto if you're small and want transparency and simplicity. Choose ADP if you're scaling or need enterprise features and don't mind custom quotes.",
+      "Pricing is the big differentiator: Gusto posts tiered rates (e.g. $49/month base plus per person); ADP typically quotes custom pricing. Gusto is easier to compare and budget for small headcounts. ADP can become competitive or advantageous at scale. Choose Gusto if you're small and want transparency and simplicity. Choose ADP if you're scaling or need enterprise features and don't mind custom quotes.",
     ],
     decisionGuideA: [
       "You're a small business or contractor and want to see pricing and sign up without a sales call.",
@@ -380,7 +380,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Full-featured; steeper learning curve for small teams", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses published tiered pricing: a base fee (e.g. $40/month on Simple) plus per-person costs. You can see and compare plans online. ADP uses custom pricing—you get a quote based on headcount, features, and service level. There's no single published rate. For small teams, Gusto is almost always easier to budget and compare. ADP's value shows at scale or when you need dedicated support and enterprise features. Compare Gusto's published tiers to an ADP quote for your specific situation.",
+      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. You can see and compare plans online. ADP uses custom pricing—you get a quote based on headcount, features, and service level. There's no single published rate. For small teams, Gusto is almost always easier to budget and compare. ADP's value shows at scale or when you need dedicated support and enterprise features. Compare Gusto's published tiers to an ADP quote for your specific situation.",
     prosConsA: {
       pros: [
         "Transparent published pricing; no sales call required",
@@ -481,7 +481,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want payroll, benefits, and HR in one platform with transparent pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     productB: {
       name: "Paychex",
@@ -504,7 +504,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Gusto and Paychex represent two different approaches to payroll. Gusto is built for small businesses that want to see the price, sign up online, and manage payroll and HR themselves—with a modern UI and published tiered pricing. Paychex is the traditional full-service model: custom quotes, dedicated specialists available, and a long track record in payroll and compliance.",
       "Gusto wins on clarity and ease: you know what you'll pay, setup is guided, and the product is designed for self-serve. Paychex wins on relationship and support: you can get a dedicated rep, advisory help on compliance, and hands-on assistance. Both handle W-2 and 1099 payroll with automatic tax filing; both offer benefits administration. The choice often comes down to whether you want maximum simplicity and transparency (Gusto) or a full-service partner (Paychex).",
-      "Pricing is the key differentiator: Gusto posts its tiers (e.g. $40/month base plus per person); Paychex typically uses custom pricing. For small teams, Gusto is easier to compare and budget. Paychex can be competitive for the level of support and service. Choose Gusto if you want to run things yourself with clear, published pricing. Choose Paychex if you want a vendor that will guide you and don't mind getting a quote.",
+      "Pricing is the key differentiator: Gusto posts its tiers (e.g. $49/month base plus per person); Paychex typically uses custom pricing. For small teams, Gusto is easier to compare and budget. Paychex can be competitive for the level of support and service. Choose Gusto if you want to run things yourself with clear, published pricing. Choose Paychex if you want a vendor that will guide you and don't mind getting a quote.",
     ],
     decisionGuideA: [
       "You want to see pricing online and sign up without talking to sales.",
@@ -535,7 +535,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Full-featured; more traditional interface", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses published tiered pricing: a base fee (e.g. $40/month on Simple) plus per-person costs. You can compare plans and sign up online. Paychex uses custom pricing—you get a quote based on your headcount, features, and service level. There's no single published rate. For small businesses, Gusto is almost always easier to budget and compare. Paychex's value is in the level of support and advisory service. Get a Paychex quote and compare to Gusto's published tiers for your situation.",
+      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. You can compare plans and sign up online. Paychex uses custom pricing—you get a quote based on your headcount, features, and service level. There's no single published rate. For small businesses, Gusto is almost always easier to budget and compare. Paychex's value is in the level of support and advisory service. Get a Paychex quote and compare to Gusto's published tiers for your situation.",
     prosConsA: {
       pros: [
         "Transparent published pricing; sign up without a sales call",
@@ -1111,7 +1111,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want simpler payroll and HR with transparent pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -1124,7 +1124,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Rippling and Gusto are both modern payroll and HR platforms, but Rippling goes broader: payroll, HR, benefits, and IT (device management, app provisioning) in one system with strong workflow automation. Gusto stays focused on payroll, benefits, and HR with a simpler product and transparent tiered pricing. Both handle W-2 and 1099 payroll with automatic tax filing.",
       "Rippling wins on breadth and automation—if you want one system to run payroll, onboard employees, manage benefits, and control software and devices, Rippling is built for that. Gusto wins on simplicity and pricing clarity: you see the price online, sign up, and run payroll without a sales cycle. For very small teams that don't need IT or heavy automation, Gusto is often the better fit. For growing companies that want to consolidate payroll, HR, and admin, Rippling has the edge.",
-      "Pricing differs sharply: Gusto publishes tiered rates (e.g. $40/month base plus per person). Rippling typically uses quoted or custom pricing. Gusto is easier to budget upfront; Rippling's value is in breadth and automation. Choose Rippling if you're scaling and want payroll plus HR plus IT in one place. Choose Gusto if you want simpler payroll and HR with transparent pricing.",
+      "Pricing differs sharply: Gusto publishes tiered rates (e.g. $49/month base plus per person). Rippling typically uses quoted or custom pricing. Gusto is easier to budget upfront; Rippling's value is in breadth and automation. Choose Rippling if you're scaling and want payroll plus HR plus IT in one place. Choose Gusto if you want simpler payroll and HR with transparent pricing.",
     ],
     decisionGuideA: [
       "You're growing and want payroll, HR, and IT/admin (devices, apps) in one platform.",
@@ -1155,7 +1155,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Powerful; steeper learning curve", productB: "Very easy; modern UI, guided setup", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Gusto uses published tiered pricing: a base fee (e.g. $40/month on Simple) plus per-person costs. You can see and compare plans online. Rippling typically uses custom or quoted pricing based on modules (payroll, HR, IT) and headcount. There isn't a single published rate. For small teams that want to budget upfront, Gusto is easier. Rippling's value is in combining payroll, HR, and IT—get a quote and compare total cost to Gusto at your headcount.",
+      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. You can see and compare plans online. Rippling typically uses custom or quoted pricing based on modules (payroll, HR, IT) and headcount. There isn't a single published rate. For small teams that want to budget upfront, Gusto is easier. Rippling's value is in combining payroll, HR, and IT—get a quote and compare total cost to Gusto at your headcount.",
     prosConsA: {
       pros: [
         "Payroll, HR, and IT in one platform",
@@ -1213,7 +1213,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is Rippling more expensive than Gusto?",
-        a: "Rippling typically uses quoted pricing, so you need to get a quote to compare. Gusto publishes tiered pricing (e.g. $40/month base plus per person). For small teams, Gusto is usually easier to budget; Rippling's cost is justified when you use its broader HR and IT features.",
+        a: "Rippling typically uses quoted pricing, so you need to get a quote to compare. Gusto publishes tiered pricing (e.g. $49/month base plus per person). For small teams, Gusto is usually easier to budget; Rippling's cost is justified when you use its broader HR and IT features.",
       },
       {
         q: "Does Rippling have better HR than Gusto?",
@@ -1362,7 +1362,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want stronger HR and benefits depth with transparent pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -1375,7 +1375,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Square Payroll is designed to sit inside a Square account: simple payroll, tax filing, and contractor support with straightforward pricing. Gusto is a standalone payroll and HR platform with more hiring tools, PTO, benefits administration, and integrations. Both handle W-2 and 1099 payroll with automatic tax filing.",
       "Square Payroll wins on simplicity and ecosystem fit—if you're already on Square, adding payroll is easy and your data stays in one place. Gusto wins on HR and benefits depth: more features for onboarding, PTO, health, and 401(k) in one product. For businesses that don't use Square, Gusto (or OnPay) is usually the better fit. For Square users who want minimal complexity, Square Payroll is a strong choice.",
-      "Pricing is comparable at entry: Square Payroll often starts around $35/month base plus per-person fees; Gusto's Simple plan starts at $40/month. Gusto's tiers add more HR and features; Square Payroll stays simple. Choose Square Payroll if you're in the Square ecosystem and want straightforward payroll. Choose Gusto if you want more HR and benefits and don't need to stay inside Square.",
+      "Pricing is comparable at entry: Square Payroll often starts around $35/month base plus per-person fees; Gusto's Simple plan starts at $49/month. Gusto's tiers add more HR and features; Square Payroll stays simple. Choose Square Payroll if you're in the Square ecosystem and want straightforward payroll. Choose Gusto if you want more HR and benefits and don't need to stay inside Square.",
     ],
     decisionGuideA: [
       "You already use Square for payments, POS, or other services.",
@@ -1405,7 +1405,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Simple; good if you use Square", productB: "Very easy; modern UI, guided setup", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Square Payroll uses published pricing—often around $35/month base plus per-employee or per-contractor fees. Gusto uses tiered pricing (e.g. $40/month on Simple plus per-person). At entry they're close; Gusto adds more HR and benefits on higher tiers. Square Payroll stays simple. Compare total monthly cost at your headcount; if you're already on Square, Square Payroll can be the most straightforward add.",
+      "Square Payroll uses published pricing—often around $35/month base plus per-employee or per-contractor fees. Gusto uses tiered pricing (e.g. $49/month on Simple plus per-person). At entry they're close; Gusto adds more HR and benefits on higher tiers. Square Payroll stays simple. Compare total monthly cost at your headcount; if you're already on Square, Square Payroll can be the most straightforward add.",
     prosConsA: {
       pros: ["Simple payroll inside Square", "Straightforward pricing and setup", "Good if you already use Square", "No separate payroll vendor to manage"],
       cons: ["Less HR and benefits depth than Gusto", "Tied to Square ecosystem", "Fewer integrations outside Square"],
@@ -1570,7 +1570,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want broader payroll and HR value with more features.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -1581,9 +1581,9 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickRecommendationB:
       "Best for small businesses that want broader payroll and HR value and more features.",
     quickVerdictParagraphs: [
-      "Patriot Payroll offers low published pricing (often from around $17/month base) and straightforward payroll and tax filing for W-2 and 1099. Gusto offers more: payroll, benefits, HR tools, and a modern interface with tiered pricing (e.g. $40/month base). Both handle automatic tax filing and contractor support; Gusto adds more HR and benefits depth.",
+      "Patriot Payroll offers low published pricing (often from around $17/month base) and straightforward payroll and tax filing for W-2 and 1099. Gusto offers more: payroll, benefits, HR tools, and a modern interface with tiered pricing (e.g. $49/month base). Both handle automatic tax filing and contractor support; Gusto adds more HR and benefits depth.",
       "Patriot wins on cost—if your main goal is to minimize monthly payroll expense while staying compliant, Patriot is a strong fit. Gusto wins on features and HR—hiring tools, PTO, health, 401(k), and contractor self-service in one platform. For very small or cost-sensitive businesses, Patriot can be the right choice. For teams that want more HR and benefits, Gusto delivers more value despite the higher price.",
-      "Pricing is the main differentiator: Patriot's base is often around $17/month plus per-person fees; Gusto's Simple plan starts at $40/month. Patriot keeps it minimal; Gusto adds features and support. Compare total monthly cost at your headcount—and whether you need the extra HR and benefits Gusto provides.",
+      "Pricing is the main differentiator: Patriot's base is often around $17/month plus per-person fees; Gusto's Simple plan starts at $49/month. Patriot keeps it minimal; Gusto adds features and support. Compare total monthly cost at your headcount—and whether you need the extra HR and benefits Gusto provides.",
     ],
     decisionGuideA: [
       "Your top priority is minimizing payroll cost.",
@@ -1613,7 +1613,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Simple; fewer options", productB: "Very easy; modern UI, guided setup", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Patriot Payroll uses low published pricing—often from around $17/month base plus per-person fees. Gusto uses tiered pricing starting at $40/month base plus per-person. Patriot is the lower-cost option; Gusto adds more features and HR. For budget-focused businesses, Patriot can save meaningful dollars; for those that want more HR and benefits, Gusto's higher cost is offset by value. Compare at your headcount and needs.",
+      "Patriot Payroll uses low published pricing—often from around $17/month base plus per-person fees. Gusto uses tiered pricing starting at $49/month base plus per-person. Patriot is the lower-cost option; Gusto adds more features and HR. For budget-focused businesses, Patriot can save meaningful dollars; for those that want more HR and benefits, Gusto's higher cost is offset by value. Compare at your headcount and needs.",
     prosConsA: {
       pros: ["Low published pricing", "Straightforward payroll and tax filing", "Good for very small businesses", "No long-term contracts"],
       cons: ["Fewer HR and benefits than Gusto", "Less contractor self-service and integrations", "Basic interface and support options"],
@@ -1637,7 +1637,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Best for 1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
     ],
     faqs: [
-      { q: "Patriot Payroll vs Gusto: which is cheaper?", a: "Patriot Payroll is typically cheaper—often from around $17/month base. Gusto starts at $40/month base. Patriot is best for budget-focused businesses; Gusto adds more HR and benefits for the higher price." },
+      { q: "Patriot Payroll vs Gusto: which is cheaper?", a: "Patriot Payroll is typically cheaper—often from around $17/month base. Gusto starts at $49/month base. Patriot is best for budget-focused businesses; Gusto adds more HR and benefits for the higher price." },
       { q: "Is Patriot Payroll good for small business?", a: "Yes. Patriot is aimed at very small businesses and budget-conscious owners. It offers compliant payroll and tax filing at low cost. If you need more HR and benefits, Gusto or OnPay may be a better fit." },
     ],
     sidebarWinners: [
@@ -1780,7 +1780,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want payroll, benefits, and HR with published pricing and self-serve.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -1818,7 +1818,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "HR and compliance", productA: "PEO compliance and support", productB: "HR tools and compliance", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Justworks uses custom pricing—you get a quote. Gusto uses published tiered pricing (e.g. $40/month base plus per person). Justworks can be competitive for PEO value but isn't comparable without a quote. Gusto is easier to budget and compare online.",
+      "Justworks uses custom pricing—you get a quote. Gusto uses published tiered pricing (e.g. $49/month base plus per person). Justworks can be competitive for PEO value but isn't comparable without a quote. Gusto is easier to budget and compare online.",
     prosConsA: {
       pros: ["PEO benefits and compliance", "Large-group health plans", "Single vendor for payroll and benefits", "Dedicated support"],
       cons: ["Custom pricing", "No self-serve signup", "Less transparency than Gusto"],
@@ -1840,7 +1840,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Best for contractors", href: getPayrollBestForUrl("contractors") },
     ],
     faqs: [
-      { q: "Justworks vs Gusto: which is cheaper?", a: "Gusto has published pricing (e.g. $40/mo base); Justworks uses custom pricing so you need a quote. For transparency and self-serve, Gusto is easier to compare." },
+      { q: "Justworks vs Gusto: which is cheaper?", a: "Gusto has published pricing (e.g. $49/mo base); Justworks uses custom pricing so you need a quote. For transparency and self-serve, Gusto is easier to compare." },
       { q: "Is Justworks a PEO?", a: "Yes. Justworks is a PEO that bundles payroll, benefits, and compliance. Gusto is a standalone payroll and HR platform, not a PEO." },
     ],
     sidebarWinners: [
@@ -1974,7 +1974,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "US small-business payroll and HR with published pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -2012,7 +2012,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Pricing transparency", productA: "Custom quote", productB: "Published tiered pricing", supportA: "partial", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Deel uses per-contractor or per-employee pricing that varies by country and service; you get a quote. Gusto uses published US pricing ($40/mo base plus per person). For US-only teams, Gusto is easier to price; for global, Deel's quote reflects your international mix.",
+      "Deel uses per-contractor or per-employee pricing that varies by country and service; you get a quote. Gusto uses published US pricing ($49/mo base plus per person). For US-only teams, Gusto is easier to price; for global, Deel's quote reflects your international mix.",
     prosConsA: {
       pros: ["Global contractor payments", "EOR for hiring abroad", "150+ countries", "Compliant contracts"],
       cons: ["Overkill for US-only", "Custom pricing", "US payroll is secondary to global"],
@@ -2168,7 +2168,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Payroll, benefits, and HR with published pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -2205,7 +2205,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Pricing", productA: "Custom or tiered", productB: "Published tiered", supportA: "partial", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "SurePayroll uses custom or tiered pricing—check their site or contact for rates. Gusto uses published pricing ($40/mo base plus per person). Gusto is easier to compare and often competitive or better value when you factor in HR and benefits.",
+      "SurePayroll uses custom or tiered pricing—check their site or contact for rates. Gusto uses published pricing ($49/mo base plus per person). Gusto is easier to compare and often competitive or better value when you factor in HR and benefits.",
     prosConsA: {
       pros: ["Simple payroll", "Full-service option", "Familiar brand", "Support available"],
       cons: ["Less HR and benefits", "Less transparent pricing", "Fewer integrations"],
@@ -2360,7 +2360,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://gusto.com",
       bestForSummary: "Small businesses that want payroll, benefits, and HR with published pricing.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
@@ -2398,7 +2398,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Pricing", productA: "Free accounting; payroll add-on", productB: "Published base + per person", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Wave's accounting is free; payroll is a paid add-on (check Wave for rates). Gusto charges a base fee (e.g. $40/mo) plus per person. For combined accounting plus payroll, Wave can be cheaper for micro teams. For payroll-only value and features, Gusto offers more.",
+      "Wave's accounting is free; payroll is a paid add-on (check Wave for rates). Gusto charges a base fee (e.g. $49/mo) plus per person. For combined accounting plus payroll, Wave can be cheaper for micro teams. For payroll-only value and features, Gusto offers more.",
     prosConsA: {
       pros: ["Free accounting", "Payroll add-on", "Simple", "Low combined cost"],
       cons: ["Less HR and benefits", "Limited integrations", "Payroll availability by state"],

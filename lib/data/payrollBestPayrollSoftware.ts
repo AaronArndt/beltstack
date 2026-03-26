@@ -16,7 +16,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     comparisonTableBestFor: "Small trade businesses",
     description: "All-in-one payroll, benefits, and HR with transparent pricing and a modern interface. Strong for small businesses and contractors.",
     rating: "4.8",
-    startingPrice: "$40/mo",
+    startingPrice: "$49/mo",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -39,7 +39,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
       "Less hand-holding than traditional providers",
     ],
     pricingSummary:
-      "Gusto uses base-plus-per-person pricing; plans often start around $40/month base plus per-employee fees. Add-ons for time tracking, benefits, and contractor payments may apply. Check current pricing for your team size.",
+      "Gusto uses base-plus-per-person pricing; plans often start around $49/month base plus per-employee fees. Add-ons for time tracking, benefits, and contractor payments may apply. Check current pricing for your team size.",
   },
   {
     slug: "quickbooks-payroll",
@@ -345,6 +345,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How much does payroll software cost?",
-    a: "Many providers charge a base fee plus per-person per month. Gusto and OnPay often start around $40/month base plus a few dollars per person; QuickBooks Payroll can start around $30/month. ADP and Paychex use custom pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
+    a: "Many providers charge a base fee plus per-person per month. Gusto often starts around $49/month base; OnPay often around $40/month base—both plus a few dollars per person; QuickBooks Payroll can start around $30/month. ADP and Paychex use custom pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
   },
 ];

@@ -28,7 +28,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
       description:
         "All-in-one payroll, benefits, and HR with transparent pricing and a modern interface. Sign up online, run your first payroll quickly, and add benefits when you're ready.",
       rating: "4.8",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       reviewHref: getPayrollReviewUrl("gusto"),
       visitUrl: "https://gusto.com",
       logoSrc: "/Logos/gusto.jpeg",
@@ -65,7 +65,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
       name: "Gusto",
       logoSrc: "/Logos/gusto.jpeg",
       bestFor: "Best overall for small business",
-      startingPrice: "$40/mo",
+      startingPrice: "$49/mo",
       payrollTypes: "W-2, 1099",
       standoutFeature: "All-in-one payroll, benefits, HR; transparent pricing",
       reviewHref: getPayrollReviewUrl("gusto"),
@@ -145,7 +145,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
     },
     {
       q: "How much does payroll software cost for a small business?",
-      a: "Many providers charge a base fee plus per employee per month. Gusto and OnPay often start around $40/month base plus a few dollars per person; QuickBooks Payroll can start around $30/month. Get a total at your headcount and confirm tax filing and support are included.",
+      a: "Many providers charge a base fee plus per employee per month. Gusto often starts around $49/month base; OnPay often around $40/month base—both plus a few dollars per person; QuickBooks Payroll can start around $30/month. Get a total at your headcount and confirm tax filing and support are included.",
     },
     {
       q: "Can I set up payroll without talking to sales?",

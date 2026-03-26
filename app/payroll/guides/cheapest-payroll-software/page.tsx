@@ -27,7 +27,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How much does the cheapest payroll software cost?",
-    a: "Base fees can start around $17–$40/month plus per-employee or per-contractor fees. Total cost depends on headcount. Wave can be attractive if you use its free accounting and add payroll. Check each provider's current pricing.",
+    a: "Base fees can start around $17–$49/month plus per-employee or per-contractor fees. Total cost depends on headcount. Wave can be attractive if you use its free accounting and add payroll. Check each provider's current pricing.",
   },
   {
     q: "Should I choose the cheapest payroll option?",
@@ -123,7 +123,7 @@ export default function CheapestPayrollSoftwarePage() {
                   <SectionTitle sub="What you get at the lowest price points.">What &quot;Cheapest&quot; Payroll Software Usually Means</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      The lowest-cost options tend to share a few traits: <strong className="text-[#1A2D48]">published pricing</strong> with a low base fee (e.g. from around $17–$40/month), <strong className="text-[#1A2D48]">per-person fees</strong> for employees and sometimes contractors, and <strong className="text-[#1A2D48]">core payroll and tax filing</strong> included. What you often don’t get at the bottom end: robust HR tools, benefits administration, time tracking, or a long list of integrations. For many very small teams, that trade-off is acceptable.
+                      The lowest-cost options tend to share a few traits: <strong className="text-[#1A2D48]">published pricing</strong> with a low base fee (e.g. from around $17–$49/month), <strong className="text-[#1A2D48]">per-person fees</strong> for employees and sometimes contractors, and <strong className="text-[#1A2D48]">core payroll and tax filing</strong> included. What you often don’t get at the bottom end: robust HR tools, benefits administration, time tracking, or a long list of integrations. For many very small teams, that trade-off is acceptable.
                     </p>
                     <p>
                       See our{" "}

@@ -51,7 +51,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.8",
-    startingPrice: "$40/mo",
+    startingPrice: "$49/mo",
     bestFor: "small trade businesses and contractors who want all-in-one payroll, benefits, and HR",
     visitUrl: "https://gusto.com",
     logoSrc: "/Logos/gusto.jpeg",
@@ -112,7 +112,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Very large employers (hundreds of employees) may find per-person costs prohibitive and may need enterprise-focused features. Businesses that need heavy job-costing or project-based payroll might want a construction-specific suite. If you need 24/7 phone support on the cheapest plan, look at alternatives that include it.",
     pricingSummary:
-      "Gusto's pricing is tiered by plan and number of people paid. The Simple plan starts at $40/month plus $6 per person. Core and Full add more features like time tracking, PTO, and expert support. For contractors, the per-person cost applies to both employees and contractors paid per run.",
+      "Gusto's pricing is tiered by plan and number of people paid. The Simple plan starts at $49/month plus $6 per person. Core and Full add more features like time tracking, PTO, and expert support. For contractors, the per-person cost applies to both employees and contractors paid per run.",
     pricingTiers:
       "Simple covers core payroll and tax filing. Core adds time tracking, PTO, and hiring tools. Full adds R&D tax credits, workforce planning, and priority support. Add-ons include health benefits administration and 401(k).",
     costVsCompetitors:
@@ -248,7 +248,7 @@ const reviews: Record<string, ReviewData> = {
       },
       {
         q: "How much does Gusto cost?",
-        a: "Gusto's Simple plan starts at $40/month plus $6 per person per month. For a team of 10, you're looking at roughly $100/month before add-ons. Core and Full plans add more features and support at higher base and per-person rates.",
+        a: "Gusto's Simple plan starts at $49/month plus $6 per person per month. For a team of 10, you're looking at roughly $110/month before add-ons. Core and Full plans add more features and support at higher base and per-person rates.",
       },
       {
         q: "Is Gusto good for construction businesses?",

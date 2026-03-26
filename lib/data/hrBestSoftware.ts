@@ -33,7 +33,7 @@ export const TOP_PICKS: BestHrPick[] = [
     description:
       "Payroll, benefits, hiring, and HR in one place for small and midsize businesses.",
     rating: "4.8",
-    startingPrice: "From ~$40/mo",
+    startingPrice: "From ~$49/mo",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -52,7 +52,7 @@ export const TOP_PICKS: BestHrPick[] = [
       "Global payroll via partners, not native",
     ],
     pricingSummary:
-      "Gusto pricing typically starts around $40/month plus per-person fees; plans include payroll, tax filing, benefits, and HR tools. Check Gusto’s site for current tiers.",
+      "Gusto pricing typically starts around $49/month plus per-person fees; plans include payroll, tax filing, benefits, and HR tools. Check Gusto’s site for current tiers.",
   },
   {
     slug: "bamboohr",
@@ -286,7 +286,7 @@ export const TOP_PICKS: BestHrPick[] = [
 
 /** Comparison table: 9 HR tools. */
 export const COMPARISON_TABLE_ROWS: HrComparisonTableRow[] = [
-  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, bestFor: "Best overall for SMBs", startingPrice: "From ~$40/mo", rating: "4.8", reviewHref: getHrReviewUrl("gusto") },
+  { slug: "gusto", name: "Gusto", logoSrc: LOGOS.gusto, bestFor: "Best overall for SMBs", startingPrice: "From ~$49/mo", rating: "4.8", reviewHref: getHrReviewUrl("gusto") },
   { slug: "bamboohr", name: "BambooHR", logoSrc: LOGOS.bamboohr, bestFor: "HR management system", startingPrice: "Quote", rating: "4.6", reviewHref: getHrReviewUrl("bamboohr") },
   { slug: "rippling", name: "Rippling", logoSrc: LOGOS.rippling, bestFor: "HR + IT automation", startingPrice: "Quote", rating: "4.6", reviewHref: getHrReviewUrl("rippling") },
   { slug: "deel", name: "Deel", logoSrc: LOGOS.deel, bestFor: "Global HR and hiring", startingPrice: "Quote", rating: "4.6", reviewHref: getHrReviewUrl("deel") },
