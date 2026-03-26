@@ -160,6 +160,9 @@ export default function Home() {
   return (
     <>
       <Head>
+        {/* Impact requires the `value` attribute (not `content`) for verification. */}
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-expect-error - `value` is not part of the React MetaHTMLAttributes typing, but is required by Impact. */}
         <meta name="impact-site-verification" value="6e75958d-93bf-4790-9cae-18726ffe1354" />
       </Head>
       <div className="min-h-screen bg-background">
