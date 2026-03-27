@@ -41,7 +41,7 @@ const P = {
     name: "Zoho Invoice",
     slug: "zoho-invoice",
     reviewHref: getInvoicingReviewUrl("zoho-invoice"),
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     visitUrl: "https://www.zoho.com/invoice",
     bestForSummary: "Value-conscious businesses and Zoho users; automation and client portal.",
     rating: "4.4",
@@ -158,7 +158,7 @@ function minimalComparison(
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "QuickBooks", href: getInvoicingReviewUrl("quickbooks"), logoSrc: "/Logos/quickbooks.png" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), logoSrc: "/Logos/zoho.png" },
       { name: "Xero", href: getInvoicingReviewUrl("xero"), logoSrc: "/Logos/xero.png" },
     ],
     faqs: [

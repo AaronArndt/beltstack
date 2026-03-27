@@ -29,7 +29,7 @@ const LOGOS = {
   setmore: "/Logos/setmore.jpeg",
   simplybookme: "/Logos/simplybook.jpeg",
   square: "/Logos/square.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
 } as const;
 
 // ——— Freelancers ———

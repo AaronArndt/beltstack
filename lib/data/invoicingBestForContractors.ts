@@ -79,7 +79,7 @@ export const CONTRACTORS_PAGE_PROPS = {
       startingPrice: "Free tier",
       reviewHref: getInvoicingReviewUrl("zoho-invoice"),
       visitUrl: "https://www.zoho.com/invoice",
-      logoSrc: "/Logos/zoho.jpeg",
+      logoSrc: "/Logos/zoho.png",
     },
   ] as BestForFeaturedProduct[],
 
@@ -87,7 +87,7 @@ export const CONTRACTORS_PAGE_PROPS = {
     { slug: "freshbooks", name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", bestFor: "Best overall for contractors", startingPrice: "$19/mo", standoutFeature: "Estimates, invoicing, time tracking", reviewHref: getInvoicingReviewUrl("freshbooks") },
     { slug: "honeybook", name: "HoneyBook", logoSrc: "/Logos/honeybook.jpeg", bestFor: "Client/project workflows", startingPrice: "Quote", standoutFeature: "Proposals, contracts, invoicing", reviewHref: getInvoicingReviewUrl("honeybook") },
     { slug: "quickbooks", name: "QuickBooks", logoSrc: "/Logos/quickbooks.png", bestFor: "Invoicing + accounting", startingPrice: "$30/mo", standoutFeature: "Job costing, reporting", reviewHref: getInvoicingReviewUrl("quickbooks") },
-    { slug: "zoho-invoice", name: "Zoho Invoice", logoSrc: "/Logos/zoho.jpeg", bestFor: "Best value", startingPrice: "Free tier", standoutFeature: "Projects, client portal", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
+    { slug: "zoho-invoice", name: "Zoho Invoice", logoSrc: "/Logos/zoho.png", bestFor: "Best value", startingPrice: "Free tier", standoutFeature: "Projects, client portal", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
   ] as BestForTableRow[],
 
   editorialGuidance: [

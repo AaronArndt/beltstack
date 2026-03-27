@@ -25,7 +25,7 @@ const SEE_ALSO = {
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   pipedrive: "/Logos/pipedrive.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
   monday: "/Logos/monday.jpeg",
 } as const;
 

@@ -30,25 +30,25 @@ export const INVENTORY_GUIDES: InventoryGuideEntry[] = [
   },
   {
     title: "Inventory Management Software vs ERP",
-    href: "/inventory/guides/inventory-management-software-vs-erp",
+    href: "/inventory/guides/how-to-choose-inventory-management-software",
     description:
       "Where inventory tools stop and ERP systems begin—and how to know which your business actually needs.",
   },
   {
     title: "Warehouse Management Software vs Inventory Software",
-    href: "/inventory/guides/warehouse-management-software-vs-inventory-software",
+    href: "/inventory/guides/inventory-software-for-manufacturing",
     description:
       "The difference between WMS and general inventory tools, and when each makes sense for growing operations.",
   },
   {
     title: "How to Track Inventory for a Small Business",
-    href: "/inventory/guides/how-to-track-inventory-for-a-small-business",
+    href: "/inventory/guides/best-inventory-software-for-small-business",
     description:
       "Practical guidance on counts, reorder points, and processes to move from ad hoc tracking to a reliable system.",
   },
   {
     title: "Inventory Software Pricing Guide",
-    href: "/inventory/guides/inventory-software-pricing-guide",
+    href: "/inventory/guides/how-to-choose-inventory-management-software",
     description:
       "How inventory platforms price their tools, what drives costs, and how to budget based on complexity and volume.",
   },

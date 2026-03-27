@@ -44,7 +44,7 @@ const FAQ_ITEMS = [
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", rating: 4.5, bestFor: "Recurring & time tracking", reviewHref: getInvoicingReviewUrl("freshbooks") },
-  { name: "Zoho Invoice", logoSrc: "/Logos/zoho.jpeg", rating: 4.4, bestFor: "Automation", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
+  { name: "Zoho Invoice", logoSrc: "/Logos/zoho.png", rating: 4.4, bestFor: "Automation", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
   { name: "QuickBooks", logoSrc: "/Logos/quickbooks.png", rating: 4.6, bestFor: "Accounting + recurring", reviewHref: getInvoicingReviewUrl("quickbooks") },
 ];
 

@@ -17,7 +17,7 @@ const LOGOS = {
   simplybookme: "/Logos/simplybook.jpeg",
   square: "/Logos/square.jpeg",
   appointy: "/Logos/appointy.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
 } as const;
 
 /** Top scheduling picks — slugs resolve to canonical `schedulingBestSoftware` data */

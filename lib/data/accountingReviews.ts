@@ -98,7 +98,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Strong QuickBooks alternative with clean UI and accountant-friendly features.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Better fit for freelancers and service businesses; simpler and focused on invoicing.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused option with good automation and ecosystem if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused option with good automation and ecosystem if you use Zoho.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for businesses that don't need advanced features.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting tools for SMBs; less mindshare than QuickBooks or Xero.", logoSrc: "/Logos/sage.png" },
       { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses already using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
@@ -197,7 +197,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Market leader with broad features and ecosystem; higher starting price.", logoSrc: "/Logos/quickbooks.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; simpler invoicing and time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value and automation; strong if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value and automation; strong if you use Zoho.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting and invoicing.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs.", logoSrc: "/Logos/sage.png" },
     ],
@@ -292,7 +292,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Broader accounting features; better for complex books.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Full accounting with clean UI; more depth than FreshBooks.", logoSrc: "/Logos/xero.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free invoicing and accounting; simpler feature set.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation; strong Zoho ecosystem fit.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation; strong Zoho ecosystem fit.", logoSrc: "/Logos/zoho.png" },
     ],
     faqs: [
       { q: "Is FreshBooks good for freelancers?", a: "Yes. FreshBooks is built for freelancers and service businesses: invoicing, time tracking, and client billing are core strengths, and the interface is easy to use." },
@@ -329,7 +329,7 @@ const reviews: Record<string, ReviewData> = {
     startingPrice: "$15/mo",
     bestFor: "value-conscious businesses using the Zoho ecosystem",
     visitUrl: "https://www.zoho.com/books",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     quickVerdict:
       "Zoho Books offers strong value, good automation, and a client portal—especially compelling if you already use Zoho apps.",
     quickVerdictParagraphs: [
@@ -478,7 +478,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "More features and integrations; paid.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Full accounting with more depth; paid.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; paid with stronger time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Low-cost paid option with more features.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Low-cost paid option with more features.", logoSrc: "/Logos/zoho.png" },
       { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simple bookkeeping; another straightforward option.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
     faqs: [
@@ -570,7 +570,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Larger ecosystem and more US-focused content.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Strong alternative with large app marketplace.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Simpler and freelancer-focused.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free option for basic needs.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [
@@ -660,7 +660,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem; no ERP required.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Dedicated accounting with large app marketplace.", logoSrc: "/Logos/xero.png" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; strong if you use Zoho ecosystem.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; strong if you use Zoho ecosystem.", logoSrc: "/Logos/zoho.png" },
       { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core accounting for SMBs; recognized brand.", logoSrc: "/Logos/sage.png" },
       { name: "Kashoo", href: getAccountingReviewUrl("kashoo"), description: "Simpler bookkeeping; good for small teams.", logoSrc: "/Logos/kashoo.jpeg" },
     ],
@@ -752,7 +752,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Full accounting with larger app marketplace.", logoSrc: "/Logos/xero.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free accounting and invoicing for basic needs.", logoSrc: "/Logos/wave.jpeg" },
       { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Freelancer-focused; strong invoicing and time tracking.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Good value and automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "For businesses using Odoo ERP.", logoSrc: "/Logos/odoo.jpeg" },
     ],
     faqs: [
@@ -815,7 +815,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with a broad ecosystem.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "A clean cloud accounting alternative with strong reporting.", logoSrc: "/Logos/xero.png" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with strong Zoho ecosystem fit.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with strong Zoho ecosystem fit.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with compliance basics.", logoSrc: "/Logos/sage.png" },
     ],
@@ -935,7 +935,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem reach.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting with strong reporting.", logoSrc: "/Logos/xero.png" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
       { name: "Sage", href: getAccountingReviewUrl("sage-accounting"), description: "Core SMB accounting with familiar workflows.", logoSrc: "/Logos/sage.png" },
     ],
@@ -988,7 +988,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broader ecosystem reach.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting with strong reporting.", logoSrc: "/Logos/xero.png" },
       { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for very small needs.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [
@@ -1040,7 +1040,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting alternative.", logoSrc: "/Logos/xero.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting.", logoSrc: "/Logos/zoho.png" },
       { name: "Odoo", href: getAccountingReviewUrl("odoo-accounting"), description: "ERP-suite integrated accounting for Odoo users.", logoSrc: "/Logos/odoo.jpeg" },
     ],
     faqs: [
@@ -1096,7 +1096,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "Standalone accounting with broad ecosystem reach.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting alternative.", logoSrc: "/Logos/xero.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting.", logoSrc: "/Logos/zoho.png" },
     ],
     faqs: [
       { q: "Is Microsoft Dynamics good for accounting?", a: "It’s best for teams that need ERP-integrated accounting workflows. If you want simpler standalone accounting, tools like QuickBooks or Xero may fit better." },
@@ -1205,7 +1205,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks Online", href: getAccountingReviewUrl("quickbooks-online"), description: "More ecosystem depth and feature breadth.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Xero", href: getAccountingReviewUrl("xero"), description: "Clean cloud accounting with strong reporting.", logoSrc: "/Logos/xero.png" },
-      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused accounting with automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free core accounting for basic needs.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [

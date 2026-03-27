@@ -28,7 +28,7 @@ const GUIDES_HUB = "/crm/guides";
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   salesforce: "/Logos/salesforce.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
   pipedrive: "/Logos/pipedrive.jpeg",
   monday: "/Logos/monday.jpeg",
   freshsales: "/Logos/freshsales.jpeg",

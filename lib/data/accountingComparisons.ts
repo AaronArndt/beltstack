@@ -41,7 +41,7 @@ const P = {
     name: "Zoho Books",
     slug: "zoho-books",
     reviewHref: getAccountingReviewUrl("zoho-books"),
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     visitUrl: "https://www.zoho.com/books",
     bestForSummary: "Businesses already using the Zoho ecosystem; strong value and automation.",
     rating: "4.4",
@@ -404,7 +404,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       ],
       alternatives: [
         { name: "FreshBooks", href: getAccountingReviewUrl("freshbooks"), description: "Simpler option for freelancers.", logoSrc: "/Logos/freshbooks.jpeg" },
-        { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; good for Zoho users.", logoSrc: "/Logos/zoho.jpeg" },
+        { name: "Zoho Books", href: getAccountingReviewUrl("zoho-books"), description: "Value-focused; good for Zoho users.", logoSrc: "/Logos/zoho.png" },
         { name: "Wave", href: getAccountingReviewUrl("wave"), description: "Free option for basic needs.", logoSrc: "/Logos/wave.jpeg" },
       ],
       faqs: [

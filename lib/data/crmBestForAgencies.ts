@@ -26,7 +26,7 @@ const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   monday: "/Logos/monday.jpeg",
   pipedrive: "/Logos/pipedrive.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
 } as const;
 
 export const AGENCIES_PAGE_PROPS = {

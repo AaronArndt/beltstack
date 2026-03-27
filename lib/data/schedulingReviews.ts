@@ -15,7 +15,7 @@ const LOGOS = {
   simplybookme: "/Logos/simplybook.jpeg",
   square: "/Logos/square.jpeg",
   appointy: "/Logos/appointy.jpeg",
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
 } as const;
 
 const SCHEDULING_HUB = "/scheduling";

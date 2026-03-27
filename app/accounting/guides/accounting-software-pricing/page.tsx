@@ -53,7 +53,7 @@ const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   },
   {
     name: "Zoho Books",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     rating: 4.4,
     bestFor: "Best value if you use Zoho",
     reviewHref: getAccountingReviewUrl("zoho-books"),

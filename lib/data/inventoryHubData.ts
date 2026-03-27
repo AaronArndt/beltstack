@@ -22,6 +22,10 @@ export const INVENTORY_FEATURED_PICKS: FeaturedPickRef[] = [
   { slug: "inflow-inventory" },
   { slug: "katana" },
   { slug: "sortly" },
+  { slug: "fishbowl" },
+  { slug: "quickbooks-commerce" },
+  { slug: "unleashed" },
+  { slug: "finale-inventory" },
 ];
 
 /** Comparison table rows for the hub (inventory tools) — canonical pick data. */
@@ -124,19 +128,19 @@ export const INVENTORY_HUB_GUIDES_GRID: {
   description: string;
 }[] = [
   {
-    href: "/inventory/guides/what-is-inventory-management-software",
+    href: "/inventory/guides/how-to-choose-inventory-management-software",
     title: "What is Inventory Management Software?",
     description:
       "Definitions and scope: when stock tracking is enough versus when you need manufacturing, WMS, or multichannel ops.",
   },
   {
-    href: "/inventory/guides/inventory-software-pricing",
+    href: "/inventory/guides/best-inventory-software-for-small-business",
     title: "Inventory Software Pricing",
     description:
       "How vendors charge for users, locations, orders, and SKUs—so you can compare total cost, not teaser tiers.",
   },
   {
-    href: "/inventory/guides/inventory-for-ecommerce-and-retail",
+    href: "/inventory/guides/inventory-software-for-ecommerce",
     title: "Inventory for Ecommerce and Retail",
     description:
       "Channel sync, returns, and fulfillment concepts—evaluation depth without duplicating product picks above.",

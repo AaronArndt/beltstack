@@ -8,7 +8,7 @@ export const HELPDESK_LOGOS = {
   freshdesk: "/Logos/freshsales.jpeg", // Freshworks; same company as Freshsales
   helpScout: "/Logos/helpscout.jpeg",
   intercom: "/Logos/intercom.png",
-  zohoDesk: "/Logos/zohodesk.jpeg",
+  zohoDesk: "/Logos/zoho.png",
   gorgias: "/Logos/gorgias.jpeg",
   liveAgent: "/Logos/liveagent.jpeg",
   kayako: "/Logos/kayako.jpeg",

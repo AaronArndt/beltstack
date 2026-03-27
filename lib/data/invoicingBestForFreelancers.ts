@@ -79,7 +79,7 @@ export const FREELANCERS_PAGE_PROPS = {
       startingPrice: "Free tier",
       reviewHref: getInvoicingReviewUrl("zoho-invoice"),
       visitUrl: "https://www.zoho.com/invoice",
-      logoSrc: "/Logos/zoho.jpeg",
+      logoSrc: "/Logos/zoho.png",
     },
   ] as BestForFeaturedProduct[],
 
@@ -87,7 +87,7 @@ export const FREELANCERS_PAGE_PROPS = {
     { slug: "freshbooks", name: "FreshBooks", logoSrc: "/Logos/freshbooks.jpeg", bestFor: "Best overall for freelancers", startingPrice: "$19/mo", standoutFeature: "Invoicing, time tracking, ease of use", reviewHref: getInvoicingReviewUrl("freshbooks") },
     { slug: "bonsai", name: "Bonsai", logoSrc: "/Logos/bonsai.jpeg", bestFor: "Freelancer workflows", startingPrice: "Quote", standoutFeature: "Proposals, contracts, invoicing", reviewHref: getInvoicingReviewUrl("bonsai") },
     { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", bestFor: "Best free", startingPrice: "Free", standoutFeature: "Free core invoicing", reviewHref: getInvoicingReviewUrl("wave") },
-    { slug: "zoho-invoice", name: "Zoho Invoice", logoSrc: "/Logos/zoho.jpeg", bestFor: "Best value", startingPrice: "Free tier", standoutFeature: "Automation, client portal", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
+    { slug: "zoho-invoice", name: "Zoho Invoice", logoSrc: "/Logos/zoho.png", bestFor: "Best value", startingPrice: "Free tier", standoutFeature: "Automation, client portal", reviewHref: getInvoicingReviewUrl("zoho-invoice") },
   ] as BestForTableRow[],
 
   editorialGuidance: [

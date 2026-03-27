@@ -180,6 +180,129 @@ export const TOP_PICKS: BestInventoryPick[] = [
   },
 ] as BestInventoryPick[];
 
+export const INVENTORY_REGISTRY_SUPPLEMENT: BestInventoryPick[] = [
+  {
+    slug: "fishbowl",
+    name: "Fishbowl",
+    badge: "Best for QuickBooks-centric manufacturing teams",
+    description:
+      "Long-standing inventory and manufacturing solution that pairs well with QuickBooks for manufacturers and distributors.",
+    editorialParagraph:
+      "Fishbowl is a practical fit for businesses that need deeper inventory and light manufacturing workflows while keeping QuickBooks as the accounting backbone. It is especially common among distributors and manufacturers that want stronger warehouse control than basic SMB tools provide.",
+    rating: "4.3",
+    startingPrice: "Quote",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.fishbowlinventory.com",
+    logoSrc: INVENTORY_LOGOS.fishbowl,
+    compareSlugs: ["fishbowl-vs-katana", "zoho-inventory-vs-cin7"],
+    pros: [
+      "Strong fit for QuickBooks-centric inventory and manufacturing",
+      "Deeper warehouse and operational workflows than lightweight SMB tools",
+      "Established product used by manufacturers and distributors",
+    ],
+    cons: [
+      "Quote-based pricing can make budgeting less transparent",
+      "Interface and onboarding can feel heavier than modern cloud SMB tools",
+      "More operational complexity than many small teams need",
+    ],
+    pricingSummary:
+      "Fishbowl pricing is generally quote-based and depends on team size, modules, and implementation scope. It is typically considered when operations have outgrown simpler inventory tools.",
+    comparisonTableBestFor: "Inventory and manufacturing for QuickBooks users",
+  },
+  {
+    slug: "quickbooks-commerce",
+    name: "QuickBooks Commerce",
+    badge: "Best for QuickBooks-native inventory workflows",
+    description:
+      "Inventory and order management designed for businesses that already rely on QuickBooks for accounting.",
+    editorialParagraph:
+      "QuickBooks Commerce is a natural shortlist option for teams that want inventory and order flows tightly connected to QuickBooks. The main advantage is accounting alignment and reduced reconciliation overhead for finance-heavy operations.",
+    rating: "4.2",
+    startingPrice: "Quote",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://quickbooks.intuit.com",
+    logoSrc: INVENTORY_LOGOS.quickbooksCommerce,
+    compareSlugs: ["inflow-inventory-vs-zoho-inventory"],
+    pros: [
+      "Strong alignment for teams already committed to QuickBooks",
+      "Useful inventory and order workflows for accounting-centric operations",
+      "Can reduce manual sync and reconciliation work",
+    ],
+    cons: [
+      "Less flexibility than broader multi-channel specialists in some cases",
+      "Pricing and packaging can require sales conversations",
+      "Best fit is narrower if you are not already in the Intuit ecosystem",
+    ],
+    pricingSummary:
+      "QuickBooks Commerce pricing is generally quote-based. It tends to be most compelling when accounting and inventory alignment in the Intuit ecosystem is the top priority.",
+    comparisonTableBestFor: "Inventory for QuickBooks-centric teams",
+  },
+  {
+    slug: "unleashed",
+    name: "Unleashed",
+    badge: "Best for wholesalers and inventory-heavy product businesses",
+    description:
+      "Inventory and production management for wholesalers and manufacturers that need deeper control over stock and margins.",
+    editorialParagraph:
+      "Unleashed is a stronger fit for inventory-heavy operations that need better visibility into stock, purchasing, and product margins. It is often considered by wholesalers and manufacturers that want more depth than SMB-first tools.",
+    rating: "4.4",
+    startingPrice: "From ~$349/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.unleashedsoftware.com",
+    logoSrc: INVENTORY_LOGOS.unleashed,
+    compareSlugs: ["cin7-vs-katana", "fishbowl-vs-katana"],
+    pros: [
+      "Strong fit for wholesale and inventory-heavy operations",
+      "Good depth for purchasing, stock control, and margin visibility",
+      "Useful integrations with accounting and commerce tools",
+    ],
+    cons: [
+      "Higher starting price than SMB-focused tools",
+      "Can take more implementation effort to roll out well",
+      "May be overkill for simpler single-location teams",
+    ],
+    pricingSummary:
+      "Unleashed starts in the mid-hundreds per month and scales by features and usage. It is usually evaluated by businesses that need deeper stock and margin control than entry-level tools provide.",
+    comparisonTableBestFor: "Wholesalers and manufacturers",
+  },
+  {
+    slug: "finale-inventory",
+    name: "Finale Inventory",
+    badge: "Best for high-volume ecommerce and warehouse operations",
+    description:
+      "Inventory software tuned for high-volume ecommerce and warehouses with strong channel and warehouse support.",
+    editorialParagraph:
+      "Finale Inventory is a strong option for ecommerce and warehouse-heavy teams that need better scanner workflows, location control, and channel sync than lightweight inventory apps can offer.",
+    rating: "4.4",
+    startingPrice: "From ~$99/mo",
+    hasFreeTrial: true,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.finaleinventory.com",
+    logoSrc: INVENTORY_LOGOS.finale,
+    compareSlugs: ["zoho-inventory-vs-cin7", "inflow-inventory-vs-zoho-inventory"],
+    pros: [
+      "Strong fit for higher-volume ecommerce and warehouse workflows",
+      "Better operational depth than many entry-level inventory tools",
+      "Good option between lightweight SMB tools and full WMS/ERP",
+    ],
+    cons: [
+      "More setup and process definition than very simple inventory apps",
+      "Feature depth can be more than tiny teams need",
+      "Advanced workflow quality still depends on clean data and implementation",
+    ],
+    pricingSummary:
+      "Finale Inventory starts around the low hundreds or high double-digits per month depending on plan and scale. It is usually selected by teams that need stronger operational workflows without going full enterprise.",
+    comparisonTableBestFor: "High-volume ecommerce and warehouses",
+  },
+] as BestInventoryPick[];
+
 export const COMPARISON_TABLE_ROWS: InventoryComparisonTableRow[] = [
   {
     slug: "zoho-inventory",

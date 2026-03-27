@@ -37,7 +37,7 @@ const P = {
     name: "Zoho CRM",
     slug: "zoho-crm",
     reviewHref: getCrmReviewUrl("zoho-crm"),
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     visitUrl: "https://www.zoho.com/crm",
     bestForSummary: "Best value CRM; strong fit for Zoho users and cost-conscious teams.",
     rating: "4.4",
@@ -168,7 +168,7 @@ function minimalComparison(
     alternatives: overrides?.alternatives ?? [
       { name: "HubSpot", href: getCrmReviewUrl("hubspot"), logoSrc: "/Logos/hubspot.jpeg" },
       { name: "Pipedrive", href: getCrmReviewUrl("pipedrive"), logoSrc: "/Logos/pipedrive.jpeg" },
-      { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm"), logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho CRM", href: getCrmReviewUrl("zoho-crm"), logoSrc: "/Logos/zoho.png" },
     ],
     faqs: overrides?.faqs ?? [
       { q: `How do ${productA.name} and ${productB.name} compare?`, a: summary.slice(0, 220) + " Read our full reviews and this comparison for a head-to-head view." },

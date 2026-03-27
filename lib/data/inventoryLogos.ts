@@ -3,7 +3,7 @@
  */
 
 export const INVENTORY_LOGOS = {
-  zoho: "/Logos/zoho.jpeg",
+  zoho: "/Logos/zoho.png",
   cin7: "/Logos/cin7.jpeg",
   inflow: "/Logos/inflow.jpeg",
   katana: "/Logos/katana.png",

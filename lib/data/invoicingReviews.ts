@@ -97,7 +97,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks", href: getInvoicingReviewUrl("quickbooks"), description: "Full accounting plus invoicing; better if you need deeper books.", logoSrc: "/Logos/quickbooks.png" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), description: "Free invoicing and accounting for cost-conscious users.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation; strong if you use Zoho.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation; strong if you use Zoho.", logoSrc: "/Logos/zoho.png" },
       { name: "Bonsai", href: getInvoicingReviewUrl("bonsai"), description: "Contracts, proposals, and invoicing for freelancers.", logoSrc: "/Logos/bonsai.jpeg" },
     ],
     faqs: [
@@ -188,7 +188,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "Xero", href: getInvoicingReviewUrl("xero"), description: "Full accounting plus invoicing; strong QuickBooks alternative.", logoSrc: "/Logos/xero.png" },
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), description: "Simpler invoicing-focused option for freelancers.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), description: "Free invoicing and accounting.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Value-focused invoicing and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Value-focused invoicing and automation.", logoSrc: "/Logos/zoho.png" },
     ],
     faqs: [
       { q: "Is QuickBooks good for invoicing?", a: "Yes. QuickBooks includes full invoicing, estimates, and payment collection. It's especially strong when you also use it for accounting so everything stays in one place." },
@@ -275,7 +275,7 @@ const reviews: Record<string, ReviewData> = {
       "Wave offers its own payment and payroll add-ons. Third-party integration list is smaller than QuickBooks or FreshBooks; sufficient for many very small businesses.",
     alternatives: [
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), description: "More features and client workflows; paid.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Free tier and more automation; good value.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Free tier and more automation; good value.", logoSrc: "/Logos/zoho.png" },
       { name: "Invoice Ninja", href: getInvoicingReviewUrl("invoice-ninja"), description: "Open-source option with more customization.", logoSrc: "/Logos/invoiceninja.jpeg" },
       { name: "QuickBooks", href: getInvoicingReviewUrl("quickbooks"), description: "Full accounting plus invoicing; paid.", logoSrc: "/Logos/quickbooks.png" },
     ],
@@ -310,7 +310,7 @@ const reviews: Record<string, ReviewData> = {
     startingPrice: "Free tier",
     bestFor: "value-conscious businesses and Zoho users",
     visitUrl: "https://www.zoho.com/invoice",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     quickVerdict:
       "Zoho Invoice delivers strong value with automation, client portal, and a free tier. Best fit for businesses already using Zoho or those comparing cost vs features.",
     quickVerdictParagraphs: [
@@ -453,7 +453,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "QuickBooks", href: getInvoicingReviewUrl("quickbooks"), description: "Market leader; similar breadth. Higher starting price.", logoSrc: "/Logos/quickbooks.png" },
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), description: "Invoicing-focused; simpler for freelancers.", logoSrc: "/Logos/freshbooks.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), description: "Free invoicing and accounting.", logoSrc: "/Logos/wave.jpeg" },
     ],
     faqs: [
@@ -541,7 +541,7 @@ const reviews: Record<string, ReviewData> = {
     alternatives: [
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), description: "Mainstream option with strong support.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), description: "Free and simple.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.png" },
       { name: "Bonsai", href: getInvoicingReviewUrl("bonsai"), description: "Freelancer-focused; contracts and proposals.", logoSrc: "/Logos/bonsai.jpeg" },
     ],
     faqs: [
@@ -716,7 +716,7 @@ const reviews: Record<string, ReviewData> = {
       { name: "HoneyBook", href: getInvoicingReviewUrl("honeybook"), description: "Similar client workflow; strong for creatives.", logoSrc: "/Logos/honeybook.jpeg" },
       { name: "FreshBooks", href: getInvoicingReviewUrl("freshbooks"), description: "More features and time tracking; good for service businesses.", logoSrc: "/Logos/freshbooks.jpeg" },
       { name: "Wave", href: getInvoicingReviewUrl("wave"), description: "Free invoicing; simpler.", logoSrc: "/Logos/wave.jpeg" },
-      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.jpeg" },
+      { name: "Zoho Invoice", href: getInvoicingReviewUrl("zoho-invoice"), description: "Good value and automation.", logoSrc: "/Logos/zoho.png" },
     ],
     faqs: [
       { q: "Is Bonsai good for freelancers?", a: "Yes. Bonsai is built for freelancers: proposals, contracts, and invoicing in one place. It's a common choice for solos and small service businesses." },

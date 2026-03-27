@@ -78,7 +78,7 @@ export const AGENCIES_PAGE_PROPS = {
       startingPrice: "$15/mo",
       reviewHref: getAccountingReviewUrl("zoho-books"),
       visitUrl: "https://www.zoho.com/books/",
-      logoSrc: "/Logos/zoho.jpeg",
+      logoSrc: "/Logos/zoho.png",
     },
   ] as BestForFeaturedProduct[],
 
@@ -113,7 +113,7 @@ export const AGENCIES_PAGE_PROPS = {
     {
       slug: "zoho-books",
       name: "Zoho Books",
-      logoSrc: "/Logos/zoho.jpeg",
+      logoSrc: "/Logos/zoho.png",
       bestFor: "Best value",
       startingPrice: "$15/mo",
       standoutFeature: "Project tracking, automation, value",

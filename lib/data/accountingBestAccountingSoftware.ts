@@ -122,7 +122,7 @@ export const TOP_PICKS: BestAccountingPick[] = [
     hasFreePlan: false,
     hasIntegrations: true,
     visitUrl: "https://www.zoho.com/books/",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     compareSlugs: ["quickbooks-online-vs-zoho-books", "xero-vs-zoho-books"],
     standoutFeature: "Automation, client portal, value pricing",
     editorialParagraph:
@@ -241,7 +241,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
   {
     slug: "zoho-books",
     name: "Zoho Books",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     bestFor: "Best value",
     startingPrice: "$15/mo",
     standoutFeature: "Automation, client portal, value",

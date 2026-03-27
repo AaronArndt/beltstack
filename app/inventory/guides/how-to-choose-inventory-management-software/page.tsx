@@ -382,7 +382,7 @@ export default function HowToChooseInventoryManagementSoftwareGuidePage() {
                     </ul>
                     <p>
                       Our{" "}
-                      <Link href="/inventory/guides/inventory-software-pricing-guide" className={linkGreen}>
+                      <Link href="/inventory/guides/how-to-choose-inventory-management-software" className={linkGreen}>
                         inventory software pricing guide
                       </Link>{" "}
                       goes deeper on common pricing models and how to budget realistically.

@@ -170,7 +170,7 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
       href: "/inventory/guides/best-inventory-software-for-small-business",
     },
     { label: "How to choose inventory management software", href: "/inventory/guides/how-to-choose-inventory-management-software" },
-    { label: "How to track inventory for a small business", href: "/inventory/guides/how-to-track-inventory-for-a-small-business" },
+    { label: "How to track inventory for a small business", href: "/inventory/guides/best-inventory-software-for-small-business" },
   ] as BestForGuideLink[],
 
   faqItems: [
@@ -766,7 +766,7 @@ export const WAREHOUSES_PAGE_PROPS: BestForTemplateProps = {
 
   relatedGuides: [
     { label: "Inventory software for ecommerce", href: "/inventory/guides/inventory-software-for-ecommerce" },
-    { label: "Warehouse management software vs inventory software", href: "/inventory/guides/warehouse-management-software-vs-inventory-software" },
+    { label: "Warehouse management software vs inventory software", href: "/inventory/guides/inventory-software-for-manufacturing" },
   ] as BestForGuideLink[],
 
   faqItems: [

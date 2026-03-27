@@ -122,7 +122,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     hasFreePlan: true,
     hasIntegrations: true,
     visitUrl: "https://www.zoho.com/invoice",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     compareSlugs: ["zoho-invoice-vs-freshbooks", "zoho-invoice-vs-quickbooks"],
     standoutFeature: "Automation, client portal, value pricing",
     editorialParagraph:
@@ -298,7 +298,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
   {
     slug: "zoho-invoice",
     name: "Zoho Invoice",
-    logoSrc: "/Logos/zoho.jpeg",
+    logoSrc: "/Logos/zoho.png",
     bestFor: "Best value",
     startingPrice: "Free tier",
     standoutFeature: "Automation, client portal",
