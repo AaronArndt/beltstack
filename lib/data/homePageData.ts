@@ -3,17 +3,6 @@
  * Used by app/page.tsx for the software-discovery homepage.
  */
 
-export const HERO_CATEGORY_CHIPS = [
-  { label: "Payroll", href: "/payroll" },
-  { label: "CRM", href: "/crm" },
-  { label: "Field Service", href: "/field-service" },
-  { label: "Helpdesk", href: "/helpdesk" },
-  { label: "POS", href: "/pos" },
-  { label: "Inventory", href: "/inventory" },
-  { label: "Scheduling", href: "/scheduling" },
-  { label: "HR", href: "/hr" },
-] as const;
-
 export type FeaturedSoftwareCard = {
   name: string;
   categoryLabel: string;

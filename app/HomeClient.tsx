@@ -5,9 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { StickyStackFinder } from "@/components/StickyStackFinder";
-import { SearchAutocomplete } from "@/components/search/SearchAutocomplete";
 import {
-  HERO_CATEGORY_CHIPS,
   FEATURED_SOFTWARE,
   SOFTWARE_CATEGORIES,
   POPULAR_COMPARISONS,
@@ -21,8 +19,7 @@ import { CRM_POPULAR_COMPARISONS } from "@/lib/data/crmHubData";
 import { HELPDESK_POPULAR_COMPARISONS } from "@/lib/data/helpdeskHubData";
 import { POS_POPULAR_COMPARISONS } from "@/lib/data/posHubData";
 import { FIELD_SERVICE_POPULAR_COMPARISONS } from "@/lib/data/fieldServiceHubData";
-import { sectionRuleAccent, trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
-import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
+import { sectionRuleAccent } from "@/lib/design-tokens";
 
 // ——— Design tokens (reference) ———
 // BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
@@ -52,6 +49,70 @@ const STACK_FAST_TRADES = [
   { value: "cleaning", label: "Cleaning" },
 ];
 
+/** Homepage hero — use-case tiles (custom artwork in /public/Logos). */
+const HERO_USE_CASE_TILES = [
+  {
+    title: "Get paid & invoicing",
+    href: "/invoicing",
+    iconSrc: "/Logos/getpaidandpricing.png",
+  },
+  {
+    title: "Run payroll & hiring",
+    href: "/payroll",
+    iconSrc: "/Logos/runpayrollandhiring.png",
+  },
+  {
+    title: "Manage jobs & crews",
+    href: "/field-service",
+    iconSrc: "/Logos/managecrewsandjobs.png",
+  },
+  {
+    title: "Get more leads",
+    href: "/lead-generation",
+    iconSrc: "/Logos/getmoreleads.png",
+  },
+  {
+    title: "Track finances",
+    href: "/accounting",
+    iconSrc: "/Logos/trackfinances.png",
+  },
+  {
+    title: "Build your website",
+    href: "/website-builders",
+    iconSrc: "/Logos/buildyourwebsite.png",
+  },
+] as const;
+
+const HERO_CATEGORY_LINKS = [
+  { label: "Payroll", href: "/payroll" },
+  { label: "CRM", href: "/crm" },
+  { label: "Project Management", href: "/project-management" },
+  { label: "Accounting", href: "/accounting" },
+  { label: "Email Marketing", href: "/email-marketing" },
+  { label: "Call Tracking", href: "/call-tracking" },
+  { label: "Website Builders", href: "/website-builders" },
+] as const;
+
+const HERO_CATEGORY_SEE_MORE_HREF = "/software" as const;
+
+/** Trade pills — hubs already in the site (no aggregate “all trades” page). */
+const HERO_TRADE_LINKS = [
+  { label: "HVAC", href: "/field-service/best-for/hvac" },
+  { label: "Plumbing", href: "/field-service/best-for/plumbing" },
+  { label: "Electrical", href: "/field-service/best-for/electricians" },
+  { label: "Cleaning", href: "/payroll/best-for/cleaning-business" },
+  { label: "Roofing", href: "/payroll/best-for/roofing" },
+] as const;
+
+const heroUseCaseTileClass =
+  "group flex h-full flex-col items-center rounded-xl border border-transparent bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(26,45,72,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-[#10B981] hover:shadow-[0_10px_28px_rgba(26,45,72,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+
+const heroFilterPillClass =
+  "inline-flex items-center rounded border border-stone-200 bg-white px-3 py-1.5 text-sm font-semibold text-[#1A2D48] transition-colors duration-200 hover:border-stone-300 hover:bg-stone-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1";
+
+const heroCategorySeeMoreClass =
+  "inline-flex items-center px-0.5 py-1 text-sm font-medium text-[#57534E] underline-offset-[3px] transition-colors duration-200 hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1 rounded-sm";
+
 function FooterLogo({ className }: { className?: string }) {
   return (
     <img
@@ -62,24 +123,6 @@ function FooterLogo({ className }: { className?: string }) {
       height={105}
       aria-hidden
     />
-  );
-}
-
-function AffiliateModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  if (!open) return null;
-  return (
-    <>
-      <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={onClose} />
-      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-md" role="dialog" aria-labelledby="affiliate-title" aria-modal="true">
-        <h3 id="affiliate-title" className="text-[#1A2D48] text-lg font-bold">Affiliate disclosure</h3>
-        <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-          We may earn a commission when you purchase through our links. This does not affect our recommendations.
-        </p>
-        <button type="button" onClick={onClose} className={btnPrimary}>
-          Got it
-        </button>
-      </div>
-    </>
   );
 }
 
@@ -125,7 +168,6 @@ const HOMEPAGE_POPULAR_COMPARISON_CARDS: PopularComparisonCard[] = POPULAR_COMPA
 export default function Home() {
   const router = useRouter();
   const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [affiliateModalOpen, setAffiliateModalOpen] = useState(false);
   const [stackCategory, setStackCategory] = useState("");
   const [stackTrade, setStackTrade] = useState("");
   const stackFinderSentinelRef = useRef<HTMLDivElement>(null);
@@ -169,40 +211,62 @@ export default function Home() {
         tradeOptions={STACK_FAST_TRADES}
       />
       <main>
-        {/* ——— 1) Hero: search-first discovery ——— */}
+        {/* ——— 1) Hero ——— */}
         <section className="border-b border-stone-200 bg-stone-50">
-          <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-            <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Find the Best Software for Your Business
+          <div className="mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-12 lg:px-8 lg:pb-20 lg:pt-14">
+            <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+              <span className="block">Find the Best Software for</span>
+              <span className="block">Your Business</span>
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-[#57534E] text-base leading-relaxed">
-              Compare payroll, CRM, field service, helpdesk, POS, inventory, and more. Independent reviews and side-by-side comparisons.
+            <p className="mx-auto mt-4 max-w-2xl text-center text-[#57534E] text-base leading-relaxed sm:mt-5 sm:text-lg">
+              Compare tools for payroll, CRM, marketing, and operations — tailored to your trade
             </p>
-            <div className={`mx-auto mt-6 justify-center ${trustIndicatorListClass}`}>
-              <span className="flex items-center gap-2">
-                <TrustIndicatorMark />
-                Updated monthly
-              </span>
-              <span className="flex items-center gap-2">
-                <TrustIndicatorMark />
-                Independent reviews
-              </span>
-              <button
-                type="button"
-                onClick={() => setAffiliateModalOpen(true)}
-                className={trustIndicatorAffiliateButtonClass}
-              >
-                <TrustIndicatorMark />
-                Affiliate disclosure
-              </button>
-            </div>
-            <SearchAutocomplete autoNavigateToResults />
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
-              {HERO_CATEGORY_CHIPS.map(({ label, href }) => (
-                <Link key={href} href={href} className={btnPill}>
-                  {label}
+
+            <div className="mx-auto mt-10 grid max-w-6xl grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4 lg:mt-14 lg:grid-cols-6 lg:gap-3 xl:gap-4">
+              {HERO_USE_CASE_TILES.map(({ title, href, iconSrc }) => (
+                <Link key={href} href={href} className={heroUseCaseTileClass}>
+                  <div className="relative mx-auto mb-4 flex h-[92px] w-full max-w-[112px] items-center justify-center">
+                    <span
+                      className="absolute left-1/2 top-1/2 h-[72px] w-[88px] -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-[2rem] bg-[#10B981]/18"
+                      aria-hidden
+                    />
+                    <Image
+                      src={iconSrc}
+                      alt=""
+                      width={88}
+                      height={88}
+                      className="relative z-[1] h-[4.5rem] w-auto max-w-[5.5rem] object-contain"
+                    />
+                  </div>
+                  <span className="text-[#1A2D48] text-sm font-bold leading-snug sm:text-[0.9375rem]">{title}</span>
                 </Link>
               ))}
+            </div>
+
+            <div className="mx-auto mt-10 max-w-6xl space-y-4 sm:mt-12">
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-5">
+                <span className="shrink-0 text-sm font-medium text-[#57534E] sm:w-24 sm:pt-1.5">Category</span>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
+                  {HERO_CATEGORY_LINKS.map(({ label, href }) => (
+                    <Link key={href + label} href={href} className={heroFilterPillClass}>
+                      {label}
+                    </Link>
+                  ))}
+                  <Link href={HERO_CATEGORY_SEE_MORE_HREF} className={heroCategorySeeMoreClass}>
+                    See more
+                  </Link>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-5">
+                <span className="shrink-0 text-sm font-medium text-[#57534E] sm:w-24 sm:pt-1.5">Trade</span>
+                <div className="flex flex-wrap gap-2">
+                  {HERO_TRADE_LINKS.map(({ label, href }) => (
+                    <Link key={href} href={href} className={heroFilterPillClass}>
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -512,7 +576,6 @@ export default function Home() {
           </div>
         </footer>
       </main>
-      <AffiliateModal open={affiliateModalOpen} onClose={() => setAffiliateModalOpen(false)} />
     </div>
   );
 }
