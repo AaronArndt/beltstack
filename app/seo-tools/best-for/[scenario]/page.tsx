@@ -19,5 +19,7 @@ export async function generateMetadata({ params }: Props) {
   const { scenario } = await params;
   const props = getSeoToolsBestForPageProps(scenario);
   if (!props) return { title: "Best SEO Tools" };
-  return { title: `${props.title} | BeltStack`, description: props.subtitle };
+  const description =
+    props.subtitle.length > 165 ? `${props.subtitle.slice(0, 162).trim()}…` : props.subtitle;
+  return { title: `${props.title} | BeltStack`, description };
 }

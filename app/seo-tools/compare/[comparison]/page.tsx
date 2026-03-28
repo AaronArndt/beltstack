@@ -59,6 +59,6 @@ export async function generateMetadata({ params }: Props) {
   const year = new Date().getFullYear();
   return {
     title: `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack Comparison`,
-    description: `Compare ${data.productA.name} vs ${data.productB.name} for local service businesses. See pricing signals, local SEO fit, and which stack matches contractors and Map Pack work.`,
+    description: `Editorial ${data.productA.name} vs ${data.productB.name} comparison for ${year}: local SEO and contractor stacks, honest limits, pricing signals—verify plans in Search Console and on each vendor’s site.`,
   };
 }

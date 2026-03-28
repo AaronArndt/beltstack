@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pageProps) return { title: "SEO Tools Alternatives" };
   const year = new Date().getFullYear();
   const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Explore the best ${pageProps.productName} alternatives for local SEO in ${year}. Compare features, pricing, and fit—with links to reviews and comparisons.`;
+  const description = `Editorial picks for the best ${pageProps.productName} alternatives in ${year}: local SEO and contractor-friendly stacks, honest trade-offs, and links to BeltStack reviews and comparisons—verify pricing and limits on each vendor’s site.`;
   const url = `${SITE_URL}${getSeoToolsAlternativeUrl(slug)}`;
   return { title, description, openGraph: { title, description, url } };
 }

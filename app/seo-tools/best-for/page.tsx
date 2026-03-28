@@ -7,12 +7,12 @@ const LINKS = [
   {
     label: "Best SEO tools overall",
     href: "/seo-tools/best-seo-tools",
-    description: "Full rankings of suites, local platforms, and free essentials.",
+    description: "Full roundup of suites, local platforms, and free essentials—with methodology, pricing realism, and GSC as baseline.",
   },
   ...BEST_FOR_BY_TRADE.map((item) => ({
     label: item.label,
     href: item.href,
-    description: `SEO stacks and evaluation tips for ${item.label.toLowerCase()}.`,
+    description: `Editorial stack guidance for ${item.label.toLowerCase()}: Search Console, GBP execution, and when paid tools earn their keep.`,
   })),
 ];
 
@@ -55,7 +55,7 @@ export default function SeoToolsBestForHubPage() {
               Best SEO Tools by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scenario-based picks for contractors and local operators: Map Pack work, research depth, and budget reality.
+              Editorial scenario guides for trades and local SMBs: we anchor on Google Search Console, honest GBP and listings execution, and when paid suites earn their keep—then link to reviews and comparisons so you can verify pricing and quotas on each vendor’s site.
             </p>
           </div>
         </section>
@@ -96,6 +96,7 @@ export default function SeoToolsBestForHubPage() {
 export function generateMetadata() {
   return {
     title: "Best SEO Tools by Use Case | BeltStack",
-    description: "Find SEO tools for contractors, local SEO, HVAC, plumbing, small business, and more.",
+    description:
+      "Editorial best-for guides for contractors, local SEO, HVAC, plumbing, and more—GSC-first, Map Pack reality, independent picks. Open a scenario for stacks, FAQs, and links to reviews.",
   };
 }
