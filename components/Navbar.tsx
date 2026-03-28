@@ -161,7 +161,7 @@ function SoftwarePanelContent({
               <div className="relative w-full pt-px">
                 <div className="h-px w-full bg-stone-200" aria-hidden />
                 <div
-                  className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-[#10B981] transition-transform duration-200 ease-out ${
+                  className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-[#10B981] transition-transform duration-300 ease-out ${
                     activeColumn === col.id ? "scale-x-100" : "scale-x-0"
                   }`}
                   aria-hidden
@@ -176,10 +176,10 @@ function SoftwarePanelContent({
                   role="menuitem"
                   className="group block rounded-md py-1 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
                 >
-                  <span className="text-sm font-semibold text-[#1A2D48] transition-colors group-hover:text-[#10B981]">
+                  <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#0d9668]">
                     {item.title}
                   </span>
-                  <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#3d4550]">
+                  <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#44403c]">
                     {item.description}
                   </p>
                 </Link>
@@ -191,7 +191,7 @@ function SoftwarePanelContent({
                       <Link
                         role="menuitem"
                         href={link.href}
-                        className="text-sm font-semibold text-[#1A2D48] transition-colors hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                       >
                         {link.label}
                       </Link>
@@ -204,7 +204,7 @@ function SoftwarePanelContent({
         ))}
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/software" className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/software" className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           View all software categories →
         </Link>
       </div>
@@ -227,10 +227,10 @@ function ComparisonsPanelContent() {
                 role="menuitem"
                 className="group block rounded-md py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
               >
-                <span className="text-sm font-semibold text-[#1A2D48] transition-colors group-hover:text-[#10B981]">
+                <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#0d9668]">
                   {item.title}
                 </span>
-                <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#3d4550]">
+                <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#44403c]">
                   {item.description}
                 </p>
               </Link>
@@ -245,7 +245,7 @@ function ComparisonsPanelContent() {
                 <Link
                   role="menuitem"
                   href="/comparisons"
-                  className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                 >
                   {item.tool}
                 </Link>
@@ -253,13 +253,13 @@ function ComparisonsPanelContent() {
               </li>
             ))}
           </ul>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
             How we review
           </Link>
         </div>
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/comparisons" className="text-sm font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/comparisons" className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
           See all comparisons →
         </Link>
       </div>
@@ -267,17 +267,22 @@ function ComparisonsPanelContent() {
   );
 }
 
-const SLIDE_DURATION_MS = 250;
+const SLIDE_DURATION_MS = 400;
+const DROPDOWN_HEIGHT_MS = 350;
 
 // ——— Single viewport: slide + height transition ———
 function MegaMenuViewport({
   activeMenu,
   activeSoftwareColumn,
   onColumnHover,
+  closing,
+  onExitComplete,
 }: {
   activeMenu: "software" | "comparisons";
   activeSoftwareColumn: string | null;
   onColumnHover: (id: string) => void;
+  closing: boolean;
+  onExitComplete: () => void;
 }) {
   const [softwareRef, softwareSize] = useMeasure<HTMLDivElement>();
   const [comparisonsRef, comparisonsSize] = useMeasure<HTMLDivElement>();
@@ -287,6 +292,11 @@ function MegaMenuViewport({
   const transitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    if (closing) {
+      setHeight(0);
+      return;
+    }
+
     const nextHeight =
       activeMenu === "software" ? softwareSize.height : comparisonsSize.height;
     if (nextHeight <= 0) return;
@@ -306,16 +316,35 @@ function MegaMenuViewport({
     } else if (!isTransitioning) {
       setHeight(nextHeight);
     }
-  }, [activeMenu, softwareSize.height, comparisonsSize.height, isTransitioning]);
+  }, [closing, activeMenu, softwareSize.height, comparisonsSize.height, isTransitioning]);
+
+  const handleHeightTransitionEnd = useCallback(
+    (e: React.TransitionEvent<HTMLDivElement>) => {
+      if (e.target !== e.currentTarget) return;
+      if (e.propertyName !== "height" || !closing) return;
+      onExitComplete();
+    },
+    [closing, onExitComplete],
+  );
+
+  useEffect(() => {
+    if (!closing) return;
+    const t = window.setTimeout(onExitComplete, DROPDOWN_HEIGHT_MS + 120);
+    return () => window.clearTimeout(t);
+  }, [closing, onExitComplete]);
 
   return (
     <div
-      style={{ height: height > 0 ? height : 0 }}
-      className="w-full overflow-hidden rounded-none border border-stone-200 border-b border-stone-300/80 bg-white shadow-sm transition-[height] duration-200 ease-out"
+      style={{
+        height: height > 0 ? height : 0,
+        transitionDuration: `${DROPDOWN_HEIGHT_MS}ms`,
+      }}
+      className="w-full overflow-hidden rounded-none border border-stone-200 border-b border-stone-300/80 bg-white shadow-sm transition-[height] ease-out"
+      onTransitionEnd={handleHeightTransitionEnd}
     >
       <div className="size-full overflow-hidden" aria-hidden>
         <div
-          className="flex w-[200%] transition-transform duration-200 ease-out"
+          className="flex w-[200%] transition-transform duration-[350ms] ease-out"
           style={{
             transform:
               activeMenu === "software" ? "translateX(0%)" : "translateX(-50%)",
@@ -343,6 +372,8 @@ function MegaMenuViewport({
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [open, setOpen] = useState(false);
+  /** Keeps mega menu mounted while height animates to 0 after hover-out */
+  const [dropdownExitPhase, setDropdownExitPhase] = useState(false);
   const [activeMenu, setActiveMenu] = useState<"software" | "comparisons">("software");
   const [activeSoftwareColumn, setActiveSoftwareColumn] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -350,15 +381,30 @@ export default function Navbar() {
   const [mobileComparisonsOpen, setMobileComparisonsOpen] = useState(false);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
+  /** Latest `open` for pathname effect (avoid stale closure) */
+  const megaMenuOpenRef = useRef(false);
+  megaMenuOpenRef.current = open;
   const [containerRect, setContainerRect] = useState<{
     left: number;
     bottom: number;
     width: number;
   } | null>(null);
 
+  const onMegaMenuOpenChange = useCallback((isOpen: boolean) => {
+    if (isOpen) {
+      setOpen(true);
+      setDropdownExitPhase(false);
+    } else {
+      if (megaMenuOpenRef.current) {
+        setDropdownExitPhase(true);
+      }
+      setOpen(false);
+    }
+  }, []);
+
   const { refs, context, floatingStyles } = useFloating({
     open,
-    onOpenChange: setOpen,
+    onOpenChange: onMegaMenuOpenChange,
     placement: "bottom",
     strategy: "fixed",
     middleware: [
@@ -386,6 +432,9 @@ export default function Navbar() {
 
   const pathname = usePathname();
   useEffect(() => {
+    if (megaMenuOpenRef.current) {
+      setDropdownExitPhase(true);
+    }
     setOpen(false);
     setMobileOpen(false);
   }, [pathname]);
@@ -415,9 +464,16 @@ export default function Navbar() {
 
   const openMenu = useCallback((menu: "software" | "comparisons") => {
     setActiveMenu(menu);
+    setDropdownExitPhase(false);
     setOpen(true);
     if (menu === "software") setActiveSoftwareColumn(null);
   }, []);
+
+  const handleMegaMenuExitComplete = useCallback(() => {
+    setDropdownExitPhase(false);
+  }, []);
+
+  const showMegaMenuDropdown = open || dropdownExitPhase;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-stone-200 bg-white sm:h-[72px]">
@@ -483,7 +539,7 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {open && (() => {
+        {showMegaMenuDropdown && (() => {
           const floatingProps = getFloatingProps();
           const mergedStyle = {
             ...(floatingProps.style && typeof floatingProps.style === "object" ? floatingProps.style : {}),
@@ -506,6 +562,8 @@ export default function Navbar() {
                 activeMenu={activeMenu}
                 activeSoftwareColumn={activeSoftwareColumn}
                 onColumnHover={setActiveSoftwareColumn}
+                closing={!open && dropdownExitPhase}
+                onExitComplete={handleMegaMenuExitComplete}
               />
             </div>
           </FloatingPortal>
@@ -561,11 +619,11 @@ export default function Navbar() {
               {mobileSoftwareOpen && (
                 <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
                   {SOFTWARE_CATEGORIES.map((item) => (
-                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm text-[#1A2D48] hover:text-[#10B981]">
+                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
                       {item.title}
                     </Link>
                   ))}
-                  <Link href="/software" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981]">
+                  <Link href="/software" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
                     View all software →
                   </Link>
                 </div>
@@ -584,11 +642,11 @@ export default function Navbar() {
               {mobileComparisonsOpen && (
                 <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
                   {COMPARISON_TYPES.map((item) => (
-                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm text-[#1A2D48] hover:text-[#10B981]">
+                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
                       {item.title}
                     </Link>
                   ))}
-                  <Link href="/comparisons" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981]">
+                  <Link href="/comparisons" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
                     See all comparisons →
                   </Link>
                 </div>
