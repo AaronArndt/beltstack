@@ -36,6 +36,7 @@ import {
   TOP_PICKS as EMAIL_MARKETING_TOP_PICKS,
   EMAIL_MARKETING_REGISTRY_SUPPLEMENT,
 } from "@/lib/data/emailMarketingBestEmailMarketingSoftware";
+import { TOP_PICKS as PAYMENT_PROCESSING_TOP_PICKS } from "@/lib/data/paymentProcessingBestPaymentProcessingSoftware";
 
 function toMap(picks: SoftwarePickCardContent[]): Map<string, SoftwarePickCardContent> {
   return new Map(picks.map((p) => [p.slug, p]));
@@ -63,6 +64,7 @@ const REGISTRY: Record<SoftwarePickCategory, Map<string, SoftwarePickCardContent
     ...REPUTATION_MANAGEMENT_REGISTRY_SUPPLEMENT,
   ]),
   "email-marketing": toMap([...EMAIL_MARKETING_TOP_PICKS, ...EMAIL_MARKETING_REGISTRY_SUPPLEMENT]),
+  "payment-processing": toMap(PAYMENT_PROCESSING_TOP_PICKS),
 };
 
 export function getSoftwarePick(

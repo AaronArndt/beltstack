@@ -54,6 +54,9 @@ import {
   getEmailMarketingAlternativeUrl,
   getEmailMarketingCompareUrl,
   getEmailMarketingReviewUrl,
+  getPaymentProcessingAlternativeUrl,
+  getPaymentProcessingCompareUrl,
+  getPaymentProcessingReviewUrl,
 } from "@/lib/routes";
 
 export type SoftwarePickCategoryRouteHelpers = {
@@ -173,6 +176,12 @@ export function getSoftwarePickCategoryRoutes(
         getReviewUrl: getEmailMarketingReviewUrl,
         getCompareUrl: getEmailMarketingCompareUrl,
         getAlternativeUrl: getEmailMarketingAlternativeUrl,
+      };
+    case "payment-processing":
+      return {
+        getReviewUrl: getPaymentProcessingReviewUrl,
+        getCompareUrl: getPaymentProcessingCompareUrl,
+        getAlternativeUrl: getPaymentProcessingAlternativeUrl,
       };
     default: {
       const _exhaustive: never = category;

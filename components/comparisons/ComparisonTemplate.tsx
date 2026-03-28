@@ -206,6 +206,13 @@ const COMPARISON_GUIDE_META: Record<
     sectionTitle: "Best email marketing guides",
     guidesLabel: "Email marketing guides",
   },
+  "/payment-processing": {
+    navLabel: "Best payment processing guides",
+    roundupHref: "/payment-processing/best-payment-processing-software",
+    roundupLabel: "Best payment processing software (2026) — full roundup",
+    sectionTitle: "Best payment processing guides",
+    guidesLabel: "Payment processing guides",
+  },
 };
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -968,6 +975,42 @@ export function ComparisonTemplate({
                                 className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
                               >
                                 Best call tracking for HVAC
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        {categoryHref === "/payment-processing" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
+                          <>
+                            <li>
+                              <Link
+                                href="/payment-processing/best-for/contractors"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best payment processing for contractors
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/payment-processing/best-for/small-business"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best payment processing for small business
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/payment-processing/best-for/home-services"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best payment processing for home services
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/payment-processing/best-for/hvac"
+                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                              >
+                                Best payment processing for HVAC
                               </Link>
                             </li>
                           </>

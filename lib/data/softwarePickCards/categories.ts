@@ -17,4 +17,5 @@ export type SoftwarePickCategory =
   | "seo-tools"
   | "call-tracking"
   | "reputation-management"
-  | "email-marketing";
+  | "email-marketing"
+  | "payment-processing";

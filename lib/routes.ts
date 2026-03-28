@@ -495,3 +495,29 @@ export function getEmailMarketingBestForUrl(scenarioSlug: string): string {
 export function getEmailMarketingAlternativeUrl(slug: string): string {
   return `/email-marketing/alternatives/${slug}`;
 }
+
+// ——— Payment Processing ———
+
+/** Payment processing review detail page: /payment-processing/review/[slug] */
+export function getPaymentProcessingReviewUrl(slug: string): string {
+  return `/payment-processing/review/${slug}`;
+}
+
+/** Payment processing hub */
+export const PAYMENT_PROCESSING_HUB_URL = "/payment-processing" as const;
+
+/** Payment processing compare page (optional comparison slug) */
+export function getPaymentProcessingCompareUrl(comparisonSlug?: string): string {
+  if (comparisonSlug) return `/payment-processing/compare/${comparisonSlug}`;
+  return "/payment-processing/compare";
+}
+
+/** Payment processing best-for scenario */
+export function getPaymentProcessingBestForUrl(scenarioSlug: string): string {
+  return `/payment-processing/best-for/${scenarioSlug}`;
+}
+
+/** Payment processing alternatives page: /payment-processing/alternatives/[slug] */
+export function getPaymentProcessingAlternativeUrl(slug: string): string {
+  return `/payment-processing/alternatives/${slug}`;
+}

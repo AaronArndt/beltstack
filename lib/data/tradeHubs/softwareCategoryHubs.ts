@@ -51,6 +51,11 @@ export const SOFTWARE_CATEGORY_HUB: Record<
     label: "Email marketing hub",
     shortLabel: "Email marketing",
   },
+  "payment-processing": {
+    href: "/payment-processing",
+    label: "Payment processing hub",
+    shortLabel: "Payment processing",
+  },
 };
 
 export function getSoftwareCategoryHubHref(category: SoftwarePickCategory): string {

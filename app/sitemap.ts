@@ -63,6 +63,8 @@ import {
   getReputationManagementAlternativeUrl,
   getEmailMarketingBestForUrl,
   getEmailMarketingAlternativeUrl,
+  getPaymentProcessingBestForUrl,
+  getPaymentProcessingAlternativeUrl,
 } from "@/lib/routes";
 import { getPosComparisonSlugs } from "@/lib/data/posComparisons";
 import { getPosReviewSlugs } from "@/lib/data/posReviews";
@@ -111,6 +113,10 @@ import { getEmailMarketingComparisonSlugs } from "@/lib/data/emailMarketingCompa
 import { getEmailMarketingReviewSlugs } from "@/lib/data/emailMarketingReviews";
 import { getEmailMarketingAlternativesSlugs } from "@/lib/data/emailMarketingAlternatives";
 import { EMAIL_MARKETING_GUIDES } from "@/lib/data/emailMarketingGuides";
+import { getPaymentProcessingComparisonSlugs } from "@/lib/data/paymentProcessingComparisons";
+import { getPaymentProcessingReviewSlugs } from "@/lib/data/paymentProcessingReviews";
+import { getPaymentProcessingAlternativesSlugs } from "@/lib/data/paymentProcessingAlternatives";
+import { PAYMENT_PROCESSING_GUIDES } from "@/lib/data/paymentProcessingGuides";
 import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -299,6 +305,16 @@ const EMAIL_MARKETING_BEST_FOR_SCENARIOS = [
   "home-services",
 ] as const;
 
+/** Static Payment Processing best-for scenario slugs (matches app/payment-processing/best-for/[scenario]). */
+const PAYMENT_PROCESSING_BEST_FOR_SCENARIOS = [
+  "small-business",
+  "contractors",
+  "hvac",
+  "plumbers",
+  "electricians",
+  "home-services",
+] as const;
+
 const defaultEntry = (
   path: string,
   options?: { changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"]; priority?: number }
@@ -425,6 +441,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/email-marketing/best-email-marketing-software", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/email-marketing/compare", { changeFrequency: "weekly", priority: 0.85 }),
     defaultEntry("/email-marketing/guides", { changeFrequency: "weekly", priority: 0.85 }),
+    // Payment processing
+    defaultEntry("/payment-processing", { changeFrequency: "weekly", priority: 0.9 }),
+    defaultEntry("/payment-processing/best-for", { changeFrequency: "weekly", priority: 0.8 }),
+    defaultEntry("/payment-processing/best-payment-processing-software", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/payment-processing/compare", { changeFrequency: "weekly", priority: 0.85 }),
+    defaultEntry("/payment-processing/guides", { changeFrequency: "weekly", priority: 0.85 }),
   ];
 
   const tradeHubEntries: MetadataRoute.Sitemap = TRADE_HUB_SLUGS.map((slug) =>
@@ -941,6 +963,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
+  // Payment processing comparisons
+  const paymentProcessingComparisonSlugs = getPaymentProcessingComparisonSlugs();
+  const paymentProcessingComparisonEntries: MetadataRoute.Sitemap = paymentProcessingComparisonSlugs.map((slug) =>
+    defaultEntry(`/payment-processing/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Payment processing reviews
+  const paymentProcessingReviewSlugs = getPaymentProcessingReviewSlugs();
+  const paymentProcessingReviewEntries: MetadataRoute.Sitemap = paymentProcessingReviewSlugs.map((slug) =>
+    defaultEntry(`/payment-processing/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Payment processing alternatives
+  const paymentProcessingAlternativeSlugs = getPaymentProcessingAlternativesSlugs();
+  const paymentProcessingAlternativeEntries: MetadataRoute.Sitemap = paymentProcessingAlternativeSlugs.map((slug) =>
+    defaultEntry(getPaymentProcessingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
+  );
+
+  // Payment processing best-for
+  const paymentProcessingBestForEntries: MetadataRoute.Sitemap = PAYMENT_PROCESSING_BEST_FOR_SCENARIOS.map((scenario) =>
+    defaultEntry(getPaymentProcessingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
+  );
+
+  // Payment processing guides
+  const paymentProcessingGuideEntries: MetadataRoute.Sitemap = PAYMENT_PROCESSING_GUIDES.map((guide) =>
+    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
+  );
+
   return [
     ...staticRoutes,
     ...tradeHubEntries,
@@ -1035,5 +1085,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...emailMarketingAlternativeEntries,
     ...emailMarketingBestForEntries,
     ...emailMarketingGuideEntries,
+    ...paymentProcessingComparisonEntries,
+    ...paymentProcessingReviewEntries,
+    ...paymentProcessingAlternativeEntries,
+    ...paymentProcessingBestForEntries,
+    ...paymentProcessingGuideEntries,
   ];
 }

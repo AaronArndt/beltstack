@@ -158,6 +158,13 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Email Marketing",
     keywords: ["email marketing", "email marketing software", "mailchimp", "contractor email marketing", "newsletter software"],
   },
+  {
+    title: "Payment Processing Software",
+    href: "/payment-processing",
+    type: "Category",
+    category: "Payment Processing",
+    keywords: ["payment processing", "stripe", "square", "credit card processing", "merchant services", "contractor payments"],
+  },
 
   // ——— Reviews (popular entities) ———
   {
@@ -343,6 +350,22 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Email Marketing",
     entity: "Klaviyo",
     keywords: ["klaviyo", "klaviyo review", "email marketing ecommerce"],
+  },
+  {
+    title: "Stripe Review (2026)",
+    href: "/payment-processing/review/stripe",
+    type: "Review",
+    category: "Payment Processing",
+    entity: "Stripe",
+    keywords: ["stripe", "stripe review", "stripe payments", "online payments"],
+  },
+  {
+    title: "Square Review (2026)",
+    href: "/payment-processing/review/square",
+    type: "Review",
+    category: "Payment Processing",
+    entity: "Square",
+    keywords: ["square", "square review", "square payments", "mobile card reader"],
   },
 
   // ——— Alternatives ———
@@ -610,6 +633,30 @@ export const searchIndex: SearchIndexItem[] = [
     entity: "MailerLite",
     keywords: ["mailerlite alternatives", "cheap email marketing alternatives"],
   },
+  {
+    title: "Best Stripe Alternatives (2026)",
+    href: "/payment-processing/alternatives/stripe",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Stripe",
+    keywords: ["stripe alternatives", "payment processing alternatives"],
+  },
+  {
+    title: "Best Square Alternatives (2026)",
+    href: "/payment-processing/alternatives/square",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Square",
+    keywords: ["square alternatives", "square competitors"],
+  },
+  {
+    title: "Best PayPal Business Alternatives (2026)",
+    href: "/payment-processing/alternatives/paypal-business",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "PayPal Business",
+    keywords: ["paypal alternatives", "paypal business alternatives", "merchant account alternatives"],
+  },
 
   // ——— Comparisons ———
   {
@@ -739,6 +786,41 @@ export const searchIndex: SearchIndexItem[] = [
     keywords: ["brevo vs mailchimp", "sendinblue vs mailchimp", "email sms software"],
   },
   {
+    title: "Stripe vs Square (2026)",
+    href: "/payment-processing/compare/stripe-vs-square",
+    type: "Comparison",
+    category: "Payment Processing",
+    keywords: ["stripe vs square", "square vs stripe", "payment processor comparison"],
+  },
+  {
+    title: "Stripe vs PayPal (2026)",
+    href: "/payment-processing/compare/stripe-vs-paypal",
+    type: "Comparison",
+    category: "Payment Processing",
+    keywords: ["stripe vs paypal", "paypal vs stripe"],
+  },
+  {
+    title: "Square vs PayPal (2026)",
+    href: "/payment-processing/compare/square-vs-paypal",
+    type: "Comparison",
+    category: "Payment Processing",
+    keywords: ["square vs paypal", "paypal vs square"],
+  },
+  {
+    title: "Helcim vs Stax (2026)",
+    href: "/payment-processing/compare/helcim-vs-stax",
+    type: "Comparison",
+    category: "Payment Processing",
+    keywords: ["helcim vs stax", "interchange plus processors"],
+  },
+  {
+    title: "Shopify Payments vs Stripe (2026)",
+    href: "/payment-processing/compare/shopify-payments-vs-stripe",
+    type: "Comparison",
+    category: "Payment Processing",
+    keywords: ["shopify payments vs stripe", "shopify stripe comparison"],
+  },
+  {
     title: "CallRail vs WhatConverts (2026)",
     href: "/call-tracking/compare/callrail-vs-whatconverts",
     type: "Comparison",
@@ -859,6 +941,13 @@ export const searchIndex: SearchIndexItem[] = [
     category: "Email Marketing",
     keywords: ["best email marketing software", "email marketing for contractors", "mailchimp alternatives"],
   },
+  {
+    title: "Best Payment Processing Software (2026)",
+    href: "/payment-processing/best-payment-processing-software",
+    type: "Best Software",
+    category: "Payment Processing",
+    keywords: ["best payment processing software", "best merchant services", "stripe square comparison"],
+  },
 
   // ——— Best-for pages (selected high-intent) ———
   {
@@ -930,6 +1019,20 @@ export const searchIndex: SearchIndexItem[] = [
     type: "Best For",
     category: "Email Marketing",
     keywords: ["best email marketing small business", "service business email marketing"],
+  },
+  {
+    title: "Best Payment Processing for Contractors",
+    href: "/payment-processing/best-for/contractors",
+    type: "Best For",
+    category: "Payment Processing",
+    keywords: ["payment processing contractors", "contractor credit card processing"],
+  },
+  {
+    title: "Best Payment Processing for Small Business",
+    href: "/payment-processing/best-for/small-business",
+    type: "Best For",
+    category: "Payment Processing",
+    keywords: ["small business payment processing", "best payment processor small business"],
   },
 
   // ——— Guides (major) ———
@@ -1100,6 +1203,41 @@ export const searchIndex: SearchIndexItem[] = [
     type: "Guide",
     category: "Email Marketing",
     keywords: ["email campaigns service business", "contractor email campaigns"],
+  },
+  {
+    title: "How Payment Processing Works",
+    href: "/payment-processing/guides/how-payment-processing-works",
+    type: "Guide",
+    category: "Payment Processing",
+    keywords: ["how payment processing works", "merchant account explained"],
+  },
+  {
+    title: "Payment Processing for Contractors",
+    href: "/payment-processing/guides/payment-processing-for-contractors",
+    type: "Guide",
+    category: "Payment Processing",
+    keywords: ["contractor payment processing", "trades credit card processing"],
+  },
+  {
+    title: "Credit Card Processing Fees Explained",
+    href: "/payment-processing/guides/credit-card-processing-fees-explained",
+    type: "Guide",
+    category: "Payment Processing",
+    keywords: ["credit card processing fees", "interchange fees explained"],
+  },
+  {
+    title: "Stripe vs Square Fees",
+    href: "/payment-processing/guides/stripe-vs-square-fees",
+    type: "Guide",
+    category: "Payment Processing",
+    keywords: ["stripe vs square fees", "square stripe pricing"],
+  },
+  {
+    title: "How to Choose a Payment Processor",
+    href: "/payment-processing/guides/how-to-choose-a-payment-processor",
+    type: "Guide",
+    category: "Payment Processing",
+    keywords: ["how to choose payment processor", "pick a merchant account"],
   },
 ];
 

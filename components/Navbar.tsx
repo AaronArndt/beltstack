@@ -46,6 +46,7 @@ const SOFTWARE_COLUMNS: {
       { title: "Payroll", description: "Pay teams, contractors, filings", href: "/payroll" },
       { title: "Accounting", description: "Bookkeeping, invoicing, expenses", href: "/accounting" },
       { title: "Invoicing", description: "Invoices, payments, recurring billing", href: "/invoicing" },
+      { title: "Payment Processing", description: "Card readers, invoicing, online checkout", href: "/payment-processing" },
       { title: "POS Software", description: "Point of sale, payments, inventory", href: "/pos" },
       { title: "Time Tracking", description: "Billable hours, teams, reporting", href: "/time-tracking" },
       { title: "HR Software", description: "HR, payroll, benefits, hiring", href: "/hr" },
