@@ -657,6 +657,46 @@ export const searchIndex: SearchIndexItem[] = [
     entity: "PayPal Business",
     keywords: ["paypal alternatives", "paypal business alternatives", "merchant account alternatives"],
   },
+  {
+    title: "Best Helcim Alternatives (2026)",
+    href: "/payment-processing/alternatives/helcim",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Helcim",
+    keywords: ["helcim alternatives", "interchange plus alternatives", "helcim competitors"],
+  },
+  {
+    title: "Best Stax Alternatives (2026)",
+    href: "/payment-processing/alternatives/stax",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Stax",
+    keywords: ["stax alternatives", "fattmerchant alternatives", "membership payment processing alternatives"],
+  },
+  {
+    title: "Best Shopify Payments Alternatives (2026)",
+    href: "/payment-processing/alternatives/shopify-payments",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Shopify Payments",
+    keywords: ["shopify payments alternatives", "shopify checkout alternatives"],
+  },
+  {
+    title: "Best Authorize.net Alternatives (2026)",
+    href: "/payment-processing/alternatives/authorize-net",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Authorize.net",
+    keywords: ["authorize.net alternatives", "authorize net competitors", "payment gateway alternatives"],
+  },
+  {
+    title: "Best Clover Alternatives (2026)",
+    href: "/payment-processing/alternatives/clover",
+    type: "Alternatives",
+    category: "Payment Processing",
+    entity: "Clover",
+    keywords: ["clover alternatives", "clover pos alternatives", "fiserv clover competitors"],
+  },
 
   // ——— Comparisons ———
   {

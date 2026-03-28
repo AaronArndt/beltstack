@@ -117,6 +117,7 @@ import { getPaymentProcessingComparisonSlugs } from "@/lib/data/paymentProcessin
 import { getPaymentProcessingReviewSlugs } from "@/lib/data/paymentProcessingReviews";
 import { getPaymentProcessingAlternativesSlugs } from "@/lib/data/paymentProcessingAlternatives";
 import { PAYMENT_PROCESSING_GUIDES } from "@/lib/data/paymentProcessingGuides";
+import { getPaymentProcessingBestForSlugs } from "@/lib/data/paymentProcessingBestForPages";
 import { TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
 
 /** Static best-for scenario slugs (matches app/payroll/best-for/[scenario] and static segments). */
@@ -297,16 +298,6 @@ const REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS = [
 
 /** Static Email Marketing best-for scenario slugs (matches app/email-marketing/best-for/[scenario]). */
 const EMAIL_MARKETING_BEST_FOR_SCENARIOS = [
-  "small-business",
-  "contractors",
-  "hvac",
-  "plumbers",
-  "electricians",
-  "home-services",
-] as const;
-
-/** Static Payment Processing best-for scenario slugs (matches app/payment-processing/best-for/[scenario]). */
-const PAYMENT_PROCESSING_BEST_FOR_SCENARIOS = [
   "small-business",
   "contractors",
   "hvac",
@@ -981,8 +972,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(getPaymentProcessingAlternativeUrl(slug), { changeFrequency: "monthly", priority: 0.75 })
   );
 
-  // Payment processing best-for
-  const paymentProcessingBestForEntries: MetadataRoute.Sitemap = PAYMENT_PROCESSING_BEST_FOR_SCENARIOS.map((scenario) =>
+  // Payment processing best-for (canonical slugs from paymentProcessingBestForPages)
+  const paymentProcessingBestForEntries: MetadataRoute.Sitemap = getPaymentProcessingBestForSlugs().map((scenario) =>
     defaultEntry(getPaymentProcessingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
   );
 

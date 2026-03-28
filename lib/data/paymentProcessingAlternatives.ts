@@ -1,5 +1,6 @@
 /**
- * Payment processing alternatives pages — Stripe, Square, PayPal Business (editorial data for AlternativesTemplate).
+ * Payment processing alternatives pages — editorial data for AlternativesTemplate (E-E-A-T: channel fit,
+ * effective-rate verification, independence, statement literacy). Sitemap entries come from getPaymentProcessingAlternativesSlugs().
  */
 
 import type {
@@ -37,6 +38,37 @@ const HUB_RELATED: AlternativesLink[] = [
   { label: "Website builders hub", href: "/website-builders" },
   { label: "Email marketing hub", href: "/email-marketing" },
 ];
+
+const ALL_REVIEW_TUPLES: [string, string][] = [
+  ["stripe", "Stripe"],
+  ["square", "Square"],
+  ["paypal-business", "PayPal Business"],
+  ["shopify-payments", "Shopify Payments"],
+  ["helcim", "Helcim"],
+  ["stax", "Stax"],
+  ["authorize-net", "Authorize.net"],
+  ["clover", "Clover"],
+];
+
+function softwareReviewLinks(entries: [string, string][] = ALL_REVIEW_TUPLES): AlternativesLink[] {
+  return entries.map(([slug, name]) => ({
+    label: `${name} review`,
+    href: getPaymentProcessingReviewUrl(slug),
+  }));
+}
+
+const ALTERNATIVE_PAGE_LINKS: AlternativesLink[] = ALL_REVIEW_TUPLES.map(([slug, name]) => ({
+  label: `Best ${name} alternatives`,
+  href: getPaymentProcessingAlternativeUrl(slug),
+}));
+
+function relatedResourcesForProduct(excludeSlug: string): AlternativesLink[] {
+  return [
+    ...HUB_RELATED,
+    ...ALTERNATIVE_PAGE_LINKS.filter((l) => l.href !== getPaymentProcessingAlternativeUrl(excludeSlug)),
+    ...softwareReviewLinks(),
+  ];
+}
 
 function rel(slug: string) {
   return toAlternativesRelatedComparison(getPaymentProcessingCompareUrl(slug), getPaymentProcessingComparisonBySlug(slug));
@@ -212,7 +244,7 @@ function detailFromPick(p: AlternativesTopPick): AlternativesDetailBlock {
     heading: p.bestFor,
     body: p.description,
     reviewHref: p.reviewHref,
-    compareHref: p.compareHref,
+    ...(p.compareHref != null ? { compareHref: p.compareHref } : {}),
   };
 }
 
@@ -272,11 +304,7 @@ const stripePage: AlternativesTemplateProps = {
     rel("shopify-payments-vs-stripe"),
     rel("helcim-vs-stax"),
   ],
-  relatedResources: [
-    ...HUB_RELATED,
-    { label: "Best Square alternatives", href: getPaymentProcessingAlternativeUrl("square") },
-    { label: "Best PayPal Business alternatives", href: getPaymentProcessingAlternativeUrl("paypal-business") },
-  ],
+  relatedResources: relatedResourcesForProduct("stripe"),
   faqItems: [
     {
       q: "What is the best Stripe alternative for contractors?",
@@ -358,11 +386,7 @@ const squarePage: AlternativesTemplateProps = {
   comparisonTableRows: buildTableRows(squareOriginal, squareAlts),
   detailedAlternatives: squareAlts.map(detailFromPick),
   relatedComparisons: [rel("stripe-vs-square"), rel("square-vs-paypal"), rel("stripe-vs-paypal"), rel("shopify-payments-vs-stripe")],
-  relatedResources: [
-    ...HUB_RELATED,
-    { label: "Best Stripe alternatives", href: getPaymentProcessingAlternativeUrl("stripe") },
-    { label: "Best PayPal Business alternatives", href: getPaymentProcessingAlternativeUrl("paypal-business") },
-  ],
+  relatedResources: relatedResourcesForProduct("square"),
   faqItems: [
     {
       q: "What is the best Square alternative for small business?",
@@ -444,11 +468,7 @@ const paypalPage: AlternativesTemplateProps = {
   comparisonTableRows: buildTableRows(paypalOriginal, paypalAlts),
   detailedAlternatives: paypalAlts.map(detailFromPick),
   relatedComparisons: [rel("stripe-vs-paypal"), rel("square-vs-paypal"), rel("stripe-vs-square"), rel("helcim-vs-stax")],
-  relatedResources: [
-    ...HUB_RELATED,
-    { label: "Best Stripe alternatives", href: getPaymentProcessingAlternativeUrl("stripe") },
-    { label: "Best Square alternatives", href: getPaymentProcessingAlternativeUrl("square") },
-  ],
+  relatedResources: relatedResourcesForProduct("paypal-business"),
   faqItems: [
     {
       q: "What is the best PayPal alternative?",
@@ -485,10 +505,747 @@ const paypalPage: AlternativesTemplateProps = {
   ],
 };
 
+const helcimAlts: AlternativesTopPick[] = [
+  {
+    slug: "stax",
+    name: "Stax",
+    logoSrc: paymentProcessingLogoForSlug("stax"),
+    rating: "4.3",
+    bestFor: "Membership + interchange pass-through",
+    description:
+      "Stax is the natural side-by-side when you already read interchange lines and want to compare platform-fee economics against Helcim’s stack—model slow-season months before you assume membership wins. See our Helcim vs Stax comparison and export both quotes against your last 90 days of card mix.",
+    reviewHref: getPaymentProcessingReviewUrl("stax"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Monthly + interchange",
+    standoutFeature: "Predictable platform fee",
+  },
+  {
+    slug: "stripe",
+    name: "Stripe",
+    logoSrc: paymentProcessingLogoForSlug("stripe"),
+    rating: "4.7",
+    bestFor: "Online checkout, Billing, APIs",
+    description:
+      "Choose Stripe when deposits and renewals need Payment Links, Billing, or custom checkout—not only a merchant portal. Helcim suits statement transparency; Stripe suits product teams who will own webhooks and test cards. Reconcile effective rate after you account for Terminal or Connect if you add card-present later.",
+    reviewHref: getPaymentProcessingReviewUrl("stripe"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Developer-led payments spine",
+  },
+  {
+    slug: "square",
+    name: "Square",
+    logoSrc: paymentProcessingLogoForSlug("square"),
+    rating: "4.6",
+    bestFor: "Field swipes + simple invoices",
+    description:
+      "Square replaces Helcim when trucks collect most dollars on readers and you want hardware-in-a-box simplicity over interchange line-item education. Pull three months of statements—if card-present dominates and finance hates parsing statements, Square’s flat story can win even if raw interchange-plus looked cheaper on paper.",
+    reviewHref: getPaymentProcessingReviewUrl("square"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Crew-ready hardware",
+  },
+  {
+    slug: "paypal-business",
+    name: "PayPal Business",
+    logoSrc: paymentProcessingLogoForSlug("paypal-business"),
+    rating: "4.4",
+    bestFor: "Wallet checkout on remote payers",
+    description:
+      "Keep PayPal in the mix when emailed estimates convert faster behind a trusted wallet—often alongside Helcim for card-present or Stripe for web. Document dual-rail reconciliation; BeltStack does not see your completion rates, so A/B cohorts beat assumptions.",
+    reviewHref: getPaymentProcessingReviewUrl("paypal-business"),
+    compareHref: getPaymentProcessingCompareUrl("square-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Buyer-recognized wallet",
+  },
+  {
+    slug: "shopify-payments",
+    name: "Shopify Payments",
+    logoSrc: paymentProcessingLogoForSlug("shopify-payments"),
+    rating: "4.5",
+    bestFor: "Shopify cart + payouts in one admin",
+    description:
+      "If parts, memberships, or deposits sell through Shopify, native checkout can beat juggling Helcim for online and another stack for retail. Not a fit when your marketing site is not Shopify—confirm acceptable business categories in Shopify’s terms before you depend on payouts.",
+    reviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+    compareHref: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe"),
+    startingPrice: "Per charge + Shopify plan",
+    standoutFeature: "Shopify-native ledger",
+  },
+  {
+    slug: "authorize-net",
+    name: "Authorize.net",
+    logoSrc: paymentProcessingLogoForSlug("authorize-net"),
+    rating: "4.2",
+    bestFor: "Gateway + ISO relationships",
+    description:
+      "Authorize.net still appears when legacy ERP, franchise, or ISO packages standardize on CyberSource-era gateways. You may keep the gateway and re-shop the merchant account behind it—treat quoted markup separately from gateway fees and confirm PCI scope with whoever owns the integration.",
+    reviewHref: getPaymentProcessingReviewUrl("authorize-net"),
+    startingPrice: "Gateway + merchant account",
+    standoutFeature: "Established gateway plumbing",
+  },
+];
+
+const staxAlts: AlternativesTopPick[] = [
+  {
+    slug: "helcim",
+    name: "Helcim",
+    logoSrc: paymentProcessingLogoForSlug("helcim"),
+    rating: "4.5",
+    bestFor: "Interchange-plus without membership framing",
+    description:
+      "Helcim competes directly on transparent interchange-plus and a modern portal—compare against Stax when you want per-transaction economics without a platform membership line item. Seasonal trades should still stress-test January cash flow against Stax’s monthly floor.",
+    reviewHref: getPaymentProcessingReviewUrl("helcim"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Interchange-plus",
+    standoutFeature: "Statement-transparent pricing",
+  },
+  {
+    slug: "stripe",
+    name: "Stripe",
+    logoSrc: paymentProcessingLogoForSlug("stripe"),
+    rating: "4.7",
+    bestFor: "Subscriptions + custom web checkout",
+    description:
+      "Stripe fits when memberships need Billing, trials, and proration beyond a simple virtual terminal. Stax’s membership model solves a different problem than Stripe’s metered APIs—pick based on who maintains your payment code and dispute exports monthly.",
+    reviewHref: getPaymentProcessingReviewUrl("stripe"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Billing + webhooks",
+  },
+  {
+    slug: "square",
+    name: "Square",
+    logoSrc: paymentProcessingLogoForSlug("square"),
+    rating: "4.6",
+    bestFor: "Counter + mobile simplicity",
+    description:
+      "Square wins when crews and showrooms need tap-to-pay speed without debating interchange tiers. If Stax felt right on paper but staff never adopted the portal, operational simplicity may beat marginal basis-point wins—verify with time studies, not only spreadsheets.",
+    reviewHref: getPaymentProcessingReviewUrl("square"),
+    compareHref: getPaymentProcessingCompareUrl("square-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Hardware + POS path",
+  },
+  {
+    slug: "paypal-business",
+    name: "PayPal Business",
+    logoSrc: paymentProcessingLogoForSlug("paypal-business"),
+    rating: "4.4",
+    bestFor: "Wallet-first remote collections",
+    description:
+      "PayPal helps when homeowners stall on card-only links—pair with Stax or Helcim for the rest of the stack if finance accepts two settlement rhythms. Export completion data; BeltStack cannot see your account-level lift.",
+    reviewHref: getPaymentProcessingReviewUrl("paypal-business"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Trusted wallet path",
+  },
+  {
+    slug: "shopify-payments",
+    name: "Shopify Payments",
+    logoSrc: paymentProcessingLogoForSlug("shopify-payments"),
+    rating: "4.5",
+    bestFor: "Shopify merchants",
+    description:
+      "Shopify Payments keeps orders, refunds, and payouts unified when ecommerce is already on Shopify—Stax may still run card-present elsewhere, but avoid three rails without a reconciliation owner.",
+    reviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+    compareHref: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe"),
+    startingPrice: "Per charge + Shopify plan",
+    standoutFeature: "Native Shopify money flow",
+  },
+  {
+    slug: "clover",
+    name: "Clover",
+    logoSrc: paymentProcessingLogoForSlug("clover"),
+    rating: "4.3",
+    bestFor: "Retail-forward POS bundles",
+    description:
+      "Clover matters when registers, inventory, and staff permissions dominate and field readers are secondary. Compare total hardware/software TCO against Stax’s card-present path—neither removes the need for chargeback documentation discipline.",
+    reviewHref: getPaymentProcessingReviewUrl("clover"),
+    startingPrice: "Hardware + processing",
+    standoutFeature: "Counter POS depth",
+  },
+];
+
+const shopifyPaymentsAlts: AlternativesTopPick[] = [
+  {
+    slug: "stripe",
+    name: "Stripe",
+    logoSrc: paymentProcessingLogoForSlug("stripe"),
+    rating: "4.7",
+    bestFor: "Non-Shopify web stacks",
+    description:
+      "Stripe is the primary alternative when your storefront is custom, headless, or WordPress—Shopify Payments only applies inside Shopify’s checkout. Read Shopify Payments vs Stripe for policy, subscription, and payout nuance; confirm you are not paying twice for redundant gateways.",
+    reviewHref: getPaymentProcessingReviewUrl("stripe"),
+    compareHref: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Portable online spine",
+  },
+  {
+    slug: "square",
+    name: "Square",
+    logoSrc: paymentProcessingLogoForSlug("square"),
+    rating: "4.6",
+    bestFor: "Omnichannel without Shopify",
+    description:
+      "Square fits when you need readers and invoices for trucks while running a non-Shopify site—common for contractors whose ecommerce is light. Model whether Shopify subscription + apps still beats splitting channels once you add Square hardware costs.",
+    reviewHref: getPaymentProcessingReviewUrl("square"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Field + counter bundle",
+  },
+  {
+    slug: "paypal-business",
+    name: "PayPal Business",
+    logoSrc: paymentProcessingLogoForSlug("paypal-business"),
+    rating: "4.4",
+    bestFor: "Wallet add-on at checkout",
+    description:
+      "Many merchants keep PayPal as a second rail even when Shopify Payments is primary—only if analytics prove conversion lift net of extra reconciliation. Fee grids differ by product path; trust exports over slogans.",
+    reviewHref: getPaymentProcessingReviewUrl("paypal-business"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Wallet recognition",
+  },
+  {
+    slug: "helcim",
+    name: "Helcim",
+    logoSrc: paymentProcessingLogoForSlug("helcim"),
+    rating: "4.5",
+    bestFor: "Interchange-plus transparency",
+    description:
+      "Helcim helps finance teams who want interchange lines on statements when Shopify’s blended rate feels opaque—often for high-ticket B2B-style cards on the side. You may run Shopify online and Helcim for card-present; document settlement mapping before you go live.",
+    reviewHref: getPaymentProcessingReviewUrl("helcim"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Interchange-plus",
+    standoutFeature: "Statement clarity",
+  },
+  {
+    slug: "stax",
+    name: "Stax",
+    logoSrc: paymentProcessingLogoForSlug("stax"),
+    rating: "4.3",
+    bestFor: "Stable volume, membership math",
+    description:
+      "Stax can beat blended Shopify rates when monthly volume is predictable and pass-through interchange stays clean—less compelling for wildly seasonal trades unless you model winter months explicitly.",
+    reviewHref: getPaymentProcessingReviewUrl("stax"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Monthly + interchange",
+    standoutFeature: "Membership platform fee",
+  },
+  {
+    slug: "authorize-net",
+    name: "Authorize.net",
+    logoSrc: paymentProcessingLogoForSlug("authorize-net"),
+    rating: "4.2",
+    bestFor: "Gateway + legacy integrations",
+    description:
+      "Authorize.net still surfaces when ERP or franchise stacks require a gateway contract outside Shopify’s rails—usually with an ISO behind the merchant ID. Treat it as infrastructure, not a branding choice; read underwriting and reserve terms carefully.",
+    reviewHref: getPaymentProcessingReviewUrl("authorize-net"),
+    startingPrice: "Gateway + merchant account",
+    standoutFeature: "Integration longevity",
+  },
+];
+
+const authorizeNetAlts: AlternativesTopPick[] = [
+  {
+    slug: "stripe",
+    name: "Stripe",
+    logoSrc: paymentProcessingLogoForSlug("stripe"),
+    rating: "4.7",
+    bestFor: "Modern APIs + hosted checkout",
+    description:
+      "Stripe replaces Authorize.net-style gateway projects when you want Payment Elements, Billing, and webhooks without maintaining legacy AIM/XML integrations. Budget migration time for card-on-file and token portability—customer consent and processor cooperation matter more than marketing pages.",
+    reviewHref: getPaymentProcessingReviewUrl("stripe"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Current developer surface",
+  },
+  {
+    slug: "square",
+    name: "Square",
+    logoSrc: paymentProcessingLogoForSlug("square"),
+    rating: "4.6",
+    bestFor: "Bundled hardware + software",
+    description:
+      "Square simplifies life when Authorize.net was only serving a virtual terminal but crews actually need mobile readers and invoices. You trade gateway flexibility for packaged UX—confirm accounting sync matches how job IDs attach to deposits.",
+    reviewHref: getPaymentProcessingReviewUrl("square"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "All-in-one field kit",
+  },
+  {
+    slug: "helcim",
+    name: "Helcim",
+    logoSrc: paymentProcessingLogoForSlug("helcim"),
+    rating: "4.5",
+    bestFor: "Interchange-plus without legacy gateway tax",
+    description:
+      "Helcim appeals when you want transparent processing without nursing a separate gateway fee stack—especially if your developer hours were burned on Authorize.net edge cases. Validate card-present paths if trucks still swipe; not every modern portal matches Square’s field polish.",
+    reviewHref: getPaymentProcessingReviewUrl("helcim"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Interchange-plus",
+    standoutFeature: "Cleaner statement story",
+  },
+  {
+    slug: "paypal-business",
+    name: "PayPal Business",
+    logoSrc: paymentProcessingLogoForSlug("paypal-business"),
+    rating: "4.4",
+    bestFor: "Wallet + pay links",
+    description:
+      "PayPal can coexist after leaving Authorize.net when remote payers want a wallet—often as a second rail next to Stripe or Helcim. Document fee paths; PayPal’s grids are product-specific and need CSV truth.",
+    reviewHref: getPaymentProcessingReviewUrl("paypal-business"),
+    compareHref: getPaymentProcessingCompareUrl("square-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Remote conversion help",
+  },
+  {
+    slug: "shopify-payments",
+    name: "Shopify Payments",
+    logoSrc: paymentProcessingLogoForSlug("shopify-payments"),
+    rating: "4.5",
+    bestFor: "Shopify-native checkout",
+    description:
+      "If Authorize.net was only bridging an old Shopify integration, Shopify Payments may reduce moving parts—provided your business category and products comply with Shopify’s acceptable use policies.",
+    reviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+    compareHref: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe"),
+    startingPrice: "Per charge + Shopify plan",
+    standoutFeature: "Single admin for orders",
+  },
+  {
+    slug: "stax",
+    name: "Stax",
+    logoSrc: paymentProcessingLogoForSlug("stax"),
+    rating: "4.3",
+    bestFor: "Membership-style economics",
+    description:
+      "Stax enters the list when stable volume makes platform-plus-interchange math attractive versus gateway + ISO markup surprises—run winter and summer months before you commit.",
+    reviewHref: getPaymentProcessingReviewUrl("stax"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Monthly + interchange",
+    standoutFeature: "Volume-friendly platform fee",
+  },
+];
+
+const cloverAlts: AlternativesTopPick[] = [
+  {
+    slug: "square",
+    name: "Square",
+    logoSrc: paymentProcessingLogoForSlug("square"),
+    rating: "4.6",
+    bestFor: "SMB POS + mobile readers",
+    description:
+      "Square is the closest peer when Clover’s Fiserv ecosystem feels heavy and you want faster iteration on readers, invoices, and basic retail. Compare app marketplaces and chargeback workflows side by side—BeltStack does not see your chargeback rate or inventory complexity.",
+    reviewHref: getPaymentProcessingReviewUrl("square"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Simpler SMB bundle",
+  },
+  {
+    slug: "stripe",
+    name: "Stripe",
+    logoSrc: paymentProcessingLogoForSlug("stripe"),
+    rating: "4.7",
+    bestFor: "Strong online + Terminal",
+    description:
+      "Stripe fits when Clover was only covering the counter but ecommerce, memberships, or custom portals drive growth—Terminal can unify card-present with the same spine as Payment Links. Expect engineering or agency ownership for anything beyond defaults.",
+    reviewHref: getPaymentProcessingReviewUrl("stripe"),
+    compareHref: getPaymentProcessingCompareUrl("stripe-vs-square"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Online-first platform",
+  },
+  {
+    slug: "paypal-business",
+    name: "PayPal Business",
+    logoSrc: paymentProcessingLogoForSlug("paypal-business"),
+    rating: "4.4",
+    bestFor: "Wallet + remote invoices",
+    description:
+      "PayPal helps when showrooms send pay-by-link invoices and some buyers only trust wallet checkout—often alongside Square or Stripe for in-person. Dual rails need explicit reconciliation owners.",
+    reviewHref: getPaymentProcessingReviewUrl("paypal-business"),
+    compareHref: getPaymentProcessingCompareUrl("square-vs-paypal"),
+    startingPrice: "Per transaction",
+    standoutFeature: "Remote payer trust",
+  },
+  {
+    slug: "helcim",
+    name: "Helcim",
+    logoSrc: paymentProcessingLogoForSlug("helcim"),
+    rating: "4.5",
+    bestFor: "Interchange-plus + modern portal",
+    description:
+      "Helcim suits finance-led operators who want interchange lines without Clover’s franchise-style packaging—especially when large tickets dominate. Validate hardware compatibility for your counters before you assume a clean swap.",
+    reviewHref: getPaymentProcessingReviewUrl("helcim"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Interchange-plus",
+    standoutFeature: "Transparent processing",
+  },
+  {
+    slug: "stax",
+    name: "Stax",
+    logoSrc: paymentProcessingLogoForSlug("stax"),
+    rating: "4.3",
+    bestFor: "Membership pricing at volume",
+    description:
+      "Stax competes on predictable platform fees when Clover’s per-transaction add-ons stack—model seasonality if you are a trade with winter slowdowns.",
+    reviewHref: getPaymentProcessingReviewUrl("stax"),
+    compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
+    startingPrice: "Monthly + interchange",
+    standoutFeature: "Volume membership math",
+  },
+  {
+    slug: "shopify-payments",
+    name: "Shopify Payments",
+    logoSrc: paymentProcessingLogoForSlug("shopify-payments"),
+    rating: "4.5",
+    bestFor: "Retail + Shopify ecommerce",
+    description:
+      "Shopify Payments makes sense when Clover was bridging retail and a Shopify catalog—native checkout can reduce duplicate systems if policies allow your product mix.",
+    reviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+    compareHref: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe"),
+    startingPrice: "Per charge + Shopify plan",
+    standoutFeature: "Unified Shopify ledger",
+  },
+];
+
+const helcimOriginal: AlternativesTableRow = {
+  slug: "helcim",
+  name: "Helcim",
+  logoSrc: paymentProcessingLogoForSlug("helcim"),
+  bestFor: "Interchange-plus + modern merchant UI",
+  startingPrice: "Interchange-plus",
+  standoutFeature: "Transparent statements",
+  reviewHref: getPaymentProcessingReviewUrl("helcim"),
+};
+
+const helcimPage: AlternativesTemplateProps = {
+  ...stripePage,
+  title: "Best Helcim Alternatives (2026)",
+  subtitle:
+    "Editorial alternatives when membership-style platforms, field hardware bundles, Shopify-native checkout, or developer-led online flows beat Helcim’s interchange-plus portal for your mix—grounded in contractor channel reality and the need to verify economics on your own statements, not ours.",
+  productName: "Helcim",
+  productSlug: "helcim",
+  originalReviewHref: getPaymentProcessingReviewUrl("helcim"),
+  quickAnswerParagraphs: [
+    "Stax is the closest apples-to-apples when you want pass-through interchange with a different platform-fee story—read Helcim vs Stax with your last quarter of volume. Stripe wins programmable web and Billing; Square wins trucks and simple invoices; PayPal stays relevant for wallet-heavy remote payers; Shopify Payments fits Shopify carts; Authorize.net remains when ISO/gateway packages lock integrations.",
+    "Leaving Helcim without exporting effective rate math is guesswork—compute fees ÷ gross volume per channel before and after any trial.",
+    "BeltStack does not see your merchant category, reserve history, or card mix. Underwriting and hold policies can invert a pretty quote—confirm written terms and, when possible, run parallel months before you migrate customer cards.",
+  ],
+  whyPeopleLookForAlternatives: [
+    {
+      heading: "Membership vs per-transaction framing",
+      body: "Some owners prefer Stax-style platform fees when volume is steady; others dislike monthly minimums when winter truck rolls disappear—model both seasons.",
+    },
+    {
+      heading: "Field operations trump statements",
+      body: "Helcim educates on interchange; Square still wins when crews need dead-simple readers and the office lacks time to coach staff through downgrade risks.",
+    },
+    {
+      heading: "Developer-led growth",
+      body: "Stripe replaces portal-first tools when hosted checkout, webhooks, and proration logic become the bottleneck—not a knock on Helcim, a channel mismatch fix.",
+    },
+    {
+      heading: "Shopify or legacy gateway constraints",
+      body: "Shopify Payments or Authorize.net paths matter when commerce or ERP integrations dictate rails—pick the constraint first, then the processor.",
+    },
+  ],
+  topAlternatives: helcimAlts,
+  comparisonTableRows: buildTableRows(helcimOriginal, helcimAlts),
+  detailedAlternatives: helcimAlts.map(detailFromPick),
+  relatedComparisons: [rel("helcim-vs-stax"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("stripe-vs-paypal")],
+  relatedResources: relatedResourcesForProduct("helcim"),
+  faqItems: [
+    {
+      q: "What is the best Helcim alternative for contractors?",
+      a: "Square when trucks swipe most revenue; Stripe when web deposits and Billing dominate; Stax when membership pricing beats your current interchange-plus stack on statements.",
+    },
+    {
+      q: "Helcim vs Stax—which saves money?",
+      a: "Depends on monthly platform fees versus your average ticket and seasonality. Export statements for both models and compare net deposits, not brochures.",
+    },
+    {
+      q: "Does BeltStack get paid to rank Helcim alternatives?",
+      a: "No pay-for-placement. Affiliate links may exist elsewhere on the site; they do not buy order here. Use trials, quotes, and your CSV exports.",
+    },
+    {
+      q: "Will switching processors fix chargebacks?",
+      a: "No—scopes, signatures, and documentation fix disputes. Processors route money; they do not rewrite contract clarity.",
+    },
+  ],
+};
+
+const staxOriginal: AlternativesTableRow = {
+  slug: "stax",
+  name: "Stax",
+  logoSrc: paymentProcessingLogoForSlug("stax"),
+  bestFor: "Membership platform + interchange pass-through",
+  startingPrice: "Monthly + interchange",
+  standoutFeature: "Predictable platform fee",
+  reviewHref: getPaymentProcessingReviewUrl("stax"),
+};
+
+const staxPage: AlternativesTemplateProps = {
+  ...stripePage,
+  title: "Best Stax Alternatives (2026)",
+  subtitle:
+    "When interchange-plus without a membership line item, simpler field hardware, or developer-led ecommerce fits better than Stax’s platform-fee model—especially for seasonal trades that must survive slow months with honest cash-flow math.",
+  productName: "Stax",
+  productSlug: "stax",
+  originalReviewHref: getPaymentProcessingReviewUrl("stax"),
+  quickAnswerParagraphs: [
+    "Helcim is the direct comparison for transparent interchange-plus with different packaging—see Helcim vs Stax. Stripe handles Billing-heavy web flows; Square simplifies card-present; PayPal helps wallet cohorts; Shopify Payments unifies Shopify orders; Clover fits counter-heavy retail.",
+    "Stax’s monthly platform fee can be brilliant at steady volume and painful in off-season—graph twelve months before you defend the contract.",
+    "We generalize from SMB and contractor patterns; your underwriting, reserves, and card mix may differ. No editorial page replaces a CFO review of net deposits.",
+  ],
+  whyPeopleLookForAlternatives: [
+    {
+      heading: "Seasonal cash flow",
+      body: "HVAC, landscaping, and outdoor trades see platform fees hurt when January volume drops—Helcim or Square may align costs with actual swipes.",
+    },
+    {
+      heading: "Simplicity for staff",
+      body: "Square reduces training load when interchange education is not sticking with crews who just need to tap and go.",
+    },
+    {
+      heading: "Product roadmap needs",
+      body: "Stripe wins when subscriptions, proration, and custom checkout outgrow membership processor portals.",
+    },
+    {
+      heading: "Retail POS depth",
+      body: "Clover competes when registers, modifiers, and inventory rule the floor—compare TCO including apps and hardware leases.",
+    },
+  ],
+  topAlternatives: staxAlts,
+  comparisonTableRows: buildTableRows(staxOriginal, staxAlts),
+  detailedAlternatives: staxAlts.map(detailFromPick),
+  relatedComparisons: [rel("helcim-vs-stax"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("square-vs-paypal")],
+  relatedResources: relatedResourcesForProduct("stax"),
+  faqItems: [
+    {
+      q: "What is the best Stax alternative for small business?",
+      a: "Helcim when you want interchange-plus without a membership platform fee narrative; Square when field simplicity matters; Stripe when online Billing leads.",
+    },
+    {
+      q: "Is Stax cheaper than Square?",
+      a: "Only if net deposits after monthly fees beat Square’s flat rate for your actual mix—compute effective rate on identical months.",
+    },
+    {
+      q: "How independent is this Stax alternatives guide?",
+      a: "Editorial picks based on channel fit for service businesses. Confirm pricing and contract terms with vendors; we do not see your statements.",
+    },
+    {
+      q: "Can I keep Stax for some locations only?",
+      a: "Possible, but multi-processor setups need accounting discipline—budget reconciliation time as a real cost.",
+    },
+  ],
+};
+
+const shopifyPaymentsOriginal: AlternativesTableRow = {
+  slug: "shopify-payments",
+  name: "Shopify Payments",
+  logoSrc: paymentProcessingLogoForSlug("shopify-payments"),
+  bestFor: "Shopify checkout + payouts",
+  startingPrice: "Per charge + Shopify plan",
+  standoutFeature: "Native Shopify money flow",
+  reviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+};
+
+const shopifyPaymentsPage: AlternativesTemplateProps = {
+  ...stripePage,
+  title: "Best Shopify Payments Alternatives (2026)",
+  subtitle:
+    "When your storefront is not Shopify, when you need deeper APIs than native checkout, or when interchange-transparent processors beat blended rates for your card mix—always cross-check Shopify acceptable-use policies and total subscription + app TCO before you optimize processing alone.",
+  productName: "Shopify Payments",
+  productSlug: "shopify-payments",
+  originalReviewHref: getPaymentProcessingReviewUrl("shopify-payments"),
+  quickAnswerParagraphs: [
+    "Stripe is the headline alternative for non-Shopify or headless stacks—use Shopify Payments vs Stripe as your checklist. Square fits omnichannel SMBs without Shopify; Helcim and Stax challenge blended pricing when finance wants statement lines; PayPal adds wallet rails; Authorize.net appears for legacy gateway requirements.",
+    "Shopify Payments saves ops time when the cart is already Shopify—switching for basis points alone can cost more in apps, migration, and risk review than you save.",
+    "BeltStack cannot see your chargeback rate, product mix, or policy flags. If Shopify Payments paused payouts, talk to support and your accountant before you leap processors.",
+  ],
+  whyPeopleLookForAlternatives: [
+    {
+      heading: "Off-Shopify websites",
+      body: "Stripe or Square own the story when marketing and checkout are not Shopify-native—Shopify Payments cannot follow you to arbitrary domains.",
+    },
+    {
+      heading: "API and subscription depth",
+      body: "Stripe Billing and webhooks outpace checkout-only needs when SaaS-style service plans or usage metering appear.",
+    },
+    {
+      heading: "Blended rate transparency",
+      body: "Helcim or Stax can appeal when large B2B-style cards dominate and you want interchange visibility—often alongside Shopify for other channels.",
+    },
+    {
+      heading: "Policy or category friction",
+      body: "Some verticals bump acceptable-use limits—alternatives are not ‘better,’ they are ‘eligible.’ Read current processor policies; editorial pages age faster than compliance teams.",
+    },
+  ],
+  topAlternatives: shopifyPaymentsAlts,
+  comparisonTableRows: buildTableRows(shopifyPaymentsOriginal, shopifyPaymentsAlts),
+  detailedAlternatives: shopifyPaymentsAlts.map(detailFromPick),
+  relatedComparisons: [rel("shopify-payments-vs-stripe"), rel("stripe-vs-square"), rel("helcim-vs-stax"), rel("stripe-vs-paypal")],
+  relatedResources: relatedResourcesForProduct("shopify-payments"),
+  faqItems: [
+    {
+      q: "What is the best alternative to Shopify Payments?",
+      a: "Stripe for custom or non-Shopify web stacks; Square for field + retail simplicity; Helcim or Stax when interchange-plus math wins on statements.",
+    },
+    {
+      q: "Can I use Stripe and Shopify together?",
+      a: "Sometimes via alternate gateways or external invoices—expect extra reconciliation and policy checks; confirm with Shopify and Stripe before you promise customers a flow.",
+    },
+    {
+      q: "Does BeltStack favor Stripe over Shopify?",
+      a: "We favor channel fit. Shopify Payments is often correct inside Shopify; Stripe is often correct outside it—verify with your own checkout and payout data.",
+    },
+    {
+      q: "Do alternatives remove Shopify subscription costs?",
+      a: "No—if you still run Shopify for catalog or POS, subscription economics stay in TCO when comparing processors.",
+    },
+  ],
+};
+
+const authorizeNetOriginal: AlternativesTableRow = {
+  slug: "authorize-net",
+  name: "Authorize.net",
+  logoSrc: paymentProcessingLogoForSlug("authorize-net"),
+  bestFor: "Gateway + merchant account stack",
+  startingPrice: "Gateway fee + processing",
+  standoutFeature: "Long-standing gateway integrations",
+  reviewHref: getPaymentProcessingReviewUrl("authorize-net"),
+};
+
+const authorizeNetPage: AlternativesTemplateProps = {
+  ...stripePage,
+  title: "Best Authorize.net Alternatives (2026)",
+  subtitle:
+    "When modern APIs, packaged SMB hardware, interchange-transparent portals, or Shopify-native checkout replace legacy gateway maintenance—especially if developer time, PCI scope, or duplicate fees are the hidden cost, not the gateway logo.",
+  productName: "Authorize.net",
+  productSlug: "authorize-net",
+  originalReviewHref: getPaymentProcessingReviewUrl("authorize-net"),
+  quickAnswerParagraphs: [
+    "Stripe is the common upgrade path for programmable checkout and Billing; Square bundles readers and invoices; Helcim and Stax modernize interchange-plus without nursing AIM-era integrations; PayPal and Shopify Payments cover wallet and cart-specific rails.",
+    "Authorize.net often sits beside an ISO merchant account—separate gateway fee from processing markup before you compare alternatives, or you will double-count savings.",
+    "Migration needs a token and customer-data plan—BeltStack does not execute cutovers; involve your developer, ISO, or qualified payments consultant for card-on-file moves.",
+  ],
+  whyPeopleLookForAlternatives: [
+    {
+      heading: "Integration maintenance fatigue",
+      body: "Legacy gateway paths break when frameworks update—teams leave for Stripe when engineering cost exceeds processing savings.",
+    },
+    {
+      heading: "Field operations reality",
+      body: "Virtual terminals do not replace mobile readers; Square or Clover paths matter when trucks actually collect payment.",
+    },
+    {
+      heading: "Fee stack clarity",
+      body: "Gateway monthly + per-transaction + ISO markup confuses owners—Helcim or Stax pitches simpler statements when you can switch merchant accounts safely.",
+    },
+    {
+      heading: "Compliance and PCI scope",
+      body: "Modern hosted fields reduce SAQ burden compared to old POST flows—security wins can justify migration even if rates look similar.",
+    },
+  ],
+  topAlternatives: authorizeNetAlts,
+  comparisonTableRows: buildTableRows(authorizeNetOriginal, authorizeNetAlts),
+  detailedAlternatives: authorizeNetAlts.map(detailFromPick),
+  relatedComparisons: [rel("stripe-vs-paypal"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("helcim-vs-stax")],
+  relatedResources: relatedResourcesForProduct("authorize-net"),
+  faqItems: [
+    {
+      q: "What replaces Authorize.net for small business?",
+      a: "Often Stripe or Square depending on online vs in-person mix; Helcim or Stax when interchange-plus and a modern portal beat gateway + ISO stacking.",
+    },
+    {
+      q: "Can I keep Authorize.net and change processors?",
+      a: "Sometimes—gateway and merchant account are separable in many stacks. Read contract end dates and PCI implications before you assume.",
+    },
+    {
+      q: "Why trust BeltStack on Authorize.net alternatives?",
+      a: "We describe typical migration patterns for SMBs; we do not access your gateway logs. Confirm with vendors and security advisors.",
+    },
+    {
+      q: "Will Stripe eliminate chargebacks?",
+      a: "No—documentation and clear scopes do. Processors only move money and supply evidence tools.",
+    },
+  ],
+};
+
+const cloverOriginal: AlternativesTableRow = {
+  slug: "clover",
+  name: "Clover",
+  logoSrc: paymentProcessingLogoForSlug("clover"),
+  bestFor: "Retail POS + Fiserv processing",
+  startingPrice: "Hardware + processing",
+  standoutFeature: "Counter ecosystem",
+  reviewHref: getPaymentProcessingReviewUrl("clover"),
+};
+
+const cloverPage: AlternativesTemplateProps = {
+  ...stripePage,
+  title: "Best Clover Alternatives (2026)",
+  subtitle:
+    "When simpler SMB POS, developer-led ecommerce, interchange-transparent pricing, or Shopify-led retail beats Clover’s bundle for your footprint—compare hardware leases, app spend, and effective rate on statements, not device aesthetics alone.",
+  productName: "Clover",
+  productSlug: "clover",
+  originalReviewHref: getPaymentProcessingReviewUrl("clover"),
+  quickAnswerParagraphs: [
+    "Square is the closest peer for faster SMB rollout on readers and invoices; Stripe wins online-heavy brands needing Billing and APIs; Helcim and Stax compete on processing economics; PayPal helps remote wallet payers; Shopify Payments fits Shopify retail + ecommerce combos.",
+    "Clover’s TCO includes hardware, apps, and support—alternative quotes must include the same scope or comparisons lie.",
+    "Field-service-heavy brands may not need Clover at all; if trucks earn most revenue, start channel mapping before you swap countertop systems.",
+  ],
+  whyPeopleLookForAlternatives: [
+    {
+      heading: "SMB simplicity",
+      body: "Square reduces decision fatigue when Clover’s marketplace and hardware tiers overshoot a two-register shop.",
+    },
+    {
+      heading: "Online growth",
+      body: "Stripe separates cleanly when ecommerce outpaces counter—Clover can feel sideways for custom checkout needs.",
+    },
+    {
+      heading: "Pricing transparency",
+      body: "Helcim or Stax can win when large tickets make interchange visibility valuable and app spend is controlled.",
+    },
+    {
+      heading: "Wallet and link payments",
+      body: "PayPal still helps certain homeowner demographics paying from email—measure completion, not opinions.",
+    },
+  ],
+  topAlternatives: cloverAlts,
+  comparisonTableRows: buildTableRows(cloverOriginal, cloverAlts),
+  detailedAlternatives: cloverAlts.map(detailFromPick),
+  relatedComparisons: [rel("stripe-vs-square"), rel("square-vs-paypal"), rel("helcim-vs-stax"), rel("shopify-payments-vs-stripe")],
+  relatedResources: relatedResourcesForProduct("clover"),
+  faqItems: [
+    {
+      q: "What is the best Clover alternative for retail?",
+      a: "Square for many SMB counters; Shopify Payments when retail and Shopify ecommerce should share a ledger; Stripe when custom online checkout leads.",
+    },
+    {
+      q: "Clover vs Square for contractors?",
+      a: "Square often fits mobile crews and simple invoices; Clover fits register-heavy showrooms—map where money enters before you choose.",
+    },
+    {
+      q: "Does BeltStack get kickbacks for Clover alternatives?",
+      a: "No sponsored rankings. Affiliate commissions may exist elsewhere on the site; verify quotes and statements yourself.",
+    },
+    {
+      q: "How do I compare hardware costs fairly?",
+      a: "Include leases, warranties, spare readers, and app subscriptions—divide by months to compare with software-only stacks.",
+    },
+  ],
+};
+
 const pages: Record<string, AlternativesTemplateProps> = {
   stripe: stripePage,
   square: squarePage,
   "paypal-business": paypalPage,
+  helcim: helcimPage,
+  stax: staxPage,
+  "shopify-payments": shopifyPaymentsPage,
+  "authorize-net": authorizeNetPage,
+  clover: cloverPage,
 };
 
 export function getPaymentProcessingAlternativesPage(slug: string): AlternativesTemplateProps | null {

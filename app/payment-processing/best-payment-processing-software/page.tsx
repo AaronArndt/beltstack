@@ -91,6 +91,26 @@ export default function BestPaymentProcessingSoftwarePage() {
               <Link href={getPaymentProcessingAlternativeUrl("paypal-business")} className={linkGreen}>
                 best PayPal Business alternatives
               </Link>
+              ,{" "}
+              <Link href={getPaymentProcessingAlternativeUrl("helcim")} className={linkGreen}>
+                best Helcim alternatives
+              </Link>
+              ,{" "}
+              <Link href={getPaymentProcessingAlternativeUrl("stax")} className={linkGreen}>
+                best Stax alternatives
+              </Link>
+              ,{" "}
+              <Link href={getPaymentProcessingAlternativeUrl("shopify-payments")} className={linkGreen}>
+                best Shopify Payments alternatives
+              </Link>
+              ,{" "}
+              <Link href={getPaymentProcessingAlternativeUrl("authorize-net")} className={linkGreen}>
+                best Authorize.net alternatives
+              </Link>
+              ,{" "}
+              <Link href={getPaymentProcessingAlternativeUrl("clover")} className={linkGreen}>
+                best Clover alternatives
+              </Link>
               .
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pageProps) return { title: "Payment Processing Alternatives" };
   const year = new Date().getFullYear();
   const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Explore the best ${pageProps.productName} alternatives for contractors and local service businesses in ${year}. Compare pricing, channel fit, and links to reviews.`;
+  const description = `Editorial ${pageProps.productName} alternatives for ${year}: contractor and SMB channel fit, effective-rate honesty, independence—verify fees on your statements and with each vendor.`;
   const url = `${SITE_URL}${getPaymentProcessingAlternativeUrl(slug)}`;
   return { title, description, openGraph: { title, description, url } };
 }

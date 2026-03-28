@@ -7,7 +7,7 @@ import {
   type ComparisonTableRow,
   type FaqItem,
 } from "@/components/hubs/HubPageTemplate";
-import { getPaymentProcessingReviewUrl } from "@/lib/routes";
+import { getPaymentProcessingAlternativeUrl, getPaymentProcessingReviewUrl } from "@/lib/routes";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
 import { HubEditorialUseCaseSection } from "@/components/hubs/HubEditorialUseCaseSection";
 import { HubGuidesGrid } from "@/components/hubs/HubGuidesGrid";
@@ -119,7 +119,23 @@ function IntroExtended() {
         <Link href="/payment-processing/guides/how-to-choose-a-payment-processor" className={linkGreen}>
           how to choose a payment processor
         </Link>
-        .
+        . Swap lists when you are re-platforming:{" "}
+        <Link href={getPaymentProcessingAlternativeUrl("stripe")} className={linkGreen}>
+          Stripe alternatives
+        </Link>
+        ,{" "}
+        <Link href={getPaymentProcessingAlternativeUrl("square")} className={linkGreen}>
+          Square alternatives
+        </Link>
+        ,{" "}
+        <Link href={getPaymentProcessingAlternativeUrl("helcim")} className={linkGreen}>
+          Helcim alternatives
+        </Link>
+        , and{" "}
+        <Link href={getPaymentProcessingAlternativeUrl("clover")} className={linkGreen}>
+          Clover alternatives
+        </Link>
+        —see each processor’s review for the full “best alternatives” link set.
       </p>
     </>
   );
