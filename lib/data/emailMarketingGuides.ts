@@ -31,4 +31,25 @@ export const EMAIL_MARKETING_GUIDES = [
     description: "Templates for seasonal pushes, maintenance reminders, reviews, and win-back offers.",
     href: `${BASE}/best-email-campaigns-for-service-businesses`,
   },
+  {
+    slug: "email-deliverability-spf-dkim-dmarc",
+    title: "Email Deliverability: SPF, DKIM & DMARC",
+    description:
+      "Authentication basics for small businesses—what records do, how ESPs use them, and when to loop in DNS-savvy help.",
+    href: `${BASE}/email-deliverability-spf-dkim-dmarc`,
+  },
+  {
+    slug: "email-automation-for-service-businesses",
+    title: "Email Automation for Service Businesses",
+    description:
+      "Welcome flows, post-job follow-up, maintenance reminders, and win-back—automation that fits how crews actually work.",
+    href: `${BASE}/email-automation-for-service-businesses`,
+  },
+  {
+    slug: "email-marketing-consent-and-can-spam",
+    title: "Email Marketing Consent & CAN-SPAM Basics",
+    description:
+      "Opt-in, physical address, unsubscribe, and honest subject lines—practical compliance habits for US-focused senders.",
+    href: `${BASE}/email-marketing-consent-and-can-spam`,
+  },
 ] as const;

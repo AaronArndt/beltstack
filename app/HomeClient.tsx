@@ -47,6 +47,8 @@ const STACK_FAST_TRADES = [
   { value: "electrical", label: "Electrical" },
   { value: "landscaping", label: "Landscaping" },
   { value: "roofing", label: "Roofing" },
+  { value: "painting", label: "Painting" },
+  { value: "general-contractors", label: "General contractors" },
   { value: "cleaning", label: "Cleaning" },
 ];
 
@@ -98,11 +100,14 @@ const HERO_CATEGORY_SEE_MORE_HREF = "/software" as const;
 
 /** Trade pills — hubs already in the site (no aggregate “all trades” page). */
 const HERO_TRADE_LINKS = [
-  { label: "HVAC", href: "/field-service/best-for/hvac" },
-  { label: "Plumbing", href: "/field-service/best-for/plumbing" },
-  { label: "Electrical", href: "/field-service/best-for/electricians" },
-  { label: "Cleaning", href: "/payroll/best-for/cleaning-business" },
-  { label: "Roofing", href: "/payroll/best-for/roofing" },
+  { label: "HVAC", href: "/hvac" },
+  { label: "Plumbing", href: "/plumbing" },
+  { label: "Electrical", href: "/electrical" },
+  { label: "Landscaping", href: "/landscaping" },
+  { label: "Cleaning", href: "/cleaning-services" },
+  { label: "Roofing", href: "/roofing" },
+  { label: "Painting", href: "/painting" },
+  { label: "General contractors", href: "/general-contractors" },
 ] as const;
 
 const heroUseCaseTileClass =

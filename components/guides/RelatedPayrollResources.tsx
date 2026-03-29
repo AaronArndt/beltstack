@@ -21,6 +21,8 @@ const DEFAULT_RELATED_RESOURCES: RelatedResourceItem[] = [
   { label: "Wave Review", href: getPayrollReviewUrl("wave") },
   { label: "Payroll for Contractors guide", href: "/payroll/guides/payroll-for-contractors" },
   { label: "Payroll Software Pricing guide", href: "/payroll/guides/payroll-software-pricing" },
+  { label: "Payroll vs HR Software guide", href: "/payroll/guides/payroll-software-vs-hr-software" },
+  { label: "HR Software Hub", href: "/hr" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

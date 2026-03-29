@@ -26,4 +26,22 @@ export const WEBSITE_BUILDERS_GUIDES: WebsiteBuildersGuideEntry[] = [
     href: "/website-builders/guides/how-to-build-a-service-business-website",
     description: "Step-by-step guidance for launching conversion-focused websites for local operators.",
   },
+  {
+    title: "Website Speed & Core Web Vitals for Small Business",
+    href: "/website-builders/guides/website-speed-and-core-web-vitals-for-small-business",
+    description:
+      "Why LCP, INP, and CLS matter for local SEO and conversions—and how to evaluate builder templates and hosting without jargon.",
+  },
+  {
+    title: "Website Builder Pricing & Hidden Costs",
+    href: "/website-builders/guides/website-builder-pricing-and-hidden-costs",
+    description:
+      "Subscriptions, domains, ecommerce add-ons, booking plugins, and transaction fees—how to model total cost before you commit.",
+  },
+  {
+    title: "Mobile-First Local Business Website Checklist",
+    href: "/website-builders/guides/mobile-first-local-business-website-checklist",
+    description:
+      "Tap-to-call, thumb-friendly forms, speed on 4G, and trust blocks—what to verify on every service-business homepage.",
+  },
 ];

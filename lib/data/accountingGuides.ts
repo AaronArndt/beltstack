@@ -55,5 +55,11 @@ export const ACCOUNTING_GUIDES: AccountingGuideEntry[] = [
     description:
       "Compare the best accounting tools for early-stage startups and founders.",
   },
+  {
+    title: "Invoices, Payments & Accounting Close",
+    href: "/accounting/guides/invoices-payments-and-accounting-close",
+    description:
+      "How invoices and customer payments flow into AR, deposits, and reconciliation—so your books match the bank.",
+  },
 ];
 

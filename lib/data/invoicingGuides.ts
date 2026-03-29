@@ -49,4 +49,10 @@ export const INVOICING_GUIDES: InvoicingGuideEntry[] = [
     description:
       "Planning a switch: exporting history, migrating contacts, recurring invoices, and avoiding disruption.",
   },
+  {
+    title: "Invoices, Payments & Accounting Close",
+    href: "/accounting/guides/invoices-payments-and-accounting-close",
+    description:
+      "A workflow-oriented guide: from issued invoices and partial payments through bank deposits to month-end close in accounting.",
+  },
 ];

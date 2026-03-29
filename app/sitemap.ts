@@ -522,10 +522,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(getInvoicingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
   );
 
-  // Invoicing guides
-  const invoicingGuideEntries: MetadataRoute.Sitemap = INVOICING_GUIDES.map((guide) =>
-    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
-  );
+  // Invoicing guides (omit entries canonical under another vertical)
+  const invoicingGuideEntries: MetadataRoute.Sitemap = INVOICING_GUIDES.filter((guide) =>
+    guide.href.startsWith("/invoicing/")
+  ).map((guide) => defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 }));
 
   // Invoicing alternatives
   const invoicingAlternativeSlugs = getInvoicingAlternativesSlugs();
@@ -550,10 +550,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(getTimeTrackingBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
   );
 
-  // Time tracking guides
-  const timeTrackingGuideEntries: MetadataRoute.Sitemap = TIME_TRACKING_GUIDES.map((guide) =>
-    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
-  );
+  // Time tracking guides (omit entries canonical under another vertical)
+  const timeTrackingGuideEntries: MetadataRoute.Sitemap = TIME_TRACKING_GUIDES.filter((guide) =>
+    guide.href.startsWith("/time-tracking/")
+  ).map((guide) => defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 }));
 
   // Time tracking alternatives
   const timeTrackingAlternativeSlugs = getTimeTrackingAlternativesSlugs();
@@ -690,8 +690,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(getHrBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
   );
 
-  // HR guides
-  const hrGuideEntries: MetadataRoute.Sitemap = HR_GUIDES.map((guide) =>
+  // HR guides (omit entries canonical under another vertical)
+  const hrGuideEntries: MetadataRoute.Sitemap = HR_GUIDES.filter((guide) => guide.href.startsWith("/hr/")).map((guide) =>
     defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
   );
 
@@ -780,10 +780,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(getHelpdeskBestForUrl(scenario), { changeFrequency: "monthly", priority: 0.7 })
   );
 
-  // Helpdesk guides
-  const helpdeskGuideEntries: MetadataRoute.Sitemap = HELPDESK_GUIDES.map((guide) =>
-    defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 })
-  );
+  // Helpdesk guides (omit entries that canonicalize under another vertical, e.g. shared CRM/helpdesk pillars)
+  const helpdeskGuideEntries: MetadataRoute.Sitemap = HELPDESK_GUIDES.filter((guide) =>
+    guide.href.startsWith("/helpdesk/")
+  ).map((guide) => defaultEntry(guide.href, { changeFrequency: "monthly", priority: 0.7 }));
 
   // Lead generation comparisons
   const leadGenerationComparisonSlugs = getLeadGenerationComparisonSlugs();

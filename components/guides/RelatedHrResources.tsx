@@ -28,6 +28,8 @@ const DEFAULT_RELATED_HR_RESOURCES: RelatedHrResourceItem[] = [
   { label: "ADP vs Paychex", href: getHrCompareUrl("adp-vs-paychex") },
   { label: "Deel vs Rippling", href: getHrCompareUrl("deel-vs-rippling") },
   { label: "Justworks vs TriNet", href: getHrCompareUrl("justworks-vs-trinet") },
+  { label: "Payroll vs HR Software guide", href: "/payroll/guides/payroll-software-vs-hr-software" },
+  { label: "How to Choose HR Software guide", href: "/hr/guides/how-to-choose-hr-software" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

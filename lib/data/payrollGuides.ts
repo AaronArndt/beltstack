@@ -78,4 +78,10 @@ export const PAYROLL_GUIDES: PayrollGuideEntry[] = [
     description:
       "Understand payroll tax filing requirements and how payroll software automates compliance.",
   },
+  {
+    title: "Payroll Software vs HR Software",
+    href: "/payroll/guides/payroll-software-vs-hr-software",
+    description:
+      "Learn where payroll ends and core HR begins, when all-in-one suites make sense, and how to avoid duplicate systems.",
+  },
 ];

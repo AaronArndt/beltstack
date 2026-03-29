@@ -24,6 +24,8 @@ const DEFAULT_RELATED_CRM_RESOURCES: RelatedCrmResourceItem[] = [
   { label: "Zoho CRM vs Pipedrive", href: getCrmCompareUrl("zoho-crm-vs-pipedrive") },
   { label: "CRM for Small Business guide", href: "/crm/guides/crm-for-small-business" },
   { label: "How to Choose CRM Software guide", href: "/crm/guides/how-to-choose-crm-software" },
+  { label: "CRM vs Helpdesk Software guide", href: "/crm/guides/crm-vs-helpdesk-software" },
+  { label: "Helpdesk Software Hub", href: "/helpdesk" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

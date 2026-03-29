@@ -41,4 +41,25 @@ export const CALL_TRACKING_GUIDES: CallTrackingGuideItem[] = [
       "Goal definitions, CRM stages, and reporting that ties marketing sources to revenue for service businesses.",
     href: "/call-tracking/guides/how-to-track-phone-call-conversions",
   },
+  {
+    slug: "dynamic-number-insertion-explained",
+    title: "Dynamic Number Insertion (DNI) Explained",
+    description:
+      "How DNI swaps phone numbers by source or session, what can break, and how to validate tagging in staging before launch.",
+    href: "/call-tracking/guides/dynamic-number-insertion-explained",
+  },
+  {
+    slug: "call-tracking-for-multi-location-businesses",
+    title: "Call Tracking for Multi-Location Businesses",
+    description:
+      "Pools per location, franchise reporting, and rollup dashboards—what to configure before scaling beyond a single storefront.",
+    href: "/call-tracking/guides/call-tracking-for-multi-location-businesses",
+  },
+  {
+    slug: "call-tracking-with-google-ads-and-lsa",
+    title: "Call Tracking with Google Ads & Local Services Ads",
+    description:
+      "GCLID, forwarding numbers, LSA call labeling, and avoiding double-counted conversions—integration concepts for search advertisers.",
+    href: "/call-tracking/guides/call-tracking-with-google-ads-and-lsa",
+  },
 ];

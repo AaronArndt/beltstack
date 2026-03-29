@@ -46,4 +46,10 @@ export const HELPDESK_GUIDES: HelpdeskGuideEntry[] = [
     href: "/helpdesk/guides/helpdesk-software-for-saas-companies",
     description: "How SaaS teams think about lifecycle support—not a vendor shortlist.",
   },
+  {
+    title: "CRM vs Helpdesk Software",
+    href: "/crm/guides/crm-vs-helpdesk-software",
+    description:
+      "How sales CRM and customer support helpdesk differ, when to implement each, and how data flows between them.",
+  },
 ];

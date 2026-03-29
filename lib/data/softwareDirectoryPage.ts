@@ -270,6 +270,21 @@ export const SOFTWARE_DIRECTORY_TRADE_HUBS: TradeHubEntry[] = [
     href: "/landscaping",
   },
   {
+    name: "Roofing",
+    description: "Production workflows, supplements and job costing, crew payroll, and cash collection.",
+    href: "/roofing",
+  },
+  {
+    name: "Painting",
+    description: "Estimate scheduling, crew job tracking, deposits, payroll, and follow-up for repaint cycles.",
+    href: "/painting",
+  },
+  {
+    name: "General Contractors",
+    description: "Project coordination, job-cost accounting, time by cost code, billing, and payroll.",
+    href: "/general-contractors",
+  },
+  {
     name: "Cleaning Services",
     description: "Scheduling and quality workflows for recurring bookings, team operations, and payroll.",
     href: "/cleaning-services",

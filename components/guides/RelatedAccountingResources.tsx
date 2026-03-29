@@ -12,6 +12,7 @@ const DEFAULT_RELATED_ACCOUNTING_RESOURCES: RelatedAccountingResourceItem[] = [
   { label: "Best Accounting Software by Use Case", href: "/accounting/best-for" },
   { label: "Accounting Software Comparisons", href: "/accounting/compare" },
   { label: "Accounting Guides", href: "/accounting/guides" },
+  { label: "Invoices, Payments & Accounting Close guide", href: "/accounting/guides/invoices-payments-and-accounting-close" },
   { label: "QuickBooks Online Review", href: getAccountingReviewUrl("quickbooks-online") },
   { label: "Xero Review", href: getAccountingReviewUrl("xero") },
   { label: "FreshBooks Review", href: getAccountingReviewUrl("freshbooks") },

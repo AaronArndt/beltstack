@@ -49,5 +49,11 @@ export const HR_GUIDES: HrGuideEntry[] = [
     description:
       "Compare PEOs and HR software: how they work, pricing models, and which approach fits your company size and risk profile.",
   },
+  {
+    title: "Payroll Software vs HR Software",
+    href: "/payroll/guides/payroll-software-vs-hr-software",
+    description:
+      "How payroll systems differ from HRIS / HR platforms, when you need one or both, and how combined products fit small businesses.",
+  },
 ];
 

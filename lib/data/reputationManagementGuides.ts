@@ -41,4 +41,25 @@ export const REPUTATION_MANAGEMENT_GUIDES: ReputationManagementGuideItem[] = [
       "A 90-day operating plan to increase ratings, recover unhappy customers, and improve lead conversion.",
     href: "/reputation-management/guides/how-to-improve-online-reputation",
   },
+  {
+    slug: "review-request-timing-and-messaging",
+    title: "Review Request Timing & Messaging",
+    description:
+      "When to ask, how to phrase requests, SMS vs email, and policy-safe language that improves completion rates.",
+    href: "/reputation-management/guides/review-request-timing-and-messaging",
+  },
+  {
+    slug: "nap-consistency-and-local-business-listings",
+    title: "NAP Consistency & Local Business Listings",
+    description:
+      "Name, address, and phone discipline across directories—how listing accuracy supports Maps, trust, and call tracking clarity.",
+    href: "/reputation-management/guides/nap-consistency-and-local-business-listings",
+  },
+  {
+    slug: "review-response-playbooks-for-multi-location",
+    title: "Review Response Playbooks for Multi-Location Brands",
+    description:
+      "Templates, approvals, and brand voice at scale—without sounding robotic or ignoring legitimate complaints.",
+    href: "/reputation-management/guides/review-response-playbooks-for-multi-location",
+  },
 ];

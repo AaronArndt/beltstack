@@ -864,6 +864,531 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     ],
   },
 
+  roofing: {
+    slug: "roofing",
+    seoTitle: "Software for Roofing Companies (2026) | BeltStack",
+    metaDescription:
+      "Roofing contractor software stacks: production scheduling, field ops, job costing, invoicing, and payroll—with category hubs and scenario links.",
+    title: "Software for Roofing Companies",
+    intro:
+      "Roofing is production-heavy: inspections, material orders, crew days, and insurance paperwork have to line up with cash collection. Software should connect the job file, field updates, and accounting so you see margin per job—not just revenue at month-end.",
+    heroCategoryLine:
+      "Stacks often combine project or job management with field-friendly mobile workflows, accounting for job costing, invoicing for deposits and supplements, and payroll tied to crews—CRM and lead tools matter more when storm or marketing volume spikes.",
+    breadcrumbLabel: "Roofing",
+    keyTakeaways: [
+      { label: "Production-first stack: jobs through billing", anchor: "#software-stack" },
+      { label: "Use cases: retail, insurance, commercial", anchor: "#use-cases" },
+      { label: "Margin, supplements, and integrations", anchor: "#how-to-choose" },
+    ],
+    categoryStackSectionTitle: "Core software stack for roofing companies",
+    categoryStackSectionSub: "Job files, field reality, and books should describe the same roof.",
+    categoryStackIntro:
+      "Roofing margins live in labor, material timing, and clean change orders. These categories map to how work gets sold, executed, and paid for.",
+    categoryStack: [
+      {
+        id: "project-management",
+        softwareCategory: "project-management",
+        heading: "Project & job management",
+        body:
+          "Roofing jobs are phased: inspection, production, punch, supplement, and closeout. You need tasks, dependencies, photos, and docs in one place—not lost threads. Strong PM or workflow tools support templates per job type, subcontractor handoffs, and management visibility without turning every ticket into an ERP project.",
+        productSlugs: ["monday", "teamwork", "smartsheet"],
+      },
+      {
+        id: "field-service",
+        softwareCategory: "field-service",
+        heading: "Field service & production",
+        body:
+          "Many roofers run production like dispatch: crews, checklists, photo proof, and daily closeouts from the ladder—not only the office. Field platforms built for trades help with estimates-to-job continuity, material notes, and customer comms. Prioritize mobile that works on roofs and poor signal, and workflows your supers will actually use.",
+        productSlugs: ["servicetitan", "simpro", "jobber"],
+      },
+      {
+        id: "accounting",
+        softwareCategory: "accounting",
+        heading: "Accounting & job costing",
+        body:
+          "Insurance and retail jobs both need clean COGS, liability handling, and visibility into labor and materials by job. Accounting should accept job dimensions so you can compare estimated vs actual—not only company P&L. Sync with invoicing and payroll reduces duplicate entry when volume spikes.",
+        productSlugs: ["quickbooks-online", "xero"],
+      },
+      {
+        id: "invoicing",
+        softwareCategory: "invoicing",
+        heading: "Invoicing & cash collection",
+        body:
+          "Deposits, ACV supplements, deductibles, and final invoicing each have different timing. Invoices should match field completion and signed docs so AR does not chase the wrong balance. Card-on-file and progress billing patterns that fit roofing reduce slow-pays after steep weeks.",
+        productSlugs: ["freshbooks", "quickbooks"],
+      },
+      {
+        id: "payroll",
+        softwareCategory: "payroll",
+        heading: "Payroll & crews",
+        body:
+          "Peak-season crews, piece or hourly mixes, and subs on the same job make payroll error-prone when time sits outside production software. Payroll fed by approved field time or schedules cuts end-of-week rework. Model costs at busy season, not only slow months.",
+        productSlugs: ["gusto", "onpay"],
+      },
+    ],
+    useCaseSectionTitle: "Best software by use case for roofing",
+    useCaseSectionSub: "Insurance-heavy, retail replacement, and scaling production have different buying paths.",
+    useCases: [
+      {
+        title: "Best for storm and insurance-driven volume",
+        body:
+          "When lead flow swings, you need fast inspection-to-contract discipline and supplement documentation tied to jobs—not spreadsheets. CRM-like stages or strong job workflows beat generic tools. Align lead sources and call tracking with how reps assign production.",
+        links: [
+          { label: "Lead generation hub →", href: "/lead-generation" },
+          { label: "Call tracking hub →", href: "/call-tracking" },
+        ],
+      },
+      {
+        title: "Best for retail re-roof and steady local demand",
+        body:
+          "Retail shops optimize estimate speed, financing handoffs, and production throughput. Scheduling for sales visits plus solid field closeout keeps cash predictable. The payroll scenario page maps products to typical crew patterns.",
+        links: [
+          { label: "Best payroll for roofing →", href: "/payroll/best-for/roofing" },
+          { label: "Scheduling hub →", href: "/scheduling" },
+        ],
+      },
+      {
+        title: "Best when job costing and supplements matter most",
+        body:
+          "If margin mystery shows up after the job, tighten accounting dimensions, change-order capture, and time-by-job before buying more marketing. Guides on contractor accounting and invoicing walk buying traps.",
+        links: [
+          { label: "Accounting for contractors →", href: "/accounting/guides/accounting-for-contractors" },
+          { label: "Invoicing for contractors →", href: "/invoicing/guides/invoicing-for-contractors" },
+        ],
+      },
+      {
+        title: "Best for growing companies standardizing production",
+        body:
+          "More crews need templates, permissions, and reporting by crew or region without burying supers in admin. Compare field platforms once you know retail vs insurance mix.",
+        links: [{ label: "Compare field service software →", href: "/field-service/compare" }],
+      },
+    ],
+    howToChooseTitle: "How to choose roofing company software",
+    howToChooseSub: "Production truth, insurance workflows, and integration paths.",
+    howToChooseSubsections: [
+      {
+        title: "One job record from sale to closeout",
+        body:
+          "Photos, supplements, and completion docs should attach to the same job ID your accountant and AR recognize. Fragmented files create denied supplements and payroll disputes.",
+      },
+      {
+        title: "Stress-test mobile for real job sites",
+        body:
+          "If supers hate the app, you lose documentation when it matters—especially insurance. Trial on weak LTE and with glove-friendly flows.",
+      },
+      {
+        title: "Model integrations before peak season",
+        body:
+          "CSV exports break when hail hits three territories at once. Native or reliable sync between field, invoicing, and accounting saves nights re-keying.",
+      },
+      {
+        title: "Buy for margin visibility, not only dispatch pretty boards",
+        body:
+          "Dispatch boards help; understanding labor and materials per job protects the business. Prioritize costing and invoice alignment when bids are tight.",
+      },
+    ],
+    identitySectionTitle: "Roofing software by business model",
+    identitySectionSub: "How you sell changes which modules pay off first.",
+    identitySegments: [
+      {
+        title: "Retail and referral-heavy",
+        body:
+          "Speed on estimates, financing, and production scheduling usually beats heavy commercial modules. CRM depth grows when inbound needs active follow-up.",
+        links: [{ label: "CRM hub →", href: "/crm" }],
+      },
+      {
+        title: "Insurance restoration workflow",
+        body:
+          "Documentation, supplement packets, and adjuster comms need structured jobs. Look for attachments, approvals, and audit trails—not only calendar tiles.",
+        links: [{ label: "Project management hub →", href: "/project-management" }],
+      },
+      {
+        title: "Commercial low-slope or multi-site",
+        body:
+          "Longer cycles and compliance expectations push you toward permissions, retainage-style billing discipline, and accounting alignment with GC processes.",
+        links: [{ label: "Time tracking hub →", href: "/time-tracking" }],
+      },
+    ],
+    nextStepsTitle: "Next steps",
+    nextStepsGroups: [
+      {
+        groupTitle: "Guides & hubs",
+        links: [
+          { label: "Project management for construction →", href: "/project-management/guides/project-management-for-construction-and-contractors" },
+          { label: "Field service hub", href: "/field-service" },
+          { label: "Payroll hub", href: "/payroll" },
+        ],
+      },
+    ],
+    faqTitle: "Roofing software FAQs",
+    faqSub: "Buying questions from owners and ops leads.",
+    faqs: [
+      {
+        q: "What software do roofing companies use?",
+        a: "Common stacks combine job or project management with field tools for crews, accounting or job costing, invoicing for deposits and progress billing, and payroll as headcount grows. CRM and marketing tools often appear when lead flow or storm cycles need structured follow-up.",
+      },
+      {
+        q: "Do roofers need field service software?",
+        a: "Many do once production scales beyond a few crews—mobile checklists, photos, and daily closeouts reduce disputes with customers, adjusters, and subs. Smaller shops sometimes start with lighter job management and add field depth when documentation pain shows up.",
+      },
+      {
+        q: "What is the best roofing software for small businesses?",
+        a: "Fit depends on how you sell (retail vs insurance), crew size, and whether you self-perform or coordinate subs. Small teams often prioritize estimate-to-job continuity and simple invoicing before enterprise modules. Use scenario pages and comparisons rather than a single brand name.",
+      },
+      {
+        q: "Should roofing contractors use separate accounting and field tools?",
+        a: "Often yes—field platforms excel at production; accounting handles financial statements, taxes, and job dimensions. The priority is reliable sync so labor, materials, and invoices stay aligned to the same jobs.",
+      },
+      {
+        q: "When should a roofing company add CRM?",
+        a: "Add CRM when leads are slipping between reps, when marketing spend justifies pipeline reporting, or when commercial accounts need structured touchpoints beyond job notes. If jobs already capture customer history well, standalone CRM can wait.",
+      },
+    ],
+    methodologyTitle: "How BeltStack evaluates trade software stacks",
+    methodologySub: "Transparent criteria for recommendations.",
+    methodologyBullets: [
+      "We prioritize tools that match roofing workflows: production documentation, cash collection, and job-level visibility.",
+      "We weigh integrations, field usability, and total cost—including per-user fees and seasonal seat changes.",
+      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+    ],
+  },
+
+  painting: {
+    slug: "painting",
+    seoTitle: "Software for Painting Contractors (2026) | BeltStack",
+    metaDescription:
+      "Painting contractor stacks: scheduling, estimates, job management, payroll, and invoicing—category picks and BeltStack internal links.",
+    title: "Software for Painting Contractors",
+    intro:
+      "Painting businesses balance estimate visits, crew coordination, and repeat repaint opportunities. Software should shorten the path from walkthrough to paid job—without burying small teams in enterprise complexity.",
+    heroCategoryLine:
+      "Typical stacks emphasize scheduling for sales visits, project or job tracking for active work, invoicing and payments for deposits or progress billing, and payroll as W-2 crews grow—CRM helps when referrals and follow-ups need structure.",
+    breadcrumbLabel: "Painting",
+    keyTakeaways: [
+      { label: "Stack: scheduling through payroll", anchor: "#software-stack" },
+      { label: "Use cases by crew and job mix", anchor: "#use-cases" },
+      { label: "How to choose & evaluate", anchor: "#how-to-choose" },
+    ],
+    categoryStackSectionTitle: "Core software stack for painting contractors",
+    categoryStackSectionSub: "Estimate flow, production clarity, and getting paid.",
+    categoryStackIntro:
+      "Interior, exterior, commercial, and maintenance repaint each stress different workflows. These categories cover how work is booked, executed, and settled.",
+    categoryStack: [
+      {
+        id: "scheduling",
+        softwareCategory: "scheduling",
+        heading: "Scheduling & estimate visits",
+        body:
+          "Color consults and bid walks need reliable calendar slots, reminders, and reschedule flows—separate from crew dispatch if possible. Customer-facing booking can reduce phone tag for smaller repaint jobs. Tie sold estimates to jobs without retyping addresses or scopes.",
+        productSlugs: ["calendly", "acuity-scheduling", "setmore"],
+      },
+      {
+        id: "project-management",
+        softwareCategory: "project-management",
+        heading: "Job & project tracking",
+        body:
+          "Active jobs need room lists, areas, coating systems, crew assignments, and punch items in one thread. Lightweight PM beats email chains when supers manage multiple houses. Templates for interior vs exterior packages speed setup without rigid ERP overhead.",
+        productSlugs: ["clickup", "asana", "monday"],
+      },
+      {
+        id: "invoicing",
+        softwareCategory: "invoicing",
+        heading: "Invoicing & deposits",
+        body:
+          "Deposit and progress billing patterns are common on larger repaints. Invoices should mirror the estimate scope so change orders are explicit. Fast field payment links help close cash on completion.",
+        productSlugs: ["freshbooks", "wave", "quickbooks"],
+      },
+      {
+        id: "payroll",
+        softwareCategory: "payroll",
+        heading: "Payroll",
+        body:
+          "Crew swings and overtime-heavy weeks punish manual payroll. Integrate approved time or simple crew rules before compliance surprises. Contractor-heavy models need different support than all W-2—buy for how you actually classify labor.",
+        productSlugs: ["gusto", "onpay"],
+      },
+      {
+        id: "crm",
+        softwareCategory: "crm",
+        heading: "CRM & follow-up",
+        body:
+          "Repaint cycles and commercial accounts reward structured follow-up—past customers, builder relationships, and multi-phase properties. CRM becomes worthwhile when job notes and texts are no longer searchable. Keep pipelines simple so reps maintain them after busy summers.",
+        productSlugs: ["hubspot", "pipedrive"],
+      },
+    ],
+    useCaseSectionTitle: "Best software by use case for painting contractors",
+    useCaseSectionSub: "Owner-led crews, growing residential, and commercial repaint each differ.",
+    useCases: [
+      {
+        title: "Best for owner-operators and small crews",
+        body:
+          "Start with scheduling plus invoicing before CRM or analytics. Fix estimate-to-payment friction first; adoption dies when tools add clicks on ladders. The payroll scenario for painters maps products to typical hiring.",
+        links: [
+          { label: "Best payroll for painters →", href: "/payroll/best-for/painters" },
+          { label: "Invoicing hub →", href: "/invoicing" },
+        ],
+      },
+      {
+        title: "Best for residential repaint and referral growth",
+        body:
+          "Automate reminders for color consults and project milestones; capture photos for marketing-ready proof. Website and SEO guides help inbound match your sales process.",
+        links: [
+          { label: "Contractor website features →", href: "/website-builders/guides/contractor-website-features" },
+          { label: "SEO for contractors →", href: "/seo-tools/guides/how-to-do-seo-for-contractors" },
+        ],
+      },
+      {
+        title: "Best for commercial repaint and multi-phase work",
+        body:
+          "Longer jobs need change tracking, approval trails, and statements that match GC expectations. Accounting alignment matters earlier than in small residential.",
+        links: [
+          { label: "Accounting for contractors →", href: "/accounting/guides/accounting-for-contractors" },
+          { label: "Project management hub →", href: "/project-management" },
+        ],
+      },
+      {
+        title: "Best when leads need structure—not more spreadsheets",
+        body:
+          "If bids stall in inboxes, lightweight CRM stages plus call tracking attributions clarify what marketing actually delivers.",
+        links: [
+          { label: "Lead generation hub →", href: "/lead-generation" },
+          { label: "Call tracking hub →", href: "/call-tracking" },
+        ],
+      },
+    ],
+    howToChooseTitle: "How to choose software for painting businesses",
+    howToChooseSub: "Adoption, estimate flow, and how you staff jobs.",
+    howToChooseSubsections: [
+      {
+        title: "Separate sales scheduling from crew calendars",
+        body:
+          "Double-booking estimators while crews wait kills trust. Decide which system owns consults vs production days.",
+      },
+      {
+        title: "Match complexity to headcount",
+        body:
+          "Enterprise PM rarely pays off for a two-truck shop. Buy the lightest tool your supers will use daily.",
+      },
+      {
+        title: "Integrate payroll when hours get political",
+        body:
+          "When OT and callbacks are normal, payroll should pull the same reality crews see—avoid parallel spreadsheets.",
+      },
+      {
+        title: "Own reputation and review loops early",
+        body:
+          "Painting is visual; reviews and portfolio proof drive the next season. Connect job completion to review requests where it fits your process.",
+      },
+    ],
+    nextStepsTitle: "Next steps",
+    nextStepsGroups: [
+      {
+        groupTitle: "Hubs",
+        links: [
+          { label: "Scheduling hub", href: "/scheduling" },
+          { label: "Field service hub", href: "/field-service" },
+        ],
+      },
+    ],
+    faqTitle: "Painting contractor software FAQs",
+    faqSub: "Common buying questions.",
+    faqs: [
+      {
+        q: "What software do painting companies use?",
+        a: "Many combine scheduling for estimate visits with job tracking or light field tools, invoicing for deposits and progress billing, and payroll as crews grow. CRM may follow when follow-up and pipeline reporting outgrow texts and job notes.",
+      },
+      {
+        q: "Do painters need field service software?",
+        a: "Not every shop needs full dispatch platforms. Crew-scale ops often benefit from mobile checklists, photos, and daily job status—whether inside lighter job tools or dedicated field software—once volume makes texts unreliable.",
+      },
+      {
+        q: "What is the best painting software for small businesses?",
+        a: "Small teams usually win with simple scheduling, clear estimates, and fast invoicing before heavy analytics. Fit depends on interior vs exterior mix, commercial volume, and whether subs vs W-2 crews dominate.",
+      },
+      {
+        q: "When should painters add CRM?",
+        a: "When repeat work, builder relationships, or marketing leads need structured stages and reporting—not when job history already covers most follow-up.",
+      },
+      {
+        q: "Can painting contractors use separate tools instead of one suite?",
+        a: "Yes—many do. The goal is reducing duplicate entry between estimates, jobs, invoicing, and payroll.",
+      },
+    ],
+    methodologyTitle: "How BeltStack evaluates trade software stacks",
+    methodologySub: "Transparent criteria for recommendations.",
+    methodologyBullets: [
+      "We prioritize tools that match painting workflows: estimate flow, crew coordination, and straightforward billing.",
+      "We weigh adoption, integrations, and realistic pricing for seasonal or volatile headcount.",
+      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+    ],
+  },
+
+  "general-contractors": {
+    slug: "general-contractors",
+    seoTitle: "Software for General Contractors (2026) | BeltStack",
+    metaDescription:
+      "General contractor software stacks: project management, accounting, time tracking, invoicing, and payroll—editorial picks and category links.",
+    title: "Software for General Contractors",
+    intro:
+      "General contractors orchestrate scopes, subs, schedules, and cash across long jobs. Software should give you one operational picture—budget vs actual, commitments, and labor—without hiding risk in disconnected spreadsheets.",
+    heroCategoryLine:
+      "GCs typically anchor on project management or construction ops, accounting with job costing, time capture tied to cost codes, invoicing or billing aligned to contracts, and payroll when internal crews and prevailing-wage rules appear.",
+    breadcrumbLabel: "General contractors",
+    keyTakeaways: [
+      { label: "GC stack: projects, costs, time, billing", anchor: "#software-stack" },
+      { label: "Use cases: remodel, new build, commercial", anchor: "#use-cases" },
+      { label: "Controls, subs, and integrations", anchor: "#how-to-choose" },
+    ],
+    categoryStackSectionTitle: "Core software stack for general contractors",
+    categoryStackSectionSub: "One chain from estimate to pay apps—fragmentation creates margin leaks.",
+    categoryStackIntro:
+      "These categories address how work is planned, measured, billed, and paid for across subs and self-performed labor.",
+    categoryStack: [
+      {
+        id: "project-management",
+        softwareCategory: "project-management",
+        heading: "Project management & coordination",
+        body:
+          "Schedules, RFIs, sub handoffs, and owner updates belong in structured workstreams—not only email. PM tools should reflect real GC workflows: baseline shifts, permit milestones, and closeout punch. Pick depth that matches project size; residential remodel rarely needs airport-scale Gantt hell.",
+        productSlugs: ["wrike", "smartsheet", "monday"],
+      },
+      {
+        id: "accounting",
+        softwareCategory: "accounting",
+        heading: "Accounting & job costing",
+        body:
+          "Committed costs, vendor bills, and labor burden should roll to jobs your PM system references. GC accounting is not generic SMB bookkeeping when retainage and WIP matter. Sync direction matters: decide whether accounting or PM owns the chart of job dimensions.",
+        productSlugs: ["quickbooks-online", "xero"],
+      },
+      {
+        id: "time-tracking",
+        softwareCategory: "time-tracking",
+        heading: "Time tracking & field labor",
+        body:
+          "Self-performed work and T&M extras need defensible hours by cost code or phase. Field-friendly timers beat end-of-week memory when owners or GCs audit. Integrations into payroll reduce duplicate entry for certified or prevailing-wage scenarios.",
+        productSlugs: ["harvest", "toggl", "clockify"],
+      },
+      {
+        id: "invoicing",
+        softwareCategory: "invoicing",
+        heading: "Billing & pay applications",
+        body:
+          "Progress billing, change orders, and lien-sensitive timelines need invoices that match contract language. Even if accounting prints final billings, frontline tools should capture approvals and attachments. Avoid ‘pretty’ invoices that disagree with subs’ commitments.",
+        productSlugs: ["quickbooks", "zoho-invoice", "freshbooks"],
+      },
+      {
+        id: "payroll",
+        softwareCategory: "payroll",
+        heading: "Payroll",
+        body:
+          "As soon as you mix staff carpenters, apprentices, and office payroll, integrations from time and accounting matter. Ask about multi-state, union, or certified payroll needs before you lock plans—edge cases define fit.",
+        productSlugs: ["gusto", "quickbooks-payroll"],
+      },
+    ],
+    useCaseSectionTitle: "Best software by use case for general contractors",
+    useCaseSectionSub: "Remodel-heavy, new residential, and commercial each stress different modules.",
+    useCases: [
+      {
+        title: "Best when job costing and WIP discipline matter",
+        body:
+          "If you only discover margin at loan draws, tighten dimensions on vendor bills, labor, and committed subcontracts before buying more dashboards. The job-costing time guide bridges field capture to books.",
+        links: [
+          { label: "Job costing & time →", href: "/time-tracking/guides/job-costing-time-tracking-for-contractors" },
+          { label: "Accounting for contractors →", href: "/accounting/guides/accounting-for-contractors" },
+        ],
+      },
+      {
+        title: "Best payroll fit for GC labor patterns",
+        body:
+          "Mixed crews, overtime, and occasional certified lines reward payroll that plays well with time data. Scenario pages narrow products to real hiring patterns.",
+        links: [
+          { label: "Payroll for general contractors →", href: "/payroll/best-for/general-contractors" },
+          { label: "Payroll for construction →", href: "/payroll/guides/payroll-for-construction-companies" },
+        ],
+      },
+      {
+        title: "Best for subs-heavy jobs and document control",
+        body:
+          "Change orders and sub quotes should attach to the job everyone references. PM comparisons help once you know commercial vs residential share of revenue.",
+        links: [{ label: "Construction & contractor PM guide →", href: "/project-management/guides/project-management-for-construction-and-contractors" }],
+      },
+      {
+        title: "Best for growing GCs standardizing workflows",
+        body:
+          "Templates for estimate, procurement, and closeout reduce one-off heroics. CRM may support builder and developer pipelines when work is won before ground breaks.",
+        links: [
+          { label: "Compare project tools →", href: "/project-management/best-project-management-software" },
+          { label: "CRM hub →", href: "/crm" },
+        ],
+      },
+    ],
+    howToChooseTitle: "How to choose GC software",
+    howToChooseSub: "Controls, integrations, and who owns the numbers.",
+    howToChooseSubsections: [
+      {
+        title: "Decide the system of record for job financials",
+        body:
+          "Split ownership between PM and accounting creates reconciliation tax every month. Pick a lead system for budgets and actuals, with the other feeding—not fighting—it.",
+      },
+      {
+        title: "Field time has to map to cost codes you actually use",
+        body:
+          "Generic timers help culture; job profitability needs codes crews understand and PMs enforce.",
+      },
+      {
+        title: "Plan for sub and vendor onboarding load",
+        body:
+          "COIs, waivers, and compliance packets scale poorly in inboxes. Know where those artifacts will live before you pick elegant scheduling alone.",
+      },
+      {
+        title: "Model total cost with modules you will really adopt",
+        body:
+          "Seat math on PM, accounting, payroll, and time stacks fast. Unused ‘enterprise’ tiers still burn cash.",
+      },
+    ],
+    nextStepsTitle: "Next steps",
+    nextStepsGroups: [
+      {
+        groupTitle: "Hubs",
+        links: [
+          { label: "Project management hub", href: "/project-management" },
+          { label: "Accounting hub", href: "/accounting" },
+          { label: "Time tracking hub", href: "/time-tracking" },
+        ],
+      },
+    ],
+    faqTitle: "General contractor software FAQs",
+    faqSub: "Buying and integration questions.",
+    faqs: [
+      {
+        q: "What software do general contractors use?",
+        a: "Many combine project or construction management for schedules and documents with accounting that supports job costing, time tracking tied to work performed, invoicing or AIA-style billing patterns, and payroll for internal crews. Larger commercial firms may add specialized construction ERP later; smaller GCs often stitch best-in-class tools with integrations.",
+      },
+      {
+        q: "Do general contractors need separate PM and accounting systems?",
+        a: "Often yes—each system excels at different jobs. What matters is reliable sync of costs, commitments, and billings so leadership sees one operational truth. Weak handoffs create surprise margin hits at closeout.",
+      },
+      {
+        q: "What is the best software for a small general contractor?",
+        a: "Fit depends on project size, self-performed vs subcontracted labor, and how strict owners or lenders expect reporting. Small remodel GCs often start with practical PM plus strong invoicing and QuickBooks-style accounting; commercial work typically demands stronger controls earlier.",
+      },
+      {
+        q: "When should GCs add dedicated time tracking?",
+        a: "Add it when labor hours drive billing, when job costing is guesswork, or when payroll reconciliation consumes hours weekly. Integrated field time beats spreadsheets once multiple supers and cost codes are in play.",
+      },
+      {
+        q: "Can GCs succeed with separate tools instead of one construction suite?",
+        a: "Yes—many do—if integrations are intentional. Avoid duplicate job masters across PM, time, and accounting; pick a path for vendor bills and labor to land on the right job codes.",
+      },
+    ],
+    methodologyTitle: "How BeltStack evaluates trade software stacks",
+    methodologySub: "Transparent criteria for recommendations.",
+    methodologyBullets: [
+      "We prioritize tools that match GC workflows: job financial visibility, document control, and labor tied to cost structure.",
+      "We weigh integration realism, permissions, and total cost across PM, accounting, payroll, and time.",
+      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+    ],
+  },
+
   /** Example of a non–field-service-first stack (POS-heavy). */
   restaurants: {
     slug: "restaurants",

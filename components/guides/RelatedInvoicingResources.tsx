@@ -12,6 +12,7 @@ const DEFAULT_RELATED_INVOICING_RESOURCES: RelatedInvoicingResourceItem[] = [
   { label: "Best Invoicing Software by Use Case", href: "/invoicing/best-for" },
   { label: "Compare Invoicing Software", href: "/invoicing/compare" },
   { label: "Invoicing Guides", href: "/invoicing/guides" },
+  { label: "Invoices, Payments & Accounting Close (workflow guide)", href: "/accounting/guides/invoices-payments-and-accounting-close" },
   { label: "FreshBooks Review", href: getInvoicingReviewUrl("freshbooks") },
   { label: "QuickBooks Review", href: getInvoicingReviewUrl("quickbooks") },
   { label: "Wave Review", href: getInvoicingReviewUrl("wave") },

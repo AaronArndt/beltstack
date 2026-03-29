@@ -9,6 +9,7 @@ const DEFAULT_RELATED_INVENTORY_RESOURCES: RelatedInventoryResourceItem[] = [
   { label: "Best Inventory Management Software (2026)", href: "/inventory/best-inventory-software" },
   { label: "Compare Inventory Software", href: "/inventory/compare" },
   { label: "Inventory Management Guides", href: "/inventory/guides" },
+  { label: "Cycle Counting & Inventory Accuracy guide", href: "/inventory/guides/cycle-counting-and-inventory-accuracy" },
   { label: "Zoho Inventory Review", href: getInventoryReviewUrl("zoho-inventory") },
   { label: "Cin7 Review", href: getInventoryReviewUrl("cin7") },
   { label: "inFlow Inventory Review", href: getInventoryReviewUrl("inflow-inventory") },

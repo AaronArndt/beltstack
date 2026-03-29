@@ -25,6 +25,8 @@ const DEFAULT_RELATED_HELPDESK_RESOURCES: RelatedHelpdeskResourceItem[] = [
   { label: "Gorgias vs Zendesk", href: getHelpdeskCompareUrl("gorgias-vs-zendesk") },
   { label: "Best Helpdesk for Small Business guide", href: "/helpdesk/guides/best-helpdesk-software-for-small-business" },
   { label: "How to Choose Helpdesk Software guide", href: "/helpdesk/guides/how-to-choose-helpdesk-software" },
+  { label: "CRM vs Helpdesk Software guide", href: "/crm/guides/crm-vs-helpdesk-software" },
+  { label: "CRM Software Hub", href: "/crm" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

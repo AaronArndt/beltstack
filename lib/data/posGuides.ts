@@ -57,6 +57,12 @@ export const POS_GUIDES: PosGuideEntry[] = [
     description:
       "How POS integrates with inventory management systems and why it matters for accurate stock and reporting.",
   },
+  {
+    title: "Employee Time Clocks & Labor with POS",
+    href: "/pos/guides/employee-time-clocks-and-labor-with-pos",
+    description:
+      "How retail and restaurant teams capture hours at the POS, connect to scheduling, and prepare data for payroll without duplicate entry.",
+  },
 ];
 
 export type PosGuideSidebarItem = {
@@ -125,4 +131,6 @@ export const POS_GUIDE_RELATED_ITEMS = [
   { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
   { label: "Toast vs Square", href: getPosCompareUrl("toast-pos-vs-square-pos") },
   { label: "Lightspeed vs Vend", href: getPosCompareUrl("lightspeed-pos-vs-vend-pos") },
+  { label: "Time Tracking Software Hub", href: "/time-tracking" },
+  { label: "Payroll Software Hub", href: "/payroll" },
 ] as const;

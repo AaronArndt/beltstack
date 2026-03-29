@@ -42,4 +42,10 @@ export const PROJECT_MANAGEMENT_GUIDES: ProjectManagementGuideEntry[] = [
     description:
       "When to use Kanban-style boards vs Scrum-style sprints, and which project management tools support each approach.",
   },
+  {
+    title: "Project Management for Construction and Contractors",
+    href: "/project-management/guides/project-management-for-construction-and-contractors",
+    description:
+      "How construction and trade businesses use PM software for jobs, crews, and handoffs—and what to prioritize before buying.",
+  },
 ];

@@ -49,5 +49,11 @@ export const TIME_TRACKING_GUIDES: TimeTrackingGuideEntry[] = [
     description:
       "Labor burden, codes, and WIP—how tracked hours feed estimates and profitability without drowning crews in admin.",
   },
+  {
+    title: "Employee Time Clocks & Labor with POS",
+    href: "/pos/guides/employee-time-clocks-and-labor-with-pos",
+    description:
+      "For hourly retail and restaurant staff: built-in POS time clocks, tips, breaks, and how data should reach payroll.",
+  },
 ];
 

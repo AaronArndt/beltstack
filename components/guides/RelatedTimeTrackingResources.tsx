@@ -12,6 +12,8 @@ const DEFAULT_RELATED_TIME_TRACKING_RESOURCES: RelatedTimeTrackingResourceItem[]
   { label: "Best Time Tracking Software by Use Case", href: "/time-tracking/best-for" },
   { label: "Compare Time Tracking Software", href: "/time-tracking/compare" },
   { label: "Time Tracking Guides", href: "/time-tracking/guides" },
+  { label: "Employee time clocks & labor with POS (guide)", href: "/pos/guides/employee-time-clocks-and-labor-with-pos" },
+  { label: "POS Software Hub", href: "/pos" },
   { label: "Geofenced time tracking for field crews (guide)", href: "/time-tracking/guides/geofenced-time-tracking-for-field-crews" },
   { label: "Time tracking for subcontractors & 1099 (guide)", href: "/time-tracking/guides/time-tracking-for-subcontractors-and-1099-workers" },
   { label: "Job costing & time tracking for contractors (guide)", href: "/time-tracking/guides/job-costing-time-tracking-for-contractors" },

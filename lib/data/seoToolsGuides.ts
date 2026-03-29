@@ -41,4 +41,25 @@ export const SEO_TOOLS_GUIDES: SeoToolsGuideItem[] = [
       "Relevance, distance, prominence explained; GBP levers, website alignment, rank grids, tactics to avoid, and when to blend paid leads.",
     href: "/seo-tools/guides/how-to-rank-in-google-maps",
   },
+  {
+    slug: "technical-seo-audit-basics-for-small-business",
+    title: "Technical SEO Audit Basics for Small Business",
+    description:
+      "Crawling, indexing, HTTPS, sitemaps, and fix prioritization—what to check before you buy a full enterprise SEO suite.",
+    href: "/seo-tools/guides/technical-seo-audit-basics-for-small-business",
+  },
+  {
+    slug: "local-keyword-research-without-enterprise-tools",
+    title: "Local Keyword Research Without Enterprise Tools",
+    description:
+      "Maps Pack intent, service modifiers, Search Console queries, and when free data is enough vs when Semrush or Ahrefs pays off.",
+    href: "/seo-tools/guides/local-keyword-research-without-enterprise-tools",
+  },
+  {
+    slug: "how-to-budget-for-seo-tools-and-subscriptions",
+    title: "How to Budget for SEO Tools & Subscriptions",
+    description:
+      "Seat limits, project caps, rank-tracking costs, and BrightonLocal-style local add-ons—pick tiers that match real headcount and markets.",
+    href: "/seo-tools/guides/how-to-budget-for-seo-tools-and-subscriptions",
+  },
 ];

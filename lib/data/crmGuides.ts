@@ -60,4 +60,10 @@ export const CRM_GUIDES: CrmGuideEntry[] = [
     description:
       "How consultants use CRM to manage clients, projects, and follow-up without overpaying for enterprise tools.",
   },
+  {
+    title: "CRM vs Helpdesk Software",
+    href: "/crm/guides/crm-vs-helpdesk-software",
+    description:
+      "Learn the difference between CRM and helpdesk tools, when you need one or both, and how they connect across sales and support.",
+  },
 ];

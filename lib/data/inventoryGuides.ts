@@ -52,6 +52,12 @@ export const INVENTORY_GUIDES: InventoryGuideEntry[] = [
     description:
       "How inventory platforms price their tools, what drives costs, and how to budget based on complexity and volume.",
   },
+  {
+    title: "Cycle Counting and Inventory Accuracy",
+    href: "/inventory/guides/cycle-counting-and-inventory-accuracy",
+    description:
+      "How cycle counts, ABC analysis, and inventory accuracy practices reduce stockouts and shrink—and how software supports them.",
+  },
 ] as const;
 
 // Re-export commonly used inventory logos for guide sidebars.

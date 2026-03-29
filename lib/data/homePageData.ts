@@ -113,12 +113,14 @@ export const BEST_SOFTWARE_ROUNDUPS = [
 ] as const;
 
 export const TRADES = [
-  { label: "HVAC", href: "/field-service/best-for/hvac" },
-  { label: "Plumbing", href: "/field-service/best-for/plumbing" },
-  { label: "Electrical", href: "/field-service/best-for/electricians" },
-  { label: "Landscaping", href: "/payroll/best-for/landscaping" },
-  { label: "Roofing", href: "/payroll/best-for/roofing" },
-  { label: "Cleaning Services", href: "/payroll/best-for/cleaning-business" },
+  { label: "HVAC", href: "/hvac" },
+  { label: "Plumbing", href: "/plumbing" },
+  { label: "Electrical", href: "/electrical" },
+  { label: "Landscaping", href: "/landscaping" },
+  { label: "Roofing", href: "/roofing" },
+  { label: "Painting", href: "/painting" },
+  { label: "General Contractors", href: "/general-contractors" },
+  { label: "Cleaning Services", href: "/cleaning-services" },
 ] as const;
 
 export const LATEST_GUIDES = [
@@ -174,7 +176,11 @@ export const SEARCH_DESTINATIONS: Record<string, string> = {
   "project management": "/project-management",
   contractors: "/payroll/best-for/contractors",
   "payroll for contractors": "/payroll/best-for/contractors",
-  hvac: "/field-service/best-for/hvac",
-  plumbing: "/field-service/best-for/plumbing",
+  hvac: "/hvac",
+  plumbing: "/plumbing",
+  roofing: "/roofing",
+  painting: "/painting",
+  "general contractors": "/general-contractors",
+  "general-contractors": "/general-contractors",
   "small business": "/payroll/best-for/small-business",
 };

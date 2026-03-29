@@ -34,6 +34,27 @@ export const EMAIL_MARKETING_HUB_GUIDES = [
     description: "High-performing campaign types for trades and multi-location operators.",
     href: `${GUIDES_BASE}/best-email-campaigns-for-service-businesses`,
   },
+  {
+    slug: "email-deliverability-spf-dkim-dmarc",
+    title: "Email Deliverability: SPF, DKIM & DMARC",
+    description:
+      "Why authentication matters for inbox placement and how to validate DNS records without breaking existing mail.",
+    href: `${GUIDES_BASE}/email-deliverability-spf-dkim-dmarc`,
+  },
+  {
+    slug: "email-automation-for-service-businesses",
+    title: "Email Automation for Service Businesses",
+    description:
+      "Sequences tied to completed jobs, seasons, and estimates—automation scope that office staff can maintain.",
+    href: `${GUIDES_BASE}/email-automation-for-service-businesses`,
+  },
+  {
+    slug: "email-marketing-consent-and-can-spam",
+    title: "Email Marketing Consent & CAN-SPAM Basics",
+    description:
+      "Permission, footer requirements, and honest headers—baseline habits before you scale send volume.",
+    href: `${GUIDES_BASE}/email-marketing-consent-and-can-spam`,
+  },
 ];
 
 export const EMAIL_MARKETING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [

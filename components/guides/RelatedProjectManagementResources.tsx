@@ -27,6 +27,7 @@ const DEFAULT_RELATED_PROJECT_MANAGEMENT_RESOURCES: RelatedProjectManagementReso
   { label: "Monday vs Wrike", href: getProjectManagementCompareUrl("monday-vs-wrike") },
   { label: "How to Choose Project Management Software guide", href: "/project-management/guides/how-to-choose-project-management-software" },
   { label: "Project Management for Small Business guide", href: "/project-management/guides/project-management-for-small-business" },
+  { label: "Project Management for Construction guide", href: "/project-management/guides/project-management-for-construction-and-contractors" },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
