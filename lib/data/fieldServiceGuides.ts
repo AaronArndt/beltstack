@@ -41,4 +41,22 @@ export const FIELD_SERVICE_GUIDES: FieldServiceGuideEntry[] = [
     description:
       "What plumbing operations usually need from estimates through invoicing, and how to evaluate features without getting lost in generic marketing claims.",
   },
+  {
+    title: "Mobile Field Service Apps: What Technicians Actually Need",
+    href: "/field-service/guides/mobile-field-service-apps-for-technicians",
+    description:
+      "Offline behavior, photos, signatures, and UX patterns that drive adoption—how to evaluate mobile FSM apps during a real trial, not a sales demo alone.",
+  },
+  {
+    title: "FSM and Accounting: QuickBooks, Xero & Clean Books",
+    href: "/field-service/guides/field-service-software-and-accounting-integration",
+    description:
+      "How job revenue, sales tax, and payments should sync to accounting, what breaks in the real world, and questions to ask before you go live.",
+  },
+  {
+    title: "Dispatch Boards & Capacity Planning for Service Trucks",
+    href: "/field-service/guides/dispatch-and-capacity-planning-for-field-service",
+    description:
+      "Zones, skills, same-day slots, and utilization—concepts that separate a usable dispatch workflow from a pretty calendar that collapses under volume.",
+  },
 ];

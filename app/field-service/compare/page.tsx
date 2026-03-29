@@ -12,7 +12,11 @@ const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getFieldServiceCompar
 
 const POPULAR_SLUGS = [
   "jobber-vs-housecall-pro",
+  "jobber-vs-servicetitan",
   "housecall-pro-vs-servicetitan",
+  "connecteam-vs-jobber",
+  "connecteam-vs-housecall-pro",
+  "connecteam-vs-servicetitan",
   "jobber-vs-workiz",
   "servicetitan-vs-service-fusion",
   "kickserv-vs-jobber",
@@ -20,7 +24,6 @@ const POPULAR_SLUGS = [
   "servicetrade-vs-servicetitan",
   "simpro-vs-servicetitan",
   "zuper-vs-jobber",
-  "connecteam-vs-jobber",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

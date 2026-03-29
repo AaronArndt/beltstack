@@ -92,6 +92,8 @@ export const SCHEDULING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     links: [
       { label: "Best scheduling for service businesses →", href: getSchedulingBestForUrl("service-business") },
       { label: "Service businesses guide →", href: "/scheduling/guides/appointment-scheduling-for-service-businesses" },
+      { label: "Route optimization for service businesses (guide) →", href: "/scheduling/guides/route-optimization-for-service-businesses" },
+      { label: "Scheduling vs field service software (guide) →", href: "/scheduling/guides/scheduling-software-vs-field-service-software" },
     ],
   },
   {
@@ -242,6 +244,27 @@ export const SCHEDULING_HUB_GUIDES: SchedulingGuideItem[] = [
     href: `${SCHEDULING_GUIDES_BASE}/appointment-scheduling-for-service-businesses`,
     description:
       "Field service, capacity, and reminders—what changes when appointments are operations-critical.",
+  },
+  {
+    slug: "route-optimization",
+    title: "Route Optimization & Multi-Stop Scheduling for Service Businesses",
+    href: `${SCHEDULING_GUIDES_BASE}/route-optimization-for-service-businesses`,
+    description:
+      "When booking links suffice versus when you need territories and sequencing—and how FSM platforms overlap.",
+  },
+  {
+    slug: "scheduling-vs-fsm",
+    title: "Scheduling Software vs Field Service Software",
+    href: `${SCHEDULING_GUIDES_BASE}/scheduling-software-vs-field-service-software`,
+    description:
+      "Customer-facing calendars versus jobs, dispatch, and invoicing—pick the right category before you shortlist vendors.",
+  },
+  {
+    slug: "emergency-same-day",
+    title: "Emergency & Same-Day Service Scheduling",
+    href: `${SCHEDULING_GUIDES_BASE}/emergency-and-same-day-appointment-scheduling`,
+    description:
+      "On-call logic, triage, and capacity when the day rarely goes to plan—beyond a standard self-serve booking page.",
   },
   {
     slug: "calendly-alternatives",

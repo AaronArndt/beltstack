@@ -97,6 +97,7 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
       "If you run a lean crew or solo operation, you need scheduling, dispatch, and invoicing without enterprise implementation drag. The goal is fewer tools and faster adoption—mobile apps that techs actually use and clear billing from the job. We focus on platforms that stay approachable at low headcount while still replacing spreadsheets.",
     links: [
       { label: "Best field service software for small business →", href: getFieldServiceBestForUrl("small-business") },
+      { label: "Mobile FSM apps for technicians (guide) →", href: "/field-service/guides/mobile-field-service-apps-for-technicians" },
       { label: "See our full rankings →", href: "/field-service/best-field-service-software" },
     ],
   },
@@ -106,6 +107,8 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
       "When call volume grows and you’re juggling multiple trucks, dispatch boards, capacity planning, and reporting become the bottleneck. Lightweight tools can feel underpowered; you need routing, job costing visibility, and often marketing or reporting depth. That’s where platforms built for scale—ServiceTitan is a common example—earn their place.",
     links: [
       { label: "Full rankings & picks for growing teams →", href: "/field-service/best-field-service-software" },
+      { label: "Dispatch & capacity planning (guide) →", href: "/field-service/guides/dispatch-and-capacity-planning-for-field-service" },
+      { label: "Jobber vs ServiceTitan →", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
       { label: "Housecall Pro vs ServiceTitan →", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
       { label: "FieldPulse vs Jobber (ops-heavy trades) →", href: getFieldServiceCompareUrl("fieldpulse-vs-jobber") },
     ],
@@ -124,7 +127,10 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     title: "Best for contractors coordinating jobs and crews",
     body:
       "General and mixed-trade contractors need one place for jobs, change orders, estimates, and customer communication—without losing visibility across crews. The right fit is less about a single trade and more about workflow: estimates to invoice, document storage, and how subs and techs get updates in the field.",
-    links: [{ label: "Best field service software for contractors →", href: getFieldServiceBestForUrl("contractors") }],
+    links: [
+      { label: "Best field service software for contractors →", href: getFieldServiceBestForUrl("contractors") },
+      { label: "Connecteam vs Housecall Pro (workforce vs FSM) →", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
+    ],
   },
   {
     title: "Strong field ops on a tighter budget",
@@ -132,6 +138,7 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
       "Not every shop needs a full enterprise stack. If price sensitivity matters, look for transparent per-user or per-tech pricing, solid core scheduling and invoicing, and room to grow without forced add-ons. Compare how lower-cost contenders stack up against all-in-one leaders before you commit.",
     links: [
       { label: "Jobber vs Workiz (value vs features) →", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
+      { label: "FSM & accounting integration (guide) →", href: "/field-service/guides/field-service-software-and-accounting-integration" },
       { label: "See our full rankings →", href: "/field-service/best-field-service-software" },
     ],
   },
@@ -162,12 +169,36 @@ export const FIELD_SERVICE_POPULAR_COMPARISONS: FieldServicePopularComparisonCar
     href: getFieldServiceCompareUrl("jobber-vs-housecall-pro"),
   },
   {
+    slug: "jobber-vs-servicetitan",
+    productA: { name: "Jobber", logoSrc: LOGOS.jobber },
+    productB: { name: "ServiceTitan", logoSrc: LOGOS.servicetitan },
+    summaryParagraph:
+      "Jobber is the SMB-friendly all-in-one FSM; ServiceTitan is the enterprise home-service platform for high-volume shops that need call-center depth, pricebooks, and heavy analytics. We compare fit, cost, and implementation—not logos.",
+    href: getFieldServiceCompareUrl("jobber-vs-servicetitan"),
+  },
+  {
     slug: "housecall-pro-vs-servicetitan",
     productA: { name: "Housecall Pro", logoSrc: LOGOS.housecallpro },
     productB: { name: "ServiceTitan", logoSrc: LOGOS.servicetitan },
     summaryParagraph:
       "Housecall Pro suits smaller teams and solo pros; ServiceTitan targets growing companies with more advanced dispatch, marketing, and reporting.",
     href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan"),
+  },
+  {
+    slug: "connecteam-vs-housecall-pro",
+    productA: { name: "Connecteam", logoSrc: LOGOS.connecteam },
+    productB: { name: "Housecall Pro", logoSrc: LOGOS.housecallpro },
+    summaryParagraph:
+      "Connecteam is workforce-first—shifts, time tracking, and internal comms for deskless teams. Housecall Pro is full home-service FSM. This guide clarifies which problem you are solving so you do not buy the wrong category.",
+    href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro"),
+  },
+  {
+    slug: "connecteam-vs-servicetitan",
+    productA: { name: "Connecteam", logoSrc: LOGOS.connecteam },
+    productB: { name: "ServiceTitan", logoSrc: LOGOS.servicetitan },
+    summaryParagraph:
+      "ServiceTitan is built for large trade and home service operations end-to-end; Connecteam adds dedicated workforce tooling that some enterprises layer on top. We explain when to combine, when to choose one, and what you give up either way.",
+    href: getFieldServiceCompareUrl("connecteam-vs-servicetitan"),
   },
   {
     slug: "jobber-vs-workiz",

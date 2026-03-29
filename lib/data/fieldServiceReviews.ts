@@ -206,6 +206,8 @@ const reviews: Record<string, FieldServiceReviewData> = {
     methodology: FIELD_SERVICE_METHODOLOGY,
     compareLinks: [
       { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
+      { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
       { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
       { label: "Kickserv vs Jobber", href: getFieldServiceCompareUrl("kickserv-vs-jobber") },
     ],
@@ -375,6 +377,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     compareLinks: [
       { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
       { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+      { label: "Connecteam vs Housecall Pro", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
     ],
     compareSectionTitle: "Compare Housecall Pro with other field service software",
     bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,
@@ -541,6 +544,8 @@ const reviews: Record<string, FieldServiceReviewData> = {
     methodology: FIELD_SERVICE_METHODOLOGY,
     compareLinks: [
       { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
+      { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
       { label: "ServiceTitan vs Service Fusion", href: getFieldServiceCompareUrl("servicetitan-vs-service-fusion") },
     ],
     compareSectionTitle: "Compare ServiceTitan with other field service software",
@@ -1856,6 +1861,8 @@ const reviews: Record<string, FieldServiceReviewData> = {
     methodology: FIELD_SERVICE_METHODOLOGY,
     compareLinks: [
       { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+      { label: "Connecteam vs Housecall Pro", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
+      { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
     ],
     compareSectionTitle: "Compare Connecteam with other field service software",
     bestPayrollSoftwareHref: FIELD_SERVICE_BEST_SOFTWARE,

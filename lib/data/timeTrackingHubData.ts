@@ -28,6 +28,7 @@ export const TIME_TRACKING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     body: "Classification overhead can kill adoption—look for rules that map tasks to billable buckets and reports your clients actually accept. Integration with invoicing reduces duplicate entry.",
     links: [
       { label: "Best time tracking for consultants →", href: getTimeTrackingBestForUrl("consultants") },
+      { label: "Time tracking for subcontractors & 1099 (guide) →", href: "/time-tracking/guides/time-tracking-for-subcontractors-and-1099-workers" },
       { label: "Harvest review →", href: getTimeTrackingReviewUrl("harvest") },
     ],
   },
@@ -36,6 +37,8 @@ export const TIME_TRACKING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     body: "Once time feeds payroll or job estimates, accuracy and lock periods matter more than pretty charts. Evaluate roles, edit history, and whether mobile or GPS features are necessary—or harmful to trust.",
     links: [
       { label: "Best time tracking for small business →", href: getTimeTrackingBestForUrl("small-business") },
+      { label: "Job costing & time tracking for contractors (guide) →", href: "/time-tracking/guides/job-costing-time-tracking-for-contractors" },
+      { label: "Geofenced time tracking for field crews (guide) →", href: "/time-tracking/guides/geofenced-time-tracking-for-field-crews" },
       { label: "Full rankings →", href: "/time-tracking/best-time-tracking-software" },
     ],
   },

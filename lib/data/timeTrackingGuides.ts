@@ -31,5 +31,23 @@ export const TIME_TRACKING_GUIDES: TimeTrackingGuideEntry[] = [
     description:
       "When lightweight tracking beats formal timesheets—and what changes at payroll scale.",
   },
+  {
+    title: "Geofenced Time Tracking for Field Crews",
+    href: "/time-tracking/guides/geofenced-time-tracking-for-field-crews",
+    description:
+      "Location-based clocks, trust, and compliance tradeoffs for contractors—when geofencing helps and when it backfires with technicians.",
+  },
+  {
+    title: "Time Tracking for Subcontractors & 1099 Workers",
+    href: "/time-tracking/guides/time-tracking-for-subcontractors-and-1099-workers",
+    description:
+      "Classification cautions, what to track for invoices versus payroll, and how to avoid turning software into a misclassification risk.",
+  },
+  {
+    title: "Job Costing with Time Tracking for Contractors",
+    href: "/time-tracking/guides/job-costing-time-tracking-for-contractors",
+    description:
+      "Labor burden, codes, and WIP—how tracked hours feed estimates and profitability without drowning crews in admin.",
+  },
 ];
 

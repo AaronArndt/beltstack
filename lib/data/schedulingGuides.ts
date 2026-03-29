@@ -49,4 +49,22 @@ export const SCHEDULING_GUIDES: SchedulingGuideEntry[] = [
     description:
       "What to look for when multiple people take bookings: round-robin, collective availability, buffer time, and team-friendly pricing.",
   },
+  {
+    title: "Route Optimization & Multi-Stop Scheduling for Service Businesses",
+    href: "/scheduling/guides/route-optimization-for-service-businesses",
+    description:
+      "When customer booking links are enough versus when you need true route and territory thinking—and how that overlaps with field service platforms.",
+  },
+  {
+    title: "Scheduling Software vs Field Service Software",
+    href: "/scheduling/guides/scheduling-software-vs-field-service-software",
+    description:
+      "Clear boundaries: public booking and calendars versus jobs, dispatch, and job-to-cash workflows—so you buy the right category first.",
+  },
+  {
+    title: "Emergency & Same-Day Service Scheduling",
+    href: "/scheduling/guides/emergency-and-same-day-appointment-scheduling",
+    description:
+      "Triage rules, on-call windows, and customer expectations when the calendar is unpredictable—evaluation criteria beyond a standard booking page.",
+  },
 ];

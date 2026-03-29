@@ -324,6 +324,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { label: "Winner for home service marketing", winner: "B" },
     ],
     moreComparisons: [
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
       { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
       { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
     ],
@@ -338,6 +339,147 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
         label: "Best for home-service marketing",
         winner: "B",
         reason: "Housecall Pro leans into customer communication and marketing for residential work.",
+      },
+    ],
+  }),
+
+  // Jobber vs ServiceTitan
+  buildComparison("jobber-vs-servicetitan", "jobber", "servicetitan", {
+    summaryParagraph:
+      "Jobber and ServiceTitan both help trade and home service companies run jobs, dispatch crews, and collect revenue—but they target different levels of scale. Jobber is the approachable all-in-one FSM for small and mid-size contractors; ServiceTitan is built for larger, high-volume operations that need call-center depth, rich pricebooks, and enterprise-style reporting.",
+    quickRecommendationA:
+      "Choose Jobber if you want a modern contractor FSM you can roll out quickly, with strong job-to-invoice workflows and pricing that fits typical SMB crew sizes.",
+    quickRecommendationB:
+      "Choose ServiceTitan if you run many trucks and locations, rely on a busy call center, and need granular metrics on CSRs, campaigns, memberships, and technician performance.",
+    quickVerdictParagraphs: [
+      "When we compare these two, we start with how your shop actually runs day to day: volume of inbound calls, how tightly you manage pricebooks and memberships, and whether managers review dashboards weekly—or whether you mainly need reliable scheduling, quotes, and invoicing without a heavy implementation.",
+      "Jobber fits the latter for most small and mid-size teams. It keeps quotes, jobs, dispatch, and payments in one coherent flow, with reporting that is strong for SMBs without the overhead of enterprise packaging.",
+      "ServiceTitan earns its place when operational maturity catches up to ambition: you have dedicated office roles, you track conversion and revenue per tech, and you are willing to invest in onboarding and ongoing admin. It is usually the wrong first purchase for very small crews, even if the brand is familiar in HVAC and plumbing.",
+      "Always validate pricing, modules, and implementation scope with each vendor—our ratings reflect typical buyer fit, not a quote for your business.",
+    ],
+    decisionGuideA: [
+      "You have roughly one office to a few dozen trucks and want one FSM without a multi-month enterprise rollout.",
+      "Your priority is job lifecycle clarity—estimate to payment—more than call-center analytics and deep pricebook governance.",
+      "You want predictable SMB-style tiered pricing rather than a custom enterprise contract.",
+    ],
+    decisionGuideB: [
+      "You staff a call center (or plan to) and want CRM-style tracking on every lead, call, and campaign.",
+      "You sell memberships, financing, and complex installs and need pricebook and reporting depth to match.",
+      "You have leadership bandwidth to own implementation, training, and process discipline across locations.",
+    ],
+    ratingsComparison: [
+      { category: "SMB time-to-value", productA: "4.7", productB: "3.6" },
+      { category: "Call-center & enterprise analytics", productA: "4.0", productB: "4.9" },
+      { category: "Core contractor FSM (jobs, dispatch, invoicing)", productA: "4.7", productB: "4.8" },
+      { category: "Typical cost for small teams", productA: "4.3", productB: "3.4" },
+    ],
+    featureComparison: [
+      ...BASE_FEATURE_ROWS,
+      {
+        feature: "Call-center & lead tracking",
+        productA: "Solid communications; lighter inbound analytics",
+        productB: "Deep call, CSR, and campaign attribution",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Memberships, pricebooks & financing",
+        productA: "Service plans and pricing tools suitable for SMBs",
+        productB: "Advanced pricebook, membership, and financing workflows",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Implementation & admin load",
+        productA: "Faster rollout for typical contractor teams",
+        productB: "Structured implementation; more ongoing configuration",
+        supportA: "supported",
+        supportB: "supported",
+        stronger: "A",
+      },
+    ],
+    pricingComparison:
+      "Jobber publishes tiered plans that most small and mid-size shops can benchmark from the website. ServiceTitan is custom-priced and typically represents a much higher total cost of ownership once you include implementation, training, and modules. ServiceTitan can be justified when you will actively use its depth; otherwise Jobber usually delivers better value per dollar at SMB scale.",
+    prosConsA: {
+      pros: [
+        "Easier path to value for common contractor workflows.",
+        "Strong balance of features and usability without enterprise complexity.",
+        "Fits a wide range of trades and team sizes.",
+      ],
+      cons: [
+        "Less call-center and membership analytics depth than ServiceTitan.",
+        "Very large multi-location operators may eventually need a heavier stack.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Industry-leading depth for high-volume home service and trade operations.",
+        "Powerful reporting on marketing, sales, and technician performance.",
+        "Built to scale across many trucks and locations.",
+      ],
+      cons: [
+        "High cost and implementation effort relative to SMB FSM.",
+        "Often overwhelming for small teams that do not need enterprise tooling yet.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for small and mid-size contractors",
+        body: "Jobber when you want dependable job-to-cash FSM, mobile adoption, and reporting that matches how most growing shops operate—without enterprise overhead.",
+      },
+      {
+        heading: "Best for large, metrics-driven service companies",
+        body: "ServiceTitan when call volume, memberships, and multi-location governance justify a premium platform and a serious rollout.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Housecall Pro",
+        href: getFieldServiceReviewUrl("housecall-pro"),
+        description: "Home-service FSM with strong customer communication and marketing.",
+      },
+      {
+        name: "Service Fusion",
+        href: getFieldServiceReviewUrl("service-fusion"),
+        description: "Mid-market trade FSM between SMB tools and full enterprise depth.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Should a 5-truck HVAC shop buy ServiceTitan or Jobber?",
+        a: "Many 5-truck shops still run happily on Jobber or Housecall Pro if they do not need deep call-center analytics and complex pricebook governance. Choose ServiceTitan when leadership will use its reporting and you are ready for the cost and implementation—not because of brand alone.",
+      },
+      {
+        q: "Can we start on Jobber and move to ServiceTitan later?",
+        a: "Yes, though migration takes planning. Some companies outgrow SMB FSM as volume and locations increase; model data export, integrations, and training before you switch.",
+      },
+      {
+        q: "Which has better mobile apps for technicians?",
+        a: "Both offer capable mobile experiences; the better fit depends on whether techs need sales and membership tools in the field (ServiceTitan’s strength) versus streamlined job completion and invoicing (Jobber’s sweet spot). Test with real jobs in a trial or demo.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for most SMB & mid-market contractors", winner: "A" },
+      { label: "Winner for enterprise-scale home service ops", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+      { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
+      { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best default for SMB contractor FSM",
+        winner: "A",
+        reason: "Jobber matches how most small and mid-size teams buy and adopt software.",
+      },
+      {
+        label: "Best when scale and analytics justify cost",
+        winner: "B",
+        reason: "ServiceTitan fits high-volume operations that will use deep reporting and call-center tooling.",
       },
     ],
   }),
@@ -460,6 +602,8 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     ],
     moreComparisons: [
       { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
+      { label: "Connecteam vs Housecall Pro", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
       { label: "ServiceTitan vs Service Fusion", href: getFieldServiceCompareUrl("servicetitan-vs-service-fusion") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
@@ -1422,13 +1566,249 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { label: "Winner for full contractor FSM", winner: "B" },
     ],
     moreComparisons: [
+      { label: "Connecteam vs Housecall Pro", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
+      { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
       { label: "Zuper vs Jobber", href: getFieldServiceCompareUrl("zuper-vs-jobber") },
-      { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
       { label: "Best for workforce coordination", winner: "A", reason: "Connecteam centers deskless employees and schedules." },
       { label: "Best for job-to-cash FSM", winner: "B", reason: "Jobber is built for contractor workflows end-to-end." },
+    ],
+  }),
+
+  buildComparison("connecteam-vs-housecall-pro", "connecteam", "housecall-pro", {
+    summaryParagraph:
+      "Connecteam and Housecall Pro both show up in field service searches, but they solve different problems. Housecall Pro is a full home-service FSM for jobs, dispatch, estimates, invoicing, and customer marketing. Connecteam is a deskless workforce platform—shifts, time clocks, forms, and internal communication—often used next to an FSM rather than instead of one.",
+    quickRecommendationA:
+      "Choose Connecteam if your main pain is labor compliance, shift coverage, time tracking, and team communication—not replacing your quoting and invoicing system.",
+    quickRecommendationB:
+      "Choose Housecall Pro if you need residential-focused FSM: online booking, customer notifications, jobs, dispatch, and payments in one product.",
+    quickVerdictParagraphs: [
+      "In our evaluations, buyers confuse these when they search for “field service app” but actually need one of two outcomes: job-to-cash for customers (Housecall Pro’s lane) or employee operations for people in the field (Connecteam’s lane).",
+      "Housecall Pro competes directly with Jobber-style FSM: it is built around homeowners, technicians, and revenue workflows. Connecteam does not replace that depth; it shines when you have many hourly employees, rotating shifts, or checklist-heavy safety routines.",
+      "A two-tool stack (Connecteam + an FSM) is common when workforce rigor matters as much as customer jobs. If you can only fund one subscription, pick the category that matches your worst bottleneck—and confirm integrations before you buy.",
+      "Pricing on both sides scales with users and modules; compare all-in monthly cost on each vendor’s current plans, not headline tiers alone.",
+    ],
+    decisionGuideA: [
+      "You need punch clocks, geofencing or attendance policies, and manager visibility into hours—not just a job schedule.",
+      "Internal announcements, training, or forms matter as much as customer SMS.",
+      "You already have (or will add) a dedicated FSM or accounting path for quotes and invoices.",
+    ],
+    decisionGuideB: [
+      "Residential service is your core motion and you want marketing, reviews, and booking tied to jobs.",
+      "You want estimates, dispatch boards, and invoicing without stitching multiple vendors.",
+      "Your team is small enough that generic workforce software is optional.",
+    ],
+    ratingsComparison: [
+      { category: "Deskless workforce & time tracking", productA: "4.6", productB: "4.1" },
+      { category: "Home-service FSM & customer marketing", productA: "3.4", productB: "4.7" },
+      { category: "SMB ease of first purchase", productA: "4.4", productB: "4.5" },
+    ],
+    featureComparison: [
+      ...BASE_FEATURE_ROWS,
+      {
+        feature: "Quotes, invoicing & customer payments",
+        productA: "Not primary—pair with FSM or accounting",
+        productB: "Core workflows end-to-end",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Online booking & review campaigns",
+        productA: "Not the product focus",
+        productB: "Built for residential growth loops",
+        supportA: "none",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Time clocks, shifts & employee tasks",
+        productA: "Purpose-built for deskless teams",
+        productB: "Scheduling exists; less HR-suite depth",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+    ],
+    pricingComparison:
+      "Both vendors tier by features and headcount. Housecall Pro’s value proposition is replacing several customer-facing tools; Connecteam’s is workforce operations. If you need both full FSM and deep workforce control, budget for two products or expect trade-offs inside a single vendor.",
+    prosConsA: {
+      pros: [
+        "Strong mobile adoption for hourly and distributed teams.",
+        "Useful when compliance, attendance, and internal comms are the constraint.",
+      ],
+      cons: [
+        "Does not deliver complete contractor FSM on its own.",
+        "Adds integration work when paired with Housecall Pro or another FSM.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "All-in-one home service workflows from lead to payment.",
+        "Marketing and customer experience features many workforce apps lack.",
+      ],
+      cons: [
+        "Less specialized than Connecteam for enterprise-style workforce programs.",
+        "Not a substitute if labor operations are your primary pain.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for workforce-first field organizations",
+        body: "Connecteam when shifts, accountability, and internal operations—not homeowner marketing—are what breaks first.",
+      },
+      {
+        heading: "Best for residential FSM buyers",
+        body: "Housecall Pro when you are choosing software to run jobs, dispatch, and customer communication for home service.",
+      },
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "Balanced contractor FSM when Housecall Pro is not the right fit." },
+      { name: "ServiceTitan", href: getFieldServiceReviewUrl("servicetitan"), description: "Enterprise FSM when you outgrow typical SMB tools." },
+    ],
+    faqs: [
+      {
+        q: "Can I use Connecteam instead of Housecall Pro?",
+        a: "Only if you do not need full FSM. Connecteam does not replace estimates, dispatch depth, and invoicing the way Housecall Pro does. Many teams use Connecteam alongside an FSM.",
+      },
+      {
+        q: "Does Housecall Pro include time tracking?",
+        a: "It supports scheduling and job time in an FSM sense. If you need robust attendance, policies, and workforce communication for large hourly staff, Connecteam or a dedicated workforce tool may still be warranted.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for deskless workforce operations", winner: "A" },
+      { label: "Winner for home-service FSM", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+      { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
+      { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      { label: "Best for workforce & compliance", winner: "A", reason: "Connecteam focuses on employees, shifts, and time—not customer job economics." },
+      { label: "Best for residential job-to-cash", winner: "B", reason: "Housecall Pro is built around homeowner workflows and technician jobs." },
+    ],
+  }),
+
+  buildComparison("connecteam-vs-servicetitan", "connecteam", "servicetitan", {
+    summaryParagraph:
+      "Connecteam and ServiceTitan may both land on a contractor’s shortlist, but they are rarely direct substitutes. ServiceTitan is an enterprise-grade field service and home-service platform with CRM, call-center tooling, dispatch, pricebooks, and deep analytics. Connecteam is workforce software for deskless teams—scheduling, time tracking, forms, and internal communication—useful alongside FSM or when labor operations are the primary gap.",
+    quickRecommendationA:
+      "Choose Connecteam when you need a dedicated employee app for time, shifts, and operations comms—whether or not you keep ServiceTitan for customer jobs.",
+    quickRecommendationB:
+      "Choose ServiceTitan when you are standardizing high-volume service operations and need one system for calls, jobs, memberships, and revenue analytics.",
+    quickVerdictParagraphs: [
+      "We treat this comparison as a category check: ServiceTitan is FSM-first for large trade and home service businesses; Connecteam is workforce-first for organizations with many field employees. Buyers who need both sometimes run them together; buyers who need only one should match software to the problem statement.",
+      "ServiceTitan’s investment—licensing, implementation, and admin time—only pays off when managers use reporting, pricebooks, and call-center workflows daily. Connecteam’s investment pays off when attendance, coverage, and frontline communication were failing under lighter tools.",
+      "If you are a small crew evaluating ServiceTitan for brand recognition alone, pause and confirm you will use its depth; otherwise SMB FSM plus optional workforce tooling may be saner.",
+      "Always confirm integration options, data flows, and per-seat pricing with both vendors before you assume a combined stack will be cheaper than an all-in-one.",
+    ],
+    decisionGuideA: [
+      "You have large hourly headcount or multiple shifts and need stronger time and attendance than FSM defaults.",
+      "HR-adjacent workflows—checklists, training posts, announcements—matter for quality and safety.",
+      "You want workforce software that does not require an enterprise FSM project to adopt.",
+    ],
+    decisionGuideB: [
+      "You are optimizing inbound demand, dispatch capacity, and revenue per technician at scale.",
+      "Call-center metrics, memberships, and pricebook governance are non-negotiable.",
+      "You have budget and staff for ServiceTitan-style implementation and ongoing administration.",
+    ],
+    ratingsComparison: [
+      { category: "Workforce & time operations", productA: "4.6", productB: "4.2" },
+      { category: "Enterprise FSM, CRM & analytics", productA: "3.3", productB: "4.9" },
+      { category: "Fit for very small teams (cost vs capability)", productA: "4.2", productB: "3.2" },
+    ],
+    featureComparison: [
+      ...BASE_FEATURE_ROWS,
+      {
+        feature: "Call-center & marketing attribution",
+        productA: "Not in scope",
+        productB: "Deep inbound and campaign tooling",
+        supportA: "none",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Shift & attendance for large hourly staff",
+        productA: "Core product strength",
+        productB: "Supported within FSM; not workforce-suite depth",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+      {
+        feature: "Job costing & service revenue analytics",
+        productA: "Limited versus FSM leaders",
+        productB: "Extensive dashboards and operational metrics",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "ServiceTitan is typically one of the largest line items in a contractor software budget, with custom quotes and implementation costs. Connecteam is usually far less expensive at comparable headcount for pure workforce features—but it does not remove ServiceTitan’s value if you still need enterprise FSM. Model total spend for the outcomes you require, not category labels.",
+    prosConsA: {
+      pros: [
+        "Focused workforce UX that scales with headcount.",
+        "Can complement ServiceTitan instead of forcing a false either/or choice.",
+      ],
+      cons: [
+        "No substitute for ServiceTitan’s FSM, CRM, and reporting depth.",
+        "Another vendor relationship if you run both platforms.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "End-to-end platform for large home service and trade operators.",
+        "Strong when inbound calls, memberships, and technician sales drive revenue.",
+      ],
+      cons: [
+        "High TCO and complexity relative to workforce-only tools.",
+        "Often excessive if you only needed better time tracking or shift communication.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for workforce operations at scale",
+        body: "Connecteam when the employee experience—clocks, coverage, comms—is the constraint, even inside a ServiceTitan shop.",
+      },
+      {
+        heading: "Best for enterprise FSM consolidation",
+        body: "ServiceTitan when one system must own customer demand, jobs, and financial visibility across many trucks.",
+      },
+    ],
+    alternatives: [
+      { name: "Jobber", href: getFieldServiceReviewUrl("jobber"), description: "SMB FSM when ServiceTitan is more than you need." },
+      { name: "Housecall Pro", href: getFieldServiceReviewUrl("housecall-pro"), description: "Home-service FSM with lighter enterprise scope than ServiceTitan." },
+    ],
+    faqs: [
+      {
+        q: "Do ServiceTitan customers use Connecteam?",
+        a: "Some do, especially when they want a dedicated employee app for time, tasks, and internal communication beyond what they run in FSM. Validate integrations and duplicate data entry before you commit.",
+      },
+      {
+        q: "Can Connecteam replace ServiceTitan?",
+        a: "Not for full FSM. You would lose call-center depth, pricebook sophistication, and the job-to-revenue analytics ServiceTitan is known for. Use Connecteam as a workforce layer or choose ServiceTitan alone if one platform is the goal.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for deskless workforce software", winner: "A" },
+      { label: "Winner for enterprise field service platform", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
+      { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
+      { label: "Connecteam vs Jobber", href: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      { label: "Best for workforce & internal ops", winner: "A", reason: "Connecteam is built around employees, not customer CRM depth." },
+      { label: "Best for full FSM at enterprise scale", winner: "B", reason: "ServiceTitan consolidates calls, jobs, and analytics for large operators." },
     ],
   }),
 
