@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
-import { StickyStackFinder } from "@/components/StickyStackFinder";
+import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import {
   FEATURED_SOFTWARE,
@@ -21,6 +19,7 @@ import { HELPDESK_POPULAR_COMPARISONS } from "@/lib/data/helpdeskHubData";
 import { POS_POPULAR_COMPARISONS } from "@/lib/data/posHubData";
 import { FIELD_SERVICE_POPULAR_COMPARISONS } from "@/lib/data/fieldServiceHubData";
 import { sectionRuleAccent } from "@/lib/design-tokens";
+import { TradeSoftwareDiscoverySection } from "@/components/home/TradeSoftwareDiscoverySection";
 
 // ——— Design tokens (reference) ———
 // BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
@@ -32,25 +31,6 @@ const btnSecondary =
   "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 hover:border-[#10B981]/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnPill =
   "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-
-const STACK_FAST_CATEGORIES = [
-  { value: "payroll", label: "Payroll" },
-  { value: "bookkeeping", label: "Bookkeeping" },
-  { value: "field-service", label: "Field Service" },
-  { value: "crm", label: "CRM" },
-  { value: "banking", label: "Banking" },
-];
-
-const STACK_FAST_TRADES = [
-  { value: "hvac", label: "HVAC" },
-  { value: "plumbing", label: "Plumbing" },
-  { value: "electrical", label: "Electrical" },
-  { value: "landscaping", label: "Landscaping" },
-  { value: "roofing", label: "Roofing" },
-  { value: "painting", label: "Painting" },
-  { value: "general-contractors", label: "General contractors" },
-  { value: "cleaning", label: "Cleaning" },
-];
 
 /** Homepage hero — use-case tiles (custom artwork in /public/Logos). */
 const HERO_USE_CASE_TILES = [
@@ -111,10 +91,10 @@ const HERO_TRADE_LINKS = [
 ] as const;
 
 const heroUseCaseTileClass =
-  "group flex h-full flex-col items-center rounded-xl border border-transparent bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(26,45,72,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-[#10B981] hover:shadow-[0_10px_28px_rgba(26,45,72,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "group flex h-full flex-col items-center rounded-md border border-stone-200 bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(26,45,72,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-[#10B981] hover:shadow-[0_10px_28px_rgba(26,45,72,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const heroFilterPillClass =
-  "inline-flex items-center rounded border border-stone-200 bg-white px-3 py-1.5 text-sm font-semibold text-[#1A2D48] transition-colors duration-200 hover:border-stone-300 hover:bg-stone-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1";
+  "inline-flex items-center rounded-sm border border-stone-200 bg-white px-3 py-1.5 text-sm font-medium text-[#1A2D48] transition-colors duration-200 hover:border-stone-300 hover:bg-stone-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1";
 
 const heroCategorySeeMoreClass =
   "inline-flex items-center px-0.5 py-1 text-sm font-medium text-[#57534E] underline-offset-[3px] transition-colors duration-200 hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1 rounded-sm";
@@ -159,53 +139,13 @@ const HOMEPAGE_POPULAR_COMPARISON_CARDS: PopularComparisonCard[] = POPULAR_COMPA
 }).filter(Boolean) as PopularComparisonCard[];
 
 export default function Home() {
-  const router = useRouter();
   const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [stackCategory, setStackCategory] = useState("");
-  const [stackTrade, setStackTrade] = useState("");
-  const stackFinderSentinelRef = useRef<HTMLDivElement>(null);
-
-  const handleStackFastSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const params = new URLSearchParams();
-    if (stackTrade) params.set("trade", stackTrade);
-    if (stackCategory) {
-      switch (stackCategory) {
-        case "payroll":
-          router.push(`/payroll${params.toString() ? `?${params.toString()}` : ""}`);
-          break;
-        case "bookkeeping":
-          router.push(`/accounting${params.toString() ? `?${params.toString()}` : ""}`);
-          break;
-        case "field-service":
-          router.push(`/field-service${params.toString() ? `?${params.toString()}` : ""}`);
-          break;
-        case "crm":
-          router.push(`/crm${params.toString() ? `?${params.toString()}` : ""}`);
-          break;
-        default:
-          router.push(`/${stackCategory}${params.toString() ? `?${params.toString()}` : ""}`);
-      }
-    } else {
-      router.push(`/payroll${params.toString() ? `?${params.toString()}` : ""}`);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyStackFinder
-        sentinelRef={stackFinderSentinelRef}
-        stackCategory={stackCategory}
-        stackTrade={stackTrade}
-        onCategoryChange={setStackCategory}
-        onTradeChange={setStackTrade}
-        onSubmit={handleStackFastSubmit}
-        categoryOptions={STACK_FAST_CATEGORIES}
-        tradeOptions={STACK_FAST_TRADES}
-      />
       <main>
         {/* ——— 1) Hero ——— */}
-        <section className="border-b border-stone-200 bg-stone-50">
+        <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-12 lg:px-8 lg:pb-20 lg:pt-14">
             <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
               <span className="block">Find the Best Software for</span>
@@ -264,7 +204,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div ref={stackFinderSentinelRef} className="h-px w-full" aria-hidden />
+        <TradeSoftwareDiscoverySection />
 
         {/* ——— 2) Featured Software ——— */}
         <section className="border-b border-stone-200 bg-white py-8 sm:py-11">

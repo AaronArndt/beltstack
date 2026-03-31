@@ -9,7 +9,7 @@ const NAVBAR_HEIGHT = 72;
 export type SectionNavProps = {
   items: SectionNavItem[];
   sticky?: boolean;
-  /** Pixels from top when sticky (default: navbar height). Use for navbar + StickyStackFinder when present. */
+  /** Pixels from top when sticky (default: navbar height). Increase if additional fixed UI sits below the navbar. */
   offsetTop?: number;
   /** Alias for offsetTop: pixels from top when sticky. Takes precedence if set. */
   stickyTop?: number;
