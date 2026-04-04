@@ -11,10 +11,18 @@ const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getHrComparisonSlugs,
 
 const POPULAR_SLUGS = [
   "gusto-vs-bamboohr",
-  "rippling-vs-gusto",
+  "bamboohr-vs-deel",
+  "bamboohr-vs-adp",
   "bamboohr-vs-rippling",
-  "adp-vs-paychex",
+  "zenefits-vs-bamboohr",
+  "zenefits-vs-gusto",
+  "rippling-vs-gusto",
+  "gusto-vs-justworks",
+  "trinet-vs-gusto",
+  "deel-vs-gusto",
+  "adp-vs-gusto",
   "deel-vs-rippling",
+  "adp-vs-paychex",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -43,7 +51,17 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
   }
 
-  const order = ["gusto", "bamboohr", "rippling", "deel", "adp-workforce-now", "paychex", "trinet", "justworks"];
+  const order = [
+    "gusto",
+    "bamboohr",
+    "rippling",
+    "deel",
+    "adp-workforce-now",
+    "paychex",
+    "trinet",
+    "justworks",
+    "zenefits",
+  ];
   return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
 }
 
@@ -90,7 +108,8 @@ export default function HrCompareHubPage() {
               Compare HR Software
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Side-by-side comparisons of popular HR software for small businesses, startups, and growing teams.
+              Side-by-side comparisons of popular HR software—including Gusto, BambooHR, Rippling, Deel, ADP, Paychex, TriNet,
+              Justworks, and Zenefits—for small businesses, startups, PEO shoppers, and global teams.
             </p>
             <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               For rankings across the whole category, see our{" "}
@@ -278,5 +297,5 @@ export default function HrCompareHubPage() {
 export const metadata = {
   title: "HR Software Comparisons (2026) | BeltStack",
   description:
-    "Compare HR software side by side. See matchups like Gusto vs BambooHR, Rippling vs Gusto, BambooHR vs Rippling, ADP vs Paychex, and Deel vs Rippling.",
+    "Compare HR software: Gusto vs BambooHR, BambooHR vs Rippling, Deel, ADP, Paychex, TriNet, Justworks, Zenefits, PEO vs software, and global vs domestic payroll.",
 };

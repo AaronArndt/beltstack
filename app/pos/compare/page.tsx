@@ -11,9 +11,15 @@ const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getPosComparisonSlugs
 
 const POPULAR_SLUGS = [
   "square-pos-vs-shopify-pos",
+  "square-pos-vs-lightspeed-pos",
+  "shopify-pos-vs-clover-pos",
   "square-pos-vs-clover-pos",
+  "toast-pos-vs-touchbistro",
   "shopify-pos-vs-lightspeed-pos",
+  "lightspeed-pos-vs-clover-pos",
   "toast-pos-vs-square-pos",
+  "toast-pos-vs-shopify-pos",
+  "clover-pos-vs-toast-pos",
   "lightspeed-pos-vs-vend-pos",
 ] as const;
 
@@ -43,7 +49,15 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
   }
 
-  const order = ["square-pos", "shopify-pos", "lightspeed-pos", "clover-pos", "toast-pos", "vend-pos"];
+  const order = [
+    "square-pos",
+    "shopify-pos",
+    "lightspeed-pos",
+    "clover-pos",
+    "toast-pos",
+    "vend-pos",
+    "touchbistro",
+  ];
   return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
 }
 
@@ -91,8 +105,8 @@ export default function PosCompareHubPage() {
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Compare popular POS systems side by side—including Square, Shopify POS, Lightspeed, Clover,
-              Toast, Vend, and more. These head-to-head matchups break down features, pricing, and fit so you
-              can choose the right platform for your business.
+              Toast, TouchBistro, Vend, and more. These head-to-head matchups break down payments, inventory,
+              restaurant vs retail fit, hardware, and pricing so you can choose the right platform for your business.
             </p>
             <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
               See our{" "}
@@ -292,6 +306,6 @@ export function generateMetadata() {
   return {
     title: "POS Software Comparisons | BeltStack",
     description:
-      "Compare POS systems side-by-side. See matchups like Square vs Shopify POS, Square vs Clover, Shopify POS vs Lightspeed, Toast vs Square, and Lightspeed vs Vend.",
+      "Compare POS systems: Square vs Lightspeed, Shopify POS vs Clover, Toast vs TouchBistro, Clover vs Toast, Lightspeed vs Clover, Toast vs Shopify POS, Square vs Shopify POS, and more.",
   };
 }

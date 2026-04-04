@@ -245,6 +245,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
       { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
+      { label: "Toggl vs Hubstaff", href: getTimeTrackingCompareUrl("toggl-vs-hubstaff") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -376,6 +377,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
       { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+      { label: "Clockify vs Hubstaff", href: getTimeTrackingCompareUrl("clockify-vs-hubstaff") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -514,6 +516,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
       { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+      { label: "Harvest vs Hubstaff", href: getTimeTrackingCompareUrl("harvest-vs-hubstaff") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -645,6 +648,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
       { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
+      { label: "Harvest vs Hubstaff", href: getTimeTrackingCompareUrl("harvest-vs-hubstaff") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -776,6 +780,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
       { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
+      { label: "Everhour vs Toggl", href: getTimeTrackingCompareUrl("everhour-vs-toggl") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -906,6 +911,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     moreComparisons: [
       { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
       { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
+      { label: "Timely vs Harvest", href: getTimeTrackingCompareUrl("timely-vs-harvest") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
@@ -918,6 +924,930 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
         label: "Best for classic timers",
         winner: "B",
         reason: "Toggl keeps tracking explicit and simple for teams used to manual timers.",
+      },
+    ],
+  }),
+
+  // Toggl vs Hubstaff
+  buildComparison("toggl-vs-hubstaff", "toggl", "hubstaff", {
+    summaryParagraph:
+      "Toggl Track and Hubstaff both log hours for teams, but they reflect opposite philosophies: Toggl is built for fast adoption and reporting without surveillance, while Hubstaff adds screenshots, activity metrics, GPS, and operational features for organizations that want measurable oversight.",
+    quickRecommendationA:
+      "Choose Toggl Track if you want lightweight, trust-based time tracking with strong reports and minimal controversy during rollout.",
+    quickRecommendationB:
+      "Choose Hubstaff if you need monitoring, optional GPS for field staff, and a broader workforce-ops stack—not just a timer.",
+    quickVerdictParagraphs: [
+      "In our evaluation, Toggl Track consistently wins when the goal is honest timesheets and clean exports for billing or analysis, without asking employees to accept screen capture or idle detection. That makes it a better default for agencies, consultancies, and creative teams where culture and retention matter as much as the clock.",
+      "Hubstaff is built for a different question: “What did people work on, and can we prove it?” Screenshots, activity levels, and optional GPS support compliance-heavy or distributed operations where visibility is a requirement, not a nice-to-have.",
+      "If you are unsure, pilot Toggl first when oversight is optional; choose Hubstaff when policy, clients, or insurance explicitly require monitoring—or when you manage crews in the field and need location-aware data alongside time.",
+    ],
+    decisionGuideA: [
+      "You want high adoption and a tool people do not perceive as surveillance.",
+      "You already invoice or run payroll elsewhere and mainly need accurate, taggable time.",
+      "Your buyers care about billable reporting and client-ready summaries more than idle alerts.",
+    ],
+    decisionGuideB: [
+      "You need screenshots, URL/app tracking, or activity scores for accountability.",
+      "You manage remote or hybrid staff where productivity metrics are part of management.",
+      "Field teams need GPS, job sites, or proof-of-work adjacent to tracked hours.",
+    ],
+    ratingsComparison: [
+      { category: "Ease of adoption", productA: "4.8", productB: "4.0" },
+      { category: "Monitoring & oversight", productA: "3.2", productB: "4.7" },
+      { category: "Reporting for billing", productA: "4.6", productB: "4.2" },
+      { category: "Field / GPS workflows", productA: "3.0", productB: "4.6" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "Screenshots & activity monitoring",
+        productA: "Not a focus; trust-based tracking",
+        productB: "Screenshots, activity scores, idle detection",
+        supportA: "none",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "GPS & job sites",
+        productA: "Not designed for field GPS workflows",
+        productB: "GPS and job-site features for mobile teams",
+        supportA: "none",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Toggl Track offers a usable free tier and per-user paid plans that stay predictable if you only need tracking and reports. Hubstaff tiers bundle monitoring depth, seats, and add-ons like payroll or scheduling, so total cost often reflects operational features—not just timers. Compare both at your real seat count and list the monitoring features you will actually turn on.",
+    prosConsA: {
+      pros: [
+        "Low-friction UX that teams actually keep using.",
+        "Strong tagging and exports without surveillance optics.",
+        "Fits billable professional services and consultant workflows.",
+      ],
+      cons: [
+        "No native screenshots, GPS, or deep productivity enforcement.",
+        "Invoicing still lives in another product.",
+        "Large teams pay per seat without unlimited-free fallback.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Deep monitoring and proof-of-work style data when required.",
+        "GPS and job sites for field and mobile crews.",
+        "Can grow into payroll and scheduling for ops-heavy businesses.",
+      ],
+      cons: [
+        "Rollout requires clear policy and often legal/HR review.",
+        "Heavier admin than lightweight trackers.",
+        "Can be overkill if you only need simple billable hours.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for trust-first and billable professional teams",
+        body: "Toggl Track fits teams that want accurate time for invoices and retrospectives without monitoring-style features that can erode morale.",
+      },
+      {
+        heading: "Best for monitored remote and field operations",
+        body: "Hubstaff fits when oversight, GPS, or activity proof is part of the job—not an optional add-on—and you are prepared to communicate policy clearly.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "Time plus invoicing when billing should stay beside tracked hours.",
+        logoSrc: "/Logos/harvest.png",
+      },
+      {
+        name: "Clockify",
+        href: getTimeTrackingReviewUrl("clockify"),
+        description: "Free-friendly tracking with optional monitoring on higher tiers.",
+        logoSrc: "/Logos/clockify.jpeg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Toggl Track or Hubstaff better for agencies?",
+        a: "Most client-facing agencies choose Toggl Track when culture and simple billable reporting matter. Hubstaff can still fit if contracts require monitoring or you run blended desk and field teams—compare policy requirements before you buy.",
+      },
+      {
+        q: "Can we switch from Hubstaff to Toggl Track later?",
+        a: "Yes, but plan for change management: monitoring-heavy tools train people to expect oversight, while Toggl assumes self-reported timers. Export historical time, align on billing tags, and run a short pilot so reports stay comparable for clients.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for lightweight tracking", winner: "A" },
+      { label: "Winner for monitoring & GPS", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Hubstaff vs Time Doctor", href: getTimeTrackingCompareUrl("hubstaff-vs-time-doctor") },
+      { label: "Clockify vs Hubstaff", href: getTimeTrackingCompareUrl("clockify-vs-hubstaff") },
+      { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best for culture & adoption",
+        winner: "A",
+        reason: "Toggl keeps tracking explicit and respectful—ideal when you do not need surveillance.",
+      },
+      {
+        label: "Best for oversight & field ops",
+        winner: "B",
+        reason: "Hubstaff layers monitoring, activity data, and GPS when policy or operations require it.",
+      },
+    ],
+  }),
+
+  // Toggl vs Time Doctor
+  buildComparison("toggl-vs-time-doctor", "toggl", "time-doctor", {
+    summaryParagraph:
+      "Toggl Track and Time Doctor both answer “how long did work take?” but Time Doctor adds distraction alerts, screenshots, and granular productivity analytics, while Toggl stays focused on timers, tags, and clean reporting for people who do not want a surveillance stack.",
+    quickRecommendationA:
+      "Choose Toggl Track when you want the simplest path to accurate billable time and team-wide adoption.",
+    quickRecommendationB:
+      "Choose Time Doctor when management needs app and site visibility, screenshots, and nudges to reduce off-task time.",
+    quickVerdictParagraphs: [
+      "Toggl Track’s strength is speed: start a timer, pick a project, and export summaries. We see it work best when leadership trusts contributors and cares about invoice-ready data—not keystroke-style accountability.",
+      "Time Doctor targets organizations that want to quantify focus: which applications dominated the day, when idle periods occurred, and how to coach remote staff. That depth helps some teams; others find it heavy-handed without a documented policy.",
+      "If your search intent is “best time tracker for freelancers and agencies,” Toggl is usually the closer match. If your intent is “employee monitoring software with time tracking,” Time Doctor belongs on the short list alongside Hubstaff.",
+    ],
+    decisionGuideA: [
+      "Billable accuracy and client reports matter more than screen-level proof.",
+      "You want integrations and extensions without configuring alert rules.",
+      "You prefer tools that feel like productivity software, not compliance surveillance.",
+    ],
+    decisionGuideB: [
+      "Managers need screenshots or URL/app reports for audits or coaching.",
+      "You want distraction alerts and productivity scoring built in.",
+      "Remote BPO or support-style teams need structured oversight.",
+    ],
+    ratingsComparison: [
+      { category: "Simplicity & speed", productA: "4.8", productB: "4.0" },
+      { category: "Productivity analytics", productA: "3.8", productB: "4.6" },
+      { category: "Monitoring depth", productA: "3.0", productB: "4.7" },
+      { category: "Billable reporting", productA: "4.6", productB: "4.2" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "Screenshots & website/app tracking",
+        productA: "Not core to the product",
+        productB: "Screenshots and detailed usage logs",
+        supportA: "none",
+        supportB: "supported",
+        stronger: "B",
+      },
+      {
+        feature: "Distraction alerts",
+        productA: "Reminders; not behavior enforcement",
+        productB: "Alerts and productivity coaching flows",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Both charge per user on paid tiers. Toggl’s free tier can cover light use; Time Doctor’s value proposition assumes you will use monitoring features—factor that into ROI. Always reconcile quoted prices with each vendor’s current public pricing before purchase.",
+    prosConsA: {
+      pros: [
+        "Fast onboarding and minimal training.",
+        "Excellent for billable tags and exports.",
+        "Less legal/HR friction than monitoring tools.",
+      ],
+      cons: [
+        "No screenshot or deep productivity enforcement.",
+        "Not built for heavy BPO-style oversight.",
+        "Still requires discipline to start timers.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Strong visibility into apps, sites, and idle time.",
+        "Useful for distributed teams with formal oversight policies.",
+        "Can support payroll-oriented workflows on some plans.",
+      ],
+      cons: [
+        "Requires careful communication and consent.",
+        "More configuration than lightweight trackers.",
+        "Can be mismatched for high-trust creative teams.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for high-trust billable work",
+        body: "Toggl Track suits consultants, designers, and agencies that sell expertise and need clean time data without monitoring optics.",
+      },
+      {
+        heading: "Best for coached, metrics-driven remote teams",
+        body: "Time Doctor fits when productivity metrics and screenshots are already part of how you manage performance.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Hubstaff",
+        href: getTimeTrackingReviewUrl("hubstaff"),
+        description: "Monitoring plus GPS and field-friendly workflows.",
+        logoSrc: "/Logos/hubstaff.jpeg",
+      },
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "Invoicing-centric tracking for service businesses.",
+        logoSrc: "/Logos/harvest.png",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Time Doctor “better” than Toggl Track?",
+        a: "Only if you need monitoring. For straightforward billable time and team adoption, Toggl Track is usually easier. For screenshots, distraction alerts, and granular productivity analytics, Time Doctor is purpose-built.",
+      },
+      {
+        q: "Do we need legal review before using Time Doctor?",
+        a: "Often yes—jurisdictions differ on notice, consent, and what you may capture. Pair vendor documentation with your HR or counsel review; our methodology page explains how we think about disclosure and independence.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for simple billable tracking", winner: "A" },
+      { label: "Winner for monitoring & coaching", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Hubstaff vs Time Doctor", href: getTimeTrackingCompareUrl("hubstaff-vs-time-doctor") },
+      { label: "Toggl vs Hubstaff", href: getTimeTrackingCompareUrl("toggl-vs-hubstaff") },
+      { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best for fast, trusted tracking",
+        winner: "A",
+        reason: "Toggl minimizes friction so people actually log time consistently.",
+      },
+      {
+        label: "Best for productivity enforcement",
+        winner: "B",
+        reason: "Time Doctor is built around visibility into apps, sites, and focus time.",
+      },
+    ],
+  }),
+
+  // Harvest vs Hubstaff
+  buildComparison("harvest-vs-hubstaff", "harvest", "hubstaff", {
+    summaryParagraph:
+      "Harvest and Hubstaff both serve businesses that need reliable time data, but Harvest orients the product around client billing—budgets, expenses, and invoices—while Hubstaff emphasizes workforce visibility with monitoring, GPS, and operational add-ons that go beyond a service invoice.",
+    quickRecommendationA:
+      "Choose Harvest when tracked time should flow into invoices, retainers, and project profitability in one app.",
+    quickRecommendationB:
+      "Choose Hubstaff when you need deeper oversight, field tracking, or an ops platform adjacent to payroll.",
+    quickVerdictParagraphs: [
+      "Harvest remains one of the clearest answers to “we bill clients from timesheets.” Budgets, billable flags, and expense capture sit next to invoicing, which keeps AR workflows tight for agencies and consultancies.",
+      "Hubstaff can still export hours to other systems, but its differentiation is operational: activity signals, optional screenshots, GPS paths, and features aimed at distributed or mobile teams—not a replacement for a full invoicing ledger.",
+      "We recommend Harvest when finance and client billing own the decision; recommend Hubstaff when operations, HR, or compliance own the decision and invoices may still live in QuickBooks, Xero, or another stack.",
+    ],
+    decisionGuideA: [
+      "Project-based billing and expense recovery are weekly realities.",
+      "You want one place to see budget burn against logged hours.",
+      "Monitoring is not a primary buying criterion.",
+    ],
+    decisionGuideB: [
+      "You need proof-of-work style data or GPS for crews.",
+      "Payroll or scheduling integrations matter as much as invoices.",
+      "You are okay pairing Hubstaff with a separate accounting or invoicing hub.",
+    ],
+    ratingsComparison: [
+      { category: "Invoicing & AR", productA: "4.7", productB: "3.6" },
+      { category: "Monitoring & GPS", productA: "3.2", productB: "4.7" },
+      { category: "Project budgeting", productA: "4.5", productB: "4.2" },
+      { category: "Ease for billers", productA: "4.5", productB: "4.0" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "Native invoicing & expenses",
+        productA: "Invoices and expenses tied to time entries",
+        productB: "Exports; invoicing not the core story",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+      {
+        feature: "Activity monitoring & GPS",
+        productA: "Lightweight; not a monitoring suite",
+        productB: "Screenshots, activity, optional GPS",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Harvest prices per user with a limited free tier; expect to pay for everyone who tracks and bills. Hubstaff also scales per seat but tiers bundle monitoring depth—compare at the feature level you will enable, not just the headline per-user rate.",
+    prosConsA: {
+      pros: [
+        "Strong agency workflow from time to invoice.",
+        "Clear budgets and billable vs non-billable views.",
+        "Less controversial rollout than monitoring tools.",
+      ],
+      cons: [
+        "Not built for heavy surveillance or GPS-first ops.",
+        "Per-user cost rises with headcount.",
+        "Less field-job orchestration than Hubstaff.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Operational depth for remote and mobile teams.",
+        "Monitoring features when policy allows.",
+        "Optional payroll and scheduling paths.",
+      ],
+      cons: [
+        "Weaker as a standalone invoicing system versus Harvest.",
+        "Requires governance for monitoring features.",
+        "Finance teams may still need a dedicated billing tool.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for invoice-driven agencies",
+        body: "Harvest fits when account managers and finance need one system to explain what was worked, what it cost, and what to bill.",
+      },
+      {
+        heading: "Best for monitored operations teams",
+        body: "Hubstaff fits distributed support, logistics, or hybrid crews where location and activity data matter as much as hours on a timesheet.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Lightweight tracking when Harvest is too much but you still need clean reports.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Time Doctor",
+        href: getTimeTrackingReviewUrl("time-doctor"),
+        description: "Desk-heavy monitoring alternative to compare policies side by side.",
+        logoSrc: "/Logos/timedoctor.jpeg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can Hubstaff replace Harvest for invoicing?",
+        a: "Usually not completely. Hubstaff can feed hours into other systems, but Harvest’s product story is built around invoices, expenses, and client budgets. If invoicing is central, Harvest typically stays ahead; pair Hubstaff with accounting if you need both.",
+      },
+      {
+        q: "Which integrates better with QuickBooks or Xero?",
+        a: "Both categories integrate with major accounting tools, but the cleanest “time → invoice → sync” story often still runs through Harvest or your accounting hub. Verify the exact connector you need on each vendor’s site before switching.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for invoicing workflows", winner: "A" },
+      { label: "Winner for monitoring & field ops", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
+      { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
+      { label: "Toggl vs Hubstaff", href: getTimeTrackingCompareUrl("toggl-vs-hubstaff") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best for billing from time",
+        winner: "A",
+        reason: "Harvest connects hours, expenses, and invoices without bolting on another billing app.",
+      },
+      {
+        label: "Best for workforce visibility",
+        winner: "B",
+        reason: "Hubstaff prioritizes operational proof and GPS-friendly workflows over native invoicing.",
+      },
+    ],
+  }),
+
+  // Everhour vs Toggl
+  buildComparison("everhour-vs-toggl", "everhour", "toggl", {
+    summaryParagraph:
+      "Everhour and Toggl Track both integrate with popular work tools, but Everhour’s depth is embedding—time fields, budgets, and estimates inside Asana, Trello, ClickUp, and similar apps—while Toggl is a standalone tracker known for speed, polish, and reporting that sits beside your stack.",
+    quickRecommendationA:
+      "Choose Everhour if your team rarely leaves Asana/Trello-style boards and you want time entry where tasks already live.",
+    quickRecommendationB:
+      "Choose Toggl Track if you want a single, consistent tracker across tools with best-in-class simplicity and exports.",
+    quickVerdictParagraphs: [
+      "Everhour shines when project management is the source of truth. Seeing budgets beside tasks reduces context switching and helps PMs catch overruns early—especially for retainers and fixed-fee engagements.",
+      "Toggl wins when people work across many surfaces: email, meetings, ad hoc tools, and multiple PM systems. Its extensions and universal timer mean you are not locked to one vendor’s task model.",
+      "For SEO-style buyer journeys (“Asana time tracking”), Everhour is often the better semantic fit. For “simple time tracker for mixed stacks,” Toggl remains the default we recommend in pilots.",
+    ],
+    decisionGuideA: [
+      "You standardized on one or two supported PM tools.",
+      "Embedded budgets and estimates matter for PMs and account leads.",
+      "You accept a separate invoicing path compared with Harvest-style suites.",
+    ],
+    decisionGuideB: [
+      "Teams use many tools or change PM software occasionally.",
+      "You want the fastest learning curve for new hires.",
+      "Reporting flexibility and tag models matter more than in-card widgets.",
+    ],
+    ratingsComparison: [
+      { category: "Embedded PM experience", productA: "4.7", productB: "4.2" },
+      { category: "Universal ease of use", productA: "4.2", productB: "4.8" },
+      { category: "Reporting depth", productA: "4.3", productB: "4.6" },
+      { category: "Pricing clarity", productA: "4.2", productB: "4.4" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "In-tool embedding (Asana, Trello, etc.)",
+        productA: "Deep native-style embeds in supported PM tools",
+        productB: "Integrations + extensions; standalone hub",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+      {
+        feature: "Cross-tool consistency",
+        productA: "Best inside supported integrations",
+        productB: "Consistent experience everywhere Toggl runs",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Both products charge per user with tiered features. Everhour’s ROI shows up when embedded budgets reduce PM overhead; Toggl’s ROI shows up when higher adoption improves data quality. Model three scenarios: solo, 10 seats, and 50 seats, including annual discounts.",
+    prosConsA: {
+      pros: [
+        "Excellent when tasks and budgets should live together.",
+        "Strong for agencies running disciplined PM hygiene.",
+        "Helpful for fixed-fee and retainer visibility.",
+      ],
+      cons: [
+        "Less compelling if your PM stack is unsupported or fragmented.",
+        "Invoicing still usually pairs with another product.",
+        "Requires admin to keep projects and mappings tidy.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Fast for mixed stacks and changing tools.",
+        "Polished UX with strong reporting exports.",
+        "Free tier for light use cases.",
+      ],
+      cons: [
+        "Less “inside the card” than Everhour on supported tools.",
+        "No invoicing; pairs with billing separately.",
+        "Still depends on people starting timers.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for PM-centric agencies",
+        body: "Everhour fits teams that live in Asana, Trello, or ClickUp and want budgets beside tasks without opening another app.",
+      },
+      {
+        heading: "Best for cross-tool teams",
+        body: "Toggl Track fits organizations where work spans many systems and you need one tracker that stays easy at scale.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "When you want time and invoices unified rather than embedded-only.",
+        logoSrc: "/Logos/harvest.png",
+      },
+      {
+        name: "Clockify",
+        href: getTimeTrackingReviewUrl("clockify"),
+        description: "Budget option with broad integrations and optional monitoring.",
+        logoSrc: "/Logos/clockify.jpeg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Everhour better than Toggl for Asana users?",
+        a: "Usually yes for in-board budgeting and time-on-task visibility. Toggl can still work via integration, but Everhour’s embed model matches Asana-first workflows closely.",
+      },
+      {
+        q: "Can we use Toggl and Everhour together?",
+        a: "Technically possible but rarely advisable—double logging creates reconciliation pain. Pick one system of record; if you outgrow your choice, migrate with a defined cutover week and frozen tags.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for embedded PM tracking", winner: "A" },
+      { label: "Winner for universal simplicity", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") },
+      { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
+      { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best inside project tools",
+        winner: "A",
+        reason: "Everhour puts hours and budgets next to the tasks people already manage.",
+      },
+      {
+        label: "Best all-around tracker",
+        winner: "B",
+        reason: "Toggl stays fast and consistent whether or not tasks live in a supported PM app.",
+      },
+    ],
+  }),
+
+  // Clockify vs Hubstaff
+  buildComparison("clockify-vs-hubstaff", "clockify", "hubstaff", {
+    summaryParagraph:
+      "Clockify and Hubstaff both scale to larger teams, but Clockify leads with an unlimited free tier and optional monitoring add-ons, while Hubstaff targets organizations that want deeper operational telemetry—GPS, job sites, and richer workforce features—from day one.",
+    quickRecommendationA:
+      "Choose Clockify when cost coverage for many users matters most and you may or may not enable monitoring later.",
+    quickRecommendationB:
+      "Choose Hubstaff when GPS, job proofing, and deeper activity analytics are non-negotiable requirements.",
+    quickVerdictParagraphs: [
+      "Clockify’s free plan is a genuine differentiator: you can deploy tracking org-wide before you have budget approval, then turn on approvals or monitoring only where policy requires it.",
+      "Hubstaff typically wins evaluations where the RFP mentions screenshots, routes, or activity scoring for compliance. The product assumes you will use those levers, not just log hours.",
+      "For mixed organizations, a pragmatic pattern is Clockify for internal, high-trust teams and Hubstaff (or a pilot group) for outsourced or regulated desks—document the split so payroll and billing stay auditable.",
+    ],
+    decisionGuideA: [
+      "You need many seats at zero or low software cost.",
+      "You want optional monitoring rather than monitoring-first design.",
+      "You prefer to add approvals and reminders before advanced oversight.",
+    ],
+    decisionGuideB: [
+      "Field services need GPS trails tied to jobs.",
+      "Clients or regulators expect demonstrable oversight.",
+      "You want payroll-adjacent features in the same vendor orbit.",
+    ],
+    ratingsComparison: [
+      { category: "Free / low-cost scale", productA: "4.9", productB: "4.0" },
+      { category: "Monitoring depth", productA: "4.0", productB: "4.7" },
+      { category: "GPS & job sites", productA: "3.5", productB: "4.6" },
+      { category: "Ease of UI polish", productA: "4.1", productB: "4.2" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "Unlimited free tracking",
+        productA: "Unlimited users on free plan",
+        productB: "Trial-limited; paid for sustained use",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+      {
+        feature: "GPS & workforce ops",
+        productA: "Lighter GPS/field story vs Hubstaff",
+        productB: "Strong GPS, job sites, operational tooling",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Clockify’s headline value is free breadth; paid tiers unlock governance. Hubstaff’s pricing reflects monitoring and operations—benchmark both vendors with the same seat count and feature checklist your legal team approves.",
+    prosConsA: {
+      pros: [
+        "Unlimited free users for core tracking.",
+        "Flexible path from lightweight to monitored use.",
+        "Good for education, internal IT, and nonprofit rollouts.",
+      ],
+      cons: [
+        "UI less polished than premium-focused trackers.",
+        "Deep field ops may still push you toward Hubstaff.",
+        "Monitoring requires the same policy rigor as any vendor.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Purpose-built for oversight and proof.",
+        "Strong GPS and distributed team stories.",
+        "Ecosystem around payroll and scheduling.",
+      ],
+      cons: [
+        "Higher baseline cost than free Clockify seats.",
+        "Not a substitute for full invoicing suites.",
+        "Heavier cultural lift during rollout.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for maximum seat coverage on a budget",
+        body: "Clockify lets you instrument whole departments without a PO fight, then tighten controls selectively.",
+      },
+      {
+        heading: "Best for GPS and compliance-heavy oversight",
+        body: "Hubstaff fits when the business case explicitly includes location, activity, or audit-style visibility.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Premium simplicity when Clockify feels too busy.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Time Doctor",
+        href: getTimeTrackingReviewUrl("time-doctor"),
+        description: "Desk-centric monitoring alternative worth shortlisting beside Hubstaff.",
+        logoSrc: "/Logos/timedoctor.jpeg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does Clockify monitor employees like Hubstaff?",
+        a: "Clockify can add monitoring-style capabilities on paid tiers, but Hubstaff’s core story is deeper operational telemetry and GPS. Compare feature flags side by side and involve HR before enabling capture.",
+      },
+      {
+        q: "Which is cheaper at 100 users?",
+        a: "Clockify often wins on software fees because of the free tier, but total cost includes admin time, integrations, and which paid modules you enable. Hubstaff may still be cheaper than a patchwork if it replaces multiple point tools—run your own TCO worksheet.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for free / broad rollout", winner: "A" },
+      { label: "Winner for deep monitoring & GPS", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Toggl vs Hubstaff", href: getTimeTrackingCompareUrl("toggl-vs-hubstaff") },
+      { label: "Hubstaff vs Time Doctor", href: getTimeTrackingCompareUrl("hubstaff-vs-time-doctor") },
+      { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best for cost at scale",
+        winner: "A",
+        reason: "Unlimited free users let you deploy widely before committing budget.",
+      },
+      {
+        label: "Best for ops-grade oversight",
+        winner: "B",
+        reason: "Hubstaff is engineered around monitoring, GPS, and workforce visibility.",
+      },
+    ],
+  }),
+
+  // Timely vs Harvest
+  buildComparison("timely-vs-harvest", "timely", "harvest", {
+    summaryParagraph:
+      "Timely and Harvest both help professional services teams understand where time goes, but Timely automates capture with AI-assisted reconstruction while Harvest assumes deliberate timers and ties those hours directly into invoices, expenses, and project budgets.",
+    quickRecommendationA:
+      "Choose Timely when missed timers are costing billable revenue and you want software to suggest entries from real work activity.",
+    quickRecommendationB:
+      "Choose Harvest when disciplined logging plus client-ready invoices is the workflow you need to protect cash flow.",
+    quickVerdictParagraphs: [
+      "Timely reduces the shame tax of blank timesheets: it watches calendars, documents, and apps (within your privacy settings) to propose blocks you approve. Consultants who live in meetings often recover hours they used to forget.",
+      "Harvest still rewards teams that can start/stop timers or batch entries, but finance gets a straight line from those hours to invoices. That matters when AR aging is a bigger risk than missed minutes.",
+      "We see buyers shortlist both when they want better data; the deciding question is whether the bottleneck is remembering to track (Timely) or billing quickly after tracking (Harvest).",
+    ],
+    decisionGuideA: [
+      "Calendar-heavy days make manual timers unreliable.",
+      "You are willing to tune privacy rules and explain them to staff.",
+      "You already have invoicing handled or can pair another tool.",
+    ],
+    decisionGuideB: [
+      "Invoices and expenses must originate next to approved hours.",
+      "Your team can maintain timer hygiene with light coaching.",
+      "You want fewer vendors touching client billing data.",
+    ],
+    ratingsComparison: [
+      { category: "Automatic capture", productA: "4.8", productB: "3.2" },
+      { category: "Invoicing & AR", productA: "3.6", productB: "4.7" },
+      { category: "Project budgeting", productA: "4.3", productB: "4.5" },
+      { category: "Privacy controls", productA: "4.2", productB: "4.6" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "AI / automatic time reconstruction",
+        productA: "Automatic suggestions from activity",
+        productB: "Manual timers and entries",
+        supportA: "supported",
+        supportB: "none",
+        stronger: "A",
+      },
+      {
+        feature: "Native invoicing",
+        productA: "Exports / partner workflows; not Harvest-class billing",
+        productB: "Invoices and expenses in-product",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Timely’s automation typically carries a higher per-seat price than manual trackers, justified when recovered billables exceed the subscription. Harvest’s pricing bundles billing value—compare both against your average recovered hours per month and your AR workflow.",
+    prosConsA: {
+      pros: [
+        "Catches forgotten time across fragmented days.",
+        "Strong narrative for consulting and hybrid remote work.",
+        "Less manual reconstruction on Sunday nights.",
+      ],
+      cons: [
+        "Requires upfront privacy conversations.",
+        "Not a full replacement for Harvest-style invoicing.",
+        "Higher price if automation is underutilized.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Time, expenses, and invoices stay unified.",
+        "Excellent for agencies billing from retainers or milestones.",
+        "Predictable manual model for finance review.",
+      ],
+      cons: [
+        "Still depends on logging discipline.",
+        "No AI reconstruction for chaotic calendars.",
+        "Per-user cost without automatic capture upside.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for calendar chaos and billable leakage",
+        body: "Timely suits consultants and leaders who jump contexts all day and need software to rebuild what actually happened.",
+      },
+      {
+        heading: "Best for invoice-ready agencies",
+        body: "Harvest suits teams that can enforce time entry standards and want billing to be the immediate next step.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Manual tracking with excellent reporting if Timely feels too automatic.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Everhour",
+        href: getTimeTrackingReviewUrl("everhour"),
+        description: "Embedded PM tracking when your bottleneck is task visibility, not memory.",
+        logoSrc: "/Logos/everhour.png",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can Timely replace Harvest?",
+        a: "Only if you no longer need Harvest-grade invoicing inside the same product. Many teams pair automatic capture with a billing hub; others choose Harvest when AR workflows must stay in one place.",
+      },
+      {
+        q: "Is automatic tracking compliant for our industry?",
+        a: "Depends on jurisdiction, client contracts, and internal policy. Document what is captured, retention windows, and opt-out paths. When in doubt, involve counsel—automatic tools need the same rigor as monitoring products.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for automatic capture", winner: "A" },
+      { label: "Winner for time-to-invoice", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+      { label: "Toggl vs Harvest", href: getTimeTrackingCompareUrl("toggl-vs-harvest") },
+      { label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best for recovering lost hours",
+        winner: "A",
+        reason: "Timely proposes time from real activity so busy days still reconcile.",
+      },
+      {
+        label: "Best for billing in one flow",
+        winner: "B",
+        reason: "Harvest connects approved hours to invoices and expenses without another hop.",
+      },
+    ],
+  }),
+
+  // Everhour vs Clockify
+  buildComparison("everhour-vs-clockify", "everhour", "clockify", {
+    summaryParagraph:
+      "Everhour and Clockify both integrate with popular business tools, but Everhour optimizes for teams that want time and budgets embedded inside project management apps, while Clockify optimizes for cost—especially unlimited free users—and flexible add-ons like approvals or light monitoring.",
+    quickRecommendationA:
+      "Choose Everhour when Asana, Trello, or similar tools are your system of record and embedded budgets matter.",
+    quickRecommendationB:
+      "Choose Clockify when you need the lowest software cost per seat, including a true free tier for everyone.",
+    quickVerdictParagraphs: [
+      "Everhour’s pricing only makes sense when embedded PM workflows save PM hours each week. If your team already lives inside tasks, seeing burn against estimates inside the same card is a tangible productivity win.",
+      "Clockify wins total-cost-of-ownership conversations for startups, schools, and internal IT groups that simply need timesheets everywhere. You trade some polish for coverage.",
+      "When buyers compare these two, we anchor on two metrics: (1) percentage of time logged inside the PM tool versus elsewhere, and (2) annual software spend per seat including paid modules.",
+    ],
+    decisionGuideA: [
+      "Project managers need budget signals beside tasks.",
+      "You run fixed-fee or hybrid billing tied to estimates.",
+      "You are willing to pay per seat for embedded depth.",
+    ],
+    decisionGuideB: [
+      "Free org-wide tracking is the gating requirement.",
+      "Teams are okay opening Clockify alongside tasks.",
+      "You may need approvals or monitoring without switching vendors.",
+    ],
+    ratingsComparison: [
+      { category: "PM embed quality", productA: "4.7", productB: "3.9" },
+      { category: "Free / value", productA: "3.8", productB: "4.9" },
+      { category: "Reporting", productA: "4.3", productB: "4.2" },
+      { category: "Ease of rollout", productA: "4.1", productB: "4.3" },
+    ],
+    featureComparison: [
+      ...BASE_TIME_TRACKING_FEATURE_ROWS,
+      {
+        feature: "Embedded PM experience",
+        productA: "Deep embeds in supported tools",
+        productB: "Integrations; primarily standalone UI",
+        supportA: "supported",
+        supportB: "partial",
+        stronger: "A",
+      },
+      {
+        feature: "Unlimited free users",
+        productA: "Paid-first positioning",
+        productB: "Unlimited users on free plan",
+        supportA: "partial",
+        supportB: "supported",
+        stronger: "B",
+      },
+    ],
+    pricingComparison:
+      "Model Everhour against PM time saved; model Clockify against seats × optional paid modules. If Everhour prevents even one blown budget monthly, it often pays for itself—if not, Clockify keeps cash in the business.",
+    prosConsA: {
+      pros: [
+        "Excellent for agencies disciplined about task hygiene.",
+        "Budget visibility without exporting to spreadsheets.",
+        "Strong fit for retainer and milestone tracking.",
+      ],
+      cons: [
+        "Less compelling without supported PM tools.",
+        "No unlimited-free equivalent.",
+        "Requires ongoing admin to keep mappings clean.",
+      ],
+    },
+    prosConsB: {
+      pros: [
+        "Unlimited free tier is hard to beat.",
+        "Optional monitoring and approvals when policies evolve.",
+        "Works across industries with minimal setup.",
+      ],
+      cons: [
+        "Less native inside PM cards than Everhour.",
+        "UI can feel busy on large accounts.",
+        "Deep field or invoicing needs may point elsewhere.",
+      ],
+    },
+    bestFor: [
+      {
+        heading: "Best for embedded PM finance visibility",
+        body: "Everhour suits teams that want hours, estimates, and burn rates visible where PMs already work.",
+      },
+      {
+        heading: "Best for org-wide coverage on minimal budget",
+        body: "Clockify suits leaders who need every contractor and employee on a timer without negotiating a PO first.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Middle ground: polished standalone tracker with great reporting.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "When embedded PM tracking still needs native invoicing next door.",
+        logoSrc: "/Logos/harvest.png",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Everhour worth it over free Clockify?",
+        a: "If embedded budgets save PM time or prevent write-offs, yes. If you only need basic totals and rarely look at estimates inside tasks, Clockify’s free tier is likely enough.",
+      },
+      {
+        q: "Which is easier for non-technical staff?",
+        a: "Clockify’s standalone timer is easy to explain. Everhour is easy for people who already live in their PM tool but requires them to respect task structure. Pick the workflow that matches actual behavior, not ideal behavior.",
+      },
+    ],
+    sidebarWinners: [
+      { label: "Winner for PM embeds", winner: "A" },
+      { label: "Winner for free scale", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Everhour vs Toggl", href: getTimeTrackingCompareUrl("everhour-vs-toggl") },
+      { label: "Clockify vs Toggl", href: getTimeTrackingCompareUrl("clockify-vs-toggl") },
+      { label: "Harvest vs Clockify", href: getTimeTrackingCompareUrl("harvest-vs-clockify") },
+    ],
+    relevantTradeLinks: RELEVANT_LINKS,
+    heroCallouts: [
+      {
+        label: "Best inside Asana & Trello",
+        winner: "A",
+        reason: "Everhour aligns time with the tasks your PMs already manage.",
+      },
+      {
+        label: "Best for $0 seat cost",
+        winner: "B",
+        reason: "Clockify’s unlimited free plan covers whole organizations when budget is tight.",
       },
     ],
   }),

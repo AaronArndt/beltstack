@@ -210,6 +210,30 @@ export const POS_POPULAR_COMPARISONS: PosPopularComparisonCard[] = [
       "Lightspeed and Vend (Lightspeed Retail) both serve retail with strong inventory and multi-location; Lightspeed has a broader product family while Vend focuses on retail POS with a clear upgrade path.",
     href: getPosCompareUrl("lightspeed-pos-vs-vend-pos"),
   },
+  {
+    slug: "square-pos-vs-lightspeed-pos",
+    productA: { name: "Square", logoSrc: POS_LOGOS.square },
+    productB: { name: "Lightspeed", logoSrc: POS_LOGOS.lightspeed },
+    summaryParagraph:
+      "Square keeps startup cost and complexity low with flexible SMB POS; Lightspeed adds retail operations depth for inventory, purchasing, and multi-location when you outgrow basic registers.",
+    href: getPosCompareUrl("square-pos-vs-lightspeed-pos"),
+  },
+  {
+    slug: "shopify-pos-vs-clover-pos",
+    productA: { name: "Shopify POS", logoSrc: POS_LOGOS.shopify },
+    productB: { name: "Clover", logoSrc: POS_LOGOS.clover },
+    summaryParagraph:
+      "Shopify POS is strongest when your online store runs on Shopify and you want one catalog for web and store; Clover fits when hardware choice and the App Market matter more than Shopify lock-in.",
+    href: getPosCompareUrl("shopify-pos-vs-clover-pos"),
+  },
+  {
+    slug: "toast-pos-vs-touchbistro",
+    productA: { name: "Toast", logoSrc: POS_LOGOS.toast },
+    productB: { name: "TouchBistro", logoSrc: POS_LOGOS.touchbistro },
+    summaryParagraph:
+      "Toast scales for multi-unit restaurants with a broad hospitality platform; TouchBistro often fits independents and small chains with tiered pricing and strong iPad restaurant workflows.",
+    href: getPosCompareUrl("toast-pos-vs-touchbistro"),
+  },
 ] as PosPopularComparisonCard[];
 
 /** FAQ items for the hub. */

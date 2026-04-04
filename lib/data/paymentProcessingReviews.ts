@@ -40,7 +40,7 @@ const METHODOLOGY: PaymentProcessingReviewData["methodology"] = {
   ],
 };
 
-/** Short trust line under hero CTA — EEAT / transparency. */
+/** Short trust line under hero CTA — transparency. */
 const DISCLOSURE_STANDARD =
   "Published rates and features vary by country, plan, and risk profile. Export a recent processing statement and confirm contract terms with the vendor before switching.";
 
@@ -128,6 +128,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
       { label: "Stripe vs PayPal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
       { label: "Shopify Payments vs Stripe", href: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe") },
+      { label: "Authorize.net vs Stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },
+      { label: "Stripe vs Helcim", href: getPaymentProcessingCompareUrl("stripe-vs-helcim") },
+      { label: "Stripe vs Stax", href: getPaymentProcessingCompareUrl("stripe-vs-stax") },
+      { label: "Stripe vs Clover", href: getPaymentProcessingCompareUrl("stripe-vs-clover") },
     ],
     pros: [
       "Industry-leading APIs and hosted checkout options",
@@ -215,6 +219,11 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
       { label: "Square vs PayPal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
+      { label: "Square vs Helcim", href: getPaymentProcessingCompareUrl("square-vs-helcim") },
+      { label: "Square vs Stax", href: getPaymentProcessingCompareUrl("square-vs-stax") },
+      { label: "Square vs Clover", href: getPaymentProcessingCompareUrl("square-vs-clover") },
+      { label: "Shopify Payments vs Square", href: getPaymentProcessingCompareUrl("shopify-payments-vs-square") },
+      { label: "Authorize.net vs Square", href: getPaymentProcessingCompareUrl("authorize-net-vs-square") },
     ],
     pros: [
       "Fast setup for card-present with known hardware",
@@ -302,6 +311,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Stripe vs PayPal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
       { label: "Square vs PayPal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
+      { label: "Helcim vs PayPal", href: getPaymentProcessingCompareUrl("helcim-vs-paypal") },
+      { label: "Stax vs PayPal", href: getPaymentProcessingCompareUrl("stax-vs-paypal") },
+      { label: "Shopify Payments vs PayPal", href: getPaymentProcessingCompareUrl("shopify-payments-vs-paypal") },
+      { label: "Authorize.net vs PayPal", href: getPaymentProcessingCompareUrl("authorize-net-vs-paypal") },
     ],
     pros: [
       "Trusted wallet button for hesitant payers",
@@ -379,6 +392,9 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Shopify Payments vs Stripe", href: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe") },
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+      { label: "Shopify Payments vs Square", href: getPaymentProcessingCompareUrl("shopify-payments-vs-square") },
+      { label: "Shopify Payments vs PayPal", href: getPaymentProcessingCompareUrl("shopify-payments-vs-paypal") },
+      { label: "Authorize.net vs Shopify Payments", href: getPaymentProcessingCompareUrl("authorize-net-vs-shopify-payments") },
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.5", explanation: "Cohesive with Shopify checkout, refunds, and the app ecosystem—fewer moving parts than bolting on a separate gateway." },
@@ -464,6 +480,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Helcim vs Stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+      { label: "Square vs Helcim", href: getPaymentProcessingCompareUrl("square-vs-helcim") },
+      { label: "Stripe vs Helcim", href: getPaymentProcessingCompareUrl("stripe-vs-helcim") },
+      { label: "Helcim vs PayPal", href: getPaymentProcessingCompareUrl("helcim-vs-paypal") },
+      { label: "Authorize.net vs Helcim", href: getPaymentProcessingCompareUrl("authorize-net-vs-helcim") },
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.4", explanation: "Modern dashboard, virtual terminal, and competitive SMB feature set for businesses that outgrow dongle-only workflows." },
@@ -543,6 +563,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Helcim vs Stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+      { label: "Square vs Stax", href: getPaymentProcessingCompareUrl("square-vs-stax") },
+      { label: "Stripe vs Stax", href: getPaymentProcessingCompareUrl("stripe-vs-stax") },
+      { label: "Stax vs PayPal", href: getPaymentProcessingCompareUrl("stax-vs-paypal") },
+      { label: "Authorize.net vs Stax", href: getPaymentProcessingCompareUrl("authorize-net-vs-stax") },
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.2", explanation: "Solid SMB processing and reporting for operators who want fewer ad-hoc vendors—not the deepest developer surface." },
@@ -609,6 +633,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
       "PCI scope and integration quality depend on your developer or ISV—Authorize.net is a building block, not a turnkey contractor app. Budget implementation and annual security review time.",
     ],
     compareLinks: [
+      { label: "Authorize.net vs Stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },
+      { label: "Authorize.net vs Square", href: getPaymentProcessingCompareUrl("authorize-net-vs-square") },
+      { label: "Authorize.net vs Helcim", href: getPaymentProcessingCompareUrl("authorize-net-vs-helcim") },
+      { label: "Authorize.net vs Shopify Payments", href: getPaymentProcessingCompareUrl("authorize-net-vs-shopify-payments") },
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
       { label: "Stripe vs PayPal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
     ],
@@ -689,6 +717,9 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     compareLinks: [
       { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
       { label: "Square vs PayPal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
+      { label: "Square vs Clover", href: getPaymentProcessingCompareUrl("square-vs-clover") },
+      { label: "Stripe vs Clover", href: getPaymentProcessingCompareUrl("stripe-vs-clover") },
+      { label: "Authorize.net vs Clover", href: getPaymentProcessingCompareUrl("authorize-net-vs-clover") },
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.4", explanation: "Device + app ecosystem suits retail-hybrid service models with counters and staff handoffs." },

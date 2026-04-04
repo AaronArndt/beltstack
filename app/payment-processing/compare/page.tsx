@@ -11,10 +11,27 @@ const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getPaymentProcessingC
 
 const POPULAR_SLUGS = [
   "stripe-vs-square",
+  "authorize-net-vs-stripe",
+  "authorize-net-vs-square",
+  "square-vs-helcim",
+  "stripe-vs-helcim",
+  "shopify-payments-vs-square",
+  "square-vs-clover",
   "stripe-vs-paypal",
   "square-vs-paypal",
   "helcim-vs-stax",
   "shopify-payments-vs-stripe",
+  "shopify-payments-vs-paypal",
+  "stripe-vs-clover",
+  "helcim-vs-paypal",
+  "stripe-vs-stax",
+  "square-vs-stax",
+  "stax-vs-paypal",
+  "authorize-net-vs-helcim",
+  "authorize-net-vs-shopify-payments",
+  "authorize-net-vs-paypal",
+  "authorize-net-vs-clover",
+  "authorize-net-vs-stax",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -41,7 +58,7 @@ function groupComparisonsByProduct(slugs: string[]) {
     if (!byProduct[a].slugs.some((s) => s.slug === slug)) byProduct[a].slugs.push({ slug, label: labelA });
     if (!byProduct[b].slugs.some((s) => s.slug === slug)) byProduct[b].slugs.push({ slug, label: labelB });
   }
-  const order = ["stripe", "square", "paypal-business", "shopify-payments", "helcim", "stax"];
+  const order = ["stripe", "square", "paypal-business", "shopify-payments", "helcim", "stax", "clover", "authorize-net"];
   return order.filter((key) => byProduct[key]).map((key) => ({ key, ...byProduct[key] }));
 }
 
@@ -81,7 +98,8 @@ export default function PaymentProcessingCompareHubPage() {
               Payment Processing Software Comparisons
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Side-by-side guidance on Stripe, Square, PayPal, Shopify Payments, Helcim, and Stax—written for contractors choosing card-present, invoicing, and online checkout with honest pricing context.
+              Side-by-side guidance on Stripe, Square, PayPal, Shopify Payments, Helcim, Stax, Clover, and Authorize.net—written for contractors choosing card-present, invoicing, wallet checkout, interchange-plus,
+              gateway, and online flows with honest pricing context.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Start from the{" "}
@@ -205,5 +223,6 @@ export default function PaymentProcessingCompareHubPage() {
 
 export const metadata = {
   title: "Payment Processing Software Comparisons (2026)",
-  description: "Compare Stripe, Square, PayPal, Shopify Payments, Helcim, Stax, and more for contractors and local service businesses.",
+  description:
+    "Compare Authorize.net vs Stripe, Authorize.net vs Square, Stripe vs Helcim, Square vs Helcim, Shopify Payments vs Square, Clover vs Square, Helcim vs Stax, Stripe vs Square, and more for contractors.",
 };

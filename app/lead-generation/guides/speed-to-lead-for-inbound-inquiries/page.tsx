@@ -77,7 +77,7 @@ export default function SpeedToLeadForInboundInquiriesPage() {
                 <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Based on dispatch reality, not conference slides.">Authoritative ops guidance</SectionTitle>
                   <p className="text-[15px] leading-relaxed text-neutral-700">
-                    Strong E-E-A-T for operations content comes from documented playbooks you will run—hold yourself to dispositions logged in CRM, not anecdotal win stories.
+                    Credible operations content comes from documented playbooks you will run—hold yourself to dispositions logged in CRM, not anecdotal win stories.
                   </p>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

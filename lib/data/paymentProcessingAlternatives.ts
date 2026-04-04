@@ -1,5 +1,5 @@
 /**
- * Payment processing alternatives pages — editorial data for AlternativesTemplate (E-E-A-T: channel fit,
+ * Payment processing alternatives pages — editorial data for AlternativesTemplate (channel fit,
  * effective-rate verification, independence, statement literacy). Sitemap entries come from getPaymentProcessingAlternativesSlugs().
  */
 

@@ -74,7 +74,7 @@ export default function TechnicalSeoAuditBasicsPage() {
                   </ol>
                 </section>
                 <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Claims you can verify in tools, not lore.">E-E-A-T alignment</SectionTitle>
+                  <SectionTitle sub="Claims you can verify in tools, not lore.">Verifiable guidance</SectionTitle>
                   <p className="text-[15px] leading-relaxed text-neutral-700">
                     Technical SEO advice should be reproducible: same URLs, same crawl date, same screenshot. When vendors promise instant recovery after fixes, insist on before/after Search Console timelines—recovery often lags deployment.
                   </p>

@@ -104,12 +104,12 @@ const relatedComparisons: BestForComparisonLink[] = [
   { label: "SE Ranking vs Semrush", href: getSeoToolsCompareUrl("se-ranking-vs-semrush") },
 ];
 
-const EEAT_FAQ_TRUST: BestForFaqItem = {
+const EDITORIAL_FAQ_HOW_WE_PICK: BestForFaqItem = {
   q: "How does BeltStack pick SEO tools for these scenarios?",
   a: "We score how each product fits contractor and local-SMB workflows—GBP execution, Search Console habits, and realistic seat usage—not pay-for-placement. Product limits and pricing change; confirm quotas and checkout totals on each vendor’s site before you commit.",
 };
 
-const EEAT_FAQ_AFFILIATE: BestForFaqItem = {
+const EDITORIAL_FAQ_AFFILIATE: BestForFaqItem = {
   q: "Do affiliate links change these recommendations?",
   a: "We may earn commissions on some outbound links site-wide; they do not buy rankings on BeltStack. Use our reviews and comparisons as orientation, then validate priorities in your own Search Console and trials.",
 };
@@ -157,7 +157,7 @@ function makePage(
       },
       { label: "CRM software hub", href: "/crm" },
     ],
-    faqItems: [...faqItems, EEAT_FAQ_TRUST, EEAT_FAQ_AFFILIATE],
+    faqItems: [...faqItems, EDITORIAL_FAQ_HOW_WE_PICK, EDITORIAL_FAQ_AFFILIATE],
   };
 }
 

@@ -16,6 +16,9 @@ const POPULAR_SLUGS = [
   "harvest-vs-clockify",
   "everhour-vs-harvest",
   "timely-vs-toggl",
+  "toggl-vs-hubstaff",
+  "everhour-vs-toggl",
+  "timely-vs-harvest",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -96,6 +99,17 @@ export default function TimeTrackingCompareHubPage() {
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Whether you&apos;re tracking billable client work, payroll hours, or productivity, these matchups help you see how
               each platform handles rates, reporting, monitoring, and exports to your invoicing and accounting stack.
+            </p>
+            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              We evaluate tools the same way we do in our{" "}
+              <Link
+                href="/time-tracking/best-time-tracking-software"
+                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+              >
+                best time tracking software roundup
+              </Link>{" "}
+              and individual reviews: real-world workflows, pricing at your headcount, and how data flows into billing and
+              payroll—so you can match software to your team&apos;s culture and compliance needs, not just feature lists.
             </p>
           </div>
         </section>
@@ -271,7 +285,7 @@ export function generateMetadata() {
   return {
     title: "Time Tracking Software Comparisons | BeltStack",
     description:
-      "Compare popular time tracking tools side by side. See matchups like Toggl vs Harvest, Clockify vs Toggl, and Hubstaff vs Time Doctor.",
+      "Compare time tracking tools side by side: Toggl vs Harvest, Clockify vs Toggl, Hubstaff vs Time Doctor, monitoring vs lightweight trackers, and AI timesheets vs invoicing-first apps.",
   };
 }
 

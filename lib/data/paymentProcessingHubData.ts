@@ -56,6 +56,7 @@ export const PAYMENT_PROCESSING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] =
     links: [
       { label: "Best payment processing for contractors →", href: getPaymentProcessingBestForUrl("contractors") },
       { label: "Stripe vs Square →", href: getPaymentProcessingCompareUrlFromSlug("stripe-vs-square") },
+      { label: "Square vs Clover →", href: getPaymentProcessingCompareUrlFromSlug("square-vs-clover") },
       { label: "POS software hub (in-person checkout) →", href: "/pos" },
     ],
   },
@@ -73,6 +74,7 @@ export const PAYMENT_PROCESSING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] =
     body: "When carts, memberships, or filter subscriptions live in Shopify, payments should stay native unless compliance or payment-method gaps force a second gateway. Compare Shopify Payments vs Stripe before you fragment checkout.",
     links: [
       { label: "Shopify Payments vs Stripe →", href: getPaymentProcessingCompareUrlFromSlug("shopify-payments-vs-stripe") },
+      { label: "Shopify Payments vs Square →", href: getPaymentProcessingCompareUrlFromSlug("shopify-payments-vs-square") },
       { label: "Website builders hub →", href: "/website-builders" },
     ],
   },
@@ -85,14 +87,31 @@ export const PAYMENT_PROCESSING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] =
       { label: "CRM software hub (track customers & payments) →", href: "/crm" },
     ],
   },
+  {
+    title: "Bank bundles, gateways, and legacy ERP paths",
+    body: "Some stacks still center on Authorize.net behind a merchant account—especially when tokens, virtual terminals, or franchisor standards lock integrations. Compare gateway + processor TCO to modern all-in-one options before you replatform cards on file.",
+    links: [
+      { label: "Authorize.net vs Stripe →", href: getPaymentProcessingCompareUrlFromSlug("authorize-net-vs-stripe") },
+      { label: "Authorize.net vs Square →", href: getPaymentProcessingCompareUrlFromSlug("authorize-net-vs-square") },
+      { label: "Authorize.net vs Helcim →", href: getPaymentProcessingCompareUrlFromSlug("authorize-net-vs-helcim") },
+    ],
+  },
 ];
 
 export type PaymentProcessingHubComparisonLink = { label: string; slug: string; href: string };
 
 export const PAYMENT_PROCESSING_HUB_POPULAR_COMPARISONS: PaymentProcessingHubComparisonLink[] = [
   { label: "Stripe vs Square", slug: "stripe-vs-square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+  { label: "Square vs Helcim", slug: "square-vs-helcim", href: getPaymentProcessingCompareUrl("square-vs-helcim") },
+  { label: "Stripe vs Helcim", slug: "stripe-vs-helcim", href: getPaymentProcessingCompareUrl("stripe-vs-helcim") },
+  { label: "Shopify Payments vs Square", slug: "shopify-payments-vs-square", href: getPaymentProcessingCompareUrl("shopify-payments-vs-square") },
+  { label: "Square vs Clover", slug: "square-vs-clover", href: getPaymentProcessingCompareUrl("square-vs-clover") },
   { label: "Stripe vs PayPal", slug: "stripe-vs-paypal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
   { label: "Square vs PayPal", slug: "square-vs-paypal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
   { label: "Helcim vs Stax", slug: "helcim-vs-stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
   { label: "Shopify Payments vs Stripe", slug: "shopify-payments-vs-stripe", href: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe") },
+  { label: "Shopify Payments vs PayPal", slug: "shopify-payments-vs-paypal", href: getPaymentProcessingCompareUrl("shopify-payments-vs-paypal") },
+  { label: "Authorize.net vs Stripe", slug: "authorize-net-vs-stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },
+  { label: "Authorize.net vs Square", slug: "authorize-net-vs-square", href: getPaymentProcessingCompareUrl("authorize-net-vs-square") },
+  { label: "Authorize.net vs Helcim", slug: "authorize-net-vs-helcim", href: getPaymentProcessingCompareUrl("authorize-net-vs-helcim") },
 ];

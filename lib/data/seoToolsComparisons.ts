@@ -138,7 +138,7 @@ function buildMoreComparisons(pa: (typeof P)[keyof typeof P], pb: (typeof P)[key
   ];
 }
 
-const PRICING_EEAT_FOOTNOTE =
+const PRICING_VERIFICATION_FOOTNOTE =
   "Confirm current list prices, taxes, and add-ons on each vendor’s site—headline tiers rarely match your cart. BeltStack does not accept pay-for-placement in comparisons; we may earn affiliate commissions on some outbound links elsewhere without changing how we score trade-offs. Reconcile any keyword, impression, or rank story with Google Search Console on your verified properties before you annualize a contract.";
 
 function featureComparisonForSlug(slug: string): ComparisonFeatureRow[] {
@@ -373,7 +373,7 @@ function build(
       quickRecommendationB: `Choose ${pb.name} if you prioritize ${pb.bestForSummary.toLowerCase()}`,
       quickVerdictParagraphs: [summary],
       featureComparison: featureComparisonForSlug(slug),
-      pricingComparison: `Both products price on usage tiers—model annual cost against tracked keywords, crawl credits, locations, and seats. For local contractors, tie software spend to booked jobs and branded plus service-area queries in Search Console, not vanity national rankings alone. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Both products price on usage tiers—model annual cost against tracked keywords, crawl credits, locations, and seats. For local contractors, tie software spend to booked jobs and branded plus service-area queries in Search Console, not vanity national rankings alone. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: ["Strong dataset or workflow fit for its segment", "Useful reporting for service pages"],
         cons: ["Costs rise with scale", "Requires consistent execution on GBP and reviews"],
@@ -446,7 +446,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         { category: "Local SEO (native)", productA: "3.6", productB: "3.5" },
         { category: "Value for lean teams", productA: "3.8", productB: "3.9" },
       ],
-      pricingComparison: `Semrush and Ahrefs both move up-market as you add users, projects, and tracked keywords or credits. Model the cart you would actually check out—not the blog headline—and compare annual prepay vs monthly. Local operators should relate cost to booked jobs from organic calls and forms, not vanity national rankings. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Semrush and Ahrefs both move up-market as you add users, projects, and tracked keywords or credits. Model the cart you would actually check out—not the blog headline—and compare annual prepay vs monthly. Local operators should relate cost to booked jobs from organic calls and forms, not vanity national rankings. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: [
           "Broad datasets plus workflows that extend beyond pure SEO for teams that will adopt them",
@@ -574,7 +574,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         { category: "Keyword research depth", productA: "4.6", productB: "4.0" },
         { category: "Local SEO (native)", productA: "3.5", productB: "3.5" },
       ],
-      pricingComparison: `Ahrefs and Moz Pro use different tiering logic—compare list prices against tracked keywords, seats, and campaign limits you will actually use. Moz can feel more approachable at entry tiers; Ahrefs can justify cost when link research is daily work. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Ahrefs and Moz Pro use different tiering logic—compare list prices against tracked keywords, seats, and campaign limits you will actually use. Moz can feel more approachable at entry tiers; Ahrefs can justify cost when link research is daily work. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: [
           "Deep link exploration and content gap workflows trusted by advanced SEOs",
@@ -698,7 +698,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         { category: "Backlink analysis", productA: "4.3", productB: "3.2" },
         { category: "Site audits", productA: "4.5", productB: "3.6" },
       ],
-      pricingComparison: `Ubersuggest typically undercuts Semrush on headline monthly price; Semrush undercuts nobody on renewal complexity—model seats, keywords, and add-ons honestly. If you only need occasional ideas, starter pricing wins; if you need reliable crawls at scale, false savings hurt. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Ubersuggest typically undercuts Semrush on headline monthly price; Semrush undercuts nobody on renewal complexity—model seats, keywords, and add-ons honestly. If you only need occasional ideas, starter pricing wins; if you need reliable crawls at scale, false savings hurt. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: [
           "Datasets and limits suited to growing and multi-user teams",
@@ -822,7 +822,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         { category: "Education & community", productA: "4.1", productB: "4.6" },
         { category: "National SEO suite (native)", productA: "2.5", productB: "2.5" },
       ],
-      pricingComparison: `Both vendors price by modules, markets, and tracked geography—build a spreadsheet per brand you manage and re-quote when you add ZIPs or locations. Local SEO software fails ROI when nobody acts on listings monthly; cancel modules you do not use. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Both vendors price by modules, markets, and tracked geography—build a spreadsheet per brand you manage and re-quote when you add ZIPs or locations. Local SEO software fails ROI when nobody acts on listings monthly; cancel modules you do not use. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: [
           "Strong packaging for agencies delivering recurring local reports",
@@ -946,7 +946,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         { category: "Audits & rank tracking", productA: "4.2", productB: "4.5" },
         { category: "Local SEO (native)", productA: "3.5", productB: "3.6" },
       ],
-      pricingComparison: `Model SE Ranking and Semrush with the same keyword counts, user seats, and audit frequency you need—not the cheapest advertised tier. Semrush typically climbs faster as you scale; SE Ranking often stays gentler until you add many brands or high-volume tracking. ${PRICING_EEAT_FOOTNOTE}`,
+      pricingComparison: `Model SE Ranking and Semrush with the same keyword counts, user seats, and audit frequency you need—not the cheapest advertised tier. Semrush typically climbs faster as you scale; SE Ranking often stays gentler until you add many brands or high-volume tracking. ${PRICING_VERIFICATION_FOOTNOTE}`,
       prosConsA: {
         pros: [
           "Strong price-to-feature story for SMB and agency starter tiers",
