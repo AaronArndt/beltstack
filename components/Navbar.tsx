@@ -177,7 +177,7 @@ function SoftwarePanelContent({
                   key={item.href}
                   href={item.href}
                   role="menuitem"
-                  className="group block rounded-md py-1 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                  className="group block rounded-sm bg-transparent px-2 py-1 transition-colors hover:bg-[#E7F8F2] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
                 >
                   <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#0d9668]">
                     {item.title}

@@ -10,11 +10,15 @@ import { Footer } from "@/components/Footer";
 const PRODUCT_LOGO_BY_SLUG = productLogoMapFromComparisons(getLeadGenerationComparisonSlugs, getLeadGenerationComparisonBySlug);
 
 const POPULAR_SLUGS = [
+  "google-local-services-ads-vs-thumbtack",
   "thumbtack-vs-angi",
+  "google-local-services-ads-vs-yelp-ads",
   "angi-vs-homeadvisor",
+  "thumbtack-vs-homeadvisor",
+  "google-local-services-ads-vs-angi",
+  "yelp-ads-vs-thumbtack",
   "bark-vs-thumbtack",
   "houzz-pro-vs-thumbtack",
-  "google-local-services-ads-vs-yelp-ads",
 ] as const;
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
