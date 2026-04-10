@@ -289,7 +289,11 @@ function ProjectManagementHowToChooseSection() {
         <Link href="/project-management/compare" className={linkGreen}>
           comparison hub
         </Link>{" "}
-        for head-to-head matchups, and the scenario links below to jump into specific use cases.
+        for head-to-head matchups, the{" "}
+        <Link href="/project-management/best-for" className={linkGreen}>
+          project management best-for hub
+        </Link>{" "}
+        to browse every use case, and the scenario links below to jump into specific use cases.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
         <ul className="space-y-2.5 text-sm text-[#57534E]">
