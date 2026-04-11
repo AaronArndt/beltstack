@@ -2,36 +2,91 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getFieldServiceBestForUrl } from "@/lib/routes";
 
-const LINKS = [
+const SCENARIOS = [
   {
     label: "Best field service software overall",
     href: "/field-service/best-field-service-software",
-    description: "Full rankings of FSM tools for dispatch, scheduling, mobile crews, and job costing.",
-  },
-  {
-    label: "Best field service software for contractors",
-    href: getFieldServiceBestForUrl("contractors"),
-    description: "Picks for general contractors and mixed-trade crews: jobs, dispatch, and field coordination.",
-  },
-  {
-    label: "Best field service software for HVAC",
-    href: getFieldServiceBestForUrl("hvac"),
-    description: "HVAC-specific workflows, service agreements, and seasonal demand.",
-  },
-  {
-    label: "Best field service software for plumbing",
-    href: getFieldServiceBestForUrl("plumbing"),
-    description: "Plumbing operations, emergency calls, and recurring service.",
-  },
-  {
-    label: "Best field service software for electricians",
-    href: getFieldServiceBestForUrl("electricians"),
-    description: "Electrical contractors, compliance-aware job docs, and crew routing.",
+    description: "Full rankings of FSM tools for dispatch, scheduling, mobile crews, job costing, and operations.",
   },
   {
     label: "Best field service software for small business",
     href: getFieldServiceBestForUrl("small-business"),
     description: "Lean teams balancing price, ease of use, and room to grow.",
+  },
+  {
+    label: "Best field service software for general contractors",
+    href: getFieldServiceBestForUrl("contractors"),
+    description: "Mixed-trade crews, multi-service scheduling, dispatch, and job coordination.",
+  },
+  {
+    label: "Best field service software for HVAC businesses",
+    href: getFieldServiceBestForUrl("hvac"),
+    description: "Maintenance agreements, seasonal demand, installs, and emergency dispatch.",
+  },
+  {
+    label: "Best field service software for plumbing companies",
+    href: getFieldServiceBestForUrl("plumbing"),
+    description: "Emergency and booked jobs, recurring service, estimates, and invoicing.",
+  },
+  {
+    label: "Best field service software for electricians",
+    href: getFieldServiceBestForUrl("electricians"),
+    description: "Service calls, crew routing, estimates, and compliance-friendly job documentation.",
+  },
+  {
+    label: "Best field service software for painting contractors",
+    href: getFieldServiceBestForUrl("painting"),
+    description: "Crew scheduling, production phases, change orders, and job-site billing.",
+  },
+  {
+    label: "Best field service software for roofing companies",
+    href: getFieldServiceBestForUrl("roofing"),
+    description: "Inspections, crew days, production documentation, supplements, and invoicing.",
+  },
+  {
+    label: "Best field service software for construction companies",
+    href: getFieldServiceBestForUrl("construction"),
+    description: "Site visits, subcontractor coordination, change documentation, and field visibility.",
+  },
+  {
+    label: "Best field service software for remodeling businesses",
+    href: getFieldServiceBestForUrl("remodeling"),
+    description: "Phased jobs, selections, change orders, and progress payments.",
+  },
+  {
+    label: "Best field service software for handyman businesses",
+    href: getFieldServiceBestForUrl("handyman"),
+    description: "High-volume small jobs, same-day dispatch, templates, and fast mobile invoicing.",
+  },
+  {
+    label: "Best field service software for landscaping companies",
+    href: getFieldServiceBestForUrl("landscaping"),
+    description: "Recurring routes, crew labor, installs, and seasonal scheduling.",
+  },
+  {
+    label: "Best field service software for property management companies",
+    href: getFieldServiceBestForUrl("property-management"),
+    description: "Work orders across portfolios, vendor jobs, documentation, and billing visibility.",
+  },
+  {
+    label: "Best field service software for pest control businesses",
+    href: getFieldServiceBestForUrl("pest-control"),
+    description: "Recurring service plans, route density, treatment notes, and renewals.",
+  },
+  {
+    label: "Best field service software for pool service companies",
+    href: getFieldServiceBestForUrl("pool-service"),
+    description: "Weekly routes, chemical notes, open/close packages, and repair tickets.",
+  },
+  {
+    label: "Best field service software for junk removal businesses",
+    href: getFieldServiceBestForUrl("junk-removal"),
+    description: "Truck windows, load-size quoting, deposits, and multi-truck dispatch.",
+  },
+  {
+    label: "Best field service software for moving companies",
+    href: getFieldServiceBestForUrl("moving"),
+    description: "Surveys, crew and truck assignments, deposits, and move-day billing.",
   },
 ];
 
@@ -71,7 +126,7 @@ export default function FieldServiceBestForHubPage() {
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-gray-700 font-medium" aria-current="page">
+                <li className="font-medium text-gray-700" aria-current="page">
                   Best For
                 </li>
               </ol>
@@ -79,9 +134,9 @@ export default function FieldServiceBestForHubPage() {
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Field Service Software by Use Case
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scenario-based picks for contractors, trades, and small service businesses—dispatch, mobile workflows,
-              and job management without overbuying.
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">
+              Scenario-based picks for contractors, trades, and service businesses—dispatch, mobile workflows, and job
+              management without overbuying.
             </p>
           </div>
         </section>
@@ -90,25 +145,21 @@ export default function FieldServiceBestForHubPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Jump to a scenario.">Pick your situation</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {LINKS.map((item) => (
+              {SCENARIOS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{item.label}</h2>
-                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
+                  <h2 className="text-xl font-bold text-[#1A2D48] group-hover:text-[#10B981]">{item.label}</h2>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#57534E]">{item.description}</p>
                   <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">Open →</span>
                 </Link>
               ))}
             </div>
             <p className="mt-6 text-sm text-[#57534E]">
-              <Link href={getFieldServiceBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
-                Best field service software for contractors
-              </Link>{" "}
-              ·{" "}
               <Link href="/field-service/compare" className="font-semibold text-[#10B981] hover:underline">
-                All comparisons
+                All field service comparisons
               </Link>
             </p>
           </div>
@@ -124,6 +175,6 @@ export function generateMetadata() {
   return {
     title: "Best Field Service Software by Use Case | BeltStack",
     description:
-      "Find field service management software for contractors, HVAC, plumbing, electricians, and small businesses.",
+      "Find field service management software by trade: HVAC, plumbing, electricians, general contractors, painting, roofing, landscaping, pool service, movers, and more.",
   };
 }

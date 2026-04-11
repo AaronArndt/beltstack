@@ -144,19 +144,19 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "QuickBooks Online",
-      body: "QuickBooks Online is the default for a reason: broad features, wide adoption by accountants, and an ecosystem that connects to almost everything. It can feel heavy for very small teams but scales well.",
+      body: "QuickBooks Online remains the default small-business accounting platform because banks, payroll providers, and bookkeepers already speak its language, and the app ecosystem covers niche integrations. You get double-entry books, reconciliations, and tax-ready reports without building spreadsheets. During a trial, connect at least one real bank feed, categorize 30 days of transactions, and run a P&L your accountant would recognize. Test user permissions if multiple people touch payables. Confirm which payroll, inventory, or multicurrency features require the specific tier you expect to need next year.",
     },
     {
       heading: "Xero",
-      body: "Xero appeals to businesses that want a cleaner interface and strong reporting without the QuickBooks brand. It’s a strong alternative with good support and integrations.",
+      body: "Xero appeals to owners who want a modern accounting interface, strong bank reconciliation, and reporting that still satisfies external advisors. Its marketplace stays deep for point solutions you may add later. In a trial, invite your bookkeeper view-only, replay a month of reconciliations, and export the same reports you send today. Validate fixed-asset or project tracking apps if those drive your margins. Xero shines when you value clean UX and collaborative accounting over legacy habits.",
     },
     {
       heading: "Wave",
-      body: "Wave is the best free option for small businesses with straightforward needs. You get real accounting and invoicing without a subscription; add-ons are available when you need them.",
+      body: "Wave is the best free-first accounting option for very small businesses that need real double-entry basics, invoicing, and receipt capture before they can justify another subscription. Paid payroll or payments add-ons let you grow without migrating immediately. During evaluation, send a few test invoices, record expenses, and reconcile a linked account to see if reporting depth meets lender or tax prep needs. If you anticipate inventory or multicurrency complexity soon, stress those scenarios early. Wave wins on cost control, not infinite enterprise features.",
     },
     {
       heading: "FreshBooks",
-      body: "FreshBooks fits service businesses that care most about invoicing and time tracking. It’s easy to use and stays manageable as you add clients and projects.",
+      body: "FreshBooks fits service-heavy small businesses that prioritize fast invoicing, time tracking, and client-friendly billing while still covering core bookkeeping. Owners who dread accounting jargon often adopt it faster than general ledgers built for accountants first. In a trial, model your common billing pattern—fixed fee, hourly, or recurring—and run an AR aging report your office manager trusts. Test accountant export or integration if year-end still flows to another system. Validate whether job costing depth matches construction or agency needs before you commit.",
     },
   ] as BestForEditorialBlock[],
 

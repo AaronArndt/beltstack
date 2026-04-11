@@ -140,19 +140,19 @@ export const AUTO_REPAIR_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small auto repair shops: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—shop owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and locations.",
+      body: "Gusto is practical payroll software for auto repair shops that pay flat-rate or hourly W-2 techs alongside 1099 mobile diagnosticians or specialty rebuild vendors. Self-serve pricing helps independent shops adopt full-service payroll without a dealer-style sales process. During your first payrolls, confirm deposits, overtime or guarantee make-up calculations if you blend flag and clock time, and reimbursements for tools or uniforms that should follow your written policy. Run a test week with warranty ROs, comebacks, and a 1099 sublet payout to ensure wage registers stay separate from vendor-style payments. If you track bays or locations, verify payroll dimensions before pushing labor to your SMS or accounting bridge. Add benefits when you promote a lead tech to management.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job and RO costing—critical for auto repair. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software auto shops pick when QuickBooks already carries parts, ROs, and labor gross, and they need payroll burden posted to the same jobs for true gross profit per ticket. Flag hours, billed hours, and actual payroll hours should reconcile somewhere your accountant can defend. On trial payrolls, tie payroll detail to a few closed ROs and confirm labor maps to the correct jobs or classes, including any burden or workers’ comp mappings your bookkeeper expects. Integrate QuickBooks Time if techs clock by RO so approvals flow into payroll. Validate multi-location tax setups if you add a second bay or acquisition. Clean ties keep your effective labor rate honest when you renegotiate with insurers or fleets.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for auto repair shops that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for repair shops that want flat per-person pricing and full-service taxes while occasionally paying 1099 mobile techs or sublet partners. Support helps when a busy Monday stacks warranty comebacks into overtime before Friday payroll. Use early payrolls to prove deposits, new-hire reporting for apprentice hires, and 1099 handling for recurring transmission or alignment specialists. Import a payroll with flat-rate bonuses, Saturday differentials, and tool allowances to confirm taxable versus non-taxable treatment matches policy. Map GL exports once if QuickBooks is downstream so each profit center still ties out. Predictable fees help when parts invoices arrive before RO pay comes in.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing auto repair shops that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for multi-location dealer groups, collision networks, or shops expanding across states that need serviced payroll and HR depth as they scale. Quoted implementations align earning codes with how you report labor to OEM programs and insurers. After go-live, audit tax registrations for every state where techs work, including short-term training rotations. Test multi-location labor reporting if you separate mechanical from collision P&L. If union or apprenticeship programs apply, review fringe and training wage rules with ADP during onboarding. Compare total serviced cost once those checkpoints pass.",
     },
   ] as BestForEditorialBlock[],
 

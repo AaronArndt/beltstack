@@ -2,6 +2,7 @@ import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { BestForTemplate } from "@/components/best/BestForTemplate";
 import type { BestForTemplateProps, BestForFeaturedProduct } from "@/components/best/BestForTemplate";
+import { enrichBestForTemplateProps } from "@/lib/bestFor/enrichRelatedComparisons";
 
 function itemListSchemaForBestFor(
   title: string,
@@ -27,10 +28,11 @@ function itemListSchemaForBestFor(
 
 /** Server component: renders ItemList JSON-LD + BestForTemplate for best-for pages. */
 export function BestForPageWithStructuredData(props: BestForTemplateProps) {
+  const enriched = enrichBestForTemplateProps(props);
   return (
     <>
-      <StructuredData data={itemListSchemaForBestFor(props.title, props.featuredProducts)} />
-      <BestForTemplate {...props} />
+      <StructuredData data={itemListSchemaForBestFor(enriched.title, enriched.featuredProducts)} />
+      <BestForTemplate {...enriched} />
     </>
   );
 }

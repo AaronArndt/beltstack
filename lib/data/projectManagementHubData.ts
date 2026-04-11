@@ -45,27 +45,46 @@ export const PROJECT_MANAGEMENT_COMPARISON_ROWS: ComparisonTableRow[] = [
   ]).map(toHubComparisonTableRow),
 ] as ComparisonTableRow[];
 
-/** Best project management by use case (scenario) links. */
+/** Best project management by use case (scenario) links — hub pill row + reviews subset. */
 export const PROJECT_MANAGEMENT_SCENARIO_LINKS = [
-  { label: "Freelancers", href: getProjectManagementBestForUrl("freelancers") },
-  { label: "Small business", href: getProjectManagementBestForUrl("small-business") },
-  { label: "Agencies", href: getProjectManagementBestForUrl("agencies") },
-  { label: "Startups", href: getProjectManagementBestForUrl("startups") },
-  { label: "Remote teams", href: getProjectManagementBestForUrl("remote-teams") },
+  { label: "Best for freelancers", href: getProjectManagementBestForUrl("freelancers") },
+  { label: "Best for small business", href: getProjectManagementBestForUrl("small-business") },
+  { label: "Best for HVAC businesses", href: getProjectManagementBestForUrl("hvac") },
+  { label: "Best for construction companies", href: getProjectManagementBestForUrl("construction") },
+  { label: "Best for general contractors", href: getProjectManagementBestForUrl("general-contractors") },
+  { label: "Best for agencies", href: getProjectManagementBestForUrl("agencies") },
+  { label: "All best-for scenarios →", href: "/project-management/best-for" },
 ] as const;
 
-/** Project management by business type (trade-style links). */
+/**
+ * Trade, team-type, and hub entry points. Only routes under /project-management/best-for/.
+ */
 export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
-  { label: "Agencies", href: getProjectManagementBestForUrl("agencies") },
-  { label: "Startups", href: getProjectManagementBestForUrl("startups") },
+  { label: "HVAC businesses", href: getProjectManagementBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getProjectManagementBestForUrl("plumbing") },
+  { label: "Electricians", href: getProjectManagementBestForUrl("electricians") },
+  { label: "Painting contractors", href: getProjectManagementBestForUrl("painting") },
+  { label: "Roofing companies", href: getProjectManagementBestForUrl("roofing") },
+  { label: "General contractors", href: getProjectManagementBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getProjectManagementBestForUrl("landscaping") },
+  { label: "Construction companies", href: getProjectManagementBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getProjectManagementBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getProjectManagementBestForUrl("handyman") },
+  { label: "Property management companies", href: getProjectManagementBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getProjectManagementBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getProjectManagementBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getProjectManagementBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getProjectManagementBestForUrl("moving") },
   { label: "Freelancers", href: getProjectManagementBestForUrl("freelancers") },
-  { label: "Remote teams", href: getProjectManagementBestForUrl("remote-teams") },
   { label: "Small business", href: getProjectManagementBestForUrl("small-business") },
+  { label: "Startups", href: getProjectManagementBestForUrl("startups") },
+  { label: "Agencies", href: getProjectManagementBestForUrl("agencies") },
+  { label: "Remote teams", href: getProjectManagementBestForUrl("remote-teams") },
+  { label: "All use cases", href: "/project-management/best-for" },
 ];
 
 export const PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS: { groupLabel: string; links: { label: string; href: string }[] }[] = [
-  { groupLabel: "Browse by team type", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(0, 3) },
-  { groupLabel: "More team types", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE.slice(3) },
+  { groupLabel: "Browse by trade, team type, and scenario", links: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE },
 ];
 
 /** Editorial “best PM by use case” — workflow shape and collaboration load, not org label alone. */

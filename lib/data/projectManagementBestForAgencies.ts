@@ -134,15 +134,15 @@ export const AGENCIES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Teamwork",
-      body: "Teamwork is built for agencies: client workspaces, time tracking, billing, and project templates. When agencies should choose Teamwork: you want agency-specific features out of the box and time tracking in the same tool. See our Teamwork review.",
+      body: "Teamwork is purpose-built for agencies—client workspaces, retainer templates, time tracking, and billing-friendly exports reduce the gap between delivery and invoicing. Account leads see profitability signals without exporting to spreadsheets nightly. During a trial, clone a live client retainer, assign tasks across roles, and log time against milestones to confirm rates and permissions behave. Test client guest access on a sanitized project so you know exactly what customers can see. Validate reporting on utilization before you promise leadership dashboards. See our Teamwork review.",
     },
     {
       heading: "Asana",
-      body: "Asana is a strong general-purpose pick for agencies: organize work by workspace or project per client, use multiple views and automation. When to choose Asana vs Teamwork: you don't need native time tracking in the PM tool or prefer a more flexible structure. See our Asana review and Asana vs Monday comparison.",
+      body: "Asana is a strong general-purpose project management platform for agencies that want crisp portfolios per client, timeline views for campaign launches, and automations that nudge creatives when feedback stalls. It stays approachable for mixed teams of strategists, designers, and PMs. In a trial, stand up one multi-phase client program with dependencies and run approvals through comments or forms if you use them. Integrate Slack or Teams so updates land where account teams already work. Choose Asana when you will track time in a dedicated tool but need rock-solid task hygiene. See our Asana review and Asana vs Monday comparison.",
     },
     {
       heading: "ClickUp",
-      body: "ClickUp offers one workspace for tasks, docs, and views with strong customization. Organize by client with spaces or folders; optional time tracking. When to choose ClickUp: you want all-in-one value and don't need the agency-specific focus of Teamwork. See our ClickUp review and Asana vs ClickUp comparison.",
+      body: "ClickUp gives agencies one customizable workspace—spaces per client, nested lists, docs, and optional time tracking—for teams that want depth without paying for five separate products. Custom fields can model SLAs, channels, or billing codes if you govern them. During evaluation, import a week of real tasks, test a client-facing view or shared doc, and measure whether PMs can find work without training marathons. Balance power with governance so every account lead does not invent incompatible field schemes. See our ClickUp review and Asana vs ClickUp comparison.",
     },
   ] as BestForEditorialBlock[],
 

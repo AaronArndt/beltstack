@@ -140,19 +140,19 @@ export const CLEANING_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small cleaning companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and jobs.",
+      body: "Gusto is practical payroll software for cleaning companies that staff overnight commercial crews, daytime residential teams, and occasional 1099 specialty cleaners from one platform. Self-serve pricing helps owner-operators scale crews without a long vendor courtship. During your first payrolls, confirm deposits, overtime when shifts run past contracted windows, and reimbursements for supplies that should follow your per-stop or per-job policy. Model a pay week with split crews, a deep-clean 1099 invoice, and holiday premiums to see registers stay audit-friendly. If you track accounts or buildings as dimensions, scan payroll detail before pushing to billing systems. Add another location or benefits when recurring contracts stabilize.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for cleaning and route-based work. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software cleaning businesses pick when QuickBooks already tracks customer contracts, buildings, or routes, and labor must post for accurate job costing and invoicing backup. One ledger keeps recurring commercial revenue aligned with true wage burden. On trial payrolls, reconcile payroll to a few active accounts and confirm hours land on the jobs or classes your proposals reference. Sync QuickBooks Time or your scheduling app so clock-ins from multiple sites feed payroll without spreadsheets. Validate local wage or sick rules if you operate in cities with add-on ordinances. Clean numbers protect renewals when facility managers scrutinize labor hours.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for cleaning teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for janitorial and cleaning teams that want flat, understandable pricing while headcount swings with new wins and churn. Support helps when a last-minute cover shift pushes payroll into overtime the same week as month-end billing. Use early payrolls to prove deposits, new-hire reporting for rapid hiring events, and 1099 payouts for periodic window or floor specialists. Import hours with travel time between buildings and weekend differentials to confirm policy matches tax treatment. Map GL exports once if QuickBooks receives payroll so each customer class still ties out. Predictable fees help when payroll is weekly but clients pay monthly.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing cleaning companies that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for cleaning enterprises with multi-state contracts, large facility portfolios, or franchise networks that need serviced payroll and compliance benches as they scale. Quoted implementations align earning codes with how you report burden to corporate clients or franchisors. After go-live, audit tax setups for every jurisdiction where overnight crews work, including states you only serve through a single anchor contract. Test multi-location labor reporting if you separate commercial from residential P&L. If union sites or prevailing wage appear, review certified payroll samples with ADP before the first compliance pull. Benchmark total serviced cost after those validations.",
     },
   ] as BestForEditorialBlock[],
 

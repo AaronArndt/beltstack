@@ -140,19 +140,19 @@ export const AGRICULTURE_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small farm and ag operations: W-2 and 1099 in one system, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add contractors without calling a rep. It scales as you add workers and locations.",
+      body: "Gusto is capable payroll software for farms and ag operations that pay seasonal W-2 crews, year-round staff, and 1099 custom harvest or hauling partners as workflows peak and trough. Self-serve pricing helps family operations modernize payroll without an enterprise procurement cycle. During your first payrolls, confirm deposits, overtime during harvest pushes, and clean handling of piece rates or bonuses if you use them alongside hourly wages. Run a test cycle with a planting crew, a packing-shed shift, and a 1099 equipment operator invoice to validate employee versus contractor registers. If you track fields, barns, or entities, verify payroll dimensions before pushing to cost accounting. Layer benefits for office managers as the operation diversifies.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run farm books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for crop, field, or location costing—critical for ag reporting. Pay workers and 1099 in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software ag businesses choose when QuickBooks already tracks crops, cost centers, or locations, and labor must post for true per-unit or per-field economics. One ledger keeps payroll burden aligned with the same classes you use for loans and co-op reporting. On trial payrolls, reconcile payroll to at least two cost centers—say a field crew and a processing line—and confirm hours, burden, and reimbursements map as your accountant expects. Integrate QuickBooks Time or another harvest-time tracker so approved hours flow before payroll cutoff. Validate multi-state withholding if crews cross borders for seasonal work. Clean feeds support traceability when auditors or buyers review labor allocation.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for ag operations that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for agricultural teams that want flat per-person pricing and full-service taxes while headcount swings with planting, harvest, and market seasons. Support helps when weather compresses two heavy workweeks into the same pay period. Use early payrolls to prove deposits, new-hire reporting for rapid seasonal onboarding, and 1099 payouts for recurring custom operators. Import a payroll with split crews across two sites and overtime after long harvest days to stress any export tags you rely on. Map GL accounts once if QuickBooks is downstream so enterprise classes survive. Predictable fees help when input invoices arrive before commodity checks clear.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing ag operations that want scale and optional dedicated support. Multi-state payroll, more workers, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for large ag enterprises, multi-site processors, or operations with complex union or H-2 programs that need serviced compliance beyond mid-market self-serve. Implementation teams align earning codes with how you report labor to regulators, lenders, and JV partners. After go-live, audit tax registrations for every state where migrant or traveling crews earn wages, not just the home farm address. Test multi-entity payroll if packing, growing, and retail silos use different FEINs. If certified payroll or prevailing wage appears on infrastructure-adjacent work, review sample outputs with ADP before agencies ask. Benchmark total serviced cost after those proofs pass.",
     },
   ] as BestForEditorialBlock[],
 

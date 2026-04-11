@@ -97,10 +97,22 @@ export const CONTRACTORS_PAGE_PROPS = {
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
-    { heading: "FreshBooks", body: "FreshBooks is a strong default for contractors: estimates, invoicing, time tracking, and client billing in one place. It’s easy to use for job-based and progress billing." },
-    { heading: "HoneyBook", body: "HoneyBook is built for client and project workflows: proposals, contracts, and invoicing in one pipeline. Ideal for contractors who run on client projects and need a polished client journey." },
-    { heading: "QuickBooks", body: "QuickBooks fits contractors who need invoicing and full accounting in one platform. Job costing and reporting are strong; best when you already use or plan to use QuickBooks for books." },
-    { heading: "Zoho Invoice", body: "Zoho Invoice delivers good project tracking and client portal at a lower price. Solid value for contractors who want more than basic invoicing without premium cost." },
+    {
+      heading: "FreshBooks",
+      body: "FreshBooks is a strong default for contractors who live on estimates, deposit invoices, and final draws—clients see professional PDFs while your office tracks what is outstanding per job. Time and materials entries support change orders without rebuilding the whole invoice. During a trial, duplicate a typical job template, collect a deposit online, and apply a credit to a change order scenario. Test photo attachments or notes if homeowners expect documentation. FreshBooks keeps residential workflows moving without ERP training.",
+    },
+    {
+      heading: "HoneyBook",
+      body: "HoneyBook suits design-build or client-facing contractors who sell experience: proposals, contracts, and invoicing share one branded pipeline so homeowners never wonder what happens next. Automations remind clients to sign before you hold calendar slots. In a trial, run a kitchen remodel inquiry through proposal, contract, and first invoice with your real line items. Validate how retainers and payment schedules display on mobile. HoneyBook shines when marketing and billing feel like one company.",
+    },
+    {
+      heading: "QuickBooks",
+      body: "QuickBooks is the pick when contractor invoicing must sit beside job costing, vendor bills, and payroll in a single accounting system your CPA already trusts. Progress billing against estimates maps well to commercial-style workflows. During evaluation, tag expenses to jobs, generate a partial invoice tied to percent complete, and reconcile lien waiver tracking if you use it. Confirm which subscription tier unlocks project profitability reports you need. QuickBooks anchors finance-heavy trades.",
+    },
+    {
+      heading: "Zoho Invoice",
+      body: "Zoho Invoice offers project-aware invoicing, portals, and automation at a value price for contractors watching software spend across trucks and crews. It integrates forward into Zoho Books when you need a fuller ledger. In a trial, set up recurring billing for maintenance agreements, test sales tax on materials versus labor per local rules, and invite a homeowner to the portal for payment. Mobile approvals help owners between job sites. Zoho fits ops-led shops that still want polish.",
+    },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [

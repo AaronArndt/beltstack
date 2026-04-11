@@ -140,19 +140,19 @@ export const ELECTRICIANS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small electrical contractors: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add electricians and jobs.",
+      body: "Gusto is strong payroll software for electrical contractors balancing licensed electricians, apprentices, and 1099 specialty subs under one login with published pricing. Built-in time tracking and contractor self-service trim the email chains that usually accompany permit-heavy work. During your first two payroll runs, confirm federal and state tax deposits, verify overtime against service and project hours, and keep W-2 wages distinct from subcontractor payouts in every register. Add a test week with a bucket-truck crew, a low-voltage partner paid as 1099, and a permit hold day to see how partial weeks and adjustments behave. If you segment by service line or branch, scan those tags on payroll exports before trusting job cost feeds. You can add benefits or another office without changing payroll engines.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for electrical projects. Pay electricians and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is purpose-built payroll software for electrical shops that already job-cost in QuickBooks and need labor dollars on the right projects automatically. Tie payroll to estimates, change orders, and actuals without CSV bridges. On early payrolls, reconcile at least one commercial job and one service truck to confirm labor, burden, and workers’ comp mappings match how your accountant closes. Flow hours from QuickBooks Time or another integrated tracker so travel, shop time, and field time do not get re-keyed. Validate multi-state withholding if you chase storms or large regional bids. When those pieces tie out, your electrical margin story stays credible to lenders and bonding agents.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for electrical contractors that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is practical payroll software for electrical contractors who want flat base-plus-employee pricing and a single plan that still covers mixed W-2 and 1099 payroll. Human support matters when a journeyman’s license renewal hits the same week as quarterlies. Use trial payrolls to prove automated deposits, new-hire reporting, and clean 1099 handling for regular low-voltage or excavation partners. Import a pay period with blended regular and overtime across commercial versus residential work codes to stress rate tables. If you export to QuickBooks, confirm account mappings once with your bookkeeper so class tracking survives. Predictable bills help when job deposits and progress billings do not line up neatly.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing electrical contractors that want scale and optional dedicated support. Multi-state payroll, more electricians, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for electrical contracting groups that outgrow self-serve administration across several states, unions, or complex prevailing-wage jobs. Quoted implementations pair you with specialists who understand construction compliance calendars. After launch, audit tax registrations and deposit schedules for every state where crews temporarily work, not just your license address. Test cost-center or job allocations if you report labor by division to a parent builder or developer. If union fringe or certified payroll is in play, review sample registers with ADP before agencies ask for them. Compare serviced pricing to mid-market peers once those guardrails look solid.",
     },
   ] as BestForEditorialBlock[],
 

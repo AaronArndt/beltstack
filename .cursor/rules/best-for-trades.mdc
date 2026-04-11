@@ -1,0 +1,23 @@
+---
+description: Pattern for vertical/trade "best-for" data modules (per-category *BestForTrades.ts)
+globs: lib/data/*BestForTrades.ts
+alwaysApply: false
+---
+
+# Best-for trade / vertical pages (`*BestForTrades.ts`)
+
+When adding or editing **trade- or scenario-specific best-for** data (e.g. `projectManagementBestForTrades.ts`, `schedulingBestForTrades.ts`):
+
+1. **Do not** default every page to the same three products with only copy swapped. **Vary the featured triple** when a different tool is a better honest fit (simple vs formal, payments ecosystem, team round-robin, grid-style, etc.). Reuse the same three only when that is genuinely accurate.
+
+2. **Product registry** — Define a single `*_PRODUCT_CORE` map keyed by review slug: `name`, `logoSrc`, `rating`, `startingPrice`, `visitUrl`, `defaultStandout` (table column). Every featured pick must resolve through `get*ReviewUrl(slug)` that exists in that category’s reviews.
+
+3. **Per-page shape** — Each export calls `buildTradeProps({ picks: [ProductPick, ProductPick, ProductPick], ... })` where each pick has `slug`, `badge`, `description`, `rowBestFor`, optional `standoutFeature`, and `why` (trial-focused, links to full reviews in prose).
+
+4. **Related reviews** — Build dynamically: **featured slugs first**, then fill to ~6 from a fixed `REVIEW_FILL_ORDER` (all reviewed products in that category), deduped.
+
+5. **Related comparisons** — Only include comparison URLs that **exist** in that category’s comparisons file. Score pairs where **both** products are featured highest, then **either** featured; pad to at least 3 with a small **fallback** list of hub comparisons if needed.
+
+6. **FAQs** — First FAQ (or equivalent) should name the **actual three** featured products for that page, not a generic roster.
+
+7. **Hub / sitemap** — New routes still belong in `app/sitemap.ts` and hub grids as today; this rule is only about **data honesty and structure** in `*BestForTrades.ts`.

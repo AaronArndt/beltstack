@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getSeoToolsBestForHubScenarioCards } from "@/lib/data/seoToolsBestForPages";
 import { getSeoToolsBestForUrl } from "@/lib/routes";
-import { BEST_FOR_BY_TRADE } from "@/lib/data/seoToolsBestSeoTools";
 
 const LINKS = [
   {
-    label: "Best SEO tools overall",
+    label: "Best SEO Tools (2026)",
     href: "/seo-tools/best-seo-tools",
-    description: "Full roundup of suites, local platforms, and free essentials—with methodology, pricing realism, and GSC as baseline.",
+    description:
+      "Full roundup of suites, local platforms, and free essentials—with methodology, pricing realism, and Google Search Console as baseline.",
   },
-  ...BEST_FOR_BY_TRADE.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: `Editorial stack guidance for ${item.label.toLowerCase()}: Search Console, GBP execution, and when paid tools earn their keep.`,
-  })),
+  ...getSeoToolsBestForHubScenarioCards(),
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -97,6 +94,6 @@ export function generateMetadata() {
   return {
     title: "Best SEO Tools by Use Case | BeltStack",
     description:
-      "Editorial best-for guides for contractors, local SEO, HVAC, plumbing, and more—GSC-first, Map Pack reality, independent picks. Open a scenario for stacks, FAQs, and links to reviews.",
+      "Editorial best-for guides for contractors, trades, property managers, movers, local SEO, and more—GSC-first, Map Pack reality, independent picks. Open a scenario for stacks, FAQs, and links to reviews.",
   };
 }

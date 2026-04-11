@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { BestForTemplate, type BestForTemplateProps } from "@/components/best/BestForTemplate";
+import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import type { BestForTemplateProps } from "@/components/best/BestForTemplate";
 import {
   FREELANCERS_PAGE_PROPS,
   SMALL_BUSINESS_PAGE_PROPS,
@@ -27,7 +28,7 @@ export default async function HrBestForScenarioPage({ params }: Props) {
     notFound();
   }
 
-  return <BestForTemplate {...pageProps} />;
+  return <BestForPageWithStructuredData {...pageProps} />;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

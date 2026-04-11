@@ -37,7 +37,11 @@ const FIELD_SERVICE_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for HVAC", href: getFieldServiceBestForUrl("hvac") },
   { label: "Best for electricians", href: getFieldServiceBestForUrl("electricians") },
   { label: "Best for small business", href: getFieldServiceBestForUrl("small-business") },
-  { label: "Best for contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for general contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for painting", href: getFieldServiceBestForUrl("painting") },
+  { label: "Best for roofing", href: getFieldServiceBestForUrl("roofing") },
+  { label: "Best for landscaping", href: getFieldServiceBestForUrl("landscaping") },
+  { label: "All best-for scenarios", href: "/field-service/best-for" },
 ];
 
 const FIELD_SERVICE_METHODOLOGY = {

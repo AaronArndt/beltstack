@@ -152,19 +152,19 @@ export const AGENCIES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "HubSpot",
-      body: "HubSpot suits agencies that want all-in-one marketing and sales: pipelines, segments, email campaigns, and reporting in one platform. You can run client work and new-business pipeline with clear visibility and scale as you add team and clients.",
+      body: "HubSpot fits agencies that want marketing and sales alignment—pipelines, segmented lists, email nurture, and dashboards—in one CRM platform so new business and client expansion stay visible to leadership. You can separate pipelines for outbound, inbound, and upsell while sharing a common contact record. During a trial, mirror your real proposal stages, assign owners per deal, and test collaboration on notes and tasks. Validate reporting on activity per rep and deal velocity before you commit seats. Confirm integrations with your project delivery stack so won deals hand off cleanly to delivery teams.",
     },
     {
       heading: "Monday",
-      body: "Monday fits agencies that prefer boards and project-style views. Customizable workspaces and views per client make it easy to model your process. Good when you want CRM plus project management in one place.",
+      body: "Monday CRM suits agencies that live in boards and timelines and want client work modeled beside pipeline stages without forcing everything into classic opportunity objects. Workspaces per client or program keep context next to deal data for account managers. In a trial, build a template board for a typical engagement and connect it to a lightweight pipeline view your sales lead will actually update. Test permissions so freelancers see only their clients. Check automations for handoffs from sales to delivery when a deal marked “won.”",
     },
     {
       heading: "Pipedrive",
-      body: "Pipedrive is the pick when your agency is sales-led and you mainly need deal and activity tracking. Clear pipeline, activity logging, and reporting—less focus on marketing automation or boards, but strong for pipeline visibility.",
+      body: "Pipedrive is the focused CRM choice when your agency is sales-led and the priority is a clean pipeline, disciplined activity logging, and forecasting—not a full marketing hub. Reps adopt quickly because the interface stays deal-centric. During a trial, load a quarter of real opportunities, enforce required fields you care about, and run weekly reports on stalled stages. Test email sync and meeting activity capture so managers see true effort. If you only need visibility into proposals and follow-ups, Pipedrive often beats heavier suites on speed to value.",
     },
     {
       heading: "Zoho CRM",
-      body: "Zoho CRM offers strong value and multi-currency support for agencies with international clients. Full CRM at competitive pricing with solid reporting and collaboration. Good for growing agencies that want features without HubSpot-level spend.",
+      body: "Zoho CRM offers strong dollar value, multi-currency support, and deep customization for agencies billing internationally or running several brands under one roof. Automation and sandbox options grow with you without jumping straight to enterprise pricing. In a trial, configure currencies and tax fields you actually invoice in, then run collaboration tests with account and creative leads sharing one account record. Validate Zoho ecosystem ties if you already use Zoho Books or Projects. Review mobile workflows for principals who approve deals between client meetings.",
     },
   ] as BestForEditorialBlock[],
 

@@ -154,7 +154,18 @@ const RELEVANT_LINKS = [
   { label: "Best for HVAC", href: getFieldServiceBestForUrl("hvac") },
   { label: "Best for electricians", href: getFieldServiceBestForUrl("electricians") },
   { label: "Best for small business", href: getFieldServiceBestForUrl("small-business") },
-  { label: "Best for contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for general contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for painting", href: getFieldServiceBestForUrl("painting") },
+  { label: "Best for roofing", href: getFieldServiceBestForUrl("roofing") },
+  { label: "Best for construction", href: getFieldServiceBestForUrl("construction") },
+  { label: "Best for remodeling", href: getFieldServiceBestForUrl("remodeling") },
+  { label: "Best for handyman", href: getFieldServiceBestForUrl("handyman") },
+  { label: "Best for landscaping", href: getFieldServiceBestForUrl("landscaping") },
+  { label: "Best for property management", href: getFieldServiceBestForUrl("property-management") },
+  { label: "Best for pest control", href: getFieldServiceBestForUrl("pest-control") },
+  { label: "Best for pool service", href: getFieldServiceBestForUrl("pool-service") },
+  { label: "Best for junk removal", href: getFieldServiceBestForUrl("junk-removal") },
+  { label: "Best for moving companies", href: getFieldServiceBestForUrl("moving") },
 ];
 
 function buildComparison(

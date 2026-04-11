@@ -35,6 +35,8 @@ const USE_CASE_LINKS: { label: string; href: string }[] = [
   { label: "Best for general contractors", href: getPayrollBestForUrl("general-contractors") },
   { label: "Best for handyman business", href: getPayrollBestForUrl("handyman-business") },
   { label: "Best for pool service", href: getPayrollBestForUrl("pool-service") },
+  { label: "Best for junk removal", href: getPayrollBestForUrl("junk-removal") },
+  { label: "Best for moving companies", href: getPayrollBestForUrl("moving") },
   { label: "Best for home services", href: getPayrollBestForUrl("home-services") },
   { label: "Best for property management", href: getPayrollBestForUrl("property-management") },
   { label: "Best for maintenance companies", href: getPayrollBestForUrl("maintenance-companies") },

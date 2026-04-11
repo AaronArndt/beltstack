@@ -3,6 +3,7 @@
  */
 
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { BEST_FOR_BY_TRADE } from "@/lib/data/seoToolsBestSeoTools";
 import {
   getSeoToolsAlternativeUrl,
   getSeoToolsBestForUrl,
@@ -16,14 +17,6 @@ const CATEGORY_HREF = "/seo-tools";
 const ROUNDUP_HREF = "/seo-tools/best-seo-tools";
 const COMPARE_HUB = "/seo-tools/compare";
 const GUIDES_HREF = "/seo-tools/guides";
-
-const SCENARIOS = [
-  { label: "Contractors", href: getSeoToolsBestForUrl("contractors") },
-  { label: "Local SEO", href: getSeoToolsBestForUrl("local-seo") },
-  { label: "Small business", href: getSeoToolsBestForUrl("small-business") },
-  { label: "HVAC", href: getSeoToolsBestForUrl("hvac") },
-  { label: "Plumbing", href: getSeoToolsBestForUrl("plumbing") },
-];
 
 const METHODOLOGY: SeoToolsReviewData["methodology"] = {
   title: "How we review SEO tools",
@@ -71,15 +64,13 @@ const SEO_SHELL: Pick<
   bestRoundupLabel: "Best SEO tools (2026) — full roundup",
   bestForSectionTitle: "Best SEO tools for different use cases",
   bestForSectionSub: "Scenario picks for local service businesses.",
-  scenarioLinks: SCENARIOS,
+  scenarioLinks: BEST_FOR_BY_TRADE,
   guideHubHref: GUIDES_HREF,
   guideHubLabel: "SEO tools guides",
   popularIndustryLinks: [
-    { label: "Best for contractors", href: getSeoToolsBestForUrl("contractors") },
-    { label: "Best for local SEO", href: getSeoToolsBestForUrl("local-seo") },
-    { label: "Best for HVAC", href: getSeoToolsBestForUrl("hvac") },
-    { label: "Best for roofers", href: getSeoToolsBestForUrl("roofing") },
-    { label: "Best for landscapers", href: getSeoToolsBestForUrl("landscaping") },
+    { label: "Website builders for contractors", href: "/website-builders/best-for/contractors" },
+    { label: "Lead generation hub", href: "/lead-generation" },
+    { label: "CRM software hub", href: "/crm" },
   ],
 };
 

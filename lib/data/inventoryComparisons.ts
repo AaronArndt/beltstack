@@ -76,11 +76,16 @@ const P = {
 
 const RELEVANT_LINKS = [
   { label: "Best inventory software (roundup)", href: "/inventory/best-inventory-software" },
+  { label: "All best-for scenarios", href: "/inventory/best-for" },
   { label: "Best for small business", href: getInventoryBestForUrl("small-business") },
   { label: "Best for ecommerce", href: getInventoryBestForUrl("ecommerce") },
   { label: "Best for retail", href: getInventoryBestForUrl("retail") },
   { label: "Best for manufacturing", href: getInventoryBestForUrl("manufacturing") },
   { label: "Best for warehouses", href: getInventoryBestForUrl("warehouses") },
+  { label: "Best for HVAC", href: getInventoryBestForUrl("hvac") },
+  { label: "Best for construction", href: getInventoryBestForUrl("construction") },
+  { label: "Best for general contractors", href: getInventoryBestForUrl("general-contractors") },
+  { label: "Best for property management", href: getInventoryBestForUrl("property-management") },
 ] as const;
 
 function buildComparison(

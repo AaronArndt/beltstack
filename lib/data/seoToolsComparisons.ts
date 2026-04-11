@@ -6,21 +6,14 @@
 import type { ComparisonFeatureRow, ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 import {
   getSeoToolsAlternativeUrl,
-  getSeoToolsBestForUrl,
   getSeoToolsCompareUrl,
   getSeoToolsReviewUrl,
 } from "@/lib/routes";
+import { BEST_FOR_BY_TRADE } from "@/lib/data/seoToolsBestSeoTools";
 
 export function getSeoToolsCompareUrlFromSlug(slug: string): string {
   return `/seo-tools/compare/${slug}`;
 }
-
-const SEO_TRADE_LINKS = [
-  { label: "Best SEO tools for contractors", href: getSeoToolsBestForUrl("contractors") },
-  { label: "Best for local SEO", href: getSeoToolsBestForUrl("local-seo") },
-  { label: "Best for small business", href: getSeoToolsBestForUrl("small-business") },
-  { label: "Best for HVAC", href: getSeoToolsBestForUrl("hvac") },
-];
 
 const P = {
   semrush: {
@@ -402,7 +395,7 @@ function build(
         { label: "Focused strength", winner: "B" },
       ],
       moreComparisons: buildMoreComparisons(pa, pb),
-      relevantTradeLinks: SEO_TRADE_LINKS,
+      relevantTradeLinks: BEST_FOR_BY_TRADE,
       ...extra,
     },
   ];

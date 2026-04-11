@@ -60,6 +60,25 @@ export const POS_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
   { label: "Multi-location businesses", href: getPosBestForUrl("multi-location") },
 ];
 
+/** Trades & service businesses (matches `posBestForTrades` slugs—avoid importing that module here). */
+export const POS_TRADE_BEST_FOR_LINKS: { label: string; href: string }[] = [
+  { label: "HVAC businesses", href: getPosBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getPosBestForUrl("plumbing") },
+  { label: "Electricians", href: getPosBestForUrl("electricians") },
+  { label: "Painting contractors", href: getPosBestForUrl("painting") },
+  { label: "Roofing companies", href: getPosBestForUrl("roofing") },
+  { label: "General contractors", href: getPosBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getPosBestForUrl("landscaping") },
+  { label: "Construction companies", href: getPosBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getPosBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getPosBestForUrl("handyman") },
+  { label: "Property management companies", href: getPosBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getPosBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getPosBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getPosBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getPosBestForUrl("moving") },
+];
+
 export const POS_BY_BUSINESS_TYPE_GROUPS: {
   groupLabel: string;
   links: { label: string; href: string }[];
@@ -71,6 +90,10 @@ export const POS_BY_BUSINESS_TYPE_GROUPS: {
   {
     groupLabel: "More storefront models",
     links: POS_BY_BUSINESS_TYPE.slice(3),
+  },
+  {
+    groupLabel: "Trades & service businesses",
+    links: POS_TRADE_BEST_FOR_LINKS,
   },
 ];
 

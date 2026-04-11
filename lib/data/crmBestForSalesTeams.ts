@@ -156,19 +156,19 @@ export const SALES_TEAMS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Salesforce",
-      body: "Salesforce is the pick for enterprise sales teams that need maximum customization, advanced forecasting, and scale. AppExchange and deep configuration support complex processes and large teams. Implementation and cost are higher—best when you have dedicated admins and budget.",
+      body: "Salesforce remains the CRM benchmark for large sales organizations that need custom objects, advanced forecasting, territory management, and AppExchange apps to match complex selling motions. It scales when you have admins, governance, and budget to maintain the platform year over year. During a pilot, configure a slice of your real process—stages, products, and approval rules—and run parallel entry against your old system to catch gaps. Test integration with CPQ, billing, or data warehouses if those drive forecasts. Expect implementation work; validate ROI on reporting and pipeline hygiene before you expand seats broadly.",
     },
     {
       heading: "HubSpot",
-      body: "HubSpot is our top pick for many small and mid-size sales teams: free CRM, Sales Hub for pipeline and sequences, and optional Marketing Hub. Reps get a clear pipeline and activity tracking; managers get reporting and forecasting. Strong adoption because it's straightforward to use.",
+      body: "HubSpot is our top pick for many small and mid-market sales teams that want fast adoption: a free CRM core with Sales Hub layers for sequences, playbooks, and manager visibility without Salesforce-level overhead. Reps see clear pipelines and tasks; leaders get dashboards that surface stalled deals and activity gaps. In a trial, import active opportunities, turn on email logging, and run a two-week cadence test on a single segment. Confirm Marketing Hub connectivity if leads originate from campaigns. Check how permissions scale as you add SDRs, AEs, and CS handoffs.",
     },
     {
       heading: "Pipedrive",
-      body: "Pipedrive is built for pipeline-first sales teams. Deal stages, activity tracking, and reporting are front and center. Reps adopt it quickly; managers get visibility without heavy configuration. Best when you want a focused sales CRM without marketing hub complexity.",
+      body: "Pipedrive keeps sales teams focused on the deal board, activities, and outcomes instead of navigating a sprawling CRM menu—ideal when discipline and speed matter more than enterprise customization. Onboarding stays short because the product is intentionally narrow and excellent at pipeline hygiene. During a trial, enforce activity reminders on every open deal and review weekly reports with managers to see if lagging stages surface automatically. Test integrations with your dialer or LinkedIn workflow if outbound is core. Choose Pipedrive when you want a pure sales CRM without marketing baggage.",
     },
     {
       heading: "Close",
-      body: "Close is built for inside sales teams that live on the phone. Calling, email, and pipeline live in one place so reps don't switch tools. Higher starting price but strong for teams that want integrated dialer and CRM. See our Close vs Pipedrive comparison for more.",
+      body: "Close is purpose-built for inside sales and high-velocity calling teams that want VoIP, SMS, email, and pipeline in one CRM so reps never tab away during a live conversation. Power dialer workflows and searchable call history help managers coach from reality, not guesses. In a trial, run a small team through real call lists, measuring connect rates and note quality inside Close. Validate compliance needs for recording and consent in your regions. Compare total telephony cost against standalone dialers plus a lighter CRM. See our Close vs Pipedrive comparison for more.",
     },
   ] as BestForEditorialBlock[],
 

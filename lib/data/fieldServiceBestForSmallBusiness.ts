@@ -125,15 +125,15 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Jobber",
-      body: "Jobber is our overall pick for many small service businesses because it does a bit of everything well—scheduling, quoting, invoicing, and customer history—without being overwhelming. It’s especially strong if you expect to grow the team over the next few years and want software that can grow with you.",
+      body: "Jobber is our overall pick for many small service businesses because it unifies scheduling, dispatch boards, quotes, invoices, and customer history without forcing a six-month enterprise implementation. Owners see today’s route and tomorrow’s capacity in one place while techs get mobile job details and payment capture. During a trial, import ten real customers, run a job from estimate to paid invoice, and test automated client reminders for upcoming appointments. Validate QuickBooks or Xero sync if your bookkeeper depends on it. Jobber scales from a two-truck crew to a growing multi-team shop if you govern how staff use custom fields.",
     },
     {
       heading: "Kickserv",
-      body: "Kickserv is a good match when you want a simpler, more budget-friendly tool that still tracks customers and jobs in one place. It feels more like a light CRM plus job board, which resonates with owners who are moving off basic spreadsheets and want a gentle step up.",
+      body: "Kickserv fits budget-minded small shops that want a gentle step up from spreadsheets—a lightweight CRM plus job board that still tracks who owes what and where techs are headed. It trades some advanced automation for approachable pricing and shorter learning curves. In a trial, recreate your weekly job list, assign techs, and confirm recurring maintenance visits behave the way your contracts read. Test online booking or client notifications if those drive your leads. Kickserv wins when simplicity and cost matter more than deep pricebook analytics.",
     },
     {
       heading: "Workiz",
-      body: "Workiz is worth a look when the daily schedule is your main pain point and you want an affordable way to see where every tech is going. It keeps job dispatch and status straightforward, which is often exactly what very small crews need.",
+      body: "Workiz appeals when chaotic scheduling is the primary pain and you need an affordable dispatch-centric view of trucks without paying for features you will not touch this year. Status updates and messaging help small crews coordinate same-day changes. During evaluation, stress-test adding emergency jobs midday, verify SMS templates match your brand, and run card-present or invoice payments on a test ticket. Check reporting on technician utilization before you promise KPIs to partners. Workiz is a pragmatic first FSM when the calendar is on fire.",
     },
   ] as BestForEditorialBlock[],
 

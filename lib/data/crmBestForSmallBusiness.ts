@@ -156,19 +156,19 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "HubSpot",
-      body: "HubSpot is our top pick for most small businesses: free CRM core, optional Sales and Marketing Hubs, and a familiar name. Setup is straightforward and the platform scales as you add users and campaigns without forcing you into enterprise complexity.",
+      body: "HubSpot is our top pick for most small businesses that want a recognizable CRM with a generous free core and clear add-ons for email marketing, automation, and service tools as you grow. Owners get pipeline visibility without forcing every employee through a steep learning curve. During a trial, map your real lead sources, assign owners, and test follow-up tasks from form fills or missed calls. Validate whether meeting scheduling and document tracking justify the next tier before you expand. HubSpot shines when marketing and sales must share one customer record.",
     },
     {
       heading: "Zoho CRM",
-      body: "Zoho CRM delivers strong value with a free tier and affordable paid plans. Pipeline, automation, and reporting are solid; it fits small teams that want full CRM features without HubSpot-level spend. Good Zoho suite integration if you use it.",
+      body: "Zoho CRM packs pipeline management, workflow automation, and reporting into aggressive pricing—excellent for budget-conscious SMBs that still want enterprise-style building blocks. Tight coupling with Zoho Books, Projects, or Desk can replace a patchwork of tools. In a trial, configure one blueprint or workflow that mirrors how you qualify leads today, then run five real prospects through it. Test mobile apps if your team sells on the road. Review email deliverability settings if you plan to send campaigns from Zoho.",
     },
     {
       heading: "Pipedrive",
-      body: "Pipedrive is built for sales-focused small teams that want a clean pipeline and activity tracking. Less marketing-heavy than HubSpot; easier to adopt for teams that only need deal and contact management. Clear pricing and simple setup.",
+      body: "Pipedrive suits sales-led small businesses that need a straightforward deal board, activity reminders, and forecasts without paying for marketing features they will not use. Reps update stages quickly, which keeps data trustworthy for owners. During evaluation, import your open quotes, set required next-step fields, and inspect weekly reports for stalled deals. Confirm integrations with quoting or accounting if deals close into invoices. Pipedrive is ideal when your bottleneck is follow-up discipline, not content marketing.",
     },
     {
       heading: "Freshsales",
-      body: "Freshsales offers modern SMB CRM with AI, built-in calling, and email. A good alternative when you want automation and engagement tools without the breadth of HubSpot or the strict pipeline focus of Pipedrive.",
+      body: "Freshsales offers a modern SMB CRM stack with built-in phone, email engagement, and AI-assisted insights for teams that want outreach tooling inside the same license as pipeline management. It sits between HubSpot’s breadth and Pipedrive’s minimalism. In a trial, connect telephony, place test calls, and verify how activities log to deals automatically. Check Freddy AI features against your data cleanliness—garbage in still means weak predictions. If you already use Freshdesk, test how support tickets surface on account records for a true customer 360.",
     },
   ] as BestForEditorialBlock[],
 

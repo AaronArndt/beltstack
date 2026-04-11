@@ -139,19 +139,19 @@ export const FREELANCERS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "FreshBooks",
-      body: "FreshBooks is built for freelancers and service businesses: straightforward invoicing, time tracking, and client billing in a clean interface. It’s easy to get started and stays manageable as you add more clients.",
+      body: "FreshBooks is tailored to freelancers who sell time or milestones: timers, expenses, and polished invoices live together so month-end billing is not a scavenger hunt. Client portals and automated reminders nudge payment without awkward emails. During a trial, recreate last month’s invoices, enable online payments, and confirm fee transparency for your customers. Test recurring billing if you run retainers. If you hire a bookkeeper midyear, export or connect to their preferred ledger early.",
     },
     {
       heading: "Wave",
-      body: "Wave gives you free accounting and invoicing so you can keep overhead low. It’s a solid choice for very small or early-stage freelancers who don’t need advanced reporting or integrations yet.",
+      body: "Wave keeps accounting overhead at zero for early-stage freelancers who need credible invoicing, expense tracking, and bank connections before revenue supports premium software. Receipt scanning and basic reports cover many solo operators through their first tax season. In a trial, link one bank, categorize a month of spending, and see whether sales tax or multicurrency gaps appear for your niche. Paid payroll is optional if you transition from contractor to employer. Wave is ideal when runway matters more than advanced automation.",
     },
     {
       heading: "QuickBooks Online",
-      body: "QuickBooks Online scales with you: when you need fuller bookkeeping, better reporting, or an accountant-friendly platform, it’s a reliable choice. Entry-level plans are still accessible for solo freelancers.",
+      body: "QuickBooks Online is the reliable upgrade when freelancers outgrow simple invoicing apps and need GAAP-friendly books, deeper reporting, or an accountant who insists on QuickBooks files. Mileage, 1099 tracking, and integrations scale as you add subcontractors or inventory-light product lines. During evaluation, import opening balances with help if needed, reconcile two statement cycles, and run the reports your CPA requests quarterly. Confirm Simple Start versus Essentials based on user count and bill pay needs.",
     },
     {
       heading: "Zoho Books",
-      body: "Zoho Books offers strong value with good automation and client portal features at a lower price. Ideal if you want more than basic invoicing without paying for the top-tier brands.",
+      body: "Zoho Books delivers automation, client portals, and workflow rules at a price that flatters budget-minded freelancers who still want more than a spreadsheet. It pairs cleanly with Zoho Invoice replacements, CRM, or Mail if you already live in Zoho. In a trial, automate one recurring client invoice, test payment gateways you actually use, and validate sales tax rules for your state. Mobile capture matters if you expense on the road—exercise those apps. Zoho rewards users who will configure a few rules up front.",
     },
   ] as BestForEditorialBlock[],
 

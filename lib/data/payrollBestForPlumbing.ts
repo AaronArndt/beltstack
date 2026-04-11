@@ -140,19 +140,19 @@ export const PLUMBING_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small plumbing companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and jobs.",
+      body: "Gusto works as payroll software for plumbing companies that dispatch W-2 techs, helpers, and 1099 trade partners from one self-serve hub with transparent fees. Contractor portals and automated tax work keep after-hours emergency calls from derailing payroll day. In your first payrolls, double-check deposits, overtime on long on-call shifts, and separation between employee wages and subcontractor draws. Simulate a week with slab leaks, a water-heater install crew, and a hydro-jet partner paid as 1099 to see how blended hours and reimbursements flow. If you track vans or territories, confirm those dimensions on payroll detail before pushing to accounting. Growth into another license region or benefits stays inside the same stack.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for plumbing and service calls. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software plumbing contractors choose when QuickBooks already carries their service agreements, jobs, and inventory, and they need labor to land on those jobs automatically. Margin on T&M and contract work improves when payroll posts where PMs expect. Run early payrolls against a remodel job and a service route to verify labor, burden, and class splits. Integrate QuickBooks Time so drive time, shop time, and field callbacks feed payroll without duplicate entry. Watch local taxes if you cross municipal boundaries on emergency calls. Clean reconciliations mean your plumbing P&L reflects real crew cost.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for plumbing teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for plumbing shops that want simple per-head pricing and full-service taxes without chasing tier upgrades mid-year. Support picks up when a new apprentice’s paperwork lands hours before payday. Validate deposits, new-hire reporting, and year-end 1099 workflows for recurring excavation or line-jetting subs during trial runs. Import hours with overtime stacked after midnight emergency shifts to confirm state rules you actually enforce in the field. Map GL exports once if QuickBooks is downstream so job classes stay intact. Steady invoices help when cash collections lag large commercial retainage.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing plumbing companies that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP fits payroll software searches for plumbing enterprises adding states, commercial mechanical divisions, or union-scale compliance overhead. Implementation teams align earning codes with how you report to GCs and agencies. Post go-live, verify each work state’s SUI and locals against where vans really earn revenue, including short multi-week projects away from home. Stress-test multi-location labor reporting if you separate residential from commercial P&L. If prevailing wage or certified payroll appears on bids, review sample outputs with ADP before the first compliance audit. Price the relationship after those proofs, not before.",
     },
   ] as BestForEditorialBlock[],
 

@@ -75,6 +75,21 @@ const RELEVANT_LINKS = [
   { label: "Best for agencies", href: getProjectManagementBestForUrl("agencies") },
   { label: "Best for startups", href: getProjectManagementBestForUrl("startups") },
   { label: "Best for remote teams", href: getProjectManagementBestForUrl("remote-teams") },
+  { label: "Best for HVAC", href: getProjectManagementBestForUrl("hvac") },
+  { label: "Best for plumbing", href: getProjectManagementBestForUrl("plumbing") },
+  { label: "Best for electricians", href: getProjectManagementBestForUrl("electricians") },
+  { label: "Best for painting", href: getProjectManagementBestForUrl("painting") },
+  { label: "Best for roofing", href: getProjectManagementBestForUrl("roofing") },
+  { label: "Best for general contractors", href: getProjectManagementBestForUrl("general-contractors") },
+  { label: "Best for landscaping", href: getProjectManagementBestForUrl("landscaping") },
+  { label: "Best for construction", href: getProjectManagementBestForUrl("construction") },
+  { label: "Best for remodeling", href: getProjectManagementBestForUrl("remodeling") },
+  { label: "Best for handyman", href: getProjectManagementBestForUrl("handyman") },
+  { label: "Best for property management", href: getProjectManagementBestForUrl("property-management") },
+  { label: "Best for pest control", href: getProjectManagementBestForUrl("pest-control") },
+  { label: "Best for pool service", href: getProjectManagementBestForUrl("pool-service") },
+  { label: "Best for junk removal", href: getProjectManagementBestForUrl("junk-removal") },
+  { label: "Best for moving companies", href: getProjectManagementBestForUrl("moving") },
 ];
 
 function buildComparison(

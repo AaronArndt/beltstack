@@ -143,19 +143,19 @@ export const AGENCIES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "FreshBooks",
-      body: "FreshBooks is built for service businesses and agencies: strong invoicing, time tracking, and client billing in an approachable interface. It’s a natural fit for teams that bill by project or retainer.",
+      body: "FreshBooks fits creative and marketing agencies that live in retainers, hourly burn, and reimbursable expenses—time tracking and invoicing stay tied to the same client record your PMs recognize. Project profitability views help partners see which accounts drain margin. During a trial, load two active clients, assign staff time entries, and approve them before invoicing to mirror your weekly rhythm. Test multi-currency or pass-through expenses if you bill global brands. FreshBooks wins when finance must be approachable for non-accountants on staff.",
     },
     {
       heading: "QuickBooks Online",
-      body: "QuickBooks Online adds full accounting and project tracking so agencies can scale. It’s the default for many firms and works well when you need deeper reporting and accountant collaboration.",
+      body: "QuickBooks Online gives agencies full general-ledger accounting with project tags, classes, or locations so leadership and external CPAs see consistent financial statements. It is the path of least resistance when your accountant already standardizes on Intuit tooling. In a trial, map your chart of accounts to classes per service line, reconcile payroll clearing accounts, and run utilization-friendly reports via connected apps if native views fall short. Validate user seats and app spend before you model year-three headcount.",
     },
     {
       heading: "Xero",
-      body: "Xero appeals to agencies that want clean reporting and an accountant-friendly workflow. The interface is modern and the reporting is strong for client-based businesses.",
+      body: "Xero pairs modern double-entry accounting with strong collaboration features—advisors and finance leads can work concurrently without mailing backup files. Reporting slices well for client P&Ls when you tag projects diligently. During evaluation, test approval workflows on bills, connect Gusto or Rippling if payroll touches the ledger, and confirm fixed-asset treatment for laptops and gear. Xero suits agencies that want cloud-native polish and marketplace extensibility without QuickBooks inertia.",
     },
     {
       heading: "Zoho Books",
-      body: "Zoho Books delivers project and client tracking, automation, and a client portal at a lower price. It’s a solid value choice for agencies that don’t need the biggest names.",
+      body: "Zoho Books stacks project billing, automation, and client portals at a price that keeps agency overhead lean, especially when paired with Zoho CRM or Projects for delivery data. Custom workflows can route vendor bills or client invoices through the right approver. In a trial, sync time from Zoho Projects if applicable, automate sales tax on digital services, and test portal payments against your merchant fees. Budget time for setup; the payoff is fewer manual journal entries each close.",
     },
   ] as BestForEditorialBlock[],
 

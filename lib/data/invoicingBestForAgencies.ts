@@ -96,10 +96,22 @@ export const AGENCIES_PAGE_PROPS = {
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
-    { heading: "FreshBooks", body: "FreshBooks is a strong default for service agencies: invoicing, time tracking, and client billing in one place. It’s easy to use and scales with your client count." },
-    { heading: "HoneyBook", body: "HoneyBook is built for client-heavy workflows: proposals, contracts, and invoicing in one pipeline. Ideal for creative and service agencies that run on projects." },
-    { heading: "QuickBooks", body: "QuickBooks fits agencies that need full accounting and reporting alongside invoicing. Multi-user and accountant-friendly; best when you already use or plan to use QuickBooks for books." },
-    { heading: "Bonsai", body: "Bonsai combines proposals, contracts, and invoicing for smaller teams. It’s a good fit for creative agencies that want a simple all-in-one without enterprise complexity." },
+    {
+      heading: "FreshBooks",
+      body: "FreshBooks is a strong default for agencies billing time and materials across retainers and projects—project managers approve hours, finance issues invoices, and leadership sees who is over budget. Client-specific rates and markups on expenses reduce spreadsheet gymnastics. During a trial, import a month of historical time, run utilization-friendly reports, and test multi-currency invoices if you serve global brands. Validate seat pricing as creatives and strategists need logins. FreshBooks keeps service AR disciplined at agency pace.",
+    },
+    {
+      heading: "HoneyBook",
+      body: "HoneyBook fits creative agencies that sell visually and want proposals, contracts, and invoicing to feel like one branded studio experience. Pipelines show which prospects stall before signature so producers can follow up. In a trial, mirror a real pitch-to-kickoff flow with file deliverables attached at each step. Test automation when clients pay deposits before scheduling kickoff calls. HoneyBook excels for boutique shops where client experience is the product.",
+    },
+    {
+      heading: "QuickBooks",
+      body: "QuickBooks belongs in agencies that need invoicing inside a full accounting stack—classes for departments, deep COGS reporting, and payroll integrations without exporting AR nightly. Your external accountant likely already prefers it. During evaluation, connect time data via integration or manual import, run an income by customer report, and confirm 1099 workflows for contractor editors or freelancers you pay. Check Advanced tiers if you need revenue recognition nuances. QuickBooks anchors finance-led agencies.",
+    },
+    {
+      heading: "Bonsai",
+      body: "Bonsai bundles contracts, scope templates, and invoicing for lean creative teams that do not want HoneyBook’s pipeline visuals but still need legal-ready paperwork fast. It keeps solo leads and micro agencies from duct-taping DocuSign, spreadsheets, and Stripe. In a trial, templatize your standard SOW, assign roles for reviewer versus signer, and invoice the first milestone automatically on contract acceptance. Validate VAT or sales tax lines if you bill internationally. Bonsai rewards teams that repeat similar engagements.",
+    },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [

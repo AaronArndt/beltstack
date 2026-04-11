@@ -9,6 +9,7 @@ import {
   ECOMMERCE_PAGE_PROPS,
   MULTI_LOCATION_PAGE_PROPS,
 } from "@/lib/data/posBestFor";
+import { POS_TRADE_BEST_FOR_BY_SLUG } from "@/lib/data/posBestForTrades";
 
 const PAGE_MAP: Record<string, BestForTemplateProps> = {
   "small-business": SMALL_BUSINESS_PAGE_PROPS,
@@ -16,6 +17,7 @@ const PAGE_MAP: Record<string, BestForTemplateProps> = {
   restaurants: RESTAURANTS_PAGE_PROPS,
   ecommerce: ECOMMERCE_PAGE_PROPS,
   "multi-location": MULTI_LOCATION_PAGE_PROPS,
+  ...POS_TRADE_BEST_FOR_BY_SLUG,
 };
 
 type Props = { params: Promise<{ scenario: string }> };
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: "Best POS Software by Use Case | BeltStack",
       description:
-        "Browse our best POS software picks by use case, including small business, retail, restaurants, ecommerce, and multi-location.",
+        "Browse our best POS software picks by use case and by trade—small business, retail, restaurants, ecommerce, multi-location, and service businesses.",
     };
   }
 

@@ -125,15 +125,15 @@ export const ELECTRICIANS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Jobber",
-      body: "Jobber is a strong all-around fit for many electrical contractors. It gives you structured jobs, clear daily routes, and fast quotes and invoices—all in a way that is approachable for smaller shops. It’s a natural upgrade from spreadsheets and basic calendars when you have multiple techs.",
+      body: "Jobber fits electrical contractors who juggle service calls, panel upgrades, and small commercial work and need structured jobs, photos, and signed quotes on mobile before techs leave the site. Route views help dispatchers respect license-level assignments when apprentices cannot close certain tickets alone. During a trial, build estimate templates for common installs, track warranty parts on a test job, and confirm recurring inspection visits for property managers if you sell them. Sync invoices to accounting with the GL codes your CPA expects. Jobber balances field usability with back-office clarity.",
     },
     {
       heading: "Housecall Pro",
-      body: "Housecall Pro stands out for home-service electricians because of its booking, notifications, and review tools. If most of your jobs are in homes and you want to keep trucks full with inbound leads and repeat work, its customer experience features are a real advantage.",
+      body: "Housecall Pro targets residential electricians who win on fast booking, proactive texts, and review generation after every truck roll—critical when homeowners compare three Google results. Optional consumer financing can lift ticket size on panel-heavy jobs. In a trial, enable online booking for EV charger installs versus quick service calls with different durations, test automated follow-ups for unfinished estimates, and verify payment capture on larger deposits. Validate how pricebooks handle multi-option proposals your sales team sells. Housecall Pro excels when marketing and CX are as important as the truck stock.",
     },
     {
       heading: "Workiz",
-      body: "Workiz makes sense when you are price-sensitive but still want to stop losing jobs to disorganized scheduling. It covers core scheduling, job tracking, and invoicing without forcing you into a more expensive platform earlier than you need.",
+      body: "Workiz suits price-sensitive electrical shops that still need dependable scheduling, dispatch statuses, and invoicing so estimators stop overlapping on the same client window. Lower base fees make FSM palatable while revenue scales. During evaluation, simulate a busy Monday with emergency calls cutting into booked installs, send customer texts from the field, and confirm techs can add line items mid-job. Review whether inventory tracking is deep enough before you promise asset-level history. Workiz is a lean bridge off whiteboards.",
     },
   ] as BestForEditorialBlock[],
 

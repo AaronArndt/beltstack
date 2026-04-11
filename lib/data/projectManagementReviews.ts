@@ -14,9 +14,11 @@ const BEST_PROJECT_MANAGEMENT_HREF = "/project-management/best-project-managemen
 const PROJECT_MANAGEMENT_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for freelancers", href: getProjectManagementBestForUrl("freelancers") },
   { label: "Best for small business", href: getProjectManagementBestForUrl("small-business") },
+  { label: "Best for HVAC businesses", href: getProjectManagementBestForUrl("hvac") },
+  { label: "Best for construction companies", href: getProjectManagementBestForUrl("construction") },
+  { label: "Best for general contractors", href: getProjectManagementBestForUrl("general-contractors") },
   { label: "Best for agencies", href: getProjectManagementBestForUrl("agencies") },
-  { label: "Best for startups", href: getProjectManagementBestForUrl("startups") },
-  { label: "Best for remote teams", href: getProjectManagementBestForUrl("remote-teams") },
+  { label: "All best-for scenarios", href: "/project-management/best-for" },
 ];
 
 const PROJECT_MANAGEMENT_METHODOLOGY = {

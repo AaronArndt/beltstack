@@ -140,19 +140,19 @@ export const FREELANCERS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Toggl Track",
-      body: "Toggl Track is an excellent all-rounder for freelancers: simple timers, strong tagging, and reporting that makes billing and self-review straightforward.",
+      body: "Toggl Track is an excellent freelancer time tracker because one-click timers, rich tags, and reports show where billable hours actually go before you underprice the next proposal. Calendar integrations can pre-fill entries if you discipline yourself to review them daily. During a trial, run two weeks of real client work, export a CSV your invoicing tool accepts, and test billable rates per project. Validate idle detection so breaks do not inflate client bills. Toggl shines when honest utilization data matters more than surveillance.",
     },
     {
       heading: "Harvest",
-      body: "Harvest is ideal when you want time tracking and invoicing together. You log hours and expenses, then bill clients from the same system.",
+      body: "Harvest pairs time tracking with invoicing and expenses so freelancers who bill hourly or hybrid fees can move from timer to paid invoice without retyping line items. Retainer burn reports help you warn clients before you eat margin silently. In a trial, create a few projects, log expenses with receipts, and generate an invoice draft your accountant recognizes. Test approval flows if you later subcontract help. Harvest fits when AR speed depends on accurate timesheets.",
     },
     {
       heading: "Clockify",
-      body: "Clockify is the go-to free option when you want basic tracking without new software spend. Paid tiers add approvals and monitoring if you grow into them.",
+      body: "Clockify is the default free time tracking option for freelancers who need unlimited timers and basic reporting before revenue supports premium apps. Paid tiers add approvals or kiosk modes if you hire VA support later. During evaluation, map tags to clients and tasks you actually use—avoid tag sprawl that makes reports useless. Export a week of entries to see if your billing spreadsheet still needs massage. Clockify wins on price and simplicity, not deep invoicing.",
     },
     {
       heading: "Everhour",
-      body: "Everhour fits freelancers and small agencies that manage projects in tools like Asana or Trello and want time data to live there.",
+      body: "Everhour embeds timers inside Asana, Trello, ClickUp, or other PM tools so freelancers who live in boards do not context-switch to another app just to log minutes. Budget bars on tasks surface scope creep early. In a trial, connect your real project board, track a sprint’s worth of tasks, and confirm sync latency is acceptable. Validate rounding rules before you invoice legalistic clients. Everhour suits delivery-first freelancers who hate duplicate entry.",
     },
   ] as BestForEditorialBlock[],
 

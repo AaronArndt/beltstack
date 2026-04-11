@@ -1,37 +1,52 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { getPosBestForUrl } from "@/lib/routes";
+import { getPosTradeBestForHubCards } from "@/lib/data/posBestForTrades";
+
+const TRADE_CARDS = getPosTradeBestForHubCards();
 
 const SCENARIOS = [
   {
+    label: "Best POS software overall",
+    href: "/pos/best-pos-software",
+    description:
+      "Full rankings for registers, payments, inventory, and omnichannel selling across retail, restaurants, and service businesses.",
+  },
+  {
     label: "Best POS software for small business",
-    href: "/pos/best-for/small-business",
+    href: getPosBestForUrl("small-business"),
     description:
       "Top POS systems for small businesses that want simple setup, transparent pricing, and integrated payments without long-term contracts.",
   },
   {
     label: "Best POS software for retail",
-    href: "/pos/best-for/retail",
+    href: getPosBestForUrl("retail"),
     description:
       "POS tools for retailers that need inventory management, reporting, and multi-location support to keep shelves stocked and understand what sells.",
   },
   {
     label: "Best POS software for restaurants",
-    href: "/pos/best-for/restaurants",
+    href: getPosBestForUrl("restaurants"),
     description:
       "Restaurant POS systems with table management, kitchen display, online ordering, and reporting built for food service.",
   },
   {
     label: "Best POS software for ecommerce",
-    href: "/pos/best-for/ecommerce",
+    href: getPosBestForUrl("ecommerce"),
     description:
       "POS that unifies online and in-store sales so inventory and orders stay in sync across your storefront and register.",
   },
   {
     label: "Best POS software for multi-location",
-    href: "/pos/best-for/multi-location",
+    href: getPosBestForUrl("multi-location"),
     description:
       "POS systems that support multiple stores with centralized or per-location inventory and consolidated reporting.",
   },
+  ...TRADE_CARDS.map((item) => ({
+    label: item.label,
+    href: item.href,
+    description: item.description,
+  })),
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -79,22 +94,8 @@ export default function PosBestForIndexPage() {
               Best POS Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find POS software that fits your situation—small businesses, retail stores, restaurants,
-              ecommerce sellers, and multi-location operations. See our{" "}
-              <Link
-                href="/pos/best-pos-software"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-              >
-                best POS software
-              </Link>{" "}
-              roundup for top picks and our{" "}
-              <Link
-                href="/pos/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-              >
-                POS guides
-              </Link>{" "}
-              for how to choose and use tools.
+              Find POS software by operation type—small business, retail, restaurants, ecommerce, and multi-location—plus
+              trade-specific picks for HVAC, plumbing, construction, property management, and more.
             </p>
           </div>
         </section>
@@ -102,7 +103,7 @@ export default function PosBestForIndexPage() {
         <section className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Choose a scenario to see our top picks and guidance.">
-              POS by use case
+              POS by use case and trade
             </SectionTitle>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {SCENARIOS.map((item) => (
@@ -111,7 +112,7 @@ export default function PosBestForIndexPage() {
                   href={item.href}
                   className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h3 className="text-[#1A2D48] font-bold">{item.label}</h3>
+                  <h2 className="text-[#1A2D48] text-lg font-bold">{item.label}</h2>
                   <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{item.description}</p>
                   <span className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline">
                     See picks →
@@ -132,6 +133,6 @@ export function generateMetadata() {
   return {
     title: "Best POS Software by Use Case | BeltStack",
     description:
-      "Browse our best POS software picks by use case, including small business, retail, restaurants, ecommerce, and multi-location.",
+      "Browse POS software picks by use case and trade: small business, retail, restaurants, ecommerce, multi-location, HVAC, plumbing, construction, property management, and more.",
   };
 }

@@ -24,7 +24,7 @@ const LOGOS = {
 } as const;
 
 export const PLUMBING_PAGE_PROPS = {
-  title: "Best Field Service Software for Plumbing Businesses (2026)",
+  title: "Best Field Service Software for Plumbing Companies (2026)",
   subtitle:
     "Compare field service management tools for plumbing businesses: job scheduling, dispatch, estimates, invoices, and customer history in one place.",
   useCase: "plumbing",
@@ -129,15 +129,15 @@ export const PLUMBING_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Jobber",
-      body: "Jobber is our default recommendation for many plumbing shops because it balances simplicity with enough structure to grow. Scheduling, dispatch, quoting, invoicing, and customer history all live in one place. It’s a strong fit if you want one system that can support 2–20 plumbers without feeling like enterprise software.",
+      body: "Jobber is our default recommendation for many plumbing shops because it handles emergency inserts, scheduled maintenance, and multi-plumber dispatch in one field service workflow without drowning a small office in configuration. Quotes convert to jobs and invoices so ticket details do not re-key three times. During a trial, model after-hours premiums, attach photos on a slab leak job, and test client notifications for arrival windows. Validate integrations with your accounting package if AP expects job-level tagging. Jobber grows from a two-truck residential shop to light commercial without forcing an immediate ServiceTitan-scale rollout.",
     },
     {
       heading: "Housecall Pro",
-      body: "Housecall Pro is particularly strong for residential plumbing: you get online booking, on-the-way texts, and review requests that help keep the schedule full and customers happy. If most of your plumbing work is in homes rather than large commercial sites, its home-service focus is an advantage.",
+      body: "Housecall Pro fits residential plumbers who compete on fast response, online booking, and polished homeowner communication—on-my-way texts, review prompts, and optional financing flows keep conversion high after the first visit. Marketing automations matter when Angi or Google leads are expensive. In a trial, turn on consumer booking for drain cleans versus water heater installs separately, test SMS templates for emergency versus booked work, and confirm payment links match how techs collect in the field. Review pricebook maintenance effort before you promise flat-rate menus. Housecall Pro wins when inbound residential demand is the growth engine.",
     },
     {
       heading: "Workiz",
-      body: "Workiz appeals to small, budget-conscious plumbing teams that want to move off paper and simple calendars. It covers scheduling, job tracking, and invoicing at a lower base price than many competitors, making it easier for small crews to justify FSM early.",
+      body: "Workiz appeals to budget-conscious plumbing crews that need to escape paper tickets and group texts with affordable scheduling, dispatch, and invoicing—often the first paid FSM a three-plumber shop can justify. It keeps daily boards readable when dispatchers juggle callbacks and installs. During evaluation, stress-test same-day job stacking, verify inventory notes if you track trucks loosely, and run card payments on completed jobs. Check if reporting on average ticket meets your needs or if you will export to spreadsheets monthly. Workiz is the pragmatic on-ramp before heavier platforms.",
     },
   ] as BestForEditorialBlock[],
 

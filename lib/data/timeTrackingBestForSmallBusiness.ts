@@ -119,15 +119,15 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Clockify",
-      body: "Best when budget is tight and you want to roll out tracking across the team quickly without new software spend.",
+      body: "Clockify is the pragmatic pick when a small business needs company-wide time tracking on a tight budget—unlimited users on the free tier make rollout feasible for hourly retail, light manufacturing, or service teams. Managers can add approvals or kiosk mode later without switching vendors. During a trial, enforce project codes you will actually audit, run a payroll test export, and confirm overtime rules match your state. Review whether screenshot features are necessary before enabling them. Clockify wins on speed to deploy and total cost.",
     },
     {
       heading: "Toggl Track",
-      body: "Ideal for small teams that value a polished experience and strong analytics over heavy monitoring.",
+      body: "Toggl Track gives small teams polished timers, strong mobile apps, and profitability insights without the surveillance feel of heavier workforce tools. Leaders see utilization trends instead of keystroke counts. In a trial, connect calendars for prefilled suggestions, compare billable versus overhead weekly, and integrate with your PM or invoicing stack if supported. Validate SSO and admin roles before you exceed a handful of seats. Toggl fits culture-conscious SMBs that still need accountability.",
     },
     {
       heading: "Harvest",
-      body: "Great for service businesses that want to connect time and expenses directly to invoices.",
+      body: "Harvest links tracked hours and expenses directly to invoices for service SMBs where cash flow depends on accurate billable data—consultancies, trades with T&M tickets, or agencies on milestones. Budget alerts on projects prevent silent overruns. During evaluation, run one billing cycle end to end inside Harvest, reconcile taxes and discounts your customers expect, and test accountant exports. Check whether you need native invoicing or just time data feeding QuickBooks. Harvest anchors billing-first operations.",
     },
   ] as BestForEditorialBlock[],
 

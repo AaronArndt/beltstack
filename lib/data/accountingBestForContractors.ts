@@ -140,19 +140,19 @@ export const CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "QuickBooks Online",
-      body: "QuickBooks Online is the go-to for many contractors: job costing, project tracking, and reporting in one place. It integrates with a wide range of field and estimating tools and is familiar to most accountants.",
+      body: "QuickBooks Online is the contractor default when you need job costing tied to estimates, change orders, and vendor bills while staying on an accountant-friendly general ledger. Integrations with estimating, payroll, and field service tools reduce double entry between site and office. During a trial, tag a few live jobs, allocate labor and materials, and run a work-in-progress style report your PM trusts. Test progress invoicing against AIA-style billing if you serve commercial GCs. Confirm which advanced job costing features require Plus or higher before you budget.",
     },
     {
       heading: "Xero",
-      body: "Xero is a strong QuickBooks alternative with a clean interface and solid job/project features. The app marketplace gives contractors options to extend with industry-specific tools.",
+      body: "Xero gives trades a modern ledger with project tracking, purchase approvals, and a deep app stack for specialized construction add-ons when native features stop short. Collaboration with offsite bookkeepers stays smooth in the cloud. In a trial, connect your bank feed, categorize job-related expenses with tracking categories, and reconcile subs’ 1099-ready vendor profiles. Validate mileage and equipment apps if crews carry tablets. Xero fits contractors who want flexibility and clean UX over Intuit muscle memory.",
     },
     {
       heading: "FreshBooks",
-      body: "FreshBooks suits contractors who prioritize simple invoicing and time tracking over heavy job costing. It’s easy to set up and use for service-oriented and project-based billing.",
+      body: "FreshBooks suits residential or light commercial contractors who need fast estimates, deposits, and final invoices more than granular WIP accounting—especially when owners still touch billing weekly. Time and materials entries convert to client-facing documents with minimal friction. During evaluation, test deposit invoices, change-order emails, and online payment fees on typical ticket sizes. If you later need heavy job costing, plan whether FreshBooks plus exports satisfies your CPA. It excels when simplicity speeds cash collection.",
     },
     {
       heading: "Zoho Books",
-      body: "Zoho Books delivers good project and client tracking at a lower price. It’s a solid value choice for contractors who want solid accounting without the premium brand price.",
+      body: "Zoho Books offers project-centric accounting, automation, and client portals at a price that flatters growing trades watching software spend. Recurring maintenance contracts and multi-location tags map well to HVAC, plumbing, or landscaping hybrids. In a trial, automate monthly billing for a service plan, test sales tax on materials versus labor where rules differ, and confirm Zoho FSM or CRM handoffs if you use them. Review mobile approvals for owner-managers between job sites.",
     },
   ] as BestForEditorialBlock[],
 

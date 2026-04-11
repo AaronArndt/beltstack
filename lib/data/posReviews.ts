@@ -10,6 +10,7 @@ import {
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 import { POS_LOGOS } from "@/lib/data/posHubData";
+import { POS_TRADE_SCENARIO_NAV_LINKS } from "@/lib/data/posBestForTrades";
 
 export type PosReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -25,6 +26,7 @@ const POS_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for restaurants", href: getPosBestForUrl("restaurants") },
   { label: "Best for ecommerce", href: getPosBestForUrl("ecommerce") },
   { label: "Best for multi-location", href: getPosBestForUrl("multi-location") },
+  ...POS_TRADE_SCENARIO_NAV_LINKS,
 ];
 
 const POS_METHODOLOGY = {

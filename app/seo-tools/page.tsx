@@ -49,11 +49,12 @@ const BEST_FOR_SCENARIOS = [
   { label: "Best SEO tools (roundup)", href: "/seo-tools/best-seo-tools" },
   { label: "Compare SEO tools", href: "/seo-tools/compare" },
   { label: "SEO tools guides", href: "/seo-tools/guides" },
+  { label: "All best-for use cases", href: "/seo-tools/best-for" },
   { label: "Contractors", href: "/seo-tools/best-for/contractors" },
   { label: "Local SEO", href: "/seo-tools/best-for/local-seo" },
   { label: "Small business", href: "/seo-tools/best-for/small-business" },
-  { label: "HVAC", href: "/seo-tools/best-for/hvac" },
-  { label: "Plumbing", href: "/seo-tools/best-for/plumbing" },
+  { label: "HVAC businesses", href: "/seo-tools/best-for/hvac" },
+  { label: "Plumbing companies", href: "/seo-tools/best-for/plumbing" },
 ];
 
 const BY_TRADE_GROUPS = [

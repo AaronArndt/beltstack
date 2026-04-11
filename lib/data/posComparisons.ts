@@ -5,6 +5,7 @@
 
 import { getPosReviewUrl, getPosBestForUrl } from "@/lib/routes";
 import { POS_LOGOS } from "./posHubData";
+import { POS_TRADE_SCENARIO_NAV_LINKS } from "./posBestForTrades";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 
 export function getPosCompareUrlFromSlug(slug: string): string {
@@ -94,7 +95,8 @@ const RELEVANT_LINKS = [
   { label: "Best for restaurants", href: getPosBestForUrl("restaurants") },
   { label: "Best for ecommerce", href: getPosBestForUrl("ecommerce") },
   { label: "Best for multi-location", href: getPosBestForUrl("multi-location") },
-] as const;
+  ...POS_TRADE_SCENARIO_NAV_LINKS,
+];
 
 function buildComparison(
   slug: string,

@@ -140,19 +140,19 @@ export const PEST_CONTROL_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small pest control companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and routes.",
+      body: "Gusto is dependable payroll software for pest control companies that dispatch licensed W-2 techs on routes while paying 1099 termite or wildlife specialists on bigger jobs. Contractor portals and automated tax work keep small offices compliant when spring swarms compress schedules. During your first payrolls, confirm deposits, overtime when callbacks extend evening routes, and reimbursements for PPE or mileage that match your handbook. Model a pay week with residential renewals, a commercial account with after-hours service, and a 1099 subcontractor payout to keep W-2 versus 1099 registers clean. If you separate residential from commercial departments, verify payroll dimensions before commission or route reports. Add benefits for inside sales when recurring revenue grows.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for pest control and route-based work. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software pest control operators choose when QuickBooks already tracks service agreements, stops, and renewals, and they need labor mapped to those records for margin and sales crediting. One system keeps chemical and labor burden aligned with the routes finance already measures. On trial payrolls, reconcile payroll to a few active routes and a large initial service job to confirm hours post to the right customers or classes. Integrate QuickBooks Time or your route software so stop durations and drive time feed payroll without duplicate entry. Validate locals if municipalities add occupational or sick-leave rules. Clean feeds keep pricing disciplined when you bundle mosquito or termite programs.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for pest control teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for pest control teams that want flat per-person pricing while routes expand through acquisitions or seasonal marketing pushes. Support helps when a surge week stacks overtime on top of new-hire training pay. Use early payrolls to prove deposits, new-hire reporting for licensed tech onboarding, and 1099 workflows for recurring wildlife partners. Import hours with Saturday routes, reservice callbacks, and chemical stipends to confirm taxable versus non-taxable treatment matches policy. Map GL exports once if QuickBooks is downstream so branch or brand classes survive. Predictable fees help when truck leases and chemical invoices hit before monthly customer drafts.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing pest control companies that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for pest control enterprises with multi-state branches, dealer networks, or franchise systems that need serviced payroll beyond mid-market self-serve. Implementation aligns earning codes with how you report labor to private equity or franchisors. After go-live, audit tax registrations for every state where roaming techs earn wages, not just corporate HQ. Test multi-location reporting if you separate residential from commercial P&L. If you centralize HR and payroll for acquisitions, validate parallel FEIN transitions with ADP during the first pay cycle after close. Compare serviced cost once those controls prove out.",
     },
   ] as BestForEditorialBlock[],
 

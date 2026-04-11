@@ -7,9 +7,9 @@ export default function BestFieldServiceForContractorsPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Field Service Software for Contractors (2026) | BeltStack",
+    title: "Best Field Service Software for General Contractors (2026) | BeltStack",
     description:
-      "Compare the best field service management software for contractors and mixed trade crews. See top tools for multi-trade scheduling, dispatch, and job management.",
+      "Compare field service management software for general contractors and mixed-trade crews. Jobber, Housecall Pro, ServiceTitan for scheduling, dispatch, and job management.",
   };
 }
 

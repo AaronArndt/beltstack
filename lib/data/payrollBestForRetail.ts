@@ -140,19 +140,19 @@ export const RETAIL_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small retail stores: W-2 and 1099 in one system, automatic tax forms, and built-in time tracking. No sales cycle—owners and managers can run payroll without calling a rep. It scales as you add locations and staff.",
+      body: "Gusto is strong payroll software for retail stores that blend hourly associates, keyholders, and occasional 1099 visual merchandisers or IT installers across one or more locations. Self-serve pricing helps independent retailers adopt full-service payroll without a mall-anchor-style vendor process. During your first payrolls, confirm deposits, overtime during holiday ramps, and commission or spiff payouts if you layer them on base wages. Run a test cycle with split shifts, a Sunday premium, and a 1099 fixture installer to see registers stay clean for sales-per-labor-hour reviews. If you use departments or locations for each store, verify payroll dimensions before pushing to your POS analytics bridge. Add benefits when you promote an assistant manager to salary.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to the right accounts, jobs, or classes for reporting—critical for retail P&L and labor by location. Pay associates and managers in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software retail operators choose when QuickBooks already runs inventory, classes, and store P&L, and they need wage burden posted by location or SKU category for true labor percent of sales. One ledger keeps comp-store narratives honest without CSV gymnastics. On trial payrolls, reconcile payroll to a few stores and confirm labor maps to the classes or locations your flash reports reference. Integrate QuickBooks Time or your POS labor export so approved hours feed payroll before Friday cutoff. Validate local wage, sick, or predictive-scheduling rules if you operate in regulated cities. Clean ties help when landlords or lenders ask for labor efficiency proof.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for retail stores that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for retail teams that want flat per-person pricing while seasonal hiring spikes before Black Friday and tapers in January. Support helps when a POS outage forces manual hour edits the night before payroll. Use early payrolls to prove deposits, new-hire reporting for rapid seasonal onboarding, and 1099 payouts for pop-up build crews. Import a payroll with overtime stacked after inventory nights and clothing uniform stipends to confirm taxable versus non-taxable treatment matches policy. Map GL exports once if QuickBooks is downstream so each store class ties out. Predictable fees help when inventory invoices hit before weekend sales cash out.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing retail chains that want scale and optional dedicated support. Multi-state payroll, more locations, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for retail chains adding states, franchise territories, or unionized stores that need serviced payroll and workforce management depth as they scale. Quoted implementations align earning codes with how you report labor to landlords, licensors, and investors. After go-live, audit tax registrations for every state where associates work, including short-term pop-up locations. Test multi-location reporting if you separate ecommerce fulfillment from brick-and-mortar P&L. If tip pools or shared gratuity models appear in hybrid concepts, review allocation rules with ADP during pilot payrolls. Compare serviced cost once those proofs pass.",
     },
   ] as BestForEditorialBlock[],
 

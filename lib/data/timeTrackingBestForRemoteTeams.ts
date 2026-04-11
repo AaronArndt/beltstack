@@ -119,15 +119,15 @@ export const REMOTE_TEAMS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Hubstaff",
-      body: "Best for organizations that need GPS, job sites, and activity metrics across remote and field staff.",
+      body: "Hubstaff suits distributed teams that mix desk workers with occasional field staff and need GPS-verified visits, optional screenshots, and app usage signals—not just passive timers. Payroll and invoice exports reduce manual reconciliation when hourly pay is tied to proof of work. During a trial, run a two-week pilot with transparent policies, review false positives on idle time, and confirm integrations with your payroll system. Validate mobile battery impact for traveling employees. Hubstaff fits when compliance or client billing demands verifiable hours.",
     },
     {
       heading: "Time Doctor",
-      body: "Best when strict oversight and productivity reporting are explicit requirements for your remote team.",
+      body: "Time Doctor targets organizations that explicitly prioritize productivity analytics—distraction alerts, website categorization, and manager dashboards—alongside straightforward time tracking for remote staff. It works when leadership communicates why monitoring exists and how data is used. In a trial, limit monitoring to work devices, test exception rules for creative research time, and export reports your HR counsel approves. Compare per-seat cost against trust-based tools if culture matters. Time Doctor is for teams that chose oversight deliberately.",
     },
     {
       heading: "Clockify",
-      body: "Good fit for teams that want to start light and then decide later whether monitoring features are necessary.",
+      body: "Clockify lets remote teams start with lightweight timers, projects, and approvals before deciding whether to add screenshot or GPS features on higher tiers. The free core lowers friction for global contractors paid hourly. During evaluation, define required fields (client, task, billable flag) so reports stay clean across time zones. Test kiosk or shared-device scenarios if support shifts rotate. Clockify balances affordability with room to grow into stricter governance later.",
     },
   ] as BestForEditorialBlock[],
 

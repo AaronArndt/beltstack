@@ -140,19 +140,19 @@ export const RESTAURANTS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small restaurants: W-2 and 1099 in one system, tip reporting, automatic tax forms, and built-in time tracking. No sales cycle—owners and managers can run payroll without calling a rep. It scales as you add locations and staff.",
+      body: "Gusto is a practical payroll software choice for restaurants that blend tipped FOH, hourly BOH, and occasional 1099 gigs in one modern platform with clear pricing. Tip flows, time tracking, and automated payroll taxes reduce the spreadsheet gymnastics busy operators usually tolerate. In your first two payroll runs, reconcile reported tips against POS summaries, confirm overtime and spread-of-hours rules for your state, and watch federal and state deposit notices so nothing is still manual. Add a training shift and a split-rate server to the test so wage plus tip withholding looks sane before you go live on a Friday night weekend. If you use departments for stores or dayparts, scan registers to ensure labor dollars land in the buckets your P&L expects. Scaling to another location or a small management bonus plan should not require a new payroll vendor.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to the right accounts for reporting—critical for restaurant P&L. Pay FOH, BOH, and 1099 in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll fits payroll software for restaurants that already close books in QuickBooks and want wage, tax, and tip burden to hit the same chart of accounts and classes they use for prime cost. Labor posts cleanly for owner reporting without exporting CSVs from a separate payroll hub. Early on, map tipped wages, employer share of FICA on tips, and allocation by location or profit center, then run a payroll that mirrors a noisy holiday week. Sync QuickBooks Time or your POS-fed hours into payroll once so you are not re-entering clock data during service. Validate local meals or hospitality taxes if your city layers rules on top of state withholding. When those pieces tie out, your prime-cost story stays trustworthy.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for restaurants that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is solid payroll software for independent restaurants that want predictable per-person pricing and a single plan that still covers tipped employees, overtime, and contractor payouts. Support is part of the package when a new manager mis-keys a voided shift. Use trial payrolls to prove tip pooling or allocation matches your house policy, that tax deposits fire on schedule, and that 1099 musicians or delivery partners do not pollute W-2 totals. Run BOH overtime alongside a large catering payout to see blended rates behave. If you operate a commissary or ghost kitchen as a second FEIN, confirm how separate companies bill before you commit. Clean trials here save drama before tourist season.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing restaurant groups that want scale and optional dedicated support. Multi-state payroll, more locations, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software worth quoting for restaurant groups when multi-state expansion, centralized HR, or white-glove compliance beats pure self-serve speed. Dedicated teams help chain finance leaders keep tip credit documentation and local wage ordinances aligned across markets. After implementation, audit payroll for each store’s local taxes, wage orders, and paid sick accruals across two cycles—not just the home state. Test multi-unit reporting for labor percent of sales and confirm tips flow correctly when employees float between locations. If you use a shared services center, validate intercompany allocations the way your auditors will ask. Compare total serviced cost to mid-market tools once those controls look airtight.",
     },
   ] as BestForEditorialBlock[],
 

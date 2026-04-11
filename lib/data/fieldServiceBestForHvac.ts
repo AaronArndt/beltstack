@@ -24,7 +24,7 @@ const LOGOS = {
 } as const;
 
 export const HVAC_PAGE_PROPS = {
-  title: "Best Field Service Software for HVAC Companies (2026)",
+  title: "Best Field Service Software for HVAC Businesses (2026)",
   subtitle:
     "Compare field service tools for HVAC contractors: dispatch, maintenance agreements, installs, and emergency calls in one system.",
   useCase: "hvac",
@@ -129,15 +129,15 @@ export const HVAC_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Housecall Pro",
-      body: "Housecall Pro fits residential HVAC teams that want strong scheduling, customer communication, and payments without a heavy implementation. It’s a natural upgrade from paper and spreadsheets for shops running a handful of trucks that care about inbound leads, reviews, and repeat work.",
+      body: "Housecall Pro fits residential HVAC teams that need dispatch, customer texting, online booking, and payment capture without a ServiceTitan-scale implementation—ideal when you run a handful of trucks and live or die on inbound leads and reviews. Seasonal reminders and follow-ups help you refill maintenance agreements before peak heat or cold. During a trial, configure tune-up versus diagnostic versus install job types with honest durations, test on-my-way messages for tight arrival windows, and run financing on a high-ticket replacement quote. Validate membership billing if recurring revenue is core to your model. Housecall Pro balances homeowner experience with operator simplicity.",
     },
     {
       heading: "ServiceTitan",
-      body: "ServiceTitan suits HVAC organizations that already run many trucks and have a staffed call center. Its membership, pricebook, call tracking, and analytics depth can meaningfully improve revenue per tech and campaign ROI—but you need the volume and management focus to use those features fully.",
+      body: "ServiceTitan suits larger HVAC operators with call centers, aggressive membership programs, and pricebooks complex enough to need governance—where revenue-per-technician reporting and marketing attribution justify premium spend and dedicated admins. Dispatch consoles, call recordings, and sold-hour analytics change how leadership runs morning meetings when adopted fully. In a pilot, load your real pricebook, run membership renewals through automation, and stress-test peak-season dispatch with true emergency volume. Partner with implementation specialists; half-configured Titan wastes money. This is enterprise FSM for shops ready to operate like chains.",
     },
     {
       heading: "Service Fusion",
-      body: "Service Fusion targets HVAC and plumbing at the mid-market: you get strong dispatch, service agreements, and invoicing at lower overall cost and complexity than ServiceTitan. It is a good fit when you have grown past basic FSM but are not yet ready for a full enterprise platform.",
+      body: "Service Fusion targets mid-market HVAC and plumbing companies that outgrew lightweight tools but want strong dispatch, service agreements, and invoicing at lower cost and complexity than Titan-class platforms. It bridges spreadsheets and enterprise when you need agreement tracking without a year-long rollout. During a trial, model maintenance plans with seasonal visit generation, test QuickBooks sync for progressive billing on installs, and confirm mobile workflows for photo-heavy jobs. Review reporting on agreement compliance before you promise KPI dashboards. Service Fusion is the pragmatic middle when you need depth without Titan overhead.",
     },
   ] as BestForEditorialBlock[],
 

@@ -96,10 +96,22 @@ export const CONSULTANTS_PAGE_PROPS = {
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
-    { heading: "FreshBooks", body: "FreshBooks is our top pick for most consultants: straightforward invoicing, time tracking, and client billing. Retainers and recurring invoices are easy to set up; the interface stays simple." },
-    { heading: "Bonsai", body: "Bonsai combines proposals, contracts, and invoicing for solo consultants. It’s a strong fit for consultants who want one place for the full client workflow." },
-    { heading: "HoneyBook", body: "HoneyBook is built for client-heavy workflows: proposals, contracts, and invoicing in one pipeline. Ideal for consultants who run on projects and need a polished client journey." },
-    { heading: "Wave", body: "Wave gives you free core invoicing so you can minimize software cost. It’s a solid choice for consultants who want to keep overhead low while still sending professional invoices." },
+    {
+      heading: "FreshBooks",
+      body: "FreshBooks is our top pick for many consultants because retainers, hourly blends, and fixed-fee phases invoice cleanly alongside time entries your clients can understand. Reporting shows outstanding balances before you chase payment awkwardly. During a trial, configure a monthly retainer with tracked hours against it, send a progress invoice mid-engagement, and test late-fee or reminder policies you plan to enforce. Confirm integration with Zoom or calendar tools if you bill meetings. FreshBooks keeps consulting AR disciplined without accounting jargon.",
+    },
+    {
+      heading: "Bonsai",
+      body: "Bonsai gives solo consultants a single pipeline for scoped proposals, signed agreements, and milestone invoices—reducing the “we agreed to what?” emails that erode margin. Client questionnaires and contract templates speed repeat offerings. In a trial, duplicate a winning SOW structure, run e-sign on a test contact, and invoice against defined milestones. Validate expense pass-through or sales tax lines if your practice bills disbursements. Bonsai fits when professionalism and speed both matter.",
+    },
+    {
+      heading: "HoneyBook",
+      body: "HoneyBook targets consultants who sell high-touch projects and want a branded client journey from inquiry through final payment inside one pipeline. Automations can nudge prospects when proposals sit unsigned. During evaluation, walk one opportunity from lead form to paid invoice, testing how files and messages stay attached. Check scheduling embeds if discovery calls close deals. HoneyBook excels for relationship-led practices that market visually.",
+    },
+    {
+      heading: "Wave",
+      body: "Wave keeps consultant overhead minimal with free invoicing, receipts, and basic accounting until revenue supports richer automation. It works when engagements are simple and you manually track hours elsewhere if needed. In a trial, send recurring monthly invoices to yourself, accept an online payment, and reconcile fees in your P&L categories. If you need contract storage or CRM stages, note workarounds up front. Wave is the pragmatic pick for early independent advisors.",
+    },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [

@@ -57,15 +57,15 @@ function makeBestForPage(titleSuffix: string, slug: string, subtitleFocus: strin
     whyThesePicks: [
       {
         heading: "Wix",
-        body: "Wix is the most consistent fit for service businesses that need SEO pages, lead forms, and frequent updates without developer bottlenecks. It balances speed-to-launch with enough depth to scale.",
+        body: "Wix is the most consistent fit for service businesses that need city and service-line pages, quote or booking forms, and weekly publishing without waiting on a developer queue. During a trial, publish a real service page, connect your primary lead form, and confirm mobile click-to-call and map embeds behave the way dispatch expects—not just how the template looks on desktop. Its app ecosystem helps when you outgrow bare forms and need routing, CRM handoffs, or scheduling. For local SEO workflows, validate that titles, meta, and internal links stay easy to adjust after launch; the best builder is the one your team will actually update. It balances speed-to-launch with enough depth to scale as you add locations, offers, or proof galleries.",
       },
       {
         heading: "Squarespace",
-        body: "Squarespace is strong when visual trust and presentation quality directly influence close rates. It is a common fit for premium brands that still want operational simplicity.",
+        body: "Squarespace shines when visual trust—portfolio galleries, testimonials, and polished before/after layouts—directly influences whether homeowners or commercial buyers request a quote. Use the trial to build one high-intent landing page and have a real estimator or office manager try to edit copy and swap photos without support tickets. It is a strong match for premium positioning where design consistency signals craftsmanship, safety, and reliability. Confirm form notifications and spam handling meet your lead SLA; beautiful pages still fail if submissions get lost. For teams that prioritize brand presentation over deep app sprawl, Squarespace often stays simpler day to day than heavier stacks.",
       },
       {
         heading: "Shopify",
-        body: "Shopify wins when online transactions become a core revenue stream, not a side feature. If your funnel includes products, subscriptions, or paid checkouts, it usually outperforms general builders.",
+        body: "Shopify belongs in the shortlist when online checkout is strategic—filters, memberships, maintenance plan SKUs, merch, or recurring charges—not a one-off PayPal button buried on a contact page. Trial it with a small catalog, test tax and shipping rules if relevant, and ensure the POS or field workflow still makes sense if crews sell in person too. Service businesses adding ecommerce should validate abandoned-cart and email integration paths so marketing can follow up compliantly. If you only need calls and quote forms, Wix or Squarespace usually stay leaner; if revenue truly moves through carts, Shopify’s commerce depth wins. Treat the trial as a finance and operations exercise, not only a theme preview.",
       },
     ],
     relatedReviews: [

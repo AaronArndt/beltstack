@@ -140,19 +140,19 @@ export const HANDYMAN_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small handyman businesses: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and jobs.",
+      body: "Gusto is approachable payroll software for handyman businesses that often start with the owner on the tools and add a W-2 helper or two plus rotating 1099 specialists. Published pricing and quick setup mean you can run payroll without a franchise-style sales process. During your first payrolls, confirm deposits, overtime when small jobs stack into long days, and reimbursements for small parts runs that should post cleanly. Run a test week with a mix of T&M tickets, flat-fee installs, and a 1099 electrician payout to ensure employee versus contractor reporting stays distinct. If you track vans or neighborhoods, verify tags on payroll detail before syncing to QuickBooks. Scale into benefits when you promote a lead tech to salary.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for handyman and service-call work. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software handyman owners pick when QuickBooks already tracks customer tickets, estimates, and simple job costing, and they want labor dollars on those jobs without double entry. Solo operators scaling into a micro-team especially benefit from one familiar UI. On trial payrolls, reconcile payroll to a few representative service calls and confirm labor maps to the income accounts or classes you use for reporting. Pair payroll with QuickBooks Time if you need mobile clocks for multi-stop days. Validate local taxes if you hop municipalities on small jobs. Clean ties keep your true hourly cost visible when you price recurring maintenance.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for handyman teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for handyman shops that want flat per-person pricing and full-service taxes while occasionally paying 1099 trades for work outside your license. Support helps when a part-time helper’s first payroll lands the same week as quarterlies. Use early runs to prove deposits, new-hire reporting, and 1099 readiness for repeat plumbers or electricians you pay as subs. Import a payroll with Saturday makeups and mileage reimbursements to confirm taxable versus non-taxable treatment matches your policy. Map GL exports once if QuickBooks is downstream so each service line still ties out. Predictable bills matter on thin margins.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing handyman businesses that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to consider for handyman franchises or multi-city brands that outgrow owner-operated payroll administration and need serviced compliance at scale. Quoted programs add dedicated teams as you standardize hiring across territories. After go-live, audit tax registrations for every metro where vans actually work, not just your mailing address. Test multi-location reporting if royalty or marketing fees allocate by branch. If you convert subs to W-2 as you tighten compliance, walk those transitions with ADP during the first month. Compare serviced cost to self-serve tools once those workflows stabilize.",
     },
   ] as BestForEditorialBlock[],
 

@@ -140,19 +140,19 @@ export const TREE_SERVICE_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small tree service companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and jobs.",
+      body: "Gusto is strong payroll software for tree service companies that mix W-2 climbers and ground crews with 1099 crane, chipper, or trucking partners on hazardous jobs. Self-serve onboarding helps when storm work forces rapid crew adds without time for enterprise sales cycles. During your first payrolls, confirm deposits, overtime after long daylight storm pushes, and hazard or premium pay types if you use them. Run a test week with a municipal contract, a residential takedown, and a 1099 heavy-equipment invoice to ensure classifications and reimbursements read clearly on registers. If you track divisions for PHC versus removals, verify payroll dimensions before exporting to accounting. Layer benefits for office dispatch when emergency volume stabilizes.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for tree service and project-based work. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software tree contractors pick when QuickBooks already estimates jobs, tracks equipment burden, and needs crew labor posted to each work order automatically. True job margin after chipper hours and disposal fees depends on payroll hitting the right jobs. On trial payrolls, reconcile payroll to a large removal and a pruning maintenance contract to confirm labor, burden, and equipment allocation codes behave. Integrate QuickBooks Time or another field tracker so crew lead approvals flow into payroll before Friday cutoff. Validate multi-state withholding if chase crews work across lines after weather events. Clean job ties keep insurance and municipal bids credible.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for tree service teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for tree service teams that want flat pricing clarity while scaling storm response crews up and down within weeks. Support helps when overtime from emergency callbacks stacks on top of scheduled municipal work. Use early payrolls to prove deposits, new-hire reporting for rapid hires, and 1099 payouts for repeat crane operators. Import a payroll with per-job bonuses, stump grinding reimbursements, and split crews across two territories to stress export mappings. Map GL accounts once if QuickBooks is downstream so job classes stay intact. Predictable bills help when diesel and disposal cash out before customer checks clear.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing tree service companies that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for tree enterprises spanning regions, utility contracts, or municipal programs that need serviced payroll muscle and deeper HR compliance. Quoted implementations align complex earning codes with how you report to cities and insurers. After go-live, audit tax registrations for every state where storm crews temporarily bunk, not just your shop address. Test multi-branch labor reporting if you separate residential from utility books. If union line-clearance or prevailing wage work is in play, review certified payroll samples with ADP before agencies compare them to your tickets. Benchmark total serviced cost after those proofs.",
     },
   ] as BestForEditorialBlock[],
 

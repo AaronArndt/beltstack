@@ -140,19 +140,19 @@ export const AGENCIES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Harvest",
-      body: "Harvest is a great starting point for smaller agencies because it combines time tracking, expenses, and invoicing, with solid project reports.",
+      body: "Harvest gives smaller agencies time tracking, expenses, and invoicing in one place so account leads see budget consumption without exporting five spreadsheets Friday night. Project dashboards highlight which retainers need change orders before teams burn out. During a trial, require daily submission for two weeks, compare reported hours to estimates, and test manager approvals. Integrate QuickBooks or Xero if finance closes books elsewhere. Harvest fits when billing integrity depends on disciplined timesheets.",
     },
     {
       heading: "Everhour",
-      body: "Everhour is ideal when your team lives in Asana or Trello and you want time to appear inside those tools instead of a separate app.",
+      body: "Everhour is ideal when creatives refuse to leave Asana, Trello, or Basecamp—timers and budgets sit beside tasks so PMs coach in context instead of nagging in email. Native sync reduces “forgot to start timer” excuses when cards move columns. In a trial, connect production boards only, set budget alerts at 80% burn, and verify role permissions hide sensitive rates from juniors. Check API limits if you automate payroll exports. Everhour rewards agencies that already standardized on one PM stack.",
     },
     {
       heading: "Toggl Track",
-      body: "Toggl Track is a flexible option for agencies that want clean tracking and reports without committing to a heavier all-in-one platform.",
+      body: "Toggl Track offers flexible agency time tracking with strong reporting APIs when you want visibility without locking into Harvest’s invoicing opinions. Tags map cleanly to clients, roles, or phases for utilization reviews. During evaluation, run a month of actuals against forecasted hours per account, export to BI if needed, and test billable versus non-billable splits leadership cares about. Validate SSO on higher tiers for distributed teams. Toggl suits analytics-minded shops that invoice or payroll elsewhere.",
     },
     {
       heading: "Timely",
-      body: "Timely shines when your team forgets timers—its automatic tracking reduces the friction of accurate timesheets.",
+      body: "Timely uses automatic capture to rebuild timesheets for agencies where creatives jump between Slack, docs, and meetings and manual timers always lie. Privacy settings deserve a trial conversation so employees trust what is logged. In a pilot, review AI-suggested blocks with team leads weekly, adjusting project mapping rules until suggestions feel fair. Compare accuracy against a control week of manual Toggl data. Timely fits when forgetting to track is your biggest enemy.",
     },
   ] as BestForEditorialBlock[],
 

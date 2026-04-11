@@ -114,15 +114,15 @@ export const GROWING_BUSINESSES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto scales from a few employees to hundreds without changing products. Multi-state payroll, benefits, and HR stay in one platform with published pricing that grows with you. No sales cycle to add states or people. Best when you want a modern, self-serve platform that grows with your business.",
+      body: "Gusto is modern payroll software for growing businesses that expect headcount, states, and benefit programs to expand without swapping payroll cores mid-flight. Published pricing and self-serve administration keep finance teams agile while still offering full-service tax filing and deposits. During your first multi-state payroll cycles, add a remote employee in a new jurisdiction and confirm registrations, reciprocity rules, and unemployment accounts update before liabilities accrue incorrectly. Run parallel payrolls in two consecutive weeks with promotions, bonuses, and 401(k) deferrals if you offer them, watching that deductions and employer match lines post cleanly. If you open a second FEIN, test how separate companies bill so intercompany charges do not surprise AP. The goal is proof you can scale without losing visibility.",
     },
     {
       heading: "ADP",
-      body: "ADP is built for scale: large headcounts, multi-state and multi-country payroll, and optional dedicated account management. You get a quote and can add support as you grow. Best when you want enterprise-grade capability and are okay with custom pricing and a more traditional relationship.",
+      body: "ADP is enterprise-grade payroll software for growing businesses that need large-headcount muscle, multi-country options, and optional dedicated account teams as complexity outpaces spreadsheets. Custom quotes typically bundle implementation, tax services, and HR modules tailored to your industry. After go-live, audit that every work location’s tax codes, locals, and deposit schedules match where employees actually perform work, especially for hybrid and travel-heavy teams. Run two payrolls that include acquisitions, role changes, and cross-border payments if applicable, validating that reporting packages your auditors expect are available on demand. If you rely on job costing or GL segments, reconcile payroll feeds with finance before month-end close hardens. Price the relationship after those operational proofs, not on demo slides alone.",
     },
     {
       heading: "Paychex",
-      body: "Paychex offers full-service payroll with strong small-to-midsize support and a reputation for hands-on advisory. Custom pricing and optional dedicated reps help with compliance, benefits, and setup as you add people and complexity. Best when you want a partner, not just software.",
+      body: "Paychex is full-service payroll software for growing businesses that want a human partner alongside software—especially when compliance questions spike as you add benefits, multiple locations, or regulated industries. Custom pricing often reflects the depth of advisory and optional dedicated reps you select. Use your first payrolls after implementation to confirm tax deposits, garnishment handling, and new-hire reporting across every state where you suddenly have remote staff. Stress-test a month with mid-year benefit elections, commission payouts, and a contractor conversion to W-2 to see how Paychex guides corrections. If you integrate time clocks or POS labor, validate the full import path before Black Friday–style volume hits. Satisfactory trials here signal the white-glove relationship will scale with you.",
     },
   ] as BestForEditorialBlock[],
 

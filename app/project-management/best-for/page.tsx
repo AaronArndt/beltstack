@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getProjectManagementBestForUrl } from "@/lib/routes";
 
-const LINKS = [
+const SCENARIOS = [
   {
     label: "Best project management software overall",
     href: "/project-management/best-project-management-software",
@@ -32,6 +32,81 @@ const LINKS = [
     label: "Best project management software for remote teams",
     href: getProjectManagementBestForUrl("remote-teams"),
     description: "Distributed collaboration, async updates, and shared source of truth.",
+  },
+  {
+    label: "Best project management software for HVAC businesses",
+    href: getProjectManagementBestForUrl("hvac"),
+    description: "Installs, service programs, crew handoffs, and job documentation in one place.",
+  },
+  {
+    label: "Best project management software for plumbing companies",
+    href: getProjectManagementBestForUrl("plumbing"),
+    description: "Multi-day jobs, handoffs, and repeatable templates for plumbing crews.",
+  },
+  {
+    label: "Best project management software for electricians",
+    href: getProjectManagementBestForUrl("electricians"),
+    description: "Phased work, inspections, and coordination across service and project jobs.",
+  },
+  {
+    label: "Best project management software for painting contractors",
+    href: getProjectManagementBestForUrl("painting"),
+    description: "Production phases, crew days, punch lists, and client-facing milestones.",
+  },
+  {
+    label: "Best project management software for roofing companies",
+    href: getProjectManagementBestForUrl("roofing"),
+    description: "Production timelines, supplements documentation, and crew scheduling context.",
+  },
+  {
+    label: "Best project management software for general contractors",
+    href: getProjectManagementBestForUrl("general-contractors"),
+    description: "Multi-trade jobs, subcontractor handoffs, and closeout checklists.",
+  },
+  {
+    label: "Best project management software for landscaping companies",
+    href: getProjectManagementBestForUrl("landscaping"),
+    description: "Install projects, maintenance programs, and seasonal crew planning.",
+  },
+  {
+    label: "Best project management software for construction companies",
+    href: getProjectManagementBestForUrl("construction"),
+    description: "Site tasks, subcontractor coordination, and inspection-ready documentation.",
+  },
+  {
+    label: "Best project management software for remodeling businesses",
+    href: getProjectManagementBestForUrl("remodeling"),
+    description: "Selections, change orders, phased schedules, and punch workflows.",
+  },
+  {
+    label: "Best project management software for handyman businesses",
+    href: getProjectManagementBestForUrl("handyman"),
+    description: "Job templates, small-project checklists, and lightweight crew visibility.",
+  },
+  {
+    label: "Best project management software for property management companies",
+    href: getProjectManagementBestForUrl("property-management"),
+    description: "Turnovers, capex projects, and vendor coordination across portfolios.",
+  },
+  {
+    label: "Best project management software for pest control businesses",
+    href: getProjectManagementBestForUrl("pest-control"),
+    description: "Multi-visit programs, commercial accounts, and internal improvement projects.",
+  },
+  {
+    label: "Best project management software for pool service companies",
+    href: getProjectManagementBestForUrl("pool-service"),
+    description: "Equipment jobs, openings/closes, and ops projects beyond the route board.",
+  },
+  {
+    label: "Best project management software for junk removal businesses",
+    href: getProjectManagementBestForUrl("junk-removal"),
+    description: "Large cleanouts, commercial jobs, and fleet or facility projects.",
+  },
+  {
+    label: "Best project management software for moving companies",
+    href: getProjectManagementBestForUrl("moving"),
+    description: "Survey-to-delivery projects, crew assignments, and long-distance handoffs.",
   },
 ];
 
@@ -80,8 +155,8 @@ export default function ProjectManagementBestForHubPage() {
               Best Project Management Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scenario-based picks for freelancers, small businesses, startups, agencies, and remote teams—balanced
-              against how you actually run projects day to day.
+              Scenario-based picks for freelancers, growing teams, agencies, remote work—and for trades and service
+              businesses that need clear job phases, handoffs, and documentation alongside day-to-day work.
             </p>
           </div>
         </section>
@@ -90,7 +165,7 @@ export default function ProjectManagementBestForHubPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Jump to a scenario.">Pick your situation</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {LINKS.map((item) => (
+              {SCENARIOS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -103,8 +178,8 @@ export default function ProjectManagementBestForHubPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-[#57534E]">
-              <Link href={getProjectManagementBestForUrl("small-business")} className="font-semibold text-[#10B981] hover:underline">
-                Best project management for small business
+              <Link href="/project-management" className="font-semibold text-[#10B981] hover:underline">
+                Project management hub
               </Link>{" "}
               ·{" "}
               <Link href="/project-management/compare" className="font-semibold text-[#10B981] hover:underline">
@@ -124,6 +199,6 @@ export function generateMetadata() {
   return {
     title: "Best Project Management Software by Use Case | BeltStack",
     description:
-      "Find project management tools for freelancers, small business, startups, agencies, and remote teams.",
+      "Find project management tools by scenario: freelancers, small business, startups, agencies, remote teams, and trades from HVAC to construction and property management.",
   };
 }

@@ -140,19 +140,19 @@ export const HOME_SERVICES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small home services businesses: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales across trades as you add techs and jobs.",
+      body: "Gusto is versatile payroll software for home services businesses that may run HVAC, plumbing, cleaning, or other trades from one back office with shared W-2 techs and 1099 specialists. One platform keeps contractor portals, time tools, and tax automation consistent even as you diversify offerings. During your first payrolls, confirm deposits, overtime patterns common to on-call rotations, and clear separation between employee wages and subcontractor payouts across divisions. Stress-test a week with mixed trade tickets, a warranty recall, and a 1099 partner invoice to see registers stay readable for your accountant. If you use departments for each trade line, verify payroll dimensions before pushing to job costing. Add locations or benefits as franchises or add-on services grow.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for home service work. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software home services operators choose when QuickBooks is already the hub for CRM, scheduling integrations, and job costing across trades. Labor that posts straight to jobs keeps blended home-services P&L honest without manual allocations. On trial payrolls, reconcile payroll to jobs from at least two different service lines and confirm burden, class, and workers’ comp mappings match how finance reviews margin. Integrate QuickBooks Time or your dispatch-backed time feed so field hours sync before payroll approval. Validate multi-state tax setups if you expand territories or acquire another brand. Clean feeds make cross-sell pricing defensible.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for home services teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for home services companies that want flat, transparent pricing while paying diverse W-2 and 1099 workers from one account. Support helps when a busy season stacks overtime across multiple trade codes in the same pay period. Use early payrolls to prove automated deposits, new-hire reporting, and 1099 workflows for repeat specialty partners. Import hours with on-call premiums, weekend differentials, and reimbursements to confirm policy matches tax treatment. Map accounting exports once if QuickBooks or another GL receives payroll so trade classes survive. Predictable fees help when marketing and fleet costs spike ahead of revenue.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing home services businesses that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for home services enterprises scaling across states, brands, or dealer networks that need serviced payroll and HR depth beyond mid-market self-serve. Implementation aligns complex earning codes with how each division reports to private equity or franchisors. After go-live, audit tax registrations for every state where vans earn revenue, including short-term storm or event deployments. Test multi-entity payroll if you silo trades under different FEINs. If you centralize HRIS with payroll, validate onboarding-to-first-paycheck timing with ADP during pilot hires. Compare total serviced cost once those controls prove out.",
     },
   ] as BestForEditorialBlock[],
 

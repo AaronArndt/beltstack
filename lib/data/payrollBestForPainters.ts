@@ -140,19 +140,19 @@ export const PAINTERS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small painting companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and jobs.",
+      body: "Gusto is capable payroll software for painting contractors that mix W-2 crews, sprayers, and 1099 drywall or pressure-wash partners across residential and commercial sites. Self-serve tools and contractor portals keep color schedules from delaying payroll approvals. During your first payrolls, confirm deposits, overtime on long production weeks, and reimbursements for lift rentals or parking that should not distort taxable wages incorrectly. Model a pay cycle with a new construction job, a repaint with warranty touch-ups, and a 1099 scaffolding vendor to validate classifications side by side. If you track interior versus exterior divisions, verify dimensions on payroll exports before finance closes. Add another crew lead or benefits when backlog steadies.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for painting and project-based work. Pay painters and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software painting companies rely on when QuickBooks already handles estimates, change orders, and job P&L, and labor must post to each job automatically. True margin on repaint versus new construction depends on burdened payroll in the same ledger. On trial payrolls, reconcile labor to two active jobs with different spec levels and confirm burden, workers’ comp class, and materials pass-through reimbursements map as your accountant expects. Integrate QuickBooks Time so supers approve hours before payroll, including multi-site travel days. Check local taxes if you work across city lines on commercial towers. Clean job feeds keep bids honest when GCs compare labor rates.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for painting teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for painting teams that want flat pricing clarity while scaling up for summer exterior season and trimming back in winter. Support helps when a GC delay pushes overtime the same week subs invoice. Use early payrolls to prove deposits, new-hire reporting, and 1099 handling for regular texture or spray partners. Import a payroll with per-job bonuses and warranty callback hours to see blended rates behave. Map GL accounts once if QuickBooks receives payroll entries so job classes stay aligned. Predictable fees help when paint houses invoice net-45 while payroll is weekly.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing painting companies that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP belongs in payroll software evaluations for painting enterprises spanning states, commercial GC programs, or union apprenticeship tracks that need deeper serviced compliance. Quoted onboarding aligns earning codes with how you report to developers and insurers. After go-live, audit tax registrations for jurisdictions where large commercial crews temporarily work. Test multi-branch labor splits if you separate residential from commercial books. If prevailing wage or certified payroll is on the horizon, review sample registers with ADP before the first agency submittal. Compare total serviced cost once those proofs look production-ready.",
     },
   ] as BestForEditorialBlock[],
 

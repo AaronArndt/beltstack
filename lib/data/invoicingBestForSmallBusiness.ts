@@ -97,10 +97,22 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
-    { heading: "FreshBooks", body: "FreshBooks is our top pick for most small businesses: straightforward invoicing, time tracking, and client billing in a clean interface. It’s easy to adopt and scales with your needs." },
-    { heading: "QuickBooks", body: "QuickBooks is the best fit when you already use it for accounting or want invoicing and books in one place. Reporting and accountant familiarity are strong." },
-    { heading: "Wave", body: "Wave gives you free core invoicing so you can minimize software cost. It’s a solid choice for very small teams or businesses watching every dollar." },
-    { heading: "Zoho Invoice", body: "Zoho Invoice delivers good automation and a client portal at a lower price. Ideal for small businesses that want more than basic invoicing without premium pricing." },
+    {
+      heading: "FreshBooks",
+      body: "FreshBooks is our top pick for many small businesses that bill for services: owners and office managers adopt it quickly, and AR aging stays visible without a finance degree. Time tracking, expenses, and project tags help you invoice accurately as headcount grows. During a trial, onboard two staff as time trackers, approve entries weekly, and run the reports you send leadership each month. Test payment links against your effective processing rate. FreshBooks balances polish with speed to cash.",
+    },
+    {
+      heading: "QuickBooks",
+      body: "QuickBooks fits when invoicing must feed directly into the general ledger you already reconcile—ideal if your accountant lives in QuickBooks and you want estimates, progress billing, and sales tax in one stack. Inventory-light product sellers still benefit from unified reporting. In a trial, convert an estimate to a partial invoice, record a customer credit memo, and confirm classes or locations tag revenue correctly. Validate user seats if AR and AP staff both need access. QuickBooks wins on ecosystem and continuity.",
+    },
+    {
+      heading: "Wave",
+      body: "Wave offers free invoicing and core accounting for very small businesses watching every subscription dollar while still accepting online payments. It can carry you from first customer to first hire if complexity stays modest. During evaluation, stress-test sales tax, multi-user needs, and whether you will outgrow inventory or payroll features within a year. Run payment fee math on your average ticket size. Wave is the lean bridge until revenue funds richer tools.",
+    },
+    {
+      heading: "Zoho Invoice",
+      body: "Zoho Invoice delivers client portals, reminders, and workflow automation at a price that flatters budget-conscious SMBs scaling customer count faster than finance headcount. It pairs cleanly if you already use Zoho Books for the ledger. In a trial, automate dunning for overdue invoices, connect Stripe or Authorize.net, and test multi-language PDFs if you export services. Review API or Zapier paths if orders originate in another system. Zoho rewards structured billing playbooks.",
+    },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [

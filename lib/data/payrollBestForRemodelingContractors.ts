@@ -140,19 +140,19 @@ export const REMODELING_CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small remodeling contractors: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and jobs.",
+      body: "Gusto is capable payroll software for remodeling contractors who rotate carpenters, finish crews, and repeat 1099 trades through occupied homes without a sales-led onboarding. Contractor portals and automated tax handling keep punch-list weeks from colliding with payroll deadlines. In your first payrolls, confirm deposits, overtime on long demo days, and a crisp line between employee wages and subcontractor payouts that should not inflate wage bases. Model a pay cycle with a kitchen gut, a siding sub paid 1099, and a warranty callback day to see reimbursements and job notes flow cleanly. If you track designers or sales separately, verify dimensions on payroll detail before pushing to accounting. Add another lead carpenter or a benefits plan when the backlog stabilizes.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for remodeling and project-based work. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software remodeling contractors lean on when QuickBooks already tracks deposits, draws, and job P&L, and labor must land on the right renovation automatically. Margin on fixed-price remodels depends on accurate burdened cost in the same ledger. During trial payrolls, reconcile labor to at least two jobs—one near completion and one mid-demo—and confirm burden, workers’ comp class, and change-order adjustments post as finance expects. Integrate QuickBooks Time so supers approve hours before payroll, including travel between sites. Check local taxes if you cross city lines on urban infill work. Trusted feeds keep client allowances and internal job costing aligned.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for remodeling teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for remodeling teams that want flat pricing clarity while still paying mixed W-2 and 1099 workers from one plan. Support helps when a homeowner delay pushes overtime into the same week as a sub’s final draw. Validate automated deposits, new-hire reporting, and 1099 workflows for regular tile, HVAC, or electrical partners during early runs. Import a payroll with blended regular and overtime across two concurrent renovations to stress job tags or classes you export downstream. Map GL accounts once with your bookkeeper if QuickBooks receives payroll journals. Predictable fees help when progress billing and supplier terms do not sync.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing remodeling contractors that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP belongs in payroll software comparisons for remodeling enterprises adding regions, design-build divisions, or complex union or prevailing-wage requirements as they scale. Quoted service wraps implementation around how you report labor to developers and agencies. After go-live, audit tax registrations for states where you stage crews on multi-month projects away from home. Test multi-location or division labor splits if you report margin by brand. If certified payroll is part of larger GC contracts, review sample registers with ADP before the first compliance pull. Compare serviced cost once those proofs look production-ready.",
     },
   ] as BestForEditorialBlock[],
 

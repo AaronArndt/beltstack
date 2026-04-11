@@ -140,19 +140,19 @@ export const POOL_SERVICE_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small pool service businesses: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and routes.",
+      body: "Gusto is capable payroll software for pool service companies that run route-based W-2 techs and pay 1099 helpers or repair specialists during peak season. Transparent pricing and quick setup help when summer demand doubles stops per truck. During your first payrolls, confirm deposits, overtime when route density forces long days, and reimbursements for chemicals or mileage that should follow your written policy. Run a test cycle with opening-week rush hours, a warranty leak callback, and a 1099 equipment repair payout to validate employee versus contractor reporting. If you separate retail build from recurring service, verify payroll tags before margin reports. Add another yard or benefits when routes mature.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for route and job costing—critical for pool service. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software pool operators choose when QuickBooks already tracks routes, customers, and construction jobs, and they need labor posted to those records for true gross margin. Retail remodels and recurring chemical service often share a back office—payroll should not blur their economics. On trial payrolls, reconcile payroll to a few active routes and at least one equipment job to confirm hours and burden map correctly. Integrate QuickBooks Time or route software so stop times and drive time feed payroll without manual fixes. Validate locals if you cross city lines on high-end accounts. Trusted job feeds keep pricing honest when you renew annual service agreements.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for pool service teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for pool service teams that want flat per-person billing while seasonal headcount spikes before Memorial Day and tapers after Labor Day. Support helps when a storm week compresses installs and service calls into the same pay period. Use early payrolls to prove deposits, new-hire reporting for rapid summer hiring, and 1099 workflows for repeat electricians or plaster crews. Import a payroll with Saturday routes, chemical stipends, and split crews across two trucks to stress any dimensions you export. Map GL lines once if QuickBooks receives entries so route classes survive. Predictable fees help when chemical distributors want cash before customer autopays hit.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing pool service businesses that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for pool enterprises with multi-state retail build teams, dealer networks, or franchise rollups that need serviced payroll depth as they scale. Implementation aligns earning codes with how you report branch performance to investors. After go-live, audit tax registrations for every state where construction crews temporarily work, not just your service yard. Test multi-location labor splits if you separate retail from route maintenance books. If you acquire another brand, validate parallel FEIN payrolls and intercompany allocations the way auditors will ask. Compare serviced pricing after those proofs pass.",
     },
   ] as BestForEditorialBlock[],
 

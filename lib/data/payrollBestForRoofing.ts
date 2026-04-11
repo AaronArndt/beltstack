@@ -144,19 +144,19 @@ export const ROOFING_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small roofing companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crew and jobs.",
+      body: "Gusto is practical payroll software for roofing companies that surge W-2 crews in storm season and lean on 1099 tear-off or sheet-metal partners the rest of the year. Self-serve signup and published pricing help when you are hiring fast after hail events. During your first payrolls, confirm deposits, overtime on long daylight pushes, and clean separation between employee payroll and large subcontractor checks that should not look like wages. Run a test week with steep-pay bonuses, per-square incentives, and a 1099 dump-trailer vendor to see how reimbursements and classifications read on registers. If you tag crews by territory, verify those labels before insurance audits pull payroll history. Scale benefits or add satellite offices without swapping payroll cores.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run estimates, invoicing, and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for roofing projects. Pay crew and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software roofing contractors choose when QuickBooks already carries estimates, supplements, and job costing, and labor must post per roof automatically. True gross margin on insurance and retail jobs needs burdened payroll in the same system. On trial payrolls, reconcile labor to a retail re-roof and a storm job with multiple supplements to confirm burden and class codes map correctly. Flow approved hours from QuickBooks Time so steep-slope and low-slope crews do not get re-keyed after supers sign off. Validate multi-state withholding if chase crews work across state lines after disasters. Clean ties keep your labor percent honest when adjusters scrutinize bids.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for roofing teams that want predictability and simple add/remove for seasonal crew. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for roofing shops that want predictable per-person billing while flexing headcount up and down with weather-driven demand. Support matters when a Monday rain delay stacks Saturday makeup hours into overtime. Use early payrolls to prove tax deposits, new-hire reporting for rapid hires, and 1099 handling for repeat sub crews. Import a payroll with per-job bonuses and warranty leak callbacks to ensure rates and reimbursements stay auditable. Confirm GL mapping if QuickBooks receives journals so each job class still ties out. Flat invoices help when insurance pay cycles lag cash outlays for materials.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing roofing companies that want scale and optional dedicated support. Multi-state payroll, more crew, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for roofing enterprises spanning multiple states, brands, or in-house sheet-metal shops that need deeper compliance benches than lean self-serve tools. Implementation teams align storm-response hiring with tax registrations where crews temporarily bunk. After go-live, audit SUI and locals for every state where trucks earn revenue during catastrophe deployments, not just your license garage. Test multi-branch labor reporting if you separate retail from insurance P&L. If union metal shops or prevailing wage on commercial decks apply, review certified outputs with ADP before agencies compare them to your apps. Price the relationship after those validations.",
     },
   ] as BestForEditorialBlock[],
 

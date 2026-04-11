@@ -134,15 +134,15 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Asana",
-      body: "Asana is our top pick for most small businesses: clear structure, multiple views, and a generous free tier. Teams can run projects and tasks without complexity; paid tiers add timeline and advanced reporting when you need them. When to choose Asana vs ClickUp: Asana is simpler to adopt; ClickUp offers more customization. See our Asana review and Asana vs ClickUp comparison.",
+      body: "Asana is our top pick for most small businesses because it balances structure—projects, assignees, due dates, and timelines—with a gentle learning curve owners can enforce without a full-time admin. The free tier often lasts until you need portfolio views or advanced security. During a trial, run payroll week or a product launch inside Asana and require daily updates from each lead. Test forms for intake if operations teams submit requests. Before upgrading, confirm which reporting and automation gates block your actual workflows. See our Asana review and Asana vs ClickUp comparison.",
     },
     {
       heading: "ClickUp",
-      body: "ClickUp delivers strong value with tasks, docs, and multiple views in one tool. Free tier is robust; good for small teams that want one place for projects and knowledge. When to choose ClickUp vs Asana: ClickUp if you want maximum flexibility; Asana if you prefer a cleaner, more opinionated structure. See our ClickUp review and Asana vs ClickUp comparison.",
+      body: "ClickUp packs tasks, docs, whiteboards, and goals into one aggressively priced workspace for small teams that want to consolidate tools as they grow. Custom statuses and views adapt to shops that do not fit cookie-cutter templates. In a trial, limit initial spaces to one department, build two automations max, and review notification volume after five working days. Integrate email or chat carefully so updates do not duplicate noise. ClickUp fits when flexibility matters more than prescriptive methodology. See our ClickUp review and Asana vs ClickUp comparison.",
     },
     {
       heading: "Monday",
-      body: "Monday fits small businesses that want highly customizable boards and workflows. No free tier but pricing is clear; strong automation and integrations. When to choose Monday: you want to model work exactly your way and are okay with paid-from-day-one. See our Monday review and Asana vs Monday comparison.",
+      body: "Monday.com suits small businesses that want colorful, highly tailored boards with strong automation recipes and clear column logic—even if that means paying from day one. Ops-heavy teams like inventory, facilities, or creative studios often appreciate the visual model. During evaluation, prototype your busiest workflow (tickets, hires, or orders) and invite a skeptic to update it daily. Test dependency and timeline apps if you need Gantt-style planning. Validate guest pricing if clients or vendors must collaborate. See our Monday review and Asana vs Monday comparison.",
     },
   ] as BestForEditorialBlock[],
 

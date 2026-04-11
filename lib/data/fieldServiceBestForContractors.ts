@@ -24,18 +24,18 @@ const LOGOS = {
 } as const;
 
 export const CONTRACTORS_PAGE_PROPS = {
-  title: "Best Field Service Software for Contractors (2026)",
+  title: "Best Field Service Software for General Contractors (2026)",
   subtitle:
-    "Compare field service platforms for contractors and mixed trade crews: scheduling, dispatch, job management, and invoicing across multiple services.",
-  useCase: "contractors",
+    "Compare field service platforms for general contractors and mixed-trade crews: scheduling, dispatch, job management, and invoicing across multiple services.",
+  useCase: "general-contractors",
   categoryHref: CATEGORY.href,
   categoryLabel: CATEGORY.label,
   introParagraph:
-    "Contractors that run plumbing, HVAC, electrical, and other trades under one roof need field service software that works across services. The right FSM platform gives you a unified schedule, consistent job workflows, and clear reporting so you can see how each line of business is performing.",
+    "General contractors that run plumbing, HVAC, electrical, and other trades under one roof need field service software that works across services. The right FSM platform gives you a unified schedule, consistent job workflows, and clear reporting so you can see how each line of business is performing.",
   freshnessText: "Updated for 2026",
-  topPicksSub: "Our top field service picks for contractors.",
-  editorialSub: "What to look for when you choose field service software for a contracting business.",
-  whyThesePicksSub: "Why we chose these tools for contractors.",
+  topPicksSub: "Our top field service picks for general contractors.",
+  editorialSub: "What to look for when you choose field service software for a general contracting business.",
+  whyThesePicksSub: "Why we chose these tools for general contractors.",
   seeAlsoBlock: SEE_ALSO,
 
   featuredProducts: [
@@ -125,15 +125,15 @@ export const CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Jobber",
-      body: "Jobber is our primary recommendation for many contractors because it balances cross‑trade flexibility with a clear, approachable interface. It works well when you run mixed crews and want one dashboard for scheduling, jobs, and invoicing without going full enterprise.",
+      body: "Jobber is our primary recommendation for many multi-trade contractors who need one field service platform for scheduling, job costing light, quotes, and invoicing across HVAC, plumbing, electrical, or handyman lines without bespoke ERP work. Client hub history helps techs see notes before they ring the doorbell. During a trial, configure services and line items you actually sell, dispatch a week of mixed jobs, and test progress billing or deposits if commercial work requires it. Integrate accounting early if finance rejects duplicate AR entries. Jobber balances flexibility with a UI owners can still learn nights and weekends.",
     },
     {
       heading: "Housecall Pro",
-      body: "Housecall Pro is a great fit for contractors whose work is primarily in single‑family homes and small properties. Its booking, notifications, and review tooling help keep a steady flow of residential work across multiple services.",
+      body: "Housecall Pro shines for contractors focused on residential routes where online booking, on-my-way texts, review requests, and marketing add-ons keep trucks full and reputations fresh. Customer experience automation often pays for itself when referrals drive revenue. In a trial, enable consumer booking for one trade, map follow-up automations after job completion, and confirm payment capture matches how you close tickets in homes. Validate pricebook depth against your SKU count before you promise dynamic estimates. Housecall Pro fits home-service brands competing on speed and polish.",
     },
     {
       heading: "ServiceTitan",
-      body: "ServiceTitan makes sense for contractors who have already grown to many techs, multiple dispatchers, and a staffed call center. Its depth around dispatch, memberships, and reporting can justify the price once you have the volume and management bandwidth to use it fully.",
+      body: "ServiceTitan targets contractors who already run many techs, multiple dispatch boards, and a call center that lives on recordings, memberships, and tight pricebook governance—where revenue per technician justifies premium software and dedicated admins. Reporting on campaigns, memberships, and sold hours can transform management meetings when data is trusted. During a pilot, load a representative pricebook, run membership renewals, and test dispatch drag-and-drop under peak call volume. Budget implementation partners and training; the ROI depends on disciplined adoption. ServiceTitan is enterprise-grade FSM for operators ready to run like one.",
     },
   ] as BestForEditorialBlock[],
 
@@ -171,8 +171,8 @@ export const CONTRACTORS_PAGE_PROPS = {
 
   faqItems: [
     {
-      q: "What is the best field service software for contractors?",
-      a: "For many small and mid-size contractors that run multiple trades, Jobber is a strong default because it works well across services without requiring a heavy implementation. Housecall Pro is excellent for home-service contractors, and ServiceTitan becomes attractive once you reach larger scale and want deeper analytics.",
+      q: "What is the best field service software for general contractors?",
+      a: "For many small and mid-size general contractors that run multiple trades, Jobber is a strong default because it works well across services without requiring a heavy implementation. Housecall Pro is excellent for home-service contractors, and ServiceTitan becomes attractive once you reach larger scale and want deeper analytics.",
     },
     {
       q: "Can one field service platform support multiple trades?",

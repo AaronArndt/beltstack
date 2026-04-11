@@ -4,6 +4,7 @@ import {
   getAccountingBestForUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { ACCOUNTING_TRADE_SCENARIO_NAV_LINKS } from "@/lib/data/accountingBestForTrades";
 
 type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -18,6 +19,7 @@ const ACCOUNTING_SCENARIO_LINKS: { label: string; href: string }[] = [
   { label: "Best for contractors", href: getAccountingBestForUrl("contractors") },
   { label: "Best for ecommerce", href: getAccountingBestForUrl("ecommerce") },
   { label: "Best for agencies", href: getAccountingBestForUrl("agencies") },
+  ...ACCOUNTING_TRADE_SCENARIO_NAV_LINKS,
 ];
 
 const ACCOUNTING_METHODOLOGY = {

@@ -127,15 +127,15 @@ export const SMALL_BUSINESS_PAGE_PROPS: BestForTemplateProps = {
   whyThesePicks: [
     {
       heading: "Square",
-      body: "Square is the best default for many small businesses because it’s easy to start: free software, low-cost hardware, and pay-per-swipe processing. You get payments, basic inventory, and reporting without a long-term contract. It fits retailers, cafes, and service businesses that prioritize simplicity and transparent pricing.",
+      body: "Square remains the default for many small businesses because you can start with free software, affordable readers, and per-transaction processing without a multi-year contract. During a trial week, run your real mix of cards—including contactless and keyed when unavoidable—and compare effective rate to your old processor’s statements. Basic inventory and daily sales reports help retailers, cafés, and mobile service businesses see what actually sells. Validate tipping, discounts, and tax rules for your state before you train staff. It fits teams that value speed-to-first-sale over deep customization.",
     },
     {
       heading: "Clover",
-      body: "Clover suits small businesses that want a broader choice of terminals and add-on apps. You can run a simple counter or a full register and extend with loyalty, scheduling, or industry apps. The trade-off is a monthly fee that typically includes hardware; if that fits your budget, Clover’s flexibility is a strong fit.",
+      body: "Clover suits SMBs that want hardware choice and an app market for loyalty, appointments, or industry-specific add-ons beyond a bare register. Trial the exact terminal model you plan to deploy; ergonomics and printer placement matter on busy counters. Expect monthly bundles that include hardware—model total cost over 24 months, not just sticker price. Test critical apps in the trial window; some rely on third-party support quality. Choose Clover when flexibility and extensibility beat Square’s simpler, flatter stack.",
     },
     {
       heading: "Shopify POS",
-      body: "Shopify POS is the right choice when your primary channel is or will be a Shopify store. It keeps online and in-store sales, inventory, and orders in one system. If you’re not on Shopify, Square or Clover are usually simpler; if you are, Shopify POS reduces double entry and keeps one source of truth.",
+      body: "Shopify POS is the coherent choice when your ecommerce catalog already lives on Shopify and you need one inventory and order spine for web plus in-person selling. Pilot unified stock: sell an item online and return it in store—or vice versa—and confirm quantities reconcile without manual fixes. Validate plan tiers, staff permissions, and any retail locations you will add this year. If you are not on Shopify, Square or Clover are usually less tangled; if you are, duplicate systems create reconciliation debt fast. Treat the trial as an ops test, not only a theme exercise.",
     },
   ] as BestForEditorialBlock[],
 
@@ -273,15 +273,15 @@ export const RETAIL_PAGE_PROPS: BestForTemplateProps = {
   whyThesePicks: [
     {
       heading: "Lightspeed",
-      body: "Lightspeed is built for retail. It offers robust inventory, multi-location support, purchasing, and reporting that fit stores with more than basic needs. If you’ve outgrown Square or a simple counter POS, Lightspeed is a strong next step.",
+      body: "Lightspeed is purpose-built for retail: deep inventory, purchasing, transfers, and multi-store reporting when you have outgrown generic POS apps. During a trial, load your real categories and vendors, then run a stocktake and reorder workflow end to end. Validate ecommerce connectors if you sell online; retail truth should be one ledger. It costs more than Square because it replaces separate inventory spreadsheets and ad hoc purchasing. Choose Lightspeed when SKU complexity and location count—not just payments—are the bottleneck.",
     },
     {
       heading: "Square",
-      body: "Square works well for single-location or straightforward retail when you want minimal cost and quick setup. You get payments, basic inventory, and reporting; add-ons extend capability. It’s a good fit until you need heavy multi-store or deeper retail workflows.",
+      body: "Square fits single-location or straightforward retail that needs fast checkout, simple catalog management, and transparent processing without heavy monthly commitments. Use the trial to stress-test peak-hour line busting and returns during a promotion weekend. Add-ons can extend reporting, but core strength is ease and low friction. It is ideal until you need true multi-store transfers, matrix inventory, or purchasing approvals. Re-evaluate when duplicate data entry between POS and back office becomes a daily tax.",
     },
     {
       heading: "Vend (Lightspeed Retail)",
-      body: "Vend is retail-focused with strong inventory and multi-store support, now part of Lightspeed. It’s a good alternative when you want dedicated retail POS with a clear path into the Lightspeed ecosystem.",
+      body: "Vend—now within the Lightspeed retail family—targets stores that want retail-first inventory and multi-site control with a clearer path into broader Lightspeed capabilities over time. Trial multi-store stock visibility and user roles if managers should not see cost data. Compare roadmap and support for your region against standalone Lightspeed Retail offerings before you commit. It suits growing chains standardizing on retail workflows without jumping straight to bespoke ERP. Validate integrations to accounting and ecommerce early.",
     },
   ] as BestForEditorialBlock[],
 
@@ -419,15 +419,15 @@ export const RESTAURANTS_PAGE_PROPS: BestForTemplateProps = {
   whyThesePicks: [
     {
       heading: "Toast",
-      body: "Toast is purpose-built for restaurants. It handles tables, courses, kitchen display, online ordering, and restaurant-specific reporting. It’s the best fit for full-service and high-volume quick-service operations that need a single system for front and back of house.",
+      body: "Toast is built for restaurants end to end: floor plans, coursing, kitchen display, online ordering hooks, and labor-aware reporting that generic POS rarely matches. Trial it during a real service rush—modifiers, voids, and split checks expose weaknesses fast. Validate hardware footprint and payment processing terms; restaurant stacks are capex plus ongoing fees. It fits full-service and busy QSR teams that need one brain for FOH and BOH. Confirm integrations to payroll and accounting match how you close nightly books.",
     },
     {
       heading: "TouchBistro",
-      body: "TouchBistro is a strong alternative for independent and small-chain restaurants. It offers table management, menus, and optional KDS and online ordering with tiered pricing that many find more approachable than quote-only options.",
+      body: "TouchBistro targets independents and small chains that want strong restaurant workflows—tables, menus, optional KDS—with published tiered pricing many teams find easier to budget than opaque quotes. During a trial, train servers on real menu complexity including 86ing items and happy-hour rules. Test online ordering handoff if off-premise revenue matters in your model. It is a credible Toast alternative when you want solid restaurant tooling with different commercial packaging. Validate local payment partners and support SLAs for your hours.",
     },
     {
       heading: "Square",
-      body: "Square works for simple food service—cafes, food trucks, counters—when you don’t need table management or a full kitchen display. It’s the most cost-effective option for basic payments and item tracking.",
+      body: "Square fits cafes, counters, and food trucks where you need quick service, simple item buttons, and low-commitment hardware more than full table service or KDS orchestration. Pilot rush-hour throughput and kitchen ticket readability if you print to a prep area. It is usually the most cost-effective path for basic food retail without deep restaurant modules. Add-ons can grow capability, but do not force Square into full-service workflows it was not meant to carry. Upgrade when table maps and coursing become non-negotiable.",
     },
   ] as BestForEditorialBlock[],
 
@@ -564,15 +564,15 @@ export const ECOMMERCE_PAGE_PROPS: BestForTemplateProps = {
   whyThesePicks: [
     {
       heading: "Shopify POS",
-      body: "Shopify POS is the best fit when your storefront is on Shopify. Online and in-store sales, inventory, and orders live in one system. There’s no sync delay or integration fragility—it’s one platform. The trade-off is the Shopify subscription; if you’re not on Shopify, Square or Lightspeed may be better.",
+      body: "Shopify POS is the cleanest fit when your catalog, inventory, promotions, and ecommerce checkout already live in Shopify—one platform removes sync delay and phantom stockouts. Trial buy-online-pick-up-in-store and returns across channels with real SKUs that have variants. Validate plan requirements, retail locations, and staff PIN workflows before you outfit a pop-up or showroom. The trade-off is platform commitment; if Shopify is your commerce hub, that is usually a feature. If you are multi-store retail-heavy, confirm retail feature depth meets your roadmap.",
     },
     {
       heading: "Square",
-      body: "Square suits ecommerce businesses that want flexibility. You can add Square Online or connect to other storefronts; inventory can sync via integrations. You’re not locked into one ecommerce platform, and you get free POS software and straightforward pricing.",
+      body: "Square suits sellers who want POS flexibility without marrying a single ecommerce platform: Square Online or integrations can bridge to other carts. During a trial, test how inventory sync behaves when you update counts—latency breaks trust during promotions. Free POS software plus straightforward processing helps omnichannel experiments stay cheap until volume proves a stack. Validate tax and shipping handoffs for your ecommerce connector. Choose Square when in-person is primary today but online could pivot between platforms.",
     },
     {
       heading: "Lightspeed",
-      body: "Lightspeed fits retail businesses that also sell online and need deeper inventory and multi-location. It connects to ecommerce platforms so stock stays in sync. Choose it when you need more retail operational depth than Shopify POS or Square provide.",
+      body: "Lightspeed fits retail-first businesses that also run ecommerce and need deeper inventory, purchasing, and multi-location controls than lighter POS-plus-plugin combos. Pilot stock sync from POS to your connected storefront during a busy week, including partial shipments and exchanges. It is stronger when retail operations—not only marketing—drive complexity. Compare total subscription and integration costs against Shopify-native paths. Pick Lightspeed when warehouse-style retail truth should lead, and the website follows.",
     },
   ] as BestForEditorialBlock[],
 
@@ -709,15 +709,15 @@ export const MULTI_LOCATION_PAGE_PROPS: BestForTemplateProps = {
   whyThesePicks: [
     {
       heading: "Lightspeed",
-      body: "Lightspeed is built for retail multi-location. It offers multi-store inventory, transfers, and consolidated reporting so you can see performance by location and overall. It’s a strong fit for retail chains that have outgrown single-location POS.",
+      body: "Lightspeed is purpose-built for multi-store retail: transfers, consolidated catalogs, and reporting that rolls up by location without spreadsheet surgery. Trial inter-store transfers and cycle counts while watching permissions—managers should see their store, finance should see all. Validate ecommerce connectors if some locations fulfill web orders. It suits chains that outgrew single-store POS but are not ready for full enterprise ERP. Budget training; consistent operations across sites is a people problem as much as software.",
     },
     {
       heading: "Revel Systems",
-      body: "Revel targets larger or more complex multi-location operations—retail and restaurant—with a unified platform. It supports customization and enterprise-style reporting. Expect quote-based pricing and a longer implementation; it’s suited to chains that need consistency and control at scale.",
+      body: "Revel targets larger or hybrid retail-and-restaurant groups that need unified POS, customization, and enterprise-grade controls across many sites. Expect demos to include quote-based pricing, implementation partners, and longer rollout timelines—this is not a weekend self-serve signup. Trial should stress custom menus, complex discounts, and franchise-style reporting if those apply. Choose Revel when compliance, scale, and bespoke workflows justify heavier TCO. Validate support and uptime commitments for your peak seasons.",
     },
     {
       heading: "Epos Now",
-      body: "Epos Now offers multi-location support at a lower entry price than many competitors. It works for retail and hospitality and can scale across sites. It’s a good option when you need multi-location capability without the cost of premium retail or enterprise POS.",
+      body: "Epos Now offers multi-location retail and hospitality capability at a lower entry price than many premium competitors, helpful when you are proving a multi-site model. During a trial, confirm inventory visibility and reporting depth match how your area managers actually run P&L reviews. Test integrations to accounting and payroll if each location is semi-autonomous. It is a pragmatic bridge when you need more than Square multi-location but cannot fund Revel yet. Watch add-on costs as you enable modules site by site.",
     },
   ] as BestForEditorialBlock[],
 

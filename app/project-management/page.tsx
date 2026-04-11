@@ -458,9 +458,9 @@ export default function ProjectManagementPage() {
         highlightFirstLink: true,
       }}
       tradeLinks={{
-        sectionTitle: "Project management by team type",
+        sectionTitle: "Project management by business type",
         sectionSub:
-          "Identity-based navigation: how you describe your team (agency, startup, remote)—not workflow shape alone.",
+          "Trades and service businesses, plus how you describe your team—jump to scenario pages aligned with how you run work.",
         links: [],
         groups: PROJECT_MANAGEMENT_BY_BUSINESS_TYPE_GROUPS,
       }}

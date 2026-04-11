@@ -454,6 +454,41 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
     href: getInventoryBestForUrl("warehouses"),
     description: "Inventory software that supports multiple locations, bins, and higher-volume warehouse operations.",
   },
+  {
+    label: "Best for HVAC",
+    href: getInventoryBestForUrl("hvac"),
+    description: "Truck stock, parts rooms, and seasonal SKUs for HVAC installs and service.",
+  },
+  {
+    label: "Best for plumbing",
+    href: getInventoryBestForUrl("plumbing"),
+    description: "Fittings, water heaters, and multi-truck parts discipline.",
+  },
+  {
+    label: "Best for electricians",
+    href: getInventoryBestForUrl("electricians"),
+    description: "Wire, breakers, fixtures, and van-to-shop visibility.",
+  },
+  {
+    label: "Best for general contractors",
+    href: getInventoryBestForUrl("general-contractors"),
+    description: "Job materials, cages, allowances, and multi-site stock.",
+  },
+  {
+    label: "Best for construction",
+    href: getInventoryBestForUrl("construction"),
+    description: "Laydown yards, prefab, and job-committed material.",
+  },
+  {
+    label: "Best for property management",
+    href: getInventoryBestForUrl("property-management"),
+    description: "MRO stock, turnovers, and portfolio-wide maintenance shops.",
+  },
+  {
+    label: "All best-for scenarios",
+    href: "/inventory/best-for",
+    description: "Browse every trade and operation-type guide: roofing, landscaping, pool service, movers, and more.",
+  },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

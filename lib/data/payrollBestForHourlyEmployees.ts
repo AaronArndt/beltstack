@@ -114,15 +114,15 @@ export const HOURLY_EMPLOYEES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for hourly payroll: it offers built-in time tracking (Gusto Time) and automatic overtime calculation. Hours sync to payroll, and you can manage hourly rates, PTO, and multiple pay types in one place. Integrations with other time apps are available if you prefer.",
+      body: "Gusto is capable payroll software for hourly workforces that need built-in time collection, automatic overtime rules, and multiple pay rates without bolting on five separate vendors. Hours can flow from Gusto Time or supported clocks straight into approvals and payroll. During your first two payroll runs, import or enter a week with split shifts, meal breaks, and hours over 40 to confirm federal overtime and your state’s daily or seventh-day rules fire correctly. Add PTO requests that cross pay periods to see accruals reduce net pay the way your handbook promises. If you pay different rates by department or location, run a blended schedule and verify each hour lands on the right earning line. When deposits and registers look sane, you have a template for busy seasons.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "QuickBooks Payroll pairs well with QuickBooks Time for time-by-job tracking. Hours flow into payroll and labor cost posts to QuickBooks jobs—ideal for contractors and service businesses that need job costing. Time tracking may be an add-on; check pricing.",
+      body: "QuickBooks Payroll is payroll software hourly teams choose when QuickBooks Time (or another integrated tracker) already captures clock-ins by job, customer, or class, and labor must post for costing as well as paychecks. Approved hours should cross into payroll without CSV fixes the night before payday. On trial payrolls, sync a week that includes travel between sites, overtime after inventory, and at least two pay rates to confirm QuickBooks maps burden to the correct jobs or classes. Reconcile the resulting payroll journal to your labor accounts and verify employer taxes hit the expected liability buckets. Confirm whether time tracking is bundled or billed separately so your true cost per hour stays accurate. Clean job costing evidence helps service and construction operators defend pricing.",
     },
     {
       heading: "OnPay",
-      body: "OnPay supports hourly payroll with overtime and time-tracking integrations at a flat price. One plan keeps billing simple; you can connect your existing time clock or use supported options. A solid choice for hourly teams that want value and clarity.",
+      body: "OnPay is practical payroll software for hourly employers that want one flat plan covering overtime calculations, garnishment-friendly registers, and integrations with common time clocks or scheduling tools. Support picks up when a manager forgets to approve punches before cutoff. Use early payrolls to prove automated tax deposits, break rules configured for your state, and PTO balances if you track them inside payroll. Import a noisy week—split shifts, callbacks, and a holiday premium—to see if rounding or approval rules behave the way your policy states. Map GL exports once if QuickBooks or another ledger receives entries so location or department tags survive. Predictable pricing helps thin-margin operators schedule cash confidently.",
     },
   ] as BestForEditorialBlock[],
 

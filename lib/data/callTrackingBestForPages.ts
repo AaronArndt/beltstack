@@ -159,9 +159,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Minute math", body: "Model renewals against peak season call volume, not quiet weeks." },
     ],
     [
-      { heading: "CallRail", body: "Best default when you run Google Ads, LSA, and website leads together." },
-      { heading: "WhatConverts", body: "Best when marketing must show forms and chats alongside calls." },
-      { heading: "CallTrackingMetrics", body: "Best when paid search teams need stronger attribution stories." },
+      {
+        heading: "CallRail",
+        body: "CallRail is the default for small businesses blending Google Ads, Local Services Ads, and website CTAs because dynamic number insertion and source-level reporting survive real-world template edits when configured carefully. During a trial, place numbers on your top money pages and paid landing pages, then click-test after any CMS publish—broken scripts silently steal attribution. Tag calls in CRM with campaign and keyword fields your sales team will actually fill so booked-job ROI is honest. Validate pool sizing against peak concurrent visitors so repeat customers do not see wrong sources. CallRail pays off when leadership reviews cost per booked job, not vanity ring counts.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts fits when marketing must roll calls, forms, and chats into one lead ledger for owners who refuse three disconnected exports. Trial with live web forms and chat widgets; confirm each submission maps to the same attribution fields as phone calls. Test spam filtering and dedupe rules so paid metrics do not inflate on bots. Pair with CRM stages so “lead” versus “qualified” versus “won” tells the truth about wasted spend. Choose WhatConverts when multi-touch proof matters more than telephony depth alone.",
+      },
+      {
+        heading: "CallTrackingMetrics",
+        body: "CallTrackingMetrics helps paid search teams defend budgets with deeper attribution models, automation, and integrations when CallRail-class basics no longer answer finance’s questions. Pilot during a month you trust—run parallel reporting against your existing tool to reconcile discrepancies before you switch contracts. Validate seat costs, minute pools, and webhook limits against your actual call volume, not demos. Document how multi-touch credit maps to your CRM so sales behavior does not break the story. It belongs when sophisticated marketing ops—not only SMB simplicity—is the constraint.",
+      },
     ],
     [{ q: "Free call forwarding enough?", a: "Forwarding hides marketing source—use DNI when you spend on ads or SEO pages." }],
     [
@@ -180,9 +189,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Website + ads together", body: "Swap scripts must survive template updates and seasonal landing pages." },
     ],
     [
-      { heading: "CallRail", body: "Strong when you juggle Ads, LSA, and website CTAs for crews." },
-      { heading: "WhatConverts", body: "Useful when sales wants one lead feed from web forms and calls." },
-      { heading: "CallTrackingMetrics", body: "Fits growing ops teams defending multi-channel spend weekly." },
+      {
+        heading: "CallRail",
+        body: "Contractors splitting spend across Google Ads, LSA, and organic or referral site pages need CallRail-style DNI to show which sources produce booked jobs once CRM ties outcomes. Trial on service-area pages that match truck routes—misaligned geo targeting makes attribution look successful while dispatch burns margin. Train CSRs to confirm source on the first ring without interrogating customers; friction drops conversion. After website or GBP updates, regression-test scripts the same day trucks go live. CallRail wins when marketing and ops share one honest funnel story.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts helps contractor sales leaders who want forms, chat, and calls in one dashboard when homeowners bounce between “request quote” and click-to-call on mobile. During trial, map each capture type into CRM with identical UTM hygiene so LSA, PPC, and organic credit stays comparable. Validate lead scoring or spam filters with real dispatch feedback—junk leads masquerade as ROI if nobody marks them bad. Review weekly with ops to tag “bad lead vendor” reasons back into marketing. It fits when multi-channel capture is messy but leadership wants one rollup.",
+      },
+      {
+        heading: "CallTrackingMetrics",
+        body: "CallTrackingMetrics suits growing contractor marketing ops teams that need stronger attribution, routing rules, and automation when weekly budget reviews get contentious. Pilot alongside existing tracking until numbers reconcile; arguing about two systems wastes the pilot window. Confirm integrations to ad platforms and CRM objects your estimators actually update. Model minute and seat costs against summer or storm peaks—quiet-month trials lie. Choose it when you outgrow basic DNI but can assign an admin owner.",
+      },
     ],
     [{ q: "Call tracking vs CRM alone?", a: "CRM shows outcomes; call tracking shows which marketing touch produced the dial—use both." }],
     [
@@ -201,9 +219,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "LSA + PPC overlap", body: "Use consistent tagging so double-counting does not inflate perceived performance." },
     ],
     [
-      { heading: "CallRail", body: "Solid when LSA and PPC run in parallel with organic pages." },
-      { heading: "CallTrackingMetrics", body: "Helps when budgets are scrutinized weekly across channels." },
-      { heading: "WhatConverts", body: "Good when web forms and chat augment phone during peak season." },
+      {
+        heading: "CallRail",
+        body: "HVAC marketers running LSA beside PPC and supporting organic service pages need CallRail to separate emergency repair intent from tune-up campaigns without double-counting the same homeowner journey. Trial with tight naming conventions in UTM and LSA reporting exports so CRM dashboards stay legible during July spikes. Test number pools on high-traffic pages to avoid session collisions when heat waves hit. Review weekly with dispatch to mark disqualified leads—cheap clicks that never book should not look like wins. CallRail fits when seasonality demands fast, trustworthy source data.",
+      },
+      {
+        heading: "CallTrackingMetrics",
+        body: "CallTrackingMetrics helps HVAC teams under weekly budget scrutiny model multi-touch paths across LSA, brand search, and remarketing when finance wants more than last-click stories. During pilot, align call outcomes with CRM job types—repair versus replace—so optimization targets the tickets you want. Validate automation rules do not over-write human dispatch notes. Compare subscription tiers against your multi-location footprint before annualizing. It belongs when marketing ops maturity—not only call logging—is the gap.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts fits HVAC when web forms and chat capture maintenance plan leads while phones handle emergencies—one rollup prevents summer chaos in spreadsheets. Trial form-to-call handoffs on mobile; many homeowners start typed then call when anxious. Ensure spam and competitor tests do not pollute paid metrics. Tie each lead to a branch or ZIP for capacity planning, not only marketing applause. Pick WhatConverts when multimodal capture is real, not theoretical.",
+      },
     ],
     [{ q: "HVAC need Invoca?", a: "Usually not until franchise or enterprise conversation-AI requirements appear." }],
     [
@@ -222,9 +249,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Review velocity", body: "Tracking proves marketing-sourced calls; reviews still influence close rate." },
     ],
     [
-      { heading: "CallRail", body: "Common pick for Google Ads and local landing pages." },
-      { heading: "WhatConverts", body: "Helps when quote forms and calls both matter." },
-      { heading: "PhoneWagon", body: "Lightweight when testing a new PPC market." },
+      {
+        heading: "CallRail",
+        body: "Plumbers leaning on Google Ads and high-intent local landing pages use CallRail to attribute burst traffic from emergency keywords to actual booked trucks, not just rings. Trial during a normal week and a surge week to validate pool sizing and script placement after WordPress or builder updates. Sync tagged calls into CRM so CSRs cannot skip source fields when pace gets frantic. Pair with GBP insights qualitatively—Maps and ads overlap in plumbing more than many trades admit. CallRail is the common pick because it balances ease and depth for local PPC.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts helps plumbing shops where quote forms catch commercial PMs while phones catch homeowners with burst pipes—marketing needs both in one attribution feed. During trial, test dedupe when the same person submits a form then calls; credit rules should reflect reality, not double wins. Validate notifications reach on-call rotations without breaching quiet hours policies. Review bad-lead reasons weekly and push them back to campaigns. It fits when multimodal leads are core to the business, not edge cases.",
+      },
+      {
+        heading: "PhoneWagon",
+        body: "PhoneWagon offers a lightweight entry when plumbers experiment in a new PPC geo or niche keyword set before committing to a heavier stack—quick numbers, simple dashboards, fewer knobs. Trial with tight spend caps and manual QA on first-dozen calls to ensure tracking numbers swap correctly on mobile. Plan migration paths if you graduate to CallRail or CTM; export historical mapping early. Validate compliance with ad platform policies on call-only ads and forwarding. Use it as a scrappy test harness, not a forever enterprise hub.",
+      },
     ],
     [{ q: "Plumbers: cheapest option?", a: "PhoneWagon or WhatConverts entry tiers can work—upgrade when multi-location or complex attribution appears." }],
     [
@@ -243,9 +279,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Multi-location brands", body: "Number pools per territory reduce cross-market confusion." },
     ],
     [
-      { heading: "CallRail", body: "Works well for paid + organic blends across counties." },
-      { heading: "CallTrackingMetrics", body: "Useful when multiple campaigns need defended reporting." },
-      { heading: "WhatConverts", body: "Helps when web leads and calls both feed sales." },
+      {
+        heading: "CallRail",
+        body: "Electrical contractors blending county-targeted PPC, LSA, and organic pages for EV, panel, and emergency services use CallRail to keep each geography’s performance visible without mixing unrelated markets. Trial with separate number pools or tracking rules per territory if licensing boundaries demand it. Regression-test after adding schema or redesigning service pages—electricians iterate sites often around new code cycles. Feed tagged calls into CRM opportunities for commercial bids versus residential service. CallRail fits when multi-county attribution clarity drives spend decisions.",
+      },
+      {
+        heading: "CallTrackingMetrics",
+        body: "CallTrackingMetrics helps when electricians run layered campaigns—brand, nonbrand, remarketing, LSA—and finance demands defended weekly reporting beyond surface dashboards. Pilot with explicit rules for commercial versus residential landing pages so credit lands on the right funnel. Validate automation does not strip human notes estimators rely on. Compare subscription footprint to your actual seats and minutes before contract signature. Choose CTM when marketing ops needs muscle, not when a solo owner just needs a tracker.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts suits electrical shops where web RFQs for commercial projects arrive alongside emergency phone calls from homeowners—one timeline prevents sales from arguing about sources. During trial, align form fields with CRM required data so attribution survives handoffs. Test chat widgets if you use them for after-hours triage; missed chat equals invisible demand. Review weekly with sales to label junk leads—unqualified tenders should not inflate ROI. It belongs when both capture modes materially affect pipeline.",
+      },
     ],
     [{ q: "Electricians need Ringba?", a: "Rarely unless you monetize or buy call volume at scale." }],
     [
@@ -264,9 +309,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Franchise caution", body: "After acquisitions, reconcile numbers and CRM fields before trusting old reports." },
     ],
     [
-      { heading: "CallRail", body: "Reliable for multi-market paid programs." },
-      { heading: "WhatConverts", body: "Helps when forms and calls both feed sales during surges." },
-      { heading: "Invoca", body: "Consider only at enterprise scale with conversation-AI requirements." },
+      {
+        heading: "CallRail",
+        body: "Roofers running multi-market paid programs—retail replacement versus storm-response funnels—rely on CallRail to keep campaigns separated so calm-month ROI does not hide CAT-month distortion. Trial with distinct tracking templates per funnel and weekly QA after landing page swaps common post-weather. Tie calls to CRM job types and insurance flags when relevant so marketing stops optimizing for unbookable leads. Validate number pools on high-traffic storm pages to avoid collisions when spikes hit. CallRail stays reliable when geography and funnel honesty matter more than buzzwords.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts helps roofers when surge periods dump both insurance-style form submissions and frantic phone calls into sales—one lead inbox keeps triage sane. During trial, stress-test notifications and mobile views for reps in the field estimating on tablets. Build dedupe when homeowners submit online then call the office minutes later. Push disqualified leads back to marketing with reasons—storm tourists versus real damage. It fits when forms plus calls spike together and spreadsheets break.",
+      },
+      {
+        heading: "Invoca",
+        body: "Invoca enters the roofing conversation at enterprise scale when conversation intelligence, buyer routing, or buyer-network economics—not simple marketing attribution—justify premium contracts and implementation depth. Pilot only if you have clean CRM hygiene and a team to tune AI labels against real outcomes; otherwise insights rot. Compare TCO to CallRail-class stacks for local operators; most regional roofers never activate Invoca’s full value. Trial should include legal review of recording consent in your states. Consider it when national complexity demands it, not by default.",
+      },
     ],
     [{ q: "Roofing and Invoca?", a: "National brands sometimes justify it; most local roofers start with CallRail-class stacks." }],
     [
@@ -285,9 +339,18 @@ export const CALL_TRACKING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps
       { heading: "Ops feedback loop", body: "Dispatch should confirm bad lead reasons so marketing stops buying them." },
     ],
     [
-      { heading: "CallRail", body: "Broad fit for mixed paid + organic programs." },
-      { heading: "WhatConverts", body: "Strong when multiple capture types must roll up for leadership." },
-      { heading: "CallTrackingMetrics", body: "Helps sophisticated marketing ops teams standardize reporting." },
+      {
+        heading: "CallRail",
+        body: "Home-service groups juggling brands, lead vendors, and owned demand use CallRail as a broad-fit layer for mixed paid and organic programs when each brand needs clean source tags inside CRM. Trial with a governance doc: who names campaigns, who fixes broken scripts, who audits weekly. Test after every website template change across franchises—one rogue deploy nukes trust in dashboards. Map marketplace leads separately from site and ads so cost-per-booked-job stays honest. CallRail scales when discipline exists; without owners, any tool lies.",
+      },
+      {
+        heading: "WhatConverts",
+        body: "WhatConverts gives leadership one rollup when calls, forms, chats, and even text captures from different trades must report together without manual Friday spreadsheets. During trial, standardize UTM templates across branches and enforce them in ad accounts—garbage in breaks executive summaries. Validate role-based access so local managers see their markets only. Review disqualification reasons in ops meetings and feed them back to vendor negotiations. It fits multi-capture portfolios that need clarity at the top.",
+      },
+      {
+        heading: "CallTrackingMetrics",
+        body: "CallTrackingMetrics helps sophisticated home-service marketing ops standardize attribution, automation, and cross-channel models when multiple ad platforms and CRMs interact daily. Pilot with parallel tracking until finance signs off on number alignment—switching mid-quarter confuses everyone. Document how each trade’s CRM objects map to call outcomes so rolled-up dashboards do not blur HVAC with plumbing unintentionally. Validate costs against peak seasons and expansion markets before multi-year deals. Choose CTM when you have admins, not when branches self-serve alone.",
+      },
     ],
     [{ q: "Home services need enterprise tools?", a: "Start mid-market; graduate when compliance, AI, or buyer routing demands it." }],
     [

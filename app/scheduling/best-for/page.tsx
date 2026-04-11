@@ -32,6 +32,81 @@ const SCENARIOS = [
     href: "/scheduling/best-for/teams",
     description: "Round-robin booking, collective availability, buffer time, and team-friendly pricing.",
   },
+  {
+    label: "Best scheduling software for HVAC businesses",
+    href: "/scheduling/best-for/hvac",
+    description: "Multi-tech calendars, maintenance plans, seasonal demand, reminders, and payments.",
+  },
+  {
+    label: "Best scheduling software for plumbing companies",
+    href: "/scheduling/best-for/plumbing",
+    description: "Emergency and booked jobs, deposits, multi-plumber scheduling, and customer reminders.",
+  },
+  {
+    label: "Best scheduling software for electricians",
+    href: "/scheduling/best-for/electricians",
+    description: "Service calls, panel jobs, crew availability, and professional client booking.",
+  },
+  {
+    label: "Best scheduling software for painting contractors",
+    href: "/scheduling/best-for/painting",
+    description: "Estimates, production blocks, deposits, and crew-friendly booking.",
+  },
+  {
+    label: "Best scheduling software for roofing companies",
+    href: "/scheduling/best-for/roofing",
+    description: "Inspections, crew days, storm-season demand, and deposit collection.",
+  },
+  {
+    label: "Best scheduling software for general contractors",
+    href: "/scheduling/best-for/general-contractors",
+    description: "Site visits, retainers, subcontractor coordination, and owner meetings.",
+  },
+  {
+    label: "Best scheduling software for landscaping companies",
+    href: "/scheduling/best-for/landscaping",
+    description: "Recurring maintenance, consults, route-friendly appointments, and reminders.",
+  },
+  {
+    label: "Best scheduling software for construction companies",
+    href: "/scheduling/best-for/construction",
+    description: "Site meetings, safety intake, travel buffers, and vendor appointments.",
+  },
+  {
+    label: "Best scheduling software for remodeling businesses",
+    href: "/scheduling/best-for/remodeling",
+    description: "Design meetings, selections, walkthroughs, and phased client check-ins.",
+  },
+  {
+    label: "Best scheduling software for handyman businesses",
+    href: "/scheduling/best-for/handyman",
+    description: "Small-job windows, multi-task visits, reminders, and simple payments.",
+  },
+  {
+    label: "Best scheduling software for property management companies",
+    href: "/scheduling/best-for/property-management",
+    description: "Showings, inspections, vendor access, and multi-coordinator calendars.",
+  },
+  {
+    label: "Best scheduling software for pest control businesses",
+    href: "/scheduling/best-for/pest-control",
+    description: "Recurring service plans, route-friendly windows, reminders, and payments.",
+  },
+  {
+    label: "Best scheduling software for pool service companies",
+    href: "/scheduling/best-for/pool-service",
+    description: "Weekly routes, open/close packages, maintenance reminders, and bookings.",
+  },
+  {
+    label: "Best scheduling software for junk removal businesses",
+    href: "/scheduling/best-for/junk-removal",
+    description: "Truck windows, load-size intake, deposits, and multi-truck coordination.",
+  },
+  {
+    label: "Best scheduling software for moving companies",
+    href: "/scheduling/best-for/moving",
+    description: "In-home surveys, move-day holds, deposits, and multi-estimator booking.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -79,8 +154,8 @@ export default function SchedulingBestForIndexPage() {
               Best Scheduling Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find scheduling software that fits your situation—freelancers, consultants, small businesses, service
-              businesses, and teams.
+              Find scheduling software that fits your situation—freelancers, consultants, small businesses, teams, and
+              trade-specific picks for HVAC, plumbing, construction, movers, and more.
             </p>
           </div>
         </section>
@@ -118,6 +193,6 @@ export function generateMetadata() {
   return {
     title: "Best Scheduling Software by Use Case | BeltStack",
     description:
-      "Browse our best scheduling software picks by use case, including freelancers, consultants, small businesses, service businesses, and teams.",
+      "Browse scheduling software by use case: freelancers, consultants, teams, HVAC, plumbing, electricians, movers, property management, and more.",
   };
 }

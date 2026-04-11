@@ -140,19 +140,19 @@ export const MAINTENANCE_COMPANIES_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small maintenance companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and sites.",
+      body: "Gusto is reliable payroll software for maintenance companies that dispatch W-2 techs across many client sites while paying 1099 specialists for one-off equipment or trade work. Contractor portals and automated tax filing keep small facilities teams from drowning in PDFs every Friday. During your first payrolls, confirm deposits, overtime when emergency call rotations stack hours, and reimbursements for parking or tolls that should follow your policy cleanly. Run a test week with SLA penalties, after-hours premiums, and a 1099 vendor paid for a capital project to see W-2 versus 1099 registers stay distinct. If you tag techs by region or contract, verify payroll dimensions before client bill-back reports. Scale benefits for coordinators as your route book grows.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job and site costing—critical for maintenance and client reporting. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software maintenance operators choose when QuickBooks already tracks contracts, sites, or work orders, and labor must post for accurate client billing and internal margin. Site-level or job-level costing depends on payroll landing in the same ledger finance already trusts. On trial payrolls, reconcile payroll to a few active SLAs and confirm labor maps to the jobs or classes your invoices reference. Integrate QuickBooks Time or another CMMS export so approved hours flow before payroll without re-entry. Validate multi-state tax rules if you maintain portfolios across borders. Clean feeds keep pass-through billing defensible when clients audit your backup.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for maintenance teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for maintenance firms that want flat per-person pricing and full-service taxes while flexing headcount with new contracts or seasonal coverage. Support helps when a client go-live weekend creates unexpected overtime. Use early payrolls to prove deposits, new-hire reporting for rapid bench hiring, and 1099 payouts for recurring low-voltage or plumbing partners. Import a payroll with blended straight and overtime hours split across two properties to stress any export tags you rely on. Map GL accounts once if QuickBooks is downstream so each contract class ties out. Predictable fees help when receivables stretch past payroll day.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing maintenance companies that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for maintenance enterprises managing national portfolios, multi-entity clients, or union sites that need serviced payroll beyond mid-market self-serve. Implementation teams align earning codes with how you report labor to facility owners and REITs. After go-live, audit tax registrations for every state where roaming techs actually earn wages, not just corporate HQ. Test multi-location or cost-center splits if you close P&L by region or brand. If certified payroll or Davis-Bacon style jobs appear, review sample outputs with ADP before agencies compare them to your pay apps. Compare serviced cost once those proofs pass.",
     },
   ] as BestForEditorialBlock[],
 

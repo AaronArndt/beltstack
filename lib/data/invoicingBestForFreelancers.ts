@@ -97,10 +97,22 @@ export const FREELANCERS_PAGE_PROPS = {
   ] as BestForEditorialBlock[],
 
   whyThesePicks: [
-    { heading: "FreshBooks", body: "FreshBooks is built for freelancers: straightforward invoicing, time tracking, and client billing in a clean interface. It’s easy to get started and stays manageable as you add more clients." },
-    { heading: "Bonsai", body: "Bonsai combines proposals, contracts, and invoicing so freelancers can run the full client workflow in one place. It’s a strong fit for solo consultants and creatives." },
-    { heading: "Wave", body: "Wave gives you free core invoicing so you can keep overhead low. It’s a solid choice for very small or early-stage freelancers who don’t need advanced features yet." },
-    { heading: "Zoho Invoice", body: "Zoho Invoice offers strong value with good automation and a client portal at a lower price. Ideal if you want more than basic invoicing without paying for the top-tier brands." },
+    {
+      heading: "FreshBooks",
+      body: "FreshBooks is built for freelancers who invoice from actual work: timers, expenses, and branded invoices stay linked so you are not reconstructing hours at month end. Automated payment reminders and online card or ACH options shorten days sales outstanding without awkward follow-ups. During a trial, send yourself a full invoice with sales tax if you collect it, enable autopay on a recurring client, and export the ledger slice your accountant needs. Test client limits on each tier before you onboard a dozen accounts at once.",
+    },
+    {
+      heading: "Bonsai",
+      body: "Bonsai wraps proposals, e-sign contracts, and invoicing into one freelancer workflow so scope, legals, and payment terms do not live in three tools. It suits consultants and creatives who sell packaged engagements or milestone billing. In a trial, run a sample project from proposal acceptance through final invoice, noting how change orders are handled. Validate international clients if you bill abroad—currency and tax fields matter. Bonsai shines when client experience is part of your brand, not an afterthought.",
+    },
+    {
+      heading: "Wave",
+      body: "Wave delivers free core invoicing and accounting basics so early freelancers keep software spend at zero while still looking professional. Recurring invoices and payment links cover many solo operators until revenue justifies premium automation. During evaluation, process a test payment, understand per-transaction fees, and confirm whether reporting satisfies your tax preparer. If you need deep time-billing or CRM hooks, note gaps early. Wave is ideal when runway beats feature breadth.",
+    },
+    {
+      heading: "Zoho Invoice",
+      body: "Zoho Invoice packs automation, estimates, and a client portal into a value price point for freelancers who outgrow manual PDFs but refuse bloated suites. Integration paths to Zoho Books or CRM appear if you graduate later. In a trial, automate payment reminders, connect the gateway you already use, and test multilingual invoices if you serve global clients. Review mobile apps if you bill from client sites. Zoho rewards a few hours of setup with fewer repetitive clicks each month.",
+    },
   ] as BestForEditorialBlock[],
 
   relatedReviews: [

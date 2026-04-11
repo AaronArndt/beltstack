@@ -140,19 +140,19 @@ export const GENERAL_CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small general contractors: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and jobs.",
+      body: "Gusto is modern payroll software for general contractors coordinating superintendents, carpenters, and steady 1099 trades without a long enterprise purchase. Contractor self-service and automated filings keep owner-operated GC offices from living in PDFs. During your first payroll cycles, confirm deposits, job or phase tags on labor (if you track them), and clean separation between employee payroll and subcontractor payments that should not hit wage reports. Model a pay week with multi-job supers, a temp labor spike, and a long-standing framer paid 1099 to validate blended scenarios. If you allocate overhead to jobs, ensure payroll exports still match how your PM software consumes labor dollars. Add another division or benefits when retainage finally clears.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for GC and project-based work. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software GCs pick when QuickBooks already runs job costing, AIA-style billing, or internal P&L by project, and payroll must post labor straight to those jobs. One system reduces arguments between accounting and field about true burdened cost. On trial payrolls, reconcile labor to two active projects and confirm burden, workers’ comp class, and equipment allocation codes behave. Pipe in time from QuickBooks Time or another tracker so field hours, drive time, and overtime do not get retyped after the superintendent approves them. Validate multi-state setups if you chase regional work. Trusted job cost feeds protect estimates on the next negotiated contract.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for GC teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for general contractors who want predictable pricing and full-service taxes while paying large pools of subs and smaller W-2 field staff from one account. Support helps when a lien-sensitive payroll question lands the day draws are due. Use early runs to prove deposit cadence, new-hire reporting, and 1099 readiness for repeat specialty contractors. Stress a payroll with blended overtime across two concurrent jobs to see if cost dimensions you care about survive export. Confirm GL mapping to QuickBooks or another ledger if finance closes by cost code. Flat invoices matter when cash is tied up in retention.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing general contractors that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP belongs on the payroll software short list for general contractors scaling across states, joint ventures, or union-heavy verticals that need serviced compliance depth. Quoted programs bring implementation rigor for complex earning codes and reporting packages owners demand. After go-live, audit tax accounts for every jurisdiction where you temporarily park crews, not just your home office. Validate multi-entity or intercompany labor allocations if you use siloed LLCs per project. If certified payroll is routine, walk sample outputs with ADP before agencies compare them to your certified apps. Compare total serviced cost once those checkpoints pass.",
     },
   ] as BestForEditorialBlock[],
 

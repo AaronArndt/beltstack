@@ -119,15 +119,15 @@ export const CONSULTANTS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Toggl Track",
-      body: "Great when you want straightforward tracking, strong tagging, and flexible reports for client conversations.",
+      body: "Toggl Track helps consultants defend scope with tagging that splits workshops, research, travel, and delivery so client conversations reference data instead of vibes. PDF or CSV exports support audit-friendly backup when stakeholders challenge invoices. During a trial, align tags with your statement of work phases, run a month of actuals against quoted hours, and test billable rates per engagement. Calendar integration reduces missed entries if you live in back-to-back calls. Toggl fits when credibility requires transparent time narratives.",
     },
     {
       heading: "Harvest",
-      body: "Best when you want to go from logged hours and expenses to invoices in the same system.",
+      body: "Harvest moves consultants from approved hours to branded invoices and expense pass-throughs without re-keying line items—critical when retainers mix fixed and variable components. Clients see detailed supporting data if you choose to share it. In a trial, configure recurring retainers, log reimbursable expenses with receipts, and send a test invoice through your payment gateway. Validate multi-currency if you advise internationally. Harvest suits consultants who bill frequently and hate duplicate systems.",
     },
     {
       heading: "Timely",
-      body: "Ideal when you jump between meetings and deep work and prefer automatic capture over manual timers.",
+      body: "Timely appeals to consultants who context-switch constantly and resent starting timers—automatic suggestions rebuild days from calendar, docs, and meetings with editable blocks. Trust and privacy policies should be reviewed with clients if work is sensitive. During a pilot, compare AI-reconstructed totals to a week you track manually in parallel. Tune project mapping rules so internal admin does not bill accidentally. Timely fits high-calendar consultants who still need defensible timesheets.",
     },
   ] as BestForEditorialBlock[],
 

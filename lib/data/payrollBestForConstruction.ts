@@ -148,19 +148,19 @@ export const CONSTRUCTION_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small construction businesses: W-2 and 1099 in one system, contractor portal, automatic tax forms, and no sales cycle. Office managers can run payroll and add subs without calling a rep. It scales as you add employees and job sites.",
+      body: "Gusto is capable payroll software for construction companies that juggle W-2 crews and 1099 subcontractors without wanting a drawn-out enterprise sale. Contractor portals, automated filings, and optional time tools keep field pay from living in side spreadsheets. During your first payrolls, verify certified or prevailing-wage style pay types if you use them, confirm tax deposits and lien-sensitive wage registers look right, and separate employee labor from subcontractor draws in reports. Run a sample week with multi-rate craft workers plus a sub invoice payment to test 1099 readiness and union or fringe deductions if applicable. If you track cost codes, make sure exports still match how your PM software expects labor dollars. Growth into more jobs or benefits layers on without swapping payroll cores.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run estimates, invoicing, and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for construction. Pay crews and subcontractors in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is natural payroll software for construction firms that already cost jobs inside QuickBooks and need payroll labor to post straight to those jobs. Estimates, draws, and actuals stay in one ecosystem, which protects margin on fixed-price work. On initial runs, tie payroll detail to at least two active jobs and confirm burden, workers’ comp class codes, or other mapped items land correctly. Pair the test with QuickBooks Time so field hours, travel, and overtime hit payroll without manual splits. Watch multi-state crews for unemployment and local withholding when sites cross lines. When those reconciliations clear, your job cost reports stay defensible to owners and sureties.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for construction offices that want predictability. Contractor payments and tax forms are included. Works with any accounting software, including QuickBooks.",
+      body: "OnPay is straightforward payroll software for construction back offices that want flat, understandable pricing while still paying subs and employees from one login. Support answers the phone when a foreman’s hours arrive late on Thursday night. Use early payrolls to validate tax deposits, new-hire reporting, and clean 1099 workflows for regular specialty subs. Import or key a crew mix with straight time, overtime, and job notes to ensure costing dimensions survive export to QuickBooks or another GL. If you operate a small equipment yard as a second department, confirm those splits before you trust month-end burden. Predictable fees matter when job cash flow swings week to week.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing construction teams that want scale and optional dedicated support. Multi-state payroll, more employees, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for construction enterprises that need deep multi-state compliance, union or certified payroll support, and optional dedicated service as bondable work scales. Implementation teams can align complex earning codes with how your jobs report to owners and agencies. After go-live, audit deposits and filings for every state where you have transient crews, not just headquarters. Run parallel checks on job or cost-center allocations if finance closes by division or JV. If Davis-Bacon or similar rules apply, walk sample certified payroll registers with your ADP contact before the first agency review. Benchmark total serviced cost once those controls prove out.",
     },
   ] as BestForEditorialBlock[],
 

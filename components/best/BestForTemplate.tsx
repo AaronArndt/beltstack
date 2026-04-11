@@ -14,10 +14,14 @@ import {
 } from "@/lib/design-tokens";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
+import { ComparisonTeaserLinkCard } from "@/components/comparisons/ComparisonTeaserLinkCard";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
 const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+
+const DEFAULT_RELATED_COMPARISON_SUMMARY =
+  "Side-by-side features, pricing, and recommendations to help you choose the right fit.";
 
 export type BestForFeaturedProduct = {
   slug: string;
@@ -45,6 +49,8 @@ export type BestForTableRow = {
 export type BestForEditorialBlock = {
   heading: string;
   body: string;
+  /** When the heading does not match `featuredProducts[].name`, set this to attach logo and links in “Why we recommend these tools”. */
+  matchProductSlug?: string;
 };
 
 export type BestForReviewLink = {
@@ -55,6 +61,12 @@ export type BestForReviewLink = {
 export type BestForComparisonLink = {
   label: string;
   href: string;
+  /** Set by `enrichBestForRelatedComparisons` (server) or manually for hub-style cards */
+  summary?: string;
+  productALogoSrc?: string;
+  productBLogoSrc?: string;
+  productAName?: string;
+  productBName?: string;
 };
 
 export type BestForGuideLink = {
@@ -77,7 +89,7 @@ export type BestForTemplateProps = {
   freshnessText?: string;
   /** Override section sub for "Top picks" (default: payroll copy). */
   topPicksSub?: string;
-  /** Override section sub for "Editorial guidance" (default: payroll copy). */
+  /** Override section sub under "What to look for" (default: payroll-oriented copy). */
   editorialSub?: string;
   /** Override section sub for "Why these picks" (default: payroll copy). */
   whyThesePicksSub?: string;
@@ -101,6 +113,96 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
+  );
+}
+
+function normalizeWhyPickHeadingKey(heading: string): string {
+  return heading
+    .trim()
+    .replace(/\s*\([^)]*\)\s*$/u, "")
+    .trim()
+    .toLowerCase();
+}
+
+function resolveFeaturedProductForWhyPick(
+  block: BestForEditorialBlock,
+  products: BestForFeaturedProduct[]
+): BestForFeaturedProduct | undefined {
+  if (block.matchProductSlug) {
+    return products.find((p) => p.slug === block.matchProductSlug);
+  }
+  const key = normalizeWhyPickHeadingKey(block.heading);
+  return products.find((p) => normalizeWhyPickHeadingKey(p.name) === key);
+}
+
+function WhyThesePickBlock({
+  block,
+  pick,
+}: {
+  block: BestForEditorialBlock;
+  pick: BestForFeaturedProduct | undefined;
+}) {
+  if (pick == null) {
+    return (
+      <div>
+        <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
+        <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{block.body}</p>
+      </div>
+    );
+  }
+
+  return (
+    <article className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+        <Link
+          href={pick.reviewHref}
+          className="flex shrink-0 justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] sm:justify-start"
+          aria-label={`${pick.name} — read full review`}
+        >
+          <img
+            src={pick.logoSrc}
+            alt=""
+            className="h-12 w-auto max-w-[140px] object-contain object-left"
+          />
+        </Link>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="text-lg font-bold text-[#1A2D48]">
+              <Link
+                href={pick.reviewHref}
+                className="rounded hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+              >
+                {pick.name}
+              </Link>
+            </h3>
+            <span className="rounded-md border border-[#10B981]/20 bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981]">
+              {pick.badge}
+            </span>
+            <span className="text-sm font-bold text-[#10B981]">{pick.rating}</span>
+            <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
+              From {pick.startingPrice}
+            </span>
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{block.body}</p>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <Link
+              href={pick.reviewHref}
+              className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+            >
+              Read full review →
+            </Link>
+            <a
+              href={pick.visitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline"
+            >
+              Visit site
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -162,7 +264,7 @@ export function BestForTemplate({
   const breadcrumbLabel = useCase.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const defaultTopPicksSub = `Our top payroll picks for ${breadcrumbLabel.toLowerCase()}.`;
   const defaultEditorialSub = `What to look for when you're choosing payroll as ${breadcrumbLabel.toLowerCase()}.`;
-  const defaultWhySub = `Why we chose these tools for ${breadcrumbLabel.toLowerCase()}.`;
+  const defaultWhySub = `How each pick fits ${breadcrumbLabel.toLowerCase()}: what to validate in a trial, with links to our full reviews and official sites.`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -273,11 +375,11 @@ export function BestForTemplate({
           </div>
         </section>
 
-        {/* ——— 4) Editorial guidance for this audience ——— */}
-        <section id="editorial-guidance" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
+        {/* ——— 4) What to look for ——— */}
+        <section id="what-to-look-for" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={editorialSub ?? defaultEditorialSub}>
-              Editorial guidance for this audience
+              What to look for
             </SectionTitle>
             <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
               {editorialGuidance.map((block, i) => (
@@ -290,18 +392,19 @@ export function BestForTemplate({
           </div>
         </section>
 
-        {/* ——— 5) Why these picks work for this use case ——— */}
+        {/* ——— 5) Why we recommend these tools (editorial + SEO) ——— */}
         <section id="why-these-picks" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={whyThesePicksSub ?? defaultWhySub}>
-              Why these picks work for this use case
+              Why we recommend these tools
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-5 text-[#57534E] text-sm leading-relaxed">
               {whyThesePicks.map((block, i) => (
-                <div key={i}>
-                  <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
-                  <p className="mt-1">{block.body}</p>
-                </div>
+                <WhyThesePickBlock
+                  key={i}
+                  block={block}
+                  pick={resolveFeaturedProductForWhyPick(block, featuredProducts)}
+                />
               ))}
             </div>
           </div>
@@ -334,15 +437,18 @@ export function BestForTemplate({
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <div className="mt-4 flex flex-wrap gap-2.5">
+            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {relatedComparisons.map((item) => (
-                <Link
+                <ComparisonTeaserLinkCard
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
-                >
-                  {item.label}
-                </Link>
+                  label={item.label}
+                  summary={item.summary ?? DEFAULT_RELATED_COMPARISON_SUMMARY}
+                  productALogoSrc={item.productALogoSrc}
+                  productBLogoSrc={item.productBLogoSrc}
+                  productAName={item.productAName}
+                  productBName={item.productBName}
+                />
               ))}
             </div>
           </div>

@@ -140,19 +140,19 @@ export const NONPROFITS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small nonprofits: W-2 and 1099 in one system, automatic tax forms, and built-in time tracking. No sales cycle—executive directors and office managers can run payroll and add contractors without calling a rep. It scales as you add staff and programs.",
+      body: "Gusto is approachable payroll software for nonprofits that pay modest W-2 program staff and 1099 facilitators, trainers, or grant consultants from one modern platform. Transparent pricing helps lean teams adopt full-service payroll without a lengthy vendor committee. During your first payrolls, confirm deposits, any stipend or housing allowance treatments your board approved, and clear separation between employee wages and independent contractor payouts for audit trails. Run a test month with split allocations across two programs if you track functional expense, plus a 1099 speaker honorarium, to see dimensions survive export. If you use departments for admin versus mission, verify payroll detail before the finance committee packet. Scale benefits when you hire a second full-time coordinator.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs or classes for program and grant costing—critical for nonprofit reporting. Pay staff and 1099 in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software nonprofits choose when QuickBooks already tracks funds, grants, and classes, and they need labor posted for reimbursement-ready grant reporting. Program versus management splits depend on payroll landing in the same class structure auditors expect. On trial payrolls, reconcile payroll to at least two grants or programs and confirm salary allocations, fringes, and employer taxes map correctly before you file reimbursement requests. Integrate QuickBooks Time if hourly staff log hours by grant line. Validate multi-state rules if remote workers live outside your incorporation state. Clean allocations reduce pain during single audits and foundation reviews.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for nonprofits that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for nonprofits that want flat, predictable pricing while boards scrutinize every administrative dollar. Support helps when a fiscal sponsor transition or new grant suddenly changes how you classify contractors. Use early payrolls to prove deposits, new-hire reporting, and 1099 workflows for recurring teaching artists or evaluators. Import a payroll with split allocations, PTO payouts, and stipends to confirm taxable versus non-taxable treatment matches policy and donor restrictions. Map GL exports once so fund balances stay tied out after each close. Predictable fees help when donations arrive quarterly but payroll is biweekly.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing nonprofits that want scale and optional dedicated support. Multi-state payroll, more staff, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for larger nonprofits, affiliates, or multisite human-services organizations that need serviced payroll, deeper HR, and multi-state compliance as they scale. Quoted implementations align earning codes with how you report functional expenses to the IRS and major funders. After go-live, audit tax registrations for every state where remote staff work, not just headquarters. Test inter-entity payroll if chapters or subsidiaries share services. If unionized staff or complex fringe benefits appear, review deductions and reporting with ADP during the first quarter. Compare serviced cost to mid-market peers once those controls prove out.",
     },
   ] as BestForEditorialBlock[],
 

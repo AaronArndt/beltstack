@@ -334,6 +334,10 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
   { label: "Best for agencies", href: getProjectManagementBestForUrl("agencies"), description: "Manage clients and projects across accounts." },
   { label: "Best for startups", href: getProjectManagementBestForUrl("startups"), description: "Affordable PM with room to grow." },
   { label: "Best for remote teams", href: getProjectManagementBestForUrl("remote-teams"), description: "Collaboration and visibility for distributed teams." },
+  { label: "All best-for scenarios", href: "/project-management/best-for", description: "Team types, trades, and service businesses." },
+  { label: "Best for HVAC businesses", href: getProjectManagementBestForUrl("hvac"), description: "Installs, service programs, and crew handoffs." },
+  { label: "Best for construction companies", href: getProjectManagementBestForUrl("construction"), description: "Site tasks, subs, and inspections." },
+  { label: "Best for general contractors", href: getProjectManagementBestForUrl("general-contractors"), description: "Multi-trade jobs and closeout." },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

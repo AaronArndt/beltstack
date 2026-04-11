@@ -70,9 +70,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "Budget list growth", body: "Model next year’s contacts from lead generation and referral programs—email pricing is usually list-size sensitive." },
     ],
     whyThesePicks: [
-      { heading: "Mailchimp", body: "Broad integrations and recognizable workflows help part-time marketers publish without reinventing the wheel." },
-      { heading: "ActiveCampaign", body: "When follow-up discipline is the bottleneck, automation pays for itself—if someone maintains it." },
-      { heading: "MailerLite", body: "Combines modern UI and fair pricing for teams that want polish without MAP complexity." },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is the familiar default for small local businesses that need templates, list management, and a huge integration catalog to connect website forms and light CRMs without a dedicated marketing hire. During a trial, send one real campaign to a permissioned segment and verify deliverability with your own domain authentication—not the vendor’s shared defaults. Test a simple automation—post-quote or post-job thank-you—and assign someone to own monthly reviews so broken branches do not silently annoy customers. It fits owner-operators who rotate between dispatch and marketing and need guardrails more than infinite branching logic. Revisit list growth pricing before annual prepay; modest lead-gen success can bump tiers faster than expected.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign earns its place when follow-up discipline—not design tools—is the bottleneck: branching on estimate status, no-shows, or dormant leads needs logic your spreadsheet cannot enforce. Pilot one workflow with real CRM or booking tags, then measure booked jobs influenced, not only email opens. Someone must own automation QA monthly; half-maintained logic damages trust faster than silence. Trial deliverability and unsubscribe handling with your actual sending domain and volume. Choose ActiveCampaign when you will invest admin time to keep sequences aligned with real job milestones.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite combines a modern editor, fair list-based pricing, and enough automation basics for lean offices that want polished emails without marketing automation platform overhead. Use the trial to rebuild one high-performing legacy template and confirm mobile rendering on the devices your customers actually use. Validate form embeds on your website builder and spam-test before the first promo blast. It suits teams that send weekly value content plus a few triggers—anything heavier may push you toward ActiveCampaign later. Budget annual cost against realistic subscriber growth from referrals and lead gen.",
+      },
     ],
     faqItems: [
       { q: "What is the best email marketing software for small service businesses?", a: "Mailchimp or MailerLite are common defaults for simplicity; ActiveCampaign enters when CRM-stage follow-up must be automated." },
@@ -97,9 +106,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "Seasonality planning", body: "Build shoulder-season campaigns during quiet months; scrambling mid-peak wastes margin." },
     ],
     whyThesePicks: [
-      { heading: "ActiveCampaign", body: "Strong when estimates stall and you need branching reminders without manual spreadsheets." },
-      { heading: "Mailchimp", body: "Reliable when creative variety and integrations matter across mixed tool stacks." },
-      { heading: "MailerLite", body: "Keeps admin lift low for subcontract-heavy ops with one marketing coordinator." },
+      {
+        heading: "ActiveCampaign",
+        body: "Contractors drowning in stalled estimates need ActiveCampaign-style branching: different paths for “viewed proposal,” “no answer,” or “job booked” without color-coded spreadsheets. Trial with your real CRM or spreadsheet export tags, then score outcomes on booked jobs and margin, not click rates. Train estimators to respect unsubscribe and SMS consent boundaries when you add texting bridges. Review automation monthly—seasonal offers rot fast when crews change capacity. It wins when follow-up discipline is the constraint, not template beauty.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp fits contractor stacks that mix tools—website builders, lead vendors, lightweight CRMs—where integration breadth matters more than the deepest automation graph. During a trial, connect live quote forms and send segmented campaigns by trade line or neighborhood. Test photo-heavy project showcases on mobile; homeowners scroll galleries between bids. Validate domain authentication before scaling sends; new domains need warm-up discipline. Mailchimp is reliable when creative iteration and partner integrations outrank enterprise MAP complexity.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite keeps admin lift manageable for subcontract-heavy shops with one coordinator juggling schedules, social, and email. Pilot a simple post-job sequence with review links and referral asks—execution beats elaborate journeys you will not maintain. Confirm pricing against list growth from every truck roll and seasonal campaigns. Use the trial to ensure forms and automations are easy enough that coverage does not break when that coordinator is out sick. It is ideal when polish and price matter and logic stays moderate.",
+      },
     ],
     faqItems: [
       { q: "Is email marketing worth it for contractors?", a: "Yes when tied to real milestones—estimate follow-ups, maintenance plans, and referral prompts outperform generic blasts." },
@@ -124,9 +142,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "Attach CRM equipment data when possible", body: "Even basic age-of-system fields improve relevance versus generic blasts." },
     ],
     whyThesePicks: [
-      { heading: "ActiveCampaign", body: "Handles conditional paths when membership status, estimates, or no-shows need different treatments." },
-      { heading: "Klaviyo", body: "Strong when data discipline exists and you want event-driven retention analytics—especially hybrid parts+service models." },
-      { heading: "Mailchimp", body: "Practical default for mixed branches that need dependable creative iteration across regions." },
+      {
+        heading: "ActiveCampaign",
+        body: "HVAC operators lean on ActiveCampaign when membership renewals, no-shows, and seasonal tune-up pushes need different branches based on real job data, not one generic newsletter. Trial flows against live tags from your CRM or scheduling tool—stale tags create embarrassing wrong-season offers. Measure renewal lift and maintenance attach, not vanity opens, during peak weeks. Assign an owner to audit logic before summer and winter surges when mistakes scale. It fits teams ready to maintain automation as seriously as dispatch.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo shines when HVAC brands feed clean events—equipment age, plan type, purchase history—and want retention analytics tied to revenue, not just broadcasts. During a trial, sync only the data you trust; garbage profiles produce creepy or wrong segments. Test win-back and upgrade paths for high-value equipment tiers with controlled send caps. Validate deliverability while scaling promotional volume around shoulder seasons. Choose Klaviyo when data hygiene and ecommerce-style lifecycle thinking already exist in the org.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a practical default for multi-branch HVAC groups that need dependable creative templates and regional sends without standing up a data science practice first. Use the trial to standardize brand modules while letting each branch swap local proof and offers. Connect forms and ad landing pages so new leads enter lists with correct consent flags. Review list-cost growth against planned lead-gen spend. Mailchimp wins when creative throughput and governance across regions matter as much as logic depth.",
+      },
     ],
     faqItems: [
       { q: "What is the best email software for HVAC companies?", a: "Often ActiveCampaign or Mailchimp for operational breadth; Klaviyo when data maturity supports advanced segmentation." },
@@ -151,9 +178,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "List hygiene", body: "Emergency opt-ins may be transactional; segment promotional consent carefully." },
     ],
     whyThesePicks: [
-      { heading: "Mailchimp", body: "Fast publishing when you rotate promo creative frequently across neighborhoods." },
-      { heading: "Brevo", body: "Useful when SMS dispatch updates and email detail should share one operational hub." },
-      { heading: "ActiveCampaign", body: "If CRM tracks commercial accounts vs residential, automation can reflect that split." },
+      {
+        heading: "Mailchimp",
+        body: "Plumbers rotating creative across neighborhoods and service specials benefit from Mailchimp’s fast publishing, templates, and integrations to common local stacks. Trial one educational sequence—freeze warnings, water-heater lifespan tips—with clear CTAs to book non-emergency work. Authenticate domains and test mobile rendering; emergency customers read email on phones in parking lots. Segment promotional consent carefully from transactional job messages to stay compliant. Mailchimp fits when speed and creative variety beat deep logic you will not staff.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo fits plumbing ops that want email storytelling plus SMS for day-before windows or dispatch updates inside one operational hub. During a trial, document TCPA consent separately from email opt-ins and train CSRs on approved scripts. Measure whether SMS reduces no-shows enough to justify per-message cost. Keep transactional texts short; save detail for email. Choose Brevo when multichannel coordination—not email alone—closes the operational loop.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps when your CRM cleanly splits commercial accounts from residential and you want automations that respect different sales cycles and ticket sizes. Pilot dual tracks: property managers versus homeowners should not get identical copy. Tag sources—LSA, organic, referrals—to see which sequences actually book. Review weekly during busy seasons; wrong-branch emails erode emergency trust fast. It belongs in the stack when data segmentation is honest enough to automate against.",
+      },
     ],
     faqItems: [
       { q: "Do plumbers benefit from email if most calls are urgent?", a: "Yes for non-emergency nurture, warranty follow-ups, and maintenance clubs that smooth truck rolls." },
@@ -178,9 +214,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "Cross-sell with data", body: "Tag services (EV, generators, smart panels) so cross-sell emails stay relevant." },
     ],
     whyThesePicks: [
-      { heading: "HubSpot", body: "When combined with HubSpot CRM, it supports longer B2B-style follow-up and sales alignment." },
-      { heading: "ActiveCampaign", body: "Strong deal-task pairing when estimators need reminders after prospects open spec emails." },
-      { heading: "Mailchimp", body: "Reliable for residential-heavy shops wanting fast sends and third-party integrations." },
+      {
+        heading: "HubSpot",
+        body: "Electricians chasing commercial panels, EV installs, and multi-bid projects benefit when HubSpot CRM and marketing email share one timeline—deal stages, opens, and tasks visible to estimators without exporting CSVs. Trial a long-cycle nurture with educational clips on code-aware topics before you ask for the site visit. Validate permissions so residential and commercial pipelines stay separate. HubSpot wins when sales and marketing alignment is the bottleneck, not template speed alone. Budget for seat growth; commercial funnels expand contact counts quietly.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign pairs well with deal-task reminders when estimators need nudges after prospects open spec-heavy emails about panels, generators, or chargers. During pilot, connect real mailbox sends and test whether tasks actually get completed—software cannot replace sales discipline. Segment by buyer type—homeowner versus GC—so technical depth matches the audience. Audit monthly; stale automations send wrong amperage stories to the wrong buyers. Choose it when behavioral triggers must drive follow-up timing.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Residential-heavy electrical shops still win with Mailchimp when the goal is fast sends, seasonal safety tips, and integrations to simpler CRMs or spreadsheets. Use the trial to standardize proof blocks—licenses, insurance, project photos—so every campaign reinforces credibility. Test SMS add-ons only if you will staff replies. Validate list hygiene after canvassing or events; cold uploads hurt deliverability. Mailchimp stays reliable when speed and integrations beat enterprise marketing suites you will not adopt.",
+      },
     ],
     faqItems: [
       { q: "Best email platform for electricians?", a: "Mailchimp or MailerLite for residential simplicity; ActiveCampaign or HubSpot when commercial deal narratives need CRM ties." },
@@ -205,9 +250,18 @@ const SCENARIOS: Record<string, Scenario> = {
       { heading: "Central reporting", body: "Leadership should compare branches on list growth, engagement, and influenced revenue—not vanity sends." },
     ],
     whyThesePicks: [
-      { heading: "Mailchimp", body: "Mature collaboration features and integrations appease mixed marketing maturity across branches." },
-      { heading: "HubSpot", body: "When the org standardizes on HubSpot CRM, marketing governance becomes auditable in one system." },
-      { heading: "ActiveCampaign", body: "Deep automation supports shared playbooks with branch-specific tags if administered well." },
+      {
+        heading: "Mailchimp",
+        body: "Multi-trade home-service brands with uneven marketing maturity across branches often standardize on Mailchimp for template libraries, roles, and integrations everyone can actually use. Trial shared assets—headers, proof modules, legal footers—while allowing local service-area swaps. Measure performance by branch with UTM discipline so strong offices do not hide weak ones. Review list hygiene after acquisitions; duplicate contacts destroy deliverability and inflate costs. Mailchimp fits when governance and accessibility matter more than exotic logic.",
+      },
+      {
+        heading: "HubSpot",
+        body: "HubSpot becomes compelling when the org commits CRM-wide: marketing emails, deal workflows, and reporting auditable for owners and franchisors alike. During pilot, define who can publish versus approve sends to protect brand and compliance. Map multi-trade pipelines so HVAC automations never fire on plumbing prospects by mistake. Validate cost per contact and seat as you consolidate brands. HubSpot wins when you need one accountable system, not parallel silos per trade.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign supports shared playbooks with branch-specific tags when a central admin can maintain logic and prevent rogue automations. Trial one standardized post-job sequence with localized variables for market promos. Require CRM hygiene SLAs; bad tags at one branch poison enterprise reporting. Audit after every acquisition—nothing annoys customers like wrong-trade offers post-merger. Pick ActiveCampaign when you have operational owners who treat automation like a product, not a side project.",
+      },
     ],
     faqItems: [
       { q: "One list or many?", a: "Often a unified list with strict segmentation and subscription centers beats separate silos that duplicate contacts." },

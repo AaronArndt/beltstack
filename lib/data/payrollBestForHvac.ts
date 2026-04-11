@@ -140,19 +140,19 @@ export const HVAC_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small HVAC companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add techs and jobs.",
+      body: "Gusto works well as payroll software for HVAC companies that need W-2 techs and 1099 subcontractors in one self-serve stack with published pricing and no sales gate. Contractor tools, automated tax filing, and built-in time tracking cut duplicate entry when crews are in the field every day. During your first two payroll runs, confirm federal and state deposits are scheduled, overtime matches imported or tracked hours, and employee versus contractor payments stay clearly separated in registers. Stress-test a week with callbacks, a ride-along trainee, and at least one subcontractor payment so withholding, deductions, and 1099 readiness all show up as you expect. If you tag trucks or branches, verify those dimensions on payroll reports before month-end close. The platform scales into benefits and more locations without forcing a payroll migration mid-season.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for HVAC and service calls. Pay techs and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is strong payroll software for HVAC shops that already run estimates, invoicing, and books in QuickBooks and need labor to land on jobs for service-call costing. When payroll posts directly to customers or jobs, gross margin and labor burden reviews stay tied to the work you actually sold. On early runs, reconcile payroll detail to a sample job and confirm labor items map the way your bookkeeper uses them for burden or burden-plus-overhead. Run a pay period with QuickBooks Time (or your integrated time tool) so drive time, job splits, and overtime flow through without re-keying. If crews cross county or state lines, validate local withholding and unemployment setup before busy cooling or heating months. Clean results there mean the stack will hold when volume spikes.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for HVAC teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is dependable payroll software for HVAC contractors who want one transparent plan—flat base plus per person—without hunting for which bundle unlocks full-service tax filing. W-2 techs, seasonal helpers, and 1099 subs still run through the same account with support included when Friday approvals get tight. Use your first payrolls to prove plain-vanilla tax deposits, new-hire reporting for a fresh apprentice, and contractor year-end workflows for regular installers you treat as 1099. Enter or import a mixed crew with regular and overtime hours across residential versus commercial codes to confirm rate rules survive real dispatch patterns. If you use an external time clock, walk one full import cycle so approvals never stall on a mapping surprise. Predictable billing plus clean registers matter most before summer ramp-up.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing HVAC companies that want scale and optional dedicated support. Multi-state payroll, more techs, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP suits payroll software evaluations for HVAC when headcount, states, or operating entities need a heavier compliance bench than a pure self-serve tool comfortably covers. Quotes typically unlock dedicated implementation and account teams that help as franchised or multi-branch mechanical groups grow. After go-live, audit that each work state’s registrations, locals, and deposit cadence match where vans actually earn revenue, not just where the office mails bills. If you allocate labor by location or brand, validate those splits across two pay cycles before trusting P&L by branch. Bring certified payroll, prevailing wage, or union mechanical work into the onboarding scope if those jobs are on your roadmap. Compare total contract cost to mid-market peers once those checkpoints pass.",
     },
   ] as BestForEditorialBlock[],
 

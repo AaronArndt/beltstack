@@ -143,19 +143,19 @@ export const ECOMMERCE_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "QuickBooks Online",
-      body: "QuickBooks Online is the default for many ecommerce businesses: strong inventory features, broad ecommerce integrations, and reporting that scales. It’s familiar to accountants and supports multi-channel sales well.",
+      body: "QuickBooks Online anchors many product brands because it reconciles Shopify, Amazon, Etsy, and POS channels into familiar inventory and COGS workflows accountants already support. Multichannel inventory apps extend native limits when SKU counts explode. During a trial, sync one high-volume sales channel, verify sales tax nexus handling with your advisor, and reconcile payout deposits against processor fees. Test assembly or bundle items if you manufacture kits. Budget for apps when order volume outgrows out-of-the-box automation.",
     },
     {
       heading: "Xero",
-      body: "Xero’s app marketplace gives ecommerce sellers flexibility to connect sales channels, inventory, and shipping. The core accounting is solid and the ecosystem keeps growing.",
+      body: "Xero pairs solid core accounting with a marketplace full of ecommerce, inventory, and fulfillment connectors so you can swap best-of-breed tools as channels change. Real-time bank feeds help match Amazon settlements and Stripe batches quickly. In a trial, connect A2X or similar if you rely on it, map COGS accounts per channel, and run gross margin reports leadership actually reads. Validate multicurrency if you sell internationally. Xero suits brands that want cloud collaboration plus flexible apps.",
     },
     {
       heading: "Zoho Books",
-      body: "Zoho Books offers good inventory and automation at a lower price. It’s a strong value choice for product businesses that don’t need the largest brand names.",
+      body: "Zoho Books delivers inventory, automation, and ecommerce hooks at aggressive pricing—strong for DTC startups scaling SKU counts without enterprise ERP quotes. Workflow rules can tag channel-specific revenue for cleaner reporting. During evaluation, integrate your storefront, stress-test stock adjustments during a mock promotion, and confirm sales tax automation for your states. Pair with Zoho Inventory if native limits bite. Zoho rewards merchants who configure integrations once and let them run.",
     },
     {
       heading: "Odoo",
-      body: "Odoo fits when you want ecommerce, orders, inventory, and accounting in one ERP-style system. Best for businesses ready to standardize on the Odoo platform.",
+      body: "Odoo appeals when you want website, CRM, manufacturing, inventory, and accounting on one modular ERP so data does not fragment across six SaaS bills. Implementation effort is real—you trade integration glue for unified records. In a trial, pilot one subsidiary or brand, configure product variants, and run order-to-cash through shipping and invoicing. Validate hosting, customization costs, and partner support before you bet the whole stack. Odoo fits operators ready to standardize processes, not dabblers.",
     },
   ] as BestForEditorialBlock[],
 

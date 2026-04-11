@@ -114,15 +114,15 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small businesses: no sales cycle, published pricing, and payroll plus benefits and HR in one platform. Setup is fast, tax filing is automatic, and you can add health and 401(k) when you're ready. It scales from a handful of employees to dozens without changing products.",
+      body: "Gusto remains a leading payroll software for small businesses that want published pricing, self-serve signup, and payroll plus benefits-ready HR in one stack without a sales-led purchase. Automatic tax calculation, filing, and deposit scheduling remove most Friday-night guesswork for owners who still run part of the company. During your first two payroll runs, open the tax payments dashboard and confirm federal and state liabilities match your expectations, then spot-check each employee’s withholdings against prior pay stubs if you are migrating mid-year. Add a contractor payment in the same cycle as W-2 wages to verify 1099-style payouts stay out of wage bases and year-end forms look sane. If you plan to offer medical or retirement soon, click through contribution previews so deductions post cleanly before open enrollment. Scaling from a handful of people to a few dozen rarely forces a product swap.",
     },
     {
       heading: "OnPay",
-      body: "OnPay delivers similar ease of use with a simpler pricing structure—one plan, flat base plus per person. There's no tier maze or surprise add-ons for core payroll. Support is included. It's a strong choice for small teams that want value and clarity without the full Gusto feature set.",
+      body: "OnPay is straightforward payroll software for small businesses that prioritize one flat plan—base fee plus per employee—without hunting for which tier unlocks full-service taxes. Phone and chat support are included when a new hire’s direct deposit lands the same day as quarterlies. Use your trial payrolls to confirm automated deposits, new-hire reporting for your state, and any local taxes that apply to your office address or remote workers. Run a payroll with mixed hourly and salaried staff plus a one-off bonus to see overtime and supplemental withholding behave. If you export to accounting software, reconcile the journal entry once so expense accounts map the way your bookkeeper expects. Predictable invoices help tight cash-flow weeks.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "If you already run your books in QuickBooks, QuickBooks Payroll keeps payroll and accounting in one place. No sync or export; payroll posts to the right accounts. Entry-level pricing is competitive, and the workflow is familiar. Best when QuickBooks is central to how you run the business.",
+      body: "QuickBooks Payroll is natural payroll software for small businesses that already live in QuickBooks Online or Desktop and want wages, taxes, and liabilities to post without a middleware sync. Payroll journals hit the same chart of accounts you use for invoicing and bill pay, which keeps month-end faster for owner-operators wearing both hats. On your first runs, trace a payroll transaction into the register and confirm wage expense, employer taxes, and clearing accounts balance to the liability center QuickBooks shows. Pay at least one employee and one contractor (if applicable) to validate W-2 versus 1099 treatment inside the same company file. If you track classes or locations, tag a sample payroll and verify P&L by segment still makes sense. When those reconciliations tie, you have proof the single-ledger story will hold at tax time.",
     },
   ] as BestForEditorialBlock[],
 

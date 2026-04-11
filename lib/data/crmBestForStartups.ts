@@ -152,19 +152,19 @@ export const STARTUPS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "HubSpot",
-      body: "HubSpot is the default for many startups: free CRM, optional Sales and Marketing Hubs, and a clear upgrade path. You can run founder-led pipeline today and add sequences and campaigns later without switching tools.",
+      body: "HubSpot is the default startup CRM when founders need free contact and deal tracking now with room to add sequences, marketing automation, and service inbox later without a painful migration. The platform’s familiarity helps early hires onboard fast. During a trial, instrument one real funnel—from demo request to closed-won—and enforce simple hygiene rules like required next steps. Test startup program pricing if you qualify. Before stacking hubs, confirm which analytics and automation gates actually block your next milestone.",
     },
     {
       heading: "Pipedrive",
-      body: "Pipedrive fits startups that want a simple, sales-focused pipeline from day one. Clear deal stages and activity tracking; less marketing breadth than HubSpot but easier to adopt for teams that only need pipeline and follow-up.",
+      body: "Pipedrive fits lean startups that want a sales pipeline on day one without configuring marketing modules they are not ready to run. Stages, activities, and lightweight reporting keep the team honest about follow-up. In a trial, limit custom fields to what you will truly maintain, then run weekly founder reviews straight from the pipeline view. Integrate email so call notes do not live in silos. Choose Pipedrive when speed and clarity beat all-in-one breadth until you hire marketing.",
     },
     {
       heading: "Zoho CRM",
-      body: "Zoho CRM offers strong value with a free tier and affordable paid plans. Good for startups that want full CRM features and room to scale without the cost of HubSpot or Salesforce. Solid automation and reporting as you grow.",
+      body: "Zoho CRM gives startups enterprise-grade workflow and customization at startup-friendly pricing, helpful when you expect process complexity before you can afford Salesforce. The free tier and Zoho bundle discounts stretch runway. During evaluation, prototype one automation for inbound leads and measure whether tasks actually fire for your team. Test Zoho One economics if you also need mail, books, or support tools. Validate API limits if product-led growth will sync large event volumes.",
     },
     {
       heading: "Monday",
-      body: "Monday suits startups that prefer boards and custom views. You can model your pipeline and client work your way; good fit when you want flexibility and visual workflows as the team and process evolve.",
+      body: "Monday CRM appeals to startups that visualize work as boards—fundraising, pilots, and customer success tasks alongside deals—in one flexible workspace. It adapts as your GTM motion shifts from founder-led to team selling. In a trial, mirror your current operating cadence (weekly reviews, OKRs, customer onboarding) and see if automations reduce Slack noise. Check permissions as contractors join. Pick Monday when project delivery and sales motion are intertwined, not sequential handoffs only.",
     },
   ] as BestForEditorialBlock[],
 

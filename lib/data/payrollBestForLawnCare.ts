@@ -140,19 +140,19 @@ export const LAWN_CARE_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small lawn care companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add subs without calling a rep. It scales as you add crews and routes.",
+      body: "Gusto is dependable payroll software for lawn care companies that run tight routes with W-2 mowers and occasional 1099 aeration or irrigation partners. Transparent pricing and fast setup help when spring renewals flood the schedule overnight. During your first payrolls, verify deposits, overtime when makeup Saturdays stack after rain, and seasonal onboarding or offboarding that does not break tax profiles mid-year. Run a test with per-stop bonuses, chemical reimbursement stipends, and a subcontractor aeration payout to confirm classifications stay defensible. If you separate maintenance from fertilization departments, check payroll tags before exporting to accounting. Add benefits for office dispatchers while crews still flex seasonally.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs for job costing—critical for lawn care and route-based work. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software lawn care operators choose when QuickBooks already tracks route density, customer profitability, or job costing, and they need labor mapped to those records. Route-level margin improves when payroll posts without manual spreadsheets. On trial payrolls, tie labor to a few representative residential routes and a commercial contract to confirm hours and burden land on the right jobs or classes. Integrate QuickBooks Time or route software exports so crew clocks, travel, and shop time feed payroll accurately. Validate local taxes if you serve multiple municipalities from one yard. Trusted numbers keep renewal pricing disciplined.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for lawn care teams that want predictability. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for lawn care teams that want one flat plan covering spikes in summer headcount and lean winter crews without renegotiating tiers. Support answers when a crew lead’s PTO hits the same week as a fertilizer push. Use early payrolls to prove deposits, new-hire reporting for rapid spring hiring, and 1099 payouts for specialty partners. Import a payroll with split crews across two trucks and blended overtime from long July days to stress any cost dimensions you care about. Map GL lines once if QuickBooks receives entries so route classes stay intact. Predictable fees help when chemical bills arrive before monthly client charges.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing lawn care companies that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to quote for lawn care enterprises adding branches, franchise territories, or multi-state fertilization programs that need serviced payroll muscle. Implementation aligns earning codes with how you report branch EBITDA. After go-live, audit tax setups for every state where seasonal expansion crews actually work, not just headquarters. Test multi-location labor reporting if you separate residential from commercial P&L. If you acquire another brand, validate parallel FEIN payrolls and intercompany allocations the way auditors will ask. Compare serviced pricing after those checkpoints pass.",
     },
   ] as BestForEditorialBlock[],
 

@@ -114,15 +114,15 @@ export const NINE_CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for 1099 contractor payroll: contractor payments and 1099-NEC are built in, the contractor portal lets subs access stubs and docs, and there's no extra fee for 1099 e-file. You can run W-2 and 1099 in one place with published pricing.",
+      body: "Gusto is strong payroll software for businesses that primarily pay 1099 contractors yet still need occasional W-2 staff in the same compliant workspace. Contractor portals, documented payment history, and bundled 1099-NEC e-file reduce the January scramble when subs ask for duplicates. During your first payment runs, schedule a contractor payout alongside any W-2 payroll and confirm tax withholding only applies where it should while 1099 amounts stay out of wage tax liabilities. Open the year-end checklist early and run a dummy contractor through W-9 capture so TIN matching and box totals look right before you have dozens of forms. If you reimburse pass-through expenses, verify those lines do not inflate reportable nonemployee compensation incorrectly on Form 1099-NEC. Add benefits modules later without migrating contractor workflows.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers strong 1099 support with flat pricing—one plan, 1099 runs and filing included. Contractor portal and support are part of the package. A solid choice if you want value and simplicity without the full Gusto feature set.",
+      body: "OnPay is straightforward payroll software for 1099-heavy companies that want flat monthly pricing with contractor payments, W-9 tracking, and 1099 filing included in the same plan you use for payroll taxes. Support helps when a sub disputes how a bonus was classified mid-year. Use trial cycles to prove contractor payments post cleanly, federal and state obligations for any W-2 employees still calculate, and 1099 batches export without surprise per-form fees. Pay the same person as both employee and contractor in separate roles only if your policy truly supports it, and watch registers during the test to catch misclassification early. If you sync to accounting software, reconcile one month of contractor detail to confirm expense accounts map predictably. Predictable billing matters when contractor counts swing monthly.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "If you run your books in QuickBooks, QuickBooks Payroll keeps 1099 payments and labor cost in the same system. Contractor payments post to jobs for job costing. Confirm 1099 e-file is included on your plan so year-end is straightforward.",
+      body: "QuickBooks Payroll is natural payroll software for 1099 workflows when QuickBooks already carries your jobs, COGS, and vendor spend, and you want contractor checks to land on the right projects for costing. One ledger keeps subcontractor labor visible next to materials without manual journals. On your first contractor payments, post to a sample job and confirm the expense hits the subcontractor or labor account your estimates expect, then verify any 1099 tracking flags QuickBooks uses for year-end. If you also run W-2 payroll, process both in the same test month and confirm liabilities segregate correctly in the payroll center. Double-check whether your subscription tier includes 1099 e-file so January is not a last-minute upgrade. When job reports tie, you have proof the integration will survive audit questions.",
     },
   ] as BestForEditorialBlock[],
 

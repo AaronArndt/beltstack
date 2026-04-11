@@ -1,5 +1,6 @@
 import { getAccountingReviewUrl, getAccountingCompareUrl, getAccountingBestForUrl, getAccountingAlternativeUrl } from "@/lib/routes";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
+import { ACCOUNTING_TRADE_SCENARIO_NAV_LINKS } from "@/lib/data/accountingBestForTrades";
 
 export function getAccountingCompareUrlFromSlug(slug: string): string {
   return `/accounting/compare/${slug}`;
@@ -176,6 +177,7 @@ const RELEVANT_LINKS = [
   { label: "Best for contractors", href: getAccountingBestForUrl("contractors") },
   { label: "Best for ecommerce", href: getAccountingBestForUrl("ecommerce") },
   { label: "Best for agencies", href: getAccountingBestForUrl("agencies") },
+  ...ACCOUNTING_TRADE_SCENARIO_NAV_LINKS,
 ];
 
 function buildComparison(

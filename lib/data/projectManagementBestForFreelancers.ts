@@ -134,15 +134,15 @@ export const FREELANCERS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Trello",
-      body: "Trello is our top pick for freelancers who want the simplest boards: create cards, move them through columns, add due dates and checklists. Free tier is generous; no learning curve. When to choose Trello: you want lightweight Kanban and don't need docs or complex views. See our Trello review and ClickUp vs Trello comparison.",
+      body: "Trello is our top pick for freelancers who want dead-simple Kanban—cards, lists, due dates, and checklists—without configuring a full project management methodology. The free tier stays useful for solo operators juggling a handful of clients at once. During a trial, map one real engagement from proposal to delivery and attach files you actually reference. Power-Ups matter if you need calendar sync or time tracking; test one so you know the limits before you pay. Trello wins when frictionless updates beat fancy reporting. See our Trello review and ClickUp vs Trello comparison.",
     },
     {
       heading: "Notion",
-      body: "Notion fits freelancers who want docs, notes, and tasks in one place. You can keep client briefs, project notes, and to-dos in databases and switch between list and board views. Free tier is solid for solo use. When to choose Notion: you live in docs and want lightweight task views. See our Notion review and Notion vs Trello comparison.",
+      body: "Notion suits freelancers who live in writing—SOWs, research, content calendars—and want databases that double as lightweight PM views beside those docs. You can switch between board, list, and calendar without exporting to another app. In a trial, build a client hub page with linked tasks and meeting notes, then share it view-only with a customer to test collaboration. Confirm offline or mobile behavior if you work from the field. Notion shines when knowledge and tasks should stay adjacent, not siloed. See our Notion review and Notion vs Trello comparison.",
     },
     {
       heading: "ClickUp",
-      body: "ClickUp offers tasks, docs, goals, and multiple views in one tool. Free tier is strong; you get more structure than Trello without enterprise complexity. Good if you outgrow Trello but don't need the doc-centric model of Notion. When to choose ClickUp: you want one tool that can do more as you grow. See our ClickUp review and Asana vs ClickUp comparison.",
+      body: "ClickUp bundles tasks, docs, goals, and multiple views for freelancers who outgrow bare boards but are not ready to pay for several SaaS tools. Automations and templates can standardize recurring client onboarding if you invest setup time. During evaluation, create one template project, duplicate it for a second client, and measure how long updates take on mobile. Tune notification rules early—ClickUp’s power can become noise. See our ClickUp review and Asana vs ClickUp comparison.",
     },
   ] as BestForEditorialBlock[],
 

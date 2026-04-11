@@ -579,9 +579,24 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
     description: "FSM tools that give small shops modern scheduling and invoicing without enterprise complexity.",
   },
   {
-    label: "Best for contractors",
+    label: "Best for general contractors",
     href: getFieldServiceBestForUrl("contractors"),
-    description: "All-in-one field service software for general contractors and mixed trade crews.",
+    description: "All-in-one field service software for general contractors and mixed-trade crews.",
+  },
+  {
+    label: "Best for landscaping",
+    href: getFieldServiceBestForUrl("landscaping"),
+    description: "Routes, recurring maintenance, installs, and crew scheduling for landscaping companies.",
+  },
+  {
+    label: "Best for pool service",
+    href: getFieldServiceBestForUrl("pool-service"),
+    description: "Weekly routes, service notes, and repair jobs for pool service operators.",
+  },
+  {
+    label: "All best-for scenarios",
+    href: "/field-service/best-for",
+    description: "Browse every trade and company-type guide: roofing, painting, movers, property management, and more.",
   },
 ];
 

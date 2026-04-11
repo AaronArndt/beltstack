@@ -71,17 +71,35 @@ export const FIELD_SERVICE_SCENARIO_LINKS = [
   { label: "Best for HVAC", href: getFieldServiceBestForUrl("hvac") },
   { label: "Best for electricians", href: getFieldServiceBestForUrl("electricians") },
   { label: "Best for small business", href: getFieldServiceBestForUrl("small-business") },
-  { label: "Best for contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for general contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Best for painting", href: getFieldServiceBestForUrl("painting") },
+  { label: "Best for roofing", href: getFieldServiceBestForUrl("roofing") },
+  { label: "Best for landscaping", href: getFieldServiceBestForUrl("landscaping") },
+  { label: "Best for pool service", href: getFieldServiceBestForUrl("pool-service") },
+  { label: "All best-for scenarios →", href: "/field-service/best-for" },
 ] as const;
 
 /**
  * Trade / company-type entry points (identity navigation). Only routes that exist under /field-service/best-for/.
  */
 export const FIELD_SERVICE_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
-  { label: "HVAC companies", href: getFieldServiceBestForUrl("hvac") },
-  { label: "Plumbing businesses", href: getFieldServiceBestForUrl("plumbing") },
-  { label: "Electrical contractors", href: getFieldServiceBestForUrl("electricians") },
-  { label: "General & mixed contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "HVAC businesses", href: getFieldServiceBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getFieldServiceBestForUrl("plumbing") },
+  { label: "Electricians", href: getFieldServiceBestForUrl("electricians") },
+  { label: "General contractors", href: getFieldServiceBestForUrl("contractors") },
+  { label: "Painting contractors", href: getFieldServiceBestForUrl("painting") },
+  { label: "Roofing companies", href: getFieldServiceBestForUrl("roofing") },
+  { label: "Construction companies", href: getFieldServiceBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getFieldServiceBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getFieldServiceBestForUrl("handyman") },
+  { label: "Landscaping companies", href: getFieldServiceBestForUrl("landscaping") },
+  { label: "Property management", href: getFieldServiceBestForUrl("property-management") },
+  { label: "Pest control", href: getFieldServiceBestForUrl("pest-control") },
+  { label: "Pool service", href: getFieldServiceBestForUrl("pool-service") },
+  { label: "Junk removal", href: getFieldServiceBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getFieldServiceBestForUrl("moving") },
+  { label: "Small business", href: getFieldServiceBestForUrl("small-business") },
+  { label: "All use cases", href: "/field-service/best-for" },
 ];
 
 /** Optional: single group label for business-type section */
@@ -124,11 +142,11 @@ export const FIELD_SERVICE_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
     ],
   },
   {
-    title: "Best for contractors coordinating jobs and crews",
+    title: "Best for general contractors coordinating jobs and crews",
     body:
       "General and mixed-trade contractors need one place for jobs, change orders, estimates, and customer communication—without losing visibility across crews. The right fit is less about a single trade and more about workflow: estimates to invoice, document storage, and how subs and techs get updates in the field.",
     links: [
-      { label: "Best field service software for contractors →", href: getFieldServiceBestForUrl("contractors") },
+      { label: "Best field service software for general contractors →", href: getFieldServiceBestForUrl("contractors") },
       { label: "Connecteam vs Housecall Pro (workforce vs FSM) →", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
     ],
   },

@@ -152,19 +152,19 @@ export const FREELANCERS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "HubSpot",
-      body: "HubSpot's free CRM is our default for freelancers: no cost, clear pipeline, and you can add Sales or Marketing Hub when you need sequences and campaigns. Easy to adopt and scales without switching tools.",
+      body: "HubSpot’s free CRM tier is our default for freelancers who need contact and deal tracking without another subscription line item, with a familiar upgrade path into sequences and campaigns when marketing matures. You can centralize leads from your website, referrals, and outbound in one pipeline instead of scattered spreadsheets. During a trial, import a small real list, build two deal stages you actually use, and log a week of activities to see if reminders and tasks stick. Test email tracking and meeting links if client conversations live in Gmail or Outlook. Before paying, confirm which automation and reporting features unlock on the plan you expect to need in six months.",
     },
     {
       heading: "Zoho CRM",
-      body: "Zoho CRM gives you a full CRM and free tier so you get pipeline, automation, and reporting at low or no cost. Strong value for freelancers who want more features without HubSpot-level spend.",
+      body: "Zoho CRM delivers full-featured customer relationship management with a credible free tier and affordable paid jumps—strong when you want workflows, blueprints, and reporting depth without HubSpot-level spend. Freelancers who already use Zoho Books or Mail gain extra synergy when contacts and invoices stay related. In a trial, configure one automation (for example follow-up tasks when a stage changes) and run sample leads through it. Validate mobile access if you sell on the road. Check how email integration behaves with your provider so logging conversations is not manual drudgery.",
     },
     {
       heading: "Monday",
-      body: "Monday fits freelancers who prefer boards and custom views over a traditional pipeline. You can model clients and projects your way; good if you like flexibility and visual workflows.",
+      body: "Monday CRM works well for freelancers who think in boards and timelines rather than rigid sales stages, letting you model retainers, deliverables, and prospects in one visual workspace. Custom columns and views adapt when you juggle multiple clients with different contract shapes. During evaluation, recreate one active client portfolio as a board and test @mentions with a collaborator if you have a VA. Confirm whether you need the CRM-specific product versus a general workspace so reporting matches how you sell. Export a sample view to see if your accountant or partner can follow your pipeline.",
     },
     {
       heading: "Keap",
-      body: "Keap combines CRM and marketing automation so you can run email campaigns, nurture leads, and track deals in one place. Best when you're ready for automation and don't want to manage separate tools.",
+      body: "Keap (formerly Infusionsoft) combines CRM with serious marketing automation—tags, campaigns, and follow-up sequences—when your freelance business is ready to nurture leads beyond manual reminders. It fits coaches, agencies, and consultants who sell repeatable programs and want one system for email plus pipeline. In a trial, build a simple nurture path for a single offer and send test contacts through it, watching how tasks and opportunities update. Validate payment or appointment integrations if you sell low-ticket workshops or discovery calls. Budget time for setup; the payoff is fewer dropped follow-ups once automations are live.",
     },
   ] as BestForEditorialBlock[],
 

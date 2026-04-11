@@ -134,15 +134,15 @@ export const REMOTE_TEAMS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Asana",
-      body: "Asana is our top pick for most remote teams: clear structure, multiple views, and strong collaboration. Status updates and comments keep everyone aligned without constant meetings. When to choose Asana: you want the best balance of structure and ease of use. See our Asana review and Asana vs ClickUp comparison.",
+      body: "Asana is our top pick for distributed teams that need shared clarity—assignees, due dates, dependencies, and status updates—without defaulting to endless video standups. Comments and project briefs keep context attached to work across time zones. During a trial, run a two-sprint pilot with teams in at least two regions and measure whether overdue tasks surface in reporting. Integrate Slack or Teams for digest notifications instead of per-task spam. Validate workload views if managers worry about uneven assignments. See our Asana review and Asana vs ClickUp comparison.",
     },
     {
       heading: "ClickUp",
-      body: "ClickUp fits remote teams that want tasks and docs in one place. Comments and @mentions keep context in the tool; multiple views support different workflows. When to choose ClickUp: you want all-in-one value and flexibility. See our ClickUp review and ClickUp vs Trello comparison.",
+      body: "ClickUp fits remote teams that want tasks, wikis, and meeting notes co-located so async handoffs do not scatter across chat threads. Multiple views let engineers, designers, and ops each work in their preferred layout inside one subscription. In a trial, enable guest access for a partner agency and confirm permissions protect sensitive lists. Test mobile capture for field or travel-heavy roles. Tune automations so handoffs create the right notifications in each timezone. See our ClickUp review and ClickUp vs Trello comparison.",
     },
     {
       heading: "Monday",
-      body: "Monday fits remote teams that want highly customizable boards and workflows. Strong automation and visibility; good when you want to model work exactly your way. When to choose Monday: you prefer boards and custom fields and are okay with paid-from-day-one. See our Monday review and Monday vs Wrike comparison.",
+      body: "Monday.com helps remote teams that think visually—color-coded boards, mirrored columns, and automations that escalate stuck work to managers in Slack. It shines when departments share one operating system for requests and delivery. During evaluation, build a cross-functional board (support to product, for example) and require updates for one month before judging adoption. Check timezone-friendly deadline fields and calendar integrations. Budget fairly for seats and automations as you scale. See our Monday review and Monday vs Wrike comparison.",
     },
   ] as BestForEditorialBlock[],
 

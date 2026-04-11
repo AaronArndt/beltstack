@@ -18,6 +18,8 @@ const SCENARIO_GUIDE: Record<string, string> = {
   hvac: "/payroll/guides/payroll-for-hvac",
   "cleaning-business": "/payroll/guides/payroll-for-contractors",
   roofing: "/payroll/guides/payroll-for-construction-companies",
+  "junk-removal": "/payroll/guides/payroll-for-contractors",
+  moving: "/payroll/guides/payroll-for-contractors",
 };
 
 export default async function BestForScenarioPage({ params }: Props) {

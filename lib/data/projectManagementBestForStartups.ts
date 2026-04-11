@@ -134,15 +134,15 @@ export const STARTUPS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "ClickUp",
-      body: "ClickUp is our top pick for startups that want one tool for tasks, docs, and goals. Free tier is strong; workspaces and views scale as the team grows. When to choose ClickUp: you want maximum flexibility and don't mind a bit of learning curve. See our ClickUp review and Asana vs ClickUp comparison.",
+      body: "ClickUp is our top pick for startups that want one project management workspace for tasks, docs, goals, and whiteboards so the stack does not fragment as headcount grows. The free tier is unusually deep, which helps pre-seed teams model real workflows before they pay. During a trial, stand up one sprint board, one doc hub, and one automation (status change to Slack) to see if the team actually lives in the tool. Watch notification noise—tune defaults so engineers are not spammed. See our ClickUp review and Asana vs ClickUp comparison.",
     },
     {
       heading: "Notion",
-      body: "Notion fits startups that live in docs and want lightweight task views. Wikis, specs, and project databases in one place; free tier is generous. When to choose Notion: documentation and knowledge sharing are as important as task tracking. See our Notion review and Notion vs Trello comparison.",
+      body: "Notion fits startups where specs, fundraising memos, and task databases should live together instead of splitting between wikis and a separate PM app. Boards and relational databases flex as your process changes weekly in early stage. In a trial, migrate one critical doc set (product roadmap or hiring pipeline) and test comments with async teammates across time zones. Validate permissions before inviting investors or advisors view-only. If tasks need heavy dependencies and reporting, pair Notion with a lighter task tracker or accept its limits. See our Notion review and Notion vs Trello comparison.",
     },
     {
       heading: "Asana",
-      body: "Asana fits startups that want clear structure without the breadth of ClickUp or the doc-centric model of Notion. Projects and tasks are easy to adopt; free tier works for small teams. When to choose Asana: you want the simplest path to structured project management. See our Asana review and Asana vs ClickUp comparison.",
+      body: "Asana gives startups an opinionated, easy-to-adopt structure—projects, sections, assignees, and due dates—without the configuration rabbit holes of all-in-one suites. The free tier supports small teams through early customer delivery. During evaluation, run a real two-week milestone with dependencies in timeline view if available on your tier. Test integrations with GitHub or Figma if engineering and design need visibility. Choose Asana when you want disciplined execution more than infinite customization. See our Asana review and Asana vs ClickUp comparison.",
     },
   ] as BestForEditorialBlock[],
 

@@ -144,19 +144,19 @@ export const LANDSCAPING_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most small landscaping companies: W-2 and 1099 in one system, contractor portal, automatic tax forms, and built-in time tracking. No sales cycle—owners and office managers can run payroll and add seasonal hires or subs without calling a rep. It scales as you add crews and properties.",
+      body: "Gusto is solid payroll software for landscaping companies that blend seasonal W-2 crews, year-round leads, and 1099 subs for specialty installs or snow overflow. Self-serve onboarding helps when spring hiring spikes before mulch season. During your first payrolls, confirm deposits, overtime on long daylight routes, and easy add-remove for temps without breaking tax accounts. Run a test cycle with maintenance contracts, a one-off hardscape partner paid 1099, and per-job bonuses to see how reimbursements and class splits behave. If you tag crews by route or branch, scan payroll detail before pushing to job costing. You can layer benefits for office staff while field headcount still flexes.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you run invoicing and books in QuickBooks, QuickBooks Payroll keeps payroll and labor cost in the same system. Labor posts to jobs or properties for costing—useful for landscaping and lawn care. Pay crews and 1099 subs in one place. Best if QuickBooks is already your central tool.",
+      body: "QuickBooks Payroll is payroll software landscaping operators pick when QuickBooks already tracks properties, phases, or jobs, and they need crew labor to post for gross margin by account. One ledger keeps maintenance recurring revenue honest against direct labor. On trial payrolls, reconcile payroll to a few active contracts and a large spring clean job to confirm hours land on the right customers or jobs. Sync QuickBooks Time or another tracker so drive time, shop time, and crew lead time do not get retyped. Validate locals if municipalities layer occupational taxes on top of state withholding. Clean feeds protect pricing when you renew HOA bids.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers straightforward payroll for W-2 and 1099 at a flat price. One plan, no tier maze—good for landscaping teams that want predictability and simple seasonal add/remove. Contractor payments and tax forms are included. Works with any accounting software.",
+      body: "OnPay is payroll software for landscaping businesses that want flat, understandable pricing while crews grow and shrink with the seasons. Support helps when a late freeze compresses installs into the same pay week as overtime snow pushes. Use early payrolls to prove deposits, new-hire reporting for H-2A adjacent workflows if you hire domestically, and 1099 payouts for irrigation or lighting partners. Import hours with Saturday makeups and split crews across two branches to stress any dimensions you export. Map accounting once if QuickBooks is downstream so class tracking survives. Predictable bills matter when fertilizer invoices hit before client autopays clear.",
     },
     {
       heading: "ADP",
-      body: "ADP fits growing landscaping companies that want scale and optional dedicated support. Multi-state payroll, more crews, and a full-service relationship when you need it. Custom pricing—get a quote and compare to Gusto or OnPay at your headcount.",
+      body: "ADP is payroll software to evaluate for landscaping enterprises with multi-state routes, nursery divisions, or snow operations that need serviced payroll depth as they scale. Quoted programs align complex earning codes with how you report branch P&L to investors or franchisors. After go-live, audit tax registrations for every state where seasonal crews camp during large municipal contracts, not just your yard address. Test multi-location labor splits if you separate design-build from maintenance books. If union municipal work or prevailing wage appears, review certified payroll samples with ADP before agencies ask. Benchmark total serviced cost after those proofs.",
     },
   ] as BestForEditorialBlock[],
 

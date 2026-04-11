@@ -114,15 +114,15 @@ export const CONTRACTORS_PAGE_PROPS = {
   whyThesePicks: [
     {
       heading: "Gusto",
-      body: "Gusto is our top pick for most contractor businesses: transparent pricing, strong 1099 support, contractor portal, and no lock-in to one accounting system. It fits mixed W-2/1099 crews and scales from a few people to dozens.",
+      body: "Gusto is capable payroll software for contractors who mix W-2 crews and 1099 trade partners and want contractor self-service without committing to a single accounting platform. Published pricing and fast onboarding help small GCs and trade shops stand up compliant payroll between jobs. During your first payrolls, confirm federal and state deposits, validate that subcontractor payments never inflate wage tax bases, and run at least one dual-type cycle with both employee wages and 1099 payouts on the same approval path. If you track cost codes or locations, export payroll detail and confirm dimensions still align with how your PM or accountant allocates labor. Test new-hire reporting for a fresh apprentice and year-end 1099 prep for a repeat sub before busy season. The stack scales into benefits when you promote leads to salary.",
     },
     {
       heading: "QuickBooks Payroll",
-      body: "When you live in QuickBooks for estimates, invoicing, and job costing, QuickBooks Payroll keeps payroll and labor cost in the same system. No sync or export—payroll posts to the right accounts and jobs. Best for contractors who already rely on QuickBooks.",
+      body: "QuickBooks Payroll is purpose-built payroll software for contractors who already estimate, bill, and job-cost inside QuickBooks and need labor dollars on the correct jobs automatically. Eliminating CSV bridges means supers, accountants, and owners argue less about true burdened cost. On trial payrolls, post payroll against two active jobs and confirm labor, burden, workers’ comp class mappings, and any equipment allocations hit the accounts your job reports expect. Flow approved hours from QuickBooks Time or another integrated tracker so drive time and overtime are not retyped after field approval. Validate multi-state tax setups if crews earn revenue across lines. When registers tie to job profitability, you have evidence the stack will survive your next bond or credit review.",
     },
     {
       heading: "OnPay",
-      body: "OnPay offers similar contractor-friendly features to Gusto with a simpler pricing structure: one plan, flat base plus per person. 1099 runs and support are included. A solid choice if you want value and clarity without the full Gusto feature set.",
+      body: "OnPay is practical payroll software for contractors who want one transparent plan with flat base-plus-employee pricing while still paying large 1099 pools alongside smaller W-2 teams. Support is included when a lien-sensitive payroll question hits the same week as a draw deadline. Use early payrolls to prove automated deposits, clean contractor versus employee registers, and included 1099 e-file workflows for repeat subs. Import a pay period with blended overtime across two jobs to stress any dimensions you export to QuickBooks or another GL. Map accounts once with your bookkeeper so class tracking survives payroll journals. Predictable fees help when job deposits and supplier invoices do not align with payroll Fridays.",
     },
   ] as BestForEditorialBlock[],
 

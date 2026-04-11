@@ -47,15 +47,39 @@ export const INVENTORY_COMPARISON_ROWS: ComparisonTableRow[] = [
 export const INVENTORY_SCENARIO_LINKS = [
   { label: "Best inventory software (roundup)", href: "/inventory/best-inventory-software" },
   { label: "Compare inventory software", href: getInventoryCompareUrl() },
+  { label: "All best-for scenarios", href: "/inventory/best-for" },
   { label: "Small business", href: getInventoryBestForUrl("small-business") },
   { label: "Ecommerce business", href: getInventoryBestForUrl("ecommerce") },
   { label: "Retail", href: getInventoryBestForUrl("retail") },
   { label: "Manufacturing", href: getInventoryBestForUrl("manufacturing") },
   { label: "Warehousing", href: getInventoryBestForUrl("warehouses") },
+  { label: "HVAC businesses", href: getInventoryBestForUrl("hvac") },
+  { label: "General contractors", href: getInventoryBestForUrl("general-contractors") },
+  { label: "Construction companies", href: getInventoryBestForUrl("construction") },
+  { label: "Property management", href: getInventoryBestForUrl("property-management") },
 ] as const;
 
-/** Inventory by business type (trade-style links). */
-export const INVENTORY_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
+/** Trade-specific best-for guides (inventory for trucks, job sites, and shops). */
+export const INVENTORY_TRADE_BEST_FOR_LINKS: { label: string; href: string }[] = [
+  { label: "HVAC businesses", href: getInventoryBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getInventoryBestForUrl("plumbing") },
+  { label: "Electricians", href: getInventoryBestForUrl("electricians") },
+  { label: "Painting contractors", href: getInventoryBestForUrl("painting") },
+  { label: "Roofing companies", href: getInventoryBestForUrl("roofing") },
+  { label: "General contractors", href: getInventoryBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getInventoryBestForUrl("landscaping") },
+  { label: "Construction companies", href: getInventoryBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getInventoryBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getInventoryBestForUrl("handyman") },
+  { label: "Property management companies", href: getInventoryBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getInventoryBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getInventoryBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getInventoryBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getInventoryBestForUrl("moving") },
+];
+
+/** Inventory by operation type (channels, BOM depth, warehouse scale). */
+export const INVENTORY_OPERATION_BEST_FOR_LINKS: { label: string; href: string }[] = [
   { label: "Small businesses", href: getInventoryBestForUrl("small-business") },
   { label: "Retail stores", href: getInventoryBestForUrl("retail") },
   { label: "Ecommerce companies", href: getInventoryBestForUrl("ecommerce") },
@@ -63,17 +87,27 @@ export const INVENTORY_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
   { label: "Warehouse operations", href: getInventoryBestForUrl("warehouses") },
 ];
 
+/** Flat list for components that expect a single array (trades, then operations, then hub). */
+export const INVENTORY_BY_BUSINESS_TYPE: { label: string; href: string }[] = [
+  ...INVENTORY_TRADE_BEST_FOR_LINKS,
+  ...INVENTORY_OPERATION_BEST_FOR_LINKS,
+  { label: "All best-for scenarios", href: "/inventory/best-for" },
+];
+
 export const INVENTORY_BY_BUSINESS_TYPE_GROUPS: {
   groupLabel: string;
   links: { label: string; href: string }[];
 }[] = [
   {
-    groupLabel: "Browse by operation type",
-    links: INVENTORY_BY_BUSINESS_TYPE.slice(0, 3),
+    groupLabel: "Browse by trade",
+    links: INVENTORY_TRADE_BEST_FOR_LINKS,
   },
   {
-    groupLabel: "More operation types",
-    links: INVENTORY_BY_BUSINESS_TYPE.slice(3),
+    groupLabel: "Browse by operation type",
+    links: [
+      ...INVENTORY_OPERATION_BEST_FOR_LINKS,
+      { label: "All best-for scenarios", href: "/inventory/best-for" },
+    ],
   },
 ];
 
