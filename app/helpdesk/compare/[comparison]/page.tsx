@@ -4,6 +4,7 @@ import {
   getHelpdeskComparisonSlugs,
   getHelpdeskCompareUrlFromSlug,
 } from "@/lib/data/helpdeskComparisons";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -80,11 +81,15 @@ const COMPARISON_DESCRIPTIONS: Record<string, string> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { comparison } = await params;
   const data = getHelpdeskComparison(comparison);
-  if (data == null) return { title: "Compare Helpdesk Software" };
-  const year = new Date().getFullYear();
-  const title = `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack Comparison`;
+  if (data == null) return { title: "Helpdesk Software Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
   const description =
     COMPARISON_DESCRIPTIONS[comparison] ??
-    `Compare ${data.productA.name} vs ${data.productB.name}. See pricing, features, pros and cons, and which helpdesk is best for your team.`;
-  return { title, description };
+    `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for support teams.`;
+  return siteMetadata({
+    path: getHelpdeskCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description,
+  });
 }

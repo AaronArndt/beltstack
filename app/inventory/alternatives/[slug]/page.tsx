@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { getInventoryAlternativesPage, getInventoryAlternativesSlugs } from "@/lib/data/inventoryAlternatives";
 import { AlternativesTemplate } from "@/components/alternatives/AlternativesTemplate";
-import { SITE_URL } from "@/lib/site";
 import { getInventoryAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,16 +17,14 @@ export default async function InventoryAlternativesPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pageProps = getInventoryAlternativesPage(slug);
-  if (!pageProps) return { title: "Inventory Management Software Alternatives" };
-  const year = new Date().getFullYear();
-  const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Explore the best ${pageProps.productName} alternatives for inventory management in ${year}. Compare features, pricing, and who each option suits—with links to full reviews and comparisons.`;
-  const url = `${SITE_URL}${getInventoryAlternativeUrl(slug)}`;
-  return {
+  if (!pageProps) return { title: "Inventory Software Alternatives | BeltStack" };
+  const title = `Best ${pageProps.productName} Alternatives & Competitors (${SEO_YEAR}) | BeltStack`;
+  const description = `Looking for ${pageProps.productName} alternatives? Compare top inventory tools on pricing, features, use cases, and overall value for small businesses.`;
+  return siteMetadata({
+    path: getInventoryAlternativeUrl(slug),
     title,
     description,
-    openGraph: { title, description, url },
-  };
+  });
 }
 
 export function generateStaticParams() {

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getPosReviewBySlug, getPosReviewSlugs } from "@/lib/data/posReviews";
 import { getPosAlternativesPage } from "@/lib/data/posAlternatives";
 import { getPosReviewUrl, getPosAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -57,13 +58,13 @@ export default async function PosReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getPosReviewBySlug(slug);
-  if (!data) return { title: "POS Software Review" };
-  const year = new Date().getFullYear();
+  if (!data) return { title: "POS Software Reviews | BeltStack" };
   const name = data.toolName;
-  return {
-    title: `${name} Review (${year}) | BeltStack`,
-    description: `Our in-depth ${name} POS software review covers pricing, features, pros and cons, best-fit use cases, and how it compares to other POS systems.`,
-  };
+  return siteMetadata({
+    path: getPosReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

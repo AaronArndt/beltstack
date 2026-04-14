@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getHelpdeskReviewBySlug, getHelpdeskReviewSlugs } from "@/lib/data/helpdeskReviews";
 import { getHelpdeskAlternativesPage } from "@/lib/data/helpdeskAlternatives";
 import { getHelpdeskReviewUrl, getHelpdeskAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -57,13 +58,13 @@ export default async function HelpdeskReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getHelpdeskReviewBySlug(slug);
-  if (!data) return { title: "Helpdesk Software Review" };
-  const year = new Date().getFullYear();
+  if (!data) return { title: "Helpdesk Software Reviews | BeltStack" };
   const name = data.toolName;
-  return {
-    title: `${name} Review (${year}) | BeltStack`,
-    description: `${name} review covering pricing, features, integrations, pros and cons, and alternatives for support teams.`,
-  };
+  return siteMetadata({
+    path: getHelpdeskReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

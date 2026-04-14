@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { AlternativesTemplate } from "@/components/alternatives/AlternativesTemplate";
-import { SITE_URL } from "@/lib/site";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import {
   getReputationManagementAlternativesPage,
   getReputationManagementAlternativesSlugs,
@@ -20,12 +20,14 @@ export default async function ReputationManagementAlternativesPage({ params }: P
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pageProps = getReputationManagementAlternativesPage(slug);
-  if (!pageProps) return { title: "Reputation Management Alternatives" };
-  const year = new Date().getFullYear();
-  const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Explore the best ${pageProps.productName} alternatives in ${year}. Compare features, pricing, and local-service fit.`;
-  const url = `${SITE_URL}${getReputationManagementAlternativeUrl(slug)}`;
-  return { title, description, openGraph: { title, description, url } };
+  if (!pageProps) return { title: "Reputation Management Software Alternatives | BeltStack" };
+  const title = `Best ${pageProps.productName} Alternatives & Competitors (${SEO_YEAR}) | BeltStack`;
+  const description = `Looking for ${pageProps.productName} alternatives? Compare top reputation tools on pricing, review features, use cases, and overall value for local businesses.`;
+  return siteMetadata({
+    path: getReputationManagementAlternativeUrl(slug),
+    title,
+    description,
+  });
 }
 
 export function generateStaticParams() {

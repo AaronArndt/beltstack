@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Call Tracking Software for Local Service Businesses (2026)",
+export const metadata: Metadata = siteMetadata({
+  title: "Best Call Tracking Software for Small Businesses (2026) | BeltStack",
   description:
-    "Compare call tracking for contractors and home services—reviews, comparisons, guides, and scenario picks for marketing attribution and CRM-ready reporting.",
-};
+    "Compare the best call tracking software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function CallTrackingLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

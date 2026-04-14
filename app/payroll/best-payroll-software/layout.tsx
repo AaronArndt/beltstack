@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_PAYROLL_OPTIONS } from "@/lib/data/payrollBestPayrollSoftware";
 import { getPayrollReviewUrl } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  title: "Best Payroll Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/payroll/best-payroll-software",
+  title: "Best Payroll Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 picks for the best payroll software for small business and contractors—tax filing, W-2 and 1099 support, reviews, and payroll comparisons.",
-};
+    "Compare the best payroll software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 function bestPayrollSoftwareItemListSchema() {
   const items = [

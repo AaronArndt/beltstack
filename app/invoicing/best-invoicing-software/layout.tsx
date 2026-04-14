@@ -1,3 +1,4 @@
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_INVOICING_OPTIONS } from "@/lib/data/invoicingBestInvoicingSoftware";
@@ -39,11 +40,12 @@ function bestInvoicingSoftwareItemListSchema() {
   };
 }
 
-export const metadata: Metadata = {
-  title: "Best Invoicing Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/invoicing/best-invoicing-software",
+  title: "Best Invoicing Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 best invoicing software for freelancers, agencies, and contractors—online payments, estimates, reviews, and invoicing comparisons.",
-};
+    "Compare the best invoicing software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function BestInvoicingSoftwareLayout({
   children,

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "How We Review Software",
+export const metadata: Metadata = siteMetadata({
+  path: "/methodology",
+  title: `How BeltStack Reviews Software (${SEO_YEAR}) | Methodology`,
   description:
-    "Learn how BeltStack evaluates software, scores products, and maintains editorial independence.",
-};
+    "Learn how BeltStack evaluates software for small businesses, what we compare (pricing, features, pros and cons), and how we stay editorially independent.",
+});
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (

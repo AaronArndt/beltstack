@@ -3,7 +3,10 @@ import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate"
 import {
   getProjectManagementComparison,
   getProjectManagementComparisonSlugs,
+  getProjectManagementCompareUrlFromSlug,
 } from "@/lib/data/projectManagementComparisons";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   const slugs = getProjectManagementComparisonSlugs();
@@ -23,19 +26,22 @@ export default async function ProjectManagementComparisonPage({
   return <ComparisonTemplate {...data} />;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ comparison: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ comparison: string }>;
+}): Promise<Metadata> {
   const { comparison } = await params;
   const data = getProjectManagementComparison(comparison);
   if (!data) {
-    return {
-      title: "Project Management Software Comparison | BeltStack",
-    };
+    return { title: "Project Management Software Comparisons | BeltStack" };
   }
-  const year = new Date().getFullYear();
-  const title = `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack`;
-  return {
-    title,
-    description: `Compare ${data.productA.name} vs ${data.productB.name} for project management. Features, pricing, and recommendations for small businesses and teams.`,
-  };
+  const a = data.productA.name;
+  const b = data.productB.name;
+  return siteMetadata({
+    path: getProjectManagementCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for small businesses and teams.`,
+  });
 }
 

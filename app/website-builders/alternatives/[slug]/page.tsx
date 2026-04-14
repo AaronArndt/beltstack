@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/site";
 import { AlternativesTemplate } from "@/components/alternatives/AlternativesTemplate";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import {
   getWebsiteBuildersAlternativesPage,
   getWebsiteBuildersAlternativesSlugs,
@@ -20,12 +20,14 @@ export default async function WebsiteBuildersAlternativesPage({ params }: Props)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pageProps = getWebsiteBuildersAlternativesPage(slug);
-  if (!pageProps) return { title: "Website Builder Alternatives" };
-  const year = new Date().getFullYear();
-  const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Explore the best ${pageProps.productName} alternatives for service-business websites in ${year}. Compare pricing, SEO fit, and lead-generation workflows.`;
-  const url = `${SITE_URL}${getWebsiteBuildersAlternativeUrl(slug)}`;
-  return { title, description, openGraph: { title, description, url } };
+  if (!pageProps) return { title: "Website Builder Alternatives | BeltStack" };
+  const title = `Best ${pageProps.productName} Alternatives & Competitors (${SEO_YEAR}) | BeltStack`;
+  const description = `Looking for ${pageProps.productName} alternatives? Compare top website builders on pricing, SEO features, templates, and overall value for service businesses.`;
+  return siteMetadata({
+    path: getWebsiteBuildersAlternativeUrl(slug),
+    title,
+    description,
+  });
 }
 
 export function generateStaticParams() {

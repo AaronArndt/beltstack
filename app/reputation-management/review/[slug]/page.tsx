@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import {
@@ -60,12 +61,13 @@ export default async function ReputationManagementReviewPage({ params }: Props) 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getReputationManagementReviewBySlug(slug);
-  if (!data) return { title: "Reputation Management Review" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${data.toolName} review covers pricing, workflows, pros and cons, and fit for local service businesses.`,
-  };
+  if (!data) return { title: "Reputation Management Software Reviews | BeltStack" };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getReputationManagementReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

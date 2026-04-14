@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { TradeHubPage } from "@/components/trade-hub/TradeHubPage";
 import { getTradeHubDefinition, TRADE_HUB_SLUGS } from "@/lib/data/tradeHubs";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 
 type Props = { params: Promise<{ tradeSlug: string }> };
 
@@ -16,10 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tradeSlug } = await params;
   const d = getTradeHubDefinition(tradeSlug);
   if (!d) return {};
-  return {
-    title: d.seoTitle,
-    description: d.metaDescription,
-  };
+  const label = d.breadcrumbLabel;
+  return siteMetadata({
+    path: `/${tradeSlug}`,
+    title: `Best Software for ${label} Businesses (${SEO_YEAR}) | BeltStack`,
+    description: `Explore the best software for ${label.toLowerCase()} businesses, including scheduling, CRM, invoicing, payroll, and field service tools.`,
+  });
 }
 
 export default async function TradeIndustryHubRoute({ params }: Props) {

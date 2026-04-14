@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 import {
   SOFTWARE_DIRECTORY_CATEGORY_GROUPS,
   SOFTWARE_DIRECTORY_EDITORIAL_TIPS,
@@ -9,11 +10,12 @@ import {
   SOFTWARE_DIRECTORY_TRADE_HUBS,
 } from "@/lib/data/softwareDirectoryPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = siteMetadata({
+  path: "/software",
   title: "Business Software Categories & Trade Hubs (2026) | BeltStack",
   description:
-    "Browse BeltStack software categories by use case or industry. Discover curated category hubs, best-of pages, comparisons, and trade-focused software guides.",
-};
+    "Browse software categories for small businesses and trades. Compare top picks, reviews, alternatives, and trade hubs—payroll, CRM, field service, and more.",
+});
 
 const sectionTitleClass = "text-[#1A2D48] text-2xl font-bold sm:text-3xl";
 const sectionSubClass = "mt-1 text-[#57534E] text-sm sm:text-base";

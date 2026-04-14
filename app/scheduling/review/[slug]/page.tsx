@@ -5,7 +5,9 @@ import {
   getSchedulingReviewSlugs,
 } from "@/lib/data/schedulingReviews";
 import { getSchedulingAlternativesPage } from "@/lib/data/schedulingAlternatives";
+import type { Metadata } from "next";
 import { getSchedulingReviewUrl, getSchedulingAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -67,15 +69,16 @@ export default async function SchedulingReviewPage({ params }: { params: Promise
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const data = getSchedulingReviewBySlug(slug);
   if (!data) {
-    return { title: "Scheduling software review" };
+    return { title: "Scheduling Software Reviews | BeltStack" };
   }
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) | BeltStack`,
-    description: `${data.toolName} scheduling software review: rating, pricing, features, pros and cons, and best-fit use cases.`,
-  };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getSchedulingReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }

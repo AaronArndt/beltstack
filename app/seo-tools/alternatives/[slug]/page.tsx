@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { getSeoToolsAlternativesPage, getSeoToolsAlternativesSlugs } from "@/lib/data/seoToolsAlternatives";
 import { AlternativesTemplate } from "@/components/alternatives/AlternativesTemplate";
-import { SITE_URL } from "@/lib/site";
 import { getSeoToolsAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,12 +17,14 @@ export default async function SeoToolsAlternativesPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pageProps = getSeoToolsAlternativesPage(slug);
-  if (!pageProps) return { title: "SEO Tools Alternatives" };
-  const year = new Date().getFullYear();
-  const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Editorial picks for the best ${pageProps.productName} alternatives in ${year}: local SEO and contractor-friendly stacks, honest trade-offs, and links to BeltStack reviews and comparisons—verify pricing and limits on each vendor’s site.`;
-  const url = `${SITE_URL}${getSeoToolsAlternativeUrl(slug)}`;
-  return { title, description, openGraph: { title, description, url } };
+  if (!pageProps) return { title: "SEO Software Alternatives | BeltStack" };
+  const title = `Best ${pageProps.productName} Alternatives & Competitors (${SEO_YEAR}) | BeltStack`;
+  const description = `Looking for ${pageProps.productName} alternatives? Compare top SEO tools on pricing, local and technical features, reviews, and overall value—verify limits on each vendor’s site.`;
+  return siteMetadata({
+    path: getSeoToolsAlternativeUrl(slug),
+    title,
+    description,
+  });
 }
 
 export function generateStaticParams() {

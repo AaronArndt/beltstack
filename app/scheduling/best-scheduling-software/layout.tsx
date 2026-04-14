@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Scheduling Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/scheduling/best-scheduling-software",
+  title: "Best Scheduling Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 best scheduling and appointment software for consultants, service businesses, and teams—booking links, reminders, reviews, and comparisons.",
-};
+    "Compare the best scheduling software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function BestSchedulingSoftwareLayout({
   children,

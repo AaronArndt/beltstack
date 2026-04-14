@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "About BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/about",
+  title: "About BeltStack | Software Comparisons for Small Businesses",
   description:
-    "BeltStack helps trade businesses and contractors compare software for payroll, field service, CRM, and more—independently and clearly.",
-};
+    "Learn how BeltStack helps contractors and small service businesses compare payroll, field service, CRM, and more—with clear, independent guidance.",
+});
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (

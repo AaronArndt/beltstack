@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import { ReviewTemplate } from "@/components/reviews/ReviewTemplate";
 import { getHrReviewBySlug, getHrReviewSlugs } from "@/lib/data/hrReviews";
 import { getHrAlternativesPage } from "@/lib/data/hrAlternatives";
+import type { Metadata } from "next";
 import { getHrReviewUrl, getHrAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -64,15 +66,16 @@ export default async function HrReviewPage({ params }: { params: Promise<{ slug:
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const data = getHrReviewBySlug(slug);
   if (!data) {
-    return { title: "HR software review" };
+    return { title: "HR Software Reviews | BeltStack" };
   }
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) | BeltStack`,
-    description: `${data.toolName} HR software review: rating, pricing, features, pros and cons, and best-fit use cases for small business.`,
-  };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getHrReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }

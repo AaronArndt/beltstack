@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Helpdesk Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/helpdesk/best-helpdesk-software",
+  title: "Best Helpdesk Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 best helpdesk software for small business, ecommerce, and support teams—ticketing, automation, reviews, and helpdesk comparisons.",
-};
+    "Compare the best helpdesk software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function BestHelpdeskSoftwareLayout({
   children,

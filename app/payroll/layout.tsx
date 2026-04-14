@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Payroll Software for Small Businesses & Contractors (2026)",
+export const metadata: Metadata = siteMetadata({
+  title: "Best Payroll Software for Small Businesses (2026) | BeltStack",
   description:
-    "Compare payroll software for contractors, small businesses, and field service teams. Explore reviews, comparisons, and payroll software by trade.",
-};
+    "Compare the best payroll software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function PayrollLayout({
   children,

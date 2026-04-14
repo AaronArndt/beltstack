@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Project Management Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/project-management/best-project-management-software",
+  title: "Best Project Management Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 best project management software for agencies and remote teams—tasks, timelines, automation, reviews, and PM comparisons.",
-};
+    "Compare the best project management software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function BestProjectManagementSoftwareLayout({
   children,

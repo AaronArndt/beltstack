@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = siteMetadata({
+  path: "/accounting/best-for/agencies",
   title: "Best Accounting Software for Agencies (2026) | BeltStack",
   description:
-    "Compare the best accounting software for agencies: invoicing, project billing, time tracking, and client retainers. Top picks include FreshBooks, QuickBooks Online, Xero, and Zoho Books.",
-};
+    "Find the best accounting software for agencies. Compare features, pricing, pros and cons, and the top tools for your business.",
+});
 
 export default function BestForAgenciesLayout({
   children,

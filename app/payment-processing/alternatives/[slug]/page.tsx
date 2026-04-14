@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { getPaymentProcessingAlternativesPage, getPaymentProcessingAlternativesSlugs } from "@/lib/data/paymentProcessingAlternatives";
 import { AlternativesTemplate } from "@/components/alternatives/AlternativesTemplate";
-import { SITE_URL } from "@/lib/site";
 import { getPaymentProcessingAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,12 +17,14 @@ export default async function PaymentProcessingAlternativesPage({ params }: Prop
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pageProps = getPaymentProcessingAlternativesPage(slug);
-  if (!pageProps) return { title: "Payment Processing Alternatives" };
-  const year = new Date().getFullYear();
-  const title = `Best ${pageProps.productName} Alternatives (${year}) | BeltStack`;
-  const description = `Editorial ${pageProps.productName} alternatives for ${year}: contractor and SMB channel fit, effective-rate honesty, independence—verify fees on your statements and with each vendor.`;
-  const url = `${SITE_URL}${getPaymentProcessingAlternativeUrl(slug)}`;
-  return { title, description, openGraph: { title, description, url } };
+  if (!pageProps) return { title: "Payment Processing Alternatives | BeltStack" };
+  const title = `Best ${pageProps.productName} Alternatives & Competitors (${SEO_YEAR}) | BeltStack`;
+  const description = `Looking for ${pageProps.productName} alternatives? Compare top payment processors on pricing, features, use cases, and overall value for small businesses—verify fees on your statements.`;
+  return siteMetadata({
+    path: getPaymentProcessingAlternativeUrl(slug),
+    title,
+    description,
+  });
 }
 
 export function generateStaticParams() {

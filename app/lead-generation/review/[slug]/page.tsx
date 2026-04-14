@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { getLeadGenerationReviewBySlug, getLeadGenerationReviewSlugs } from "@/lib/data/leadGenerationReviews";
@@ -54,12 +55,13 @@ export default async function LeadGenerationReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getLeadGenerationReviewBySlug(slug);
-  if (!data) return { title: "Lead Generation Review" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${data.toolName} review covers pricing, lead quality signals, pros and cons, and how it compares for local service businesses.`,
-  };
+  if (!data) return { title: "Lead Generation Software Reviews | BeltStack" };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getLeadGenerationReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

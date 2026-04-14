@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Accounting Software for Ecommerce Businesses (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/accounting/best-for/ecommerce",
+  title: "Best Accounting Software for Ecommerce (2026) | BeltStack",
   description:
-    "Compare the best accounting software for ecommerce: inventory, sales channel integrations, transaction volume, and reporting. Top picks include QuickBooks Online, Xero, Zoho Books, and Odoo.",
-};
+    "Find the best accounting software for ecommerce businesses. Compare features, pricing, pros and cons, and the top tools for your business.",
+});
 
 export default function BestForEcommerceLayout({
   children,

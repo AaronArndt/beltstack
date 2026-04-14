@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Payment Processing Software for Local Service Businesses (2026)",
+export const metadata: Metadata = siteMetadata({
+  title: "Best Payment Processing Software for Small Businesses (2026) | BeltStack",
   description:
-    "Compare payment processors for contractors and home services—reviews, comparisons, guides, and scenario picks for card-present, invoicing, and online checkout.",
-};
+    "Compare the best payment processing software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function PaymentProcessingLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

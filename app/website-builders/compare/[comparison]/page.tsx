@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -56,10 +57,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { comparison } = await params;
   const data = getWebsiteBuildersComparisonBySlug(comparison);
-  if (!data) return { title: "Compare Website Builders" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack Comparison`,
-    description: `Compare ${data.productA.name} vs ${data.productB.name} for service businesses. See pricing, features, and which builder fits your local lead-generation workflow.`,
-  };
+  if (!data) return { title: "Website Builder Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
+  return siteMetadata({
+    path: getWebsiteBuildersCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for service businesses.`,
+  });
 }

@@ -5,7 +5,9 @@ import {
   getFieldServiceReviewSlugs,
 } from "@/lib/data/fieldServiceReviews";
 import { getFieldServiceAlternativesPage } from "@/lib/data/fieldServiceAlternatives";
+import type { Metadata } from "next";
 import { getFieldServiceReviewUrl, getFieldServiceAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 
 function softwareApplicationSchema(
@@ -67,16 +69,17 @@ export default async function FieldServiceReviewPage({ params }: { params: Promi
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const data = getFieldServiceReviewBySlug(slug);
   if (!data) {
-    return { title: "Field service management software review" };
+    return { title: "Field Service Software Reviews | BeltStack" };
   }
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) | BeltStack`,
-    description: `${data.toolName} field service management software review: rating, pricing, features, pros and cons, and best-fit use cases.`,
-  };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getFieldServiceReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 

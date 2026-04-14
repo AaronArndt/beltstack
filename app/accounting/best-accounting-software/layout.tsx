@@ -1,3 +1,4 @@
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_ACCOUNTING_OPTIONS } from "@/lib/data/accountingBestAccountingSoftware";
@@ -39,11 +40,12 @@ function bestAccountingSoftwareItemListSchema() {
   };
 }
 
-export const metadata: Metadata = {
-  title: "Best Accounting Software (2026) | BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/accounting/best-accounting-software",
+  title: "Best Accounting Software for Small Businesses (2026) | BeltStack",
   description:
-    "2026 rankings of the best accounting software for small businesses and contractors—bookkeeping, bank feeds, invoicing, reviews, and accounting comparisons.",
-};
+    "Compare the best accounting software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function BestAccountingSoftwareLayout({
   children,

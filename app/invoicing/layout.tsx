@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Invoicing Software for Small Businesses (2026)",
+export const metadata: Metadata = siteMetadata({
+  title: "Best Invoicing Software for Small Businesses (2026) | BeltStack",
   description:
-    "Compare invoicing software for freelancers, small businesses, agencies, and contractors. Reviews, comparisons, and guides for tools like FreshBooks, QuickBooks, Wave, and Zoho Invoice.",
-};
+    "Compare the best invoicing software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function InvoicingLayout({
   children,

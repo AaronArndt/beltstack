@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getPayrollReviewBySlug, getPayrollReviewSlugs } from "@/lib/data/payrollReviews";
 import { getPayrollAlternativesPage } from "@/lib/data/payrollAlternatives";
 import { getPayrollReviewUrl, getPayrollAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -54,13 +55,13 @@ export default async function PayrollReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getPayrollReviewBySlug(slug);
-  if (!data) return { title: "Payroll Review" };
-  const year = new Date().getFullYear();
+  if (!data) return { title: "Payroll Software Reviews | BeltStack" };
   const name = data.toolName;
-  return {
-    title: `${name} Payroll Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${name} payroll review covers pricing, features, contractor support, pros and cons, and how it compares to other payroll software.`,
-  };
+  return siteMetadata({
+    path: getPayrollReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

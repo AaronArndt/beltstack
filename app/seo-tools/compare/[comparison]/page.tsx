@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -55,10 +56,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { comparison } = await params;
   const data = getSeoToolsComparisonBySlug(comparison);
-  if (!data) return { title: "Compare SEO Tools" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack Comparison`,
-    description: `Editorial ${data.productA.name} vs ${data.productB.name} comparison for ${year}: local SEO and contractor stacks, honest limits, pricing signals—verify plans in Search Console and on each vendor’s site.`,
-  };
+  if (!data) return { title: "SEO Software Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
+  return siteMetadata({
+    path: getSeoToolsCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for local and contractor SEO—verify plans on each vendor’s site.`,
+  });
 }

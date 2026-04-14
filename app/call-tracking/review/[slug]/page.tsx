@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { getCallTrackingReviewBySlug, getCallTrackingReviewSlugs } from "@/lib/data/callTrackingReviews";
@@ -54,12 +55,13 @@ export default async function CallTrackingReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getCallTrackingReviewBySlug(slug);
-  if (!data) return { title: "Call Tracking Review" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${data.toolName} review covers pricing, call attribution workflows, pros and cons, and how it compares for local service businesses.`,
-  };
+  if (!data) return { title: "Call Tracking Software Reviews | BeltStack" };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getCallTrackingReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

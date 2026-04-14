@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getAccountingReviewBySlug, getAccountingReviewSlugs } from "@/lib/data/accountingReviews";
 import { getAccountingAlternativesPage } from "@/lib/data/accountingAlternatives";
 import { getAccountingReviewUrl, getAccountingAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -73,14 +74,16 @@ const REVIEW_DESCRIPTIONS: Record<string, string> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getAccountingReviewBySlug(slug);
-  if (!data) return { title: "Accounting Review" };
-  const year = new Date().getFullYear();
+  if (!data) return { title: "Accounting Software Reviews | BeltStack" };
   const name = data.toolName;
-  const description = REVIEW_DESCRIPTIONS[slug] ?? `Our ${name} accounting review covers pricing, features, pros and cons, and how it compares to other accounting software.`;
-  return {
-    title: `${name} Review (${year}): Pricing, Features, Pros & Cons`,
+  const description =
+    REVIEW_DESCRIPTIONS[slug] ??
+    `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`;
+  return siteMetadata({
+    path: getAccountingReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
     description,
-  };
+  });
 }
 
 export function generateStaticParams() {

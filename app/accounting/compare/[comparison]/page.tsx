@@ -4,6 +4,7 @@ import {
   getAccountingComparisonSlugs,
   getAccountingCompareUrlFromSlug,
 } from "@/lib/data/accountingComparisons";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -103,11 +104,15 @@ const COMPARISON_DESCRIPTIONS: Record<string, string> = {
 export async function generateMetadata({ params }: Props) {
   const { comparison } = await params;
   const data = getAccountingComparisonBySlug(comparison);
-  if (data == null) return { title: "Compare Accounting Software" };
-  const year = new Date().getFullYear();
-  const title = `${data.productA.name} vs ${data.productB.name} (${year})`;
+  if (data == null) return { title: "Accounting Software Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
   const description =
     COMPARISON_DESCRIPTIONS[comparison] ??
-    `Compare ${data.productA.name} vs ${data.productB.name}. See pricing, features, pros and cons, and which accounting software is best for your business.`;
-  return { title, description };
+    `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for small businesses.`;
+  return siteMetadata({
+    path: getAccountingCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description,
+  });
 }

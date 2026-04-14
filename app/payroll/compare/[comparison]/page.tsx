@@ -5,6 +5,7 @@ import {
   getPayrollCompareUrl,
 } from "@/lib/data/payrollComparisons";
 import { getPayrollReviewUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -67,10 +68,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { comparison } = await params;
   const data = getPayrollComparisonBySlug(comparison);
-  if (data == null) return { title: "Compare Payroll" };
-  const year = new Date().getFullYear();
-  const title = `${data.productA.name} vs ${data.productB.name} (${year}): Features, Pricing & Which Is Better`;
-  const description =
-    `Compare ${data.productA.name} vs ${data.productB.name}. See pricing, features, pros & cons, and which payroll software is best for contractors and small businesses.`;
-  return { title, description };
+  if (data == null) return { title: "Payroll Software Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
+  return siteMetadata({
+    path: getPayrollCompareUrl(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for small businesses and contractors.`,
+  });
 }

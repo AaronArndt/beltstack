@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getCrmReviewBySlug, getCrmReviewSlugs } from "@/lib/data/crmReviews";
 import { getCrmAlternativesPage } from "@/lib/data/crmAlternatives";
 import { getCrmReviewUrl, getCrmAlternativeUrl } from "@/lib/routes";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ReviewPageClient } from "./ReviewPageClient";
@@ -54,13 +55,13 @@ export default async function CrmReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getCrmReviewBySlug(slug);
-  if (!data) return { title: "CRM Review" };
-  const year = new Date().getFullYear();
+  if (!data) return { title: "CRM Software Reviews | BeltStack" };
   const name = data.toolName;
-  return {
-    title: `${name} CRM Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${name} CRM review covers pricing, features, pros and cons, integrations, and how it compares to other CRM software.`,
-  };
+  return siteMetadata({
+    path: getCrmReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

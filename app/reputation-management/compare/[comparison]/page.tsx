@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -55,10 +56,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { comparison } = await params;
   const data = getReputationManagementComparisonBySlug(comparison);
-  if (!data) return { title: "Compare Reputation Management Software" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.productA.name} vs ${data.productB.name} (${year}) | BeltStack`,
-    description: data.summaryParagraph.slice(0, 155),
-  };
+  if (!data) return { title: "Reputation Management Comparisons | BeltStack" };
+  const a = data.productA.name;
+  const b = data.productB.name;
+  return siteMetadata({
+    path: getReputationManagementCompareUrlFromSlug(comparison),
+    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for local businesses.`,
+  });
 }

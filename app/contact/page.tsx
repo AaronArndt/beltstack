@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 import { ContactEmailActions } from "./ContactEmailActions";
 
-export const metadata: Metadata = {
-  title: "Contact BeltStack",
+export const metadata: Metadata = siteMetadata({
+  path: "/contact",
+  title: "Contact BeltStack | Questions & Partnerships",
   description:
-    "Reach the BeltStack team for questions, feedback, or partnership inquiries. Email us at support@beltstack.com.",
-};
+    "Contact BeltStack for review questions, corrections, or partnership inquiries. Email support@beltstack.com for a fast response.",
+});
 
 const EMAIL = "support@beltstack.com";
 

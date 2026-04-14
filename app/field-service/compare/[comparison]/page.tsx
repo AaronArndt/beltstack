@@ -4,6 +4,7 @@ import {
   getFieldServiceComparisonSlugs,
   getFieldServiceCompareUrlFromSlug,
 } from "@/lib/data/fieldServiceComparisons";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { ComparisonTemplate } from "@/components/comparisons/ComparisonTemplate";
@@ -63,18 +64,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { comparison } = await params;
   const data = getFieldServiceComparisonBySlug(comparison);
   if (!data) {
-    return {
-      title: "Field Service Management Software Comparison",
-      description: "Compare field service management tools side by side.",
-    };
+    return { title: "Field Service Software Comparisons | BeltStack" };
   }
   const productA = data.productA.name;
   const productB = data.productB.name;
-  const year = new Date().getFullYear();
-  return {
-    title: `${productA} vs ${productB} (${year}) | BeltStack Comparison`,
-    description: `Compare ${productA} vs ${productB} for field service management: features, pricing, use cases, and our verdict on who each tool fits best.`,
-  };
+  return siteMetadata({
+    path: getFieldServiceCompareUrlFromSlug(comparison),
+    title: `${productA} vs ${productB} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description: `Compare ${productA} vs ${productB} on pricing, features, ease of use, pros and cons, and ideal business fit for field service teams.`,
+  });
 }
 
 export function generateStaticParams() {

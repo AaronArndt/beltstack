@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { SEO_YEAR, siteMetadata } from "@/lib/seo/siteMetadata";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { getSeoToolsReviewBySlug, getSeoToolsReviewSlugs } from "@/lib/data/seoToolsReviews";
@@ -54,12 +55,13 @@ export default async function SeoToolsReviewPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = getSeoToolsReviewBySlug(slug);
-  if (!data) return { title: "SEO Tools Review" };
-  const year = new Date().getFullYear();
-  return {
-    title: `${data.toolName} Review (${year}) – Pricing, Features & Pros/Cons`,
-    description: `Our in-depth ${data.toolName} review covers pricing, SEO workflows, pros and cons, and how it compares for local service businesses and Map Pack operators.`,
-  };
+  if (!data) return { title: "SEO Software Reviews | BeltStack" };
+  const name = data.toolName;
+  return siteMetadata({
+    path: getSeoToolsReviewUrl(slug),
+    title: `${name} Review (${SEO_YEAR}): Pricing, Features, Pros & Cons | BeltStack`,
+    description: `Read our ${name} review covering pricing, features, pros and cons, best use cases, and whether it’s worth it for small businesses.`,
+  });
 }
 
 export function generateStaticParams() {

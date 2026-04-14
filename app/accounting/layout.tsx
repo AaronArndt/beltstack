@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
-export const metadata: Metadata = {
-  title: "Best Accounting Software for Small Businesses (2026)",
+export const metadata: Metadata = siteMetadata({
+  title: "Best Accounting Software for Small Businesses (2026) | BeltStack",
   description:
-    "Compare accounting software for small businesses, freelancers, and contractors. Reviews, comparisons, and guides for tools like QuickBooks, Xero, and FreshBooks.",
-};
+    "Compare the best accounting software for small businesses. Review pricing, features, pros and cons, and top picks.",
+});
 
 export default function AccountingLayout({
   children,
