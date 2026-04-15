@@ -200,6 +200,42 @@ const SCENARIOS: Record<string, Scenario> = {
       { q: "What integrations matter?", a: "Scheduling, CRM, and website quote forms to keep segments accurate." },
     ],
   },
+  roofing: {
+    subtitle: "Storm-season demand capture and trust-led follow-up for roofing companies.",
+    introParagraph:
+      "Roofing companies need email marketing software that supports high-value estimate follow-up, weather-driven campaign timing, and credibility-building content for homeowners and commercial buyers.",
+    topPicksSub: "Email platforms for roofing growth.",
+    editorialSub: "How roofers should evaluate email software.",
+    whyThesePicksSub: "Why these tools fit roofing sales cycles.",
+    editorialGuidance: [
+      { heading: "Storm-event responsiveness", body: "Build pre-approved campaigns so your team can publish quickly after weather events without sacrificing quality." },
+      { heading: "Estimate-stage nurture", body: "Automate reminders and educational follow-up for unbooked inspections and proposals." },
+      { heading: "Proof-driven content", body: "Use warranty clarity, certifications, and project examples to reduce trust friction." },
+      { heading: "Segment by project type", body: "Separate residential repair, replacement, and commercial opportunities for better relevance." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign is strong for roofing teams that need quote-stage automations and behavior-based follow-up tied to real pipeline changes. It helps maintain consistency when inspection demand spikes.",
+      },
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits roofing businesses that want CRM and email in one system, making it easier to align estimator activity with lifecycle campaigns and reporting.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a practical option for roofers prioritizing fast campaign execution, visual proof templates, and broad integrations with existing local-marketing stacks.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for roofing companies?", a: "ActiveCampaign and HubSpot are strong for quote pipeline follow-up, while Mailchimp is a reliable option for fast campaign execution." },
+      { q: "What should roofers automate first?", a: "Start with post-inspection and post-estimate follow-up sequences before adding more complex workflows." },
+      { q: "How often should roofing companies email?", a: "Use event-driven messages around inspections and storms plus a steady value cadence, often weekly or biweekly." },
+      { q: "Should roofing lists be segmented?", a: "Yes—at least by residential vs commercial and by project stage." },
+      { q: "What content improves conversions?", a: "Warranty detail, project proof, process clarity, and financing education typically perform well." },
+      { q: "How should ROI be measured?", a: "Track estimate-to-booked-job conversion and revenue influenced by email journeys." },
+    ],
+  },
   painting: {
     subtitle: "Visual portfolio nurture and seasonal campaign timing for paint-focused crews.",
     introParagraph:
@@ -884,7 +920,7 @@ function scenarioTable(scenarioKey: string): typeof comparisonTableRows {
 }
 
 function makePage(slug: string, title: string): BestForTemplateProps {
-  const s = SCENARIOS[slug];
+  const s = SCENARIOS[slug] ?? SCENARIOS["small-business"];
   return {
     title,
     subtitle: s.subtitle,
