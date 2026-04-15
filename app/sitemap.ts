@@ -176,6 +176,19 @@ const ACCOUNTING_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static Invoicing best-for scenario slugs. */
@@ -209,6 +222,21 @@ const TIME_TRACKING_BEST_FOR_SCENARIOS = [
   "consultants",
   "agencies",
   "remote-teams",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static CRM best-for scenario slugs. */
@@ -310,6 +338,21 @@ const HR_BEST_FOR_SCENARIOS = [
   "startups",
   "agencies",
   "global-teams",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static POS best-for scenario slugs (matches app/pos/best-for/[scenario]). */
@@ -362,11 +405,21 @@ const INVENTORY_BEST_FOR_SCENARIOS = [
 
 /** Static Helpdesk best-for scenario slugs (matches app/helpdesk/best-for/[scenario]). */
 const HELPDESK_BEST_FOR_SCENARIOS = [
-  "small-business",
-  "startups",
-  "ecommerce",
-  "saas",
-  "growing-teams",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static Lead Generation best-for scenario slugs (matches app/lead-generation/best-for/[scenario]). */
@@ -375,10 +428,18 @@ const LEAD_GENERATION_BEST_FOR_SCENARIOS = [
   "hvac",
   "plumbing",
   "electricians",
+  "painting",
   "roofing",
+  "general-contractors",
   "landscaping",
-  "cleaning-services",
-  "home-services",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static SEO Tools best-for scenario slugs (matches app/seo-tools/best-for/[scenario]). */
@@ -405,33 +466,58 @@ const SEO_TOOLS_BEST_FOR_SCENARIOS = [
 
 /** Static Call Tracking best-for scenario slugs (matches app/call-tracking/best-for/[scenario]). */
 const CALL_TRACKING_BEST_FOR_SCENARIOS = [
-  "small-business",
-  "contractors",
   "hvac",
   "plumbing",
   "electricians",
+  "painting",
   "roofing",
-  "home-services",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 const REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS = [
-  "small-business",
-  "contractors",
   "hvac",
-  "plumbers",
+  "plumbing",
   "electricians",
-  "roofers",
-  "home-services",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static Email Marketing best-for scenario slugs (matches app/email-marketing/best-for/[scenario]). */
 const EMAIL_MARKETING_BEST_FOR_SCENARIOS = [
-  "small-business",
-  "contractors",
   "hvac",
-  "plumbers",
+  "plumbing",
   "electricians",
-  "home-services",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 const defaultEntry = (

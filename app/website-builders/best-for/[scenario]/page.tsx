@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import {
+  WEBSITE_BUILDERS_BEST_FOR_METADATA_BY_SLUG,
   getWebsiteBuildersBestForBySlug,
   getWebsiteBuildersBestForSlugs,
 } from "@/lib/data/websiteBuildersBestFor";
@@ -18,6 +19,7 @@ export default async function WebsiteBuildersBestForPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { scenario } = await params;
   const pageProps = getWebsiteBuildersBestForBySlug(scenario);
+  const meta = WEBSITE_BUILDERS_BEST_FOR_METADATA_BY_SLUG[scenario];
   if (!pageProps) {
     return {
       title: "Best Website Builders by Use Case | BeltStack",
@@ -25,7 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "Browse best website builder recommendations by service-business use case, including contractors, HVAC, plumbing, electricians, and other local operators.",
     };
   }
-  return { title: `${pageProps.title} | BeltStack`, description: pageProps.subtitle };
+  return {
+    title: meta?.title ?? `${pageProps.title} | BeltStack`,
+    description: meta?.description ?? pageProps.subtitle,
+    keywords: meta?.keywords,
+  };
 }
 
 export function generateStaticParams() {

@@ -235,12 +235,21 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
 ];
 
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
-  { label: "Small business", href: getEmailMarketingBestForUrl("small-business") },
-  { label: "Contractors", href: getEmailMarketingBestForUrl("contractors") },
-  { label: "HVAC", href: getEmailMarketingBestForUrl("hvac") },
-  { label: "Plumbers", href: getEmailMarketingBestForUrl("plumbers") },
+  { label: "HVAC businesses", href: getEmailMarketingBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getEmailMarketingBestForUrl("plumbing") },
   { label: "Electricians", href: getEmailMarketingBestForUrl("electricians") },
-  { label: "Home services", href: getEmailMarketingBestForUrl("home-services") },
+  { label: "Painting contractors", href: getEmailMarketingBestForUrl("painting") },
+  { label: "Roofing companies", href: getEmailMarketingBestForUrl("roofing") },
+  { label: "General contractors", href: getEmailMarketingBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getEmailMarketingBestForUrl("landscaping") },
+  { label: "Construction companies", href: getEmailMarketingBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getEmailMarketingBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getEmailMarketingBestForUrl("handyman") },
+  { label: "Property management companies", href: getEmailMarketingBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getEmailMarketingBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getEmailMarketingBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getEmailMarketingBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getEmailMarketingBestForUrl("moving") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

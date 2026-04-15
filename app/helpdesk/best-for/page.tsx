@@ -4,34 +4,84 @@ import { getHelpdeskBestForUrl } from "@/lib/routes";
 
 const SCENARIOS = [
   {
-    label: "Best helpdesk software overall",
+    label: "Best Helpdesk Software (2026)",
     href: "/helpdesk/best-helpdesk-software",
     description: "Our full rankings of the best helpdesk software for small businesses, startups, ecommerce, and support teams.",
   },
   {
-    label: "Best helpdesk software for small business",
-    href: getHelpdeskBestForUrl("small-business"),
-    description: "Helpdesk tools that stay simple and affordable as you grow. Ticketing, collaboration, and ease of use.",
+    label: "Best Helpdesk Software for HVAC Businesses (2026)",
+    href: getHelpdeskBestForUrl("hvac"),
+    description: "Dispatch-aware ticketing and support workflows for HVAC service teams.",
   },
   {
-    label: "Best helpdesk software for startups",
-    href: getHelpdeskBestForUrl("startups"),
-    description: "Affordable helpdesk with fast setup and room to scale as you add support volume.",
+    label: "Best Helpdesk Software for Plumbing Companies (2026)",
+    href: getHelpdeskBestForUrl("plumbing"),
+    description: "Urgency-based triage and multichannel support for plumbing offices.",
   },
   {
-    label: "Best helpdesk software for ecommerce",
-    href: getHelpdeskBestForUrl("ecommerce"),
-    description: "Helpdesk built for stores with order context, customer history, and ecommerce integrations.",
+    label: "Best Helpdesk Software for Electricians (2026)",
+    href: getHelpdeskBestForUrl("electricians"),
+    description: "Structured communication and technical issue tracking for electrical contractors.",
   },
   {
-    label: "Best helpdesk software for SaaS",
-    href: getHelpdeskBestForUrl("saas"),
-    description: "Ticketing, customer lifecycle context, and messaging for product-led and SaaS support teams.",
+    label: "Best Helpdesk Software for Painting Contractors (2026)",
+    href: getHelpdeskBestForUrl("painting"),
+    description: "Estimate follow-up and project communication support for painting teams.",
   },
   {
-    label: "Best helpdesk software for growing teams",
-    href: getHelpdeskBestForUrl("growing-teams"),
-    description: "Helpdesk that scales with your team: more agents, channels, automation, and reporting.",
+    label: "Best Helpdesk Software for Roofing Companies (2026)",
+    href: getHelpdeskBestForUrl("roofing"),
+    description: "High-volume inquiry handling and urgent request workflows for roofers.",
+  },
+  {
+    label: "Best Helpdesk Software for General Contractors (2026)",
+    href: getHelpdeskBestForUrl("general-contractors"),
+    description: "Project-phase and stakeholder communication workflows for general contractors.",
+  },
+  {
+    label: "Best Helpdesk Software for Landscaping Companies (2026)",
+    href: getHelpdeskBestForUrl("landscaping"),
+    description: "Seasonal and recurring service support tools for landscaping companies.",
+  },
+  {
+    label: "Best Helpdesk Software for Construction Companies (2026)",
+    href: getHelpdeskBestForUrl("construction"),
+    description: "Structured ticketing and reporting tools for construction organizations.",
+  },
+  {
+    label: "Best Helpdesk Software for Remodeling Businesses (2026)",
+    href: getHelpdeskBestForUrl("remodeling"),
+    description: "Long-cycle client communication tools for remodeling businesses.",
+  },
+  {
+    label: "Best Helpdesk Software for Handyman Businesses (2026)",
+    href: getHelpdeskBestForUrl("handyman"),
+    description: "Simple and affordable support ticketing for handyman teams.",
+  },
+  {
+    label: "Best Helpdesk Software for Property Management Companies (2026)",
+    href: getHelpdeskBestForUrl("property-management"),
+    description: "High-volume lifecycle support tools for property management companies.",
+  },
+  {
+    label: "Best Helpdesk Software for Pest Control Businesses (2026)",
+    href: getHelpdeskBestForUrl("pest-control"),
+    description: "Recurring-service and triage support workflows for pest control teams.",
+  },
+  {
+    label: "Best Helpdesk Software for Pool Service Companies (2026)",
+    href: getHelpdeskBestForUrl("pool-service"),
+    description: "Seasonal customer support tools for pool service operations.",
+  },
+  {
+    label: "Best Helpdesk Software for Junk Removal Businesses (2026)",
+    href: getHelpdeskBestForUrl("junk-removal"),
+    description: "Fast-turn support and dispatch coordination tools for junk removal teams.",
+  },
+  {
+    label: "Best Helpdesk Software for Moving Companies (2026)",
+    href: getHelpdeskBestForUrl("moving"),
+    description: "Quote-cycle and scheduling support tools for moving companies.",
   },
 ];
 
@@ -80,7 +130,7 @@ export default function HelpdeskBestForIndexPage() {
               Best Helpdesk Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find helpdesk software that fits your situation—small business, startups, ecommerce, SaaS, and growing support teams.
+              Scenario-based helpdesk picks for trades and field-service businesses, with recommendations tailored to support workflows, ticket volume, and collaboration needs.
             </p>
           </div>
         </section>
@@ -95,11 +145,11 @@ export default function HelpdeskBestForIndexPage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h3 className="text-[#1A2D48] font-bold">{item.label}</h3>
-                  <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{item.description}</p>
-                  <span className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline">
+                  <h3 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h3>
+                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
+                  <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">
                     See picks →
                   </span>
                 </Link>
@@ -143,6 +193,6 @@ export function generateMetadata() {
   return {
     title: "Best Helpdesk Software by Use Case | BeltStack",
     description:
-      "Browse our best helpdesk software picks by use case: small business, startups, ecommerce, SaaS, and growing teams. Find the right helpdesk for your situation.",
+      "Browse our best helpdesk software picks by trade and business type, including HVAC, plumbing, electrical, roofing, and other field-service teams.",
   };
 }

@@ -1,19 +1,28 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getCallTrackingBestForUrl } from "@/lib/routes";
-import { BEST_FOR_BY_TRADE } from "@/lib/data/callTrackingBestCallTrackingSoftware";
 
 const LINKS = [
   {
-    label: "Best call tracking software overall",
+    label: "Best Call Tracking Software (2026)",
     href: "/call-tracking/best-call-tracking-software",
     description: "Full rankings of SMB stacks, lead rollups, and enterprise options.",
   },
-  ...BEST_FOR_BY_TRADE.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: `Call tracking picks and evaluation tips for ${item.label.toLowerCase()}.`,
-  })),
+  { label: "Best Call Tracking Software for HVAC Businesses (2026)", href: getCallTrackingBestForUrl("hvac"), description: "Seasonal attribution and dispatch-ready source tracking for HVAC." },
+  { label: "Best Call Tracking Software for Plumbing Companies (2026)", href: getCallTrackingBestForUrl("plumbing"), description: "Urgent-intent call attribution for plumbing campaigns." },
+  { label: "Best Call Tracking Software for Electricians (2026)", href: getCallTrackingBestForUrl("electricians"), description: "Residential vs commercial call source clarity for electricians." },
+  { label: "Best Call Tracking Software for Painting Contractors (2026)", href: getCallTrackingBestForUrl("painting"), description: "Quote-intent call tracking for painting businesses." },
+  { label: "Best Call Tracking Software for Roofing Companies (2026)", href: getCallTrackingBestForUrl("roofing"), description: "Storm vs retail funnel attribution for roofers." },
+  { label: "Best Call Tracking Software for General Contractors (2026)", href: getCallTrackingBestForUrl("general-contractors"), description: "Multi-source opportunity attribution for GCs." },
+  { label: "Best Call Tracking Software for Landscaping Companies (2026)", href: getCallTrackingBestForUrl("landscaping"), description: "Seasonal campaign attribution for landscaping teams." },
+  { label: "Best Call Tracking Software for Construction Companies (2026)", href: getCallTrackingBestForUrl("construction"), description: "Governance-ready reporting for construction organizations." },
+  { label: "Best Call Tracking Software for Remodeling Businesses (2026)", href: getCallTrackingBestForUrl("remodeling"), description: "Long-cycle lead source tracking for remodelers." },
+  { label: "Best Call Tracking Software for Handyman Businesses (2026)", href: getCallTrackingBestForUrl("handyman"), description: "Lean attribution stacks for handyman operators." },
+  { label: "Best Call Tracking Software for Property Management Companies (2026)", href: getCallTrackingBestForUrl("property-management"), description: "Portfolio and location-level call attribution." },
+  { label: "Best Call Tracking Software for Pest Control Businesses (2026)", href: getCallTrackingBestForUrl("pest-control"), description: "Recurring and urgent call source tracking for pest services." },
+  { label: "Best Call Tracking Software for Pool Service Companies (2026)", href: getCallTrackingBestForUrl("pool-service"), description: "Seasonal call attribution for pool service businesses." },
+  { label: "Best Call Tracking Software for Junk Removal Businesses (2026)", href: getCallTrackingBestForUrl("junk-removal"), description: "Fast-turn lead source tracking for junk removal teams." },
+  { label: "Best Call Tracking Software for Moving Companies (2026)", href: getCallTrackingBestForUrl("moving"), description: "Quote-call attribution for moving company campaigns." },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -55,7 +64,7 @@ export default function CallTrackingBestForHubPage() {
               Best Call Tracking Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scenario-based picks for contractors and local operators: CRM-ready attribution, seasonal trades, and multi-brand home services.
+              Scenario-based picks for trade and field-service operators who need reliable call attribution tied to booked-job outcomes.
             </p>
           </div>
         </section>
@@ -70,15 +79,15 @@ export default function CallTrackingBestForHubPage() {
                   href={item.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{item.label}</h2>
+                  <h2 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h2>
                   <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
                   <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">Open →</span>
                 </Link>
               ))}
             </div>
             <p className="mt-6 text-sm text-[#57534E]">
-              <Link href={getCallTrackingBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
-                Best for contractors
+              <Link href={getCallTrackingBestForUrl("hvac")} className="font-semibold text-[#10B981] hover:underline">
+                Best for HVAC businesses
               </Link>{" "}
               ·{" "}
               <Link href="/call-tracking/compare" className="font-semibold text-[#10B981] hover:underline">

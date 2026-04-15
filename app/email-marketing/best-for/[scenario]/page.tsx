@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
-import { getEmailMarketingBestForPageProps, getEmailMarketingBestForSlugs } from "@/lib/data/emailMarketingBestForPages";
+import {
+  EMAIL_MARKETING_BEST_FOR_METADATA_BY_SLUG,
+  getEmailMarketingBestForPageProps,
+  getEmailMarketingBestForSlugs,
+} from "@/lib/data/emailMarketingBestForPages";
 
 type Props = { params: Promise<{ scenario: string }> };
 
@@ -18,6 +22,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { scenario } = await params;
   const props = getEmailMarketingBestForPageProps(scenario);
+  const meta = EMAIL_MARKETING_BEST_FOR_METADATA_BY_SLUG[scenario];
   if (!props) return { title: "Best Email Marketing" };
-  return { title: `${props.title} | BeltStack`, description: props.subtitle };
+  return {
+    title: meta?.title ?? `${props.title} | BeltStack`,
+    description: meta?.description ?? props.subtitle,
+    keywords: meta?.keywords,
+  };
 }

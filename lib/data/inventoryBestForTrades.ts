@@ -1165,3 +1165,185 @@ export const MOVING_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
     },
   ],
 });
+
+export const APPLIANCE_REPAIR_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "appliance-repair",
+  title: "Best Inventory Management Software for Appliance Repair Businesses (2026)",
+  subtitle: "Compare inventory tools for appliance repair teams managing truck parts, serialized components, and warranty returns.",
+  introParagraph: "Appliance repair companies need inventory software that tracks fast-moving parts, model-specific components, and returns without losing van-level accountability.",
+  picks: [
+    { slug: "zoho-inventory", badge: "Best balanced service-parts control", description: "Structured SKU, PO, and multi-location support for vans plus central parts rooms.", rowBestFor: "Truck + shop parts", why: "Zoho Inventory is a strong fit when appliance repair teams need disciplined stock and purchasing across vans and a parts room. See our Zoho Inventory review." },
+    { slug: "inflow-inventory", badge: "Best practical receiving and reordering", description: "Straightforward workflows for ordering and replenishing common repair parts.", rowBestFor: "Receiving discipline", why: "inFlow Inventory works well for appliance service teams that want cleaner parts counts and reorder signals without heavy complexity. See our inFlow Inventory review." },
+    { slug: "sortly", badge: "Best visual truck-stock adoption", description: "Photo and barcode tracking for teams that need quick field audits.", rowBestFor: "Field visibility", why: "Sortly helps crews keep van inventory visible with minimal training. See our Sortly review." },
+  ],
+  editorialGuidance: [E("Serialized components", "Track serial or lot details where required for high-value parts."), E("Warranty return loops", "Separate warranty and scrap statuses so counts and credits stay accurate."), E("Model-specific kits", "Bundle common repair kits to reduce missed truck stock.")],
+  faqItems: [{ q: "What inventory software is best for appliance repair?", a: "Zoho Inventory, inFlow Inventory, and Sortly are strong options depending on depth and field simplicity needs." }],
+});
+
+export const GARAGE_DOOR_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "garage-door",
+  title: "Best Inventory Management Software for Garage Door Companies (2026)",
+  subtitle: "Inventory software for garage door teams managing springs, openers, hardware, and truck stock.",
+  introParagraph: "Garage door companies need inventory visibility across central stock and route trucks so emergency jobs are not delayed by missing parts.",
+  picks: [
+    { slug: "inflow-inventory", badge: "Best practical operations fit", description: "Clear POs, receiving, and reorder controls for hardware-heavy service teams.", rowBestFor: "Hardware stock control", why: "inFlow Inventory keeps garage-door parts operations disciplined without enterprise overhead." },
+    { slug: "zoho-inventory", badge: "Best multi-location growth", description: "Useful when multiple branches and transfers are required.", rowBestFor: "Branch + van transfers", why: "Zoho Inventory helps growing garage-door operators manage stock across shops and vans." },
+    { slug: "sortly", badge: "Best quick team adoption", description: "Visual labels and scans for faster daily counts.", rowBestFor: "Daily audits", why: "Sortly is effective when field teams need low-friction inventory tracking." },
+  ],
+  editorialGuidance: [E("Critical spare depth", "Set minimum levels for high-failure parts like springs and remotes."), E("Van par levels", "Define truck-level target counts by service territory."), E("Job kits", "Pre-kit common installs to reduce return trips.")],
+  faqItems: [{ q: "What is the best inventory software for garage door companies?", a: "inFlow Inventory and Zoho Inventory are strong defaults, with Sortly ideal for visual field workflows." }],
+});
+
+export const LOCKSMITH_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "locksmith",
+  title: "Best Inventory Management Software for Locksmith Businesses (2026)",
+  subtitle: "Inventory tools for locksmiths managing key blanks, hardware SKUs, and mobile-van stock.",
+  introParagraph: "Locksmith businesses need accurate parts visibility and fast truck replenishment to avoid missed lockout and rekey jobs.",
+  picks: [
+    { slug: "sortly", badge: "Best visual small-parts tracking", description: "Great for bins, labels, and quick part lookup.", rowBestFor: "Small-part organization", why: "Sortly helps locksmith teams control many small SKUs with simple visual workflows." },
+    { slug: "inflow-inventory", badge: "Best reorder discipline", description: "PO and stock controls when SKU counts grow.", rowBestFor: "Reorder and receiving", why: "inFlow Inventory fits locksmith operations that need cleaner replenishment and stock reliability." },
+    { slug: "zoho-inventory", badge: "Best scalability across teams", description: "Adds structure for growing crews and locations.", rowBestFor: "Multi-tech operations", why: "Zoho Inventory supports locksmith businesses scaling beyond one van or one shop." },
+  ],
+  editorialGuidance: [E("Fast-mover bins", "Prioritize high-turn keyways and cylinders in daily checks."), E("Mobile accountability", "Track van-level stock to reduce lost inventory."), E("SKU cleanup", "Standardize naming to avoid duplicate key blank records.")],
+  faqItems: [{ q: "What inventory software works best for locksmith businesses?", a: "Sortly, inFlow Inventory, and Zoho Inventory are all strong depending on process maturity." }],
+});
+
+export const FLOORING_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "flooring",
+  title: "Best Inventory Management Software for Flooring Contractors (2026)",
+  subtitle: "Compare inventory software for flooring teams handling lot-sensitive materials, transitions, and adhesives.",
+  introParagraph: "Flooring contractors need inventory tools that track lot consistency, staged job materials, and reorder timing for long-lead products.",
+  picks: [
+    { slug: "zoho-inventory", badge: "Best lot and location balance", description: "Strong SKU control for staged material and purchasing workflows.", rowBestFor: "Job staging + purchasing", why: "Zoho Inventory supports flooring teams managing ordered material and site allocations." },
+    { slug: "inflow-inventory", badge: "Best day-to-day control", description: "Useful for straightforward receiving and stock movement.", rowBestFor: "Warehouse receiving", why: "inFlow Inventory works well for flooring shops that need practical operations discipline." },
+    { slug: "unleashed", badge: "Best margin-heavy operations", description: "Costing-focused option for inventory-heavy flooring businesses.", rowBestFor: "Costing and analytics", why: "Unleashed suits larger flooring operators where margin analytics and stock value control matter most." },
+  ],
+  editorialGuidance: [E("Lot matching", "Track lot identifiers for finish consistency on large installs."), E("Job allocation", "Reserve product by project to avoid accidental pulls."), E("Damage handling", "Use clear damaged-return workflows to keep counts honest.")],
+  faqItems: [{ q: "What inventory software is best for flooring contractors?", a: "Zoho Inventory and inFlow Inventory are strong operational defaults; Unleashed is a better fit for larger analytics-heavy operations." }],
+});
+
+export const FENCE_DECK_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "fence-deck",
+  title: "Best Inventory Management Software for Fence & Deck Builders (2026)",
+  subtitle: "Inventory software for fence and deck teams tracking lumber, hardware kits, and site-staged materials.",
+  introParagraph: "Fence and deck builders need inventory software that manages bulk material, hardware kits, and project allocations without guesswork.",
+  picks: [
+    { slug: "inflow-inventory", badge: "Best practical materials control", description: "Simple receiving and reorder workflows for lumber and hardware.", rowBestFor: "Materials and kit control", why: "inFlow Inventory suits fence/deck builders that need straightforward stock discipline." },
+    { slug: "zoho-inventory", badge: "Best multi-yard coordination", description: "Strong for shops running staging yards and transfers.", rowBestFor: "Yard transfers", why: "Zoho Inventory helps coordinate material between yard, shop, and active jobs." },
+    { slug: "sortly", badge: "Best field-level visibility", description: "Visual tracking for trailer and on-site bins.", rowBestFor: "Trailer stock visibility", why: "Sortly helps crews quickly verify hardware and consumables before dispatch." },
+  ],
+  editorialGuidance: [E("Kit templates", "Build reusable material kits for common fence and deck packages."), E("Yard to site transfer", "Standardize transfer steps to reduce phantom stock."), E("Waste capture", "Log offcuts and damage for better estimating feedback.")],
+  faqItems: [{ q: "What inventory software fits fence and deck builders?", a: "inFlow Inventory and Zoho Inventory are strong choices, with Sortly useful for visual field tracking." }],
+});
+
+export const GLASS_WINDOW_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "glass-window-installers",
+  title: "Best Inventory Management Software for Glass & Window Installers (2026)",
+  subtitle: "Compare inventory tools for glass and window installers managing fragile SKUs, custom orders, and site staging.",
+  introParagraph: "Glass and window installers need inventory systems that handle fragile, often custom materials with clear receiving and project staging workflows.",
+  picks: [
+    { slug: "zoho-inventory", badge: "Best custom-order operations", description: "Structured order and stock workflows for mixed standard and custom SKUs.", rowBestFor: "Custom + stock blend", why: "Zoho Inventory helps teams coordinate custom windows and standard stock in one system." },
+    { slug: "inflow-inventory", badge: "Best straightforward receiving", description: "Clean receiving, reordering, and inventory visibility for installation teams.", rowBestFor: "Receiving and stock control", why: "inFlow Inventory is a practical fit for installer-led operations with moderate SKU complexity." },
+    { slug: "sortly", badge: "Best fragile inventory visibility", description: "Visual tracking for staged units and high-breakage handling.", rowBestFor: "Fragile staging", why: "Sortly helps teams verify staged product quickly and reduce handling confusion." },
+  ],
+  editorialGuidance: [E("Custom order tagging", "Separate custom-order lines from shelf stock for clearer commitments."), E("Damage and breakage", "Track breakage reasons explicitly to improve handling process."), E("Site staging controls", "Assign staged inventory to projects to avoid cross-job pulls.")],
+  faqItems: [{ q: "What inventory software is best for glass and window installers?", a: "Zoho Inventory and inFlow Inventory are strong operational choices; Sortly helps with visual staging and fragile-item workflows." }],
+});
+
+export const CONCRETE_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "concrete-contractors",
+  title: "Best Inventory Management Software for Concrete Contractors (2026)",
+  subtitle: "Inventory software for concrete contractors managing forms, additives, hardware, and tooling across crews.",
+  introParagraph: "Concrete contractors need inventory visibility for formwork, consumables, and tools spread across jobs and yards.",
+  picks: [
+    { slug: "inflow-inventory", badge: "Best practical yard operations", description: "Reliable receiving and stock visibility for consumables and reusable equipment.", rowBestFor: "Yard + consumables", why: "inFlow Inventory provides a practical operational baseline for concrete teams." },
+    { slug: "sortly", badge: "Best equipment and consumable audits", description: "Visual tracking for forms, blades, PPE, and accessories.", rowBestFor: "Equipment checks", why: "Sortly is useful when crews need quick visual stock verification across sites." },
+    { slug: "zoho-inventory", badge: "Best scaling structure", description: "Multi-location and transfer workflows for larger crews and jobs.", rowBestFor: "Multi-site control", why: "Zoho Inventory supports growing concrete businesses with stronger process controls." },
+  ],
+  editorialGuidance: [E("Reusable vs consumable", "Separate reusable forms and tools from one-time consumables."), E("Crew-level assignments", "Track where critical tools are assigned each week."), E("Supplier cadence", "Set reorder timing around pour schedules to avoid delays.")],
+  faqItems: [{ q: "What inventory software works for concrete contractors?", a: "inFlow Inventory, Sortly, and Zoho Inventory are all practical options depending on scale and process depth." }],
+});
+
+export const EXCAVATION_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "excavation",
+  title: "Best Inventory Management Software for Excavation Companies (2026)",
+  subtitle: "Compare inventory tools for excavation teams handling attachments, consumables, and site support inventory.",
+  introParagraph: "Excavation companies need inventory systems that keep attachments, wear parts, and support materials visible across crews and yards.",
+  picks: [
+    { slug: "sortly", badge: "Best field and yard visibility", description: "Visual tracking for attachments, buckets, and support inventory.", rowBestFor: "Attachment visibility", why: "Sortly helps excavation teams keep field-accessible asset and consumable records." },
+    { slug: "inflow-inventory", badge: "Best structured stock control", description: "PO and receiving workflows for wear parts and supplies.", rowBestFor: "Wear-part replenishment", why: "inFlow Inventory suits teams needing more structured stock discipline than spreadsheets." },
+    { slug: "zoho-inventory", badge: "Best scaling operations", description: "Useful when multiple yards and transfer controls are required.", rowBestFor: "Multi-yard operations", why: "Zoho Inventory helps excavation firms standardize inventory across expanding operations." },
+  ],
+  editorialGuidance: [E("Attachment tracking", "Maintain clear location records for high-value attachments."), E("Wear-part forecasting", "Use reorder logic on predictable replacement parts."), E("Yard transfer controls", "Log transfers to avoid missing equipment between crews.")],
+  faqItems: [{ q: "What inventory software is best for excavation companies?", a: "Sortly, inFlow Inventory, and Zoho Inventory are strong fits depending on field visibility and process needs." }],
+});
+
+export const AUTO_REPAIR_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "auto-repair",
+  title: "Best Inventory Management Software for Auto Repair Shops (2026)",
+  subtitle: "Inventory software for auto repair shops managing high-SKU parts, fluids, and fast-turn service demand.",
+  introParagraph: "Auto repair shops need inventory systems that reduce stockouts, control parts carrying cost, and support fast service-bay turnaround.",
+  picks: [
+    { slug: "zoho-inventory", badge: "Best broad parts control", description: "Structured SKU, ordering, and stock visibility for busy service shops.", rowBestFor: "Shop parts operations", why: "Zoho Inventory is strong for auto shops that need clean parts workflows and scaling structure." },
+    { slug: "inflow-inventory", badge: "Best practical receiving and reordering", description: "Clear purchasing flows and min/max controls for common parts.", rowBestFor: "Reorder discipline", why: "inFlow Inventory suits repair teams prioritizing straightforward operations consistency." },
+    { slug: "unleashed", badge: "Best advanced costing visibility", description: "Useful for multi-shop operators where margin and stock valuation depth matter.", rowBestFor: "Costing and valuation", why: "Unleashed is a better fit for larger operations that need deeper margin intelligence." },
+  ],
+  editorialGuidance: [E("Fast movers vs specials", "Separate stocked parts from special-order lines for cleaner reordering."), E("Bay-cycle alignment", "Set inventory triggers to match average repair throughput."), E("Return process", "Track supplier returns and credits rigorously to protect margin.")],
+  faqItems: [{ q: "What inventory software should auto repair shops use?", a: "Zoho Inventory and inFlow Inventory are strong operational defaults, with Unleashed suitable for larger analytics-heavy shops." }],
+});
+
+export const MOBILE_MECHANIC_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "mobile-mechanics",
+  title: "Best Inventory Management Software for Mobile Mechanics (2026)",
+  subtitle: "Inventory tools for mobile mechanics tracking van stock, common parts, and daily replenishment.",
+  introParagraph: "Mobile mechanics need inventory software that keeps van stock accurate and prevents missed jobs due to unavailable parts.",
+  picks: [
+    { slug: "sortly", badge: "Best van-first visibility", description: "Visual and barcode-friendly tracking that works well in the field.", rowBestFor: "Van inventory audits", why: "Sortly is ideal for mobile mechanics prioritizing quick daily checks and team adoption." },
+    { slug: "inflow-inventory", badge: "Best structured restocking", description: "Simple PO and receiving loops for central replenishment.", rowBestFor: "Replenishment workflows", why: "inFlow Inventory helps mobile teams add purchasing discipline without complexity." },
+    { slug: "zoho-inventory", badge: "Best scaling crews and vans", description: "Supports multi-van operations and transfer controls.", rowBestFor: "Multi-van control", why: "Zoho Inventory is a strong fit once mobile operations expand beyond a single tech." },
+  ],
+  editorialGuidance: [E("Van par levels", "Define per-van target quantities for critical parts."), E("End-of-day counts", "Keep daily count routines short and repeatable."), E("Special-order handling", "Separate special-order customer parts from standard stock.")],
+  faqItems: [{ q: "What inventory software is best for mobile mechanics?", a: "Sortly for van-first simplicity, inFlow Inventory for restocking discipline, and Zoho Inventory for scaling multi-van teams." }],
+});
+
+export const CLEANING_FRANCHISE_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "cleaning-franchises",
+  title: "Best Inventory Management Software for Cleaning Franchises (2026)",
+  subtitle: "Inventory software for cleaning franchise operations managing multi-location supplies and standards.",
+  introParagraph: "Cleaning franchises need inventory systems that standardize supplies across locations while maintaining local accountability.",
+  picks: [
+    { slug: "zoho-inventory", badge: "Best franchise-ready structure", description: "Multi-location stock visibility and transfer workflows for growing networks.", rowBestFor: "Multi-location control", why: "Zoho Inventory helps franchised operations maintain consistent supply workflows across branches." },
+    { slug: "sortly", badge: "Best visual standards enforcement", description: "Photo-based supply standards and easy location audits.", rowBestFor: "Visual location audits", why: "Sortly helps franchise teams enforce shelf and kit standards with minimal training." },
+    { slug: "inflow-inventory", badge: "Best practical purchasing discipline", description: "PO and receiving controls for central supply operations.", rowBestFor: "Central purchasing", why: "inFlow Inventory is effective when franchise groups need straightforward central replenishment control." },
+  ],
+  editorialGuidance: [E("Standardized kits", "Define approved kits and enforce them by location."), E("Central vs local purchasing", "Clarify who buys what to avoid duplicate stock."), E("Audit cadence", "Run monthly location audits to maintain consistency.")],
+  faqItems: [{ q: "What inventory software works for cleaning franchises?", a: "Zoho Inventory for multi-location structure, Sortly for visual audits, and inFlow Inventory for practical purchasing controls." }],
+});
+
+export const EVENT_SERVICES_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "event-services",
+  title: "Best Inventory Management Software for Event Services (2026)",
+  subtitle: "Compare inventory tools for event service teams tracking rentable items, consumables, and staging logistics.",
+  introParagraph: "Event services businesses need inventory software that keeps rentable assets and consumables organized across rapid staging and teardown cycles.",
+  picks: [
+    { slug: "sortly", badge: "Best visual staging workflows", description: "Great for quick pick/pack visibility and location-based prep.", rowBestFor: "Staging visibility", why: "Sortly helps event teams move quickly with visual inventory workflows." },
+    { slug: "zoho-inventory", badge: "Best operations and order control", description: "Stronger stock and order workflows for growing event businesses.", rowBestFor: "Order-linked inventory", why: "Zoho Inventory supports event operators who need tighter order and stock coordination." },
+    { slug: "inflow-inventory", badge: "Best practical warehouse controls", description: "Reliable receiving and issue workflows for event supplies.", rowBestFor: "Warehouse operations", why: "inFlow Inventory fits teams that need straightforward warehouse control." },
+  ],
+  editorialGuidance: [E("Rentable vs consumable", "Separate durable rental items from one-time consumables."), E("Event allocation", "Reserve inventory by event date to avoid conflicts."), E("Post-event reconciliation", "Run rapid return checks after teardown to reduce shrink.")],
+  faqItems: [{ q: "What inventory software is best for event services?", a: "Sortly, Zoho Inventory, and inFlow Inventory are all strong options depending on staging speed and process depth requirements." }],
+});
+
+export const HOME_INSPECTOR_INVENTORY_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "home-inspectors",
+  title: "Best Inventory Management Software for Home Inspectors (2026)",
+  subtitle: "Inventory software for home inspectors managing equipment kits, replacements, and multi-inspector accountability.",
+  introParagraph: "Home inspectors need lightweight inventory systems to track equipment kits, replacement cycles, and team accountability across inspectors.",
+  picks: [
+    { slug: "sortly", badge: "Best inspector kit visibility", description: "Visual tracking for toolkits and consumables by inspector.", rowBestFor: "Inspector kit tracking", why: "Sortly is a strong fit for home inspectors needing quick equipment visibility and low admin overhead." },
+    { slug: "inflow-inventory", badge: "Best restock control", description: "Simple workflows for consumable replacements and ordering.", rowBestFor: "Consumable management", why: "inFlow Inventory helps when inspection teams need clearer supply reordering discipline." },
+    { slug: "zoho-inventory", badge: "Best for growing teams", description: "Adds structure for multi-inspector firms with centralized purchasing.", rowBestFor: "Team-scale control", why: "Zoho Inventory works for larger home inspection operations that need standardized inventory control." },
+  ],
+  editorialGuidance: [E("Kit standards", "Define one checklist per inspector kit for consistent readiness."), E("Calibration replacements", "Track replacement cadence for key tools and consumables."), E("Team accountability", "Assign kits to inspectors to reduce missing equipment issues.")],
+  faqItems: [{ q: "What inventory software is best for home inspectors?", a: "Sortly is often the easiest start, with inFlow Inventory and Zoho Inventory suitable as operational complexity grows." }],
+});

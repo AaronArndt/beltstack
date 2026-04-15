@@ -196,51 +196,28 @@ export type ComparisonLink = { label: string; href: string };
 export type FaqItem = { q: string; a: string };
 
 export const USE_CASE_LINKS: UseCaseLink[] = [
-  {
-    label: "Best for contractors",
-    href: getCallTrackingBestForUrl("contractors"),
-    description: "Dispatch-friendly attribution and CRM handoffs.",
-  },
-  {
-    label: "Best for small business",
-    href: getCallTrackingBestForUrl("small-business"),
-    description: "Lean stacks that prove marketing ROI without shelfware.",
-  },
-  {
-    label: "Best for HVAC",
-    href: getCallTrackingBestForUrl("hvac"),
-    description: "Seasonal demand, emergency calls, and LSA overlap.",
-  },
-  {
-    label: "Best for home services",
-    href: getCallTrackingBestForUrl("home-services"),
-    description: "Multi-trade operators juggling numbers and markets.",
-  },
-  {
-    label: "Best for plumbing",
-    href: getCallTrackingBestForUrl("plumbing"),
-    description: "Emergency calls, GBP alignment, and paid search proof.",
-  },
-  {
-    label: "Best for electricians",
-    href: getCallTrackingBestForUrl("electricians"),
-    description: "Commercial vs residential intent and multi-county programs.",
-  },
-  {
-    label: "Best for roofing",
-    href: getCallTrackingBestForUrl("roofing"),
-    description: "Retail vs storm funnels without blended ROI math.",
-  },
+  { label: "Best Call Tracking Software for HVAC Businesses (2026)", href: getCallTrackingBestForUrl("hvac"), description: "Seasonal demand, emergency calls, and dispatch-ready attribution." },
+  { label: "Best Call Tracking Software for Plumbing Companies (2026)", href: getCallTrackingBestForUrl("plumbing"), description: "Urgent-intent calls, GBP alignment, and paid search proof." },
+  { label: "Best Call Tracking Software for Electricians (2026)", href: getCallTrackingBestForUrl("electricians"), description: "Commercial vs residential intent and market segmentation." },
+  { label: "Best Call Tracking Software for Roofing Companies (2026)", href: getCallTrackingBestForUrl("roofing"), description: "Retail vs storm funnel attribution discipline." },
 ];
 
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
-  { label: "Contractors", href: getCallTrackingBestForUrl("contractors") },
-  { label: "HVAC", href: getCallTrackingBestForUrl("hvac") },
-  { label: "Plumbing", href: getCallTrackingBestForUrl("plumbing") },
+  { label: "HVAC businesses", href: getCallTrackingBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getCallTrackingBestForUrl("plumbing") },
   { label: "Electricians", href: getCallTrackingBestForUrl("electricians") },
-  { label: "Roofing", href: getCallTrackingBestForUrl("roofing") },
-  { label: "Home services", href: getCallTrackingBestForUrl("home-services") },
-  { label: "Small business", href: getCallTrackingBestForUrl("small-business") },
+  { label: "Painting contractors", href: getCallTrackingBestForUrl("painting") },
+  { label: "Roofing companies", href: getCallTrackingBestForUrl("roofing") },
+  { label: "General contractors", href: getCallTrackingBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getCallTrackingBestForUrl("landscaping") },
+  { label: "Construction companies", href: getCallTrackingBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getCallTrackingBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getCallTrackingBestForUrl("handyman") },
+  { label: "Property management companies", href: getCallTrackingBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getCallTrackingBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getCallTrackingBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getCallTrackingBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getCallTrackingBestForUrl("moving") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

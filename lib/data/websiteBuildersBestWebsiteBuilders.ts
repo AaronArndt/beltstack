@@ -181,24 +181,29 @@ export const MORE_WEBSITE_BUILDER_OPTIONS = [
 ];
 
 export const USE_CASE_LINKS = [
-  { label: "Best website builders for small business", href: getWebsiteBuildersBestForUrl("small-business"), description: "Reliable local business websites with lead generation." },
-  { label: "Best website builders for contractors", href: getWebsiteBuildersBestForUrl("contractors"), description: "Quote forms, service pages, and trust signals for contractors." },
-  { label: "Best website builders for HVAC", href: getWebsiteBuildersBestForUrl("hvac"), description: "Lead capture and mobile-first service area pages." },
-  { label: "Best website builders for home services", href: getWebsiteBuildersBestForUrl("home-services"), description: "Conversion-focused websites for local operators." },
+  { label: "Best Website Builders for HVAC Businesses (2026)", href: getWebsiteBuildersBestForUrl("hvac"), description: "Lead capture and mobile-first service area pages for HVAC teams." },
+  { label: "Best Website Builders for Plumbing Companies (2026)", href: getWebsiteBuildersBestForUrl("plumbing"), description: "Urgent-intent pages and conversion-focused quote paths for plumbing companies." },
+  { label: "Best Website Builders for Electricians (2026)", href: getWebsiteBuildersBestForUrl("electricians"), description: "Trust-forward electrical service websites that convert local traffic." },
+  { label: "Best Website Builders for Roofing Companies (2026)", href: getWebsiteBuildersBestForUrl("roofing"), description: "High-intent roofing lead capture and project-proof page architecture." },
 ];
 
 /** Trade / industry best-for links (roundup “by trade” row — aligned with hub trade pills). */
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
-  { label: "Contractors", href: getWebsiteBuildersBestForUrl("contractors") },
-  { label: "Small business", href: getWebsiteBuildersBestForUrl("small-business") },
-  { label: "Home services", href: getWebsiteBuildersBestForUrl("home-services") },
-  { label: "HVAC", href: getWebsiteBuildersBestForUrl("hvac") },
-  { label: "Plumbing", href: getWebsiteBuildersBestForUrl("plumbers") },
-  { label: "Electrical", href: getWebsiteBuildersBestForUrl("electricians") },
-  { label: "Roofing", href: getWebsiteBuildersBestForUrl("roofers") },
-  { label: "Landscaping", href: getWebsiteBuildersBestForUrl("landscapers") },
-  { label: "Painters", href: getWebsiteBuildersBestForUrl("painters") },
-  { label: "Cleaning services", href: getWebsiteBuildersBestForUrl("cleaning-services") },
+  { label: "HVAC businesses", href: getWebsiteBuildersBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getWebsiteBuildersBestForUrl("plumbing") },
+  { label: "Electricians", href: getWebsiteBuildersBestForUrl("electricians") },
+  { label: "Painting contractors", href: getWebsiteBuildersBestForUrl("painting") },
+  { label: "Roofing companies", href: getWebsiteBuildersBestForUrl("roofing") },
+  { label: "General contractors", href: getWebsiteBuildersBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getWebsiteBuildersBestForUrl("landscaping") },
+  { label: "Construction companies", href: getWebsiteBuildersBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getWebsiteBuildersBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getWebsiteBuildersBestForUrl("handyman") },
+  { label: "Property management companies", href: getWebsiteBuildersBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getWebsiteBuildersBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getWebsiteBuildersBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getWebsiteBuildersBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getWebsiteBuildersBestForUrl("moving") },
 ];
 
 export const RELATED_COMPARISONS = [

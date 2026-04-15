@@ -164,7 +164,7 @@ const SCENARIOS: Record<string, Scenario> = {
       { q: "What should we avoid?", a: "Blanket discounts every week—they train customers to wait for promos instead of booking needed work." },
     ],
   },
-  plumbers: {
+  plumbing: {
     subtitle: "Trust, urgency, and repeat service patterns.",
     introParagraph:
       "Plumbing buyers often decide quickly under stress. Email marketing for plumbers should reinforce reliability between emergencies, surface maintenance offers, and keep your brand present when panic searches happen again.",
@@ -198,6 +198,402 @@ const SCENARIOS: Record<string, Scenario> = {
       { q: "Should plumbers use HubSpot?", a: "If inbound marketing and CRM already live there, HubSpot can unify reporting—otherwise lighter tools may suffice." },
       { q: "How to measure success?", a: "Track booked drain cleanings, membership adds, and repeat job rate—not just clicks." },
       { q: "What integrations matter?", a: "Scheduling, CRM, and website quote forms to keep segments accurate." },
+    ],
+  },
+  painting: {
+    subtitle: "Visual portfolio nurture and seasonal campaign timing for paint-focused crews.",
+    introParagraph:
+      "Painting contractors need email software that supports visual trust, estimate follow-up, and season-aware campaigns without overloading small office teams.",
+    topPicksSub: "Email tools for painting businesses.",
+    editorialSub: "How painting teams should evaluate platforms.",
+    whyThesePicksSub: "Why these tools fit paint-focused sales cycles.",
+    editorialGuidance: [
+      { heading: "Lead with before/after proof", body: "Use image-heavy blocks and testimonial snippets to improve estimate conversion." },
+      { heading: "Seasonal scheduling cadence", body: "Send shoulder-season promos early so crews fill calendars before slow periods." },
+      { heading: "Quote follow-up automation", body: "Automate reminders for unapproved estimates within realistic office response capacity." },
+      { heading: "Neighborhood relevance", body: "Segment by service area so messaging and travel assumptions stay realistic." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is a strong fit for painting contractors because visual templates and easy campaign production help offices ship polished proof quickly. Trial one estimate follow-up and one seasonal promo flow, then measure booked jobs influenced rather than open-rate vanity.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite suits painting teams that want clean design and lower overhead while still running basic automations. It is ideal when one coordinator handles both ops and marketing and needs software that stays manageable.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign works when painting businesses need deeper quote-stage automation and segmented follow-up by job type. It rewards teams that can maintain tags and workflow QA monthly.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for painting contractors?", a: "Mailchimp is a common default, with MailerLite and ActiveCampaign as strong options depending on design and automation depth needs." },
+      { q: "How often should painting companies email?", a: "Most teams perform well with one educational or proof-forward campaign weekly plus triggered estimate and post-job flows." },
+      { q: "What should be automated first?", a: "Start with estimate follow-up and post-job review/referral sequences before adding complex branching." },
+      { q: "Does visual content really matter for painters?", a: "Yes—before/after proof and project photos typically improve trust and quote conversion." },
+      { q: "How do we track ROI?", a: "Measure booked estimates and won jobs attributed to campaign clicks and triggered flows." },
+      { q: "What integration matters most?", a: "CRM or estimate pipeline integration so follow-up timing aligns with real sales stages." },
+    ],
+  },
+  "general-contractors": {
+    subtitle: "Long-cycle project nurture and multi-stakeholder follow-up for general contractors.",
+    introParagraph:
+      "General contractors need email marketing software that supports longer bid cycles, stakeholder education, and structured follow-up tied to CRM stages.",
+    topPicksSub: "Email platforms for general contractor growth.",
+    editorialSub: "What GCs should prioritize when choosing email software.",
+    whyThesePicksSub: "Why these tools fit project-driven, longer sales cycles.",
+    editorialGuidance: [
+      { heading: "Map to project pipeline", body: "Tie nurture sequences to bid and proposal stages instead of generic calendars." },
+      { heading: "Multi-contact journeys", body: "Support segmented messaging for owners, PMs, and procurement stakeholders." },
+      { heading: "Case-study cadence", body: "Use project proof and timeline outcomes to build credibility over longer cycles." },
+      { heading: "CRM alignment", body: "Ensure sales and marketing share one view of engagement and follow-up tasks." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot excels for general contractors when CRM and email must stay unified across longer deal timelines. Trial lifecycle workflows tied to proposal stages and verify deal-to-email reporting before scaling.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign is strong for GC teams needing behavior-driven follow-up and task automation without buying a full enterprise suite. It performs best when CRM tags and ownership rules are disciplined.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains useful for GC shops prioritizing reliable campaign output and broad integrations. It is often the practical choice when operational simplicity outranks deep branching logic.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for general contractors?", a: "HubSpot and ActiveCampaign are top options for longer-cycle workflows, while Mailchimp works well for simpler, integration-heavy stacks." },
+      { q: "Do GCs need advanced automation?", a: "If bids run for weeks or months, structured follow-up automation usually improves consistency and close rates." },
+      { q: "What should we send prospects?", a: "Project case studies, process explainers, and stage-specific reminders tied to active opportunities." },
+      { q: "How do we keep sales and marketing aligned?", a: "Use shared CRM objects and defined triggers for when follow-up tasks and emails fire." },
+      { q: "How often should we email?", a: "Use stage-driven timing rather than fixed weekly blasts for active bid opportunities." },
+      { q: "What metric matters most?", a: "Stage progression and won-revenue influence from email touches in CRM." },
+    ],
+  },
+  landscaping: {
+    subtitle: "Route-driven seasonal promotion and recurring service nurture for landscapers.",
+    introParagraph:
+      "Landscaping companies need email software that supports seasonal demand planning, route-density offers, and recurring service retention.",
+    topPicksSub: "Email tools for landscaping teams.",
+    editorialSub: "What landscapers should evaluate before committing.",
+    whyThesePicksSub: "Why these platforms match seasonal landscaping workflows.",
+    editorialGuidance: [
+      { heading: "Seasonality planning", body: "Build spring and fall campaigns well ahead of peak labor demand." },
+      { heading: "Recurring-service retention", body: "Automate reminder and renewal messaging for maintenance clients." },
+      { heading: "Geo-segment by route", body: "Keep campaigns aligned to realistic crew travel and service density." },
+      { heading: "Simple ops ownership", body: "Pick automation depth your office can maintain consistently." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is effective for landscapers needing reliable seasonal campaigns and route-based segmentation. It helps teams publish quickly and maintain visual proof without high admin overhead.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo fits landscaping businesses that combine email promotions with SMS reminders for service windows and weather-dependent updates. Trial consent flows and message timing carefully.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite is a good value pick for landscaping operators that need clean design and basic automation without enterprise complexity. It works well for recurring service nurture and light promotional sends.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for landscaping companies?", a: "Mailchimp is a strong default, with Brevo and MailerLite as practical alternatives based on SMS needs and budget." },
+      { q: "How should landscapers segment lists?", a: "Use route area, service type, and recurring vs one-time status as baseline segments." },
+      { q: "When should campaigns be sent?", a: "Launch seasonal offers before demand peaks so crews fill schedules predictably." },
+      { q: "Should we use SMS too?", a: "SMS helps with reminders and short updates; keep long-form sales education in email." },
+      { q: "What automation should come first?", a: "Start with recurring service reminders and post-job referral requests." },
+      { q: "How do we measure impact?", a: "Track recurring bookings and booked jobs influenced by campaigns per service line." },
+    ],
+  },
+  construction: {
+    subtitle: "Structured B2B nurture and bid-stage communication for construction organizations.",
+    introParagraph:
+      "Construction companies need email software that supports longer sales cycles, role-based messaging, and clear alignment with CRM and project pipeline data.",
+    topPicksSub: "Email systems for construction demand nurture.",
+    editorialSub: "Construction-focused selection criteria.",
+    whyThesePicksSub: "Why these tools fit long-cycle construction growth.",
+    editorialGuidance: [
+      { heading: "Role-based communication", body: "Differentiate messaging for owners, PMs, and procurement contacts." },
+      { heading: "Bid-stage workflows", body: "Automate follow-up based on quote and proposal milestones." },
+      { heading: "Proof-driven content", body: "Use project outcomes and reliability proof to build credibility over time." },
+      { heading: "Pipeline reporting", body: "Tie email engagement to opportunity stage progression and won deals." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot is strong for construction firms that need CRM and email in one accountable platform. It supports bid-stage segmentation and executive reporting across longer nurture cycles.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign is useful when construction teams want deep automation and behavior-based follow-up without full enterprise stack overhead. It performs best with disciplined data ownership.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo works for construction operators with mature data and event tracking who want advanced segmentation and revenue-style reporting. It requires strong profile hygiene to justify cost.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for construction companies?", a: "HubSpot and ActiveCampaign are top options for pipeline-linked nurture, with Klaviyo as a data-heavy alternative." },
+      { q: "Do construction companies need CRM-linked email?", a: "Usually yes for longer sales cycles where stage-aware follow-up drives better conversion and consistency." },
+      { q: "How often should we email opportunities?", a: "Use stage-based cadence and educational milestones rather than generic weekly sends." },
+      { q: "What should content include?", a: "Case studies, process clarity, timeline expectations, and relevant project proof." },
+      { q: "What metric matters most?", a: "Opportunity stage advancement and won revenue tied to email touches." },
+      { q: "When should we avoid heavy automation?", a: "If data quality is weak; fix CRM hygiene before scaling complex journeys." },
+    ],
+  },
+  remodeling: {
+    subtitle: "Project-education nurture and estimate follow-up for remodeling businesses.",
+    introParagraph:
+      "Remodeling businesses need email software that supports trust-building, visual storytelling, and follow-up discipline through longer homeowner decision cycles.",
+    topPicksSub: "Email marketing tools for remodelers.",
+    editorialSub: "How remodeling teams should compare platforms.",
+    whyThesePicksSub: "Why these tools align with remodel sales journeys.",
+    editorialGuidance: [
+      { heading: "Visual storytelling", body: "Use project galleries and phased process education to improve trust." },
+      { heading: "Long decision nurture", body: "Automate gentle follow-up across multi-week estimate timelines." },
+      { heading: "Segment by project type", body: "Differentiate kitchen, bath, and whole-home messaging tracks." },
+      { heading: "Review and referral loops", body: "Automate post-project proof collection to fuel future campaigns." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo is strong for remodeling companies that can support richer segmentation and behavior-driven nurture tied to project type and engagement history. It excels when data quality is high.",
+      },
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits remodelers who want unified CRM + marketing reporting and better coordination between sales conversations and nurture campaigns.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a practical choice for remodelers needing visual campaigns and reliable estimate follow-up without adopting an enterprise workflow stack.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for remodeling businesses?", a: "Klaviyo and HubSpot are strong for data and CRM depth, while Mailchimp is often the easiest reliable starting point." },
+      { q: "What campaigns should remodelers run first?", a: "Start with estimate follow-up, project-proof education, and post-project referral/review sequences." },
+      { q: "How long should nurture flows run?", a: "Often 30–90 days depending on project size and homeowner timeline." },
+      { q: "Do remodelers need advanced segmentation?", a: "Yes if you have enough lead volume and project variety to support clean segments." },
+      { q: "How do we track ROI?", a: "Measure influenced consultations, signed projects, and referral pipeline growth." },
+      { q: "What common mistake hurts results?", a: "Sending generic promos instead of project-type specific educational sequences." },
+    ],
+  },
+  handyman: {
+    subtitle: "Simple, high-utility email systems for lean handyman teams.",
+    introParagraph:
+      "Handyman businesses need practical email software that keeps follow-up, reminders, and referral asks running without adding heavy admin complexity.",
+    topPicksSub: "Email picks for handyman operators.",
+    editorialSub: "What small handyman teams should prioritize.",
+    whyThesePicksSub: "Why these tools fit lean handyman operations.",
+    editorialGuidance: [
+      { heading: "Keep workflows minimal", body: "Start with a few reliable automations rather than complex branching." },
+      { heading: "Promote repeat services", body: "Use email to create recurring touchpoints for maintenance and small jobs." },
+      { heading: "Route-local messaging", body: "Segment by geography to keep dispatch economics realistic." },
+      { heading: "Referral-first follow-up", body: "Automate review and referral asks after successful jobs." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "MailerLite",
+        body: "MailerLite is ideal for handyman businesses that need clean campaigns and lightweight automation with minimal overhead. It supports practical growth without enterprise complexity.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo fits handyman teams that want email plus reminder SMS in one stack. It helps coordinate quick-service scheduling and short lifecycle campaigns.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a reliable option for handyman operations that prioritize easy campaign execution and broad integrations across local business tools.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for handyman businesses?", a: "MailerLite and Mailchimp are common lean-team defaults, with Brevo added when SMS reminders are important." },
+      { q: "How many automations should we start with?", a: "Most handyman teams start with two to three: post-estimate, post-job, and dormant-customer reminder." },
+      { q: "How often should we send campaigns?", a: "Weekly or biweekly value-focused sends usually work better than infrequent heavy promotions." },
+      { q: "Should we segment by job type?", a: "Yes—service type segmentation improves relevance and reduces unsubscribe rates." },
+      { q: "What metric matters most?", a: "Booked repeat jobs and referrals influenced by email." },
+      { q: "What is the biggest mistake?", a: "Overbuilding automation before basic list hygiene and send cadence are stable." },
+    ],
+  },
+  "property-management": {
+    subtitle: "Lifecycle messaging for owner communications and property-service programs.",
+    introParagraph:
+      "Property management companies need email software that supports multi-audience communication, recurring service touchpoints, and clear lifecycle segmentation.",
+    topPicksSub: "Email tools for property management companies.",
+    editorialSub: "How property managers should evaluate platforms.",
+    whyThesePicksSub: "Why these systems support portfolio and service communication.",
+    editorialGuidance: [
+      { heading: "Segment by audience type", body: "Separate owner, tenant-adjacent, and vendor communications where applicable." },
+      { heading: "Automate recurring touchpoints", body: "Use lifecycle emails for inspections, reminders, and service updates." },
+      { heading: "Control governance", body: "Set role permissions for multi-office publishing consistency." },
+      { heading: "Tie to CRM/portfolio data", body: "Relevant lifecycle data improves trust and reduces message noise." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot is strong for property management businesses that need centralized CRM + email governance across multiple audiences and longer lifecycle communications.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign fits property managers needing conditional automation tied to lifecycle triggers and lead behavior while maintaining manageable platform costs.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp works well for property management teams that need reliable campaign execution, simple segmentation, and broad integration support.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for property management companies?", a: "HubSpot and ActiveCampaign are strong for lifecycle automation, while Mailchimp is a practical simplicity-first option." },
+      { q: "How should property managers segment lists?", a: "At minimum by audience type, location/portfolio, and lifecycle stage." },
+      { q: "What campaigns should be automated first?", a: "Inspection reminders, service updates, and owner-reporting style touchpoints." },
+      { q: "Do we need CRM integration?", a: "Usually yes for reliable lifecycle triggers and cleaner reporting." },
+      { q: "How often should we send?", a: "Use event-driven sends plus predictable monthly value updates." },
+      { q: "How is ROI measured?", a: "Track retained accounts, response rates to service campaigns, and lead-to-client conversion." },
+    ],
+  },
+  "pest-control": {
+    subtitle: "Retention-first campaigns and recurring service lifecycle automation for pest operators.",
+    introParagraph:
+      "Pest control businesses need email software that supports recurring-service retention, seasonal campaign timing, and route-friendly communication workflows.",
+    topPicksSub: "Email platforms for pest control growth.",
+    editorialSub: "What pest-control teams should demand from email tools.",
+    whyThesePicksSub: "Why these tools fit recurring-treatment business models.",
+    editorialGuidance: [
+      { heading: "Recurring plan nurture", body: "Automate renewals and seasonal reminders around treatment cycles." },
+      { heading: "Segment by service program", body: "Differentiate one-time treatments from ongoing plans." },
+      { heading: "Use educational content", body: "Prevention-focused messaging builds trust beyond discount offers." },
+      { heading: "Pair with review loops", body: "Post-service follow-up should include reputation and referral asks." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign is a strong choice for pest control operators that need recurring-plan automation and behavior-based follow-up tied to customer lifecycle events.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo supports pest-control teams that combine email education with SMS reminders for appointments and treatment windows in one operational stack.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a dependable option for pest businesses prioritizing campaign simplicity and manageable segmentation for recurring services.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for pest control businesses?", a: "ActiveCampaign is strong for lifecycle automation, with Brevo and Mailchimp as practical alternatives." },
+      { q: "What campaigns should pest-control teams run?", a: "Recurring renewal reminders, seasonal prevention education, and post-service referral/review prompts." },
+      { q: "How should lists be segmented?", a: "By program type, service frequency, and treatment history where available." },
+      { q: "Does SMS help this trade?", a: "Yes for appointment and treatment reminders; keep educational content in email." },
+      { q: "How often should we send?", a: "Monthly value emails plus event-driven lifecycle messages usually perform well." },
+      { q: "What KPI matters most?", a: "Recurring-plan retention and booked follow-up services influenced by campaigns." },
+    ],
+  },
+  "pool-service": {
+    subtitle: "Seasonal route growth and recurring-service communication for pool operators.",
+    introParagraph:
+      "Pool service companies need email software that handles seasonality, recurring-service retention, and route-based campaign relevance without excessive overhead.",
+    topPicksSub: "Email tools for pool service companies.",
+    editorialSub: "How pool teams should evaluate email platforms.",
+    whyThesePicksSub: "Why these picks suit seasonal pool-service workflows.",
+    editorialGuidance: [
+      { heading: "Seasonal calendar planning", body: "Build opening/closing and maintenance campaigns well ahead of demand peaks." },
+      { heading: "Recurring account focus", body: "Segment recurring service clients separately from one-off jobs." },
+      { heading: "Route-based offers", body: "Use geographic targeting to support scheduling and profitability." },
+      { heading: "Simple ops ownership", body: "Pick workflows your office can manage weekly during busy months." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "MailerLite",
+        body: "MailerLite is well suited to pool-service teams that need clean seasonal campaigns and manageable automation without enterprise admin burden.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp provides dependable campaign output and segmentation flexibility for recurring and seasonal service communication.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo is useful when pool teams want to combine reminder SMS with email campaigns under one stack, especially around seasonal scheduling windows.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for pool service companies?", a: "MailerLite and Mailchimp are strong practical options, with Brevo useful for bundled email + SMS operations." },
+      { q: "What campaigns should pool companies automate first?", a: "Start with seasonal opening/closing reminders and recurring-service renewal touchpoints." },
+      { q: "How should we segment contacts?", a: "By recurring vs one-time service, geography, and season-specific needs." },
+      { q: "How often should we send emails?", a: "Monthly baseline communication plus seasonal bursts and triggered reminders." },
+      { q: "Is SMS necessary?", a: "It helps for appointment reminders but should complement—not replace—email education." },
+      { q: "How do we prove ROI?", a: "Track recurring-account retention and booked services influenced by campaigns." },
+    ],
+  },
+  "junk-removal": {
+    subtitle: "Fast-turn local demand nurture and repeat-service messaging for junk-removal teams.",
+    introParagraph:
+      "Junk removal companies need email software that supports quick-turn lead follow-up, local route economics, and repeat-service reminders for homeowners and partners.",
+    topPicksSub: "Email software for junk-removal operations.",
+    editorialSub: "What junk-removal teams should prioritize.",
+    whyThesePicksSub: "Why these tools align with quick-response service cycles.",
+    editorialGuidance: [
+      { heading: "Speed-to-lead follow-up", body: "Automate immediate nurture after inbound requests to reduce drop-off." },
+      { heading: "Partner and referral loops", body: "Create campaigns for realtor and property-manager referral relationships." },
+      { heading: "Local segmentation", body: "Keep route and service-area targeting tight for profitability." },
+      { heading: "Simple automation ownership", body: "Use practical journeys your office can maintain consistently." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Brevo",
+        body: "Brevo works well for junk-removal teams that need both email and reminder SMS in one stack for fast-turn inquiries and schedule coordination.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is a dependable option for campaign speed, local segmentation, and integration coverage across common small-business systems.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign fits growing junk-removal operators that want behavior-based follow-up automation tied to lead and booking status changes.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for junk removal businesses?", a: "Brevo and Mailchimp are practical defaults, with ActiveCampaign for deeper automation-heavy workflows." },
+      { q: "What emails should we send first?", a: "Start with post-inquiry follow-up, post-job referral asks, and periodic repeat-service reminders." },
+      { q: "How often should campaigns run?", a: "Weekly or biweekly sends plus triggered lifecycle automations are common for this trade." },
+      { q: "Should we use SMS?", a: "SMS helps with rapid scheduling and reminders when consent and timing are handled properly." },
+      { q: "How should we segment?", a: "By service type, geography, and referral source for clearer campaign relevance." },
+      { q: "What KPI matters most?", a: "Booked jobs and repeat-service conversion influenced by campaign sequences." },
+    ],
+  },
+  moving: {
+    subtitle: "Quote-cycle follow-up and seasonal relocation demand management for moving companies.",
+    introParagraph:
+      "Moving companies need email software that supports fast quote follow-up, trust-building content, and seasonal campaign planning tied to relocation demand patterns.",
+    topPicksSub: "Email tools for moving company growth.",
+    editorialSub: "How moving teams should choose platforms.",
+    whyThesePicksSub: "Why these platforms support quote-driven moving workflows.",
+    editorialGuidance: [
+      { heading: "Quote nurturing discipline", body: "Automate reminder sequences for unbooked moving quotes." },
+      { heading: "Seasonal demand pacing", body: "Build high-season campaigns before demand spikes hit the office." },
+      { heading: "Trust-building proof", body: "Use testimonials and process transparency to reduce buyer anxiety." },
+      { heading: "Lead-source segmentation", body: "Segment by local vs long-distance and partner channels for relevance." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign is strong for moving companies with quote-heavy funnels that need behavior-based reminders and stage-aware follow-up to increase booking rates.",
+      },
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits moving operators that want CRM and email in one system for clearer quote pipeline reporting and multi-touch lifecycle communication.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains a practical option for moving teams prioritizing campaign consistency, ease of use, and broad integration compatibility.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for moving companies?", a: "ActiveCampaign and HubSpot are strong for quote-stage follow-up, while Mailchimp is a reliable simplicity-first option." },
+      { q: "What campaigns should moving companies automate first?", a: "Start with post-quote reminders, pre-move education, and post-move referral requests." },
+      { q: "How often should we email prospects?", a: "Use short quote-cycle sequences rather than generic weekly blasts for active leads." },
+      { q: "How do we segment moving leads?", a: "At minimum by local vs long-distance, move timeline, and lead source." },
+      { q: "Should we combine SMS and email?", a: "Yes for reminders and timing updates, while keeping richer trust-building content in email." },
+      { q: "How do we prove ROI?", a: "Track quote-to-book conversion and booked move revenue influenced by email journeys." },
     ],
   },
   electricians: {
@@ -287,6 +683,87 @@ function hubspotRow(): (typeof comparisonTableRows)[number] {
 }
 
 function scenarioFeatured(scenarioKey: string): typeof featuredProducts {
+  if (scenarioKey === "painting") {
+    return [featuredProducts[0], featuredProducts[2], featuredProducts[1]];
+  }
+  if (scenarioKey === "general-contractors") {
+    return [
+      {
+        slug: "hubspot-email-marketing",
+        name: "HubSpot",
+        badge: "Best CRM + pipeline alignment",
+        description: "Unified CRM and email lifecycle for long-cycle contractor sales.",
+        rating: "4.4",
+        startingPrice: "Free–paid",
+        reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing"),
+        visitUrl: "https://www.hubspot.com/products/marketing",
+        logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"),
+      },
+      featuredProducts[1],
+      featuredProducts[0],
+    ];
+  }
+  if (scenarioKey === "landscaping" || scenarioKey === "pool-service" || scenarioKey === "handyman") {
+    return [
+      featuredProducts[0],
+      {
+        slug: "brevo",
+        name: "Brevo",
+        badge: "Best email + SMS operations",
+        description: "Coordinate reminders and promos from one multichannel stack.",
+        rating: "4.2",
+        startingPrice: "Free–paid",
+        reviewHref: getEmailMarketingReviewUrl("brevo"),
+        visitUrl: "https://www.brevo.com",
+        logoSrc: emailMarketingLogoForSlug("brevo"),
+      },
+      featuredProducts[2],
+    ];
+  }
+  if (scenarioKey === "construction" || scenarioKey === "remodeling" || scenarioKey === "property-management" || scenarioKey === "moving") {
+    return [
+      {
+        slug: "hubspot-email-marketing",
+        name: "HubSpot",
+        badge: "Best CRM-linked lifecycle",
+        description: "When CRM, deals, and email must stay in one accountable timeline.",
+        rating: "4.4",
+        startingPrice: "Free–paid",
+        reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing"),
+        visitUrl: "https://www.hubspot.com/products/marketing",
+        logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"),
+      },
+      featuredProducts[1],
+      {
+        slug: "klaviyo",
+        name: "Klaviyo",
+        badge: "Best data-heavy segmentation",
+        description: "Behavior-driven segmentation for mature lifecycle operations.",
+        rating: "4.5",
+        startingPrice: "Free–paid",
+        reviewHref: getEmailMarketingReviewUrl("klaviyo"),
+        visitUrl: "https://www.klaviyo.com",
+        logoSrc: emailMarketingLogoForSlug("klaviyo"),
+      },
+    ];
+  }
+  if (scenarioKey === "pest-control" || scenarioKey === "junk-removal") {
+    return [
+      featuredProducts[1],
+      {
+        slug: "brevo",
+        name: "Brevo",
+        badge: "Best multichannel reminders",
+        description: "Pair reminder SMS with lifecycle email in one platform.",
+        rating: "4.2",
+        startingPrice: "Free–paid",
+        reviewHref: getEmailMarketingReviewUrl("brevo"),
+        visitUrl: "https://www.brevo.com",
+        logoSrc: emailMarketingLogoForSlug("brevo"),
+      },
+      featuredProducts[0],
+    ];
+  }
   if (scenarioKey === "electricians" || scenarioKey === "home-services") {
     return [
       {
@@ -303,7 +780,7 @@ function scenarioFeatured(scenarioKey: string): typeof featuredProducts {
       ...featuredProducts.filter((p) => p.slug !== "mailerlite").slice(0, 2),
     ];
   }
-  if (scenarioKey === "plumbers") {
+  if (scenarioKey === "plumbing" || scenarioKey === "plumbers") {
     return [
       featuredProducts[0],
       {
@@ -351,6 +828,41 @@ function scenarioFeatured(scenarioKey: string): typeof featuredProducts {
 }
 
 function scenarioTable(scenarioKey: string): typeof comparisonTableRows {
+  if (scenarioKey === "painting") {
+    return [
+      { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Visual campaign speed", startingPrice: "Free–paid", standoutFeature: "Template velocity", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
+      { slug: "mailerlite", name: "MailerLite", logoSrc: emailMarketingLogoForSlug("mailerlite"), bestFor: "Lean-team value", startingPrice: "Free–paid", standoutFeature: "Modern editor", reviewHref: getEmailMarketingReviewUrl("mailerlite") },
+      { slug: "activecampaign", name: "ActiveCampaign", logoSrc: emailMarketingLogoForSlug("activecampaign"), bestFor: "Quote follow-up logic", startingPrice: "From ~$29/mo", standoutFeature: "Workflow branching", reviewHref: getEmailMarketingReviewUrl("activecampaign") },
+    ];
+  }
+  if (scenarioKey === "general-contractors") {
+    return [
+      { slug: "hubspot-email-marketing", name: "HubSpot", logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"), bestFor: "Pipeline-linked nurture", startingPrice: "Free–paid", standoutFeature: "CRM timeline", reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing") },
+      { slug: "activecampaign", name: "ActiveCampaign", logoSrc: emailMarketingLogoForSlug("activecampaign"), bestFor: "Automation depth", startingPrice: "From ~$29/mo", standoutFeature: "Conditional logic", reviewHref: getEmailMarketingReviewUrl("activecampaign") },
+      { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Integration breadth", startingPrice: "Free–paid", standoutFeature: "Template + integrations", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
+    ];
+  }
+  if (scenarioKey === "landscaping" || scenarioKey === "pool-service" || scenarioKey === "handyman") {
+    return [
+      { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Generalist sends", startingPrice: "Free–paid", standoutFeature: "Template speed", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
+      { slug: "brevo", name: "Brevo", logoSrc: emailMarketingLogoForSlug("brevo"), bestFor: "Email + SMS ops", startingPrice: "Free–paid", standoutFeature: "Bundled channels", reviewHref: getEmailMarketingReviewUrl("brevo") },
+      { slug: "mailerlite", name: "MailerLite", logoSrc: emailMarketingLogoForSlug("mailerlite"), bestFor: "Lean-office value", startingPrice: "Free–paid", standoutFeature: "Simple UI", reviewHref: getEmailMarketingReviewUrl("mailerlite") },
+    ];
+  }
+  if (scenarioKey === "construction" || scenarioKey === "remodeling" || scenarioKey === "property-management" || scenarioKey === "moving") {
+    return [
+      { slug: "hubspot-email-marketing", name: "HubSpot", logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"), bestFor: "CRM lifecycle orchestration", startingPrice: "Free–paid", standoutFeature: "Unified reporting", reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing") },
+      { slug: "activecampaign", name: "ActiveCampaign", logoSrc: emailMarketingLogoForSlug("activecampaign"), bestFor: "Behavior automation", startingPrice: "From ~$29/mo", standoutFeature: "Branching flows", reviewHref: getEmailMarketingReviewUrl("activecampaign") },
+      { slug: "klaviyo", name: "Klaviyo", logoSrc: emailMarketingLogoForSlug("klaviyo"), bestFor: "Data-heavy segmentation", startingPrice: "Free–paid", standoutFeature: "Profile analytics", reviewHref: getEmailMarketingReviewUrl("klaviyo") },
+    ];
+  }
+  if (scenarioKey === "pest-control" || scenarioKey === "junk-removal") {
+    return [
+      { slug: "activecampaign", name: "ActiveCampaign", logoSrc: emailMarketingLogoForSlug("activecampaign"), bestFor: "Recurring lifecycle logic", startingPrice: "From ~$29/mo", standoutFeature: "Trigger depth", reviewHref: getEmailMarketingReviewUrl("activecampaign") },
+      { slug: "brevo", name: "Brevo", logoSrc: emailMarketingLogoForSlug("brevo"), bestFor: "Reminder + promo blend", startingPrice: "Free–paid", standoutFeature: "SMS + email", reviewHref: getEmailMarketingReviewUrl("brevo") },
+      { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Campaign consistency", startingPrice: "Free–paid", standoutFeature: "Fast publishing", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
+    ];
+  }
   if (scenarioKey === "hvac") {
     return [
       { slug: "activecampaign", name: "ActiveCampaign", logoSrc: emailMarketingLogoForSlug("activecampaign"), bestFor: "Seasonal automation", startingPrice: "From ~$29/mo", standoutFeature: "Branching workflows", reviewHref: getEmailMarketingReviewUrl("activecampaign") },
@@ -358,7 +870,7 @@ function scenarioTable(scenarioKey: string): typeof comparisonTableRows {
       { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Generalist", startingPrice: "Free–paid", standoutFeature: "Templates", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
     ];
   }
-  if (scenarioKey === "plumbers") {
+  if (scenarioKey === "plumbing" || scenarioKey === "plumbers") {
     return [
       { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Speed + creative", startingPrice: "Free–paid", standoutFeature: "Integrations", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
       { slug: "brevo", name: "Brevo", logoSrc: emailMarketingLogoForSlug("brevo"), bestFor: "Email + SMS", startingPrice: "Free–paid", standoutFeature: "Bundled channels", reviewHref: getEmailMarketingReviewUrl("brevo") },
@@ -428,10 +940,104 @@ function makePage(slug: string, title: string): BestForTemplateProps {
 export const EMAIL_MARKETING_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps> = {
   "small-business": makePage("small-business", "Best Email Marketing Software for Small Business (2026)"),
   contractors: makePage("contractors", "Best Email Marketing Software for Contractors (2026)"),
-  hvac: makePage("hvac", "Best Email Marketing Software for HVAC (2026)"),
-  plumbers: makePage("plumbers", "Best Email Marketing Software for Plumbers (2026)"),
+  hvac: makePage("hvac", "Best Email Marketing Software for HVAC Businesses (2026)"),
+  plumbing: makePage("plumbing", "Best Email Marketing Software for Plumbing Companies (2026)"),
+  plumbers: makePage("plumbing", "Best Email Marketing Software for Plumbing Companies (2026)"),
   electricians: makePage("electricians", "Best Email Marketing Software for Electricians (2026)"),
+  painting: makePage("painting", "Best Email Marketing Software for Painting Contractors (2026)"),
+  roofing: makePage("roofing", "Best Email Marketing Software for Roofing Companies (2026)"),
+  "general-contractors": makePage("general-contractors", "Best Email Marketing Software for General Contractors (2026)"),
+  landscaping: makePage("landscaping", "Best Email Marketing Software for Landscaping Companies (2026)"),
+  construction: makePage("construction", "Best Email Marketing Software for Construction Companies (2026)"),
+  remodeling: makePage("remodeling", "Best Email Marketing Software for Remodeling Businesses (2026)"),
+  handyman: makePage("handyman", "Best Email Marketing Software for Handyman Businesses (2026)"),
+  "property-management": makePage("property-management", "Best Email Marketing Software for Property Management Companies (2026)"),
+  "pest-control": makePage("pest-control", "Best Email Marketing Software for Pest Control Businesses (2026)"),
+  "pool-service": makePage("pool-service", "Best Email Marketing Software for Pool Service Companies (2026)"),
+  "junk-removal": makePage("junk-removal", "Best Email Marketing Software for Junk Removal Businesses (2026)"),
+  moving: makePage("moving", "Best Email Marketing Software for Moving Companies (2026)"),
   "home-services": makePage("home-services", "Best Email Marketing Software for Home Services (2026)"),
+};
+
+export const EMAIL_MARKETING_BEST_FOR_METADATA_BY_SLUG: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = {
+  hvac: {
+    title: "Best Email Marketing Software for HVAC Businesses (2026) | BeltStack",
+    description: "Compare the best email marketing software for HVAC businesses: ActiveCampaign, Klaviyo, and Mailchimp.",
+    keywords: ["best email marketing software for HVAC businesses", "HVAC email marketing software", "HVAC email marketing tools"],
+  },
+  plumbing: {
+    title: "Best Email Marketing Software for Plumbing Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for plumbing companies: Mailchimp, Brevo, and ActiveCampaign.",
+    keywords: ["best email marketing software for plumbing companies", "plumbing email marketing software", "plumber email marketing tools"],
+  },
+  electricians: {
+    title: "Best Email Marketing Software for Electricians (2026) | BeltStack",
+    description: "Compare the best email marketing software for electricians: HubSpot, ActiveCampaign, and Mailchimp.",
+    keywords: ["best email marketing software for electricians", "electrician email marketing software", "electrical contractor email marketing"],
+  },
+  painting: {
+    title: "Best Email Marketing Software for Painting Contractors (2026) | BeltStack",
+    description: "Compare the best email marketing software for painting contractors: Mailchimp, MailerLite, and ActiveCampaign.",
+    keywords: ["best email marketing software for painting contractors", "painting email marketing software", "painter email marketing tools"],
+  },
+  roofing: {
+    title: "Best Email Marketing Software for Roofing Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for roofing companies tailored to project follow-up and trust-building campaigns.",
+    keywords: ["best email marketing software for roofing companies", "roofing email marketing software", "roofer email marketing tools"],
+  },
+  "general-contractors": {
+    title: "Best Email Marketing Software for General Contractors (2026) | BeltStack",
+    description: "Compare the best email marketing software for general contractors: HubSpot, ActiveCampaign, and Mailchimp.",
+    keywords: ["best email marketing software for general contractors", "general contractor email marketing software", "GC email marketing tools"],
+  },
+  landscaping: {
+    title: "Best Email Marketing Software for Landscaping Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for landscaping companies: Mailchimp, Brevo, and MailerLite.",
+    keywords: ["best email marketing software for landscaping companies", "landscaping email marketing software", "landscaper email marketing tools"],
+  },
+  construction: {
+    title: "Best Email Marketing Software for Construction Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for construction companies: HubSpot, ActiveCampaign, and Klaviyo.",
+    keywords: ["best email marketing software for construction companies", "construction email marketing software", "construction marketing email tools"],
+  },
+  remodeling: {
+    title: "Best Email Marketing Software for Remodeling Businesses (2026) | BeltStack",
+    description: "Compare the best email marketing software for remodeling businesses: Klaviyo, HubSpot, and Mailchimp.",
+    keywords: ["best email marketing software for remodeling businesses", "remodeling email marketing software", "remodeler email marketing tools"],
+  },
+  handyman: {
+    title: "Best Email Marketing Software for Handyman Businesses (2026) | BeltStack",
+    description: "Compare the best email marketing software for handyman businesses: MailerLite, Brevo, and Mailchimp.",
+    keywords: ["best email marketing software for handyman businesses", "handyman email marketing software", "handyman email tools"],
+  },
+  "property-management": {
+    title: "Best Email Marketing Software for Property Management Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for property management companies: HubSpot, ActiveCampaign, and Mailchimp.",
+    keywords: ["best email marketing software for property management companies", "property management email marketing software", "property management email tools"],
+  },
+  "pest-control": {
+    title: "Best Email Marketing Software for Pest Control Businesses (2026) | BeltStack",
+    description: "Compare the best email marketing software for pest control businesses: ActiveCampaign, Brevo, and Mailchimp.",
+    keywords: ["best email marketing software for pest control businesses", "pest control email marketing software", "pest control email tools"],
+  },
+  "pool-service": {
+    title: "Best Email Marketing Software for Pool Service Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for pool service companies: MailerLite, Mailchimp, and Brevo.",
+    keywords: ["best email marketing software for pool service companies", "pool service email marketing software", "pool maintenance email tools"],
+  },
+  "junk-removal": {
+    title: "Best Email Marketing Software for Junk Removal Businesses (2026) | BeltStack",
+    description: "Compare the best email marketing software for junk removal businesses: Brevo, Mailchimp, and ActiveCampaign.",
+    keywords: ["best email marketing software for junk removal businesses", "junk removal email marketing software", "junk hauling email marketing"],
+  },
+  moving: {
+    title: "Best Email Marketing Software for Moving Companies (2026) | BeltStack",
+    description: "Compare the best email marketing software for moving companies: ActiveCampaign, HubSpot, and Mailchimp.",
+    keywords: ["best email marketing software for moving companies", "moving company email marketing software", "moving email marketing tools"],
+  },
 };
 
 export function getEmailMarketingBestForPageProps(slug: string): BestForTemplateProps | null {

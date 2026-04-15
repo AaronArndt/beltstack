@@ -1,19 +1,88 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getLeadGenerationBestForUrl } from "@/lib/routes";
-import { BEST_FOR_BY_TRADE } from "@/lib/data/leadGenerationBestLeadGenerationTools";
 
 const LINKS = [
   {
-    label: "Best lead generation tools overall",
+    label: "Best Lead Generation Tools (2026)",
     href: "/lead-generation/best-lead-generation-tools",
     description: "Full rankings of marketplaces, Google LSA, and complementary channels.",
   },
-  ...BEST_FOR_BY_TRADE.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: `Lead channels and evaluation tips for ${item.label.toLowerCase()}.`,
-  })),
+  {
+    label: "Best Lead Generation Software for HVAC Businesses (2026)",
+    href: getLeadGenerationBestForUrl("hvac"),
+    description: "Lead channels and evaluation tips for HVAC businesses.",
+  },
+  {
+    label: "Best Lead Generation Software for Plumbing Companies (2026)",
+    href: getLeadGenerationBestForUrl("plumbing"),
+    description: "Lead channels and evaluation tips for plumbing companies.",
+  },
+  {
+    label: "Best Lead Generation Software for Electricians (2026)",
+    href: getLeadGenerationBestForUrl("electricians"),
+    description: "Lead channels and evaluation tips for electricians.",
+  },
+  {
+    label: "Best Lead Generation Software for Painting Contractors (2026)",
+    href: getLeadGenerationBestForUrl("painting"),
+    description: "Lead channels and evaluation tips for painting contractors.",
+  },
+  {
+    label: "Best Lead Generation Software for Roofing Companies (2026)",
+    href: getLeadGenerationBestForUrl("roofing"),
+    description: "Lead channels and evaluation tips for roofing companies.",
+  },
+  {
+    label: "Best Lead Generation Software for General Contractors (2026)",
+    href: getLeadGenerationBestForUrl("general-contractors"),
+    description: "Lead channels and evaluation tips for general contractors.",
+  },
+  {
+    label: "Best Lead Generation Software for Landscaping Companies (2026)",
+    href: getLeadGenerationBestForUrl("landscaping"),
+    description: "Lead channels and evaluation tips for landscaping companies.",
+  },
+  {
+    label: "Best Lead Generation Software for Construction Companies (2026)",
+    href: getLeadGenerationBestForUrl("construction"),
+    description: "Lead channels and evaluation tips for construction companies.",
+  },
+  {
+    label: "Best Lead Generation Software for Remodeling Businesses (2026)",
+    href: getLeadGenerationBestForUrl("remodeling"),
+    description: "Lead channels and evaluation tips for remodeling businesses.",
+  },
+  {
+    label: "Best Lead Generation Software for Handyman Businesses (2026)",
+    href: getLeadGenerationBestForUrl("handyman"),
+    description: "Lead channels and evaluation tips for handyman businesses.",
+  },
+  {
+    label: "Best Lead Generation Software for Property Management Companies (2026)",
+    href: getLeadGenerationBestForUrl("property-management"),
+    description: "Lead channels and evaluation tips for property management companies.",
+  },
+  {
+    label: "Best Lead Generation Software for Pest Control Businesses (2026)",
+    href: getLeadGenerationBestForUrl("pest-control"),
+    description: "Lead channels and evaluation tips for pest control businesses.",
+  },
+  {
+    label: "Best Lead Generation Software for Pool Service Companies (2026)",
+    href: getLeadGenerationBestForUrl("pool-service"),
+    description: "Lead channels and evaluation tips for pool service companies.",
+  },
+  {
+    label: "Best Lead Generation Software for Junk Removal Businesses (2026)",
+    href: getLeadGenerationBestForUrl("junk-removal"),
+    description: "Lead channels and evaluation tips for junk removal businesses.",
+  },
+  {
+    label: "Best Lead Generation Software for Moving Companies (2026)",
+    href: getLeadGenerationBestForUrl("moving"),
+    description: "Lead channels and evaluation tips for moving companies.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -70,7 +139,7 @@ export default function LeadGenerationBestForHubPage() {
                   href={item.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{item.label}</h2>
+                  <h2 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h2>
                   <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
                   <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">Open →</span>
                 </Link>

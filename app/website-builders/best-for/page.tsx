@@ -43,10 +43,10 @@ export default function WebsiteBuildersBestForIndexPage() {
             </SectionTitle>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {WEBSITE_BUILDERS_BEST_FOR_INDEX.map((item) => (
-                <Link key={item.href} href={item.href} className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm hover:border-stone-300">
-                  <h3 className="text-[#1A2D48] font-bold">{item.label}</h3>
-                  <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{item.description}</p>
-                  <span className="mt-3 inline-block text-sm font-semibold text-[#10B981]">See picks →</span>
+                <Link key={item.href} href={item.href} className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2">
+                  <h3 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h3>
+                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
+                  <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">See picks →</span>
                 </Link>
               ))}
             </div>

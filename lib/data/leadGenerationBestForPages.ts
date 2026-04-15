@@ -212,7 +212,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   ),
   hvac: makePage(
     "hvac",
-    "Best Lead Generation Tools for HVAC (2026)",
+    "Best Lead Generation Software for HVAC Businesses (2026)",
     "High-intent emergency and seasonal demand—balance LSA with marketplaces.",
     "HVAC swings between urgent calls and tune-up campaigns; pick channels that match the job types you want this quarter.",
     [
@@ -241,7 +241,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   ),
   plumbing: makePage(
     "plumbing",
-    "Best Lead Generation Tools for Plumbers (2026)",
+    "Best Lead Generation Software for Plumbing Companies (2026)",
     "Capture emergency demand and planned jobs without overpaying for mismatched leads.",
     "Plumbers win or lose on phone speed—choose vendors you can dispute cleanly when dispatch rules differ from the lead’s story.",
     [
@@ -267,7 +267,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   ),
   electricians: makePage(
     "electricians",
-    "Best Lead Generation Tools for Electricians (2026)",
+    "Best Lead Generation Software for Electricians (2026)",
     "From service calls to panel upgrades—pick channels that match permit-heavy work or quick service tickets.",
     "Electrical work ranges from small service to large projects; align lead sources with the ticket sizes your crew actually wants.",
     [
@@ -293,7 +293,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   ),
   roofing: makePage(
     "roofing",
-    "Best Lead Generation Tools for Roofers (2026)",
+    "Best Lead Generation Software for Roofing Companies (2026)",
     "Storm chasing and retail replacement leads need different math—segment your campaigns.",
     "Roofing has retail and event-driven demand; measure channels separately so storm spend doesn’t mask weak retail close rates.",
     [
@@ -319,7 +319,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   ),
   landscaping: makePage(
     "landscaping",
-    "Best Lead Generation Tools for Landscapers (2026)",
+    "Best Lead Generation Software for Landscaping Companies (2026)",
     "Seasonal funnels for maintenance and install—avoid buying snow leads if you only mow.",
     "Landscaping leads are seasonal; adjust budgets monthly and qualify for recurring routes vs one-off cleanups.",
     [
@@ -398,6 +398,347 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
       { label: "Paid vs organic leads", href: `${GUIDES}/paid-vs-organic-leads` },
     ]
   ),
+  painting: makePage(
+    "painting",
+    "Best Lead Generation Software for Painting Contractors (2026)",
+    "Compare lead generation software for painting contractors across local marketplaces, search intent, and directory channels.",
+    "Painting contractors need lead channels that balance one-off projects and repeat neighborhood opportunities while protecting margin on estimate-heavy jobs.",
+    [
+      { heading: "Quote-to-close cycle", body: "Measure channel quality on booked estimates and wins, not raw lead count." },
+      { heading: "Service-area discipline", body: "Painting crews lose margin on long travel times—tight geography matters." },
+    ],
+    [
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack is useful for painting contractors testing local demand with flexible pay-per-lead budgets. Validate close rates by job type (interior, exterior, commercial touch-up) and scale only what keeps crews profitably scheduled.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "Google LSA helps painting businesses capture high-intent local search demand when homeowners actively seek estimates. Success depends on fast follow-up, accurate service areas, and strong review signals.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi can perform well for homeowners comparison-shopping painting pros in brand-trust directories. Run a 30–60 day test and compare booked-job margin against Thumbtack and LSA before committing larger budgets.",
+      },
+    ],
+    [{ q: "What lead source is best for painting contractors?", a: "Most painting contractors start with Thumbtack or Google LSA, then layer Angi where directory intent is strong in their market." }],
+    [{ label: "How to choose a lead generation platform", href: `${GUIDES}/how-to-choose-a-lead-generation-platform` }]
+  ),
+  "general-contractors": makePage(
+    "general-contractors",
+    "Best Lead Generation Software for General Contractors (2026)",
+    "Compare lead generation software for general contractors with channels that support high-value bids and long sales cycles.",
+    "General contractors need lead generation channels that prioritize qualified project opportunities over low-fit calls, with clear tracking from lead to signed contract.",
+    [
+      { heading: "Opportunity quality over volume", body: "GCs should optimize for qualified project pipeline, not call count." },
+      { heading: "Stakeholder follow-up", body: "Long-cycle deals require structured follow-up and CRM tagging by source." },
+    ],
+    [
+      {
+        heading: "Google Local Services Ads",
+        body: "Google LSA captures high-intent local search demand when property owners and businesses actively seek contractors. Validate lead quality by project scope to avoid overpaying for small jobs that do not fit your pipeline.",
+      },
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack provides flexible lead testing for general contractors in local markets. Keep budgets capped during pilots and score leads on qualified bids and contract value, not only volume.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi helps GCs appear in homeowner and property-owner comparison journeys. It works best when your service mix and quoting process match directory buyer behavior in your metro.",
+      },
+    ],
+    [{ q: "What is the best lead generation software for general contractors?", a: "Google LSA, Thumbtack, and Angi are common starting points; the best choice depends on your market and project mix." }],
+    [{ label: "Lead generation strategies for local business", href: `${GUIDES}/lead-generation-strategies-for-local-business` }]
+  ),
+  construction: makePage(
+    "construction",
+    "Best Lead Generation Software for Construction Companies (2026)",
+    "Compare lead generation software for construction companies with channels that support project-qualified demand and better bid pipeline visibility.",
+    "Construction companies need lead generation software that produces qualified opportunities and supports measurable pipeline economics from first contact through close.",
+    [
+      { heading: "Pipeline qualification", body: "Track source quality by project size and close probability." },
+      { heading: "Margin-first measurement", body: "Cost per booked job and project margin beat vanity lead metrics." },
+    ],
+    [
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA can drive high-intent local construction demand where categories and eligibility align. Pilot by service line and judge performance on qualified bid volume and booked revenue.",
+      },
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack offers flexible local lead testing for construction teams exploring new geographies or service lines. Use strict qualification criteria to avoid mismatched small-ticket leads.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi adds directory-driven construction opportunities in markets where homeowners and property managers comparison-shop before committing. Compare conversion quality against search-led sources monthly.",
+      },
+    ],
+    [{ q: "Which lead generation software works best for construction companies?", a: "Most teams test Google LSA, Thumbtack, and Angi first, then scale the channels with the strongest qualified-project economics." }],
+    [{ label: "Paid vs organic leads", href: `${GUIDES}/paid-vs-organic-leads` }]
+  ),
+  remodeling: makePage(
+    "remodeling",
+    "Best Lead Generation Software for Remodeling Businesses (2026)",
+    "Compare lead generation software for remodeling businesses focused on high-intent homeowners and project-ready opportunities.",
+    "Remodeling businesses need lead channels that produce qualified homeowners with real project intent, not low-fit inquiries that drain estimator capacity.",
+    [
+      { heading: "Project intent filtering", body: "Qualify budget, timeline, and scope early to protect estimator time." },
+      { heading: "Portfolio influence", body: "Visual proof and reviews materially affect remodel close rates." },
+    ],
+    [
+      {
+        heading: "Angi",
+        body: "Angi is often strong for remodeling demand where homeowners compare providers before requesting estimates. Validate booked-project value and margin, not just booked consultations.",
+      },
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack helps remodelers test demand quickly with budget controls and category flexibility. Maintain strict qualification scripts to separate small repairs from true remodel opportunities.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "Google LSA can generate strong local remodel inquiries where eligibility fits. Performance depends on review quality, response speed, and accurate service-area targeting.",
+      },
+    ],
+    [{ q: "What lead generation software is best for remodeling businesses?", a: "Angi, Thumbtack, and Google LSA are the most common channels to test; optimize based on booked project margin and close rate." }],
+    [{ label: "How to choose a lead generation platform", href: `${GUIDES}/how-to-choose-a-lead-generation-platform` }]
+  ),
+  handyman: makePage(
+    "handyman",
+    "Best Lead Generation Software for Handyman Businesses (2026)",
+    "Compare lead generation software for handyman businesses that need affordable local demand and fast quote-to-book workflows.",
+    "Handyman businesses need lead channels that deliver local, service-fit demand at sustainable cost per booked job, especially in competitive neighborhoods.",
+    [
+      { heading: "Ticket-size alignment", body: "Avoid channels that over-index on low-value jobs you cannot profitably service." },
+      { heading: "Response speed", body: "Handyman leads decay fast—phone and SMS routing must be immediate." },
+    ],
+    [
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack is a practical first channel for handyman businesses due to flexible budgets and broad local demand categories. Keep service definitions tight and track net booked-job economics weekly.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "Google LSA captures high-intent local search demand for small-job and urgent fixes. Success depends on quick response, accurate profiles, and strong review velocity.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi can supplement demand where homeowners browse directories before hiring. Run controlled tests and compare close rates against Thumbtack and LSA for your target ticket sizes.",
+      },
+    ],
+    [{ q: "What is the best lead generation software for handyman businesses?", a: "Thumbtack and Google LSA are common starting channels, with Angi added where directory demand is strong." }],
+    [{ label: "Lead generation strategies for local business", href: `${GUIDES}/lead-generation-strategies-for-local-business` }]
+  ),
+  "property-management": makePage(
+    "property-management",
+    "Best Lead Generation Software for Property Management Companies (2026)",
+    "Compare lead generation software for property management companies focused on qualified owner and portfolio leads.",
+    "Property management companies need lead channels that attract qualified property owners and managers, not only one-off service requests.",
+    [
+      { heading: "Lead persona fit", body: "Prioritize channels that generate owner and investor-quality inquiries." },
+      { heading: "Long-cycle nurturing", body: "Track source ROI over longer close timelines typical in property management." },
+    ],
+    [
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA can produce high-intent local management inquiries when categories and market behavior align. Validate lead quality by property count and contract value before scaling.",
+      },
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack provides flexible testing for local property-related demand and can uncover usable market pockets quickly. Keep qualification scripts strict to avoid low-fit tenant-service style inquiries.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi can support property-management acquisition in homeowner-heavy markets where directory trust influences selection. Use CRM tagging to compare true managed-door economics by source.",
+      },
+    ],
+    [{ q: "Which lead generation software works best for property management companies?", a: "Google LSA, Thumbtack, and Angi are common channels to test; choose based on qualified owner lead quality and signed-management economics." }],
+    [{ label: "Paid vs organic leads", href: `${GUIDES}/paid-vs-organic-leads` }]
+  ),
+  "pest-control": makePage(
+    "pest-control",
+    "Best Lead Generation Software for Pest Control Businesses (2026)",
+    "Compare lead generation software for pest control businesses balancing urgent calls, recurring plans, and local route economics.",
+    "Pest control operators need lead channels that support both urgent service calls and recurring treatment-plan growth at healthy acquisition cost.",
+    [
+      { heading: "Recurring-value focus", body: "Track lead sources by recurring customer value, not one-time treatment volume." },
+      { heading: "Route density", body: "Local clustering materially impacts profitability for pest service teams." },
+    ],
+    [
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA is often strong for high-intent pest-control searches, especially urgent issues where homeowners call immediately. Use route-aware service areas and track booked recurring plans by source.",
+      },
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack gives pest-control companies budget-flexible marketplace testing across service types. Keep qualification tight and separate one-time service from recurring-program opportunities in reporting.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi can add directory demand where homeowners compare local providers before selecting a plan. Benchmark conversion quality and recurring-value outcomes against LSA and Thumbtack monthly.",
+      },
+    ],
+    [{ q: "What is the best lead generation software for pest control businesses?", a: "Google LSA and Thumbtack are common first channels, with Angi as a useful secondary source in many local markets." }],
+    [{ label: "How to choose a lead generation platform", href: `${GUIDES}/how-to-choose-a-lead-generation-platform` }]
+  ),
+  "pool-service": makePage(
+    "pool-service",
+    "Best Lead Generation Software for Pool Service Companies (2026)",
+    "Compare lead generation software for pool service companies focused on recurring route growth and seasonal demand capture.",
+    "Pool service companies need lead channels that support recurring account growth, route density, and seasonal demand spikes without margin erosion.",
+    [
+      { heading: "Recurring route value", body: "Score channels on recurring account value and retention potential." },
+      { heading: "Seasonal pacing", body: "Increase spend ahead of seasonal peaks, not after calendars fill." },
+    ],
+    [
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack is a flexible marketplace option for pool service teams testing recurring and one-time demand in local markets. Track route-fit and recurring account conversion separately from one-off jobs.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA can capture high-intent pool service searches where eligibility applies. Validate speed-to-lead and booked recurring-plan economics before scaling spend.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi supports pool-service visibility in directory-led homeowner journeys. Compare conversion and route profitability against Thumbtack and LSA in the same geography.",
+      },
+    ],
+    [{ q: "Which lead generation software is best for pool service companies?", a: "Thumbtack and Google LSA are common starting points, with Angi added where directory demand performs well." }],
+    [{ label: "Lead generation strategies for local business", href: `${GUIDES}/lead-generation-strategies-for-local-business` }]
+  ),
+  "junk-removal": makePage(
+    "junk-removal",
+    "Best Lead Generation Software for Junk Removal Businesses (2026)",
+    "Compare lead generation software for junk removal businesses that need fast local demand and route-efficient booked jobs.",
+    "Junk removal businesses rely on quick response and efficient routing, so lead channels should be judged on booked-job profitability and dispatch fit.",
+    [
+      { heading: "Dispatch readiness", body: "Speed-to-lead is critical; delayed callbacks reduce win rates sharply." },
+      { heading: "Route economics", body: "Service-area discipline and load type qualification protect margin." },
+    ],
+    [
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack is often the first channel junk removal teams use for local demand due to flexible budgets and broad category coverage. Track cost per booked load and route-fit quality by zip.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA captures high-intent search demand for same-day and urgent junk hauling needs. Validate booked-job margin after travel time and disposal costs before expanding budgets.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi can complement marketplace and search channels where homeowners comparison-shop providers first. Compare performance against Thumbtack and LSA using the same booked-job metrics.",
+      },
+    ],
+    [{ q: "What is the best lead generation software for junk removal businesses?", a: "Thumbtack and Google LSA are common lead-generation starting points, with Angi as an additional channel in many local markets." }],
+    [{ label: "Paid vs organic leads", href: `${GUIDES}/paid-vs-organic-leads` }]
+  ),
+  moving: makePage(
+    "moving",
+    "Best Lead Generation Software for Moving Companies (2026)",
+    "Compare lead generation software for moving companies with channels optimized for high-intent local and long-distance inquiry demand.",
+    "Moving companies need lead channels that deliver qualified requests with clear job details so sales teams can quote quickly and protect route economics.",
+    [
+      { heading: "Job-detail qualification", body: "Capture distance, inventory, and timing early to avoid low-fit opportunities." },
+      { heading: "Fast quote response", body: "Lead conversion drops quickly when follow-up is delayed." },
+    ],
+    [
+      {
+        heading: "Thumbtack",
+        body: "Thumbtack gives moving companies flexible lead testing for local and regional opportunities with pay-per-lead control. Track booked-move value and qualification quality before scaling.",
+      },
+      {
+        heading: "Google Local Services Ads",
+        body: "LSA can generate strong high-intent moving inquiries when eligibility and local search volume support it. Success depends on quick response and disciplined service-area settings.",
+      },
+      {
+        heading: "Angi",
+        body: "Angi adds directory-based demand from customers comparing moving providers. Evaluate conversion quality and average move value against Thumbtack and LSA monthly.",
+      },
+    ],
+    [{ q: "Which lead generation software is best for moving companies?", a: "Most moving companies test Thumbtack and Google LSA first, then add Angi where directory demand supports profitable booked moves." }],
+    [{ label: "How to choose a lead generation platform", href: `${GUIDES}/how-to-choose-a-lead-generation-platform` }]
+  ),
+};
+
+export const LEAD_GENERATION_BEST_FOR_METADATA_BY_SLUG: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = {
+  hvac: {
+    title: "Best Lead Generation Software for HVAC Businesses (2026) | BeltStack",
+    description: "Compare the best lead generation software for HVAC businesses, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for HVAC businesses", "HVAC lead generation software", "HVAC lead generation tools"],
+  },
+  plumbing: {
+    title: "Best Lead Generation Software for Plumbing Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for plumbing companies, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for plumbing companies", "plumber lead generation software", "plumbing lead generation tools"],
+  },
+  electricians: {
+    title: "Best Lead Generation Software for Electricians (2026) | BeltStack",
+    description: "Compare the best lead generation software for electricians, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for electricians", "electrician lead generation software", "electrical contractor lead generation"],
+  },
+  painting: {
+    title: "Best Lead Generation Software for Painting Contractors (2026) | BeltStack",
+    description: "Compare the best lead generation software for painting contractors, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for painting contractors", "painting lead generation software", "painter lead generation tools"],
+  },
+  roofing: {
+    title: "Best Lead Generation Software for Roofing Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for roofing companies, including Angi, Thumbtack, and Google LSA.",
+    keywords: ["best lead generation software for roofing companies", "roofing lead generation software", "roofer lead generation tools"],
+  },
+  "general-contractors": {
+    title: "Best Lead Generation Software for General Contractors (2026) | BeltStack",
+    description: "Compare the best lead generation software for general contractors, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for general contractors", "general contractor lead generation software", "GC lead generation tools"],
+  },
+  landscaping: {
+    title: "Best Lead Generation Software for Landscaping Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for landscaping companies, including Thumbtack, Angi, and Google LSA.",
+    keywords: ["best lead generation software for landscaping companies", "landscaping lead generation software", "landscaper lead generation tools"],
+  },
+  construction: {
+    title: "Best Lead Generation Software for Construction Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for construction companies, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for construction companies", "construction lead generation software", "construction lead generation tools"],
+  },
+  remodeling: {
+    title: "Best Lead Generation Software for Remodeling Businesses (2026) | BeltStack",
+    description: "Compare the best lead generation software for remodeling businesses, including Angi, Thumbtack, and Google LSA.",
+    keywords: ["best lead generation software for remodeling businesses", "remodeling lead generation software", "remodeler lead generation tools"],
+  },
+  handyman: {
+    title: "Best Lead Generation Software for Handyman Businesses (2026) | BeltStack",
+    description: "Compare the best lead generation software for handyman businesses, including Thumbtack, Google LSA, and Angi.",
+    keywords: ["best lead generation software for handyman businesses", "handyman lead generation software", "handyman lead generation tools"],
+  },
+  "property-management": {
+    title: "Best Lead Generation Software for Property Management Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for property management companies, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for property management companies", "property management lead generation software", "property management lead tools"],
+  },
+  "pest-control": {
+    title: "Best Lead Generation Software for Pest Control Businesses (2026) | BeltStack",
+    description: "Compare the best lead generation software for pest control businesses, including Google LSA, Thumbtack, and Angi.",
+    keywords: ["best lead generation software for pest control businesses", "pest control lead generation software", "pest control lead tools"],
+  },
+  "pool-service": {
+    title: "Best Lead Generation Software for Pool Service Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for pool service companies, including Thumbtack, Google LSA, and Angi.",
+    keywords: ["best lead generation software for pool service companies", "pool service lead generation software", "pool service lead tools"],
+  },
+  "junk-removal": {
+    title: "Best Lead Generation Software for Junk Removal Businesses (2026) | BeltStack",
+    description: "Compare the best lead generation software for junk removal businesses, including Thumbtack, Google LSA, and Angi.",
+    keywords: ["best lead generation software for junk removal businesses", "junk removal lead generation software", "junk hauling lead generation"],
+  },
+  moving: {
+    title: "Best Lead Generation Software for Moving Companies (2026) | BeltStack",
+    description: "Compare the best lead generation software for moving companies, including Thumbtack, Google LSA, and Angi.",
+    keywords: ["best lead generation software for moving companies", "moving company lead generation software", "moving leads software"],
+  },
 };
 
 export function getLeadGenerationBestForPageProps(slug: string): BestForTemplateProps | null {

@@ -3,40 +3,115 @@ import { Footer } from "@/components/Footer";
 
 const SCENARIOS = [
   {
-    label: "Best HR software overall",
+    label: "Best HR Software (2026)",
     href: "/hr/best-hr-software",
     description:
       "Our full rankings of the best HR platforms for small businesses, startups, agencies, and global teams.",
   },
   {
-    label: "Best HR software for freelancers",
+    label: "Best HR Software for Freelancers (2026)",
     href: "/hr/best-for/freelancers",
     description:
       "Lightweight HR and payroll options for solo operators and consultants planning their first hire.",
   },
   {
-    label: "Best HR software for small businesses",
+    label: "Best HR Software for Small Businesses (2026)",
     href: "/hr/best-for/small-business",
     description:
       "All-in-one HR and payroll tools for small teams that need payroll, benefits, and onboarding in one place.",
   },
   {
-    label: "Best HR software for startups",
+    label: "Best HR Software for Startups (2026)",
     href: "/hr/best-for/startups",
     description:
       "HR platforms for high-growth startups that are adding headcount quickly and may hire across locations.",
   },
   {
-    label: "Best HR software for agencies",
+    label: "Best HR Software for Agencies (2026)",
     href: "/hr/best-for/agencies",
     description:
       "HR tools for agencies that juggle client work, billable hours, and a mix of full-time and contract talent.",
   },
   {
-    label: "Best HR software for global teams",
+    label: "Best HR Software for Global Teams (2026)",
     href: "/hr/best-for/global-teams",
     description:
       "HR platforms that support international hiring, multi-country payroll, and compliance across borders.",
+  },
+  {
+    label: "Best HR Software for HVAC Businesses (2026)",
+    href: "/hr/best-for/hvac",
+    description: "Payroll, onboarding, and compliance workflows built for HVAC field and office teams.",
+  },
+  {
+    label: "Best HR Software for Plumbing Companies (2026)",
+    href: "/hr/best-for/plumbing",
+    description: "HR and payroll tools for plumbing teams with mixed office and field operations.",
+  },
+  {
+    label: "Best HR Software for Electricians (2026)",
+    href: "/hr/best-for/electricians",
+    description: "HR workflows for electrical contractor hiring, onboarding, and payroll accuracy.",
+  },
+  {
+    label: "Best HR Software for Painting Contractors (2026)",
+    href: "/hr/best-for/painting",
+    description: "Seasonal hiring, payroll, and onboarding support for painting contractor teams.",
+  },
+  {
+    label: "Best HR Software for Roofing Companies (2026)",
+    href: "/hr/best-for/roofing",
+    description: "HR and payroll systems that scale with roofing crews and compliance needs.",
+  },
+  {
+    label: "Best HR Software for General Contractors (2026)",
+    href: "/hr/best-for/general-contractors",
+    description: "HR software for multi-role GC teams and compliance-heavy operations.",
+  },
+  {
+    label: "Best HR Software for Landscaping Companies (2026)",
+    href: "/hr/best-for/landscaping",
+    description: "Seasonal workforce HR and payroll support for landscaping businesses.",
+  },
+  {
+    label: "Best HR Software for Construction Companies (2026)",
+    href: "/hr/best-for/construction",
+    description: "HR systems for construction workforce scaling and payroll control.",
+  },
+  {
+    label: "Best HR Software for Remodeling Businesses (2026)",
+    href: "/hr/best-for/remodeling",
+    description: "Project-driven HR and payroll workflows for remodeling teams.",
+  },
+  {
+    label: "Best HR Software for Handyman Businesses (2026)",
+    href: "/hr/best-for/handyman",
+    description: "Affordable HR and payroll options for lean handyman operations.",
+  },
+  {
+    label: "Best HR Software for Property Management Companies (2026)",
+    href: "/hr/best-for/property-management",
+    description: "Mixed-workforce HR and payroll tools for property management companies.",
+  },
+  {
+    label: "Best HR Software for Pest Control Businesses (2026)",
+    href: "/hr/best-for/pest-control",
+    description: "HR and payroll support for route-based pest control teams.",
+  },
+  {
+    label: "Best HR Software for Pool Service Companies (2026)",
+    href: "/hr/best-for/pool-service",
+    description: "Seasonal HR and payroll workflows for pool service operations.",
+  },
+  {
+    label: "Best HR Software for Junk Removal Businesses (2026)",
+    href: "/hr/best-for/junk-removal",
+    description: "Payroll and onboarding support for fast-moving junk removal teams.",
+  },
+  {
+    label: "Best HR Software for Moving Companies (2026)",
+    href: "/hr/best-for/moving",
+    description: "Crew-focused HR and payroll systems for moving businesses.",
   },
 ];
 
@@ -85,8 +160,8 @@ export default function HrBestForIndexPage() {
               Best HR Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find HR software that fits your situation—freelancers, small businesses, startups, agencies, and global
-              teams.
+              Find HR software that fits your situation, from freelancers and startups to trade and field-service
+              businesses.
             </p>
           </div>
         </section>
@@ -101,11 +176,11 @@ export default function HrBestForIndexPage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h3 className="text-[#1A2D48] font-bold">{item.label}</h3>
-                  <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{item.description}</p>
-                  <span className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline">
+                  <h3 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h3>
+                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
+                  <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">
                     See picks →
                   </span>
                 </Link>

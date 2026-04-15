@@ -113,6 +113,71 @@ const SCENARIOS = [
     href: getInventoryBestForUrl("moving"),
     description: "Boxes, packing material, and warehouse consumables.",
   },
+  {
+    label: "Best Inventory Management Software for Appliance Repair Businesses (2026)",
+    href: getInventoryBestForUrl("appliance-repair"),
+    description: "Truck parts, serialized components, and warranty return workflows.",
+  },
+  {
+    label: "Best Inventory Management Software for Garage Door Companies (2026)",
+    href: getInventoryBestForUrl("garage-door"),
+    description: "Springs, openers, hardware, and van stock control.",
+  },
+  {
+    label: "Best Inventory Management Software for Locksmith Businesses (2026)",
+    href: getInventoryBestForUrl("locksmith"),
+    description: "Key blanks, lock hardware, and mobile inventory accountability.",
+  },
+  {
+    label: "Best Inventory Management Software for Flooring Contractors (2026)",
+    href: getInventoryBestForUrl("flooring"),
+    description: "Lot-sensitive materials, transitions, and adhesive inventory.",
+  },
+  {
+    label: "Best Inventory Management Software for Fence & Deck Builders (2026)",
+    href: getInventoryBestForUrl("fence-deck"),
+    description: "Lumber, hardware kits, and site-staged material workflows.",
+  },
+  {
+    label: "Best Inventory Management Software for Glass & Window Installers (2026)",
+    href: getInventoryBestForUrl("glass-window-installers"),
+    description: "Fragile SKU tracking, custom orders, and site staging.",
+  },
+  {
+    label: "Best Inventory Management Software for Concrete Contractors (2026)",
+    href: getInventoryBestForUrl("concrete-contractors"),
+    description: "Forms, additives, consumables, and tooling visibility.",
+  },
+  {
+    label: "Best Inventory Management Software for Excavation Companies (2026)",
+    href: getInventoryBestForUrl("excavation"),
+    description: "Attachments, wear parts, and yard transfer accountability.",
+  },
+  {
+    label: "Best Inventory Management Software for Auto Repair Shops (2026)",
+    href: getInventoryBestForUrl("auto-repair"),
+    description: "High-SKU parts, fluids, and bay-cycle replenishment.",
+  },
+  {
+    label: "Best Inventory Management Software for Mobile Mechanics (2026)",
+    href: getInventoryBestForUrl("mobile-mechanics"),
+    description: "Van stock, common parts, and daily replenishment controls.",
+  },
+  {
+    label: "Best Inventory Management Software for Cleaning Franchises (2026)",
+    href: getInventoryBestForUrl("cleaning-franchises"),
+    description: "Multi-location supply standards and central purchasing.",
+  },
+  {
+    label: "Best Inventory Management Software for Event Services (2026)",
+    href: getInventoryBestForUrl("event-services"),
+    description: "Rentable assets, consumables, and staging logistics.",
+  },
+  {
+    label: "Best Inventory Management Software for Home Inspectors (2026)",
+    href: getInventoryBestForUrl("home-inspectors"),
+    description: "Inspector kit tracking, replacements, and team accountability.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -176,11 +241,11 @@ export default function InventoryBestForIndexPage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-[#1A2D48] text-lg font-bold">{item.label}</h2>
-                  <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{item.description}</p>
-                  <span className="mt-3 inline-block text-sm font-semibold text-[#10B981] hover:underline">
+                  <h2 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h2>
+                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
+                  <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">
                     See picks →
                   </span>
                 </Link>

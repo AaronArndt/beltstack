@@ -786,3 +786,540 @@ export const GROWING_TEAMS_PAGE_PROPS: BestForTemplateProps = {
     },
   ] as BestForFaqItem[],
 };
+
+type HelpdeskToolSlug =
+  | "zendesk"
+  | "freshdesk"
+  | "help-scout"
+  | "intercom"
+  | "zoho-desk"
+  | "gorgias"
+  | "liveagent"
+  | "kayako"
+  | "front";
+
+type ToolProfile = {
+  name: string;
+  rating: string;
+  startingPrice: string;
+  visitUrl: string;
+  logoSrc: string;
+  shortDesc: string;
+  bestFor: string;
+  standout: string;
+};
+
+const TRADE_TOOL_PROFILES: Record<HelpdeskToolSlug, ToolProfile> = {
+  zendesk: {
+    name: "Zendesk",
+    rating: "4.5",
+    startingPrice: "From ~$19/agent/mo",
+    visitUrl: "https://www.zendesk.com",
+    logoSrc: LOGOS.zendesk,
+    shortDesc: "Enterprise-ready ticketing, SLAs, and reporting for teams that need process depth.",
+    bestFor: "Advanced workflow and scale",
+    standout: "Automation + reporting depth",
+  },
+  freshdesk: {
+    name: "Freshdesk",
+    rating: "4.5",
+    startingPrice: "From ~$15/agent/mo",
+    visitUrl: "https://www.freshdesk.com",
+    logoSrc: LOGOS.freshdesk,
+    shortDesc: "Strong value with full helpdesk features, multichannel support, and straightforward setup.",
+    bestFor: "Value and flexibility",
+    standout: "Low-friction scaling",
+  },
+  "help-scout": {
+    name: "Help Scout",
+    rating: "4.6",
+    startingPrice: "From ~$20/user/mo",
+    visitUrl: "https://www.helpscout.com",
+    logoSrc: LOGOS.helpScout,
+    shortDesc: "Email-first support with a collaborative shared inbox and fast team adoption.",
+    bestFor: "Email-first workflows",
+    standout: "Simplicity and usability",
+  },
+  intercom: {
+    name: "Intercom",
+    rating: "4.4",
+    startingPrice: "From ~$39/mo",
+    visitUrl: "https://www.intercom.com",
+    logoSrc: LOGOS.intercom,
+    shortDesc: "Messaging-first support with chat, bots, and lifecycle touchpoints for higher-velocity teams.",
+    bestFor: "Conversational support",
+    standout: "In-app messaging + bots",
+  },
+  "zoho-desk": {
+    name: "Zoho Desk",
+    rating: "4.4",
+    startingPrice: "Free tier / paid tiers",
+    visitUrl: "https://www.zoho.com/desk",
+    logoSrc: LOGOS.zohoDesk,
+    shortDesc: "Budget-friendly ticketing and automation with strong fit for Zoho ecosystem users.",
+    bestFor: "Budget-conscious teams",
+    standout: "Cost-efficient core ticketing",
+  },
+  gorgias: {
+    name: "Gorgias",
+    rating: "4.5",
+    startingPrice: "From ~$60/mo",
+    visitUrl: "https://www.gorgias.com",
+    logoSrc: LOGOS.gorgias,
+    shortDesc: "High-speed support operations with automation and strong commerce context for high-volume teams.",
+    bestFor: "High-volume workflows",
+    standout: "Macro-heavy efficiency",
+  },
+  liveagent: {
+    name: "LiveAgent",
+    rating: "4.3",
+    startingPrice: "From ~$15/agent/mo",
+    visitUrl: "https://www.liveagent.com",
+    logoSrc: LOGOS.liveAgent,
+    shortDesc: "Multichannel support at competitive pricing with solid call and chat handling.",
+    bestFor: "Phone + chat-heavy teams",
+    standout: "Omnichannel inbox",
+  },
+  kayako: {
+    name: "Kayako",
+    rating: "4.2",
+    startingPrice: "Custom pricing",
+    visitUrl: "https://kayako.com",
+    logoSrc: LOGOS.kayako,
+    shortDesc: "Customer-journey support context for teams needing deeper conversation continuity.",
+    bestFor: "Conversation history depth",
+    standout: "Unified customer timeline",
+  },
+  front: {
+    name: "Front",
+    rating: "4.5",
+    startingPrice: "From ~$19/user/mo",
+    visitUrl: "https://www.front.com",
+    logoSrc: LOGOS.front,
+    shortDesc: "Collaborative shared inbox for teams that coordinate support with ops and sales.",
+    bestFor: "Cross-team collaboration",
+    standout: "Internal collaboration UX",
+  },
+};
+
+type TradeBestForConfig = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  introParagraph: string;
+  hubDescription: string;
+  keywords: string[];
+  picks: [HelpdeskToolSlug, HelpdeskToolSlug, HelpdeskToolSlug];
+  editorialGuidance: { heading: string; body: string }[];
+  faqItems: { q: string; a: string }[];
+};
+
+function tradeWhyPickBody(tool: ToolProfile, tradeLabel: string): string {
+  return `${tool.name} is a strong helpdesk option for ${tradeLabel} because it supports the ticketing speed, collaboration, and customer visibility needed in this trade. During evaluation, map real request types, validate assignment and SLA rules, and confirm reporting tracks response quality and resolution consistency by service category.`;
+}
+
+function makeTradePage(config: TradeBestForConfig): BestForTemplateProps {
+  const [a, b, c] = config.picks.map((slug) => TRADE_TOOL_PROFILES[slug]);
+  const comparisonRows = config.picks.map((slug) => {
+    const tool = TRADE_TOOL_PROFILES[slug];
+    return {
+      slug,
+      name: tool.name,
+      logoSrc: tool.logoSrc,
+      bestFor: tool.bestFor,
+      startingPrice: tool.startingPrice,
+      standoutFeature: tool.standout,
+      reviewHref: getHelpdeskReviewUrl(slug),
+    };
+  }) as BestForTableRow[];
+
+  return {
+    title: config.title,
+    subtitle: config.subtitle,
+    useCase: config.slug,
+    categoryHref: CATEGORY.href,
+    categoryLabel: CATEGORY.label,
+    introParagraph: config.introParagraph,
+    freshnessText: "Updated for 2026",
+    topPicksSub: `Our top helpdesk picks for ${config.title.replace("Best Helpdesk Software for ", "").replace(" (2026)", "").toLowerCase()}.`,
+    editorialSub: "What to evaluate before selecting helpdesk software for this trade.",
+    whyThesePicksSub: "Why these tools fit this business type.",
+    seeAlsoBlock: SEE_ALSO,
+    featuredProducts: [
+      {
+        slug: config.picks[0],
+        name: a.name,
+        badge: "Best overall fit",
+        description: a.shortDesc,
+        rating: a.rating,
+        startingPrice: a.startingPrice,
+        reviewHref: getHelpdeskReviewUrl(config.picks[0]),
+        visitUrl: a.visitUrl,
+        logoSrc: a.logoSrc,
+      },
+      {
+        slug: config.picks[1],
+        name: b.name,
+        badge: "Best alternative fit",
+        description: b.shortDesc,
+        rating: b.rating,
+        startingPrice: b.startingPrice,
+        reviewHref: getHelpdeskReviewUrl(config.picks[1]),
+        visitUrl: b.visitUrl,
+        logoSrc: b.logoSrc,
+      },
+      {
+        slug: config.picks[2],
+        name: c.name,
+        badge: "Best specialized fit",
+        description: c.shortDesc,
+        rating: c.rating,
+        startingPrice: c.startingPrice,
+        reviewHref: getHelpdeskReviewUrl(config.picks[2]),
+        visitUrl: c.visitUrl,
+        logoSrc: c.logoSrc,
+      },
+    ] as BestForFeaturedProduct[],
+    comparisonTableRows: comparisonRows,
+    editorialGuidance: config.editorialGuidance as BestForEditorialBlock[],
+    whyThesePicks: [
+      { heading: a.name, body: tradeWhyPickBody(a, config.title.replace("Best Helpdesk Software for ", "").replace(" (2026)", "")) },
+      { heading: b.name, body: tradeWhyPickBody(b, config.title.replace("Best Helpdesk Software for ", "").replace(" (2026)", "")) },
+      { heading: c.name, body: tradeWhyPickBody(c, config.title.replace("Best Helpdesk Software for ", "").replace(" (2026)", "")) },
+    ] as BestForEditorialBlock[],
+    relatedReviews: [
+      { name: a.name, href: getHelpdeskReviewUrl(config.picks[0]) },
+      { name: b.name, href: getHelpdeskReviewUrl(config.picks[1]) },
+      { name: c.name, href: getHelpdeskReviewUrl(config.picks[2]) },
+    ] as BestForReviewLink[],
+    relatedComparisons: [
+      { label: "Zendesk vs Freshdesk", href: getHelpdeskCompareUrl("zendesk-vs-freshdesk") },
+      { label: "Help Scout vs Zendesk", href: getHelpdeskCompareUrl("help-scout-vs-zendesk") },
+      { label: "Intercom vs Zendesk", href: getHelpdeskCompareUrl("intercom-vs-zendesk") },
+    ] as BestForComparisonLink[],
+    relatedGuides: [
+      { label: "How to choose helpdesk software", href: "/helpdesk/guides/how-to-choose-helpdesk-software" },
+      { label: "Shared inbox vs helpdesk software", href: "/helpdesk/guides/shared-inbox-vs-helpdesk-software" },
+    ] as BestForGuideLink[],
+    faqItems: config.faqItems as BestForFaqItem[],
+  };
+}
+
+const HELPDESK_TRADE_CONFIGS: TradeBestForConfig[] = [
+  {
+    slug: "hvac",
+    title: "Best Helpdesk Software for HVAC Businesses (2026)",
+    subtitle: "Compare HVAC helpdesk tools for dispatch communication, service-history context, and fast ticket resolution.",
+    introParagraph: "HVAC businesses need helpdesk software that supports high ticket velocity during seasonal demand spikes, preserves customer service history, and keeps office and field communication aligned.",
+    hubDescription: "Dispatch-aware helpdesk picks for HVAC service teams.",
+    keywords: ["best helpdesk software for HVAC businesses", "HVAC helpdesk software", "HVAC customer support software"],
+    picks: ["freshdesk", "zendesk", "front"],
+    editorialGuidance: [
+      { heading: "Seasonal volume planning", body: "Choose queue and routing tools that keep response times stable during heating/cooling spikes." },
+      { heading: "Field-office visibility", body: "Support and dispatch teams should share one clear customer timeline across channels." },
+      { heading: "SLA discipline", body: "Use escalation rules for emergency vs non-emergency requests." },
+      { heading: "Reporting by service type", body: "Track performance for install, maintenance, and repair workflows separately." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for HVAC businesses?", a: "Freshdesk and Zendesk are strong HVAC options, with Front useful for collaboration-heavy office workflows." },
+      { q: "Why do HVAC companies need helpdesk software?", a: "It improves response consistency, routing, and customer-history visibility during seasonal peaks." },
+      { q: "What should HVAC teams automate first?", a: "Start with ticket assignment, urgency routing, and follow-up reminders by service category." },
+    ],
+  },
+  {
+    slug: "plumbing",
+    title: "Best Helpdesk Software for Plumbing Companies (2026)",
+    subtitle: "Helpdesk tools for plumbing teams that need fast triage, recurring customer visibility, and practical automation.",
+    introParagraph: "Plumbing companies handle both urgent and routine jobs, so helpdesk software should prioritize triage speed, customer-history context, and straightforward workflows for office teams.",
+    hubDescription: "Triage-first helpdesk picks for plumbing operations.",
+    keywords: ["best helpdesk software for plumbing companies", "plumbing helpdesk software", "plumber support ticket software"],
+    picks: ["liveagent", "freshdesk", "zoho-desk"],
+    editorialGuidance: [
+      { heading: "Urgency-based routing", body: "Separate emergency plumbing requests from standard jobs with clear priority rules." },
+      { heading: "Repeat-customer context", body: "Agents should see prior issues and service history before responding." },
+      { heading: "Phone + email coordination", body: "Use one helpdesk timeline for call, email, and follow-up communication." },
+      { heading: "Lean-team usability", body: "Choose tools office staff can run without lengthy onboarding." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for plumbing companies?", a: "LiveAgent, Freshdesk, and Zoho Desk are strong plumbing helpdesk options depending on channel and budget needs." },
+      { q: "Do plumbing companies need multichannel support?", a: "Yes, most benefit from unified phone, email, and message tracking in one system." },
+      { q: "How should plumbers measure helpdesk success?", a: "Track response speed, first resolution rate, and repeat customer satisfaction." },
+    ],
+  },
+  {
+    slug: "electricians",
+    title: "Best Helpdesk Software for Electricians (2026)",
+    subtitle: "Compare helpdesk software for electricians that supports project communication, service traceability, and follow-up quality.",
+    introParagraph: "Electrical contractors need helpdesk systems that keep detailed service conversations organized, especially for safety-sensitive and project-based work.",
+    hubDescription: "Support software picks for electrical contractor workflows.",
+    keywords: ["best helpdesk software for electricians", "electrician helpdesk software", "electrical contractor ticketing software"],
+    picks: ["zendesk", "help-scout", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Documentation quality", body: "Support teams should preserve clear records for technical and safety-related issues." },
+      { heading: "Project-stage communication", body: "Use tags and workflows aligned to estimate, install, and follow-up phases." },
+      { heading: "Consistency across channels", body: "Keep communication history unified so handoffs stay accurate." },
+      { heading: "Customer confidence", body: "Use templates that reinforce professionalism and technical clarity." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for electricians?", a: "Zendesk and Freshdesk are strong full-suite options, while Help Scout works well for email-first teams." },
+      { q: "What matters most for electrician support teams?", a: "Reliable documentation, consistent follow-up, and clear issue categorization." },
+      { q: "Should electricians use automation?", a: "Yes, especially for assignment, status updates, and SLA reminders." },
+    ],
+  },
+  {
+    slug: "painting",
+    title: "Best Helpdesk Software for Painting Contractors (2026)",
+    subtitle: "Helpdesk tools for painting contractors focused on estimate follow-up, client updates, and team coordination.",
+    introParagraph: "Painting contractors benefit from helpdesk software that keeps estimate and project communication organized while improving response consistency for office teams.",
+    hubDescription: "Client-communication helpdesk picks for painting businesses.",
+    keywords: ["best helpdesk software for painting contractors", "painting contractor helpdesk software", "painting support ticket software"],
+    picks: ["help-scout", "front", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Estimate follow-up cadence", body: "Use workflow reminders to reduce quote drop-off." },
+      { heading: "Project communication consistency", body: "Track status and updates in one support timeline." },
+      { heading: "Cross-team collaboration", body: "Office and production teams should share context on open requests." },
+      { heading: "Template quality", body: "Use standardized responses for common prep and scheduling questions." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for painting contractors?", a: "Help Scout and Front are excellent for communication-heavy teams, with Freshdesk as a value full-suite option." },
+      { q: "Do painters need ticketing software?", a: "Yes, it reduces missed follow-ups and improves response consistency." },
+      { q: "What should painters automate first?", a: "Start with estimate follow-ups and project status response templates." },
+    ],
+  },
+  {
+    slug: "roofing",
+    title: "Best Helpdesk Software for Roofing Companies (2026)",
+    subtitle: "Compare roofing helpdesk software for high-volume inquiries, urgent service routing, and lifecycle support workflows.",
+    introParagraph: "Roofing companies need helpdesk tools that handle spikes in inquiry volume, prioritize urgent requests, and maintain clear communication history from estimate to completion.",
+    hubDescription: "High-volume support picks for roofing businesses.",
+    keywords: ["best helpdesk software for roofing companies", "roofing helpdesk software", "roofing support ticket system"],
+    picks: ["zendesk", "freshdesk", "liveagent"],
+    editorialGuidance: [
+      { heading: "Storm-season scalability", body: "Choose a system that can handle rapid ticket surges without losing visibility." },
+      { heading: "Priority routing", body: "Differentiate leak emergencies from routine requests automatically." },
+      { heading: "Field coordination", body: "Ensure support and operations share consistent customer updates." },
+      { heading: "Resolution reporting", body: "Track backlog and response quality by request type." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for roofing companies?", a: "Zendesk and Freshdesk are strong for structured workflows; LiveAgent is useful for channel-heavy teams." },
+      { q: "Why do roofers need helpdesk software?", a: "It improves triage, communication consistency, and visibility during demand spikes." },
+      { q: "Which channel setup is best for roofers?", a: "Most teams benefit from unified phone, email, and web request handling." },
+    ],
+  },
+  {
+    slug: "general-contractors",
+    title: "Best Helpdesk Software for General Contractors (2026)",
+    subtitle: "Helpdesk platforms for general contractors that need multi-stakeholder communication and project-phase support workflows.",
+    introParagraph: "General contractors need helpdesk software that keeps owner, subcontractor, and client communication organized while supporting project-stage workflow consistency.",
+    hubDescription: "Project-phase support picks for general contractors.",
+    keywords: ["best helpdesk software for general contractors", "general contractor helpdesk software", "construction support ticket software"],
+    picks: ["front", "zendesk", "kayako"],
+    editorialGuidance: [
+      { heading: "Multi-party communication", body: "Use workflows that maintain clarity across stakeholders and teams." },
+      { heading: "Project-phase tagging", body: "Map ticket categories to bid, pre-construction, and active project phases." },
+      { heading: "Internal collaboration", body: "Improve handoffs between project managers and support staff." },
+      { heading: "Audit-ready history", body: "Preserve customer communication trails for operational visibility." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for general contractors?", a: "Front is strong for collaboration, Zendesk for workflow depth, and Kayako for timeline continuity." },
+      { q: "Do GCs need advanced ticket workflows?", a: "Yes, especially for multi-party communication and project-stage support." },
+      { q: "How should GCs evaluate tools?", a: "Test collaboration, tagging, and reporting with real project communication flows." },
+    ],
+  },
+  {
+    slug: "landscaping",
+    title: "Best Helpdesk Software for Landscaping Companies (2026)",
+    subtitle: "Support platforms for landscaping teams focused on seasonal scheduling communication and recurring service support.",
+    introParagraph: "Landscaping companies need helpdesk software that supports recurring client communication, seasonal workflow changes, and route-aware coordination between office and field teams.",
+    hubDescription: "Seasonal support picks for landscaping operations.",
+    keywords: ["best helpdesk software for landscaping companies", "landscaping helpdesk software", "landscaper customer support software"],
+    picks: ["freshdesk", "zoho-desk", "front"],
+    editorialGuidance: [
+      { heading: "Seasonal communication planning", body: "Prepare workflow templates for spring and fall demand shifts." },
+      { heading: "Recurring service visibility", body: "Track repeat requests and customer history clearly." },
+      { heading: "Route-aware coordination", body: "Keep dispatch and support aligned on scheduling updates." },
+      { heading: "Cost control", body: "Prioritize tools with pricing that scales predictably with staff." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for landscaping companies?", a: "Freshdesk and Zoho Desk are strong value options, while Front is great for collaboration-focused teams." },
+      { q: "Why is helpdesk software useful for landscapers?", a: "It improves consistency on recurring service communication and scheduling updates." },
+      { q: "What should landscapers automate first?", a: "Start with assignment, seasonal request tags, and follow-up templates." },
+    ],
+  },
+  {
+    slug: "construction",
+    title: "Best Helpdesk Software for Construction Companies (2026)",
+    subtitle: "Compare construction helpdesk tools for structured ticketing, team accountability, and project support reporting.",
+    introParagraph: "Construction companies need helpdesk software with structured workflows, clear accountability, and strong reporting to support complex communication across projects.",
+    hubDescription: "Structured support picks for construction organizations.",
+    keywords: ["best helpdesk software for construction companies", "construction helpdesk software", "construction support ticketing"],
+    picks: ["zendesk", "front", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Workflow governance", body: "Establish consistent ticket states and assignment ownership across teams." },
+      { heading: "Cross-functional communication", body: "Coordinate support requests with PM and operations workflows." },
+      { heading: "Service-level tracking", body: "Measure response and resolution by request category and project phase." },
+      { heading: "Scalable reporting", body: "Choose dashboards that support multi-project analysis." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for construction companies?", a: "Zendesk leads on depth, Front on collaboration, and Freshdesk on value-oriented scaling." },
+      { q: "Do construction companies need helpdesk SLAs?", a: "Yes, SLAs improve consistency and accountability for support response quality." },
+      { q: "How should construction teams choose tools?", a: "Prioritize workflow control, collaboration, and reporting aligned to project operations." },
+    ],
+  },
+  {
+    slug: "remodeling",
+    title: "Best Helpdesk Software for Remodeling Businesses (2026)",
+    subtitle: "Helpdesk software for remodelers that supports long-cycle customer communication and project-status updates.",
+    introParagraph: "Remodeling businesses need helpdesk platforms that handle longer customer communication timelines while keeping office coordination and status updates organized.",
+    hubDescription: "Long-cycle support picks for remodeling teams.",
+    keywords: ["best helpdesk software for remodeling businesses", "remodeling helpdesk software", "remodeler support software"],
+    picks: ["help-scout", "kayako", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Long-cycle communication", body: "Support workflows should handle extended pre-project and active-project timelines." },
+      { heading: "Expectation management", body: "Use templates for timeline and progress communications." },
+      { heading: "History visibility", body: "Maintain context from estimate through completion and post-project follow-up." },
+      { heading: "Team adoption", body: "Select tools that office teams can run consistently without friction." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for remodeling businesses?", a: "Help Scout and Freshdesk are strong practical options; Kayako is useful when conversation continuity is critical." },
+      { q: "Why is support software important for remodelers?", a: "It keeps long-cycle client communication clear and reduces dropped updates." },
+      { q: "What should remodelers test in trials?", a: "Evaluate timeline visibility, templates, and collaboration on active project requests." },
+    ],
+  },
+  {
+    slug: "handyman",
+    title: "Best Helpdesk Software for Handyman Businesses (2026)",
+    subtitle: "Compare helpdesk tools for handyman teams that need simple setup, consistent follow-up, and affordable ticketing.",
+    introParagraph: "Handyman businesses need lightweight, practical helpdesk software that keeps customer communication organized without creating extra administrative burden.",
+    hubDescription: "Lean-team helpdesk picks for handyman operations.",
+    keywords: ["best helpdesk software for handyman businesses", "handyman helpdesk software", "handyman customer support software"],
+    picks: ["zoho-desk", "help-scout", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Simplicity first", body: "Choose tools that are easy to adopt and maintain for small office teams." },
+      { heading: "Repeat-customer tracking", body: "Use ticket history to improve recurring service communication." },
+      { heading: "Template consistency", body: "Create reusable responses for common request types." },
+      { heading: "Budget-friendly growth", body: "Select pricing models that fit small-team expansion." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for handyman businesses?", a: "Zoho Desk and Help Scout are strong lean-team picks, with Freshdesk offering more depth as teams grow." },
+      { q: "Do handyman businesses need a full helpdesk?", a: "Many do once support volume grows beyond a single inbox." },
+      { q: "What should handyman teams prioritize?", a: "Ease of use, repeat-customer history, and practical automation." },
+    ],
+  },
+  {
+    slug: "property-management",
+    title: "Best Helpdesk Software for Property Management Companies (2026)",
+    subtitle: "Helpdesk platforms for property managers handling recurring tenant and owner communication at scale.",
+    introParagraph: "Property management companies need helpdesk software that handles high communication volume, recurring issue categories, and clear audit-ready conversation history.",
+    hubDescription: "Recurring lifecycle support picks for property management teams.",
+    keywords: ["best helpdesk software for property management companies", "property management helpdesk software", "tenant support ticketing"],
+    picks: ["zendesk", "front", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Category-based routing", body: "Separate maintenance, billing, and general inquiries with clear queues." },
+      { heading: "High-volume coordination", body: "Use workflows that keep staff aligned across properties." },
+      { heading: "Conversation accountability", body: "Preserve owner and tenant communication history for transparency." },
+      { heading: "Portfolio reporting", body: "Track service performance by property or portfolio segment." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for property management companies?", a: "Zendesk and Freshdesk are strong for workflow depth, while Front excels for cross-team coordination." },
+      { q: "Why do property managers need helpdesk software?", a: "It improves consistency and accountability across recurring communication workflows." },
+      { q: "What should be automated first?", a: "Ticket routing by issue type, escalation rules, and status update templates." },
+    ],
+  },
+  {
+    slug: "pest-control",
+    title: "Best Helpdesk Software for Pest Control Businesses (2026)",
+    subtitle: "Compare helpdesk tools for pest-control teams managing recurring services, routing, and customer communication.",
+    introParagraph: "Pest control businesses need helpdesk software that supports recurring service communication, fast triage, and consistent updates between office and field operations.",
+    hubDescription: "Recurring-service support picks for pest control operations.",
+    keywords: ["best helpdesk software for pest control businesses", "pest control helpdesk software", "pest service support software"],
+    picks: ["freshdesk", "liveagent", "zoho-desk"],
+    editorialGuidance: [
+      { heading: "Recurring service workflows", body: "Use tagging and templates for recurring treatment communications." },
+      { heading: "Urgency handling", body: "Prioritize urgent requests with automatic routing and escalation." },
+      { heading: "Multichannel consistency", body: "Keep phone, email, and message history unified." },
+      { heading: "Operational simplicity", body: "Choose tools that office teams can maintain reliably." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for pest control businesses?", a: "Freshdesk and LiveAgent are strong channel-ready options, with Zoho Desk as a budget-friendly alternative." },
+      { q: "What support workflows matter most?", a: "Recurring service communications, urgent triage, and consistent follow-up." },
+      { q: "How should pest-control teams evaluate tools?", a: "Run real recurring request scenarios and measure response and resolution quality." },
+    ],
+  },
+  {
+    slug: "pool-service",
+    title: "Best Helpdesk Software for Pool Service Companies (2026)",
+    subtitle: "Helpdesk platforms for pool service teams focused on seasonal support and recurring customer updates.",
+    introParagraph: "Pool service companies need helpdesk software that handles recurring client communication, seasonal demand cycles, and practical coordination between office and technicians.",
+    hubDescription: "Seasonal support picks for pool service teams.",
+    keywords: ["best helpdesk software for pool service companies", "pool service helpdesk software", "pool maintenance support software"],
+    picks: ["help-scout", "freshdesk", "zoho-desk"],
+    editorialGuidance: [
+      { heading: "Seasonal request preparation", body: "Build workflows for opening and closing season support surges." },
+      { heading: "Recurring customer context", body: "Track service history and prior issues in one timeline." },
+      { heading: "Response consistency", body: "Use templates and macros for common maintenance questions." },
+      { heading: "Cost-fit scaling", body: "Select tools with pricing aligned to lean office teams." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for pool service companies?", a: "Help Scout and Freshdesk are strong practical options, with Zoho Desk for budget-focused teams." },
+      { q: "Why should pool-service teams use helpdesk software?", a: "It improves recurring support consistency and customer communication clarity." },
+      { q: "What should be tracked in tickets?", a: "Seasonal service type, customer history, and prior resolution notes." },
+    ],
+  },
+  {
+    slug: "junk-removal",
+    title: "Best Helpdesk Software for Junk Removal Businesses (2026)",
+    subtitle: "Compare helpdesk software for junk-removal teams that need fast response, dispatch communication, and streamlined support.",
+    introParagraph: "Junk removal businesses need helpdesk software that supports fast turnaround communication, practical dispatch coordination, and efficient ticket handling for local service demand.",
+    hubDescription: "Fast-turn support picks for junk-removal teams.",
+    keywords: ["best helpdesk software for junk removal businesses", "junk removal helpdesk software", "junk hauling support software"],
+    picks: ["liveagent", "front", "freshdesk"],
+    editorialGuidance: [
+      { heading: "Speed-to-response", body: "Optimize queues for quick inquiry triage and assignment." },
+      { heading: "Dispatch handoff clarity", body: "Maintain clear communication history between support and operations." },
+      { heading: "Multichannel intake", body: "Unify email, web, and phone inquiries in one queue." },
+      { heading: "Repeatable templates", body: "Use standardized responses for scheduling and pricing questions." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for junk removal businesses?", a: "LiveAgent and Front are strong for speed and collaboration, while Freshdesk is a reliable value option." },
+      { q: "Why does junk removal need ticketing software?", a: "It helps teams respond quickly and avoid dropped requests in high-turnover workflows." },
+      { q: "What should teams automate first?", a: "Assignment rules, inquiry categorization, and follow-up reminders." },
+    ],
+  },
+  {
+    slug: "moving",
+    title: "Best Helpdesk Software for Moving Companies (2026)",
+    subtitle: "Helpdesk tools for moving companies that need quote-cycle support, schedule communication, and service reliability.",
+    introParagraph: "Moving companies need helpdesk software that keeps quote and scheduling communication organized while supporting high inquiry volume during peak moving periods.",
+    hubDescription: "Quote-cycle support picks for moving companies.",
+    keywords: ["best helpdesk software for moving companies", "moving company helpdesk software", "moving support ticket software"],
+    picks: ["zendesk", "front", "liveagent"],
+    editorialGuidance: [
+      { heading: "Quote-to-booking workflow", body: "Track inquiry progression from quote request to booked move." },
+      { heading: "Peak-season scalability", body: "Use routing and SLAs that hold up during demand spikes." },
+      { heading: "Cross-team coordination", body: "Keep operations and support aligned on schedule updates." },
+      { heading: "Customer confidence", body: "Use consistent templates for timeline and preparation communication." },
+    ],
+    faqItems: [
+      { q: "What is the best helpdesk software for moving companies?", a: "Zendesk is strong for process depth, Front for collaboration, and LiveAgent for multichannel support." },
+      { q: "What workflows matter most for movers?", a: "Quote tracking, schedule updates, and clear resolution communication." },
+      { q: "How should movers evaluate tools?", a: "Test real quote and scheduling scenarios with peak-volume assumptions." },
+    ],
+  },
+];
+
+export const HELPDESK_TRADE_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps> = Object.fromEntries(
+  HELPDESK_TRADE_CONFIGS.map((config) => [config.slug, makeTradePage(config)])
+);
+
+export const HELPDESK_TRADE_METADATA_BY_SLUG: Record<string, { title: string; description: string; keywords: string[] }> =
+  Object.fromEntries(
+    HELPDESK_TRADE_CONFIGS.map((config) => [
+      config.slug,
+      {
+        title: `${config.title} | BeltStack`,
+        description: config.subtitle,
+        keywords: config.keywords,
+      },
+    ])
+  );

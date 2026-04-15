@@ -56,6 +56,98 @@ const comparisonTableRows = [
   { slug: "nicejob", name: "NiceJob", logoSrc: LOGOS.nicejob, bestFor: "Simplicity", startingPrice: "From ~$75/mo", standoutFeature: "Low-friction onboarding", reviewHref: getReputationManagementReviewUrl("nicejob") },
 ];
 
+type RepToolSlug =
+  | "podium"
+  | "birdeye"
+  | "nicejob"
+  | "reputation-com"
+  | "broadly"
+  | "grade-us"
+  | "trustpilot-business";
+
+const TOOL_SUMMARIES: Record<
+  RepToolSlug,
+  { name: string; badge: string; description: string; rating: string; startingPrice: string; visitUrl: string; logoSrc: string; bestFor: string; standout: string }
+> = {
+  podium: {
+    name: "Podium",
+    badge: "Best SMS-first execution",
+    description: "Strong for teams that run customer follow-up and review requests through text.",
+    rating: "4.5",
+    startingPrice: "Custom / quote",
+    visitUrl: "https://www.podium.com",
+    logoSrc: LOGOS.podium,
+    bestFor: "Text-led review requests",
+    standout: "SMS workflow speed",
+  },
+  birdeye: {
+    name: "Birdeye",
+    badge: "Best all-in-one suite",
+    description: "Broad reputation, listings, and response management for scaling operations.",
+    rating: "4.6",
+    startingPrice: "Custom / quote",
+    visitUrl: "https://birdeye.com",
+    logoSrc: LOGOS.birdeye,
+    bestFor: "Multi-location governance",
+    standout: "Suite depth",
+  },
+  nicejob: {
+    name: "NiceJob",
+    badge: "Best low-friction automation",
+    description: "Simple review growth automation for lean service teams.",
+    rating: "4.4",
+    startingPrice: "From ~$75/mo",
+    visitUrl: "https://nicejob.com",
+    logoSrc: LOGOS.nicejob,
+    bestFor: "Simple execution",
+    standout: "Fast onboarding",
+  },
+  "reputation-com": {
+    name: "Reputation.com",
+    badge: "Best enterprise controls",
+    description: "Governance-focused platform for organizations with strict approvals and reporting.",
+    rating: "4.2",
+    startingPrice: "Enterprise / custom",
+    visitUrl: "https://reputation.com",
+    logoSrc: LOGOS["reputation-com"],
+    bestFor: "Policy-heavy teams",
+    standout: "Enterprise governance",
+  },
+  broadly: {
+    name: "Broadly",
+    badge: "Best local-service simplicity",
+    description: "Practical local review workflows without heavy setup overhead.",
+    rating: "4.2",
+    startingPrice: "Custom / quote",
+    visitUrl: "https://broadly.com",
+    logoSrc: LOGOS.broadly,
+    bestFor: "Small service teams",
+    standout: "Ease of use",
+  },
+  "grade-us": {
+    name: "Grade.us",
+    badge: "Best agency-style campaigns",
+    description: "Campaign-oriented review funnels with flexible management controls.",
+    rating: "4.1",
+    startingPrice: "From ~$110/mo",
+    visitUrl: "https://www.grade.us",
+    logoSrc: LOGOS["grade-us"],
+    bestFor: "Campaign management",
+    standout: "Workflow flexibility",
+  },
+  "trustpilot-business": {
+    name: "Trustpilot (Business)",
+    badge: "Best third-party trust brand",
+    description: "Useful when third-party social proof and wider brand visibility are strategic.",
+    rating: "4.0",
+    startingPrice: "Custom / quote",
+    visitUrl: "https://business.trustpilot.com",
+    logoSrc: LOGOS["trustpilot-business"],
+    bestFor: "Third-party review visibility",
+    standout: "Recognized trust profile",
+  },
+};
+
 type BestForScenarioContent = {
   subtitle: string;
   introParagraph: string;
@@ -356,8 +448,104 @@ const BEST_FOR_SCENARIO_CONTENT: Record<string, BestForScenarioContent> = {
   },
 };
 
+type TradeConfig = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  introParagraph: string;
+  keywords: string[];
+  picks: [RepToolSlug, RepToolSlug, RepToolSlug];
+};
+
+const TRADE_CONFIGS: TradeConfig[] = [
+  { slug: "hvac", title: "Best Reputation Management Software for HVAC Businesses (2026)", subtitle: "Manage HVAC review growth and response quality through seasonal demand swings.", introParagraph: "HVAC businesses need reputation software that keeps review requests and response workflows reliable during peak seasonal volume.", keywords: ["best reputation management software for HVAC businesses", "HVAC reputation management software", "HVAC review management"], picks: ["podium", "birdeye", "nicejob"] },
+  { slug: "plumbing", title: "Best Reputation Management Software for Plumbing Companies (2026)", subtitle: "Reputation tools for plumbing teams handling urgent-intent leads and trust-sensitive reviews.", introParagraph: "Plumbing companies benefit from fast review request workflows and clear negative-feedback handling to protect local conversion.", keywords: ["best reputation management software for plumbing companies", "plumbing reputation software", "plumber review management"], picks: ["podium", "broadly", "nicejob"] },
+  { slug: "electricians", title: "Best Reputation Management Software for Electricians (2026)", subtitle: "Review and response platforms for electricians where technical trust influences close rates.", introParagraph: "Electricians need reputation systems that reinforce credibility and maintain response discipline across high-intent local channels.", keywords: ["best reputation management software for electricians", "electrician reputation software", "electrical contractor reviews"], picks: ["birdeye", "podium", "nicejob"] },
+  { slug: "painting", title: "Best Reputation Management Software for Painting Contractors (2026)", subtitle: "Reputation software for painting businesses focused on visual proof and review consistency.", introParagraph: "Painting contractors need review workflows that turn completed projects into visible social proof and referral momentum.", keywords: ["best reputation management software for painting contractors", "painting reputation software", "painter review platform"], picks: ["nicejob", "broadly", "podium"] },
+  { slug: "roofing", title: "Best Reputation Management Software for Roofing Companies (2026)", subtitle: "High-trust reputation tools for roofing teams selling high-ticket jobs and handling dispute risk.", introParagraph: "Roofing businesses need reputation operations that support long buying cycles, trust reinforcement, and complaint escalation control.", keywords: ["best reputation management software for roofing companies", "roofing reputation software", "roofer review management"], picks: ["birdeye", "podium", "reputation-com"] },
+  { slug: "general-contractors", title: "Best Reputation Management Software for General Contractors (2026)", subtitle: "Reputation systems for GCs managing multi-stakeholder communication and project credibility.", introParagraph: "General contractors need review governance and response consistency across homeowner, commercial, and referral-driven workstreams.", keywords: ["best reputation management software for general contractors", "general contractor reputation software", "GC review software"], picks: ["birdeye", "reputation-com", "grade-us"] },
+  { slug: "landscaping", title: "Best Reputation Management Software for Landscaping Companies (2026)", subtitle: "Review growth platforms for landscaping teams balancing seasonality and recurring service trust.", introParagraph: "Landscaping businesses need reputation tools that keep review cadence consistent across seasonal demand and recurring maintenance workflows.", keywords: ["best reputation management software for landscaping companies", "landscaping reputation software", "landscaper review management"], picks: ["nicejob", "broadly", "podium"] },
+  { slug: "construction", title: "Best Reputation Management Software for Construction Companies (2026)", subtitle: "Reputation platforms for construction companies requiring governance, visibility, and multi-team accountability.", introParagraph: "Construction organizations benefit from structured review monitoring and escalation workflows tied to project delivery quality.", keywords: ["best reputation management software for construction companies", "construction reputation software", "construction review platform"], picks: ["reputation-com", "birdeye", "grade-us"] },
+  { slug: "remodeling", title: "Best Reputation Management Software for Remodeling Businesses (2026)", subtitle: "Reputation tools for remodelers where long-cycle trust and social proof drive conversion.", introParagraph: "Remodeling businesses need strong review recency and high-quality response practices to support premium project close rates.", keywords: ["best reputation management software for remodeling businesses", "remodeling reputation software", "remodeler reviews"], picks: ["nicejob", "birdeye", "podium"] },
+  { slug: "handyman", title: "Best Reputation Management Software for Handyman Businesses (2026)", subtitle: "Simple, affordable reputation software for handyman teams focused on repeat local trust.", introParagraph: "Handyman businesses need lightweight reputation workflows that can run consistently without adding operational overhead.", keywords: ["best reputation management software for handyman businesses", "handyman reputation software", "handyman review software"], picks: ["broadly", "nicejob", "podium"] },
+  { slug: "property-management", title: "Best Reputation Management Software for Property Management Companies (2026)", subtitle: "Reputation management platforms for multi-property communication and response governance.", introParagraph: "Property management companies need review and response systems that support recurring communication across properties and stakeholder types.", keywords: ["best reputation management software for property management companies", "property management reputation software", "property reviews management"], picks: ["birdeye", "reputation-com", "podium"] },
+  { slug: "pest-control", title: "Best Reputation Management Software for Pest Control Businesses (2026)", subtitle: "Review growth and response tools for pest-control teams managing recurring service trust.", introParagraph: "Pest control businesses need dependable reputation workflows that maintain review velocity and protect local trust in recurring service models.", keywords: ["best reputation management software for pest control businesses", "pest control reputation software", "pest service review software"], picks: ["podium", "nicejob", "broadly"] },
+  { slug: "pool-service", title: "Best Reputation Management Software for Pool Service Companies (2026)", subtitle: "Seasonal reputation software for pool service teams that rely on recurring customer confidence.", introParagraph: "Pool service companies need easy reputation systems that support seasonal campaign timing and recurring-client review consistency.", keywords: ["best reputation management software for pool service companies", "pool service reputation software", "pool maintenance review software"], picks: ["nicejob", "podium", "broadly"] },
+  { slug: "junk-removal", title: "Best Reputation Management Software for Junk Removal Businesses (2026)", subtitle: "Fast-turn reputation tools for junk removal teams where speed and trust shape local conversion.", introParagraph: "Junk removal businesses need review workflows that match quick-turn operations and keep customer trust visible in local search.", keywords: ["best reputation management software for junk removal businesses", "junk removal reputation software", "junk hauling reviews"], picks: ["podium", "broadly", "nicejob"] },
+  { slug: "moving", title: "Best Reputation Management Software for Moving Companies (2026)", subtitle: "Reputation software for moving companies balancing high-stress customer journeys and trust signals.", introParagraph: "Moving companies need reputation platforms that support disciplined follow-up and responsive issue handling during high-stakes customer interactions.", keywords: ["best reputation management software for moving companies", "moving company reputation software", "moving reviews management"], picks: ["birdeye", "podium", "trustpilot-business"] },
+];
+
+function scenarioFeatured(slug: string) {
+  const cfg = TRADE_CONFIGS.find((item) => item.slug === slug);
+  if (!cfg) return featuredProducts;
+  return cfg.picks.map((pick, idx) => {
+    const t = TOOL_SUMMARIES[pick];
+    return {
+      slug: pick,
+      name: t.name,
+      badge: idx === 0 ? "Best overall fit" : idx === 1 ? "Best alternative fit" : "Best specialized fit",
+      description: t.description,
+      rating: t.rating,
+      startingPrice: t.startingPrice,
+      reviewHref: getReputationManagementReviewUrl(pick),
+      visitUrl: t.visitUrl,
+      logoSrc: t.logoSrc,
+    };
+  });
+}
+
+function scenarioTable(slug: string) {
+  const cfg = TRADE_CONFIGS.find((item) => item.slug === slug);
+  if (!cfg) return comparisonTableRows;
+  return cfg.picks.map((pick) => {
+    const t = TOOL_SUMMARIES[pick];
+    return {
+      slug: pick,
+      name: t.name,
+      logoSrc: t.logoSrc,
+      bestFor: t.bestFor,
+      startingPrice: t.startingPrice,
+      standoutFeature: t.standout,
+      reviewHref: getReputationManagementReviewUrl(pick),
+    };
+  });
+}
+
+function makeGeneratedScenarioContent(slug: string): BestForScenarioContent {
+  const cfg = TRADE_CONFIGS.find((item) => item.slug === slug);
+  const titleLc = cfg
+    ? cfg.title.replace("Best Reputation Management Software for ", "").replace(" (2026)", "").toLowerCase()
+    : slug;
+  const picks = cfg ? cfg.picks.map((pick) => TOOL_SUMMARIES[pick].name) : ["Podium", "Birdeye", "NiceJob"];
+  return {
+    subtitle: cfg?.subtitle ?? `Reputation management workflows optimized for ${titleLc}.`,
+    introParagraph:
+      cfg?.introParagraph ??
+      `The best reputation management software for ${titleLc} should help teams collect high-quality reviews consistently, respond quickly, and convert trust into stronger local lead performance.`,
+    topPicksSub: `Top reputation software picks for ${titleLc}.`,
+    editorialSub: `What ${titleLc} teams should prioritize when selecting reputation software.`,
+    whyThesePicksSub: `Why these tools are strong fits for ${titleLc}.`,
+    editorialGuidance: [
+      { heading: "Tie request timing to service completion", body: "Request reviews after successful jobs using a repeatable workflow so cadence stays consistent." },
+      { heading: "Define response ownership clearly", body: "Assign who responds, who escalates sensitive complaints, and how quickly unresolved issues are reviewed." },
+      { heading: "Connect trust signals to conversion pages", body: "Surface fresh reviews on high-intent pages so local buyers see proof at decision points." },
+      { heading: "Measure business impact, not only review count", body: "Track review velocity and response quality alongside lead quality and close-rate performance." },
+    ],
+    whyThesePicks: picks.map((tool) => ({
+      heading: tool,
+      body: `${tool} is a strong option for ${titleLc} teams because it supports repeatable review collection and response workflows without relying on ad hoc follow-up. During evaluation, run a 30- to 60-day pilot with clear ownership and compare outcomes across review growth, response speed, and conversion influence.`,
+    })),
+    faqItems: [
+      { q: `What is the best reputation management software for ${titleLc}?`, a: `${picks.join(", ")} are strong starting options. Choose based on workflow fit, team capacity, and required governance depth.` },
+      { q: "How quickly should teams respond to negative reviews?", a: "Aim for same-day acknowledgment when possible, then route resolution to the right owner with a documented escalation path." },
+      { q: "How do we prove ROI from reputation software?", a: "Measure review and response trends alongside booked leads, close rates, and local conversion performance by market." },
+      { q: "What is the best rollout approach?", a: "Pilot one service line or market first, tune templates and ownership, then scale only after consistent execution is proven." },
+    ],
+  };
+}
+
 function makePage(slug: string, title: string): BestForTemplateProps {
-  const scenario = BEST_FOR_SCENARIO_CONTENT[slug];
+  const scenario = BEST_FOR_SCENARIO_CONTENT[slug] ?? makeGeneratedScenarioContent(slug);
   return {
     title,
     subtitle: scenario.subtitle,
@@ -375,8 +563,8 @@ function makePage(slug: string, title: string): BestForTemplateProps {
       compareLabel: "Compare reputation management software",
       compareHref: "/reputation-management/compare",
     },
-    featuredProducts,
-    comparisonTableRows,
+    featuredProducts: scenarioFeatured(slug),
+    comparisonTableRows: scenarioTable(slug),
     editorialGuidance: scenario.editorialGuidance,
     whyThesePicks: scenario.whyThesePicks,
     relatedReviews: [
@@ -411,13 +599,24 @@ function makePage(slug: string, title: string): BestForTemplateProps {
 }
 
 export const REPUTATION_MANAGEMENT_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps> = {
-  "small-business": makePage("small-business", "Best Reputation Management Software for Small Business (2026)"),
-  contractors: makePage("contractors", "Best Reputation Management Software for Contractors (2026)"),
-  hvac: makePage("hvac", "Best Reputation Management Software for HVAC (2026)"),
-  plumbers: makePage("plumbers", "Best Reputation Management Software for Plumbers (2026)"),
+  hvac: makePage("hvac", "Best Reputation Management Software for HVAC Businesses (2026)"),
+  plumbing: makePage("plumbing", "Best Reputation Management Software for Plumbing Companies (2026)"),
   electricians: makePage("electricians", "Best Reputation Management Software for Electricians (2026)"),
-  roofers: makePage("roofers", "Best Reputation Management Software for Roofers (2026)"),
-  "home-services": makePage("home-services", "Best Reputation Management Software for Home Services (2026)"),
+  painting: makePage("painting", "Best Reputation Management Software for Painting Contractors (2026)"),
+  roofing: makePage("roofing", "Best Reputation Management Software for Roofing Companies (2026)"),
+  "general-contractors": makePage("general-contractors", "Best Reputation Management Software for General Contractors (2026)"),
+  landscaping: makePage("landscaping", "Best Reputation Management Software for Landscaping Companies (2026)"),
+  construction: makePage("construction", "Best Reputation Management Software for Construction Companies (2026)"),
+  remodeling: makePage("remodeling", "Best Reputation Management Software for Remodeling Businesses (2026)"),
+  handyman: makePage("handyman", "Best Reputation Management Software for Handyman Businesses (2026)"),
+  "property-management": makePage("property-management", "Best Reputation Management Software for Property Management Companies (2026)"),
+  "pest-control": makePage("pest-control", "Best Reputation Management Software for Pest Control Businesses (2026)"),
+  "pool-service": makePage("pool-service", "Best Reputation Management Software for Pool Service Companies (2026)"),
+  "junk-removal": makePage("junk-removal", "Best Reputation Management Software for Junk Removal Businesses (2026)"),
+  moving: makePage("moving", "Best Reputation Management Software for Moving Companies (2026)"),
+  // legacy aliases
+  plumbers: makePage("plumbing", "Best Reputation Management Software for Plumbing Companies (2026)"),
+  roofers: makePage("roofing", "Best Reputation Management Software for Roofing Companies (2026)"),
 };
 
 export function getReputationManagementBestForPageProps(slug: string): BestForTemplateProps | null {
@@ -425,5 +624,19 @@ export function getReputationManagementBestForPageProps(slug: string): BestForTe
 }
 
 export function getReputationManagementBestForSlugs(): string[] {
-  return Object.keys(REPUTATION_MANAGEMENT_BEST_FOR_BY_SLUG);
+  return TRADE_CONFIGS.map((item) => item.slug);
 }
+
+export const REPUTATION_MANAGEMENT_BEST_FOR_METADATA_BY_SLUG: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = Object.fromEntries(
+  TRADE_CONFIGS.map((cfg) => [
+    cfg.slug,
+    {
+      title: `${cfg.title} | BeltStack`,
+      description: cfg.subtitle,
+      keywords: cfg.keywords,
+    },
+  ])
+);

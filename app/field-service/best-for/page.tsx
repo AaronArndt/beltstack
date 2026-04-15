@@ -65,7 +65,7 @@ export default function FieldServiceBestForHubPage() {
                   href={item.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-xl font-bold text-[#1A2D48] group-hover:text-[#10B981]">{item.label}</h2>
+                  <h2 className="text-base font-bold text-[#1A2D48] group-hover:text-[#10B981]">{item.label}</h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-[#57534E]">{item.description}</p>
                   <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">Open →</span>
                 </Link>

@@ -9,13 +9,18 @@ import {
   AGENCIES_PAGE_PROPS,
   GLOBAL_TEAMS_PAGE_PROPS,
 } from "@/lib/data/hrBestFor";
+import { HR_TRADE_BEST_FOR_BY_SLUG, HR_TRADE_BEST_FOR_METADATA_BY_SLUG } from "@/lib/data/hrBestForTrades";
 
-const PAGE_MAP: Record<string, BestForTemplateProps> = {
+const CORE_PAGE_MAP: Record<string, BestForTemplateProps> = {
   freelancers: FREELANCERS_PAGE_PROPS,
   "small-business": SMALL_BUSINESS_PAGE_PROPS,
   startups: STARTUPS_PAGE_PROPS,
   agencies: AGENCIES_PAGE_PROPS,
   "global-teams": GLOBAL_TEAMS_PAGE_PROPS,
+};
+const PAGE_MAP: Record<string, BestForTemplateProps> = {
+  ...CORE_PAGE_MAP,
+  ...HR_TRADE_BEST_FOR_BY_SLUG,
 };
 
 type Props = { params: Promise<{ scenario: string }> };
@@ -34,6 +39,7 @@ export default async function HrBestForScenarioPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { scenario } = await params;
   const pageProps = PAGE_MAP[scenario];
+  const tradeMeta = HR_TRADE_BEST_FOR_METADATA_BY_SLUG[scenario];
 
   if (!pageProps) {
     return {
@@ -43,8 +49,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${pageProps.title} | BeltStack`,
-    description: pageProps.subtitle,
+    title: tradeMeta?.title ?? `${pageProps.title} | BeltStack`,
+    description: tradeMeta?.description ?? pageProps.subtitle,
+    keywords: tradeMeta?.keywords,
   };
 }
 

@@ -197,23 +197,28 @@ export type ComparisonLink = { label: string; href: string };
 export type FaqItem = { q: string; a: string };
 
 export const USE_CASE_LINKS: UseCaseLink[] = [
-  { label: "Best for small business", href: getReputationManagementBestForUrl("small-business"), description: "Simple, sustainable review workflows." },
-  { label: "Best for contractors", href: getReputationManagementBestForUrl("contractors"), description: "Trade-focused review and response operations." },
-  { label: "Best for HVAC", href: getReputationManagementBestForUrl("hvac"), description: "High-volume seasonal demand patterns." },
-  { label: "Best for plumbers", href: getReputationManagementBestForUrl("plumbers"), description: "Urgent intent and rapid follow-up." },
-  { label: "Best for electricians", href: getReputationManagementBestForUrl("electricians"), description: "Trust and credential-led buying." },
-  { label: "Best for roofers", href: getReputationManagementBestForUrl("roofers"), description: "High-ticket review trust impact." },
-  { label: "Best for home services", href: getReputationManagementBestForUrl("home-services"), description: "Multi-trade consistency and governance." },
+  { label: "Best Reputation Management Software for HVAC Businesses (2026)", href: getReputationManagementBestForUrl("hvac"), description: "High-volume seasonal demand patterns and response consistency." },
+  { label: "Best Reputation Management Software for Plumbing Companies (2026)", href: getReputationManagementBestForUrl("plumbing"), description: "Urgent intent and fast follow-up review workflows." },
+  { label: "Best Reputation Management Software for Electricians (2026)", href: getReputationManagementBestForUrl("electricians"), description: "Trust and credibility-led review operations." },
+  { label: "Best Reputation Management Software for Roofing Companies (2026)", href: getReputationManagementBestForUrl("roofing"), description: "High-ticket trust signals and escalation controls." },
 ];
 
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
-  { label: "Small business", href: getReputationManagementBestForUrl("small-business") },
-  { label: "Contractors", href: getReputationManagementBestForUrl("contractors") },
-  { label: "HVAC", href: getReputationManagementBestForUrl("hvac") },
-  { label: "Plumbers", href: getReputationManagementBestForUrl("plumbers") },
+  { label: "HVAC businesses", href: getReputationManagementBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getReputationManagementBestForUrl("plumbing") },
   { label: "Electricians", href: getReputationManagementBestForUrl("electricians") },
-  { label: "Roofers", href: getReputationManagementBestForUrl("roofers") },
-  { label: "Home services", href: getReputationManagementBestForUrl("home-services") },
+  { label: "Painting contractors", href: getReputationManagementBestForUrl("painting") },
+  { label: "Roofing companies", href: getReputationManagementBestForUrl("roofing") },
+  { label: "General contractors", href: getReputationManagementBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getReputationManagementBestForUrl("landscaping") },
+  { label: "Construction companies", href: getReputationManagementBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getReputationManagementBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getReputationManagementBestForUrl("handyman") },
+  { label: "Property management companies", href: getReputationManagementBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getReputationManagementBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getReputationManagementBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getReputationManagementBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getReputationManagementBestForUrl("moving") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

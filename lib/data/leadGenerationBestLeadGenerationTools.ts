@@ -263,14 +263,21 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
 ];
 
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
-  { label: "Contractors", href: getLeadGenerationBestForUrl("contractors") },
-  { label: "HVAC", href: getLeadGenerationBestForUrl("hvac") },
-  { label: "Plumbing", href: getLeadGenerationBestForUrl("plumbing") },
+  { label: "HVAC businesses", href: getLeadGenerationBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getLeadGenerationBestForUrl("plumbing") },
   { label: "Electricians", href: getLeadGenerationBestForUrl("electricians") },
-  { label: "Roofing", href: getLeadGenerationBestForUrl("roofing") },
-  { label: "Landscaping", href: getLeadGenerationBestForUrl("landscaping") },
-  { label: "Cleaning services", href: getLeadGenerationBestForUrl("cleaning-services") },
-  { label: "Home services", href: getLeadGenerationBestForUrl("home-services") },
+  { label: "Painting contractors", href: getLeadGenerationBestForUrl("painting") },
+  { label: "Roofing companies", href: getLeadGenerationBestForUrl("roofing") },
+  { label: "General contractors", href: getLeadGenerationBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getLeadGenerationBestForUrl("landscaping") },
+  { label: "Construction companies", href: getLeadGenerationBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getLeadGenerationBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getLeadGenerationBestForUrl("handyman") },
+  { label: "Property management companies", href: getLeadGenerationBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getLeadGenerationBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getLeadGenerationBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getLeadGenerationBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getLeadGenerationBestForUrl("moving") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

@@ -1,19 +1,88 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getEmailMarketingBestForUrl } from "@/lib/routes";
-import { BEST_FOR_BY_TRADE } from "@/lib/data/emailMarketingBestEmailMarketingSoftware";
 
 const LINKS = [
   {
-    label: "Best email marketing software overall",
+    label: "Best Email Marketing Software (2026)",
     href: "/email-marketing/best-email-marketing-software",
     description: "Full rankings, deep dives, automations, and trade-offs for local operators.",
   },
-  ...BEST_FOR_BY_TRADE.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: `Email marketing picks and evaluation tips for ${item.label.toLowerCase()}.`,
-  })),
+  {
+    label: "Best Email Marketing Software for HVAC Businesses (2026)",
+    href: getEmailMarketingBestForUrl("hvac"),
+    description: "Email automation picks and lifecycle guidance for HVAC businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Plumbing Companies (2026)",
+    href: getEmailMarketingBestForUrl("plumbing"),
+    description: "Email and reminder workflows for plumbing companies.",
+  },
+  {
+    label: "Best Email Marketing Software for Electricians (2026)",
+    href: getEmailMarketingBestForUrl("electricians"),
+    description: "Email systems for electrical contractors with longer-cycle follow-up.",
+  },
+  {
+    label: "Best Email Marketing Software for Painting Contractors (2026)",
+    href: getEmailMarketingBestForUrl("painting"),
+    description: "Visual campaign and estimate nurture tools for painting contractors.",
+  },
+  {
+    label: "Best Email Marketing Software for Roofing Companies (2026)",
+    href: getEmailMarketingBestForUrl("roofing"),
+    description: "Trust-building and seasonal campaign platforms for roofing companies.",
+  },
+  {
+    label: "Best Email Marketing Software for General Contractors (2026)",
+    href: getEmailMarketingBestForUrl("general-contractors"),
+    description: "CRM-linked nurture platforms for general contractors.",
+  },
+  {
+    label: "Best Email Marketing Software for Landscaping Companies (2026)",
+    href: getEmailMarketingBestForUrl("landscaping"),
+    description: "Seasonal and route-based email tools for landscaping companies.",
+  },
+  {
+    label: "Best Email Marketing Software for Construction Companies (2026)",
+    href: getEmailMarketingBestForUrl("construction"),
+    description: "Pipeline-aware email platforms for construction companies.",
+  },
+  {
+    label: "Best Email Marketing Software for Remodeling Businesses (2026)",
+    href: getEmailMarketingBestForUrl("remodeling"),
+    description: "Project-education and quote nurture software for remodeling businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Handyman Businesses (2026)",
+    href: getEmailMarketingBestForUrl("handyman"),
+    description: "Simple and affordable email tools for handyman businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Property Management Companies (2026)",
+    href: getEmailMarketingBestForUrl("property-management"),
+    description: "Lifecycle communication and segmentation tools for property management companies.",
+  },
+  {
+    label: "Best Email Marketing Software for Pest Control Businesses (2026)",
+    href: getEmailMarketingBestForUrl("pest-control"),
+    description: "Recurring-service retention software for pest control businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Pool Service Companies (2026)",
+    href: getEmailMarketingBestForUrl("pool-service"),
+    description: "Seasonal and recurring campaign tools for pool service companies.",
+  },
+  {
+    label: "Best Email Marketing Software for Junk Removal Businesses (2026)",
+    href: getEmailMarketingBestForUrl("junk-removal"),
+    description: "Fast-turn campaign and reminder tools for junk removal businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Moving Companies (2026)",
+    href: getEmailMarketingBestForUrl("moving"),
+    description: "Quote follow-up and lifecycle email tools for moving companies.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
@@ -70,7 +139,7 @@ export default function EmailMarketingBestForHubPage() {
                   href={item.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
                 >
-                  <h2 className="text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{item.label}</h2>
+                  <h2 className="text-[#1A2D48] text-base font-bold group-hover:text-[#10B981]">{item.label}</h2>
                   <p className="mt-2 text-[#57534E] text-sm leading-relaxed flex-1">{item.description}</p>
                   <span className="mt-4 text-sm font-semibold text-[#10B981] group-hover:underline">Open →</span>
                 </Link>
