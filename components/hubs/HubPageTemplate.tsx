@@ -135,8 +135,16 @@ export type HubPageTemplateProps = {
   heroCta?: { label: string; href: string };
   /** Optional: compact block between hero and next section (e.g. "Best Payroll Software Overall") */
   bestRoundupBlock?: { title: string; description: string; linkText: string; href: string };
+  /** Optional: custom roundup block content rendered in the same slot above section nav */
+  bestRoundupCustomContent?: React.ReactNode;
+  /** Optional: render roundup block inside hero section instead of separate white section */
+  bestRoundupPlacement?: "default" | "hero";
+  /** Optional: right-side companion content for key takeaways in hero */
+  keyTakeawaysAside?: React.ReactNode;
   /** Optional: link near featured picks section (e.g. "See full rankings") */
   featuredPicksRankingsLink?: { label: string; href: string };
+  /** Optional: content block rendered immediately after featured pick cards */
+  featuredPicksAfterContent?: React.ReactNode;
   /** Optional: link near comparison table (e.g. "See our full rankings") */
   comparisonTableRankingsLink?: { label: string; href: string };
 };
@@ -147,6 +155,25 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+    </div>
+  );
+}
+
+function BestRoundupCard({ block }: { block: { title: string; description: string; linkText: string; href: string } }) {
+  return (
+    <div className="rounded-lg border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-emerald-50/80 to-teal-50/70 p-4 shadow-sm sm:p-5 lg:p-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+        <img src="/Logos/SB_Crown.svg" alt="" aria-hidden className="mt-0.5 h-9 w-9 shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-[1.75rem]">{block.title}</h2>
+          <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">{block.description}</p>
+        </div>
+        <div className="w-full sm:w-auto sm:min-w-[220px] sm:self-start">
+          <Link href={block.href} className={`w-full text-center inline-flex items-center justify-center ${btnPrimary}`}>
+            {block.linkText}
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
@@ -176,7 +203,11 @@ export function HubPageTemplate({
   popularComparisonsSection,
   heroCta,
   bestRoundupBlock,
+  bestRoundupCustomContent,
+  bestRoundupPlacement = "hero",
+  keyTakeawaysAside,
   featuredPicksRankingsLink,
+  featuredPicksAfterContent,
   comparisonTableRankingsLink,
   scenarioCustomContent,
 }: HubPageTemplateProps) {
@@ -242,40 +273,49 @@ export function HubPageTemplate({
               </button>
             </div>
 
-            {/* Key takeaways card */}
+            {/* Key takeaways card (+ optional companion card) */}
             <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
-              <h2 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide">Key takeaways</h2>
-              <ul className="mt-3 space-y-2">
-                {keyTakeaways.map((item) => (
-                  <li key={item.anchor} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
-                    <a
-                      href={item.anchor}
-                      className="text-[#1A2D48] text-sm font-medium hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div className={keyTakeawaysAside != null ? "grid gap-4 lg:grid-cols-[minmax(280px,420px)_minmax(0,1fr)] lg:items-start lg:gap-3" : ""}>
+                <div>
+                  <h2 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide">Key takeaways</h2>
+                  <ul className="mt-3 space-y-2">
+                    {keyTakeaways.map((item) => (
+                      <li key={item.anchor} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                        <a
+                          href={item.anchor}
+                          className="text-[#1A2D48] text-sm font-medium hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {keyTakeawaysAside != null && keyTakeawaysAside}
+              </div>
             </div>
+            {bestRoundupPlacement === "hero" && (bestRoundupCustomContent != null || bestRoundupBlock != null) && (
+              <div className="mt-4">
+                {bestRoundupCustomContent != null ? (
+                  bestRoundupCustomContent
+                ) : (
+                  <BestRoundupCard block={bestRoundupBlock!} />
+                )}
+              </div>
+            )}
           </div>
         </section>
 
         {/* ——— Best roundup block (optional) ——— */}
-        {bestRoundupBlock != null && (
+        {bestRoundupPlacement !== "hero" && (bestRoundupCustomContent != null || bestRoundupBlock != null) && (
           <section className="border-b border-stone-200/80 bg-white py-6 sm:py-8">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">{bestRoundupBlock.title}</h2>
-              <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
-                {bestRoundupBlock.description}
-              </p>
-              <Link
-                href={bestRoundupBlock.href}
-                className="mt-3 inline-block text-base font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
-              >
-                {bestRoundupBlock.linkText}
-              </Link>
+              {bestRoundupCustomContent != null ? (
+                bestRoundupCustomContent
+              ) : (
+                <BestRoundupCard block={bestRoundupBlock!} />
+              )}
             </div>
           </section>
         )}
@@ -325,6 +365,11 @@ export function HubPageTemplate({
                 );
               })}
             </div>
+            {featuredPicksAfterContent != null ? (
+              <div className="mt-8">{featuredPicksAfterContent}</div>
+            ) : (
+              bestRoundupBlock != null && <div className="mt-8"><BestRoundupCard block={bestRoundupBlock} /></div>
+            )}
           </div>
         </section>
 

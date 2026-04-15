@@ -372,6 +372,29 @@ function InventoryPopularComparisonsSection() {
   );
 }
 
+function InventoryBestRoundupCtaModule() {
+  return (
+    <div className="rounded-lg border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-emerald-50/80 to-teal-50/70 p-4 shadow-sm sm:p-5 lg:p-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+        <img src="/Logos/SB_Crown.svg" alt="" aria-hidden className="mt-0.5 h-9 w-9 shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-[1.75rem]">
+            Compare the Best Inventory Management Software
+          </h2>
+          <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">
+            Find the right tool for your business with full rankings, detailed reviews, and side-by-side comparisons.
+          </p>
+        </div>
+        <div className="w-full sm:w-auto sm:min-w-[220px] sm:self-start">
+          <Link href="/inventory/best-inventory-software" className={`w-full text-center inline-flex items-center justify-center ${btnPrimary}`}>
+            View Full Rankings →
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ——— Key takeaways ———
 const KEY_TAKEAWAYS = [
   { label: "Best overall for most SMBs: Zoho Inventory", anchor: "#pick-zoho-inventory" },
@@ -420,17 +443,13 @@ export default function InventoryPage() {
           blocks={INVENTORY_USE_CASE_EDITORIAL}
         />
       }
-      bestRoundupBlock={{
-        title: "Best Inventory Management Software Overall",
-        description:
-          "See our curated rankings of the best inventory management tools for small businesses, ecommerce companies, retailers, manufacturers, and warehouses.",
-        linkText: "See full rankings →",
-        href: "/inventory/best-inventory-software",
-      }}
+      bestRoundupCustomContent={<InventoryBestRoundupCtaModule />}
+      bestRoundupPlacement="hero"
       featuredPicksRankingsLink={{
         label: "See full rankings →",
         href: "/inventory/best-inventory-software",
       }}
+      featuredPicksAfterContent={<InventoryBestRoundupCtaModule />}
       comparisonTableRankingsLink={{
         label: "See our full rankings →",
         href: "/inventory/best-inventory-software",
