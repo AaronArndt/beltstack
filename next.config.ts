@@ -36,6 +36,8 @@ const nextConfig: NextConfig = {
       { source: "/payroll/trades/nonprofits", destination: "/payroll/best-for/nonprofits", permanent: true },
       { source: "/website-builders/review/wordpress-com", destination: "/website-builders/review/wordpress", permanent: true },
       { source: "/website-builders/review/wordpress-com/", destination: "/website-builders/review/wordpress", permanent: true },
+      { source: "/payment-processing/best-for/plumbers", destination: "/payment-processing/best-for/plumbing", permanent: true },
+      { source: "/payment-processing/best-for/plumbers/", destination: "/payment-processing/best-for/plumbing", permanent: true },
     ];
   },
 };

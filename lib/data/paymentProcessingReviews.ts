@@ -21,8 +21,21 @@ const GUIDES_HREF = "/payment-processing/guides";
 const SCENARIOS = [
   { label: "Contractors", href: getPaymentProcessingBestForUrl("contractors") },
   { label: "Small business", href: getPaymentProcessingBestForUrl("small-business") },
-  { label: "HVAC", href: getPaymentProcessingBestForUrl("hvac") },
-  { label: "Plumbers", href: getPaymentProcessingBestForUrl("plumbers") },
+  { label: "HVAC businesses", href: getPaymentProcessingBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getPaymentProcessingBestForUrl("plumbing") },
+  { label: "Electricians", href: getPaymentProcessingBestForUrl("electricians") },
+  { label: "Painting contractors", href: getPaymentProcessingBestForUrl("painting") },
+  { label: "Roofing companies", href: getPaymentProcessingBestForUrl("roofing") },
+  { label: "General contractors", href: getPaymentProcessingBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getPaymentProcessingBestForUrl("landscaping") },
+  { label: "Construction companies", href: getPaymentProcessingBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getPaymentProcessingBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getPaymentProcessingBestForUrl("handyman") },
+  { label: "Property management", href: getPaymentProcessingBestForUrl("property-management") },
+  { label: "Pest control", href: getPaymentProcessingBestForUrl("pest-control") },
+  { label: "Pool service", href: getPaymentProcessingBestForUrl("pool-service") },
+  { label: "Junk removal", href: getPaymentProcessingBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getPaymentProcessingBestForUrl("moving") },
   { label: "Home services", href: getPaymentProcessingBestForUrl("home-services") },
 ];
 
@@ -87,9 +100,12 @@ const PP_SHELL: Pick<
   popularIndustryLinks: [
     { label: "Best for contractors", href: getPaymentProcessingBestForUrl("contractors") },
     { label: "Best for small business", href: getPaymentProcessingBestForUrl("small-business") },
-    { label: "Best for HVAC", href: getPaymentProcessingBestForUrl("hvac") },
-    { label: "Best for plumbers", href: getPaymentProcessingBestForUrl("plumbers") },
+    { label: "Best for HVAC businesses", href: getPaymentProcessingBestForUrl("hvac") },
+    { label: "Best for plumbing companies", href: getPaymentProcessingBestForUrl("plumbing") },
     { label: "Best for electricians", href: getPaymentProcessingBestForUrl("electricians") },
+    { label: "Best for painting contractors", href: getPaymentProcessingBestForUrl("painting") },
+    { label: "Best for roofing companies", href: getPaymentProcessingBestForUrl("roofing") },
+    { label: "Best for general contractors", href: getPaymentProcessingBestForUrl("general-contractors") },
     { label: "Best for home services", href: getPaymentProcessingBestForUrl("home-services") },
   ],
 };

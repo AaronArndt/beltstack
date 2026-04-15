@@ -1,20 +1,9 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getPaymentProcessingBestForUrl } from "@/lib/routes";
-import { BEST_FOR_BY_TRADE } from "@/lib/data/paymentProcessingBestPaymentProcessingSoftware";
+import { getPaymentProcessingBestForHubLinks } from "@/lib/data/paymentProcessingBestForPages";
 
-const LINKS = [
-  {
-    label: "Best payment processing software overall",
-    href: "/payment-processing/best-payment-processing-software",
-    description: "Full rankings, deep dives, and trade-offs for card-present, invoicing, and online checkout.",
-  },
-  ...BEST_FOR_BY_TRADE.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: `Payment processing picks and evaluation tips for ${item.label.toLowerCase()}.`,
-  })),
-];
+const LINKS = getPaymentProcessingBestForHubLinks();
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -55,7 +44,7 @@ export default function PaymentProcessingBestForHubPage() {
               Best Payment Processing Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Scenario-based picks for contractors, trades, and multi-crew home services—aligned to mobile payments, invoicing, and job-site collections.
+              Scenario-based picks for contractors, trades, and multi-crew home services—from HVAC and plumbing to construction and property management—aligned to mobile payments, invoicing, and job-site collections.
             </p>
           </div>
         </section>

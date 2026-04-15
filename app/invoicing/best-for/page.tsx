@@ -1,39 +1,8 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
-import { getInvoicingBestForUrl } from "@/lib/routes";
+import { getInvoicingBestForHubLinks } from "@/lib/data/invoicingBestForHub";
 
-const SCENARIOS = [
-  {
-    label: "Best invoicing software overall",
-    href: "/invoicing/best-invoicing-software",
-    description: "Our full rankings of the best invoicing software for freelancers, small businesses, and teams.",
-  },
-  {
-    label: "Best invoicing software for freelancers",
-    href: getInvoicingBestForUrl("freelancers"),
-    description: "Simple invoicing and time tracking for solo freelancers who bill by project or hour.",
-  },
-  {
-    label: "Best invoicing software for small business",
-    href: getInvoicingBestForUrl("small-business"),
-    description: "Invoicing that scales with your team—recurring billing, payments, and reporting.",
-  },
-  {
-    label: "Best invoicing software for agencies",
-    href: getInvoicingBestForUrl("agencies"),
-    description: "Invoicing across clients and projects, with retainer and time-based billing.",
-  },
-  {
-    label: "Best invoicing software for contractors",
-    href: getInvoicingBestForUrl("contractors"),
-    description: "Invoicing for contractors and trade businesses with estimates and progress billing.",
-  },
-  {
-    label: "Best invoicing software for consultants",
-    href: getInvoicingBestForUrl("consultants"),
-    description: "Invoicing for consultants with retainers, expenses, and client reporting.",
-  },
-];
+const SCENARIOS = getInvoicingBestForHubLinks();
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -80,7 +49,8 @@ export default function InvoicingBestForPage() {
               Best Invoicing Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find invoicing software that fits your situation—freelancers, small business, agencies, contractors, and consultants.
+              Find invoicing software that fits your situation—from freelancers and consultants to trade-specific picks for HVAC,
+              plumbing, electricians, construction, and other field-service businesses.
             </p>
           </div>
         </section>
@@ -143,6 +113,6 @@ export function generateMetadata() {
   return {
     title: "Best Invoicing Software by Use Case | BeltStack",
     description:
-      "Browse our best invoicing software picks by use case: freelancers, small business, agencies, contractors, and consultants. Find the right invoicing for your situation.",
+      "Browse best invoicing software by use case and trade: freelancers, small business, agencies, contractors, consultants, HVAC, plumbing, electricians, construction, and more.",
   };
 }

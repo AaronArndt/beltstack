@@ -1,47 +1,8 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
-import { getAccountingBestForUrl } from "@/lib/routes";
-import { getAccountingTradeBestForHubCards } from "@/lib/data/accountingBestForTrades";
+import { getAccountingBestForHubLinks } from "@/lib/data/accountingBestForHub";
 
-const TRADE_CARDS = getAccountingTradeBestForHubCards();
-
-const SCENARIOS = [
-  {
-    label: "Best accounting software overall",
-    href: "/accounting/best-accounting-software",
-    description: "Our full rankings of the best accounting software for small businesses, freelancers, and growing companies.",
-  },
-  {
-    label: "Best accounting software for freelancers",
-    href: getAccountingBestForUrl("freelancers"),
-    description: "Simple bookkeeping and reporting for solo freelancers who need clean books and tax-ready records.",
-  },
-  {
-    label: "Best accounting software for contractors",
-    href: getAccountingBestForUrl("contractors"),
-    description: "Accounting for contractors and trade businesses with job costing and reporting.",
-  },
-  {
-    label: "Best accounting software for small business",
-    href: getAccountingBestForUrl("small-business"),
-    description: "Full bookkeeping, invoicing, and reporting for small teams without enterprise complexity.",
-  },
-  {
-    label: "Best accounting software for ecommerce businesses",
-    href: getAccountingBestForUrl("ecommerce"),
-    description: "Accounting that connects to sales channels, inventory, and multi-currency for online sellers.",
-  },
-  {
-    label: "Best accounting software for agencies",
-    href: getAccountingBestForUrl("agencies"),
-    description: "Accounting across clients and projects with time tracking and client reporting.",
-  },
-  ...TRADE_CARDS.map((item) => ({
-    label: item.label,
-    href: item.href,
-    description: item.description,
-  })),
-];
+const SCENARIOS = getAccountingBestForHubLinks();
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (

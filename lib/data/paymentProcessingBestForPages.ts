@@ -9,6 +9,11 @@ import type {
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
 import { paymentProcessingLogoForSlug } from "@/lib/data/paymentProcessingLogos";
+import {
+  PAYMENT_PROCESSING_TRADE_BEST_FOR_BY_SLUG,
+  getPaymentProcessingTradeSeoMeta,
+} from "@/lib/data/paymentProcessingBestForTrades";
+import { BEST_FOR_BY_TRADE } from "@/lib/data/paymentProcessingBestPaymentProcessingSoftware";
 import { getPaymentProcessingCompareUrl, getPaymentProcessingReviewUrl } from "@/lib/routes";
 
 const GUIDES = "/payment-processing/guides";
@@ -230,120 +235,7 @@ export const PAYMENT_PROCESSING_BEST_FOR_BY_SLUG: Record<string, BestForTemplate
       { label: "Stripe vs Square fees", href: `${GUIDES}/stripe-vs-square-fees` },
     ]
   ),
-  hvac: makePage(
-    "hvac",
-    "Best Payment Processing for HVAC (2026)",
-    "High-ticket replacements, seasonal cash flow, and deposits that match long job cycles.",
-    "HVAC companies often run large replacement tickets with staged deposits. Processors should support progressive billing, clear receipts for finance partners, and honest economics when summer volume spikes.",
-    [
-      { heading: "Model seasonal slowdowns", body: "If you use membership-style processor fees, verify slow months still work—or keep flat per-transaction pricing." },
-      { heading: "Progressive billing", body: "Align deposits, equipment orders, and final draws with payment links or invoices your office can reproduce." },
-      { heading: "Interchange awareness", body: "Large tickets amplify basis points—compare Helcim quotes against flat-rate bundles using real statements." },
-      { heading: "Ecommerce add-ons", body: "Filters and memberships sold online may push Shopify + Shopify Payments—see Shopify Payments vs Stripe before splitting gateways." },
-    ],
-    [
-      {
-        heading: "Stripe",
-        body: "HVAC replacements and membership renewals often move through card-not-present flows—Stripe Payment Links and Billing handle large deposits and recurring charges with clearer retry logic than ad hoc invoices. Pilot progressive billing: deposit, equipment milestone, final balance—ensuring your office can reproduce each step without errors. Connect Stripe events to CRM so CSRs see paid stages before they schedule return visits. Validate ACH if you add it; failures need human follow-up during peak season. Stripe wins when web and phone sales ops—not only trucks—own revenue timing.",
-      },
-      {
-        heading: "Square",
-        body: "Square stays strong when crews collect final signatures and balances on-site after commissioning, especially when homeowners want to see finished work before tapping to pay. Trial tap-to-pay on phones during summer peaks to avoid Bluetooth reader surprises. Tie receipts to equipment serials or job numbers for warranty and finance audits. Compare effective rate on large tickets quarterly; flat pricing is simple but not always cheapest at extreme averages. Square complements Stripe when field and office collections split naturally.",
-      },
-      {
-        heading: "Helcim",
-        body: "HVAC replacements push large card-not-present deposits and high-ticket balances where interchange-plus transparency from Helcim can beat flat-rate bundles once you model real statements. Pilot with a month of actual processing data: separate repair from replace tickets, note keyed versus chip/tap share, and compute effective rate after refunds. Validate that finance can still tie payouts to job numbers and membership renewals without extra spreadsheets. Confirm hardware or virtual terminal flows work for office staff taking deposits while crews stay mobile on Square. Pick Helcim when the math clears your margin bar, not when chasing the lowest advertised percentage.",
-      },
-    ],
-    [
-      { q: "What payment method is best for HVAC replacements?", a: "Often a deposit link plus on-site balance capture—pick tools your office repeats without errors." },
-      { q: "Is flat rate bad for HVAC?", a: "Not automatically—compute effective rate; large tickets sometimes favor interchange-plus." },
-      { q: "How do memberships bill?", a: "Use processor recurring features or pair with invoicing software that manages renewals and failures." },
-      { q: "Should we offer financing instead?", a: "Financing complements cards—still maintain a card rail for deposits and service calls." },
-      { q: "What is the cheapest processor?", a: "The one with lowest net cost for your actual card mix and chargeback rate." },
-      { q: "How does email marketing help?", a: "Send payment reminders and seasonal offers through our email marketing hub with compliant cadences." },
-    ],
-    [
-      { label: "Credit card processing fees explained", href: `${GUIDES}/credit-card-processing-fees-explained` },
-      { label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` },
-    ]
-  ),
-  plumbers: makePage(
-    "plumbers",
-    "Best Payment Processing for Plumbers (2026)",
-    "Emergency calls, quick mobile capture, and payment links when homeowners pay from work.",
-    "Plumbing revenue mixes urgent same-day swipes with emailed invoices for larger repipes. Your processor should keep techs moving, support tap-to-pay hygiene, and reduce abandoned remote payments.",
-    [
-      { heading: "Speed after service", body: "Long checkout flows cost callbacks—train techs on a three-tap habit when possible." },
-      { heading: "After-hours links", body: "Payment links should include job reference and plain-language descriptions to prevent confusion chargebacks." },
-      { heading: "Wallet options", body: "PayPal or Apple Pay can rescue completion—test on your demographic." },
-      { heading: "CRM alignment", body: "Mark invoices paid in CRM so dispatchers stop double-billing." },
-    ],
-    [
-      {
-        heading: "Square",
-        body: "Plumbers living on emergency vans need Square’s fast card-present capture, SMS or email receipts, and hardware that survives truck life. Trial after-hours flows: does the on-call tech get notifications, or does money sit unclaimed in limbo? Use memos for job addresses and scope snippets to defend disputes on slab leaks and after-midnight calls. Reconcile nightly so dispatch knows which tickets are truly paid before callbacks go out. Square is excellent when speed after the wrench work matters more than fancy invoicing.",
-      },
-      {
-        heading: "PayPal Business",
-        body: "PayPal Business fits when homeowners pay larger repipes or water heater swaps from work via emailed estimates and want a wallet they already trust. Run a two-week trial comparing PayPal buttons to generic pay links on the same ticket sizes. Document line items and warranties in the payment description trail to reduce confusion chargebacks. Make sure office staff marks CRM paid the moment PayPal clears—double trucks roll when systems disagree. Use it where mobile wallet completion measurably beats manual card entry.",
-      },
-      {
-        heading: "Stripe",
-        body: "Stripe belongs in the mix when you sell service plans, big-ticket jobs, or commercial retainers through a portal with structured line items and recurring logic. Pilot one commercial account with milestone billing to prove your team can operate it without constant dev help. Webhooks into job software keep field and office aligned on deposits received. Validate 3DS and receipt emails for property managers paying on phones. Pair Stripe with Square so urgent van swipes and planned portal payments each use the right rail.",
-      },
-    ],
-    [
-      { q: "Stripe or Square for plumbers?", a: "Square for van-heavy payment collection; Stripe when web links and subscriptions matter more." },
-      { q: "How do plumbers reduce fees?", a: "Encourage card-present vs keyed entry, dispute invalid chargebacks with docs, and review effective rate quarterly." },
-      { q: "What about cash and checks?", a: "Still document in the same systems so reporting stays honest and CRM stages update." },
-      { q: "Should I use invoicing software?", a: "Often yes for line items and history—pair with our invoicing hub." },
-      { q: "How much do payment processors charge?", a: "Varies by entry method; keyed and invoice-not-present often cost more than tap." },
-      { q: "Can customers pay by text?", a: "Many stacks support pay-by-link via SMS—ensure PCI-safe flows and consent." },
-    ],
-    [
-      { label: "Payment processing for contractors", href: `${GUIDES}/payment-processing-for-contractors` },
-      { label: "How payment processing works", href: `${GUIDES}/how-payment-processing-works` },
-    ]
-  ),
-  electricians: makePage(
-    "electricians",
-    "Best Payment Processing for Electricians (2026)",
-    "Panel upgrades, commercial draws, and professional receipts that reflect licensed work.",
-    "Electrical contractors often juggle residential upgrades and multi-phase commercial jobs. Payments should support staged deposits, clear documentation for inspectors and homeowners, and accounting that survives audits.",
-    [
-      { heading: "Commercial draw schedules", body: "Match processor invoices or links to contract milestones—avoid ad-hoc Venmo chaos." },
-      { heading: "Large ticket economics", body: "Evaluate interchange-plus when panel jobs routinely exceed flat-rate comfort zones." },
-      { heading: "Receipt professionalism", body: "Homeowners forward receipts to insurers—use consistent branding and job IDs." },
-      { heading: "Website trust", body: "Commercial buyers often verify you online first—accept payments on pages from our website builders hub when possible." },
-    ],
-    [
-      {
-        heading: "Stripe",
-        body: "Electrical contractors running staged commercial draws or large residential upgrades benefit from Stripe Payment Links and structured Checkout that attach PDF scopes and clear descriptors. Trial with one estimator’s workflow—deposit, progress, retention—to ensure finance can audit matches to contracts. Automate receipts to customers and PMs so nobody argues about what was authorized. Validate sales tax and surcharge rules if you pass fees through in your state. Stripe wins when deposits are negotiated remotely before trucks roll.",
-      },
-      {
-        heading: "Square",
-        body: "Square covers residential closeouts when homeowners want to pay after walkthroughs with tap or chip on site, especially for panel swaps and same-day restores. Test reader failover—if one device dies, can another login complete the sale without delaying the crew? Brand receipts with license numbers insurers expect to see forwarded. Track effective rates separately for small service calls versus heavy tickets to see where flat pricing helps or hurts. Square is the field complement to Stripe’s portal depth.",
-      },
-      {
-        heading: "Helcim",
-        body: "Electrical contractors moving large commercial draws and high-ticket residential upgrades often hit flat-rate drag that interchange-plus statements from Helcim can clarify—if you commit to reading statements monthly. Trial Helcim against your Stripe or Square effective rates on the same ticket mix, including corporate cards and AMEX. Validate virtual terminal and invoicing flows for PMs paying from offices while techs stay in the field. Ensure PCI practices stay tight on card-not-present approvals and stored-card policies for progressive billing. Choose Helcim when transparent basis points beat simplicity at your actual volume.",
-      },
-    ],
-    [
-      { q: "What processor fits electrical contractors?", a: "Stripe for staged online deposits; Square for residential truck collections; Helcim when statements show flat-rate drag." },
-      { q: "How do I invoice commercial clients?", a: "Use invoicing tools with net terms tracking plus card or ACH options your processor supports." },
-      { q: "Are keyed payments worth avoiding?", a: "Yes when possible—card-present rates are usually lower and fraud risk drops." },
-      { q: "What is interchange?", a: "Baseline network cost passed through or bundled into flat rates—see our fees explained guide." },
-      { q: "Should electricians offer financing?", a: "Large jobs often pair financing with card deposits—choose partners that integrate cleanly." },
-      { q: "How does CRM help?", a: "Track bids, approvals, and paid stages so crews and office agree on what is owed." },
-    ],
-    [
-      { label: "Credit card processing fees explained", href: `${GUIDES}/credit-card-processing-fees-explained` },
-      { label: "Stripe vs Square fees", href: `${GUIDES}/stripe-vs-square-fees` },
-    ]
-  ),
+  ...PAYMENT_PROCESSING_TRADE_BEST_FOR_BY_SLUG,
   "home-services": makePage(
     "home-services",
     "Best Payment Processing for Home Services (2026)",
@@ -390,4 +282,43 @@ export function getPaymentProcessingBestForPageProps(slug: string): BestForTempl
 
 export function getPaymentProcessingBestForSlugs(): string[] {
   return Object.keys(PAYMENT_PROCESSING_BEST_FOR_BY_SLUG);
+}
+
+/** SEO metadata (keywords + long description) for trade / vertical best-for pages; undefined for generic scenarios. */
+export function getPaymentProcessingBestForSeoMeta(slug: string) {
+  return getPaymentProcessingTradeSeoMeta(slug);
+}
+
+/** Hub card for the main payment processing roundup — matches H1 on /payment-processing/best-payment-processing-software. */
+export const PAYMENT_PROCESSING_BEST_FOR_ROUNDUP_HUB_LINK = {
+  label: "Best Payment Processing Software (2026)",
+  href: "/payment-processing/best-payment-processing-software",
+  description:
+    "The best payment processing setup for small businesses and contractors is the one that matches where money actually enters—truck swipes, emailed invoice links, or website checkout—with honest effective rates after refunds and chargebacks.",
+} as const;
+
+export type PaymentProcessingBestForHubCard = { label: string; href: string; description: string };
+
+/** Hub link labels match each scenario page’s `title`; descriptions use `subtitle` (same as on-page hero). */
+export function getPaymentProcessingBestForHubScenarioLinks(): PaymentProcessingBestForHubCard[] {
+  const prefix = "/payment-processing/best-for/";
+  return BEST_FOR_BY_TRADE.map((item) => {
+    if (!item.href.startsWith(prefix)) {
+      throw new Error(`Unexpected payment processing best-for href: ${item.href}`);
+    }
+    const slug = item.href.slice(prefix.length);
+    const props = getPaymentProcessingBestForPageProps(slug);
+    if (!props) {
+      throw new Error(`Missing payment processing best-for data for slug: ${slug}`);
+    }
+    return {
+      label: props.title,
+      href: item.href,
+      description: props.subtitle,
+    };
+  });
+}
+
+export function getPaymentProcessingBestForHubLinks(): PaymentProcessingBestForHubCard[] {
+  return [PAYMENT_PROCESSING_BEST_FOR_ROUNDUP_HUB_LINK, ...getPaymentProcessingBestForHubScenarioLinks()];
 }

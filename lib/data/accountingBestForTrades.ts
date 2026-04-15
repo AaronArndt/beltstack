@@ -1017,30 +1017,13 @@ export const ACCOUNTING_TRADE_HUB_ORDER = [
 
 export type AccountingTradeBestForHubCard = { label: string; href: string; description: string };
 
-/** Hub cards use sentence-case titles (match project-management best-for hub pattern). */
+/** Hub card labels use each trade page `title` (same H1 as /accounting/best-for/[scenario]). */
 export function getAccountingTradeBestForHubCards(): AccountingTradeBestForHubCard[] {
-  const LABELS: Record<(typeof ACCOUNTING_TRADE_HUB_ORDER)[number], string> = {
-    hvac: "Best accounting software for HVAC businesses",
-    plumbing: "Best accounting software for plumbing companies",
-    electricians: "Best accounting software for electricians",
-    painting: "Best accounting software for painting contractors",
-    roofing: "Best accounting software for roofing companies",
-    "general-contractors": "Best accounting software for general contractors",
-    landscaping: "Best accounting software for landscaping companies",
-    construction: "Best accounting software for construction companies",
-    remodeling: "Best accounting software for remodeling businesses",
-    handyman: "Best accounting software for handyman businesses",
-    "property-management": "Best accounting software for property management companies",
-    "pest-control": "Best accounting software for pest control businesses",
-    "pool-service": "Best accounting software for pool service companies",
-    "junk-removal": "Best accounting software for junk removal businesses",
-    moving: "Best accounting software for moving companies",
-  };
   return ACCOUNTING_TRADE_HUB_ORDER.map((slug) => {
     const cfg = TRADE_CONFIGS.find((c) => c.useCase === slug);
     if (!cfg) throw new Error(`Missing accounting trade config: ${slug}`);
     return {
-      label: LABELS[slug],
+      label: cfg.title,
       href: getAccountingBestForUrl(slug),
       description: cfg.hubTeaser,
     };

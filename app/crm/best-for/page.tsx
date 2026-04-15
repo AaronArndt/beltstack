@@ -1,39 +1,8 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
-import { getCrmBestForUrl } from "@/lib/routes";
+import { getCrmBestForHubLinks } from "@/lib/data/crmBestForHub";
 
-const SCENARIOS = [
-  {
-    label: "Best CRM software overall",
-    href: "/crm/best-crm-software",
-    description: "Our full rankings of the best CRM software for small businesses, sales teams, and growing companies.",
-  },
-  {
-    label: "Best CRM software for freelancers",
-    href: getCrmBestForUrl("freelancers"),
-    description: "Lightweight CRM for client tracking, leads, and follow-ups without enterprise complexity.",
-  },
-  {
-    label: "Best CRM software for small business",
-    href: getCrmBestForUrl("small-business"),
-    description: "CRM that scales with your team: lead management, automation, and reporting without big budgets.",
-  },
-  {
-    label: "Best CRM software for startups",
-    href: getCrmBestForUrl("startups"),
-    description: "Affordable CRM with fast setup and room to grow as you add sales and marketing.",
-  },
-  {
-    label: "Best CRM software for agencies",
-    href: getCrmBestForUrl("agencies"),
-    description: "Manage clients, deals, and pipeline across multiple accounts with reporting and collaboration.",
-  },
-  {
-    label: "Best CRM software for sales teams",
-    href: getCrmBestForUrl("sales-teams"),
-    description: "Pipeline-focused CRM for inside and field sales, with reporting and forecasting.",
-  },
-];
+const SCENARIOS = getCrmBestForHubLinks();
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
@@ -80,7 +49,8 @@ export default function CrmBestForIndexPage() {
               Best CRM Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Find CRM software that fits your situation—freelancers, small business, startups, agencies, and sales teams.
+              Find CRM software that fits your situation—freelancers, small business, startups, agencies, sales teams, and
+              trades from HVAC to construction and property management.
             </p>
           </div>
         </section>
@@ -143,6 +113,6 @@ export function generateMetadata() {
   return {
     title: "Best CRM Software by Use Case | BeltStack",
     description:
-      "Browse our best CRM software picks by use case: freelancers, small business, startups, agencies, and sales teams. Find the right CRM for your situation.",
+      "Browse our best CRM software picks by use case: freelancers, small business, startups, agencies, sales teams, and industry-specific guides for trades and service businesses.",
   };
 }

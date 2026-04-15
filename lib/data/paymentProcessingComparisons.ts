@@ -14,7 +14,8 @@ export function getPaymentProcessingCompareUrlFromSlug(slug: string): string {
 const PP_TRADE_LINKS = [
   { label: "Best payment processing for contractors", href: getPaymentProcessingBestForUrl("contractors") },
   { label: "Best for small business", href: getPaymentProcessingBestForUrl("small-business") },
-  { label: "Best for HVAC", href: getPaymentProcessingBestForUrl("hvac") },
+  { label: "Best for HVAC businesses", href: getPaymentProcessingBestForUrl("hvac") },
+  { label: "Best for plumbing companies", href: getPaymentProcessingBestForUrl("plumbing") },
   { label: "Best for home services", href: getPaymentProcessingBestForUrl("home-services") },
 ];
 

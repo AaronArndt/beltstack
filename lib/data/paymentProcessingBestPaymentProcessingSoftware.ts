@@ -329,14 +329,74 @@ export const USE_CASE_LINKS: UseCaseLink[] = [
     description: "High-ticket jobs, deposits, and seasonal cash-flow friendly setups.",
   },
   {
-    label: "Best for plumbers",
-    href: getPaymentProcessingBestForUrl("plumbers"),
+    label: "Best for plumbing companies",
+    href: getPaymentProcessingBestForUrl("plumbing"),
     description: "Emergency calls, mobile readers, and quick payment links after service.",
   },
   {
     label: "Best for electricians",
     href: getPaymentProcessingBestForUrl("electricians"),
     description: "Code-heavy jobs with deposits, change orders, and professional receipts.",
+  },
+  {
+    label: "Best for painting contractors",
+    href: getPaymentProcessingBestForUrl("painting"),
+    description: "Deposits, production-week balances, and pay links when homeowners are away.",
+  },
+  {
+    label: "Best for roofing companies",
+    href: getPaymentProcessingBestForUrl("roofing"),
+    description: "Milestone deposits, on-site deductible capture, and large-ticket economics.",
+  },
+  {
+    label: "Best for general contractors",
+    href: getPaymentProcessingBestForUrl("general-contractors"),
+    description: "Draw schedules, retainage-aware flows, and milestone billing tied to contracts.",
+  },
+  {
+    label: "Best for landscaping companies",
+    href: getPaymentProcessingBestForUrl("landscaping"),
+    description: "Seasonal spikes, design deposits, and recurring maintenance renewals.",
+  },
+  {
+    label: "Best for construction companies",
+    href: getPaymentProcessingBestForUrl("construction"),
+    description: "Progress draws, commercial cards, and integrated portal billing.",
+  },
+  {
+    label: "Best for remodeling businesses",
+    href: getPaymentProcessingBestForUrl("remodeling"),
+    description: "Phased remodel billing, wallet checkout on estimates, and on-site finals.",
+  },
+  {
+    label: "Best for handyman businesses",
+    href: getPaymentProcessingBestForUrl("handyman"),
+    description: "Small tickets, fast mobile capture, and simple emailed invoice links.",
+  },
+  {
+    label: "Best for property management companies",
+    href: getPaymentProcessingBestForUrl("property-management"),
+    description: "Owner contributions, tenant charges, and portal-embedded payment paths.",
+  },
+  {
+    label: "Best for pest control businesses",
+    href: getPaymentProcessingBestForUrl("pest-control"),
+    description: "Route capture, recurring plans, and digital upsells alongside stops.",
+  },
+  {
+    label: "Best for pool service companies",
+    href: getPaymentProcessingBestForUrl("pool-service"),
+    description: "Weekly routes, equipment job deposits, and seasonal volume swings.",
+  },
+  {
+    label: "Best for junk removal businesses",
+    href: getPaymentProcessingBestForUrl("junk-removal"),
+    description: "On-truck capture, commercial cleanout deposits, and fast pay links.",
+  },
+  {
+    label: "Best for moving companies",
+    href: getPaymentProcessingBestForUrl("moving"),
+    description: "Booking deposits, corporate billing, and on-site finals after delivery.",
   },
   {
     label: "Best for home services",
@@ -356,9 +416,21 @@ export const RELATED_COMPARISONS: ComparisonLink[] = [
 export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
   { label: "Small business", href: getPaymentProcessingBestForUrl("small-business") },
   { label: "Contractors", href: getPaymentProcessingBestForUrl("contractors") },
-  { label: "HVAC", href: getPaymentProcessingBestForUrl("hvac") },
-  { label: "Plumbers", href: getPaymentProcessingBestForUrl("plumbers") },
+  { label: "HVAC businesses", href: getPaymentProcessingBestForUrl("hvac") },
+  { label: "Plumbing companies", href: getPaymentProcessingBestForUrl("plumbing") },
   { label: "Electricians", href: getPaymentProcessingBestForUrl("electricians") },
+  { label: "Painting contractors", href: getPaymentProcessingBestForUrl("painting") },
+  { label: "Roofing companies", href: getPaymentProcessingBestForUrl("roofing") },
+  { label: "General contractors", href: getPaymentProcessingBestForUrl("general-contractors") },
+  { label: "Landscaping companies", href: getPaymentProcessingBestForUrl("landscaping") },
+  { label: "Construction companies", href: getPaymentProcessingBestForUrl("construction") },
+  { label: "Remodeling businesses", href: getPaymentProcessingBestForUrl("remodeling") },
+  { label: "Handyman businesses", href: getPaymentProcessingBestForUrl("handyman") },
+  { label: "Property management companies", href: getPaymentProcessingBestForUrl("property-management") },
+  { label: "Pest control businesses", href: getPaymentProcessingBestForUrl("pest-control") },
+  { label: "Pool service companies", href: getPaymentProcessingBestForUrl("pool-service") },
+  { label: "Junk removal businesses", href: getPaymentProcessingBestForUrl("junk-removal") },
+  { label: "Moving companies", href: getPaymentProcessingBestForUrl("moving") },
   { label: "Home services", href: getPaymentProcessingBestForUrl("home-services") },
 ];
 

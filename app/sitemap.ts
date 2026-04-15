@@ -185,6 +185,21 @@ const INVOICING_BEST_FOR_SCENARIOS = [
   "contractors",
   "consultants",
   "agencies",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static Time Tracking best-for scenario slugs. */
@@ -203,6 +218,21 @@ const CRM_BEST_FOR_SCENARIOS = [
   "startups",
   "agencies",
   "sales-teams",
+  "hvac",
+  "plumbing",
+  "electricians",
+  "painting",
+  "roofing",
+  "general-contractors",
+  "landscaping",
+  "construction",
+  "remodeling",
+  "handyman",
+  "property-management",
+  "pest-control",
+  "pool-service",
+  "junk-removal",
+  "moving",
 ] as const;
 
 /** Static Project Management best-for scenario slugs. */
