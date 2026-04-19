@@ -9,7 +9,10 @@ import {
   ECOMMERCE_PAGE_PROPS,
   MULTI_LOCATION_PAGE_PROPS,
 } from "@/lib/data/posBestFor";
-import { POS_TRADE_BEST_FOR_BY_SLUG } from "@/lib/data/posBestForTrades";
+import {
+  POS_TRADE_BEST_FOR_BY_SLUG,
+  getPosTradeMetaKeywords,
+} from "@/lib/data/posBestForTrades";
 
 const PAGE_MAP: Record<string, BestForTemplateProps> = {
   "small-business": SMALL_BUSINESS_PAGE_PROPS,
@@ -45,9 +48,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const keywords = getPosTradeMetaKeywords(scenario);
+
   return {
     title: `${pageProps.title} | BeltStack`,
     description: pageProps.subtitle,
+    ...(keywords?.length ? { keywords } : {}),
   };
 }
 

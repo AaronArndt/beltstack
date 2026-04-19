@@ -106,6 +106,7 @@ type ProductPick = {
   description: string;
   rowBestFor: string;
   standoutFeature?: string;
+  /** “Why we recommend” card body: ~3–5 sentences; trade-specific rationale and trial guidance. */
   why: string;
 };
 
@@ -1096,4 +1097,720 @@ export const MOVING_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
     },
   ],
   extraGuides: [{ label: "Best scheduling software for moving companies", href: "/scheduling/best-for/moving" }],
+});
+
+export const APPLIANCE_REPAIR_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "appliance-repair",
+  title: "Best CRM Software for Appliance Repair Businesses (2026)",
+  subtitle:
+    "Compare CRM tools for appliance repair: warranty and COD leads, estimate follow-up, membership and extended-service renewals, and marketing when seasonal demand spikes.",
+  introParagraph:
+    "Appliance repair businesses juggle OEM warranty calls, retail COD tickets, and repeat customers who need fast scheduling—not a generic ecommerce funnel. CRM software centralizes leads from LSAs, referrals, and manufacturer programs; tracks follow-up on estimates for replacements; and helps the office nurture maintenance plans without losing context between CSR and field techs.",
+  picks: [
+    {
+      slug: "freshsales",
+      badge: "Best phone-heavy CSR and estimator teams",
+      description:
+        "Built-in phone, email, and timelines on the record—built for shops where CSRs qualify warranty vs cash jobs on the phone.",
+      rowBestFor: "Call-first appliance sales",
+      why: "Freshsales fits appliance repair teams that live on the phone—routing emergencies, quoting extended warranties, and logging what the homeowner actually said before the truck rolls. Built-in telephony and AI-assisted scoring reduce tab-hopping between inbox and CRM when CSRs are underwater during heat waves or holidays. Trial with two reps logging real calls for a week; confirm mobile access if your lead estimator works from a laptop between ride-alongs. Freshsales shines when conversation volume is high and the CRM must reflect it without custom dev.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best inbound marketing + unified leads",
+      description:
+        "Forms, chat, and optional Marketing Hub when you buy local search, LSAs, or run seasonal replacement campaigns.",
+      rowBestFor: "Inbound + campaigns",
+      why: "HubSpot helps appliance repair brands that invest in Google Local Services, paid search, or email campaigns for tune-ups and replacement promos—one database for ad-sourced leads, referrals, and repeat customers. Use deal types or pipelines to separate warranty dispatch-driven work from retail equipment sales. During a trial, import last month’s leads, tag source honestly, and build stages that match estimate sent, parts ordered, and scheduled install. HubSpot fits when marketing and CSR share one timeline instead of three spreadsheets.",
+    },
+    {
+      slug: "zoho-crm",
+      badge: "Best value and Zoho stack alignment",
+      description:
+        "Affordable workflows and blueprints—strong if you also use Zoho Books or want tight quote-to-cash beside operations.",
+      rowBestFor: "Value & automation",
+      why: "Zoho CRM delivers strong automation per dollar for owner-led shops that still need structured follow-up on replacement quotes and recurring maintenance touches. Blueprints can nudge deals stuck after “estimate sent” when parts delays or homeowner indecision stall the job. If billing lives in Zoho Books, shared customer records reduce double entry between sales and back office. Trial one automation and one integration path to your dispatch or FSM—Zoho wins when you want CRM depth without HubSpot-level spend.",
+    },
+  ],
+  editorialGuidance: [
+    E("Warranty vs retail segmentation", "Separate pipelines or deal types so CSRs do not treat OEM paperwork like a cash coil sale."),
+    E("Speed-to-lead on emergencies", "Tasks or SLAs for inbound calls—CRM should reflect how fast you actually call back."),
+    E("Membership and add-on fields", "Track extended plans and filter subscriptions so renewals become proactive, not reactive."),
+    E("CRM vs dispatch", "Routing lives in FSM; CRM owns pipeline, quotes, and nurture—link job IDs in notes when possible."),
+  ],
+  faqItems: [
+    {
+      q: "What is the best CRM for appliance repair businesses?",
+      a: "We shortlist Freshsales for call-heavy CSRs and estimators, HubSpot when inbound marketing and multi-channel leads need one system, and Zoho CRM for value and automation—especially alongside other Zoho apps.",
+    },
+    {
+      q: "Do appliance repair shops need CRM or only field service software?",
+      a: "Field service handles trucks and work orders; CRM handles selling replacements, following up on estimates, and marketing to your customer list. Many growing shops use both with clear handoff rules.",
+    },
+    {
+      q: "Is there a free CRM for small appliance repair companies?",
+      a: "HubSpot and Zoho CRM offer free tiers to pilot contacts and deals; add paid tiers when multiple users need automation, sequences, or integrated phone.",
+    },
+  ],
+});
+
+export const GARAGE_DOOR_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "garage-door",
+  title: "Best CRM Software for Garage Door Companies (2026)",
+  subtitle:
+    "Compare CRM tools for garage door dealers: new construction and retrofit pipelines, commercial rolling-door pursuits, and follow-up on high-ticket residential quotes.",
+  introParagraph:
+    "Garage door companies sell large-ticket installs and ongoing service—often across builder programs, commercial accounts, and retail homeowners. CRM software gives sales and estimating a shared record of opportunities, deposit milestones, and next steps so spring construction peaks and storm-driven service spikes do not bury warm quotes.",
+  picks: [
+    {
+      slug: "hubspot",
+      badge: "Best marketing + CRM for dealer growth",
+      description:
+        "Forms, ads, and email when you run local campaigns, builder partnerships, or nurture homeowners after estimates.",
+      rowBestFor: "Dealer marketing + pipeline",
+      why: "HubSpot suits garage door dealers investing in LSAs, home-show leads, or builder programs—CRM plus optional Marketing Hub keeps spend tied to booked installs when configured with discipline. Segment contacts by single-family, multifamily, or commercial rolling applications; track deal stages for measure, order, install, and service contract add-ons. Trial with one sales pod and enforce weekly activity logging. HubSpot fits when growth depends on marketing and sales sharing one database—not only dispatch throughput.",
+    },
+    {
+      slug: "salesforce",
+      badge: "Best for multi-location and complex accounts",
+      description:
+        "Account hierarchy, opportunities, and reporting when you run several branches, commercial teams, or formal builder pursuits.",
+      rowBestFor: "Scaling door dealers",
+      why: "Salesforce earns its seat cost when garage door organizations manage many contacts per builder or property manager, multi-branch forecasting, and leadership reporting that must roll up cleanly. Expect admin effort or partner help—reward is pipeline truth across territories. Pilot one region with stages tied to real gates (spec approved, opening measured, deposit received). Salesforce fits when deal complexity and headcount justify dedicated CRM operations—not for three-person residential shops on day one.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best disciplined residential pipeline",
+      description:
+        "Activity-based selling for owner-led teams that need clear next steps after measures and estimates—not another enterprise suite.",
+      rowBestFor: "Estimate follow-up",
+      why: "Pipedrive keeps garage door sales honest about which homeowner quotes are still live after measures—where money hides when crews stay busy on booked work. Reminders and mobile-friendly activities beat sticky notes for “call back after spouse approval.” Map stages to how you actually sell; avoid fifteen micro-stages nobody updates. Pipedrive wins when the leak is follow-through on high-ticket residential, not lack of lead volume.",
+    },
+  ],
+  editorialGuidance: [
+    E("Builder vs walk-in mindset", "Different sales motions deserve different pipelines or deal types."),
+    E("Deposit and scheduling handoffs", "Notes on door SKU, lead times, and opener pairings reduce production callbacks."),
+    E("Commercial rolling doors", "Longer cycles—use company records and tasks for spec reviews and submittals."),
+    E("Service upsell path", "CRM tags for aging openers help ethical upgrade conversations after service calls."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM should garage door companies use?",
+      a: "HubSpot when marketing and inbound leads are central, Salesforce for multi-branch or complex commercial pursuits with serious reporting needs, and Pipedrive for disciplined follow-up on residential estimates.",
+    },
+    {
+      q: "Garage door CRM vs industry-specific software?",
+      a: "Specialized dealer tools exist; general CRM still wins for flexible pipelines, integrations, and marketing when you want one hub for sales—not only order entry.",
+    },
+    {
+      q: "Free CRM for garage door startups?",
+      a: "HubSpot’s free CRM is a common pilot for contacts and deals; graduate to paid tiers when automation and multi-user discipline matter.",
+    },
+  ],
+});
+
+export const LOCKSMITH_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "locksmith",
+  title: "Best CRM Software for Locksmith Businesses (2026)",
+  subtitle:
+    "Compare CRM tools for locksmiths: emergency and scheduled leads, commercial rekey programs, and speed-to-contact workflows that match mobile, phone-heavy sales.",
+  introParagraph:
+    "Locksmiths win on minutes—not weeks—especially for emergencies and automotive lockouts. CRM software still matters for commercial rekeys, property managers, and quoted access-control work: it captures recurring accounts, logs scope notes, and prevents commercial follow-ups from vanishing between dispatch and the owner who actually signs.",
+  picks: [
+    {
+      slug: "close",
+      badge: "Best high-velocity call and SMS sales",
+      description:
+        "Built-in calling, SMS, Power Dialer culture—when CSRs and owners convert leads from the phone all day.",
+      rowBestFor: "Phone-first locksmith CRM",
+      why: "Close fits locksmith brands with dedicated inside sales or owners who personally work high lead volume—power dialer workflows, unified inbox, and pipeline views built for speed. Expect higher per-seat pricing; justify it with measured close rates on commercial and automotive upsells, not only emergency dispatch. Trial during real peak hours with mandatory activity logging. Close wins when your bottleneck is contact speed and disciplined follow-up, not landing pages.",
+    },
+    {
+      slug: "copper",
+      badge: "Best Google Workspace–native shops",
+      description:
+        "CRM in Gmail and Calendar—ideal for lean teams that live in Workspace and hate switching apps.",
+      rowBestFor: "Gmail-centric locksmiths",
+      why: "Copper suits small locksmith operations that run from Gmail and Calendar—suggested records next to threads, light pipeline for quoted master-key systems or access projects, and fast adoption because reps never “leave email.” Trial by linking commercial property managers and tagging deal value for rekey programs. Copper fits owner-operators and micro-teams who will not tolerate heavy CRM training but still need pipeline for non-emergency revenue.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best simple pipeline for quoted work",
+      description:
+        "Clear stages for commercial quotes, access-control scopes, and automotive fleet programs—without enterprise weight.",
+      rowBestFor: "Quoted commercial deals",
+      why: "Pipedrive helps locksmiths building recurring commercial books—rekeys, padlock programs, small safe work—with stages and activities that survive when the owner is back in the van. Pair with call tracking or forms; keep emergency dispatch in your existing tools. Trial two weeks with mandatory next-step tasks on open quotes. Pipedrive shines when quoted and account-based work is strategic, not occasional one-offs.",
+    },
+  ],
+  editorialGuidance: [
+    E("Emergency vs quoted pipelines", "Separate motions so CSRs do not treat a lockout like a master-key bid."),
+    E("Property manager accounts", "Company records with gate codes and billing preferences reduce repeat questions."),
+    E("Source tracking", "Know whether Google, roadside, or referrals feed profitable work."),
+    E("CRM vs dispatch", "Dispatch handles trucks; CRM owns commercial pipeline and follow-up discipline."),
+  ],
+  faqItems: [
+    {
+      q: "What is the best CRM for locksmith businesses?",
+      a: "Close when phone and SMS volume drives revenue and you will invest in per-seat cost, Copper for Google Workspace–centric lean teams, and Pipedrive for clear pipelines on quoted commercial work.",
+    },
+    {
+      q: "Do locksmiths need CRM software?",
+      a: "Residential-only shops with one dispatcher may delay; brands building commercial accounts, automotive fleets, or multi-tech sales usually benefit early.",
+    },
+    {
+      q: "CRM vs locksmith dispatch software?",
+      a: "Dispatch schedules jobs; CRM tracks accounts, quotes, and follow-up—use both with clear rules for when a lead becomes a job.",
+    },
+  ],
+});
+
+export const FLOORING_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "flooring",
+  title: "Best CRM Software for Flooring Contractors (2026)",
+  subtitle:
+    "Compare CRM tools for flooring companies: showroom and designer-led sales, long material lead times, and follow-up when homeowners pause on selections or deposits.",
+  introParagraph:
+    "Flooring contractors sell design-heavy projects with deposits, material orders, and subcontractor coordination—often weeks between first visit and install. CRM software helps sales and project coordinators track opportunities, stakeholder notes, and next actions so estimates and selections do not stall silently while crews stay busy elsewhere.",
+  picks: [
+    {
+      slug: "monday-crm",
+      badge: "Best visual pipelines for design-build selling",
+      description:
+        "Boards for showroom vs commercial, phase gates, and automations when one linear funnel cannot describe your sales.",
+      rowBestFor: "Multi-phase flooring sales",
+      why: "Monday CRM suits flooring dealers that sell across showrooms, builder programs, and commercial bid work—flexible columns for selections pending, material on order, and install week without forcing every deal into identical stages. Automations can flag stalled deals when deposits or signed approvals lag. Trial one vertical at a time to keep boards clean. Monday fits owners and sales managers who think visually and want sales and ops language to align—without duplicating full production scheduling in CRM.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best designer and referral nurture",
+      description:
+        "Lists, email, and forms for builders, designers, and past customers when repeat and referral work drives margin.",
+      rowBestFor: "Referrals + marketing",
+      why: "HubSpot helps flooring brands that depend on designers, builders, and repeat homeowners—CRM segments for nurture, optional email campaigns for promotions, and deal history so referrals feel personal. Import a cohort of last year’s customers and test one honest follow-up campaign during evaluation. HubSpot fits when growth is as much about relationships and timing as knocking new doors.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best estimate follow-up discipline",
+      description:
+        "Activity reminders and clean stages when quotes stall after measures—common when material delays or spouse decisions slow the job.",
+      rowBestFor: "Sales cadence",
+      why: "Pipedrive keeps flooring sales teams focused on next calls and tasks after measures and quotes—where margin leaks when crews are booked and nobody chases deposits. Stages might include measure complete, estimate sent, deposit received, material ordered. Trial during a busy month with daily activity logging. Pipedrive wins when execution on open opportunities matters more than marketing breadth.",
+    },
+  ],
+  editorialGuidance: [
+    E("Selections and delays", "Deal notes for product holds and ETA changes reduce miscommunication with production."),
+    E("Deposit milestones", "Tasks tied to payments keep cash aligned with material orders."),
+    E("Commercial vs residential", "Separate pipelines or properties so bid deadlines do not look like showroom follow-ups."),
+    E("Integrate with estimating", "Link estimate PDFs or totals in deals for context when handoffs span people."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM should flooring contractors use?",
+      a: "Monday for flexible visual pipelines across project types, HubSpot when designer and referral nurture are central, and Pipedrive for strict follow-up on open estimates.",
+    },
+    {
+      q: "CRM vs flooring estimating software?",
+      a: "Estimating tools price materials and labor; CRM tracks relationships, stalled deals, and marketing—complementary systems.",
+    },
+    {
+      q: "Free CRM for flooring showrooms?",
+      a: "HubSpot’s free CRM helps pilot contacts and deals; add paid tiers when automation and multi-user adoption matter.",
+    },
+  ],
+});
+
+export const FENCE_DECK_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "fence-deck",
+  title: "Best CRM Software for Fence & Deck Builders (2026)",
+  subtitle:
+    "Compare CRM tools for fence and deck builders: residential and commercial pursuits, permit-driven timelines, and follow-up when weather or material delays pause decisions.",
+  introParagraph:
+    "Fence and deck builders sell outdoor projects with permits, subs, and seasonal peaks—often mixing retail homeowners with small commercial enclosures. CRM software gives estimators and owners a system of record for open quotes, stakeholder notes, and next steps so spring and summer demand does not bury follow-ups on signed contracts.",
+  picks: [
+    {
+      slug: "salesforce",
+      badge: "Best for multi-crew and commercial pursuits",
+      description:
+        "Accounts, opportunities, and reporting when you pursue GC work, HOAs, or multi-phase outdoor packages.",
+      rowBestFor: "Complex outdoor sales",
+      why: "Salesforce fits growing fence and deck companies that pursue commercial or multi-location work—many stakeholders, formal bid calendars, and leadership forecasting that must roll up without shadow spreadsheets. Expect configuration and admin time; pilot one market or division with realistic stages tied to permit and submittal gates. Salesforce earns its place when average deal size and pursuit volume justify CRM administration—not for two-person residential crews on day one.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best SMB growth and inbound",
+      description:
+        "Faster adoption with optional marketing—strong for regional builders investing in local SEO, partnerships, or showroom consults.",
+      rowBestFor: "Regional builder CRM",
+      why: "HubSpot gives fence and deck brands a modern CRM with forms, chat, and email when you generate leads from search, realtor partnerships, or seasonal campaigns. Use companies and deals for builder and HOA relationships; log permit milestones in notes or custom properties. Trial with your top twenty open opportunities. HubSpot fits when you want professional pipeline management without a full-time Salesforce admin.",
+    },
+    {
+      slug: "monday-crm",
+      badge: "Best flexible boards for mixed sales",
+      description:
+        "Visual pipelines when you sell residential packages, commercial enclosures, and maintenance differently.",
+      rowBestFor: "Visual pursuit tracking",
+      why: "Monday CRM helps outdoor contractors that need different columns or boards for residential package sales versus commercial bids—with automations when cards sit too long awaiting permit or deposit. Keep CRM focused on selling; avoid mirroring full job costing unless the team will maintain it. Monday suits BD-heavy owners who already think in boards and want status visible to sales and ops leads.",
+    },
+  ],
+  editorialGuidance: [
+    E("Permit and inspection tasks", "Deal tasks for AHJ milestones reduce surprises that blow schedules."),
+    E("Change order communication", "Notes when homeowners add linear feet or upgrade materials after sign-off."),
+    E("Commercial vs HOA context", "Company records with contact roles beat one generic customer field."),
+    E("Handoff to production", "Clear won process so crews get scope, photos, and gate access expectations."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM do fence and deck companies use?",
+      a: "Salesforce for complex commercial pursuits and forecasting, HubSpot for inbound-heavy regional growth with easier adoption, and Monday for flexible visual pipelines across residential and commercial motions.",
+    },
+    {
+      q: "Fence CRM vs construction project software?",
+      a: "Project tools schedule crews and subs; CRM tracks selling the job, relationships, and follow-ups—pair both with clear IDs.",
+    },
+    {
+      q: "Small deck builder CRM?",
+      a: "Start with HubSpot’s free CRM or Pipedrive trials; scale when multiple estimators need shared truth.",
+    },
+  ],
+});
+
+export const GLASS_WINDOW_INSTALLERS_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "glass-window-installers",
+  title: "Best CRM Software for Glass & Window Installers (2026)",
+  subtitle:
+    "Compare CRM tools for glass and window companies: residential replacement funnels, commercial glazing pursuits, and follow-up when custom orders and lead times stretch decisions.",
+  introParagraph:
+    "Glass and window installers balance quick residential replacements with measured commercial work—often involving insurance, landlords, or GC coordination. CRM software centralizes leads from canvassing, referrals, and inbound calls; tracks stakeholder notes on measurements and products; and keeps follow-up moving when orders sit in fabrication queues.",
+  picks: [
+    {
+      slug: "pipedrive",
+      badge: "Best pipeline discipline for measured sales",
+      description:
+        "Stages from lead to measure to order placed—reduces ghosting when homeowners or PMs go quiet mid-process.",
+      rowBestFor: "Deal execution",
+      why: "Pipedrive helps glass and window sales teams manage many open opportunities across residential and light commercial—clear next activities after measures, deposit milestones, and production handoffs. Filters help reps see which deals stalled waiting on HOA approval or spouse sign-off. Trial with mandatory logging for two weeks during a busy season. Pipedrive wins when follow-through—not lead gen—is the gap.",
+    },
+    {
+      slug: "freshsales",
+      badge: "Best call-heavy commercial and property work",
+      description:
+        "Phone and email context on the record—useful when you sell to property managers, facility teams, and multi-site customers.",
+      rowBestFor: "Account-based selling",
+      why: "Freshsales suits window and glass teams that qualify opportunities on the phone—calling landlords, facility managers, and builders—with timelines and conversations attached to deals. AI scoring and unified timelines reduce hunting through inboxes when multiple people touch an account. Trial with commercial reps logging real outreach. Freshsales fits when B2B-style account work complements residential retail.",
+    },
+    {
+      slug: "zoho-crm",
+      badge: "Best value and suite integration",
+      description:
+        "Workflows and account hierarchy at lower cost—strong alongside Zoho Books if finance lives in Zoho too.",
+      rowBestFor: "Value & accounts",
+      why: "Zoho CRM offers affordable depth for installers managing accounts with multiple sites or contacts—workflows for follow-up when fabrication delays push install dates. If billing uses Zoho Books, fewer silos exist between quoted work and invoices. Pilot blueprint rules for handoffs between inside sales and field measurers. Zoho wins on price-performance for growing regional installers.",
+    },
+  ],
+  editorialGuidance: [
+    E("Residential vs commercial pipelines", "Different velocity and stakeholders—segment accordingly."),
+    E("Insurance and landlord notes", "Attach photos and scope summaries for clarity on disputed or managed properties."),
+    E("Custom order lead times", "Deal tasks when factory ETAs slip—proactive customer updates beat silence."),
+    E("CRM vs fabrication systems", "Production tracks glass orders; CRM tracks selling and customer communication."),
+  ],
+  faqItems: [
+    {
+      q: "What is the best CRM for glass and window installers?",
+      a: "Pipedrive for disciplined pipelines on measured sales, Freshsales for phone-heavy commercial account work, and Zoho CRM for value and account hierarchy—often with other Zoho apps.",
+    },
+    {
+      q: "Window CRM vs industry ERP?",
+      a: "Specialized glass ERPs handle fabrication; CRM handles leads, relationships, and sales follow-up—integrate or link job IDs where possible.",
+    },
+    {
+      q: "Free CRM for window sales reps?",
+      a: "HubSpot and Zoho CRM free tiers support pilots; expect to pay for automation at scale.",
+    },
+  ],
+});
+
+export const CONCRETE_CONTRACTORS_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "concrete-contractors",
+  title: "Best CRM Software for Concrete Contractors (2026)",
+  subtitle:
+    "Compare CRM tools for concrete contractors: commercial and residential pursuits, bid calendars, and relationship tracking with GCs, owners, and municipalities.",
+  introParagraph:
+    "Concrete contractors sell on schedules, specs, and trust—often through GCs, developers, and direct owners with long paths to signed work. CRM software gives business development and estimators a shared record of pursuits, deadlines, and stakeholders instead of scattered email and plan-room noise.",
+  picks: [
+    {
+      slug: "salesforce",
+      badge: "Best for formal pursuits and forecasting",
+      description:
+        "Opportunities, accounts, and roll-up reporting when you pursue multi-phase flatwork, structural, or paving programs.",
+      rowBestFor: "Enterprise-style BD",
+      why: "Salesforce fits concrete firms that pursue larger opportunities with many contacts per account, formal stage gates, and leadership forecasting across regions. Expect admin investment or partner support—reward is pipeline discipline leadership trusts. Pilot one division with stages tied to real bid dates and go/no-go meetings. Salesforce fits when pursuit complexity and deal size justify CRM operations—not for owner-only residential flatwork shops.",
+    },
+    {
+      slug: "zoho-crm",
+      badge: "Best mid-market value",
+      description:
+        "Account hierarchy, workflows, and lower TCO when you need structured BD without Salesforce overhead.",
+      rowBestFor: "Growing concrete BD teams",
+      why: "Zoho CRM delivers strong capability per dollar for concrete contractors scaling BD—blueprints for handoffs between estimators, workflows when pursuits stall before deadlines, and related lists for GC relationships with many jobs. If operations use Zoho apps elsewhere, data stays closer together. Trial pursuits for one GC vertical first. Zoho fits regional contractors who outgrew spreadsheets but are not ready for Salesforce total cost.",
+    },
+    {
+      slug: "monday-crm",
+      badge: "Best visual pursuit boards",
+      description:
+        "Boards for pursuit type, region, or bid month when linear stages do not describe your BD reality.",
+      rowBestFor: "Visual pipelines",
+      why: "Monday CRM helps concrete BD leads who want boards reflecting pursuit clusters—hard bid, negotiated, design-build, maintenance—without forcing one funnel. Automations can surface tasks before addenda or walk dates. Trial one pursuit type end-to-end. Monday suits visually minded teams that need status clarity more than traditional CRM reports on day one.",
+    },
+  ],
+  editorialGuidance: [
+    E("GC and owner contacts", "Role-based contact records reduce “who owns this relationship?” confusion."),
+    E("Bid calendar alignment", "Deal stages should mirror real dates—not vanity percentages."),
+    E("Bonding and prequal data", "Custom fields for limits and expirations support honest go/no-go."),
+    E("Handoff to estimating", "Attach ITBs, addenda links, and scope notes to opportunities."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM should concrete contractors use?",
+      a: "Salesforce for complex pursuits and forecasting at scale, Zoho CRM for structured BD at strong value, and Monday for flexible visual boards across pursuit types.",
+    },
+    {
+      q: "CRM vs construction bid tools?",
+      a: "Plan rooms and bid management handle documents; CRM tracks relationships, pursuits, and follow-ups—use both.",
+    },
+    {
+      q: "Small concrete company CRM?",
+      a: "Many start with HubSpot or Zoho free tiers; add depth when BD headcount grows.",
+    },
+  ],
+});
+
+export const EXCAVATION_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "excavation",
+  title: "Best CRM Software for Excavation Companies (2026)",
+  subtitle:
+    "Compare CRM tools for excavation and earthwork: pursuit tracking with GCs and developers, long-cycle bids, and follow-up when schedules slip or scopes change.",
+  introParagraph:
+    "Excavation companies pursue site work packages that depend on relationships, prequalification, and tight bid windows—often with multiple stakeholders per job. CRM software helps BD teams track opportunities, contacts, and next actions so pursuits do not live only in estimators’ inboxes.",
+  picks: [
+    {
+      slug: "salesforce",
+      badge: "Best for multi-pursuit civil BD",
+      description:
+        "Accounts, opportunities, and reporting when you run regional pursuits across public and private work.",
+      rowBestFor: "Civil-scale sales",
+      why: "Salesforce supports excavation firms that pursue many simultaneous opportunities with complex account maps—GCs, developers, agencies—and need roll-up forecasting by region or division. Expect configuration discipline; pilot with real pursuit stages tied to pre-bid meetings and addenda reviews. Salesforce fits when leadership needs trusted pipeline reporting and deal size justifies admin investment.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best approachable CRM for growing earthwork brands",
+      description:
+        "Companies, deals, and optional marketing when you invest in relationships and inbound alongside cold pursuits.",
+      rowBestFor: "Relationship + inbound",
+      why: "HubSpot gives growing excavation companies a faster-adoption CRM for tracking contacts, deals, and activities—optional marketing when you promote capabilities or nurture past GC relationships. Use custom properties for project type, bond needs, and equipment constraints. Trial with active pursuits only—clean data beats imported junk. HubSpot fits regional BD teams that want professional CRM without a full Salesforce program on day one.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best disciplined follow-up on bids",
+      description:
+        "Activity reminders when estimators chase addenda, quotes, and post-bid clarifications across many files.",
+      rowBestFor: "Bid follow-through",
+      why: "Pipedrive helps excavation estimators and BD reps who juggle many deadlines—tasks for addenda downloads, scope questions, and follow-up calls after bid day. Simplicity keeps adoption higher than bloated configs. Map stages to how you actually win work. Pipedrive shines when the risk is dropped balls on follow-up, not lack of opportunities.",
+    },
+  ],
+  editorialGuidance: [
+    E("Prequal and insurance fields", "Track expiration dates and limits on accounts—avoid last-minute surprises."),
+    E("Joint venture and teaming", "Notes on partner roles and revenue splits on complex pursuits."),
+    E("Weather and schedule risk", "Deal notes when owners push schedules—relationship context matters on the next pursuit."),
+    E("CRM vs estimating", "Estimating tools price dirt; CRM tracks who to call and when."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM do excavation companies use?",
+      a: "Salesforce for complex regional pursuits and reporting, HubSpot for approachable CRM with marketing options, and Pipedrive for activity-driven bid follow-up.",
+    },
+    {
+      q: "Excavation CRM vs heavy equipment telematics?",
+      a: "Telematics tracks iron; CRM tracks customer relationships and pursuits—complementary systems.",
+    },
+    {
+      q: "Affordable CRM for small excavators?",
+      a: "Zoho CRM and HubSpot free tiers support pilots; scale with paid automation as BD headcount grows.",
+    },
+  ],
+});
+
+export const AUTO_REPAIR_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "auto-repair",
+  title: "Best CRM Software for Auto Repair Shops (2026)",
+  subtitle:
+    "Compare CRM tools for auto repair: service advisor workflows, declined work follow-up, fleet and commercial accounts, and marketing to your customer database.",
+  introParagraph:
+    "Auto repair shops live in the SMS—but growth still depends on tracking fleet accounts, declined recommendations, and marketing to existing customers. CRM software complements shop management: it gives advisors and owners a place to manage B2B relationships, follow up on estimates, and run campaigns without spamming every RO.",
+  picks: [
+    {
+      slug: "freshsales",
+      badge: "Best phone- and advisor-centric workflows",
+      description:
+        "Built-in phone, email, and AI assist—useful when service advisors and BDRs work accounts from the counter and the phone.",
+      rowBestFor: "Advisor-heavy shops",
+      why: "Freshsales fits multi-bay shops that want CRM-style timelines for fleet accounts, commercial motor pool contacts, and high-value follow-ups—without forcing shop software to be a full relationship system. Phone and email context on the record speeds coaching and handoffs between advisors. Trial with real account lists and measure activities logged per week. Freshsales shines when human conversation drives fleet and commercial upsell—not only RO automation.",
+    },
+    {
+      slug: "zoho-crm",
+      badge: "Best value for multi-location groups",
+      description:
+        "Affordable seats and workflows—pairs with Zoho apps if you want marketing or finance adjacent to CRM.",
+      rowBestFor: "Value & scale",
+      why: "Zoho CRM offers strong automation per dollar for independent chains and franchise-style groups that need territories, recurring follow-up tasks, and integration options without Salesforce economics. Blueprints can assign tasks when declined work ages past a threshold—if your team commits to honest data entry from the SMS. Trial one store before rolling out. Zoho fits operators who want CRM depth on a budget.",
+    },
+    {
+      slug: "keap",
+      badge: "Best CRM plus customer marketing automation",
+      description:
+        "Tags, campaigns, and automation when you actively market services, inspections, and seasonal promotions to your list.",
+      rowBestFor: "Marketing + CRM",
+      why: "Keap combines CRM with campaigns—useful for shops that monetize their database with reminders, seasonal offers, and declined-work sequences without building a separate marketing stack. Expect setup time; measure lift on booked hours, not just opens. Trial one segment (for example fleet PM reminders) before blasting everyone. Keap fits owner-led marketing teams that will invest in automation discipline.",
+    },
+  ],
+  editorialGuidance: [
+    E("CRM vs shop management system", "SMS owns ROs; CRM owns accounts, pursuits, and marketing lists—sync or export with clear rules."),
+    E("Declined work follow-up", "Tags or deals for high-dollar recommendations that did not sell on first visit."),
+    E("Fleet and commercial accounts", "Company records with vehicle counts, billing, and gate protocols."),
+    E("Marketing consent", "Honor opt-outs—trust beats volume."),
+  ],
+  faqItems: [
+    {
+      q: "What is the best CRM for auto repair shops?",
+      a: "Freshsales for advisor- and phone-centric account work, Zoho CRM for value and workflows across bays or locations, and Keap when customer marketing automation is as important as pipeline tracking.",
+    },
+    {
+      q: "Do auto shops need CRM if they have shop software?",
+      a: "Shop software runs the bay; CRM helps manage commercial accounts, follow-ups, and marketing—many growing shops add CRM when relationship revenue matters.",
+    },
+    {
+      q: "Free CRM for auto repair?",
+      a: "HubSpot’s free CRM can centralize contacts for pilots; add paid tiers when multiple users need automation.",
+    },
+  ],
+  extraGuides: [{ label: "Best scheduling software for small business", href: "/scheduling/best-for/small-business" }],
+});
+
+export const MOBILE_MECHANICS_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "mobile-mechanics",
+  title: "Best CRM Software for Mobile Mechanics (2026)",
+  subtitle:
+    "Compare CRM tools for mobile mechanics: fast lead response, simple pipelines for fleet and repeat clients, and lightweight CRM that fits van-first work.",
+  introParagraph:
+    "Mobile mechanics often run lean—solo or with a partner—selling from the road with texts and calls. CRM software still helps when you pursue small fleets, motor clubs, and repeat customers: it keeps contact history, follow-ups, and quoted work from living only in one phone.",
+  picks: [
+    {
+      slug: "copper",
+      badge: "Best Google Workspace–native solo pros",
+      description:
+        "CRM inside Gmail—minimal context switching for owners who will not adopt heavy software.",
+      rowBestFor: "Gmail-first mobile ops",
+      why: "Copper suits solo and two-person mobile mechanics who live in Gmail on their phones—opportunities for quoted jobs, suggested records next to threads, and light pipeline without a second app culture. Trial by tracking three fleet prospects and recurring commercial contacts. Copper wins when adoption friction is the enemy and relationship memory matters more than enterprise reporting.",
+    },
+    {
+      slug: "close",
+      badge: "Best high-touch call and SMS follow-up",
+      description:
+        "Built-in calling and SMS with pipeline views—when you actively work motor club, fleet, or referral leads.",
+      rowBestFor: "Velocity selling",
+      why: "Close helps mobile mechanics who dedicate time to outbound—calling shops, property managers, or leads from ads—with unified SMS and call logging. Higher per-seat cost must be justified by recurring commercial or fleet work, not one-off driveways. Trial during weeks when you actually have bandwidth to follow up. Close fits when speed-to-contact and persistent touch drive revenue.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best simple pipeline for quoted work",
+      description:
+        "Clear stages for quotes, scheduled jobs, and won fleet accounts—without marketing suite bloat.",
+      rowBestFor: "Lightweight pipeline",
+      why: "Pipedrive gives mobile mechanics a straightforward place to track open quotes and small B2B pursuits—activities and reminders so commercial follow-ups do not die when you are under a truck. Pair with your calendar; keep invoices in accounting tools. Trial with mandatory next-step tasks. Pipedrive shines when you need pipeline discipline without becoming a CRM administrator.",
+    },
+  ],
+  editorialGuidance: [
+    E("Keep CRM minimal", "Solo operators fail when CRM has more fields than they will maintain."),
+    E("Fleet and motor club notes", "Rate structures and gate codes belong on the account record."),
+    E("Handoff to invoicing", "Link to invoice or job IDs in notes for clean year-end review."),
+    E("Speed first", "If CRM slows you down at the curb, simplify stages."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM should mobile mechanics use?",
+      a: "Copper for Gmail-centric solo pros, Close when call and SMS volume drives fleet and commercial work, and Pipedrive for simple pipelines on quoted opportunities.",
+    },
+    {
+      q: "Do solo mechanics need CRM?",
+      a: "Optional until fleet, motor club, or referral accounts matter—then lightweight CRM beats sticky notes.",
+    },
+    {
+      q: "Mobile mechanic CRM vs accounting software?",
+      a: "Accounting tracks money; CRM tracks relationships and follow-up—use both with clear roles.",
+    },
+  ],
+});
+
+export const CLEANING_FRANCHISES_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "cleaning-franchises",
+  title: "Best CRM Software for Cleaning Franchises (2026)",
+  subtitle:
+    "Compare CRM tools for cleaning franchises: territory sales, recurring commercial contracts, franchise reporting rhythms, and marketing that respects brand standards.",
+  introParagraph:
+    "Cleaning franchisees and regional operators sell recurring routes—residential and commercial—with onboarding complexity and brand-mandated follow-ups. CRM software helps track prospects across territories, handoffs between sales and operations, and renewal or upsell conversations without losing accountability when teams scale.",
+  picks: [
+    {
+      slug: "keap",
+      badge: "Best CRM plus territory-style automation",
+      description:
+        "Tags, campaigns, and automation for onboarding sequences, quotes, and follow-ups—when you will invest in setup.",
+      rowBestFor: "Automation-heavy franchise ops",
+      why: "Keap combines CRM with marketing automation—useful for cleaning franchises that need repeatable onboarding, quote follow-ups, and nurture within brand guidelines. Measure booked cleans and commercial proposals, not email vanity metrics. Pilot one territory before system-wide rollout. Keap fits owner-operators who will configure campaigns with franchise compliance in mind.",
+    },
+    {
+      slug: "zoho-crm",
+      badge: "Best Zoho stack value",
+      description:
+        "Workflows, territories, and affordable scaling—strong if you also run Zoho Books or other Zoho ops tools.",
+      rowBestFor: "Zoho ecosystem franchises",
+      why: "Zoho CRM offers territory management, workflows, and lower seat cost for multi-unit cleaning brands that need structured handoffs between sales and ops—especially when Zoho Books or other Zoho apps already run the business. Blueprints can enforce steps after a commercial walkthrough. Trial with real franchise territories and naming discipline. Zoho wins on integrated value when you commit to the suite.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best inbound marketing + CRM alignment",
+      description:
+        "Forms, chat, and email tied to CRM when territories invest in local inbound and partner channels.",
+      rowBestFor: "Inbound growth",
+      why: "HubSpot helps cleaning franchises that buy local leads or invest in partnerships—CRM ties spend to booked contracts when attribution is configured honestly. Free CRM can unify inbound before you pay for Marketing Hub. Segment lists for residential versus commercial playbooks. HubSpot fits growth-focused territories with dedicated sales or marketing time.",
+    },
+  ],
+  editorialGuidance: [
+    E("Franchise compliance", "Confirm approved messaging and data use before automations go live."),
+    E("Commercial vs residential", "Separate pipelines or deal types—sales motions differ."),
+    E("Territory hygiene", "Naming and ownership rules prevent reps from fighting over the same ZIP."),
+    E("Renewal and upsell", "Tasks or deals for contract anniversaries and add-on services."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM is best for cleaning franchises?",
+      a: "Keap when CRM plus marketing automation is central, Zoho CRM for territory workflows and suite value, and HubSpot when inbound marketing and lead attribution matter.",
+    },
+    {
+      q: "Franchise CRM vs brand-provided tools?",
+      a: "Use franchisor systems where required; add CRM when local B2B sales, marketing ROI, and territory accountability need a dedicated hub.",
+    },
+    {
+      q: "Affordable CRM for janitorial startups?",
+      a: "HubSpot and Zoho CRM free tiers support pilots; expect paid automation as territories add reps.",
+    },
+  ],
+});
+
+export const EVENT_SERVICES_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "event-services",
+  title: "Best CRM Software for Event Services (2026)",
+  subtitle:
+    "Compare CRM tools for event production: fast proposal cycles, B2B pursuits, vendor-heavy projects, and follow-up when clients compare multiple vendors quickly.",
+  introParagraph:
+    "Event services—AV, staging, rentals, catering support—sell deadline-driven projects with many stakeholders and tight handoffs. CRM software helps sales and producers track opportunities, proposal versions, and next actions so high-season volume does not bury follow-ups on signed contracts.",
+  picks: [
+    {
+      slug: "hubspot",
+      badge: "Best B2B event sales and marketing",
+      description:
+        "Companies, deals, and optional marketing when you pursue corporate programs, agencies, and venue partnerships.",
+      rowBestFor: "Corporate + agency CRM",
+      why: "HubSpot supports event services firms that sell to planners, marketing teams, and agencies—one place for contacts, deal history, and optional email sequences for nurture. Use custom properties for event date, load-in window, and technical requirements. Trial with active pursuits only and enforce attachment discipline for scopes. HubSpot fits when growth depends on relationship selling plus measurable inbound.",
+    },
+    {
+      slug: "monday-crm",
+      badge: "Best visual deal + production alignment",
+      description:
+        "Boards for event type, month, or producer—when sales and ops need shared language without duplicating full PM software.",
+      rowBestFor: "Visual event pipelines",
+      why: "Monday CRM helps event companies that want boards reflecting show clusters, verticals, or producers—with automations when proposals age past internal SLA. Keep CRM focused on selling; production detail may live elsewhere. Trial one vertical (for example corporate annual meetings) before expanding. Monday suits teams that think visually and need status clarity across sales and ops leads.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best fast-cycle follow-up",
+      description:
+        "Activity-driven pipeline for short decision windows—reduces silent losses after proposals go out.",
+      rowBestFor: "Deal discipline",
+      why: "Pipedrive keeps event sales teams focused on next calls when clients compare multiple vendors on tight timelines—stages like qualified, proposal sent, revision, signed. Mobile-friendly activities matter when producers sell from venues. Trial during a busy booking season with daily logging. Pipedrive wins when execution on open deals is the bottleneck.",
+    },
+  ],
+  editorialGuidance: [
+    E("Event date and load-in fields", "Custom properties reduce scope misunderstandings."),
+    E("Stakeholder maps", "Planners, agencies, technical directors—know who actually signs."),
+    E("Revision tracking", "Notes or attachments for proposal versions—avoid “which PDF is final?” fights."),
+    E("CRM vs event PM tools", "Production scheduling may live elsewhere; CRM tracks selling and client communication."),
+  ],
+  faqItems: [
+    {
+      q: "What CRM should event services companies use?",
+      a: "HubSpot for B2B event sales with optional marketing, Monday for visual pipelines aligned to how you sell shows, and Pipedrive for strict follow-up on fast-cycle proposals.",
+    },
+    {
+      q: "Event CRM vs rental inventory software?",
+      a: "Inventory systems track gear; CRM tracks customer relationships, pursuits, and follow-ups—integrate IDs where possible.",
+    },
+    {
+      q: "Small event company CRM?",
+      a: "Start with HubSpot’s free CRM or Pipedrive trials; add marketing when you measure ROI.",
+    },
+  ],
+});
+
+export const HOME_INSPECTORS_CRM_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "home-inspectors",
+  title: "Best CRM Software for Home Inspectors (2026)",
+  subtitle:
+    "Compare CRM tools for home inspectors: agent and direct-to-consumer pipelines, inspection add-ons, and follow-up that keeps referral relationships warm.",
+  introParagraph:
+    "Home inspectors sell fixed-price services in a referral-heavy market—agents, past clients, and online leads all matter. CRM software gives solo inspectors and small teams a place to track relationships, automate reminders, and segment marketing without blasting every contact the same way.",
+  picks: [
+    {
+      slug: "copper",
+      badge: "Best Gmail-native inspector offices",
+      description:
+        "CRM in Google Workspace—minimal friction for owners who live in email with agents and coordinators.",
+      rowBestFor: "Gmail-centric inspectors",
+      why: "Copper fits home inspection businesses built on Gmail and Calendar—suggested records next to agent threads, simple pipelines for quoted add-ons or commercial walkthroughs, and fast adoption because inspectors are not living in another app between reports. Trial by linking top agent offices and tagging referral sources honestly. Copper wins when relationship memory and lightweight pipeline beat enterprise features.",
+    },
+    {
+      slug: "hubspot",
+      badge: "Best marketing + database growth",
+      description:
+        "Lists, email, and forms when you nurture agents, past clients, and online leads with segmented outreach.",
+      rowBestFor: "Growth-focused inspectors",
+      why: "HubSpot helps inspection brands that invest in SEO, agent partnerships, or email nurture—CRM segments for buyers, sellers, agents, and past clients with optional campaigns for seasonal reminders. Start with free CRM; add Marketing Hub when you can measure cost per booked inspection. Import clean data only—bad lists make bad automation. HubSpot fits teams ready to treat the database as a growth asset.",
+    },
+    {
+      slug: "pipedrive",
+      badge: "Best simple pipeline for commercial and multi-inspector teams",
+      description:
+        "Clear stages for quotes, scheduled inspections, and add-on upsells—lightweight enough to maintain.",
+      rowBestFor: "Pipeline discipline",
+      why: "Pipedrive gives growing inspection firms a straightforward place to track commercial opportunities, multi-inspector scheduling handoffs, and upsell paths for radon or sewer scopes—activities and reminders so nothing dies in shared inboxes. Trial with one pipeline per revenue line. Pipedrive shines when modest structure beats chaos without Salesforce overhead.",
+    },
+  ],
+  editorialGuidance: [
+    E("Agent relationship notes", "Track who refers consistently—reciprocity matters."),
+    E("Add-on opportunities", "Deals or tasks for ancillaries tied to property profile."),
+    E("Compliance and brand", "Automation must respect state marketing rules and franchise standards if applicable."),
+    E("CRM vs report software", "Reporting tools deliver deliverables; CRM tracks selling and relationships."),
+  ],
+  faqItems: [
+    {
+      q: "What is the best CRM for home inspectors?",
+      a: "Copper for Gmail-centric offices, HubSpot when marketing and segmented outreach drive growth, and Pipedrive for clear pipelines on commercial work and add-ons.",
+    },
+    {
+      q: "Do solo home inspectors need CRM?",
+      a: "Spreadsheets work until referral follow-up and marketing lists outgrow memory—lightweight CRM often pays for itself.",
+    },
+    {
+      q: "Free CRM for home inspection businesses?",
+      a: "HubSpot’s free CRM is a common pilot; add paid tiers when automation and multi-user access matter.",
+    },
+  ],
 });

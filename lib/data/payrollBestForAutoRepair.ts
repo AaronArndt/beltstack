@@ -12,7 +12,7 @@ import type {
 export const AUTO_REPAIR_PAGE_PROPS = {
   title: "Best Payroll Software for Auto Repair Shops (2026)",
   subtitle:
-    "Compare payroll software for auto repair shops and mechanics managing W-2 technicians and service staff plus 1099 subcontractors.",
+    "Compare payroll software for auto repair shops, dealerships, and mechanical teams: W-2 technicians and service writers, flat-rate pay, 1099 sublet partners, and QuickBooks labor on repair orders.",
   useCase: "auto-repair",
   categoryHref: "/payroll",
   categoryLabel: "Payroll",
@@ -190,6 +190,10 @@ export const AUTO_REPAIR_PAGE_PROPS = {
     {
       q: "Can payroll software handle flat-rate (flag) pay for mechanics?",
       a: "Yes. Gusto, QuickBooks Payroll, OnPay, and ADP support multiple pay types and rates—including flat-rate or bonus pay—so you can pay techs on flag hours or a mix of base and productivity pay. Labor cost can still flow to jobs when you use QuickBooks Payroll with QuickBooks for job costing.",
+    },
+    {
+      q: "What payroll is best for independent auto repair shops vs dealership-sized groups?",
+      a: "Independent shops often start with Gusto or OnPay for transparent pricing and fast setup; QuickBooks Payroll when QuickBooks already carries ROs and parts. Multi-rooftop or high-compliance groups evaluate ADP for serviced payroll, multi-state depth, and HR support—compare total cost of ownership, not list price alone.",
     },
   ] as BestForFaqItem[],
 };

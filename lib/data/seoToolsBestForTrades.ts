@@ -98,6 +98,7 @@ export type SeoToolsProductPick = {
   description: string;
   rowBestFor: string;
   standoutFeature?: string;
+  /** “Why we recommend” card body: ~3–5 sentences; GSC-first, local/trade-specific rationale. */
   why: string;
 };
 

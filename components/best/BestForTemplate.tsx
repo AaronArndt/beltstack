@@ -15,6 +15,7 @@ import {
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { ComparisonTeaserLinkCard } from "@/components/comparisons/ComparisonTeaserLinkCard";
+import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardStartingPrice";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
 const btnPrimary =
@@ -180,7 +181,7 @@ function WhyThesePickBlock({
             </span>
             <span className="text-sm font-bold text-[#10B981]">{pick.rating}</span>
             <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
-              From {pick.startingPrice}
+              {formatProductCardStartingPrice(pick.startingPrice)}
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{block.body}</p>
@@ -216,7 +217,7 @@ function FeaturedCard({ pick }: { pick: BestForFeaturedProduct }) {
         </span>
         <span className="text-[#10B981] font-bold">{pick.rating}</span>
         <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
-          From {pick.startingPrice}
+          {formatProductCardStartingPrice(pick.startingPrice)}
         </span>
       </div>
       <h3 className="mt-3 text-[#1A2D48] text-xl font-bold">

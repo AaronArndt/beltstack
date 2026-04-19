@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
-import { ACCOUNTING_TRADE_BEST_FOR_BY_SLUG } from "@/lib/data/accountingBestForTrades";
+import {
+  ACCOUNTING_TRADE_BEST_FOR_BY_SLUG,
+  getAccountingTradeMetaKeywords,
+} from "@/lib/data/accountingBestForTrades";
 
 const PAGE_MAP = ACCOUNTING_TRADE_BEST_FOR_BY_SLUG;
 
@@ -30,9 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const keywords = getAccountingTradeMetaKeywords(scenario);
+
   return {
     title: `${pageProps.title} | BeltStack`,
     description: pageProps.subtitle,
+    ...(keywords?.length ? { keywords } : {}),
   };
 }
 

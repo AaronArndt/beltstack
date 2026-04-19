@@ -50,7 +50,8 @@ export default function CrmBestForIndexPage() {
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Find CRM software that fits your situation—freelancers, small business, startups, agencies, sales teams, and
-              trades from HVAC to construction and property management.
+              trades from HVAC to construction and property management, plus automotive, appliance repair, event services,
+              home inspectors, and more.
             </p>
           </div>
         </section>
@@ -113,6 +114,12 @@ export function generateMetadata() {
   return {
     title: "Best CRM Software by Use Case | BeltStack",
     description:
-      "Browse our best CRM software picks by use case: freelancers, small business, startups, agencies, sales teams, and industry-specific guides for trades and service businesses.",
+      "Browse our best CRM software picks by use case: freelancers, small business, startups, agencies, sales teams, and industry-specific guides for HVAC, construction, automotive, appliance repair, event services, home inspectors, and more.",
+    keywords: [
+      "best CRM by industry",
+      "CRM software by use case",
+      "CRM for trades",
+      "CRM for service businesses",
+    ],
   };
 }

@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
-import { getSeoToolsBestForPageProps, getSeoToolsBestForSlugs } from "@/lib/data/seoToolsBestForPages";
+import {
+  getSeoToolsBestForMetaKeywords,
+  getSeoToolsBestForPageProps,
+  getSeoToolsBestForSlugs,
+} from "@/lib/data/seoToolsBestForPages";
 
 type Props = { params: Promise<{ scenario: string }> };
 
@@ -21,5 +25,10 @@ export async function generateMetadata({ params }: Props) {
   if (!props) return { title: "Best SEO Tools" };
   const description =
     props.subtitle.length > 165 ? `${props.subtitle.slice(0, 162).trim()}…` : props.subtitle;
-  return { title: `${props.title} | BeltStack`, description };
+  const keywords = getSeoToolsBestForMetaKeywords(scenario);
+  return {
+    title: `${props.title} | BeltStack`,
+    description,
+    ...(keywords?.length ? { keywords } : {}),
+  };
 }

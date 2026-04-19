@@ -95,7 +95,8 @@ export default function PosBestForIndexPage() {
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Find POS software by operation type—small business, retail, restaurants, ecommerce, and multi-location—plus
-              trade-specific picks for HVAC, plumbing, construction, property management, and more.
+              trade-specific picks for HVAC, plumbing, construction, property management, appliance repair, auto repair,
+              event services, home inspectors, and more.
             </p>
           </div>
         </section>
@@ -133,6 +134,14 @@ export function generateMetadata() {
   return {
     title: "Best POS Software by Use Case | BeltStack",
     description:
-      "Browse POS software picks by use case and trade: small business, retail, restaurants, ecommerce, multi-location, HVAC, plumbing, construction, property management, and more.",
+      "Browse POS software picks by use case and trade: small business, retail, restaurants, ecommerce, multi-location, HVAC, plumbing, construction, property management, appliance repair, garage door, locksmith, flooring, auto repair, mobile mechanics, cleaning franchises, event services, home inspectors, and more.",
+    keywords: [
+      "best POS by use case",
+      "POS software for contractors",
+      "retail POS",
+      "restaurant POS",
+      "trade business POS",
+      "small business point of sale",
+    ],
   };
 }

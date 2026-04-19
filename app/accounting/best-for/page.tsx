@@ -50,7 +50,8 @@ export default function AccountingBestForPage() {
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Find accounting software that fits your situation—freelancers, contractors, small business, ecommerce, agencies, and
-              trade-specific picks for HVAC, plumbing, construction, property management, and more.
+              trade-specific picks for HVAC, plumbing, construction, property management, automotive, event services, home
+              inspectors, and more.
             </p>
           </div>
         </section>
@@ -93,6 +94,12 @@ export function generateMetadata() {
   return {
     title: "Best Accounting Software by Use Case | BeltStack",
     description:
-      "Browse accounting software by use case and trade: freelancers, contractors, small business, ecommerce, agencies, HVAC, plumbing, construction, property management, and more.",
+      "Browse accounting software by use case and trade: freelancers, contractors, small business, ecommerce, agencies, HVAC, plumbing, construction, property management, appliance repair, auto shops, cleaning franchises, home inspectors, and more.",
+    keywords: [
+      "best accounting software by industry",
+      "accounting software for contractors",
+      "accounting software for trades",
+      "small business accounting by use case",
+    ],
   };
 }

@@ -77,6 +77,19 @@ export const POS_TRADE_BEST_FOR_LINKS: { label: string; href: string }[] = [
   { label: "Pool service companies", href: getPosBestForUrl("pool-service") },
   { label: "Junk removal businesses", href: getPosBestForUrl("junk-removal") },
   { label: "Moving companies", href: getPosBestForUrl("moving") },
+  { label: "Best POS Software for Appliance Repair Businesses (2026)", href: getPosBestForUrl("appliance-repair") },
+  { label: "Best POS Software for Garage Door Companies (2026)", href: getPosBestForUrl("garage-door") },
+  { label: "Best POS Software for Locksmith Businesses (2026)", href: getPosBestForUrl("locksmith") },
+  { label: "Best POS Software for Flooring Contractors (2026)", href: getPosBestForUrl("flooring") },
+  { label: "Best POS Software for Fence & Deck Builders (2026)", href: getPosBestForUrl("fence-deck") },
+  { label: "Best POS Software for Glass & Window Installers (2026)", href: getPosBestForUrl("glass-window-installers") },
+  { label: "Best POS Software for Concrete Contractors (2026)", href: getPosBestForUrl("concrete-contractors") },
+  { label: "Best POS Software for Excavation Companies (2026)", href: getPosBestForUrl("excavation") },
+  { label: "Best POS Software for Auto Repair Shops (2026)", href: getPosBestForUrl("auto-repair") },
+  { label: "Best POS Software for Mobile Mechanics (2026)", href: getPosBestForUrl("mobile-mechanics") },
+  { label: "Best POS Software for Cleaning Franchises (2026)", href: getPosBestForUrl("cleaning-franchises") },
+  { label: "Best POS Software for Event Services (2026)", href: getPosBestForUrl("event-services") },
+  { label: "Best POS Software for Home Inspectors (2026)", href: getPosBestForUrl("home-inspectors") },
 ];
 
 export const POS_BY_BUSINESS_TYPE_GROUPS: {

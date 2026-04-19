@@ -139,6 +139,66 @@ const SCENARIOS = [
     description: "Payroll for auto repair shops and mechanics.",
   },
   {
+    label: "Best Payroll Software for Appliance Repair Businesses (2026)",
+    href: getPayrollBestForUrl("appliance-repair"),
+    description: "Payroll for appliance repair shops: field techs, 1099 subs, overtime, and QuickBooks job alignment.",
+  },
+  {
+    label: "Best Payroll Software for Garage Door Companies (2026)",
+    href: getPayrollBestForUrl("garage-door"),
+    description: "Payroll for garage door dealers and installers: crews, commissions, and multi-location growth.",
+  },
+  {
+    label: "Best Payroll Software for Locksmith Businesses (2026)",
+    href: getPayrollBestForUrl("locksmith"),
+    description: "Payroll for locksmiths: mobile crews, Square-friendly options, W-2 and 1099 in one stack.",
+  },
+  {
+    label: "Best Payroll Software for Flooring Contractors (2026)",
+    href: getPayrollBestForUrl("flooring"),
+    description: "Payroll for flooring contractors: install crews, showrooms, Rippling, QuickBooks job costing.",
+  },
+  {
+    label: "Best Payroll Software for Fence & Deck Builders (2026)",
+    href: getPayrollBestForUrl("fence-deck"),
+    description: "Payroll for fence and deck builders: crew OT, job-costed labor, and contractor payouts.",
+  },
+  {
+    label: "Best Payroll Software for Glass & Window Installers (2026)",
+    href: getPayrollBestForUrl("glass-window-installers"),
+    description: "Payroll for glass and window companies: glazier crews, QuickBooks jobs, Paychex or Gusto.",
+  },
+  {
+    label: "Best Payroll Software for Concrete Contractors (2026)",
+    href: getPayrollBestForUrl("concrete-contractors"),
+    description: "Payroll for concrete contractors: large crews, ADP scale, QuickBooks labor on pours.",
+  },
+  {
+    label: "Best Payroll Software for Excavation Companies (2026)",
+    href: getPayrollBestForUrl("excavation"),
+    description: "Payroll for excavation: ADP, Paychex serviced payroll, operators, and multi-state crews.",
+  },
+  {
+    label: "Best Payroll Software for Mobile Mechanics (2026)",
+    href: getPayrollBestForUrl("mobile-mechanics"),
+    description: "Payroll for mobile mechanics: Square Payroll, OnPay, van crews, and QuickBooks shops.",
+  },
+  {
+    label: "Best Payroll Software for Cleaning Franchises (2026)",
+    href: getPayrollBestForUrl("cleaning-franchises"),
+    description: "Payroll for cleaning franchises: Rippling multi-entity, Gusto franchisees, ADP at scale.",
+  },
+  {
+    label: "Best Payroll Software for Event Services (2026)",
+    href: getPayrollBestForUrl("event-services"),
+    description: "Payroll for event services: seasonal staff, Gusto hiring, Patriot low cost, Square on Square.",
+  },
+  {
+    label: "Best Payroll Software for Home Inspectors (2026)",
+    href: getPayrollBestForUrl("home-inspectors"),
+    description: "Payroll for home inspectors: Patriot, OnPay, small teams, W-2 and associate inspectors.",
+  },
+  {
     label: "Best payroll software for restaurants",
     href: getPayrollBestForUrl("restaurants"),
     description: "Payroll for restaurants, tips, and hospitality.",
@@ -205,7 +265,8 @@ export default function PayrollBestForPage() {
               Best Payroll Software by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Browse payroll software recommendations by scenario: trade, company size, budget, or use case. Find the best fit for your business.
+              Browse payroll software recommendations by scenario: trade, company size, budget, or use case—including appliance repair, garage door,
+              flooring, concrete, excavation, mobile mechanics, cleaning franchises, event services, home inspectors, and more.
             </p>
           </div>
         </section>
@@ -248,6 +309,12 @@ export function generateMetadata() {
   return {
     title: "Best Payroll Software by Use Case | BeltStack",
     description:
-      "Browse our best payroll software picks by use case: small business, contractors, trades, restaurants, retail, nonprofits, and more. Find the right payroll for your situation.",
+      "Browse our best payroll software picks by use case: small business, contractors, trades, appliance repair, garage door, locksmith, flooring, fence and deck, glass and window, concrete, excavation, auto repair, mobile mechanics, cleaning franchises, event services, home inspectors, restaurants, retail, nonprofits, and more.",
+    keywords: [
+      "best payroll by use case",
+      "payroll software for contractors",
+      "trade business payroll",
+      "small business payroll",
+    ],
   };
 }

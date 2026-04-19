@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { sectionRuleAccent } from "@/lib/design-tokens";
+import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardStartingPrice";
 
 // ——— Design tokens (match review template) ———
 
@@ -353,7 +354,9 @@ export function ComparisonTemplate({
                       <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productA.rating}</span> rating</p>
                     )}
                     {productA.startingPrice != null && productA.startingPrice !== "" && (
-                      <p className="text-sm text-neutral-700 mt-0.5">From {productA.startingPrice}</p>
+                      <p className="text-sm text-neutral-700 mt-0.5">
+                        {formatProductCardStartingPrice(productA.startingPrice)}
+                      </p>
                     )}
                     <p className="mt-2 text-sm text-neutral-700 leading-relaxed">{productA.bestForSummary}</p>
                     {productA.visitUrl != null && productA.visitUrl !== "" && (
@@ -369,7 +372,9 @@ export function ComparisonTemplate({
                       <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productB.rating}</span> rating</p>
                     )}
                     {productB.startingPrice != null && productB.startingPrice !== "" && (
-                      <p className="text-sm text-neutral-700 mt-0.5">From {productB.startingPrice}</p>
+                      <p className="text-sm text-neutral-700 mt-0.5">
+                        {formatProductCardStartingPrice(productB.startingPrice)}
+                      </p>
                     )}
                     <p className="mt-2 text-sm text-neutral-700 leading-relaxed">{productB.bestForSummary}</p>
                     {productB.visitUrl != null && productB.visitUrl !== "" && (

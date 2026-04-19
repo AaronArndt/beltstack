@@ -1121,6 +1121,838 @@ export const SEO_TOOLS_BEST_FOR_BY_SLUG: Record<string, BestForTemplateProps> = 
       { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
     ]
   ),
+  "appliance-repair": makePage(
+    "appliance-repair",
+    "Best SEO Tools for Appliance Repair Businesses (2026)",
+    "Warranty dispatch, retail COD jobs, and OEM program leads need different landing paths—your stack should pair Search Console truth with Map Pack grids and research that matches how homeowners actually book repairs.",
+    "Appliance repair SEO blends emergency intent (“dryer not heating today”), retail replacement queries, and manufacturer-adjacent traffic patterns. Verify every site in Google Search Console before you annualize paid suites—Performance shows which services and cities already earn impressions. BrightLocal-class grids matter when homeowners pick from the Map Pack; Semrush or SE Ranking helps when you scale city-plus-service pages or chase competitor coverage ethically. Tools report movement; fast callbacks, honest service areas, and review velocity still close the job.",
+    [
+      {
+        heading: "Split OEM, retail, and warranty intent",
+        body: "Mixed pages confuse users and weaken relevance—separate paths when your dispatch and billing truly differ.",
+      },
+      {
+        heading: "GBP services match trucks",
+        body: "List what you actually repair; overstuffed menus attract calls you decline.",
+      },
+      {
+        heading: "Model seasonality in GSC",
+        body: "Compare quarter-over-quarter before you rewrite pages off one busy week.",
+      },
+      {
+        heading: "Ethical OEM claims",
+        body: "Follow brand and warranty program rules—tools suggest topics; compliance teams approve copy.",
+      },
+    ],
+    [
+      {
+        slug: "google-search-console",
+        badge: "Best free performance truth",
+        description:
+          "Queries and pages for repair vs install intents—baseline before you trust third-party keyword scores.",
+        rowBestFor: "First-party queries & coverage",
+        why: "Search Console is non-negotiable for appliance repair brands juggling warranty callbacks, COD tickets, and replacement upsells: Performance shows which queries already surface your URLs, while Coverage catches index blocks after template or booking-widget changes. Export top queries monthly and reconcile them with call logs—if third-party tools disagree with your own clicks, trust your property. Pair URL Inspection with major service-line launches. GSC will not replace local grids or rank trackers, but it should veto bad priorities when suites push vanity keywords you never earn.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best Map Pack + listings execution",
+        description:
+          "ZIP grids and GBP reporting when homeowners compare shops from the pack before they read your site.",
+        rowBestFor: "Local grids & citation hygiene",
+        why: "Appliance repair still converts heavily from Google Business Profile—BrightLocal grids diagnose ZIP-level Map Pack visibility after photo refreshes, category tweaks, or honest service-area edits. Trial a tight set of ZIPs your vans cover weekly; grids without assigned GBP follow-through are PDF theater. Pair reporting with review asks after successful repairs (with permission) and fast response SLAs. Validate per-location pricing if you operate multiple shops or brands. Compare BrightLocal vs Whitespark if citations—not dashboards—are your main pain.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best scaled research + technical checks",
+        description:
+          "City-plus-service pages, audits after CMS changes, and competitor snapshots on replacement-heavy SERPs.",
+        rowBestFor: "Keyword projects + site audits",
+        why: "Semrush helps multi-van appliance repair marketers track city and appliance-line keywords, run audits after seasonal promo template pushes, and benchmark competitor pages on high-ticket replacements ethically. During a trial, connect Search Console and cap tracked terms to services you can staff and warranty rules you can honor—bloated projects inflate renewals. Use audits to catch broken internal links when OEM or finance landing pages multiply. Assign a weekly owner or downgrade modules nobody opens.",
+      },
+    ],
+    [
+      {
+        q: "What free SEO tools should appliance repair shops use first?",
+        a: "Google Search Console on every domain—queries, coverage, and URL inspection. Add BrightLocal or Whitespark when Map Pack and citations need monthly accountability; add Semrush or SE Ranking when multi-city pages and audits become weekly work.",
+      },
+      {
+        q: "Do appliance repair businesses need Ahrefs?",
+        a: "Often later—when content gaps and ethical link opportunities become a deliberate strategy. Many shops run Search Console + BrightLocal + Semrush first.",
+      },
+    ],
+    [
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
+  "garage-door": makePage(
+    "garage-door",
+    "Best SEO Tools for Garage Door Companies (2026)",
+    "High-ticket installs, service doors, and builder programs need separate intents—tooling should support Map Pack grids near showrooms, large-site audits on multi-location templates, and gap research against regional dealers.",
+    "Garage door dealers compete in the Map Pack for emergency service while also pursuing new construction and commercial rolling-door bids. Search Console shows whether “garage door repair [city]” or install-adjacent queries already earn impressions—expand from that evidence before you chase national head terms. BrightLocal helps when grids and citations are the bottleneck; Semrush and Ahrefs help when dozens of city pages, technical health, and competitor content depth—not only GBP—consume weekly time.",
+    [
+      {
+        heading: "Install vs service keywords",
+        body: "Separate landing paths when sales motions, pricing, and crews truly differ—mixed pages weaken relevance.",
+      },
+      {
+        heading: "Builder and commercial proof",
+        body: "Portfolio and spec pages need real project photos—tools find gaps; crews supply credibility.",
+      },
+      {
+        heading: "Multi-location honesty",
+        body: "Align GBP service areas with dispatch reality; overstretching creates bad reviews faster than SEO recovers.",
+      },
+      {
+        heading: "Verify SERPs manually",
+        body: "Rank trackers can disagree with live results—spot-check high-value terms in-browser and against GSC.",
+      },
+    ],
+    [
+      {
+        slug: "brightlocal",
+        badge: "Best dealer Map Pack operations",
+        description:
+          "Grids around showrooms and high-LTV suburbs—client-ready PDFs when owners expect monthly local proof.",
+        rowBestFor: "GBP grids & listings reporting",
+        why: "Garage door companies live in the Map Pack for emergency and install discovery—BrightLocal grids show ZIP-level movement after GBP photo updates, category fixes, or service-area adjustments tied to real dispatch. Trial grids along routes your techs actually run; fantasy coverage maps create bad reviews. Pair charts with citation cleanup and review velocity after installs. Validate module bundles against how many locations or brands you report.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best multi-location template hygiene",
+        description:
+          "Audits when city pages multiply, plus rank projects split by residential install, service, and commercial intents.",
+        rowBestFor: "Technical SEO + keyword tracking",
+        why: "Semrush supports garage door dealers scaling dozens of landers—catch duplicate titles, broken internals, and index bloat after acquisitions or template pushes. Connect Search Console during trial and prioritize coverage fixes both tools flag. Split rank-tracking projects so emergency service keywords do not hide weakness in commercial or builder programs. Confirm crawl limits before annual checkout.",
+      },
+      {
+        slug: "ahrefs",
+        badge: "Best dealer + manufacturer SERP gaps",
+        description:
+          "Content and link context for insulated doors, openers, and commercial lines competitors already monetize.",
+        rowBestFor: "Competitive content + backlinks",
+        why: "Ahrefs clarifies why regional competitors win on high-ticket installs, opener bundles, or commercial landing pages—page-level gaps and backlink profiles you can benchmark ethically. Trial by mapping three rival URLs that outrank your money pages, then validate ideas with Search Console before you rebuild the site. Ethical links mirror real builder partnerships and supplier relationships—not purchased junk. Use insights to prioritize maintainable proof pages your estimators can defend.",
+      },
+    ],
+    [
+      {
+        q: "Garage door companies: BrightLocal or Whitespark first?",
+        a: "Both are credible—compare citation workflows, grid UX, and per-location pricing on each vendor’s site. See BrightLocal vs Whitespark.",
+      },
+      {
+        q: "When do garage door dealers need Semrush and Ahrefs together?",
+        a: "When multi-location technical hygiene and competitor content depth are both weekly priorities—many teams start with Search Console + BrightLocal + one flagship suite.",
+      },
+    ],
+    [
+      { label: "How to rank in Google Maps", href: `${GUIDES}/how-to-rank-in-google-maps` },
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+    ]
+  ),
+  locksmith: makePage(
+    "locksmith",
+    "Best SEO Tools for Locksmith Businesses (2026)",
+    "Emergency lockouts and automotive keys demand call-first landers and tight service polygons—your stack should prioritize Search Console, affordable local grids, and lean research before you annualize flagship suites.",
+    "Locksmith SEO is hyper-local and urgency-driven; most leads tap-to-call from phones. Search Console shows which “locksmith near me” and automotive-key variants already produce impressions—optimize those URLs before you chase broad national keywords. Ubersuggest or SE Ranking fits lean budgets; BrightLocal earns budget when Map Pack competition in dense metros is the daily battle. Tools do not answer 2 a.m. calls—speed and honest territories still win reviews.",
+    [
+      {
+        heading: "Service-area honesty",
+        body: "Overstating coverage tanks close rates—align GBP polygons with real ETA promises.",
+      },
+      {
+        heading: "Avoid doorway sprawl",
+        body: "Consolidate thin city pages; audits from mid-tier suites help spot duplicates after template tests.",
+      },
+      {
+        heading: "Commercial vs emergency",
+        body: "Separate intents when you pursue master-key programs versus roadside lockouts—mixed pages confuse bids.",
+      },
+      {
+        heading: "Track calls, not only ranks",
+        body: "Pair SEO landing pages with clean call attribution so you optimize for booked jobs.",
+      },
+    ],
+    [
+      {
+        slug: "google-search-console",
+        badge: "Best free query reality",
+        description:
+          "See which emergency and automotive queries surface your brand—fix coverage before you buy more keywords.",
+        rowBestFor: "Performance & indexing truth",
+        why: "Locksmith businesses should verify Search Console on every domain before stacking paid tools: Performance separates automotive, commercial, and residential queries that actually hit your site, while Coverage catches mobile CTA or booking breaks that kill conversions overnight. Export monthly and compare to call logs—if impressions rise but calls fall, fix pages and CTAs before chasing new terms. GSC remains the veto layer when keyword tools suggest irrelevant national volume.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best hyper-competitive Map grids",
+        description:
+          "ZIP-level visibility when aggregators and franchises crowd your metro—pair grids with review cadence.",
+        rowBestFor: "Map Pack diagnostics + citations",
+        why: "Locksmith Map Packs are brutally competitive—BrightLocal grids expose ZIP-level shifts when new entrants buy ads and SEO simultaneously or when you tighten service areas after dispatch changes. Trial tight geography tied to realistic ETAs; pair insights with GBP photos of branded vans and fast review replies after successful jobs (with permission). Validate pricing for solo vs multi-van reporting.",
+      },
+      {
+        slug: "se-ranking",
+        badge: "Best affordable tracking + audits",
+        description:
+          "Rank checks and recurring audits without flagship invoices—pair with ruthless GSC discipline.",
+        rowBestFor: "Value all-in-one monitoring",
+        why: "SE Ranking fits locksmith operators who need structured rank tracking and site audits on a budget—connect Search Console, cap cities to your true polygon, and close audit tickets monthly or downgrade. Graduate to Semrush when competitor research and crawl scale become daily habits; see SE Ranking vs Semrush. Pair with BrightLocal if Maps—not organic blog posts—drives most revenue.",
+      },
+    ],
+    [
+      {
+        q: "Do locksmiths need Semrush on day one?",
+        a: "Usually not—start with Search Console, honest GBP, and either SE Ranking or Ubersuggest for lean tracking; add Semrush or Ahrefs when content and technical scale justify renewals.",
+      },
+      {
+        q: "Why SE Ranking on this locksmith shortlist?",
+        a: "It balances affordable rank tracking and audits for mobile-heavy sites—upgrade when flagship depth becomes a weekly need.",
+      },
+    ],
+    [
+      { label: "How to rank in Google Maps", href: `${GUIDES}/how-to-rank-in-google-maps` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
+  flooring: makePage(
+    "flooring",
+    "Best SEO Tools for Flooring Contractors (2026)",
+    "Showroom visits, designer referrals, and long material lead times reward depth—your stack should support portfolio-heavy audits, Map Pack grids around design centers, and gap research on competitor room-type pages.",
+    "Flooring SEO is visual and research-heavy; homeowners compare galleries before they call. Search Console shows whether hardwood, LVP, or commercial carpet queries already earn impressions—improve those URLs before generic blogging. BrightLocal matters when discovery happens in the Map Pack near showrooms; Semrush helps when dozens of city and room-type pages need technical hygiene; Moz Pro can help blended teams adopt on-page habits without power-user overwhelm.",
+    [
+      {
+        heading: "Room-type and material clarity",
+        body: "Separate pages when bids, crews, and margins truly differ—avoid thin duplicates for every keyword variant.",
+      },
+      {
+        heading: "Designer and builder referrals",
+        body: "Track sources in CRM; SEO tools inform content gaps, not relationship follow-up.",
+      },
+      {
+        heading: "GBP as showroom extension",
+        body: "Fresh project photos and review replies influence pack clicks before users open galleries.",
+      },
+      {
+        heading: "Validate demand in GSC",
+        body: "Before building ten new city pages, confirm impressions exist or commercial intent is real in SERPs.",
+      },
+    ],
+    [
+      {
+        slug: "semrush",
+        badge: "Best gallery-site crawl scale",
+        description:
+          "Fix broken internals after portfolio uploads, plus rank groups for residential vs commercial flooring lines.",
+        rowBestFor: "Audits + multi-intent tracking",
+        why: "Flooring sites sprawl with image-heavy galleries—Semrush crawls help catch broken links, duplicate titles, and CWV issues after template or vendor widget changes. Trial with Search Console connected; prioritize fixes both tools agree hurt indexing. Track keyword clusters by room type and commercial vertical separately so reporting matches P&L. Validate user seats before annual contracts.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best showroom Map Pack intelligence",
+        description:
+          "Suburban grids around design centers and high-LTV ZIPs—pair with ethical review cadence after installs.",
+        rowBestFor: "Local grids + GBP reporting",
+        why: "BrightLocal helps flooring dealers watch Map Pack performance around showrooms and affluent suburbs where homeowners compare pack results before driving in. Trial limited ZIP sets tied to real appointment radius—overbroad grids misallocate marketing time. Pair monthly reports with GBP photo refreshes and Q&A maintenance. Compare BrightLocal vs Whitespark if citations are the primary pain.",
+      },
+      {
+        slug: "moz-pro",
+        badge: "Best approachable on-page polish",
+        description:
+          "Clear recommendations when showroom staff and owners co-own SEO—not only agency power users.",
+        rowBestFor: "On-page fundamentals + rank tracking",
+        why: "Moz Pro suits flooring teams where marketers, designers, and owners share SEO duties—understandable Page Optimization views and steady rank tracking without forcing everyone into deep link graphs daily. Trial Moz on high-intent service pages, then pair deeper gap analysis with Ahrefs or Semrush if competitor content research becomes weekly work—see Ahrefs vs Moz Pro. Moz does not replace photo proof or honest lead-time copy.",
+      },
+    ],
+    [
+      {
+        q: "Flooring contractors: Semrush or Ahrefs?",
+        a: "Either flagship suite can work—here we emphasize Semrush for crawl scale on gallery-heavy sites, BrightLocal for showroom Maps, and Moz Pro for blended-team adoption. Ahrefs stays in related reviews for link-led strategies.",
+      },
+      {
+        q: "Do flooring showrooms need local SEO software?",
+        a: "If Map Pack discovery drives foot traffic and bids, yes—pair it with Search Console on every site and disciplined GBP execution.",
+      },
+    ],
+    [
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
+  "fence-deck": makePage(
+    "fence-deck",
+    "Best SEO Tools for Fence & Deck Builders (2026)",
+    "Outdoor projects need photo proof, permit-aware copy, and honest service areas—your stack should support competitive gap research, Map Pack grids along real routes, and technical audits after portfolio or template changes.",
+    "Fence and deck builders win on galleries, reviews, and city-plus-service relevance. Search Console shows which wood vs composite or pool-enclosure queries already earn impressions—expand there first. Ahrefs helps benchmark ethical content and link gaps against regional competitors; Semrush keeps large multi-city templates healthy; BrightLocal aligns Map Pack ZIPs with trucks you actually run.",
+    [
+      {
+        heading: "Permit and HOA context",
+        body: "Publish accurate guidance for local rules—tools suggest topics; you supply defensible copy.",
+      },
+      {
+        heading: "Avoid thin city spam",
+        body: "Consolidate overlapping service-area pages; audits flag duplicates after rapid scaling.",
+      },
+      {
+        heading: "Seasonal publishing",
+        body: "Ship deck and staining pages before peak seasons so queries hit mature URLs.",
+      },
+      {
+        heading: "Measure qualified leads",
+        body: "Tie tracked keywords to booked estimates where possible—not vanity national rankings.",
+      },
+    ],
+    [
+      {
+        slug: "ahrefs",
+        badge: "Best outdoor project gap research",
+        description:
+          "Content and link gaps on pergolas, pool fences, and commercial enclosures—validated against crew capacity.",
+        rowBestFor: "Competitive SERPs + ethical links",
+        why: "Ahrefs helps fence and deck builders see which regional competitors earn links and supporting pages on pergolas, aluminum, or HOA-friendly packages you have not documented with photo proof. Trial by comparing three competitor URLs that outrank your money pages, then cross-check opportunities with Search Console before funding new builds. Ethical links follow real supplier and community relationships. Use insights to prioritize sustainable galleries, not churned outreach.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best multi-city technical hygiene",
+        description:
+          "Crawl control when city landers multiply—track residential vs commercial keyword groups separately.",
+        rowBestFor: "Site audits + intent-split tracking",
+        why: "Semrush supports operators scaling many city and material-line pages—catch broken internal links, thin duplicates, and index bloat after template experiments. Connect GSC during trial and fix high-severity coverage issues first. Separate rank projects for residential package sales versus commercial enclosures to keep KPIs honest. Confirm crawl credits before annualizing large sites.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best route-honest Map Pack",
+        description:
+          "ZIP grids along real drive patterns—GBP photos of completed jobs that match what you sell.",
+        rowBestFor: "Local visibility + listings",
+        why: "BrightLocal grids matter when homeowners pick outdoor contractors from the Map Pack—trial ZIP clusters along routes you profitably serve, not statewide radii that attract bad leads. Pair grid shifts with GBP updates: fresh project photos, accurate service areas, and review replies after quality installs. Tools amplify field excellence; they cannot replace crews showing up on time.",
+      },
+    ],
+    [
+      {
+        q: "Fence and deck builders: prioritize Ahrefs or BrightLocal?",
+        a: "If Map Pack drives most estimates, start Search Console + BrightLocal; add Ahrefs when content gaps and ethical links become a deliberate growth lever. Semrush covers technical scale for large sites.",
+      },
+      {
+        q: "Can SEO tools write permit copy?",
+        a: "No—use them for research; legal and ops teams approve jurisdiction-specific statements.",
+      },
+    ],
+    [
+      { label: "How to do SEO for contractors", href: `${GUIDES}/how-to-do-seo-for-contractors` },
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+    ]
+  ),
+  "glass-window-installers": makePage(
+    "glass-window-installers",
+    "Best SEO Tools for Glass & Window Installers (2026)",
+    "Residential replacement, commercial glazing, and custom orders need distinct pages—tooling should support Search Console truth, local grids for install-heavy metros, and mid-market tracking when you scale city landers.",
+    "Glass and window installers compete on trust, lead times, and project photos—homeowners and facility managers search with different intents. Search Console shows whether residential, storefront, or IGU queries already hit your domain; improve those pages before chasing vanity keywords. BrightLocal helps when Map Pack visibility drives residential discovery; SE Ranking offers affordable rank tracking and audits for growing regional brands; Whitespark supports citation-heavy listing programs alongside commercial pursuits.",
+    [
+      {
+        heading: "Residential vs commercial lanes",
+        body: "Separate funnels when sales cycles, pricing, and proof requirements truly differ.",
+      },
+      {
+        heading: "Lead-time honesty",
+        body: "Custom glass pages should reflect real factory ETAs—SEO cannot fix broken expectations.",
+      },
+      {
+        heading: "Safety and liability copy",
+        body: "Tempered glass and code references need expert review—tools suggest topics only.",
+      },
+      {
+        heading: "Citation discipline",
+        body: "Multi-name rollups break listings—audit before you scale rank tracking spend.",
+      },
+    ],
+    [
+      {
+        slug: "brightlocal",
+        badge: "Best residential Map Pack",
+        description:
+          "ZIP grids for replacement-heavy suburbs—pair with photo and review programs after installs.",
+        rowBestFor: "GBP grids + local reporting",
+        why: "Residential glass and window work still converts from the Map Pack—BrightLocal grids reveal ZIP-level movement after GBP photo updates, category tweaks, or tightened service areas. Trial geography you can actually serve with measure crews; overstated coverage destroys close rates. Combine monthly reports with review asks and fast callbacks on quote requests.",
+      },
+      {
+        slug: "se-ranking",
+        badge: "Best value multi-city tracking",
+        description:
+          "Affordable audits and rank projects when you scale landers but Semrush renewals overshoot adoption.",
+        rowBestFor: "SMB tracking + technical checks",
+        why: "SE Ranking helps regional window companies monitor organic performance across many city and service pages without flagship invoices—connect Search Console, cap keywords to lines you staff, and close audit tickets monthly. Graduate to Semrush when crawl scale and competitor modules become daily habits. Pair with BrightLocal if Maps—not blog volume—is the revenue engine.",
+      },
+      {
+        slug: "whitespark",
+        badge: "Best citation-first local depth",
+        description:
+          "Modular listing research when commercial accounts demand squeaky-clean NAP across directories.",
+        rowBestFor: "Citation tooling + education",
+        why: "Whitespark fits glass shops tackling citation inconsistency after acquisitions or when commercial prospects compare directory presence—use it when listing research is a workflow, not a one-time cleanup. Read BrightLocal vs Whitespark, run parallel small tests, and pick based on execution habits. Tools surface issues; humans still claim profiles and fix duplicates.",
+      },
+    ],
+    [
+      {
+        q: "Glass installers: SE Ranking or Semrush?",
+        a: "SE Ranking often fits until crawl and competitor depth demand Semrush—both appear in related reviews. BrightLocal or Whitespark handles listings depth depending on workflow preference.",
+      },
+      {
+        q: "Should commercial glazing teams skip Map Pack tools?",
+        a: "Not always—many residential lines still feed the funnel; use grids for ZIPs where homeowners compare installers visually.",
+      },
+    ],
+    [
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+    ]
+  ),
+  "concrete-contractors": makePage(
+    "concrete-contractors",
+    "Best SEO Tools for Concrete Contractors (2026)",
+    "Flatwork, structural, and decorative lines need different proof—your stack should pair Search Console with flagship research for technical site scale and local grids when depot or yard visibility matters for regional bids.",
+    "Concrete contractors pursue residential driveways, commercial flatwork, and structural packages—often with long sales cycles and safety-sensitive claims. Search Console shows which service modifiers already earn impressions; use that before you rewrite the whole site. Semrush supports large template hygiene; Ahrefs informs ethical content and link gaps; BrightLocal helps when Map Pack visibility influences local discovery near yards or offices.",
+    [
+      {
+        heading: "Claims you can defend",
+        body: "PSI tests, warranty language, and commercial credentials need internal review—keyword tools do not write compliance copy.",
+      },
+      {
+        heading: "Separate decorative vs structural",
+        body: "Different crews and margins deserve distinct page paths when true.",
+      },
+      {
+        heading: "Photo proof beats keyword stuffing",
+        body: "Project galleries influence conversions; rank trackers only show whether visibility follows.",
+      },
+      {
+        heading: "Grid + GSC together",
+        body: "Map Pack and organic queries tell different stories—review both monthly.",
+      },
+    ],
+    [
+      {
+        slug: "semrush",
+        badge: "Best large-site audits",
+        description:
+          "Crawl health when galleries, spec PDFs, and city templates multiply—split keyword groups by line of business.",
+        rowBestFor: "Technical SEO + tracking",
+        why: "Concrete contractor websites accumulate heavy media and duplicate city shells—Semrush crawls help catch broken links, thin duplicates, and index issues after template pushes. Connect Search Console and prioritize coverage errors both tools agree on. Track residential, commercial, and decorative intents in separate projects to keep KPIs honest. Validate crawl limits for large asset libraries.",
+      },
+      {
+        slug: "ahrefs",
+        badge: "Best commercial + decorative gaps",
+        description:
+          "Backlink and content benchmarking for polished concrete, structural, and municipal-style SERPs.",
+        rowBestFor: "Competitive research",
+        why: "Ahrefs shows which competitors earn visibility on commercial flatwork, decorative, or stamped concrete topics you have not substantiated with projects and specs. Trial against rivals you actually lose to in SERPs; validate ideas with GSC before funding new pages. Ethical links mirror suppliers, GCs, and associations—not blog networks. Use insights to prioritize proof you can maintain.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best depot-adjacent Map Pack",
+        description:
+          "ZIP grids when local discovery near yards influences residential or small commercial bids.",
+        rowBestFor: "Local grids + listings",
+        why: "When homeowners or small commercial buyers search from the Map Pack, BrightLocal grids diagnose ZIP performance around depots and primary service corridors. Trial limited geography tied to dispatch reality. Pair reporting with GBP photos of crews, equipment, and finished slabs—tools cannot replace job-site proof.",
+      },
+    ],
+    [
+      {
+        q: "Concrete contractors: do we need both Semrush and Ahrefs?",
+        a: "Often one flagship suite plus Search Console suffices—choose Semrush for crawl-heavy sites, Ahrefs when gap and link research dominates. BrightLocal adds value when Maps materially affects leads.",
+      },
+      {
+        q: "Can SEO tools guarantee commercial RFP wins?",
+        a: "No—they inform visibility and technical health; relationships and estimating still win pursuits.",
+      },
+    ],
+    [
+      { label: "How to do SEO for contractors", href: `${GUIDES}/how-to-do-seo-for-contractors` },
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+    ]
+  ),
+  excavation: makePage(
+    "excavation",
+    "Best SEO Tools for Excavation Companies (2026)",
+    "Site work and earthmoving bids depend on trust-heavy pages and clean technical foundations—your stack should emphasize Search Console, flagship competitive research, and local measurement only when regional offices or yards influence discovery.",
+    "Excavation SEO often blends municipal-adjacent keywords with residential pool or foundation-adjacent services—intent varies wildly. Search Console separates durable queries from one-off spikes; trust it before third-party keyword scores. Ahrefs helps study ethical content gaps and links on heavy-civil-adjacent topics; Semrush keeps large sites healthy after migrations; BrightLocal is optional when Map Pack near yards affects inbound calls.",
+    [
+      {
+        heading: "Safety and licensing claims",
+        body: "Tools suggest topics; legal and ops approve statements about capabilities and authorities.",
+      },
+      {
+        heading: "Project proof",
+        body: "Case studies with real sites beat generic city spam—audits help prevent duplicate thin pages.",
+      },
+      {
+        heading: "Long sales cycles",
+        body: "Measure quarter-over-quarter in GSC—single weeks mislead on pursuit-heavy keywords.",
+      },
+      {
+        heading: "Ethical link targets",
+        body: "Pursue associations and suppliers you will maintain—Ahrefs informs, humans execute.",
+      },
+    ],
+    [
+      {
+        slug: "ahrefs",
+        badge: "Best pursuit + authority research",
+        description:
+          "Gap and link context for site work, utilities, and regional competitors you actually bid against.",
+        rowBestFor: "Competitive SERPs + backlinks",
+        why: "Ahrefs helps excavation BD teams compare content and links on competitors winning municipal-adjacent or regional earthwork SERPs—trial with domains you lose to in search, then validate backlog items against GSC. Use insights to prioritize case studies and safety pages your crews can support. Avoid manipulative link tactics; earthwork SERPs attract scrutiny.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best technical consolidation",
+        description:
+          "Crawl coverage after acquisitions, plus keyword grouping by residential vs commercial pursuits.",
+        rowBestFor: "Site audits + rank projects",
+        why: "Semrush supports excavation marketers managing large multi-service sites—catch redirect chains, duplicate titles, and coverage errors after CMS migrations or brand rollups. Connect Search Console; fix issues both tools agree hurt indexing. Split rank tracking by pursuit type so KPIs reflect how BD actually sells.",
+      },
+      {
+        slug: "google-search-console",
+        badge: "Best free ground truth",
+        description:
+          "Queries and pages that already earn impressions for earthwork services—veto bad priorities from suites.",
+        rowBestFor: "Performance, coverage, inspection",
+        why: "Excavation keywords are niche and geographically specific—Search Console remains the authoritative view of which queries and landing pages Google associates with your brand today. Review Performance quarterly for pursuit-heavy terms; use Coverage and URL Inspection after major template or careers page launches. Let GSC disagree with third-party volume estimates when your own clicks say otherwise.",
+      },
+    ],
+    [
+      {
+        q: "Excavation companies: why Google Search Console on this shortlist?",
+        a: "Ground-truth queries beat generic keyword models for niche earthwork terms—pair GSC with Ahrefs or Semrush when competitive research and technical scale justify paid seats.",
+      },
+      {
+        q: "When does BrightLocal matter for excavation?",
+        a: "When regional yards or offices materially influence Map Pack discovery for local services—add it if grids drive qualified calls; skip if pursuits are entirely relationship-led.",
+      },
+    ],
+    [
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+      { label: "How to rank in Google Maps", href: `${GUIDES}/how-to-rank-in-google-maps` },
+    ]
+  ),
+  "auto-repair": makePage(
+    "auto-repair",
+    "Best SEO Tools for Auto Repair Shops (2026)",
+    "Service keywords, tire lines, and fleet accounts need separate paths—your stack should combine Search Console, strong Map Pack measurement, and budget-friendly research before you stack flagship suites.",
+    "Auto repair SEO is local and call-heavy; most shops win or lose in the Map Pack and on fast mobile pages. Search Console shows which brake, diagnostic, or fleet queries already earn impressions—optimize those first. BrightLocal helps when grids and citations are the bottleneck; Ubersuggest offers lean keyword and audit passes; Semrush steps in when multi-bay groups scale city and service-line pages with serious crawl needs.",
+    [
+      {
+        heading: "Service menu honesty",
+        body: "GBP services and site nav should match what bays actually repair—ranking for work you decline wrecks ratings.",
+      },
+      {
+        heading: "Fleet vs retail",
+        body: "Separate landing experiences when sales and pricing truly differ.",
+      },
+      {
+        heading: "Speed and CTAs",
+        body: "Most leads are mobile—audit Core Web Vitals on call-heavy templates after vendor changes.",
+      },
+      {
+        heading: "Call tracking alignment",
+        body: "Attribute booked jobs to landing pages—not only rank trackers—before you expand spend.",
+      },
+    ],
+    [
+      {
+        slug: "brightlocal",
+        badge: "Best shop Map Pack battlegrounds",
+        description:
+          "ZIP grids near bays when aggregators and dealers crowd local results—pair with review velocity after great repairs.",
+        rowBestFor: "Local grids + GBP reporting",
+        why: "Auto repair still converts heavily from the Map Pack—BrightLocal grids diagnose ZIP-level shifts when new shops, dealers, or LSAs intensify competition. Trial geography around realistic drive-time radii; update GBP service lists when bays add ADAS or EV work. Pair charts with fast review replies and honest hours. Validate per-location pricing for multi-shop groups.",
+      },
+      {
+        slug: "ubersuggest",
+        badge: "Best lean keyword + audit pass",
+        description:
+          "Budget-friendly ideas while you prove ROI—graduate to Semrush when crawl and competitor depth demand it.",
+        rowBestFor: "Starter research + quick audits",
+        why: "Ubersuggest gives affordable keyword prompts and light audits for shops watching margins—trial with a tight list of profitable services (brakes, diagnostics, fleet PM) and delete vanity terms fast. Use it to spot obvious on-page gaps before annualizing Semrush. See Semrush vs Ubersuggest when you upgrade.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best multi-bay technical scale",
+        description:
+          "Crawl and track dozens of city and service pages when groups expand brands or specialties.",
+        rowBestFor: "Site audits + keyword scale",
+        why: "Semrush helps growing auto repair groups manage large multi-location sites—monitor technical health after booking widget swaps, track keyword groups by specialty bay, and benchmark competitor service pages ethically. Connect Search Console; prune bloated keyword projects that inflate renewals. Assign weekly owners or downgrade unused modules.",
+      },
+    ],
+    [
+      {
+        q: "Auto repair shops: Semrush or SE Ranking?",
+        a: "SE Ranking is a strong mid-market alternative—here we pair BrightLocal for Maps, Ubersuggest for lean starts, and Semrush when multi-location technical scale is the bottleneck.",
+      },
+      {
+        q: "Do shops need Ahrefs?",
+        a: "Add Ahrefs when ethical link and content-gap workflows become weekly habits—it remains in related reviews.",
+      },
+    ],
+    [
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+    ]
+  ),
+  "mobile-mechanics": makePage(
+    "mobile-mechanics",
+    "Best SEO Tools for Mobile Mechanics (2026)",
+    "Solo vans and tight polygons need ruthless simplicity—start with Search Console, budget local grids, and affordable tracking before you annualize enterprise SEO suites.",
+    "Mobile mechanics compete in hyper-local emergency and fleet niches; overstuffed tool stacks become shelfware when the owner is under a hood all day. Search Console shows which “mobile mechanic [city]” and automotive queries already produce impressions. Ubersuggest keeps research affordable; BrightLocal defends Map Pack ZIPs; Google Search Console stays the credibility layer on every domain.",
+    [
+      {
+        heading: "Tiny service polygons",
+        body: "Align GBP and on-site copy with realistic ETAs—false coverage destroys ratings.",
+      },
+      {
+        heading: "Avoid page sprawl",
+        body: "Consolidate overlapping city pages; light audits catch duplicates after quick template tests.",
+      },
+      {
+        heading: "Call-first UX",
+        body: "Mobile LCP and tap targets matter more than long blogs—fix technical basics first.",
+      },
+      {
+        heading: "Upgrade when adoption appears",
+        body: "Move to Semrush-class suites only when someone logs in weekly—not because logos impress.",
+      },
+    ],
+    [
+      {
+        slug: "google-search-console",
+        badge: "Best essential free layer",
+        description:
+          "Queries and pages for mobile road-service terms—veto spend when your own data disagrees with suites.",
+        rowBestFor: "Performance & coverage",
+        why: "Mobile mechanics should verify Search Console before buying anything else: Performance shows whether roadside, battery, or fleet queries already hit your site, while Coverage catches mobile CTA breaks that silently kill leads. Export monthly and compare to texts or calls. GSC remains the honesty check on keyword tool hype.",
+      },
+      {
+        slug: "ubersuggest",
+        badge: "Best budget research",
+        description:
+          "Affordable keyword prompts and quick audits for solo operators proving SEO ROI on thin margins.",
+        rowBestFor: "Lean keyword + audit pass",
+        why: "Ubersuggest fits owner-operators who need keyword ideas and basic audits without flagship invoices—trial with a short list of profitable services and your true service polygon in mind. Delete vanity keywords that attract calls outside your range. Graduate to SE Ranking or Semrush when crawl limits or competitor tracking block real work.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best hyper-local Map defense",
+        description:
+          "Tight ZIP grids when competitors crowd your territory—pair with fast review replies after great jobs.",
+        rowBestFor: "Map Pack diagnostics",
+        why: "BrightLocal grids help mobile mechanics watch ZIP-level Map Pack movement when new entrants advertise aggressively—trial small geography and update GBP service areas when dispatch rules change. Pair insights with review asks and van-forward photos. Validate solo-friendly pricing; enterprise bundles waste money for one van.",
+      },
+    ],
+    [
+      {
+        q: "Mobile mechanics: when to buy Semrush?",
+        a: "When multi-van expansion or dozens of landers demand serious crawls and competitor tracking—until then Search Console + Ubersuggest + BrightLocal often suffice.",
+      },
+      {
+        q: "Why two budget tools on this page?",
+        a: "Search Console is free truth; Ubersuggest keeps research lean; BrightLocal defends Maps—together they match lean operations without shelfware suites.",
+      },
+    ],
+    [
+      { label: "How to rank in Google Maps", href: `${GUIDES}/how-to-rank-in-google-maps` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
+  "cleaning-franchises": makePage(
+    "cleaning-franchises",
+    "Best SEO Tools for Cleaning Franchises (2026)",
+    "Territories, recurring routes, and commercial bids need scalable reporting—your stack should pair Search Console with affordable multi-location tracking and local platforms that survive franchise compliance reviews.",
+    "Cleaning franchises juggle residential routes, commercial contracts, and brand-mandated marketing—SEO tools should make citations, grids, and organic performance visible across territories without duplicate logins everywhere. Search Console on each primary domain remains ground truth. SE Ranking scales affordable monitoring; BrightLocal handles Map Pack and listings programs; Semrush supports enterprise-style audits when sites sprawl.",
+    [
+      {
+        heading: "Franchise compliance",
+        body: "Confirm approved messaging before automations or landing experiments go live.",
+      },
+      {
+        heading: "Territory naming discipline",
+        body: "Avoid duplicate GBPs and conflicting NAP when new territories launch—audit listings before scaling rank trackers.",
+      },
+      {
+        heading: "Commercial vs residential",
+        body: "Separate intents when sales teams and margins truly differ.",
+      },
+      {
+        heading: "Measure recurring value",
+        body: "Tie SEO reporting to retained contracts where possible—not only one-off lead counts.",
+      },
+    ],
+    [
+      {
+        slug: "se-ranking",
+        badge: "Best affordable multi-territory tracking",
+        description:
+          "Rank and audit coverage across locations without flagship invoices—connect Search Console per domain.",
+        rowBestFor: "Value monitoring at scale",
+        why: "SE Ranking helps franchise operators watch dozens of localized pages and microsites without paying for unused flagship modules—trial one brand first, align tracked cities with territories you actually serve, and close audit tickets monthly. Graduate to Semrush when enterprise crawl limits and deep competitor modules become daily needs.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best Map Pack + listings rollups",
+        description:
+          "Grids, citations, and PDF-ready reporting when owners expect monthly local proof across doors.",
+        rowBestFor: "Local platform scale",
+        why: "Cleaning franchises reporting to owners or regional directors use BrightLocal for recurring grids, citation monitoring, and GBP-ready narratives—validate per-location pricing against your door count. Pair dashboards with accountable tasks: duplicate suppression, review SLAs, and photo updates after branded van wraps.",
+      },
+      {
+        slug: "semrush",
+        badge: "Best enterprise crawl + consolidation",
+        description:
+          "Technical audits after acquisitions or CMS migrations when many territory sites inherit duplicate templates.",
+        rowBestFor: "Large-site technical SEO",
+        why: "Semrush supports franchise marketing teams consolidating many location sites—catch redirect issues, duplicate titles, and coverage errors after migrations. Connect Search Console for each major domain; prioritize fixes that impact indexing. Validate enterprise seats and crawl credits before annual contracts.",
+      },
+    ],
+    [
+      {
+        q: "Cleaning franchises: BrightLocal or Whitespark?",
+        a: "BrightLocal fits packaged reporting; Whitespark fits citation-first workflows—compare BrightLocal vs Whitespark on the same ZIP set.",
+      },
+      {
+        q: "Should every territory site verify Search Console?",
+        a: "Yes for every primary domain you control—first-party queries beat third-party models.",
+      },
+    ],
+    [
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
+  "event-services": makePage(
+    "event-services",
+    "Best SEO Tools for Event Services (2026)",
+    "Corporate events, weddings, and production rentals mix B2B and seasonal demand—your stack should support gap research on competitive programs, technical health on media-heavy sites, and approachable on-page workflows for lean marketing teams.",
+    "Event services SEO spans high-intent B2B pursuits and visually driven landing pages—galleries and video can tank Core Web Vitals. Search Console shows which event type and city queries already earn impressions; improve those before chasing generic inspiration keywords. Semrush helps audit heavy sites; Ahrefs informs ethical competitor gaps; Moz Pro keeps blended teams shipping on-page fixes without drowning in data.",
+    [
+      {
+        heading: "Portfolio performance",
+        body: "Compress and lazy-load media; audits catch LCP regressions after gallery uploads.",
+      },
+      {
+        heading: "B2B vs consumer funnels",
+        body: "Separate paths when pricing, contracts, and crews truly differ.",
+      },
+      {
+        heading: "Seasonal calendar reality",
+        body: "Publish and index pages before peak seasons—late launches miss impression windows.",
+      },
+      {
+        heading: "Claims you can fulfill",
+        body: "Inventory and crew capacity must match marketing promises—tools do not load trucks.",
+      },
+    ],
+    [
+      {
+        slug: "semrush",
+        badge: "Best media-heavy site audits",
+        description:
+          "CWV and internal link health after video and gallery pushes—track keyword groups by vertical.",
+        rowBestFor: "Technical SEO + tracking",
+        why: "Event production sites load large media—Semrush audits help catch Core Web Vitals regressions, broken embeds, and duplicate thin city pages after rapid scaling. Connect Search Console; prioritize issues that hurt mobile conversions on quote forms. Track corporate, wedding, and festival intents separately when P&L differs.",
+      },
+      {
+        slug: "ahrefs",
+        badge: "Best competitive program gaps",
+        description:
+          "Content and link benchmarking for AV, staging, and tenting SERPs—validated against capacity.",
+        rowBestFor: "Gap + backlink research",
+        why: "Ahrefs shows which competitors earn links and visibility on corporate programs, festival logistics, or specialty rentals you have not documented with case studies. Trial against rivals you actually lose to in SERPs; validate topics with GSC before funding builds. Ethical links follow venues, planners, and suppliers you will maintain—not blog spam.",
+      },
+      {
+        slug: "moz-pro",
+        badge: "Best lean-team on-page habits",
+        description:
+          "Understandable guidance when marketers wear multiple hats—pair with disciplined publishing calendars.",
+        rowBestFor: "Approachable on-page + rank checks",
+        why: "Moz Pro suits event companies where marketers also handle sales and ops—Page Optimization views and rank tracking without forcing daily deep dives into link graphs. Trial on high-intent landing pages; add Ahrefs or Semrush depth when gap research becomes weekly work. See Ahrefs vs Moz Pro.",
+      },
+    ],
+    [
+      {
+        q: "Event services: why Moz Pro here?",
+        a: "Many teams need approachable on-page execution on busy sites—Ahrefs and Semrush remain in related reviews when deep gap research dominates.",
+      },
+      {
+        q: "Do event companies need local SEO platforms?",
+        a: "Add BrightLocal or Whitespark when Map Pack visibility materially affects inbound—many B2B event firms lean more on organic service pages and outreach.",
+      },
+    ],
+    [
+      { label: "On-page SEO for local business", href: `${GUIDES}/on-page-seo-for-local-business` },
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+    ]
+  ),
+  "home-inspectors": makePage(
+    "home-inspectors",
+    "Best SEO Tools for Home Inspectors (2026)",
+    "Agent referrals and direct consumers both matter—your stack should emphasize Search Console, Map Pack grids near core ZIPs, and clear on-page guidance for small teams publishing trust-heavy pages.",
+    "Home inspector SEO rewards fast mobile experiences, ethical claims, and local relevance—many leads still originate from agent relationships, but search visibility still moves the needle. Search Console shows which inspection-type and add-on queries already earn impressions; optimize those URLs before chasing national volumes. BrightLocal helps when pack visibility matters in competitive metros; Moz Pro supports approachable on-page work for solo inspectors; Google Search Console remains mandatory on every site.",
+    [
+      {
+        heading: "Ethical standards claims",
+        body: "Follow association and state marketing rules—tools suggest topics; you supply compliant copy.",
+      },
+      {
+        heading: "Add-on service pages",
+        body: "Radon, sewer scope, and mold pages need accurate scope language—avoid thin duplicates.",
+      },
+      {
+        heading: "Review cadence",
+        body: "Recent reviews influence Map Pack and click-through; tools only report movement.",
+      },
+      {
+        heading: "Mobile speed",
+        body: "Most users book from phones—fix CWV basics before buying more keyword seats.",
+      },
+    ],
+    [
+      {
+        slug: "google-search-console",
+        badge: "Best foundation for inspector sites",
+        description:
+          "Queries for buyer, seller, and add-on intents—coverage for indexing issues after template swaps.",
+        rowBestFor: "Performance & indexing",
+        why: "Inspectors should anchor weekly habits in Search Console: Performance shows which services and cities already earn impressions, while Coverage catches mobile booking or schema issues that silently kill conversions. Compare quarterly trends—not single busy weeks tied to rate changes. Let GSC disagree with keyword tools pushing irrelevant national terms.",
+      },
+      {
+        slug: "brightlocal",
+        badge: "Best competitive metro Map Pack",
+        description:
+          "ZIP grids where homeowners compare inspectors visually—pair with ethical review programs.",
+        rowBestFor: "Local grids + GBP",
+        why: "In competitive metros, BrightLocal grids reveal ZIP-level Map Pack shifts after GBP photo updates, category tweaks, or tightened service areas. Trial geography you truly cover same-week. Pair reporting with fast response SLAs on quote requests—SEO cannot save slow callbacks.",
+      },
+      {
+        slug: "moz-pro",
+        badge: "Best solo-inspector usability",
+        description:
+          "On-page clarity for trust pages when you are the marketer, inspector, and bookkeeper.",
+        rowBestFor: "On-page + rank tracking",
+        why: "Moz Pro helps solo and small inspection teams tighten titles, on-page recommendations, and rank tracking without enterprise complexity—trial on add-on service pages and high-intent city pages. Pair every recommendation with accurate scope and licensing language. Add Semrush or Ahrefs if competitor gap research becomes a weekly habit.",
+      },
+    ],
+    [
+      {
+        q: "Home inspectors: do we need Semrush?",
+        a: "Often later—many succeed with Search Console + BrightLocal + Moz Pro until content scale demands Semrush-class crawls; Semrush appears in related reviews.",
+      },
+      {
+        q: "Can SEO tools write inspection reports?",
+        a: "No—they help with visibility; reports and standards compliance remain on your software and training.",
+      },
+    ],
+    [
+      { label: "Local SEO for service businesses", href: `${GUIDES}/local-seo-for-service-businesses` },
+      { label: "Google Business Profile optimization", href: `${GUIDES}/google-business-profile-optimization` },
+    ]
+  ),
   "local-seo": makePage(
     "local-seo",
     "Best SEO Tools for Local SEO (2026)",
@@ -1199,6 +2031,105 @@ export function getSeoToolsBestForSlugs(): string[] {
   return Object.keys(SEO_TOOLS_BEST_FOR_BY_SLUG);
 }
 
+/** Optional `metadata.keywords` for scenario pages (Next.js Metadata). */
+const SEO_TOOLS_BEST_FOR_META_KEYWORDS: Partial<Record<string, string[]>> = {
+  "appliance-repair": [
+    "SEO tools for appliance repair",
+    "appliance repair local SEO",
+    "Google Search Console appliance service",
+    "BrightLocal appliance repair",
+    "Semrush for home service SEO",
+  ],
+  "garage-door": [
+    "SEO tools for garage door company",
+    "garage door dealer SEO",
+    "local SEO garage door installers",
+    "BrightLocal garage door",
+    "Ahrefs vs Semrush local business",
+  ],
+  locksmith: [
+    "SEO tools for locksmiths",
+    "locksmith local SEO software",
+    "locksmith Google Business Profile SEO",
+    "BrightLocal locksmith",
+    "SE Ranking small business SEO",
+  ],
+  flooring: [
+    "SEO tools for flooring contractors",
+    "flooring company local SEO",
+    "flooring showroom SEO",
+    "Semrush technical SEO",
+    "Moz Pro on-page SEO",
+  ],
+  "fence-deck": [
+    "SEO tools for fence and deck builders",
+    "deck builder SEO software",
+    "fence contractor local SEO",
+    "Ahrefs content gap analysis",
+    "BrightLocal Map Pack",
+  ],
+  "glass-window-installers": [
+    "SEO tools for glass installers",
+    "window company SEO",
+    "glazing contractor local SEO",
+    "SE Ranking vs Semrush",
+    "Whitespark citations",
+  ],
+  "concrete-contractors": [
+    "SEO tools for concrete contractors",
+    "concrete company SEO",
+    "local SEO construction",
+    "Semrush site audit",
+    "Ahrefs backlinks",
+  ],
+  excavation: [
+    "SEO tools for excavation company",
+    "earthwork SEO",
+    "civil contractor SEO software",
+    "Google Search Console B2B",
+    "Ahrefs competitor analysis",
+  ],
+  "auto-repair": [
+    "SEO tools for auto repair shop",
+    "automotive shop local SEO",
+    "auto repair Google Maps SEO",
+    "BrightLocal auto repair",
+    "Ubersuggest local SEO",
+  ],
+  "mobile-mechanics": [
+    "SEO tools for mobile mechanic",
+    "mobile auto repair SEO",
+    "van business local SEO",
+    "Google Search Console local",
+    "Ubersuggest SEO",
+  ],
+  "cleaning-franchises": [
+    "SEO tools for cleaning franchise",
+    "janitorial franchise SEO",
+    "multi-location local SEO",
+    "SE Ranking multi-location",
+    "BrightLocal franchise",
+  ],
+  "event-services": [
+    "SEO tools for event services",
+    "event production SEO",
+    "corporate event marketing SEO",
+    "Semrush Core Web Vitals",
+    "Moz Pro SEO",
+  ],
+  "home-inspectors": [
+    "SEO tools for home inspectors",
+    "home inspection SEO",
+    "inspector local SEO",
+    "BrightLocal home services",
+    "Moz Pro local SEO",
+  ],
+};
+
+export function getSeoToolsBestForMetaKeywords(slug: string): string[] | undefined {
+  return SEO_TOOLS_BEST_FOR_META_KEYWORDS[slug];
+}
+
 /** Hub grid order — keep aligned with `BEST_FOR_BY_TRADE` in `seoToolsBestSeoTools.ts`. */
 const SEO_TOOLS_BEST_FOR_HUB_SLUGS = [
   "contractors",
@@ -1217,6 +2148,19 @@ const SEO_TOOLS_BEST_FOR_HUB_SLUGS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
   "local-seo",
   "small-business",
 ] as const;

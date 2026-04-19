@@ -52,7 +52,7 @@ export default function SeoToolsBestForHubPage() {
               Best SEO Tools by Use Case
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Editorial scenario guides for trades and local SMBs: we anchor on Google Search Console, honest GBP and listings execution, and when paid suites earn their keep—then link to reviews and comparisons so you can verify pricing and quotas on each vendor’s site.
+              Editorial scenario guides for trades and local SMBs: we anchor on Google Search Console, honest GBP and listings execution, and when paid suites earn their keep—then link to reviews and comparisons so you can verify pricing and quotas on each vendor’s site. Includes appliance repair, garage door, automotive, event services, home inspectors, and more.
             </p>
           </div>
         </section>
@@ -94,6 +94,12 @@ export function generateMetadata() {
   return {
     title: "Best SEO Tools by Use Case | BeltStack",
     description:
-      "Editorial best-for guides for contractors, trades, property managers, movers, local SEO, and more—GSC-first, Map Pack reality, independent picks. Open a scenario for stacks, FAQs, and links to reviews.",
+      "Editorial best-for guides for contractors, trades, property managers, movers, automotive, appliance repair, event services, home inspectors, local SEO, and more—GSC-first, Map Pack reality, independent picks. Open a scenario for stacks, FAQs, and links to reviews.",
+    keywords: [
+      "best SEO tools by industry",
+      "SEO software for local business",
+      "local SEO tools by trade",
+      "Google Search Console SEO stack",
+    ],
   };
 }
