@@ -1,15 +1,29 @@
+import type { Metadata } from "next";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { ELECTRICIANS_PAGE_PROPS } from "@/lib/data/fieldServiceBestForElectricians";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
 export default function BestFieldServiceForElectriciansPage() {
   return <BestForPageWithStructuredData {...ELECTRICIANS_PAGE_PROPS} />;
 }
 
-export function generateMetadata() {
+export function generateMetadata(): Metadata {
   return {
-    title: "Best Field Service Software for Electricians (2026) | BeltStack",
-    description:
-      "Compare the best field service management software for electricians. See top picks for scheduling, dispatch, estimates, and invoicing.",
+    ...siteMetadata({
+      path: "/field-service/best-for/electricians",
+      title: "Best Field Service Software for Electricians (2026) | BeltStack",
+      description:
+        "Compare field service software for electricians: FieldPulse, Jobber, and Workiz for dispatch, estimates, field documentation, and invoicing.",
+    }),
+    keywords: [
+      "field service software for electricians",
+      "electrical contractor software",
+      "electrician dispatch software",
+      "FSM for electricians",
+      "electrical scheduling software",
+      "field service management",
+      "2026",
+    ],
   };
 }
 

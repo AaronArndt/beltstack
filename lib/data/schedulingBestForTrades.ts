@@ -1188,3 +1188,874 @@ export const MOVING_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
   ],
   extraGuides: [ROUTE_GUIDE, EMERGENCY_GUIDE],
 });
+
+export const APPLIANCE_REPAIR_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "appliance-repair",
+  title: "Best Scheduling Software for Appliance Repair Businesses (2026)",
+  subtitle:
+    "Compare scheduling tools for appliance repair: brand and model intake, warranty vs COD flows, multi-tech dispatch, and reminders that cut no-shows.",
+  introParagraph:
+    "Appliance repair shops book short diagnostic windows, longer parts-return visits, and warranty jobs with different rules. Scheduling software should capture model numbers and symptoms before you roll a van, support multiple technicians, and plug into how you already take payment—especially if you run a counter or retail add-ons.",
+  picks: [
+    {
+      slug: "square-appointments",
+      badge: "Best when Square runs your counter and field payments",
+      description:
+        "Booking plus deposits and card-present checkout in one Square stack—ideal when parts pickups and service calls share the same merchant account.",
+      rowBestFor: "Square-native repair shops",
+      why:
+        "Square Appointments fits appliance repair businesses that already invoice or swipe cards through Square—deposits on parts-heavy jobs and final charges after diagnosis stay in one financial home. Trial separate event types for warranty callbacks versus COD diagnostics with different buffers. See our Square Appointments review.",
+    },
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for intake before you dispatch",
+      description:
+        "Forms for brand, model, serial, and symptom photos reduce wasted trips when the wrong tech or van rolls.",
+      rowBestFor: "Diagnostics & warranty intake",
+      why:
+        "Acuity Scheduling helps appliance repair teams qualify jobs before dispatch—structured questions, optional photo upload, and payment-at-booking for after-hours or high-demand slots. Package recurring maintenance plans if you sell them. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "setmore",
+      badge: "Best affordable multi-technician booking",
+      description:
+        "Free tier friendly; add techs and reminders as call volume grows without jumping straight to enterprise pricing.",
+      rowBestFor: "Growing multi-tech shops",
+      why:
+        "Setmore gives repair shops approachable online booking with multiple technicians and SMS-style reminders at a price that scales with headcount. Map “any available tech” versus named techs to match how you route warranty work. See our Setmore review and Acuity Scheduling vs Setmore.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Diagnostics vs return visits",
+      "Use different durations and intake rules so customers do not book a 30-minute slot for a sealed-system compressor job."
+    ),
+    E(
+      "Parts and return trips",
+      "Buffer follow-up visits when parts orders are uncertain; booking copy should set expectations."
+    ),
+    E(
+      "Warranty vs COD",
+      "Separate booking types or forms so dispatchers see coverage before assigning senior techs."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software works best for appliance repair?",
+      a: "We shortlist Square Appointments if you are on Square, Acuity Scheduling for model and symptom intake before dispatch, and Setmore for affordable multi-technician booking and reminders.",
+    },
+    {
+      q: "Should appliance repair shops take deposits online?",
+      a: "Deposits help on after-hours calls, large parts orders, or crowded peak weeks—disclose refund rules clearly in confirmation emails.",
+    },
+    {
+      q: "When do repair shops need field service software instead?",
+      a: "When dispatch, parts inventory, and job costing dominate the day. See scheduling software vs field service software.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});
+
+export const GARAGE_DOOR_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "garage-door",
+  title: "Best Scheduling Software for Garage Door Companies (2026)",
+  subtitle:
+    "Compare scheduling tools for garage door installers: spring and opener service calls, new-door estimates, emergency same-day rules, and multi-crew calendars.",
+  introParagraph:
+    "Garage door companies mix urgent spring failures with scheduled installs and commercial roll-up work. Scheduling software should separate emergency from routine booking, capture ceiling height and opener type when possible, and keep multiple install crews from double-booking the same arrival window.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for emergency rules and install intake",
+      description:
+        "Forms for single vs double door, opener brand, and clearance questions—plus deposits on Saturday installs.",
+      rowBestFor: "Intake & install deposits",
+      why:
+        "Acuity Scheduling fits garage door operators who need structured intake before dispatch and payment-at-booking when no-shows on long truck rolls hurt margin. Build separate flows for “spring emergency” versus “new door estimate.” See our Acuity Scheduling review.",
+    },
+    {
+      slug: "calendly",
+      badge: "Best simple booking homeowners already trust",
+      description:
+        "Fast setup for standard service calls when you do not need heavy forms—ideal for established local brands.",
+      rowBestFor: "Straightforward service booking",
+      why:
+        "Calendly is a strong pick when your bottleneck is frictionless booking for repeat customers and simple tune-ups—many homeowners already recognize the flow. Use paid tiers for multiple installers or sales reps. See our Calendly review and Calendly vs Acuity Scheduling.",
+    },
+    {
+      slug: "youcanbookme",
+      badge: "Best calendar-native crew pooling",
+      description:
+        "Round-robin or named tech booking tied to Google or Microsoft—good when dispatch mirrors real crew calendars.",
+      rowBestFor: "Multi-crew availability",
+      why:
+        "YouCanBook.me suits garage door teams that want customers to book any available installer while availability reflects real Outlook or Google calendars. Trial round-robin against per-tech links for commercial accounts. See our YouCanBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Emergency vs booked work",
+      "Do not promise same-hour arrival on the same link as routine tune-ups unless you can honor it—use separate entry points or clear copy."
+    ),
+    E(
+      "Commercial roll-up jobs",
+      "Longer blocks and different intake for dock doors versus residential sectional doors."
+    ),
+    E(
+      "Reminders",
+      "Automated SMS or email reminders reduce no-shows when trucks are loaded with doors and springs."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do garage door companies use?",
+      a: "Garage door operators often evaluate Acuity Scheduling for intake and deposits, Calendly for simple consumer booking, and YouCanBook.me for multi-crew calendar pooling.",
+    },
+    {
+      q: "How should garage door businesses handle emergency calls online?",
+      a: "Use a dedicated emergency CTA or after-hours policy; if you book online, set expectations on response time and any premium fees.",
+    },
+    {
+      q: "When do garage door companies need full FSM software?",
+      a: "When job costing, inventory, and dispatch boards replace calendar booking as the bottleneck. See scheduling software vs field service software.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});
+
+export const LOCKSMITH_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "locksmith",
+  title: "Best Scheduling Software for Locksmith Businesses (2026)",
+  subtitle:
+    "Compare scheduling tools for locksmiths: after-hours premiums, automotive vs residential job types, rapid SMS confirmations, and honest arrival windows.",
+  introParagraph:
+    "Locksmiths sell speed and trust. Scheduling software should not pretend every job is a 15-minute calendar block—especially for automotive rekeys or commercial master-key work. The right tools capture vehicle or lock type when helpful, support after-hours pricing or deposits where legal, and send reminders so customers wait at the right address.",
+  picks: [
+    {
+      slug: "calendly",
+      badge: "Best ultra-fast setup for callback-heavy workflows",
+      description:
+        "Minimal friction when you mainly need “pick a slot” links for booked work—not full shop management.",
+      rowBestFor: "Simple booked jobs",
+      why:
+        "Calendly fits locksmiths who want a clean booking link for prescheduled rekeys, safe openings, or commercial appointments where heavy intake is overkill. Pair with clear after-hours policies on your site. See our Calendly review.",
+    },
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for after-hours deposits and structured intake",
+      description:
+        "Payment-at-booking and forms for vehicle year/make/model or commercial access notes when they reduce bad dispatches.",
+      rowBestFor: "Premium slots & intake",
+      why:
+        "Acuity Scheduling helps when you charge more for nights and weekends or want structured intake before you commit a van—vehicle details for automotive work or gate codes for gated communities. Trial cancellation rules that match how you actually roll trucks. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "setmore",
+      badge: "Best budget multi-van booking",
+      description:
+        "Multiple locksmiths on one account with reminders—strong when you are proving online booking before heavier software.",
+      rowBestFor: "Multi-van teams",
+      why:
+        "Setmore gives growing locksmith shops affordable multi-user booking with reminders without enterprise pricing. Map public services to realistic durations including drive buffers. See our Setmore review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Honest windows",
+      "Offer realistic arrival windows for mobile work; over-precision creates one-star reviews."
+    ),
+    E(
+      "Automotive vs residential",
+      "Different durations and questions—avoid booking a car lockout like a cabinet rekey."
+    ),
+    E(
+      "Compliance and pricing",
+      "Keep booking copy aligned with local regulations on pricing disclosures and emergency services."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling app is best for a locksmith business?",
+      a: "Calendly for simple booked work, Acuity Scheduling when deposits and structured intake matter, Setmore for affordable multi-van booking with reminders.",
+    },
+    {
+      q: "Should locksmiths take credit card deposits online?",
+      a: "Where legal and practical, deposits reduce ghost calls on late-night slots—always disclose fees and refund rules clearly.",
+    },
+    {
+      q: "Is Calendly enough for a 24/7 locksmith?",
+      a: "Calendly handles scheduled slots well; true 24/7 dispatch often still needs phone or dispatch software—use scheduling for the portion of work that is actually bookable online.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});
+
+export const FLOORING_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "flooring",
+  title: "Best Scheduling Software for Flooring Contractors (2026)",
+  subtitle:
+    "Compare scheduling tools for flooring pros: in-home measures, design consults, install-day holds, material lead-time messaging, and deposits.",
+  introParagraph:
+    "Flooring contractors live on estimates and multi-phase work—measure, order materials, acclimate, install. Scheduling software should support longer consult blocks, deposits when you hold crews or materials, and clear customer reminders so homes are cleared and ready when the crew arrives.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for measures, consults, and deposits",
+      description:
+        "Packages for measure-plus-proposal, intake for subfloor concerns, and payment-at-booking on busy install weeks.",
+      rowBestFor: "Measures & install holds",
+      why:
+        "Acuity Scheduling fits flooring contractors who sell in-home measures, design consults, and deposit-backed install dates—forms capture square footage estimates, pet gates, and furniture move expectations. Trial separate event lengths for “quick estimate” versus full measure. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "simplybookme",
+      badge: "Best customization per dollar",
+      description:
+        "Define many service types—carpet, LVP, hardwood refinishing—with custom questions at a competitive price point.",
+      rowBestFor: "Multi-trade flooring catalogs",
+      why:
+        "SimplyBook.me suits flooring shops that need distinct service types and branding without overspending on premium tiers. Expect a bit more setup. See our SimplyBook.me review and SimplyBook.me vs Setmore.",
+    },
+    {
+      slug: "calendly",
+      badge: "Best simple showroom or consult booking",
+      description:
+        "When you want a polished link for quick consults or showroom appointments with minimal configuration.",
+      rowBestFor: "Simple consult links",
+      why:
+        "Calendly works when your primary online need is low-friction booking for showroom visits or short consultations while install scheduling stays internal. See our Calendly review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Lead times and expectations",
+      "Booking copy should explain that install dates may follow material arrival—avoid promising next-day full installs unless true."
+    ),
+    E(
+      "Crew holds vs customer selects",
+      "Use deposits or internal confirmation when customers pick install weeks that depend on material ships."
+    ),
+    E(
+      "Reminders",
+      "Remind customers to clear rooms, secure pets, and confirm address the day before measure and install."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do flooring contractors use?",
+      a: "Flooring teams often evaluate Acuity Scheduling for measures and deposits, SimplyBook.me for flexible multi-service catalogs at value pricing, and Calendly for simple consult booking.",
+    },
+    {
+      q: "Should flooring companies take deposits through scheduling?",
+      a: "Yes when you hold crew days or special-order materials—pair deposits with clear reschedule and refund policies.",
+    },
+    {
+      q: "When do flooring businesses need construction or FSM software?",
+      a: "When job files, change orders, and crew dispatch replace calendar booking as the core problem.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE],
+});
+
+export const FENCE_DECK_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "fence-deck",
+  title: "Best Scheduling Software for Fence & Deck Builders (2026)",
+  subtitle:
+    "Compare scheduling tools for fence and deck builders: site surveys, HOA paperwork lead times, crew-day scheduling, and weather-aware messaging.",
+  introParagraph:
+    "Fence and deck builders book property walks, permit-sensitive timelines, and multi-day crew blocks. Scheduling software should capture lot lines, HOA requirements when relevant, and realistic buffers for outdoor work—without letting customers assume instant start dates after a single click.",
+  picks: [
+    {
+      slug: "setmore",
+      badge: "Best affordable crew and survey booking",
+      description:
+        "Multi-staff calendars for estimators and leads; reminders for homeowners to stake lines and secure pets.",
+      rowBestFor: "Surveys & growing crews",
+      why:
+        "Setmore fits fence and deck builders scaling estimators and project leads who need online booking without heavy software spend. Trial separate services for wood versus composite consults with different durations. See our Setmore review.",
+    },
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for survey intake and phased deposits",
+      description:
+        "Forms for HOA status, utility locates, and access gates; deposits when you hold crew weeks during peak season.",
+      rowBestFor: "Site surveys & deposits",
+      why:
+        "Acuity Scheduling helps when surveys need structured intake—HOA approval state, utility locate status, photos of existing fence lines—and when deposits protect peak-season crew holds. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "youcanbookme",
+      badge: "Best multi-estimator calendar pooling",
+      description:
+        "Pool estimator availability from Google or Outlook when several sales reps cover different territories.",
+      rowBestFor: "Pooled estimator teams",
+      why:
+        "YouCanBook.me suits teams where multiple estimators share territories and you want real calendar availability instead of manual triage. See our YouCanBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Weather and outdoor reality",
+      "Use buffers and clear messaging that exterior work may reschedule for storms."
+    ),
+    E(
+      "HOA and permits",
+      "Intake fields for approval status reduce sales promises the crew cannot keep."
+    ),
+    E(
+      "Crew days vs visits",
+      "Differentiate survey appointments from multi-day build blocks in service definitions."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do fence and deck companies use?",
+      a: "Fence and deck builders often use Setmore for affordable multi-staff booking, Acuity Scheduling for survey intake and deposits, and YouCanBook.me for pooled estimator calendars.",
+    },
+    {
+      q: "Should deck builders offer instant online booking for construction start dates?",
+      a: "Usually book surveys first; confirm start dates after materials and permits—use copy and internal steps to avoid over-promising.",
+    },
+    {
+      q: "When do outdoor contractors need FSM or construction software?",
+      a: "When job costing, change orders, and crew dispatch replace calendar booking as the main pain.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE, ROUTE_GUIDE],
+});
+
+export const GLASS_WINDOW_INSTALLERS_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "glass-window-installers",
+  title: "Best Scheduling Software for Glass & Window Installers (2026)",
+  subtitle:
+    "Compare scheduling tools for glass and window companies: field measures, safety and access intake, commercial bid walks, and install-day coordination.",
+  introParagraph:
+    "Glass and window installers book precise field measures, reglazing service calls, and full-home replacement projects. Scheduling software should capture ladder access, parking constraints, and whether homeowners cleared window treatments—while supporting deposits when custom orders are non-returnable.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for measure intake and custom-order deposits",
+      description:
+        "Forms for floor level, ladder constraints, tempered requirements, and photos—payment-at-booking when orders are custom.",
+      rowBestFor: "Measures & custom glass",
+      why:
+        "Acuity Scheduling fits glass shops that need measure appointments with serious intake before fabrication—deposits protect non-returnable custom orders. Trial separate flows for service reglazing versus full replacement consults. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "square-appointments",
+      badge: "Best for retail glass shops on Square",
+      description:
+        "When showroom consults and field installs share Square payments and customer records.",
+      rowBestFor: "Retail + field on Square",
+      why:
+        "Square Appointments suits glass and window businesses already running cards and invoices through Square—booking ties cleanly to the same customer profile as counter sales. See our Square Appointments review.",
+    },
+    {
+      slug: "simplybookme",
+      badge: "Best flexible service catalog value",
+      description:
+        "Define commercial site walks, residential measures, and emergency board-ups with custom questions at competitive pricing.",
+      rowBestFor: "Mixed commercial & residential",
+      why:
+        "SimplyBook.me helps when you need many distinct service types—board-ups, reglazing, IGU replacement, commercial bid walks—without overspending. See our SimplyBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Safety and access",
+      "Capture ladder points, interior floor protection needs, and parking limits before you send crews with heavy glass."
+    ),
+    E(
+      "Commercial vs residential",
+      "Different durations and approval paths—commercial walks may need longer blocks."
+    ),
+    E(
+      "Weather and lifts",
+      "Exterior installs may need reschedule policies; communicate them in confirmations."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software works for glass and window installers?",
+      a: "Glass shops often evaluate Acuity Scheduling for measure intake and deposits, Square Appointments if Square is your payment hub, and SimplyBook.me for flexible multi-service catalogs at strong value.",
+    },
+    {
+      q: "Should window companies take deposits for custom orders?",
+      a: "Yes when glass is fabricated to size—pair deposits with written fabrication approval and clear reschedule rules.",
+    },
+    {
+      q: "When do window installers need glazing-specific or FSM software?",
+      a: "When fabrication tracking, job costing, and fleet dispatch dominate—scheduling stays the customer-facing layer until then.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE],
+});
+
+export const CONCRETE_CONTRACTORS_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "concrete-contractors",
+  title: "Best Scheduling Software for Concrete Contractors (2026)",
+  subtitle:
+    "Compare scheduling tools for concrete contractors: site walks, pour-day weather risk, decorative stamp consults, and realistic multi-hour holds.",
+  introParagraph:
+    "Concrete work depends on cure times, weather, and crew-day sequencing. Scheduling software should book realistic site visits and consultations—not pretend a full driveway pour fits in a 30-minute slot. Use intake for square footage estimates, access constraints, and deposits when you hold pump or crew days.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for site visits, pour holds, and deposits",
+      description:
+        "Longer blocks, forms for square footage and access, and payment-at-booking when you lock crew days in peak season.",
+      rowBestFor: "Site visits & crew holds",
+      why:
+        "Acuity Scheduling fits concrete contractors who sell stamped patio consults, driveway replacements, and commercial flatwork walks that need deposits before you commit mix and pump resources. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "calendly",
+      badge: "Best simple estimator booking",
+      description:
+        "When you want a polished link for quick site checks or follow-up visits with minimal setup.",
+      rowBestFor: "Straightforward consults",
+      why:
+        "Calendly works for concrete teams that need dependable booking for standard consults while pour scheduling stays internal. See our Calendly review.",
+    },
+    {
+      slug: "setmore",
+      badge: "Best budget multi-crew coordination",
+      description:
+        "Affordable multi-staff calendars as you add estimators and project managers without heavy software spend.",
+      rowBestFor: "Growing concrete crews",
+      why:
+        "Setmore helps growing concrete businesses publish multiple estimators’ availability with reminders at approachable pricing. See our Setmore review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Weather and reschedule policy",
+      "Pour-day risk belongs in confirmation copy and policies—not hidden footnotes."
+    ),
+    E(
+      "Realistic durations",
+      "Separate quick consults from full site engineering walks."
+    ),
+    E(
+      "Deposits",
+      "Protect crew and pump holds during peak season when customers shop multiple quotes."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do concrete contractors use?",
+      a: "Concrete contractors often evaluate Acuity Scheduling for site visits and deposits, Calendly for simple consult booking, and Setmore for affordable multi-estimator calendars.",
+    },
+    {
+      q: "Should customers book pour days online?",
+      a: "Usually book consults and internal confirmations first—pours depend on weather, cure products, and crew sequencing.",
+    },
+    {
+      q: "When do concrete companies need construction or FSM software?",
+      a: "When job costing, progress billing, and dispatch replace calendar booking as the core operational system.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});
+
+export const EXCAVATION_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "excavation",
+  title: "Best Scheduling Software for Excavation Companies (2026)",
+  subtitle:
+    "Compare scheduling tools for excavation contractors: utility locate lead times, site walk scheduling, DOT-heavy mobilization, and realistic multi-hour blocks.",
+  introParagraph:
+    "Excavation companies schedule site walks, utility marks, and equipment mobilizations—not 15-minute haircuts. Scheduling software should use long appointment types, capture access and staging notes, and set expectations about locate waiting periods before digging can legally start.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for structured site walks and intake",
+      description:
+        "Forms for utility locate status, easements, and photos of access roads; deposits when you hold equipment days.",
+      rowBestFor: "Site walks & holds",
+      why:
+        "Acuity Scheduling fits excavation contractors who need serious intake before sending iron—locate status, staging constraints, and whether homeowners expect same-day start or a true walk-and-quote. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "youcanbookme",
+      badge: "Best multi-estimator or PM calendar pooling",
+      description:
+        "When several project managers or estimators share booking across territories with real Outlook or Google availability.",
+      rowBestFor: "Pooled estimator calendars",
+      why:
+        "YouCanBook.me helps excavation shops where multiple PMs or estimators need pooled availability without a call-center bottleneck. See our YouCanBook.me review.",
+    },
+    {
+      slug: "setmore",
+      badge: "Best affordable field booking layer",
+      description:
+        "Straightforward multi-user booking when you want online access without heavy configuration.",
+      rowBestFor: "Lean excavation ops",
+      why:
+        "Setmore gives excavation teams a practical online booking layer for standard site visits as they professionalize from phone-only dispatch. See our Setmore review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Locate and compliance",
+      "Booking copy should explain that dig dates may follow 811 marks and internal safety checks—not the first open calendar square."
+    ),
+    E(
+      "Access and equipment",
+      "Intake for gate width, slope, and neighbor access reduces failed mobilizations."
+    ),
+    E(
+      "Duration honesty",
+      "Use multi-hour blocks for walks and pre-con meetings; undervalued durations create angry GCs."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software works for excavation companies?",
+      a: "Excavation contractors often evaluate Acuity Scheduling for structured site walks and deposits, YouCanBook.me for pooled estimator calendars, and Setmore for affordable multi-user booking.",
+    },
+    {
+      q: "Should excavation customers book dig days online?",
+      a: "Usually book site walks and consultations first; confirm dig windows after locates, safety checks, and sequencing with the GC.",
+    },
+    {
+      q: "When do excavation companies need heavy equipment or FSM software?",
+      a: "When fleet tracking, job costing, and ticketed work replace simple appointment booking.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE],
+});
+
+export const AUTO_REPAIR_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "auto-repair",
+  title: "Best Scheduling Software for Auto Repair Shops (2026)",
+  subtitle:
+    "Compare scheduling tools for auto repair: bay and tech availability, symptom intake, fleet account booking, and reminders that fill slow mornings.",
+  introParagraph:
+    "Auto repair shops schedule bays and technicians—not generic “meetings.” Good scheduling software captures vehicle details and symptoms, supports multiple techs or advisors, and plugs into payments when you are already Square-native or want deposits on large jobs.",
+  picks: [
+    {
+      slug: "setmore",
+      badge: "Best affordable multi-bay booking",
+      description:
+        "Multi-staff calendars for service advisors; reminders that reduce no-shows on oil changes and diagnostics.",
+      rowBestFor: "Multi-advisor shops",
+      why:
+        "Setmore fits independent auto repair shops that want online booking across advisors or bays without enterprise shop management pricing. Map services to realistic bay times including diagnostic buffers. See our Setmore review.",
+    },
+    {
+      slug: "square-appointments",
+      badge: "Best for shops already on Square",
+      description:
+        "Booking plus payments and customer records when Square terminals and invoicing already run the front counter.",
+      rowBestFor: "Square-native garages",
+      why:
+        "Square Appointments suits garages that live on Square for parts, deposits, and card-present checkout—customers book into the same ecosystem they already pay through. See our Square Appointments review.",
+    },
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for symptom intake and longer jobs",
+      description:
+        "Forms for warning lights, noise descriptions, and fleet unit numbers; packages for seasonal services.",
+      rowBestFor: "Diagnostics & fleet intake",
+      why:
+        "Acuity Scheduling helps when intake before the bay matters—symptom questions, fleet identifiers, and prepaid diagnostics on busy days. See our Acuity Scheduling review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Bay reality",
+      "Do not overbook bays—use buffers for unknown diagnostic time."
+    ),
+    E(
+      "Fleet vs retail",
+      "Different questions or booking links for fleet managers versus retail customers."
+    ),
+    E(
+      "Reminders",
+      "SMS or email reminders lift show rates on quick-lane style appointments."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do auto repair shops use?",
+      a: "Independent shops often evaluate Setmore for affordable multi-advisor booking, Square Appointments if Square powers payments, and Acuity Scheduling for symptom intake and structured diagnostics.",
+    },
+    {
+      q: "Should repair shops take online deposits?",
+      a: "Useful for large jobs, performance upgrades, or specialty parts orders—disclose policies clearly.",
+    },
+    {
+      q: "When do shops need shop management software instead of scheduling?",
+      a: "When parts matrix, labor guides, and RO workflow dominate—scheduling alone will not replace a full SMS.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});
+
+export const MOBILE_MECHANICS_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "mobile-mechanics",
+  title: "Best Scheduling Software for Mobile Mechanics (2026)",
+  subtitle:
+    "Compare scheduling tools for mobile mechanics: drive-time buffers, location-based intake, on-site payment links, and realistic arrival windows.",
+  introParagraph:
+    "Mobile mechanics book rolling warehouses—not shop bays. Scheduling software must bake in travel time, capture vehicle location and symptoms, and send reminders so customers meet you with keys and space. Lightweight, mobile-friendly booking often beats heavy shop suites early on.",
+  picks: [
+    {
+      slug: "calendly",
+      badge: "Best fast client booking with minimal friction",
+      description:
+        "Homeowners and fleet drivers already recognize Calendly links—ideal when you want bookings without heavy setup.",
+      rowBestFor: "Simple mobile service booking",
+      why:
+        "Calendly fits mobile mechanics who need a polished booking link customers will actually use from a phone—especially for fleet managers booking recurring driver slots. Add generous buffers for drive time in each event type. See our Calendly review.",
+    },
+    {
+      slug: "youcanbookme",
+      badge: "Best calendar-native availability for solo or duo teams",
+      description:
+        "Tie public booking to the real Google or Outlook calendar of the mechanic who actually rolls.",
+      rowBestFor: "Solo & duo mobile techs",
+      why:
+        "YouCanBook.me suits solo or two-van operations where availability must mirror the tech’s real calendar, not a generic shop grid. See our YouCanBook.me review and Calendly vs YouCanBook.me.",
+    },
+    {
+      slug: "square-appointments",
+      badge: "Best payments-linked booking for mobile ops on Square",
+      description:
+        "Collect deposits or invoices in Square when you already run cards and payouts through Square in the field.",
+      rowBestFor: "Square field payments",
+      why:
+        "Square Appointments helps mobile mechanics on Square unify booking with tap-to-pay and invoicing—fewer apps on the truck. See our Square Appointments review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Drive-time buffers",
+      "Undersized buffers create late arrivals; model real metro traffic patterns."
+    ),
+    E(
+      "Location clarity",
+      "Intake for exact parking, apartment gate codes, and whether the customer will be on site."
+    ),
+    E(
+      "Weather and lighting",
+      "Outdoor work may need daylight constraints—communicate in confirmations."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software is best for mobile mechanics?",
+      a: "Mobile mechanics often use Calendly for simple client booking, YouCanBook.me for calendar-native solo or duo teams, and Square Appointments when Square handles field payments.",
+    },
+    {
+      q: "How do mobile mechanics reduce late arrivals?",
+      a: "Use realistic buffers, limit same-day online booking unless you truly have capacity, and send automated reminders with address confirmation.",
+    },
+    {
+      q: "When should mobile mechanics adopt full shop or FSM software?",
+      a: "When parts catalogs, RO history, and fleet contracts replace ad hoc calendar booking as the core system.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE, EMERGENCY_GUIDE],
+});
+
+export const CLEANING_FRANCHISES_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "cleaning-franchises",
+  title: "Best Scheduling Software for Cleaning Franchises (2026)",
+  subtitle:
+    "Compare scheduling tools for cleaning franchises: multi-territory teams, recurring route appointments, brand-consistent booking pages, and franchisee onboarding speed.",
+  introParagraph:
+    "Cleaning franchises need repeatable booking experiences across territories—recurring maid visits, deep cleans, and move-out packages—without every franchisee building a custom Rube Goldberg stack. Scheduling software should scale seats, support recurring appointments, and keep confirmations on-brand.",
+  picks: [
+    {
+      slug: "setmore",
+      badge: "Best franchisee-friendly value at scale",
+      description:
+        "Multi-staff recurring visits and reminders at a price point that survives dozens of territories.",
+      rowBestFor: "Recurring cleans & teams",
+      why:
+        "Setmore fits cleaning franchises that need consistent online booking, recurring visits, and multi-technician calendars without enterprise implementation on every branch. Standardize service durations and reminder copy at the brand level. See our Setmore review.",
+    },
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for packaged deep cleans and move-outs",
+      description:
+        "Sell move-out and deep-clean packages with add-ons, intake for square footage, and deposits on large jobs.",
+      rowBestFor: "Packages & deposits",
+      why:
+        "Acuity Scheduling helps franchise brands that sell packaged deep cleans and move-outs with structured intake and optional deposits—reducing underpriced jobs. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "simplybookme",
+      badge: "Best customizable booking per territory",
+      description:
+        "Franchisees can tune forms and services while staying within brand guardrails—often at competitive cost.",
+      rowBestFor: "Flexible franchise catalogs",
+      why:
+        "SimplyBook.me suits franchisors that want franchisees to localize service lists and questions without paying premium per-seat pricing everywhere. See our SimplyBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Brand consistency",
+      "Lock colors, logos, and confirmation language so territories feel like one company."
+    ),
+    E(
+      "Recurring visits",
+      "Define cadence options clearly—weekly, biweekly, monthly—and train franchisees on skip policies."
+    ),
+    E(
+      "Onboarding",
+      "Pick tools franchisees can self-serve in a day; complex stacks kill rollout."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software works for cleaning franchises?",
+      a: "Franchise systems often evaluate Setmore for recurring team booking at value pricing, Acuity Scheduling for packaged deep cleans and deposits, and SimplyBook.me for flexible localized catalogs.",
+    },
+    {
+      q: "How do cleaning franchises keep booking consistent?",
+      a: "Use shared templates for services, durations, and reminder copy; centralize payment processors where possible.",
+    },
+    {
+      q: "When do franchises need franchise-specific or FSM platforms?",
+      a: "When territory KPIs, supply ordering, and QA audits need a single operating system beyond calendars.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE],
+});
+
+export const EVENT_SERVICES_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "event-services",
+  title: "Best Scheduling Software for Event Services (2026)",
+  subtitle:
+    "Compare scheduling tools for event services: client consults, vendor walkthroughs, crew shift holds, and multi-calendar coordination across sales and ops.",
+  introParagraph:
+    "Event services—catering, AV, rentals, planners—sell dates, venues, and people. Scheduling software should separate sales consults from load-in blocks, support deposits on peak Saturdays, and let multiple producers share real availability without double booking the same lead.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for consults, packages, and retainers",
+      description:
+        "Sell wedding packages, tasting appointments, or site walkthroughs with forms and payment-at-booking on peak dates.",
+      rowBestFor: "Consults & retainers",
+      why:
+        "Acuity Scheduling fits event services that sell packaged consults, tastings, or walkthroughs with retainers—especially when peak season dates need deposits. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "calendly",
+      badge: "Best simple booking for busy clients",
+      description:
+        "Fast links for quick syncs with venues and corporate clients who already live in Calendly.",
+      rowBestFor: "Simple client meetings",
+      why:
+        "Calendly works when your team needs frictionless scheduling for short syncs—planners coordinating with florists, AV leads meeting venues—without heavy intake. See our Calendly review.",
+    },
+    {
+      slug: "youcanbookme",
+      badge: "Best multi-producer and sales team pooling",
+      description:
+        "Round-robin or pooled calendars across producers tied to Google or Microsoft—reduces bottlenecks during RFP season.",
+      rowBestFor: "Sales & producer teams",
+      why:
+        "YouCanBook.me helps event companies where multiple producers or account managers need pooled availability for consults without manual triage. See our YouCanBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Consult vs load-in",
+      "Different event types and durations—do not book a 30-minute call for a full venue walk."
+    ),
+    E(
+      "Deposits on peak dates",
+      "Protect inventory and crew holds with clear refund windows tied to cancellation policy."
+    ),
+    E(
+      "Time zones",
+      "Multi-city events need explicit time zones in confirmations."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do event services companies use?",
+      a: "Event teams often evaluate Acuity Scheduling for consults and retainers, Calendly for simple client meetings, and YouCanBook.me for pooled producer or sales calendars.",
+    },
+    {
+      q: "Should event companies take retainers through scheduling?",
+      a: "Yes on peak dates and custom builds—use contracts plus booking deposits with clear terms.",
+    },
+    {
+      q: "When do event businesses need dedicated event management software?",
+      a: "When floor plans, staffing grids, and inventory allocation replace calendar booking as the core system.",
+    },
+  ],
+  extraGuides: [ROUTE_GUIDE],
+});
+
+export const HOME_INSPECTORS_SCHEDULING_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "home-inspectors",
+  title: "Best Scheduling Software for Home Inspectors (2026)",
+  subtitle:
+    "Compare scheduling tools for home inspectors: multi-hour inspection blocks, agent-friendly booking, radon or ancillary add-ons, and MLS-style tight same-day windows.",
+  introParagraph:
+    "Home inspectors sell long, immovable blocks—often coordinated with real estate closings. Scheduling software must support three- to four-hour appointments, same-day urgency during option periods, and optional add-ons like radon placement with separate durations and intake.",
+  picks: [
+    {
+      slug: "acuity-scheduling",
+      badge: "Best for long inspections and add-on packages",
+      description:
+        "Multi-hour services, intake for square footage and age, and payment-at-booking when agents need guaranteed slots.",
+      rowBestFor: "Full inspections & add-ons",
+      why:
+        "Acuity Scheduling fits home inspectors who need long appointment types, add-on radon or sewer scope packages, and structured intake on square footage and foundation access. Trial MLS notes fields for combo lock and tenant access. See our Acuity Scheduling review.",
+    },
+    {
+      slug: "calendly",
+      badge: "Best simple booking for agent referrals",
+      description:
+        "When agents just need a trusted link to grab the next honest slot without learning a new UI.",
+      rowBestFor: "Agent-friendly simplicity",
+      why:
+        "Calendly works for inspectors whose primary channel is agent referrals wanting the lowest-friction booking—configure long durations and buffers explicitly. See our Calendly review.",
+    },
+    {
+      slug: "simplybookme",
+      badge: "Best value for multi-inspector firms",
+      description:
+        "Multiple inspectors, ancillary services, and custom questions at pricing that scales for small firms.",
+      rowBestFor: "Multi-inspector firms",
+      why:
+        "SimplyBook.me helps multi-inspector firms customize services and reminders competitively as they grow past solo calendars. See our SimplyBook.me review.",
+    },
+  ],
+  editorialGuidance: [
+    E(
+      "Duration honesty",
+      "Older homes and crawlspaces need longer blocks—underestimating time creates cascading late reports."
+    ),
+    E(
+      "Access and liability",
+      "Intake for occupied homes, pets, and utilities informs safer site days."
+    ),
+    E(
+      "Agent workflows",
+      "Offer ICS attachments and clear cancellation windows aligned with your contract."
+    ),
+  ],
+  faqItems: [
+    {
+      q: "What scheduling software do home inspectors use?",
+      a: "Inspectors often evaluate Acuity Scheduling for long inspections and add-on packages, Calendly for simple agent-facing booking, and SimplyBook.me for multi-inspector firms at strong value.",
+    },
+    {
+      q: "Should home inspectors offer same-day booking online?",
+      a: "Only if you truly have capacity—otherwise use manual confirmation or premium fees for rush slots.",
+    },
+    {
+      q: "When do inspection companies need inspection-specific software?",
+      a: "When report writing, standards checklists, and photo libraries replace calendar booking as the core product.",
+    },
+  ],
+  extraGuides: [EMERGENCY_GUIDE],
+});

@@ -1,183 +1,73 @@
-import { getFieldServiceReviewUrl, getFieldServiceCompareUrl } from "@/lib/routes";
-import type {
-  BestForFeaturedProduct,
-  BestForTableRow,
-  BestForEditorialBlock,
-  BestForReviewLink,
-  BestForComparisonLink,
-  BestForFaqItem,
-  BestForGuideLink,
-} from "@/components/best/BestForTemplate";
+import { buildFieldServiceTradeProps } from "@/lib/data/fieldServiceBestForCore";
 
-const CATEGORY = { href: "/field-service", label: "Field Service" };
-const SEE_ALSO = {
-  roundupLabel: "best field service management software",
-  roundupHref: "/field-service/best-field-service-software",
-  compareLabel: "field service software comparisons",
-  compareHref: "/field-service/compare",
-};
+const E = (heading: string, body: string) => ({ heading, body });
 
-const LOGOS = {
-  jobber: "/Logos/jobber.png",
-  housecallpro: "/Logos/housecallpro.jpeg",
-  workiz: "/Logos/workiz.jpeg",
-} as const;
-
-export const ELECTRICIANS_PAGE_PROPS = {
+export const ELECTRICIANS_PAGE_PROPS = buildFieldServiceTradeProps({
+  useCase: "electricians",
   title: "Best Field Service Software for Electricians (2026)",
   subtitle:
-    "Compare field service platforms for electrical contractors: job scheduling, dispatch, estimates, and invoicing that work in the field.",
-  useCase: "electricians",
-  categoryHref: CATEGORY.href,
-  categoryLabel: CATEGORY.label,
+    "Compare field service platforms for electrical contractors: dispatch boards, estimates, code-aware documentation, and invoicing that works from the van.",
   introParagraph:
-    "Electricians need tools that keep jobs organized, crews on schedule, and invoices going out on time—without dragging them into enterprise software. FSM tools give electrical contractors one place to manage calls, work orders, and customer history instead of spreading details across notebooks, texts, and spreadsheets.",
-  freshnessText: "Updated for 2026",
-  topPicksSub: "Our top field service picks for electricians.",
-  editorialSub: "What to look for when you choose field service software for an electrical business.",
-  whyThesePicksSub: "Why we chose these tools for electricians.",
-  seeAlsoBlock: SEE_ALSO,
-
-  featuredProducts: [
+    "Electrical contractors need field service software that keeps jobs, crews, and invoices aligned—without forcing industrial-scale ERP on a ten-person shop. The right FSM platform gives electricians one place for service calls, panel upgrades, and repeat commercial work so details do not scatter across notebooks and texts.",
+  picks: [
     {
-      slug: "jobber",
-      name: "Jobber",
-      badge: "Best overall for electrical contractors",
+      slug: "fieldpulse",
+      badge: "Best for dispatch-heavy electrical ops",
       description:
-        "All-in-one FSM for small and mid-size electrical businesses. Handles jobs, scheduling, quoting, and invoicing with a clear mobile app for techs.",
-      rating: "4.6",
-      startingPrice: "From ~$69/mo",
-      reviewHref: getFieldServiceReviewUrl("jobber"),
-      visitUrl: "https://getjobber.com",
-      logoSrc: LOGOS.jobber,
+        "Operations-focused FSM when you run multiple trucks and need dispatch depth, job visibility, and structured field workflows.",
+      rowBestFor: "Multi-truck & commercial-light electrical",
+      standoutFeature: "Dispatch depth for growing electrical shops",
+      why:
+        "FieldPulse fits electrical contractors whose bottleneck is dispatch and job execution—not just a calendar—when you run several crews and need consistent status updates from the field. In a trial, route panel upgrades versus quick service calls with different skill tags, stress-test mobile photo notes for inspections, and confirm reporting your lead tech actually opens weekly. FieldPulse earns its place when operational visibility matters as much as homeowner texting.",
     },
     {
-      slug: "housecall-pro",
-      name: "Housecall Pro",
-      badge: "Best for home-service electricians",
+      slug: "jobber",
+      badge: "Best all-around for residential electrical",
       description:
-        "Home-service-focused FSM with strong customer communication and online reviews. Good fit for residential electrical work.",
-      rating: "4.5",
-      startingPrice: "From ~$49/mo",
-      reviewHref: getFieldServiceReviewUrl("housecall-pro"),
-      visitUrl: "https://housecallpro.com",
-      logoSrc: LOGOS.housecallpro,
+        "Quotes, scheduling, and invoicing in one system with a strong mobile app—ideal for mixed service and project work.",
+      rowBestFor: "Most small and mid-size electrical shops",
+      why:
+        "Jobber is a reliable default for electricians who need structured jobs, signed quotes on mobile, and recurring inspection visits for property managers. During evaluation, build estimate templates for EV chargers and service upgrades, attach photos for warranty claims, and sync invoices to accounting with the GL mapping your CPA expects. Jobber balances usability for techs with clarity for the office.",
     },
     {
       slug: "workiz",
-      name: "Workiz",
-      badge: "Best for small electrical crews on a budget",
+      badge: "Best value for lean electrical crews",
       description:
-        "Straightforward job scheduling and dispatch with a lower entry price—useful for small electrical teams getting off paper.",
-      rating: "4.4",
-      startingPrice: "From ~$29/mo",
-      reviewHref: getFieldServiceReviewUrl("workiz"),
-      visitUrl: "https://workiz.com",
-      logoSrc: LOGOS.workiz,
+        "Affordable scheduling and dispatch with fast invoicing—strong when margins on small service calls are tight.",
+      rowBestFor: "Budget-focused teams scaling off paper",
+      why:
+        "Workiz appeals to electrical shops that need dependable boards, job notes, and card payments without premium per-seat pricing. Pilot a peak week: stack emergency calls into booked installs, capture change-order line items before techs leave, and export jobs for payroll if you pay by ticket. Workiz is the pragmatic on-ramp when spreadsheets are still your system of record.",
     },
-  ] as BestForFeaturedProduct[],
-
-  comparisonTableRows: [
-    {
-      slug: "jobber",
-      name: "Jobber",
-      logoSrc: LOGOS.jobber,
-      bestFor: "Most electrical contractors",
-      startingPrice: "From ~$69/mo",
-      standoutFeature: "Well-rounded jobs, scheduling, and invoicing",
-      reviewHref: getFieldServiceReviewUrl("jobber"),
-    },
-    {
-      slug: "housecall-pro",
-      name: "Housecall Pro",
-      logoSrc: LOGOS.housecallpro,
-      bestFor: "Home-service electricians",
-      startingPrice: "From ~$49/mo",
-      standoutFeature: "Customer communication & review tools",
-      reviewHref: getFieldServiceReviewUrl("housecall-pro"),
-    },
-    {
-      slug: "workiz",
-      name: "Workiz",
-      logoSrc: LOGOS.workiz,
-      bestFor: "Budget-conscious small crews",
-      startingPrice: "From ~$29/mo",
-      standoutFeature: "Affordable scheduling and dispatch",
-      reviewHref: getFieldServiceReviewUrl("workiz"),
-    },
-  ] as BestForTableRow[],
-
+  ],
   editorialGuidance: [
-    {
-      heading: "Job types and repeat work",
-      body: "Electricians work a mix of one-off projects, recurring service, and emergency calls. FSM should make it easy to see what is booked, which technicians are free, and which customers are due for follow-ups or panel upgrades—without building a giant project plan for every job.",
-    },
-    {
-      heading: "Safety and documentation",
-      body: "Electricians often need photos and notes for inspections, warranty claims, and safety records. A good field service app lets techs attach photos and notes to each job so the office and future techs can see exactly what was done.",
-    },
-    {
-      heading: "Residential vs commercial electrical work",
-      body: "Residential-focused platforms like Housecall Pro emphasize customer experience and inbound booking. Jobber and Workiz can handle both residential and light commercial work, but if most of your revenue comes from commercial/industrial projects, you may eventually look at more project-oriented tools as well.",
-    },
-  ] as BestForEditorialBlock[],
-
-  whyThesePicks: [
-    {
-      heading: "Jobber",
-      body: "Jobber fits electrical contractors who juggle service calls, panel upgrades, and small commercial work and need structured jobs, photos, and signed quotes on mobile before techs leave the site. Route views help dispatchers respect license-level assignments when apprentices cannot close certain tickets alone. During a trial, build estimate templates for common installs, track warranty parts on a test job, and confirm recurring inspection visits for property managers if you sell them. Sync invoices to accounting with the GL codes your CPA expects. Jobber balances field usability with back-office clarity.",
-    },
-    {
-      heading: "Housecall Pro",
-      body: "Housecall Pro targets residential electricians who win on fast booking, proactive texts, and review generation after every truck roll—critical when homeowners compare three Google results. Optional consumer financing can lift ticket size on panel-heavy jobs. In a trial, enable online booking for EV charger installs versus quick service calls with different durations, test automated follow-ups for unfinished estimates, and verify payment capture on larger deposits. Validate how pricebooks handle multi-option proposals your sales team sells. Housecall Pro excels when marketing and CX are as important as the truck stock.",
-    },
-    {
-      heading: "Workiz",
-      body: "Workiz suits price-sensitive electrical shops that still need dependable scheduling, dispatch statuses, and invoicing so estimators stop overlapping on the same client window. Lower base fees make FSM palatable while revenue scales. During evaluation, simulate a busy Monday with emergency calls cutting into booked installs, send customer texts from the field, and confirm techs can add line items mid-job. Review whether inventory tracking is deep enough before you promise asset-level history. Workiz is a lean bridge off whiteboards.",
-    },
-  ] as BestForEditorialBlock[],
-
-  relatedReviews: [
-    { name: "Jobber", href: getFieldServiceReviewUrl("jobber") },
-    { name: "Housecall Pro", href: getFieldServiceReviewUrl("housecall-pro") },
-    { name: "Workiz", href: getFieldServiceReviewUrl("workiz") },
-  ] as BestForReviewLink[],
-
-  relatedComparisons: [
-    {
-      label: "Jobber vs Housecall Pro",
-      href: getFieldServiceCompareUrl("jobber-vs-housecall-pro"),
-    },
-    {
-      label: "Jobber vs Workiz",
-      href: getFieldServiceCompareUrl("jobber-vs-workiz"),
-    },
-  ] as BestForComparisonLink[],
-
-  relatedGuides: [
-    {
-      label: "Field service software for small business",
-      href: "/field-service/guides/field-service-software-for-small-business",
-    },
-    {
-      label: "How to choose field service management software",
-      href: "/field-service/guides/how-to-choose-field-service-software",
-    },
-  ] as BestForGuideLink[],
-
+    E(
+      "Job types and repeat work",
+      "Electricians mix quick service calls, multi-hour installs, and emergency coverage. FSM should show capacity and skill fit—not just a list of names."
+    ),
+    E(
+      "Safety and documentation",
+      "Photos and notes for panels, GFCI faults, and inspection sign-offs belong on the job record for liability and warranty follow-through."
+    ),
+    E(
+      "Residential vs commercial electrical",
+      "Residential-heavy teams may prioritize customer texting; commercial-heavy teams may prioritize job costing exports—match software to where most revenue lives today."
+    ),
+  ],
+  extraGuides: [
+    { label: "Field service software for small business", href: "/field-service/guides/field-service-software-for-small-business" },
+  ],
   faqItems: [
     {
       q: "What field service software is best for electricians?",
-      a: "For most small and mid-size electrical contractors, Jobber and Housecall Pro are strong starting points. Jobber offers a great all-around workflow; Housecall Pro is especially strong for home-service electricians. Workiz is a good option when you want to keep costs down while improving scheduling.",
+      a: "Electrical contractors often shortlist FieldPulse for dispatch-heavy operations, Jobber for all-in-one jobs and invoicing, and Workiz for affordable scheduling and field billing. Trial with your real job mix—including emergency inserts—before you standardize.",
     },
     {
       q: "Do electrician tools include scheduling and invoicing?",
-      a: "Yes. Modern field service platforms used by electricians combine scheduling, dispatch, estimates, invoices, and payments. The goal is to keep job details, customer history, and billing in one system instead of across separate tools.",
+      a: "Yes. Leading FSM platforms combine scheduling, estimates, invoices, and payments so techs can close tickets from the field.",
     },
     {
       q: "Do these tools work for both residential and commercial electrical work?",
-      a: "Yes, but the emphasis differs. Housecall Pro focuses on residential; Jobber and Workiz can support both residential and light commercial electrical work. If you primarily do large commercial or industrial projects, you may want to complement FSM with project‑management tools.",
+      a: "They commonly support both, though very large commercial or industrial jobs may eventually pair FSM with heavier project or estimating systems. Start with your typical week in a trial.",
     },
-  ] as BestForFaqItem[],
-};
-
+  ],
+});

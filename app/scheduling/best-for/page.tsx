@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { getSchedulingBestForHubLinks } from "@/lib/data/schedulingBestForHub";
+import { siteMetadata } from "@/lib/seo/siteMetadata";
 
 const SCENARIOS = getSchedulingBestForHubLinks();
 
@@ -84,10 +86,19 @@ export default function SchedulingBestForIndexPage() {
   );
 }
 
-export function generateMetadata() {
+export function generateMetadata(): Metadata {
   return {
-    title: "Best Scheduling Software by Use Case | BeltStack",
-    description:
-      "Browse scheduling software by use case: freelancers, consultants, teams, HVAC, plumbing, electricians, movers, property management, and more.",
+    ...siteMetadata({
+      path: "/scheduling/best-for",
+      title: "Best Scheduling Software by Use Case (2026) | BeltStack",
+      description:
+        "Browse scheduling software by use case and trade: freelancers, consultants, teams, HVAC, appliance repair, garage door, locksmith, flooring, auto repair, mobile mechanics, cleaning franchises, event services, home inspectors, and more.",
+    }),
+    keywords: [
+      "best scheduling software by industry",
+      "scheduling software for contractors",
+      "appointment booking software 2026",
+      "BeltStack scheduling best-for",
+    ],
   };
 }
