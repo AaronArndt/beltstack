@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { CONCRETE_CONTRACTORS_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForConcreteContractorsPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForConcreteContractorsPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Concrete Contractors (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Concrete Contractors (2026)"),
     description:
       "Compare CRM tools for concrete contractors: commercial and residential pursuits, bid calendars, and relationship tracking with GCs, owners, and municipalities.",
     keywords: [

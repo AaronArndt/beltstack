@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { AGENCIES_PAGE_PROPS } from "@/lib/data/projectManagementBestForAgencies";
 
 export default function BestProjectManagementForAgenciesPage() {
@@ -7,7 +8,7 @@ export default function BestProjectManagementForAgenciesPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Project Management Software for Agencies (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Project Management Software for Agencies (2026)"),
     description:
       "Compare the best project management software for agencies: Teamwork, Asana, ClickUp. Client projects, time tracking, and team collaboration.",
   };

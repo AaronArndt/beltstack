@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
+import { getBestSoftwareRoundupMeta } from "@/lib/seo/bestSoftwareRoundupMeta";
 
-export const metadata: Metadata = siteMetadata({
-  path: "/scheduling/best-scheduling-software",
-  title: "Best Scheduling Software for Small Businesses (2026) | BeltStack",
-  description:
-    "Compare the best scheduling software for small businesses. Review pricing, features, pros and cons, and top picks.",
-});
+export const metadata: Metadata = siteMetadata(getBestSoftwareRoundupMeta("scheduling"));
 
-export default function BestSchedulingSoftwareLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function BestSchedulingSoftwareLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

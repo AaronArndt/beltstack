@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { CLEANING_FRANCHISES_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForCleaningFranchisesPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForCleaningFranchisesPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Cleaning Franchises (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Cleaning Franchises (2026)"),
     description:
       "Compare CRM tools for cleaning franchises: territory sales, recurring commercial contracts, franchise reporting rhythms, and marketing that respects brand standards.",
     keywords: [

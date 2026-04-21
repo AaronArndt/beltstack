@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -79,34 +82,12 @@ export default function BestPosSoftwarePage() {
               Best POS Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best POS software for retail, restaurants, and hybrid ecommerce is the checkout your staff can run during
-              rush hour—paired with inventory, tipping, and reporting that matches how you actually operate. This 2026
-              roundup compares systems on card-present reliability, hardware ecosystems, back-office depth, and whether the
-              product makes sense for one location or many.
+              If you run in-person transactions, the best POS software should support reliable checkout, clear reporting, and hardware workflows that fit your business model.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate processing costs, offline mode, kitchen or table workflows where relevant, staff permissions, and
-              integrations with accounting or ecommerce. Combine the list with our reviews and{" "}
-              <Link href="/pos/compare" className={linkGreen}>
-                POS software comparisons
-              </Link>{" "}
-              before you lock in terminals and rates.
+              We compared checkout workflows, hardware flexibility, reporting, pricing, and integration fit so the Key Takeaways shortlist supports smarter vendor shortlisting.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Explore the{" "}
-              <Link href="/pos" className={linkGreen}>
-                POS software hub
-              </Link>
-              ,{" "}
-              <Link href="/pos/best-for" className={linkGreen}>
-                best POS by use case
-              </Link>
-              , and{" "}
-              <Link href="/pos/guides/best-pos-for-small-business" className={linkGreen}>
-                best POS for small business
-              </Link>{" "}
-              for deeper guidance.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/pos" categoryLabel="pos software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -123,6 +104,17 @@ export default function BestPosSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="POS software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best POS software picks ——— */}
         <section
@@ -295,6 +287,12 @@ export default function BestPosSoftwarePage() {
           headingCategoryLabel="POS software"
           sectionSub="Find POS software that fits your situation."
           items={useCaseEditorialItems}
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="POS software"
+          compareHref="/pos/compare"
+          guidesHref="/pos/guides"
         />
 
         {/* ——— Related comparisons ——— */}

@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import type { Metadata } from "next";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { PEST_CONTROL_FIELD_SERVICE_BEST_FOR_PAGE_PROPS } from "@/lib/data/fieldServiceBestForTrades";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/field-service/best-for/pest-control",
-      title: "Best Field Service Software for Pest Control Businesses (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Field Service Software for Pest Control Businesses (2026)"),
       description:
         "Compare field service software for pest control: WorkWave Service, Housecall Pro, and Jobber for recurring routes, treatment notes, renewals, and invoicing.",
     }),

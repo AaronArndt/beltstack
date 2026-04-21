@@ -1,4 +1,5 @@
 import type { BestForTemplateProps } from "@/components/best/BestForTemplate";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import {
   getWebsiteBuildersBestForUrl,
   getWebsiteBuildersCompareUrl,
@@ -394,7 +395,7 @@ export const WEBSITE_BUILDERS_BEST_FOR_METADATA_BY_SLUG: Record<
   TRADE_CONFIGS.map((config) => [
     config.slug,
     {
-      title: `${config.title} | BeltStack`,
+      title: buildBestForMetaTitle(config.title),
       description: config.subtitle,
       keywords: config.keywords,
     },

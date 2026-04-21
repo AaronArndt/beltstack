@@ -1,4 +1,5 @@
 import { siteMetadata } from "@/lib/seo/siteMetadata";
+import { getBestSoftwareRoundupMeta } from "@/lib/seo/bestSoftwareRoundupMeta";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_ACCOUNTING_OPTIONS } from "@/lib/data/accountingBestAccountingSoftware";
@@ -41,10 +42,7 @@ function bestAccountingSoftwareItemListSchema() {
 }
 
 export const metadata: Metadata = siteMetadata({
-  path: "/accounting/best-accounting-software",
-  title: "Best Accounting Software for Small Businesses (2026) | BeltStack",
-  description:
-    "Compare the best accounting software for small businesses. Review pricing, features, pros and cons, and top picks.",
+  ...getBestSoftwareRoundupMeta("accounting"),
 });
 
 export default function BestAccountingSoftwareLayout({

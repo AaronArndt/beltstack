@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -70,80 +73,12 @@ export default function BestPaymentProcessingSoftwarePage() {
               Best Payment Processing Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best payment processing setup for small businesses and contractors is the one that matches <strong className="font-semibold text-[#1A2D48]">where money actually enters</strong>—truck swipes, emailed invoice links, or website checkout—keeps{" "}
-              <strong className="font-semibold text-[#1A2D48]">effective rate</strong> honest after refunds and chargebacks, and reconciles cleanly to your bank and accounting. This 2026 roundup compares Stripe, Square, PayPal Business, Shopify Payments, Helcim,
-              Stax, Authorize.net, and Clover on those realities, not logo popularity.
+              If you collect payments in the field, online, or by invoice, the best payment processing software should keep fees predictable while supporting the channels you actually use.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We stress-test channel fit, statement literacy (card-present vs keyed vs online), dispute workflows, hardware and software TCO, and integrations with invoicing, POS, CRM, and accounting. Pair these picks with our reviews and{" "}
-              <Link href="/payment-processing/compare" className={linkGreen}>
-                payment processing comparisons
-              </Link>{" "}
-              when you are ready to narrow the field. Ranked swap lists:{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("stripe")} className={linkGreen}>
-                best Stripe alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("square")} className={linkGreen}>
-                best Square alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("paypal-business")} className={linkGreen}>
-                best PayPal Business alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("helcim")} className={linkGreen}>
-                best Helcim alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("stax")} className={linkGreen}>
-                best Stax alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("shopify-payments")} className={linkGreen}>
-                best Shopify Payments alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("authorize-net")} className={linkGreen}>
-                best Authorize.net alternatives
-              </Link>
-              ,{" "}
-              <Link href={getPaymentProcessingAlternativeUrl("clover")} className={linkGreen}>
-                best Clover alternatives
-              </Link>
-              .
+              We compared fee models, payout workflows, channel fit, reporting, and integration needs so the Key Takeaways shortlist is grounded in real payment operations.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Browse the{" "}
-              <Link href="/payment-processing" className={linkGreen}>
-                payment processing software hub
-              </Link>{" "}
-              for the full category view, or start with{" "}
-              <Link href="/payment-processing/guides/how-to-choose-a-payment-processor" className={linkGreen}>
-                how to choose a payment processor
-              </Link>{" "}
-              for foundational context. Cross-stack: our{" "}
-              <Link href="/invoicing" className={linkGreen}>
-                invoicing
-              </Link>
-              ,{" "}
-              <Link href="/pos" className={linkGreen}>
-                POS
-              </Link>
-              ,{" "}
-              <Link href="/crm" className={linkGreen}>
-                CRM
-              </Link>
-              ,{" "}
-              <Link href="/website-builders" className={linkGreen}>
-                website builders
-              </Link>
-              , and{" "}
-              <Link href="/email-marketing" className={linkGreen}>
-                email marketing
-              </Link>{" "}
-              hubs cover tools that sit beside your processor.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/payment-processing" categoryLabel="payment processing software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -162,6 +97,17 @@ export default function BestPaymentProcessingSoftwarePage() {
         </section>
 
         {/* ——— 2) Best picks ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="payment processing software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-payment-processing-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">Best Payment Processing Software Picks</SectionTitle>
@@ -346,6 +292,12 @@ export default function BestPaymentProcessingSoftwarePage() {
         </section>
 
         {/* ——— Related comparisons ——— */}
+        <RoundupHowWeChoseSection
+          categoryLabel="payment processing software"
+          compareHref="/payment-processing/compare"
+          guidesHref="/payment-processing/guides"
+        />
+
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">Related comparisons</SectionTitle>

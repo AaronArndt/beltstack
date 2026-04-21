@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { HANDYMAN_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 
@@ -7,7 +8,7 @@ export default function BestSchedulingForHandymanPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Handyman Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Handyman Businesses (2026)"),
     description:
       "Compare scheduling apps for handyman services: small-job windows, reminders, simple payments. Setmore, Square Appointments, Acuity Scheduling.",
   };

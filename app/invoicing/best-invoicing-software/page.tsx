@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -74,26 +77,12 @@ export default function BestInvoicingSoftwarePage() {
               Best Invoicing Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best invoicing software for freelancers, agencies, contractors, and small businesses is the tool that gets quotes and invoices out fast, tracks who has paid, and supports online payments without manual chase. This 2026 roundup prioritizes recurring billing, client management, payment fees, and light bookkeeping overlap where it matters.
+              If cash flow depends on timely billing, the best invoicing software should speed up invoice creation, automate reminders, and make payment collection easier for your team.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate templates, estimates, automation, multi-currency, time and expense tie-in, and how cleanly each product connects to accounting or tax workflows. Combine these picks with our reviews and{" "}
-              <Link href="/invoicing/compare" className={linkGreen}>
-                invoicing software comparisons
-              </Link>{" "}
-              to lock in a shortlist.
+              We compared billing workflows, payment options, automation, pricing, and reporting so the Key Takeaways shortlist can guide a confident purchase decision.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Visit the{" "}
-              <Link href="/invoicing" className={linkGreen}>
-                invoicing software hub
-              </Link>{" "}
-              for more resources, or read{" "}
-              <Link href="/invoicing/guides/best-invoicing-software-for-freelancers" className={linkGreen}>
-                best invoicing software for freelancers
-              </Link>{" "}
-              if you bill by project or retainer.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/invoicing" categoryLabel="invoicing software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -112,6 +101,17 @@ export default function BestInvoicingSoftwarePage() {
         </section>
 
         {/* ——— 2) Best invoicing software picks (main picks in detail) ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="invoicing software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-invoicing-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">
@@ -269,6 +269,12 @@ export default function BestInvoicingSoftwarePage() {
         />
 
         {/* ——— Related comparisons ——— */}
+        <RoundupHowWeChoseSection
+          categoryLabel="invoicing software"
+          compareHref="/invoicing/compare"
+          guidesHref="/invoicing/guides"
+        />
+
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">

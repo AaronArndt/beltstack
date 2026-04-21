@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -70,107 +73,12 @@ export default function BestCallTrackingSoftwarePage() {
               Best Call Tracking Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best call tracking tools for local service businesses tie phone calls to marketing sources—Google Ads, LSA, SEO pages, and directories—so you measure booked jobs, not vanity ring volume. This roundup compares SMB-friendly attribution, lead
-              rollups, and operator-grade analytics on workflow fit.
+              If your business depends on inbound calls, the best call tracking software should show which channels generate qualified leads and which calls turn into booked jobs.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Pair these picks with our{" "}
-              <Link href="/call-tracking/compare" className={linkGreen}>
-                call tracking comparisons
-              </Link>
-              , the{" "}
-              <Link href="/call-tracking/best-for" className={linkGreen}>
-                best call tracking by scenario
-              </Link>
-              , and{" "}
-              <Link href="/call-tracking/guides" className={linkGreen}>
-                call tracking guides
-              </Link>{" "}
-              when you refine your stack.
+              We compared attribution quality, reporting depth, pricing transparency, and workflow fit so the Key Takeaways shortlist gives you clear next options.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Read full reviews for{" "}
-              <Link href={getCallTrackingReviewUrl("callrail")} className={linkGreen}>
-                CallRail
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("calltrackingmetrics")} className={linkGreen}>
-                CallTrackingMetrics
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("whatconverts")} className={linkGreen}>
-                WhatConverts
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("invoca")} className={linkGreen}>
-                Invoca
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("ringba")} className={linkGreen}>
-                Ringba
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("twilio")} className={linkGreen}>
-                Twilio
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingReviewUrl("phonewagon")} className={linkGreen}>
-                PhoneWagon
-              </Link>
-              , and{" "}
-              <Link href={getCallTrackingReviewUrl("nimbata")} className={linkGreen}>
-                Nimbata
-              </Link>
-              . Our{" "}
-              <Link href="/website-builders/best-website-builders" className={linkGreen}>
-                best website builders
-              </Link>{" "}
-              roundup helps you ship strong CTAs; when owned demand needs backup, compare{" "}
-              <Link href="/lead-generation/best-lead-generation-tools" className={linkGreen}>
-                best lead generation tools
-              </Link>
-              , improve visibility with our{" "}
-              <Link href="/seo-tools" className={linkGreen}>
-                SEO tools hub
-              </Link>
-              , and tag outcomes in your{" "}
-              <Link href="/crm" className={linkGreen}>
-                CRM
-              </Link>
-              . Ranked substitute lists include{" "}
-              <Link href={getCallTrackingAlternativeUrl("callrail")} className={linkGreen}>
-                best CallRail alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("calltrackingmetrics")} className={linkGreen}>
-                best CallTrackingMetrics alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("whatconverts")} className={linkGreen}>
-                best WhatConverts alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("ringba")} className={linkGreen}>
-                best Ringba alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("invoca")} className={linkGreen}>
-                best Invoca alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("twilio")} className={linkGreen}>
-                best Twilio alternatives
-              </Link>
-              ,{" "}
-              <Link href={getCallTrackingAlternativeUrl("phonewagon")} className={linkGreen}>
-                best PhoneWagon alternatives
-              </Link>
-              , and{" "}
-              <Link href={getCallTrackingAlternativeUrl("nimbata")} className={linkGreen}>
-                best Nimbata alternatives
-              </Link>
-              .
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/call-tracking" categoryLabel="call tracking software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -183,6 +91,17 @@ export default function BestCallTrackingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="call tracking software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         <section id="best-call-tracking-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -325,6 +244,12 @@ export default function BestCallTrackingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupHowWeChoseSection
+          categoryLabel="call tracking software"
+          compareHref="/call-tracking/compare"
+          guidesHref="/call-tracking/guides"
+        />
 
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

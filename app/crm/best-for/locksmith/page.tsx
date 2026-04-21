@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { LOCKSMITH_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForLocksmithPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForLocksmithPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Locksmith Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Locksmith Businesses (2026)"),
     description:
       "Compare CRM tools for locksmiths: emergency and scheduled leads, commercial rekey programs, and speed-to-contact workflows that match mobile, phone-heavy sales.",
     keywords: [

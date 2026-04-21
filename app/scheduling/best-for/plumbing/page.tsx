@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { PLUMBING_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 
@@ -7,7 +8,7 @@ export default function BestSchedulingForPlumbingPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Plumbing Companies (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Plumbing Companies (2026)"),
     description:
       "Compare scheduling tools for plumbers: emergency and booked jobs, deposits, multi-plumber calendars, reminders. Square Appointments, Acuity Scheduling, Setmore.",
   };

@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -78,30 +81,12 @@ export default function BestSchedulingSoftwarePage() {
               Best Scheduling Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best scheduling software for consultants, freelancers, and service businesses is the one clients actually
-              book through—without double bookings, timezone confusion, or reminder gaps that drive no-shows. This 2026
-              roundup compares appointment and booking tools on calendar sync, team and location routing, payments and
-              intake, and mobile-friendly client flows.
+              If you coordinate people and appointments, the best scheduling software should keep availability, bookings, and team workloads synchronized throughout the workweek.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate buffer rules, automations, branding, CRM and video integrations, and total cost at your expected
-              booking volume. Use the rankings with our reviews and{" "}
-              <Link href="/scheduling/compare" className={linkGreen}>
-                scheduling software comparisons
-              </Link>{" "}
-              when you are ready to pick a vendor for the year ahead.
+              We compared booking workflows, team availability controls, automation, pricing, and usability so the Key Takeaways shortlist is clear and actionable.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Start from the{" "}
-              <Link href="/scheduling" className={linkGreen}>
-                scheduling software hub
-              </Link>
-              , or walk through{" "}
-              <Link href="/scheduling/guides/how-to-choose-scheduling-software" className={linkGreen}>
-                how to choose scheduling software
-              </Link>{" "}
-              before you commit.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/scheduling" categoryLabel="scheduling software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -118,6 +103,17 @@ export default function BestSchedulingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="scheduling software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best scheduling software picks ——— */}
         <section
@@ -250,6 +246,12 @@ export default function BestSchedulingSoftwarePage() {
           sectionSub="Find scheduling tools that fit your situation."
           items={useCaseEditorialItems}
           sectionClassName="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="scheduling software"
+          compareHref="/scheduling/compare"
+          guidesHref="/scheduling/guides"
         />
 
         {/* ——— 6) Related comparisons ——— */}

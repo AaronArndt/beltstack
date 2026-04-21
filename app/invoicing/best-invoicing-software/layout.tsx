@@ -1,4 +1,5 @@
 import { siteMetadata } from "@/lib/seo/siteMetadata";
+import { getBestSoftwareRoundupMeta } from "@/lib/seo/bestSoftwareRoundupMeta";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_INVOICING_OPTIONS } from "@/lib/data/invoicingBestInvoicingSoftware";
@@ -41,10 +42,7 @@ function bestInvoicingSoftwareItemListSchema() {
 }
 
 export const metadata: Metadata = siteMetadata({
-  path: "/invoicing/best-invoicing-software",
-  title: "Best Invoicing Software for Small Businesses (2026) | BeltStack",
-  description:
-    "Compare the best invoicing software for small businesses. Review pricing, features, pros and cons, and top picks.",
+  ...getBestSoftwareRoundupMeta("invoicing"),
 });
 
 export default function BestInvoicingSoftwareLayout({

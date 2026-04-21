@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { LOCKSMITH_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/scheduling/best-for/locksmith",
-      title: "Best Scheduling Software for Locksmith Businesses (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Scheduling Software for Locksmith Businesses (2026)"),
       description:
         "Compare scheduling software for locksmiths: Calendly, Acuity Scheduling, and Setmore for after-hours deposits, automotive vs residential booking, and multi-van teams.",
     }),

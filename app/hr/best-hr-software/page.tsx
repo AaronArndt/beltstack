@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -78,30 +81,12 @@ export default function BestHrSoftwarePage() {
               Best HR Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best HR software for small businesses and growing teams is the system that keeps employee records,
-              onboarding, time off, and payroll handoffs coherent—without forcing you onto a stack you will outgrow in a
-              year. This 2026 roundup weighs people operations platforms on hiring workflows, compliance guardrails,
-              integrations, and clarity of pricing as headcount scales.
+              If you are growing headcount, the best HR software should simplify onboarding, records, and compliance tasks without forcing small teams into enterprise-level complexity.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We look at core HR vs all-in-one bundles, payroll and benefits connectors, document and e-signature paths,
-              and day-to-day admin burden for lean teams. Pair these picks with our reviews and{" "}
-              <Link href="/hr/compare" className={linkGreen}>
-                HR software comparisons
-              </Link>{" "}
-              to align finalists with your 2026 hiring plan.
+              We compared onboarding workflows, compliance support, usability, pricing, and integrations so the Key Takeaways shortlist aligns with practical people-ops needs.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Browse the{" "}
-              <Link href="/hr" className={linkGreen}>
-                HR software hub
-              </Link>
-              , or read{" "}
-              <Link href="/hr/guides/best-hr-software-for-small-business" className={linkGreen}>
-                best HR software for small business
-              </Link>{" "}
-              for buyer-focused guidance.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/hr" categoryLabel="hr software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -118,6 +103,17 @@ export default function BestHrSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="HR software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best HR software picks ——— */}
         <section
@@ -257,6 +253,12 @@ export default function BestHrSoftwarePage() {
           sectionSub="Find HR tools that fit your situation."
           items={useCaseEditorialItems}
           sectionClassName="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="HR software"
+          compareHref="/hr/compare"
+          guidesHref="/hr/guides"
         />
 
         {/* ——— 6) Related comparisons ——— */}

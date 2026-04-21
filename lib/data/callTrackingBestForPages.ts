@@ -9,6 +9,7 @@ import type {
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
 import { getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 
 const GUIDES = "/call-tracking/guides";
 
@@ -409,7 +410,7 @@ export const CALL_TRACKING_BEST_FOR_METADATA_BY_SLUG: Record<
   TRADE_CONFIGS.map((config) => [
     config.slug,
     {
-      title: `${config.title} | BeltStack`,
+      title: buildBestForMetaTitle(config.title),
       description: config.subtitle,
       keywords: config.keywords,
     },

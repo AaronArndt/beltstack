@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { PAINTING_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForPaintingPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForPaintingPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Painting Contractors (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Painting Contractors (2026)"),
     description:
       "Compare the best CRM software for painting contractors: Pipedrive, Monday, HubSpot. Estimate follow-up, production alignment, referrals, and repeat customer marketing.",
     keywords: [

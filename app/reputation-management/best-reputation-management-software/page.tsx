@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -58,27 +61,15 @@ export default function BestReputationManagementSoftwarePage() {
             </nav>
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Best Reputation Management Software (2026)</h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best reputation management software for local service businesses helps teams request reviews consistently, respond quickly, and turn trust signals into higher lead conversion.
+              If local trust drives growth, the best reputation management software should help you collect reviews consistently, respond quickly, and monitor brand sentiment in one place.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Pair these picks with our{" "}
-              <Link href="/reputation-management/compare" className={linkGreen}>reputation software comparisons</Link>,{" "}
-              <Link href="/reputation-management/best-for" className={linkGreen}>best by scenario pages</Link>, and{" "}
-              <Link href="/reputation-management/guides" className={linkGreen}>reputation guides</Link>.
-            </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Read full reviews for{" "}
-              <Link href={getReputationManagementReviewUrl("podium")} className={linkGreen}>Podium</Link>,{" "}
-              <Link href={getReputationManagementReviewUrl("birdeye")} className={linkGreen}>Birdeye</Link>,{" "}
-              <Link href={getReputationManagementReviewUrl("nicejob")} className={linkGreen}>NiceJob</Link>, and{" "}
-              <Link href={getReputationManagementReviewUrl("reputation-com")} className={linkGreen}>Reputation.com</Link>. See ranked alternatives for{" "}
-              <Link href={getReputationManagementAlternativeUrl("podium")} className={linkGreen}>Podium</Link>,{" "}
-              <Link href={getReputationManagementAlternativeUrl("birdeye")} className={linkGreen}>Birdeye</Link>, and{" "}
-              <Link href={getReputationManagementAlternativeUrl("nicejob")} className={linkGreen}>NiceJob</Link>.
+              We compared review generation tools, monitoring, response workflows, pricing, and usability so the Key Takeaways shortlist helps prioritize next steps.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Also review <Link href={getReputationManagementReviewUrl("broadly")} className={linkGreen}>Broadly</Link>, <Link href={getReputationManagementReviewUrl("grade-us")} className={linkGreen}>Grade.us</Link>, <Link href={getReputationManagementReviewUrl("trustpilot-business")} className={linkGreen}>Trustpilot (Business)</Link>, and <Link href={getReputationManagementReviewUrl("yelp-for-business")} className={linkGreen}>Yelp for Business</Link>. For full-funnel execution, pair reputation operations with <Link href="/seo-tools" className={linkGreen}>SEO tools</Link>, <Link href="/crm" className={linkGreen}>CRM</Link>, and <Link href="/call-tracking" className={linkGreen}>call tracking</Link>.
             </p>
+            <RoundupHubLinksBlurb categoryPath="/reputation-management" categoryLabel="reputation management software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2"><TrustIndicatorMark />Updated for 2026</span>
               <button type="button" onClick={() => setAffiliateOpen(true)} className={trustIndicatorAffiliateButtonClass}>
@@ -87,6 +78,17 @@ export default function BestReputationManagementSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="reputation management software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         <section id="best-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -163,6 +165,12 @@ export default function BestReputationManagementSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupHowWeChoseSection
+          categoryLabel="reputation management software"
+          compareHref="/reputation-management/compare"
+          guidesHref="/reputation-management/guides"
+        />
 
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

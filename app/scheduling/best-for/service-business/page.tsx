@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { SERVICE_BUSINESS_PAGE_PROPS } from "@/lib/data/schedulingBestFor";
 
 export default function BestSchedulingForServiceBusinessPage() {
@@ -7,7 +8,7 @@ export default function BestSchedulingForServiceBusinessPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Service Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Service Businesses (2026)"),
     description:
       "Compare the best scheduling software for service businesses: Square Appointments, Acuity Scheduling, Setmore. Staff scheduling, recurring appointments, and payments.",
   };

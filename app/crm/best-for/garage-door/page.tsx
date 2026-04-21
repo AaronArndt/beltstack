@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { GARAGE_DOOR_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForGarageDoorPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForGarageDoorPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Garage Door Companies (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Garage Door Companies (2026)"),
     description:
       "Compare CRM tools for garage door dealers: new construction and retrofit pipelines, commercial rolling-door pursuits, and follow-up on high-ticket residential quotes.",
     keywords: [

@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { PEST_CONTROL_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 
@@ -7,7 +8,7 @@ export default function BestSchedulingForPestControlPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Pest Control Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Pest Control Businesses (2026)"),
     description:
       "Compare scheduling software for pest control: recurring plans, route-friendly windows, reminders, payments. Square, Acuity, Setmore.",
   };

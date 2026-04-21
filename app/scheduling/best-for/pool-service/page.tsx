@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { POOL_SERVICE_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 
@@ -7,7 +8,7 @@ export default function BestSchedulingForPoolServicePage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Pool Service Companies (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Pool Service Companies (2026)"),
     description:
       "Compare scheduling tools for pool maintenance: weekly routes, open/close packages, reminders. Setmore, Acuity Scheduling, Square Appointments.",
   };

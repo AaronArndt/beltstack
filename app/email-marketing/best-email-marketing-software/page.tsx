@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -72,25 +75,10 @@ export default function BestEmailMarketingSoftwarePage() {
             </nav>
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Best Email Marketing Software (2026)</h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Email marketing software is the system you use to send newsletters, automations, and transactional messages to homeowners and commercial clients—complete with subscriber records, consent, segmentation, and reporting so you know what drives booked work instead of guessing from open rates alone.
+              If you rely on repeat business and follow-up, the best email marketing software should make campaigns, reminders, and lifecycle messages simple to run and measure.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              For local service businesses, email matters because jobs have gaps: estimates go cold, memberships lapse, and seasons swing demand. Email keeps your brand present between truck rolls with appointment reminders, post-job follow-ups, referral prompts, and educational content that earns trust before the next emergency call. It also compounds leads you already paid for in{" "}
-              <Link href="/lead-generation" className={linkGreen}>
-                lead generation programs
-              </Link>{" "}
-              and visitors you earn through{" "}
-              <Link href="/seo-tools" className={linkGreen}>
-                SEO
-              </Link>{" "}
-              —without renting attention forever.
-            </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Invest in email when you can name who will own sends, when you have repeatable customer touchpoints (completed jobs, estimates, memberships), and when your website or{" "}
-              <Link href="/crm" className={linkGreen}>
-                CRM
-              </Link>{" "}
-              can feed clean subscriber data. Skip heavy marketing automation until someone can audit journeys monthly; broken automations erode trust faster than no email at all.
+              We compared usability, automation depth, feature coverage, pricing, and reporting so the Key Takeaways shortlist is practical to act on.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
               Tools differ primarily by automation depth, segmentation philosophy, bundling (SMS and transactional email), and how naturally they sit beside your CRM. Mailchimp-style platforms optimize for fast creative iteration; ActiveCampaign-class systems optimize for branching logic tied to pipeline stages; Klaviyo rewards teams that track events rigorously; Brevo appeals when multi-channel messaging should share one bill and compliance story.
@@ -196,6 +184,7 @@ export default function BestEmailMarketingSoftwarePage() {
               </Link>{" "}
               when decision guidance matters more than logos.
             </p>
+            <RoundupHubLinksBlurb categoryPath="/email-marketing" categoryLabel="email marketing software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -208,6 +197,17 @@ export default function BestEmailMarketingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="email marketing software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         <section id="best-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -338,6 +338,12 @@ export default function BestEmailMarketingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupHowWeChoseSection
+          categoryLabel="email marketing software"
+          compareHref="/email-marketing/compare"
+          guidesHref="/email-marketing/guides"
+        />
 
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

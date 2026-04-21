@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -73,30 +76,12 @@ export default function BestProjectManagementSoftwarePage() {
               Best Project Management Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best project management software for agencies, remote teams, and small businesses is the workspace where
-              tasks, deadlines, and file context actually stay together—so status meetings shrink and handoffs stop living in
-              email. This 2026 roundup compares tools on list and board workflows, timelines, dependencies, automation, and
-              how well each product scales from solo to multi-team projects.
+              If you manage active jobs and handoffs, the best project management software should keep tasks, timelines, collaboration, and progress reporting practical for small teams.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate permissions, guest access, reporting, time tracking hooks, and integration depth with chat,
-              docs, and invoicing. Pair the rankings with our reviews and{" "}
-              <Link href="/project-management/compare" className={linkGreen}>
-                project management software comparisons
-              </Link>{" "}
-              to align a finalist with your delivery style.
+              We compared collaboration features, workflow flexibility, usability, pricing, and reporting so the Key Takeaways shortlist gives a focused starting point.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Browse the{" "}
-              <Link href="/project-management" className={linkGreen}>
-                project management software hub
-              </Link>
-              , then read{" "}
-              <Link href="/project-management/guides/how-to-choose-project-management-software" className={linkGreen}>
-                how to choose project management software
-              </Link>{" "}
-              before you migrate work in flight.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/project-management" categoryLabel="project management software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -115,6 +100,17 @@ export default function BestProjectManagementSoftwarePage() {
         </section>
 
         {/* ——— 2) Best project management software picks ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="project management software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-project-management-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">

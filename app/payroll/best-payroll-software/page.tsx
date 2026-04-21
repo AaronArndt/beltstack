@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -75,26 +78,12 @@ export default function BestPayrollSoftwarePage() {
               Best Payroll Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best payroll software for small businesses and contractors is the system that runs on-time pay runs, handles tax filing confidently, and fits how you hire—W-2 employees, 1099 workers, or both—without surprise fees. This 2026 roundup compares modern payroll platforms and full-service providers on day-to-day ease, compliance support, contractor workflows, and total cost.
+              If you run payroll for mixed teams, the best payroll software should handle employees and contractors accurately while reducing filing risk and manual correction work.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We stress-test onboarding, pay scheduling, direct deposit, 1099 support, HR add-ons, integrations with accounting and time tools, and published vs opaque pricing. Pair these picks with our reviews and{" "}
-              <Link href="/payroll/compare" className={linkGreen}>
-                payroll software comparisons
-              </Link>{" "}
-              when you are ready to narrow the field.
+              We compared payroll usability, compliance support, contractor handling, pricing, and integrations so the Key Takeaways shortlist is ready for final evaluation.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Browse the{" "}
-              <Link href="/payroll" className={linkGreen}>
-                payroll software hub
-              </Link>{" "}
-              for industry guides, or start with{" "}
-              <Link href="/payroll/guides/payroll-for-small-business" className={linkGreen}>
-                payroll for small business
-              </Link>{" "}
-              for foundational context.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/payroll" categoryLabel="payroll software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -113,6 +102,17 @@ export default function BestPayrollSoftwarePage() {
         </section>
 
         {/* ——— 2) Best payroll software picks (main picks in detail) ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="payroll software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-payroll-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">
@@ -283,6 +283,12 @@ export default function BestPayrollSoftwarePage() {
         </section>
 
         {/* ——— 7) Related comparisons ——— */}
+        <RoundupHowWeChoseSection
+          categoryLabel="payroll software"
+          compareHref="/payroll/compare"
+          guidesHref="/payroll/guides"
+        />
+
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">

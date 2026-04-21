@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import type { Metadata } from "next";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { PAINTING_FIELD_SERVICE_BEST_FOR_PAGE_PROPS } from "@/lib/data/fieldServiceBestForTrades";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/field-service/best-for/painting",
-      title: "Best Field Service Software for Painting Contractors (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Field Service Software for Painting Contractors (2026)"),
       description:
         "Compare field service software for painting contractors: Jobber, Housecall Pro, and Kickserv for crew scheduling, estimates, production phases, change orders, and invoicing.",
     }),

@@ -225,6 +225,19 @@ const INVOICING_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static Time Tracking best-for scenario slugs. */
@@ -484,6 +497,19 @@ const HELPDESK_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static Lead Generation best-for scenario slugs (matches app/lead-generation/best-for/[scenario]). */

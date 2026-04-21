@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { CLEANING_FRANCHISES_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/scheduling/best-for/cleaning-franchises",
-      title: "Best Scheduling Software for Cleaning Franchises (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Scheduling Software for Cleaning Franchises (2026)"),
       description:
         "Compare scheduling software for cleaning franchises: Setmore, Acuity Scheduling, and SimplyBook.me for recurring routes, deep-clean packages, and multi-territory rollout.",
     }),

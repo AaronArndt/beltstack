@@ -1,3 +1,4 @@
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { HANDYMAN_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS } from "@/lib/data/projectManagementBestForTrades";
 
@@ -7,7 +8,7 @@ export default function BestProjectManagementForHandymanPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Project Management Software for Handyman Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Project Management Software for Handyman Businesses (2026)"),
     description:
       "Compare lightweight PM tools for handyman businesses: job templates, crews, checklists. Asana, ClickUp, Monday.",
   };

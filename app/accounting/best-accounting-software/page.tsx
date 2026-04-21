@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -74,26 +77,12 @@ export default function BestAccountingSoftwarePage() {
               Best Accounting Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best accounting software for small businesses, freelancers, and contractors is the stack you will reconcile and categorize in every month—without fighting the bank feed, invoice workflow, or tax-time exports. This 2026 ranking weighs real bookkeeping needs: chart of accounts, bank rules, invoicing, expenses, contractor 1099 readiness, and integrations with payroll and payments.
+              If you run a small service business, the best accounting software should handle invoicing, expenses, reconciliations, and cash flow reporting without extra admin overhead.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We compare ease of use, multi-entity and industry fit, automation, reporting depth, plan creep, and accountant collaboration. Use these picks alongside our reviews and{" "}
-              <Link href="/accounting/compare" className={linkGreen}>
-                accounting software comparisons
-              </Link>{" "}
-              to choose a platform you will still trust after your first busy season.
+              We compared pricing, bookkeeping usability, invoicing workflows, reporting depth, and integrations so the Key Takeaways shortlist is ready for fast vendor comparison.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Explore the{" "}
-              <Link href="/accounting" className={linkGreen}>
-                accounting software hub
-              </Link>{" "}
-              and our guide to{" "}
-              <Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>
-                accounting for small business
-              </Link>{" "}
-              before you shortlist vendors.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/accounting" categoryLabel="accounting software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -112,6 +101,18 @@ export default function BestAccountingSoftwarePage() {
         </section>
 
         {/* ——— 2) Best accounting software picks (main picks in detail) ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="accounting software"
+          categoryPath="/accounting"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-accounting-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">
@@ -270,6 +271,12 @@ export default function BestAccountingSoftwarePage() {
         />
 
         {/* ——— Related comparisons ——— */}
+        <RoundupHowWeChoseSection
+          categoryLabel="accounting software"
+          compareHref="/accounting/compare"
+          guidesHref="/accounting/guides"
+        />
+
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { HVAC_PAGE_PROPS } from "@/lib/data/fieldServiceBestForHvac";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/field-service/best-for/hvac",
-      title: "Best Field Service Software for HVAC Businesses (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Field Service Software for HVAC Businesses (2026)"),
       description:
         "Compare the best field service software for HVAC companies: Housecall Pro, ServiceTitan, and Service Fusion for dispatch, maintenance agreements, memberships, and emergency calls.",
     }),

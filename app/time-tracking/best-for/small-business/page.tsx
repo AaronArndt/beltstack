@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { SMALL_BUSINESS_PAGE_PROPS } from "@/lib/data/timeTrackingBestForSmallBusiness";
 
 export default function BestTimeTrackingForSmallBusinessPage() {
@@ -7,7 +8,7 @@ export default function BestTimeTrackingForSmallBusinessPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Time Tracking Software for Small Businesses (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Time Tracking Software for Small Businesses (2026)"),
     description:
       "Compare the best time tracking software for small businesses: Clockify, Toggl Track, Harvest. Simple setup, clear pricing, and useful reporting.",
   };

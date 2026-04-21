@@ -83,6 +83,71 @@ const SCENARIOS = [
     href: getHelpdeskBestForUrl("moving"),
     description: "Quote-cycle and scheduling support tools for moving companies.",
   },
+  {
+    label: "Best Helpdesk Software for Appliance Repair Businesses (2026)",
+    href: getHelpdeskBestForUrl("appliance-repair"),
+    description: "Callback and parts-delay support workflows for appliance repair businesses.",
+  },
+  {
+    label: "Best Helpdesk Software for Garage Door Companies (2026)",
+    href: getHelpdeskBestForUrl("garage-door"),
+    description: "Install-stage and service support communication tools for garage door companies.",
+  },
+  {
+    label: "Best Helpdesk Software for Locksmith Businesses (2026)",
+    href: getHelpdeskBestForUrl("locksmith"),
+    description: "Urgent-request triage and planned-service support workflows for locksmith businesses.",
+  },
+  {
+    label: "Best Helpdesk Software for Flooring Contractors (2026)",
+    href: getHelpdeskBestForUrl("flooring"),
+    description: "Quote-to-install communication support tools for flooring contractors.",
+  },
+  {
+    label: "Best Helpdesk Software for Fence & Deck Builders (2026)",
+    href: getHelpdeskBestForUrl("fence-deck"),
+    description: "Permit and project-stage support tools for fence and deck builders.",
+  },
+  {
+    label: "Best Helpdesk Software for Glass & Window Installers (2026)",
+    href: getHelpdeskBestForUrl("glass-window-installers"),
+    description: "Lead-time and install update support workflows for glass and window installers.",
+  },
+  {
+    label: "Best Helpdesk Software for Concrete Contractors (2026)",
+    href: getHelpdeskBestForUrl("concrete-contractors"),
+    description: "Phase-based support and accountability workflows for concrete contractors.",
+  },
+  {
+    label: "Best Helpdesk Software for Excavation Companies (2026)",
+    href: getHelpdeskBestForUrl("excavation"),
+    description: "Readiness and dependency-aware support communication tools for excavation teams.",
+  },
+  {
+    label: "Best Helpdesk Software for Auto Repair Shops (2026)",
+    href: getHelpdeskBestForUrl("auto-repair"),
+    description: "Parts, approval, and follow-up support workflows for auto repair shops.",
+  },
+  {
+    label: "Best Helpdesk Software for Mobile Mechanics (2026)",
+    href: getHelpdeskBestForUrl("mobile-mechanics"),
+    description: "Field-first support tools for mobile mechanics and return-visit workflows.",
+  },
+  {
+    label: "Best Helpdesk Software for Cleaning Franchises (2026)",
+    href: getHelpdeskBestForUrl("cleaning-franchises"),
+    description: "Multi-location support and quality follow-up tools for cleaning franchises.",
+  },
+  {
+    label: "Best Helpdesk Software for Event Services (2026)",
+    href: getHelpdeskBestForUrl("event-services"),
+    description: "Timeline-sensitive support workflows for event services teams.",
+  },
+  {
+    label: "Best Helpdesk Software for Home Inspectors (2026)",
+    href: getHelpdeskBestForUrl("home-inspectors"),
+    description: "Report follow-up and office support workflow tools for home inspectors.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

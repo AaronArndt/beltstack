@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -73,26 +76,12 @@ export default function BestCrmSoftwarePage() {
               Best CRM Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best CRM software for small businesses, startups, and sales teams is the platform your reps will log into daily—without losing pipeline visibility, contact history, or automation that keeps follow-ups on track. This 2026 roundup focuses on SMB-friendly CRM: lead and deal management, email and task workflows, and reporting you can act on, not shelf-ware built only for enterprise.
+              If you manage leads and follow-up, the best CRM software should keep pipeline activity, customer history, and next actions visible from first contact to closed work.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We evaluate pipeline design, records and segmentation, automation, integrations with inbox and marketing tools, mobile apps, per-seat pricing, and how cleanly each product scales as your team grows. Use the rankings below with our reviews and{" "}
-              <Link href="/crm/compare" className={linkGreen}>
-                CRM software comparisons
-              </Link>{" "}
-              to shortlist vendors for 2026.
+              We compared ease of use, automation, pricing, lead workflow depth, and collaboration features so the Key Takeaways shortlist maps to real buying decisions.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Start from the{" "}
-              <Link href="/crm" className={linkGreen}>
-                CRM software hub
-              </Link>{" "}
-              for more context, or read{" "}
-              <Link href="/crm/guides/how-to-choose-crm-software" className={linkGreen}>
-                how to choose CRM software
-              </Link>{" "}
-              before you commit.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/crm" categoryLabel="crm software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -111,6 +100,17 @@ export default function BestCrmSoftwarePage() {
         </section>
 
         {/* ——— 2) Best CRM software picks ——— */}
+        <RoundupQuickPicksSection
+          categoryLabel="CRM software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
+
         <section id="best-crm-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">

@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -73,30 +76,12 @@ export default function BestHelpdeskSoftwarePage() {
               Best Helpdesk Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best helpdesk software for small businesses, ecommerce brands, and support teams is the inbox your agents
-              can triage without losing context—unifying email, chat, and order history so first-reply quality stays high as
-              volume grows. This 2026 guide ranks platforms on ticketing, SLAs, automation, macros, reporting, and channel fit
-              (including Shopify-heavy or general B2B stacks).
+              If your team handles customer issues daily, the best helpdesk software should centralize requests, assign work clearly, and keep response workflows consistent as volume grows.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We stress collaboration features, knowledge bases, integrations, per-seat vs flat pricing, and migration risk
-              from spreadsheets or shared mailboxes. Combine the shortlist with our reviews and{" "}
-              <Link href="/helpdesk/compare" className={linkGreen}>
-                helpdesk software comparisons
-              </Link>{" "}
-              before you roll out to the full team.
+              We compared ticketing workflows, automation, reporting, pricing, and team usability so the Key Takeaways shortlist is useful for implementation planning.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Explore the{" "}
-              <Link href="/helpdesk" className={linkGreen}>
-                helpdesk software hub
-              </Link>{" "}
-              and{" "}
-              <Link href="/helpdesk/guides/best-helpdesk-software-for-small-business" className={linkGreen}>
-                best helpdesk software for small business
-              </Link>{" "}
-              for deeper evaluation notes.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/helpdesk" categoryLabel="helpdesk software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -113,6 +98,17 @@ export default function BestHelpdeskSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="helpdesk software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best helpdesk software picks ——— */}
         <section

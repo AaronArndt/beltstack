@@ -9,6 +9,7 @@ import type {
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
 import { getTimeTrackingBestForUrl, getTimeTrackingCompareUrl, getTimeTrackingReviewUrl } from "@/lib/routes";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 
 const CATEGORY = { href: "/time-tracking", label: "Time tracking" };
 const SEE_ALSO = {
@@ -159,7 +160,7 @@ function buildPageData(config: TradeConfig, navLabel: string): TradePageData {
       faqItems: config.faqItems,
     },
     metadata: {
-      title: `${config.title} | BeltStack`,
+      title: buildBestForMetaTitle(config.title),
       description: config.subtitle,
       keywords: config.keywords,
     },

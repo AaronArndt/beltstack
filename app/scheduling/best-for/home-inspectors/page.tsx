@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { HOME_INSPECTORS_SCHEDULING_BEST_FOR_PAGE_PROPS } from "@/lib/data/schedulingBestForTrades";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/scheduling/best-for/home-inspectors",
-      title: "Best Scheduling Software for Home Inspectors (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Scheduling Software for Home Inspectors (2026)"),
       description:
         "Compare scheduling software for home inspectors: Acuity Scheduling, Calendly, and SimplyBook.me for multi-hour blocks, radon add-ons, agent-friendly booking, and multi-inspector firms.",
     }),

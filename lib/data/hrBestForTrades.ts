@@ -9,6 +9,7 @@ import type {
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
 import { getHrBestForUrl, getHrCompareUrl, getHrReviewUrl } from "@/lib/routes";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 
 const CATEGORY = { href: "/hr", label: "HR" };
 const SEE_ALSO = {
@@ -157,7 +158,7 @@ function buildTradePage(config: TradeConfig): {
       faqItems: config.faqItems,
     },
     metadata: {
-      title: `${config.title} | BeltStack`,
+      title: buildBestForMetaTitle(config.title),
       description: config.subtitle,
       keywords: config.keywords,
     },

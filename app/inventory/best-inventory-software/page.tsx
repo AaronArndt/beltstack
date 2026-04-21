@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -79,30 +82,12 @@ export default function BestInventorySoftwarePage() {
               Best Inventory Management Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best inventory management software for small businesses, ecommerce, and light manufacturing is the system
-              that keeps on-hand counts trustworthy across warehouses and sales channels—without forcing a full ERP just to
-              avoid stockouts. This 2026 ranking highlights tools that handle SKUs, purchase orders, kitting or bundles where
-              needed, and integrations with Shopify, Amazon, or your POS.
+              If you manage parts or stock, the best inventory software should improve reorder timing, reduce stockouts, and keep inventory visibility clear across day-to-day operations.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We compare receiving, cycle counting, demand signals, automation, and reporting depth at realistic order
-              volumes. Use the shortlist with our reviews and{" "}
-              <Link href="/inventory/compare" className={linkGreen}>
-                inventory software comparisons
-              </Link>{" "}
-              before you migrate off spreadsheets.
+              We compared stock controls, reorder workflows, reporting, pricing, and integrations so the Key Takeaways shortlist supports faster software selection.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Start at the{" "}
-              <Link href="/inventory" className={linkGreen}>
-                inventory management hub
-              </Link>
-              , or read{" "}
-              <Link href="/inventory/guides/best-inventory-software-for-small-business" className={linkGreen}>
-                best inventory software for small business
-              </Link>{" "}
-              for a grounded buying framework.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/inventory" categoryLabel="inventory software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -119,6 +104,17 @@ export default function BestInventorySoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="inventory management software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best inventory software picks ——— */}
         <section
@@ -295,6 +291,12 @@ export default function BestInventorySoftwarePage() {
           headingCategoryLabel="inventory software"
           sectionSub="Find inventory software that fits your situation."
           items={useCaseEditorialItems}
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="inventory management software"
+          compareHref="/inventory/compare"
+          guidesHref="/inventory/guides"
         />
 
         {/* ——— Related comparisons ——— */}

@@ -1039,3 +1039,328 @@ export const MOVING_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
     },
   ],
 });
+
+export const APPLIANCE_REPAIR_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "appliance-repair",
+  title: "Best Project Management Software for Appliance Repair Businesses (2026)",
+  subtitle: "Compare PM tools for appliance repair: callback follow-up, parts delays, return visits, and office-to-tech handoffs.",
+  introParagraph:
+    "Appliance repair businesses juggle fast service volume with multi-visit jobs that depend on parts and warranty workflows. Project management software keeps each follow-up visible with clear owners and due dates so callbacks do not slip.",
+  picks: [
+    { slug: "trello", badge: "Best lightweight callback tracking", description: "Simple boards for parts, callbacks, and return visits with fast team adoption.", rowBestFor: "Parts + callback workflows", why: "Trello earns this spot because most appliance repair bottlenecks are workflow clarity problems, not feature problems. In real small-team rollouts, teams adopt Trello quickly when boards mirror real statuses like Diagnosed, Waiting on Parts, Ready to Return, and Closed. That speed matters for reducing missed callbacks and improving first-time completion on second visits. If your team avoids complex software, Trello is often the safest starting point and can still support SEO-relevant operational goals like faster turnaround and improved customer response consistency." },
+    { slug: "asana", badge: "Best structured multi-visit repairs", description: "Clear owners and dates for diagnosis, parts ordering, return scheduling, and closeout.", rowBestFor: "Multi-step repair coordination", why: "Asana is the better choice when your shop has outgrown basic boards and needs stronger owner-based accountability. It supports repeatable templates for refrigerator, washer, and HVAC-adjacent appliance workflows, plus clear due dates and dependencies. That makes it easier to enforce SLAs, reduce aging jobs, and improve team-level execution quality. For buyers searching best project management software for appliance repair businesses, Asana usually wins when operational discipline is the top priority." },
+    { slug: "clickup", badge: "Best SOP + execution hub", description: "Track jobs while keeping troubleshooting SOPs and internal playbooks in one workspace.", rowBestFor: "Knowledge-driven repair ops", why: "ClickUp stands out for repair teams that need both project tracking and institutional knowledge in one system. You can combine appliance-specific SOPs, model troubleshooting guides, warranty policies, and active job workflows without splitting tools. That supports EEAT-style trust signals in operations: documented standards, repeatable process, and auditable handoffs. For multi-tech companies investing in long-term process maturity, ClickUp provides the deepest operational upside once governance is in place." },
+  ],
+  editorialGuidance: [
+    E("Parts-delay control", "Track order date, ETA, vendor, and return-visit owner for every delayed repair. A strong appliance repair PM setup should surface jobs that are blocked for more than 48 hours and automatically notify the assigned coordinator."),
+    E("Callback discipline", "Use explicit statuses, due dates, and escalation rules so unresolved jobs surface quickly. This is the core difference between average and high-performing shops: every callback has a next action, owner, and date."),
+    E("Office-field handoff quality", "Attach diagnosis notes, part numbers, customer constraints, and photos so the second visit is prepared before dispatch. Better handoff data improves technician efficiency and customer trust."),
+    E("SOP consistency", "Store repeatable troubleshooting and warranty workflows beside active tasks. Standardization protects quality as new techs onboard and supports Google-style EEAT signals through documented process authority."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for appliance repair businesses?", a: "The best fit depends on operating model. Trello is usually best for small teams that need immediate callback visibility, Asana is best for structured multi-visit workflow accountability, and ClickUp is best for process-driven teams that want SOPs and execution in one platform. Choose based on adoption speed, not feature count." },
+    { q: "Can PM software replace dispatch software?", a: "Not completely. Dispatch software remains the system of record for routing and technician scheduling, while project management software improves follow-up execution, callback control, and inter-team accountability. Most mature shops use both tools together." },
+    { q: "How do we reduce missed return visits?", a: "Standardize statuses, assign a single owner per blocked job, and add automated reminders for parts-dependent work. The most reliable pattern is simple: every callback must have a next step, a due date, and clear ownership." },
+    { q: "What should we test in a 30-day PM trial?", a: "Pilot your three most common high-friction workflows: parts-delayed repair, warranty callback, and customer no-response follow-up. Measure aging jobs, missed callbacks, and average time-to-close before and after the pilot." },
+  ],
+});
+
+export const GARAGE_DOOR_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "garage-door",
+  title: "Best Project Management Software for Garage Door Companies (2026)",
+  subtitle: "Compare PM tools for garage door companies: install pipelines, parts coordination, and sales-to-field handoffs.",
+  introParagraph:
+    "Garage door companies run both rapid service jobs and staged install projects. Project management software keeps each stage aligned from quote and measurement through parts arrival, installation, and final punch.",
+  picks: [
+    { slug: "monday", badge: "Best visual install pipeline", description: "Color-coded boards for sold, measured, ordered, installed, and punch-complete jobs.", rowBestFor: "Sales-to-install visibility", why: "Monday is ideal for garage door operators who need one shared production board across sales, scheduling, and installation teams. Its visual stage model makes blocked jobs obvious, especially when parts or site access delays occur. In practice, teams get the most value when they define strict stage criteria and track time-in-stage as a KPI. For buyers comparing project management software for garage door companies, Monday is usually the strongest fit when live operational visibility is the main problem." },
+    { slug: "asana", badge: "Best structured install templates", description: "Repeatable tasks for measurement, ordering, installation readiness, and QA closeout.", rowBestFor: "Standardized install execution", why: "Asana is a better fit when you want repeatable execution discipline, not just stage-level visibility. You can standardize measurement verification, ordering, installation readiness, and QA closeout workflows so jobs run consistently even as volume increases. That reduces tribal knowledge risk and improves new team member onboarding. Asana works best for companies that value process reliability and clear owner-based accountability." },
+    { slug: "teamwork", badge: "Best milestone communication", description: "Milestones and client-facing updates for larger property-manager or commercial jobs.", rowBestFor: "Client project updates", why: "Teamwork stands out when garage door projects involve commercial clients, property managers, or HOAs that need milestone-level status updates. It keeps client-facing communication connected to delivery tasks instead of splitting updates across email threads. This improves trust and helps teams deliver a more professional project experience. Teamwork is a strong choice when communication quality is as important as operational execution." },
+  ],
+  editorialGuidance: [
+    E("Stage ownership", "Define who advances each job between sales, measurement, ordering, and install. If stage ownership is ambiguous, delays multiply and customer communication degrades."),
+    E("Parts readiness", "Track supplier ETAs, damaged shipments, and blocked installs before crews are scheduled. Readiness visibility directly impacts utilization and margin."),
+    E("Template quality", "Use one install template per high-volume job type and enforce completion standards. Template consistency is the fastest route to execution quality at scale."),
+    E("Commercial communication", "Use milestones for property manager, HOA, and commercial stakeholder updates. Predictable status communication improves trust and referral outcomes."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for garage door companies?", a: "Monday is best for visual install pipeline management, Asana is best for repeatable task-based execution, and Teamwork is best when client milestone communication is a core requirement. The right choice depends on whether your biggest issue is visibility, execution discipline, or communication." },
+    { q: "Can PM software help with opener replacements and warranty installs?", a: "Yes. Use templates for measurement confirmation, product ordering, schedule coordination, install QA, and final customer handoff. Standardized workflows reduce avoidable revisits." },
+    { q: "How should small teams start implementation?", a: "Start with one high-frequency job type, define 5-7 essential statuses, and train one team lead as workflow owner. Expand only after 2-3 weeks of consistent usage data." },
+    { q: "What KPIs should garage door teams track in PM software?", a: "Track days in stage, installs delayed by parts, install reschedule rate, and average time from sold to completed. These metrics tie directly to customer experience and gross margin." },
+  ],
+});
+
+export const LOCKSMITH_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "locksmith",
+  title: "Best Project Management Software for Locksmith Businesses (2026)",
+  subtitle: "Compare PM tools for locksmith businesses: rekey projects, access-control installs, and service follow-up accountability.",
+  introParagraph:
+    "Locksmith businesses handle urgent calls and planned security projects with different workflow needs. Project management software helps teams keep planned work, documentation, and approvals organized beyond day-of dispatch.",
+  picks: [
+    { slug: "clickup", badge: "Best SOP-first locksmith operations", description: "Tasks, playbooks, and security workflow docs in a single workspace.", rowBestFor: "Process-heavy locksmith ops", why: "ClickUp is the strongest fit for locksmith operators building a process-first business with documented standards. You can manage rekey workflows, access-control installation tasks, and internal security SOPs in one workspace with audit-ready records. That supports EEAT-style operational trust: clear procedures, repeatable delivery, and accountable handoffs. ClickUp performs best when one ops lead owns taxonomy and governance." },
+    { slug: "trello", badge: "Best lightweight service follow-up", description: "Simple cards for urgent service follow-up and short-cycle project tasks.", rowBestFor: "Quick-turn service workflows", why: "Trello works well for locksmith teams that need speed and simplicity, especially for short-cycle service and callback workflows. Most teams can launch usable boards in days, not weeks, which improves adoption and reduces missed follow-up. It is intentionally lightweight, but that is often the advantage for field-first operations. Trello is the practical choice when your bottleneck is consistency, not advanced reporting." },
+    { slug: "wrike", badge: "Best for complex commercial installs", description: "Dependencies and approvals for multi-site access-control and phased security projects.", rowBestFor: "Commercial dependency planning", why: "Wrike is better suited to locksmith businesses handling high-stakes commercial installations where dependency errors are costly. It provides stronger controls for phased sequencing, approval checkpoints, and cross-site coordination than simpler board tools. If your team manages multi-location access projects, Wrike reduces risk through structure. It is the right choice when project complexity justifies deeper process overhead." },
+  ],
+  editorialGuidance: [
+    E("Emergency vs planned work split", "Use separate templates so emergency lockouts do not pollute planned rekey or access-control project visibility."),
+    E("Security recordkeeping", "Attach approvals, site notes, and implementation records to each project. In security workflows, documentation quality is part of service quality."),
+    E("Dependency management", "Use milestone gates for phased commercial installations and multi-site rollouts. This prevents sequencing errors that create compliance risk."),
+    E("Closeout standards", "Require final verification checks before completion, including customer sign-off and documentation confirmation."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for locksmith businesses?", a: "ClickUp is strongest for SOP-first locksmith operations, Trello is best for lightweight service follow-up workflows, and Wrike is best for complex commercial sequencing with formal approvals." },
+    { q: "Can PM tools support rekey and access-control projects?", a: "Yes. Build templates for survey, scope approval, procurement, installation, and verification. This improves handoff quality and reduces missed requirements." },
+    { q: "Is Wrike too heavy for small locksmith teams?", a: "Often yes unless you run complex commercial programs. Smaller teams usually get faster ROI with Trello or Asana, then graduate to Wrike when dependency risk increases." },
+    { q: "How does PM software support trust and EEAT in locksmith operations?", a: "Documented workflows, clear approvals, and auditable completion records reinforce expertise and operational authority, especially for commercial and regulated environments." },
+  ],
+});
+
+export const FLOORING_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "flooring",
+  title: "Best Project Management Software for Flooring Contractors (2026)",
+  subtitle: "Compare PM tools for flooring contractors: material lead times, room sequencing, and install closeout workflows.",
+  introParagraph:
+    "Flooring contractors coordinate measurement, procurement, prep, install, and punch across multiple jobs. Project management software helps teams enforce phase discipline and material readiness without relying on inbox updates.",
+  picks: [
+    { slug: "asana", badge: "Best phased flooring execution", description: "Templates for measure, prep, install, and final walkthrough with clear ownership.", rowBestFor: "Phase-based project control", why: "Asana is a strong fit for flooring contractors that need dependable phase-based execution across residential and commercial jobs. It supports repeatable templates, clear ownership, and due-date discipline that reduce scope drift between office and field. Teams often see fewer missed handoffs once prep, install, and punch are standardized. Asana is best when consistency and accountability matter more than custom dashboard complexity." },
+    { slug: "smartsheet", badge: "Best material lead-time tracking", description: "Grid-based workflow for SKU ETAs, scheduling dependencies, and readiness dashboards.", rowBestFor: "Material-heavy operations", why: "Smartsheet shines when flooring operations are procurement-heavy and planning already lives in spreadsheets. You can track SKU-level ETAs, substitutions, and readiness dependencies in a familiar grid model while adding automation and team visibility. That reduces install-day surprises and protects schedule reliability. For spreadsheet-native operations teams, Smartsheet often delivers the fastest operational ROI." },
+    { slug: "monday", badge: "Best visual production board", description: "Board view for sales handoff, install progress, delays, and punch completion.", rowBestFor: "Production pipeline visibility", why: "Monday is best for owners and production managers who need at-a-glance visibility across many active flooring jobs. Its board and dashboard views make blockers visible quickly, especially for material and scheduling delays. The platform performs best when stage definitions are strict and team usage is standardized. Monday is the right pick when leadership visibility and pipeline control are top priorities." },
+  ],
+  editorialGuidance: [
+    E("Material dependency tracking", "Track order confirmation, ETA shifts, and damage replacements so installs can be re-sequenced before customer impact escalates."),
+    E("Phase template discipline", "Use standardized templates for LVP, tile, hardwood, and commercial jobs. Standardization is the fastest path to fewer handoff errors."),
+    E("Crew assignment clarity", "Keep each phase task owner-based and date-based so field and office teams stay synchronized on scope and readiness."),
+    E("Punch closeout rigor", "Track completion photos, customer notes, and sign-off tasks before invoicing. Clean closeout reduces callbacks and protects reviews."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for flooring contractors?", a: "Asana is best for structured phase execution, Smartsheet is best for material and spreadsheet-style planning, and Monday is best for visual production oversight across jobs." },
+    { q: "Can PM tools handle supplier delays and schedule changes?", a: "Yes. Use dependency fields, ETA status updates, and automation alerts so delayed materials automatically surface impacted installation tasks." },
+    { q: "How should flooring teams implement PM software?", a: "Start with one high-volume job template, define mandatory stage gates, and train a project owner to enforce data hygiene for the first 30 days." },
+    { q: "What metrics matter most for flooring operations?", a: "Track sold-to-install days, jobs delayed by materials, punch-list reopen rate, and install completion on original date." },
+  ],
+});
+
+export const FENCE_DECK_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "fence-deck",
+  title: "Best Project Management Software for Fence & Deck Builders (2026)",
+  subtitle: "Compare PM tools for fence and deck builders: permitting, material staging, install milestones, and final punch workflows.",
+  introParagraph:
+    "Fence and deck builders deal with permit dependencies, material timing, and weather-sensitive scheduling. Project management software helps teams track each project from signed quote to final walkthrough with fewer handoff errors.",
+  picks: [
+    { slug: "monday", badge: "Best visual build pipeline", description: "Stage-driven boards for quote, permit, material-ready, install, and punch.", rowBestFor: "Sales-to-production control", why: "Monday is highly effective for fence and deck builders who need one real-time pipeline from sold project to final walkthrough. Permit blockers, material delays, and crew readiness are easy to spot when stage logic is well-defined. This helps teams protect schedule commitments and communicate confidently with homeowners. Monday is usually the top choice when production visibility is the primary pain point." },
+    { slug: "wrike", badge: "Best for complex phased builds", description: "Dependency and timeline controls for larger projects with inspection gates.", rowBestFor: "Complex project sequencing", why: "Wrike fits builders handling larger or multi-phase projects where sequencing and inspection timing create material risk. Its dependency controls and timeline depth help teams avoid costly misalignment between permitting, staging, and field execution. If your projects involve many moving parts and stakeholder approvals, Wrike provides stronger guardrails than lighter tools. It is best for complexity-heavy operations with dedicated process ownership." },
+    { slug: "trello", badge: "Best lightweight field coordination", description: "Simple cards and checklists for smaller crews and mobile-first updates.", rowBestFor: "Small-team execution", why: "Trello remains a strong option for smaller fence and deck teams that need straightforward field coordination without software overhead. Card-based checklists keep updates simple and mobile-friendly, which improves daily adoption. When teams consistently update status, Trello can materially reduce missed steps and callback risk. It is the practical choice for businesses that value speed and usability over advanced reporting." },
+  ],
+  editorialGuidance: [
+    E("Permit checkpoint tracking", "Use milestone tasks for zoning, permit, and inspection gates before crews are committed."),
+    E("Material readiness management", "Track supplier ETAs, substitutions, and site staging so install starts with full readiness."),
+    E("Field checklist discipline", "Standardize build phase tasks across fence and deck types to improve consistency and reduce rework."),
+    E("Walkthrough closeout", "Capture punch items, completion photos, and client sign-off in one project record for cleaner billing."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for fence and deck builders?", a: "Monday is best for live pipeline visibility, Wrike is best for complex phased dependency management, and Trello is best for smaller teams that need lightweight field coordination." },
+    { q: "Can PM software help with permit delays?", a: "Yes. Milestone tracking and blocked-status alerts make permit issues visible early enough to protect schedules and customer communication." },
+    { q: "When should teams move beyond Trello?", a: "Move when you need cross-project reporting, stronger dependency controls, or stakeholder-level dashboards that basic board workflows cannot provide." },
+    { q: "What should be included in a fence/deck project template?", a: "Include permit readiness, material staging, pre-install site checks, build phase tasks, punch completion, and walkthrough sign-off." },
+  ],
+});
+
+export const GLASS_WINDOW_INSTALLERS_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "glass-window-installers",
+  title: "Best Project Management Software for Glass & Window Installers (2026)",
+  subtitle: "Compare PM tools for glass and window installers: measure-to-install workflows, supplier ETAs, and customer milestone updates.",
+  introParagraph:
+    "Glass and window installers rely on measurement accuracy, supplier lead times, and installation sequencing. Project management software helps teams prevent avoidable delays by tracking dependencies and ownership from order to closeout.",
+  picks: [
+    { slug: "smartsheet", badge: "Best supplier and order tracking", description: "Grid-first tracking for measurements, order status, ETAs, and readiness.", rowBestFor: "Procurement-driven workflows", why: "Smartsheet is the leading fit for glass and window installers that depend on precise ordering workflows and supplier lead-time control. The grid model works naturally for measurement records, SKU tracking, ETA changes, and install readiness rollups. This reduces scheduling surprises and improves predictability across crews. For procurement-centric operations, Smartsheet usually provides the strongest operational control." },
+    { slug: "asana", badge: "Best structured install execution", description: "Template tasks for site check, delivery, install, and punch completion.", rowBestFor: "Repeatable install templates", why: "Asana is a dependable choice for teams that need repeatable install execution from site verification through closeout. It supports owner-based accountability and due-date discipline that reduce handoff failures between office and field. Asana is especially effective when teams manage high install volume and need consistent quality standards. It balances structure and usability well for mixed-role crews." },
+    { slug: "teamwork", badge: "Best milestone-based client updates", description: "Client project context and milestone communication for larger jobs.", rowBestFor: "Client-facing project delivery", why: "Teamwork is well-suited for window and glass businesses that serve commercial clients or property managers who expect proactive milestone communication. It keeps customer-facing updates tied to task progress, which reduces status confusion and trust gaps. This is valuable when relationship quality and delivery transparency affect repeat business. Teamwork is strongest for service teams where communication is a competitive differentiator." },
+  ],
+  editorialGuidance: [
+    E("Measurement handoff quality", "Require approved measurements, product specs, and client confirmations before ordering tasks begin."),
+    E("ETA dependency visibility", "Track delayed orders and affected install dates in one view so scheduling decisions are proactive, not reactive."),
+    E("Install QA checklists", "Use standardized QA tasks for prep, fit, seal, and final inspection on every install."),
+    E("Stakeholder updates", "Use milestone updates for homeowners, property managers, and GC partners to maintain trust and reduce status calls."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for glass and window installers?", a: "Smartsheet is best for order/ETA-heavy operations, Asana is best for structured install execution, and Teamwork is best for milestone-driven client communication." },
+    { q: "Can PM software track custom-order windows and lead times?", a: "Yes. Use SKU-level fields, supplier ETA statuses, and dependency links to protect install dates and customer commitments." },
+    { q: "Do we still need estimating tools?", a: "Yes. Estimating software handles pricing and quoting, while PM software manages post-sale execution quality and accountability." },
+    { q: "How can installers improve closeout quality?", a: "Use standardized QA and documentation checklists, then require final sign-off before billing." },
+  ],
+});
+
+export const CONCRETE_CONTRACTORS_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "concrete-contractors",
+  title: "Best Project Management Software for Concrete Contractors (2026)",
+  subtitle: "Compare PM tools for concrete contractors: prep/pour sequencing, inspection checkpoints, QA logs, and crew coordination.",
+  introParagraph:
+    "Concrete contractors manage strict sequencing where delays cascade into cost and schedule risk. Project management software improves visibility from prep and pour through cure, inspection, and closeout.",
+  picks: [
+    { slug: "wrike", badge: "Best dependency management for pours", description: "Timeline and dependency controls for prep, pour, cure, and handoff.", rowBestFor: "Critical-path sequencing", why: "Wrike is the best option for concrete contractors managing schedules where dependency failures are expensive. It supports formal critical-path control for prep, pour windows, cure milestones, and downstream handoffs. That structure reduces preventable delays and helps teams react faster when site conditions change. Wrike is most valuable for complex operations that need rigorous sequencing control." },
+    { slug: "smartsheet", badge: "Best QA and field log tracking", description: "Grid workflows for inspection readiness, test logs, and completion records.", rowBestFor: "Quality/compliance tracking", why: "Smartsheet is highly effective for QA-heavy concrete workflows because it combines spreadsheet familiarity with shared operational control. Teams can track inspection readiness, test data, and closeout records in one structured environment. This improves documentation quality and reduces compliance risk across projects. For process-centric field teams, Smartsheet often delivers immediate clarity." },
+    { slug: "asana", badge: "Best standardized concrete templates", description: "Repeatable task structures for common concrete project workflows.", rowBestFor: "Template-driven execution", why: "Asana is a strong fit for contractors that need consistent template-driven execution without enterprise complexity. It helps teams standardize core workflows and maintain owner-level accountability on each phase. This improves repeatability and makes onboarding easier as crews scale. Asana is best when teams want structure with high adoption potential." },
+  ],
+  editorialGuidance: [
+    E("Critical-path visibility", "Map dependencies so delayed prep, weather shifts, and equipment constraints are visible before pour windows are lost."),
+    E("Inspection gate control", "Use milestone tasks for pre-pour readiness and post-pour QA checkpoints with explicit owners."),
+    E("Resource coordination", "Assign labor, equipment, and material readiness tasks to named owners to reduce last-minute bottlenecks."),
+    E("Documentation consistency", "Attach test reports, photos, and completion records in-system for cleaner closeout and future reference."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for concrete contractors?", a: "Wrike is best for critical-path dependency control, Smartsheet is best for QA and field-log workflows, and Asana is best for approachable template-driven execution." },
+    { q: "Can PM tools manage prep/pour/cure sequencing?", a: "Yes. Use dependency-linked tasks and milestone gates to control each phase and reduce avoidable schedule slips." },
+    { q: "How should teams roll out a PM tool?", a: "Pilot one project type, validate field update discipline, then standardize templates and reporting before full deployment." },
+    { q: "What concrete KPIs are useful in PM software?", a: "Track on-time pour starts, blocked dependency count, failed inspection rate, and punch reopen percentage." },
+  ],
+});
+
+export const EXCAVATION_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "excavation",
+  title: "Best Project Management Software for Excavation Companies (2026)",
+  subtitle: "Compare PM tools for excavation companies: utility coordination, site readiness, phase dependencies, and multi-site control.",
+  introParagraph:
+    "Excavation companies coordinate utility locates, mobilization, earthwork phases, and handoffs to other trades. Project management software helps operations teams keep readiness and dependencies visible across active sites.",
+  picks: [
+    { slug: "smartsheet", badge: "Best site readiness grids", description: "Grid-first tracking for locates, permits, equipment, and mobilization status.", rowBestFor: "Pre-job planning workflows", why: "Smartsheet is the top fit for excavation companies whose planning workflows are already grid-centric. It handles permit, locate, equipment, and mobilization readiness tracking in a model teams already understand. This minimizes change resistance while improving shared visibility across office and field. Smartsheet is especially effective when readiness discipline is the key operational gap." },
+    { slug: "wrike", badge: "Best dependency-heavy excavation schedules", description: "Formal timeline controls for phase sequencing and approvals.", rowBestFor: "Complex multi-phase projects", why: "Wrike is stronger for excavation businesses managing multi-phase schedules with significant cross-trade dependency risk. Its formal dependency and timeline controls help operations teams protect sequence integrity and reduce schedule slippage. It is best suited for organizations willing to invest in process governance. For complex sitework, Wrike adds meaningful risk control." },
+    { slug: "monday", badge: "Best visual multi-site oversight", description: "Portfolio dashboards for status, blockers, and crew utilization.", rowBestFor: "Operations leadership visibility", why: "Monday is ideal for leadership teams that need quick cross-site status visibility without requiring deep PM administration from every field user. Dashboards surface blockers, at-risk jobs, and utilization patterns in a format executives can act on quickly. This supports faster escalation and better operational decision-making. Monday is best when oversight and alignment across many active sites are the priority." },
+  ],
+  editorialGuidance: [
+    E("Readiness gating", "Track locates, permits, mobilization, and equipment readiness before any field start commitment."),
+    E("Dependency sequencing", "Map upstream and downstream trade constraints so conflicts surface early and schedule risk is controlled."),
+    E("Crew/equipment ownership", "Assign accountable owners for every critical readiness dependency across field and office teams."),
+    E("Escalation rules", "Use blocker flags, aging thresholds, and automated alerts for stalled high-risk items."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for excavation companies?", a: "Smartsheet is best for grid-based pre-job planning, Wrike is best for dependency-heavy schedule control, and Monday is best for visual multi-site operational oversight." },
+    { q: "Can PM tools track utility locate dependencies?", a: "Yes. Use prerequisite tasks, due-date gates, and escalation rules before excavation phases can start." },
+    { q: "Do excavation teams need PM plus scheduling tools?", a: "In most cases yes. Scheduling tools manage day-level dispatch while PM tools manage multi-phase readiness, dependencies, and accountability." },
+    { q: "What should excavation teams prioritize first?", a: "Start with readiness workflow discipline: permits, locates, mobilization, and equipment confirmation before live production." },
+  ],
+});
+
+export const AUTO_REPAIR_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "auto-repair",
+  title: "Best Project Management Software for Auto Repair Shops (2026)",
+  subtitle: "Compare PM tools for auto repair shops: parts follow-up, approvals, warranty workflows, and advisor-to-tech handoffs.",
+  introParagraph:
+    "Auto repair shops move quickly, but non-linear jobs still require structured follow-up across diagnostics, approvals, and parts delays. Project management software helps teams reduce dropped handoffs and aging work orders.",
+  picks: [
+    { slug: "clickup", badge: "Best SOP-driven shop workflow", description: "Combine repair process docs and multi-step task execution in one workspace.", rowBestFor: "Process-heavy shop operations", why: "ClickUp is the strongest option for auto repair shops building a documented, SOP-driven operation. It allows teams to tie repair workflows, diagnostic playbooks, and internal standards to active work in one system. This reduces handoff variability and supports better training consistency across advisors and technicians. ClickUp is best when long-term process maturity is the strategic goal." },
+    { slug: "trello", badge: "Best lightweight parts follow-up board", description: "Simple job status cards for waiting on parts, approvals, and return visits.", rowBestFor: "Aging job follow-up control", why: "Trello is highly practical for shops that need immediate visibility into aging and blocked jobs without major implementation overhead. Service advisors can quickly update part status, approvals, and revisit tasks in a shared board. That simplicity drives usage, which is often more valuable than extra features. Trello is a strong fit for small and mid-size shops focused on reducing missed follow-ups." },
+    { slug: "asana", badge: "Best structured multi-touch repairs", description: "Template-based task ownership for diagnostics, approvals, and completion QA.", rowBestFor: "Repeatable repair workflows", why: "Asana provides clear structure for multi-touch repair workflows where owner accountability and due-date discipline matter. Shops can standardize diagnostics, approval checkpoints, and completion QA across service categories. This improves predictability and reduces dropped handoffs as volume grows. Asana is usually the best middle ground between simplicity and operational rigor." },
+  ],
+  editorialGuidance: [
+    E("Approval/parts checkpoints", "Track customer approvals, parts ETA, and blocked status with clear owner and due date at each gate."),
+    E("Advisor-tech handoffs", "Capture diagnostics, recommendations, and required follow-up context for each transfer to reduce rework."),
+    E("Warranty workflow templates", "Use dedicated templates for warranty claims, callbacks, and escalation workflows."),
+    E("Aging-job visibility", "Use dashboards that highlight overdue and blocked jobs by owner, not just by status."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for auto repair shops?", a: "ClickUp is best for SOP-heavy process systems, Trello is best for lightweight parts-follow-up boards, and Asana is best for structured multi-step accountability across advisor and tech teams." },
+    { q: "Can PM software replace shop management systems?", a: "No. Shop systems remain core for repair orders, invoicing, and customer records. PM software is the execution layer that improves follow-through and internal accountability." },
+    { q: "How do we reduce delayed handoffs?", a: "Use standardized templates with mandatory owner fields, handoff notes, and due dates for every diagnostic, approval, and parts-dependent step." },
+    { q: "What should a shop measure during rollout?", a: "Measure aging jobs, blocked jobs over 48 hours, revisit rates, and advisor follow-up completion rates before and after implementation." },
+  ],
+});
+
+export const MOBILE_MECHANICS_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "mobile-mechanics",
+  title: "Best Project Management Software for Mobile Mechanics (2026)",
+  subtitle: "Compare PM tools for mobile mechanics: phone-first follow-up tracking, parts delays, return visits, and team communication.",
+  introParagraph:
+    "Mobile mechanics need systems that are easy to update from the field while still managing multi-visit work. Project management software helps track unresolved jobs and ownership without adding desktop-heavy friction.",
+  picks: [
+    { slug: "trello", badge: "Best phone-first workflow", description: "Simple cards and checklists for active jobs, return visits, and parts status.", rowBestFor: "Field-first job tracking", why: "Trello is the best fit for mobile mechanics that need field-first updates with minimal friction. Technicians can update statuses quickly from phones, which improves real-world adoption and keeps office visibility accurate. For mobile workflows, consistent usage often matters more than advanced features. Trello wins when speed and simplicity are the deciding factors." },
+    { slug: "asana", badge: "Best structured follow-up accountability", description: "Clear assignees and deadlines for diagnostics, approvals, and revisits.", rowBestFor: "Multi-visit ownership control", why: "Asana is stronger when mobile mechanic teams need tighter owner-based accountability across multi-visit jobs. It supports clear assignment, due-date enforcement, and template-driven consistency across common service types. That reduces dropped follow-ups and improves completion reliability. Asana is ideal when teams are scaling beyond purely informal coordination." },
+    { slug: "basecamp", badge: "Best simple small-team coordination", description: "Flat-priced communication and task tracking for owner-led mobile teams.", rowBestFor: "Small-team communication", why: "Basecamp is a practical choice for owner-led mobile teams that prioritize straightforward communication and predictable flat pricing. It keeps conversations and tasks in one place without requiring heavy process administration. For small crews that want order without complexity, this can be the best operational balance. Basecamp is best when calm coordination is the primary need." },
+  ],
+  editorialGuidance: [
+    E("Mobile usability first", "Choose workflows technicians can update in under a minute with minimal taps."),
+    E("Return-visit structure", "Treat parts-dependent revisits as explicit tracked tasks with owner and deadline."),
+    E("Field note quality", "Capture concise diagnostics, photos, and customer constraints for office follow-through."),
+    E("Communication centralization", "Keep updates in one system to reduce missed texts, duplicate calls, and task drift."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for mobile mechanics?", a: "Trello is best for lightweight field-first workflows, Asana is best for structured multi-visit accountability, and Basecamp is best for simple communication in small owner-led teams." },
+    { q: "Can mobile teams reliably use PM software?", a: "Yes, if workflows are mobile-first, status choices are simple, and updates are required at each customer handoff point." },
+    { q: "Do solo mobile mechanics need PM tools?", a: "Not always, but once parts-delayed follow-ups and callbacks increase, lightweight PM tracking can prevent missed revenue and customer churn." },
+    { q: "What should be included in a mobile mechanic template?", a: "Include diagnosis summary, parts status, revisit scheduling, customer communication task, and completion verification." },
+  ],
+});
+
+export const CLEANING_FRANCHISES_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "cleaning-franchises",
+  title: "Best Project Management Software for Cleaning Franchises (2026)",
+  subtitle: "Compare PM tools for cleaning franchises: multi-location initiatives, onboarding workflows, quality programs, and accountability.",
+  introParagraph:
+    "Cleaning franchises coordinate launches, training, audits, and operational initiatives across many locations. Project management software gives HQ and local operators shared visibility on timelines, owners, and execution risk.",
+  picks: [
+    { slug: "monday", badge: "Best multi-location operational visibility", description: "Portfolio dashboards for launches, audits, and initiative tracking by location.", rowBestFor: "Franchise network oversight", why: "Monday is the strongest option for cleaning franchises that need clear HQ-level visibility across many locations. Its dashboards make at-risk initiatives and inconsistent execution visible quickly, which helps leadership intervene earlier. This is valuable when network consistency is tied to brand performance. Monday is typically the top choice for franchise-wide operational oversight." },
+    { slug: "smartsheet", badge: "Best compliance/audit tracking", description: "Grid-based workflows for quality checks, remediation tasks, and recurring compliance programs.", rowBestFor: "Quality and compliance workflows", why: "Smartsheet is a strong fit for franchises running frequent audits and remediation workflows in spreadsheet-like systems. It improves traceability, accountability, and reporting without forcing a completely new planning model. Teams can manage recurring compliance cycles with better control and less manual chasing. Smartsheet is best when audit rigor is the primary requirement." },
+    { slug: "clickup", badge: "Best SOP + onboarding execution", description: "Combine training docs, playbooks, and initiative tasks in one system.", rowBestFor: "Operational standardization", why: "ClickUp is ideal for franchise operators focused on repeatable SOP execution and scalable onboarding quality. It centralizes playbooks, training paths, and initiative tasks, which supports consistent delivery across locations. This improves operational authority and EEAT-style trust through documented standards and measurable execution. ClickUp is strongest when process standardization is a strategic priority." },
+  ],
+  editorialGuidance: [
+    E("HQ-to-location alignment", "Define ownership for each initiative at the local level and enforce review cadence."),
+    E("Recurring audit cadence", "Use repeating templates for inspections, remediation, and re-verification workflows."),
+    E("Onboarding consistency", "Track launch milestones from hiring and training through operational readiness."),
+    E("Executive rollup reporting", "Use dashboards to identify at-risk locations early and focus support where it matters."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for cleaning franchises?", a: "Monday is best for executive-level multi-location visibility, Smartsheet is best for compliance and audit-heavy operations, and ClickUp is best for SOP-driven operational standardization." },
+    { q: "Can PM tools support franchise onboarding?", a: "Yes. Standardized onboarding templates for hiring, training, staffing, and launch readiness improve consistency across locations." },
+    { q: "How do franchises improve audit follow-through?", a: "Assign remediation owners, define due dates, and set escalation triggers for overdue actions. Follow-up quality improves when accountability is explicit." },
+    { q: "What does EEAT look like in franchise operations content?", a: "Documented standards, repeatable workflows, and measurable quality controls demonstrate operational expertise and authority across the network." },
+  ],
+});
+
+export const EVENT_SERVICES_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "event-services",
+  title: "Best Project Management Software for Event Services (2026)",
+  subtitle: "Compare PM tools for event services: timeline planning, vendor coordination, setup logistics, and post-event closeout.",
+  introParagraph:
+    "Event services teams manage deadline-heavy projects where missed dependencies can cascade quickly. Project management software keeps planning, ownership, and communication centralized from pre-production through teardown.",
+  picks: [
+    { slug: "teamwork", badge: "Best client delivery structure", description: "Milestones, tasks, and service-delivery context for event projects.", rowBestFor: "Client-driven event execution", why: "Teamwork is the best fit for event service teams delivering client-facing projects with milestone commitments and frequent status expectations. It keeps deliverables, timelines, and communication context tightly connected, which reduces confusion and escalation risk. This is especially valuable for agencies and production teams handling multiple concurrent clients. Teamwork wins when service delivery clarity is the top priority." },
+    { slug: "asana", badge: "Best dependency-based event timelines", description: "Structured timelines for planning, setup, live delivery, and closeout.", rowBestFor: "Timeline and task sequencing", why: "Asana is excellent for dependency-heavy event planning where one missed task can impact an entire run-of-show. Teams can map setup, staffing, vendor dependencies, and closeout with clear owner-based accountability. This improves execution reliability and protects day-of performance under pressure. Asana is a strong fit when timeline control is your biggest risk area." },
+    { slug: "notion", badge: "Best runbooks and creative context", description: "Docs-first planning for briefs, vendor notes, and run-of-show support.", rowBestFor: "Documentation-heavy planning", why: "Notion is best for event teams where planning depth depends on detailed briefs, playbooks, and shared context between creative and operations stakeholders. It centralizes runbooks, vendor notes, and decision history in a way that improves team alignment. While lighter on formal PM controls, it excels at planning quality and institutional knowledge. Notion is the right choice when documentation quality is the competitive edge." },
+  ],
+  editorialGuidance: [
+    E("Milestone discipline", "Set fixed checkpoints for logistics, staffing, procurement, and final readiness."),
+    E("Vendor accountability", "Assign owners for confirmations, contracts, and deliverables with escalation dates."),
+    E("Run-of-show clarity", "Keep runbooks, contingency plans, and owner-based tasks in the same workspace."),
+    E("Post-event follow-through", "Track debriefs, billing, and lessons-learned actions so process quality improves event to event."),
+  ],
+  faqItems: [
+    { q: "What PM software is best for event services?", a: "Teamwork is best for client-delivery and milestone context, Asana is best for dependency-driven planning control, and Notion is best for documentation-rich pre-production collaboration." },
+    { q: "Can PM software manage run-of-show workflows?", a: "Yes. Build run-of-show milestones, dependency-linked tasks, and contingency workflows in a single project view to reduce day-of execution risk." },
+    { q: "Which tool is easiest for mixed creative and operations teams?", a: "Notion is usually easiest for shared briefs and planning context, while Asana and Teamwork are stronger for strict operational execution and accountability." },
+    { q: "What should event teams measure after rollout?", a: "Track missed milestones, vendor delay impact, day-of escalations, and post-event action completion to evaluate process improvement." },
+  ],
+});
+
+export const HOME_INSPECTORS_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS = buildTradeProps({
+  useCase: "home-inspectors",
+  title: "Best Project Management Software for Home Inspectors (2026)",
+  subtitle: "Compare PM tools for home inspectors: report QA, follow-up tasks, team workflows, and operational consistency.",
+  introParagraph:
+    "Home inspection businesses need reliable internal workflows around report quality, revisions, and follow-up communication. Project management software helps growing teams standardize these processes without relying on memory.",
+  picks: [
+    { slug: "asana", badge: "Best structured inspection workflow", description: "Templates for prep, report QA, delivery, and follow-up actions.", rowBestFor: "Standardized inspection ops", why: "Asana is the strongest fit for home inspection businesses that need repeatable, owner-based workflow discipline around report quality and follow-up. It supports clear templates for pre-inspection prep, QA review, revision handling, and delivery handoffs, which reduces missed steps as volume grows. Teams also benefit from better accountability across inspectors and admin staff. For firms searching best project management software for home inspectors, Asana typically wins when consistency and process control are the main goals." },
+    { slug: "notion", badge: "Best SOP and training knowledge base", description: "Combine training content, standards, and lightweight workflow tracking.", rowBestFor: "Documentation-centric teams", why: "Notion stands out for inspection teams that prioritize standards documentation, onboarding quality, and knowledge retention. You can centralize SOPs, sample findings, reporting standards, and internal training material while still managing lightweight workflows. This supports EEAT-style authority through documented expertise and repeatable quality standards. Notion is best when institutional knowledge is a core part of service quality." },
+    { slug: "trello", badge: "Best lightweight follow-up management", description: "Simple boards for pending reports, revisions, and client action items.", rowBestFor: "Small-team follow-up boards", why: "Trello is a practical option for smaller home inspection teams that need immediate follow-up visibility without complex implementation. Boards for Pending QA, Revision Needed, Sent to Client, and Awaiting Response are easy to maintain and improve day-to-day execution reliability. That simplicity improves adoption and reduces dropped tasks. Trello is the best starting point when teams need quick operational wins with minimal setup." },
+  ],
+  editorialGuidance: [
+    E("Report QA repeatability", "Use templates for review, quality checks, revisions, and delivery handoffs."),
+    E("Follow-up accountability", "Assign owners and due dates for report revisions, client questions, and agent follow-up requests."),
+    E("Training consistency", "Keep standards, SOPs, and sample reports in one searchable workspace for faster onboarding."),
+    E("Scale readiness", "Standardize recurring workflows before team volume grows to protect quality and consistency."),
+  ],
+  faqItems: [
+    { q: "What is the best project management software for home inspectors?", a: "Asana is best for structured inspection workflow execution, Notion is best for SOP and training-heavy operations, and Trello is best for lightweight follow-up tracking in smaller teams." },
+    { q: "Do home inspectors need PM software if they already use report tools?", a: "Yes, if internal handoffs are inconsistent. Report tools capture findings, while PM software improves process control for QA, revisions, and follow-up accountability." },
+    { q: "What is easiest for small home inspection teams?", a: "Trello is usually the easiest starting point due to low complexity. Asana becomes the better fit when volume, team size, or QA requirements increase." },
+    { q: "How can inspection teams improve EEAT signals operationally?", a: "Use documented standards, repeatable QA workflows, and auditable follow-up processes. Consistent process quality reinforces expertise and trust." },
+  ],
+});

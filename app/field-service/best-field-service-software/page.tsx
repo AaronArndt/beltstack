@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -79,30 +82,12 @@ export default function BestFieldServiceSoftwarePage() {
               Best Field Service Management Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best field service management software for contractors and home services teams is the system dispatch
-              trusts, technicians actually open in the truck, and the office uses to close the loop on estimates,
-              invoices, and recurring work. This 2026 roundup compares FSM platforms on scheduling and dispatch, mobile
-              offline behavior, customer communications, and job costing—not just pretty maps.
+              If you dispatch field teams, the best field service software should keep scheduling, job details, invoicing, and technician updates aligned across office and crew workflows.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We weigh integrations with accounting and payments, inventory and equipment tracking where relevant, and
-              pricing at your crew size. Pair these picks with our reviews and{" "}
-              <Link href="/field-service/compare" className={linkGreen}>
-                field service software comparisons
-              </Link>{" "}
-              when you are narrowing vendors for the season ahead.
+              We compared scheduling controls, mobile usability, invoicing workflows, integrations, and pricing so the Key Takeaways shortlist reflects real operational fit.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Visit the{" "}
-              <Link href="/field-service" className={linkGreen}>
-                field service software hub
-              </Link>
-              , then read{" "}
-              <Link href="/field-service/guides/how-to-choose-field-service-software" className={linkGreen}>
-                how to choose field service software
-              </Link>{" "}
-              for structured evaluation criteria.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/field-service" categoryLabel="field service software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -119,6 +104,17 @@ export default function BestFieldServiceSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="field service software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best field service software picks ——— */}
         <section
@@ -251,6 +247,12 @@ export default function BestFieldServiceSoftwarePage() {
           sectionSub="Find field service tools that fit your situation."
           items={useCaseEditorialItems}
           sectionClassName="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="field service software"
+          compareHref="/field-service/compare"
+          guidesHref="/field-service/guides"
         />
 
         {/* ——— 6) Related comparisons ——— */}

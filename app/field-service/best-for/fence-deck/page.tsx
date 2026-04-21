@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
 import { FENCE_DECK_FIELD_SERVICE_BEST_FOR_PAGE_PROPS } from "@/lib/data/fieldServiceBestForTrades";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     ...siteMetadata({
       path: "/field-service/best-for/fence-deck",
-      title: "Best Field Service Software for Fence & Deck Builders (2026) | BeltStack",
+      title: buildBestForMetaTitle("Best Field Service Software for Fence & Deck Builders (2026)"),
       description:
         "Compare field service software for fence and deck builders: Jobber, WorkWave Service, and Simpro for surveys, crew days, HOA notes, outdoor project billing, and route-heavy crews.",
     }),

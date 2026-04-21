@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
+import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
+import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
@@ -78,30 +81,12 @@ export default function BestTimeTrackingSoftwarePage() {
               Best Time Tracking Software (2026)
             </h1>
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              The best time tracking software for freelancers, agencies, and distributed teams is the tool people will start
-              and stop without resentment—then export clean data into invoices, payroll, or client reports. This 2026
-              roundup weighs timers vs automatic capture, billable rates, project budgets, compliance boundaries, and
-              pricing that stays fair as headcount grows.
+              If labor time affects payroll and profitability, the best time tracking software should capture accurate hours and make timesheet review fast for managers and owners.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We compare integrations with accounting and PM stacks, mobile and desktop friction, approval workflows, and
-              reporting depth for managers. Use these picks with our reviews and{" "}
-              <Link href="/time-tracking/compare" className={linkGreen}>
-                time tracking software comparisons
-              </Link>{" "}
-              when you are standardizing how hours are recorded company-wide.
+              We compared time capture options, payroll sync, reporting, pricing, and usability so the Key Takeaways shortlist supports accurate tool selection.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              Start from the{" "}
-              <Link href="/time-tracking" className={linkGreen}>
-                time tracking software hub
-              </Link>
-              , or read{" "}
-              <Link href="/time-tracking/guides/how-time-tracking-software-works" className={linkGreen}>
-                how time tracking software works
-              </Link>{" "}
-              to align features with your policies.
-            </p>
+            <RoundupHubLinksBlurb categoryPath="/time-tracking" categoryLabel="time tracking software" />
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
                 <TrustIndicatorMark />
@@ -118,6 +103,17 @@ export default function BestTimeTrackingSoftwarePage() {
             </div>
           </div>
         </section>
+
+        <RoundupQuickPicksSection
+          categoryLabel="time tracking software"
+          picks={TOP_PICKS.map((pick) => ({
+            slug: pick.slug,
+            name: pick.name,
+            badge: pick.badge,
+            reviewHref: pick.reviewHref,
+            description: pick.description,
+          }))}
+        />
 
         {/* ——— 2) Best time tracking software picks ——— */}
         <section
@@ -265,6 +261,12 @@ export default function BestTimeTrackingSoftwarePage() {
           headingCategoryLabel="time tracking software"
           sectionSub="Find time tracking tools that fit your situation."
           items={useCaseEditorialItems}
+        />
+
+        <RoundupHowWeChoseSection
+          categoryLabel="time tracking software"
+          compareHref="/time-tracking/compare"
+          guidesHref="/time-tracking/guides"
         />
 
         {/* ——— 6) Related comparisons ——— */}

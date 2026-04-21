@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { CONSTRUCTION_CRM_BEST_FOR_PAGE_PROPS } from "@/lib/data/crmBestForTrades";
 
 export default function BestCrmForConstructionPage() {
@@ -7,7 +8,7 @@ export default function BestCrmForConstructionPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best CRM Software for Construction Companies (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best CRM Software for Construction Companies (2026)"),
     description:
       "Compare the best CRM software for construction companies: Monday, Salesforce, HubSpot. Business development, pursuits, bid calendars, and marketing-aligned CRM for contractors.",
     keywords: [

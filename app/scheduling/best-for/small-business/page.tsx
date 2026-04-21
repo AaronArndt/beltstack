@@ -1,4 +1,5 @@
 import { BestForPageWithStructuredData } from "@/components/best/BestForPageWithStructuredData";
+import { buildBestForMetaTitle } from "@/lib/seo/bestForTitles";
 import { SMALL_BUSINESS_PAGE_PROPS } from "@/lib/data/schedulingBestFor";
 
 export default function BestSchedulingForSmallBusinessPage() {
@@ -7,7 +8,7 @@ export default function BestSchedulingForSmallBusinessPage() {
 
 export function generateMetadata() {
   return {
-    title: "Best Scheduling Software for Small Business (2026) | BeltStack",
+    title: buildBestForMetaTitle("Best Scheduling Software for Small Business (2026)"),
     description:
       "Compare the best scheduling software for small businesses: Setmore, SimplyBook.me, Square Appointments. Free tiers, team features, and when to upgrade.",
   };

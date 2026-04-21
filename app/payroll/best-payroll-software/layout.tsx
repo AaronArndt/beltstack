@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
+import { getBestSoftwareRoundupMeta } from "@/lib/seo/bestSoftwareRoundupMeta";
 import { SITE_URL } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { TOP_PICKS, MORE_PAYROLL_OPTIONS } from "@/lib/data/payrollBestPayrollSoftware";
 import { getPayrollReviewUrl } from "@/lib/routes";
 
 export const metadata: Metadata = siteMetadata({
-  path: "/payroll/best-payroll-software",
-  title: "Best Payroll Software for Small Businesses (2026) | BeltStack",
-  description:
-    "Compare the best payroll software for small businesses. Review pricing, features, pros and cons, and top picks.",
+  ...getBestSoftwareRoundupMeta("payroll"),
 });
 
 function bestPayrollSoftwareItemListSchema() {
