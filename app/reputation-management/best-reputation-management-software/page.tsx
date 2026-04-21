@@ -85,7 +85,6 @@ export default function BestReputationManagementSoftwarePage() {
             slug: pick.slug,
             name: pick.name,
             badge: pick.badge,
-            reviewHref: pick.reviewHref,
             description: pick.description,
           }))}
         />

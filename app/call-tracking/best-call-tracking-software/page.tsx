@@ -98,7 +98,6 @@ export default function BestCallTrackingSoftwarePage() {
             slug: pick.slug,
             name: pick.name,
             badge: pick.badge,
-            reviewHref: pick.reviewHref,
             description: pick.description,
           }))}
         />

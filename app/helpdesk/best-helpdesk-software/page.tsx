@@ -105,7 +105,6 @@ export default function BestHelpdeskSoftwarePage() {
             slug: pick.slug,
             name: pick.name,
             badge: pick.badge,
-            reviewHref: pick.reviewHref,
             description: pick.description,
           }))}
         />
