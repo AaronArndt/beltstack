@@ -113,6 +113,71 @@ const SCENARIOS = [
     href: "/hr/best-for/moving",
     description: "Crew-focused HR and payroll systems for moving businesses.",
   },
+  {
+    label: "Best HR Software for Appliance Repair Businesses (2026)",
+    href: "/hr/best-for/appliance-repair",
+    description: "HR and payroll support for mobile appliance repair teams.",
+  },
+  {
+    label: "Best HR Software for Garage Door Companies (2026)",
+    href: "/hr/best-for/garage-door",
+    description: "Payroll and onboarding tools for garage door service and install teams.",
+  },
+  {
+    label: "Best HR Software for Locksmith Businesses (2026)",
+    href: "/hr/best-for/locksmith",
+    description: "Lean HR and payroll workflows for locksmith service teams.",
+  },
+  {
+    label: "Best HR Software for Flooring Contractors (2026)",
+    href: "/hr/best-for/flooring",
+    description: "HR and payroll tools for flooring installation businesses.",
+  },
+  {
+    label: "Best HR Software for Fence & Deck Builders (2026)",
+    href: "/hr/best-for/fence-deck",
+    description: "Project-crew HR and payroll tools for fence and deck builders.",
+  },
+  {
+    label: "Best HR Software for Glass & Window Installers (2026)",
+    href: "/hr/best-for/glass-window-installers",
+    description: "Install-focused HR and payroll tools for glass and window teams.",
+  },
+  {
+    label: "Best HR Software for Concrete Contractors (2026)",
+    href: "/hr/best-for/concrete-contractors",
+    description: "Crew-first HR and payroll systems for concrete contractors.",
+  },
+  {
+    label: "Best HR Software for Excavation Companies (2026)",
+    href: "/hr/best-for/excavation",
+    description: "HR and payroll workflows for excavation operators and crews.",
+  },
+  {
+    label: "Best HR Software for Auto Repair Shops (2026)",
+    href: "/hr/best-for/auto-repair",
+    description: "HR and payroll support for technician-heavy auto repair teams.",
+  },
+  {
+    label: "Best HR Software for Mobile Mechanics (2026)",
+    href: "/hr/best-for/mobile-mechanics",
+    description: "Field-team HR and payroll systems for mobile mechanic operations.",
+  },
+  {
+    label: "Best HR Software for Cleaning Franchises (2026)",
+    href: "/hr/best-for/cleaning-franchises",
+    description: "Multi-location HR and payroll systems for cleaning franchise operators.",
+  },
+  {
+    label: "Best HR Software for Event Services (2026)",
+    href: "/hr/best-for/event-services",
+    description: "HR and payroll workflows for variable-staff event service teams.",
+  },
+  {
+    label: "Best HR Software for Home Inspectors (2026)",
+    href: "/hr/best-for/home-inspectors",
+    description: "Lean HR and payroll systems for home inspection businesses.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

@@ -1356,6 +1356,734 @@ export const PAYMENT_PROCESSING_TRADE_BEST_FOR_BY_SLUG: Record<string, BestForTe
         "Compare Stripe, Square, and PayPal Business for moving companies: online deposits, on-site finals, and wallet checkout on emailed moving quotes.",
     }
   ),
+
+  "appliance-repair": trade(
+    "appliance-repair",
+    {
+      useCase: "appliance-repair",
+      title: "Best Payment Processing Software for Appliance Repair Businesses (2026)",
+      subtitle:
+        "Same-day service calls, parts-and-labor invoices, and on-site card capture that keeps technicians moving without payment follow-up drag.",
+      introParagraph:
+        "Appliance repair teams need fast payment collection at the end of service calls, plus reliable links for follow-up parts and return visits. The best processors support mobile readers, clean receipts, and low-friction remote payment options.",
+      picks: [
+        {
+          slug: "square",
+          badge: "Best for same-day field capture",
+          description: "Mobile readers and SMS receipts for card-present collection at the customer home.",
+          rowBestFor: "On-site service jobs",
+          why: "Square is the practical default for appliance repair because most payments happen right after diagnostics and repair completion. Readers are easy to train across techs, and payment status can be reconciled quickly by office staff. It is strongest when your team prioritizes speed and consistency on route days.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for remote follow-up payments",
+          description: "Payment Links for special-order parts, return visits, and post-service balances.",
+          rowBestFor: "Remote balance collection",
+          why: "Stripe works well when some jobs convert into second visits or parts invoices that customers pay later from email or SMS. Hosted links reduce friction and keep payment flows professional. It pairs well with Square when the business mixes same-day card-present and post-visit card-not-present revenue.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best wallet checkout option",
+          description: "Trusted PayPal button for homeowners paying from mobile email.",
+          rowBestFor: "Mobile wallet payers",
+          why: "PayPal Business can improve completion rates for remote invoices when customers prefer wallet checkout over entering full card details. Run it as a measured secondary rail and keep only if funded invoice rate improves. It is most useful for customer segments with strong PayPal familiarity.",
+        },
+      ],
+      editorialGuidance: [
+        E("Capture before truck departure", "The easiest collections are still on-site—optimize for closeout speed."),
+        E("Itemized receipts", "Include parts and labor clarity to reduce disputes and callbacks."),
+        E("Return-visit billing flow", "Have a standard link workflow for special-order parts and second visits."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for appliance repair businesses?",
+          a: "For most teams, Square is best for same-day on-site payment capture, Stripe is best for remote follow-up balances, and PayPal Business can help when wallet checkout improves completion.",
+        },
+      ],
+      relatedGuides: [{ label: "How payment processing works", href: `${GUIDES}/how-payment-processing-works` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for appliance repair businesses",
+        "appliance repair payment processing",
+        "appliance service credit card processing",
+      ],
+      description:
+        "Compare Square, Stripe, and PayPal Business for appliance repair businesses: same-day on-site card capture, follow-up payment links, and wallet checkout for remote invoices.",
+    }
+  ),
+
+  "garage-door": trade(
+    "garage-door",
+    {
+      useCase: "garage-door",
+      title: "Best Payment Processing Software for Garage Door Companies (2026)",
+      subtitle:
+        "Service-call collections, opener and parts invoices, and deposit links for replacements without losing speed at the driveway.",
+      introParagraph:
+        "Garage door businesses handle both quick service tickets and larger replacement projects. Payment systems should support instant field capture plus remote deposit and final-balance links for higher-ticket jobs.",
+      picks: [
+        {
+          slug: "square",
+          badge: "Best for driveway closeouts",
+          description: "Reliable card-present collection for service calls and completed installations.",
+          rowBestFor: "Field service capture",
+          why: "Square is ideal for garage door teams that collect most revenue at job completion. Hardware is straightforward, receipts are immediate, and staff adoption is fast. It helps reduce unpaid service calls and end-of-day collections work.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for replacement deposits",
+          description: "Hosted payment links for higher-ticket replacement and staged billing workflows.",
+          rowBestFor: "Deposit and staged billing",
+          why: "Stripe fits companies that send deposit requests before scheduling larger replacements. Payment Links and clear descriptors make remote funding easier and more professional. It is strong when your office converts estimates through email or web channels.",
+        },
+        {
+          slug: "helcim",
+          badge: "Best for high-ticket fee control",
+          description: "Interchange-plus transparency for larger average tickets and margin-sensitive jobs.",
+          rowBestFor: "Large-ticket economics",
+          why: "Helcim is worth evaluating when replacement-ticket volume is high enough that basis-point differences matter. Monthly statement discipline is required to realize the benefit. It is best for operators who actively manage effective rate, not just advertised pricing.",
+        },
+      ],
+      editorialGuidance: [
+        E("Split service vs replacement reporting", "Track economics separately; ticket mix drives processor value."),
+        E("Use deposit policy language", "Tie deposit requests to schedule commitment and material ordering."),
+        E("Job-number memo standards", "Consistent references speed reconciliation and dispute response."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processor is best for garage door companies?",
+          a: "Square is best for same-day field closeouts, Stripe is best for remote deposit workflows, and Helcim is best when high-ticket volume justifies interchange-plus optimization.",
+        },
+      ],
+      relatedGuides: [{ label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for garage door companies",
+        "garage door payment processing",
+        "garage door merchant services",
+      ],
+      description:
+        "Compare Square, Stripe, and Helcim for garage door companies: driveway card capture, replacement deposit links, and high-ticket fee optimization.",
+    }
+  ),
+
+  locksmith: trade(
+    "locksmith",
+    {
+      useCase: "locksmith",
+      title: "Best Payment Processing Software for Locksmith Businesses (2026)",
+      subtitle:
+        "Emergency mobile payments, after-hours callouts, and fast card capture when jobs depend on speed and trust.",
+      introParagraph:
+        "Locksmith teams need payment tools that work in urgent, mobile conditions where customers expect quick resolution and immediate receipt confirmation. Processors should prioritize speed, reliability, and simple customer payment options.",
+      picks: [
+        {
+          slug: "square",
+          badge: "Best for emergency mobile capture",
+          description: "Fast tap/chip collection and instant receipts from mobile devices.",
+          rowBestFor: "Emergency field jobs",
+          why: "Square is the best fit for most locksmith operations because emergency jobs demand immediate, no-friction payment capture. Techs can collect on-site and close jobs quickly with minimal setup. This reduces billing lag and improves daily cash flow.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best for trusted remote payment",
+          description: "PayPal wallet option for customers paying by link after service.",
+          rowBestFor: "Wallet-preferred customers",
+          why: "PayPal Business helps when customers prefer a recognizable wallet flow, especially after-hours when support friction is costly. It can improve completion for remote or delayed payments. Use it where conversion data supports its added fee overhead.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for digital dispatch workflows",
+          description: "Payment links and automation for teams integrating dispatch and payment status.",
+          rowBestFor: "Link-based payment ops",
+          why: "Stripe works well for locksmith companies that route jobs digitally and want payment links tied to job records. Automated status sync improves office visibility and reduces manual follow-up. It is strongest when your operation already relies on software-led dispatch.",
+        },
+      ],
+      editorialGuidance: [
+        E("Prioritize completion speed", "In emergency services, payment latency turns into admin overhead immediately."),
+        E("Keep receipts clear", "Include location/job notes to support disputes and repeat customers."),
+        E("Test after-hours flows", "Run real evening scenarios before full rollout."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for locksmith businesses?",
+          a: "Square is typically best for emergency on-site payments, while PayPal Business and Stripe are strong add-ons for remote wallet and link-based collections.",
+        },
+      ],
+      relatedGuides: [{ label: "Stripe vs Square fees", href: `${GUIDES}/stripe-vs-square-fees` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for locksmith businesses",
+        "locksmith payment processing",
+        "locksmith credit card processing",
+      ],
+      description:
+        "Compare Square, PayPal Business, and Stripe for locksmith businesses: emergency on-site capture, wallet checkout, and link-based payment workflows.",
+    }
+  ),
+
+  flooring: trade(
+    "flooring",
+    {
+      useCase: "flooring",
+      title: "Best Payment Processing Software for Flooring Contractors (2026)",
+      subtitle:
+        "Deposit-heavy installs, material milestones, and final walkthrough balances with payment records that support project billing clarity.",
+      introParagraph:
+        "Flooring contractors manage deposits, material commitments, and final payment collection across multi-day jobs. Payment processors should support staged collection and transparent reporting for margin-sensitive projects.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for staged project deposits",
+          description: "Payment Links and milestone billing workflows for material and labor phases.",
+          rowBestFor: "Project-phase billing",
+          why: "Stripe is a strong primary rail for flooring projects that collect payments in stages. It handles remote deposits cleanly and supports milestone-style invoicing patterns. This improves cash timing and reduces manual payment chasing between project phases.",
+        },
+        {
+          slug: "helcim",
+          badge: "Best for interchange-plus transparency",
+          description: "Clear fee visibility for larger average tickets and project-based billing.",
+          rowBestFor: "High average-ticket shops",
+          why: "Helcim can outperform flat-rate pricing when flooring jobs have larger ticket sizes and fewer micro-transactions. Its value comes from disciplined statement review and rate tracking. It is best for operators focused on net deposit optimization.",
+        },
+        {
+          slug: "square",
+          badge: "Best for on-site final balances",
+          description: "Fast card-present capture at final walkthrough and completion.",
+          rowBestFor: "Walkthrough collections",
+          why: "Square remains useful for collecting the final balance in person at job closeout. It helps crews complete payment without returning to office-driven invoicing steps. Many teams use it alongside Stripe for mixed remote and field payment paths.",
+        },
+      ],
+      editorialGuidance: [
+        E("Use milestone naming standards", "Customers should clearly understand each payment stage."),
+        E("Separate material and labor tracking", "Granular records help with change-order and margin reviews."),
+        E("Keep final-balance workflow simple", "On-site capture reduces late collections."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for flooring contractors?",
+          a: "Stripe is best for staged deposit workflows, Helcim is best when interchange-plus savings matter on larger tickets, and Square is best for quick final-balance collection on site.",
+        },
+      ],
+      relatedGuides: [{ label: "Credit card processing fees explained", href: `${GUIDES}/credit-card-processing-fees-explained` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for flooring contractors",
+        "flooring contractor payment processing",
+        "flooring merchant services",
+      ],
+      description:
+        "Compare Stripe, Helcim, and Square for flooring contractors: staged project deposits, interchange-plus transparency, and on-site final balance capture.",
+    }
+  ),
+
+  "fence-deck": trade(
+    "fence-deck",
+    {
+      useCase: "fence-deck",
+      title: "Best Payment Processing Software for Fence & Deck Builders (2026)",
+      subtitle:
+        "Project deposits, progress draws, and completion payments for outdoor build jobs with high material swings and change orders.",
+      introParagraph:
+        "Fence and deck projects often involve staged payments tied to material orders, weather windows, and scope changes. Payment systems should support milestone collection and clear customer records.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for milestone payment flows",
+          description: "Hosted links for deposit, progress, and final payment stages.",
+          rowBestFor: "Milestone collections",
+          why: "Stripe is well suited for fence and deck builders that bill by milestone and manage approvals remotely. Links are easy to send and align with proposal-to-payment workflows. It reduces payment friction during longer project cycles.",
+        },
+        {
+          slug: "helcim",
+          badge: "Best for large project-ticket margins",
+          description: "Interchange-plus pricing visibility for higher-value outdoor builds.",
+          rowBestFor: "Larger project economics",
+          why: "Helcim is a good choice when average project values are high enough for fee structure differences to materially impact margin. Success depends on monthly effective-rate monitoring. It is best for teams with finance discipline and consistent volume.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best for remote homeowner checkout",
+          description: "Wallet trust for homeowners paying deposits from mobile email.",
+          rowBestFor: "Remote homeowner pay",
+          why: "PayPal Business can lift completion on remote deposit requests where wallet familiarity matters. It is most effective as a conversion rail, not necessarily a full primary processor. Keep it if booked-project conversion improves measurably.",
+        },
+      ],
+      editorialGuidance: [
+        E("Tie payments to contract milestones", "Explicit stage naming lowers confusion and disputes."),
+        E("Document change orders", "Payment context should reference approved scope changes."),
+        E("Track conversion by payment method", "Use data to validate secondary wallet rails."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processor is best for fence and deck builders?",
+          a: "Stripe is best for milestone billing, Helcim is best for margin-focused high-ticket processing, and PayPal Business can improve remote deposit conversion with wallet checkout.",
+        },
+      ],
+      relatedGuides: [{ label: "Payment processing for contractors", href: `${GUIDES}/payment-processing-for-contractors` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for fence and deck builders",
+        "deck builder payment processing",
+        "fence contractor merchant services",
+      ],
+      description:
+        "Compare Stripe, Helcim, and PayPal Business for fence and deck builders: milestone billing, high-ticket margin control, and wallet-based remote deposits.",
+    }
+  ),
+
+  "glass-window-installers": trade(
+    "glass-window-installers",
+    {
+      useCase: "glass-window-installers",
+      title: "Best Payment Processing Software for Glass & Window Installers (2026)",
+      subtitle:
+        "High-ticket install deposits, unit-based final billing, and payment rails that reduce delays between project completion and cash collection.",
+      introParagraph:
+        "Glass and window installers often collect larger deposits before install and final balances after walkthrough. Payment tools should support staged collection and clean customer-facing descriptors.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for install deposit workflows",
+          description: "Structured payment links for deposit, progress, and completion phases.",
+          rowBestFor: "Install milestone billing",
+          why: "Stripe is a strong fit for install businesses that rely on remote deposit collection before crews mobilize. It supports staged payment structures with clear customer communication. That makes cash timing more predictable across longer install cycles.",
+        },
+        {
+          slug: "helcim",
+          badge: "Best for large-ticket fee efficiency",
+          description: "Interchange-plus transparency for higher-value install invoices.",
+          rowBestFor: "Large-ticket processing",
+          why: "Helcim can lower effective cost for installers with larger average invoices and consistent volume. Its advantage appears in statement-level analysis, not headline rates. It is best for operators willing to monitor fee performance monthly.",
+        },
+        {
+          slug: "square",
+          badge: "Best for in-person final collection",
+          description: "Reliable on-site card capture during final inspection or handoff.",
+          rowBestFor: "Final walkthrough capture",
+          why: "Square helps close payment quickly at final walkthrough, especially when homeowners want to pay after seeing completed work. It is easy for teams to deploy and use in the field. Many installers combine it with Stripe for mixed remote/field collection.",
+        },
+      ],
+      editorialGuidance: [
+        E("Use clear statement descriptors", "Homeowners should immediately recognize charges."),
+        E("Standardize milestone receipts", "Consistent naming improves trust and support workflows."),
+        E("Separate install and service tickets", "Different ticket profiles can change best processor economics."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for glass and window installers?",
+          a: "Stripe is best for staged deposit and milestone billing, Helcim is best when large-ticket interchange-plus savings matter, and Square is best for in-person final payment collection.",
+        },
+      ],
+      relatedGuides: [{ label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for glass and window installers",
+        "window installer payment processing",
+        "glass contractor merchant services",
+      ],
+      description:
+        "Compare Stripe, Helcim, and Square for glass and window installers: milestone deposit billing, large-ticket fee transparency, and final walkthrough card capture.",
+    }
+  ),
+
+  "concrete-contractors": trade(
+    "concrete-contractors",
+    {
+      useCase: "concrete-contractors",
+      title: "Best Payment Processing Software for Concrete Contractors (2026)",
+      subtitle:
+        "Bid-to-project deposits, phase-based billing, and payment capture for high-ticket pours where scope and timing often shift.",
+      introParagraph:
+        "Concrete contractors handle project-based payments across prep, pour, and finish phases. Payment systems should support staged collection, clear records, and fee control on larger invoices.",
+      picks: [
+        {
+          slug: "helcim",
+          badge: "Best for high-ticket interchange-plus pricing",
+          description: "Transparent statements for larger concrete project invoices.",
+          rowBestFor: "Large project-ticket economics",
+          why: "Helcim is often a strong fit for concrete contractors because larger ticket sizes can magnify fee-structure impact. Interchange-plus visibility helps teams model net margin accurately. It is best when finance workflows include regular statement analysis.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for phased project billing",
+          description: "Payment links for deposit and project-phase payment requests.",
+          rowBestFor: "Phase-based remote billing",
+          why: "Stripe supports contractors who send staged payment requests from office workflows tied to project phases. Hosted links and clear records reduce delays in receiving progress payments. It pairs effectively with field capture tools when needed.",
+        },
+        {
+          slug: "square",
+          badge: "Best for field and punch-list collection",
+          description: "Simple card-present capture for completion balances and add-ons.",
+          rowBestFor: "On-site closeout payment",
+          why: "Square remains valuable for collecting final balances in person at project closeout. It is easy for crews to adopt and keeps payment completion quick. This helps reduce aging receivables on completed jobs.",
+        },
+      ],
+      editorialGuidance: [
+        E("Model effective rate by project type", "Commercial and residential mixes can behave very differently."),
+        E("Use phase tags in payment records", "Clean tagging helps finance and PM teams stay aligned."),
+        E("Close balances quickly", "In-person capture at completion reduces late-payment follow-up."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processor is best for concrete contractors?",
+          a: "Helcim is often best for high-ticket fee transparency, Stripe is best for phased remote billing, and Square is best for fast on-site closeout collection.",
+        },
+      ],
+      relatedGuides: [{ label: "Credit card processing fees explained", href: `${GUIDES}/credit-card-processing-fees-explained` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for concrete contractors",
+        "concrete contractor payment processing",
+        "concrete merchant services",
+      ],
+      description:
+        "Compare Helcim, Stripe, and Square for concrete contractors: high-ticket fee transparency, phase-based billing links, and on-site completion payment capture.",
+    }
+  ),
+
+  excavation: trade(
+    "excavation",
+    {
+      useCase: "excavation",
+      title: "Best Payment Processing Software for Excavation Companies (2026)",
+      subtitle:
+        "Equipment-heavy project billing, milestone deposits, and payment workflows that match scope changes and larger invoice values.",
+      introParagraph:
+        "Excavation companies often run fewer, larger projects with milestone billing and changing site conditions. Payment processors should support structured requests, transparent fees, and clear financial tracking.",
+      picks: [
+        {
+          slug: "helcim",
+          badge: "Best for large-ticket margin control",
+          description: "Interchange-plus statements for larger excavation and sitework invoices.",
+          rowBestFor: "Large-ticket fee transparency",
+          why: "Helcim is a strong fit for excavation firms where project invoices are large enough that effective-rate optimization affects margin materially. It supports finance-led decision making through transparent fee structure. It is best when operators commit to monthly statement review.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for structured milestone collection",
+          description: "Hosted links for mobilization deposits and project milestone payments.",
+          rowBestFor: "Milestone billing workflows",
+          why: "Stripe helps excavation teams collect mobilization and progress payments remotely with clear records and easy customer completion. It improves office-led billing efficiency and can integrate with project systems. This is especially useful when stakeholders approve payments off-site.",
+        },
+        {
+          slug: "authorize-net",
+          badge: "Best for gateway-led legacy stacks",
+          description: "Gateway option for firms already tied to bank merchant-account workflows.",
+          rowBestFor: "Legacy gateway requirements",
+          why: "Authorize.net is relevant when excavation firms already run through bank-led merchant-account arrangements or legacy ERP/payment requirements. It is not always the simplest option, but it can fit compliance-heavy or legacy-integrated environments. Choose it when infrastructure constraints require gateway compatibility.",
+        },
+      ],
+      editorialGuidance: [
+        E("Align billing with scope milestones", "Payment schedules should mirror actual project approvals."),
+        E("Separate card and ACH economics", "Large tickets may favor different rails by customer type."),
+        E("Validate legacy integration needs", "Only keep gateway complexity when required."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for excavation companies?",
+          a: "Helcim is often best for high-ticket interchange-plus pricing, Stripe is strong for milestone collection workflows, and Authorize.net is useful when legacy gateway or bank-stack requirements apply.",
+        },
+      ],
+      relatedGuides: [{ label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for excavation companies",
+        "excavation payment processing",
+        "sitework merchant services",
+      ],
+      description:
+        "Compare Helcim, Stripe, and Authorize.net for excavation companies: high-ticket fee transparency, milestone billing links, and legacy gateway compatibility.",
+    }
+  ),
+
+  "auto-repair": trade(
+    "auto-repair",
+    {
+      useCase: "auto-repair",
+      title: "Best Payment Processing Software for Auto Repair Shops (2026)",
+      subtitle:
+        "Parts-and-labor checkout, service-advisor payment speed, and customer-friendly options that reduce pickup delays.",
+      introParagraph:
+        "Auto repair shops need fast in-person checkout plus reliable remote payment options for approvals and parts work. Payment tools should keep front-desk flow efficient while maintaining clear records for each RO.",
+      picks: [
+        {
+          slug: "clover",
+          badge: "Best for front-counter checkout operations",
+          description: "Terminal-focused in-shop checkout with app ecosystem and staff-friendly workflows.",
+          rowBestFor: "Counter-driven service shops",
+          why: "Clover is a strong option for auto repair shops with busy service counters and multiple front-desk users. Dedicated hardware can improve throughput and reduce friction versus phone-only setups. It works best where in-shop checkout is the primary payment path.",
+        },
+        {
+          slug: "square",
+          badge: "Best all-around shop plus mobile capture",
+          description: "Readers, invoices, and simple workflows for mixed front-desk and lot collection.",
+          rowBestFor: "Mixed counter and mobile collection",
+          why: "Square fits repair shops that need both counter checkout and occasional mobile payment capture outside the bay. It is easy to deploy and keeps staff training simple. This makes it a reliable operational default for small to mid-size shops.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for remote approvals and links",
+          description: "Payment links for customer approvals, deposits, and remote balance collection.",
+          rowBestFor: "Remote estimate approvals",
+          why: "Stripe helps shops collect payments from customers who approve work remotely before pickup. Links are fast to send and easy to complete on mobile. It is strongest as a remote-payment complement to a counter-focused primary system.",
+        },
+      ],
+      editorialGuidance: [
+        E("Optimize pickup speed", "Checkout bottlenecks reduce daily bay throughput."),
+        E("Use RO/order IDs in receipts", "Clear references reduce payment disputes and call volume."),
+        E("Support remote approval pay", "Many customers pay before pickup—have a consistent link flow."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processor is best for auto repair shops?",
+          a: "Clover is excellent for high-volume front-counter checkout, Square is strong for mixed counter/mobile collection, and Stripe is useful for remote approval and payment-link workflows.",
+        },
+      ],
+      relatedGuides: [{ label: "Stripe vs Square fees", href: `${GUIDES}/stripe-vs-square-fees` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for auto repair shops",
+        "auto repair payment processing",
+        "mechanic shop merchant services",
+      ],
+      description:
+        "Compare Clover, Square, and Stripe for auto repair shops: front-counter checkout, mixed mobile capture, and remote approval payment links.",
+    }
+  ),
+
+  "mobile-mechanics": trade(
+    "mobile-mechanics",
+    {
+      useCase: "mobile-mechanics",
+      title: "Best Payment Processing Software for Mobile Mechanics (2026)",
+      subtitle:
+        "Driveway diagnostics, on-site repair payment capture, and mobile-first workflows that avoid office-heavy reconciliation.",
+      introParagraph:
+        "Mobile mechanics collect revenue in customer driveways and parking lots, often with limited time and variable signal quality. Payment tools should prioritize fast mobile capture and simple backup link workflows.",
+      picks: [
+        {
+          slug: "square",
+          badge: "Best for mobile on-site payment",
+          description: "Fast reader and tap workflows built for field-first collection.",
+          rowBestFor: "Driveway payment capture",
+          why: "Square is the top fit for mobile mechanics because it is optimized for fast field collection and easy receipts. It works well with solo and small crews that need reliability over configuration complexity. This minimizes time lost between repair completion and payment.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best backup wallet payment rail",
+          description: "Trusted wallet checkout for customers paying by link when card entry stalls.",
+          rowBestFor: "Remote wallet fallback",
+          why: "PayPal Business offers a useful fallback when card-present collection is not possible or customers prefer wallet payment from their phone. It can improve completion in mixed signal and urgency scenarios. Keep it where completion data justifies the extra rail.",
+        },
+        {
+          slug: "stripe",
+          badge: "Best for link-based follow-up billing",
+          description: "Payment links for return-visit work, parts invoices, and deferred balances.",
+          rowBestFor: "Deferred and follow-up payments",
+          why: "Stripe is valuable for mechanics who convert some jobs into follow-up work or parts billing that is paid later. Easy link workflows reduce office callbacks and manual card collection. It complements Square well in hybrid payment operations.",
+        },
+      ],
+      editorialGuidance: [
+        E("Carry a tested backup flow", "When readers fail, link payments should be one tap away."),
+        E("Keep receipts service-specific", "Include repair notes or RO references for trust."),
+        E("Minimize manual reconciliation", "Field-first businesses need lightweight office ops."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for mobile mechanics?",
+          a: "Square is usually best for field-first collection, with PayPal Business and Stripe as strong secondary rails for wallet and link-based follow-up payments.",
+        },
+      ],
+      relatedGuides: [{ label: "How payment processing works", href: `${GUIDES}/how-payment-processing-works` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for mobile mechanics",
+        "mobile mechanic payment processing",
+        "on site mechanic credit card processing",
+      ],
+      description:
+        "Compare Square, PayPal Business, and Stripe for mobile mechanics: fast driveway card capture, wallet fallback options, and follow-up payment links.",
+    }
+  ),
+
+  "cleaning-franchises": trade(
+    "cleaning-franchises",
+    {
+      useCase: "cleaning-franchises",
+      title: "Best Payment Processing Software for Cleaning Franchises (2026)",
+      subtitle:
+        "Recurring contract billing, multi-location consistency, and payout visibility across franchise operators and service teams.",
+      introParagraph:
+        "Cleaning franchises need payment systems that scale across locations, recurring contracts, and centralized reporting. The right processor should support repeatable billing and consistent finance controls.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for recurring contract billing",
+          description: "Billing automation for recurring service agreements and centralized payment flows.",
+          rowBestFor: "Recurring multi-location billing",
+          why: "Stripe is a strong fit for cleaning franchises with recurring service contracts and centralized billing operations. It supports scalable automation and consistent customer payment experiences across locations. This helps reduce billing variance and admin overhead franchise-wide.",
+        },
+        {
+          slug: "stax",
+          badge: "Best for predictable multi-location volume",
+          description: "Membership-style pricing model for operators with steady transaction throughput.",
+          rowBestFor: "Consistent franchise volume",
+          why: "Stax can be attractive for franchise systems with stable monthly processing volume where membership-style economics make sense. It requires realistic volume modeling and consolidated statement review. It is strongest for mature operators with predictable payment throughput.",
+        },
+        {
+          slug: "square",
+          badge: "Best for local branch field collection",
+          description: "Simple branch-level mobile capture with easy training and deployment.",
+          rowBestFor: "Branch-level field payments",
+          why: "Square works well when franchise locations still collect on site and need simple, repeatable field workflows. Its ease of use supports faster adoption across varied branch teams. It is a pragmatic operational rail even in more centralized systems.",
+        },
+      ],
+      editorialGuidance: [
+        E("Standardize payment policy across branches", "Inconsistent rails increase reconciliation and compliance risk."),
+        E("Review effective rate by location", "Blended reporting can hide underperforming branches."),
+        E("Keep recurring-billing ownership clear", "Assign responsibility for failed payment recovery."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processing software is best for cleaning franchises?",
+          a: "Stripe is best for centralized recurring billing, Stax is best for predictable high-volume franchise economics, and Square is best for simple branch-level field capture.",
+        },
+      ],
+      relatedGuides: [{ label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for cleaning franchises",
+        "cleaning franchise payment processing",
+        "recurring cleaning merchant services",
+      ],
+      description:
+        "Compare Stripe, Stax, and Square for cleaning franchises: recurring contract billing, multi-location processing economics, and branch-level field collection.",
+    }
+  ),
+
+  "event-services": trade(
+    "event-services",
+    {
+      useCase: "event-services",
+      title: "Best Payment Processing Software for Event Services (2026)",
+      subtitle:
+        "Proposal deposits, milestone invoices, and final settlement workflows for event-based projects with high client communication needs.",
+      introParagraph:
+        "Event service businesses collect money across proposal acceptance, milestone planning stages, and event-close settlement. Payment systems should support flexible staged billing and strong client-facing completion rates.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for milestone and link billing",
+          description: "Hosted links for deposit, planning-stage invoices, and final balance collection.",
+          rowBestFor: "Staged event billing",
+          why: "Stripe is highly effective for event teams that bill in multiple phases and rely on email-first client communication. Payment Links keep billing flexible and easy to complete on mobile. This helps improve on-time payments across long planning cycles.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best for wallet-trust conversion",
+          description: "PayPal checkout for remote clients paying from email and mobile.",
+          rowBestFor: "Remote client checkout",
+          why: "PayPal Business can improve completion on deposit and milestone requests when client trust in wallet checkout is high. It is especially useful for consumer-heavy event verticals. Keep it where funded-invoice conversion clearly improves.",
+        },
+        {
+          slug: "square",
+          badge: "Best for event-day and final on-site settlement",
+          description: "In-person capture rail for final balances and add-on payments.",
+          rowBestFor: "On-site final settlement",
+          why: "Square supports event-day final balances and add-on charges when in-person payment still occurs at setup or completion. Hardware and receipt simplicity help teams close quickly under time pressure. It complements remote billing rails well.",
+        },
+      ],
+      editorialGuidance: [
+        E("Tie each payment to deliverable stage", "Clear milestone language reduces client confusion."),
+        E("Track deposit-to-final conversion", "Identify where clients stall and optimize that stage."),
+        E("Keep event-day backup rail ready", "In-person final settlement should be operationally simple."),
+      ],
+      faqItems: [
+        {
+          q: "What is the best payment processing software for event services?",
+          a: "Stripe is best for staged milestone billing, PayPal Business is strong for wallet-based remote checkout, and Square is useful for event-day in-person final settlement.",
+        },
+      ],
+      relatedGuides: [{ label: "How payment processing works", href: `${GUIDES}/how-payment-processing-works` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for event services",
+        "event service payment processing",
+        "event business merchant services",
+      ],
+      description:
+        "Compare Stripe, PayPal Business, and Square for event services: staged milestone billing, wallet-trust checkout, and event-day final payment capture.",
+    }
+  ),
+
+  "home-inspectors": trade(
+    "home-inspectors",
+    {
+      useCase: "home-inspectors",
+      title: "Best Payment Processing Software for Home Inspectors (2026)",
+      subtitle:
+        "Pre-inspection payment links, quick report-close settlement, and lightweight tools that fit solo and small inspection teams.",
+      introParagraph:
+        "Home inspectors often need payment before or immediately after inspection while keeping admin overhead low. Payment processors should support simple link workflows, mobile completion, and straightforward records.",
+      picks: [
+        {
+          slug: "stripe",
+          badge: "Best for pre-inspection link payments",
+          description: "Payment links for booking and pre-inspection collection.",
+          rowBestFor: "Pre-service payment flow",
+          why: "Stripe is a strong fit for inspectors who collect at booking or prior to inspection. Links are easy to send and complete, reducing no-pay follow-up and report-release delays. It works especially well in email-driven scheduling workflows.",
+        },
+        {
+          slug: "square",
+          badge: "Best for same-day on-site settlement",
+          description: "Mobile card capture during or immediately after property visit.",
+          rowBestFor: "On-site same-day collection",
+          why: "Square gives inspectors a simple on-site capture option when clients pay at or right after inspection. It minimizes billing lag and keeps workflows fast. Solo operators often benefit from its low training overhead.",
+        },
+        {
+          slug: "paypal-business",
+          badge: "Best for remote wallet payers",
+          description: "Wallet-friendly checkout option for clients paying from mobile email.",
+          rowBestFor: "Remote mobile checkout",
+          why: "PayPal Business can improve completion for clients who prefer wallet payment over card entry. This is useful when payment is collected remotely before report delivery. Keep it as a conversion-optimized option where data supports it.",
+        },
+      ],
+      editorialGuidance: [
+        E("Collect before report delivery", "Clear timing policy prevents post-service collection delays."),
+        E("Use property/order references", "Payment records should map cleanly to inspection jobs."),
+        E("Keep stack lightweight", "Solo operators benefit from fewer moving parts."),
+      ],
+      faqItems: [
+        {
+          q: "What payment processing software is best for home inspectors?",
+          a: "Stripe is best for pre-inspection payment links, Square is best for same-day on-site settlement, and PayPal Business is useful for remote wallet-based checkout.",
+        },
+      ],
+      relatedGuides: [{ label: "How to choose a payment processor", href: `${GUIDES}/how-to-choose-a-payment-processor` }],
+    },
+    {
+      keywords: [
+        "best payment processing software for home inspectors",
+        "home inspector payment processing",
+        "inspection business merchant services",
+      ],
+      description:
+        "Compare Stripe, Square, and PayPal Business for home inspectors: pre-inspection payment links, same-day settlement, and remote wallet checkout.",
+    }
+  ),
 };
 
 export function getPaymentProcessingTradeSeoMeta(slug: string): PaymentProcessingTradeSeoMeta | undefined {

@@ -20,7 +20,43 @@ type TradeConfig = {
   hubTeaser: string;
   metaDescription: string;
   metaKeywords: string[];
+  softwareSet?: TradeSoftwareSetKey;
 };
+
+type ProductSlug =
+  | "freshbooks"
+  | "quickbooks"
+  | "zoho-invoice"
+  | "wave"
+  | "xero"
+  | "invoice-ninja"
+  | "honeybook"
+  | "bonsai";
+
+type ProductConfig = {
+  slug: ProductSlug;
+  name: string;
+  description: string;
+  rating: string;
+  startingPrice: string;
+  visitUrl: string;
+  logoSrc: string;
+  defaultBadge: string;
+  defaultBestFor: string;
+  standoutFeature: string;
+};
+
+type TradeSoftwareSet = {
+  featured: [ProductSlug, ProductSlug, ProductSlug, ProductSlug];
+  comparison: [ProductSlug, ProductSlug, ProductSlug, ProductSlug];
+};
+
+type TradeSoftwareSetKey =
+  | "fieldServiceCore"
+  | "projectBilling"
+  | "routeService"
+  | "smallTeamOps"
+  | "creativeClientOps";
 
 const CATEGORY = { href: "/invoicing", label: "Invoicing" } as const;
 const SEE_ALSO = {
@@ -31,6 +67,292 @@ const SEE_ALSO = {
 } as const;
 
 const TRADE_CONFIGS: readonly TradeConfig[] = [
+  {
+    useCase: "appliance-repair",
+    audiencePlural: "Appliance repair businesses",
+    audienceSingular: "appliance repair business",
+    audienceShort: "appliance repair",
+    title: "Best Invoicing Software for Appliance Repair Businesses (2026)",
+    subtitle:
+      "Compare invoicing software for appliance repair businesses: dispatch-to-invoice speed, warranty-ready notes, parts and labor line items, and same-day payment collection.",
+    introParagraph:
+      "Appliance repair businesses need quick invoice turnaround after diagnostics and parts replacement. These picks help you document labor and parts clearly, send invoices on-site, and reduce unpaid service calls.",
+    hubTeaser:
+      "Best invoicing software for appliance repair teams that need fast job closeout and same-day collections.",
+    metaDescription:
+      "Best invoicing software for appliance repair businesses in 2026. Compare top tools for parts-and-labor invoices, service notes, and fast payment collection.",
+    metaKeywords: [
+      "best invoicing software for appliance repair businesses",
+      "appliance repair invoicing software",
+      "appliance service invoice app",
+      "parts and labor invoicing software",
+    ],
+    softwareSet: "routeService",
+  },
+  {
+    useCase: "garage-door",
+    audiencePlural: "Garage door companies",
+    audienceSingular: "garage door company",
+    audienceShort: "garage door",
+    title: "Best Invoicing Software for Garage Door Companies (2026)",
+    subtitle:
+      "Compare invoicing software for garage door companies: estimate conversion, opener and part line-item billing, service-call invoicing, and payment links.",
+    introParagraph:
+      "Garage door companies often invoice mixed jobs with diagnostics, parts, labor, and follow-up adjustments. These tools help teams quote quickly, invoice cleanly, and collect before leaving the job site.",
+    hubTeaser:
+      "Invoicing software for garage door teams with fast estimate-to-invoice flow and field payments.",
+    metaDescription:
+      "Best invoicing software for garage door companies in 2026. Compare tools for service-call invoicing, part line items, and faster payment collection.",
+    metaKeywords: [
+      "best invoicing software for garage door companies",
+      "garage door invoicing software",
+      "garage door service invoice app",
+      "garage door estimate software",
+    ],
+    softwareSet: "routeService",
+  },
+  {
+    useCase: "locksmith",
+    audiencePlural: "Locksmith businesses",
+    audienceSingular: "locksmith business",
+    audienceShort: "locksmith",
+    title: "Best Invoicing Software for Locksmith Businesses (2026)",
+    subtitle:
+      "Compare invoicing software for locksmith businesses: mobile invoicing, emergency call billing, key and hardware line items, and instant payment capture.",
+    introParagraph:
+      "Locksmith businesses need invoicing tools that work in urgent, mobile situations. These picks are best for teams that invoice immediately after unlocks, rekeys, and installs.",
+    hubTeaser:
+      "Mobile-first invoicing software for locksmith teams handling emergency and on-demand calls.",
+    metaDescription:
+      "Best invoicing software for locksmith businesses in 2026. Compare mobile invoice apps for emergency calls, hardware billing, and same-day payments.",
+    metaKeywords: [
+      "best invoicing software for locksmith businesses",
+      "locksmith invoicing software",
+      "locksmith invoice app",
+      "emergency service billing software",
+    ],
+    softwareSet: "smallTeamOps",
+  },
+  {
+    useCase: "flooring",
+    audiencePlural: "Flooring contractors",
+    audienceSingular: "flooring contractor",
+    audienceShort: "flooring",
+    title: "Best Invoicing Software for Flooring Contractors (2026)",
+    subtitle:
+      "Compare invoicing software for flooring contractors: estimate templates, material and labor breakdowns, deposit billing, and phase-based invoicing.",
+    introParagraph:
+      "Flooring contractors need invoicing software that separates material, labor, and project-phase charges clearly. These tools help avoid invoice disputes and improve collection speed.",
+    hubTeaser:
+      "Best invoicing software for flooring contractors with deposit and phase-based billing workflows.",
+    metaDescription:
+      "Best invoicing software for flooring contractors in 2026. Compare tools for estimates, deposit invoices, and material-and-labor billing.",
+    metaKeywords: [
+      "best invoicing software for flooring contractors",
+      "flooring invoicing software",
+      "flooring estimate and invoice app",
+      "contractor phase billing software",
+    ],
+    softwareSet: "projectBilling",
+  },
+  {
+    useCase: "fence-deck",
+    audiencePlural: "Fence and deck builders",
+    audienceSingular: "fence and deck builder",
+    audienceShort: "fence and deck",
+    title: "Best Invoicing Software for Fence & Deck Builders (2026)",
+    subtitle:
+      "Compare invoicing software for fence and deck builders: proposal-to-invoice conversion, staged billing, change-order tracking, and milestone payment collection.",
+    introParagraph:
+      "Fence and deck builders need clear project billing for deposits, progress draws, and final payments. These picks support long-cycle jobs where scope and materials can change mid-project.",
+    hubTeaser:
+      "Best invoicing software for fence and deck projects with staged billing and change-order clarity.",
+    metaDescription:
+      "Best invoicing software for fence and deck builders in 2026. Compare software for staged billing, change orders, and project payment tracking.",
+    metaKeywords: [
+      "best invoicing software for fence and deck builders",
+      "deck builder invoicing software",
+      "fence contractor invoice app",
+      "project milestone billing software",
+    ],
+    softwareSet: "projectBilling",
+  },
+  {
+    useCase: "glass-window-installers",
+    audiencePlural: "Glass and window installers",
+    audienceSingular: "glass and window installer",
+    audienceShort: "glass and window",
+    title: "Best Invoicing Software for Glass & Window Installers (2026)",
+    subtitle:
+      "Compare invoicing software for glass and window installers: quote-to-invoice workflows, unit and labor billing, deposit invoices, and final payment collection.",
+    introParagraph:
+      "Glass and window installers manage higher-ticket jobs that require clean documentation and staged payments. These tools help teams bill accurately and get paid faster at project completion.",
+    hubTeaser:
+      "Top invoicing software for glass and window installers with staged payment workflows.",
+    metaDescription:
+      "Best invoicing software for glass and window installers in 2026. Compare tools for quote conversion, deposit billing, and final invoice collection.",
+    metaKeywords: [
+      "best invoicing software for glass and window installers",
+      "window contractor invoicing software",
+      "glass installer invoice app",
+      "window installation billing software",
+    ],
+    softwareSet: "projectBilling",
+  },
+  {
+    useCase: "concrete-contractors",
+    audiencePlural: "Concrete contractors",
+    audienceSingular: "concrete contractor",
+    audienceShort: "concrete",
+    title: "Best Invoicing Software for Concrete Contractors (2026)",
+    subtitle:
+      "Compare invoicing software for concrete contractors: bid-to-invoice conversion, milestone billing, pour-phase invoices, and change-order documentation.",
+    introParagraph:
+      "Concrete contractors need invoicing workflows that account for changing site conditions and staged work. These picks help teams keep billing tied to approved scope and completed phases.",
+    hubTeaser:
+      "Invoicing software for concrete contractors with milestone billing and change-order workflows.",
+    metaDescription:
+      "Best invoicing software for concrete contractors in 2026. Compare tools for project-phase invoices, change orders, and payment tracking.",
+    metaKeywords: [
+      "best invoicing software for concrete contractors",
+      "concrete invoicing software",
+      "concrete contractor invoice app",
+      "construction phase billing software",
+    ],
+    softwareSet: "projectBilling",
+  },
+  {
+    useCase: "excavation",
+    audiencePlural: "Excavation companies",
+    audienceSingular: "excavation company",
+    audienceShort: "excavation",
+    title: "Best Invoicing Software for Excavation Companies (2026)",
+    subtitle:
+      "Compare invoicing software for excavation companies: estimate and scope updates, equipment and operator billing, milestone invoicing, and receivables tracking.",
+    introParagraph:
+      "Excavation companies need invoicing software that handles project complexity and changing job-site scope. These picks support clearer billing records and faster collections on larger tickets.",
+    hubTeaser:
+      "Best invoicing software for excavation companies with equipment-heavy and milestone billing support.",
+    metaDescription:
+      "Best invoicing software for excavation companies in 2026. Compare invoicing tools for scope changes, milestone billing, and cash-flow visibility.",
+    metaKeywords: [
+      "best invoicing software for excavation companies",
+      "excavation invoicing software",
+      "sitework billing software",
+      "heavy equipment invoice app",
+    ],
+    softwareSet: "projectBilling",
+  },
+  {
+    useCase: "auto-repair",
+    audiencePlural: "Auto repair shops",
+    audienceSingular: "auto repair shop",
+    audienceShort: "auto repair",
+    title: "Best Invoicing Software for Auto Repair Shops (2026)",
+    subtitle:
+      "Compare invoicing software for auto repair shops: labor and parts invoicing, inspection-to-invoice speed, service history context, and payment processing.",
+    introParagraph:
+      "Auto repair shops need invoicing software that keeps labor and parts billing transparent for customers. These tools help teams issue accurate invoices quickly and reduce payment delays at pickup.",
+    hubTeaser:
+      "Top invoicing software for auto repair shops with labor-plus-parts billing and faster checkout.",
+    metaDescription:
+      "Best invoicing software for auto repair shops in 2026. Compare invoice tools for labor-and-parts billing, service workflow speed, and payment collection.",
+    metaKeywords: [
+      "best invoicing software for auto repair shops",
+      "auto repair invoicing software",
+      "mechanic invoice app",
+      "labor and parts billing software",
+    ],
+    softwareSet: "routeService",
+  },
+  {
+    useCase: "mobile-mechanics",
+    audiencePlural: "Mobile mechanics",
+    audienceSingular: "mobile mechanic",
+    audienceShort: "mobile mechanic",
+    title: "Best Invoicing Software for Mobile Mechanics (2026)",
+    subtitle:
+      "Compare invoicing software for mobile mechanics: phone-first invoicing, diagnostic and repair billing, on-site card payments, and receipt delivery.",
+    introParagraph:
+      "Mobile mechanics need lightweight invoicing software that works from the vehicle and customer driveway. These picks help you invoice immediately and collect payment before leaving.",
+    hubTeaser:
+      "Phone-first invoicing software for mobile mechanics with on-site payment support.",
+    metaDescription:
+      "Best invoicing software for mobile mechanics in 2026. Compare mobile invoicing apps for on-site billing, repair line items, and instant payment collection.",
+    metaKeywords: [
+      "best invoicing software for mobile mechanics",
+      "mobile mechanic invoicing software",
+      "mobile auto repair invoice app",
+      "on-site repair billing software",
+    ],
+    softwareSet: "smallTeamOps",
+  },
+  {
+    useCase: "cleaning-franchises",
+    audiencePlural: "Cleaning franchises",
+    audienceSingular: "cleaning franchise",
+    audienceShort: "cleaning franchise",
+    title: "Best Invoicing Software for Cleaning Franchises (2026)",
+    subtitle:
+      "Compare invoicing software for cleaning franchises: recurring contract billing, multi-location client invoicing, standardized templates, and AR visibility.",
+    introParagraph:
+      "Cleaning franchises need invoicing software that standardizes billing across teams, territories, and recurring contracts. These tools support consistent invoice quality and predictable collections.",
+    hubTeaser:
+      "Invoicing software for cleaning franchises with recurring and multi-location billing workflows.",
+    metaDescription:
+      "Best invoicing software for cleaning franchises in 2026. Compare recurring invoicing, multi-location billing, and collections automation tools.",
+    metaKeywords: [
+      "best invoicing software for cleaning franchises",
+      "cleaning franchise invoicing software",
+      "recurring cleaning invoice app",
+      "multi-location billing software",
+    ],
+    softwareSet: "fieldServiceCore",
+  },
+  {
+    useCase: "event-services",
+    audiencePlural: "Event service businesses",
+    audienceSingular: "event service business",
+    audienceShort: "event services",
+    title: "Best Invoicing Software for Event Services (2026)",
+    subtitle:
+      "Compare invoicing software for event services: proposal and contract billing, deposit and milestone invoices, change-request billing, and final settlement workflows.",
+    introParagraph:
+      "Event service businesses need invoicing systems that handle deposits, mid-project adjustments, and post-event final billing. These picks are best for teams managing client-facing project work.",
+    hubTeaser:
+      "Best invoicing software for event service teams with deposit, milestone, and final settlement billing.",
+    metaDescription:
+      "Best invoicing software for event services in 2026. Compare tools for proposal-to-invoice flow, deposit billing, and post-event payment collection.",
+    metaKeywords: [
+      "best invoicing software for event services",
+      "event service invoicing software",
+      "event deposit invoice software",
+      "event business billing app",
+    ],
+    softwareSet: "creativeClientOps",
+  },
+  {
+    useCase: "home-inspectors",
+    audiencePlural: "Home inspectors",
+    audienceSingular: "home inspector",
+    audienceShort: "home inspection",
+    title: "Best Invoicing Software for Home Inspectors (2026)",
+    subtitle:
+      "Compare invoicing software for home inspectors: fast pre-inspection invoicing, report-linked billing, payment reminders, and simple client payment workflows.",
+    introParagraph:
+      "Home inspectors need invoicing software that keeps admin minimal and payment timing predictable. These tools help you invoice before or immediately after inspections and keep receivables clean.",
+    hubTeaser:
+      "Best invoicing software for home inspectors with simple pre- and post-inspection billing workflows.",
+    metaDescription:
+      "Best invoicing software for home inspectors in 2026. Compare invoicing tools for pre-inspection billing, payment reminders, and faster collections.",
+    metaKeywords: [
+      "best invoicing software for home inspectors",
+      "home inspector invoicing software",
+      "inspection invoice app",
+      "home inspection billing software",
+    ],
+    softwareSet: "smallTeamOps",
+  },
   {
     useCase: "hvac",
     audiencePlural: "HVAC businesses",
@@ -273,6 +595,172 @@ const TRADE_CONFIGS: readonly TradeConfig[] = [
   },
 ] as const;
 
+const PRODUCT_MAP: Record<ProductSlug, ProductConfig> = {
+  freshbooks: {
+    slug: "freshbooks",
+    name: "FreshBooks",
+    description:
+      "Reliable estimate-to-invoice workflows with online payments and client-friendly invoice delivery for service businesses.",
+    rating: "4.5",
+    startingPrice: "$19/mo",
+    visitUrl: "https://www.freshbooks.com",
+    logoSrc: "/Logos/freshbooks.jpeg",
+    defaultBadge: "Best overall",
+    defaultBestFor: "Best overall",
+    standoutFeature: "Estimate-to-invoice flow with online payments",
+  },
+  quickbooks: {
+    slug: "quickbooks",
+    name: "QuickBooks",
+    description:
+      "Invoicing in the same system as accounting, with strong reporting and a familiar workflow for bookkeepers and owners.",
+    rating: "4.6",
+    startingPrice: "$30/mo",
+    visitUrl: "https://quickbooks.intuit.com",
+    logoSrc: "/Logos/quickbooks.png",
+    defaultBadge: "Best for invoicing + accounting",
+    defaultBestFor: "Invoicing + accounting in one stack",
+    standoutFeature: "Integrated books, invoicing, and reporting",
+  },
+  "zoho-invoice": {
+    slug: "zoho-invoice",
+    name: "Zoho Invoice",
+    description:
+      "Affordable invoicing with automation, reminders, and a client portal for smoother payment collection.",
+    rating: "4.4",
+    startingPrice: "Free tier",
+    visitUrl: "https://www.zoho.com/invoice",
+    logoSrc: "/Logos/zoho.png",
+    defaultBadge: "Best value",
+    defaultBestFor: "Value-focused teams",
+    standoutFeature: "Automation and client portal",
+  },
+  wave: {
+    slug: "wave",
+    name: "Wave",
+    description:
+      "Free core invoicing for budget-conscious businesses that still need professional invoices and payment tracking.",
+    rating: "4.3",
+    startingPrice: "Free",
+    visitUrl: "https://www.waveapps.com",
+    logoSrc: "/Logos/wave.jpeg",
+    defaultBadge: "Best free option",
+    defaultBestFor: "Teams prioritizing low software cost",
+    standoutFeature: "Free core invoicing and payment tracking",
+  },
+  xero: {
+    slug: "xero",
+    name: "Xero",
+    description:
+      "Balanced invoicing and accounting stack with strong reporting, reconciliation, and integrations for growing teams.",
+    rating: "4.5",
+    startingPrice: "$15/mo",
+    visitUrl: "https://www.xero.com",
+    logoSrc: "/Logos/xero.png",
+    defaultBadge: "Best QuickBooks alternative",
+    defaultBestFor: "Growing teams needing invoicing + accounting",
+    standoutFeature: "Strong reporting with broad integrations",
+  },
+  "invoice-ninja": {
+    slug: "invoice-ninja",
+    name: "Invoice Ninja",
+    description:
+      "Flexible invoicing platform with automation and customization for teams that want deeper workflow control.",
+    rating: "4.3",
+    startingPrice: "Free / paid",
+    visitUrl: "https://www.invoiceninja.com",
+    logoSrc: "/Logos/invoiceninja.jpeg",
+    defaultBadge: "Best for customization",
+    defaultBestFor: "Teams needing customization and control",
+    standoutFeature: "Highly customizable workflows and templates",
+  },
+  honeybook: {
+    slug: "honeybook",
+    name: "HoneyBook",
+    description:
+      "Client-workflow platform with proposals, contracts, and invoicing for project-based service businesses.",
+    rating: "4.4",
+    startingPrice: "Quote",
+    visitUrl: "https://www.honeybook.com",
+    logoSrc: "/Logos/honeybook.jpeg",
+    defaultBadge: "Best for proposal-to-payment workflows",
+    defaultBestFor: "Client-facing project businesses",
+    standoutFeature: "Proposal, contract, and invoice workflow in one app",
+  },
+  bonsai: {
+    slug: "bonsai",
+    name: "Bonsai",
+    description:
+      "Freelancer-focused platform for proposals, contracts, and invoices in one streamlined workflow.",
+    rating: "4.3",
+    startingPrice: "Quote",
+    visitUrl: "https://www.hellobonsai.com",
+    logoSrc: "/Logos/bonsai.jpeg",
+    defaultBadge: "Best for solo operators",
+    defaultBestFor: "Solo service operators",
+    standoutFeature: "Simple proposals and invoicing for solo teams",
+  },
+};
+
+const TRADE_SOFTWARE_SETS: Record<TradeSoftwareSetKey, TradeSoftwareSet> = {
+  fieldServiceCore: {
+    featured: ["freshbooks", "quickbooks", "zoho-invoice", "wave"],
+    comparison: ["freshbooks", "quickbooks", "zoho-invoice", "wave"],
+  },
+  projectBilling: {
+    featured: ["quickbooks", "xero", "freshbooks", "invoice-ninja"],
+    comparison: ["quickbooks", "xero", "freshbooks", "invoice-ninja"],
+  },
+  routeService: {
+    featured: ["freshbooks", "zoho-invoice", "quickbooks", "wave"],
+    comparison: ["freshbooks", "zoho-invoice", "quickbooks", "wave"],
+  },
+  smallTeamOps: {
+    featured: ["zoho-invoice", "wave", "freshbooks", "bonsai"],
+    comparison: ["zoho-invoice", "wave", "freshbooks", "bonsai"],
+  },
+  creativeClientOps: {
+    featured: ["honeybook", "freshbooks", "bonsai", "quickbooks"],
+    comparison: ["honeybook", "freshbooks", "bonsai", "quickbooks"],
+  },
+};
+
+function getSoftwareSet(cfg: InvoicingTradeConfig): TradeSoftwareSet {
+  return TRADE_SOFTWARE_SETS[cfg.softwareSet ?? "fieldServiceCore"];
+}
+
+function toFeaturedProduct(slug: ProductSlug, index: number, cfg: InvoicingTradeConfig): BestForFeaturedProduct {
+  const product = PRODUCT_MAP[slug];
+  const badge =
+    index === 0 ? `Best overall for ${cfg.audienceShort}` : product.defaultBadge;
+  return {
+    slug: product.slug,
+    name: product.name,
+    badge,
+    description: product.description,
+    rating: product.rating,
+    startingPrice: product.startingPrice,
+    reviewHref: getInvoicingReviewUrl(product.slug),
+    visitUrl: product.visitUrl,
+    logoSrc: product.logoSrc,
+  };
+}
+
+function toTableRow(slug: ProductSlug, index: number, cfg: InvoicingTradeConfig): BestForTableRow {
+  const product = PRODUCT_MAP[slug];
+  const bestFor =
+    index === 0 ? `Best overall for ${cfg.audienceShort}` : product.defaultBestFor;
+  return {
+    slug: product.slug,
+    name: product.name,
+    logoSrc: product.logoSrc,
+    bestFor,
+    startingPrice: product.startingPrice,
+    standoutFeature: product.standoutFeature,
+    reviewHref: getInvoicingReviewUrl(product.slug),
+  };
+}
+
 type InvoicingTradeConfig = (typeof TRADE_CONFIGS)[number];
 
 const TRADE_CONFIGS_BY_USE_CASE = Object.fromEntries(
@@ -281,6 +769,13 @@ const TRADE_CONFIGS_BY_USE_CASE = Object.fromEntries(
 
 function buildTradePageProps(cfg: InvoicingTradeConfig): BestForTemplateProps {
   const useCasePhrase = cfg.audiencePlural.toLowerCase();
+  const softwareSet = getSoftwareSet(cfg);
+  const featuredProducts = softwareSet.featured.map((slug, index) =>
+    toFeaturedProduct(slug, index, cfg)
+  );
+  const comparisonRows = softwareSet.comparison.map((slug, index) =>
+    toTableRow(slug, index, cfg)
+  );
   return {
     title: cfg.title,
     subtitle: cfg.subtitle,
@@ -293,94 +788,8 @@ function buildTradePageProps(cfg: InvoicingTradeConfig): BestForTemplateProps {
     editorialSub: `What to look for when you're choosing invoicing software for ${useCasePhrase}.`,
     whyThesePicksSub: `Why these invoicing tools fit ${useCasePhrase}.`,
     seeAlsoBlock: SEE_ALSO,
-    featuredProducts: [
-      {
-        slug: "freshbooks",
-        name: "FreshBooks",
-        badge: `Best overall for ${cfg.audienceShort}`,
-        description:
-          "Reliable estimate-to-invoice workflows with online payments and client-friendly invoice delivery for service businesses.",
-        rating: "4.5",
-        startingPrice: "$19/mo",
-        reviewHref: getInvoicingReviewUrl("freshbooks"),
-        visitUrl: "https://www.freshbooks.com",
-        logoSrc: "/Logos/freshbooks.jpeg",
-      },
-      {
-        slug: "quickbooks",
-        name: "QuickBooks",
-        badge: "Best for invoicing + accounting",
-        description:
-          "Invoicing in the same system as accounting, with strong reporting and a familiar workflow for bookkeepers and owners.",
-        rating: "4.6",
-        startingPrice: "$30/mo",
-        reviewHref: getInvoicingReviewUrl("quickbooks"),
-        visitUrl: "https://quickbooks.intuit.com",
-        logoSrc: "/Logos/quickbooks.png",
-      },
-      {
-        slug: "zoho-invoice",
-        name: "Zoho Invoice",
-        badge: `Best value for ${cfg.audienceShort} teams`,
-        description:
-          "Affordable invoicing with automation, reminders, and a client portal for smoother payment collection.",
-        rating: "4.4",
-        startingPrice: "Free tier",
-        reviewHref: getInvoicingReviewUrl("zoho-invoice"),
-        visitUrl: "https://www.zoho.com/invoice",
-        logoSrc: "/Logos/zoho.png",
-      },
-      {
-        slug: "wave",
-        name: "Wave",
-        badge: "Best free option",
-        description:
-          "Free core invoicing for budget-conscious businesses that still need professional invoices and payment tracking.",
-        rating: "4.3",
-        startingPrice: "Free",
-        reviewHref: getInvoicingReviewUrl("wave"),
-        visitUrl: "https://www.waveapps.com",
-        logoSrc: "/Logos/wave.jpeg",
-      },
-    ] as BestForFeaturedProduct[],
-    comparisonTableRows: [
-      {
-        slug: "freshbooks",
-        name: "FreshBooks",
-        logoSrc: "/Logos/freshbooks.jpeg",
-        bestFor: `Best overall for ${cfg.audienceShort}`,
-        startingPrice: "$19/mo",
-        standoutFeature: "Estimate-to-invoice flow with online payments",
-        reviewHref: getInvoicingReviewUrl("freshbooks"),
-      },
-      {
-        slug: "quickbooks",
-        name: "QuickBooks",
-        logoSrc: "/Logos/quickbooks.png",
-        bestFor: "Invoicing + accounting in one stack",
-        startingPrice: "$30/mo",
-        standoutFeature: "Integrated books, invoicing, and reporting",
-        reviewHref: getInvoicingReviewUrl("quickbooks"),
-      },
-      {
-        slug: "zoho-invoice",
-        name: "Zoho Invoice",
-        logoSrc: "/Logos/zoho.png",
-        bestFor: `Value-focused ${cfg.audienceShort} businesses`,
-        startingPrice: "Free tier",
-        standoutFeature: "Automation and client portal",
-        reviewHref: getInvoicingReviewUrl("zoho-invoice"),
-      },
-      {
-        slug: "wave",
-        name: "Wave",
-        logoSrc: "/Logos/wave.jpeg",
-        bestFor: "Teams prioritizing low software cost",
-        startingPrice: "Free",
-        standoutFeature: "Free core invoicing and payment tracking",
-        reviewHref: getInvoicingReviewUrl("wave"),
-      },
-    ] as BestForTableRow[],
+    featuredProducts: featuredProducts as BestForFeaturedProduct[],
+    comparisonTableRows: comparisonRows as BestForTableRow[],
     editorialGuidance: [
       {
         heading: "Estimate-to-invoice speed",

@@ -107,6 +107,71 @@ const SCENARIOS = [
     href: "/time-tracking/best-for/moving",
     description: "Crew and route labor tracking for local and long-distance moves.",
   },
+  {
+    label: "Best Time Tracking Software for Appliance Repair Businesses (2026)",
+    href: "/time-tracking/best-for/appliance-repair",
+    description: "Mobile labor tracking for appliance service calls, diagnostics, and return visits.",
+  },
+  {
+    label: "Best Time Tracking Software for Garage Door Companies (2026)",
+    href: "/time-tracking/best-for/garage-door",
+    description: "Track install and service labor with cleaner mobile timesheets and payroll exports.",
+  },
+  {
+    label: "Best Time Tracking Software for Locksmith Businesses (2026)",
+    href: "/time-tracking/best-for/locksmith",
+    description: "Fast time entry for emergency locksmith callouts and mobile field teams.",
+  },
+  {
+    label: "Best Time Tracking Software for Flooring Contractors (2026)",
+    href: "/time-tracking/best-for/flooring",
+    description: "Project-phase labor tracking for flooring crews and install workflows.",
+  },
+  {
+    label: "Best Time Tracking Software for Fence & Deck Builders (2026)",
+    href: "/time-tracking/best-for/fence-deck",
+    description: "Crew time tracking for fence and deck builds with phase-level reporting.",
+  },
+  {
+    label: "Best Time Tracking Software for Glass & Window Installers (2026)",
+    href: "/time-tracking/best-for/glass-window-installers",
+    description: "Installation crew timesheets and job-level labor visibility for window and glass teams.",
+  },
+  {
+    label: "Best Time Tracking Software for Concrete Contractors (2026)",
+    href: "/time-tracking/best-for/concrete-contractors",
+    description: "Track prep, pour, and finish labor with field-ready payroll reporting.",
+  },
+  {
+    label: "Best Time Tracking Software for Excavation Companies (2026)",
+    href: "/time-tracking/best-for/excavation",
+    description: "Operator and crew labor tracking across changing site conditions and schedules.",
+  },
+  {
+    label: "Best Time Tracking Software for Auto Repair Shops (2026)",
+    href: "/time-tracking/best-for/auto-repair",
+    description: "Technician labor and bay productivity tracking for payroll and repair-order reporting.",
+  },
+  {
+    label: "Best Time Tracking Software for Mobile Mechanics (2026)",
+    href: "/time-tracking/best-for/mobile-mechanics",
+    description: "Field-first mobile timesheets for route-based mechanic teams and solo operators.",
+  },
+  {
+    label: "Best Time Tracking Software for Cleaning Franchises (2026)",
+    href: "/time-tracking/best-for/cleaning-franchises",
+    description: "Standardized multi-location labor tracking for recurring cleaning operations.",
+  },
+  {
+    label: "Best Time Tracking Software for Event Services (2026)",
+    href: "/time-tracking/best-for/event-services",
+    description: "Shift and project labor tracking for setup, event-day, and teardown crews.",
+  },
+  {
+    label: "Best Time Tracking Software for Home Inspectors (2026)",
+    href: "/time-tracking/best-for/home-inspectors",
+    description: "Lightweight field and report-time tracking for inspection businesses.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

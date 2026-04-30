@@ -466,6 +466,240 @@ const TRADE_CONFIGS: TradeConfig[] = [
     editorialGuidance: [E("Standardize crew onboarding", "Create role-specific onboarding paths for drivers, movers, and coordinators."), E("Validate payroll timing", "Ensure payroll cycles align with peak move days and overtime patterns.")],
     faqItems: [{ q: "What HR software is best for moving companies?", a: "Gusto is a strong all-around choice for most moving companies, with Rippling and Justworks as alternatives for scale or support-focused needs." }],
   },
+  {
+    useCase: "appliance-repair",
+    navLabel: "Appliance repair businesses",
+    title: "Best HR Software for Appliance Repair Businesses (2026)",
+    subtitle:
+      "Compare HR software for appliance repair businesses with technician onboarding, payroll workflows, and compliance support for mobile service teams.",
+    introParagraph:
+      "Appliance repair businesses need HR tools that keep technician hiring, onboarding, and payroll clean across field and office roles. The best platforms reduce admin friction while supporting growth and retention.",
+    hubTeaser: "HR and payroll support for mobile appliance repair teams.",
+    keywords: ["best HR software for appliance repair businesses", "appliance repair HR software", "appliance service payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for appliance repair SMBs", description: "All-in-one payroll and HR for field and office teams.", rowBestFor: "SMB all-in-one setup", why: "Gusto is a practical default for appliance repair companies that need dependable payroll, onboarding, and benefits admin without heavy setup overhead." },
+      { slug: "bamboohr", badge: "Best for structured people operations", description: "Strong HRIS workflows for hiring, records, and onboarding quality.", rowBestFor: "HRIS process depth", why: "BambooHR is a strong fit when appliance repair businesses want cleaner employee lifecycle workflows and better HR process consistency as they scale." },
+      { slug: "justworks", badge: "Best PEO option for support-heavy teams", description: "PEO-backed compliance and benefits support for lean HR teams.", rowBestFor: "Outsourced HR support", why: "Justworks works well for appliance repair operators who prefer more guided compliance and HR support through a PEO model." },
+    ],
+    editorialGuidance: [E("Standardize technician onboarding", "Use role-specific onboarding paths for field techs and coordinators."), E("Review payroll edge cases", "Validate overtime and on-call pay-code setup before full rollout.")],
+    faqItems: [{ q: "What is the best HR software for appliance repair businesses?", a: "Gusto is the top all-around choice for most appliance repair SMBs, with BambooHR and Justworks as strong alternatives for deeper HR process or PEO-backed support." }],
+  },
+  {
+    useCase: "garage-door",
+    navLabel: "Garage door companies",
+    title: "Best HR Software for Garage Door Companies (2026)",
+    subtitle:
+      "Compare HR software for garage door companies with payroll automation, installer onboarding, and compliance workflows for service and install teams.",
+    introParagraph:
+      "Garage door companies run mixed service and installation teams that need clean payroll and repeatable onboarding. The right HR platform improves consistency as hiring and dispatch volume grows.",
+    hubTeaser: "Payroll and onboarding tools for garage door service and install teams.",
+    keywords: ["best HR software for garage door companies", "garage door HR software", "garage door payroll HR platform"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for garage door SMBs", description: "Simple payroll and onboarding for service and install teams.", rowBestFor: "SMB payroll and HR", why: "Gusto fits garage door companies that need a reliable all-in-one HR and payroll stack without complex implementation." },
+      { slug: "rippling", badge: "Best for scaling multi-team operations", description: "Automation-heavy HR and payroll for growing garage door businesses.", rowBestFor: "Scaling automation", why: "Rippling is ideal for operators adding locations, managers, and systems that require stronger process automation and policy control." },
+      { slug: "bamboohr", badge: "Best HRIS-first choice", description: "Structured people operations for teams with separate payroll preferences.", rowBestFor: "People-process maturity", why: "BambooHR is a good fit for businesses prioritizing hiring process quality, onboarding consistency, and employee records management." },
+    ],
+    editorialGuidance: [E("Separate service vs install roles", "Clean role mapping improves policy, reporting, and payroll consistency."), E("Build reusable onboarding templates", "Template-based onboarding reduces admin overhead during hiring spikes.")],
+    faqItems: [{ q: "Which HR software is best for garage door companies?", a: "Gusto is a strong default, while Rippling and BambooHR are better fits for scaling automation or deeper HRIS workflows." }],
+  },
+  {
+    useCase: "locksmith",
+    navLabel: "Locksmith businesses",
+    title: "Best HR Software for Locksmith Businesses (2026)",
+    subtitle:
+      "Compare HR software for locksmith businesses with payroll, mobile-team onboarding, and compliance workflows for emergency and scheduled service teams.",
+    introParagraph:
+      "Locksmith businesses need HR software that stays simple while supporting technician hiring, payroll accuracy, and policy consistency for mobile operations.",
+    hubTeaser: "Lean HR and payroll workflows for locksmith service teams.",
+    keywords: ["best HR software for locksmith businesses", "locksmith HR software", "locksmith payroll and HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for locksmith SMBs", description: "Straightforward HR and payroll for small field-service teams.", rowBestFor: "Lean all-in-one operations", why: "Gusto is usually the best first platform for locksmith businesses that need reliable payroll and onboarding with minimal admin burden." },
+      { slug: "justworks", badge: "Best PEO for compliance support", description: "PEO model with guided compliance and benefits administration.", rowBestFor: "Support-first HR model", why: "Justworks is helpful for locksmith teams that want outsourced support for compliance and people administration as they grow." },
+      { slug: "rippling", badge: "Best for scaling locksmith operations", description: "Unified HR and payroll automation for larger teams.", rowBestFor: "Growth and automation", why: "Rippling works best for operators who are expanding and need stronger workflow controls than basic payroll-first tools." },
+    ],
+    editorialGuidance: [E("Keep onboarding mobile-friendly", "Technicians should complete required steps quickly before route assignment."), E("Audit recurring payroll issues", "Track repeated corrections to improve pay-code setup early.")],
+    faqItems: [{ q: "What HR software is best for locksmith businesses?", a: "Gusto is a top all-around choice, with Justworks and Rippling as strong options for support-heavy or scaling operations." }],
+  },
+  {
+    useCase: "flooring",
+    navLabel: "Flooring contractors",
+    title: "Best HR Software for Flooring Contractors (2026)",
+    subtitle:
+      "Compare HR software for flooring contractors with installer onboarding, payroll workflows, and compliance support for project-based teams.",
+    introParagraph:
+      "Flooring contractors need HR systems that support project-driven hiring, repeatable onboarding, and payroll consistency across crews and office roles.",
+    hubTeaser: "HR and payroll tools for flooring installation businesses.",
+    keywords: ["best HR software for flooring contractors", "flooring HR software", "flooring contractor payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for flooring SMBs", description: "Reliable all-in-one payroll and HR for installer teams.", rowBestFor: "SMB installer teams", why: "Gusto is a strong fit for flooring contractors that need dependable payroll and onboarding with low implementation complexity." },
+      { slug: "bamboohr", badge: "Best for HRIS workflow quality", description: "Structured employee lifecycle workflows for growing flooring companies.", rowBestFor: "Process-driven HR teams", why: "BambooHR helps flooring businesses improve hiring documentation, onboarding consistency, and employee record quality at scale." },
+      { slug: "rippling", badge: "Best for multi-team automation", description: "Advanced HR and payroll automation for expanding operations.", rowBestFor: "Operational scale", why: "Rippling is ideal for flooring companies with increasing headcount and systems complexity requiring stronger automation and controls." },
+    ],
+    editorialGuidance: [E("Standardize installer role setup", "Consistent role/pay mapping improves payroll and reporting quality."), E("Template project-season onboarding", "Reusable onboarding flows reduce admin load during hiring waves.")],
+    faqItems: [{ q: "What is the best HR software for flooring contractors?", a: "Gusto is a practical default, while BambooHR and Rippling fit teams that need deeper HR process structure or broader automation." }],
+  },
+  {
+    useCase: "fence-deck",
+    navLabel: "Fence & deck builders",
+    title: "Best HR Software for Fence & Deck Builders (2026)",
+    subtitle:
+      "Compare HR software for fence and deck builders with payroll, onboarding, and compliance workflows for project-based field teams.",
+    introParagraph:
+      "Fence and deck builders need HR software that keeps hiring and payroll efficient across project crews and seasonal demand shifts.",
+    hubTeaser: "Project-crew HR and payroll tools for fence and deck builders.",
+    keywords: ["best HR software for fence and deck builders", "deck builder HR software", "fence contractor payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for fence and deck SMBs", description: "Simple all-in-one payroll and HR for build-focused teams.", rowBestFor: "SMB builder operations", why: "Gusto offers the right balance of payroll reliability and onboarding simplicity for most fence and deck teams." },
+      { slug: "justworks", badge: "Best PEO-backed support option", description: "PEO model for compliance and benefits support while teams grow.", rowBestFor: "Support-focused operations", why: "Justworks is helpful for builders wanting guided compliance and HR support without building an internal HR function." },
+      { slug: "bamboohr", badge: "Best HRIS for process standardization", description: "Structured people workflows for builders formalizing HR operations.", rowBestFor: "HR process maturity", why: "BambooHR works well for teams that need cleaner employee lifecycle management and stronger documentation consistency." },
+    ],
+    editorialGuidance: [E("Use consistent crew-role taxonomy", "Clear role data improves onboarding and payroll setup quality."), E("Review compliance document completion", "Ensure policy acknowledgments are complete before field assignment.")],
+    faqItems: [{ q: "Which HR software is best for fence and deck builders?", a: "Gusto is the most common all-around fit, with Justworks and BambooHR as strong alternatives for PEO support or deeper HR process structure." }],
+  },
+  {
+    useCase: "glass-window-installers",
+    navLabel: "Glass & window installers",
+    title: "Best HR Software for Glass & Window Installers (2026)",
+    subtitle:
+      "Compare HR software for glass and window installers with payroll, onboarding, and compliance workflows for install-focused field teams.",
+    introParagraph:
+      "Glass and window installers need HR tools that keep payroll and onboarding accurate across mixed office and field crews. The right platform reduces errors and supports repeatable hiring workflows.",
+    hubTeaser: "Install-focused HR and payroll tools for glass and window teams.",
+    keywords: ["best HR software for glass and window installers", "window installer HR software", "glass contractor payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for installer SMBs", description: "Reliable HR and payroll for field and office operations.", rowBestFor: "All-in-one installer operations", why: "Gusto is a practical default for installer teams that need fast setup and dependable payroll/HR coverage." },
+      { slug: "rippling", badge: "Best for scaling installer operations", description: "Automation-heavy platform for multi-team growth and control.", rowBestFor: "Scaling and controls", why: "Rippling is ideal for installers expanding headcount and systems where automation and policy governance matter more." },
+      { slug: "bamboohr", badge: "Best HRIS for structured people ops", description: "Strong onboarding and employee records for process-driven teams.", rowBestFor: "HR documentation quality", why: "BambooHR supports cleaner people operations for companies that prioritize onboarding quality and HR process consistency." },
+    ],
+    editorialGuidance: [E("Separate install and office employee groups", "Role segmentation improves payroll and policy accuracy."), E("Run onboarding QA quarterly", "Regular audits catch workflow gaps before hiring spikes.")],
+    faqItems: [{ q: "What HR software is best for glass and window installers?", a: "Gusto is best for most SMB installers, while Rippling and BambooHR are stronger for automation-heavy or HRIS-first operations." }],
+  },
+  {
+    useCase: "concrete-contractors",
+    navLabel: "Concrete contractors",
+    title: "Best HR Software for Concrete Contractors (2026)",
+    subtitle:
+      "Compare HR software for concrete contractors with payroll automation, crew onboarding, and compliance workflows for labor-intensive operations.",
+    introParagraph:
+      "Concrete contractors need HR software that handles crew-heavy payroll and structured onboarding while keeping compliance and employee data organized.",
+    hubTeaser: "Crew-first HR and payroll systems for concrete contractors.",
+    keywords: ["best HR software for concrete contractors", "concrete contractor HR software", "concrete payroll HR platform"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for concrete SMBs", description: "Simple payroll and HR foundation for labor-heavy teams.", rowBestFor: "SMB concrete teams", why: "Gusto is a strong fit for concrete contractors needing dependable payroll and low-friction onboarding." },
+      { slug: "rippling", badge: "Best for operational scale", description: "Automation and policy controls for larger concrete organizations.", rowBestFor: "Growing multi-team operations", why: "Rippling works best when concrete firms need stronger workflow automation and centralized control as they scale." },
+      { slug: "justworks", badge: "Best PEO compliance support", description: "PEO-backed HR model for teams wanting more guided support.", rowBestFor: "Support-heavy compliance model", why: "Justworks helps concrete teams that prefer outsourced compliance and benefits administration support." },
+    ],
+    editorialGuidance: [E("Keep crew-role payroll mapping consistent", "Consistent classifications reduce recurring payroll corrections."), E("Automate compliance reminders", "Policy and document reminders reduce administrative misses.")],
+    faqItems: [{ q: "What is the best HR software for concrete contractors?", a: "Gusto is a top all-around option, with Rippling and Justworks as strong choices for larger scale or PEO-backed support." }],
+  },
+  {
+    useCase: "excavation",
+    navLabel: "Excavation companies",
+    title: "Best HR Software for Excavation Companies (2026)",
+    subtitle:
+      "Compare HR software for excavation companies with payroll, onboarding, and compliance workflows for operator and field-crew teams.",
+    introParagraph:
+      "Excavation companies need HR systems that support crew and operator payroll accuracy, efficient onboarding, and repeatable compliance across project-heavy operations.",
+    hubTeaser: "HR and payroll workflows for excavation operators and crews.",
+    keywords: ["best HR software for excavation companies", "excavation HR software", "excavation payroll HR system"],
+    picks: [
+      { slug: "rippling", badge: "Best for scaling excavation operations", description: "Automation-first HR and payroll for complex workforce setups.", rowBestFor: "Automation and scale", why: "Rippling is ideal for excavation companies with growing teams and system complexity that demand stronger automation and governance." },
+      { slug: "gusto", badge: "Best all-in-one for excavation SMBs", description: "Straightforward payroll and onboarding for field-heavy businesses.", rowBestFor: "SMB simplicity", why: "Gusto provides dependable payroll/HR coverage with minimal setup burden for small to mid-size excavation businesses." },
+      { slug: "bamboohr", badge: "Best HRIS process support", description: "Structured people operations for teams improving HR maturity.", rowBestFor: "HR workflow structure", why: "BambooHR is a good fit when excavation teams need stronger documentation and employee lifecycle process quality." },
+    ],
+    editorialGuidance: [E("Separate operator and crew job families", "Role clarity improves policy and pay-rule setup."), E("Define onboarding ownership", "Clear ownership prevents incomplete compliance tasks for new hires.")],
+    faqItems: [{ q: "Which HR software is best for excavation companies?", a: "Rippling is strong for operational complexity, while Gusto and BambooHR fit SMB all-in-one or HRIS-first workflows." }],
+  },
+  {
+    useCase: "auto-repair",
+    navLabel: "Auto repair shops",
+    title: "Best HR Software for Auto Repair Shops (2026)",
+    subtitle:
+      "Compare HR software for auto repair shops with technician payroll, onboarding workflows, and compliance tools for shop and office teams.",
+    introParagraph:
+      "Auto repair shops need HR software that supports technician hiring, payroll consistency, and clean employee workflows across service advisors, mechanics, and office staff.",
+    hubTeaser: "HR and payroll support for technician-heavy auto repair teams.",
+    keywords: ["best HR software for auto repair shops", "auto repair HR software", "mechanic payroll HR platform"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for auto repair SMBs", description: "Simple payroll and onboarding for shop and office teams.", rowBestFor: "SMB repair operations", why: "Gusto is a practical default for auto repair shops that need reliable payroll and HR functionality without complexity." },
+      { slug: "bamboohr", badge: "Best for HR process structure", description: "People-ops workflows for shops formalizing hiring and documentation.", rowBestFor: "HRIS process depth", why: "BambooHR supports auto repair businesses that want cleaner employee records and stronger onboarding consistency." },
+      { slug: "rippling", badge: "Best for scaling multi-location shops", description: "Automation-heavy HR and payroll for growing repair organizations.", rowBestFor: "Scaling operations", why: "Rippling is best when repair businesses expand and need more automation and policy controls across locations." },
+    ],
+    editorialGuidance: [E("Standardize technician role levels", "Role structure improves pay policy and reporting consistency."), E("Audit onboarding completion rates", "Incomplete onboarding increases compliance and payroll risk.")],
+    faqItems: [{ q: "What is the best HR software for auto repair shops?", a: "Gusto is the leading all-around option for most shops, with BambooHR and Rippling as strong alternatives for process depth or scaling automation." }],
+  },
+  {
+    useCase: "mobile-mechanics",
+    navLabel: "Mobile mechanics",
+    title: "Best HR Software for Mobile Mechanics (2026)",
+    subtitle:
+      "Compare HR software for mobile mechanics with payroll, field-team onboarding, and compliance workflows for distributed technician operations.",
+    introParagraph:
+      "Mobile mechanic businesses need HR tools that keep payroll and onboarding simple for distributed field teams while maintaining policy and compliance consistency.",
+    hubTeaser: "Field-team HR and payroll systems for mobile mechanic operations.",
+    keywords: ["best HR software for mobile mechanics", "mobile mechanic HR software", "mobile service payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for mobile mechanic SMBs", description: "Straightforward HR and payroll for distributed service teams.", rowBestFor: "Lean field-service operations", why: "Gusto is ideal for mobile mechanic teams that need easy payroll and onboarding with minimal overhead." },
+      { slug: "justworks", badge: "Best PEO support for distributed crews", description: "PEO-backed compliance and benefits support for growing teams.", rowBestFor: "Support-first HR model", why: "Justworks fits teams wanting more guided compliance and HR administration as mobile operations grow." },
+      { slug: "rippling", badge: "Best for scaling and automation", description: "Unified HR/payroll automation for larger distributed teams.", rowBestFor: "Automation at scale", why: "Rippling helps mobile mechanic businesses with growing workforce complexity and stronger process-control requirements." },
+    ],
+    editorialGuidance: [E("Use mobile-completable onboarding", "Field hires should complete required steps quickly from any device."), E("Track recurring payroll exceptions", "Exception trends reveal setup issues that should be fixed once.")],
+    faqItems: [{ q: "What HR software is best for mobile mechanics?", a: "Gusto is the best all-around choice for most teams, with Justworks and Rippling as strong options for PEO support or larger-scale automation." }],
+  },
+  {
+    useCase: "cleaning-franchises",
+    navLabel: "Cleaning franchises",
+    title: "Best HR Software for Cleaning Franchises (2026)",
+    subtitle:
+      "Compare HR software for cleaning franchises with multi-location payroll, onboarding standardization, and compliance workflows for franchise growth.",
+    introParagraph:
+      "Cleaning franchises need HR software that can enforce consistent people processes across locations while supporting scalable payroll and onboarding operations.",
+    hubTeaser: "Multi-location HR and payroll systems for cleaning franchise operators.",
+    keywords: ["best HR software for cleaning franchises", "cleaning franchise HR software", "multi-location payroll HR platform"],
+    picks: [
+      { slug: "rippling", badge: "Best for franchise scale and control", description: "Automation-rich HR/payroll platform for multi-location operations.", rowBestFor: "Multi-location governance", why: "Rippling is the strongest fit for cleaning franchises that need centralized controls and automation across multiple locations and teams." },
+      { slug: "gusto", badge: "Best for smaller franchise groups", description: "Simple all-in-one HR and payroll stack for growing operators.", rowBestFor: "SMB franchise rollout", why: "Gusto is a strong option for smaller franchise groups that prioritize ease of use and predictable implementation." },
+      { slug: "justworks", badge: "Best PEO-backed franchise support", description: "PEO model for benefits and compliance support across teams.", rowBestFor: "Support-heavy compliance model", why: "Justworks helps franchise operators that prefer outsourced compliance and HR administration support during growth." },
+    ],
+    editorialGuidance: [E("Standardize onboarding across locations", "Shared templates improve consistency and lower training variance."), E("Audit payroll by location monthly", "Location-level review catches setup drift early.")],
+    faqItems: [{ q: "What is the best HR software for cleaning franchises?", a: "Rippling is best for multi-location control, while Gusto and Justworks are strong options for smaller rollout or support-heavy models." }],
+  },
+  {
+    useCase: "event-services",
+    navLabel: "Event services",
+    title: "Best HR Software for Event Services (2026)",
+    subtitle:
+      "Compare HR software for event services with variable staffing payroll, onboarding workflows, and compliance tools for project-based teams.",
+    introParagraph:
+      "Event services businesses need HR software that handles fluctuating staffing, clean onboarding, and reliable payroll workflows across production and operations roles.",
+    hubTeaser: "HR and payroll workflows for variable-staff event service teams.",
+    keywords: ["best HR software for event services", "event staffing HR software", "event company payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for event-service SMBs", description: "Reliable HR and payroll for variable staffing patterns.", rowBestFor: "Variable staffing payroll", why: "Gusto works well for event-service teams that need straightforward payroll and onboarding while staffing levels shift by season and project load." },
+      { slug: "bamboohr", badge: "Best for people-process structure", description: "Strong onboarding and records for teams formalizing HR workflows.", rowBestFor: "HR process standardization", why: "BambooHR is useful when event businesses need cleaner HR documentation and employee lifecycle structure as operations mature." },
+      { slug: "justworks", badge: "Best PEO compliance support", description: "PEO-backed benefits and compliance support for lean HR teams.", rowBestFor: "Support-first operations", why: "Justworks helps teams that prefer outsourced HR support while maintaining operational focus on event delivery." },
+    ],
+    editorialGuidance: [E("Build reusable role-specific onboarding", "Role templates reduce prep time for recurring event staffing cycles."), E("Validate payroll for variable schedules", "Ensure pay rules match overtime realities for event peaks.")],
+    faqItems: [{ q: "Which HR software is best for event services?", a: "Gusto is the top all-around option for most event-service SMBs, with BambooHR and Justworks fitting process-heavy or support-first teams." }],
+  },
+  {
+    useCase: "home-inspectors",
+    navLabel: "Home inspectors",
+    title: "Best HR Software for Home Inspectors (2026)",
+    subtitle:
+      "Compare HR software for home inspectors with payroll, onboarding, and compliance workflows for lean field-service businesses.",
+    introParagraph:
+      "Home inspection businesses need HR software that stays lightweight while supporting payroll and repeatable people workflows as teams grow beyond owner-operator mode.",
+    hubTeaser: "Lean HR and payroll systems for home inspection businesses.",
+    keywords: ["best HR software for home inspectors", "home inspector HR software", "inspection business payroll HR"],
+    picks: [
+      { slug: "gusto", badge: "Best overall for home inspector SMBs", description: "Simple payroll and HR for small inspection teams.", rowBestFor: "Lean all-in-one HR", why: "Gusto is the best starting point for most home inspection businesses that need reliable payroll and onboarding without extra software overhead." },
+      { slug: "bamboohr", badge: "Best for structured HR growth", description: "HRIS workflows for teams adding process depth beyond payroll.", rowBestFor: "HR process maturity", why: "BambooHR is a good fit for inspection companies formalizing hiring, documentation, and employee lifecycle workflows." },
+      { slug: "justworks", badge: "Best PEO support option", description: "PEO-based compliance and benefits support for lean internal teams.", rowBestFor: "Outsourced HR support", why: "Justworks helps inspection teams that want guided compliance and benefits administration support while keeping internal HR lean." },
+    ],
+    editorialGuidance: [E("Keep workflows lightweight", "Simple systems improve team adoption and reduce admin drag."), E("Document policy acknowledgments clearly", "Strong documentation reduces compliance risk as headcount increases.")],
+    faqItems: [{ q: "What is the best HR software for home inspectors?", a: "Gusto is the strongest all-around choice for most home inspection SMBs, with BambooHR and Justworks as alternatives for deeper HR process or PEO-backed support." }],
+  },
 ];
 
 const BUILT = TRADE_CONFIGS.map((config) => buildTradePage(config));

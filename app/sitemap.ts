@@ -262,6 +262,19 @@ const TIME_TRACKING_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static CRM best-for scenario slugs. */
@@ -417,6 +430,19 @@ const HR_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static POS best-for scenario slugs (matches app/pos/best-for/[scenario]). */
