@@ -556,6 +556,19 @@ const LEAD_GENERATION_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring",
+  "fence-deck",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static SEO Tools best-for scenario slugs (matches app/seo-tools/best-for/[scenario]). */

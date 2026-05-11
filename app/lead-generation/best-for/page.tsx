@@ -83,6 +83,71 @@ const LINKS = [
     href: getLeadGenerationBestForUrl("moving"),
     description: "Lead channels and evaluation tips for moving companies.",
   },
+  {
+    label: "Best Lead Generation Software for Appliance Repair Businesses (2026)",
+    href: getLeadGenerationBestForUrl("appliance-repair"),
+    description: "Google LSA, Thumbtack, and HomeAdvisor for urgent appliance repairs and booked-job economics.",
+  },
+  {
+    label: "Best Lead Generation Software for Garage Door Companies (2026)",
+    href: getLeadGenerationBestForUrl("garage-door"),
+    description: "Google LSA, Angi, and Thumbtack for emergency calls, directory shoppers, and marketplace tests.",
+  },
+  {
+    label: "Best Lead Generation Software for Locksmith Businesses (2026)",
+    href: getLeadGenerationBestForUrl("locksmith"),
+    description: "Google LSA, Yelp Ads, and Bark for lockouts, Yelp-heavy metros, and posted job requests.",
+  },
+  {
+    label: "Best Lead Generation Software for Flooring Contractors (2026)",
+    href: getLeadGenerationBestForUrl("flooring"),
+    description: "Houzz Pro, Angi, and Thumbtack for visual buyers, directory comparisons, and flexible marketplace demand.",
+  },
+  {
+    label: "Best Lead Generation Software for Fence & Deck Builders (2026)",
+    href: getLeadGenerationBestForUrl("fence-deck"),
+    description: "Houzz Pro, Facebook Lead Ads, and Thumbtack for outdoor portfolios, seasonal promos, and local fill.",
+  },
+  {
+    label: "Best Lead Generation Software for Glass & Window Installers (2026)",
+    href: getLeadGenerationBestForUrl("glass-window-installers"),
+    description: "Google LSA, Houzz Pro, and Yelp Ads for board-ups, upgrades, and Yelp-centric research habits.",
+  },
+  {
+    label: "Best Lead Generation Software for Concrete Contractors (2026)",
+    href: getLeadGenerationBestForUrl("concrete-contractors"),
+    description: "HomeAdvisor, Bark, and Thumbtack for flatwork marketplace volume, posted projects, and pay-per-lead tests.",
+  },
+  {
+    label: "Best Lead Generation Software for Excavation Companies (2026)",
+    href: getLeadGenerationBestForUrl("excavation"),
+    description: "Bark, Google LSA, and Thumbtack for posted digs, urgent search, and marketplace breadth.",
+  },
+  {
+    label: "Best Lead Generation Software for Auto Repair Shops (2026)",
+    href: getLeadGenerationBestForUrl("auto-repair"),
+    description: "Yelp Ads, Google LSA, and Facebook Lead Ads for review-driven demand, urgent search, and bay-fill offers.",
+  },
+  {
+    label: "Best Lead Generation Software for Mobile Mechanics (2026)",
+    href: getLeadGenerationBestForUrl("mobile-mechanics"),
+    description: "Thumbtack, Bark, and Google LSA for rolling dispatch, posted jobs, and urgent local intent.",
+  },
+  {
+    label: "Best Lead Generation Software for Cleaning Franchises (2026)",
+    href: getLeadGenerationBestForUrl("cleaning-franchises"),
+    description: "Facebook Lead Ads, Angi, and Google LSA for franchise-compliant campaigns and recurring-route growth.",
+  },
+  {
+    label: "Best Lead Generation Software for Event Services (2026)",
+    href: getLeadGenerationBestForUrl("event-services"),
+    description: "Facebook Lead Ads, Bark, and Thumbtack for date-based campaigns, posted events, and marketplace categories.",
+  },
+  {
+    label: "Best Lead Generation Software for Home Inspectors (2026)",
+    href: getLeadGenerationBestForUrl("home-inspectors"),
+    description: "Google LSA, Thumbtack, and Angi for contract-window search, marketplace flexibility, and directory trust.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
