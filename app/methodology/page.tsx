@@ -81,7 +81,10 @@ export default function MethodologyPage() {
         </section>
 
         {/* ——— Editorial independence ——— */}
-        <section className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
+        <section
+          id="editorial-independence"
+          className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11"
+        >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Our recommendations are our own.">
               Editorial independence
@@ -93,7 +96,10 @@ export default function MethodologyPage() {
         </section>
 
         {/* ——— Affiliate disclosure ——— */}
-        <section className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
+        <section
+          id="affiliate-disclosure"
+          className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11"
+        >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="How we may earn from links.">
               Affiliate disclosure

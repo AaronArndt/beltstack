@@ -48,6 +48,8 @@ const FOOTER_COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Methodology", href: "/methodology" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
   { label: "Browse by trade", href: "/software#browse-by-trade" },
 ] as const;
 
