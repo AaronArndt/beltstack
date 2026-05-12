@@ -219,6 +219,19 @@ export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
   { label: "Pool service companies", href: getReputationManagementBestForUrl("pool-service") },
   { label: "Junk removal businesses", href: getReputationManagementBestForUrl("junk-removal") },
   { label: "Moving companies", href: getReputationManagementBestForUrl("moving") },
+  { label: "Appliance repair businesses", href: getReputationManagementBestForUrl("appliance-repair") },
+  { label: "Garage door companies", href: getReputationManagementBestForUrl("garage-door") },
+  { label: "Locksmith businesses", href: getReputationManagementBestForUrl("locksmith") },
+  { label: "Flooring contractors", href: getReputationManagementBestForUrl("flooring-contractors") },
+  { label: "Fence & deck builders", href: getReputationManagementBestForUrl("fence-deck-builders") },
+  { label: "Glass & window installers", href: getReputationManagementBestForUrl("glass-window-installers") },
+  { label: "Concrete contractors", href: getReputationManagementBestForUrl("concrete-contractors") },
+  { label: "Excavation companies", href: getReputationManagementBestForUrl("excavation") },
+  { label: "Auto repair shops", href: getReputationManagementBestForUrl("auto-repair-shops") },
+  { label: "Mobile mechanics", href: getReputationManagementBestForUrl("mobile-mechanics") },
+  { label: "Cleaning franchises", href: getReputationManagementBestForUrl("cleaning-franchises") },
+  { label: "Event services", href: getReputationManagementBestForUrl("event-services") },
+  { label: "Home inspectors", href: getReputationManagementBestForUrl("home-inspectors") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

@@ -83,6 +83,71 @@ const LINKS = [
     href: getEmailMarketingBestForUrl("moving"),
     description: "Quote follow-up and lifecycle email tools for moving companies.",
   },
+  {
+    label: "Best Email Marketing Software for Appliance Repair Businesses (2026)",
+    href: getEmailMarketingBestForUrl("appliance-repair"),
+    description: "Post-service nurture, warranty-aware messaging, and SMS coordination for appliance repair shops.",
+  },
+  {
+    label: "Best Email Marketing Software for Garage Door Companies (2026)",
+    href: getEmailMarketingBestForUrl("garage-door"),
+    description: "Quote automation, install follow-up, and storm-ready campaigns for garage door teams.",
+  },
+  {
+    label: "Best Email Marketing Software for Locksmith Businesses (2026)",
+    href: getEmailMarketingBestForUrl("locksmith"),
+    description: "Speed-to-lead nurture and multichannel ops for locksmith businesses.",
+  },
+  {
+    label: "Best Email Marketing Software for Flooring Contractors (2026)",
+    href: getEmailMarketingBestForUrl("flooring-contractors"),
+    description: "Visual proof, showroom nurture, and long estimate cycles for flooring contractors.",
+  },
+  {
+    label: "Best Email Marketing Software for Fence & Deck Builders (2026)",
+    href: getEmailMarketingBestForUrl("fence-deck-builders"),
+    description: "Weather-aware promotions and project-completion follow-up for outdoor builders.",
+  },
+  {
+    label: "Best Email Marketing Software for Glass & Window Installers (2026)",
+    href: getEmailMarketingBestForUrl("glass-window-installers"),
+    description: "Specifier education and mixed retail or commercial nurture for glass and window installers.",
+  },
+  {
+    label: "Best Email Marketing Software for Concrete Contractors (2026)",
+    href: getEmailMarketingBestForUrl("concrete-contractors"),
+    description: "Bid-stage nurture and GC-facing proof for concrete contractors.",
+  },
+  {
+    label: "Best Email Marketing Software for Excavation Companies (2026)",
+    href: getEmailMarketingBestForUrl("excavation"),
+    description: "B2B bid nurture and guided newsletters for excavation and sitework firms.",
+  },
+  {
+    label: "Best Email Marketing Software for Auto Repair Shops (2026)",
+    href: getEmailMarketingBestForUrl("auto-repair-shops"),
+    description: "RO-close follow-up and high-volume trust content for auto repair shops.",
+  },
+  {
+    label: "Best Email Marketing Software for Mobile Mechanics (2026)",
+    href: getEmailMarketingBestForUrl("mobile-mechanics"),
+    description: "Lean road-based email and SMS coordination for mobile mechanics.",
+  },
+  {
+    label: "Best Email Marketing Software for Cleaning Franchises (2026)",
+    href: getEmailMarketingBestForUrl("cleaning-franchises"),
+    description: "Franchise governance and retention analytics for cleaning franchises.",
+  },
+  {
+    label: "Best Email Marketing Software for Event Services (2026)",
+    href: getEmailMarketingBestForUrl("event-services"),
+    description: "Inquiry speed, peak-season bursts, and portfolio storytelling for event services.",
+  },
+  {
+    label: "Best Email Marketing Software for Home Inspectors (2026)",
+    href: getEmailMarketingBestForUrl("home-inspectors"),
+    description: "Neutral education and agent-friendly cadence for home inspectors.",
+  },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

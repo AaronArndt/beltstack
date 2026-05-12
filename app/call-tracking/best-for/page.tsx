@@ -23,6 +23,19 @@ const LINKS = [
   { label: "Best Call Tracking Software for Pool Service Companies (2026)", href: getCallTrackingBestForUrl("pool-service"), description: "Seasonal call attribution for pool service businesses." },
   { label: "Best Call Tracking Software for Junk Removal Businesses (2026)", href: getCallTrackingBestForUrl("junk-removal"), description: "Fast-turn lead source tracking for junk removal teams." },
   { label: "Best Call Tracking Software for Moving Companies (2026)", href: getCallTrackingBestForUrl("moving"), description: "Quote-call attribution for moving company campaigns." },
+  { label: "Best Call Tracking Software for Appliance Repair Businesses (2026)", href: getCallTrackingBestForUrl("appliance-repair"), description: "Dispatch-friendly attribution for warranty-heavy appliance repair demand." },
+  { label: "Best Call Tracking Software for Garage Door Companies (2026)", href: getCallTrackingBestForUrl("garage-door"), description: "Emergency and install funnel clarity for garage door companies." },
+  { label: "Best Call Tracking Software for Locksmith Businesses (2026)", href: getCallTrackingBestForUrl("locksmith"), description: "High-intent mobile call attribution for 24/7 locksmith demand." },
+  { label: "Best Call Tracking Software for Flooring Contractors (2026)", href: getCallTrackingBestForUrl("flooring-contractors"), description: "Showroom and web journey tracking for flooring contractors." },
+  { label: "Best Call Tracking Software for Fence & Deck Builders (2026)", href: getCallTrackingBestForUrl("fence-deck-builders"), description: "Lean seasonal attribution for fence and deck builders." },
+  { label: "Best Call Tracking Software for Glass & Window Installers (2026)", href: getCallTrackingBestForUrl("glass-window-installers"), description: "Mixed retail and commercial call attribution for glass and window installers." },
+  { label: "Best Call Tracking Software for Concrete Contractors (2026)", href: getCallTrackingBestForUrl("concrete-contractors"), description: "Bid-stage and GC-facing call reporting for concrete contractors." },
+  { label: "Best Call Tracking Software for Excavation Companies (2026)", href: getCallTrackingBestForUrl("excavation"), description: "B2B-heavy attribution for excavation and sitework firms." },
+  { label: "Best Call Tracking Software for Auto Repair Shops (2026)", href: getCallTrackingBestForUrl("auto-repair-shops"), description: "High-volume bay attribution for auto repair shops." },
+  { label: "Best Call Tracking Software for Mobile Mechanics (2026)", href: getCallTrackingBestForUrl("mobile-mechanics"), description: "Programmable and lean stacks for mobile mechanics." },
+  { label: "Best Call Tracking Software for Cleaning Franchises (2026)", href: getCallTrackingBestForUrl("cleaning-franchises"), description: "Multi-territory call governance for cleaning franchises." },
+  { label: "Best Call Tracking Software for Event Services (2026)", href: getCallTrackingBestForUrl("event-services"), description: "Peak-season routing and marketing attribution for event services." },
+  { label: "Best Call Tracking Software for Home Inspectors (2026)", href: getCallTrackingBestForUrl("home-inspectors"), description: "Privacy-respecting attribution for home inspectors." },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

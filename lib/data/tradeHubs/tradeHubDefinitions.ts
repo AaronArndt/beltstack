@@ -1389,6 +1389,225 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     ],
   },
 
+  construction: {
+    slug: "construction",
+    seoTitle: "Software for Construction Companies (2026) | BeltStack",
+    metaDescription:
+      "Construction company software for jobsites, portfolios, and job costing—field service, PM, accounting, time, invoicing, payroll, and category hub links.",
+    title: "Software for Construction Companies",
+    intro:
+      "Construction companies run on synchronized jobsites and back offices: daily production logs, changing site conditions, equipment moves, and cash timing that does not wait for month-end close. Software should connect what supers see in the mud to what accounting sees in WIP—without forcing crews through desktop-only workflows built for insurance adjusters.",
+    heroCategoryLine:
+      "Most builders anchor field execution and daily documentation in field service or construction operations tools, pair portfolio schedules and RFIs with project management, tie vendor steel and rental draws to accounting with real job costing, capture hours by cost code with time tracking, bill progress with invoicing aligned to contract terms, and add payroll when self-performed crews, apprentices, or certified payroll lines appear.",
+    breadcrumbLabel: "Construction",
+    keyTakeaways: [
+      { label: "Construction stack: field, PM, costs, billing", anchor: "#software-stack" },
+      { label: "Use cases: self-perform, subs-heavy, union pockets", anchor: "#use-cases" },
+      { label: "Operating models & controls", anchor: "#operating-models" },
+    ],
+    categoryStackSectionTitle: "Core software stack for construction companies",
+    categoryStackSectionSub: "Field truth, portfolio control, and job financials have to agree—or margin leaks between trailers.",
+    categoryStackIntro:
+      "These categories mirror how money, labor, and materials move through real construction organizations—not generic SMB checklists. Depth should track how much you self-perform, how complex your contracts are, and how many concurrent jobs share equipment and crews.",
+    categoryStack: [
+      {
+        id: "field-service",
+        softwareCategory: "field-service",
+        heading: "Field service & site operations",
+        body:
+          "Daily logs, safety walks, toolbox talks, and punch photos belong on mobile flows supers will actually use between deliveries—not buried in desktop folders. Strong field layers reduce rework disputes, speed owner sign-offs, and feed accounting with defensible quantities before invoices argue about them. Pick depth that matches commercial compliance versus lighter residential production.",
+        productSlugs: ["buildops", "simpro", "servicetrade"],
+      },
+      {
+        id: "project-management",
+        softwareCategory: "project-management",
+        heading: "Project management & portfolio control",
+        body:
+          "Multi-job builders need baselines that survive weather slips, crane picks, and late steel—not single-project vanity charts. PM tools should carry RFIs, submittals, and change narratives in one place so supers, PMs, and estimators stop reconciling three inboxes. Choose portfolio views when you run concurrent shells; avoid enterprise airport software for single-crew remodel lanes you will never staff.",
+        productSlugs: ["asana", "clickup", "teamwork"],
+      },
+      {
+        id: "accounting",
+        softwareCategory: "accounting",
+        heading: "Accounting & job costing",
+        body:
+          "Committed costs, equipment time, and vendor draws need to land on the same job dimensions your PM system references—before retainage and WIP surprises show up in lending meetings. Construction accounting is rarely generic QuickBooks-in-a-box when you track phases, overhead allocation, and under/over billings honestly. Decide which system owns the chart of job dimensions before you wire integrations.",
+        productSlugs: ["quickbooks-online", "xero"],
+      },
+      {
+        id: "time-tracking",
+        softwareCategory: "time-tracking",
+        heading: "Time tracking & field labor",
+        body:
+          "Self-performed concrete, steel, or MEP pockets need hours tied to cost codes crews understand—not Friday memory totals that collapse under audit. Mobile timers with geofence sanity and photo notes beat paper when owners dispute T&M extras or when union stewards ask for clean certified payroll trails. Integrate into payroll early if prevailing wage or multi-state crews are on the horizon.",
+        productSlugs: ["harvest", "toggl", "clockify"],
+      },
+      {
+        id: "invoicing",
+        softwareCategory: "invoicing",
+        heading: "Progress billing & pay applications",
+        body:
+          "AIA-style schedules, stored materials, and retention releases need invoices that match contract language and lien-sensitive timelines—even when accounting prints the final PDF. Frontline tools should capture approvals, lien waivers, and backup attachments so AR is not archaeology. Avoid ‘pretty’ invoices that disagree with what supers committed in the field.",
+        productSlugs: ["quickbooks", "zoho-invoice", "freshbooks"],
+      },
+      {
+        id: "payroll",
+        softwareCategory: "payroll",
+        heading: "Payroll",
+        body:
+          "Once you mix carpenters, operators, apprentices, and office staff, payroll integrations from time and accounting stop being optional. Ask about union fringes, multi-state, and certified payroll before you optimize for the cheapest per-seat headline—edge cases define fit faster than marketing brochures.",
+        productSlugs: ["gusto", "quickbooks-payroll"],
+      },
+    ],
+    useCaseSectionTitle: "Best software by use case for construction companies",
+    useCaseSectionSub: "Self-perform crews, subs-heavy shells, and union pockets each stress different modules first.",
+    useCases: [
+      {
+        title: "Best when self-performed labor drives margin",
+        body:
+          "If crews—not subs—own critical path work, invest in field time capture and daily production quality before you buy another portfolio dashboard. Tie hours to phases you actually estimate so job costing stops being a quarterly apology tour.",
+        links: [
+          { label: "Time tracking for construction →", href: "/time-tracking/guides/job-costing-time-tracking-for-contractors" },
+          { label: "Payroll for construction companies →", href: "/payroll/guides/payroll-for-construction-companies" },
+        ],
+      },
+      {
+        title: "Best for subs-heavy programs and document load",
+        body:
+          "When subs carry most labor risk, change packages and compliance packets scale faster than any PM demo suggests. Pick systems that attach COIs, drawings, and RFIs to the same job record accounting references for draws.",
+        links: [{ label: "Construction & contractor PM guide →", href: "/project-management/guides/project-management-for-construction-and-contractors" }],
+      },
+      {
+        title: "Best payroll and time fit for field-heavy hiring",
+        body:
+          "Certified lines, fringes, and multi-state crews punish spreadsheets quickly. Scenario pages map products to real hiring patterns—not generic SMB payroll.",
+        links: [{ label: "Payroll best-for construction →", href: "/payroll/best-for/construction" }],
+      },
+      {
+        title: "Best field operations stack for multi-site builders",
+        body:
+          "Equipment moves, safety walks, and punch lists behave like operations—not marketing. Compare depth before you assume lightweight service apps will carry commercial GC-style compliance.",
+        links: [
+          { label: "Field service best-for construction →", href: "/field-service/best-for/construction" },
+          { label: "Compare field service software →", href: "/field-service/compare" },
+        ],
+      },
+    ],
+    howToChooseTitle: "How to choose construction company software",
+    howToChooseSub: "Controls, integrations, and who owns the numbers between trailer and HQ.",
+    howToChooseSubsections: [
+      {
+        title: "Match software depth to how you actually build",
+        body:
+          "Vertical concrete, civil sitework, and wood-frame multifamily each produce different document loads, safety cadence, and billing rhythms. Buy for the work you perform monthly—not the megaproject you might bid once.",
+      },
+      {
+        title: "Decide the system of record for job financials",
+        body:
+          "Split ownership between PM and accounting creates reconciliation tax every Friday. Pick a lead for budgets and actuals, with the other feeding—not fighting—it.",
+      },
+      {
+        title: "Field adoption beats feature checklists",
+        body:
+          "If supers abandon mobile logs after week two, your safety and productivity data never compiles—no matter how glossy the roadmap looks.",
+      },
+      {
+        title: "Model integrations before you chase AI add-ons",
+        body:
+          "Clean vendor bills, time, and progress draws beat conversational dashboards when lenders and owners ask where cash went mid-job.",
+      },
+    ],
+    identitySectionTitle: "Construction software by operating model",
+    identitySectionSub: "How you deploy labor and risk changes what to implement first.",
+    identitySegments: [
+      {
+        title: "Self-perform–heavy builders",
+        body:
+          "Own crews, equipment yards, and rental meters mean time capture, internal transfer pricing, and maintenance schedules matter as much as subcontractor POs. Start with field truth feeding job costing, then tighten payroll and billing.",
+        links: [{ label: "Project management best-for construction →", href: "/project-management/best-for/construction" }],
+      },
+      {
+        title: "Subs-led shells with lean self-perform",
+        body:
+          "Document control, change workflows, and pay app hygiene dominate. PM depth and invoicing discipline usually beat another fleet tracking module you will not staff.",
+        links: [{ label: "CRM best-for construction →", href: "/crm/best-for/construction" }],
+      },
+      {
+        title: "Union or prevailing-wage pockets",
+        body:
+          "Fringe, certified payroll, and multi-jurisdiction rules define payroll and time vendors more than slick UI. Validate compliance paths before you lock annual contracts.",
+        links: [{ label: "Scheduling best-for construction →", href: "/scheduling/best-for/construction" }],
+      },
+    ],
+    nextStepsTitle: "Next steps",
+    nextStepsGroups: [
+      {
+        groupTitle: "Hubs",
+        links: [
+          { label: "Field service hub", href: "/field-service" },
+          { label: "Project management hub", href: "/project-management" },
+          { label: "Accounting hub", href: "/accounting" },
+          { label: "Time tracking hub", href: "/time-tracking" },
+          { label: "Invoicing hub", href: "/invoicing" },
+          { label: "Payroll hub", href: "/payroll" },
+        ],
+      },
+      {
+        groupTitle: "Growth, cash & compliance",
+        links: [
+          { label: "Payment processing hub", href: "/payment-processing" },
+          { label: "Inventory hub", href: "/inventory" },
+          { label: "Lead generation hub", href: "/lead-generation" },
+          { label: "Reputation management hub", href: "/reputation-management" },
+        ],
+      },
+      {
+        groupTitle: "Marketing & communications",
+        links: [
+          { label: "Website builders hub", href: "/website-builders" },
+          { label: "SEO tools hub", href: "/seo-tools" },
+          { label: "Email marketing hub", href: "/email-marketing" },
+          { label: "Call tracking hub", href: "/call-tracking" },
+        ],
+      },
+    ],
+    faqTitle: "Construction company software FAQs",
+    faqSub: "Buying paths, integrations, and realistic first purchases.",
+    faqs: [
+      {
+        q: "What software do construction companies use?",
+        a: "Common stacks combine field service or construction operations for site logs and safety, project management for schedules and RFIs, accounting with job costing, time tracking tied to cost codes, progress invoicing or pay apps, and payroll for self-performed crews. Larger firms may add inventory for major materials, payment processing for draw controls, and specialized estimating—small builders often stitch fewer tools with disciplined integrations.",
+      },
+      {
+        q: "What is the best construction software for small businesses?",
+        a: "Fit depends on whether you self-perform, how many concurrent jobs you run, and how strict owners or lenders expect reporting. Small self-perform builders often win with practical field plus time tools feeding accounting; subs-heavy shells usually need stronger PM and billing first. Avoid buying construction ERP depth you will not administer.",
+      },
+      {
+        q: "Do construction companies need separate PM and accounting systems?",
+        a: "Often yes—each excels at different jobs. What matters is reliable sync of commitments, actuals, and billings so leadership sees one operational truth. Weak handoffs create surprise margin hits when retainage releases or audits land.",
+      },
+      {
+        q: "When should construction firms add inventory software?",
+        a: "Add it when staged materials, tool cribs, or prefab assemblies create shrinkage or billing disputes that job costing alone cannot explain—usually after multiple concurrent jobs share expensive consumables.",
+      },
+      {
+        q: "How does CRM fit construction companies?",
+        a: "Useful when preconstruction pipelines, developer relationships, or bid calendars need structured follow-up beyond supers’ texts. It is not a substitute for field execution tools when production—not prospecting—is the bottleneck.",
+      },
+      {
+        q: "Can construction companies succeed with best-in-class tools instead of one suite?",
+        a: "Yes—many do—if integrations are intentional. Avoid duplicate job masters across field, time, and accounting; pick a path for vendor bills and labor to land on the right job codes before you scale headcount.",
+      },
+    ],
+    methodologyTitle: "How BeltStack evaluates trade software stacks",
+    methodologySub: "Transparent criteria for recommendations.",
+    methodologyBullets: [
+      "We prioritize tools that match construction realities: jobsite documentation, portfolio control, and job financial visibility—not generic small-business checklists.",
+      "We weigh integration paths, permissions, and total cost across field, PM, accounting, time, billing, and payroll.",
+      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+    ],
+  },
+
   /** Example of a non–field-service-first stack (POS-heavy). */
   restaurants: {
     slug: "restaurants",

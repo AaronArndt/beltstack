@@ -21,7 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return siteMetadata({
     path: `/${tradeSlug}`,
     title: `Best Software for ${label} Businesses (${SEO_YEAR}) | BeltStack`,
-    description: `Explore the best software for ${label.toLowerCase()} businesses, including scheduling, CRM, invoicing, payroll, and field service tools.`,
+    description:
+      d.metaDescription ??
+      `Explore the best software for ${label.toLowerCase()} businesses, including scheduling, CRM, invoicing, payroll, and field service tools.`,
   });
 }
 

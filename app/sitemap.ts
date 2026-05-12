@@ -623,6 +623,19 @@ const CALL_TRACKING_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring-contractors",
+  "fence-deck-builders",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair-shops",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 const REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS = [
@@ -641,6 +654,19 @@ const REPUTATION_MANAGEMENT_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring-contractors",
+  "fence-deck-builders",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair-shops",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 /** Static Email Marketing best-for scenario slugs (matches app/email-marketing/best-for/[scenario]). */
@@ -660,6 +686,19 @@ const EMAIL_MARKETING_BEST_FOR_SCENARIOS = [
   "pool-service",
   "junk-removal",
   "moving",
+  "appliance-repair",
+  "garage-door",
+  "locksmith",
+  "flooring-contractors",
+  "fence-deck-builders",
+  "glass-window-installers",
+  "concrete-contractors",
+  "excavation",
+  "auto-repair-shops",
+  "mobile-mechanics",
+  "cleaning-franchises",
+  "event-services",
+  "home-inspectors",
 ] as const;
 
 const defaultEntry = (

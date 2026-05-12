@@ -44,6 +44,182 @@ const comparisonTableRows = [
   { slug: "mailerlite", name: "MailerLite", logoSrc: emailMarketingLogoForSlug("mailerlite"), bestFor: "Lean teams", startingPrice: "Free–paid", standoutFeature: "Simple powerful UI", reviewHref: getEmailMarketingReviewUrl("mailerlite") },
 ];
 
+/** Top-three product order for newer trade-specific best-for pages (featured cards + comparison table). */
+const EMAIL_TRADE_SCENARIO_TRIPLES: Record<string, [string, string, string]> = {
+  "appliance-repair": ["mailerlite", "brevo", "mailchimp"],
+  "garage-door": ["activecampaign", "brevo", "mailchimp"],
+  locksmith: ["brevo", "activecampaign", "mailerlite"],
+  "flooring-contractors": ["mailchimp", "activecampaign", "klaviyo"],
+  "fence-deck-builders": ["mailerlite", "mailchimp", "brevo"],
+  "glass-window-installers": ["hubspot-email-marketing", "activecampaign", "mailchimp"],
+  "concrete-contractors": ["hubspot-email-marketing", "klaviyo", "activecampaign"],
+  excavation: ["hubspot-email-marketing", "activecampaign", "constant-contact"],
+  "auto-repair-shops": ["brevo", "activecampaign", "mailchimp"],
+  "mobile-mechanics": ["brevo", "mailerlite", "activecampaign"],
+  "cleaning-franchises": ["hubspot-email-marketing", "activecampaign", "klaviyo"],
+  "event-services": ["mailchimp", "klaviyo", "convertkit"],
+  "home-inspectors": ["mailerlite", "constant-contact", "mailchimp"],
+};
+
+type EmailCardBase = Omit<(typeof featuredProducts)[number], "badge">;
+
+const EMAIL_PRODUCT_CARD: Record<string, EmailCardBase> = {
+  mailchimp: {
+    slug: "mailchimp",
+    name: "Mailchimp",
+    description: "Fast campaigns, solid journeys, and massive integrations for lean marketing teams.",
+    rating: "4.5",
+    startingPrice: "Free–paid",
+    reviewHref: getEmailMarketingReviewUrl("mailchimp"),
+    visitUrl: "https://mailchimp.com",
+    logoSrc: emailMarketingLogoForSlug("mailchimp"),
+  },
+  activecampaign: {
+    slug: "activecampaign",
+    name: "ActiveCampaign",
+    description: "CRM-aware sequences for estimate follow-up, no-shows, and seasonal pushes.",
+    rating: "4.6",
+    startingPrice: "From ~$29/mo",
+    reviewHref: getEmailMarketingReviewUrl("activecampaign"),
+    visitUrl: "https://www.activecampaign.com",
+    logoSrc: emailMarketingLogoForSlug("activecampaign"),
+  },
+  mailerlite: {
+    slug: "mailerlite",
+    name: "MailerLite",
+    description: "Modern editor and automation basics without enterprise overhead.",
+    rating: "4.3",
+    startingPrice: "Free–paid",
+    reviewHref: getEmailMarketingReviewUrl("mailerlite"),
+    visitUrl: "https://www.mailerlite.com",
+    logoSrc: emailMarketingLogoForSlug("mailerlite"),
+  },
+  brevo: {
+    slug: "brevo",
+    name: "Brevo",
+    description: "Email plus SMS and transactional messaging in one operational stack.",
+    rating: "4.2",
+    startingPrice: "Free–paid",
+    reviewHref: getEmailMarketingReviewUrl("brevo"),
+    visitUrl: "https://www.brevo.com",
+    logoSrc: emailMarketingLogoForSlug("brevo"),
+  },
+  klaviyo: {
+    slug: "klaviyo",
+    name: "Klaviyo",
+    description: "Behavior- and property-driven segmentation when clean event data exists.",
+    rating: "4.5",
+    startingPrice: "Free–paid",
+    reviewHref: getEmailMarketingReviewUrl("klaviyo"),
+    visitUrl: "https://www.klaviyo.com",
+    logoSrc: emailMarketingLogoForSlug("klaviyo"),
+  },
+  "hubspot-email-marketing": {
+    slug: "hubspot-email-marketing",
+    name: "HubSpot",
+    description: "Unified CRM and marketing email when deals, tasks, and reporting must align.",
+    rating: "4.4",
+    startingPrice: "Free–paid tiers",
+    reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing"),
+    visitUrl: "https://www.hubspot.com/products/marketing",
+    logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"),
+  },
+  "constant-contact": {
+    slug: "constant-contact",
+    name: "Constant Contact",
+    description: "Guided templates and support-forward onboarding for owner-led marketers.",
+    rating: "4.3",
+    startingPrice: "From ~$12/mo",
+    reviewHref: getEmailMarketingReviewUrl("constant-contact"),
+    visitUrl: "https://www.constantcontact.com",
+    logoSrc: emailMarketingLogoForSlug("constant-contact"),
+  },
+  convertkit: {
+    slug: "convertkit",
+    name: "Kit",
+    description: "Story-driven sequences and simple monetization paths for audience-first brands.",
+    rating: "4.4",
+    startingPrice: "Free–paid (subscriber-based)",
+    reviewHref: getEmailMarketingReviewUrl("convertkit"),
+    visitUrl: "https://kit.com",
+    logoSrc: emailMarketingLogoForSlug("convertkit"),
+  },
+};
+
+const EMAIL_TABLE_ROW: Record<string, (typeof comparisonTableRows)[number]> = {
+  mailchimp: comparisonTableRows[0],
+  activecampaign: comparisonTableRows[1],
+  mailerlite: comparisonTableRows[2],
+  brevo: {
+    slug: "brevo",
+    name: "Brevo",
+    logoSrc: emailMarketingLogoForSlug("brevo"),
+    bestFor: "Email + SMS operations",
+    startingPrice: "Free–paid",
+    standoutFeature: "Bundled channels",
+    reviewHref: getEmailMarketingReviewUrl("brevo"),
+  },
+  klaviyo: {
+    slug: "klaviyo",
+    name: "Klaviyo",
+    logoSrc: emailMarketingLogoForSlug("klaviyo"),
+    bestFor: "Data-led segmentation",
+    startingPrice: "Free–paid",
+    standoutFeature: "Profiles + flows",
+    reviewHref: getEmailMarketingReviewUrl("klaviyo"),
+  },
+  "hubspot-email-marketing": {
+    slug: "hubspot-email-marketing",
+    name: "HubSpot",
+    logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"),
+    bestFor: "CRM + lifecycle email",
+    startingPrice: "Free–paid tiers",
+    standoutFeature: "Unified reporting",
+    reviewHref: getEmailMarketingReviewUrl("hubspot-email-marketing"),
+  },
+  "constant-contact": {
+    slug: "constant-contact",
+    name: "Constant Contact",
+    logoSrc: emailMarketingLogoForSlug("constant-contact"),
+    bestFor: "Guided simplicity",
+    startingPrice: "From ~$12/mo",
+    standoutFeature: "Template guidance",
+    reviewHref: getEmailMarketingReviewUrl("constant-contact"),
+  },
+  convertkit: {
+    slug: "convertkit",
+    name: "Kit",
+    logoSrc: emailMarketingLogoForSlug("convertkit"),
+    bestFor: "Creator-style nurture",
+    startingPrice: "Free–paid",
+    standoutFeature: "Story automations",
+    reviewHref: getEmailMarketingReviewUrl("convertkit"),
+  },
+};
+
+function featuredFromTradeTriple(scenarioKey: string): typeof featuredProducts | null {
+  const triple = EMAIL_TRADE_SCENARIO_TRIPLES[scenarioKey];
+  if (!triple) return null;
+  return triple.map((slug, idx) => {
+    const base = EMAIL_PRODUCT_CARD[slug];
+    if (!base) throw new Error(`Missing EMAIL_PRODUCT_CARD for ${slug}`);
+    return {
+      ...base,
+      badge: idx === 0 ? "Best overall fit" : idx === 1 ? "Best alternative fit" : "Best specialized fit",
+    };
+  });
+}
+
+function tableFromTradeTriple(scenarioKey: string): typeof comparisonTableRows | null {
+  const triple = EMAIL_TRADE_SCENARIO_TRIPLES[scenarioKey];
+  if (!triple) return null;
+  return triple.map((slug) => {
+    const row = EMAIL_TABLE_ROW[slug];
+    if (!row) throw new Error(`Missing EMAIL_TABLE_ROW for ${slug}`);
+    return row;
+  });
+}
+
 type Scenario = {
   subtitle: string;
   introParagraph: string;
@@ -704,6 +880,474 @@ const SCENARIOS: Record<string, Scenario> = {
       { q: "When is enterprise MAP justified?", a: "When compliance, multi-brand needs, and advanced personalization justify cost—otherwise midsize tools often suffice." },
     ],
   },
+  "appliance-repair": {
+    subtitle: "Post-service nurture, warranty-aware messaging, and parts-delay sensitivity for appliance repair shops.",
+    introParagraph:
+      "Appliance repair businesses live on repeat calls, warranty confusion, and tight dispatch windows. Email marketing should reinforce professionalism after completed repairs, educate on maintenance without sounding salesy, and pair cleanly with SMS for arrival windows—without blasting customers still waiting on back-ordered parts.",
+    topPicksSub: "Email marketing platforms for appliance repair operators.",
+    editorialSub: "How appliance repair teams should evaluate email software.",
+    whyThesePicksSub: "Why MailerLite, Brevo, and Mailchimp map to typical appliance repair stacks.",
+    editorialGuidance: [
+      { heading: "Separate promotional from transactional consent", body: "Job-confirmation and parts-delay updates are not the same as promo lists—segment consent so compliance and trust stay intact." },
+      { heading: "Trigger after true completion", body: "Automate post-job thank-yous and review asks only when the ticket is closed happy; mid-warranty limbo needs softer education, not hard CTAs." },
+      { heading: "Bundle SMS for dispatch reality", body: "When crews already text ETAs, choose stacks that keep SMS and email coordinated so customers do not get double-nagged." },
+      { heading: "Keep creative lightweight", body: "Owners rarely have design time—prioritize templates you can ship weekly between truck rolls." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "MailerLite",
+        body: "MailerLite fits lean appliance repair offices that need polished post-service emails and simple automations without hiring a marketing manager. Use the trial to wire one post-repair sequence with maintenance tips and a single review CTA, then measure booked callbacks—not opens. Confirm forms from your website builder sync cleanly so warranty leads do not duplicate contacts. It wins when execution consistency matters more than enterprise branching.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo helps appliance shops that already text customers for windows and parts updates and want email nurture in the same operational hub. Pilot SMS volumes against no-show reduction; message costs spike if you over-send. Document TCPA consent separately from email promos. Brevo belongs when multichannel coordination—not isolated newsletters—is the goal.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains the practical integration-heavy choice when your stack mixes scheduling tools, lead vendors, and light CRMs and you need dependable campaign velocity. Trial domain authentication on your real sending domain before scaling seasonal filter promotions. Use segmentation by appliance type only when data is trustworthy—bad tags produce irrelevant offers. Mailchimp suits mixed-tool shops that value speed and partner ecosystem breadth.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for appliance repair businesses?", a: "MailerLite for lean automation, Brevo when SMS plus email should live together, and Mailchimp when integrations and fast publishing matter most." },
+      { q: "Should appliance repair shops email weekly?", a: "A modest value cadence plus triggered post-job messages usually outperforms sporadic blasts—busy owners need sustainable rhythms." },
+      { q: "How do we avoid annoying customers waiting on parts?", a: "Use transactional-style updates for delays and pause promotional automations until service is complete." },
+      { q: "What is the first automation to build?", a: "A closed-ticket thank-you with maintenance tips and optional review link, gated on job status from your FSM or CRM." },
+      { q: "Do we need CRM-grade email?", a: "Only if you run true pipeline stages; many single-location shops succeed with lighter tools plus disciplined tags." },
+      { q: "How should we measure ROI?", a: "Track booked return visits, plan attach rate, and referral mentions tied to campaign clicks—not vanity opens." },
+    ],
+  },
+  "garage-door": {
+    subtitle: "Emergency dispatch nurture, install follow-up, and upsell-friendly campaigns for garage door companies.",
+    introParagraph:
+      "Garage door operators split attention between spring emergencies, opener upgrades, and commercial sectional work. Email should support fast quote follow-up, reinforce safety and warranty clarity after installs, and carry visual proof—without your office abandoning automations every storm season.",
+    topPicksSub: "Email systems for garage door installers and service teams.",
+    editorialSub: "What garage door companies should prioritize in email software.",
+    whyThesePicksSub: "Why ActiveCampaign, Brevo, and Mailchimp fit common garage door workflows.",
+    editorialGuidance: [
+      { heading: "Split emergency vs scheduled messaging", body: "Tone, cadence, and CTAs should differ for 2 a.m. spring calls versus planned panel upgrades." },
+      { heading: "Automate estimate nudges with discipline", body: "Short quote-cycle sequences outperform generic newsletters when sales teams are slammed mid-season." },
+      { heading: "Coordinate SMS for logistics", body: "Day-before arrival confirmations and crew ETAs belong in SMS; keep education and proof in email." },
+      { heading: "Storm-ready templates", body: "Pre-approve modular campaigns you can publish quickly after hail or wind events without sloppy copy." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign suits garage door sales teams juggling same-day quotes and multi-day installs—branching on estimate status, deposit paid, or install complete keeps follow-up honest. Pilot with real CRM or FSM tags and audit weekly during peak weeks. It wins when pipeline discipline—not just pretty templates—is the constraint.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo helps when dispatch already texts homeowners and you want promotional email plus operational SMS under one roof. Trial consent capture on web forms and measure whether bundled reminders cut no-shows enough to justify message cost. It fits coordination-heavy operations.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is the dependable generalist when you need fast storm campaigns, broad integrations, and visual proof blocks ops can reuse. Validate deliverability before scaling geo-targeted offers. It suits teams that rotate creative often and refuse brittle enterprise stacks.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for garage door companies?", a: "ActiveCampaign for quote-stage automation, Brevo for combined email and SMS operations, and Mailchimp for fast integrated campaigns." },
+      { q: "What campaigns should we automate first?", a: "Post-inspection follow-up, deposit-to-schedule reminders, and post-install care plus review asks." },
+      { q: "How often should we email homeowners?", a: "Event-driven sequences plus a monthly maintenance or safety tip usually feel helpful rather than spammy." },
+      { q: "Should commercial and residential share one list?", a: "Prefer segmentation at minimum—copy and proof differ sharply between builder programs and homeowner emergencies." },
+      { q: "How do we protect deliverability?", a: "Authenticate your domain, avoid purchased lists, and scrub duplicates after acquisitions or new phone systems." },
+      { q: "What proves ROI?", a: "Fewer ghosted quotes, higher opener attach rates, and faster referral loops measured in CRM or dispatch notes." },
+    ],
+  },
+  locksmith: {
+    subtitle: "Speed-to-lead nurture, after-hours sensitivity, and dispute-aware messaging for locksmith businesses.",
+    introParagraph:
+      "Locksmith demand is urgent and mobile-first; buyers compare fast from search. Email still matters for receipts, rekey programs, commercial master-key education, and follow-up that builds repeat commercial accounts—if sends respect timing and you pair operational SMS thoughtfully.",
+    topPicksSub: "Email tools for locksmith operators.",
+    editorialSub: "How locksmiths should choose email marketing platforms.",
+    whyThesePicksSub: "Why Brevo, ActiveCampaign, and MailerLite fit locksmith realities.",
+    editorialGuidance: [
+      { heading: "Lead velocity over newsletter vanity", body: "Prioritize short post-inquiry sequences that mirror how fast buyers decide." },
+      { heading: "Quiet hours and consent", body: "Night dispatch is normal—marketing sends are not. Separate transactional SMS from promos." },
+      { heading: "Automotive vs commercial tracks", body: "Car lockout customers need different nurture than property managers on master-key contracts." },
+      { heading: "Reputation-sensitive tone", body: "Draft calm templates for pricing disputes before you need them in public-facing crises." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Brevo",
+        body: "Brevo fits locksmiths who text ETAs and invoices and want lifecycle email—rekey reminders, commercial check-ins—in the same stack. Measure SMS costs against booked return work. It wins on multichannel speed for lean crews.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps growing locksmith groups segment commercial, automotive, and residential pipelines with stage-based follow-up. Requires honest CRM tags—bad data sends automotive blasts to property managers. Choose it when logic discipline exists.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite keeps owner-operators shipping professional emails between calls: simple automations, modern editor, fair pricing. Ideal when you refuse heavy admin but still want post-job sequences that run without you remembering.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for locksmith businesses?", a: "Brevo for email plus SMS operations, ActiveCampaign for pipeline-heavy segmentation, and MailerLite for lean owner-led execution." },
+      { q: "Do locksmiths need fancy automation?", a: "Start with two or three triggers—post-service, dormant commercial check-in, and seasonal security tips—before branching deeply." },
+      { q: "How should we handle pricing complaints in email?", a: "Use calm, factual templates and move detailed billing disputes offline—never argue invoices in marketing broadcasts." },
+      { q: "Is weekly email realistic?", a: "Often biweekly value plus triggered flows fits solo operators better than unsustainable weekly promises." },
+      { q: "What integrations matter?", a: "Scheduling, invoicing, and website quote forms so segments stay honest." },
+      { q: "What KPI should we track?", a: "Booked jobs and repeat commercial contracts influenced by sequences, not click rate alone." },
+    ],
+  },
+  "flooring-contractors": {
+    subtitle: "Visual proof, long estimate cycles, and showroom-to-install nurture for flooring contractors.",
+    introParagraph:
+      "Flooring buyers need inspiration, material education, and confidence in measurement and dust control. Email is where you carry before/after galleries, timeline expectations, and follow-up across multi-week decisions—without your coordinator abandoning the tool mid-season.",
+    topPicksSub: "Email marketing picks for flooring contractors.",
+    editorialSub: "How flooring businesses should evaluate email platforms.",
+    whyThesePicksSub: "Why Mailchimp, ActiveCampaign, and Klaviyo align with flooring sales journeys.",
+    editorialGuidance: [
+      { heading: "Visual-first templates", body: "Prioritize mobile rendering for large imagery and clear CTAs to book measure appointments." },
+      { heading: "Stage-based nurture", body: "Map sequences to showroom visit, measure scheduled, install booked, and punch complete—each stage needs different proof." },
+      { heading: "Data only when clean", body: "Klaviyo-style segmentation rewards accurate project-type tags; do not fake sophistication with messy CRM exports." },
+      { heading: "Partner with reps responsibly", body: "If you co-brand with suppliers, keep unsubscribes and consent transparent." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp helps flooring teams ship gorgeous room scenes and promotion modules fast while integrating common contractor stacks. Trial one estimate nurture and one seasonal hardwood campaign; measure booked measures, not opens. It wins on creative velocity.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign supports longer estimate cycles with branching when prospects open pricing emails or stall after samples. Requires someone to audit branches monthly. Choose it when follow-up discipline is the real bottleneck.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo fits flooring retailers with showroom POS or website events feeding clean profiles—win-back, upgrade to waterproof lines, and VIP designer tracks. Validate data pipes before paying for advanced features. It belongs when behavior data is trustworthy.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for flooring contractors?", a: "Mailchimp for visual campaign speed, ActiveCampaign for structured estimate nurture, and Klaviyo when clean event data supports advanced segmentation." },
+      { q: "How long should estimate nurture run?", a: "Often 21–45 days with stage-based messages; pause when customers book or explicitly defer." },
+      { q: "Should we segment residential vs commercial?", a: "Yes—proof, timelines, and payment terms differ materially." },
+      { q: "How do we use photos ethically?", a: "Obtain customer permission before featuring installs; use labeled stock where needed." },
+      { q: "What is a high-performing first campaign?", a: "Post-measure education on acclimation and subfloor prep with a clear scheduling CTA." },
+      { q: "How should we measure ROI?", a: "Booked installs, average project value, and repeat referral requests tied to email touches." },
+    ],
+  },
+  "fence-deck-builders": {
+    subtitle: "Weather-aware promotions, neighbor-sensitive messaging, and project-completion follow-up for outdoor builders.",
+    introParagraph:
+      "Fence and deck builders sell curb appeal and long outdoor projects—email is ideal for material education, permit-delay updates, and post-walkthrough referral loops. Pick software your PMs will not abandon when rain pushes schedules.",
+    topPicksSub: "Email tools for fence and deck companies.",
+    editorialSub: "What outdoor builders should demand from email software.",
+    whyThesePicksSub: "Why MailerLite, Mailchimp, and Brevo fit fence and deck workflows.",
+    editorialGuidance: [
+      { heading: "Pause automations around weather slips", body: "Nothing feels worse than a promo landing while crews are behind—use manual holds or date-aware logic." },
+      { heading: "Post-punch referral timing", body: "Ask after stain dry and walkthrough sign-off, not mid-railing install." },
+      { heading: "Material education wins trust", body: "Explain rot resistance, hardware choices, and code basics before pushing upgrades." },
+      { heading: "SMS for day-of logistics", body: "Coordinate crew arrivals via SMS; keep inspiration galleries in email." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "MailerLite",
+        body: "MailerLite suits lean outdoor crews that need attractive project showcases and light automation without enterprise overhead. Great when one coordinator runs social and email together.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp helps multi-crew deck builders standardize modules—proof, offers, footers—while swapping local photos quickly. Integrations keep website leads flowing into segments.",
+      },
+      {
+        heading: "Brevo",
+        body: "Brevo adds SMS for weather delays and arrival windows alongside email nurture—critical when neighbors watch your trucks all week. Watch consent and frequency caps.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for fence and deck builders?", a: "MailerLite for lean value, Mailchimp for template speed and integrations, and Brevo when SMS plus email coordination matters." },
+      { q: "Should we email during delays?", a: "Send honest project updates; pause promos until schedules stabilize." },
+      { q: "What content converts?", a: "Process explainers, warranty clarity, and curated project galleries with realistic timelines." },
+      { q: "How often should we broadcast?", a: "Monthly or biweekly inspiration plus milestone triggers is a sustainable baseline." },
+      { q: "Do we need CRM integration?", a: "Helpful once you juggle many open jobs; otherwise start with simple tags by project stage." },
+      { q: "What proves ROI?", a: "Signed contracts influenced by nurture, referral mentions, and fewer ghosted estimates." },
+    ],
+  },
+  "glass-window-installers": {
+    subtitle: "Specifier education, retrofit homeowner nurture, and compliance-aware follow-up for glass and window installers.",
+    introParagraph:
+      "Glass and window companies sell energy performance, safety, and clean installs—often across retail replacement, new construction, and insurance-adjacent workstreams. Email should carry technical education, project timelines, and post-install care without mixing incompatible buyer journeys.",
+    topPicksSub: "Email platforms for glass and window installers.",
+    editorialSub: "How glass and window companies should evaluate email tools.",
+    whyThesePicksSub: "Why HubSpot, ActiveCampaign, and Mailchimp map to mixed B2B and homeowner demand.",
+    editorialGuidance: [
+      { heading: "Separate retail, GC, and insurance tracks", body: "Different approvals, tone, and cadence—shared lists without segmentation create embarrassing misfires." },
+      { heading: "Technical education builds trust", body: "Low-E coatings, structural glass, and lead-time transparency belong in email—not rushed SMS alone." },
+      { heading: "CRM alignment for longer bids", body: "Commercial glazing needs deal-stage visibility; retail replacement needs faster quote cycles." },
+      { heading: "Careful co-marketing", body: "Manufacturer programs are great—ensure unsubscribes remain clear to homeowners." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits glass shops adding commercial programs or multiple locations and needing CRM plus marketing email in one timeline. Trial deal-based automations before scaling; unused CRM seats waste money. It wins when pipeline reporting is mandatory.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign supports behavior-triggered follow-up when prospects open spec-heavy messages about U-values or sound packages. Requires disciplined tagging between retrofit and new construction. Choose it when sales needs automated nudges tied to real engagement.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp remains the pragmatic choice for retail-heavy replacement crews that need fast, visual campaigns and wide integrations without standing up full CRM marketing overnight. Authenticate domains before scaling geo offers.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for glass and window installers?", a: "HubSpot when CRM-linked lifecycle is central, ActiveCampaign for engagement-based nurture, and Mailchimp for fast integrated retail campaigns." },
+      { q: "Should we email technical specs?", a: "Yes in digestible chunks—buyers comparing bids want clarity on performance and warranties." },
+      { q: "How do we handle long manufacturer lead times?", a: "Use honest update emails and pause upsell promos until delivery stabilizes." },
+      { q: "What is the first automation?", a: "Post-estimate education sequence with measurement expectations and prep checklist." },
+      { q: "Do we need SMS?", a: "Useful for crew ETAs; keep detailed education in email." },
+      { q: "How should we measure ROI?", a: "Booked installs, average contract value, and influenced revenue by segment." },
+    ],
+  },
+  "concrete-contractors": {
+    subtitle: "Bid-stage nurture, GC-facing proof, and homeowner education for concrete contractors.",
+    introParagraph:
+      "Concrete contractors balance homeowner flatwork, decorative finishes, and commercial schedules with different risk profiles. Email should support longer GC nurture, educate homeowners on cure times and joints, and keep follow-up disciplined when weather disrupts pours.",
+    topPicksSub: "Email systems for concrete contractors.",
+    editorialSub: "What concrete contractors should prioritize in email software.",
+    whyThesePicksSub: "Why HubSpot, Klaviyo, and ActiveCampaign fit heavier project pipelines.",
+    editorialGuidance: [
+      { heading: "Stage-aware follow-up", body: "GC bids need milestone emails; residential driveways need shorter, proof-heavy cycles." },
+      { heading: "Educate before upsell", body: "Explain sealing, joints, and realistic crack expectations to reduce post-pour disputes." },
+      { heading: "Data discipline for segmentation", body: "Klaviyo-style tracks only help when project type and revenue band tags are accurate." },
+      { heading: "Weather and schedule transparency", body: "Batch honest delay communications; silence erodes trust faster than rain." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot suits concrete firms growing commercial work and needing CRM visibility across estimators, PMs, and marketing. Pilot one pipeline before rolling enterprise features you will not staff.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo helps when you can feed project size, service line, and engagement history cleanly—useful for win-back and upsell decorative finishes to past flatwork clients. Garbage data makes expensive software pointless.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign delivers deep automation for mixed residential and commercial funnels—task reminders when GCs open spec emails, homeowner nurture after pour photos. Requires monthly QA.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for concrete contractors?", a: "HubSpot for CRM-centric growth, Klaviyo when trustworthy data unlocks lifecycle revenue plays, and ActiveCampaign for strong automation without full enterprise bloat." },
+      { q: "Should residential and GC leads share one journey?", a: "No—split tracks and tone; GCs need proof, schedules, and safety culture; homeowners need education and reassurance." },
+      { q: "What campaigns convert residential work?", a: "Driveway maintenance tips, seasonal sealing offers, and decorative finish galleries with clear CTAs." },
+      { q: "How often should we email GCs?", a: "Follow milestone cadence tied to bids and project updates—not generic weekly blasts." },
+      { q: "What is the biggest mistake?", a: "Over-promising timelines in email when weather controls your schedule." },
+      { q: "How do we prove ROI?", a: "Won bid value, residential repeat rate, and add-on decorative work influenced by campaigns." },
+    ],
+  },
+  excavation: {
+    subtitle: "B2B bid nurture, safety-and-community sensitivity, and selective homeowner campaigns for excavation companies.",
+    introParagraph:
+      "Excavation companies sell to developers, municipalities, and selective residential buyers. Email should support longer B2B cycles, subcontractor coordination updates, and occasional community-facing education—without sounding consumer-marketing-cute on heavy civil topics.",
+    topPicksSub: "Email marketing tools for excavation and sitework firms.",
+    editorialSub: "How excavation companies should evaluate email platforms.",
+    whyThesePicksSub: "Why HubSpot, ActiveCampaign, and Constant Contact fit mixed B2B and local visibility.",
+    editorialGuidance: [
+      { heading: "Respect audience maturity", body: "Procurement readers want concise scope references, safety culture proof, and clear next steps—not emoji-heavy promos." },
+      { heading: "Long-cycle B2B nurture", body: "Automate reminders on dormant bids and RFP clarifications with CRM alignment." },
+      { heading: "Local brand maintenance", body: "Selective homeowner newsletters can support hiring and small job demand—keep lists clean." },
+      { heading: "Crisis and safety comms", body: "Pre-draft templates for incidents with legal review gates before sending at scale." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits excavation firms standardizing CRM, deal tracking, and executive reporting across regions. Trial permissions so field supers cannot accidentally blast enterprise lists.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps teams automate bid-stage touches, dormant opportunity nudges, and webinar-style technical sessions when CRM tags stay honest.",
+      },
+      {
+        heading: "Constant Contact",
+        body: "Constant Contact is a pragmatic choice for owner-led excavation brands that need guided templates, predictable support, and straightforward newsletters to local stakeholders without adopting a full MAP overnight.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for excavation companies?", a: "HubSpot for CRM-heavy pipelines, ActiveCampaign for structured automation, and Constant Contact for guided simplicity on lean teams." },
+      { q: "Should excavation firms send consumer-style newsletters?", a: "Only when targeting specific local services; keep tone factual and relevant." },
+      { q: "What should B2B emails include?", a: "Project proof, equipment capabilities, safety metrics, and clear call-to-action for pre-bid meetings." },
+      { q: "How often should we email prospects?", a: "Follow deal cadence—not arbitrary weekly marketing calendars." },
+      { q: "Do we need SMS?", a: "Sometimes for crew coordination; keep sensitive legal topics out of SMS marketing." },
+      { q: "How should we measure ROI?", a: "Qualified opportunities advanced, won contract value, and inbound partner referrals influenced by nurture." },
+    ],
+  },
+  "auto-repair-shops": {
+    subtitle: "RO-close follow-up, service reminder discipline, and high-volume trust content for auto repair shops.",
+    introParagraph:
+      "Auto repair shops move fast: declined jobs, deferred maintenance, and fleet accounts all need different email rhythms. Software should integrate with shop systems where possible, support SMS for same-day logistics, and keep educational content scannable on phones.",
+    topPicksSub: "Email marketing platforms for auto repair shops.",
+    editorialSub: "How auto repair shops should choose email software.",
+    whyThesePicksSub: "Why Brevo, ActiveCampaign, and Mailchimp suit bay-heavy operations.",
+    editorialGuidance: [
+      { heading: "Trigger on RO status", body: "Post-visit education and declined-service nurture should respect whether the customer paid, picked up, or needs callback." },
+      { heading: "Advisor-friendly templates", body: "Service writers need plug-and-play blocks for brakes, tires, and inspections—avoid fragile custom HTML." },
+      { heading: "SMS discipline", body: "Reminders help; marketing texts need clear consent and opt-out paths." },
+      { heading: "Fleet vs retail segmentation", body: "Account-based messaging for fleets should not mirror consumer coupon cadence." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Brevo",
+        body: "Brevo fits shops already texting pickup approvals and wanting email nurture—declined repairs, seasonal checks—in one stack. Watch message costs during high-volume months.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps multi-advisor shops automate follow-up on declined work and dormant vehicles with behavior triggers from integrated CRM or DMS exports. Requires someone to audit logic weekly.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp is the dependable generalist for fast coupon campaigns, loyalty sends, and integrations when you are not ready for heavy automation overhead.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for auto repair shops?", a: "Brevo for combined email and SMS ops, ActiveCampaign for deeper RO-triggered automation, and Mailchimp for straightforward high-volume campaigns." },
+      { q: "What is the first automation to launch?", a: "Post-service thank-you with maintenance tips and a respectful declined-service follow-up sequence." },
+      { q: "How often should shops email?", a: "Monthly value plus triggered service reminders usually beats random blasts." },
+      { q: "Should we segment by vehicle type?", a: "When data exists, yes—diesel, EV, and fleet maintenance paths differ." },
+      { q: "What content builds trust?", a: "Transparent inspection explainers, warranty clarity, and advisor-signed tips—not only discounts." },
+      { q: "How do we measure ROI?", a: "Return visits, accepted recommendations, and fleet account revenue influenced by email." },
+    ],
+  },
+  "mobile-mechanics": {
+    subtitle: "On-the-road follow-up, lean automation, and SMS-first coordination for mobile mechanics.",
+    introParagraph:
+      "Mobile mechanics run businesses from trucks and phones. Email marketing should stay lightweight—post-repair education, deferred-work reminders, and occasional seasonal pushes—while SMS handles real-time logistics without double-notifying customers.",
+    topPicksSub: "Email tools for mobile mechanics.",
+    editorialSub: "What mobile mechanics should prioritize in email software.",
+    whyThesePicksSub: "Why Brevo, MailerLite, and ActiveCampaign fit road-based automotive service.",
+    editorialGuidance: [
+      { heading: "Keep admin overhead honest", body: "Choose flows you can maintain between jobs—complex MAPs die unused." },
+      { heading: "Pair SMS and email deliberately", body: "SMS for ETAs; email for richer education on maintenance intervals." },
+      { heading: "Invoice-triggered sends", body: "Automate from closed tickets so asks align with completed work." },
+      { heading: "Fleet pursuit tracks", body: "Separate small business fleet nurture from retail consumer cadence." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Brevo",
+        body: "Brevo suits mobile mechanics who already text customers and want simple email sequences layered on—referrals, seasonal checks—without juggling multiple vendors.",
+      },
+      {
+        heading: "MailerLite",
+        body: "MailerLite keeps solo operators publishing clean emails with minimal time investment; ideal when marketing is nights-and-weekends work.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps growing mobile fleets add branching for deferred work and dormant VINs once CRM or export hygiene exists.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for mobile mechanics?", a: "Brevo for SMS plus email coordination, MailerLite for lean simplicity, and ActiveCampaign when you need deeper automation as you scale." },
+      { q: "Should mobile mechanics skip email entirely?", a: "Email still carries education and trust better than SMS alone—just keep volume modest." },
+      { q: "What is the first campaign?", a: "Post-repair tips with clear next service interval and a single referral ask." },
+      { q: "How do we avoid unsafe messaging habits?", a: "Use templates triggered when parked; avoid typing campaigns while driving." },
+      { q: "Do we need a CRM?", a: "Helpful once you track fleets; many start with tags inside the email tool plus invoices." },
+      { q: "What proves ROI?", a: "Repeat bookings, deferred work captured, and fleet contracts won after nurture." },
+    ],
+  },
+  "cleaning-franchises": {
+    subtitle: "Franchise governance, territory reporting, and recurring-route retention for cleaning franchises.",
+    introParagraph:
+      "Cleaning franchises must balance brand standards with local execution: recurring route retention, upsell add-ons, and hiring campaigns all need email that scales without breaking consent or duplicating contacts across territories.",
+    topPicksSub: "Email platforms for cleaning franchises.",
+    editorialSub: "What cleaning franchises should demand from email software.",
+    whyThesePicksSub: "Why HubSpot, ActiveCampaign, and Klaviyo support franchise-scale operations.",
+    editorialGuidance: [
+      { heading: "Permissions and template libraries", body: "Corporate should own legal footers and promo rules while locals personalize community hooks." },
+      { heading: "Territory dashboards", body: "Compare locations on list growth, engagement, and booked upsells—not vanity sends." },
+      { heading: "Data hygiene after transfers", body: "Route changes and acquisitions duplicate contacts fast—audit quarterly." },
+      { heading: "Recurring-service automation", body: "Deep clean reminders, seasonal window campaigns, and referral asks should align to service dates." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "HubSpot",
+        body: "HubSpot fits franchisors needing CRM discipline, deal pipelines for B2B accounts, and marketing email with role-based governance across territories.",
+      },
+      {
+        heading: "ActiveCampaign",
+        body: "ActiveCampaign helps franchise systems enforce playbooks with branching—quality checks, upsells, win-backs—while still allowing local tags when ops stay disciplined.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo supports data-rich retention programs when POS or billing events feed clean profiles—VIP routes, add-on attach, churn risk. Requires integration investment.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for cleaning franchises?", a: "HubSpot for CRM-centric governance, ActiveCampaign for operational automation depth, and Klaviyo when trustworthy event data unlocks retention analytics." },
+      { q: "Should franchisors centralize lists?", a: "Often yes with strict segmentation; siloed lists duplicate contacts and hurt deliverability." },
+      { q: "What campaigns matter first?", a: "Post-clean quality check, referral ask, and recurring upsell sequences tied to service frequency." },
+      { q: "How do we protect brand voice?", a: "Locked modules for legal and offers with editable local fields only where allowed." },
+      { q: "What is the biggest risk?", a: "Stale automations after rebrands—audit every merge and name change." },
+      { q: "How should we measure ROI?", a: "Retention rate, add-on revenue per route, and franchisee NPS—not just opens." },
+    ],
+  },
+  "event-services": {
+    subtitle: "Inquiry speed, peak-season bursts, and portfolio storytelling for event services companies.",
+    introParagraph:
+      "Event rentals, AV, staffing, and logistics firms sell high-stakes days. Email should capture inquiries fast, nurture corporate planners with proof, and support seasonal peaks—while Kit-style sequences help creator-led brands monetize workshops or add-ons.",
+    topPicksSub: "Email marketing systems for event services businesses.",
+    editorialSub: "How event services teams should evaluate email platforms.",
+    whyThesePicksSub: "Why Mailchimp, Klaviyo, and Kit fit mixed B2B and audience-led event models.",
+    editorialGuidance: [
+      { heading: "Speed-to-quote sequences", body: "Short automations after form fills beat monthly newsletters for active RFPs." },
+      { heading: "Portfolio and logistics clarity", body: "Load-in diagrams, insurance proof, and rain plans belong in scannable email blocks." },
+      { heading: "Segment weddings vs corporate", body: "Different tone, cadence, and upsell paths—never mix them blindly." },
+      { heading: "Post-event referral timing", body: "Send gratitude and photo links while memory is fresh—then pause before upselling next season." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp helps event teams ship fast visual promos, vendor partner blasts, and integrated landing pages when integrations matter more than exotic CRM logic.",
+      },
+      {
+        heading: "Klaviyo",
+        body: "Klaviyo fits operators capturing rich website behavior—repeat corporate buyers, add-on furniture tiers, VIP client tiers—when data pipelines are clean enough to justify advanced flows.",
+      },
+      {
+        heading: "Kit",
+        body: "Kit (ConvertKit) supports story-driven nurture for workshop hosts, influencer-led rentals, and education-first upsells where simple visual sequences outperform heavy MAP complexity.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for event services?", a: "Mailchimp for fast integrated campaigns, Klaviyo when behavioral data supports premium segmentation, and Kit for audience-led story nurture." },
+      { q: "What should we automate first?", a: "Inquiry acknowledgment, quote follow-up, and post-event referral asks." },
+      { q: "How do we handle peak season?", a: "Pre-build modular campaigns and throttle sends so deliverability stays healthy." },
+      { q: "Should we SMS clients day-of?", a: "Yes for logistics with consent; keep contracts and insurance detail in email." },
+      { q: "What content converts corporate planners?", a: "Case studies, load-in timelines, contingency plans, and transparent pricing ranges." },
+      { q: "How should we measure ROI?", a: "Booked events, upsell revenue, and repeat corporate accounts influenced by nurture." },
+    ],
+  },
+  "home-inspectors": {
+    subtitle: "Neutral education, agent-friendly cadence, and liability-aware messaging for home inspectors.",
+    introParagraph:
+      "Home inspectors need referral-friendly visibility without aggressive sales tactics that undermine neutrality. Email should deliver maintenance education, seasonal checklists, and gentle post-report follow-up—aligned with how agents and buyers actually want to hear from you.",
+    topPicksSub: "Email marketing tools for home inspectors.",
+    editorialSub: "What home inspectors should prioritize in email software.",
+    whyThesePicksSub: "Why MailerLite, Constant Contact, and Mailchimp fit inspection practices.",
+    editorialGuidance: [
+      { heading: "Tone: educator, not salesperson", body: "Avoid language that sounds like you are negotiating repairs; focus on homeowner safety and maintenance literacy." },
+      { heading: "Agent partner rhythms", body: "Seasonal co-branded tips can work—ensure agents remain comfortable with your neutrality positioning." },
+      { heading: "Simple automations you will maintain", body: "One post-report sequence beats ten abandoned flows." },
+      { heading: "Permission clarity", body: "Buyers opt in at different moments—respect transactional vs marketing separation." },
+    ],
+    whyThesePicks: [
+      {
+        heading: "MailerLite",
+        body: "MailerLite helps solo inspectors and small teams publish polished educational emails without enterprise overhead—ideal for seasonal maintenance series and referral-light follow-ups.",
+      },
+      {
+        heading: "Constant Contact",
+        body: "Constant Contact supports inspectors who want guided onboarding, template suggestions, and human support when they are too busy to troubleshoot DNS issues alone.",
+      },
+      {
+        heading: "Mailchimp",
+        body: "Mailchimp fits multi-inspector firms needing integrations with website builders, class providers, and light CRMs while standardizing brand modules across partners.",
+      },
+    ],
+    faqItems: [
+      { q: "What is the best email marketing software for home inspectors?", a: "MailerLite for lean educational programs, Constant Contact for guided simplicity and support, and Mailchimp for integration breadth across small teams." },
+      { q: "Should inspectors run aggressive promo emails?", a: "No—focus on education, seasonal safety, and soft referral asks that preserve neutrality." },
+      { q: "What is a good first sequence?", a: "Post-report maintenance tips with clear disclaimers and optional scheduling links for ancillary services you legitimately offer." },
+      { q: "How often should inspectors email?", a: "Monthly or seasonal educational cadence plus light triggered flows is usually sustainable." },
+      { q: "Can we co-market with agents?", a: "Yes with transparent, optional value—never imply undue influence on negotiations." },
+      { q: "How should we measure success?", a: "Referral volume from trusted agents, ancillary service bookings, and list growth from delighted clients—not open rates alone." },
+    ],
+  },
 };
 
 function hubspotRow(): (typeof comparisonTableRows)[number] {
@@ -719,6 +1363,8 @@ function hubspotRow(): (typeof comparisonTableRows)[number] {
 }
 
 function scenarioFeatured(scenarioKey: string): typeof featuredProducts {
+  const tradeFeatured = featuredFromTradeTriple(scenarioKey);
+  if (tradeFeatured) return tradeFeatured;
   if (scenarioKey === "painting") {
     return [featuredProducts[0], featuredProducts[2], featuredProducts[1]];
   }
@@ -864,6 +1510,8 @@ function scenarioFeatured(scenarioKey: string): typeof featuredProducts {
 }
 
 function scenarioTable(scenarioKey: string): typeof comparisonTableRows {
+  const tradeTable = tableFromTradeTriple(scenarioKey);
+  if (tradeTable) return tradeTable;
   if (scenarioKey === "painting") {
     return [
       { slug: "mailchimp", name: "Mailchimp", logoSrc: emailMarketingLogoForSlug("mailchimp"), bestFor: "Visual campaign speed", startingPrice: "Free–paid", standoutFeature: "Template velocity", reviewHref: getEmailMarketingReviewUrl("mailchimp") },
@@ -993,6 +1641,19 @@ export const EMAIL_MARKETING_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
   "junk-removal": makePage("junk-removal", "Best Email Marketing Software for Junk Removal Businesses (2026)"),
   moving: makePage("moving", "Best Email Marketing Software for Moving Companies (2026)"),
   "home-services": makePage("home-services", "Best Email Marketing Software for Home Services (2026)"),
+  "appliance-repair": makePage("appliance-repair", "Best Email Marketing Software for Appliance Repair Businesses (2026)"),
+  "garage-door": makePage("garage-door", "Best Email Marketing Software for Garage Door Companies (2026)"),
+  locksmith: makePage("locksmith", "Best Email Marketing Software for Locksmith Businesses (2026)"),
+  "flooring-contractors": makePage("flooring-contractors", "Best Email Marketing Software for Flooring Contractors (2026)"),
+  "fence-deck-builders": makePage("fence-deck-builders", "Best Email Marketing Software for Fence & Deck Builders (2026)"),
+  "glass-window-installers": makePage("glass-window-installers", "Best Email Marketing Software for Glass & Window Installers (2026)"),
+  "concrete-contractors": makePage("concrete-contractors", "Best Email Marketing Software for Concrete Contractors (2026)"),
+  excavation: makePage("excavation", "Best Email Marketing Software for Excavation Companies (2026)"),
+  "auto-repair-shops": makePage("auto-repair-shops", "Best Email Marketing Software for Auto Repair Shops (2026)"),
+  "mobile-mechanics": makePage("mobile-mechanics", "Best Email Marketing Software for Mobile Mechanics (2026)"),
+  "cleaning-franchises": makePage("cleaning-franchises", "Best Email Marketing Software for Cleaning Franchises (2026)"),
+  "event-services": makePage("event-services", "Best Email Marketing Software for Event Services (2026)"),
+  "home-inspectors": makePage("home-inspectors", "Best Email Marketing Software for Home Inspectors (2026)"),
 };
 
 export const EMAIL_MARKETING_BEST_FOR_METADATA_BY_SLUG: Record<
@@ -1073,6 +1734,84 @@ export const EMAIL_MARKETING_BEST_FOR_METADATA_BY_SLUG: Record<
     title: "Best Email Marketing Software for Moving Companies (2026) | BeltStack",
     description: "Compare the best email marketing software for moving companies: ActiveCampaign, HubSpot, and Mailchimp.",
     keywords: ["best email marketing software for moving companies", "moving company email marketing software", "moving email marketing tools"],
+  },
+  "appliance-repair": {
+    title: "Best Email Marketing Software for Appliance Repair Businesses (2026) | BeltStack",
+    description:
+      "Compare the best email marketing software for appliance repair businesses in 2026: MailerLite for lean automations, Brevo for SMS plus email, and Mailchimp for integrations and fast campaigns.",
+    keywords: ["best email marketing software for appliance repair businesses", "appliance repair email marketing", "appliance service email automation"],
+  },
+  "garage-door": {
+    title: "Best Email Marketing Software for Garage Door Companies (2026) | BeltStack",
+    description:
+      "Find the best email marketing software for garage door companies in 2026: ActiveCampaign for quote-stage automation, Brevo for combined email and SMS, and Mailchimp for storm-ready campaigns.",
+    keywords: ["best email marketing software for garage door companies", "garage door email marketing", "garage door installer email automation"],
+  },
+  locksmith: {
+    title: "Best Email Marketing Software for Locksmith Businesses (2026) | BeltStack",
+    description:
+      "Choose email marketing software for locksmith businesses in 2026: Brevo for text-led operations, ActiveCampaign for segmented pipelines, and MailerLite for lean owner-run nurture.",
+    keywords: ["best email marketing software for locksmith businesses", "locksmith email marketing", "locksmith SMS and email software"],
+  },
+  "flooring-contractors": {
+    title: "Best Email Marketing Software for Flooring Contractors (2026) | BeltStack",
+    description:
+      "See the best email marketing software for flooring contractors in 2026: Mailchimp for visual campaigns, ActiveCampaign for estimate nurture, and Klaviyo when clean data supports segmentation.",
+    keywords: ["best email marketing software for flooring contractors", "flooring contractor email marketing", "hardwood installer email campaigns"],
+  },
+  "fence-deck-builders": {
+    title: "Best Email Marketing Software for Fence & Deck Builders (2026) | BeltStack",
+    description:
+      "Best email marketing software for fence and deck builders in 2026: MailerLite for simple beautiful sends, Mailchimp for integrations, and Brevo for weather and logistics SMS with email.",
+    keywords: ["best email marketing software for fence and deck builders", "deck builder email marketing", "fence contractor email automation"],
+  },
+  "glass-window-installers": {
+    title: "Best Email Marketing Software for Glass & Window Installers (2026) | BeltStack",
+    description:
+      "Compare email marketing software for glass and window installers in 2026: HubSpot for CRM-linked lifecycle, ActiveCampaign for behavior nurture, and Mailchimp for fast retail campaigns.",
+    keywords: ["best email marketing software for glass and window installers", "window replacement email marketing", "glass company email automation"],
+  },
+  "concrete-contractors": {
+    title: "Best Email Marketing Software for Concrete Contractors (2026) | BeltStack",
+    description:
+      "Top email marketing software for concrete contractors in 2026: HubSpot for pipeline reporting, Klaviyo for data-led retention plays, and ActiveCampaign for deep job-stage automation.",
+    keywords: ["best email marketing software for concrete contractors", "concrete contractor email marketing", "flatwork contractor email automation"],
+  },
+  excavation: {
+    title: "Best Email Marketing Software for Excavation Companies (2026) | BeltStack",
+    description:
+      "B2B-focused email marketing picks for excavation companies in 2026: HubSpot for CRM governance, ActiveCampaign for bid nurture, and Constant Contact for guided owner-led newsletters.",
+    keywords: ["best email marketing software for excavation companies", "excavation contractor email marketing", "sitework company email campaigns"],
+  },
+  "auto-repair-shops": {
+    title: "Best Email Marketing Software for Auto Repair Shops (2026) | BeltStack",
+    description:
+      "Best email marketing software for auto repair shops in 2026: Brevo for SMS plus email, ActiveCampaign for RO-triggered automation, and Mailchimp for high-volume promotional campaigns.",
+    keywords: ["best email marketing software for auto repair shops", "auto repair email marketing", "mechanic shop email automation"],
+  },
+  "mobile-mechanics": {
+    title: "Best Email Marketing Software for Mobile Mechanics (2026) | BeltStack",
+    description:
+      "Lean email marketing software for mobile mechanics in 2026: Brevo for coordinated SMS and email, MailerLite for simple road-friendly campaigns, and ActiveCampaign as you scale automations.",
+    keywords: ["best email marketing software for mobile mechanics", "mobile mechanic email marketing", "roadside mechanic email tools"],
+  },
+  "cleaning-franchises": {
+    title: "Best Email Marketing Software for Cleaning Franchises (2026) | BeltStack",
+    description:
+      "Email marketing software for cleaning franchises in 2026: HubSpot for franchisor CRM control, ActiveCampaign for playbook automation, and Klaviyo when event data powers retention analytics.",
+    keywords: ["best email marketing software for cleaning franchises", "cleaning franchise email marketing", "maid service franchise email automation"],
+  },
+  "event-services": {
+    title: "Best Email Marketing Software for Event Services (2026) | BeltStack",
+    description:
+      "Best email marketing software for event services in 2026: Mailchimp for fast visual campaigns, Klaviyo for behavioral segmentation, and Kit (ConvertKit) for story-driven audience nurture.",
+    keywords: ["best email marketing software for event services", "event rental email marketing", "event company email automation"],
+  },
+  "home-inspectors": {
+    title: "Best Email Marketing Software for Home Inspectors (2026) | BeltStack",
+    description:
+      "Compare email marketing software for home inspectors in 2026: MailerLite for neutral education, Constant Contact for guided support, and Mailchimp for multi-inspector integrations.",
+    keywords: ["best email marketing software for home inspectors", "home inspector email marketing", "property inspection email campaigns"],
   },
 };
 

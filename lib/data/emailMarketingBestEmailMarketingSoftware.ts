@@ -250,6 +250,19 @@ export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
   { label: "Pool service companies", href: getEmailMarketingBestForUrl("pool-service") },
   { label: "Junk removal businesses", href: getEmailMarketingBestForUrl("junk-removal") },
   { label: "Moving companies", href: getEmailMarketingBestForUrl("moving") },
+  { label: "Appliance repair businesses", href: getEmailMarketingBestForUrl("appliance-repair") },
+  { label: "Garage door companies", href: getEmailMarketingBestForUrl("garage-door") },
+  { label: "Locksmith businesses", href: getEmailMarketingBestForUrl("locksmith") },
+  { label: "Flooring contractors", href: getEmailMarketingBestForUrl("flooring-contractors") },
+  { label: "Fence & deck builders", href: getEmailMarketingBestForUrl("fence-deck-builders") },
+  { label: "Glass & window installers", href: getEmailMarketingBestForUrl("glass-window-installers") },
+  { label: "Concrete contractors", href: getEmailMarketingBestForUrl("concrete-contractors") },
+  { label: "Excavation companies", href: getEmailMarketingBestForUrl("excavation") },
+  { label: "Auto repair shops", href: getEmailMarketingBestForUrl("auto-repair-shops") },
+  { label: "Mobile mechanics", href: getEmailMarketingBestForUrl("mobile-mechanics") },
+  { label: "Cleaning franchises", href: getEmailMarketingBestForUrl("cleaning-franchises") },
+  { label: "Event services", href: getEmailMarketingBestForUrl("event-services") },
+  { label: "Home inspectors", href: getEmailMarketingBestForUrl("home-inspectors") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

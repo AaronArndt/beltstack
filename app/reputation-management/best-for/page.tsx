@@ -23,6 +23,19 @@ const LINKS = [
   { label: "Best Reputation Management Software for Pool Service Companies (2026)", href: getReputationManagementBestForUrl("pool-service"), description: "Seasonal review consistency for pool service operators." },
   { label: "Best Reputation Management Software for Junk Removal Businesses (2026)", href: getReputationManagementBestForUrl("junk-removal"), description: "Fast-turn reputation workflows for junk removal teams." },
   { label: "Best Reputation Management Software for Moving Companies (2026)", href: getReputationManagementBestForUrl("moving"), description: "Trust and response workflows for moving companies." },
+  { label: "Best Reputation Management Software for Appliance Repair Businesses (2026)", href: getReputationManagementBestForUrl("appliance-repair"), description: "Review timing for warranty work, parts delays, and repeat home visits." },
+  { label: "Best Reputation Management Software for Garage Door Companies (2026)", href: getReputationManagementBestForUrl("garage-door"), description: "Emergency and install workflows for garage door service teams." },
+  { label: "Best Reputation Management Software for Locksmith Businesses (2026)", href: getReputationManagementBestForUrl("locksmith"), description: "24/7 lockout and rekey demand with fast, dispute-ready responses." },
+  { label: "Best Reputation Management Software for Flooring Contractors (2026)", href: getReputationManagementBestForUrl("flooring-contractors"), description: "Multi-day installs, walkthroughs, and showroom-driven social proof." },
+  { label: "Best Reputation Management Software for Fence & Deck Builders (2026)", href: getReputationManagementBestForUrl("fence-deck-builders"), description: "Outdoor projects, weather delays, and neighbor-visible job sites." },
+  { label: "Best Reputation Management Software for Glass & Window Installers (2026)", href: getReputationManagementBestForUrl("glass-window-installers"), description: "Retrofit and construction programs with sensitive complaint escalation." },
+  { label: "Best Reputation Management Software for Concrete Contractors (2026)", href: getReputationManagementBestForUrl("concrete-contractors"), description: "Flatwork and decorative pours with higher-stakes dispute handling." },
+  { label: "Best Reputation Management Software for Excavation Companies (2026)", href: getReputationManagementBestForUrl("excavation"), description: "Sitework and utility projects with portfolio-level visibility." },
+  { label: "Best Reputation Management Software for Auto Repair Shops (2026)", href: getReputationManagementBestForUrl("auto-repair-shops"), description: "High-volume bays, advisors, and warranty-sensitive customer moments." },
+  { label: "Best Reputation Management Software for Mobile Mechanics (2026)", href: getReputationManagementBestForUrl("mobile-mechanics"), description: "Text-led roadside workflows with lean automation overhead." },
+  { label: "Best Reputation Management Software for Cleaning Franchises (2026)", href: getReputationManagementBestForUrl("cleaning-franchises"), description: "Franchise governance, territory reporting, and brand-consistent playbooks." },
+  { label: "Best Reputation Management Software for Event Services (2026)", href: getReputationManagementBestForUrl("event-services"), description: "Peak-season events, RFP-driven buyers, and multi-vendor narratives." },
+  { label: "Best Reputation Management Software for Home Inspectors (2026)", href: getReputationManagementBestForUrl("home-inspectors"), description: "Tactful post-report asks and liability-aware response patterns." },
 ];
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {

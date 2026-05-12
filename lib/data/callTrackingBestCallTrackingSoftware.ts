@@ -218,6 +218,19 @@ export const BEST_FOR_BY_TRADE: { label: string; href: string }[] = [
   { label: "Pool service companies", href: getCallTrackingBestForUrl("pool-service") },
   { label: "Junk removal businesses", href: getCallTrackingBestForUrl("junk-removal") },
   { label: "Moving companies", href: getCallTrackingBestForUrl("moving") },
+  { label: "Appliance repair businesses", href: getCallTrackingBestForUrl("appliance-repair") },
+  { label: "Garage door companies", href: getCallTrackingBestForUrl("garage-door") },
+  { label: "Locksmith businesses", href: getCallTrackingBestForUrl("locksmith") },
+  { label: "Flooring contractors", href: getCallTrackingBestForUrl("flooring-contractors") },
+  { label: "Fence & deck builders", href: getCallTrackingBestForUrl("fence-deck-builders") },
+  { label: "Glass & window installers", href: getCallTrackingBestForUrl("glass-window-installers") },
+  { label: "Concrete contractors", href: getCallTrackingBestForUrl("concrete-contractors") },
+  { label: "Excavation companies", href: getCallTrackingBestForUrl("excavation") },
+  { label: "Auto repair shops", href: getCallTrackingBestForUrl("auto-repair-shops") },
+  { label: "Mobile mechanics", href: getCallTrackingBestForUrl("mobile-mechanics") },
+  { label: "Cleaning franchises", href: getCallTrackingBestForUrl("cleaning-franchises") },
+  { label: "Event services", href: getCallTrackingBestForUrl("event-services") },
+  { label: "Home inspectors", href: getCallTrackingBestForUrl("home-inspectors") },
 ];
 
 export const RELATED_COMPARISONS: ComparisonLink[] = [

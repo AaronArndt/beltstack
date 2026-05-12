@@ -285,6 +285,11 @@ export const SOFTWARE_DIRECTORY_TRADE_HUBS: TradeHubEntry[] = [
     href: "/general-contractors",
   },
   {
+    name: "Construction",
+    description: "Jobsite operations, portfolio PM, job costing, progress billing, field time, and payroll for builders.",
+    href: "/construction",
+  },
+  {
     name: "Cleaning Services",
     description: "Scheduling and quality workflows for recurring bookings, team operations, and payroll.",
     href: "/cleaning-services",
