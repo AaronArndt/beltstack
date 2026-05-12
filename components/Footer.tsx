@@ -47,6 +47,7 @@ const FOOTER_COMPARE_LINKS = [
 const FOOTER_COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Media Kit", href: "/media-kit" },
   { label: "Methodology", href: "/methodology" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
