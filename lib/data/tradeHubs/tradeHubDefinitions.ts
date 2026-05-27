@@ -864,6 +864,241 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     ],
   },
 
+  handyman: {
+    slug: "handyman",
+    seoTitle: "Best Software for Handyman Businesses (2026) | BeltStack",
+    metaDescription:
+      "Best software for handyman businesses: field service, scheduling, invoicing, payroll, CRM, and marketing tools with practical buying guidance.",
+    title: "Software for Handyman Businesses",
+    intro:
+      "Handyman businesses run on fast estimates, short-cycle jobs, and tight daily routing. The right software stack keeps booking, dispatch, invoicing, and follow-up connected so small details do not turn into missed revenue.",
+    heroCategoryLine:
+      "Most handyman companies start with field service and scheduling, then layer invoicing, payroll, CRM, and local marketing tools as call volume and crew complexity increase.",
+    breadcrumbLabel: "Handyman",
+    keyTakeaways: [
+      { label: "Core stack: booking, jobs, and cash collection", anchor: "#software-stack" },
+      { label: "Use cases for solo operators vs growing crews", anchor: "#use-cases" },
+      { label: "How to evaluate integrations and total cost", anchor: "#how-to-choose" },
+    ],
+    categoryStackSectionTitle: "Core software stack for handyman businesses",
+    categoryStackSectionSub: "Short-cycle work rewards speed, clarity, and low admin overhead.",
+    categoryStackIntro:
+      "Handyman operations break when job notes, schedule changes, and invoices live in different places. These categories map to how estimates become completed, paid jobs.",
+    categoryStack: [
+      {
+        id: "field-service",
+        softwareCategory: "field-service",
+        heading: "Field service & job management",
+        body:
+          "Most handyman teams need one board for incoming requests, active jobs, and closeout status. Good field tools keep photos, scope notes, materials, and customer communication tied to the same job record. Prioritize mobile usability and fast updates between calls over enterprise project complexity.",
+        productSlugs: ["jobber", "housecall-pro", "fieldpulse"],
+      },
+      {
+        id: "scheduling",
+        softwareCategory: "scheduling",
+        heading: "Scheduling & booking",
+        body:
+          "Handyman demand often includes same-week jobs, small callbacks, and estimate visits. Scheduling software should handle booking links, reminders, and reschedules without constant phone tag. Tie booking into dispatch so jobs are assigned by skills and location, not whichever calendar was open first.",
+        productSlugs: ["calendly", "setmore"],
+      },
+      {
+        id: "invoicing",
+        softwareCategory: "invoicing",
+        heading: "Invoicing & payments",
+        body:
+          "Cash flow depends on same-day billing for completed tasks and clean estimate-to-invoice handoff on larger punch-list jobs. Invoicing tools should support deposits, line-item clarity, and payment links customers actually use. Faster collection protects margin on small tickets where one late payment can erase profit.",
+        productSlugs: ["freshbooks", "quickbooks"],
+      },
+      {
+        id: "payroll",
+        softwareCategory: "payroll",
+        heading: "Payroll & contractor payouts",
+        body:
+          "As soon as you add helpers or subcontractors, payroll complexity jumps: overtime, mixed worker types, and variable hours by day. Payroll connected to approved time reduces manual corrections and end-of-week scramble. Confirm your setup supports your local compliance rules and how you classify labor.",
+        productSlugs: ["gusto", "onpay"],
+      },
+      {
+        id: "crm",
+        softwareCategory: "crm",
+        heading: "CRM & repeat-customer follow-up",
+        body:
+          "Handyman growth often comes from repeat homeowners, property managers, and referrals. CRM helps track estimate follow-up, seasonal reminders, and small upsell opportunities that disappear in text threads. Choose simple pipelines and reminders your team will use after every job.",
+        productSlugs: ["hubspot", "pipedrive"],
+      },
+      {
+        id: "lead-generation",
+        softwareCategory: "lead-generation",
+        heading: "Lead generation & local demand",
+        body:
+          "When owner referral volume plateaus, lead channels matter: local marketplace leads, website forms, and ad-driven calls. Lead generation tools should show cost per booked job, not just lead volume. Pair with CRM and call tracking to see which channels drive profitable handyman work.",
+        productSlugs: ["thumbtack", "google-local-services-ads"],
+      },
+      {
+        id: "reputation-management",
+        softwareCategory: "reputation-management",
+        heading: "Reputation management",
+        body:
+          "Handyman buyers often decide from reviews before they ever call. Reputation tools automate review requests after completed jobs and help you respond consistently across profiles. Better review velocity improves local visibility and reduces dependence on paid lead sources.",
+        productSlugs: ["podium", "birdeye"],
+      },
+    ],
+    useCaseSectionTitle: "Best software by use case for handyman businesses",
+    useCaseSectionSub: "Different stacks win for solo operators, recurring property work, and growing multi-tech teams.",
+    useCases: [
+      {
+        title: "Best for solo handyman operators",
+        body:
+          "If you are still taking jobs through texts and calls, centralize scheduling, job records, and invoices first. A lightweight field-service-plus-invoicing stack usually beats jumping into complex all-in-one suites. Focus on tools you can update between jobs in under a minute.",
+        links: [
+          { label: "Best field service software →", href: "/field-service/best-field-service-software" },
+          { label: "Invoicing hub →", href: "/invoicing" },
+        ],
+      },
+      {
+        title: "Best for handyman businesses with recurring property-manager work",
+        body:
+          "Property managers expect quick response, clear documentation, and predictable billing cycles. You need customer history by unit or address, repeat-task templates, and clean monthly invoicing. CRM plus field service usually becomes essential once recurring accounts drive revenue.",
+        links: [
+          { label: "CRM hub →", href: "/crm" },
+          { label: "Best CRM for handyman →", href: "/crm/best-for/handyman" },
+        ],
+      },
+      {
+        title: "Best for growing crews and mixed payroll models",
+        body:
+          "Adding technicians or subcontractors creates immediate payroll and scheduling friction. Time capture and role-based scheduling should be connected before headcount scales further. The payroll handyman page helps match products to typical small-crew labor patterns.",
+        links: [
+          { label: "Best payroll for handyman businesses →", href: "/payroll/best-for/handyman-business" },
+          { label: "Payroll hub →", href: "/payroll" },
+        ],
+      },
+      {
+        title: "Best for lead generation beyond word-of-mouth",
+        body:
+          "Once referrals flatten, paid channels and local SEO become part of the operating model. Choose tools that connect leads to booked jobs and actual revenue, not vanity metrics. Review velocity and call attribution often deliver faster wins than adding more ad spend alone.",
+        links: [
+          { label: "Lead generation hub →", href: "/lead-generation" },
+          { label: "Call tracking hub →", href: "/call-tracking" },
+        ],
+      },
+      {
+        title: "Best for local-brand growth and repeat work",
+        body:
+          "Handyman businesses that stay visible in local search and keep past clients engaged usually lower acquisition costs over time. Reputation requests and simple email follow-ups can drive recurring small-ticket jobs with better margins than marketplace-only demand.",
+        links: [
+          { label: "Reputation management hub →", href: "/reputation-management" },
+          { label: "Email marketing hub →", href: "/email-marketing" },
+        ],
+      },
+    ],
+    howToChooseTitle: "How to choose software for handyman companies",
+    howToChooseSub: "Practical buying criteria for high-velocity, local service operations.",
+    howToChooseSubsections: [
+      {
+        title: "Prioritize speed at the job level",
+        body:
+          "If techs cannot update status, notes, and line items quickly from a phone, data quality collapses. Fast job closeout and payment capture matter more than long feature checklists.",
+      },
+      {
+        title: "Map your stack to job size and frequency",
+        body:
+          "Short, same-day jobs need rapid scheduling and invoicing; larger punch-list or light remodel tasks need stronger estimates and documentation. Buy for your most common job pattern first.",
+      },
+      {
+        title: "Model real cost at your growth stage",
+        body:
+          "Per-user, per-tech, texting, and payment add-ons can change total cost significantly. Price your stack at expected peak headcount and volume, not only your current month.",
+      },
+      {
+        title: "Treat integrations as core requirements",
+        body:
+          "Scheduling, field updates, invoicing, and payroll should not require duplicate data entry. Validate integration quality during trial workflows, including failed sync handling.",
+      },
+      {
+        title: "Build for repeat business, not just first bookings",
+        body:
+          "Many handyman companies grow through repeat work and neighborhood referrals. CRM and review workflows should support follow-up cadence, not rely on memory and ad-hoc texts.",
+      },
+    ],
+    identitySectionTitle: "Handyman software by operating model",
+    identitySectionSub: "What to implement first depends on your customer mix and labor model.",
+    identitySegments: [
+      {
+        title: "Solo owner-operator",
+        body:
+          "Start with job scheduling, mobile documentation, and fast invoicing. Keep the stack lightweight and automate reminders and payment links before adding advanced analytics.",
+        links: [{ label: "Scheduling hub →", href: "/scheduling" }],
+      },
+      {
+        title: "Small crew with helpers or subcontractors",
+        body:
+          "As soon as multiple workers share jobs, standardize time capture, job notes, and handoffs. Payroll and dispatch coordination become more important than additional lead channels.",
+        links: [{ label: "Time tracking hub →", href: "/time-tracking" }],
+      },
+      {
+        title: "Property-management and recurring service focus",
+        body:
+          "Recurring accounts need predictable service windows, consistent reporting, and clear monthly billing. CRM plus reputation systems help retain accounts and defend local positioning.",
+        links: [{ label: "Reputation management for contractors →", href: "/reputation-management/guides/reputation-management-for-contractors" }],
+      },
+    ],
+    nextStepsTitle: "Popular comparisons, reviews & next steps",
+    nextStepsSub: "Continue evaluation with high-intent pages for categories handyman teams use most.",
+    nextStepsGroups: [
+      {
+        groupTitle: "Handyman-focused best-for pages",
+        links: [
+          { label: "Best scheduling software for handyman", href: "/scheduling/best-for/handyman" },
+          { label: "Best project management for handyman", href: "/project-management/best-for/handyman" },
+          { label: "Best field service for handyman", href: "/field-service/best-for/handyman" },
+        ],
+      },
+      {
+        groupTitle: "Related category hubs",
+        links: [
+          { label: "Field service software hub", href: "/field-service" },
+          { label: "CRM software hub", href: "/crm" },
+          { label: "Lead generation tools hub", href: "/lead-generation" },
+        ],
+      },
+    ],
+    faqTitle: "Handyman software FAQs",
+    faqSub: "Common questions from owners comparing handyman business tools.",
+    faqs: [
+      {
+        q: "What software do handyman businesses use?",
+        a: "Most handyman companies combine field service or job management, scheduling, and invoicing first. As teams grow, they add payroll, CRM, and local marketing tools to manage repeat work and lead flow more consistently.",
+      },
+      {
+        q: "What is the best software for handyman businesses?",
+        a: "The best software for handyman companies depends on job size, crew structure, and whether growth comes from referrals, property managers, or paid leads. Small teams usually prioritize mobile job workflows and fast invoicing before adding deeper CRM or analytics.",
+      },
+      {
+        q: "Do handyman companies need CRM software?",
+        a: "Not always on day one, but CRM becomes valuable once repeat clients, estimate follow-up, and account-based work start slipping through texts and email. It helps convert more existing demand without adding as much new lead spend.",
+      },
+      {
+        q: "Should a handyman business use separate tools or one platform?",
+        a: "Both can work. The deciding factor is whether scheduling, job updates, invoicing, and payroll data move cleanly without duplicate entry. Many successful handyman businesses use separate tools with strong integrations.",
+      },
+      {
+        q: "When should a handyman company add payroll software?",
+        a: "Add payroll software when you move beyond occasional contractor payouts and start running regular W-2 or mixed payroll cycles. If weekly corrections and tax handling are consuming owner time, payroll software usually pays for itself quickly.",
+      },
+      {
+        q: "What features matter most in handyman software?",
+        a: "Mobile usability, fast scheduling, estimate-to-invoice continuity, payment collection, and repeat-customer follow-up matter most. For local growth, review request automation and call or lead attribution become important next layers.",
+      },
+    ],
+    methodologyTitle: "How BeltStack evaluates trade software stacks",
+    methodologySub: "Transparent criteria for recommendations.",
+    methodologyBullets: [
+      "We prioritize tools that match handyman workflows: short-cycle jobs, mobile updates, and same-day cash collection.",
+      "We weigh integration quality, ease of adoption for small crews, and total cost as headcount and lead volume grow.",
+      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+    ],
+  },
+
   roofing: {
     slug: "roofing",
     seoTitle: "Software for Roofing Companies (2026) | BeltStack",

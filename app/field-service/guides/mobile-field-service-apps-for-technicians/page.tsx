@@ -122,7 +122,11 @@ export default function MobileFieldServiceAppsForTechniciansPage() {
                     </p>
                     <p>
                       We evaluate mobile FSM the same way we evaluate the rest of the stack: against workflows, not
-                      screenshots. Use this alongside our{" "}
+                      screenshots. For how technician apps sync, cache job packets, and hand off to billing, see{" "}
+                      <Link href="/field-service/guides/how-mobile-field-service-apps-work" className={linkGreen}>
+                        how mobile field service apps work
+                      </Link>
+                      . Use this alongside our{" "}
                       <Link href="/field-service/guides/how-to-choose-field-service-software" className={linkGreen}>
                         how to choose field service software
                       </Link>{" "}

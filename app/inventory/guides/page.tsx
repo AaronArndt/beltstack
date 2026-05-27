@@ -111,9 +111,9 @@ export default function InventoryGuidesPage() {
               Inventory Management Guides
             </SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {INVENTORY_GUIDES.map((guide) => (
+              {INVENTORY_GUIDES.map((guide, index) => (
                 <GuideCard
-                  key={guide.href}
+                  key={`${guide.href}-${index}`}
                   title={guide.title}
                   href={guide.href}
                   description={guide.description}

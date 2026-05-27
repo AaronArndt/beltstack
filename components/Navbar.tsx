@@ -75,6 +75,7 @@ const SOFTWARE_COLUMNS: {
       { label: "Landscaping", href: "/landscaping" },
       { label: "Roofing", href: "/roofing" },
       { label: "Painting", href: "/painting" },
+      { label: "Handyman", href: "/handyman" },
       { label: "General contractors", href: "/general-contractors" },
     ],
   },

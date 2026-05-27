@@ -32,6 +32,24 @@ export const PAYROLL_GUIDES: PayrollGuideEntry[] = [
       "Learn how construction companies manage payroll for crews, subcontractors, and job-based labor.",
   },
   {
+    title: "How Certified Payroll Works",
+    href: "/payroll/guides/how-certified-payroll-works",
+    description:
+      "Learn how certified payroll works on public works jobs, including WH-347 reporting, classifications, and common compliance mistakes.",
+  },
+  {
+    title: "How Prevailing Wage Payroll Works",
+    href: "/payroll/guides/how-prevailing-wage-payroll-works",
+    description:
+      "Learn how prevailing wage payroll works, how rates are applied by classification, and how contractors stay compliant across projects.",
+  },
+  {
+    title: "How Construction Payroll Differs",
+    href: "/payroll/guides/how-construction-payroll-differs",
+    description:
+      "Learn how construction payroll differs from standard payroll, including job costing, multi-site labor, certified payroll, and prevailing wage.",
+  },
+  {
     title: "Payroll for Landscaping Businesses",
     href: "/payroll/guides/payroll-for-landscaping-businesses",
     description:
