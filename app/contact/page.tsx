@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
+import { SocialLinks } from "@/components/SocialLinks";
 import { ContactEmailActions } from "./ContactEmailActions";
 
 export const metadata: Metadata = siteMetadata({
@@ -119,6 +120,14 @@ export default function ContactPage() {
 
               <div className="mt-8">
                 <ContactEmailActions />
+              </div>
+
+              <div className="mt-8 border-t border-stone-200/80 pt-8">
+                <h3 className="text-[#1A2D48] text-lg font-bold">Social media</h3>
+                <p className="mt-1 text-sm text-[#57534E]">
+                  Follow BeltStack for software picks, comparisons, and small-business operations tips.
+                </p>
+                <SocialLinks className="mt-4" />
               </div>
             </div>
           </div>

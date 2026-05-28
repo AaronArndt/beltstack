@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { SocialLinks } from "@/components/SocialLinks";
 import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
 
@@ -82,6 +83,17 @@ export default function AboutPage() {
         </section>
 
         <section className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionTitle sub="Updates and editorial highlights.">Social media</SectionTitle>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">
+              Follow BeltStack on Instagram for software roundups, comparison tips, and small-business operations
+              content between site updates.
+            </p>
+            <SocialLinks className="mt-4" />
+          </div>
+        </section>
+
+        <section className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Start here.">Explore BeltStack</SectionTitle>
             <ul className="mt-4 flex flex-col gap-2 text-sm text-[#57534E] sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">

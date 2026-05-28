@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { SocialLinks } from "@/components/SocialLinks";
 import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/seo/siteMetadata";
 
@@ -171,6 +172,16 @@ export default function MediaKitPage() {
               </Link>
               .
             </p>
+          </div>
+        </section>
+
+        <section id="social-media" className="scroll-mt-section border-t border-stone-200/80 bg-background py-8 sm:py-11">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionTitle sub="Official BeltStack profiles.">Social media</SectionTitle>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">
+              Follow BeltStack for editorial updates, comparison highlights, and small-business software guidance.
+            </p>
+            <SocialLinks className="mt-4" />
           </div>
         </section>
 

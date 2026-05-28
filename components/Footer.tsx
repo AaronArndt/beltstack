@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "@/components/SocialLinks";
 
 function FooterLogo({ className }: { className?: string }) {
   return (
@@ -70,6 +71,10 @@ export function Footer() {
               Independent reviews, pricing notes, and side-by-side comparisons for payroll, operations, and growth
               tools—written for trades and small businesses.
             </p>
+            <div className="mt-6">
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Social</h4>
+              <SocialLinks variant="footer" className="mt-3" />
+            </div>
           </div>
           <div className="lg:col-span-3">
             <h4 className="text-xs font-semibold uppercase tracking-wide text-white/90">Software</h4>
