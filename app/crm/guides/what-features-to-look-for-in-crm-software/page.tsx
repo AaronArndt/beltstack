@@ -41,7 +41,7 @@ const FAQ_ITEMS = [
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "HubSpot", logoSrc: "/Logos/hubspot.jpeg", rating: 4.6, bestFor: "Broad feature set", reviewHref: getCrmReviewUrl("hubspot") },
   { name: "Pipedrive", logoSrc: "/Logos/pipedrive.jpeg", rating: 4.5, bestFor: "Sales essentials", reviewHref: getCrmReviewUrl("pipedrive") },
-  { name: "Zoho CRM", logoSrc: "/Logos/zoho.png", rating: 4.4, bestFor: "Depth at lower cost", reviewHref: getCrmReviewUrl("zoho-crm") },
+  { name: "Zoho CRM", logoSrc: "/Logos/zohocrm.jpeg", rating: 4.4, bestFor: "Depth at lower cost", reviewHref: getCrmReviewUrl("zoho-crm") },
 ];
 
 const RELATED_ITEMS = [

@@ -296,7 +296,7 @@ const DISCOVERY_PRODUCTS: DiscoveryProduct[] = [
     id: "crm-zoho",
     category: "crm",
     name: "Zoho CRM",
-    logoSrc: "/Logos/zoho.png",
+    logoSrc: "/Logos/zohocrm.jpeg",
     visitUrl: "https://www.zoho.com/crm",
     reviewHref: getCrmReviewUrl("zoho-crm"),
     overallScore: 4.4,

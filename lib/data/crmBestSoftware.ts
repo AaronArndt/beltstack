@@ -5,11 +5,12 @@
 
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
 import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
+import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   salesforce: "/Logos/salesforce.jpeg",
-  zoho: "/Logos/zoho.png",
+  zoho: ZOHO_CRM_LOGO,
   pipedrive: "/Logos/pipedrive.jpeg",
   monday: "/Logos/monday.jpeg",
   freshsales: "/Logos/freshsales.jpeg",

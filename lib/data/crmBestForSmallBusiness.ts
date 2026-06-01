@@ -4,6 +4,7 @@
  */
 
 import { getCrmReviewUrl, getCrmCompareUrl } from "@/lib/routes";
+import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 import type {
   BestForFeaturedProduct,
   BestForTableRow,
@@ -24,7 +25,7 @@ const SEE_ALSO = {
 
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
-  zoho: "/Logos/zoho.png",
+  zoho: ZOHO_CRM_LOGO,
   pipedrive: "/Logos/pipedrive.jpeg",
   freshsales: "/Logos/freshsales.jpeg",
 } as const;

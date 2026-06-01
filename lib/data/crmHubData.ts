@@ -8,12 +8,13 @@ import type { HubUseCaseEditorialBlock } from "@/lib/types/hubEditorial";
 import type { FeaturedPickRef } from "@/components/hubs/HubPageTemplate";
 import type { ComparisonTableRow } from "@/components/hubs/HubPageTemplate";
 import { listSoftwarePicksBySlugs, toHubComparisonTableRow } from "@/lib/data/softwarePickCards";
+import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 
 // ——— Logo paths ———
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   salesforce: "/Logos/salesforce.jpeg",
-  zoho: "/Logos/zoho.png",
+  zoho: ZOHO_CRM_LOGO,
   pipedrive: "/Logos/pipedrive.jpeg",
   monday: "/Logos/monday.jpeg",
   freshsales: "/Logos/freshsales.jpeg",

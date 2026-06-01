@@ -10,6 +10,7 @@ import {
   getCrmBestForUrl,
 } from "@/lib/routes";
 import { getCrmComparisonBySlug } from "@/lib/data/crmComparisons";
+import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 import { toAlternativesRelatedComparison } from "@/lib/alternatives/toAlternativesRelatedComparison";
 import type {
   AlternativesTemplateProps,
@@ -28,7 +29,7 @@ const GUIDES_HUB = "/crm/guides";
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   salesforce: "/Logos/salesforce.jpeg",
-  zoho: "/Logos/zoho.png",
+  zoho: ZOHO_CRM_LOGO,
   pipedrive: "/Logos/pipedrive.jpeg",
   monday: "/Logos/monday.jpeg",
   freshsales: "/Logos/freshsales.jpeg",

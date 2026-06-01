@@ -42,7 +42,7 @@ const CRM_PRODUCT_CORE = {
   },
   "zoho-crm": {
     name: "Zoho CRM",
-    logoSrc: "/Logos/zoho.png",
+    logoSrc: "/Logos/zohocrm.jpeg",
     rating: "4.4",
     startingPrice: "Free tier",
     visitUrl: "https://www.zoho.com/crm",

@@ -5,6 +5,7 @@
  */
 
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
+import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 
 export type CrmReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
@@ -12,7 +13,7 @@ export type CrmReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { catego
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
   salesforce: "/Logos/salesforce.jpeg",
-  zoho: "/Logos/zoho.png",
+  zoho: ZOHO_CRM_LOGO,
   pipedrive: "/Logos/pipedrive.jpeg",
   monday: "/Logos/monday.jpeg",
   freshsales: "/Logos/freshsales.jpeg",
