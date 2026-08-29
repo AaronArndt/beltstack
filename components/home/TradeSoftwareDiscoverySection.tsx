@@ -5,11 +5,13 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { RatingInfoTooltip } from "@/components/RatingInfoTooltip";
 import { sectionRuleAccent } from "@/lib/design-tokens";
+import { getAllTradeHubDefinitions } from "@/lib/data/tradeHubs";
 import {
   DISCOVERY_CATEGORIES,
-  DISCOVERY_TRADES,
+  DISCOVERY_PRIMARY_TRADE_IDS,
   getCategoryById,
   getDiscoveryCombo,
+  getDiscoveryTradeIdForHubSlug,
   getTradeById,
   type DiscoveryCategoryId,
   type DiscoverySoftwareCard,
@@ -29,6 +31,16 @@ const tradeChipBase =
 const tradeChipInactive = `${tradeChipBase} border-stone-200 bg-white text-[#1A2D48] hover:border-stone-300 hover:bg-stone-50/80`;
 
 const tradeChipActive = `${tradeChipBase} border-[#10B981] bg-[#10B981]/10 text-[#1A2D48] font-semibold`;
+
+const PRIMARY_TRADE_ID_SET = new Set<string>(DISCOVERY_PRIMARY_TRADE_IDS);
+
+const PRIMARY_TRADES = DISCOVERY_PRIMARY_TRADE_IDS.map((id) => getTradeById(id));
+
+const MORE_TRADES = getAllTradeHubDefinitions().flatMap((hub) => {
+  const id = getDiscoveryTradeIdForHubSlug(hub.slug);
+  if (!id || PRIMARY_TRADE_ID_SET.has(id)) return [];
+  return [getTradeById(id)];
+});
 
 function SoftwareResultCard({ card }: { card: DiscoverySoftwareCard }) {
   return (
@@ -78,18 +90,18 @@ export function TradeSoftwareDiscoverySection() {
   };
 
   return (
-    <section className="border-b border-stone-200 bg-white py-8 sm:py-11">
+    <section id="trade-finder" className="scroll-mt-section border-b border-stone-200 bg-white pt-6 pb-8 sm:pt-7 sm:pb-11">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-4 sm:mb-5">
-          <h2 className="text-2xl font-bold text-[#1A2D48] sm:text-3xl">Find the Right Software for Your Trade</h2>
+          <h2 className="text-2xl font-bold text-[#1A2D48] sm:text-3xl">Find the Right Software for Your Business</h2>
           <div className={sectionRuleAccent} aria-hidden />
           <p className="mt-1 text-sm text-[#57534E] sm:text-base">
-            Select your trade to see the best software categories and top-rated tools used by businesses like yours.
+            Choose your trade or business type to see recommended software categories and products for how you work.
           </p>
         </div>
 
         <div className="flex flex-wrap gap-2" role="group" aria-label="Trade">
-          {DISCOVERY_TRADES.map((t) => (
+          {PRIMARY_TRADES.map((t) => (
             <button
               key={t.id}
               type="button"
@@ -101,6 +113,21 @@ export function TradeSoftwareDiscoverySection() {
             </button>
           ))}
         </div>
+        {MORE_TRADES.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label="More industries">
+            {MORE_TRADES.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                onClick={() => handleTradeSelect(t.id)}
+                className={tradeId === t.id ? tradeChipActive : tradeChipInactive}
+                aria-pressed={tradeId === t.id}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="mt-6 rounded-lg border border-stone-200 bg-white p-5 shadow-sm sm:p-6 lg:mt-8 lg:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">

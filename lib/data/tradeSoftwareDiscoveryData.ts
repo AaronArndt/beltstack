@@ -8,15 +8,19 @@ import {
   getSchedulingReviewUrl,
 } from "@/lib/routes";
 
-/** Homepage trade discovery â€” trades users can pick in the hero-adjacent section. */
+/** Homepage trade discovery — trades users can pick in the hero-adjacent section. */
 export const DISCOVERY_TRADES = [
   { id: "hvac", label: "HVAC", headingBusinesses: "HVAC", tipPhrase: "HVAC businesses" },
   { id: "plumbing", label: "Plumbing", headingBusinesses: "Plumbing", tipPhrase: "plumbing businesses" },
   { id: "electrical", label: "Electrical", headingBusinesses: "Electrical", tipPhrase: "electrical businesses" },
   { id: "landscaping", label: "Landscaping", headingBusinesses: "Landscaping", tipPhrase: "landscaping businesses" },
   { id: "roofing", label: "Roofing", headingBusinesses: "Roofing", tipPhrase: "roofing businesses" },
-  { id: "cleaning", label: "Cleaning", headingBusinesses: "Cleaning", tipPhrase: "cleaning businesses" },
-  { id: "general-contractor", label: "General Contractor", headingBusinesses: "General Contractor", tipPhrase: "general contractor businesses" },
+  { id: "cleaning", label: "Cleaning Services", headingBusinesses: "Cleaning", tipPhrase: "cleaning businesses" },
+  { id: "general-contractor", label: "General Contractors", headingBusinesses: "General Contractor", tipPhrase: "general contractor businesses" },
+  { id: "handyman", label: "Handyman", headingBusinesses: "Handyman", tipPhrase: "handyman businesses" },
+  { id: "painting", label: "Painting", headingBusinesses: "Painting", tipPhrase: "painting businesses" },
+  { id: "construction", label: "Construction", headingBusinesses: "Construction", tipPhrase: "construction businesses" },
+  { id: "restaurants", label: "Restaurants", headingBusinesses: "Restaurant", tipPhrase: "restaurant businesses" },
 ] as const;
 
 export const DISCOVERY_CATEGORIES = [
@@ -30,6 +34,29 @@ export const DISCOVERY_CATEGORIES = [
 
 export type DiscoveryTradeId = (typeof DISCOVERY_TRADES)[number]["id"];
 export type DiscoveryCategoryId = (typeof DISCOVERY_CATEGORIES)[number]["id"];
+
+/** First-row chips — original finder trades, unchanged order. */
+export const DISCOVERY_PRIMARY_TRADE_IDS = [
+  "hvac",
+  "plumbing",
+  "electrical",
+  "landscaping",
+  "roofing",
+  "cleaning",
+  "general-contractor",
+] as const satisfies readonly DiscoveryTradeId[];
+
+/** Trade-hub slugs that differ from finder ids. */
+const TRADE_HUB_SLUG_TO_DISCOVERY_TRADE: Record<string, DiscoveryTradeId> = {
+  "cleaning-services": "cleaning",
+  "general-contractors": "general-contractor",
+};
+
+/** Map a published trade-hub slug to the homepage finder trade id, if supported. */
+export function getDiscoveryTradeIdForHubSlug(slug: string): DiscoveryTradeId | undefined {
+  if (DISCOVERY_TRADES.some((t) => t.id === slug)) return slug as DiscoveryTradeId;
+  return TRADE_HUB_SLUG_TO_DISCOVERY_TRADE[slug];
+}
 
 /** Optional trade-specific ranking boost and bullet overrides (finalScore = overallScore + tradePriority). */
 export type DiscoveryTradeModifier = {
@@ -735,7 +762,7 @@ export function productToDiscoveryCard(product: DiscoveryProduct, trade: Discove
   };
 }
 
-const FIELD_SERVICE_COPY: Record<Exclude<DiscoveryTradeId, "hvac">, { subcopy: string; tip: string }> = {
+const FIELD_SERVICE_COPY: Partial<Record<Exclude<DiscoveryTradeId, "hvac">, { subcopy: string; tip: string }>> = {
   plumbing: {
     subcopy:
       "Plumbing contractors juggle emergency calls and multi-day jobsâ€”field service software keeps dispatch, crew updates, and invoices aligned from the truck to the office.",
@@ -776,7 +803,12 @@ const HVAC_FIELD_COPY = {
 
 function copyForFieldService(trade: TradeRow): Pick<DiscoveryCombo, "subcopy" | "tip"> {
   if (trade.id === "hvac") return HVAC_FIELD_COPY;
-  return FIELD_SERVICE_COPY[trade.id];
+  const specific = FIELD_SERVICE_COPY[trade.id];
+  if (specific) return specific;
+  return {
+    subcopy: `${trade.headingBusinesses} teams need scheduling, mobile job tools, and invoicing in one flow—so crews stay on track and cash moves without duplicate entry.`,
+    tip: `Tip: These software solutions are highly rated by ${trade.tipPhrase} and integrate with popular tools you may already use.`,
+  };
 }
 
 function copyForCategory(trade: TradeRow, categoryId: DiscoveryCategoryId): Pick<DiscoveryCombo, "subcopy" | "tip"> {

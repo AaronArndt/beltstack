@@ -70,20 +70,66 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
   },
 ];
 
-export const SOFTWARE_CATEGORIES = [
-  { label: "Payroll", href: "/payroll", description: "Payroll software for small business" },
-  { label: "Accounting", href: "/accounting", description: "Accounting and bookkeeping" },
-  { label: "Invoicing", href: "/invoicing", description: "Invoicing software" },
-  { label: "Time Tracking", href: "/time-tracking", description: "Time tracking tools" },
-  { label: "CRM", href: "/crm", description: "Customer relationship management" },
-  { label: "Project Management", href: "/project-management", description: "Project management software" },
-  { label: "Field Service", href: "/field-service", description: "Field service management" },
-  { label: "Scheduling", href: "/scheduling", description: "Scheduling and booking" },
-  { label: "HR", href: "/hr", description: "HR software" },
-  { label: "Inventory", href: "/inventory", description: "Inventory management" },
-  { label: "POS", href: "/pos", description: "Point of sale software" },
-  { label: "Helpdesk", href: "/helpdesk", description: "Helpdesk and support" },
-] as const;
+export type HomepageCategory = {
+  label: string;
+  href: string;
+  description: string;
+};
+
+/** Presentational homepage grouping only — does not change category ownership or routes. */
+export const HOMEPAGE_CATEGORY_GROUPS: {
+  title: string;
+  categories: HomepageCategory[];
+}[] = [
+  {
+    title: "Run your business",
+    categories: [
+      { label: "Field Service", href: "/field-service", description: "Scheduling, dispatch, estimates" },
+      { label: "Scheduling", href: "/scheduling", description: "Appointments, booking, calendars" },
+      { label: "Project Management", href: "/project-management", description: "Projects, tasks, collaboration" },
+      { label: "Time Tracking", href: "/time-tracking", description: "Billable hours, teams, reporting" },
+    ],
+  },
+  {
+    title: "Money & team",
+    categories: [
+      { label: "Accounting", href: "/accounting", description: "Bookkeeping, invoicing, expenses" },
+      { label: "Invoicing", href: "/invoicing", description: "Invoices, payments, recurring billing" },
+      { label: "Payroll", href: "/payroll", description: "Pay teams, contractors, filings" },
+      { label: "HR", href: "/hr", description: "Hiring, onboarding, people operations" },
+      { label: "Payment Processing", href: "/payment-processing", description: "Card readers, invoicing, online checkout" },
+      { label: "POS", href: "/pos", description: "Point of sale, payments, inventory" },
+    ],
+  },
+  {
+    title: "Customers & growth",
+    categories: [
+      { label: "CRM", href: "/crm", description: "Leads, pipelines, follow-up" },
+      { label: "Lead Generation", href: "/lead-generation", description: "Capture and qualify more leads" },
+      { label: "Email Marketing", href: "/email-marketing", description: "Automate campaigns and follow-ups" },
+      { label: "Reputation Management", href: "/reputation-management", description: "Monitor and improve online reviews" },
+      { label: "Call Tracking", href: "/call-tracking", description: "Track call sources and campaign ROI" },
+    ],
+  },
+  {
+    title: "Online presence",
+    categories: [
+      { label: "Website Builders", href: "/website-builders", description: "Build and launch your business site" },
+      { label: "SEO Tools", href: "/seo-tools", description: "Rank higher with search optimization" },
+    ],
+  },
+  {
+    title: "Operations",
+    categories: [
+      { label: "Helpdesk", href: "/helpdesk", description: "Support tickets, live chat, customer messaging" },
+      { label: "Inventory", href: "/inventory", description: "Inventory, stock, and product tracking" },
+    ],
+  },
+];
+
+export const SOFTWARE_CATEGORIES: HomepageCategory[] = HOMEPAGE_CATEGORY_GROUPS.flatMap(
+  (group) => group.categories
+);
 
 export const POPULAR_COMPARISONS = [
   { label: "Gusto vs OnPay", href: "/payroll/compare/gusto-vs-onpay" },
@@ -133,9 +179,18 @@ export const LATEST_GUIDES = [
 ] as const;
 
 export const TRUST_ITEMS = [
-  { heading: "Independent Reviews", body: "We test software ourselves and publish honest reviews. No pay-to-rank." },
-  { heading: "Built for Real Businesses", body: "Reviews and comparisons are written for small businesses and growing teams." },
-  { heading: "Compare Before You Commit", body: "Side-by-side comparisons so you can see pricing, features, and fit in one place." },
+  {
+    heading: "Editorial ratings",
+    body: "BeltStack ratings are editorial evaluations, not user-review averages. Scores combine pricing, features, ease of use, support, and contractor fit.",
+  },
+  {
+    heading: "Built for small businesses",
+    body: "We evaluate software around small-business and service-business workflows—how you get paid, run jobs, and grow—not enterprise checklists.",
+  },
+  {
+    heading: "Affiliate disclosure",
+    body: "We may earn a commission when you purchase through our links. This does not affect our recommendations.",
+  },
 ] as const;
 
 /**

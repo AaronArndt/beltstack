@@ -17,9 +17,12 @@ import {
   size,
 } from "@floating-ui/react";
 import { useMeasure } from "@/hooks/useMeasure";
+import { getAllTradeHubDefinitions, getTradeHubDefinition } from "@/lib/data/tradeHubs";
 
 // ——— Data ———
 type SoftwareItem = { title: string; description: string; href: string };
+type MegaMenuId = "software" | "industries" | "comparisons";
+type MobileNavView = "root" | "software" | "industries";
 
 const SOFTWARE_COLUMNS: {
   id: string;
@@ -108,6 +111,49 @@ const SIMPLE_LINKS = [
 // For mobile we still need flat list
 const SOFTWARE_CATEGORIES: SoftwareItem[] = SOFTWARE_COLUMNS.flatMap((col) => col.items);
 
+function tradeNavLabel(breadcrumbLabel: string): string {
+  if (breadcrumbLabel === "Cleaning services") return "Cleaning Services";
+  if (breadcrumbLabel === "General contractors") return "General Contractors";
+  return breadcrumbLabel;
+}
+
+/** Presentational grouping only — slugs come from published trade hubs. */
+const INDUSTRY_NAV_GROUPS = [
+  {
+    title: "Home & Field Services",
+    slugs: [
+      "hvac",
+      "plumbing",
+      "electrical",
+      "landscaping",
+      "cleaning-services",
+      "handyman",
+      "roofing",
+      "painting",
+      "general-contractors",
+      "construction",
+    ],
+  },
+  {
+    title: "Food & Hospitality",
+    slugs: ["restaurants"],
+  },
+] as const;
+
+const INDUSTRY_NAV_GROUPED = INDUSTRY_NAV_GROUPS.map((group) => ({
+  title: group.title,
+  items: group.slugs.flatMap((slug) => {
+    const def = getTradeHubDefinition(slug);
+    if (!def) return [];
+    return [{ label: tradeNavLabel(def.breadcrumbLabel), href: `/${def.slug}` }];
+  }),
+})).filter((group) => group.items.length > 0);
+
+const INDUSTRY_NAV_ITEMS = getAllTradeHubDefinitions().map((def) => ({
+  label: tradeNavLabel(def.breadcrumbLabel),
+  href: `/${def.slug}`,
+}));
+
 const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
@@ -140,6 +186,40 @@ function Chevron({ open }: { open: boolean }) {
       aria-hidden
     >
       <path d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
+
+function ChevronRight() {
+  return (
+    <svg
+      className="h-3.5 w-3.5 shrink-0 text-[#57534E]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path d="M9 5l7 7-7 7" />
+    </svg>
+  );
+}
+
+function ChevronLeft() {
+  return (
+    <svg
+      className="h-3.5 w-3.5 shrink-0 text-[#57534E]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path d="M15 19l-7-7 7-7" />
     </svg>
   );
 }
@@ -216,6 +296,36 @@ function SoftwarePanelContent({
   );
 }
 
+function IndustriesPanelContent() {
+  return (
+    <div className="w-full min-w-0 shrink-0">
+      <div className="grid grid-cols-2 gap-8">
+        {INDUSTRY_NAV_GROUPED.map((group) => (
+          <div key={group.title} className="min-w-0">
+            <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#57534E]">{group.title}</p>
+            <div className="relative w-full pt-px">
+              <div className="h-px w-full bg-stone-200" aria-hidden />
+            </div>
+            <ul className="mt-3 space-y-0">
+              {group.items.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    role="menuitem"
+                    className="block rounded-sm px-2 py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:bg-[#E7F8F2] hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ——— Comparisons panel: 2 columns + featured, no icons, emerald links ———
 function ComparisonsPanelContent() {
   return (
@@ -282,27 +392,39 @@ function MegaMenuViewport({
   closing,
   onExitComplete,
 }: {
-  activeMenu: "software" | "comparisons";
+  activeMenu: MegaMenuId;
   activeSoftwareColumn: string | null;
   onColumnHover: (id: string) => void;
   closing: boolean;
   onExitComplete: () => void;
 }) {
   const [softwareRef, softwareSize] = useMeasure<HTMLDivElement>();
+  const [industriesRef, industriesSize] = useMeasure<HTMLDivElement>();
   const [comparisonsRef, comparisonsSize] = useMeasure<HTMLDivElement>();
   const [height, setHeight] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const prevMenuRef = useRef<"software" | "comparisons">(activeMenu);
+  const prevMenuRef = useRef<MegaMenuId>(activeMenu);
   const transitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    if (closing) {
-      setHeight(0);
-      return;
-    }
+  const panelHeight =
+    activeMenu === "software"
+      ? softwareSize.height
+      : activeMenu === "industries"
+        ? industriesSize.height
+        : comparisonsSize.height;
 
-    const nextHeight =
-      activeMenu === "software" ? softwareSize.height : comparisonsSize.height;
+  const panelTransform =
+    activeMenu === "software"
+      ? "translateX(0%)"
+      : activeMenu === "industries"
+        ? "translateX(-33.333%)"
+        : "translateX(-66.666%)";
+
+  /* eslint-disable react-hooks/set-state-in-effect -- mega-menu height follows measured panel size */
+  useEffect(() => {
+    if (closing) return;
+
+    const nextHeight = panelHeight;
     if (nextHeight <= 0) return;
 
     const menuChanged = prevMenuRef.current !== activeMenu;
@@ -320,7 +442,8 @@ function MegaMenuViewport({
     } else if (!isTransitioning) {
       setHeight(nextHeight);
     }
-  }, [closing, activeMenu, softwareSize.height, comparisonsSize.height, isTransitioning]);
+  }, [closing, activeMenu, panelHeight, isTransitioning]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleHeightTransitionEnd = useCallback(
     (e: React.TransitionEvent<HTMLDivElement>) => {
@@ -340,7 +463,7 @@ function MegaMenuViewport({
   return (
     <div
       style={{
-        height: height > 0 ? height : 0,
+        height: closing ? 0 : height > 0 ? height : 0,
         transitionDuration: `${DROPDOWN_HEIGHT_MS}ms`,
       }}
       className="w-full overflow-hidden rounded-none border border-stone-200 border-b border-stone-300/80 bg-white shadow-sm transition-[height] ease-out"
@@ -348,13 +471,10 @@ function MegaMenuViewport({
     >
       <div className="size-full overflow-hidden" aria-hidden>
         <div
-          className="flex w-[200%] transition-transform duration-[350ms] ease-out"
-          style={{
-            transform:
-              activeMenu === "software" ? "translateX(0%)" : "translateX(-50%)",
-          }}
+          className="flex w-[300%] transition-transform duration-[350ms] ease-out"
+          style={{ transform: panelTransform }}
         >
-          <div className="w-1/2 shrink-0 bg-transparent">
+          <div className="w-1/3 shrink-0 bg-transparent">
             <div ref={softwareRef} className="p-5">
               <SoftwarePanelContent
                 activeColumn={activeSoftwareColumn}
@@ -362,7 +482,12 @@ function MegaMenuViewport({
               />
             </div>
           </div>
-          <div className="w-1/2 shrink-0 bg-transparent">
+          <div className="w-1/3 shrink-0 bg-transparent">
+            <div ref={industriesRef} className="p-5">
+              <IndustriesPanelContent />
+            </div>
+          </div>
+          <div className="w-1/3 shrink-0 bg-transparent">
             <div ref={comparisonsRef} className="p-5">
               <ComparisonsPanelContent />
             </div>
@@ -378,16 +503,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   /** Keeps mega menu mounted while height animates to 0 after hover-out */
   const [dropdownExitPhase, setDropdownExitPhase] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<"software" | "comparisons">("software");
+  const [activeMenu, setActiveMenu] = useState<MegaMenuId>("software");
   const [activeSoftwareColumn, setActiveSoftwareColumn] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSoftwareOpen, setMobileSoftwareOpen] = useState(false);
-  const [mobileComparisonsOpen, setMobileComparisonsOpen] = useState(false);
+  const [mobileView, setMobileView] = useState<MobileNavView>("root");
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   /** Latest `open` for pathname effect (avoid stale closure) */
   const megaMenuOpenRef = useRef(false);
-  megaMenuOpenRef.current = open;
   const [containerRect, setContainerRect] = useState<{
     left: number;
     bottom: number;
@@ -436,12 +559,45 @@ export default function Navbar() {
 
   const pathname = usePathname();
   useEffect(() => {
+    megaMenuOpenRef.current = open;
+  }, [open]);
+  useEffect(() => {
     if (megaMenuOpenRef.current) {
       setDropdownExitPhase(true);
     }
     setOpen(false);
     setMobileOpen(false);
+    setMobileView("root");
   }, [pathname]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1023px)");
+    const onChange = () => {
+      if (mq.matches) {
+        setOpen(false);
+        setDropdownExitPhase(false);
+      }
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+        setMobileView("root");
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     if (!open) {
@@ -466,11 +622,23 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const openMenu = useCallback((menu: "software" | "comparisons") => {
+  const openMenu = useCallback((menu: MegaMenuId) => {
     setActiveMenu(menu);
     setDropdownExitPhase(false);
     setOpen(true);
     if (menu === "software") setActiveSoftwareColumn(null);
+  }, []);
+
+  const closeMobileMenu = useCallback(() => {
+    setMobileOpen(false);
+    setMobileView("root");
+  }, []);
+
+  const toggleMobileMenu = useCallback(() => {
+    setMobileOpen((isOpen) => {
+      if (isOpen) setMobileView("root");
+      return !isOpen;
+    });
   }, []);
 
   const handleMegaMenuExitComplete = useCallback(() => {
@@ -491,7 +659,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center">
-          <nav className="hidden items-center gap-3 md:flex" aria-label="Main">
+          <nav className="hidden items-center gap-2 lg:flex xl:gap-3" aria-label="Main">
             <div
               ref={refs.setReference}
               className="flex items-center"
@@ -504,7 +672,7 @@ export default function Navbar() {
                   setActiveSoftwareColumn(null);
                 }}
                 onClick={() => openMenu("software")}
-                className={`relative inline-flex items-center px-3 py-2 ${navItemClass} ${open && activeMenu === "software" ? "text-[#0f2440]" : ""}`}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "software" ? "text-[#0f2440]" : ""}`}
                 aria-expanded={open && activeMenu === "software"}
                 aria-haspopup="true"
               >
@@ -517,11 +685,28 @@ export default function Navbar() {
               <button
                 type="button"
                 onPointerEnter={() => {
+                  setActiveMenu("industries");
+                  setActiveSoftwareColumn(null);
+                }}
+                onClick={() => openMenu("industries")}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "industries" ? "text-[#0f2440]" : ""}`}
+                aria-expanded={open && activeMenu === "industries"}
+                aria-haspopup="true"
+              >
+                <span className="relative inline-block">
+                  Industries
+                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-[#10B981] transition-transform duration-200 origin-left ${open && activeMenu === "industries" ? "scale-x-100" : "scale-x-0"}`} />
+                </span>
+                <Chevron open={open && activeMenu === "industries"} />
+              </button>
+              <button
+                type="button"
+                onPointerEnter={() => {
                   setActiveMenu("comparisons");
                   setActiveSoftwareColumn(null);
                 }}
                 onClick={() => openMenu("comparisons")}
-                className={`relative inline-flex items-center px-3 py-2 ${navItemClass} ${open && activeMenu === "comparisons" ? "text-[#0f2440]" : ""}`}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "comparisons" ? "text-[#0f2440]" : ""}`}
                 aria-expanded={open && activeMenu === "comparisons"}
                 aria-haspopup="true"
               >
@@ -533,7 +718,7 @@ export default function Navbar() {
               </button>
             </div>
             {SIMPLE_LINKS.map(({ label, href }) => (
-              <Link key={href} href={href} className={`group relative inline-flex items-center px-3 py-2 ${navItemClass}`}>
+              <Link key={href} href={href} className={`group relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass}`}>
                 <span className="relative inline-block">
                   {label}
                   <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#10B981] scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
@@ -543,24 +728,23 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {showMegaMenuDropdown && (() => {
-          const floatingProps = getFloatingProps();
-          const mergedStyle = {
-            ...(floatingProps.style && typeof floatingProps.style === "object" ? floatingProps.style : {}),
-            position: "fixed" as const,
-            transform: "none",
-            left: containerRect != null ? containerRect.left : undefined,
-            top: containerRect != null ? containerRect.bottom : undefined,
-            width: containerRect != null ? containerRect.width : undefined,
-            maxHeight: floatingStyles.maxHeight,
-          };
-          return (
+        {/* @floating-ui requires setFloating / getFloatingProps during render */}
+        {/* eslint-disable react-hooks/refs */}
+        {showMegaMenuDropdown && (
           <FloatingPortal>
             <div
               ref={refs.setFloating}
-              {...floatingProps}
-              style={mergedStyle}
-              className="z-50"
+              {...getFloatingProps({
+                style: {
+                  position: "fixed",
+                  transform: "none",
+                  left: containerRect != null ? containerRect.left : undefined,
+                  top: containerRect != null ? containerRect.bottom : undefined,
+                  width: containerRect != null ? containerRect.width : undefined,
+                  maxHeight: floatingStyles.maxHeight,
+                },
+              })}
+              className="z-50 hidden lg:block"
             >
               <MegaMenuViewport
                 activeMenu={activeMenu}
@@ -571,8 +755,8 @@ export default function Navbar() {
               />
             </div>
           </FloatingPortal>
-          );
-        })()}
+        )}
+        {/* eslint-enable react-hooks/refs */}
 
         <div className="flex items-center gap-3">
           <div className="searchContainer hidden sm:flex items-center rounded-md border border-stone-200 bg-white px-3 py-2 text-[#1A2D48] transition-all duration-150 focus-within:border-[#10B981]">
@@ -593,10 +777,11 @@ export default function Navbar() {
           </Link>
           <button
             type="button"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-[#1A2D48] hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] md:hidden"
+            onClick={toggleMobileMenu}
+            className="inline-flex items-center justify-center rounded-lg p-2 text-[#1A2D48] hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] lg:hidden"
             aria-expanded={mobileOpen}
-            aria-label="Toggle menu"
+            aria-controls="mobile-nav-panel"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? (
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
@@ -608,67 +793,130 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-stone-200 bg-white px-4 py-3 md:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Mobile">
-            <div>
-              <button
-                type="button"
-                onClick={() => setMobileSoftwareOpen(!mobileSoftwareOpen)}
-                className="flex w-full items-center justify-between py-2 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                aria-expanded={mobileSoftwareOpen}
-              >
-                Software
-                <Chevron open={mobileSoftwareOpen} />
-              </button>
-              {mobileSoftwareOpen && (
-                <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
+        <div
+          id="mobile-nav-panel"
+          className="absolute inset-x-0 top-full z-50 border-t border-stone-200 bg-white shadow-sm lg:hidden"
+          style={{ maxHeight: "calc(100dvh - var(--navbar-h))" }}
+        >
+          <div
+            className="overflow-y-auto overscroll-contain px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
+            style={{ maxHeight: "calc(100dvh - var(--navbar-h))" }}
+          >
+            <nav className="flex flex-col" aria-label="Mobile">
+              {mobileView === "root" && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("software")}
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-haspopup="true"
+                  >
+                    Software
+                    <ChevronRight />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("industries")}
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-haspopup="true"
+                  >
+                    Industries
+                    <ChevronRight />
+                  </button>
+                  <Link
+                    href="/comparisons"
+                    onClick={closeMobileMenu}
+                    className="flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  >
+                    Comparisons
+                  </Link>
+                  {SIMPLE_LINKS.map(({ label, href }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={closeMobileMenu}
+                      className="flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                  <div className="searchContainer mt-2 flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
+                    <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input
+                      type="search"
+                      placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="searchInput flex-1 border-0 bg-transparent py-1 text-sm focus:outline-none focus:ring-0 focus:shadow-none"
+                      aria-label="Search"
+                    />
+                  </div>
+                  <Link href="/software" onClick={closeMobileMenu} className={`mt-2 inline-block text-center ${btnPrimary}`}>
+                    Explore
+                  </Link>
+                </>
+              )}
+
+              {mobileView === "software" && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("root")}
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-label="Back to main menu"
+                  >
+                    <ChevronLeft />
+                    Back
+                  </button>
+                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Software</h2>
                   {SOFTWARE_CATEGORIES.map((item) => (
-                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                    >
                       {item.title}
                     </Link>
                   ))}
-                  <Link href="/software" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
+                  <Link
+                    href="/software"
+                    onClick={closeMobileMenu}
+                    className="mt-1 flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#10B981] hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                  >
                     View all software →
                   </Link>
-                </div>
+                </>
               )}
-            </div>
-            <div>
-              <button
-                type="button"
-                onClick={() => setMobileComparisonsOpen(!mobileComparisonsOpen)}
-                className="flex w-full items-center justify-between py-2 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                aria-expanded={mobileComparisonsOpen}
-              >
-                Comparisons
-                <Chevron open={mobileComparisonsOpen} />
-              </button>
-              {mobileComparisonsOpen && (
-                <div className="ml-3 space-y-1 border-l-2 border-stone-100 pl-3 pb-2">
-                  {COMPARISON_TYPES.map((item) => (
-                    <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
-                      {item.title}
+
+              {mobileView === "industries" && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("root")}
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-label="Back to main menu"
+                  >
+                    <ChevronLeft />
+                    Back
+                  </button>
+                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Industries</h2>
+                  {INDUSTRY_NAV_ITEMS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                    >
+                      {item.label}
                     </Link>
                   ))}
-                  <Link href="/comparisons" onClick={() => setMobileOpen(false)} className="block py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668]">
-                    See all comparisons →
-                  </Link>
-                </div>
+                </>
               )}
-            </div>
-            {SIMPLE_LINKS.map(({ label, href }) => (
-              <Link key={href} href={href} onClick={() => setMobileOpen(false)} className="py-2 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981]">
-                {label}
-              </Link>
-            ))}
-            <div className="searchContainer mt-2 flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
-              <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              <input type="search" placeholder="Search..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="searchInput flex-1 border-0 bg-transparent py-1 text-sm focus:outline-none focus:ring-0 focus:shadow-none" />
-            </div>
-            <Link href="/software" onClick={() => setMobileOpen(false)} className={`mt-2 inline-block text-center ${btnPrimary}`}>
-              Explore
-            </Link>
-          </nav>
+            </nav>
+          </div>
         </div>
       )}
     </header>
