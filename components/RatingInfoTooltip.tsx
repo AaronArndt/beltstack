@@ -58,8 +58,8 @@ export function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right"
         >
           <p className="text-sm font-semibold text-[#1A2D48]">How we rate</p>
           <p className="mt-1 text-xs leading-relaxed text-[#57534E]">
-            Scores combine pricing, features, ease of use, support, and contractor fit. We review sources and update
-            regularly.
+            BeltStack ratings are editorial evaluations, not user-review averages. Scores combine pricing, features,
+            ease of use, support, and contractor fit. We review sources and update regularly.
           </p>
           <Link
             href="/methodology"

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import {
   HubPageTemplate,
   type FeaturedPickRef,
@@ -141,7 +140,7 @@ function PayrollHowToChooseSection() {
           scenario-based picks
         </a>{" "}
         when you know your situation—or{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         to learn pricing and compliance first. Our{" "}
@@ -328,79 +327,6 @@ const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-// Finder form needs these tokens (match template/homepage)
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
-function PayrollFinderForm() {
-  const [teamSize, setTeamSize] = useState("");
-  const [payType, setPayType] = useState("");
-  const [need1099, setNeed1099] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder: no filter logic yet
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="payroll-team-size" className="block text-sm font-semibold text-[#1A2D48]">
-          Team size
-        </label>
-        <select
-          id="payroll-team-size"
-          value={teamSize}
-          onChange={(e) => setTeamSize(e.target.value)}
-          className={`mt-1 ${selectClass}`}
-        >
-          <option value="">Select</option>
-          <option value="solo">Solo</option>
-          <option value="2-5">2–5</option>
-          <option value="6-20">6–20</option>
-          <option value="21+">21+</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="payroll-pay-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Pay type
-        </label>
-        <select
-          id="payroll-pay-type"
-          value={payType}
-          onChange={(e) => setPayType(e.target.value)}
-          className={`mt-1 ${selectClass}`}
-        >
-          <option value="">Select</option>
-          <option value="hourly">Hourly</option>
-          <option value="salary">Salary</option>
-          <option value="mixed">Mixed</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="payroll-1099" className="block text-sm font-semibold text-[#1A2D48]">
-          Need to pay 1099s?
-        </label>
-        <select
-          id="payroll-1099"
-          value={need1099}
-          onChange={(e) => setNeed1099(e.target.value)}
-          className={`mt-1 ${selectClass}`}
-        >
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-      <button type="submit" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 function PayrollEducationSection() {
   return (
     <>
@@ -498,7 +424,7 @@ export default function PayrollPage() {
                 payroll by business type
               </a>{" "}
               below. For how pricing and taxes work, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 payroll guides
               </a>
               .
@@ -538,11 +464,6 @@ export default function PayrollPage() {
         sub: "Transparent process, contractor-focused criteria.",
         introParagraph: "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information.",
         bullets: METHODOLOGY_BULLETS,
-      }}
-      finderSection={{
-        title: "Find the right payroll fit",
-        sub: "Narrow down by team size and pay type.",
-        content: <PayrollFinderForm />,
       }}
       educationSection={<PayrollEducationSection />}
     />

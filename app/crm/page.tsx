@@ -28,10 +28,6 @@ const KEY_TAKEAWAYS = [
   { label: "Best for sales pipeline: Pipedrive", anchor: "#pick-pipedrive" },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -88,7 +84,7 @@ function CrmHowToChooseSection() {
           CRM best-for hub
         </Link>
         . Prefer to read first? Use the{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         section for evaluation criteria. Our{" "}
@@ -226,30 +222,6 @@ function CrmPopularComparisonsSection() {
   );
 }
 
-function CrmFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="crm-business-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Business type
-        </label>
-        <select id="crm-business-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="freelancers">Freelancers</option>
-          <option value="small-business">Small business</option>
-          <option value="sales-teams">Sales teams</option>
-          <option value="startups">Startups</option>
-          <option value="agencies">Agencies</option>
-          <option value="enterprise">Enterprise</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 function CrmEducationSection() {
   return (
     <>
@@ -359,7 +331,7 @@ export default function CrmPage() {
                 CRM by team type
               </a>{" "}
               below. For concepts and definitions, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 CRM guides
               </a>
               .
@@ -398,11 +370,6 @@ export default function CrmPage() {
       faqTitle="CRM software FAQs"
       faqSub="Quick answers to common questions."
       methodology={CRM_METHODOLOGY}
-      finderSection={{
-        title: "Find the right CRM fit",
-        sub: "Narrow down by business type.",
-        content: <CrmFinderForm />,
-      }}
       educationSection={<CrmEducationSection />}
       popularComparisonsSection={<CrmPopularComparisonsSection />}
     />

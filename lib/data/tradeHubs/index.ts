@@ -8,6 +8,12 @@ export {
   getSoftwareCategoryHubLabel,
   getSoftwareCategoryShortLabel,
 } from "./softwareCategoryHubs";
+export {
+  TRADE_HUB_BEST_FOR_PREVIEW_COUNT,
+  getBestForScenarioSlugForTradeHub,
+  getBestForTradeRecommendations,
+} from "./tradeBestForRecommendations";
+export type { TradeHubBestForPreview } from "./tradeBestForRecommendations";
 
 /** All trade hub slugs with published pages (for static generation & sitemap). */
 export const TRADE_HUB_SLUGS = Object.keys(TRADE_HUB_DEFINITIONS) as readonly string[];

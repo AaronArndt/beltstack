@@ -161,24 +161,8 @@ function buildRelatedComparisons(featured: SeoToolsProductSlug[]): BestForCompar
   return out;
 }
 
-const REVIEW_FILL_ORDER: SeoToolsProductSlug[] = [
-  "semrush",
-  "ahrefs",
-  "brightlocal",
-  "moz-pro",
-  "se-ranking",
-  "ubersuggest",
-  "whitespark",
-  "google-search-console",
-];
-
 function buildRelatedReviews(featured: SeoToolsProductSlug[]): BestForReviewLink[] {
-  const ordered: SeoToolsProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 8) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: SEO_TOOLS_PRODUCT_CORE[s].name,
     href: getSeoToolsReviewUrl(s),
   }));
@@ -239,9 +223,6 @@ export function buildSeoToolsTradeProps(p: SeoToolsTradeConfig): BestForTemplate
   }));
 
   const featuredSlugs = p.picks.map((x) => x.slug);
-  const featuredNames = new Set(p.picks.map((x) => SEO_TOOLS_PRODUCT_CORE[x.slug].name));
-  const otherReviewNames = REVIEW_FILL_ORDER.map((s) => SEO_TOOLS_PRODUCT_CORE[s].name).filter((n) => !featuredNames.has(n));
-  const othersPhrase = otherReviewNames.slice(0, 5).join(", ");
   const [n1, n2, n3] = p.picks.map((pk) => SEO_TOOLS_PRODUCT_CORE[pk.slug].name);
 
   const relatedGuides = [...(p.extraGuides ?? []), ...COMMON_RELATED_GUIDES].filter(
@@ -258,7 +239,7 @@ export function buildSeoToolsTradeProps(p: SeoToolsTradeConfig): BestForTemplate
     freshnessText: "Updated for 2026",
     topPicksSub: `Editorial top picks for ${label}. Confirm pricing, modules, and regional availability on each vendor’s site—our shortlist is a workflow map, not a substitute for your own invoice math.`,
     editorialSub: `Experience-informed criteria for ${label}: Google Search Console as ground truth, honest limits of software vs field execution, and tying spend to calls or booked jobs—not vanity rankings.`,
-    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}. ${othersPhrase.length > 0 ? `${othersPhrase} are in the full reviews list when budget or niche fit points elsewhere.` : "See related reviews for the full field."}`,
+    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}.`,
     seeAlsoBlock: SEE_ALSO,
     featuredProducts,
     comparisonTableRows,

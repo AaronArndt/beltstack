@@ -263,7 +263,7 @@ function HowToChooseSection() {
           scenario picks
         </a>{" "}
         when you know your trade—or{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         for fee fundamentals first. Our{" "}

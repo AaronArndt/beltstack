@@ -86,13 +86,18 @@ const CRM_BEST_FOR_PROPS_BY_SLUG: Record<string, BestForTemplateProps> = {
   "home-inspectors": HOME_INSPECTORS_CRM_BEST_FOR_PAGE_PROPS,
 };
 
-/** Same order as app/crm/best-for/page.tsx scenario grid */
-const CRM_BEST_FOR_HUB_SLUG_ORDER = [
+/** Pages sourced from dedicated CRM best-for files (not `crmBestForTrades.ts`). */
+const CRM_BEST_FOR_GENERAL_SLUGS = [
   "freelancers",
   "small-business",
   "startups",
   "agencies",
   "sales-teams",
+] as const;
+
+/** Same order as app/crm/best-for/page.tsx scenario grid */
+const CRM_BEST_FOR_HUB_SLUG_ORDER = [
+  ...CRM_BEST_FOR_GENERAL_SLUGS,
   "hvac",
   "plumbing",
   "electricians",
@@ -123,18 +128,33 @@ const CRM_BEST_FOR_HUB_SLUG_ORDER = [
   "home-inspectors",
 ] as const;
 
+function crmHubCard(slug: string): CrmBestForHubCard {
+  const props = CRM_BEST_FOR_PROPS_BY_SLUG[slug];
+  if (!props) throw new Error(`Missing CRM best-for hub props: ${slug}`);
+  return {
+    label: props.title,
+    href: getCrmBestForUrl(slug),
+    description: props.subtitle,
+  };
+}
+
+export function getCrmBestForHubGeneralLinks(): CrmBestForHubCard[] {
+  return CRM_BEST_FOR_GENERAL_SLUGS.map(crmHubCard);
+}
+
+export function getCrmBestForHubTradeLinks(): CrmBestForHubCard[] {
+  const general = new Set<string>(CRM_BEST_FOR_GENERAL_SLUGS);
+  return CRM_BEST_FOR_HUB_SLUG_ORDER.filter((slug) => !general.has(slug)).map(crmHubCard);
+}
+
 export function getCrmBestForHubScenarioLinks(): CrmBestForHubCard[] {
-  return CRM_BEST_FOR_HUB_SLUG_ORDER.map((slug) => {
-    const props = CRM_BEST_FOR_PROPS_BY_SLUG[slug];
-    if (!props) throw new Error(`Missing CRM best-for hub props: ${slug}`);
-    return {
-      label: props.title,
-      href: getCrmBestForUrl(slug),
-      description: props.subtitle,
-    };
-  });
+  return CRM_BEST_FOR_HUB_SLUG_ORDER.map(crmHubCard);
 }
 
 export function getCrmBestForHubLinks(): CrmBestForHubCard[] {
   return [CRM_BEST_FOR_ROUNDUP_HUB_LINK, ...getCrmBestForHubScenarioLinks()];
+}
+
+export function getCrmBestForPageProps(slug: string): BestForTemplateProps | undefined {
+  return CRM_BEST_FOR_PROPS_BY_SLUG[slug];
 }

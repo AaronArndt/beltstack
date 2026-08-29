@@ -200,23 +200,6 @@ const DEFAULT_FS_COMPARISON_FALLBACK: BestForComparisonLink[] = [
   { label: "Housecall Pro vs ServiceTitan", href: getFieldServiceCompareUrl("housecall-pro-vs-servicetitan") },
 ];
 
-const REVIEW_FILL_ORDER: FsProductSlug[] = [
-  "jobber",
-  "housecall-pro",
-  "servicetitan",
-  "service-fusion",
-  "workiz",
-  "kickserv",
-  "fieldpulse",
-  "servicetrade",
-  "workwave-service",
-  "buildops",
-  "connecteam",
-  "simpro",
-  "zuper",
-  "oracle-field-service",
-];
-
 function buildRelatedComparisons(featured: FsProductSlug[]): BestForComparisonLink[] {
   const set = new Set(featured);
   const scored = FS_COMPARISON_PAIRS.map((c) => {
@@ -244,12 +227,7 @@ function buildRelatedComparisons(featured: FsProductSlug[]): BestForComparisonLi
 }
 
 function buildRelatedReviews(featured: FsProductSlug[]): BestForReviewLink[] {
-  const ordered: FsProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: FS_PRODUCT_CORE[s].name,
     href: getFieldServiceReviewUrl(s),
   }));

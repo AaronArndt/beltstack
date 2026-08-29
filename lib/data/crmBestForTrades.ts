@@ -166,25 +166,8 @@ function buildRelatedComparisons(featured: CrmProductSlug[]): BestForComparisonL
   return out;
 }
 
-const REVIEW_FILL_ORDER: CrmProductSlug[] = [
-  "hubspot",
-  "salesforce",
-  "zoho-crm",
-  "pipedrive",
-  "monday-crm",
-  "freshsales",
-  "copper",
-  "close",
-  "keap",
-];
-
 function buildRelatedReviews(featured: CrmProductSlug[]): BestForReviewLink[] {
-  const ordered: CrmProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: CRM_PRODUCT_CORE[s].name,
     href: getCrmReviewUrl(s),
   }));

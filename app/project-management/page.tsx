@@ -27,11 +27,6 @@ const KEY_TAKEAWAYS = [
   { label: "Best lightweight boards: Trello & Notion", anchor: "#pick-trello" },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
@@ -44,41 +39,6 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
         <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
       )}
     </div>
-  );
-}
-
-function ProjectManagementFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="pm-team-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Team type
-        </label>
-        <select id="pm-team-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="freelancers">Freelancers</option>
-          <option value="small-business">Small business</option>
-          <option value="agencies">Agencies</option>
-          <option value="startups">Startups</option>
-          <option value="remote-teams">Remote teams</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="pm-work-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary work type
-        </label>
-        <select id="pm-work-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="client-projects">Client projects</option>
-          <option value="internal-projects">Internal projects</option>
-          <option value="product">Product & engineering</option>
-          <option value="content">Content & marketing</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
   );
 }
 
@@ -422,7 +382,7 @@ export default function ProjectManagementPage() {
                 project management by team type
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 project management guides
               </a>
               .
@@ -468,11 +428,6 @@ export default function ProjectManagementPage() {
       faqTitle="Project management software FAQs"
       faqSub="Quick answers to common questions."
       methodology={PROJECT_MANAGEMENT_METHODOLOGY}
-      finderSection={{
-        title: "Find the right project management fit",
-        sub: "Narrow down by team type and primary work.",
-        content: <ProjectManagementFinderForm />,
-      }}
       educationSection={<ProjectManagementEducationSection />}
       popularComparisonsSection={<ProjectManagementPopularComparisonsSection />}
     />

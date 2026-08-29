@@ -1590,16 +1590,7 @@ function makePage(slug: string, title: string): BestForTemplateProps {
     comparisonTableRows: scenarioTable(slug),
     editorialGuidance: s.editorialGuidance,
     whyThesePicks: s.whyThesePicks,
-    relatedReviews: [
-      { name: "Mailchimp", href: getEmailMarketingReviewUrl("mailchimp") },
-      { name: "ActiveCampaign", href: getEmailMarketingReviewUrl("activecampaign") },
-      { name: "Klaviyo", href: getEmailMarketingReviewUrl("klaviyo") },
-      { name: "HubSpot", href: getEmailMarketingReviewUrl("hubspot-email-marketing") },
-      { name: "Kit", href: getEmailMarketingReviewUrl("convertkit") },
-      { name: "Brevo", href: getEmailMarketingReviewUrl("brevo") },
-      { name: "MailerLite", href: getEmailMarketingReviewUrl("mailerlite") },
-      { name: "Constant Contact", href: getEmailMarketingReviewUrl("constant-contact") },
-    ],
+    relatedReviews: scenarioFeatured(slug).map((p) => ({ name: p.name, href: p.reviewHref })),
     relatedComparisons: [
       { label: "Mailchimp vs ActiveCampaign", href: getEmailMarketingCompareUrl("mailchimp-vs-activecampaign") },
       { label: "Klaviyo vs Mailchimp", href: getEmailMarketingCompareUrl("klaviyo-vs-mailchimp") },

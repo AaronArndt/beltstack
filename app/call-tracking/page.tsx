@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import {
   HubPageTemplate,
   type FeaturedPickRef,
@@ -148,7 +147,7 @@ function CallTrackingHowToChooseSection() {
           scenario picks
         </a>{" "}
         when you know your trade—or{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         for fundamentals first. Our{" "}
@@ -324,63 +323,6 @@ const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
-function CallTrackingFinderForm() {
-  const [focus, setFocus] = useState("");
-  const [footprint, setFootprint] = useState("");
-  const [budget, setBudget] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="ct-focus" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="ct-focus" value={focus} onChange={(e) => setFocus(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="dni">Website DNI + keyword context</option>
-          <option value="lead">Calls + forms + chats rollup</option>
-          <option value="paid">Paid search attribution depth</option>
-          <option value="telco">Routing / buyer programs</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="ct-footprint" className="block text-sm font-semibold text-[#1A2D48]">
-          Footprint
-        </label>
-        <select id="ct-footprint" value={footprint} onChange={(e) => setFootprint(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="one">Single brand / city</option>
-          <option value="few">2–5 locations</option>
-          <option value="many">6+ locations</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="ct-budget" className="block text-sm font-semibold text-[#1A2D48]">
-          Monthly software budget
-        </label>
-        <select id="ct-budget" value={budget} onChange={(e) => setBudget(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="low">Under ~$75/mo</option>
-          <option value="mid">~$75–150/mo</option>
-          <option value="high">$150+/mo or enterprise</option>
-        </select>
-      </div>
-      <button type="submit" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 function CallTrackingEducationSection() {
   return (
     <>
@@ -521,11 +463,6 @@ export default function CallTrackingHubPage() {
         sub: "Transparent criteria focused on local operators.",
         introParagraph: "Our reviews are independent and updated on a regular cadence so you get current pricing signals and workflow fit.",
         bullets: METHODOLOGY_BULLETS,
-      }}
-      finderSection={{
-        title: "Find the right call tracking stack",
-        sub: "Placeholder finder—narrows by need, footprint, and budget.",
-        content: <CallTrackingFinderForm />,
       }}
       educationSection={<CallTrackingEducationSection />}
     />

@@ -4,7 +4,6 @@ import type {
   BestForFaqItem,
   BestForFeaturedProduct,
   BestForGuideLink,
-  BestForReviewLink,
   BestForTableRow,
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
@@ -93,17 +92,6 @@ const comparisonTableRows: BestForTableRow[] = [
   },
 ];
 
-const relatedReviews: BestForReviewLink[] = [
-  { name: "Stripe", href: getPaymentProcessingReviewUrl("stripe") },
-  { name: "Square", href: getPaymentProcessingReviewUrl("square") },
-  { name: "PayPal Business", href: getPaymentProcessingReviewUrl("paypal-business") },
-  { name: "Shopify Payments", href: getPaymentProcessingReviewUrl("shopify-payments") },
-  { name: "Helcim", href: getPaymentProcessingReviewUrl("helcim") },
-  { name: "Stax", href: getPaymentProcessingReviewUrl("stax") },
-  { name: "Authorize.net", href: getPaymentProcessingReviewUrl("authorize-net") },
-  { name: "Clover", href: getPaymentProcessingReviewUrl("clover") },
-];
-
 const relatedComparisons: BestForComparisonLink[] = [
   { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
   { label: "Stripe vs PayPal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
@@ -144,7 +132,7 @@ function makePage(
     comparisonTableRows,
     editorialGuidance,
     whyThesePicks,
-    relatedReviews,
+    relatedReviews: featuredProducts.map((p) => ({ name: p.name, href: p.reviewHref })),
     relatedComparisons,
     relatedGuides: [
       ...relatedGuides,

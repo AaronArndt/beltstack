@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import {
   HubPageTemplate,
   type FeaturedPickRef,
@@ -184,7 +183,7 @@ function LeadGenHowToChooseSection() {
           scenario picks
         </a>{" "}
         when you know your trade—or{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         for economics first. Our{" "}
@@ -360,62 +359,6 @@ const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
-function LeadGenFinderForm() {
-  const [channel, setChannel] = useState("");
-  const [buyer, setBuyer] = useState("");
-  const [speed, setSpeed] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="lg-channel" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary channel interest
-        </label>
-        <select id="lg-channel" value={channel} onChange={(e) => setChannel(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="marketplace">Marketplace leads</option>
-          <option value="lsa">Google Local Services Ads</option>
-          <option value="social">Paid social</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="lg-buyer" className="block text-sm font-semibold text-[#1A2D48]">
-          How customers find you today
-        </label>
-        <select id="lg-buyer" value={buyer} onChange={(e) => setBuyer(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="google">Google search</option>
-          <option value="referral">Referrals / repeat</option>
-          <option value="mixed">Mixed</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="lg-speed" className="block text-sm font-semibold text-[#1A2D48]">
-          Lead response speed
-        </label>
-        <select id="lg-speed" value={speed} onChange={(e) => setSpeed(e.target.value)} className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="fast">&lt; 5 minutes</option>
-          <option value="hour">Same business day</option>
-          <option value="slow">Inconsistent</option>
-        </select>
-      </div>
-      <button type="submit" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 function LeadGenEducationSection() {
   return (
     <>
@@ -548,11 +491,6 @@ export default function LeadGenerationHubPage() {
         sub: "Transparent criteria focused on contractor economics.",
         introParagraph: "Our reviews are independent and updated on a regular cadence so you get current policies and pricing signals.",
         bullets: METHODOLOGY_BULLETS,
-      }}
-      finderSection={{
-        title: "Find the right lead mix",
-        sub: "Placeholder finder—narrows by channel and response speed.",
-        content: <LeadGenFinderForm />,
       }}
       educationSection={<LeadGenEducationSection />}
     />

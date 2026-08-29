@@ -21,8 +21,6 @@ import {
 import { getInventoryReviewUrl } from "@/lib/routes";
 const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -41,42 +39,6 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
 }
 
 // ——— Finder: Find the right inventory fit ———
-function InventoryFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="inventory-business-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Business type
-        </label>
-        <select id="inventory-business-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="small-business">Small business</option>
-          <option value="ecommerce-business">Ecommerce business</option>
-          <option value="retail">Retail</option>
-          <option value="manufacturing">Manufacturing</option>
-          <option value="warehousing">Warehousing</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="inventory-primary-need" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="inventory-primary-need" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="inventory-tracking">Inventory tracking</option>
-          <option value="multi-channel-inventory">Multi-channel inventory</option>
-          <option value="manufacturing-inventory">Manufacturing inventory</option>
-          <option value="warehouse-management">Warehouse management</option>
-          <option value="purchase-order-management">Purchase order management</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
-  );
-}
-
 // ——— How to choose inventory management software (pre-featured picks) ———
 function InventoryHowToChooseSection() {
   return (
@@ -434,7 +396,7 @@ export default function InventoryPage() {
                 inventory by business type
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 inventory guides
               </a>
               .
@@ -449,7 +411,6 @@ export default function InventoryPage() {
         label: "See full rankings →",
         href: "/inventory/best-inventory-software",
       }}
-      featuredPicksAfterContent={<InventoryBestRoundupCtaModule />}
       comparisonTableRankingsLink={{
         label: "See our full rankings →",
         href: "/inventory/best-inventory-software",
@@ -472,11 +433,6 @@ export default function InventoryPage() {
       faqTitle="Inventory management software FAQs"
       faqSub="Quick answers to common questions."
       methodology={INVENTORY_METHODOLOGY}
-      finderSection={{
-        title: "Find the right inventory fit",
-        sub: "Narrow down by business type and primary need.",
-        content: <InventoryFinderForm />,
-      }}
       educationSection={<InventoryEducationSection />}
       popularComparisonsSection={<InventoryPopularComparisonsSection />}
     />

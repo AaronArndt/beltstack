@@ -29,16 +29,34 @@ export type HubGuidesGridProps = {
   footer?: ReactNode;
 };
 
+const HUB_GUIDES_PREVIEW_CAP = 6;
+
+const guidesIndexLinkClass =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+
+function inferCategoryGuidesIndexHref(guides: readonly HubGuideCardItem[]): string | undefined {
+  for (const guide of guides) {
+    const match = guide.href.match(/^(\/[\w-]+\/guides)(?:\/|$)/);
+    if (match) return match[1];
+  }
+  return undefined;
+}
+
 /**
  * Educational / informational guides grid (matches refined field-service hub pattern).
+ * Hub hubs show a preview of the first 6 items; full lists stay on the category guides index.
  */
 export function HubGuidesGrid({ sectionTitle, sectionSub, intro, guides, footer }: HubGuidesGridProps) {
+  const previewGuides = guides.slice(0, HUB_GUIDES_PREVIEW_CAP);
+  const guidesIndexHref = inferCategoryGuidesIndexHref(guides);
+  const allGuidesLabel = `View all ${sectionTitle.toLowerCase()} →`;
+
   return (
     <>
       <HubSectionTitle sub={sectionSub}>{sectionTitle}</HubSectionTitle>
       <p className="mt-1 max-w-3xl text-sm leading-relaxed text-[#57534E]">{intro}</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {guides.map((guide) => (
+        {previewGuides.map((guide) => (
           <Link
             key={guide.slug ?? guide.href}
             href={guide.href}
@@ -51,6 +69,13 @@ export function HubGuidesGrid({ sectionTitle, sectionSub, intro, guides, footer 
           </Link>
         ))}
       </div>
+      {guidesIndexHref != null && (
+        <p className="mt-4 text-sm">
+          <Link href={guidesIndexHref} className={guidesIndexLinkClass}>
+            {allGuidesLabel}
+          </Link>
+        </p>
+      )}
       {footer != null && <div className="mt-4 text-sm text-[#57534E]">{footer}</div>}
     </>
   );

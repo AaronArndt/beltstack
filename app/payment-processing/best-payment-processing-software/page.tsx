@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
-import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupTopPicksSummary } from "@/components/best-of/RoundupTopPicksSummary";
+import { RoundupSoftwarePicksSection } from "@/components/best-of/RoundupSoftwarePicksSection";
 import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
 import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
@@ -18,7 +18,7 @@ import {
 } from "@/lib/data/paymentProcessingBestPaymentProcessingSoftware";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getPaymentProcessingAlternativeUrl, getPaymentProcessingReviewUrl } from "@/lib/routes";
-import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
 
@@ -97,24 +97,12 @@ export default function BestPaymentProcessingSoftwarePage() {
         </section>
 
         {/* ——— 2) Best picks ——— */}
-        <RoundupQuickPicksSection
-          categoryLabel="payment processing software"
-          picks={TOP_PICKS.map((pick) => ({
-            slug: pick.slug,
-            name: pick.name,
-            badge: pick.badge,
-            description: pick.description,
-          }))}
-        />
+        <RoundupTopPicksSummary picks={TOP_PICKS} routes={ppPickRoutes} />
 
         <section id="best-payment-processing-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">Best Payment Processing Software Picks</SectionTitle>
-            <div className="mt-6 space-y-10">
-              {TOP_PICKS.map((pick) => (
-                <SoftwarePickCard key={pick.slug} {...toSoftwarePickCardProps(pick, ppPickRoutes, { id: `pick-${pick.slug}` })} />
-              ))}
-            </div>
+            <RoundupSoftwarePicksSection picks={TOP_PICKS} routes={ppPickRoutes} />
           </div>
         </section>
 

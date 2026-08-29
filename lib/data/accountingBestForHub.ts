@@ -20,8 +20,9 @@ export const ACCOUNTING_BEST_FOR_ROUNDUP_HUB_LINK = {
 
 export type AccountingBestForHubCard = { label: string; href: string; description: string };
 
-export function getAccountingBestForHubLinks(): AccountingBestForHubCard[] {
-  const core: AccountingBestForHubCard[] = [
+/** Core / general hub cards — existing `core` array, not trade getter. */
+export function getAccountingBestForHubGeneralLinks(): AccountingBestForHubCard[] {
+  return [
     {
       label: FREELANCERS_PAGE_PROPS.title,
       href: getAccountingBestForUrl("freelancers"),
@@ -48,6 +49,16 @@ export function getAccountingBestForHubLinks(): AccountingBestForHubCard[] {
       description: AGENCIES_PAGE_PROPS.subtitle,
     },
   ];
+}
 
-  return [ACCOUNTING_BEST_FOR_ROUNDUP_HUB_LINK, ...core, ...getAccountingTradeBestForHubCards()];
+export function getAccountingBestForHubTradeLinks(): AccountingBestForHubCard[] {
+  return getAccountingTradeBestForHubCards();
+}
+
+export function getAccountingBestForHubLinks(): AccountingBestForHubCard[] {
+  return [
+    ACCOUNTING_BEST_FOR_ROUNDUP_HUB_LINK,
+    ...getAccountingBestForHubGeneralLinks(),
+    ...getAccountingBestForHubTradeLinks(),
+  ];
 }

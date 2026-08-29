@@ -554,7 +554,21 @@ const reviews: Record<string, ReviewData> = {
       "Not designed for client billing or payroll",
       "Team features are limited compared to other tools",
     ],
-    keyFeatures: [],
+    keyFeatures: [
+      {
+        name: "Passive activity tracking",
+        description:
+          "Runs in the background and categorizes apps and websites as productive or distracting, without start/stop timers.",
+      },
+      {
+        name: "Focus scores and summaries",
+        description: "Daily and weekly summaries plus focus scores to see how habits change over time.",
+      },
+      {
+        name: "Distraction blocking",
+        description: "Paid plans add more advanced tools to block distracting sites when you need to focus.",
+      },
+    ],
     pricingSummary:
       "RescueTime offers a free tier and paid plans with more advanced focus and blocking features.",
     integrations: [],
@@ -565,13 +579,42 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "If you need project-based billing, invoicing, or team timesheets, choose tools like Toggl, Harvest, or Clockify instead.",
     compareLinks: [],
-    faqs: [],
+    faqs: [
+      {
+        q: "Is RescueTime a billing time tracker?",
+        a: "No. BeltStack positions RescueTime as passive productivity and focus insights—not client billing, invoicing, or team timesheets. Use Toggl, Harvest, or Clockify when you need explicit timers for billable work.",
+      },
+      {
+        q: "How is RescueTime different from Timely?",
+        a: "Both reduce manual entry, but BeltStack treats RescueTime as passive activity and focus coaching, and Timely as AI-assisted timesheets for project work. Timely is the closer automatic-tracking alternative when you still need reconstructable timesheets.",
+      },
+      {
+        q: "How is RescueTime different from Time Doctor or Hubstaff?",
+        a: "Those tools are monitoring-heavy (screenshots, activity scores, oversight). RescueTime is a passive, self-management approach. Time Doctor alternatives copy treats RescueTime as the option when you want insights without strict oversight.",
+      },
+      {
+        q: "Does RescueTime have a free plan?",
+        a: "BeltStack lists RescueTime as Free tier, with paid plans for more advanced focus and blocking. Compare limits with Toggl and Clockify if you also need explicit time tracking.",
+      },
+    ],
     alternatives: [
       {
         name: "Timely",
         href: getTimeTrackingReviewUrl("timely"),
-        description: "Another automatic tracker focused on teams and projects.",
+        description: "AI-assisted automatic timesheets for teams and projects, not just personal focus.",
         logoSrc: "/Logos/timely.png",
+      },
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Manual timers and reporting when you need explicit billable time.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Clockify",
+        href: getTimeTrackingReviewUrl("clockify"),
+        description: "Unlimited free users for explicit time tracking at team scale.",
+        logoSrc: "/Logos/clockify.jpeg",
       },
     ],
     scenarioLinks: TIME_TRACKING_SCENARIO_LINKS,
@@ -594,29 +637,106 @@ const reviews: Record<string, ReviewData> = {
     logoSrc: "/Logos/everhour.png",
     quickVerdict:
       "Everhour is built for project teams that want time tracking deeply embedded into tools like Asana, Trello, and ClickUp.",
-    quickVerdictParagraphs: [],
+    quickVerdictParagraphs: [
+      "Everhour’s value is in-context tracking: time fields, budgets, and reports sit inside the project tools your team already uses, so PMs can coach from the board instead of nagging in a separate app.",
+      "BeltStack’s Everhour vs Harvest comparison is the core tradeoff. Everhour goes deeper into Asana, Trello, and ClickUp embedding; Harvest is the standalone app with built-in invoicing and expenses. If you still need invoices, BeltStack expects you to pair Everhour with a separate billing tool.",
+      "If your stack is fragmented or people work across many surfaces, Toggl is the usual standalone alternative. If you want automatic capture instead of in-tool timers, Timely is the different workflow—not a substitute for Everhour’s PM embedding.",
+    ],
     ratingBreakdown: [],
-    pros: [],
-    cons: [],
-    keyFeatures: [],
-    pricingSummary: "",
-    integrations: [],
+    pros: [
+      "Time tracking lives inside Asana, Trello, ClickUp, and similar boards",
+      "Budgets and reports appear where tasks already live",
+      "Strong fit for agencies with one standardized PM stack",
+    ],
+    cons: [
+      "Much less compelling if you do not rely on those supported project tools",
+      "Billing still usually requires a separate invoicing product (unlike Harvest)",
+    ],
+    keyFeatures: [
+      {
+        name: "Embedded timers in project tools",
+        description:
+          "Timers and time fields appear beside tasks in Asana, Trello, ClickUp, and similar tools so people log minutes without leaving the board.",
+      },
+      {
+        name: "Budgets beside tasks",
+        description:
+          "BeltStack’s agency and freelancer best-for copy highlights budget visibility in context so PMs can catch overruns without a second dashboard.",
+      },
+      {
+        name: "Project and client reporting",
+        description:
+          "The Everhour vs Harvest comparison credits Everhour with solid reporting for project and client profitability—inside the PM workflow.",
+      },
+      {
+        name: "Exports and light billing workflows",
+        description:
+          "Everhour supports exports and some billing workflows, but BeltStack is explicit that it does not replace Harvest-style invoicing.",
+      },
+    ],
+    pricingSummary:
+      "BeltStack lists Everhour as From ~$8.50/user/mo. Comparisons describe per-user monthly pricing that is broadly comparable to Harvest; the buying decision is embedding vs invoicing, not a published plan catalog.",
+    integrations: ["Asana", "Trello", "ClickUp"],
     integrationsIntro:
-      "Everhour's main draw is how tightly it integrates with project management tools—time fields and reports appear right in the tools your team already uses.",
+      "Everhour's main draw is how tightly it integrates with project management tools—time fields and reports appear right in the tools your team already uses. BeltStack repeatedly names Asana, Trello, and ClickUp; confirm any other connectors with the vendor.",
     bestForEditorial:
       "Best for agencies and teams that already manage all work in tools like Asana, Trello, or ClickUp and want time tracking to live there too.",
     whoShouldAvoid:
       "If you don't rely on those project tools, Everhour's strengths matter less; general trackers like Toggl or Harvest may be simpler.",
-    compareLinks: [{ label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") }],
-    faqs: [],
-    alternatives: [],
+    compareLinks: [
+      { label: "Everhour vs Harvest", href: getTimeTrackingCompareUrl("everhour-vs-harvest") },
+      { label: "Everhour vs Toggl", href: getTimeTrackingCompareUrl("everhour-vs-toggl") },
+      { label: "Everhour vs Clockify", href: getTimeTrackingCompareUrl("everhour-vs-clockify") },
+    ],
+    faqs: [
+      {
+        q: "Is Everhour better than Harvest?",
+        a: "Everhour lives inside project tools; Harvest has built-in invoicing. Choose Everhour when in-context tracking is the job, and Harvest when time plus billing should live in one app.",
+      },
+      {
+        q: "Does Everhour include invoicing?",
+        a: "Not the way Harvest does. BeltStack describes exports and light billing workflows; most teams still pair Everhour with a separate invoicing or accounting tool.",
+      },
+      {
+        q: "Does Everhour work if we are not on Asana or Trello?",
+        a: "BeltStack’s positioning assumes a supported PM stack (Asana, Trello, ClickUp, and similar). If you do not live in those tools, Toggl or Harvest is usually simpler.",
+      },
+      {
+        q: "How does Everhour compare to Toggl?",
+        a: "Everhour is the embedded option for teams standardized on one or two PM tools. Toggl is the standalone tracker for mixed stacks and faster onboarding.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "Standalone time tracking with built-in invoicing and expenses.",
+        logoSrc: "/Logos/harvest.png",
+      },
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Standalone tracker with strong reporting when you are not locked to one PM tool.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "Timely",
+        href: getTimeTrackingReviewUrl("timely"),
+        description: "Automatic AI-assisted timesheets instead of in-board timers.",
+        logoSrc: "/Logos/timely.png",
+      },
+    ],
     scenarioLinks: TIME_TRACKING_SCENARIO_LINKS,
     methodology: TIME_TRACKING_METHODOLOGY,
-    useCaseLinks: [{ label: "Best time tracking for agencies", href: getTimeTrackingBestForUrl("agencies") }],
+    useCaseLinks: [
+      { label: "Best time tracking for agencies", href: getTimeTrackingBestForUrl("agencies") },
+      { label: "Best time tracking for freelancers", href: getTimeTrackingBestForUrl("freelancers") },
+    ],
     compareHubHref: TIME_TRACKING_COMPARE_HUB,
     bestPayrollSoftwareHref: BEST_TIME_TRACKING_HREF,
     guideHubHref: TIME_TRACKING_GUIDES_HUB,
     guideHubLabel: "Time tracking guides",
+    relatedReading: [{ label: "Invoicing software hub", href: "/invoicing" }],
   },
   timely: {
     toolName: "Timely",
@@ -630,25 +750,96 @@ const reviews: Record<string, ReviewData> = {
     logoSrc: "/Logos/timely.png",
     quickVerdict:
       "Timely automatically records app, website, and document activity so you can build accurate timesheets without starting and stopping timers manually.",
-    quickVerdictParagraphs: [],
+    quickVerdictParagraphs: [
+      "Timely’s pitch is capturing the day for you: app, website, document, and calendar activity become suggested time entries you approve, instead of relying on start/stop discipline.",
+      "BeltStack’s Timely vs Toggl comparison is the main fork. Toggl is the simpler manual-timer model at a typically lower price. Timely vs Harvest says Harvest still wins when invoices and expenses must originate next to approved hours; Timely is for recovering forgotten time, not Harvest-class billing.",
+      "RescueTime is the other automatic-ish neighbor: BeltStack treats RescueTime as passive personal-productivity coaching, and Timely as AI-assisted timesheets for project and consulting work. They are not interchangeable.",
+    ],
     ratingBreakdown: [],
-    pros: [],
-    cons: [],
-    keyFeatures: [],
-    pricingSummary: "",
+    pros: [
+      "Automatic capture reduces missed time when people forget timers",
+      "AI-assisted timesheets help reconstruct meeting- and document-heavy days",
+      "Strong fit for consultants and knowledge-work teams in BeltStack comparisons",
+    ],
+    cons: [
+      "Higher per-user price than many manual trackers",
+      "Background logging needs a privacy conversation some teams will not want",
+      "Does not replace Harvest-style invoicing",
+    ],
+    keyFeatures: [
+      {
+        name: "Automatic activity capture",
+        description:
+          "Records app, website, and document activity so timesheets can be built without starting and stopping timers.",
+      },
+      {
+        name: "AI-assisted timesheet suggestions",
+        description:
+          "Suggested blocks from calendars, docs, and meetings that you review and map to projects—BeltStack’s consulting and agency copy stresses editable, defensible entries.",
+      },
+      {
+        name: "Privacy controls around capture",
+        description:
+          "Comparisons and agency best-for copy flag configurable activity capture and the need to explain privacy settings to staff before a rollout.",
+      },
+    ],
+    pricingSummary:
+      "BeltStack lists Timely as From ~$11/user/mo. Comparisons describe per-user pricing that typically sits above manual trackers such as Toggl; Clockify’s free plan is the cost-conscious alternative. BeltStack does not publish a Timely plan catalog beyond that starting price.",
     integrations: [],
     integrationsIntro:
-      "Timely connects to calendars and tools to reconstruct your day and suggest time entries, making it easier to log time for busy knowledge workers.",
+      "Timely connects to calendars and tools to reconstruct your day and suggest time entries, making it easier to log time for busy knowledge workers. BeltStack does not publish a named connector catalog beyond that calendar-and-tools story.",
     bestForEditorial:
       "Best for teams that struggle to remember to start timers and want auto-captured activity to build accurate timesheets.",
     whoShouldAvoid:
       "If manual timers are fine and budgets are tight, simpler tools like Toggl or Clockify may be more cost-effective.",
-    compareLinks: [{ label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") }],
-    faqs: [],
-    alternatives: [],
+    compareLinks: [
+      { label: "Timely vs Toggl", href: getTimeTrackingCompareUrl("timely-vs-toggl") },
+      { label: "Timely vs Harvest", href: getTimeTrackingCompareUrl("timely-vs-harvest") },
+    ],
+    faqs: [
+      {
+        q: "Is Timely better than Toggl?",
+        a: "Timely is automatic; Toggl is manual. Choose Timely if forgotten timers are the problem. Choose Toggl if you want explicit control, a simpler model, and typically lower cost.",
+      },
+      {
+        q: "Does Timely include invoicing?",
+        a: "BeltStack’s Timely vs Harvest comparison says Timely is not a Harvest-class billing tool. Pair another invoicing product, or choose Harvest, if invoices must originate next to approved hours.",
+      },
+      {
+        q: "How is Timely different from RescueTime?",
+        a: "RescueTime is passive personal-productivity tracking and focus insights. Timely is automatic capture aimed at project timesheets. Use RescueTime for habits; Timely when you still need reconstructable client time.",
+      },
+      {
+        q: "Is Timely cheaper than Toggl or Clockify?",
+        a: "Usually not. BeltStack lists Timely from ~$11/user/mo and treats Clockify (free) and Toggl’s free tier as the cheaper manual-timer options.",
+      },
+    ],
+    alternatives: [
+      {
+        name: "Toggl Track",
+        href: getTimeTrackingReviewUrl("toggl"),
+        description: "Manual timers and reporting when you want explicit control instead of automatic capture.",
+        logoSrc: "/Logos/toggl.jpeg",
+      },
+      {
+        name: "RescueTime",
+        href: getTimeTrackingReviewUrl("rescuetime"),
+        description: "Passive productivity and focus insights, not project timesheets.",
+        logoSrc: "/Logos/rescuetime.jpeg",
+      },
+      {
+        name: "Harvest",
+        href: getTimeTrackingReviewUrl("harvest"),
+        description: "Manual tracking plus built-in invoicing when billing is the bottleneck.",
+        logoSrc: "/Logos/harvest.png",
+      },
+    ],
     scenarioLinks: TIME_TRACKING_SCENARIO_LINKS,
     methodology: TIME_TRACKING_METHODOLOGY,
-    useCaseLinks: [],
+    useCaseLinks: [
+      { label: "Best time tracking for agencies", href: getTimeTrackingBestForUrl("agencies") },
+      { label: "Best time tracking for consultants", href: getTimeTrackingBestForUrl("consultants") },
+    ],
     compareHubHref: TIME_TRACKING_COMPARE_HUB,
     bestPayrollSoftwareHref: BEST_TIME_TRACKING_HREF,
     guideHubHref: TIME_TRACKING_GUIDES_HUB,

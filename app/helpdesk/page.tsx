@@ -19,10 +19,6 @@ import {
 } from "@/lib/data/helpdeskHubData";
 import { HELPDESK_GUIDES } from "@/lib/data/helpdeskGuides";
 import { getHelpdeskReviewUrl } from "@/lib/routes";
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -36,42 +32,6 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
         <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
       )}
     </div>
-  );
-}
-
-function HelpdeskFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="helpdesk-team-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Team type
-        </label>
-        <select id="helpdesk-team-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="small-business">Small business</option>
-          <option value="startup">Startup</option>
-          <option value="ecommerce">Ecommerce team</option>
-          <option value="saas">SaaS support team</option>
-          <option value="growing">Growing support team</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="helpdesk-primary-need" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="helpdesk-primary-need" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="ticketing">Ticketing</option>
-          <option value="shared-inbox">Shared inbox</option>
-          <option value="live-chat">Live chat</option>
-          <option value="ecommerce-support">Ecommerce support</option>
-          <option value="multi-channel">Multi-channel support</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
   );
 }
 
@@ -91,7 +51,7 @@ function HelpdeskHowToChooseSection() {
           scenario-based picks
         </a>{" "}
         when you know your channels and volume—or{" "}
-        <a href="#payroll-guides" className={linkGreen}>
+        <a href="#guides" className={linkGreen}>
           guides
         </a>{" "}
         to learn pricing and workflow concepts first. Our{" "}
@@ -374,7 +334,7 @@ export default function HelpdeskPage() {
                 helpdesk by company type
               </a>{" "}
               below. For pricing and concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 helpdesk guides
               </a>
               .
@@ -401,11 +361,6 @@ export default function HelpdeskPage() {
       faqTitle="Helpdesk software FAQs"
       faqSub="Quick answers to common questions."
       methodology={HELPDESK_METHODOLOGY}
-      finderSection={{
-        title: "Find the right helpdesk fit",
-        sub: "Narrow down by team type and primary need.",
-        content: <HelpdeskFinderForm />,
-      }}
       educationSection={<HelpdeskEducationSection />}
       popularComparisonsSection={<HelpdeskPopularComparisonsSection />}
     />

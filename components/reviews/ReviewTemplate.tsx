@@ -16,6 +16,75 @@ const btnPrimary =
 const btnSecondary =
   "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-[#1A2D48] transition-colors hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
+/** Shared BeltStack affiliate line (hubs, roundups, best-for). */
+const AFFILIATE_DISCLOSURE =
+  "We may earn a commission when you purchase through our links. This does not affect our recommendations.";
+
+const REPUTATION_MANAGEMENT_HREF = "/reputation-management";
+
+function methodologyCorpus(methodology: NonNullable<ReviewTemplateProps["methodology"]>): string {
+  return [methodology.title, methodology.sub, methodology.introParagraph ?? "", ...methodology.bullets].join(" ");
+}
+
+/** Skip copy that claims firsthand testing or experience BeltStack cannot substantiate. */
+function hasUnsupportedExperienceClaims(text: string): boolean {
+  const t = text.toLowerCase();
+  return (
+    /\bwe test\b/.test(t) ||
+    /\bwe tested\b/.test(t) ||
+    /\bwe stress-test/.test(t) ||
+    /\bwe stress test\b/.test(t) ||
+    /\bexperience-informed\b/.test(t) ||
+    /\bthrough the same workflows\b/.test(t) ||
+    /\bhands-on\b/.test(t) ||
+    /\bfirst[- ]?hand\b/.test(t) ||
+    /\bwe interviewed\b/.test(t) ||
+    /\bproprietary testing\b/.test(t)
+  );
+}
+
+function shouldRenderMethodology(
+  methodology: ReviewTemplateProps["methodology"],
+  categoryHref: string
+): methodology is NonNullable<ReviewTemplateProps["methodology"]> {
+  if (methodology == null) return false;
+  if (categoryHref === REPUTATION_MANAGEMENT_HREF) return false;
+  if (hasUnsupportedExperienceClaims(methodologyCorpus(methodology))) return false;
+  return true;
+}
+
+type ReviewNavLink = { label: string; href: string };
+
+const editorialLinkClass =
+  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+const secondaryNavLinkClass =
+  "text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+
+const SCENARIO_PREVIEW_LIMIT = 6;
+
+function uniqueNavLinks(links: ReviewNavLink[]): ReviewNavLink[] {
+  const seen = new Set<string>();
+  const out: ReviewNavLink[] = [];
+  for (const link of links) {
+    if (link.href === "" || seen.has(link.href)) continue;
+    seen.add(link.href);
+    out.push(link);
+  }
+  return out;
+}
+
+function isCategoryLocalHref(href: string, categoryHref: string): boolean {
+  return href === categoryHref || href.startsWith(`${categoryHref}/`);
+}
+
+function categoryBestForHubHref(categoryHref: string): string {
+  return `${categoryHref}/best-for`;
+}
+
+function isBestForHubHref(href: string, categoryHref: string): boolean {
+  return href === categoryBestForHubHref(categoryHref) || href === `${categoryHref}/best-for/`;
+}
+
 export type ReviewFaqItem = { q: string; a: string };
 export type ReviewAlternative = { name: string; href: string; description?: string; logoSrc?: string };
 
@@ -138,12 +207,28 @@ const SECTION_NAV_ITEMS = [
   { label: "FAQs", href: "#faqs" },
 ];
 
-function getSectionNavItems(showRatingBreakdown: boolean, showContractorUse: boolean) {
-  return SECTION_NAV_ITEMS.filter((item) => {
+function getSectionNavItems(
+  showRatingBreakdown: boolean,
+  showContractorUse: boolean,
+  showComparisons: boolean,
+  showNextSteps: boolean,
+  showMethodology: boolean
+) {
+  const items = SECTION_NAV_ITEMS.filter((item) => {
     if (item.href === "#rating-breakdown") return showRatingBreakdown;
     if (item.href === "#contractor-use") return showContractorUse;
     return true;
   });
+  const extras: { label: string; href: string }[] = [];
+  if (showComparisons) extras.push({ label: "Comparisons", href: "#compare-with-others" });
+  if (showNextSteps) extras.push({ label: "Next steps", href: "#next-steps" });
+  const faqsIdx = items.findIndex((item) => item.href === "#faqs");
+  if (faqsIdx >= 0) items.splice(faqsIdx, 0, ...extras);
+  else items.push(...extras);
+  if (showMethodology) {
+    items.push({ label: "Methodology", href: "#methodology" });
+  }
+  return items;
 }
 
 function ReviewJsonLd({
@@ -227,19 +312,13 @@ export function ReviewTemplate({
   compareHubHref,
   compareHubLabel,
   bestRoundupLabel,
-  useCaseLinks,
-  bestForSectionTitle,
-  bestForSectionSub,
   popularIndustryLinks,
-  industrySectionTitle,
-  industrySectionSub,
   scenarioLinks,
   guideHubHref,
   guideHubLabel,
   relatedReading,
   alternativesPageHref,
   alternativesPageLabel,
-  tradeLinks,
 }: ReviewTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const currentYear = new Date().getFullYear();
@@ -247,15 +326,61 @@ export function ReviewTemplate({
   const featureList = keyFeatures ?? features.map((name) => ({ name, description: "" }));
   const showContractorUse = contractorUse && contractorUse.length > 0;
   const showRatingBreakdown = ratingBreakdown && ratingBreakdown.length > 0;
-  const sectionNavItems = getSectionNavItems(!!showRatingBreakdown, !!showContractorUse);
+  const showMethodology = shouldRenderMethodology(methodology, categoryHref);
+  const extraDisclosure =
+    disclosureLine != null &&
+    disclosureLine !== "" &&
+    disclosureLine.trim() !== AFFILIATE_DISCLOSURE
+      ? disclosureLine
+      : null;
 
-  const compareTitle = compareSectionTitle ?? "Compare with other payroll software";
-  const bestForTitle = bestForSectionTitle ?? "Best payroll software for different use cases";
-  const bestForSub = bestForSectionSub ?? "Find payroll software by scenario.";
-  const hubCompareLabel = compareHubLabel ?? "Compare payroll software";
-  const roundupLabel = bestRoundupLabel ?? "Best payroll software (2026) — full roundup";
-  const industryTitle = industrySectionTitle ?? "Popular industries";
-  const industrySub = industrySectionSub ?? "Payroll guides by industry.";
+  const compareTitle = compareSectionTitle ?? `Compare with other ${category} software`;
+  const hubCompareLabel = compareHubLabel ?? `Compare ${category} software`;
+  const roundupLabel = bestRoundupLabel ?? `Best ${category} software — full roundup`;
+
+  const showComparisons = compareLinks != null && compareLinks.length > 0;
+  const hasAlternativesPage = alternativesPageHref != null && alternativesPageLabel != null;
+  const hasRoundup = bestPayrollSoftwareHref != null && bestPayrollSoftwareHref !== "";
+  const hasCompareHub = compareHubHref != null && compareHubHref !== "";
+  const showNextSteps = hasCompareHub || hasAlternativesPage || hasRoundup;
+
+  const categoryScenarioPool = uniqueNavLinks([
+    ...(scenarioLinks ?? []),
+    ...(popularIndustryLinks ?? []).filter((link) => isCategoryLocalHref(link.href, categoryHref)),
+  ]);
+  const bestForHubHref = categoryBestForHubHref(categoryHref);
+  const scenarioPreview = categoryScenarioPool.filter((link) => !isBestForHubHref(link.href, categoryHref));
+  const visibleScenarios = scenarioPreview.slice(0, SCENARIO_PREVIEW_LIMIT);
+  const showUseCaseBrowse = visibleScenarios.length > 0;
+  const existingHubInData = categoryScenarioPool.find((link) => isBestForHubHref(link.href, categoryHref));
+  const useCaseViewAllHref = existingHubInData?.href ?? bestForHubHref;
+  const useCaseViewAllLabel = existingHubInData?.label ?? `View all ${category} scenarios`;
+
+  const surfacedHrefs = new Set(
+    [
+      bestPayrollSoftwareHref,
+      compareHubHref,
+      guideHubHref,
+      alternativesPageHref,
+      categoryHref,
+      bestForHubHref,
+      ...categoryScenarioPool.map((l) => l.href),
+    ].filter((href): href is string => href != null && href !== "")
+  );
+  const leftoverRelated = uniqueNavLinks([
+    ...(relatedReading ?? []),
+    ...(popularIndustryLinks ?? []).filter((link) => !isCategoryLocalHref(link.href, categoryHref)),
+  ]).filter((link) => !surfacedHrefs.has(link.href));
+  const showGuides = guideHubHref != null && guideHubLabel != null;
+  const showRelatedReading = leftoverRelated.length > 0 || showGuides;
+
+  const sectionNavItems = getSectionNavItems(
+    !!showRatingBreakdown,
+    !!showContractorUse,
+    showComparisons,
+    showNextSteps,
+    showMethodology
+  );
 
   // Sticky offsets: align with site navbar and add gap below "On this page" bar
   const STICKY_NAV_OFFSET = 72;
@@ -300,7 +425,7 @@ export function ReviewTemplate({
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#57534E]">
               <span className="flex items-center gap-1.5 align-baseline">
                 <span className="text-[#10B981] font-bold">{rating}</span>
-                <span>Rating</span>
+                <span>BeltStack rating</span>
                 <RatingInfoTooltip />
               </span>
               <span>
@@ -327,8 +452,11 @@ export function ReviewTemplate({
                 </a>
               </div>
             )}
-            {disclosureLine != null && disclosureLine !== "" && (
-              <p className="mt-2 text-xs text-[#57534E]">{disclosureLine}</p>
+            <p className="mt-3 max-w-[720px] text-xs leading-relaxed text-[#57534E]">
+              {AFFILIATE_DISCLOSURE}
+            </p>
+            {extraDisclosure != null && (
+              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-[#57534E]">{extraDisclosure}</p>
             )}
             </div>
           </div>
@@ -517,89 +645,100 @@ export function ReviewTemplate({
                 </ul>
               </section>
 
-              {/* Compare with other [category] software */}
-              {compareLinks != null && compareLinks.length > 0 && (
+              {/* Compare with other [category] software — product-specific, compact */}
+              {showComparisons && (
                 <section id="compare-with-others" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub={`See how ${toolName} stacks up head-to-head.`}>{compareTitle}</SectionTitle>
-                  <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-                    {compareLinks.map((c) => (
+                  <SectionTitle sub={`Head-to-head pages that include ${toolName}.`}>{compareTitle}</SectionTitle>
+                  <ul className="space-y-2 text-sm">
+                    {compareLinks!.map((c) => (
                       <li key={c.href}>
-                        <Link href={c.href} className="font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={c.href} className={editorialLinkClass}>
                           {c.label}
                         </Link>
                       </li>
                     ))}
                   </ul>
+                  {hasCompareHub && (
+                    <p className="mt-4 text-sm leading-relaxed text-neutral-700">
+                      <Link href={compareHubHref!} className={editorialLinkClass}>
+                        {hubCompareLabel}
+                      </Link>
+                    </p>
+                  )}
                 </section>
               )}
 
-              {/* Best [category] software for different use cases — roundup + scenarios only (no full trade list) */}
-              {(bestPayrollSoftwareHref != null || compareHubHref != null || guideHubHref != null || alternativesPageHref != null || (scenarioLinks != null && scenarioLinks.length > 0) || (relatedReading != null && relatedReading.length > 0)) && (
-                <section id="best-for-use-cases" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub={bestForSub}>{bestForTitle}</SectionTitle>
-                  <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
-                    {compareHubHref != null && (
+              {showNextSteps && (
+                <section id="next-steps" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                  <SectionTitle sub={`Product-level next steps for evaluating ${toolName}.`}>
+                    Still deciding?
+                  </SectionTitle>
+                  <ul className="space-y-3 text-[15px] leading-relaxed text-neutral-700">
+                    {hasCompareHub && (
                       <li>
-                        <Link href={compareHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {hubCompareLabel}
+                        <Link href={compareHubHref!} className={editorialLinkClass}>
+                          Compare {toolName}
                         </Link>
                       </li>
                     )}
-                    {bestPayrollSoftwareHref != null && (
+                    {hasAlternativesPage && (
                       <li>
-                        <Link href={bestPayrollSoftwareHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {roundupLabel}
+                        <Link href={alternativesPageHref!} className={editorialLinkClass}>
+                          See alternatives to {toolName}
                         </Link>
                       </li>
                     )}
-                    {guideHubHref != null && guideHubLabel != null && (
+                    {hasRoundup && (
                       <li>
-                        <Link href={guideHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {guideHubLabel}
+                        <Link href={bestPayrollSoftwareHref!} className={editorialLinkClass}>
+                          See how {toolName} ranks overall
                         </Link>
+                        <span className="text-neutral-500"> — {roundupLabel}</span>
                       </li>
-                    )}
-                    {alternativesPageHref != null && alternativesPageLabel != null && (
-                      <li>
-                        <Link href={alternativesPageHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {alternativesPageLabel}
-                        </Link>
-                      </li>
-                    )}
-                    {scenarioLinks != null && scenarioLinks.map((s) => (
-                      <li key={s.href}>
-                        <Link href={s.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {s.label}
-                        </Link>
-                      </li>
-                    ))}
-                    {relatedReading != null && relatedReading.length > 0 && (
-                      <>
-                        <li className="pt-2 mt-2 border-t border-neutral-200/60">
-                          <span className="text-neutral-500 text-xs uppercase tracking-wide">Related reading</span>
-                        </li>
-                        {relatedReading.map((r) => (
-                          <li key={r.href}>
-                            <Link href={r.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                              {r.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </>
                     )}
                   </ul>
                 </section>
               )}
 
-              {/* Popular industries / by use case — contextual links */}
-              {popularIndustryLinks != null && popularIndustryLinks.length > 0 && (
-                <section id="popular-industries" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub={industrySub}>{industryTitle}</SectionTitle>
+              {showUseCaseBrowse && (
+                <section id="best-for-use-cases" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                  <SectionTitle
+                    sub={`These pages rank ${category} software by situation. They are not a list of ${toolName} endorsements.`}
+                  >
+                    Browse by use case
+                  </SectionTitle>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
-                    {popularIndustryLinks.map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
-                          {link.label}
+                    {visibleScenarios.map((s) => (
+                      <li key={s.href}>
+                        <Link href={s.href} className={secondaryNavLinkClass}>
+                          {s.label}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="pt-1">
+                      <Link href={useCaseViewAllHref} className={editorialLinkClass}>
+                        {useCaseViewAllLabel}
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              )}
+
+              {showRelatedReading && (
+                <section id="related-reading" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                  <SectionTitle sub="Guides and related software categories.">Related reading</SectionTitle>
+                  <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
+                    {showGuides && (
+                      <li>
+                        <Link href={guideHubHref!} className={editorialLinkClass}>
+                          {guideHubLabel}
+                        </Link>
+                      </li>
+                    )}
+                    {leftoverRelated.map((r) => (
+                      <li key={r.href}>
+                        <Link href={r.href} className={secondaryNavLinkClass}>
+                          {r.label}
                         </Link>
                       </li>
                     ))}
@@ -627,6 +766,35 @@ export function ReviewTemplate({
                 </div>
               </section>
 
+              {showMethodology && methodology && (
+                <section id="methodology" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                  <SectionTitle sub={methodology.sub}>How BeltStack evaluates {toolName}</SectionTitle>
+                  {methodology.introParagraph != null && methodology.introParagraph !== "" && (
+                    <p className="mb-5 break-words text-[15px] leading-relaxed text-neutral-700">
+                      {methodology.introParagraph}
+                    </p>
+                  )}
+                  <ul className="space-y-2 text-[15px] leading-relaxed text-neutral-700">
+                    {methodology.bullets.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-[#10B981] shrink-0 mt-1" aria-hidden>
+                          •
+                        </span>
+                        <span className="min-w-0 break-words">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-5">
+                    <Link
+                      href="/methodology"
+                      className="inline-block rounded text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    >
+                      Read our full review methodology →
+                    </Link>
+                  </p>
+                </section>
+              )}
+
               </div>
             </article>
 
@@ -652,7 +820,7 @@ export function ReviewTemplate({
                   <div className="flex items-baseline gap-1">
                     <div>
                       <p className="text-emerald-600 text-2xl font-semibold leading-none">{rating}</p>
-                      <p className="text-neutral-500 text-xs mt-0.5">Rating</p>
+                      <p className="text-neutral-500 text-xs mt-0.5">BeltStack rating</p>
                     </div>
                     <RatingInfoTooltip align="right" />
                   </div>

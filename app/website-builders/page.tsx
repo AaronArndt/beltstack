@@ -326,7 +326,7 @@ export default function WebsiteBuildersHubPage() {
                 website builders by business type
               </a>{" "}
               below. For deeper how-to (SEO, WordPress tradeoffs), see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 website builder guides
               </a>
               .

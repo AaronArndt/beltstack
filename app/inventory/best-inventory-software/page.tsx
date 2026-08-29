@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
-import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupTopPicksSummary } from "@/components/best-of/RoundupTopPicksSummary";
+import { RoundupSoftwarePicksSection } from "@/components/best-of/RoundupSoftwarePicksSection";
+import { SoftwareMoreOptionCard } from "@/components/software-picks/SoftwareMoreOptionCard";
 import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
 import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
@@ -18,7 +19,7 @@ import {
   MORE_INVENTORY_OPTIONS,
 } from "@/lib/data/inventoryBestSoftware";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
-import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -105,15 +106,7 @@ export default function BestInventorySoftwarePage() {
           </div>
         </section>
 
-        <RoundupQuickPicksSection
-          categoryLabel="inventory management software"
-          picks={TOP_PICKS.map((pick) => ({
-            slug: pick.slug,
-            name: pick.name,
-            badge: pick.badge,
-            description: pick.description,
-          }))}
-        />
+        <RoundupTopPicksSummary picks={TOP_PICKS} routes={inventoryPickRoutes} />
 
         {/* ——— 2) Best inventory software picks ——— */}
         <section
@@ -124,14 +117,7 @@ export default function BestInventorySoftwarePage() {
             <SectionTitle sub="Why we picked each platform and who it fits.">
               Best Inventory Management Software Picks
             </SectionTitle>
-            <div className="mt-6 space-y-10">
-              {TOP_PICKS.map((pick) => (
-                <SoftwarePickCard
-                  key={pick.slug}
-                  {...toSoftwarePickCardProps(pick, inventoryPickRoutes, { id: `pick-${pick.slug}` })}
-                />
-              ))}
-            </div>
+            <RoundupSoftwarePicksSection picks={TOP_PICKS} routes={inventoryPickRoutes} />
           </div>
         </section>
 
@@ -197,31 +183,13 @@ export default function BestInventorySoftwarePage() {
             </SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {MORE_INVENTORY_OPTIONS.map((opt) => (
-                <article
+                <SoftwareMoreOptionCard
                   key={opt.slug}
-                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">
-                      <Link
-                        href={opt.reviewHref}
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                      >
-                        {opt.name}
-                      </Link>
-                    </h3>
-                  </div>
-                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{opt.description}</p>
-                  <div className="mt-4 border-t border-stone-200 pt-4">
-                    <Link
-                      href={opt.reviewHref}
-                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      Read review →
-                    </Link>
-                  </div>
-                </article>
+                  logoSrc={opt.logoSrc}
+                  name={opt.name}
+                  description={opt.description}
+                  reviewHref={opt.reviewHref}
+                />
               ))}
             </div>
           </div>

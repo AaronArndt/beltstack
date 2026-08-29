@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
-import { RoundupQuickPicksSection } from "@/components/best-of/RoundupQuickPicksSection";
+import { RoundupTopPicksSummary } from "@/components/best-of/RoundupTopPicksSummary";
+import { RoundupSoftwarePicksSection } from "@/components/best-of/RoundupSoftwarePicksSection";
 import { RoundupHubLinksBlurb } from "@/components/best-of/RoundupHubLinksBlurb";
 import { RoundupHowWeChoseSection } from "@/components/best-of/RoundupHowWeChoseSection";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
@@ -18,7 +18,7 @@ import {
 } from "@/lib/data/fieldServiceBestSoftware";
 import { FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS } from "@/lib/data/fieldServiceHubData";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
-import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -105,15 +105,7 @@ export default function BestFieldServiceSoftwarePage() {
           </div>
         </section>
 
-        <RoundupQuickPicksSection
-          categoryLabel="field service software"
-          picks={TOP_PICKS.map((pick) => ({
-            slug: pick.slug,
-            name: pick.name,
-            badge: pick.badge,
-            description: pick.description,
-          }))}
-        />
+        <RoundupTopPicksSummary picks={TOP_PICKS} routes={fieldServicePickRoutes} />
 
         {/* ——— 2) Best field service software picks ——— */}
         <section
@@ -124,14 +116,7 @@ export default function BestFieldServiceSoftwarePage() {
             <SectionTitle sub="Why we picked each platform and who it fits.">
               Best Field Service Management Software Picks
             </SectionTitle>
-            <div className="mt-6 space-y-10">
-              {TOP_PICKS.map((pick) => (
-                <SoftwarePickCard
-                  key={pick.slug}
-                  {...toSoftwarePickCardProps(pick, fieldServicePickRoutes, { id: `pick-${pick.slug}` })}
-                />
-              ))}
-            </div>
+            <RoundupSoftwarePicksSection picks={TOP_PICKS} routes={fieldServicePickRoutes} />
           </div>
         </section>
 

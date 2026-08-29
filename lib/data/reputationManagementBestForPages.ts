@@ -1206,16 +1206,7 @@ function makePage(slug: string, title: string): BestForTemplateProps {
     comparisonTableRows: scenarioTable(slug),
     editorialGuidance: scenario.editorialGuidance,
     whyThesePicks: scenario.whyThesePicks,
-    relatedReviews: [
-      { name: "Podium", href: getReputationManagementReviewUrl("podium") },
-      { name: "Birdeye", href: getReputationManagementReviewUrl("birdeye") },
-      { name: "NiceJob", href: getReputationManagementReviewUrl("nicejob") },
-      { name: "Reputation.com", href: getReputationManagementReviewUrl("reputation-com") },
-      { name: "Broadly", href: getReputationManagementReviewUrl("broadly") },
-      { name: "Grade.us", href: getReputationManagementReviewUrl("grade-us") },
-      { name: "Trustpilot (Business)", href: getReputationManagementReviewUrl("trustpilot-business") },
-      { name: "Yelp for Business", href: getReputationManagementReviewUrl("yelp-for-business") },
-    ],
+    relatedReviews: scenarioFeatured(slug).map((p) => ({ name: p.name, href: p.reviewHref })),
     relatedComparisons: [
       { label: "Podium vs Birdeye", href: getReputationManagementCompareUrl("podium-vs-birdeye") },
       { label: "Birdeye vs NiceJob", href: getReputationManagementCompareUrl("birdeye-vs-nicejob") },

@@ -5,19 +5,15 @@ import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { SectionNav } from "@/components/SectionNav";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { SoftwareRecommendationCard } from "@/components/software-picks/SoftwareRecommendationCard";
+import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
 import {
-  getSoftwarePick,
-  getSoftwarePickCategoryRoutes,
-  toSoftwarePickCardProps,
-} from "@/lib/data/softwarePickCards";
-import {
-  getSoftwareCategoryHubHref,
   getSoftwareCategoryHubLabel,
   getSoftwareCategoryShortLabel,
 } from "@/lib/data/tradeHubs";
+import { getTradeHubCategoryPreview } from "@/lib/data/tradeHubs/resolveTradeHubCategoryPreview";
+import { TradeHubStackSummary } from "@/components/trade-hub/TradeHubStackSummary";
 import type { TradeHubCategoryStackItem, TradeHubDefinition } from "@/lib/types/tradeHub";
-import type { SoftwarePickCategory } from "@/lib/data/softwarePickCards";
 import {
   sectionRuleAccent,
   trustIndicatorAffiliateButtonClass,
@@ -42,25 +38,55 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
   );
 }
 
+/** Same display rule as roundup SoftwareRecommendationCard pricing — not the best-for helper. */
+function formatTradeHubRecommendationPricingLabel(startingPrice: string): string {
+  const trimmed = startingPrice.trim();
+  if (/^custom pricing$/i.test(trimmed)) {
+    return trimmed;
+  }
+  const withoutFrom = trimmed.replace(/^from\s+/i, "").trim();
+  return `From ${withoutFrom}`;
+}
+
+function tradeHubRecommendationBody(editorialParagraph: string, description: string): string {
+  const editorial = editorialParagraph.trim();
+  return editorial || description;
+}
+
 /**
  * One category in the core stack: no outer card — spacing + optional top divider;
- * SoftwarePickCard remains the primary product container.
+ * SoftwareRecommendationCard is the product container (medium density).
  */
-function CategoryStackGroup({ item, index }: { item: TradeHubCategoryStackItem; index: number }) {
-  const cat = item.softwareCategory as SoftwarePickCategory;
-  const routes = getSoftwarePickCategoryRoutes(cat);
-  const hubHref = item.categoryHubHrefOverride ?? getSoftwareCategoryHubHref(cat);
-  const shortLabel = getSoftwareCategoryShortLabel(cat);
-  const defaultHubCta = `Browse ${shortLabel} hub →`;
-  const hubLabel = item.categoryHubLinkLabel ?? defaultHubCta;
-  const hubAria = item.categoryHubLinkLabel ?? `${getSoftwareCategoryHubLabel(cat)} — opens category hub`;
+function bestForCategoryCtaLabel(shortLabel: string, tradeLabel: string): string {
+  const categoryPhrase =
+    shortLabel === "CRM" || shortLabel === "POS" || shortLabel === "HR"
+      ? shortLabel
+      : shortLabel.toLowerCase();
+  return `See the best ${categoryPhrase} software for ${tradeLabel} →`;
+}
 
-  const picks = item.productSlugs
-    .map((slug) => {
-      const pick = getSoftwarePick(cat, slug);
-      return pick != null ? { slug, pick } : null;
-    })
-    .filter((x): x is { slug: string; pick: NonNullable<ReturnType<typeof getSoftwarePick>> } => x != null);
+function CategoryStackGroup({
+  item,
+  index,
+  tradeSlug,
+  tradeLabel,
+}: {
+  item: TradeHubCategoryStackItem;
+  index: number;
+  tradeSlug: string;
+  tradeLabel: string;
+}) {
+  const preview = getTradeHubCategoryPreview(item, tradeSlug);
+  const routes = getSoftwarePickCategoryRoutes(preview.softwareCategory);
+  const shortLabel = getSoftwareCategoryShortLabel(preview.softwareCategory);
+  const defaultHubCta = `Browse ${shortLabel} hub →`;
+  const hubLabel = preview.mapped
+    ? bestForCategoryCtaLabel(shortLabel, tradeLabel)
+    : (item.categoryHubLinkLabel ?? defaultHubCta);
+  const hubAria = preview.mapped
+    ? `${bestForCategoryCtaLabel(shortLabel, tradeLabel).replace(/ →$/, "")} — opens best-for recommendations`
+    : (item.categoryHubLinkLabel ?? `${getSoftwareCategoryHubLabel(preview.softwareCategory)} — opens category hub`);
+  const picks = preview.picks;
 
   return (
     <div
@@ -72,7 +98,7 @@ function CategoryStackGroup({ item, index }: { item: TradeHubCategoryStackItem; 
           {item.heading}
         </h3>
         <Link
-          href={hubHref}
+          href={preview.href}
           className="shrink-0 text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded sm:pt-1"
           aria-label={hubAria}
         >
@@ -80,11 +106,19 @@ function CategoryStackGroup({ item, index }: { item: TradeHubCategoryStackItem; 
         </Link>
       </div>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-[15px] sm:leading-relaxed">{item.body}</p>
-      <div className="mt-8 space-y-10 sm:mt-10">
+      <div className="mt-6 space-y-4">
         {picks.map(({ slug, pick }) => (
-          <SoftwarePickCard
+          <SoftwareRecommendationCard
             key={slug}
-            {...toSoftwarePickCardProps(pick, routes, { id: `trade-pick-${item.id}-${slug}` })}
+            id={`trade-pick-${item.id}-${slug}`}
+            logoSrc={pick.logoSrc}
+            name={pick.name}
+            badge={pick.badge}
+            rating={pick.rating}
+            pricingLabel={formatTradeHubRecommendationPricingLabel(pick.startingPrice)}
+            body={tradeHubRecommendationBody(pick.editorialParagraph, pick.description)}
+            reviewHref={routes.getReviewUrl(pick.slug)}
+            visitUrl={pick.visitUrl}
           />
         ))}
       </div>
@@ -173,9 +207,22 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             {data.categoryStackIntro != null && data.categoryStackIntro.length > 0 && (
               <p className="mt-1 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">{data.categoryStackIntro}</p>
             )}
+            <TradeHubStackSummary
+              heading={`Recommended software stack for ${data.breadcrumbLabel}`}
+              rows={data.categoryStack.map((item) => ({
+                item,
+                preview: getTradeHubCategoryPreview(item, data.slug),
+              }))}
+            />
             <div className="mt-10">
               {data.categoryStack.map((item, index) => (
-                <CategoryStackGroup key={item.id} item={item} index={index} />
+                <CategoryStackGroup
+                  key={item.id}
+                  item={item}
+                  index={index}
+                  tradeSlug={data.slug}
+                  tradeLabel={data.breadcrumbLabel}
+                />
               ))}
             </div>
           </div>

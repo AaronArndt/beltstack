@@ -169,23 +169,8 @@ function buildRelatedComparisons(featured: SchedulingProductSlug[]): BestForComp
   return out;
 }
 
-const REVIEW_FILL_ORDER: SchedulingProductSlug[] = [
-  "calendly",
-  "acuity-scheduling",
-  "setmore",
-  "simplybookme",
-  "square-appointments",
-  "youcanbookme",
-  "appointy",
-];
-
 function buildRelatedReviews(featured: SchedulingProductSlug[]): BestForReviewLink[] {
-  const ordered: SchedulingProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: SCHED_PRODUCT_CORE[s].name,
     href: getSchedulingReviewUrl(s),
   }));

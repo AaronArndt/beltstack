@@ -93,11 +93,6 @@ const FAQ_ITEMS: FaqItem[] = [
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
 function TimeTrackingIntroExtended() {
   return (
     <p>
@@ -402,41 +397,6 @@ function TimeTrackingPopularComparisonsSection() {
   );
 }
 
-function TimeTrackingFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="time-business-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Team type
-        </label>
-        <select id="time-business-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="freelancer">Freelancer</option>
-          <option value="agency">Agency</option>
-          <option value="consulting">Consulting</option>
-          <option value="small-business">Small business</option>
-          <option value="remote-team">Remote team</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="time-use-case" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary use case
-        </label>
-        <select id="time-use-case" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="billing">Billable client work</option>
-          <option value="payroll">Payroll and timesheets</option>
-          <option value="productivity">Productivity and focus</option>
-          <option value="utilization">Project utilization and planning</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 export default function TimeTrackingPage() {
   return (
     <HubPageTemplate
@@ -469,7 +429,7 @@ export default function TimeTrackingPage() {
                 time tracking by team type
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 time tracking guides
               </a>
               .
@@ -518,11 +478,6 @@ export default function TimeTrackingPage() {
           "We compare pricing tiers, user limits, and add-ons so you can budget accurately.",
           "We focus on freelancers, agencies, consultants, and small businesses—not enterprise-only needs.",
         ],
-      }}
-      finderSection={{
-        title: "Find the right time tracking fit",
-        sub: "Narrow down by team type and use case.",
-        content: <TimeTrackingFinderForm />,
       }}
       educationSection={<TimeTrackingEducationSection />}
     />

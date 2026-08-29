@@ -86,12 +86,17 @@ const PM_BEST_FOR_PROPS_BY_SLUG: Record<string, BestForTemplateProps> = {
   "home-inspectors": HOME_INSPECTORS_PROJECT_MANAGEMENT_BEST_FOR_PAGE_PROPS,
 };
 
-const PM_BEST_FOR_HUB_SLUG_ORDER = [
+/** Pages sourced from dedicated PM best-for files (not `projectManagementBestForTrades.ts`). */
+const PM_BEST_FOR_GENERAL_SLUGS = [
   "freelancers",
   "small-business",
   "startups",
   "agencies",
   "remote-teams",
+] as const;
+
+const PM_BEST_FOR_HUB_SLUG_ORDER = [
+  ...PM_BEST_FOR_GENERAL_SLUGS,
   "hvac",
   "plumbing",
   "electricians",
@@ -122,18 +127,33 @@ const PM_BEST_FOR_HUB_SLUG_ORDER = [
   "home-inspectors",
 ] as const;
 
+function pmHubCard(slug: string): ProjectManagementBestForHubCard {
+  const props = PM_BEST_FOR_PROPS_BY_SLUG[slug];
+  if (!props) throw new Error(`Missing project management best-for hub props: ${slug}`);
+  return {
+    label: props.title,
+    href: getProjectManagementBestForUrl(slug),
+    description: props.subtitle,
+  };
+}
+
+export function getProjectManagementBestForHubGeneralLinks(): ProjectManagementBestForHubCard[] {
+  return PM_BEST_FOR_GENERAL_SLUGS.map(pmHubCard);
+}
+
+export function getProjectManagementBestForHubTradeLinks(): ProjectManagementBestForHubCard[] {
+  const general = new Set<string>(PM_BEST_FOR_GENERAL_SLUGS);
+  return PM_BEST_FOR_HUB_SLUG_ORDER.filter((slug) => !general.has(slug)).map(pmHubCard);
+}
+
 export function getProjectManagementBestForHubScenarioLinks(): ProjectManagementBestForHubCard[] {
-  return PM_BEST_FOR_HUB_SLUG_ORDER.map((slug) => {
-    const props = PM_BEST_FOR_PROPS_BY_SLUG[slug];
-    if (!props) throw new Error(`Missing project management best-for hub props: ${slug}`);
-    return {
-      label: props.title,
-      href: getProjectManagementBestForUrl(slug),
-      description: props.subtitle,
-    };
-  });
+  return PM_BEST_FOR_HUB_SLUG_ORDER.map(pmHubCard);
 }
 
 export function getProjectManagementBestForHubLinks(): ProjectManagementBestForHubCard[] {
   return [PROJECT_MANAGEMENT_BEST_FOR_ROUNDUP_HUB_LINK, ...getProjectManagementBestForHubScenarioLinks()];
+}
+
+export function getProjectManagementBestForPageProps(slug: string): BestForTemplateProps | undefined {
+  return PM_BEST_FOR_PROPS_BY_SLUG[slug];
 }

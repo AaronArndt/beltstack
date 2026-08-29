@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { BestOfUseCaseEditorialSection } from "@/components/best-of/BestOfUseCaseEditorialSection";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { RoundupTopPicksSummary } from "@/components/best-of/RoundupTopPicksSummary";
+import { RoundupSoftwarePicksSection } from "@/components/best-of/RoundupSoftwarePicksSection";
+import { SoftwareMoreOptionCard } from "@/components/software-picks/SoftwareMoreOptionCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import {
   TOP_PICKS,
@@ -16,7 +18,7 @@ import {
 } from "@/lib/data/seoToolsBestSeoTools";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSeoToolsAlternativeUrl, getSeoToolsReviewUrl } from "@/lib/routes";
-import { getSoftwarePickCategoryRoutes, toSoftwarePickCardProps } from "@/lib/data/softwarePickCards";
+import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
 
@@ -160,14 +162,12 @@ export default function BestSeoToolsPage() {
           </div>
         </section>
 
+        <RoundupTopPicksSummary picks={TOP_PICKS} routes={seoPickRoutes} />
+
         <section id="best-seo-tool-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Why we picked each platform and who it fits.">Best SEO Tool Picks</SectionTitle>
-            <div className="mt-6 space-y-10">
-              {TOP_PICKS.map((pick) => (
-                <SoftwarePickCard key={pick.slug} {...toSoftwarePickCardProps(pick, seoPickRoutes, { id: `pick-${pick.slug}` })} />
-              ))}
-            </div>
+            <RoundupSoftwarePicksSection picks={TOP_PICKS} routes={seoPickRoutes} />
           </div>
         </section>
 
@@ -218,31 +218,13 @@ export default function BestSeoToolsPage() {
             <SectionTitle sub="Additional platforms worth reviewing.">More SEO tool options</SectionTitle>
             <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {MORE_SEO_TOOLS_OPTIONS.map((opt) => (
-                <article
+                <SoftwareMoreOptionCard
                   key={opt.slug}
-                  className="flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <img src={opt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">
-                      <Link
-                        href={opt.reviewHref}
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                      >
-                        {opt.name}
-                      </Link>
-                    </h3>
-                  </div>
-                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{opt.description}</p>
-                  <div className="mt-4 border-t border-stone-200 pt-4">
-                    <Link
-                      href={opt.reviewHref}
-                      className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-                    >
-                      Read review →
-                    </Link>
-                  </div>
-                </article>
+                  logoSrc={opt.logoSrc}
+                  name={opt.name}
+                  description={opt.description}
+                  reviewHref={opt.reviewHref}
+                />
               ))}
             </div>
           </div>

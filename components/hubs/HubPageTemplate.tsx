@@ -4,10 +4,9 @@
  * Shared layout template for software category hub pages (e.g. /payroll, /accounting).
  * Use this for all category hubs so section order, spacing, typography, and UI stay consistent.
  *
- * Section order: Hero → Best roundup block → Section nav → How to choose (optional) →
- * Top picks → Comparison table → By scenario (optional custom content) → By trade
- * → Guides (optional) → Finder (optional) → Popular comparisons (optional) →
- * Education (optional) → FAQ → Methodology
+ * Section order: Hero → Best roundup block → Section nav → Explore →
+ * How to choose (optional) → Top picks → Comparison table → By scenario → By trade
+ * → Guides (optional) → Popular comparisons (optional) → Education (optional) → FAQ → Methodology
  *
  * Future categories (CRM, scheduling, invoicing, field-service, time-tracking) should
  * pass the same prop shape with category-specific data.
@@ -19,11 +18,10 @@ import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { SectionNav } from "@/components/SectionNav";
-import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
+import { SoftwareRecommendationCard } from "@/components/software-picks/SoftwareRecommendationCard";
 import {
   getSoftwarePick,
   getSoftwarePickCategoryRoutes,
-  toSoftwarePickCardProps,
   type SoftwarePickCategory,
 } from "@/lib/data/softwarePickCards";
 import {
@@ -42,18 +40,57 @@ const btnPrimary =
 const btnPill =
   "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
-const JUMP_LINKS_BASE = [
-  { label: "Top picks", href: "#top-picks" },
-  { label: "Compare", href: "#compare" },
-  { label: "Find your fit", href: "#find-fit" },
-  { label: "By scenario", href: "#by-scenario" },
-  { label: "By trade", href: "#by-trade" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "How we review", href: "#how-we-review" },
-];
+const JUMP_LINKS_EXPLORE = { label: "Explore", href: "#explore" };
 const JUMP_LINKS_HOW_TO_CHOOSE = { label: "How to choose", href: "#how-to-choose" };
-const JUMP_LINKS_GUIDES = { label: "Guides", href: "#payroll-guides" };
+const JUMP_LINKS_TOP_PICKS = { label: "Top picks", href: "#top-picks" };
+const JUMP_LINKS_COMPARE = { label: "Compare", href: "#compare" };
+const JUMP_LINKS_BY_SCENARIO = { label: "By scenario", href: "#by-scenario" };
+const JUMP_LINKS_BY_TRADE = { label: "By trade", href: "#by-trade" };
+const JUMP_LINKS_GUIDES = { label: "Guides", href: "#guides" };
 const JUMP_LINKS_COMPARISONS = { label: "Comparisons", href: "#popular-comparisons" };
+const JUMP_LINKS_FAQS = { label: "FAQs", href: "#faqs" };
+const JUMP_LINKS_HOW_WE_REVIEW = { label: "How we review", href: "#how-we-review" };
+
+const HUB_FEATURED_DISPLAY_CAP = 4;
+
+function hubFeaturedPickAnchorSlug(anchor: string): string | null {
+  if (!anchor.startsWith("#pick-")) return null;
+  const slug = anchor.slice("#pick-".length);
+  return slug.length > 0 ? slug : null;
+}
+
+/**
+ * Hub featured display = first 4 `featuredPicks`, plus any later pick still targeted by a
+ * Key Takeaway `#pick-{slug}` link. Order is the existing featuredPicks order (not TOP_PICKS).
+ */
+function selectHubFeaturedPicksForDisplay(
+  featuredPicks: readonly FeaturedPickRef[],
+  keyTakeaways: readonly { anchor: string }[]
+): FeaturedPickRef[] {
+  const takeawaySlugs = new Set(
+    keyTakeaways
+      .map((item) => hubFeaturedPickAnchorSlug(item.anchor))
+      .filter((slug): slug is string => slug != null)
+  );
+  return featuredPicks.filter(
+    (ref, index) => index < HUB_FEATURED_DISPLAY_CAP || takeawaySlugs.has(ref.slug)
+  );
+}
+
+/** Same SoftwareRecommendationCard pricing rule as roundups and trade hubs. */
+function formatHubRecommendationPricingLabel(startingPrice: string): string {
+  const trimmed = startingPrice.trim();
+  if (/^custom pricing$/i.test(trimmed)) {
+    return trimmed;
+  }
+  const withoutFrom = trimmed.replace(/^from\s+/i, "").trim();
+  return `From ${withoutFrom}`;
+}
+
+function hubRecommendationBody(editorialParagraph: string, description: string): string {
+  const editorial = editorialParagraph.trim();
+  return editorial || description;
+}
 
 /** Hub “top picks” = canonical product slugs; optional `badge` overrides the default crown label */
 export type FeaturedPickRef = {
@@ -115,11 +152,6 @@ export type HubPageTemplateProps = {
     introParagraph?: string;
     bullets: string[];
   };
-  finderSection?: {
-    title: string;
-    sub: string;
-    content: React.ReactNode;
-  };
   educationSection?: React.ReactNode;
   /** Optional: additional intro paragraphs and links (pillar page) */
   introExtended?: React.ReactNode;
@@ -129,7 +161,7 @@ export type HubPageTemplateProps = {
   comparisonTableIntro?: string;
   /** Optional: guides / resources section (rendered after by-trade; educational / informational) */
   guidesSection?: React.ReactNode;
-  /** Optional: popular comparisons section (after guides / finder) */
+  /** Optional: popular comparisons section (after guides) */
   popularComparisonsSection?: React.ReactNode;
   /** Optional: primary CTA in hero (e.g. "View Best Payroll Software") */
   heroCta?: { label: string; href: string };
@@ -157,6 +189,57 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
       {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
     </div>
   );
+}
+
+function HubExploreNav({
+  categoryLabel,
+  items,
+}: {
+  categoryLabel: string;
+  items: { label: string; href: string }[];
+}) {
+  if (items.length === 0) return null;
+  return (
+    <section id="explore" className="scroll-mt-section border-b border-stone-200/80 bg-white py-6 sm:py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">Explore {categoryLabel}</h2>
+        <div className={sectionRuleAccent} aria-hidden />
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map((item) => (
+            <li key={item.href} className="min-w-0">
+              <Link
+                href={item.href}
+                className="flex h-full items-center rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-[#1A2D48] hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              >
+                <span className="min-w-0">{item.label}</span>
+                <span className="ml-1 shrink-0 text-[#10B981]" aria-hidden>
+                  →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function buildHubExploreItems({
+  softwarePickCategory,
+  roundupHref,
+}: {
+  softwarePickCategory: SoftwarePickCategory;
+  roundupHref?: string;
+}): { label: string; href: string }[] {
+  const base = `/${softwarePickCategory}`;
+  const items: { label: string; href: string }[] = [];
+  if (roundupHref) {
+    items.push({ label: "Best software", href: roundupHref });
+  }
+  items.push({ label: "Best for your business", href: `${base}/best-for` });
+  items.push({ label: "Compare", href: `${base}/compare` });
+  items.push({ label: "Guides", href: `${base}/guides` });
+  return items;
 }
 
 function BestRoundupCard({ block }: { block: { title: string; description: string; linkText: string; href: string } }) {
@@ -194,7 +277,6 @@ export function HubPageTemplate({
   faqTitle,
   faqSub,
   methodology,
-  finderSection,
   educationSection,
   introExtended,
   howToChooseSection,
@@ -212,15 +294,24 @@ export function HubPageTemplate({
   scenarioCustomContent,
 }: HubPageTemplateProps) {
   const pickRoutes = getSoftwarePickCategoryRoutes(softwarePickCategory);
+  const visibleFeaturedPicks = selectHubFeaturedPicksForDisplay(featuredPicks, keyTakeaways);
+  const exploreItems = buildHubExploreItems({
+    softwarePickCategory,
+    roundupHref: bestRoundupBlock?.href ?? featuredPicksRankingsLink?.href,
+  });
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [affiliateOpen, setAffiliateOpen] = useState(false);
   const jumpLinks = [
+    ...(exploreItems.length > 0 ? [JUMP_LINKS_EXPLORE] : []),
     ...(howToChooseSection ? [JUMP_LINKS_HOW_TO_CHOOSE] : []),
-    ...JUMP_LINKS_BASE.slice(0, 2), // Top picks, Compare
-    ...JUMP_LINKS_BASE.slice(2, 5), // Find your fit, By scenario, By trade
+    JUMP_LINKS_TOP_PICKS,
+    JUMP_LINKS_COMPARE,
+    JUMP_LINKS_BY_SCENARIO,
+    JUMP_LINKS_BY_TRADE,
     ...(guidesSection ? [JUMP_LINKS_GUIDES] : []),
     ...(popularComparisonsSection ? [JUMP_LINKS_COMPARISONS] : []),
-    ...JUMP_LINKS_BASE.slice(5),
+    JUMP_LINKS_FAQS,
+    JUMP_LINKS_HOW_WE_REVIEW,
   ];
 
   return (
@@ -323,6 +414,10 @@ export function HubPageTemplate({
         {/* ——— Section nav: below hero, in flow; sticks under navbar when scrolling ——— */}
         <SectionNav items={jumpLinks} sticky offsetTop={72} />
 
+        {exploreItems.length > 0 && (
+          <HubExploreNav categoryLabel={breadcrumbLabel} items={exploreItems} />
+        )}
+
         {/* ——— How to choose (optional) ——— */}
         {howToChooseSection != null && (
           <section id="how-to-choose" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
@@ -350,25 +445,28 @@ export function HubPageTemplate({
                 </Link>
               )}
             </div>
-            <div className="mt-6 space-y-10">
-              {featuredPicks.map((ref) => {
+            <div className="mt-6 space-y-4">
+              {visibleFeaturedPicks.map((ref) => {
                 const canonical = getSoftwarePick(softwarePickCategory, ref.slug);
                 if (canonical == null) return null;
                 return (
-                  <SoftwarePickCard
+                  <SoftwareRecommendationCard
                     key={ref.slug}
-                    {...toSoftwarePickCardProps(canonical, pickRoutes, {
-                      id: `pick-${ref.slug}`,
-                      badgeText: ref.badge,
-                    })}
+                    id={`pick-${ref.slug}`}
+                    logoSrc={canonical.logoSrc}
+                    name={canonical.name}
+                    badge={ref.badge ?? canonical.badge}
+                    rating={canonical.rating}
+                    pricingLabel={formatHubRecommendationPricingLabel(canonical.startingPrice)}
+                    body={hubRecommendationBody(canonical.editorialParagraph, canonical.description)}
+                    reviewHref={pickRoutes.getReviewUrl(ref.slug)}
+                    visitUrl={canonical.visitUrl}
                   />
                 );
               })}
             </div>
-            {featuredPicksAfterContent != null ? (
+            {featuredPicksAfterContent != null && (
               <div className="mt-8">{featuredPicksAfterContent}</div>
-            ) : (
-              bestRoundupBlock != null && <div className="mt-8"><BestRoundupCard block={bestRoundupBlock} /></div>
             )}
           </div>
         </section>
@@ -503,19 +601,9 @@ export function HubPageTemplate({
 
         {/* ——— Guides section (optional) ——— */}
         {guidesSection != null && (
-          <section id="payroll-guides" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
+          <section id="guides" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               {guidesSection}
-            </div>
-          </section>
-        )}
-
-        {/* ——— E) Finder / filters (optional) ——— */}
-        {finderSection != null && (
-          <section id="find-fit" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-10">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <SectionTitle sub={finderSection.sub}>{finderSection.title}</SectionTitle>
-              {finderSection.content}
             </div>
           </section>
         )}

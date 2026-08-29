@@ -169,23 +169,8 @@ function buildRelatedComparisons(featured: InventoryProductSlug[]): BestForCompa
   return out;
 }
 
-const REVIEW_FILL_ORDER: InventoryProductSlug[] = [
-  "zoho-inventory",
-  "inflow-inventory",
-  "sortly",
-  "cin7",
-  "katana",
-  "fishbowl",
-  "unleashed",
-];
-
 function buildRelatedReviews(featured: InventoryProductSlug[]): BestForReviewLink[] {
-  const ordered: InventoryProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: INVENTORY_PRODUCT_CORE[s].name,
     href: getInventoryReviewUrl(s),
   }));

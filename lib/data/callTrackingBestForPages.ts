@@ -4,7 +4,6 @@ import type {
   BestForFaqItem,
   BestForFeaturedProduct,
   BestForGuideLink,
-  BestForReviewLink,
   BestForTableRow,
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
@@ -77,17 +76,6 @@ const comparisonTableRows: BestForTableRow[] = [
     standoutFeature: "Automation + models",
     reviewHref: getCallTrackingReviewUrl("calltrackingmetrics"),
   },
-];
-
-const relatedReviews: BestForReviewLink[] = [
-  { name: "CallRail", href: getCallTrackingReviewUrl("callrail") },
-  { name: "CallTrackingMetrics", href: getCallTrackingReviewUrl("calltrackingmetrics") },
-  { name: "WhatConverts", href: getCallTrackingReviewUrl("whatconverts") },
-  { name: "Ringba", href: getCallTrackingReviewUrl("ringba") },
-  { name: "Invoca", href: getCallTrackingReviewUrl("invoca") },
-  { name: "Twilio", href: getCallTrackingReviewUrl("twilio") },
-  { name: "PhoneWagon", href: getCallTrackingReviewUrl("phonewagon") },
-  { name: "Nimbata", href: getCallTrackingReviewUrl("nimbata") },
 ];
 
 const relatedComparisons: BestForComparisonLink[] = [
@@ -688,7 +676,7 @@ function makePage(
     comparisonTableRows,
     editorialGuidance,
     whyThesePicks,
-    relatedReviews,
+    relatedReviews: featuredProducts.map((p) => ({ name: p.name, href: p.reviewHref })),
     relatedComparisons,
     relatedGuides: [
       ...relatedGuides,
@@ -798,7 +786,7 @@ function makeTradePage(config: TradeConfig): BestForTemplateProps {
     comparisonTableRows: tradeTable(config.slug),
     editorialGuidance,
     whyThesePicks,
-    relatedReviews,
+    relatedReviews: tradeFeatured(config.slug).map((p) => ({ name: p.name, href: p.reviewHref })),
     relatedComparisons,
     relatedGuides: [
       { label: "How to track phone call conversions", href: `${GUIDES}/how-to-track-phone-call-conversions` },

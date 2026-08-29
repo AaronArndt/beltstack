@@ -50,7 +50,7 @@ export type BestForTableRow = {
 export type BestForEditorialBlock = {
   heading: string;
   body: string;
-  /** When the heading does not match `featuredProducts[].name`, set this to attach logo and links in “Why we recommend these tools”. */
+  /** When the heading does not match `featuredProducts[].name`, set this to resolve the canonical product name. */
   matchProductSlug?: string;
 };
 
@@ -143,67 +143,12 @@ function WhyThesePickBlock({
   block: BestForEditorialBlock;
   pick: BestForFeaturedProduct | undefined;
 }) {
-  if (pick == null) {
-    return (
-      <div>
-        <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
-        <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{block.body}</p>
-      </div>
-    );
-  }
-
+  const heading = pick?.name ?? block.heading;
   return (
-    <article className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-        <Link
-          href={pick.reviewHref}
-          className="flex shrink-0 justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] sm:justify-start"
-          aria-label={`${pick.name} — read full review`}
-        >
-          <img
-            src={pick.logoSrc}
-            alt=""
-            className="h-12 w-auto max-w-[140px] object-contain object-left"
-          />
-        </Link>
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-lg font-bold text-[#1A2D48]">
-              <Link
-                href={pick.reviewHref}
-                className="rounded hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
-              >
-                {pick.name}
-              </Link>
-            </h3>
-            <span className="rounded-md border border-[#10B981]/20 bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981]">
-              {pick.badge}
-            </span>
-            <span className="text-sm font-bold text-[#10B981]">{pick.rating}</span>
-            <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
-              {formatProductCardStartingPrice(pick.startingPrice)}
-            </span>
-          </div>
-          <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{block.body}</p>
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            <Link
-              href={pick.reviewHref}
-              className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
-            >
-              Read full review →
-            </Link>
-            <a
-              href={pick.visitUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline"
-            >
-              Visit site
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
+    <div className="min-w-0 py-5 first:pt-0 last:pb-0">
+      <h3 className="text-base font-bold text-[#1A2D48]">{heading}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{block.body}</p>
+    </div>
   );
 }
 
@@ -265,7 +210,7 @@ export function BestForTemplate({
   const breadcrumbLabel = useCase.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const defaultTopPicksSub = `Our top payroll picks for ${breadcrumbLabel.toLowerCase()}.`;
   const defaultEditorialSub = `What to look for when you're choosing payroll as ${breadcrumbLabel.toLowerCase()}.`;
-  const defaultWhySub = `How each pick fits ${breadcrumbLabel.toLowerCase()}: what to validate in a trial, with links to our full reviews and official sites.`;
+  const defaultWhySub = `How each pick fits ${breadcrumbLabel.toLowerCase()}.`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -277,6 +222,7 @@ export function BestForTemplate({
               items={[
                 { label: "Home", href: "/" },
                 { label: categoryLabel, href: categoryHref },
+                { label: "Best for", href: `${categoryHref}/best-for` },
                 { label: breadcrumbLabel },
               ]}
               className="mb-4"
@@ -393,13 +339,13 @@ export function BestForTemplate({
           </div>
         </section>
 
-        {/* ——— 5) Why we recommend these tools (editorial + SEO) ——— */}
+        {/* ——— 5) Why these are our picks (editorial rationale) ——— */}
         <section id="why-these-picks" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={whyThesePicksSub ?? defaultWhySub}>
-              Why we recommend these tools
+              Why these are our picks
             </SectionTitle>
-            <div className="mt-4 space-y-5 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 divide-y divide-stone-200">
               {whyThesePicks.map((block, i) => (
                 <WhyThesePickBlock
                   key={i}

@@ -19,10 +19,6 @@ import {
   POS_USE_CASE_EDITORIAL,
 } from "@/lib/data/posHubData";
 import { getPosReviewUrl } from "@/lib/routes";
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
@@ -41,42 +37,6 @@ function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: s
 }
 
 // ——— Finder: Find the right POS fit ———
-function PosFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="pos-business-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Business type
-        </label>
-        <select id="pos-business-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="retail-store">Retail store</option>
-          <option value="restaurant">Restaurant</option>
-          <option value="ecommerce-store">Ecommerce store</option>
-          <option value="small-business">Small business</option>
-          <option value="multi-location-business">Multi-location business</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="pos-primary-need" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="pos-primary-need" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="retail-pos">Retail POS</option>
-          <option value="restaurant-pos">Restaurant POS</option>
-          <option value="inventory-integration">Inventory integration</option>
-          <option value="ecommerce-integration">Ecommerce integration</option>
-          <option value="multi-location-management">Multi-location management</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
-  );
-}
-
 // ——— How to choose POS software (pre-featured picks) ———
 function PosHowToChooseSection() {
   return (
@@ -381,7 +341,7 @@ export default function PosPage() {
                 POS by business type
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 POS guides
               </a>
               .
@@ -423,11 +383,6 @@ export default function PosPage() {
       faqTitle="POS software FAQs"
       faqSub="Quick answers to common questions."
       methodology={POS_METHODOLOGY}
-      finderSection={{
-        title: "Find the right POS fit",
-        sub: "Narrow down by business type and primary need.",
-        content: <PosFinderForm />,
-      }}
       educationSection={<PosEducationSection />}
       popularComparisonsSection={<PosPopularComparisonsSection />}
     />

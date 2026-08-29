@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import {
   HubPageTemplate,
   type FeaturedPickRef,
@@ -300,62 +299,6 @@ function AccountingPopularComparisonsSection() {
   );
 }
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-
-function AccountingFinderForm() {
-  const [businessType, setBusinessType] = useState("");
-  const [teamSize, setTeamSize] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="accounting-business-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Business type
-        </label>
-        <select
-          id="accounting-business-type"
-          value={businessType}
-          onChange={(e) => setBusinessType(e.target.value)}
-          className={`mt-1 ${selectClass}`}
-        >
-          <option value="">Select</option>
-          <option value="freelancer">Freelancer</option>
-          <option value="contractor">Contractor</option>
-          <option value="small-business">Small business</option>
-          <option value="ecommerce">Ecommerce</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="accounting-team-size" className="block text-sm font-semibold text-[#1A2D48]">
-          Team size
-        </label>
-        <select
-          id="accounting-team-size"
-          value={teamSize}
-          onChange={(e) => setTeamSize(e.target.value)}
-          className={`mt-1 ${selectClass}`}
-        >
-          <option value="">Select</option>
-          <option value="solo">Solo</option>
-          <option value="2-5">2–5</option>
-          <option value="6-20">6–20</option>
-          <option value="21+">21+</option>
-        </select>
-      </div>
-      <button type="submit" className={btnPrimary}>
-        See results
-      </button>
-    </form>
-  );
-}
-
 function AccountingEducationSection() {
   return (
     <>
@@ -453,7 +396,7 @@ export default function AccountingPage() {
                 accounting by business type
               </a>
               ; for concepts and pricing, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 accounting guides
               </a>
               .
@@ -493,11 +436,6 @@ export default function AccountingPage() {
         sub: "Transparent process, small-business–focused criteria.",
         introParagraph: "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information.",
         bullets: METHODOLOGY_BULLETS,
-      }}
-      finderSection={{
-        title: "Find the right accounting fit",
-        sub: "Narrow down by business type and team size.",
-        content: <AccountingFinderForm />,
       }}
       educationSection={<AccountingEducationSection />}
     />

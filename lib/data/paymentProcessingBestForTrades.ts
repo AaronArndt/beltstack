@@ -175,24 +175,8 @@ function buildRelatedComparisons(featured: PpProductSlug[]): BestForComparisonLi
   return out;
 }
 
-const REVIEW_FILL_ORDER: PpProductSlug[] = [
-  "stripe",
-  "square",
-  "paypal-business",
-  "helcim",
-  "stax",
-  "shopify-payments",
-  "authorize-net",
-  "clover",
-];
-
 function buildRelatedReviews(featured: PpProductSlug[]): BestForReviewLink[] {
-  const ordered: PpProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: PP_PRODUCT_CORE[s].name,
     href: getPaymentProcessingReviewUrl(s),
   }));

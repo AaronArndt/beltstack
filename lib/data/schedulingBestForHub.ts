@@ -88,12 +88,17 @@ const SCHEDULING_BEST_FOR_PROPS_BY_SLUG: Record<string, BestForTemplateProps> = 
   "home-inspectors": HOME_INSPECTORS_SCHEDULING_BEST_FOR_PAGE_PROPS,
 };
 
-const SCHEDULING_BEST_FOR_HUB_SLUG_ORDER = [
+/** Pages sourced from `schedulingBestFor.ts` (not trade configs). */
+const SCHEDULING_BEST_FOR_GENERAL_SLUGS = [
   "freelancers",
   "consultants",
   "small-business",
   "service-business",
   "teams",
+] as const;
+
+const SCHEDULING_BEST_FOR_HUB_SLUG_ORDER = [
+  ...SCHEDULING_BEST_FOR_GENERAL_SLUGS,
   "hvac",
   "plumbing",
   "electricians",
@@ -124,18 +129,33 @@ const SCHEDULING_BEST_FOR_HUB_SLUG_ORDER = [
   "home-inspectors",
 ] as const;
 
+function schedulingHubCard(slug: string): SchedulingBestForHubCard {
+  const props = SCHEDULING_BEST_FOR_PROPS_BY_SLUG[slug];
+  if (!props) throw new Error(`Missing scheduling best-for hub props: ${slug}`);
+  return {
+    label: props.title,
+    href: getSchedulingBestForUrl(slug),
+    description: props.subtitle,
+  };
+}
+
+export function getSchedulingBestForHubGeneralLinks(): SchedulingBestForHubCard[] {
+  return SCHEDULING_BEST_FOR_GENERAL_SLUGS.map(schedulingHubCard);
+}
+
+export function getSchedulingBestForHubTradeLinks(): SchedulingBestForHubCard[] {
+  const general = new Set<string>(SCHEDULING_BEST_FOR_GENERAL_SLUGS);
+  return SCHEDULING_BEST_FOR_HUB_SLUG_ORDER.filter((slug) => !general.has(slug)).map(schedulingHubCard);
+}
+
 export function getSchedulingBestForHubScenarioLinks(): SchedulingBestForHubCard[] {
-  return SCHEDULING_BEST_FOR_HUB_SLUG_ORDER.map((slug) => {
-    const props = SCHEDULING_BEST_FOR_PROPS_BY_SLUG[slug];
-    if (!props) throw new Error(`Missing scheduling best-for hub props: ${slug}`);
-    return {
-      label: props.title,
-      href: getSchedulingBestForUrl(slug),
-      description: props.subtitle,
-    };
-  });
+  return SCHEDULING_BEST_FOR_HUB_SLUG_ORDER.map(schedulingHubCard);
 }
 
 export function getSchedulingBestForHubLinks(): SchedulingBestForHubCard[] {
   return [SCHEDULING_BEST_FOR_ROUNDUP_HUB_LINK, ...getSchedulingBestForHubScenarioLinks()];
+}
+
+export function getSchedulingBestForPageProps(slug: string): BestForTemplateProps | undefined {
+  return SCHEDULING_BEST_FOR_PROPS_BY_SLUG[slug];
 }

@@ -126,3 +126,7 @@ export function getFieldServiceBestForHubScenarioLinks(): FieldServiceBestForHub
 export function getFieldServiceBestForHubLinks(): FieldServiceBestForHubCard[] {
   return [FIELD_SERVICE_BEST_FOR_ROUNDUP_HUB_LINK, ...getFieldServiceBestForHubScenarioLinks()];
 }
+
+export function getFieldServiceBestForPageProps(slug: string): BestForTemplateProps | undefined {
+  return FS_BEST_FOR_PROPS_BY_SLUG[slug];
+}

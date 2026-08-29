@@ -154,22 +154,8 @@ function buildRelatedComparisons(featured: AccountingTradeProductSlug[]): BestFo
   return out;
 }
 
-const REVIEW_FILL_ORDER: AccountingTradeProductSlug[] = [
-  "quickbooks-online",
-  "xero",
-  "freshbooks",
-  "zoho-books",
-  "wave",
-  "sage-accounting",
-];
-
 function buildRelatedReviews(featured: AccountingTradeProductSlug[]): BestForReviewLink[] {
-  const ordered: AccountingTradeProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: ACCOUNTING_PRODUCT_CORE[s].name,
     href: getAccountingReviewUrl(s),
   }));
@@ -231,8 +217,6 @@ function buildAccountingTradeProps(p: AccountingTradeConfig): BestForTemplatePro
   const featuredSlugs = p.picks.map((x) => x.slug);
   const names = p.picks.map((pk) => ACCOUNTING_PRODUCT_CORE[pk.slug].name);
   const [n1, n2, n3] = names;
-  const featuredNameSet = new Set(names);
-  const others = REVIEW_FILL_ORDER.map((s) => ACCOUNTING_PRODUCT_CORE[s].name).filter((n) => !featuredNameSet.has(n));
 
   const relatedGuides = [...(p.extraGuides ?? []), ...COMMON_GUIDES].filter(
     (item, i, arr) => arr.findIndex((x) => x.href === item.href) === i
@@ -248,7 +232,7 @@ function buildAccountingTradeProps(p: AccountingTradeConfig): BestForTemplatePro
     freshnessText: "Updated for 2026",
     topPicksSub: `Editorial accounting picks for ${label}. Model tiers, seats, and payroll add-ons on each vendor’s site—our shortlist is a workflow map, not a substitute for your own close process.`,
     editorialSub: `What matters for ${label}: job or project visibility, invoicing that matches how you collect cash, and clean handoffs to tax and payroll.`,
-    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}. ${others.length > 0 ? `${others.join(", ")} appear in related reviews when a different price band or ledger style fits better.` : ""}`,
+    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}.`,
     seeAlsoBlock: SEE_ALSO,
     featuredProducts,
     comparisonTableRows,

@@ -28,10 +28,6 @@ const KEY_TAKEAWAYS = [
   { label: "Best PEO: Justworks", anchor: "#pick-justworks" },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
@@ -138,42 +134,6 @@ function HrGuidesSection() {
         </>
       }
     />
-  );
-}
-
-function HrFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="hr-company-size" className="block text-sm font-semibold text-[#1A2D48]">
-          Company size
-        </label>
-        <select id="hr-company-size" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="freelancers">Freelancers</option>
-          <option value="small-business">Small business</option>
-          <option value="growing">Growing companies</option>
-          <option value="agencies">Agencies</option>
-          <option value="global">Global teams</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="hr-primary-need" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="hr-primary-need" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="hr-management">HR management</option>
-          <option value="payroll-hr">Payroll + HR</option>
-          <option value="hiring-onboarding">Hiring and onboarding</option>
-          <option value="global-employment">Global employment</option>
-          <option value="peo">PEO services</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
   );
 }
 
@@ -350,7 +310,7 @@ export default function HrPage() {
                 HR by business type
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 HR guides
               </a>
               .
@@ -392,11 +352,6 @@ export default function HrPage() {
       faqTitle="HR software FAQs"
       faqSub="Quick answers to common questions."
       methodology={HR_METHODOLOGY}
-      finderSection={{
-        title: "Find the right HR fit",
-        sub: "Narrow down by company size and primary need.",
-        content: <HrFinderForm />,
-      }}
       educationSection={<HrEducationSection />}
       popularComparisonsSection={<HrPopularComparisonsSection />}
     />

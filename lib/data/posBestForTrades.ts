@@ -136,21 +136,8 @@ function buildRelatedComparisons(featured: PosProductSlug[]): BestForComparisonL
   return out;
 }
 
-const REVIEW_FILL_ORDER: PosProductSlug[] = [
-  "square-pos",
-  "lightspeed-pos",
-  "clover-pos",
-  "shopify-pos",
-  "vend-pos",
-];
-
 function buildRelatedReviews(featured: PosProductSlug[]): BestForReviewLink[] {
-  const ordered: PosProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: POS_PRODUCT_CORE[s].name,
     href: getPosReviewUrl(s),
   }));
@@ -212,8 +199,6 @@ function buildPosTradeProps(p: PosTradeConfig): BestForTemplateProps {
   const featuredSlugs = p.picks.map((x) => x.slug);
   const names = p.picks.map((pk) => POS_PRODUCT_CORE[pk.slug].name);
   const [n1, n2, n3] = names;
-  const featuredNameSet = new Set(names);
-  const others = REVIEW_FILL_ORDER.map((s) => POS_PRODUCT_CORE[s].name).filter((n) => !featuredNameSet.has(n));
 
   const relatedGuides = [...(p.extraGuides ?? []), ...COMMON_GUIDES].filter(
     (item, i, arr) => arr.findIndex((x) => x.href === item.href) === i
@@ -229,7 +214,7 @@ function buildPosTradeProps(p: PosTradeConfig): BestForTemplateProps {
     freshnessText: "Updated for 2026",
     topPicksSub: `Editorial POS picks for ${label}. Model hardware, processing, and add-ons on each vendor’s site—our shortlist is a workflow map, not a substitute for your own invoice math.`,
     editorialSub: `What matters for ${label}: honest inventory of parts or SKUs, checkout speed on service calls, and reporting your office can reconcile.`,
-    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}. ${others.length > 0 ? `${others.join(", ")} appear in related reviews when a different price band or retail depth fits better.` : ""}`,
+    whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}.`,
     seeAlsoBlock: SEE_ALSO,
     featuredProducts,
     comparisonTableRows,

@@ -16,8 +16,9 @@ export const INVOICING_BEST_FOR_ROUNDUP_HUB_LINK = {
     "The best invoicing software is the one your team will use every day to send clear invoices, collect online payments, and keep receivables from turning into month-end surprises.",
 } as const;
 
-export function getInvoicingBestForHubLinks(): InvoicingBestForHubCard[] {
-  const core: InvoicingBestForHubCard[] = [
+/** Core / general hub cards — existing `core` array, not trade getter. */
+export function getInvoicingBestForHubGeneralLinks(): InvoicingBestForHubCard[] {
+  return [
     {
       label: FREELANCERS_PAGE_PROPS.title,
       href: getInvoicingBestForUrl("freelancers"),
@@ -44,6 +45,16 @@ export function getInvoicingBestForHubLinks(): InvoicingBestForHubCard[] {
       description: CONSULTANTS_PAGE_PROPS.subtitle,
     },
   ];
+}
 
-  return [INVOICING_BEST_FOR_ROUNDUP_HUB_LINK, ...core, ...getInvoicingTradeBestForHubCards()];
+export function getInvoicingBestForHubTradeLinks(): InvoicingBestForHubCard[] {
+  return getInvoicingTradeBestForHubCards();
+}
+
+export function getInvoicingBestForHubLinks(): InvoicingBestForHubCard[] {
+  return [
+    INVOICING_BEST_FOR_ROUNDUP_HUB_LINK,
+    ...getInvoicingBestForHubGeneralLinks(),
+    ...getInvoicingBestForHubTradeLinks(),
+  ];
 }

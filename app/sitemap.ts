@@ -848,15 +848,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry(`/payroll/compare/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
   );
 
-  // Payroll reviews
+  // Payroll reviews (canonical). Legacy /payroll/providers/{slug} redirects to these URLs
+  // and is not listed separately.
   const reviewSlugs = getPayrollReviewSlugs();
   const reviewEntries: MetadataRoute.Sitemap = reviewSlugs.map((slug) =>
     defaultEntry(`/payroll/review/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
-  );
-
-  // Payroll provider landing pages
-  const providerEntries: MetadataRoute.Sitemap = reviewSlugs.map((slug) =>
-    defaultEntry(`/payroll/providers/${slug}`, { changeFrequency: "monthly", priority: 0.75 })
   );
 
   // Payroll best-for
@@ -1385,7 +1381,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tradeHubEntries,
     ...comparisonEntries,
     ...reviewEntries,
-    ...providerEntries,
     ...bestForEntries,
     ...guideEntries,
     ...alternativeEntries,

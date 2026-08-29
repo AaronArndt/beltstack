@@ -27,10 +27,6 @@ const KEY_TAKEAWAYS = [
   { label: "Best for service businesses: Setmore", anchor: "#pick-setmore" },
 ];
 
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
-const selectClass =
-  "w-full rounded-md border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
 const linkGreen =
   "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
 
@@ -152,39 +148,6 @@ function SchedulingGuidesSection() {
         </>
       }
     />
-  );
-}
-
-function SchedulingFinderForm() {
-  return (
-    <form className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-4 pb-2">
-      <div className="flex-1">
-        <label htmlFor="scheduling-team-type" className="block text-sm font-semibold text-[#1A2D48]">
-          Team type
-        </label>
-        <select id="scheduling-team-type" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="freelancer">Freelancer</option>
-          <option value="small-business">Small business</option>
-          <option value="growing-team">Growing team</option>
-        </select>
-      </div>
-      <div className="flex-1">
-        <label htmlFor="scheduling-primary-need" className="block text-sm font-semibold text-[#1A2D48]">
-          Primary need
-        </label>
-        <select id="scheduling-primary-need" className={`mt-1 ${selectClass}`}>
-          <option value="">Select</option>
-          <option value="appointment-scheduling">Appointment scheduling</option>
-          <option value="customer-booking">Customer booking</option>
-          <option value="team-scheduling">Team scheduling</option>
-          <option value="calendar-automation">Calendar automation</option>
-        </select>
-      </div>
-      <button type="button" className={btnPrimary}>
-        See suggestions
-      </button>
-    </form>
   );
 }
 
@@ -361,7 +324,7 @@ export default function SchedulingPage() {
                 scheduling by role or environment
               </a>
               ; for concepts, see{" "}
-              <a href="#payroll-guides" className={linkGreen}>
+              <a href="#guides" className={linkGreen}>
                 scheduling guides
               </a>
               .
@@ -403,11 +366,6 @@ export default function SchedulingPage() {
       faqTitle="Scheduling software FAQs"
       faqSub="Quick answers to common questions."
       methodology={SCHEDULING_METHODOLOGY}
-      finderSection={{
-        title: "Find the right scheduling fit",
-        sub: "Narrow down by team type and primary need.",
-        content: <SchedulingFinderForm />,
-      }}
       educationSection={<SchedulingEducationSection />}
       popularComparisonsSection={<SchedulingPopularComparisonsSection />}
     />

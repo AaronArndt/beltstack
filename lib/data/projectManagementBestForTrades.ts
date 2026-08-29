@@ -160,25 +160,8 @@ function buildRelatedComparisons(featured: PmProductSlug[]): BestForComparisonLi
   return out;
 }
 
-const REVIEW_FILL_ORDER: PmProductSlug[] = [
-  "asana",
-  "clickup",
-  "monday",
-  "trello",
-  "notion",
-  "wrike",
-  "teamwork",
-  "basecamp",
-  "smartsheet",
-];
-
 function buildRelatedReviews(featured: PmProductSlug[]): BestForReviewLink[] {
-  const ordered: PmProductSlug[] = [...featured];
-  for (const s of REVIEW_FILL_ORDER) {
-    if (!ordered.includes(s)) ordered.push(s);
-    if (ordered.length >= 6) break;
-  }
-  return ordered.map((s) => ({
+  return featured.map((s) => ({
     name: PM_PRODUCT_CORE[s].name,
     href: getProjectManagementReviewUrl(s),
   }));

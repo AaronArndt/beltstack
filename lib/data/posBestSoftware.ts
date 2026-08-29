@@ -180,6 +180,45 @@ export const TOP_PICKS: BestPosPick[] = [
   },
 ] as BestPosPick[];
 
+/**
+ * Canonical registry coverage for POS products that are reviewed and used on
+ * /best-for/ pages but are not part of the ranked TOP_PICKS roundup.
+ * Does not change roundup ranking or TOP_PICKS order.
+ */
+export const POS_REGISTRY_SUPPLEMENT: BestPosPick[] = [
+  {
+    slug: "touchbistro",
+    name: "TouchBistro",
+    badge: "Restaurant and hospitality POS",
+    description:
+      "Restaurant and hospitality POS with table management, menus, and integrated payments.",
+    rating: "4.4",
+    startingPrice: "From ~$69/mo",
+    hasFreeTrial: false,
+    hasFreePlan: false,
+    hasIntegrations: true,
+    visitUrl: "https://www.touchbistro.com",
+    logoSrc: POS_LOGOS.touchbistro,
+    compareSlugs: ["toast-pos-vs-touchbistro", "square-pos-vs-touchbistro"],
+    editorialParagraph:
+      "TouchBistro is a strong restaurant POS focused on food-service workflows, table management, and hospitality. It’s a good alternative to Toast for restaurants that want restaurant-specific features without the same scale or quote-based pricing model.",
+    pros: [
+      "Built for restaurants with table management and food-service workflows",
+      "Published tiered pricing so you can compare plans",
+      "Good balance of capability and cost for independent restaurants",
+      "Online ordering and delivery integrations",
+    ],
+    cons: [
+      "Less scale-oriented than Toast for very large or multi-brand operations",
+      "Some advanced features may require higher tiers or add-ons",
+      "Not built for retail use",
+    ],
+    pricingSummary:
+      "TouchBistro typically offers tiered plans starting around $69/month. Hardware and payment processing may be separate. Add-ons for online ordering, loyalty, and advanced features. Confirm current pricing on TouchBistro’s site.",
+    comparisonTableBestFor: "Restaurant and hospitality POS",
+  },
+];
+
 export const COMPARISON_TABLE_ROWS: PosComparisonTableRow[] = [
   {
     slug: "square-pos",
