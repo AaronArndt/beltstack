@@ -22,7 +22,7 @@ import { getAllTradeHubDefinitions, getTradeHubDefinition } from "@/lib/data/tra
 // ——— Data ———
 type SoftwareItem = { title: string; description: string; href: string };
 type MegaMenuId = "software" | "industries" | "comparisons";
-type MobileNavView = "root" | "software" | "industries";
+type MobileNavView = "root" | "software" | "industries" | "comparisons";
 
 const SOFTWARE_COLUMNS: {
   id: string;
@@ -110,6 +110,11 @@ const SIMPLE_LINKS = [
 
 // For mobile we still need flat list
 const SOFTWARE_CATEGORIES: SoftwareItem[] = SOFTWARE_COLUMNS.flatMap((col) => col.items);
+
+const COMPARISON_NAV_ITEMS = SOFTWARE_CATEGORIES.map((item) => ({
+  label: item.title,
+  href: `${item.href}/compare`,
+}));
 
 function tradeNavLabel(breadcrumbLabel: string): string {
   if (breadcrumbLabel === "Cleaning services") return "Cleaning Services";
@@ -823,13 +828,15 @@ export default function Navbar() {
                     Industries
                     <ChevronRight />
                   </button>
-                  <Link
-                    href="/comparisons"
-                    onClick={closeMobileMenu}
-                    className="flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("comparisons")}
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-haspopup="true"
                   >
                     Comparisons
-                  </Link>
+                    <ChevronRight />
+                  </button>
                   {SIMPLE_LINKS.map(({ label, href }) => (
                     <Link
                       key={href}
@@ -904,6 +911,31 @@ export default function Navbar() {
                   </button>
                   <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Industries</h2>
                   {INDUSTRY_NAV_ITEMS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </>
+              )}
+
+              {mobileView === "comparisons" && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("root")}
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    aria-label="Back to main menu"
+                  >
+                    <ChevronLeft />
+                    Back
+                  </button>
+                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Comparisons</h2>
+                  {COMPARISON_NAV_ITEMS.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
