@@ -41,7 +41,7 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   { tool: "Patriot Payroll", bestFor: "Budget-conscious small business", price: "$17/mo", rating: "4.2", slug: "patriot-payroll", logoSrc: "/Logos/patriot.jpeg" },
   { tool: "Justworks", bestFor: "PEO-style payroll and benefits", price: "Quote", rating: "4.5", slug: "justworks", logoSrc: "/Logos/justworks.jpeg" },
   { tool: "Deel", bestFor: "Global contractors and EOR", price: "Quote", rating: "4.6", slug: "deel", logoSrc: "/Logos/deel.jpeg" },
-  { tool: "SurePayroll", bestFor: "Simple payroll + full-service option", price: "Quote", rating: "4.2", slug: "surepayroll", logoSrc: "/Logos/surepayroll.jpeg" },
+  { tool: "SurePayroll", bestFor: "Simple payroll + full-service option", price: "$29 + $7/EE", rating: "4.2", slug: "surepayroll", logoSrc: "/Logos/surepayroll.jpeg" },
   { tool: "Wave", bestFor: "Free accounting + payroll add-on", price: "Add-on", rating: "4.3", slug: "wave", logoSrc: "/Logos/wave.jpeg" },
 ];
 

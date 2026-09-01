@@ -152,7 +152,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
     ...CT_SHELL,
     toolName: "CallRail",
     rating: "4.6",
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     bestFor: "SMB and agency teams needing keyword-level call attribution",
     visitUrl: "https://www.callrail.com",
     logoSrc: "/Logos/callrail.jpeg",
@@ -166,6 +166,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
     ],
     ratingBreakdown: RATING.callrail,
     compareLinks: [
+      { label: "Invoca vs CallRail", href: getCallTrackingCompareUrl("invoca-vs-callrail") },
       { label: "CallRail vs CallTrackingMetrics", href: getCallTrackingCompareUrl("callrail-vs-calltrackingmetrics") },
       { label: "CallRail vs WhatConverts", href: getCallTrackingCompareUrl("callrail-vs-whatconverts") },
       { label: "Ringba vs CallRail", href: getCallTrackingCompareUrl("ringba-vs-callrail") },
@@ -178,7 +179,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
       "Reporting most owners can scan without a data science hire",
     ],
     cons: [
-      "Usage (minutes, numbers, seats) can surprise you at renewal if campaigns scale fast",
+      "Usage (minutes and numbers) can surprise you if campaigns scale past the included 5 numbers and 250 minutes",
       "Not a contact center—routing depth stops where ACD-heavy platforms begin",
       "Requires ongoing script and pool checks after template or CMS changes",
       "Enterprise conversation-AI buyers may still graduate to Invoca-class stacks",
@@ -188,9 +189,9 @@ const reviews: Record<string, CallTrackingReviewData> = {
     whoShouldAvoid:
       "Performance call buyers who need carrier-grade buyer waterfalls and monetization on day one (Ringba-class), or enterprises that mandated conversation AI and governance workflows (Invoca-class) before evaluating CallRail.",
     pricingSummary:
-      "CallRail typically bills around tracked numbers, call minutes, and feature tiers. Model active campaigns, peak-season volume, and how many locations need separate pools—quiet-month math misleads renewals.",
+      "CallRail currently lists Lead Tracking from $55/month ($50 billed annually). All four public plans include 5 local numbers and 250 local minutes; extra numbers and minutes bill as usage. Lead Tracking Complete adds forms; Lead Conversion adds Premium Conversation Intelligence. 14-day trial. Verified August 2026 on CallRail’s pricing and comparison pages.",
     pricingTiers:
-      "Plans stack features like form tracking, premium integrations, or higher usage caps. Agencies should align client tiers to realistic minute volume so downstream markups stay predictable.",
+      "Lead Tracking, Lead Tracking Complete, Lead Conversion, and Lead Conversion Complete. Higher tiers add form tracking and Premium CI—not a larger included minute pool. Voice Assist is a separate $95/month product (50 included calls). HIPAA Healthcare plans currently listed from $150/month with a BAA.",
     costVsCompetitors:
       "CallRail often lands between budget trackers and premium analytics platforms: richer than PhoneWagon for ecosystem breadth, lighter on wallet than CallTrackingMetrics or Invoca for many SMB footprints.",
     features: ["Dynamic number insertion", "Form tracking", "Call recording", "Integrations"],
@@ -454,8 +455,8 @@ const reviews: Record<string, CallTrackingReviewData> = {
     ...CT_SHELL,
     toolName: "Invoca",
     rating: "4.4",
-    startingPrice: "Enterprise / custom",
-    bestFor: "Enterprise programs needing AI and compliance on calls",
+    startingPrice: "Quote required",
+    bestFor: "Programs that need custom call-outcome models, automated QA, and media/CRM activation",
     visitUrl: "https://www.invoca.com",
     logoSrc: "/Logos/invoca.png",
     quickVerdict: "Invoca adds conversation intelligence where revenue and risk require proof—not for the average two-truck HVAC shop.",
@@ -487,9 +488,9 @@ const reviews: Record<string, CallTrackingReviewData> = {
     whoShouldAvoid:
       "Single-location contractors and lean agencies without dedicated ops. CallRail or CallTrackingMetrics usually matches reality better until AI requirements are explicit and funded.",
     pricingSummary:
-      "Invoca is quoted enterprise pricing. Budget implementation partners, integrations, and ongoing admin—not just annual licenses.",
+      "Invoca does not publish dollar prices. Pro, Enterprise, and Elite (plus Performance packages) are quote-based; Invoca’s llm-info page (updated June 2026) states annual contract terms. Signal AI, Quality Management, and PreSense are listed as add-ons. Verified August 2026 on Invoca’s pricing page.",
     pricingTiers:
-      "Packaging varies by modules, volumes, and support tiers. Expect procurement cycles rather than self-serve upgrades.",
+      "Pro (6,000 annual numbers, 5 custom Signals), Enterprise (12,000 numbers, 50 Signals), Elite (18,000 numbers, 100 Signals, PreSense included). Signal AI and Quality Management remain add-ons. Confirm Salesforce/Adobe and implementation fees on the quote.",
     costVsCompetitors:
       "Invoca sits above CallRail and WhatConverts for most footprints; compare against Ringba when routing economics—not NLP on transcripts—are the core problem.",
     features: ["Signal extraction", "Routing", "Integrations", "Compliance"],
@@ -514,7 +515,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
       alt("WhatConverts", "whatconverts", "Unified marketing leads when AI is not the driver", "/Logos/whatconverts.jpeg"),
     ],
     faqs: [
-      { q: "Invoca vs CallRail for contractors?", a: "CallRail unless you are enterprise-scale with AI, compliance, and integration mandates." },
+      { q: "Invoca vs CallRail for contractors?", a: "CallRail for typical local attribution. Choose Invoca when you need custom call-outcome models, automated QA across a contact center, or classified conversions feeding ads/CRM—not because the brand sounds more advanced." },
       { q: "When is Invoca worth it?", a: "When conversation signals must flow into revenue ops with governance—not when you only need DNI." },
       { q: "Implementation timeline?", a: "Plan in quarters for serious programs, not weekends." },
     ],

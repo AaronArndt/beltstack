@@ -39,7 +39,7 @@ const TABLE_ROWS: ComparisonTableRow[] = [
   {
     tool: "Bark",
     bestFor: "Multi-category lead credits",
-    price: "Credits / packs",
+    price: "From $2.35/credit",
     rating: "4.0",
     slug: "bark",
     logoSrc: "/Logos/bark.jpeg",
@@ -343,7 +343,7 @@ function LeadGenPopularComparisonsSection() {
 const FAQ_ITEMS: FaqItem[] = [
   {
     q: "What’s the best lead generation tool for contractors?",
-    a: "Start with Thumbtack or Google Local Services Ads if eligible—then add Angi or HomeAdvisor as a split test. Best channel depends on how homeowners find you and how fast you answer.",
+    a: "Start with Thumbtack or Google Local Services Ads if eligible. Angi and HomeAdvisor are the same parent company—confirm whether you are being sold ads, Angi Leads, or a mix before you treat them as two unrelated tests.",
   },
   {
     q: "Are paid leads worth it?",

@@ -58,6 +58,7 @@ const RELATED_RESOURCES_ITEMS = [
   { label: "Stripe vs Square Fees", href: "/payment-processing/guides/stripe-vs-square-fees" },
   { label: "Stripe vs Square Comparison", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
   { label: "Helcim vs Stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
+  { label: "Stripe vs Stax", href: getPaymentProcessingCompareUrl("stripe-vs-stax") },
   { label: "Helcim Review", href: getPaymentProcessingReviewUrl("helcim") },
   { label: "Stripe Review", href: getPaymentProcessingReviewUrl("stripe") },
   { label: "Best Payment Processing Software", href: "/payment-processing/best-payment-processing-software" },
@@ -152,7 +153,11 @@ export default function CreditCardProcessingFeesExplainedPage() {
                       <Link href={getPaymentProcessingCompareUrl("helcim-vs-stax")} className={link}>
                         Helcim vs Stax
                       </Link>{" "}
-                      when membership models enter the picture.
+                      when membership models enter the picture, or{" "}
+                      <Link href={getPaymentProcessingCompareUrl("stripe-vs-stax")} className={link}>
+                        Stripe vs Stax
+                      </Link>{" "}
+                      when you are weighing a published percentage-plus-cents rate against a subscription plus interchange.
                     </p>
                   </div>
                 </section>

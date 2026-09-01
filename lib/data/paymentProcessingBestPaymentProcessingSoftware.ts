@@ -81,7 +81,7 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
     hasIntegrations: true,
     visitUrl: "https://squareup.com",
     logoSrc: PAYMENT_PROCESSING_LOGOS.square,
-    compareSlugs: ["stripe-vs-square", "square-vs-paypal", "stripe-vs-paypal"],
+    compareSlugs: ["stripe-vs-square", "square-vs-paypal", "authorize-net-vs-square"],
     primaryChannel: "Card-present, invoice, light online",
     standoutFeature: "Hardware + software in one ecosystem for field and storefront teams",
     editorialParagraph:
@@ -98,7 +98,7 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
       "Flat-style pricing is easy to understand but not always cheapest at scale",
     ],
     pricingSummary:
-      "Square publishes processing rates for card-present and card-not-present transactions, with additional fees for instant transfers or premium software tiers. Compare total cost including hardware amortization, not just the percentage on the marketing page.",
+      "U.S. Square Free (verified August 2026): 2.6% + 15¢ tap/dip/swipe, 3.3% + 30¢ online or invoices, 3.5% + 15¢ keyed. Plus is $49/location/month and Premium $149/location/month with lower in-person rates. Instant transfers and most hardware are extra—compare total cost, not only the marketing percentage.",
     alternativesSlug: "square",
   },
   {
@@ -208,13 +208,13 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
     description:
       "Stax (formerly Fattmerchant) uses a membership-style model that can flatten month-to-month swings when you process enough volume.",
     rating: "4.3",
-    startingPrice: "Monthly platform fee plus interchange costs",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     hasFreeTrial: false,
     hasFreePlan: false,
     hasIntegrations: true,
     visitUrl: "https://www.staxpayments.com",
     logoSrc: PAYMENT_PROCESSING_LOGOS.stax,
-    compareSlugs: ["helcim-vs-stax", "stripe-vs-square"],
+    compareSlugs: ["helcim-vs-stax", "stripe-vs-stax"],
     primaryChannel: "Membership + steady volume",
     standoutFeature: "Membership pricing that rewards consistent processing volume",
     editorialParagraph:
@@ -230,7 +230,7 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
       "Compare feature set vs Stripe/Square ecosystems you already use",
     ],
     pricingSummary:
-      "Stax combines membership fees with pass-through interchange costs. Seasonal trades should model slow months explicitly—what helps in July may sting in January.",
+      "Stax Pay (August 2026): $99 / $139 / $199+ per month by annual volume, plus interchange (Stax states 0% extra percentage markup) plus $0.08 card-present or $0.15 CNP. Seasonal trades should model slow months explicitly—what helps in July may sting in January.",
     alternativesSlug: null,
   },
   {
@@ -241,13 +241,13 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
     description:
       "Authorize.net is a long-standing gateway brand—common when your bank or ISO pairs “merchant account + gateway” rather than an all-in-one like Square.",
     rating: "4.2",
-    startingPrice: "Gateway fee plus processor/acquirer pricing",
+    startingPrice: "From $25/mo plus transaction fees",
     hasFreeTrial: false,
     hasFreePlan: false,
     hasIntegrations: true,
     visitUrl: "https://www.authorize.net",
     logoSrc: PAYMENT_PROCESSING_LOGOS.authorizeNet,
-    compareSlugs: ["stripe-vs-square"],
+    compareSlugs: ["authorize-net-vs-square", "authorize-net-vs-stripe"],
     primaryChannel: "Gateway / bank bundle",
     standoutFeature: "Gateway features: tokenization, recurring billing hooks, and broad integrations",
     editorialParagraph:
@@ -263,7 +263,7 @@ export const TOP_PICKS: BestPaymentProcessingPick[] = [
       "Greenfield SMBs often start simpler with Square or Stripe",
     ],
     pricingSummary:
-      "Budget gateway monthly fees, per-transaction gateway charges, and the underlying processor’s interchange markup. Ask for a sample monthly statement before you sign.",
+      "Published plans (August 2026): $25/month. All-in-One is 2.9% + 30¢ plus that monthly fee. Gateway Only is 10¢ per transaction and 10¢ daily batch plus your processor’s interchange and markup. Ask for a sample monthly statement before you sign.",
     alternativesSlug: null,
   },
   {

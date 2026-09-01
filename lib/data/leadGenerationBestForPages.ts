@@ -116,7 +116,7 @@ const LG_PRODUCT_BASE = {
     slug: "bark",
     name: "Bark",
     rating: "4.0",
-    startingPrice: "Credits / lead packs",
+    startingPrice: "From $2.35/credit (leads cost multiple credits)",
     visitUrl: "https://www.bark.com",
     logoSrc: "/Logos/bark.jpeg",
   },

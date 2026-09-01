@@ -165,10 +165,10 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     whoShouldAvoid:
       "Operators who will never touch the website and only need the fastest phone reader rollout with zero integration—Square may be simpler day one.",
     pricingSummary:
-      "Percentage plus fixed fee per successful charge for most cards; additional fees for Billing, Terminal hardware, instant payouts, and FX. Export three months of deposits and divide net by gross to find effective rate.",
-    pricingTiers: "Cards, wallets, and ACH (where offered) may price differently—map each payment method you actually use.",
+      "US Standard Payments (August 2026): no monthly fee. Online domestic cards 2.9% + 30¢; keyed +0.5% (3.4% + 30¢); Terminal 2.7% + 5¢; ACH Direct Debit 0.8% capped at $5; $15 per dispute received. Billing is 0.7% of Billing volume or from $620/month on an annual plan. Instant Payouts 1.5% (50¢ min). Export three months of deposits and divide net by gross to find effective rate.",
+    pricingTiers: "Cards, wallets, and ACH (where offered) may price differently—map each payment method you actually use. Stripe Invoicing, if used, adds 0.4–0.5% per paid invoice on top of Payments.",
     costVsCompetitors:
-      "Flat-rate bundles like Square look simpler on paper; Stripe can win when online share is high or when Billing replaces manual invoice chasing.",
+      "Flat-rate bundles like Square look simpler on paper; Stripe can win when online share is high or when Billing replaces manual invoice chasing. Versus Stax, Stripe is usually simpler at low or seasonal volume because there is no $99–$199+ subscription; Stax can win at high, even volume if interchange plus Stax’s 8¢/15¢ undercuts Stripe’s blended percentage—see Stripe vs Stax.",
     features: ["Checkout", "Payment Links", "Billing", "Terminal", "Connect"],
     keyFeatures: [
       { name: "Stripe Checkout", description: "Hosted payment pages with Apple Pay and strong mobile UX for deposits." },
@@ -195,7 +195,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     ],
     faqs: [
       { q: "Is Stripe better than Square?", a: "Stripe leads online and in custom software; Square leads simple in-person + invoice bundles. Match the channel where you collect most revenue." },
-      { q: "How much does Stripe charge?", a: "Typically a percentage plus cents per successful charge, plus fees for Billing, Terminal, and other products—verify current published rates and your statement." },
+      { q: "How much does Stripe charge?", a: "US Standard (August 2026): 2.9% + 30¢ online, 2.7% + 5¢ in person via Terminal, no monthly Payments fee. Billing, Invoicing, Instant Payouts, and disputes add their own fees—verify current published rates and your statement." },
       { q: "What is the cheapest payment processor?", a: "Whichever yields the lowest net deposits for your card mix after refunds and disputes—compute effective rate, do not guess from ads." },
       { q: "Does Stripe replace invoicing software?", a: "Often no—you still need line-item discipline; many teams pair Stripe with invoicing or field-service tools." },
       { q: "Can I use Stripe for recurring HVAC memberships?", a: "Yes—Stripe Billing is a common pattern when you can define clear plan rules and handle failed payments." },
@@ -257,7 +257,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     whoShouldAvoid:
       "Headless commerce or multi-marketplace payout needs—evaluate Stripe Connect or specialized acquirer programs instead.",
     pricingSummary:
-      "Per-transaction fees differ for card-present, card-not-present, and keyed; software subscriptions and instant transfers add cost. Annualize hardware and software together.",
+      "Per Square’s published U.S. fees (verified August 2026): Square Free is 2.6% + 15¢ tap/dip/swipe, 3.3% + 30¢ online or invoices, 2.9% + 30¢ online API, and 3.5% + 15¢ keyed or card on file, with no monthly POS software fee. Plus is $49/location/month; Premium is $149/location/month, with lower in-person rates. Instant transfers and most hardware are extra. Annualize software and hardware together.",
     pricingTiers:
       "Card-present, manually entered, and invoice/online paths often price differently—export a month of transactions tagged by entry method to see where margin leaks.",
     costVsCompetitors:
@@ -565,7 +565,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     ...PP_SHELL,
     toolName: "Stax",
     rating: "4.3",
-    startingPrice: "Monthly platform fee plus interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     bestFor: "Steady card volume that can amortize a membership-style fee",
     visitUrl: "https://www.staxpayments.com",
     logoSrc: paymentProcessingLogoForSlug("stax"),
@@ -595,11 +595,12 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     cons: ["Slow-season risk on membership fees", "Needs quarterly repricing reviews", "Not a silver bullet for disputes"],
     bestForEditorial: "Operators with relatively even monthly card volume across crews or locations.",
     whoShouldAvoid: "Highly seasonal single-truck businesses without cash reserves—model January before you sign.",
-    pricingSummary: "Platform fee plus pass-through interchange; confirm card-present vs keyed differences in your agreement.",
+    pricingSummary:
+      "Stax Pay (August 2026): monthly subscription by annual card volume—$99 up to $150k/year, $139 from $150k–$250k, $199+ above $250k—plus interchange at Stax’s stated 0% extra percentage markup, plus $0.08 card-present or $0.15 card-not-present. ACH is 1% capped at $10. That is not free processing: interchange still varies by card. Confirm your quote; custom pricing applies above high volume.",
     pricingTiers:
-      "Your agreement should spell out card-present, manually keyed, and CNP rates on top of the platform fee—get each scenario in writing before you sign.",
+      "Published cents are $0.08 card-present and $0.15 card-not-present. Hardware is quoted separately; optional terminal protection is $19/month. Stax’s docs say it reviews processing about every six months and can raise the subscription if volume exceeds the approved tier. Chargeback dollar amounts are not listed on the public pricing page—verify the merchant agreement.",
     costVsCompetitors:
-      "Versus Helcim-style interchange-plus without a platform fee, Stax wins when membership + interchange undercuts your statement for the whole year, not just busy months.",
+      "Versus Helcim-style interchange-plus without a membership, Stax wins when subscription + interchange + cents undercuts your statement for the whole year, not just busy months. Versus Stripe’s 2.9% + 30¢ (no monthly Payments fee), Stax needs enough steady volume that the subscription amortizes—see Stripe vs Stax.",
     features: ["Processing", "Virtual terminal", "Reporting"],
     keyFeatures: [
       { name: "Membership model", description: "Trade per-transaction stacking for a platform fee when volume supports it." },
@@ -614,7 +615,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     contractorUse: [
       "Standardize processing across branches under one membership line item",
       "Review fee fit after peak summer season",
-      "Set calendar reminders to re-run breakeven math before annual renewal—volume drift changes the answer",
+      "Set calendar reminders to re-run breakeven math when volume is reviewed (Stax says about every six months)—volume drift can change the subscription tier",
     ],
     alternatives: [
       alt("Helcim", "helcim", "Straight interchange-plus", paymentProcessingLogoForSlug("helcim")),
@@ -624,8 +625,8 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
       { q: "Stax vs Helcim?", a: "Stax when membership math wins on steady volume; Helcim when you want straightforward interchange-plus markup." },
       { q: "What is the cheapest payment processor?", a: "Whichever minimizes net deposits for your seasonal pattern—not only peak months." },
       { q: "Is Stax good for seasonal HVAC?", a: "Model slow months—membership fees can sting when card volume drops; renegotiate or switch if winter math inverts." },
-      { q: "How much do payment processors charge?", a: "Stax combines platform fee and interchange—quote both before you compare to flat-rate competitors." },
-      { q: "Stax vs Stripe?", a: "Stripe when online software-led flows dominate; Stax when steady SMB volume fits membership economics." },
+      { q: "How much do payment processors charge?", a: "Stax combines a $99+ monthly subscription, interchange (not a single %), and 8¢ or 15¢ per card—quote all three before you compare to Stripe or Square." },
+      { q: "Stax vs Stripe?", a: "Stripe when you want published pay-as-you-go rates and online/Billing flexibility; Stax when high, even volume may make subscription + interchange cheaper. Ticket size and slow months change the answer—see Stripe vs Stax." },
       {
         q: "Is BeltStack affiliated with Stax?",
         a: "No. We may use general partner links elsewhere on the site, but ratings are editorial. Always compare Stax’s written quote to at least one interchange-plus and one flat-rate competitor using your own statements.",
@@ -637,7 +638,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     ...PP_SHELL,
     toolName: "Authorize.net",
     rating: "4.2",
-    startingPrice: "Gateway fee plus processor/acquirer pricing",
+    startingPrice: "From $25/mo plus transaction fees",
     bestFor: "Gateway-first setups paired with merchant accounts or legacy ERP integrations",
     visitUrl: "https://www.authorize.net",
     logoSrc: paymentProcessingLogoForSlug("authorize-net"),
@@ -677,7 +678,8 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     ],
     bestForEditorial: "Businesses inheriting bank-led merchant stacks or needing gateway flexibility with specific acquirers.",
     whoShouldAvoid: "Teams wanting the fastest phone-reader rollout with minimal vendors.",
-    pricingSummary: "Monthly gateway fee plus per-transaction gateway charges and underlying interchange markup from your processor.",
+    pricingSummary:
+      "Authorize.net publishes two U.S. plans (verified August 2026): All-in-One is $25/month plus 2.9% + 30¢; Gateway Only is $25/month plus 10¢ per transaction and a 10¢ daily batch fee on top of your processor. Gateway setup is $0; the gateway itself has no early-termination fee. All-in-One merchant-account terms can differ. Ask for a sample statement that includes processor markup on Gateway Only.",
     pricingTiers:
       "Gateway fees are only one layer—card type, CNP vs CP, and international cards still flow through the underlying processor’s interchange schedule.",
     costVsCompetitors:
@@ -705,7 +707,7 @@ const PAYMENT_PROCESSING_REVIEWS: Record<string, PaymentProcessingReviewData> = 
     faqs: [
       { q: "Do I still pay interchange with Authorize.net?", a: "Yes—the gateway sits on top of a processor that passes interchange through or bundles it." },
       { q: "Authorize.net vs Stripe?", a: "Stripe for new web-first builds; Authorize.net when your bank bundle or ERP path requires it." },
-      { q: "How much does Authorize.net cost?", a: "Gateway monthly fee plus per-transaction gateway charges plus your processor’s markup—ask for a sample statement." },
+      { q: "How much does Authorize.net cost?", a: "Published plans start at $25/month. All-in-One is $25 plus 2.9% + 30¢ per transaction. Gateway Only is $25 plus 10¢ per transaction and 10¢ per daily batch, plus your merchant account/processor. Confirm current figures on Authorize.net’s pricing page." },
       { q: "Is Authorize.net good for contractors?", a: "It is fine when inherited stacks require it; greenfield mobile-first crews often start with Square or Stripe instead." },
       { q: "Can Authorize.net store cards on file?", a: "Yes with tokenization when implemented correctly—useful for maintenance billing with consent." },
       {

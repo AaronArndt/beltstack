@@ -110,7 +110,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     name: "ADP",
     badge: "Best for larger teams",
     comparisonTableBestFor: "Larger teams",
-    description: "Enterprise-grade payroll and HR that scales. Custom pricing and optional dedicated support for growing and multi-state businesses.",
+    description: "Enterprise-grade payroll and HR that scales. RUN Powered by ADP is the 1–49 product (quote-based packages); Workforce Now is 50+. Optional dedicated support for growing and multi-state businesses.",
     rating: "4.4",
     startingPrice: "Custom pricing",
     hasFreeTrial: true,
@@ -118,11 +118,11 @@ export const TOP_PICKS: BestPayrollPick[] = [
     hasIntegrations: true,
     visitUrl: "https://www.adp.com/small-business",
     logoSrc: "/Logos/adp.jpeg",
-    compareSlugs: ["gusto-vs-adp", "adp-vs-paychex"],
+    compareSlugs: ["gusto-vs-adp", "adp-vs-paychex", "surepayroll-vs-adp"],
     payrollTypes: "W-2, 1099, multi-state",
     standoutFeature: "Scale and enterprise features; multi-country option",
     editorialParagraph:
-      "ADP is the pick when you need to scale. It handles large headcounts, multi-state payroll, and optional global payroll. Pricing is custom—you get a quote—and you can get dedicated account management. For very small teams, Gusto or OnPay are often simpler; for growing or midsize businesses that want a full-service provider, ADP is a top option.",
+      "ADP is the pick when you need to scale past payroll-only tools. For most small businesses the product is RUN Powered by ADP (1–49 employees, four packages, quote required). Workforce Now is ADP’s 50+ platform. Pricing is not a public RUN dollar card. For a very small crew that only needs payroll, Gusto, OnPay, or SurePayroll are often simpler; for growing businesses that want payroll plus HR infrastructure, ADP is a top option.",
     pros: [
       "Scales to large headcounts and multi-state payroll",
       "Optional dedicated support and account management",
@@ -135,7 +135,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
       "Implementation may require more time than self-serve tools",
     ],
     pricingSummary:
-      "ADP uses custom pricing—you request a quote based on headcount, state, and needs. Total cost varies; compare quotes with Gusto or OnPay at your size.",
+      "RUN package prices are quote-based (ADP’s 1–49 page is “Get pricing”). Workforce Now is custom. Compare a written quote with Gusto, OnPay, or SurePayroll at your size—including W-2/1099 and add-ons.",
   },
   {
     slug: "paychex",
@@ -270,7 +270,7 @@ export const MORE_PAYROLL_OPTIONS: { slug: string; name: string; description: st
   {
     slug: "surepayroll",
     name: "SurePayroll",
-    description: "Simple small-business payroll with optional full-service. Part of the Paychex family.",
+    description: "Simple small-business payroll with published Full Service pricing ($29/mo + $7 per employee). Part of the Paychex family.",
     reviewHref: getPayrollReviewUrl("surepayroll"),
     logoSrc: "/Logos/surepayroll.jpeg",
   },
@@ -319,6 +319,7 @@ export const RELATED_COMPARISONS: ComparisonLink[] = [
   { label: "Gusto vs QuickBooks Payroll", href: getPayrollCompareUrl("gusto-vs-quickbooks-payroll") },
   { label: "Gusto vs OnPay", href: getPayrollCompareUrl("gusto-vs-onpay") },
   { label: "Gusto vs ADP", href: getPayrollCompareUrl("gusto-vs-adp") },
+  { label: "SurePayroll vs ADP", href: getPayrollCompareUrl("surepayroll-vs-adp") },
   { label: "Gusto vs Paychex", href: getPayrollCompareUrl("gusto-vs-paychex") },
   { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
   { label: "Justworks vs Gusto", href: getPayrollCompareUrl("justworks-vs-gusto") },
@@ -345,6 +346,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How much does payroll software cost?",
-    a: "Many providers charge a base fee plus per-person per month. Gusto often starts around $49/month base; OnPay often around $40/month base—both plus a few dollars per person; QuickBooks Payroll can start around $30/month. ADP and Paychex use custom pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
+    a: "Many providers charge a base fee plus per-person per month. Gusto often starts around $49/month base; OnPay often around $40/month base—both plus a few dollars per person; QuickBooks Payroll can start around $30/month; SurePayroll Full Service currently lists $29/month plus $7 per employee. ADP (RUN packages) and Paychex use quote-based pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
   },
 ];

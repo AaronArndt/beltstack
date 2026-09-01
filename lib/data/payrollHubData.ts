@@ -81,6 +81,7 @@ export const PAYROLL_HUB_POPULAR_COMPARISONS: PayrollComparisonLink[] = [
   { label: "Gusto vs QuickBooks Payroll", slug: "gusto-vs-quickbooks-payroll", href: getPayrollCompareUrl("gusto-vs-quickbooks-payroll") },
   { label: "Gusto vs OnPay", slug: "gusto-vs-onpay", href: getPayrollCompareUrl("gusto-vs-onpay") },
   { label: "Gusto vs ADP", slug: "gusto-vs-adp", href: getPayrollCompareUrl("gusto-vs-adp") },
+  { label: "SurePayroll vs ADP", slug: "surepayroll-vs-adp", href: getPayrollCompareUrl("surepayroll-vs-adp") },
   { label: "Gusto vs Paychex", slug: "gusto-vs-paychex", href: getPayrollCompareUrl("gusto-vs-paychex") },
   { label: "Rippling vs Gusto", slug: "rippling-vs-gusto", href: getPayrollCompareUrl("rippling-vs-gusto") },
   { label: "Square Payroll vs Gusto", slug: "square-payroll-vs-gusto", href: getPayrollCompareUrl("square-payroll-vs-gusto") },

@@ -186,7 +186,7 @@ const stripeAlts: AlternativesTopPick[] = [
       "Stax replaces stacked per-transaction margin with a platform fee plus pass-through interchange—worth modeling when card volume is steady month to month. Seasonal trades should stress-test slow months; membership math that works in July can feel expensive in January if truck rolls drop.",
     reviewHref: getPaymentProcessingReviewUrl("stax"),
     compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
-    startingPrice: "Monthly + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     standoutFeature: "Predictable platform fee",
   },
 ];
@@ -303,6 +303,7 @@ const stripePage: AlternativesTemplateProps = {
     rel("stripe-vs-paypal"),
     rel("shopify-payments-vs-stripe"),
     rel("helcim-vs-stax"),
+    rel("stripe-vs-stax"),
   ],
   relatedResources: relatedResourcesForProduct("stripe"),
   faqItems: [
@@ -385,7 +386,7 @@ const squarePage: AlternativesTemplateProps = {
   topAlternatives: squareAlts,
   comparisonTableRows: buildTableRows(squareOriginal, squareAlts),
   detailedAlternatives: squareAlts.map(detailFromPick),
-  relatedComparisons: [rel("stripe-vs-square"), rel("square-vs-paypal"), rel("stripe-vs-paypal"), rel("shopify-payments-vs-stripe")],
+  relatedComparisons: [rel("authorize-net-vs-square"), rel("stripe-vs-square"), rel("square-vs-paypal"), rel("stripe-vs-paypal"), rel("shopify-payments-vs-stripe")],
   relatedResources: relatedResourcesForProduct("square"),
   faqItems: [
     {
@@ -516,7 +517,7 @@ const helcimAlts: AlternativesTopPick[] = [
       "Stax is the natural side-by-side when you already read interchange lines and want to compare platform-fee economics against Helcim’s stack—model slow-season months before you assume membership wins. See our Helcim vs Stax comparison and export both quotes against your last 90 days of card mix.",
     reviewHref: getPaymentProcessingReviewUrl("stax"),
     compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
-    startingPrice: "Monthly + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     standoutFeature: "Predictable platform fee",
   },
   {
@@ -728,7 +729,7 @@ const shopifyPaymentsAlts: AlternativesTopPick[] = [
       "Stax can beat blended Shopify rates when monthly volume is predictable and pass-through interchange stays clean—less compelling for wildly seasonal trades unless you model winter months explicitly.",
     reviewHref: getPaymentProcessingReviewUrl("stax"),
     compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
-    startingPrice: "Monthly + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     standoutFeature: "Membership platform fee",
   },
   {
@@ -821,7 +822,7 @@ const authorizeNetAlts: AlternativesTopPick[] = [
       "Stax enters the list when stable volume makes platform-plus-interchange math attractive versus gateway + ISO markup surprises—run winter and summer months before you commit.",
     reviewHref: getPaymentProcessingReviewUrl("stax"),
     compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
-    startingPrice: "Monthly + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     standoutFeature: "Volume-friendly platform fee",
   },
 ];
@@ -889,7 +890,7 @@ const cloverAlts: AlternativesTopPick[] = [
       "Stax competes on predictable platform fees when Clover’s per-transaction add-ons stack—model seasonality if you are a trade with winter slowdowns.",
     reviewHref: getPaymentProcessingReviewUrl("stax"),
     compareHref: getPaymentProcessingCompareUrl("helcim-vs-stax"),
-    startingPrice: "Monthly + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
     standoutFeature: "Volume membership math",
   },
   {
@@ -978,7 +979,7 @@ const staxOriginal: AlternativesTableRow = {
   name: "Stax",
   logoSrc: paymentProcessingLogoForSlug("stax"),
   bestFor: "Membership platform + interchange pass-through",
-  startingPrice: "Monthly + interchange",
+  startingPrice: "From $99/mo + interchange + ¢/txn",
   standoutFeature: "Predictable platform fee",
   reviewHref: getPaymentProcessingReviewUrl("stax"),
 };
@@ -993,7 +994,7 @@ const staxPage: AlternativesTemplateProps = {
   originalReviewHref: getPaymentProcessingReviewUrl("stax"),
   quickAnswerParagraphs: [
     "Helcim is the direct comparison for transparent interchange-plus with different packaging—see Helcim vs Stax. Stripe handles Billing-heavy web flows; Square simplifies card-present; PayPal helps wallet cohorts; Shopify Payments unifies Shopify orders; Clover fits counter-heavy retail.",
-    "Stax’s monthly platform fee can be brilliant at steady volume and painful in off-season—graph twelve months before you defend the contract.",
+    "Stax’s monthly subscription (from $99) can be brilliant at steady volume and painful in off-season—graph twelve months of card volume before you commit. Stax’s docs say it has no contracts; the subscription can still rise if volume exceeds the approved tier.",
     "We generalize from SMB and contractor patterns; your underwriting, reserves, and card mix may differ. No editorial page replaces a CFO review of net deposits.",
   ],
   whyPeopleLookForAlternatives: [
@@ -1017,7 +1018,7 @@ const staxPage: AlternativesTemplateProps = {
   topAlternatives: staxAlts,
   comparisonTableRows: buildTableRows(staxOriginal, staxAlts),
   detailedAlternatives: staxAlts.map(detailFromPick),
-  relatedComparisons: [rel("helcim-vs-stax"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("square-vs-paypal")],
+  relatedComparisons: [rel("helcim-vs-stax"), rel("stripe-vs-stax"), rel("shopify-payments-vs-stripe"), rel("square-vs-paypal")],
   relatedResources: relatedResourcesForProduct("stax"),
   faqItems: [
     {
@@ -1110,7 +1111,7 @@ const authorizeNetOriginal: AlternativesTableRow = {
   name: "Authorize.net",
   logoSrc: paymentProcessingLogoForSlug("authorize-net"),
   bestFor: "Gateway + merchant account stack",
-  startingPrice: "Gateway fee + processing",
+  startingPrice: "From $25/mo plus transaction fees",
   standoutFeature: "Long-standing gateway integrations",
   reviewHref: getPaymentProcessingReviewUrl("authorize-net"),
 };
@@ -1149,7 +1150,7 @@ const authorizeNetPage: AlternativesTemplateProps = {
   topAlternatives: authorizeNetAlts,
   comparisonTableRows: buildTableRows(authorizeNetOriginal, authorizeNetAlts),
   detailedAlternatives: authorizeNetAlts.map(detailFromPick),
-  relatedComparisons: [rel("stripe-vs-paypal"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("helcim-vs-stax")],
+  relatedComparisons: [rel("authorize-net-vs-square"), rel("stripe-vs-paypal"), rel("stripe-vs-square"), rel("shopify-payments-vs-stripe"), rel("helcim-vs-stax")],
   relatedResources: relatedResourcesForProduct("authorize-net"),
   faqItems: [
     {

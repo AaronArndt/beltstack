@@ -10,6 +10,7 @@ const POPULAR_SLUGS = [
   "gusto-vs-quickbooks-payroll",
   "gusto-vs-onpay",
   "gusto-vs-adp",
+  "surepayroll-vs-adp",
   "gusto-vs-paychex",
   "quickbooks-payroll-vs-onpay",
   "adp-vs-paychex",

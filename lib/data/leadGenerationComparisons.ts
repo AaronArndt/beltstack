@@ -23,9 +23,9 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("thumbtack"),
     logoSrc: "/Logos/thumbtack.jpeg",
     visitUrl: "https://www.thumbtack.com",
-    bestForSummary: "Local pros who want pay-per-lead marketplace volume with self-serve tools.",
+    bestForSummary: "Pay-per-lead marketplace with targeting, max lead prices, and weekly budgets.",
     rating: "4.4",
-    startingPrice: "Pay per lead",
+    startingPrice: "No membership fee; pay per lead",
   },
   angi: {
     name: "Angi",
@@ -53,9 +53,9 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("bark"),
     logoSrc: "/Logos/bark.jpeg",
     visitUrl: "https://www.bark.com",
-    bestForSummary: "Multi-category pros who want to buy leads across services.",
+    bestForSummary: "Inspect-then-buy credits; pay only when you choose to contact a lead.",
     rating: "4.0",
-    startingPrice: "Credits / lead packs",
+    startingPrice: "From $2.35/credit (leads cost multiple credits)",
   },
   "houzz-pro": {
     name: "Houzz Pro",
@@ -136,6 +136,12 @@ function lgMoreComparisons(
   ];
 }
 
+/**
+ * Pair-specific copy belongs in `extra`, not in the shared product registry `P`.
+ * Do not store comparison editorial (“A is better than B for X”) as a global product property.
+ * After a substantial A-vs-B update, audit related reviews/alternatives/hubs for factual consistency
+ * (see `.cursor/rules/comparison-optimization.mdc`).
+ */
 function build(
   slug: string,
   a: keyof typeof P,
@@ -256,6 +262,14 @@ const RELATED = {
   hzYelp: { label: "Houzz Pro vs Yelp Ads", slug: "houzz-pro-vs-yelp-ads" },
 } as const;
 
+const dim = (feature: string, productA: string, productB: string): ComparisonTemplateProps["featureComparison"][number] => ({
+  feature,
+  productA,
+  productB,
+  supportA: "text",
+  supportB: "text",
+});
+
 const entries: [string, ComparisonTemplateProps][] = [
   build(
     "thumbtack-vs-angi",
@@ -267,9 +281,516 @@ const entries: [string, ComparisonTemplateProps][] = [
     "angi-vs-homeadvisor",
     "angi",
     "homeadvisor",
-    "Angi and HomeAdvisor overlap in home-services marketplaces; compare lead exclusivity, geography fit, and bundled marketing before choosing a primary provider."
+    "Angi and HomeAdvisor are not two unrelated competing companies. Both are Angi Inc. brands. The useful question in 2026 is which Angi/HomeAdvisor product you are being offered—typically advertising/directory (Angi Ads lineage) versus Angi Leads marketplace connections still sold under the HomeAdvisor name—and whether the economics work for your jobs.",
+    {
+      pageHeading: "Angi vs HomeAdvisor (2026): What's the Difference?",
+      seoTitle: "Angi vs HomeAdvisor (2026): What's the Difference? | BeltStack",
+      seoDescription:
+        "Angi and HomeAdvisor are Angi Inc. brands, not unrelated rivals. See Angi Ads vs Angi Leads, shared-lead terms, and how to judge cost per booked job.",
+      quickVerdictHeading: "Short answer",
+      quickVerdictSub: "This is not a traditional two-company bake-off.",
+      researchNote:
+        "Verified August 2026 against Angi Inc.’s 2025 Form 10-K, the Angi Pro Agreement, and Angi contractor product pages. Exact lead prices, exclusive-lead counts, and close rates are not published as one national figure—confirm the offer you receive.",
+      productA: {
+        ...P.angi,
+        bestForSummary: "Angi Inc. ads, directory, and homeowner brand—often sold separately from Angi Leads.",
+      },
+      productB: {
+        ...P.homeadvisor,
+        bestForSummary: "Angi Leads marketplace still branded HomeAdvisor; same parent company as Angi.",
+      },
+      quickRecommendationA:
+        "Treat this as Angi Inc.’s ads/directory side (often sold as Angi advertising or profile visibility)—not a separate company from HomeAdvisor.",
+      quickRecommendationB:
+        "Treat this as Angi Leads: pay-per-lead marketplace connections that still use HomeAdvisor branding on contractor tools and homeadvisor.com.",
+      quickVerdictParagraphs: [
+        "Angi Inc. still operates consumer and contractor brands including Angi, Angie’s List, HomeAdvisor, and Handy. People search “Angi vs HomeAdvisor” because the names were once independent, and contractors still see HomeAdvisor on signup, apps, and lead invoices.",
+        "Contractor-facing “HomeAdvisor” is largely the Angi Leads marketplace. Angi also sells advertising and directory products in the Angi Ads lineage. A sales pitch that says “Angi” might mean ads, leads, a subscription, a pre-priced/Handy-style job, or a mix.",
+        "The useful question is less “which company is better?” and more “which product am I buying, what am I paying for, and can my ticket size, close rate, and response speed support shared marketplace leads or an advertising commitment?”",
+      ],
+      relationshipContext: {
+        heading: "Are Angi and HomeAdvisor the same company?",
+        paragraphs: [
+          "Historically, Angie’s List and HomeAdvisor were separate businesses. IAC combined HomeAdvisor with Angie’s List in 2017. In March 2021 the parent became Angi Inc.; Angie’s List was rebranded Angi and HomeAdvisor became “HomeAdvisor, powered by Angi.” Angi Inc.’s 2025 Form 10-K still lists Angi, Angie’s List, HomeAdvisor, and Handy as operating brands.",
+          "HomeAdvisor still operates as a live consumer site and contractor brand. It is not a defunct nameplate. Contractor onboarding and the Angi Leads app still surface homeadvisor.com and related HomeAdvisor URLs. Older Angi filings described Angi Leads as the HomeAdvisor digital marketplace.",
+          "That is why searchers still compare the names: leftover brand memory, two websites, and sales language that may not spell out ads versus leads. If you are evaluating lead generation today, start by identifying the product on the contract—marketplace leads, advertising/profile, subscription, or pre-priced work—then compare that product with independent channels such as Thumbtack or Google Local Services Ads. Do not treat Angi and HomeAdvisor as two unrelated vendors you can “split-test” without knowing which product each quote actually is.",
+        ],
+      },
+      decisionGuideAHeading: "Choose Angi ads / directory products if:",
+      decisionGuideBHeading: "Choose HomeAdvisor / Angi Leads if:",
+      decisionGuideA: [
+        "You are being sold advertising, directory, or profile visibility (Angi Ads lineage) and you already have reviews and a sales process that convert from shoppers who compare providers.",
+        "You want longer-lived brand presence on Angi.com rather than paying primarily for each consumer match.",
+        "Your jobs are planned projects where homeowners research brands before inviting bids—and you can verify the specific advertising terms, geography, and category in writing.",
+      ],
+      decisionGuideB: [
+        "You need additional job flow and can staff speed-to-lead: Angi Leads / HomeAdvisor matches are frequently sent to several other approved pros, according to the Angi Pro Agreement.",
+        "Your average ticket and gross margin can absorb paying for leads you do not win. The Pro Agreement states you pay for leads even if you do not win the job.",
+        "You can track contact rate, appointments, close rate, and credits in CRM so you know cost per booked job—not just cost per lead name.",
+      ],
+      decisionGuideNeither: [
+        "Low-margin or tiny-ticket work where shared-lead customer acquisition cost cannot fit even with a strong close rate.",
+        "You cannot answer quickly or qualify on the first contact. Shared marketplace leads reward the first viable responder.",
+        "The offer does not clearly state product type (ads vs leads), shared-lead behavior, pricing unit, contract length, or early-termination terms. Angi subscriptions can auto-renew and may include an early termination fee under the signed contract.",
+        "Owned channels, Google Local Services Ads (if eligible), or another independent marketplace already fill your capacity at a better booked-job margin.",
+      ],
+      featureComparisonSub: "Pair-specific questions for this brand relationship—not a generic feature grid.",
+      featureComparisonColumnLabel: "Question",
+      featureComparison: [
+        dim("Are these separate companies?", "No. Angi Inc. owns both brands.", "No. Same parent as Angi."),
+        dim(
+          "Current product / brand status",
+          "Angi consumer brand plus advertising/directory products (Angi Ads lineage).",
+          "Live HomeAdvisor brand; contractor marketplace commonly called Angi Leads."
+        ),
+        dim(
+          "What are you actually buying?",
+          "Typically profile, advertising, or bundled visibility—confirm the quote.",
+          "Typically consumer matches / leads, sometimes via subscription or other Angi offerings."
+        ),
+        dim(
+          "Lead model",
+          "Not a pure pay-per-lead marketplace in the same way as Angi Leads—ads vs leads can be sold together.",
+          "Pay-per-lead and related Angi Leads offerings (budgeted leads, subscriptions, other formats)."
+        ),
+        dim(
+          "Shared vs exclusive leads",
+          "Depends on product. Do not assume exclusivity unless the contract says so.",
+          "Pro Agreement: leads are frequently sent to several other approved pros, including Angi Services."
+        ),
+        dim(
+          "Advertising / profile exposure",
+          "Core to Angi Ads / directory products.",
+          "Basic membership can include a profile on HomeAdvisor.com and Angi.com, per Angi Inc.’s 2025 10-K."
+        ),
+        dim(
+          "Pricing structure",
+          "Quoted by market, category, and package. No reliable public national rate card.",
+          "Usage- and market-based lead pricing; subscriptions and other packages exist. Confirm your invoice unit."
+        ),
+        dim(
+          "Contract / commitment",
+          "Advertising agreements vary. Verify term, auto-renewal, and cancellation in the documents you sign.",
+          "Subscriptions may auto-renew. An early termination fee may apply per the signed Contract; cancel via Angi Customer Care."
+        ),
+        dim(
+          "Lead credits / refunds",
+          "Credit and dispute rules depend on the product. Verify before scaling.",
+          "You pay for leads even if you do not win the job. Credits/disputes are offer-specific—do not assume a universal refund rate."
+        ),
+        dim(
+          "How inquiries are delivered",
+          "Varies by product (profile responses, advertised contacts).",
+          "Matches, opt-in, and related flows. Angi implemented “homeowner choice” in January 2025; confirm current delivery in your offer."
+        ),
+        dim(
+          "Best-fit contractor",
+          "Teams that convert from directory/brand shoppers and can evaluate an advertising commitment.",
+          "Teams that can win shared matches with speed, qualification, and enough job value/margin."
+        ),
+        dim(
+          "Biggest drawback / risk",
+          "Paying for the wrong Angi product, or treating ads like exclusive jobs.",
+          "Paying for shared leads you lose, plus possible subscription/ETF exposure."
+        ),
+        dim(
+          "How to evaluate ROI",
+          "Cost per booked job and gross profit after ad spend—not impressions.",
+          "Cost per booked job after credits, shared competition, and close rate—not cost per raw lead."
+        ),
+      ],
+      pricingComparison:
+        "Angi Inc. does not publish a single national lead price that applies to every trade and zip. Angi Inc.’s 2025 Form 10-K describes contractor offerings that include full-priced leads within a monthly budget, discounted leads in a subscription, double opt-in a-la-carte, and pre-priced offerings, plus advertising revenue alongside lead revenue. Contractors should treat any dollar figure a salesperson quotes as offer-specific.",
+      pricingComparisonParagraphs: [
+        "Angi Inc. does not publish a single national lead price that applies to every trade and zip. Angi Inc.’s 2025 Form 10-K describes contractor offerings that include full-priced leads within a monthly budget, discounted leads in a subscription, double opt-in a-la-carte, and pre-priced offerings, plus material advertising revenue alongside lead revenue.",
+        "The Angi Pro Agreement states that leads are not guaranteed jobs, that a lead is frequently sent to several other approved pros, and that you pay for leads even if you do not win the job. Subscriptions can auto-renew; an early termination fee may apply under the signed Contract. On termination, the agreement language we reviewed does not provide a general refund of fees.",
+        "Ask the rep to put in writing: product name (ads vs Angi Leads vs other), pricing unit, shared-lead behavior, credit/dispute process, term, auto-renewal, and any ETF. Then model cost per booked job with your own close rate. Do not scale on a verbal “average lead cost” alone.",
+      ],
+      roiGuidance: {
+        heading: "How to evaluate ROI",
+        paragraphs: [
+          "Evaluate cost per booked job, not simply cost per raw lead. A cheap lead that never answers, never books, or loses to three other pros is more expensive than a higher-priced lead that becomes a profitable job.",
+          "Use your numbers for: cost per lead, contact rate, appointment rate, close rate, lead credits or refunds you actually receive, shared/duplicate competition, average job value, gross profit, and customer lifetime or repeat value. If gross profit on the average won job cannot cover fully loaded CAC, the channel does not work—regardless of brand name.",
+        ],
+        example: {
+          heading: "Hypothetical example (not Angi or HomeAdvisor pricing)",
+          body: "20 leads × $50 illustrative average lead cost = $1,000 spend. If 3 become booked jobs, customer acquisition cost is about $333 per booked job. Replace every number with your invoices and CRM outcomes. If those 3 jobs cannot produce enough gross profit (and repeat work) to cover $333 plus follow-up labor, the offer is a no—even if the lead volume looks high.",
+        },
+      },
+      prosConsA: {
+        pros: [
+          "Recognized Angi consumer brand for homeowners who comparison-shop directories",
+          "Advertising/profile products can support visibility beyond a single match",
+          "Same Angi Inc. ecosystem as HomeAdvisor—useful once you know which product you are buying",
+        ],
+        cons: [
+          "“Angi” on a sales sheet may mean ads, leads, or a bundle—easy to compare the wrong thing",
+          "Not a substitute for owned marketing or Google intent if shoppers never use Angi",
+          "Contract and credit terms are offer-specific; there is no public one-price card",
+        ],
+      },
+      prosConsB: {
+        pros: [
+          "HomeAdvisor remains a live brand; many homeowners still start there",
+          "Angi Leads can add volume when you can win shared matches",
+          "Profile presence on HomeAdvisor.com and Angi.com is part of the approved-pro model described in Angi Inc.’s 2025 10-K",
+        ],
+        cons: [
+          "Shared-lead competition is explicit in the Pro Agreement—you often pay without winning the job",
+          "Subscriptions may auto-renew and may carry an early termination fee",
+          "Treating HomeAdvisor as an independent rival to Angi leads to the wrong test design",
+        ],
+      },
+      bestFor: [
+        {
+          heading: "When marketplace / shared-lead acquisition can make sense",
+          body: "You have unused crew capacity, you answer and qualify fast, and typical job value plus gross margin can cover paying for matches you lose to other approved pros. Track cost per booked job after credits—not lead count.",
+        },
+        {
+          heading: "When advertising / profile products may make more sense",
+          body: "Homeowners in your metro already shop Angi-branded directories, your reviews support conversion, and you prefer visibility over buying each match. Confirm geography, category, and term in the advertising agreement.",
+        },
+        {
+          heading: "Who tends to struggle with these models",
+          body: "Low-margin or one-off tiny tickets, slow follow-up, weak qualification, or no CRM attribution. Shared leads and pay-even-if-you-lose terms punish slow ops.",
+        },
+        {
+          heading: "When neither Angi ads nor Angi Leads may be attractive",
+          body: "If independent channels (Google Local Services Ads, Thumbtack, owned search/referral) already produce better booked-job margin, or the Angi/HomeAdvisor offer is opaque on product, sharing, or cancellation, pause spend until the paperwork is clear—or skip the channel.",
+        },
+      ],
+      alternatives: [
+        { name: "Thumbtack", href: getLeadGenerationReviewUrl("thumbtack"), logoSrc: "/Logos/thumbtack.jpeg", description: "Independent pay-per-lead marketplace—actual alternative to Angi Leads." },
+        { name: "Google Local Services Ads", href: getLeadGenerationReviewUrl("google-local-services-ads"), logoSrc: "/Logos/google.jpeg", description: "Google-screened local search leads, independent of Angi Inc." },
+        { name: "Bark", href: getLeadGenerationReviewUrl("bark"), logoSrc: "/Logos/bark.jpeg", description: "Separate credit-style marketplace across many service categories." },
+      ],
+      faqs: [
+        {
+          q: "Are Angi and HomeAdvisor the same company?",
+          a: "Yes. Both are brands of Angi Inc. HomeAdvisor still operates as a distinct consumer and contractor brand. Contractor-facing HomeAdvisor is largely the Angi Leads marketplace. See our Angi review and HomeAdvisor review for product-level detail.",
+        },
+        {
+          q: "Is HomeAdvisor the same as Angi Leads?",
+          a: "In current contractor usage, HomeAdvisor is the long-running brand on the Angi Leads marketplace. Confirm the product name on your contract. Angi Ads is a different (advertising/directory) line.",
+        },
+        {
+          q: "What’s the difference between Angi Ads and Angi Leads?",
+          a: "Angi Ads is the advertising/directory lineage. Angi Leads is the pay-per-lead marketplace still associated with HomeAdvisor. A pitch that only says “Angi” is incomplete until you know which one you are buying.",
+        },
+        {
+          q: "Do I pay if I don’t win the job?",
+          a: "For Angi Leads, the Angi Pro Agreement states that you pay for leads even if you do not win the job, and that leads are frequently sent to several other approved pros. Credit and dispute rules vary by offer—get them in writing.",
+        },
+        {
+          q: "Should I split-test Angi vs HomeAdvisor as two unrelated vendors?",
+          a: "Not as if they were independent companies. First identify whether each quote is ads, Angi Leads, a subscription, or another Angi offering. Then compare that product with truly independent channels such as Thumbtack or Google Local Services Ads, using cost per booked job.",
+        },
+        {
+          q: "How should I compare cost?",
+          a: "Use cost per booked job after credits, shared competition, and follow-up labor. There is no reliable public national price list. Replace any example math on this page with your invoices and close rates.",
+        },
+        {
+          q: "Where should I go next?",
+          a: "Read the Angi and HomeAdvisor reviews, then Angi alternatives or HomeAdvisor alternatives if you need a channel outside Angi Inc. Compare Thumbtack vs Angi and Google Local Services Ads vs Angi when you want independent options.",
+        },
+      ],
+      sidebarWinners: [
+        { label: "Directory / advertising product", winner: "A" },
+        { label: "Angi Leads marketplace", winner: "B" },
+        { label: "HomeAdvisor name still used with contractors", winner: "B" },
+      ],
+      heroCallouts: [
+        {
+          label: "Ads / directory products",
+          winner: "A",
+          reason: "Angi Ads lineage is the advertising and profile side of Angi Inc.",
+        },
+        {
+          label: "Pay-per-lead marketplace",
+          winner: "B",
+          reason: "HomeAdvisor branding still maps to Angi Leads connections.",
+        },
+        {
+          label: "HomeAdvisor brand still live",
+          winner: "B",
+          reason: "homeadvisor.com and contractor tools still use the HomeAdvisor name.",
+        },
+      ],
+      moreComparisons: lgMoreComparisons("angi-vs-homeadvisor", "angi", "homeadvisor", [
+        RELATED.tbAngi,
+        RELATED.lsaAngi,
+        RELATED.lsaHa,
+        RELATED.tbHa,
+        RELATED.barkAngi,
+      ]),
+    }
   ),
-  build("bark-vs-thumbtack", "bark", "thumbtack", "Bark spans broader service categories with credit-style lead buying; Thumbtack is often tighter for US local trade lead flow and pro tooling."),
+  build(
+    "bark-vs-thumbtack",
+    "bark",
+    "thumbtack",
+    "Bark lets you inspect a matched request, see the credit cost, and pay only if you choose to contact. Thumbtack matches you from targeting preferences and, for direct leads, charges when a customer reaches out—controlled by max lead prices and a weekly budget, not by picking each lead from a feed.",
+    {
+      pageHeading: "Bark vs Thumbtack (2026): Cost, Leads & Best Fit",
+      seoTitle: "Bark vs Thumbtack (2026): Cost, Leads & Best Fit | BeltStack",
+      seoDescription:
+        "Bark is inspect-then-buy credits (from $2.35 each). Thumbtack charges per lead when a customer reaches out, with budgets and no membership fee. Compare mechanics—not a fake CPL.",
+      quickVerdictHeading: "Short answer",
+      quickVerdictSub: "The useful difference is how you get charged—not which logo has “better leads.”",
+      researchNote:
+        "Verified August 2026 against Bark’s US professional pricing page and Help Center, and Thumbtack’s Pro marketing plus official community guidance. Bark lists a $2.35 standard credit price; individual leads cost a variable number of credits. Thumbtack does not publish a national cost-per-lead table. BeltStack has not purchased leads on either platform.",
+      quickRecommendationA:
+        "Choose Bark when you want to review each opportunity—job details, signals, and credit cost—and skip it without paying.",
+      quickRecommendationB:
+        "Choose Thumbtack when you want preference-based matching, a weekly budget and max lead prices, and customers contacting you inside a marketplace with no membership fee.",
+      quickVerdictParagraphs: [
+        "These are two independent marketplaces, not two skins of the same company. The decision is how a service professional acquires and pays for an opportunity: Bark is inspect-then-buy credits; Thumbtack is targeting plus budget, with a charge when a qualifying customer connection happens.",
+        "On Bark (US Help Center and US pricing page, August 2026), you see matched leads for free. Credit cost is shown before you respond. You are charged credits only when you choose to contact. After that, Bark says you get the customer’s phone and email; follow-up messages are not extra. Bark states it does not take a commission. Standard credit price is $2.35; packs can lower the effective rate. Credits bought on or after November 1, 2025 expire after 3 months.",
+        "On Thumbtack, Thumbtack says there is no charge to join, no annual fees, and no membership fees. You set targeting preferences, a max/exact lead price per service, and a weekly budget. Thumbtack staff have stated that you are charged for direct leads the moment the customer reaches out—not after you browse a feed and opt in to that specific job. A non-responsive customer is not, by itself, a published refund reason.",
+        "Neither platform publishes a universal cost per booked job. The number that matters is marketplace spend ÷ booked jobs (then gross profit after that CAC). A $40 lead that books a $4,000 HVAC replacement is a different business than a $40 lead for a $120 one-time clean.",
+      ],
+      relationshipContext: {
+        heading: "How you actually get a lead—and when you pay",
+        paragraphs: [
+          "Bark: A customer submits a request. Bark matches it to professionals. You see the lead in your feed with a credit cost and signals (Bark lists high hiring intent, urgent, first to respond, and verified phone). You can ignore it or use Bark’s “Not interested” control without spending credits. If you spend the credits, Bark says you receive phone and email and can message in-app. Further messages are free. You are not buying a guaranteed hire—you are buying the right to contact a customer who may also hear from other professionals.",
+          "Thumbtack: A customer searches or submits a job. Thumbtack matches professionals using the targeting you set (services, area, hours, job preferences). Thumbtack’s Pro page says you receive leads from customers who choose you, that competition per lead is limited, and that your pricing and budget determine how many leads you get. A Thumbtack community administrator (August 2025) stated that you are always charged for direct leads the moment the customer reaches out. That is a different control surface than Bark’s per-lead purchase button: you mainly control fit before the match via targeting and price/budget, not by inspecting and declining each named opportunity without a charge.",
+          "What happens before you get charged, then: On Bark, you can see the request and the credit price and still walk away. On Thumbtack, for direct leads, the charge is tied to the customer reaching out under your targeting—so wrong targeting is an expensive setting, not a skippable card in a feed. Confirm the current charge rules in your Thumbtack account; lead types can differ.",
+        ],
+      },
+      decisionGuideAHeading: "Choose Bark if:",
+      decisionGuideBHeading: "Choose Thumbtack if:",
+      decisionGuideA: [
+        "You want to inspect job details, signals, and credit cost and skip leads that do not fit—without paying.",
+        "You will actually be selective: buying every lead in the feed defeats the model.",
+        "You can respond quickly after unlocking contact details. Bark shows how many professionals have already responded; its Help Center states a customer can receive 5 responses.",
+        "You can use credits before they expire (3 months from purchase for credits bought November 1, 2025 onward) and you understand that $2.35 is per credit, not per lead.",
+      ],
+      decisionGuideB: [
+        "You want customers finding and contacting you inside a US local marketplace, with targeting and a weekly spend cap instead of a credit wallet.",
+        "You will maintain job preferences, travel area, hours, and max lead prices so automatic direct-lead charges stay on work you actually want.",
+        "Thumbtack has demand in your category and you can answer those conversations fast after the customer reaches out.",
+        "You prefer no membership or annual platform fee (Thumbtack’s stated model) and will track spend against booked jobs, not raw lead count.",
+      ],
+      decisionGuideNeither: [
+        "Paid marketplace CAC already exceeds gross profit on the jobs you actually win—fix close rate or ticket mix before buying more names.",
+        "You cannot respond quickly. Shared or limited-competition marketplaces still reward the first viable reply.",
+        "Referrals, Google Business Profile, or Google Local Services Ads (if eligible) already fill the calendar at a better booked-job margin.",
+        "You need exclusive, high-ticket project flow—neither marketplace guarantees exclusivity. Houzz Pro or owned marketing may fit planned remodels better than either feed.",
+      ],
+      heroCallouts: [
+        {
+          label: "Inspect before you pay",
+          winner: "A",
+          reason: "Bark shows the request and credit cost; you pay only if you contact.",
+        },
+        {
+          label: "Customer reaches out; budget caps spend",
+          winner: "B",
+          reason: "Thumbtack: targeting + max lead price + weekly budget; direct leads charged when the customer contacts you.",
+        },
+        {
+          label: "Published credit price (not CPL)",
+          winner: "A",
+          reason: "Bark lists $2.35 per standard credit; lead cost = credits required × your effective credit rate.",
+        },
+      ],
+      featureComparisonSub: "Mechanics that change whether you should buy a given opportunity.",
+      featureComparisonColumnLabel: "Question",
+      featureComparison: [
+        dim(
+          "How you receive opportunities",
+          "Matched lead feed. Browse, filter, decide.",
+          "Matches from targeting preferences; customers choose/contact you."
+        ),
+        dim(
+          "When you pay",
+          "When you spend credits to contact that lead.",
+          "For direct leads: when the customer reaches out (Thumbtack staff, Aug 2025). Confirm current types in-account."
+        ),
+        dim(
+          "Pricing unit",
+          "Credits. Standard US price $2.35/credit; packs can discount. Lead cost = credits × rate.",
+          "A lead price per connection. You set max/exact lead prices. No public national rate card."
+        ),
+        dim(
+          "Inspect before paying?",
+          "Yes. Cost and details are shown first. “Not interested” skips without credits.",
+          "You shape matches via targeting and max price. Direct-lead charges are not a per-card “buy this one” step."
+        ),
+        dim(
+          "Spend controls",
+          "Buy only the leads you want. Optional auto top-up and credit-pack subscriptions. Credits expire.",
+          "Weekly budget plus max lead prices. Thumbtack says budget/pricing determine lead volume."
+        ),
+        dim(
+          "Competition",
+          "Help Center: a customer can receive 5 responses. You can see how many have already responded.",
+          "Thumbtack says competition per lead is limited. It does not publish a single number on the Pro page."
+        ),
+        dim(
+          "Contact details",
+          "Phone and email after you pay to respond, plus in-app Messenger.",
+          "Conversation with the customer on Thumbtack (and related contact tools in the pro account)."
+        ),
+        dim(
+          "Intent signals",
+          "High hiring intent, urgent, first to respond, verified phone—plus job scope in the request.",
+          "Thumbtack markets customers who choose you with intent to hire. Job completeness still varies—track your own close rate."
+        ),
+        dim(
+          "Refunds / credits",
+          "Credit return within 14 days for listed invalid reasons. Unresponsive customers and “hired someone else” do not qualify. Returns are credits, not automatically cash.",
+          "A job not booking is not, by itself, a published refund. Thumbtack staff: non-responsive customers are not in the refund policy. Check current in-app rules."
+        ),
+        dim(
+          "Credit / lead expiration",
+          "Credits purchased from Nov 1, 2025 expire after 3 months. Unused credits cannot be refunded (Bark Help).",
+          "No Bark-style credit wallet on the public Pro model. You pay lead prices against budget."
+        ),
+        dim(
+          "Optional subscription",
+          "Elite Pro is optional (20% credit-pack discount, 2 free weekly leads on 48-hour-old unanswered leads, ranking/directory perks). Not required to buy leads.",
+          "No membership, annual, or join fee on Thumbtack’s Pro page."
+        ),
+        dim(
+          "Biggest tradeoff",
+          "Selectivity only helps if you skip weak leads and use credits before they expire. You still compete (up to 5 responses).",
+          "You can be charged when a customer contacts you even if you never would have “bought” that job from a feed."
+        ),
+      ],
+      pricingComparison:
+        "Bark’s $2.35 is a credit price, not a lead price. Thumbtack does not publish a universal CPL. Compare both on cost per booked job using your own spend and CRM outcomes.",
+      pricingComparisonParagraphs: [
+        "Bark (US, August 2026): standard price is $2.35 per credit. Packs can lower the effective rate. Every lead shows how many credits it takes before you respond. Factors Bark lists: service type, job size/scope, location/demand, and customer engagement. Example math (hypothetical): a lead that costs 12 credits at $2.35 is $28.20; the same lead at a discounted pack rate of $2.00 would be $24. A bulk pack is not cheaper if you cannot use the credits in 3 months.",
+        "Bark also sells optional Credit Pack Subscriptions (set up with Customer Success; weekly or monthly delivery; lower per-credit than one-off packs). Auto top-up can refill a low balance without a full subscription. Elite Pro, if you buy it, currently includes a 20% credit-pack discount and two free leads per week that apply only to leads with no responses after 48 hours; those free leads reset Mondays and are not return-eligible.",
+        "Thumbtack: no published national price sheet. Official community guidance (2026) says Thumbtack uses exact lead prices: the price you set is what you pay unless a promotion applies. Max lead prices plus a weekly budget are the spend controls. Lead prices vary by service, job, and market. Do not use a blog’s “typical HVAC CPL” as your number. Read the range inside your pro account.",
+        "Bark states no commission on the job. Thumbtack’s Pro page likewise emphasizes no membership/annual fees and paying for leads rather than a join fee. Neither claim is the same as “cheap leads.”",
+      ],
+      roiGuidance: {
+        heading: "Compare cost per booked job—not cost per lead",
+        paragraphs: [
+          "Track, separately for each marketplace: spend, paid opportunities, conversations, estimates/appointments, booked jobs, revenue, and gross profit. Cost per booked job = total marketplace spend ÷ booked jobs. Customer acquisition cost for new customers is the same idea if you count unique new clients.",
+          "The same $500 can be a win or a loss depending on ticket size, repeat work, and close rate. A landscaper buying recurring mowing can justify a higher CAC than a one-time $99 junk-haul. An HVAC replacement can absorb a higher lead cost than a $150 service call. Do not crown a platform from CPL alone.",
+        ],
+        example: {
+          heading: "Hypothetical funnel — not a Bark or Thumbtack benchmark",
+          body: "$500 spend → 20 paid opportunities → 12 conversations → 6 estimates → 3 booked jobs. CAC ≈ $167 per booked job. If those 3 jobs cannot produce enough gross profit (after labor, materials, and follow-up time) to cover $167 plus your time, the channel fails—whether the $500 was Bark credits or Thumbtack lead charges. Replace every number with your invoices and CRM.",
+        },
+      },
+      prosConsA: {
+        pros: [
+          "See the request and credit cost before you pay",
+          "Skip unfit leads without a charge",
+          "Published $2.35 credit price and visible per-lead credit amounts",
+          "No commission on won jobs (Bark’s stated model); optional Elite Pro, not required",
+        ],
+        cons: [
+          "$2.35/credit is not the lead price—busy categories cost many credits",
+          "Credits bought from Nov 1, 2025 expire in 3 months",
+          "Up to 5 professionals can respond; unresponsive customers are not a credit-return reason",
+          "Get Hired Guarantee applies to a first eligible pack/purchase with conditions—not every pack forever",
+        ],
+      },
+      prosConsB: {
+        pros: [
+          "No membership, annual, or join fee (Thumbtack’s Pro page)",
+          "Weekly budget and max lead prices cap spend",
+          "Customers who choose you—Thumbtack’s stated high-intent story",
+          "Limited competition per lead (stated; no public headcount)",
+        ],
+        cons: [
+          "Direct-lead charge when the customer reaches out—you may pay for jobs you would have skipped on Bark",
+          "No public national CPL; prices are account- and market-specific",
+          "Non-response is not a published refund reason",
+          "Wrong targeting or max prices can buy volume you cannot staff",
+        ],
+      },
+      bestFor: [
+        {
+          heading: "HVAC, plumbing, and other urgent repair",
+          body: "Speed still wins on both. Bark’s “urgent” and “first to respond” flags help you spend credits where delay is costly. Thumbtack’s customer-initiated contact can be a live conversation you must answer immediately. If you cannot staff the phone, neither marketplace is a lead-quality problem—it is an operations problem. Hypothetical: a $50 acquisition cost can be fine on a $4,000 replacement and fatal on a $179 diagnostic.",
+        },
+        {
+          heading: "Recurring work (cleaning, lawn, maintenance)",
+          body: "Judge CAC against the first year of the route, not the first visit. Bark lets you skip one-off tiny jobs if the credit price is high relative to a single clean. Thumbtack targeting and max prices should be set so you are not paying full freight for jobs you would never take. Track repeat rate in CRM or you will misread both channels.",
+        },
+        {
+          heading: "Quoted projects (painting, remodeling, larger electrical)",
+          body: "Higher tickets can absorb a higher lead cost if you close. Bark’s job-size pricing means larger scopes cost more credits—compare that to expected gross profit before you tap respond. Thumbtack max lead prices should be set from contribution margin, not from “I want more volume.” Neither platform replaces a qualification script.",
+        },
+        {
+          heading: "Can you run both?",
+          body: "Yes—they are independent. A useful test is not “30–60 days of vibes.” Pick a calendar window and a hard budget per channel. Tag every opportunity in CRM. Compare spend, conversations, estimates, booked jobs, revenue, and gross profit. Kill the channel whose CAC exceeds your gross-profit target after refunds/credit returns. If both clear the hurdle, keep the better CAC and use the other only when the first has no capacity. Deduplicate the same customer who appears on both.",
+        },
+      ],
+      alternatives: [
+        {
+          name: "Google Local Services Ads",
+          href: getLeadGenerationReviewUrl("google-local-services-ads"),
+          logoSrc: "/Logos/google.jpeg",
+          description: "Pay per Google-screened lead when search is already how customers find you.",
+        },
+        {
+          name: "Angi",
+          href: getLeadGenerationReviewUrl("angi"),
+          logoSrc: "/Logos/angi.jpeg",
+          description: "Directory/ads vs Angi Leads—different products; see Angi vs HomeAdvisor.",
+        },
+      ],
+      faqs: [
+        {
+          q: "Is Bark cheaper than Thumbtack?",
+          a: "Not as a universal fact. Bark’s published unit is $2.35 per credit; a lead that takes many credits can cost more than a Thumbtack lead in your account. Compare spend ÷ booked jobs on both, with the same job types.",
+        },
+        {
+          q: "Does $2.35 mean each Bark lead costs $2.35?",
+          a: "No. That is the standard price of one credit. Leads require a variable number of credits shown before you respond.",
+        },
+        {
+          q: "When does Thumbtack charge me?",
+          a: "Thumbtack staff have said you are charged for direct leads the moment the customer reaches out. Targeting, max lead prices, and weekly budget determine what can reach you. Confirm current lead types and terms in your account.",
+        },
+        {
+          q: "Do Bark credits expire?",
+          a: "Bark’s Help Center: credits purchased from November 1, 2025 expire 3 months after purchase (12 months if bought before that date). Unused credits cannot be refunded. The US pricing page also states credits are valid for 3 months.",
+        },
+        {
+          q: "Does Bark refund unresponsive customers?",
+          a: "No. Bark lists unresponsive customers and “hired someone else” as common decline reasons. Eligible returns include invalid contact details, duplicates, wrong service, and similar quality failures—within 14 days, at Bark’s discretion. Approved returns are credits, not automatically cash.",
+        },
+        {
+          q: "How many pros compete on each lead?",
+          a: "Bark’s Help Center says a customer can receive 5 responses and that you can see how many have already responded. Thumbtack says competition is limited per lead but does not publish a headcount on its Pro page. Do not assume a blog’s 3–5 figure for Thumbtack.",
+        },
+        {
+          q: "Do I need Bark Elite Pro?",
+          a: "No. You can buy credits without it. Elite Pro is an optional paid plan (credit-pack discount, limited free weekly leads on older unanswered requests, ranking/directory perks). Thumbtack does not have a comparable required membership.",
+        },
+        {
+          q: "Bark vs Thumbtack for contractors?",
+          a: "If you want to cherry-pick requests, start with Bark’s inspect-then-buy model. If you want customers contacting you under targeting and a weekly cap, Thumbtack fits that mechanic. Run both only with tagged CRM and a booked-job scorecard.",
+        },
+        {
+          q: "Which has better lead quality?",
+          a: "BeltStack cannot rank them from unpublished conversion data. Use your contact rate, estimate rate, close rate, average job value, and gross profit after spend. Vendor marketing is not a close-rate study.",
+        },
+      ],
+      sidebarWinners: [
+        { label: "Inspect before paying", winner: "A" },
+        { label: "Weekly budget + customer-initiated direct leads", winner: "B" },
+        { label: "Published per-credit price", winner: "A" },
+      ],
+      moreComparisons: lgMoreComparisons("bark-vs-thumbtack", "bark", "thumbtack", [
+        RELATED.tbAngi,
+        RELATED.tbHa,
+        RELATED.lsaTb,
+        RELATED.lsaBark,
+        RELATED.barkAngi,
+        RELATED.barkHa,
+        RELATED.hzTb,
+      ]),
+    }
+  ),
   build(
     "houzz-pro-vs-thumbtack",
     "houzz-pro",
@@ -1093,7 +1614,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Lead purchase model",
-          productA: "Credits / packs",
+          productA: "Credits (from $2.35; lead cost varies)",
           productB: "Lead programs + directory",
           supportA: "supported",
           supportB: "supported",

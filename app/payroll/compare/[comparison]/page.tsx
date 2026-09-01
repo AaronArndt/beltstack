@@ -73,7 +73,9 @@ export async function generateMetadata({ params }: Props) {
   const b = data.productB.name;
   return siteMetadata({
     path: getPayrollCompareUrl(comparison),
-    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
-    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for small businesses and contractors.`,
+    title: data.seoTitle ?? `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description:
+      data.seoDescription ??
+      `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for small businesses and contractors.`,
   });
 }

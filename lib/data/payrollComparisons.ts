@@ -1,8 +1,16 @@
-import { getPayrollReviewUrl, getPayrollBestForUrl } from "@/lib/routes";
+import { getPayrollReviewUrl, getPayrollBestForUrl, getPayrollAlternativeUrl } from "@/lib/routes";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 
 export function getPayrollCompareUrl(slug: string): string {
   return `/payroll/compare/${slug}`;
+}
+
+function textRow(
+  feature: string,
+  productA: string,
+  productB: string
+): ComparisonTemplateProps["featureComparison"][number] {
+  return { feature, productA, productB, supportA: "text", supportB: "text" };
 }
 
 const comparisons: Record<string, ComparisonTemplateProps> = {
@@ -2158,7 +2166,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://www.surepayroll.com",
       bestForSummary: "Simple payroll with optional full-service; Paychex family.",
       rating: "4.2",
-      startingPrice: "Custom pricing",
+      startingPrice: "$29/mo + $7/employee",
     },
     productB: {
       name: "Gusto",
@@ -2180,12 +2188,12 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       "Best for small businesses that want payroll, benefits, and HR in one place with published pricing and self-serve.",
     quickVerdictParagraphs: [
       "SurePayroll focuses on straightforward payroll—run it yourself or choose full-service. It's part of the Paychex family, so you get a recognizable name and support. Gusto adds benefits and HR with published tiered pricing and a modern self-serve experience. Both handle W-2 and 1099.",
-      "SurePayroll wins if you want simplicity and the option to hand off payroll to the provider. Gusto wins if you want more HR and benefits in one product and transparent pricing you can see online. Compare total cost and features; Gusto typically offers more for similar or clearer pricing.",
+      "SurePayroll wins if you want simplicity and the option to hand off payroll to the provider. Gusto wins if you want more HR and benefits in one product and transparent pricing you can see online. Compare total cost and features; Gusto typically offers more HR for a published (different) price.",
     ],
     decisionGuideA: [
       "You want simple payroll with optional full-service.",
       "You prefer a well-known brand (Paychex family).",
-      "You're okay with custom or less transparent pricing.",
+      "You want a published payroll-first price (currently $29/mo + $7 per employee on Full Service) rather than Gusto’s HR-inclusive tiers.",
     ],
     decisionGuideB: [
       "You want payroll, benefits, and HR in one platform.",
@@ -2202,13 +2210,13 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     featureComparison: [
       { feature: "Payroll", productA: "W-2 and 1099; simple or full-service", productB: "W-2 and 1099; full-featured", supportA: "supported", supportB: "supported", stronger: "B" },
       { feature: "HR and benefits", productA: "Basic", productB: "Strong; benefits and HR tools", supportA: "partial", supportB: "supported", stronger: "B" },
-      { feature: "Pricing", productA: "Custom or tiered", productB: "Published tiered", supportA: "partial", supportB: "supported", stronger: "B" },
+      { feature: "Pricing", productA: "Published Full Service $29/mo + $7/EE", productB: "Published tiered (e.g. $49/mo base + per person)", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "SurePayroll uses custom or tiered pricing—check their site or contact for rates. Gusto uses published pricing ($49/mo base plus per person). Gusto is easier to compare and often competitive or better value when you factor in HR and benefits.",
+      "Both publish pricing. SurePayroll Full Service is currently $29/month plus $7 per employee (No Tax Filing is $20 + $4). Gusto uses published tiers (e.g. $49/month base plus per person). Compare at your headcount and whether you need Gusto’s HR/benefits in the same product.",
     prosConsA: {
-      pros: ["Simple payroll", "Full-service option", "Familiar brand", "Support available"],
-      cons: ["Less HR and benefits", "Less transparent pricing", "Fewer integrations"],
+      pros: ["Simple payroll", "Full-service option", "Familiar brand", "Published Full Service pricing"],
+      cons: ["Less HR and benefits", "Fewer integrations", "Year-end and add-on fees sit outside the headline rate"],
     },
     prosConsB: {
       pros: ["Published pricing", "Payroll + benefits + HR", "Self-serve", "Strong integrations"],
@@ -2227,13 +2235,13 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Best for contractors", href: getPayrollBestForUrl("contractors") },
     ],
     faqs: [
-      { q: "SurePayroll vs Gusto: which has more features?", a: "Gusto has more: benefits administration, HR tools, and published pricing. SurePayroll focuses on simple payroll with optional full-service. Choose Gusto for all-in-one; choose SurePayroll for simplicity and full-service option." },
+      { q: "SurePayroll vs Gusto: which has more features?", a: "Gusto has more HR and benefits in the base product. SurePayroll is payroll-first with published Full Service pricing ($29/mo + $7 per employee). Choose Gusto for all-in-one; choose SurePayroll for simpler payroll and a lower published starting rate." },
       { q: "Is SurePayroll part of Paychex?", a: "Yes. SurePayroll is part of the Paychex family, focused on small-business payroll." },
     ],
     sidebarWinners: [
       { label: "Winner for full-service option", winner: "A" },
       { label: "Winner for features", winner: "B" },
-      { label: "Winner for pricing transparency", winner: "B" },
+      { label: "Winner for payroll + HR together", winner: "B" },
     ],
     heroCallouts: [
       { label: "Winner for full-service", winner: "A", reason: "SurePayroll lets you hand off payroll and tax filing to the provider." },
@@ -2252,9 +2260,9 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       reviewHref: getPayrollReviewUrl("surepayroll"),
       logoSrc: "/Logos/surepayroll.jpeg",
       visitUrl: "https://www.surepayroll.com",
-      bestForSummary: "Simple small-business payroll; Paychex family.",
+      bestForSummary: "Payroll-first product with published Full Service pricing for small employers.",
       rating: "4.2",
-      startingPrice: "Custom pricing",
+      startingPrice: "$29/mo + $7/employee",
     },
     productB: {
       name: "ADP",
@@ -2262,31 +2270,62 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       reviewHref: getPayrollReviewUrl("adp"),
       logoSrc: "/Logos/adp.jpeg",
       visitUrl: "https://www.adp.com/small-business",
-      bestForSummary: "Enterprise payroll and HR; scales to large organizations.",
+      bestForSummary: "RUN Powered by ADP: payroll plus HR packages for 1–49 employees; quote required.",
       rating: "4.4",
-      startingPrice: "Custom pricing",
+      startingPrice: "Quote (RUN packages)",
     },
     categoryHref: "/payroll",
     categoryLabel: "Payroll",
+    pageHeading: "SurePayroll vs ADP (2026): Pricing & Best Fit",
+    seoTitle: "SurePayroll vs ADP (2026): Pricing & Best Fit | BeltStack",
+    seoDescription:
+      "For most small businesses, SurePayroll vs ADP means SurePayroll vs RUN Powered by ADP. Compare published $29 + $7/employee pricing vs ADP’s quote-based RUN packages, tax filing, HR add-ons, and when each fits.",
     summaryParagraph:
-      "SurePayroll is small-business payroll (Paychex family) with simple or full-service options; ADP is enterprise payroll and HR that scales. Both use custom pricing. SurePayroll fits smallest teams; ADP fits growing or large organizations.",
+      "For most small businesses comparing SurePayroll with ADP, the relevant ADP product is RUN Powered by ADP—not Workforce Now, TotalSource, or Roll. SurePayroll is a Paychex payroll-first product with published Full Service pricing. RUN is ADP’s 1–49 payroll and HR platform with four packages and quote-based pricing. The useful decision is whether you mainly need payroll with a calculator price, or a broader payroll/HR stack you will actually use.",
+    quickVerdictHeading: "The real choice is payroll-first vs RUN’s HR stack",
+    quickVerdictSub: "Not SurePayroll vs ADP the company, and not a sticker-price contest.",
     quickRecommendationA:
-      "Best for very small businesses that want simple payroll with optional full-service and a familiar brand.",
+      "Best when payroll and tax filing are the job, you want a published monthly number, and you do not need ADP’s hiring, HR helpdesk, or time/benefits add-ons yet.",
     quickRecommendationB:
-      "Best for growing or large businesses that need enterprise payroll, compliance, and scale.",
+      "Best when you want ADP’s 1–49 platform (RUN), 24/7 support, package-based HR/recruiting tools, and a later path into Workforce Now—and you will get a quote before deciding on price.",
+    researchNote:
+      "Pricing and product details verified August 2026 from SurePayroll’s published pricing page and ADP’s RUN Powered by ADP 1–49 payroll-packages documentation. ADP does not publish RUN dollar prices; this page does not treat third-party estimates as facts. BeltStack has not run payroll, filed taxes, migrated a client, or received an ADP quote through either platform.",
     quickVerdictParagraphs: [
-      "SurePayroll focuses on small-business payroll with a simple product and optional full-service—part of the Paychex family. ADP offers payroll and HR from small business to enterprise with custom pricing and optional dedicated support. Both use custom pricing; scale and complexity differ.",
-      "SurePayroll wins for smallest teams that want straightforward payroll and the option to hand off. ADP wins for scale: more employees, multi-state, compliance, and enterprise features. Compare quotes for your headcount; small teams may find SurePayroll or Gusto simpler; larger teams may prefer ADP.",
+      "For most small businesses comparing SurePayroll with ADP, the relevant ADP product is RUN Powered by ADP. ADP positions RUN for 1–49 employees. Workforce Now is ADP’s 50+ / midsize–enterprise product. TotalSource is a PEO. Roll by ADP is a separate simpler payroll line ADP has described with its own starting price. Comparing SurePayroll to “ADP” as one giant company is how this search goes wrong.",
+      "SurePayroll (a Paychex company) currently lists Full Service at $29/month plus $7 per employee: taxes calculated, filed, and deposited; W-2 and 1099; unlimited payroll runs; free 2-day direct deposit; cancel anytime. A cheaper No Tax Filing plan is $20 + $4 per employee if you file and deposit taxes yourself. RUN does not publish those numbers. You request pricing. Packages run Essential Payroll through HR Pro Payroll & HR. Tax filing is included across packages; W-2 and 1099 carry an additional fee; time, retirement, workers’ comp, and health insurance are add-ons.",
+      "Choose SurePayroll when the business is still payroll-shaped: a small crew, one or a few states, and a monthly cost you can calculate before talking to sales. Choose RUN when payroll is only the start—onboarding volume, HR helpdesk, recruiting, time and attendance, or a package path you expect to grow into. Do not pick on sticker price alone: SurePayroll’s published rate omits year-end forms, extra states, local taxes, and add-ons, and ADP’s quote can bundle services SurePayroll sells separately. If you will not use RUN’s HR stack, you are shopping complexity, not value.",
     ],
+    relationshipContext: {
+      heading: "SurePayroll vs ADP: what are you actually comparing?",
+      paragraphs: [
+        "SurePayroll is a small-business payroll product from Paychex. Its public plans are Full Service and No Tax Filing, plus add-ons for accounting integration, timeclock, employment-law tools, 401(k), workers’ comp, and health insurance. It is not ADP, and it is not Paychex Flex. Owners who want Paychex’s fuller full-service stack should compare Paychex, not treat SurePayroll as a back door into the same product.",
+        "ADP is a family of products. For this search, the counterpart is RUN Powered by ADP. ADP’s own comparison of RUN vs Workforce Now assigns RUN to small businesses (1–49) and Workforce Now to midsize and enterprise (50+). RUN sells four packages: Essential Payroll, Enhanced Payroll, Complete Payroll & HR Plus, and HR Pro Payroll & HR. All include payroll, tax filing, 24/7 phone and chat, employee access, new-hire reporting, GL export, and new-hire onboarding. Higher packages add garnishments, job costing, ZipRecruiter, live HR helpdesk, handbook tools, ATS, LMS, and legal assistance.",
+        "Workforce Now, TotalSource, and Roll are the usual mix-ups. Workforce Now is the next ADP product after RUN’s stated 1–49 band—not the product most “SurePayroll vs ADP” shoppers should price first. TotalSource is a PEO (co-employment), a different buying motion. ADP’s 1–49 FAQ also mentions Roll (“Simple payroll by Roll”) with a published starting example; that is not RUN. If a sales quote is for Workforce Now or Roll, you are no longer in the same comparison as SurePayroll Full Service.",
+        "The practical mismatch: a five-person plumber comparing SurePayroll’s $64/month Full Service math to an ADP enterprise demo will over-buy. A 40-person multi-location shop comparing SurePayroll’s payroll-first product to Workforce Now will under-buy. Stay on Full Service vs RUN unless your headcount, HR staff, or PEO need has already left that band.",
+      ],
+    },
+    decisionGuideAHeading: "Choose SurePayroll if…",
+    decisionGuideBHeading: "Choose ADP (RUN) if…",
     decisionGuideA: [
-      "You're a very small business and want simple payroll.",
-      "You want optional full-service from a recognizable brand.",
-      "You don't need enterprise scale or multi-country.",
+      "Payroll and tax filing are the main problem; you do not need hiring, HR helpdesk, or workforce modules yet.",
+      "You want a published rate you can calculate before a sales call (currently $29/mo + $7 per employee on Full Service).",
+      "You want unlimited payroll runs and cancel-anytime billing without a quote cycle.",
+      "A small service crew (or mixed W-2 + 1099) in one primary state is the actual operation.",
+      "You are willing to add timeclock, accounting export, extra states, and year-end forms as line items rather than a platform package.",
     ],
     decisionGuideB: [
-      "You're growing or already have a larger workforce.",
-      "You need enterprise compliance, multi-state, or multi-country.",
-      "You want optional dedicated account management.",
+      "You want ADP’s small-business platform (RUN), not a payroll-only tool, and you expect to use onboarding, HR tools, or recruiting.",
+      "24/7 phone and chat, multi-jurisdiction payroll, garnishments, or job costing matter more than a public price table.",
+      "You want a package ladder (Essential → Enhanced → Complete → HR Pro) and a later path toward Workforce Now if you cross ADP’s 50+ line.",
+      "Time tracking, retirement, workers’ comp, or health benefits will be bought through the same vendor, not bolted on later from a spreadsheet.",
+      "You will get a written quote that matches SurePayroll’s included tax filing, year-end forms, and add-ons before you compare cost.",
+    ],
+    decisionGuideNeither: [
+      "You want accounting-native payroll (QuickBooks Payroll) rather than a standalone payroll product.",
+      "You mainly pay 1099 contractors and barely run W-2 payroll—contractor-first tools may be a better fit.",
+      "You need international payroll or EOR, which neither SurePayroll nor RUN is built to be.",
+      "You want published payroll + HR in one modern product (Gusto, OnPay) rather than Paychex-family payroll-first or ADP packages.",
+      "You specifically want Paychex Flex / fuller Paychex HR—not SurePayroll—and should compare Paychex vs ADP instead.",
     ],
     ratingsComparison: [
       { category: "Ease of use", productA: "4.4", productB: "4.2" },
@@ -2295,49 +2334,164 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { category: "Support", productA: "4.5", productB: "4.6" },
       { category: "Integrations", productA: "4.0", productB: "4.5" },
     ],
+    featureComparisonColumnLabel: "What you’re comparing",
+    featureComparisonSub:
+      "This table is SurePayroll vs RUN Powered by ADP. It is not SurePayroll vs Workforce Now or vs ADP TotalSource.",
     featureComparison: [
-      { feature: "Payroll", productA: "Simple; W-2 and 1099", productB: "Full-scale; multi-state/country", supportA: "supported", supportB: "supported", stronger: "B" },
-      { feature: "Scale", productA: "Small business focus", productB: "Enterprise scale", supportA: "supported", supportB: "supported", stronger: "B" },
-      { feature: "Simplicity", productA: "Simple product; full-service option", productB: "More complex; more features", supportA: "supported", supportB: "partial", stronger: "A" },
+      textRow("Relevant product", "SurePayroll Full Service (Paychex company). No Tax Filing is a cheaper self-file plan.", "RUN Powered by ADP (1–49). Not Workforce Now (50+), TotalSource (PEO), or Roll."),
+      textRow("Pricing visibility", "Published: Full Service $29/mo + $7/employee; No Tax Filing $20 + $4/employee. Cancel anytime.", "Quote required. ADP lists four RUN packages and “Get pricing.” No public dollar card for RUN."),
+      textRow("Payroll tax filing", "Full Service: SurePayroll calculates, files, and deposits. No Tax Filing: you file and deposit.", "Included on all RUN packages: calculate, file, deposit, reconcile; ADP states it pays fines/penalties if it makes a tax-filing error."),
+      textRow("Tax guarantees", "Full Service: No Penalty Tax Filing Guarantee (client still liable if at fault; client always pays the taxes). Self-service: Tax Calculation Guarantee.", "ADP: if ADP makes a tax filing error, it pays resulting fines/penalties. Client-caused errors are a different issue—read the service agreement."),
+      textRow("Year-end W-2 / 1099", "Published annual fee: $50 base + $5 per form.", "W-2 and 1099 listed as an additional fee on every RUN package. Ask for the dollar amount in the quote."),
+      textRow("Payroll runs", "Unlimited payroll runs on the published plans, including auto-schedule.", "Off-cycle payroll is allowed; ADP states payroll fees increase with frequency. Some states set a minimum frequency."),
+      textRow("Direct deposit", "Free 2-day direct deposit. Expedited 1-day and same-day available for an extra fee (cutoffs in CT).", "Direct deposit included. Wisely pay card listed as included. Delivery of paper checks is in the feature set."),
+      textRow("Contractors", "1099 payments and year-end 1099-NEC on the same payroll product.", "1099 contractor payments supported. ADP also sells a contractor payment bundle (monthly base + per-contractor + year-end fees)."),
+      textRow("Multi-state / local", "First state included; additional states $9.99/mo. Local taxes: separate fee (amount not listed as a flat public rate on the pricing calculator).", "Multi-jurisdiction payroll included on RUN packages. Ask how the quote treats extra states and localities."),
+      textRow("Time tracking", "Optional timeclock from $5/mo + $3 per employee.", "Time and Attendance is an add-on on all RUN packages—not included in Essential by default."),
+      textRow("HR outside payroll", "Employment-law add-on from $30/mo. Basic employee self-service and mobile. Not an ATS/HRIS suite.", "Essential is payroll-forward. Enhanced+ adds recruiting/posting tools; Complete+ live HR helpdesk and handbook tools; HR Pro adds ATS, LMS, legal assistance."),
+      textRow("Benefits / WC / retirement", "Workers’ comp and health insurance offered as services; 401(k) is a custom add-on.", "Health insurance, retirement, and workers’ comp are add-ons on all RUN packages."),
+      textRow("Accounting / integrations", "Accounting integration add-on $4.99/mo.", "GL export to QuickBooks, Xero, Wave, Creative Solutions, and generic included. Broader ADP Marketplace / POS / business-system integrations on the RUN stack."),
+      textRow("Support (availability)", "Customer service described as Monday–Friday. Do not treat that as a quality score.", "24/7 phone and chat listed on all RUN packages. Availability, not a BeltStack support-quality test."),
+      textRow("Contract", "Billed monthly; cancel anytime (SurePayroll).", "ADP states you do not have to sign a contract and services can be terminated at any time. Still confirm on your quote."),
+      textRow("Best complexity profile", "Payroll is the product. You outgrow it when HR/workforce admin becomes the larger problem—not at an official headcount cap.", "Built as a small-business payroll/HR platform with a documented next product (Workforce Now) at 50+ on ADP’s side."),
+      textRow("Biggest tradeoff", "You can see the price. You do not get RUN’s HR package ladder or 24/7 support hours.", "You get ADP infrastructure and package depth. You cannot verify monthly cost from a public page, and unused HR modules are paid complexity."),
     ],
     pricingComparison:
-      "Both use custom pricing. SurePayroll is aimed at small businesses; ADP scales up. Get quotes for your headcount and needs. Small teams often find SurePayroll or Gusto easier to budget; ADP becomes relevant at scale.",
+      "SurePayroll publishes Full Service at $29/month plus $7 per employee. ADP requires a RUN quote. Do not treat third-party “ADP starts at $X” figures as current RUN pricing.",
+    pricingComparisonParagraphs: [
+      "SurePayroll currently publishes two small-business plans. Full Service (listed as most popular) is $29/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, free 2-day direct deposit, auto-schedule, mobile for employers and employees, new-hire reporting, and free onboarding. No Tax Filing is $20/month plus $4 per employee with the same payroll features except you file and deposit taxes. First state is included; additional states are $9.99/month. Local taxes carry a separate fee. Year-end W-2 / 1099-NEC is billed annually at $50 plus $5 per form—not in the monthly calculator total. Optional add-ons include accounting integration at $4.99/month, timeclock from $5/month plus $3 per employee, employment law from $30/month, and custom 401(k). SurePayroll states cancel-anytime monthly billing. Household/nanny pricing is a different product (the pricing page listed $39/month including one employee) and is not this comparison.",
+      "ADP does not publish RUN package prices. The 1–49 payroll-packages page is “Get pricing.” ADP describes RUN pricing as tiered (four packages) versus custom pricing for Workforce Now—still without dollar amounts for RUN. ADP says payroll software pricing depends on how often you run payroll, how many people you pay, how often you add or remove payees, and add-on services. Off-cycle payroll is allowed but fees increase with frequency. W-2 and 1099 are an additional fee on every package. Contractors can be billed as a separate bundle (monthly base plus per-contractor plus year-end fees). Implementation fees are not listed as a public number. Confirm them on the quote. ADP’s 1–49 FAQ mentions Roll starting as low as $39/month plus $5 per employee; that is Roll, not RUN. Do not use it as a RUN or SurePayroll-vs-ADP price.",
+      "What to ask ADP before you compare the price: (1) total monthly and annual cost for your headcount and pay frequency; (2) what is monthly vs per-payroll; (3) implementation or setup fees; (4) whether tax filing is included at the quoted package (it is on the public package table—confirm the quote matches); (5) W-2 and 1099 year-end dollar amounts; (6) extra-state or local-tax charges; (7) Time and Attendance, HR HelpDesk, ZipRecruiter, ATS, retirement, workers’ comp, and health-insurance add-on prices if you will use them; (8) contractor-bundle fees if you pay 1099s; (9) confirmation of no required long-term contract and how cancellation works on your order form; (10) support hours and whether anything is gated behind a higher package. Ask for the same scope SurePayroll Full Service already prices: tax filing, unlimited-equivalent run frequency, direct deposit, employee access, and year-end forms. Then add only the RUN modules you will use.",
+    ],
+    roiGuidance: {
+      heading: "What does payroll cost at 5, 10, 25, and 50 employees?",
+      paragraphs: [
+        "These SurePayroll figures are published-rate estimates for Full Service (base + per employee only), one included state, no local-tax fee, no timeclock, no accounting add-on, and no year-end forms. They are not invoices. Year-end adds $50 plus $5 per W-2/1099. A second state adds $9.99/month.",
+        "5 employees: $29 + $35 = $64/month. 10 employees: $29 + $70 = $99/month. 25 employees: $29 + $175 = $204/month. 50 employees: $29 + $350 = $379/month. ADP at every row: quote required. There is no responsible way to fill an ADP column with a public monthly number in August 2026.",
+        "Is ADP worth the extra complexity? Only if the business will use it. A five-person plumbing company that needs direct deposit, tax filing, and a known monthly bill is buying SurePayroll’s product. Paying RUN for recruiting, LMS, or HR helpdesk it will not open is not a sophistication upgrade. A growing multi-location crew that is already drowning in onboarding, time cards, garnishments, or benefits deductions is shopping RUN’s stack, not a $64 vs unknown quote contest.",
+        "You do not outgrow SurePayroll at a published employee cap. SurePayroll does not publish a “switch at 25” or “max 49” limit. You outgrow it when payroll is no longer the main problem: multiple locations, recruiting volume, handbook/HR admin, time and scheduling, benefits administration, or reporting that a payroll-first product treats as add-ons. ADP’s own 50+ line is the RUN-to-Workforce Now handoff inside ADP—not a SurePayroll fact. A 50-person company can still run SurePayroll Full Service at the published math above; whether it should is an operations question.",
+      ],
+      example: {
+        heading: "Apples-to-apples quote request",
+        body: "Send ADP your employee count, 1099 count, states, pay frequency, and whether you need time tracking, HR helpdesk, recruiting, workers’ comp, retirement, and health benefits. Ask them to price Essential vs the package that includes the HR tools you will use. Compare that total—including W-2/1099 and implementation—to SurePayroll Full Service ($29 + $7 × employees) plus the add-ons you would actually buy (timeclock, extra state, accounting export, year-end forms). Ignore unused RUN modules in the “value” column.",
+      },
+    },
     prosConsA: {
-      pros: ["Simple payroll", "Full-service option", "Small-business focus", "Familiar brand"],
-      cons: ["Less scale", "Fewer features", "Custom pricing"],
+      pros: [
+        "Published Full Service price: $29/mo + $7 per employee",
+        "Unlimited payroll runs; cancel anytime",
+        "Full Service tax filing plus a cheaper No Tax Filing plan if you self-file",
+        "W-2 and 1099 on the same product; year-end fee is published",
+      ],
+      cons: [
+        "HR, timeclock, and accounting export are add-ons, not a platform ladder",
+        "Support is described as weekday, not 24/7",
+        "No ADP Marketplace-style HR/recruiting package stack",
+        "Year-end, extra-state, and local-tax fees sit outside the headline monthly rate",
+      ],
     },
     prosConsB: {
-      pros: ["Enterprise scale", "Compliance depth", "Dedicated support option", "Multi-country"],
-      cons: ["Custom pricing", "Can be complex for tiny teams"],
+      pros: [
+        "RUN is the correct 1–49 ADP product for this search, with a documented path to Workforce Now",
+        "Tax filing included across packages; 24/7 phone and chat",
+        "Package ladder for onboarding, garnishment, job costing, HR helpdesk, ATS, LMS",
+        "GL export included; time, retirement, WC, and health available as add-ons",
+      ],
+      cons: [
+        "No public RUN dollar prices—comparison requires a quote",
+        "W-2/1099 extra fee; contractor bundle and off-cycle frequency can change the bill",
+        "Paying for Complete/HR Pro without using HR tools is unused infrastructure",
+        "Easy to compare the wrong ADP product (Workforce Now, TotalSource, or Roll)",
+      ],
     },
     bestFor: [
-      { heading: "Best for very small business", body: "SurePayroll is the better fit when you want simple payroll and optional full-service without enterprise scale." },
-      { heading: "Best for scale", body: "ADP is the better fit when you need enterprise payroll, compliance, and optional dedicated support." },
+      {
+        heading: "5-person plumbing company",
+        body: "SurePayroll Full Service is usually the better fit: $64/month at published rates for five people, tax filing, unlimited runs, and 2-day direct deposit. RUN is only the better buy if you already need ADP’s HR/recruiting packages or 24/7 support enough to justify a quote you have not seen yet.",
+      },
+      {
+        heading: "10-person landscaping crew",
+        body: "Still a SurePayroll-shaped problem if the office manager runs payroll and time is a clipboard or a cheap timeclock add-on. Choose RUN if you want time and attendance, job costing (Enhanced+), or hiring volume through ZipRecruiter/ATS inside the same vendor.",
+      },
+      {
+        heading: "Seasonal HVAC employer",
+        body: "Headcount that jumps in summer and shrinks in winter favors a published per-employee fee you can drop when you terminate (SurePayroll) and unlimited runs for off-cycle bonuses. Ask ADP how seasonal adds/removes and off-cycle frequency hit the quote—ADP states fees increase with payroll frequency and that some plans charge by people paid each cycle.",
+      },
+      {
+        heading: "W-2 employees plus 1099 subcontractors",
+        body: "Both pay contractors. SurePayroll includes 1099-NEC in the year-end form fee ($50 + $5 per form). ADP supports 1099s and also sells a contractor bundle with its own base, per-contractor, and year-end fees—get that line item or you are not comparing the mixed workforce.",
+      },
+      {
+        heading: "Growing multi-location service company",
+        body: "When you add locations, extra states ($9.99/mo on SurePayroll), local taxes, time tracking, and an office manager doing HR by hand, RUN’s multi-jurisdiction payroll, onboarding, and Complete/HR Pro tools start to match the job. That is operational complexity, not a magic employee number.",
+      },
+      {
+        heading: "Company adding an HR / office-manager role",
+        body: "If that hire will live in recruiting, handbooks, training, and compliance databases, RUN’s higher packages exist for that work. If they will mostly run payroll and file the same taxes you already file, SurePayroll plus a $30/month employment-law add-on may still be the smaller system.",
+      },
     ],
     alternatives: [
-      { name: "Gusto", href: getPayrollReviewUrl("gusto"), description: "Published pricing; payroll and HR.", logoSrc: "/Logos/gusto.jpeg" },
-      { name: "Paychex", href: getPayrollReviewUrl("paychex"), description: "Full-service; same family as SurePayroll.", logoSrc: "/Logos/paychex.jpeg" },
+      { name: "Gusto", href: getPayrollReviewUrl("gusto"), description: "Published payroll + HR if you want a modern all-in-one instead of either vendor.", logoSrc: "/Logos/gusto.jpeg" },
+      { name: "Paychex", href: getPayrollReviewUrl("paychex"), description: "Same family as SurePayroll; fuller full-service HR—compare vs ADP, not as a SurePayroll clone.", logoSrc: "/Logos/paychex.jpeg" },
+      { name: "OnPay", href: getPayrollReviewUrl("onpay"), description: "Flat published payroll pricing if the decision is cost clarity, not ADP’s stack.", logoSrc: "/Logos/onpay.jpeg" },
+      { name: "SurePayroll alternatives", href: getPayrollAlternativeUrl("surepayroll"), description: "Other options if payroll-first SurePayroll is not the fit.", logoSrc: "/Logos/surepayroll.jpeg" },
+      { name: "ADP alternatives", href: getPayrollAlternativeUrl("adp"), description: "Other options if RUN’s quote or scope is not the fit.", logoSrc: "/Logos/adp.jpeg" },
     ],
     relevantTradeLinks: [
-      { label: "Best for small business", href: getPayrollBestForUrl("small-business") },
+      { label: "Best payroll software for small business", href: getPayrollBestForUrl("small-business") },
       { label: "Best for growing businesses", href: getPayrollBestForUrl("growing-businesses") },
+      { label: "Best for contractors", href: getPayrollBestForUrl("contractors") },
+      { label: "Best for 1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
+      { label: "Best payroll software (roundup)", href: "/payroll/best-payroll-software" },
     ],
     faqs: [
-      { q: "SurePayroll vs ADP: which for small business?", a: "SurePayroll is built for small-business payroll with simple or full-service. ADP serves small to enterprise; for very small teams, SurePayroll or Gusto may be simpler. For scale, ADP has the edge." },
-      { q: "Are SurePayroll and ADP related?", a: "No. SurePayroll is part of Paychex. ADP is a separate company. Both offer payroll with custom pricing." },
+      {
+        q: "When someone searches SurePayroll vs ADP, which ADP product is that?",
+        a: "RUN Powered by ADP. ADP positions RUN for small businesses with 1–49 employees. Workforce Now is the 50+ product. TotalSource is a PEO. Roll is a separate simpler payroll line. Keep the search keyword “ADP,” but price RUN unless your size or buying motion has already left that product.",
+      },
+      {
+        q: "Are SurePayroll and ADP the same company?",
+        a: "No. SurePayroll is a Paychex company. ADP is a separate company. SurePayroll is not an ADP small-business brand and is not an upgrade path into RUN.",
+      },
+      {
+        q: "Which is cheaper, SurePayroll or ADP?",
+        a: "SurePayroll Full Service is $29/month plus $7 per employee, plus extras (year-end $50 + $5/form, extra states $9.99/month, local-tax fee, add-ons). ADP does not publish RUN prices, so BeltStack cannot say ADP is higher or lower. Get a RUN quote for the same scope (tax filing, year-end forms, states, time, HR) and compare. Do not use Roll’s $39 + $5 example or old third-party ADP rates as RUN’s price.",
+      },
+      {
+        q: "Does SurePayroll include tax filing?",
+        a: "On Full Service, yes: calculation, filing, and deposits, with a No Penalty Tax Filing Guarantee subject to the service agreement (you still pay the taxes; you remain liable if you caused the error). The No Tax Filing plan is cheaper and leaves filing/deposits to you, with a Tax Calculation Guarantee. RUN includes tax filing on all listed packages.",
+      },
+      {
+        q: "Does ADP RUN include unlimited payroll?",
+        a: "ADP says you can process payroll outside your regular schedule, but payroll fees increase with frequency, and some states have minimum frequency rules. SurePayroll advertises unlimited payroll runs on its published plans. If you run extra payrolls often, ask ADP how that is billed before you treat the products as equal.",
+      },
+      {
+        q: "When should I move from SurePayroll to ADP?",
+        a: "Not at a magic headcount. Move when HR processes, recruiting/onboarding, time and scheduling, benefits administration, multi-location reporting, or compliance work outgrow a payroll-first product. Inside ADP, the documented product change at 50+ employees is RUN to Workforce Now—that is ADP’s lineup, not a SurePayroll ceiling.",
+      },
+      {
+        q: "Is ADP worth the extra complexity for a small team?",
+        a: "Only if you will use RUN’s extra infrastructure. A five-person business paying for HR/recruiting/workforce modules it does not open should prefer SurePayroll’s published payroll product. A growing employer already doing onboarding, time, benefits, and compliance by hand may prefer RUN’s packages even before seeing a lower monthly line than SurePayroll.",
+      },
+      {
+        q: "SurePayroll vs RUN by ADP vs Roll by ADP?",
+        a: "SurePayroll is Paychex payroll-first with public Full Service pricing. RUN is ADP’s 1–49 payroll/HR platform (quote). Roll is ADP’s simpler payroll mention on the 1–49 FAQ with a published starting example. A “cheap ADP” quote that matches Roll’s structure may not be RUN.",
+      },
     ],
     sidebarWinners: [
-      { label: "Winner for simplicity", winner: "A" },
-      { label: "Winner for scale", winner: "B" },
-      { label: "Winner for enterprise", winner: "B" },
+      { label: "Winner for published pricing", winner: "A" },
+      { label: "Winner for payroll-first simplicity", winner: "A" },
+      { label: "Winner for HR/workforce packages", winner: "B" },
     ],
     heroCallouts: [
-      { label: "Winner for small business simplicity", winner: "A", reason: "SurePayroll focuses on simple payroll with optional full-service." },
-      { label: "Winner for scale", winner: "B", reason: "ADP scales to enterprise with compliance and dedicated support." },
+      { label: "Winner for published payroll cost", winner: "A", reason: "SurePayroll lists Full Service at $29/mo + $7 per employee. RUN still requires a quote." },
+      { label: "Winner for payroll + HR infrastructure", winner: "B", reason: "RUN’s packages add onboarding, HR helpdesk, recruiting, and a path to Workforce Now—if you will use them." },
     ],
     moreComparisons: [
       { label: "SurePayroll vs Gusto", href: getPayrollCompareUrl("surepayroll-vs-gusto") },
       { label: "Gusto vs ADP", href: getPayrollCompareUrl("gusto-vs-adp") },
+      { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
+      { label: "Rippling vs Gusto", href: getPayrollCompareUrl("rippling-vs-gusto") },
     ],
   },
 

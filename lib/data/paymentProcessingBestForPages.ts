@@ -97,6 +97,7 @@ const relatedComparisons: BestForComparisonLink[] = [
   { label: "Stripe vs PayPal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
   { label: "Square vs PayPal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
   { label: "Helcim vs Stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
+  { label: "Stripe vs Stax", href: getPaymentProcessingCompareUrl("stripe-vs-stax") },
   { label: "Shopify Payments vs Stripe", href: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe") },
 ];
 

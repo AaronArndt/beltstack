@@ -78,7 +78,7 @@ const P = {
     visitUrl: "https://www.staxpayments.com",
     bestForSummary: "Membership + pass-through interchange",
     rating: "4.3",
-    startingPrice: "Monthly platform + interchange",
+    startingPrice: "From $99/mo + interchange + ¢/txn",
   },
   clover: {
     name: "Clover",
@@ -98,7 +98,7 @@ const P = {
     visitUrl: "https://www.authorize.net",
     bestForSummary: "Gateway and tokenization atop a merchant account—common with banks and ERPs",
     rating: "4.2",
-    startingPrice: "Gateway fee plus processor/acquirer pricing",
+    startingPrice: "From $25/mo plus transaction fees",
   },
 } as const;
 
@@ -174,8 +174,19 @@ type PaymentProcessingCompareBody = Omit<
   | "quickRecommendationB"
   | "moreComparisons"
   | "relevantTradeLinks"
->;
+> &
+  Partial<
+    Pick<
+      ComparisonTemplateProps,
+      "quickRecommendationA" | "quickRecommendationB" | "moreComparisons" | "relevantTradeLinks"
+    >
+  >;
 
+/**
+ * Pair-specific copy belongs in `extra`. Shared `P` is for canonical product facts only.
+ * After a substantial A-vs-B update, audit related reviews/alternatives/hubs
+ * (see `.cursor/rules/comparison-optimization.mdc`).
+ */
 function build(
   slug: string,
   a: keyof typeof P,
@@ -188,7 +199,6 @@ function build(
   return [
     slug,
     {
-      ...extra,
       productA: pa,
       productB: pb,
       categoryHref: "/payment-processing",
@@ -198,8 +208,17 @@ function build(
       quickRecommendationB: `Choose ${pb.name} when ${pb.bestForSummary.toLowerCase()} is the bottleneck you need to fix.`,
       moreComparisons: buildMoreComparisons(pa, pb),
       relevantTradeLinks: PP_TRADE_LINKS,
+      ...extra,
     },
   ];
+}
+
+function textRow(
+  feature: string,
+  productA: string,
+  productB: string
+): ComparisonTemplateProps["featureComparison"][number] {
+  return { feature, productA, productB, supportA: "text", supportB: "text" };
 }
 
 const COMMON_ALTS = [
@@ -505,7 +524,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       { feature: "Developer APIs vs all-in-one", productA: "Competitive modern stack", productB: "Operations-first", supportA: "supported", supportB: "supported" },
     ],
     pricingComparison:
-      "Helcim typically prices as interchange plus a disclosed processor markup. Stax adds a monthly platform (membership) fee to pass-through interchange. On top of either model, include hardware, chargebacks, refunds, and any PCI or support fees. Low-volume months affect Stax more because the platform fee is fixed—model a slow season before you commit. Ask both vendors for a written fee schedule or sample statement for your expected volume.",
+      "Helcim typically prices as interchange plus a disclosed processor markup. Stax (August 2026 published pricing) adds a monthly subscription from $99 by annual volume, pass-through interchange at Stax’s stated 0% extra percentage markup, plus $0.08 card-present or $0.15 card-not-present. On top of either model, include hardware, chargebacks, refunds, and any PCI or support fees. Low-volume months affect Stax more because the subscription is fixed—model a slow season before you commit. Ask both vendors for a written fee schedule or sample statement for your expected volume.",
     prosConsA: {
       pros: [
         "Clear interchange-plus positioning",
@@ -741,88 +760,208 @@ const entries: [string, ComparisonTemplateProps][] = [
       { label: "Statement-transparent acquiring", winner: "B" },
     ],
   }),
-  build("stripe-vs-stax", "stripe", "stax", "Stripe optimizes programmable online money movement; Stax pairs a membership-style platform fee with pass-through interchange—seasonal trades should model slow months before treating Stax like ‘cheaper Stripe.’", {
+  build("stripe-vs-stax", "stripe", "stax", "Stripe charges a published percentage plus cents with no monthly Payments fee. Stax charges a monthly subscription (from $99) plus interchange at Stax’s stated 0% markup plus 8¢ or 15¢ per card. Which is cheaper depends on monthly volume, average ticket, card-present vs keyed mix, and actual interchange—not a single headline rate.", {
+    pageHeading: "Stripe vs Stax (2026): Fees, Pricing & Best Fit",
+    seoTitle: "Stripe vs Stax (2026): Fees, Pricing & Best Fit | BeltStack",
+    seoDescription:
+      "Stripe is pay-as-you-go (2.9% + 30¢ online). Stax is $99+/month plus interchange and 8–15¢. See when volume and ticket size change which is cheaper.",
+    quickVerdictHeading: "Short answer",
+    quickVerdictSub: "The choice is a pricing-model decision first, a feature decision second.",
+    researchNote:
+      "Pricing verified August 2026 from Stripe’s official pricing pages and Stax’s pricing page. Interchange is not a single percentage—it varies by card brand, card type, and how the payment is entered. Stax quotes can still differ from published tiers. BeltStack has not processed payments through either product or negotiated a Stax quote. Confirm your agreement.",
+    quickRecommendationA:
+      "Choose Stripe when you want published pay-as-you-go rates, custom online checkout, Billing, or Terminal on the same account—especially at lower or uneven volume.",
+    quickRecommendationB:
+      "Choose Stax when monthly card volume is high and steady enough that subscription + interchange + Stax’s cents can beat Stripe’s blended percentage after you model slow months.",
     quickVerdictParagraphs: [
-      "Stripe wins when APIs, Billing, and custom checkout are non-negotiable. Stax wins when steady volume amortizes a monthly platform line and finance likes predictable software-style billing.",
-      "August-heavy HVAC shops can look brilliant on Stax in peak season and painful in February—run forward models with conservative truck-roll counts.",
-      "Stripe’s add-ons are line-item visible; Stax’s membership is a single number—both need net-deposit math after refunds.",
-      "If you sell deposits online but collect final balances in the field, decide whether one processor spine (Stripe + Terminal) or split rails is worth the reconciliation tax—Stax does not remove that design question.",
-      "Experience signal: membership processors reward operators who spreadsheet monthly platform fee ÷ volume every quarter. Stripe rewards teams that catalog which products (Billing, Radar, instant payout) actually hit the P&L.",
-      "We do not underwrite either account; holds and reserves follow your category and history regardless of brand. Confirm payout timing and dispute workflows in writing before you cut over card-on-file.",
+      "Stripe usually wins on simplicity of the published rate, online/developer flexibility, and low or seasonal volume: standard US Payments has no monthly fee. Stax usually becomes interesting only after you can amortize at least $99/month and your interchange on the actual mix is low enough that Stax’s known fees undercut Stripe’s 2.9% + 30¢ (online) or 2.7% + 5¢ (Terminal).",
+      "The variable that changes the answer most is all-in cost at your volume and ticket size—not “which has more features.” Stax does not eliminate interchange. It says it adds 0% percentage markup on direct-cost interchange, then still bills a volume-tiered subscription and 8¢ (card-present) or 15¢ (card-not-present) per card. Stripe bundles interchange into its flat percentage.",
+      "A business processing $10,000 through 400 small invoices has different economics than one processing $10,000 through 20 large deposits. Stripe’s 30¢ online (or 5¢ in person) is a larger share of small tickets; Stax’s monthly fee is a larger share of thin months. There is no honest single break-even dollar amount without your interchange mix.",
     ],
+    relationshipContext: {
+      heading: "How Stripe and Stax charge—and why 2.9% + 30¢ is not the same kind of number",
+      paragraphs: [
+        "Stripe Standard Payments (US, August 2026): no setup or monthly fee on the published pay-as-you-go plan. Online domestic cards are 2.9% + 30¢ per successful charge; manually entered cards add 0.5% (3.4% + 30¢); international cards add 1.5%; currency conversion adds 1% when required. In-person Terminal is 2.7% + 5¢ for domestic cards (Tap to Pay adds $0.10 per authorization). ACH Direct Debit is 0.8% with a $5 cap. Disputes: $15 when a dispute is received; $15 if you counter manually (refunded if you win). Instant Payouts are 1.5% (50¢ minimum). Stripe Invoicing, if you use that product, adds 0.4% (Starter) or 0.5% (Plus) per paid invoice on top of Payments. Stripe Billing is either 0.7% of Billing volume (no recurring Billing fee) or a billed Billing plan starting at $620/month on a one-year contract.",
+        "Stax Pay (August 2026): a monthly subscription set by annual card volume—$99/month up to $150,000/year, $139/month from $150,000–$250,000, $199+/month above $250,000 (custom quote above that). Stax states 0% markup on direct-cost interchange. That is not “free processing.” You still pay interchange (which changes by card) plus Stax’s published cents: $0.08 card-present, $0.15 card-not-present. ACH is 1% capped at $10. Features listed as included with the subscription include invoicing, payment links, hosted pages, recurring billing, virtual terminal-style tools, APIs, next-business-day funding, and no batch fees. Optional: terminal protection $19/month; hardware quoted separately. Stax’s pricing page also describes a surcharge product (credit surcharge paid by the cardholder where eligible; merchant-paid debit surcharge listed at 1.25% + $0.25). Network assessments can still apply.",
+        "You cannot subtract 2.9% from “interchange + $99” and call a winner. Stripe’s percentage already includes interchange, Stripe’s markup, and the 30¢ (or 5¢). Stax’s monthly fee is independent of ticket size; interchange is not. Until you know interchange on your mix, you can only compute Stripe’s published cost and the Stax costs that are public (subscription + cents), then ask whether remaining interchange would still beat Stripe.",
+      ],
+    },
+    decisionGuideAHeading: "Choose Stripe if:",
+    decisionGuideBHeading: "Choose Stax if:",
     decisionGuideA: [
-      "You are building or maintaining custom web checkout.",
-      "Subscriptions and retries matter to your service contracts.",
-      "Developers already operate your payment integration.",
-      "You need Connect, multi-party payouts, or global methods beyond a typical SMB bundle.",
+      "Volume is low, lumpy, or highly seasonal and you do not want a $99–$199+ bill in slow months.",
+      "You need custom checkout, Payment Links, Billing dunning, Connect/multi-party payouts, or many international methods on one developer platform.",
+      "Most revenue is online or invoiced and you want a rate you can estimate from Stripe’s public table without waiting for a Stax quote.",
+      "You will use Terminal or Tap to Pay to keep field collections on the same Stripe account as the website.",
     ],
     decisionGuideB: [
-      "Monthly processing volume is relatively stable.",
-      "You want a fixed platform component for budgeting.",
-      "Interchange pass-through plus membership fits your finance style.",
-      "Your CFO prefers interchange visibility over bundled flat-rate storytelling.",
+      "Annual card volume is high enough to sit in a published Stax tier (or a custom quote) and stays relatively even month to month.",
+      "Finance wants interchange visible on the statement and a fixed subscription instead of a bundled 2.9% story—and will re-run the math when volume is reviewed (Stax says it reviews processing about every six months).",
+      "You will consolidate card-present and invoice volume onto Stax so the monthly fee is not duplicated across a second processor.",
+      "You have modeled January/February (or your slow season) with the subscription still on, not only peak-season savings.",
+    ],
+    decisionGuideNeither: [
+      "You want an integrated POS/hardware store and same-day reader setup—Square is usually the simpler field stack (see Stripe vs Square).",
+      "You want interchange-plus with a disclosed processor markup and no Stax-style subscription—Helcim is the closer economic peer (see Helcim vs Stax and Stripe vs Helcim).",
+      "Your cart is Shopify—Shopify Payments is the native rail unless you have a specific reason to leave it.",
+      "You already have a merchant account and only need a gateway—Authorize.net (or similar) is a different architecture than either Stripe or Stax.",
     ],
     heroCallouts: [
-      { label: "API + product breadth", winner: "A", reason: "Stripe’s surface area targets software-led merchants." },
-      { label: "Membership + interchange model", winner: "B", reason: "Stax centers platform fee plus pass-through costs." },
-      { label: "Spiky / seasonal revenue", winner: "A", reason: "Stripe does not layer a fixed membership fee that stings when winter truck rolls pause—Stax needs explicit low-month modeling." },
+      { label: "Published pay-as-you-go rate", winner: "A", reason: "Stripe Standard has no monthly Payments fee; online is 2.9% + 30¢." },
+      { label: "Subscription + interchange + cents", winner: "B", reason: "Stax starts at $99/month with 0% stated interchange markup plus 8¢/15¢." },
+      { label: "Low or seasonal volume", winner: "A", reason: "A fixed Stax subscription still posts when truck rolls drop; Stripe’s cost scales down with volume." },
     ],
+    featureComparisonSub: "Economics and capabilities that actually separate this pair.",
+    featureComparisonColumnLabel: "Question",
     featureComparison: [
-      { feature: "Custom web + APIs", productA: "Very strong", productB: "Operations-first", supportA: "supported", supportB: "partial", stronger: "A" },
-      { feature: "Membership platform fee", productA: "Not the model", productB: "Core", supportA: "none", supportB: "supported", stronger: "B" },
-      { feature: "Virtual terminal / invoicing", productA: "Strong", productB: "Strong", supportA: "supported", supportB: "supported" },
-      { feature: "Instant payout / cash-flow add-ons", productA: "Line-item options", productB: "Confirm in your quote", supportA: "supported", supportB: "partial", stronger: "A" },
+      textRow("Pricing model", "Bundled % + ¢ (interchange inside the published rate).", "Monthly subscription + interchange (Stax: 0% extra % markup) + 8¢/15¢."),
+      textRow("Monthly platform fee (standard)", "None on Stripe Standard Payments.", "$99 / $139 / $199+ by annual volume; custom above high volume."),
+      textRow("Online / CNP cards (US published)", "2.9% + 30¢; +0.5% if keyed (3.4% + 30¢).", "Interchange + $0.15 per transaction."),
+      textRow("Card-present", "Terminal 2.7% + 5¢; Tap to Pay +$0.10 per authorization.", "Interchange + $0.08 per transaction; compatible terminals (hardware quoted)."),
+      textRow("Best volume profile", "Any volume; relatively better when volume is low or uneven.", "Higher, steadier annual volume that can amortize the subscription."),
+      textRow("Average ticket", "30¢ (online) or 5¢ (Terminal) is a bigger share of small tickets.", "Monthly fee is ticket-agnostic; 8¢/15¢ is smaller than Stripe’s 30¢ on tiny invoices."),
+      textRow("Invoicing / payment links", "Payment Links at Payments rates; Stripe Invoicing product adds 0.4–0.5% per paid invoice.", "Invoicing, payment links, Text2Pay, hosted pages listed as included with the subscription."),
+      textRow("Recurring billing", "Stripe Billing: 0.7% of Billing volume or from $620/mo (1-year contract).", "Recurring billing listed as included with Stax Pay; Stax Bill is a separate billing platform."),
+      textRow("ACH", "0.8% capped at $5 (ACH Direct Debit).", "1% capped at $10."),
+      textRow("Developer / APIs", "Payments, Checkout, Billing, Terminal, Connect—usually the deeper platform.", "API keys and hosted pages included; not Stripe-class product breadth (Connect, Radar, global methods)."),
+      textRow("International / FX", "Published +1.5% international cards; +1% conversion when required.", "US-focused acquiring; confirm cross-border support on your quote."),
+      textRow("Contracts", "Standard Payments: pay-as-you-go. Billing annual plan has a 1-year contract.", "Stax states no contracts and no cancellation fees; subscription can rise if volume exceeds the approved tier."),
+      textRow("Disputes", "$15 dispute received; $15 to counter (returned if you win).", "Not listed as a dollar amount on Stax’s public pricing page—verify the merchant agreement."),
+      textRow("Funding", "Standard payout schedule at no extra fee; Instant Payouts 1.5% (50¢ min).", "Next business day listed as included; same-day may be extra—confirm."),
+      textRow("Biggest tradeoff", "You pay a bundled percentage even when interchange is low; add-ons stack.", "You pay the subscription even in slow months; interchange still varies and is not “0%.”"),
     ],
     pricingComparison:
-      "Stripe bills percentage-plus-fixed processing plus fees for products you turn on, such as Billing, Terminal, and instant payout. Stax bills a monthly platform fee plus pass-through interchange. Add chargebacks, refunds, and cross-border costs to both models. Seasonal businesses should weight slow months heavily: a fixed membership fee hurts more when volume drops. Confirm every line item in writing before you compare the two stacks.",
+      "Stripe’s published US card rates are complete enough to estimate processing for a given volume and ticket mix. Stax’s public numbers are the subscription, the 8¢/15¢, and ACH—not interchange. A responsible comparison is Stripe’s estimated processing versus Stax subscription + cents + your interchange from a sample statement or quote.",
+    pricingComparisonParagraphs: [
+      "Stripe (US Standard, August 2026): estimate card cost as rate × volume + fixed fee × transaction count. Online domestic: 2.9% + 30¢. Keyed: 3.4% + 30¢. Terminal: 2.7% + 5¢. Add Billing (0.7% of Billing volume unless you are on a billed Billing plan), Invoicing product fees if used, Instant Payouts, and $15 per dispute received. There is no monthly Payments subscription on Standard.",
+      "Stax (August 2026): estimate as subscription for your annual-volume tier + interchange + $0.08 × card-present count + $0.15 × CNP count + ACH 1% (cap $10) if used. Stax’s “0% markup on direct-cost interchange” means they are not adding another percentage on top of interchange in the Stax Pay story—it does not mean interchange is 0%. Do not use a blog’s “average interchange” as your number. Debit/credit mix, rewards cards, and keyed vs dipped change interchange a lot.",
+      "Stax subscription floors by annual volume: $99/month at up to $150k/year (~$12,500/month average), $139 between $150k–$250k, $199+ above $250k. A shop at $25,000/month is already in the $199+ band on a 12-month run-rate. Stax says it reviews processing about every six months and can move you to a higher tier if volume exceeds the approved range—without charging back-dated catch-up for prior months.",
+    ],
+    roiGuidance: {
+      heading: "Is Stax cheaper than Stripe?",
+      paragraphs: [
+        "Not automatically, and not at a fake universal break-even. Compute Stripe from published rates. For Stax, add the subscription and cents, then ask: is remaining interchange still less than the gap?",
+        "Implied interchange ceiling for Stax to cost less than that Stripe estimate = (Stripe estimated processing − Stax subscription − Stax cents) ÷ volume. If your real interchange is below that ceiling, Stax’s public fees would win that scenario. If interchange is higher, Stripe can still be cheaper. Network assessments, refunds, disputes, hardware, Instant Payouts, Billing/Invoicing add-ons, and surcharge programs are excluded unless you add them.",
+      ],
+      example: {
+        heading: "Hypothetical examples — not quotes (all CNP, $100 average ticket unless noted)",
+        body: "$10,000/month, 100 transactions, Stax $99 tier: Stripe ≈ 2.9% × $10,000 + 30¢ × 100 = $320. Stax known costs = $99 + 15¢ × 100 = $114. Interchange must stay under about $206 (≈2.06% of volume) for Stax to beat this Stripe estimate. Same $10,000 through 400 × $25 invoices: Stripe ≈ $410; Stax known = $99 + $60 = $159; ceiling ≈ 2.51%. Same $10,000 through 20 × $500 invoices: Stripe ≈ $296; Stax known = $102; ceiling ≈ 1.94%—high-ticket rewards/CNP interchange can blow through that. $50,000/month, 500 × $100, Stax at the $199 published floor (you may pay more): Stripe ≈ $1,600; Stax known = $199 + $75 = $274; ceiling ≈ 2.65%, so Stax is more likely to win if interchange is ordinary. Slow month at $2,000 volume with $99 still due: Stax subscription alone is 4.95% of volume before interchange or cents; Stripe’s 2.9% + 30¢ scales down with that month’s sales.",
+      },
+    },
     prosConsA: {
       pros: [
-        "Maximum flexibility for online flows and custom software",
-        "Billing and developer tooling depth for recurring service revenue",
-        "Add-ons are explicit—easier to attribute cost to product lines in accounting",
+        "Published US rates you can model without a sales call",
+        "No monthly Payments fee on Standard—cost follows volume",
+        "Checkout, Payment Links, Billing, Terminal, and Connect on one platform",
+        "Dispute fee and Instant Payouts are published dollar/% amounts",
       ],
       cons: [
-        "Per-feature costs accumulate without an owner watching the dashboard",
-        "Interchange-plus or membership shoppers may still benchmark Stax or Helcim",
-        "In-person is strong via Terminal but requires deliberate rollout",
+        "Bundled 2.9% (or 2.7%) can be more than interchange-plus at high, clean card-present volume",
+        "Billing, Invoicing, and Instant Payouts add cost if you turn them on",
+        "In-person is Terminal/Tap to Pay, not a Square-style hardware store",
       ],
     },
     prosConsB: {
       pros: [
-        "Predictable monthly platform line for budgets",
-        "Can win at sustained, even volume versus flat-rate bundles",
-        "Pass-through interchange helps when auditors want cost separation",
+        "Published subscription tiers and 8¢/15¢ make the non-interchange layer explicit",
+        "Invoicing, links, recurring billing, and APIs listed in the subscription",
+        "Stax states no long-term contract and no cancellation fees",
+        "Can undercut Stripe when volume is high, tickets are not tiny-fee-dominated, and interchange is moderate",
       ],
       cons: [
-        "Slow seasons can make membership feel expensive versus gross",
-        "Less natural when revenue is lumpy project-by-project",
-        "Does not replace Stripe-class APIs if software is the product",
+        "Interchange is still paid and is not a single published %",
+        "Subscription continues in slow months and can increase if annual volume jumps tiers",
+        "$199+ is a floor above $250k/year—not a guaranteed rate",
+        "Not a substitute for Stripe if software, Connect, or global methods are the product",
       ],
     },
     bestFor: [
       {
-        heading: "Best for custom checkout and Billing",
-        body: "Stripe is the better fit when APIs, hosted checkout, subscriptions, and developer tooling are non-negotiable. Stax is the better fit when steady processing volume makes membership plus interchange the winning economic shape on a full-year model.",
+        heading: "Contractor collecting in the field",
+        body: "Stripe Terminal (2.7% + 5¢) keeps field swipes on the same account as Payment Links. Stax card-present is interchange + 8¢ on compatible hardware. If crews already live in a Square app, neither is the path of least training—see Stripe vs Square. Choose Stripe here when the website and the truck must share customers and subscriptions. Choose Stax when field volume is large, steady, and you are willing to quote terminals separately.",
       },
       {
-        heading: "Best for membership-style processing",
-        body: "Stax is the better fit when finance wants a predictable monthly platform line plus interchange visibility and your volume does not collapse in off-seasons.",
+        heading: "Office invoices, keyed payments, and deposits",
+        body: "Stripe online/invoice cards are 2.9% + 30¢ (keyed 3.4% + 30¢). Stax CNP is interchange + 15¢. High-ticket deposits make Stripe’s 30¢ trivial and make interchange (rewards, commercial cards) the Stax swing factor. Lots of small invoice payments make Stripe’s 30¢ add up faster than Stax’s 15¢.",
       },
       {
-        heading: "Best for seasonal revenue",
-        body: "Stripe avoids a standing membership fee; if your card volume is highly seasonal, model your lowest months before you choose Stax—fixed fees can dominate gross when jobs pause.",
+        heading: "Recurring service agreements",
+        body: "Stripe Billing is a full subscription product (0.7% or a $620+/mo annual plan) with retries and customer portal. Stax Pay lists recurring billing as included; Stax Bill is a separate subscription-management product. If failed-renewal automation is the job, Stripe Billing is usually the deeper tool. If you only need simple card-on-file repeats on a high-volume merchant account, Stax’s included recurring tools may be enough—confirm in a demo, not from a feature name.",
+      },
+      {
+        heading: "Multi-location or high monthly volume",
+        body: "Stax’s pitch is consolidating volume so one subscription covers the brand. That only works if you actually turn off the second processor. Stripe Custom (IC+ / volume discounts) exists for large volume too—do not assume Stax is the only way off 2.9%. Compare a written Stax quote to Stripe’s published Standard and, if you qualify, a Stripe custom conversation.",
+      },
+      {
+        heading: "Seasonal trades (HVAC, landscaping, outdoor work)",
+        body: "A Stax subscription that looks cheap in August can dominate a thin February. Run the same math on your slowest months, not only peak truck-roll volume: $99 on $2,000 of card volume is already about 5% before interchange or cents. Stripe’s cost scales down with that month’s sales. Holds and reserves follow category and history on either brand—we do not underwrite accounts.",
+      },
+      {
+        heading: "Who should not use either as the default",
+        body: "Square for simple field POS; Helcim if you want interchange-plus without a Stax subscription; Shopify Payments on Shopify; a bank merchant account plus gateway if that is already the constraint. Dual-railing Stripe Billing with Stax processing is not a normal architecture—pick one acquiring spine unless a payments engineer and your accountant design otherwise.",
       },
     ],
-    alternatives: [altCard("helcim", "Straight interchange-plus without membership framing"), altCard("square", "Simple SMB field + invoice bundle")],
+    alternatives: [
+      altCard("helcim", "Interchange-plus with a disclosed markup and no Stax-style membership tier."),
+      altCard("square", "Integrated readers, invoices, and POS when the constraint is field simplicity, not IC+ math."),
+    ],
     faqs: [
-      { q: "Stax vs Stripe for contractors?", a: "Stripe when web deposits and integrations lead; Stax when finance wants membership + interchange and volume is steady year-round." },
-      { q: "What is cheaper?", a: "Net deposits after refunds and disputes—export both paths on identical job cohorts before you decide." },
-      { q: "Can I use Stripe Billing with Stax for processing?", a: "Uncommon as a default architecture—usually you pick one acquiring spine. If you think you need both, involve a payments engineer and your accountant before you double complexity." },
-      { q: "Does BeltStack get kickbacks for recommending Stripe or Stax?", a: "No pay-for-placement on comparisons. General affiliate links may exist elsewhere on the site; they do not change this analysis." },
+      {
+        q: "Is Stax cheaper than Stripe?",
+        a: "Sometimes, at higher, steadier volume, if interchange on your mix plus Stax’s subscription and 8¢/15¢ totals less than Stripe’s published % + ¢. At low or seasonal volume, Stripe is often cheaper because there is no $99–$199+ monthly Payments fee. There is no honest one-number break-even without interchange.",
+      },
+      {
+        q: "Does average ticket size matter?",
+        a: "Yes. Stripe charges 30¢ per online charge (5¢ in person). Many small tickets inflate Stripe’s fixed-fee layer. Stax’s monthly fee does not change with ticket size; its 8¢/15¢ is smaller per tap. Very large tickets make the cents trivial and make interchange (especially rewards/CNP) the Stax variable.",
+      },
+      {
+        q: "Does Stax charge 0% processing?",
+        a: "No. Stax says 0% markup on direct-cost interchange. You still pay interchange, the monthly subscription, and 8¢ or 15¢ per card (plus ACH and optional add-ons).",
+      },
+      {
+        q: "Does Stripe have a monthly fee?",
+        a: "Not on Standard Payments. Optional products can: Stripe Billing has a pay-as-you-go 0.7% option or an annual billed plan starting at $620/month. Instant Payouts and Invoicing have their own fees.",
+      },
+      {
+        q: "Does Stax require a contract?",
+        a: "Stax’s documentation says it has no contracts and its pricing page lists no cancellation fees. Subscription can still increase if your processing exceeds the approved annual-volume tier. Read the agreement you sign.",
+      },
+      {
+        q: "Stripe vs Stax for a service business?",
+        a: "Stripe when deposits, portals, and subscriptions are software-led. Stax when card volume is high and even and finance will model interchange plus the subscription through the slow season. Square or Helcim may fit better than either—see the decision guide on this page.",
+      },
+      {
+        q: "Stax vs Stripe for seasonal HVAC?",
+        a: "Model January and February with the Stax subscription still on. Peak-season savings do not cancel a membership fee in a slow month. Stripe Standard has no monthly Payments fee, so cost follows that month’s volume.",
+      },
+      {
+        q: "Can I use Stripe Billing with Stax for processing?",
+        a: "That is not a standard setup. You usually pick one acquiring spine. If you think you need both, involve a payments engineer and your accountant before you split vaults and reconciliation.",
+      },
+      {
+        q: "Does BeltStack get kickbacks for recommending Stripe or Stax?",
+        a: "No pay-for-placement on comparisons. General affiliate links may exist elsewhere on the site; they do not change this analysis.",
+      },
     ],
     sidebarWinners: [
-      { label: "Custom software stacks", winner: "A" },
-      { label: "Steady-volume membership economics", winner: "B" },
+      { label: "Low / seasonal volume", winner: "A" },
+      { label: "High steady volume (if interchange cooperates)", winner: "B" },
+      { label: "Custom online + Billing platform", winner: "A" },
+    ],
+    moreComparisons: [
+      { label: "Stripe review", href: getPaymentProcessingReviewUrl("stripe") },
+      { label: "Stax review", href: getPaymentProcessingReviewUrl("stax") },
+      { label: "Helcim vs Stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
+      { label: "Stripe vs Helcim", href: getPaymentProcessingCompareUrl("stripe-vs-helcim") },
+      { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+      { label: "Square vs Stax", href: getPaymentProcessingCompareUrl("square-vs-stax") },
+      { label: "Stripe vs Clover", href: getPaymentProcessingCompareUrl("stripe-vs-clover") },
+      { label: "Authorize.net vs Stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },
+      { label: "Best Stripe alternatives", href: getPaymentProcessingAlternativeUrl("stripe") },
+      { label: "Best Stax alternatives", href: getPaymentProcessingAlternativeUrl("stax") },
+      { label: "Best payment processing software", href: "/payment-processing/best-payment-processing-software" },
+      { label: "Credit card processing fees explained", href: "/payment-processing/guides/credit-card-processing-fees-explained" },
+      { label: "How to choose a payment processor", href: "/payment-processing/guides/how-to-choose-a-payment-processor" },
     ],
   }),
   build("stripe-vs-clover", "stripe", "clover", "Stripe powers custom online checkout and Terminal when you control the stack; Clover leads with counter-first hardware, apps, and reseller-bundled processing—compare ISO quotes and contract terms, not only logos.", {
@@ -1583,88 +1722,198 @@ const entries: [string, ComparisonTemplateProps][] = [
       { label: "New programmable online stack", winner: "B" },
     ],
   }),
-  build("authorize-net-vs-square", "authorizeNet", "square", "Authorize.net is middleware plus a merchant account path; Square bundles processing, readers, and SMB software—field-first crews rarely start with a gateway unless something already forces it.", {
+  build("authorize-net-vs-square", "authorizeNet", "square", "Authorize.net is a payment gateway that can sit on your own merchant account (or Authorize.net’s All-in-One bundle). Square is an integrated payments and business platform that processes through Square’s own merchant-services account. The useful question is which payment architecture you need—not which logo has more features.", {
+    pageHeading: "Authorize.net vs Square (2026): Fees & Key Differences",
+    seoTitle: "Authorize.net vs Square (2026): Fees & Key Differences | BeltStack",
+    seoDescription:
+      "Authorize.net is a payment gateway (with an All-in-One option). Square is an integrated payments/POS platform. Compare published fees, architecture, and who each setup fits.",
+    quickVerdictHeading: "Short answer",
+    quickVerdictSub: "They sit in different places in the payment stack.",
+    researchNote:
+      "Pricing verified August 2026 from Authorize.net’s official pricing page and Square’s published fees (Support Center and squareup.com/pricing). Gateway-only Authorize.net cost still depends on your separate processor. Confirm the offer you sign.",
+    quickRecommendationA:
+      "Use this when you already have (or want) a separate merchant account/processor, or your website/ERP already integrates as a gateway.",
+    quickRecommendationB:
+      "Use this when you want payments, POS, hardware, invoices, and related tools in one Square account without standing up a gateway + processor pair.",
     quickVerdictParagraphs: [
-      "Square wins time-to-swipe for trucks and small counters; Authorize.net wins when your stack already centers on gateway tokens and a specific acquirer.",
-      "If you only need mobile readers and invoices, Square is the natural shortlist—Authorize.net adds implementation and statement complexity without field hardware wins.",
-      "Hybrid shops sometimes run Square in the field and keep Authorize.net for legacy web billing—document reconciliation rules before you bless two rails.",
-      "Effective rate on Authorize.net still flows through the underlying processor; compare that all-in number to Square’s card-present vs keyed paths.",
-      "Search intent: if you are comparing ‘Authorize.net vs Square’ because your bank mentioned both, clarify whether you need a gateway vault or a field POS—most trades need Square first, gateway second.",
-      "Pair deposits with job costing: see payment processing for contractors on BeltStack for how belts-and-suspenders stacks still need job IDs on every payment.",
-      "BeltStack does not implement gateways—budget developer or partner hours when Authorize.net is non-negotiable.",
+      "Square and Authorize.net are not interchangeable processors. Square runs checkout, processing, and most of the business software through one account. According to Square, it holds a merchant services relationship with acquiring banks and processes sellers through that infrastructure. Authorize.net is primarily the gateway layer: it moves card data from your website, virtual terminal, or reader to a processor/acquirer. You still need a merchant account—either one you already have (Gateway Only) or the merchant account Authorize.net bundles in All-in-One.",
+      "Square usually fits a small business starting from scratch that wants technicians, a counter, or an office to take cards quickly, send invoices, and keep reporting in one dashboard. Authorize.net usually fits a business that must keep a bank/ISO merchant account, already has shopping-cart or ERP integrations built for Authorize.net, or wants gateway features (hosted checkout, CIM/recurring profiles, virtual terminal) without switching to Square’s payments ecosystem.",
+      "You generally cannot plug Authorize.net in as Square’s gateway, or use Square as the processor behind Authorize.net. Separate parts of a business can run each product independently, but that creates two payment ecosystems and two reconciliation problems—not one integrated stack.",
     ],
+    relationshipContext: {
+      heading: "Square and Authorize.net aren't the same type of payment product",
+      paragraphs: [
+        "A card payment typically travels: customer → checkout or POS → payment gateway → processor/acquirer → card network → issuing bank. The gateway is the software that captures and encrypts the card and sends the authorization. The processor/acquirer (and merchant account) is what actually settles money toward your business bank account.",
+        "Authorize.net occupies the gateway slot. Its own documentation distinguishes a payment gateway from a merchant account and sells two published setups: Gateway Only (connect Authorize.net to an existing merchant account) and All-in-One (gateway plus a merchant account). Features such as virtual terminal, digital invoicing, Automated Recurring Billing, and Customer Information Manager run on that gateway. In-person payments are possible via compatible readers, Virtual Point of Sale, or Tap to Pay—but those still settle through the merchant-account path, not a Square-style hardware store.",
+        "Square occupies several slots at once. You create a Square account, take payments in the Square POS app or online tools, and Square submits the transaction to its acquiring-bank relationship. Square’s own explainer says it “acts as one giant merchant services account for all businesses that use Square payment processing.” That is why you do not bring your own merchant account to Square, and why Square hardware, invoices, and reporting live in the same product family.",
+      ],
+    },
+    decisionGuideAHeading: "Choose Authorize.net if:",
+    decisionGuideBHeading: "Choose Square if:",
     decisionGuideA: [
-      "ERP, bank, or franchise standards require Authorize.net.",
-      "You must preserve CIM/token workflows during an accounting migration.",
-      "Developers already maintain gateway integrations.",
-      "Virtual terminal and card-on-file are central to office billing.",
+      "You already have a merchant account with a bank or processor and want a gateway that connects to it (Authorize.net Gateway Only), instead of replacing that relationship.",
+      "Your website, shopping cart, or industry software already supports Authorize.net (API login + transaction key) and changing processors would mean a development project.",
+      "You need gateway-centered tools—virtual terminal, CIM/card-on-file, Automated Recurring Billing, digital invoices—while keeping processor choice or an existing acquirer quote.",
+      "A bank, franchise, or ERP standard specifies Authorize.net-shaped integrations, and migrating stored payment profiles would be costly.",
     ],
     decisionGuideB: [
-      "Crews collect cards daily on phones or tablets.",
-      "You want hardware retail paths and simple staff training.",
-      "You are greenfield without a gateway mandate.",
-      "You need invoicing and readers without ISO or gateway projects.",
+      "You are starting from scratch and want payments, POS, invoices, and hardware in one account with published per-transaction rates and no monthly Square Free software fee.",
+      "Technicians collect cards in the field, or you run a small counter, and you want Square Readers/Terminal/Register plus a POS app staff can learn quickly.",
+      "You do not have (and do not want) a separate merchant-account contract; you are willing to process through Square’s bundled payments infrastructure.",
+      "Most of your volume is straightforward in-person, invoice, or simple online checkout rather than a custom gateway integration.",
+    ],
+    decisionGuideNeither: [
+      "You need a modern developer payments platform with Billing/Connect-style products—compare Stripe (see Stripe vs Square) rather than forcing Square or a legacy gateway.",
+      "You want interchange-plus statements without a separate $25 gateway layer—Helcim (or similar) may fit better than Gateway Only plus an opaque ISO.",
+      "Your storefront is Shopify—Shopify Payments is usually the native rail; Authorize.net vs Shopify Payments only matters if you have a real reason to leave Shopify’s processor.",
+      "You want a reseller countertop POS ecosystem (Clover) rather than Square’s hardware or a gateway.",
     ],
     heroCallouts: [
-      { label: "Gateway + token portability", winner: "A", reason: "Authorize.net fits inherited technical constraints." },
-      { label: "Field + invoice simplicity", winner: "B", reason: "Square targets SMB card-present first." },
-      { label: "Statement simplicity for owners", winner: "B", reason: "Square’s bundled story is easier to explain to new office hires than gateway + processor stacks." },
+      { label: "Payment architecture", winner: "A", reason: "Authorize.net is the gateway layer; you still need a merchant account (yours or All-in-One)." },
+      { label: "Integrated POS + business tools", winner: "B", reason: "Square bundles processing, hardware, invoices, and POS in one seller account." },
+      { label: "Published rate you can estimate", winner: "B", reason: "Square publishes in-person, online, and keyed rates; Gateway Only Authorize.net still needs processor pricing." },
     ],
+    featureComparisonSub: "How these products actually differ—not a generic “strong vs good” grid.",
+    featureComparisonColumnLabel: "Question",
     featureComparison: [
-      { feature: "Mobile readers / crews", productA: "Not the focus", productB: "Core", supportA: "partial", supportB: "supported", stronger: "B" },
-      { feature: "POS + counter retail", productA: "Via other software", productB: "Strong", supportA: "partial", supportB: "supported", stronger: "B" },
-      { feature: "Gateway tokenization", productA: "Core strength", productB: "Different model", supportA: "supported", supportB: "partial", stronger: "A" },
-      { feature: "Instant payout / cash flow", productA: "Processor-dependent", productB: "Optional Square feature", supportA: "partial", supportB: "supported", stronger: "B" },
+      textRow("Product type", "Payment gateway (Visa/CyberSource). Optional All-in-One adds a merchant account.", "Integrated payments + POS/business platform."),
+      textRow("Where it sits in the stack", "Gateway between your checkout/POS and a processor/acquirer.", "Checkout/POS, gateway functions, and processing in one Square account."),
+      textRow("Merchant account", "Required. Bring your own (Gateway Only) or use All-in-One.", "You process through Square’s merchant-services account; you do not bring a separate acquirer."),
+      textRow("Use with the other product", "Not as Square’s gateway. Separate business units could run it independently.", "Square does not accept Authorize.net as a connected gateway (Square has stated they offer overlapping services)."),
+      textRow("In-person payments", "Compatible readers, VPOS, Tap to Pay—settles via your merchant account.", "Square POS + Readers, Terminal, Register, Tap to Pay; hardware ecosystem is a core product."),
+      textRow("Online / ecommerce", "Hosted forms and APIs into carts and custom sites; processor still behind the gateway.", "Square Online, checkout, and APIs; processing stays on Square."),
+      textRow("Virtual terminal / keyed", "Browser virtual terminal (Accept Payments) for phone/mail orders.", "Virtual Terminal and keyed/card-on-file at a higher published rate than tap/dip/swipe."),
+      textRow("Invoices / payment links", "Digital invoicing through the same gateway (cards, eCheck, wallets per Authorize.net).", "Square Invoices and payment links; rates follow the invoice/online schedule on your plan."),
+      textRow("Recurring billing", "Automated Recurring Billing and CIM (customer payment profiles); Account Updater is an add-on.", "Square subscriptions / card on file on Square’s rates; tokens do not transfer to Authorize.net CIM."),
+      textRow("Pricing structure", "All-in-One: published % + ¢. Gateway Only: $25 + 10¢ + 10¢ batch plus your processor.", "Published rates by method (in-person, online, keyed) and Square Free / Plus / Premium plan."),
+      textRow("Monthly software/gateway fee", "$25/month on published plans (no gateway setup fee).", "Square Free: $0 software. Plus $49/location and Premium $149/location if you subscribe."),
+      textRow("Contracts", "Gateway: no contract/ETF per Authorize.net. All-in-One merchant account may have separate terms.", "No early-termination fee on Square processing (per Square). Plus/Premium can be canceled or switched."),
+      textRow("Best fit", "Existing merchant account, gateway integrations, or token/ERP constraints.", "Greenfield SMB that wants one payments + POS + invoice stack."),
+      textRow("Biggest tradeoff", "Two-vendor cost (unless All-in-One) and more implementation work.", "Less processor portability; you adopt Square’s ecosystem and risk/underwriting model."),
     ],
     pricingComparison:
-      "Square charges processing plus optional software tiers, team features, and instant transfer; benchmarks are relatively simple for field-first businesses. Authorize.net adds gateway fees to your processor’s interchange and markup—ask for one combined sample statement or quote so you see the full stack. Budget implementation and PCI work on the gateway path; Square usually avoids that layer for straightforward in-person use.",
+      "A single percentage comparison is misleading. Square’s published rates include processing. Authorize.net Gateway Only is only the gateway layer; your processor still bills interchange and markup. All-in-One is the closer apples-to-apples published bundle, but it is not the same product as Gateway Only.",
+    pricingComparisonParagraphs: [
+      "A percentage-for-percentage comparison is often misleading. Square’s published rates include processing. Authorize.net Gateway Only is gateway fees only; the merchant account/processor still charges its own rates. All-in-One is the published bundle (gateway + merchant account) and is the closer apples-to-apples published number—not Gateway Only plus an unknown ISO quote.",
+      "According to Authorize.net (August 2026): both published plans are $25/month with $0 gateway setup and no early-termination fee on the gateway. All-in-One is $25/month plus 2.9% + 30¢ per transaction. Gateway Only is $25/month plus 10¢ per transaction and a 10¢ daily batch fee, on top of whatever your processor charges. eCheck.Net is listed at 0.75% with additional eCheck fees. If you applied for a merchant account through All-in-One, Authorize.net notes that merchant-account terms can differ from the gateway’s no-ETF policy. Custom options are offered above $500K/year.",
+      "According to Square (August 2026): Square Free has no monthly POS software fee. Published U.S. processing includes 2.6% + 15¢ tap/dip/swipe, 3.3% + 30¢ online or invoices, 2.9% + 30¢ online API, and 3.5% + 15¢ manual entry or card on file. Square Plus is $49/month per location (2.5% + 15¢ in-person; 2.9% + 30¢ online/invoices). Square Premium is $149/month per location (2.4% + 15¢ in-person; 2.9% + 30¢ online/invoices). Keyed remains 3.5% + 15¢ across those plans. Square states there is no chargeback fee and no early-termination fee. Custom processing is offered above $250K annual sales. Instant transfers and hardware (beyond the free magstripe reader) are extra.",
+    ],
+    roiGuidance: {
+      heading: "Hypothetical cost example",
+      paragraphs: [
+        "Square’s processing cost can be estimated from published rates once you know card-present vs online vs keyed mix. Gateway-only Authorize.net cannot be finished without the processor’s rate. All-in-One can be estimated from Authorize.net’s published 2.9% + 30¢ plus $25/month.",
+        "Replace every figure with your statements. Mix, average ticket, keyed share, refunds, and (on Square) plan tier change the result. This is not a quote.",
+      ],
+      example: {
+        heading: "Example: $20,000 / month and 200 transactions (illustrative)",
+        body: "Square Free, all in-person: 2.6% × $20,000 = $520, plus 15¢ × 200 = $30, total about $550. Square Free, all online/invoices: 3.3% × $20,000 = $660, plus 30¢ × 200 = $60, total about $720. A 50/50 mix of those two methods is about $635. Authorize.net All-in-One on the same $20,000 / 200 transactions: $25 + 2.9% × $20,000 ($580) + 30¢ × 200 ($60) = about $665. Gateway Only is $25 + 10¢ × 200 ($20) + about $2 in daily batch fees—plus processor pricing you must add from your merchant-account statement. If that processor is 2.5% + 10¢, Gateway Only all-in is a different number than All-in-One; do not use 2.9% + 30¢ as a stand-in for Gateway Only.",
+      },
+    },
     prosConsA: {
       pros: [
-        "Fits bank or ERP gateway requirements without replatforming vaults overnight",
-        "Mature tokenization story for cards on file",
-        "Keeps acquirer relationships negotiable in many architectures",
+        "Gateway can connect to an existing merchant account instead of replacing it",
+        "All-in-One publishes a complete rate if you do not already have an acquirer",
+        "Mature virtual terminal, invoicing, ARB/CIM, and shopping-cart integrations",
+        "Processor/acquirer remains negotiable on Gateway Only (including interchange-plus via your MSP, when they offer it)",
       ],
       cons: [
-        "Slow path for field-first startups that only need readers",
-        "Total cost split across gateway and processor statements",
-        "Implementation quality varies by partner",
+        "Gateway Only total cost is two bills; easy to quote only the $25 + 10¢ layer",
+        "Not a Square-style POS/hardware store; in-person is possible but not the same ecosystem",
+        "Implementation quality depends on your developer, cart, or partner",
+        "Cannot use Square as the processor behind the gateway",
       ],
     },
     prosConsB: {
       pros: [
-        "Fast operational wins for local operators",
-        "Hardware ecosystem crews and homeowners already recognize",
-        "Invoices and pay links without standing up gateway middleware",
+        "Published rates you can model without waiting for an ISO quote",
+        "POS, invoices, hardware, and processing in one account",
+        "No monthly fee on Square Free; no Square chargeback fee or gateway ETF",
+        "Fast path for field collections and small counters",
       ],
       cons: [
-        "Not a drop-in replacement for deep CIM migrations without a project plan",
-        "Heavy custom ecommerce may still evaluate Stripe",
-        "Keyed transactions still need monitoring on any processor",
+        "You do not bring your own merchant account to Square",
+        "Online/invoice and keyed rates are higher than tap/dip/swipe",
+        "Saved Square payment methods do not become Authorize.net CIM tokens if you leave",
+        "Account underwriting and holds follow Square’s model—not your bank’s merchant-account contract",
       ],
     },
     bestFor: [
       {
-        heading: "Best for gateway or ERP requirements",
-        body: "Authorize.net is the better fit when software, franchise, or bank rules require a gateway vault and specific token flows. Square is the better fit when you need mobile readers, simple invoices, and counter sales without standing up gateway middleware.",
+        heading: "Contractor taking cards in the field",
+        body: "Square is usually the shorter path: a reader or Tap to Pay, job-named receipts, and invoices when the homeowner is not on site. Authorize.net can take in-person payments, but you still need a merchant account and compatible hardware—and you do not get Square’s POS/hardware catalog. Choose Authorize.net here mainly if the office already bills through that gateway and field collections must hit the same merchant account.",
       },
       {
-        heading: "Best for crews and counters",
-        body: "Square is the better fit for day-to-day swipes, hardware swaps, and SMB training—most field-first businesses start here unless something already forces Authorize.net.",
+        heading: "Office invoices, phone orders, and card-not-present",
+        body: "Both can invoice and key cards. Square Invoices price at the online/invoice rate on your plan (3.3% + 30¢ on Free). Authorize.net digital invoices settle through the same gateway as the rest of the account (All-in-One at 2.9% + 30¢, or Gateway Only plus processor). If the office already lives in Authorize.net’s virtual terminal, switching to Square is a workflow change, not a feature checkbox.",
       },
       {
-        heading: "Best for understanding the bill",
-        body: "Authorize.net’s cost is gateway plus processor; Square’s is primarily processing and optional subscriptions—compare all-in numbers from written quotes or statements, not feature grids alone.",
+        heading: "Retail / service hybrid or existing industry POS",
+        body: "If you already run a trade-specific POS that speaks Authorize.net, keep the gateway unless you are ready to replace that POS. If you have no POS yet and need a counter plus trucks, Square is the integrated option; Clover is the usual counter alternative if Square is not the right hardware family.",
+      },
+      {
+        heading: "Existing merchant account",
+        body: "Gateway Only is the Authorize.net product designed for this. Square will not sit in front of that merchant account as a bolt-on gateway. Keeping the merchant account means Authorize.net (or another standalone gateway), not Square processing.",
+      },
+      {
+        heading: "Can you use Authorize.net and Square together?",
+        body: "Not as a normal integrated pairing. Square’s product team has stated Square does not connect to Authorize.net because they offer the same class of service. You cannot use a Square “merchant account” as the processor behind Authorize.net. Two locations or two legal entities could each use a different product, but deposits, disputes, saved cards, and accounting stay separate. If you already run both, tag every payment in bookkeeping; do not assume they share a customer vault.",
+      },
+      {
+        heading: "Switching or migrating",
+        body: "Saved cards, subscriptions, and CIM/ARB profiles on Authorize.net do not move to Square automatically; Square card-on-file does not become Authorize.net tokens. Recurring billing usually means collecting new authorizations. Hardware is not interchangeable. Accounting integrations and payout reports have to be rebuilt. Gateway Only merchants may be able to keep the merchant account and change gateways—or keep Authorize.net and change processors—subject to those vendors’ contracts. Square processing is the Square account; leaving Square is a new processor relationship, not a MID you take to another gateway. BeltStack does not migrate card data; involve your developer and the processors’ documented export/import paths.",
       },
     ],
-    alternatives: [altCard("stripe", "Online spine when APIs matter"), altCard("helcim", "Interchange-plus acquiring alternative")],
+    alternatives: [
+      altCard("stripe", "Developer-led online payments when the website or subscriptions are the system of record."),
+      altCard("helcim", "Interchange-plus acquiring if you want statement transparency without a separate gateway brand."),
+    ],
     faqs: [
-      { q: "Authorize.net or Square for small business?", a: "Square for most SMB field and counter use; Authorize.net when technical or bank requirements demand a gateway vault." },
-      { q: "Can Square replace Authorize.net?", a: "Sometimes for new businesses—rarely without a token migration plan if recurring billing depends on CIM." },
-      { q: "Which is easier for staff?", a: "Square for swipe-and-go crews; Authorize.net when back-office virtual terminal users are trained and documented." },
+      {
+        q: "What is the difference between Authorize.net and Square?",
+        a: "Authorize.net is a payment gateway (with an optional All-in-One merchant account). Square is an integrated payments and POS platform that processes through Square’s own merchant-services account. They are not two brands of the same product.",
+      },
+      {
+        q: "Authorize.net vs Square fees—which is cheaper?",
+        a: "It depends on the Authorize.net plan and your card-present vs online mix. Square Free in-person is 2.6% + 15¢; online/invoices are 3.3% + 30¢ (August 2026). All-in-One Authorize.net is $25/month + 2.9% + 30¢. Gateway Only is $25 + 10¢ + 10¢ batch plus processor rates you must add. Compare all-in cost for your mix, not one headline percentage.",
+      },
+      {
+        q: "Can I use Authorize.net and Square together?",
+        a: "Not as Square’s gateway or as Square processing behind Authorize.net. Separate parts of a business can run each product on their own, with separate deposits and reconciliation. See the section on this page.",
+      },
+      {
+        q: "Does Authorize.net require a merchant account?",
+        a: "Yes. Gateway Only uses a merchant account you already have. All-in-One includes a merchant account. Authorize.net states a PayPal account is not a merchant account that can be used with its gateway.",
+      },
+      {
+        q: "Does Square give me my own merchant account?",
+        a: "Square’s documentation describes processing through Square’s merchant services account with acquiring banks—not bringing your own acquirer. You get a Square seller account and deposits to your bank. That is a different structure from a dedicated bank merchant ID behind Authorize.net Gateway Only.",
+      },
+      {
+        q: "Can Square replace Authorize.net if I have cards on file?",
+        a: "For a new business with no stored profiles, yes. If recurring billing uses Authorize.net CIM/ARB, plan a migration: customers typically need to be charged on Square with new payment methods. Do not assume tokens port.",
+      },
+      {
+        q: "Which is better for a small service business?",
+        a: "Square for most teams that need field collections and invoices without a gateway project. Authorize.net when you must keep a merchant account or an existing Authorize.net integration. Stripe or Helcim may fit better than either if your constraint is custom online billing or interchange-plus—not this pair.",
+      },
     ],
     sidebarWinners: [
-      { label: "Inherited gateway / ERP", winner: "A" },
-      { label: "Field + SMB operations", winner: "B" },
+      { label: "Gateway + existing merchant account", winner: "A" },
+      { label: "Integrated POS, hardware, and invoices", winner: "B" },
+      { label: "Estimate cost from a public rate card", winner: "B" },
+    ],
+    moreComparisons: [
+      { label: "Authorize.net vs Stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },
+      { label: "Authorize.net vs Shopify Payments", href: getPaymentProcessingCompareUrl("authorize-net-vs-shopify-payments") },
+      { label: "Stripe vs Square", href: getPaymentProcessingCompareUrl("stripe-vs-square") },
+      { label: "Square vs PayPal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
+      { label: "Square vs Clover", href: getPaymentProcessingCompareUrl("square-vs-clover") },
+      { label: "Square vs Helcim", href: getPaymentProcessingCompareUrl("square-vs-helcim") },
+      { label: "Best Authorize.net alternatives", href: getPaymentProcessingAlternativeUrl("authorize-net") },
+      { label: "Best Square alternatives", href: getPaymentProcessingAlternativeUrl("square") },
+      { label: "Best payment processing software", href: "/payment-processing/best-payment-processing-software" },
+      { label: "Credit card processing fees explained", href: "/payment-processing/guides/credit-card-processing-fees-explained" },
+      { label: "How to choose a payment processor", href: "/payment-processing/guides/how-to-choose-a-payment-processor" },
     ],
   }),
   build("authorize-net-vs-paypal", "authorizeNet", "paypal", "Authorize.net routes through your acquirer behind a gateway; PayPal leads with wallet trust and consumer pay surfaces—compare the paths homeowners actually click, not abstract architecture diagrams.", {

@@ -71,7 +71,9 @@ export async function generateMetadata({ params }: Props) {
   const b = data.productB.name;
   return siteMetadata({
     path: getPaymentProcessingCompareUrlFromSlug(comparison),
-    title: `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
-    description: `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for contractors and small businesses.`,
+    title: data.seoTitle ?? `${a} vs ${b} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description:
+      data.seoDescription ??
+      `Compare ${a} vs ${b} on pricing, features, ease of use, pros and cons, and ideal business fit for contractors and small businesses.`,
   });
 }

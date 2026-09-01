@@ -18,9 +18,9 @@ export type ComparisonFeatureRow = {
   feature: string;
   productA: string;
   productB: string;
-  /** Optional: show ✔ Supported | ⚠ Partial | — Not available */
-  supportA?: "supported" | "partial" | "none";
-  supportB?: "supported" | "partial" | "none";
+  /** Optional: show ✔ Supported | ⚠ Partial | — Not available | text-only (no icon) */
+  supportA?: "supported" | "partial" | "none" | "text";
+  supportB?: "supported" | "partial" | "none" | "text";
   /** Optional: which product is stronger in this row (gets green background) */
   stronger?: "A" | "B";
 };
@@ -81,6 +81,31 @@ export type ComparisonTemplateProps = {
   relevantTradeLinks?: { label: string; href: string }[];
   /** Optional: hero callouts under the summary (winner + reason) */
   heroCallouts?: HeroCalloutItem[];
+  /** Optional H1 override (include year in the string if needed). Default: `{A} vs {B} ({year})`. */
+  pageHeading?: string;
+  /** Optional SEO title/description for the page `generateMetadata` helper. */
+  seoTitle?: string;
+  seoDescription?: string;
+  /** Optional heading/subcopy for the quick-verdict section. */
+  quickVerdictHeading?: string;
+  quickVerdictSub?: string;
+  /** Optional pair-specific relationship/context section (corporate, product lineage, naming). */
+  relationshipContext?: { heading: string; paragraphs: string[] };
+  /** Optional heading overrides for the two-column decision guide. */
+  decisionGuideAHeading?: string;
+  decisionGuideBHeading?: string;
+  /** Optional third decision column: when neither product is a good fit. */
+  decisionGuideNeither?: string[];
+  /** Optional ROI / economics section. */
+  roiGuidance?: { heading?: string; paragraphs: string[]; example?: { heading: string; body: string } };
+  /** Optional research/verification note shown near the verdict. */
+  researchNote?: string;
+  /** Optional feature-table section subcopy. */
+  featureComparisonSub?: string;
+  /** Optional first-column header. Default: Feature. */
+  featureComparisonColumnLabel?: string;
+  /** Optional multi-paragraph pricing copy. Falls back to `pricingComparison`. */
+  pricingComparisonParagraphs?: string[];
 };
 
 /** Roundup + guides block for comparison footers — one entry per vertical with comparison pages. */
@@ -232,7 +257,7 @@ function FeatureCell({
   text,
   isStronger,
 }: {
-  support?: "supported" | "partial" | "none";
+  support?: "supported" | "partial" | "none" | "text";
   text: string;
   isStronger: boolean;
 }) {
@@ -241,6 +266,7 @@ function FeatureCell({
   return (
     <td className={`py-3 px-4 text-neutral-700 align-middle ${bgClass}`}>
       <span className="flex items-center gap-2">
+        {level === "text" && null}
         {level === "supported" && (
           <span className="text-[#10B981] shrink-0" aria-hidden title="Supported">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -291,22 +317,52 @@ export function ComparisonTemplate({
   moreComparisons,
   relevantTradeLinks,
   heroCallouts,
+  pageHeading,
+  quickVerdictHeading,
+  quickVerdictSub,
+  relationshipContext,
+  decisionGuideAHeading,
+  decisionGuideBHeading,
+  decisionGuideNeither,
+  roiGuidance,
+  researchNote,
+  featureComparisonSub,
+  featureComparisonColumnLabel,
+  pricingComparisonParagraphs,
 }: ComparisonTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const currentYear = new Date().getFullYear();
   const title = `${productA.name} vs ${productB.name}`;
+  const heading = pageHeading ?? `${title} (${currentYear})`;
   const logoA = productA.logo ?? productA.logoSrc;
   const logoB = productB.logo ?? productB.logoSrc;
 
-  const hasDecisionGuide = (decisionGuideA != null && decisionGuideA.length > 0) || (decisionGuideB != null && decisionGuideB.length > 0);
+  const hasDecisionGuide =
+    (decisionGuideA != null && decisionGuideA.length > 0) ||
+    (decisionGuideB != null && decisionGuideB.length > 0) ||
+    (decisionGuideNeither != null && decisionGuideNeither.length > 0);
+  const hasRelationshipContext = relationshipContext != null && relationshipContext.paragraphs.length > 0;
+  const hasRoiGuidance =
+    roiGuidance != null &&
+    ((roiGuidance.paragraphs != null && roiGuidance.paragraphs.length > 0) || roiGuidance.example != null);
   const hasRatingsComparison = ratingsComparison != null && ratingsComparison.length > 0;
+  const hideFeatureSupportLegend = featureComparison.every(
+    (row) => (row.supportA ?? "supported") === "text" && (row.supportB ?? "supported") === "text"
+  );
+  const pricingParagraphs = pricingComparisonParagraphs ?? [pricingComparison];
   const guideSection = COMPARISON_GUIDE_META[categoryHref] ?? COMPARISON_GUIDE_META["/payroll"];
   const sectionNavItems = [
     { label: "Quick verdict", href: "#quick-verdict" },
+    ...(hasRelationshipContext && relationshipContext
+      ? [{ label: relationshipContext.heading, href: "#relationship" }]
+      : []),
     ...(hasDecisionGuide ? [{ label: "Quick decision guide", href: "#quick-decision-guide" }] : []),
     ...(hasRatingsComparison ? [{ label: "Ratings comparison", href: "#ratings-comparison" }] : []),
     { label: "Feature comparison", href: "#feature-comparison" },
     { label: "Pricing", href: "#pricing" },
+    ...(hasRoiGuidance && roiGuidance
+      ? [{ label: roiGuidance.heading ?? "How to evaluate ROI", href: "#roi" }]
+      : []),
     { label: "Pros & cons", href: "#pros-cons" },
     { label: "Best for", href: "#best-for" },
     { label: "Alternatives", href: "#alternatives" },
@@ -340,7 +396,7 @@ export function ComparisonTemplate({
                   className="mb-4"
                 />
                 <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  {title} ({currentYear})
+                  {heading}
                 </h1>
                 <p className="mt-4 text-[15px] leading-relaxed text-neutral-700">
                   {summaryParagraph}
@@ -410,13 +466,18 @@ export function ComparisonTemplate({
               <div className="max-w-[720px]">
                 {/* 1. Quick verdict */}
                 <section id="quick-verdict" className="scroll-mt-section pt-12 pb-12">
-                  <SectionTitle sub="How these two tools differ.">Quick verdict</SectionTitle>
+                  <SectionTitle sub={quickVerdictSub ?? "How these two tools differ."}>
+                    {quickVerdictHeading ?? "Quick verdict"}
+                  </SectionTitle>
                   <div className="rounded-lg border border-stone-200/80 bg-white p-6 sm:p-8">
                     <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
                       {quickVerdictParagraphs.map((p, i) => (
                         <p key={i}>{p}</p>
                       ))}
                     </div>
+                    {researchNote != null && researchNote !== "" && (
+                      <p className="mt-5 text-xs leading-relaxed text-[#57534E]">{researchNote}</p>
+                    )}
                   </div>
                   <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                     <Link href={productA.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -450,14 +511,27 @@ export function ComparisonTemplate({
                   )}
                 </section>
 
+                {hasRelationshipContext && relationshipContext && (
+                  <section id="relationship" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                    <SectionTitle>{relationshipContext.heading}</SectionTitle>
+                    <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
+                      {relationshipContext.paragraphs.map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
                 {/* Quick decision guide */}
-                {((decisionGuideA != null && decisionGuideA.length > 0) || (decisionGuideB != null && decisionGuideB.length > 0)) && (
+                {hasDecisionGuide && (
                   <section id="quick-decision-guide" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                     <SectionTitle sub="Which product fits your situation.">Quick decision guide</SectionTitle>
                     <div className="grid gap-6 sm:grid-cols-2">
                       {decisionGuideA != null && decisionGuideA.length > 0 && (
                         <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Choose {productA.name} if:</h3>
+                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">
+                            {decisionGuideAHeading ?? `Choose ${productA.name} if:`}
+                          </h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideA.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
@@ -470,7 +544,9 @@ export function ComparisonTemplate({
                       )}
                       {decisionGuideB != null && decisionGuideB.length > 0 && (
                         <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Choose {productB.name} if:</h3>
+                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">
+                            {decisionGuideBHeading ?? `Choose ${productB.name} if:`}
+                          </h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideB.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
@@ -482,6 +558,19 @@ export function ComparisonTemplate({
                         </div>
                       )}
                     </div>
+                    {decisionGuideNeither != null && decisionGuideNeither.length > 0 && (
+                      <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-6">
+                        <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Consider neither if:</h3>
+                        <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
+                          {decisionGuideNeither.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-[#1A2D48] shrink-0 mt-0.5" aria-hidden>•</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </section>
                 )}
 
@@ -514,7 +603,8 @@ export function ComparisonTemplate({
 
                 {/* 2. Feature comparison table */}
                 <section id="feature-comparison" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <SectionTitle sub="Side-by-side feature check.">Feature comparison</SectionTitle>
+                  <SectionTitle sub={featureComparisonSub ?? "Side-by-side feature check."}>Feature comparison</SectionTitle>
+                  {!hideFeatureSupportLegend && (
                   <p className="mb-4 text-xs text-[#57534E]">
                     <span className="inline-flex items-center gap-1.5 mr-4">
                       <span className="text-[#10B981]" aria-hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="inline-block"><polyline points="20 6 9 17 4 12" /></svg></span>
@@ -529,11 +619,12 @@ export function ComparisonTemplate({
                       Not available
                     </span>
                   </p>
+                  )}
                   <div className="overflow-x-auto rounded-md border border-slate-200">
                     <table className="w-full min-w-[480px] text-sm">
                       <thead>
                         <tr className="border-b border-slate-200 bg-slate-50">
-                          <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] w-[40%] align-middle">Feature</th>
+                          <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] w-[40%] align-middle">{featureComparisonColumnLabel ?? "Feature"}</th>
                           <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productA.name}</th>
                           <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productB.name}</th>
                         </tr>
@@ -563,9 +654,30 @@ export function ComparisonTemplate({
                 <section id="pricing" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="What to expect to pay.">Pricing comparison</SectionTitle>
                   <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
-                    <p>{pricingComparison}</p>
+                    {pricingParagraphs.map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
                   </div>
                 </section>
+
+                {hasRoiGuidance && roiGuidance && (
+                  <section id="roi" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
+                    <SectionTitle sub="Cost per booked job, not cost per raw lead.">
+                      {roiGuidance.heading ?? "How to evaluate ROI"}
+                    </SectionTitle>
+                    <div className="space-y-5 text-[15px] leading-relaxed text-neutral-700">
+                      {(roiGuidance.paragraphs ?? []).map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                    </div>
+                    {roiGuidance.example != null && (
+                      <div className="mt-6 rounded-lg border border-stone-200/80 bg-slate-50 p-6">
+                        <h3 className="text-[#1A2D48] text-lg font-semibold mb-2">{roiGuidance.example.heading}</h3>
+                        <p className="text-[15px] leading-relaxed text-neutral-700">{roiGuidance.example.body}</p>
+                      </div>
+                    )}
+                  </section>
+                )}
 
                 {/* 4. Pros and cons */}
                 <section id="pros-cons" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

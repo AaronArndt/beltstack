@@ -148,7 +148,7 @@ const callrailAlts: AlternativesTopPick[] = [
     description: "When conversation AI and compliance justify enterprise rollout.",
     reviewHref: getCallTrackingReviewUrl("invoca"),
     compareHref: getCallTrackingCompareUrl("invoca-vs-callrail"),
-    startingPrice: "Enterprise",
+    startingPrice: "Quote required",
     standoutFeature: "AI + governance",
   },
   {
@@ -169,7 +169,7 @@ const callrailOriginal: AlternativesTableRow = {
   name: "CallRail",
   logoSrc: "/Logos/callrail.jpeg",
   bestFor: "SMB marketing attribution",
-  startingPrice: "From ~$45/mo",
+  startingPrice: "$55/mo ($50 annual)",
   standoutFeature: "Integrations + DNI",
   reviewHref: getCallTrackingReviewUrl("callrail"),
 };
@@ -235,7 +235,7 @@ const callrailPage: AlternativesTemplateProps = {
     },
     {
       q: "Do I need Invoca instead of CallRail?",
-      a: "Only when conversation intelligence, compliance workflows, and revenue-system integrations are non-negotiable—typical two-truck operators and lean agencies rarely start there.",
+      a: "When you need custom outcome models, automated contact-center QA, or classified conversions feeding ads—not for a typical two-truck shop that only needs DNI.",
     },
     {
       q: "Will switching platforms fix bad attribution?",
@@ -262,7 +262,7 @@ const ctmAlts: AlternativesTopPick[] = [
     description: "When you want integrations and UI speed over maximum model depth.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("callrail-vs-calltrackingmetrics"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "Time-to-value",
   },
   {
@@ -285,7 +285,7 @@ const ctmAlts: AlternativesTopPick[] = [
     bestFor: "Enterprise upgrade",
     description: "When AI and governance justify a bigger stack.",
     reviewHref: getCallTrackingReviewUrl("invoca"),
-    startingPrice: "Enterprise",
+    startingPrice: "Quote required",
     standoutFeature: "Conversation AI",
   },
   {
@@ -399,7 +399,7 @@ const wcAlts: AlternativesTopPick[] = [
     description: "When paid search and call workflows dominate and you want ecosystem breadth.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("callrail-vs-whatconverts"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "DNI + ads",
   },
   {
@@ -546,7 +546,7 @@ const ringbaAlts: AlternativesTopPick[] = [
     description: "When you need DNI and dashboards without operating a telco control plane.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("ringba-vs-callrail"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "Time-to-value",
   },
   {
@@ -558,7 +558,7 @@ const ringbaAlts: AlternativesTopPick[] = [
     description: "When regulated or franchise programs need signal extraction, not just routing trees.",
     reviewHref: getCallTrackingReviewUrl("invoca"),
     compareHref: getCallTrackingCompareUrl("invoca-vs-callrail"),
-    startingPrice: "Enterprise",
+    startingPrice: "Quote required",
     standoutFeature: "AI + governance",
   },
   {
@@ -664,7 +664,7 @@ const invocaOriginal: AlternativesTableRow = {
   name: "Invoca",
   logoSrc: "/Logos/invoca.png",
   bestFor: "Enterprise conversation intelligence",
-  startingPrice: "Enterprise / custom",
+  startingPrice: "Quote required",
   standoutFeature: "AI + revenue signals",
   reviewHref: getCallTrackingReviewUrl("invoca"),
 };
@@ -679,7 +679,7 @@ const invocaAlts: AlternativesTopPick[] = [
     description: "When you need attribution without enterprise procurement and services-heavy rollout.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("invoca-vs-callrail"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "DNI + integrations",
   },
   {
@@ -814,7 +814,7 @@ const twilioAlts: AlternativesTopPick[] = [
     description: "When you want DNI, reporting, and ad integrations without owning telephony code.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("callrail-vs-whatconverts"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "Attribution UI",
   },
   {
@@ -946,7 +946,7 @@ const phonewagonAlts: AlternativesTopPick[] = [
     description: "When accounts grow past a few numbers and need a deeper integration marketplace.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("callrail-vs-whatconverts"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "Ecosystem",
   },
   {
@@ -1080,7 +1080,7 @@ const nimbataAlts: AlternativesTopPick[] = [
     description: "When you need the broadest ad and CRM ecosystem and US operations dominate.",
     reviewHref: getCallTrackingReviewUrl("callrail"),
     compareHref: getCallTrackingCompareUrl("callrail-vs-whatconverts"),
-    startingPrice: "From ~$45/mo",
+    startingPrice: "$55/mo ($50 annual)",
     standoutFeature: "Integrations",
   },
   {

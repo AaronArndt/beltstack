@@ -819,17 +819,17 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.4",
-    startingPrice: "Custom pricing",
+    startingPrice: "Quote (RUN packages)",
     bestFor: "larger trade businesses, growing contractors, and companies that need more advanced payroll and HR support",
     visitUrl: "https://www.adp.com/small-business",
     logoSrc: "/Logos/adp.jpeg",
-    payrollTypes: "W-2, 1099, Multi-state, Multi-country",
+    payrollTypes: "W-2, 1099, Multi-state (RUN); multi-country on other ADP products",
     quickVerdict:
-      "ADP scales from small businesses to enterprise. It offers broad payroll and HR capabilities, strong compliance support, and dedicated service—but pricing is less transparent and the platform can feel heavy for very small teams.",
+      "ADP scales from small businesses (RUN Powered by ADP, 1–49 employees) to midsize and enterprise (Workforce Now, 50+). RUN offers payroll/HR packages with quote-based pricing and 24/7 support. Pricing is not a public dollar card, and the platform can feel heavy for a payroll-only micro team.",
     quickVerdictParagraphs: [
-      "ADP is one of the largest payroll and HR providers, serving businesses from a handful of employees to thousands. For growing trade businesses and contractors that need more than basic payroll—advanced reporting, compliance tools, benefits administration, or dedicated support—ADP brings enterprise-grade depth. You get W-2 and 1099 payroll, multi-state and multi-country options, and a wide set of HR and admin tools.",
-      "We like ADP for scalability: as you add people, locations, or complexity, the platform can grow with you. Compliance and tax filing are handled; you can add time tracking, benefits, and workforce management. The trade-off is that pricing is typically custom and quoted per client, so it's harder to compare at a glance than flat-rate tools like OnPay or Gusto.",
-      "Limitations: For very small teams with simple payroll, ADP can feel like more than you need—both in features and in cost. Setup and navigation can be more involved than lighter products. If you're a small crew with straightforward W-2/1099 needs, Gusto or OnPay may be a better fit; if you're scaling or need deeper HR and compliance, ADP is worth considering.",
+      "ADP is a family of products, not one payroll SKU. For most small employers, the relevant product is RUN Powered by ADP—ADP positions it for 1–49 employees. Workforce Now is the 50+ / midsize–enterprise platform. TotalSource is a PEO. You get W-2 and 1099 payroll, tax filing, and a package ladder from Essential Payroll through HR Pro. Multi-country payroll lives on broader ADP products, not as the default RUN comparison.",
+      "We like ADP when a small business will actually use RUN’s HR, onboarding, time, or benefits add-ons, or wants a documented path into Workforce Now later. Tax filing is included across RUN packages; ADP states it pays fines/penalties if it makes a tax-filing error. The trade-off is quote-based pricing: RUN dollars are not on a public rate card.",
+      "Limitations: For a very small team that only needs payroll and a calculator price, SurePayroll, Gusto, or OnPay may be a better fit. Setup and navigation can be heavier than payroll-first tools. Get a RUN quote that matches tax filing, year-end forms, and add-ons before you compare cost.",
     ],
     ratingBreakdown: [
       {
@@ -842,7 +842,7 @@ const reviews: Record<string, ReviewData> = {
         category: "Pricing",
         score: "4.0",
         explanation:
-          "Pricing is custom and quoted per business—no simple published base plus per-person. Can be competitive at scale but less transparent for small teams comparing options.",
+          "RUN package prices are quote-based—ADP’s 1–49 packages page is “Get pricing,” not a public $X + $Y/employee card. Workforce Now is custom. Do not use Roll’s published starting example as RUN pricing.",
       },
       {
         category: "Ease of Use",
@@ -881,9 +881,9 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Very small teams with simple W-2/1099 payroll and no need for advanced HR or compliance may find ADP overkill and harder to budget due to custom pricing. Consider Gusto or OnPay for transparent, flat-rate options. If you want the lightest possible setup and don't plan to scale, a simpler product may be a better fit.",
     pricingSummary:
-      "ADP typically uses custom pricing—you get a quote based on your headcount, features, and needs. There isn't a single published base-plus-per-person rate like Gusto or OnPay. Small-business tiers exist, but costs vary. Contact ADP or check their small-business site for current options; compare total cost with your specific requirements in mind.",
+      "RUN Powered by ADP (1–49) uses quote-based package pricing. ADP does not publish current RUN dollar amounts. Workforce Now (50+) is custom. Contact ADP for a quote that includes tax filing, W-2/1099 fees, pay frequency, and add-ons. Verified August 2026: RUN packages page is “Get pricing.”",
     pricingTiers:
-      "ADP offers multiple product lines (e.g. RUN for small business, Workforce Now for mid-market). Features and pricing depend on tier and configuration. Payroll, tax filing, time tracking, benefits, and HR modules can be combined. Get a quote to see what fits your size and needs.",
+      "RUN packages: Essential Payroll, Enhanced Payroll, Complete Payroll & HR Plus, and HR Pro Payroll & HR. All listed packages include payroll, tax filing, 24/7 support, and employee access. W-2 and 1099 are an additional fee. Time and Attendance, retirement, workers’ comp, and health insurance are add-ons. Workforce Now is a separate 50+ product line.",
     costVsCompetitors:
       "ADP is often more expensive on a per-employee basis for very small teams compared to Gusto or OnPay, but can be competitive or advantageous as you scale. The value is in breadth: compliance, HR, and support that lighter tools don't offer. Compare quoted total cost and included features, not just headline rates.",
     features: [
@@ -993,11 +993,11 @@ const reviews: Record<string, ReviewData> = {
       },
       {
         q: "How much does ADP cost?",
-        a: "ADP uses custom pricing—you get a quote based on your business size, features, and needs. There isn't a single published base-plus-per-person rate. Contact ADP or visit their small-business site for current options and to compare with your requirements.",
+        a: "ADP does not publish RUN package dollar prices. You get a quote based on headcount, pay frequency, package, and add-ons. W-2/1099 are an extra fee on RUN. Do not use third-party “starts at” figures or Roll by ADP’s $39 + $5 example as RUN pricing. Visit ADP’s small-business / 1–49 packages page and request pricing.",
       },
       {
         q: "Is ADP good for small businesses?",
-        a: "ADP serves small businesses through products like ADP RUN, but the platform is built to scale. Very small teams with simple payroll may find Gusto or OnPay simpler and more transparent on price. ADP is a strong fit when you're growing or need more HR, compliance, or support.",
+        a: "Yes, through RUN Powered by ADP, which ADP positions for 1–49 employees. Very small teams that only need payroll and a published monthly rate may prefer SurePayroll, Gusto, or OnPay. ADP is a stronger fit when you will use RUN’s HR packages, 24/7 support, or expect to grow toward Workforce Now (50+).",
       },
       {
         q: "How does ADP compare to Gusto?",
@@ -1025,6 +1025,7 @@ const reviews: Record<string, ReviewData> = {
       ],
     },
     compareLinks: [
+      { label: "SurePayroll vs ADP", href: getPayrollCompareUrl("surepayroll-vs-adp") },
       { label: "Gusto vs ADP", href: getPayrollCompareUrl("gusto-vs-adp") },
       { label: "ADP vs Paychex", href: getPayrollCompareUrl("adp-vs-paychex") },
     ],
@@ -1905,7 +1906,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.2",
-    startingPrice: "Custom pricing",
+    startingPrice: "$29/mo + $7/employee",
     bestFor: "small businesses that want simple payroll with optional full-service support from a well-known brand",
     visitUrl: "https://www.surepayroll.com",
     logoSrc: "/Logos/surepayroll.jpeg",
@@ -1913,13 +1914,13 @@ const reviews: Record<string, ReviewData> = {
     quickVerdict:
       "SurePayroll offers small-business payroll with a simple interface and optional full-service support. Part of the Paychex family; good for owners who want a recognizable name and straightforward payroll.",
     quickVerdictParagraphs: [
-      "SurePayroll is a small-business payroll product from the Paychex family. It focuses on simplicity: run payroll yourself or opt for full-service handling. Tax filing, direct deposit, and basic reporting are included. Pricing is typically custom or tiered—you get a quote or see plan options on the site.",
-      "We like SurePayroll for small businesses that want a simple payroll experience with the option to hand off tax filing and compliance to the provider. The brand is familiar and support is available. For published pricing and a more self-serve all-in-one (payroll plus HR and benefits), Gusto or OnPay may be a better fit.",
-      "Limitations: Less HR and benefits depth than Gusto. Custom or less transparent pricing than OnPay or Patriot. Consider Gusto if you want one platform for payroll and HR with clear rates.",
+      "SurePayroll is a small-business payroll product from the Paychex family. Full Service currently lists at $29/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, and free 2-day direct deposit. A No Tax Filing plan is $20 plus $4 per employee if you file and deposit taxes yourself. Billing is monthly; SurePayroll states you can cancel anytime.",
+      "We like SurePayroll for small businesses that want a payroll-first product with a published monthly number and the option to hand off tax filing. The brand is familiar and support is available. For a more self-serve all-in-one (payroll plus HR and benefits), Gusto or OnPay may still be a better fit even though SurePayroll now publishes rates too.",
+      "Limitations: Less HR and benefits depth than Gusto. Year-end forms ($50 + $5 per form), extra states ($9.99/month), local taxes, timeclock, and accounting export are extra. Consider Gusto if you want one platform for payroll and HR.",
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.0", explanation: "Solid core payroll and tax filing; W-2 and 1099. Fewer bells and whistles than Gusto." },
-      { category: "Pricing", score: "4.0", explanation: "Custom or tiered pricing; check SurePayroll for current rates. Less transparent than Gusto or OnPay." },
+      { category: "Pricing", score: "4.0", explanation: "Published Full Service $29/mo + $7 per employee; extras (year-end, extra state, add-ons) sit outside the headline rate." },
       { category: "Ease of Use", score: "4.4", explanation: "Simple interface; optional full-service makes it easy to hand off payroll." },
       { category: "Support", score: "4.5", explanation: "Support and full-service options available; good for small businesses that want help." },
       { category: "Integrations", score: "4.0", explanation: "Integrates with accounting and other tools; less ecosystem depth than Gusto or QuickBooks Payroll." },
@@ -1932,19 +1933,19 @@ const reviews: Record<string, ReviewData> = {
     ],
     cons: [
       "Less HR and benefits depth than Gusto",
-      "Custom or less transparent pricing",
+      "Year-end, extra-state, and add-on fees sit outside the headline monthly rate",
       "Fewer integrations than Gusto or QuickBooks Payroll",
     ],
     bestForEditorial:
       "SurePayroll is best for small businesses that want simple payroll with optional full-service support. Good for owners who prefer a well-known brand and straightforward pay runs without needing deep HR or benefits in the same product.",
     whoShouldAvoid:
-      "Businesses that want the most HR and benefits in one platform may prefer Gusto. If you want published, compare-online pricing, look at OnPay or Patriot Payroll.",
+      "Businesses that want the most HR and benefits in one platform may prefer Gusto. If you need ADP RUN’s HR package ladder or 24/7 support, compare SurePayroll vs ADP rather than assuming SurePayroll is an ADP product.",
     pricingSummary:
-      "SurePayroll uses custom or tiered pricing. Base and per-employee costs vary; check SurePayroll's website or contact for current rates.",
+      "SurePayroll currently publishes Full Service at $29/month plus $7 per employee and No Tax Filing at $20 plus $4 per employee. Extra states are $9.99/month; year-end W-2/1099 is $50 plus $5 per form. Local taxes and add-ons (timeclock, accounting integration, employment law, 401(k)) are extra. Verified August 2026 on SurePayroll’s pricing page.",
     pricingTiers:
-      "SurePayroll offers self-service and full-service options; pricing depends on plan and headcount.",
+      "Full Service (most popular): $29/mo + $7 per employee, with tax filing and deposits. No Tax Filing: $20/mo + $4 per employee. Household/nanny is a separate plan on the pricing page.",
     costVsCompetitors:
-      "SurePayroll sits in the small-business segment. Compare total cost to Gusto and OnPay for similar headcounts; Gusto offers more HR and published pricing.",
+      "SurePayroll sits in the small-business segment with published payroll-first pricing. Compare total cost to Gusto and OnPay at your headcount; Gusto still offers more HR in the base product.",
     features: [
       "W-2 and 1099 payroll",
       "Tax filing and deposits",
@@ -1971,7 +1972,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     faqs: [
       { q: "Does SurePayroll support 1099 contractors?", a: "Yes. SurePayroll handles both W-2 and 1099 payroll with tax filing. Contractor payments and 1099 forms are supported." },
-      { q: "How much does SurePayroll cost?", a: "SurePayroll uses custom or tiered pricing. Check SurePayroll's website or contact them for current rates based on your headcount and needs." },
+      { q: "How much does SurePayroll cost?", a: "Full Service is currently $29/month plus $7 per employee. No Tax Filing is $20 plus $4 per employee. Year-end forms are $50 plus $5 per form; extra states are $9.99/month. Check SurePayroll’s pricing page for add-ons and local-tax fees." },
       { q: "Is SurePayroll part of Paychex?", a: "Yes. SurePayroll is part of the Paychex family, focused on small-business payroll with a simpler product and optional full-service." },
       { q: "SurePayroll vs Gusto?", a: "Gusto offers more HR, benefits, and published pricing in an all-in-one. SurePayroll offers simpler payroll with optional full-service and a familiar brand. Choose Gusto for more features; choose SurePayroll for simplicity and full-service option." },
     ],

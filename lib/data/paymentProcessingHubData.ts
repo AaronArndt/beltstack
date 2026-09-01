@@ -83,6 +83,7 @@ export const PAYMENT_PROCESSING_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] =
     body: "High average tickets—panel upgrades, full system replacements—make a few basis points visible on statements. Helcim and membership models like Stax deserve modeling against flat-rate simplicity.",
     links: [
       { label: "Helcim vs Stax →", href: getPaymentProcessingCompareUrlFromSlug("helcim-vs-stax") },
+      { label: "Stripe vs Stax →", href: getPaymentProcessingCompareUrlFromSlug("stripe-vs-stax") },
       { label: "Credit card processing fees explained →", href: `${GUIDES_BASE}/credit-card-processing-fees-explained` },
       { label: "CRM software hub (track customers & payments) →", href: "/crm" },
     ],
@@ -109,6 +110,7 @@ export const PAYMENT_PROCESSING_HUB_POPULAR_COMPARISONS: PaymentProcessingHubCom
   { label: "Stripe vs PayPal", slug: "stripe-vs-paypal", href: getPaymentProcessingCompareUrl("stripe-vs-paypal") },
   { label: "Square vs PayPal", slug: "square-vs-paypal", href: getPaymentProcessingCompareUrl("square-vs-paypal") },
   { label: "Helcim vs Stax", slug: "helcim-vs-stax", href: getPaymentProcessingCompareUrl("helcim-vs-stax") },
+  { label: "Stripe vs Stax", slug: "stripe-vs-stax", href: getPaymentProcessingCompareUrl("stripe-vs-stax") },
   { label: "Shopify Payments vs Stripe", slug: "shopify-payments-vs-stripe", href: getPaymentProcessingCompareUrl("shopify-payments-vs-stripe") },
   { label: "Shopify Payments vs PayPal", slug: "shopify-payments-vs-paypal", href: getPaymentProcessingCompareUrl("shopify-payments-vs-paypal") },
   { label: "Authorize.net vs Stripe", slug: "authorize-net-vs-stripe", href: getPaymentProcessingCompareUrl("authorize-net-vs-stripe") },

@@ -66,7 +66,7 @@ export const LEAD_GENERATION_USE_CASE_EDITORIAL: HubUseCaseEditorialBlock[] = [
   },
   {
     title: "Home services brands comparing Angi and HomeAdvisor",
-    body: "Overlapping lead networks still differ in bundles, dispute rules, and geography. Read both reviews and the head-to-head before you commit annual spend.",
+    body: "They are the same parent company. The useful comparison is Angi Ads vs Angi Leads (HomeAdvisor branding)—then independent channels. Read the head-to-head before you treat them as unrelated vendors.",
     links: [{ label: "Angi vs HomeAdvisor →", href: getLeadGenerationCompareUrlFromSlug("angi-vs-homeadvisor") }],
   },
   {

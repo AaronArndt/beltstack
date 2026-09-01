@@ -122,7 +122,7 @@ const thumbtackAlts: AlternativesTopPick[] = [
     description: "Useful when you want to test multiple service lines in one account.",
     reviewHref: getLeadGenerationReviewUrl("bark"),
     compareHref: getLeadGenerationCompareUrl("bark-vs-thumbtack"),
-    startingPrice: "Credits / packs",
+    startingPrice: "From $2.35/credit",
     standoutFeature: "Multi-category reach",
   },
   {
@@ -166,7 +166,7 @@ const thumbtackOriginal: AlternativesTableRow = {
   name: "Thumbtack",
   logoSrc: "/Logos/thumbtack.jpeg",
   bestFor: "Pay-per-lead marketplace for local pros",
-  startingPrice: "Pay per lead",
+  startingPrice: "No membership fee; pay per lead",
   standoutFeature: "Flexible budgets; broad trade coverage",
   reviewHref: getLeadGenerationReviewUrl("thumbtack"),
 };
@@ -187,8 +187,8 @@ const thumbtackDetailed: AlternativesDetailBlock[] = [
   },
   {
     productName: "HomeAdvisor",
-    heading: "Best parallel marketplace test",
-    body: "Many teams run Thumbtack alongside HomeAdvisor to compare lead quality by zip.",
+    heading: "Best Angi Inc. marketplace option",
+    body: "HomeAdvisor is Angi Leads—not a separate company from Angi. Many teams compare it with Thumbtack by zip using booked-job math.",
     reviewHref: getLeadGenerationReviewUrl("homeadvisor"),
   },
 ];
@@ -205,7 +205,7 @@ const thumbtackPage: AlternativesTemplateProps = {
   showPayrollTypesColumn: false,
   quickAnswerParagraphs: [
     "Teams look beyond Thumbtack when lead quality in their zip code slips, competition spikes, or Google search becomes the dominant buyer path.",
-    "Start by retesting dispute rules and follow-up speed—then diversify with Angi, HomeAdvisor, or Google Local Services Ads using booked-job math.",
+    "Start by retesting dispute rules and follow-up speed—then diversify with Angi Inc. products (ads or Angi Leads/HomeAdvisor) or Google Local Services Ads using booked-job math.",
     "Most pros win with a blended channel mix: keep one marketplace, layer one search-intent source, and tie everything back to CRM outcomes.",
   ],
   whyPeopleLookForAlternatives: [
@@ -250,8 +250,8 @@ const angiAlts: AlternativesTopPick[] = [
     name: "HomeAdvisor",
     logoSrc: "/Logos/homeadvisor.jpeg",
     rating: "4.1",
-    bestFor: "Parallel home-services marketplace",
-    description: "Often the first split test against Angi for residential trades.",
+    bestFor: "Angi Leads (same parent company)",
+    description: "Angi Inc.’s pay-per-lead marketplace still branded HomeAdvisor—not an independent rival.",
     reviewHref: getLeadGenerationReviewUrl("homeadvisor"),
     compareHref: getLeadGenerationCompareUrl("angi-vs-homeadvisor"),
     startingPrice: "Pay per lead",
@@ -276,7 +276,7 @@ const angiAlts: AlternativesTopPick[] = [
     bestFor: "Multi-category prospecting",
     description: "Useful when you list more than one trade service line.",
     reviewHref: getLeadGenerationReviewUrl("bark"),
-    startingPrice: "Credits / packs",
+    startingPrice: "From $2.35/credit",
     standoutFeature: "Wide category mix",
   },
   {
@@ -312,7 +312,7 @@ const angiPage: AlternativesTemplateProps = {
   originalReviewHref: getLeadGenerationReviewUrl("angi"),
   showPayrollTypesColumn: false,
   quickAnswerParagraphs: [
-    "Pros add Thumbtack, HomeAdvisor, or Google LSA when Angi economics drift—or when they need diversification beyond one network.",
+    "Pros add Thumbtack or Google LSA when Angi economics drift—or when they need a channel outside Angi Inc. HomeAdvisor is the same parent (typically Angi Leads), not an unrelated rival.",
     "Angi alternatives usually win when bundles reduce flexibility, geo coverage is uneven, or your team needs clearer per-lead economics.",
     "Use one scorecard across channels: same response SLA, same qualification script, and same booked-job attribution rules.",
   ],
@@ -333,8 +333,8 @@ const angiPage: AlternativesTemplateProps = {
     },
     {
       productName: "HomeAdvisor",
-      heading: "Best head-to-head marketplace",
-      body: "Run Angi vs HomeAdvisor with the same follow-up script to compare quality.",
+      heading: "Same parent — Angi Leads marketplace",
+      body: "HomeAdvisor is Angi Inc.’s Angi Leads product, not a separate company. Use Angi vs HomeAdvisor to see ads vs leads before you treat it as a substitute.",
       reviewHref: getLeadGenerationReviewUrl("homeadvisor"),
       compareHref: getLeadGenerationCompareUrl("angi-vs-homeadvisor"),
     },
@@ -343,7 +343,7 @@ const angiPage: AlternativesTemplateProps = {
   relatedComparisons: [rel("thumbtack-vs-angi"), rel("angi-vs-homeadvisor")],
   relatedResources: [...HUB_RELATED_RESOURCES, ...softwareReviewLinks(ALL_REVIEW_TUPLES)],
   faqItems: [
-    { q: "Is Angi or HomeAdvisor better?", a: "It depends on your geography and category. Read our comparison and test both at modest spend." },
+    { q: "Is Angi or HomeAdvisor better?", a: "They are the same parent company. The useful question is whether you are being sold Angi Ads, Angi Leads (HomeAdvisor), or a mix—and whether those economics beat independent channels. Read Angi vs HomeAdvisor rather than testing them as unrelated vendors." },
     { q: "What is the best Angi alternative for contractors?", a: "Thumbtack is typically the most direct alternative for flexible local lead buying; Google LSA can outperform where search intent is strongest." },
     { q: "How should I test Angi alternatives?", a: "Run a 30-60 day split with identical scripts, response timing, and CRM stages, then choose by booked-job margin." },
     { q: "Where do I compare Angi alternatives and reviews?", a: "Use the alternatives table here, then open Thumbtack vs Angi, Angi vs HomeAdvisor, and the linked reviews." },
@@ -364,7 +364,7 @@ const homeadvisorOriginal: AlternativesTableRow = {
 
 const homeadvisorPage: AlternativesTemplateProps = {
   title: "Best HomeAdvisor Alternatives (2026)",
-  subtitle: "Swap or complement HomeAdvisor when overlap, cost, or lead quality forces a broader mix.",
+  subtitle: "Swap or complement HomeAdvisor when overlap, cost, or lead quality forces a mix outside Angi Inc.—or when you were sold the wrong Angi product.",
   productName: "HomeAdvisor",
   productSlug: "homeadvisor",
   categoryHref: CATEGORY.href,
@@ -372,7 +372,7 @@ const homeadvisorPage: AlternativesTemplateProps = {
   originalReviewHref: getLeadGenerationReviewUrl("homeadvisor"),
   showPayrollTypesColumn: false,
   quickAnswerParagraphs: [
-    "Angi, Thumbtack, and Google LSA are the most common pivots—choose based on intent (search vs marketplace) and your dispute comfort.",
+    "Thumbtack and Google LSA are the most common independent pivots—choose based on intent (search vs marketplace) and your dispute comfort. Angi ads/directory products are the same parent as HomeAdvisor, not a separate rival.",
     "HomeAdvisor alternatives usually improve performance when duplicate overlap is high or gross margins cannot absorb shared-lead variance.",
     "For most local teams, the winning setup is one marketplace channel plus one intent channel with strict CRM attribution.",
   ],
@@ -386,8 +386,8 @@ const homeadvisorPage: AlternativesTemplateProps = {
   detailedAlternatives: [
     {
       productName: "Angi",
-      heading: "Best parallel competitor",
-      body: "Evaluate Angi bundles against HomeAdvisor in the same zip codes.",
+      heading: "Same parent — confirm the product",
+      body: "Angi advertising/directory products are not an independent competitor. Read Angi vs HomeAdvisor to see ads vs Angi Leads before you reallocate budget inside Angi Inc.",
       reviewHref: getLeadGenerationReviewUrl("angi"),
       compareHref: getLeadGenerationCompareUrl("angi-vs-homeadvisor"),
     },
@@ -404,7 +404,7 @@ const homeadvisorPage: AlternativesTemplateProps = {
   relatedResources: [...HUB_RELATED_RESOURCES, ...softwareReviewLinks(ALL_REVIEW_TUPLES)],
   faqItems: [
     { q: "What replaced HomeAdvisor-only strategies?", a: "Most teams now blend marketplaces with Google LSA and owned marketing channels so one vendor does not control the full pipeline." },
-    { q: "What is the best HomeAdvisor alternative?", a: "Angi and Thumbtack are the closest marketplace alternatives, while Google LSA is often the best intent-driven complement." },
+    { q: "What is the best HomeAdvisor alternative?", a: "Thumbtack is the closest independent marketplace alternative, while Google LSA is often the best intent-driven complement. Angi is the same parent company—see Angi vs HomeAdvisor rather than treating it as an unrelated vendor." },
     { q: "Should I keep HomeAdvisor while testing alternatives?", a: "Yes—reduce spend gradually and compare booked-job margin before fully switching." },
     { q: "What should I read next?", a: "Start with Angi vs HomeAdvisor, then review Thumbtack and Google LSA pages to finalize your channel mix." },
   ],
@@ -507,14 +507,15 @@ const barkPage = makeLeadGenAlternativesPage({
   title: "Best Bark Alternatives (2026)",
   subtitle: "If Bark credit packs are not producing consistent booked jobs, these alternatives offer stronger local category depth and clearer intent channels.",
   originalBestFor: "Credit-based, multi-category lead buying",
-  originalPricing: "Credits / lead packs",
+  originalPricing: "From $2.35/credit (leads cost multiple credits)",
   originalStandout: "Multi-category breadth",
   quickAnswerParagraphs: [
-    "Bark alternatives are common when teams want stronger category depth by metro and less variability in lead quality.",
+    "Bark is inspect-then-buy: you see credit cost before you pay, but $2.35 is per credit, not per lead, and unused credits expire. Teams look for alternatives when CAC after credit returns still misses margin, or when Thumbtack/LSA matching fits their market better.",
     "Thumbtack and Angi are the usual marketplace replacements; Google LSA and Yelp Ads can win where search/profile behavior is stronger.",
   ],
   why: [
-    { heading: "Credit efficiency", body: "Credit models can feel opaque when lead acceptance rates or close quality vary by category." },
+    { heading: "Credit vs lead price", body: "A $2.35 credit is not a $2.35 lead. High-credit jobs plus 3-month expiry can make bulk packs look cheaper than they are." },
+    { heading: "Selectivity vs volume", body: "Bark only helps if you skip unfit requests. If you buy everything in the feed, a targeting-and-budget marketplace may be simpler." },
     { heading: "Category depth", body: "Some verticals simply perform better on US-focused marketplaces with denser supply." },
     { heading: "Intent quality", body: "When broad category reach attracts low-fit leads, narrower channels often improve economics." },
   ],
@@ -530,7 +531,7 @@ const barkPage = makeLeadGenAlternativesPage({
   relatedComparisonSlugs: ["bark-vs-thumbtack", "thumbtack-vs-angi", "google-local-services-ads-vs-yelp-ads"],
   faqs: [
     { q: "What is the closest Bark alternative?", a: "Thumbtack is usually the closest US-focused alternative for local service lead buying." },
-    { q: "Are Bark credits better than pay-per-lead?", a: "Not always. Evaluate by booked-job margin after disputes and response costs, not by headline credit price." },
+    { q: "Are Bark credits better than pay-per-lead?", a: "They are a different unit. Bark: inspect, then spend credits ($2.35 standard) only if you contact. Thumbtack: targeting and budget; direct leads charge when the customer reaches out. Compare cost per booked job on Bark vs Thumbtack." },
     { q: "Should I run Bark and Thumbtack together?", a: "You can, but dedupe leads in CRM and compare channel-level close rates before expanding both budgets." },
   ],
 });

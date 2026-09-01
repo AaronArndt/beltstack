@@ -171,7 +171,7 @@ const ADP_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "rippling", name: "Rippling", logoSrc: "/Logos/rippling.jpeg", rating: "4.6", bestFor: "payroll + HR + IT", description: "Modern platform combining payroll, HR, and IT. For companies that want one system.", reviewHref: getPayrollReviewUrl("rippling"), compareHref: getPayrollCompareUrl("gusto-vs-adp"), startingPrice: "Custom", standoutFeature: "Payroll, HR, and IT in one" },
   { slug: "gusto", name: "Gusto", logoSrc: "/Logos/gusto.jpeg", rating: "4.8", bestFor: "transparent pricing and self-serve", description: "All-in-one payroll and HR with published pricing. Good for SMBs that want clarity.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("gusto-vs-adp"), startingPrice: "$49/mo", standoutFeature: "Transparent pricing; modern UX" },
   { slug: "justworks", name: "Justworks", logoSrc: "/Logos/justworks.jpeg", rating: "4.5", bestFor: "PEO-style benefits and payroll", description: "PEO that bundles payroll with benefits and compliance. Custom pricing.", reviewHref: getPayrollReviewUrl("justworks"), startingPrice: "Custom", standoutFeature: "PEO benefits; simplified compliance" },
-  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "ADP-owned small business payroll with straightforward pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp"), startingPrice: "From $49/mo", standoutFeature: "Simple small-business focus" },
+  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "Paychex small-business payroll with published Full Service pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp"), startingPrice: "$29/mo + $7/EE", standoutFeature: "Simple small-business focus" },
 ];
 const adpPage: AlternativesTemplateProps = {
   ...gustoPage,
@@ -181,7 +181,7 @@ const adpPage: AlternativesTemplateProps = {
   productSlug: "adp",
   originalReviewHref: getPayrollReviewUrl("adp"),
   quickAnswerParagraphs: [
-    "Teams look for ADP alternatives when they want published pricing, a simpler self-serve experience, or a different scale. Paychex is the closest traditional full-service alternative. Gusto and OnPay offer transparent pricing and modern UX. Rippling fits those who want payroll plus HR and IT. Justworks suits PEO-style benefits; SurePayroll is another ADP-owned option for small business.",
+    "Teams look for ADP alternatives when they want published pricing, a simpler self-serve experience, or a different scale. Paychex is the closest traditional full-service alternative. Gusto and OnPay offer transparent pricing and modern UX. Rippling fits those who want payroll plus HR and IT. Justworks suits PEO-style benefits. SurePayroll is a Paychex payroll-first product with published pricing—not an ADP brand.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Pricing transparency", body: "ADP uses custom pricing. Teams that want published base-plus-per-person rates often consider Gusto, OnPay, or SurePayroll." },
@@ -198,7 +198,7 @@ const adpPage: AlternativesTemplateProps = {
     { productName: "Rippling", heading: "Best for payroll + HR + IT", body: "Rippling offers a modern, unified platform for payroll, HR, and IT. For companies that want one system and more self-serve control.", reviewHref: getPayrollReviewUrl("rippling") },
     { productName: "Gusto", heading: "Best for transparent pricing and self-serve", body: "Gusto provides published pricing and an all-in-one payroll and HR experience. Strong for SMBs that want clarity and modern UX.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("gusto-vs-adp") },
     { productName: "Justworks", heading: "Best for PEO-style benefits and payroll", body: "Justworks bundles payroll with PEO benefits and compliance. Custom pricing; good if you want a PEO without ADP's scale.", reviewHref: getPayrollReviewUrl("justworks") },
-    { productName: "SurePayroll", heading: "Best for small business payroll", body: "SurePayroll is ADP-owned and focused on small business with simpler pricing. An option if you want the ADP ecosystem at a smaller scale.", reviewHref: getPayrollReviewUrl("surepayroll"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp") },
+    { productName: "SurePayroll", heading: "Best for small business payroll", body: "SurePayroll is a Paychex company focused on payroll-first small-business payroll with published Full Service pricing ($29/mo + $7 per employee). Compare it with RUN Powered by ADP, not as an ADP-owned brand.", reviewHref: getPayrollReviewUrl("surepayroll"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp") },
   ],
   relatedComparisons: [
     payRel("adp-vs-paychex"),
@@ -219,7 +219,7 @@ const PAYCHEX_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "gusto", name: "Gusto", logoSrc: "/Logos/gusto.jpeg", rating: "4.8", bestFor: "transparent pricing and self-serve", description: "All-in-one payroll and HR with published pricing and modern UX.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("gusto-vs-paychex"), startingPrice: "$49/mo", standoutFeature: "Transparent pricing; modern UX" },
   { slug: "onpay", name: "OnPay", logoSrc: "/Logos/onpay.jpeg", rating: "4.5", bestFor: "value and flat pricing", description: "Flat pricing and straightforward payroll. Good for small teams.", reviewHref: getPayrollReviewUrl("onpay"), compareHref: getPayrollCompareUrl("gusto-vs-paychex"), startingPrice: "$40/mo", standoutFeature: "Flat pricing; one plan" },
   { slug: "rippling", name: "Rippling", logoSrc: "/Logos/rippling.jpeg", rating: "4.6", bestFor: "payroll + HR + IT", description: "Modern platform for payroll, HR, and IT in one.", reviewHref: getPayrollReviewUrl("rippling"), startingPrice: "Custom", standoutFeature: "Payroll, HR, and IT in one" },
-  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business", description: "Small business payroll with straightforward pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "From $49/mo", standoutFeature: "Simple small-business focus" },
+  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business", description: "Small business payroll with straightforward pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "$29/mo + $7/EE", standoutFeature: "Simple small-business focus" },
 ];
 const paychexPage: AlternativesTemplateProps = {
   ...gustoPage,
@@ -406,7 +406,7 @@ const deelPage: AlternativesTemplateProps = {
 const SUREPAYROLL_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "gusto", name: "Gusto", logoSrc: "/Logos/gusto.jpeg", rating: "4.8", bestFor: "all-in-one payroll and HR", description: "Payroll and HR with more features and transparent pricing.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("surepayroll-vs-gusto"), startingPrice: "$49/mo", standoutFeature: "Transparent pricing; modern UX" },
   { slug: "onpay", name: "OnPay", logoSrc: "/Logos/onpay.jpeg", rating: "4.5", bestFor: "value and flat pricing", description: "Flat pricing and straightforward payroll. Good for small teams.", reviewHref: getPayrollReviewUrl("onpay"), startingPrice: "$40/mo", standoutFeature: "Flat pricing; one plan" },
-  { slug: "adp", name: "ADP", logoSrc: "/Logos/adp.jpeg", rating: "4.4", bestFor: "enterprise and full-service", description: "ADP (SurePayroll's parent) for scale and full-service. Custom pricing.", reviewHref: getPayrollReviewUrl("adp"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp"), startingPrice: "Custom", standoutFeature: "Enterprise depth; dedicated support" },
+  { slug: "adp", name: "ADP", logoSrc: "/Logos/adp.jpeg", rating: "4.4", bestFor: "payroll + HR packages (RUN 1–49)", description: "RUN Powered by ADP is ADP’s small-business payroll/HR platform (quote-based). Not SurePayroll’s parent.", reviewHref: getPayrollReviewUrl("adp"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp"), startingPrice: "Quote", standoutFeature: "RUN packages; 24/7 support" },
   { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", rating: "4.3", bestFor: "micro businesses", description: "Free accounting plus payroll add-on. For solopreneurs and very small teams.", reviewHref: getPayrollReviewUrl("wave"), startingPrice: "Payroll add-on", standoutFeature: "Free accounting + payroll" },
   { slug: "paychex", name: "Paychex", logoSrc: "/Logos/paychex.jpeg", rating: "4.3", bestFor: "traditional full-service", description: "Full-service payroll and HR with strong support. Custom pricing.", reviewHref: getPayrollReviewUrl("paychex"), startingPrice: "Custom", standoutFeature: "Full-service; strong support" },
 ];
@@ -418,22 +418,22 @@ const surepayrollPage: AlternativesTemplateProps = {
   productSlug: "surepayroll",
   originalReviewHref: getPayrollReviewUrl("surepayroll"),
   quickAnswerParagraphs: [
-    "SurePayroll is ADP's small business payroll brand. Teams look for alternatives when they want more HR features (Gusto, OnPay), full-service at scale (ADP, Paychex), or the lowest cost (Wave). Gusto and OnPay are the most common alternatives with more features and transparent pricing.",
+    "SurePayroll is a Paychex small-business payroll product with published Full Service pricing. Teams look for alternatives when they want more HR features (Gusto, OnPay), ADP RUN’s payroll/HR packages, fuller Paychex full-service, or the lowest cost (Wave). Gusto and OnPay are the most common alternatives with more HR in the base product.",
   ],
   whyPeopleLookForAlternatives: [
     { heading: "Features and HR", body: "SurePayroll covers core payroll; teams that want more HR, benefits, or integrations often look at Gusto or OnPay." },
-    { heading: "Scale and support", body: "For more hand-holding or enterprise features, ADP (parent brand) or Paychex offer full-service options." },
+    { heading: "Scale and support", body: "For ADP’s 1–49 payroll/HR platform (RUN) or traditional full-service, compare ADP or Paychex. SurePayroll is not an ADP product." },
     { heading: "Cost", body: "Wave offers free accounting plus payroll add-on for micro businesses; compare total cost at your size." },
   ],
   topAlternatives: SUREPAYROLL_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
-    { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", bestFor: "small business payroll", startingPrice: "From $49/mo", standoutFeature: "Simple small-business focus", reviewHref: getPayrollReviewUrl("surepayroll"), payrollTypes: "W-2, 1099" },
+    { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", bestFor: "small business payroll", startingPrice: "$29/mo + $7/EE", standoutFeature: "Simple small-business focus", reviewHref: getPayrollReviewUrl("surepayroll"), payrollTypes: "W-2, 1099" },
     SUREPAYROLL_ALTERNATIVES
   ),
   detailedAlternatives: [
     { productName: "Gusto", heading: "Best for all-in-one payroll and HR", body: "Gusto offers more HR and benefits features with transparent pricing. Strong alternative if you've outgrown SurePayroll's scope.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("surepayroll-vs-gusto") },
     { productName: "OnPay", heading: "Best for value and flat pricing", body: "OnPay delivers flat pricing and straightforward payroll with good value. Good for small teams.", reviewHref: getPayrollReviewUrl("onpay") },
-    { productName: "ADP", heading: "Best for enterprise and full-service", body: "ADP is SurePayroll's parent; upgrade path for full-service and scale. Custom pricing.", reviewHref: getPayrollReviewUrl("adp"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp") },
+    { productName: "ADP", heading: "Best for payroll + HR packages (RUN)", body: "ADP is a separate company. The small-business counterpart is RUN Powered by ADP (quote-based packages for 1–49 employees), not a SurePayroll upgrade path.", reviewHref: getPayrollReviewUrl("adp"), compareHref: getPayrollCompareUrl("surepayroll-vs-adp") },
     { productName: "Wave", heading: "Best for micro businesses", body: "Wave provides free accounting and a payroll add-on. Best for solopreneurs and very small teams.", reviewHref: getPayrollReviewUrl("wave") },
     { productName: "Paychex", heading: "Best for traditional full-service", body: "Paychex offers full-service payroll and HR with strong support. For teams that want more hand-holding.", reviewHref: getPayrollReviewUrl("paychex") },
   ],
@@ -453,7 +453,7 @@ const surepayrollPage: AlternativesTemplateProps = {
 const WAVE_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "gusto", name: "Gusto", logoSrc: "/Logos/gusto.jpeg", rating: "4.8", bestFor: "all-in-one payroll and HR", description: "Payroll and HR with more features. No free accounting.", reviewHref: getPayrollReviewUrl("gusto"), compareHref: getPayrollCompareUrl("wave-vs-gusto"), startingPrice: "$49/mo", standoutFeature: "Transparent pricing; modern UX" },
   { slug: "onpay", name: "OnPay", logoSrc: "/Logos/onpay.jpeg", rating: "4.5", bestFor: "value and flat pricing", description: "Flat pricing and straightforward payroll. Good for small teams.", reviewHref: getPayrollReviewUrl("onpay"), startingPrice: "$40/mo", standoutFeature: "Flat pricing; one plan" },
-  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "Small business payroll with straightforward pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "From $49/mo", standoutFeature: "Simple small-business focus" },
+  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "Small business payroll with straightforward pricing.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "$29/mo + $7/EE", standoutFeature: "Simple small-business focus" },
   { slug: "adp", name: "ADP", logoSrc: "/Logos/adp.jpeg", rating: "4.4", bestFor: "enterprise full-service", description: "Full-service payroll and HR at scale. Custom pricing.", reviewHref: getPayrollReviewUrl("adp"), startingPrice: "Custom", standoutFeature: "Enterprise depth; dedicated support" },
   { slug: "paychex", name: "Paychex", logoSrc: "/Logos/paychex.jpeg", rating: "4.3", bestFor: "traditional full-service", description: "Full-service payroll and HR with strong support. Custom pricing.", reviewHref: getPayrollReviewUrl("paychex"), startingPrice: "Custom", standoutFeature: "Full-service; strong support" },
 ];
@@ -597,7 +597,7 @@ const PATRIOT_PAYROLL_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "onpay", name: "OnPay", logoSrc: "/Logos/onpay.jpeg", rating: "4.5", bestFor: "value and flat pricing", description: "Flat pricing and more features than Patriot. Good middle ground.", reviewHref: getPayrollReviewUrl("onpay"), compareHref: getPayrollCompareUrl("patriot-payroll-vs-onpay"), startingPrice: "$40/mo", standoutFeature: "Flat pricing; one plan" },
   { slug: "square-payroll", name: "Square Payroll", logoSrc: "/Logos/square.jpeg", rating: "4.3", bestFor: "Square ecosystem", description: "Simple payroll if you already use Square. Similar simplicity.", reviewHref: getPayrollReviewUrl("square-payroll"), startingPrice: "$35/mo", standoutFeature: "Square integration; simplicity" },
   { slug: "wave", name: "Wave", logoSrc: "/Logos/wave.jpeg", rating: "4.3", bestFor: "micro businesses", description: "Free accounting plus payroll add-on. For solopreneurs and very small teams.", reviewHref: getPayrollReviewUrl("wave"), startingPrice: "Payroll add-on", standoutFeature: "Free accounting + payroll" },
-  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "Small business payroll with straightforward pricing. Slightly more features.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "From $49/mo", standoutFeature: "Simple small-business focus" },
+  { slug: "surepayroll", name: "SurePayroll", logoSrc: "/Logos/surepayroll.jpeg", rating: "4.2", bestFor: "small business payroll", description: "Small business payroll with straightforward pricing. Slightly more features.", reviewHref: getPayrollReviewUrl("surepayroll"), startingPrice: "$29/mo + $7/EE", standoutFeature: "Simple small-business focus" },
 ];
 const patriotPayrollPage: AlternativesTemplateProps = {
   ...gustoPage,

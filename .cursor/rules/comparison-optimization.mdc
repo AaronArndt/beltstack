@@ -1,0 +1,30 @@
+---
+description: When substantially updating a product comparison (A vs B)—research current sources, write pair-specific copy, then audit related reviews/alternatives/hubs for factual consistency without globalizing comparison editorial.
+globs: lib/data/*Comparisons.ts,lib/data/*Reviews.ts,lib/data/*Alternatives.ts,components/comparisons/**
+alwaysApply: false
+---
+
+# Comparison optimization (pair-specific, then consistency)
+
+Optimize comparison pages **one pair at a time**. Do not mass-migrate every comparison to identical sections or copy.
+
+## Workflow (required on a substantial A vs B update)
+
+1. **Research** both products from current authoritative sources (vendor docs, official pricing/terms, filings). Do not reuse outdated BeltStack copy as the source of truth.
+2. **Identify search intent** behind “A vs B” (relationship, pricing, which product to buy, etc.).
+3. **Identify facts that distinguish THIS pair.** Write pair-specific decision criteria. Remove generic template language (“workflow aligns…”, “response playbook”, generic 30–60 day split-tests) unless it is genuinely useful for this pair.
+4. **Update the comparison** via the existing `build(slug, a, b, summary, extra)` pattern (or equivalent). Existing comparisons must keep rendering. Add optional template fields only when they will be reused on future pairs.
+5. **Search the repo** for substantive mentions of Product A and Product B (reviews, alternatives, hubs, guides, other comparisons, best-for).
+6. **Update related pages only where factual consistency requires it** (wrong corporate/product relationship, outdated product names, advice that conflicts with verified research). Preserve URLs, ratings, CTAs, and unrelated editorial.
+7. **Canonical product facts** (official name, current status, starting price, trial/plan, company relationship, verified date) may live in the shared product registry. **Do not** move pair-specific editorial conclusions into global product data (e.g. “Square is better than Authorize.net for mobile service businesses”).
+8. **Do not propagate** this comparison’s prose into unrelated pages.
+
+## Architecture notes
+
+- Prefer optional fields on `ComparisonTemplateProps` (`pageHeading`, `seoTitle`, `seoDescription`, `relationshipContext`, `decisionGuideNeither`, `roiGuidance`, `researchNote`, pair-specific `featureComparison` rows, etc.).
+- Do not add fields that will not be used. Do not redesign the comparison UI.
+- Do not change URLs, ratings (without separately verified justification), affiliate/CTA architecture, or invent firsthand testing / fake prices.
+
+## Trust
+
+Prefer “According to [vendor]…”, “Current documentation indicates…”, “We verified this in [month/year]…”, “Contractors should verify the offer they receive.” Label hypothetical ROI math as hypothetical.

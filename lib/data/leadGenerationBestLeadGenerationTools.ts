@@ -17,7 +17,7 @@ export const TOP_PICKS: BestLeadGenPick[] = [
     comparisonTableBestFor: "Local pros who want pay-per-lead flow",
     description: "Pay-per-lead marketplace built for fast responses and local trade categories.",
     rating: "4.4",
-    startingPrice: "Pay per lead",
+    startingPrice: "No membership fee; pay per lead",
     hasFreeTrial: false,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -29,7 +29,8 @@ export const TOP_PICKS: BestLeadGenPick[] = [
       "Thumbtack is the default shortlist product when you want marketplace leads without building funnels from scratch. It rewards fast follow-up and clear service definitions—weak ops burn budget.",
     pros: ["Large local buyer volume", "Self-serve lead buying", "Works across many trades"],
     cons: ["Shared leads in competitive markets", "Quality varies by metro", "Needs tight phone discipline"],
-    pricingSummary: "Typically pay-per-lead pricing varies by service and geography. Confirm dispute and credit rules in your market before scaling.",
+    pricingSummary:
+      "No membership fee. Pay a lead price under max lead prices and a weekly budget. Direct leads are charged when the customer reaches out. Confirm dispute rules in your market before scaling.",
   },
   {
     slug: "angi",
@@ -49,7 +50,7 @@ export const TOP_PICKS: BestLeadGenPick[] = [
     editorialParagraph:
       "Angi fits teams that want repeated exposure across search and directory behavior. Compare bundles against pure pay-per-lead tools using booked-job economics.",
     pros: ["Recognized consumer brand", "Multiple ad and listing formats", "Strong in home services"],
-    cons: ["Overlap with other marketplaces", "Complex bundles", "Still requires lead ops discipline"],
+    cons: ["Shared-lead / marketplace economics", "Ads vs leads packaging can be confusing", "Still requires lead ops discipline"],
     pricingSummary: "Pricing is often quoted by market and category. Ask how credits, refunds, and duplicate leads are handled.",
   },
   {
@@ -111,7 +112,7 @@ export const LEAD_GENERATION_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     description:
       "Multi-category lead marketplace that uses credits and packs to test several service lines from one account.",
     rating: "4.0",
-    startingPrice: "Credits / packs",
+    startingPrice: "From $2.35/credit (leads cost multiple credits)",
     hasFreeTrial: false,
     hasFreePlan: false,
     hasIntegrations: false,
@@ -123,7 +124,8 @@ export const LEAD_GENERATION_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
       "Bark fits operators who want to experiment across categories without opening separate marketplace accounts for each trade.",
     pros: ["Multi-category reach", "Credit packs can simplify test budgets", "Fast setup for parallel line tests"],
     cons: ["Lead quality varies by category", "Still needs sharp qualification", "Shared economics like other marketplaces"],
-    pricingSummary: "Credits and packs vary by category and region—model cost per booked job, not credits consumed.",
+    pricingSummary:
+      "US standard credit $2.35 (August 2026). Lead cost = credits × rate; packs can discount. Credits bought from Nov 1, 2025 expire in 3 months. Model cost per booked job, not credits consumed.",
     alternativesSlug: null,
   },
   {
@@ -131,7 +133,7 @@ export const LEAD_GENERATION_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     name: "HomeAdvisor",
     badge: "Best for homeowner marketplace scale",
     comparisonTableBestFor: "High-volume home service leads",
-    description: "Established pay-per-lead marketplace with broad homeowner demand for residential trades.",
+    description: "Angi Inc. pay-per-lead marketplace still branded HomeAdvisor—not an independent rival to Angi.",
     rating: "4.1",
     startingPrice: "Pay per lead",
     hasFreeTrial: false,
@@ -142,7 +144,7 @@ export const LEAD_GENERATION_REGISTRY_SUPPLEMENT: SoftwarePickCardContent[] = [
     compareSlugs: ["angi-vs-homeadvisor", "thumbtack-vs-angi"],
     standoutFeature: "Large homeowner audience",
     editorialParagraph:
-      "HomeAdvisor is a common parallel test to Angi and Thumbtack—success still hinges on dispute hygiene and phone speed.",
+      "HomeAdvisor is Angi Inc.’s Angi Leads marketplace (still branded HomeAdvisor), not an independent rival to Angi. Compare it with Thumbtack or Google LSA using booked-job economics—success still hinges on dispute hygiene and phone speed.",
     pros: ["Large homeowner audience", "Familiar marketplace flow", "Works as a second channel with CRM tagging"],
     cons: ["Overlap with adjacent networks", "Margin depends on close rate", "Shared leads in competitive zips"],
     pricingSummary: "Typically pay per lead with market-specific quoting—confirm dispute and duplicate rules during onboarding.",
@@ -210,7 +212,7 @@ export const MORE_LEAD_GEN_OPTIONS: {
   {
     slug: "homeadvisor",
     name: "HomeAdvisor",
-    description: "Established home-services marketplace leads.",
+    description: "Angi Leads marketplace still branded HomeAdvisor (same parent as Angi).",
     reviewHref: getLeadGenerationReviewUrl("homeadvisor"),
     logoSrc: "/Logos/homeadvisor.jpeg",
   },
