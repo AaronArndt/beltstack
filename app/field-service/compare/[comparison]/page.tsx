@@ -70,8 +70,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const productB = data.productB.name;
   return siteMetadata({
     path: getFieldServiceCompareUrlFromSlug(comparison),
-    title: `${productA} vs ${productB} (${SEO_YEAR}): Which Is Better? | BeltStack`,
-    description: `Compare ${productA} vs ${productB} on pricing, features, ease of use, pros and cons, and ideal business fit for field service teams.`,
+    title: data.seoTitle ?? `${productA} vs ${productB} (${SEO_YEAR}): Which Is Better? | BeltStack`,
+    description:
+      data.seoDescription ??
+      `Compare ${productA} vs ${productB} on pricing, features, ease of use, pros and cons, and ideal business fit for field service teams.`,
   });
 }
 

@@ -62,7 +62,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.6",
-    startingPrice: "From ~$69/mo",
+    startingPrice: "From $29/mo billed annually (Core, 1 user)",
     bestFor: "contractors and home service businesses that want one system for jobs, scheduling, and invoicing",
     visitUrl: "https://getjobber.com",
     logoSrc: LOGOS.jobber,
@@ -84,7 +84,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
         category: "Pricing",
         score: "4.4",
         explanation:
-          "Plans start around ~$69/month and scale with users and features. Not the cheapest, but competitive for an all‑in‑one platform that can replace multiple tools.",
+          "Jobber’s public pricing page (September 2026) starts Core at $29/month billed annually for one user ($49/month with no commitment). Team plans are sold in user bands. Not the cheapest way to send an invoice, but competitive as an all-in-one job-to-cash platform.",
       },
       {
         category: "Ease of Use",
@@ -122,9 +122,9 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Solo operators who only run a few jobs a week may find Jobber more tool than they need and might prefer a lighter app or simple invoicing plus calendar combo. Very large, multi‑location operations that need call‑center tooling, deep reporting, and complex pricebooks may outgrow Jobber and lean toward ServiceTitan or another enterprise FSM.",
     pricingSummary:
-      "Jobber typically prices plans based on user count and feature bundles. Entry tiers cover core scheduling, jobs, and invoicing for small teams; higher tiers add automation, more advanced reporting, and additional users. Expect to pay more than a basic invoicing app but less than enterprise‑grade FSM, especially if you consolidate several tools into Jobber.",
+      "Jobber publishes Core, Connect, Grow, and Plus on getjobber.com/pricing (September 2026). Core is $29/month billed annually for 1 user ($39/month on a 1-year monthly commitment; $49/month no commitment). Connect/Grow/Plus use included-user bands (1, 5, 10, 15). Examples billed annually: Connect 5 users $149/month; Grow 10 users $299/month; Plus 15 users $529/month. Month-to-month is higher. 14-day trial uses Grow features; no credit card required. Jobber Payments card/ACH fees are separate. Confirm the live configurator—intro discounts appear on the page and are not the ongoing rate.",
     pricingTiers:
-      "Lower‑tier plans focus on core job management and scheduling for a handful of users. Mid and upper tiers add features like quote follow‑ups, more robust reporting, additional locations, and more seats. Always check Jobber’s current pricing page for up‑to‑date plan names and limits.",
+      "Core covers quotes, invoices, online payments, Client hub, requests, and online booking for one user. Connect adds automated client reminders, automatic payments, job checklists, QuickBooks Online, and time/expense tracking. Grow adds richer quotes, job costing, two-way SMS, and automatic time tracking. Plus adds onboarding, premium support, Pipeline, Marketing Suite, and Receptionist positioning. Always verify current names and included users on Jobber’s pricing page.",
     costVsCompetitors:
       "Jobber usually sits above ultra‑budget tools and below enterprise FSM like ServiceTitan. Compared with Housecall Pro and Workiz, pricing is broadly similar once you normalize for user counts and feature sets. The main question is whether you want Jobber’s workflow and interface versus alternatives—not a huge price delta at typical crew sizes.",
     features: [],
@@ -155,7 +155,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
           "Technicians can view their schedule, job details, and directions, upload photos, capture notes, and mark jobs complete from their phones.",
       },
     ],
-    integrations: ["QuickBooks Online", "Xero", "Payment processors", "Calendar tools (via sync)", "Basic email and SMS"],
+    integrations: ["QuickBooks Online", "Xero", "Gusto", "Zapier", "Jobber Payments"],
     integrationsIntro:
       "Jobber focuses on the essentials: keeping your books in sync with QuickBooks or Xero and helping you collect payments. For many small contractors, that is enough—time and job data stay aligned with accounting and you do not have to re‑enter numbers.",
     contractorUse: [
@@ -196,7 +196,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
       },
       {
         q: "How much does Jobber cost?",
-        a: "Jobber’s plans typically start around ~$69/month and scale with users and features. You will pay more than for a simple invoicing app but less than for most enterprise FSM tools. Check Jobber’s pricing page for current tiers.",
+        a: "Jobber’s September 2026 pricing page starts Core at $29/month billed annually for one user. Five users on Connect billed annually is $149/month; ten users on Grow billed annually is $299/month. There is no free plan; the trial is 14 days on Grow features with no credit card. Processing fees apply when you use Jobber Payments. Check Jobber’s pricing page for the quote that matches your headcount.",
       },
       {
         q: "Does Jobber integrate with QuickBooks?",
@@ -1803,7 +1803,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.3",
-    startingPrice: "From ~$29/mo (varies by plan)",
+    startingPrice: "Free up to 10 users; paid hubs from $29/mo",
     bestFor: "deskless teams that need scheduling, time tracking, forms, and internal communication—often alongside a dedicated FSM for full job-to-cash workflows",
     visitUrl: "https://connecteam.com",
     logoSrc: LOGOS.connecteam,
@@ -1836,20 +1836,20 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Teams that need one system for estimates, dispatch, invoicing, and customer management should prioritize Jobber-class FSM first—Connecteam is the wrong sole purchase for that outcome.",
     pricingSummary:
-      "Connecteam offers free and paid tiers; paid plans scale with features and users. Compare all-in pricing if you also pay for FSM software.",
+      "Connecteam’s September 2026 pricing page: 14-day trial, no credit card. Small Business Plan is free for life for up to 10 users (Help: active and archived users both count). Paid Operations, Communications, and HR & Skills hubs are billed separately at Basic $29 / Advanced $49 / Expert $99 per hub per month when billed yearly for the first 30 users (monthly list $35 / $59 / $119). After 30 users, per-user add-ons apply. A Limited free essentials plan exists for teams under 30 who are past the Small Business cap. The Operations feature table marks payroll integration as not included on Small Business. Confirm the live page.",
     pricingTiers:
-      "Tiered by features and headcount—confirm forms, time tracking, and scheduling limits on the plan you evaluate.",
+      "Operations Hub: time clock, job scheduling, forms, quick tasks. Communications Hub: chat, updates, directory, surveys, knowledge base, help desk. HR & Skills: time off, courses, documents, recognition, hiring/onboarding. Buy only the hubs you need. Expert unlocks extras such as unlimited geofence sites, breadcrumbs, auto-scheduling, and API/webhooks.",
     costVsCompetitors:
       "Compare against Zuper or Jobber when you need full FSM; compare against pure time-tracking tools when workforce is the only gap.",
     features: [],
     keyFeatures: [
-      { name: "Shift & schedule management", description: "Plan coverage and communicate changes to field teams fast." },
-      { name: "Time tracking & attendance", description: "Clock-ins and accountability for distributed crews." },
-      { name: "Forms & checklists", description: "Standardize quality and safety workflows on mobile." },
+      { name: "Shift & job scheduling", description: "Workforce scheduling: open shifts, repeating shifts on paid tiers, job labels that can represent customers, sites, or roles." },
+      { name: "Time tracking & attendance", description: "Mobile and kiosk clocks, GPS stamps on paid Operations, geofence/breadcrumbs on higher plans, timesheet export." },
+      { name: "Employee app (comms, training, HR)", description: "Chat, updates, courses, documents, and time off live in Communications and HR hubs—not a customer portal." },
     ],
-    integrations: ["Accounting and FSM tools (varies)", "Payroll (varies)"],
+    integrations: ["Gusto", "Xero", "Paychex", "QuickBooks", "Zapier", "Wix Bookings"],
     integrationsIntro:
-      "If you pair Connecteam with an FSM, map the handoff between workforce data and job billing before rollout.",
+      "Connecteam’s integrations page lists payroll, accounting, POS, and Zapier connections. Confirm the live catalog. Connecteam Help: Zapier requires Advanced or higher. Help’s invoicing article is an Excel export of hours—not a native customer payment product. If you pair Connecteam with Jobber, map employees and job names; there is no native connector, only Zapier automations.",
     contractorUse: [
       "Cleaning and field services with large hourly teams needing time and attendance rigor.",
       "Trade contractors that already have invoicing solved but struggle with crew coordination.",
@@ -1859,7 +1859,8 @@ const reviews: Record<string, FieldServiceReviewData> = {
       { name: "Zuper", href: getFieldServiceReviewUrl("zuper"), description: "Flexible modern FSM for configurable field workflows.", logoSrc: LOGOS.zuper },
     ],
     faqs: [
-      { q: "Can Connecteam replace Jobber?", a: "Usually not for full FSM. Use Connecteam for workforce operations and Jobber (or similar) for job lifecycle workflows—or pick one primary system based on your biggest gap." },
+      { q: "Can Connecteam replace Jobber?", a: "It can replace overlapping labor tools (schedule, time, forms). It does not replace Jobber’s customer quotes, Client hub, invoices, or Jobber Payments. See Connecteam vs Jobber for the workflow split." },
+      { q: "Does Connecteam invoice customers?", a: "Connecteam Help describes exporting Job Insights or the schedule list to Excel and generating invoices elsewhere. That is not a built-in customer invoice and payment portal." },
       { q: "Connecteam vs Zuper?", a: "Zuper is FSM-first; Connecteam is workforce-first. Choose based on whether jobs/invoicing or labor coordination is the bottleneck." },
     ],
     methodology: FIELD_SERVICE_METHODOLOGY,

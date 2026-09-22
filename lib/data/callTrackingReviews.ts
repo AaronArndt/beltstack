@@ -189,7 +189,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
     whoShouldAvoid:
       "Performance call buyers who need carrier-grade buyer waterfalls and monetization on day one (Ringba-class), or enterprises that mandated conversation AI and governance workflows (Invoca-class) before evaluating CallRail.",
     pricingSummary:
-      "CallRail currently lists Lead Tracking from $55/month ($50 billed annually). All four public plans include 5 local numbers and 250 local minutes; extra numbers and minutes bill as usage. Lead Tracking Complete adds forms; Lead Conversion adds Premium Conversation Intelligence. 14-day trial. Verified August 2026 on CallRail’s pricing and comparison pages.",
+      "CallRail currently lists Lead Tracking from $55/month ($50 billed annually). All four public plans include 5 local numbers and 250 local minutes; extra numbers and minutes bill as usage. Lead Tracking Complete adds forms; Lead Conversion adds Premium Conversation Intelligence. 14-day trial. Verified September 2026 on CallRail’s pricing and comparison pages.",
     pricingTiers:
       "Lead Tracking, Lead Tracking Complete, Lead Conversion, and Lead Conversion Complete. Higher tiers add form tracking and Premium CI—not a larger included minute pool. Voice Assist is a separate $95/month product (50 included calls). HIPAA Healthcare plans currently listed from $150/month with a BAA.",
     costVsCompetitors:
@@ -488,7 +488,7 @@ const reviews: Record<string, CallTrackingReviewData> = {
     whoShouldAvoid:
       "Single-location contractors and lean agencies without dedicated ops. CallRail or CallTrackingMetrics usually matches reality better until AI requirements are explicit and funded.",
     pricingSummary:
-      "Invoca does not publish dollar prices. Pro, Enterprise, and Elite (plus Performance packages) are quote-based; Invoca’s llm-info page (updated June 2026) states annual contract terms. Signal AI, Quality Management, and PreSense are listed as add-ons. Verified August 2026 on Invoca’s pricing page.",
+      "Invoca does not publish dollar prices. Pro, Enterprise, and Elite (plus Performance packages) are quote-based; Invoca’s llm-info page (dated June 2026; re-checked September 2026) states annual contract terms. Signal AI, Quality Management, and PreSense are listed as add-ons. Verified September 2026 on Invoca’s pricing page.",
     pricingTiers:
       "Pro (6,000 annual numbers, 5 custom Signals), Enterprise (12,000 numbers, 50 Signals), Elite (18,000 numbers, 100 Signals, PreSense included). Signal AI and Quality Management remain add-ons. Confirm Salesforce/Adobe and implementation fees on the quote.",
     costVsCompetitors:

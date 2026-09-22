@@ -152,12 +152,12 @@ const thumbtackAlts: AlternativesTopPick[] = [
     name: "Houzz Pro",
     logoSrc: "/Logos/houzz.jpeg",
     rating: "4.2",
-    bestFor: "Portfolio-driven remodel leads",
-    description: "Better when projects need visual proof and design trust.",
+    bestFor: "Remodel/design software + Houzz presence",
+    description: "Business software with optional Houzz ads—not a pay-per-lead marketplace.",
     reviewHref: getLeadGenerationReviewUrl("houzz-pro"),
     compareHref: getLeadGenerationCompareUrl("houzz-pro-vs-thumbtack"),
-    startingPrice: "Subscription + ads",
-    standoutFeature: "Visual discovery",
+    startingPrice: "Software; ads extra from $499/mo",
+    standoutFeature: "Software + optional ads",
   },
 ];
 
@@ -265,8 +265,9 @@ const angiAlts: AlternativesTopPick[] = [
     bestFor: "Google-first customers",
     description: "Use when searchers convert better than directory browsers.",
     reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"),
-    startingPrice: "Pay per lead",
-    standoutFeature: "Screened Google placement",
+    compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-angi"),
+    startingPrice: "Pay per valid lead",
+    standoutFeature: "Google Verified; pay per valid lead",
   },
   {
     slug: "bark",
@@ -296,9 +297,9 @@ const angiOriginal: AlternativesTableRow = {
   slug: "angi",
   name: "Angi",
   logoSrc: "/Logos/angi.jpeg",
-  bestFor: "Home services directory + lead products",
-  startingPrice: "Quote / bundles",
-  standoutFeature: "Trusted brand; bundled formats",
+  bestFor: "Home services directory + Angi Leads",
+  startingPrice: "Quote — Leads or Ads",
+  standoutFeature: "Identify Ads vs Leads before you compare",
   reviewHref: getLeadGenerationReviewUrl("angi"),
 };
 
@@ -340,13 +341,13 @@ const angiPage: AlternativesTemplateProps = {
     },
   ],
   howToChoose: HOW_TO_CHOOSE,
-  relatedComparisons: [rel("thumbtack-vs-angi"), rel("angi-vs-homeadvisor")],
+  relatedComparisons: [rel("google-local-services-ads-vs-angi"), rel("thumbtack-vs-angi"), rel("angi-vs-homeadvisor")],
   relatedResources: [...HUB_RELATED_RESOURCES, ...softwareReviewLinks(ALL_REVIEW_TUPLES)],
   faqItems: [
     { q: "Is Angi or HomeAdvisor better?", a: "They are the same parent company. The useful question is whether you are being sold Angi Ads, Angi Leads (HomeAdvisor), or a mix—and whether those economics beat independent channels. Read Angi vs HomeAdvisor rather than testing them as unrelated vendors." },
-    { q: "What is the best Angi alternative for contractors?", a: "Thumbtack is typically the most direct alternative for flexible local lead buying; Google LSA can outperform where search intent is strongest." },
+    { q: "What is the best Angi alternative for contractors?", a: "Thumbtack is typically the most direct independent marketplace alternative. Google LSA is a Search/Maps valid-lead product, not another Angi-style marketplace—see Google Local Services Ads vs Angi." },
     { q: "How should I test Angi alternatives?", a: "Run a 30-60 day split with identical scripts, response timing, and CRM stages, then choose by booked-job margin." },
-    { q: "Where do I compare Angi alternatives and reviews?", a: "Use the alternatives table here, then open Thumbtack vs Angi, Angi vs HomeAdvisor, and the linked reviews." },
+    { q: "Where do I compare Angi alternatives and reviews?", a: "Use the alternatives table here, then open Google LSA vs Angi, Thumbtack vs Angi, Angi vs HomeAdvisor, and the linked reviews." },
   ],
 };
 
@@ -470,16 +471,16 @@ const houzzProPage = makeLeadGenAlternativesPage({
   productName: "Houzz Pro",
   title: "Best Houzz Pro Alternatives (2026)",
   subtitle: "If Houzz Pro’s portfolio-driven model is too narrow for your pipeline mix, these alternatives expand into marketplaces, Google intent demand, and lower-maintenance lead flows.",
-  originalBestFor: "Portfolio-first remodel and design-build leads",
-  originalPricing: "Subscription + ads",
-  originalStandout: "Visual credibility and project storytelling",
+  originalBestFor: "Remodel/design software plus optional Houzz ads",
+  originalPricing: "Software plans; ads extra from $499/mo",
+  originalStandout: "CRM through payment; ads sold separately",
   quickAnswerParagraphs: [
-    "Teams replace Houzz Pro when lead volume depends less on project galleries and more on urgent calls or broader trade categories.",
-    "Thumbtack and Angi usually win for faster marketplace volume, while Google Local Services Ads wins for high-intent search behavior in eligible categories.",
-    "Keep Houzz Pro if your close rate is anchored by before/after proof and long sales cycles; switch when speed-to-lead and category breadth matter more.",
+    "Houzz Pro is not a Thumbtack clone. Teams look elsewhere when they needed pay-per-lead contacts, not construction software—or when Houzz advertising and a 12-month software term do not fit.",
+    "Thumbtack is the usual marketplace replacement for variable lead spend. Google Local Services Ads is the Search/Maps alternative where eligible.",
+    "Keep Houzz Pro if you use the estimates/project/invoice stack. Replace only the acquisition layer if that is what failed.",
   ],
   why: [
-    { heading: "Intent mismatch", body: "Design-led browsing can underperform when your best jobs come from urgent repair intent." },
+    { heading: "Needed leads, bought software", body: "Houzz Pro software does not invoice like Thumbtack exact lead prices. If the gap was marketplace contacts, compare Thumbtack or Google LSA—not another estimating tool." },
     { heading: "Content overhead", body: "Houzz Pro rewards fresh project assets—teams without regular photo pipelines can struggle." },
     { heading: "Channel diversification", body: "Many operators add search and marketplace channels to stabilize lead flow seasonally." },
   ],
@@ -495,8 +496,8 @@ const houzzProPage = makeLeadGenAlternativesPage({
   ],
   relatedComparisonSlugs: ["houzz-pro-vs-thumbtack", "thumbtack-vs-angi", "google-local-services-ads-vs-yelp-ads"],
   faqs: [
-    { q: "What is the best Houzz Pro alternative for contractors?", a: "Thumbtack is usually the first alternative for broader marketplace volume; Google LSA is best for urgent Google-first intent where eligible." },
-    { q: "Should remodelers leave Houzz Pro?", a: "Not always—if portfolio-led trust drives your close rate, Houzz Pro can still be a top channel. Replace only when channel economics no longer work." },
+    { q: "What is the best Houzz Pro alternative for contractors?", a: "If you needed more customers: Thumbtack (marketplace) or Google LSA (Search/Maps). If you needed software: Thumbtack is not a replacement—compare contractor platforms. See Houzz Pro vs Thumbtack." },
+    { q: "Should remodelers leave Houzz Pro?", a: "Not if the software is how you estimate and run jobs. Replace Houzz advertising or add Thumbtack if acquisition is the weak layer. Replace the subscription only if the workflow is unused." },
     { q: "How should I test alternatives?", a: "Run a 30-60 day split with identical lead response scripts, then compare booked-job margin and no-show rates rather than raw lead count." },
   ],
 });
@@ -543,7 +544,7 @@ const googleLsaPage = makeLeadGenAlternativesPage({
   subtitle: "If LSA eligibility, lead costs, or category limitations block growth, these alternatives provide marketplace and social lead channels with different intent profiles.",
   originalBestFor: "Verified, high-intent Google call leads",
   originalPricing: "Pay per lead",
-  originalStandout: "Google Screened trust signal",
+  originalStandout: "Google Verified screening; pay per valid lead",
   quickAnswerParagraphs: [
     "Teams seek LSA alternatives when categories are ineligible, lead auctions spike, or profile verification becomes operationally heavy.",
     "Thumbtack and Angi are the usual marketplace complements; Yelp Ads and Facebook Lead Ads add profile/social demand where they already perform.",
@@ -556,7 +557,7 @@ const googleLsaPage = makeLeadGenAlternativesPage({
   ],
   topAlternatives: [
     { slug: "thumbtack", name: "Thumbtack", logoSrc: "/Logos/thumbtack.jpeg", rating: "4.4", bestFor: "Marketplace diversification", description: "Adds marketplace volume when LSA caps or eligibility limit growth.", reviewHref: getLeadGenerationReviewUrl("thumbtack"), compareHref: getLeadGenerationCompareUrl("thumbtack-vs-angi"), startingPrice: "Pay per lead", standoutFeature: "Flexible budgets" },
-    { slug: "angi", name: "Angi", logoSrc: "/Logos/angi.jpeg", rating: "4.3", bestFor: "Home-services alternatives", description: "Brand-backed residential demand outside Google auctions.", reviewHref: getLeadGenerationReviewUrl("angi"), compareHref: getLeadGenerationCompareUrl("thumbtack-vs-angi"), startingPrice: "Quote / bundles", standoutFeature: "Directory + bundles" },
+    { slug: "angi", name: "Angi", logoSrc: "/Logos/angi.jpeg", rating: "4.3", bestFor: "Home-services alternatives", description: "Brand-backed residential demand outside Google auctions—confirm Angi Leads vs Angi Ads.", reviewHref: getLeadGenerationReviewUrl("angi"), compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-angi"), startingPrice: "Quote — Leads or Ads", standoutFeature: "Leads vs Ads—confirm the SKU" },
     { slug: "yelp-ads", name: "Yelp Ads", logoSrc: "/Logos/yelp.png", rating: "4.0", bestFor: "Yelp-centric metros", description: "Useful where Yelp profiles and review volume already convert.", reviewHref: getLeadGenerationReviewUrl("yelp-ads"), compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads"), startingPrice: "Campaign budgets", standoutFeature: "Sponsored Yelp visibility" },
     { slug: "facebook-lead-ads", name: "Facebook Lead Ads", logoSrc: "/Logos/facebook.jpeg", rating: "4.1", bestFor: "Offer-based paid social", description: "Demand generation channel when search volume is limited.", reviewHref: getLeadGenerationReviewUrl("facebook-lead-ads"), startingPrice: "Campaign budgets", standoutFeature: "Audience targeting" },
   ],
@@ -564,9 +565,9 @@ const googleLsaPage = makeLeadGenAlternativesPage({
     { productName: "Yelp Ads", heading: "Best profile-driven alternative", body: "Best where Yelp behavior is already strong and reviews influence call intent.", reviewHref: getLeadGenerationReviewUrl("yelp-ads"), compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads") },
     { productName: "Thumbtack", heading: "Best marketplace backup", body: "Adds spendable lead volume when LSA budgets hit efficiency ceilings.", reviewHref: getLeadGenerationReviewUrl("thumbtack") },
   ],
-  relatedComparisonSlugs: ["google-local-services-ads-vs-yelp-ads", "thumbtack-vs-angi", "angi-vs-homeadvisor"],
+  relatedComparisonSlugs: ["google-local-services-ads-vs-angi", "google-local-services-ads-vs-thumbtack", "google-local-services-ads-vs-yelp-ads"],
   faqs: [
-    { q: "What is the best Google LSA alternative?", a: "Thumbtack is the most common marketplace complement; Yelp Ads is viable in Yelp-heavy metros; Angi/HomeAdvisor fit residential marketplace strategies." },
+    { q: "What is the best Google LSA alternative?", a: "Thumbtack is the most common independent marketplace complement. Angi is not one product: split Angi Leads from Angi Ads before you compare (see Google LSA vs Angi). Yelp Ads is viable in Yelp-heavy metros." },
     { q: "Should I replace LSA entirely?", a: "Usually no. Most profitable operators keep LSA and diversify with one or two alternatives by category and zip." },
     { q: "How do I compare alternatives fairly?", a: "Use the same response SLA, call script, and CRM disposition stages across channels, then compare booked-job margin." },
   ],

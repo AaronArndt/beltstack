@@ -33,9 +33,9 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("angi"),
     logoSrc: "/Logos/angi.jpeg",
     visitUrl: "https://www.angi.com",
-    bestForSummary: "Home service brands that want combined ads and directory exposure.",
+    bestForSummary: "Angi Ads (directory/advertising) and Angi Leads (pay-per-lead)—confirm which product a quote is.",
     rating: "4.3",
-    startingPrice: "Quote / lead bundles",
+    startingPrice: "Quote — Leads or Ads",
   },
   homeadvisor: {
     name: "HomeAdvisor",
@@ -63,9 +63,9 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("houzz-pro"),
     logoSrc: "/Logos/houzz.jpeg",
     visitUrl: "https://www.houzz.com/pro",
-    bestForSummary: "Design-build and remodeling firms with visual portfolios.",
+    bestForSummary: "Remodel/design business software with optional Houzz advertising.",
     rating: "4.2",
-    startingPrice: "Subscription + ads",
+    startingPrice: "Software plans; ads extra from $499/mo",
   },
   "google-local-services-ads": {
     name: "Google Local Services Ads",
@@ -73,9 +73,9 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"),
     logoSrc: "/Logos/google.jpeg",
     visitUrl: "https://ads.google.com/local-services-ads",
-    bestForSummary: "Verified pros who want Google-screened calls on high-intent local searches.",
+    bestForSummary: "Eligible local businesses capturing Google Search and Maps demand, paying per valid lead.",
     rating: "4.5",
-    startingPrice: "Pay per lead",
+    startingPrice: "Pay per valid lead",
   },
   "yelp-ads": {
     name: "Yelp Ads",
@@ -795,7 +795,276 @@ const entries: [string, ComparisonTemplateProps][] = [
     "houzz-pro-vs-thumbtack",
     "houzz-pro",
     "thumbtack",
-    "Houzz Pro fits design-build and remodel pros who want portfolio-led discovery; Thumbtack favors faster marketplace lead buying across many local trades."
+    "Houzz Pro vs Thumbtack is not two interchangeable lead marketplaces. Thumbtack sells homeowner contacts you pay for when a matching customer reaches out. Houzz Pro is remodeling/design business software; Houzz directory presence and a separate advertising package (from $499/month on the US pricing page) are additional acquisition layers—not a Thumbtack-style per-lead invoice.",
+    {
+      pageHeading: "Houzz Pro vs Thumbtack (2026): Leads, Cost & Best Fit",
+      seoTitle: "Houzz Pro vs Thumbtack (2026): Leads, Cost & Best Fit | BeltStack",
+      seoDescription:
+        "Houzz Pro is remodel/design software plus optional Houzz ads. Thumbtack is a pay-per-lead marketplace with no membership fee. Compare payment, software, and booked-job economics—not two identical lead SKUs.",
+      quickVerdictHeading: "First decide what problem you are buying a solution for.",
+      quickVerdictSub: "Thumbtack buys marketplace demand. Houzz Pro is software; Houzz ads are a separate marketing line.",
+      researchNote:
+        "Verified September 2026 from Houzz Pro pricing (including the designer-facing plan view), Houzz Pro features, Houzz Pro Help on cancellation, Houzz Pro trial and Premium Profile pages, Thumbtack’s Pro page, and Thumbtack Help on exact lead prices and pay-for-leads. Houzz does not publish a national per-lead price. Thumbtack does not publish a national CPL. BeltStack has not subscribed to Houzz Pro, bought Houzz advertising, or purchased Thumbtack leads.",
+      quickRecommendationA:
+        "Choose Houzz Pro when you are a remodeler, builder, or design professional who needs CRM, estimates, project tools, and invoicing—and you will treat Houzz marketing/ads as a separate decision from the software subscription.",
+      quickRecommendationB:
+        "Choose Thumbtack when your primary gap is more homeowner contacts across local services, you want no membership fee, and you will run exact lead prices plus a weekly budget against booked-job CAC.",
+      quickVerdictParagraphs: [
+        "A contractor searching “Houzz Pro vs Thumbtack” is often asking whether Houzz will “get them leads like Thumbtack.” That is the wrong unit. Thumbtack’s Pro page (2026) states there is no charge to join, no annual fees, and no membership fees. You pay for leads: customers choose professionals, you set lead prices and a budget, and competition per lead is limited. Houzz Pro’s current US pricing page sells named software plans (Design, Pro, Teams on the designer-facing view) and, separately, an Advertising Package starting at $499/month. Houzz Pro’s features documentation describes lead generation as subscription/flat-rate rather than pay-per-lead.",
+        "Houzz still has a consumer marketplace. Houzz states remodeling and design professionals can create a profile and appear in Find Professionals. Homeowners browse projects and search for pros. A free listing is not Thumbtack’s targeting-and-budget machine. Premium Profile, website, and email tools sit on higher Houzz Pro marketing/software tiers. Targeted ads are an add-on on the pricing page we fetched—geographic, service, and project-type targeting, with inquiries delivered from those placements. Do not assume the software subscription includes advertising unless the quote says so.",
+        "Thumbtack does not attempt to replace Houzz Pro after the hire: estimates, selections, change orders, schedules, client dashboard, takeoffs, and online payments are Houzz Pro’s job. Houzz Pro does not attempt to be a broad local-services lead marketplace for a house cleaner or emergency plumber. If you need customers this month, compare Thumbtack’s variable lead spend to Houzz advertising—not to the software seat. If you need to run the job, compare Houzz Pro to other contractor software, not to Thumbtack.",
+      ],
+      relationshipContext: {
+        heading: "What are you actually buying?",
+        paragraphs: [
+          "Thumbtack: you are buying homeowner contacts inside Thumbtack’s marketplace. Direct leads: Thumbtack Help states that when a customer reaches out from search results and the job matches your preferences, you auto-pay the exact lead price you set. Opportunities (open leads): you reach out first and pay the shown price only if the customer responds. Weekly budget is the cap across services. Thumbtack’s Pro page: customers choose you; limited competition; no hidden fees or contracts on that marketing page.",
+          "Houzz Pro software: you are buying an all-in-one platform Houzz positions for home building, remodeling, and design. The designer-facing pricing view lists Design (CRM, estimates and proposals, invoices, online payments, 3D floor plans, mood boards, selections, product clipper), Pro (adds takeoffs, bid management, change orders, budget, contracts, project schedule, daily logs), and Teams (unlimited users plus marketing tools Houzz lists as premium profile, email marketing, custom website, dedicated support). Extra users are priced per seat on Design/Pro. Houzz’s pricing FAQ: 30-day free trial; cancel during the trial before the annual subscription begins.",
+          "Houzz advertising / lead generation: a separate Advertising Package on the US pricing page, starting at $499/month. Houzz Pro features: ads target geography, services, project type, and budget ranges; inquiries come from those placements; you can turn ads on or off. Houzz Help account settings distinguish “ad and lead subscriptions” from the software plan. Houzz does not invoice a Thumbtack-style exact price per named contact on the public pricing page.",
+          "Typical Thumbtack path: homeowner uses Thumbtack → describes the job → sees professionals → contacts you (direct lead, auto-charge) or you contact an Opportunity → you quote and compete to close. Typical Houzz path: homeowner browses Houzz photos, ideabooks, or Find Professionals (or sees a targeted ad) → contacts the profile → inquiry lands in Houzz Pro CRM (Houzz also says CRM can capture forms, email, or manual leads) → estimate/proposal → project tools → invoice/payment. Do not blend software ROI with acquisition CAC.",
+        ],
+      },
+      decisionGuideAHeading: "Choose Houzz Pro if…",
+      decisionGuideBHeading: "Choose Thumbtack if…",
+      decisionGuideA: [
+        "You remodel, design, or build, and you need one system for CRM, estimates, selections, schedule, and invoicing—not only a lead inbox.",
+        "Homeowners in your category already research visually on Houzz, and you will maintain project photos and reviews.",
+        "You have read the Pro Services Agreement: Houzz Help states most Houzz Pro plans are annual 12-month contracts, with a 30-day non-renewal request before the next term, and that early cancellation is generally not available.",
+        "You will price Houzz advertising separately (from $499/month on the US pricing page we fetched) and will not pretend the software seat is your CPL.",
+      ],
+      decisionGuideB: [
+        "Your main problem is more local customers this month across trades Thumbtack actually matches—not a construction ERP.",
+        "You want no membership fee, exact lead prices, and a weekly budget you can raise or hit as a hard cap (Thumbtack Help).",
+        "You can staff replies after the customer reaches out. Direct leads charge when they contact you under targeting; you do not inspect-and-skip each name the way Bark does.",
+        "A house cleaner, plumber, or other non-visual trade would get little from Houzz Pro takeoffs and 3D plans even if a Houzz listing exists.",
+      ],
+      decisionGuideNeither: [
+        "Gross profit cannot support paid CAC, or referrals/GBP already fill the calendar.",
+        "You need emergency same-day search intercept—that is a Google Local Services Ads question, not this pair.",
+        "You will not keep a Houzz portfolio current and you will not answer Thumbtack messages quickly.",
+        "You only wanted “a cheap monthly lead plan.” Houzz software is an annual-style software commitment; Thumbtack is variable lead spend. Neither is a magic CPL.",
+      ],
+      featureComparisonColumnLabel: "What you’re comparing",
+      featureComparisonSub:
+        "Do not compare a Houzz Pro software invoice to a Thumbtack lead. Split software, Houzz ads, and Thumbtack spend.",
+      featureComparison: [
+        dim(
+          "Primary job",
+          "Business software for remodel/design/build (CRM through payment), plus Houzz marketplace presence and optional ads.",
+          "Homeowner-to-pro marketplace. Pay for matching customer contacts. Not project-management software."
+        ),
+        dim(
+          "Where the customer starts",
+          "Houzz photos, ideabooks, Find Professionals search, or targeted Houzz ads.",
+          "Thumbtack search or a submitted job; the customer chooses professionals on Thumbtack."
+        ),
+        dim(
+          "What creates a charge",
+          "Software: the subscription (trial then typically an annual term). Ads: the advertising package—not a public per-inquiry meter. Profile inquiries are not billed like Thumbtack exact prices.",
+          "Direct lead: customer reaches out from search results and the job matches preferences—you auto-pay the exact price. Opportunity: you pay the shown price if they respond."
+        ),
+        dim(
+          "Public price shape",
+          "US pricing: software plans (indexed Design/Pro/Teams dollars include $99 / $199 / from $399+ on the designer-facing page family) plus ads from $499/mo. Extra seats $50/user/mo on Design/Pro in the view we fetched. Confirm your trade’s live page.",
+          "No membership fee (Pro page). Exact lead prices per service + weekly budget. No national rate card."
+        ),
+        dim(
+          "Commitment",
+          "Pricing FAQ: 30-day trial, then annual subscription unless you cancel in trial. Help: most plans 12-month; 7-day post-trial grace (one month billed); 30-day non-renewal notice; generally no mid-term cancel.",
+          "Pro page: no hidden fees or contracts on that marketing table. Pause by lowering budget / job preferences. You still pay for leads already incurred."
+        ),
+        dim(
+          "After the lead",
+          "CRM pipeline, estimates/proposals, takeoffs (Pro+), selections, change orders, schedule, client dashboard, invoices, card/ACH payments, QuickBooks Online.",
+          "Messaging and the job thread. Thumbtack lists partner tools (e.g. field-service platforms) rather than replacing your estimate/project stack."
+        ),
+        dim(
+          "External leads",
+          "Houzz Pro features: capture leads from Houzz, forms, email, or manually; track source. No Thumbtack native integration listed on the features page we reviewed.",
+          "You can export or copy a Thumbtack customer into another CRM by hand. That is an ops workflow, not a documented Houzz connector."
+        ),
+        dim(
+          "Competition / sharing",
+          "Homeowners can contact multiple Houzz profiles. Ads buy placement/targeting; Houzz does not publish a “sent to N contractors” lead-share count for every inquiry.",
+          "Customers choose you; competition per lead is limited (Pro page). Thumbtack does not publish a headcount. Limited ≠ exclusive."
+        ),
+        dim(
+          "Refunds / bad leads",
+          "No Thumbtack-style per-lead credit table on public Houzz pricing. Software/ads follow the signed Pro Services Agreement and cancellation Help—not “this inquiry didn’t book.”",
+          "Credits/refunds are documented for specific cases (duplicates, some smarter-matching declines, some Thumbtack Numbers 72-hour cases). Hired-someone-else is not automatic."
+        ),
+        dim(
+          "Best-fit trade",
+          "Kitchen/bath, remodel, design-build, interior design, architecture, landscape design—visual, planned, higher-ticket work.",
+          "Broad local services: cleaning, handyman, trades, and remodelers who want marketplace volume without buying construction software."
+        ),
+        dim(
+          "Biggest tradeoff",
+          "You may pay for software (and possibly ads) whether or not a given week produces hires. You get the workflow after the yes.",
+          "You pay when contacts happen. You still need some other system to estimate, schedule, and collect."
+        ),
+      ],
+      pricingComparison:
+        "Houzz software, Houzz advertising, and Thumbtack leads are three different expense types. Do not convert a monthly Houzz invoice into a fake CPL.",
+      pricingComparisonParagraphs: [
+        "Thumbtack: no join/annual/membership fee on the Pro page. You see exact lead prices in the account. Weekly budget stops new leads when hit (Help example: $10 lead price and $90 weekly budget → 9 leads). Prices vary by service, job, and market. Do not use a blog’s “average HVAC CPL.”",
+        "Houzz Pro software: 30-day trial of the Essential package (trial page). After trial, Houzz’s pricing FAQ says the annual subscription begins unless you cancel. Indexed US software prices on the designer-facing pricing page family: $99/month, $199/month, and Teams starting at $399/month. Extra users $50/month on Design/Pro in the page we fetched. Other Houzz pricing renderings exist (including $60/user/month extra-seat copy). Get the line items in writing.",
+        "Houzz advertising: add-on starting at $499/month on the US pricing page. Custom advertising packages: Houzz lists (888) 510-9389. Houzz describes this as targeted ads and subscription/flat-rate lead access—not pay-per-lead. Third-party “average Houzz lead cost” figures are not BeltStack facts.",
+        "To compare unlike costs: (1) software dollars vs time saved / replacing other tools; (2) Houzz ads + any other Houzz marketing vs booked Houzz-sourced jobs; (3) Thumbtack spend minus credits vs booked Thumbtack jobs. Illustrative only: $199 software + $499 ads = $698/month before you have a single hire. Ten Thumbtack leads at $40 is $400 variable spend. Those numbers do not declare a winner—they show why mixing the invoices hides CAC.",
+      ],
+      roiGuidance: {
+        heading: "Software cost is not customer-acquisition cost",
+        paragraphs: [
+          "Vendor fact: neither company publishes your close rate. BeltStack illustrative model—replace every number.",
+          "Scorecard Thumbtack: spend, leads, qualified, estimates, booked jobs, gross profit, credits, cost per booked job.",
+          "Scorecard Houzz: software + seats + processing fees you actually pay; advertising/marketing if purchased; Houzz-sourced leads; booked Houzz-sourced jobs; plus whether the software replaced another estimating/PM tool (that savings is not CAC).",
+          "Maximum affordable Thumbtack lead cost (planning framework, not a bid): gross profit per completed job × lead-to-job close rate × the share of contribution you will spend on acquisition. Example: $2,000 × 20% × 25% = $100. Houzz ads need the same booked-job math, using ad spend—not the software seat—in the numerator.",
+          "You can run both if you staff both. Houzz Pro features say you can add leads manually. Copy the Thumbtack customer into Houzz Pro CRM after you decide to bid. Deduplicate. Do not invent a native Thumbtack integration.",
+        ],
+        example: {
+          heading: "Remodeler vs interior designer vs house cleaner vs plumber (fit, not winners)",
+          body: "A kitchen remodeler may want Houzz photos and Houzz Pro selections/estimates, and still buy Thumbtack jobs when the calendar has holes. An interior designer often lives in Houzz visual discovery; Thumbtack may be secondary. A house cleaner typically needs recurring local contacts—Thumbtack’s marketplace is the closer product; Houzz Pro takeoffs and 3D plans are the wrong category. A plumber with emergency demand should look at Google Search/Maps pay-per-lead before treating Houzz Pro as a lead network. None of these are official vendor cutoffs.",
+        },
+      },
+      prosConsA: {
+        pros: [
+          "Software covers estimate → project → invoice, not only the first message",
+          "Houzz visual/directory discovery for planned home projects",
+          "CRM accepts Houzz, form, email, and manual leads",
+          "Advertising is a separate, targetable package—not hidden inside a fake CPL",
+        ],
+        cons: [
+          "Annual-style software commitment (Help: most plans 12 months)",
+          "Ads from $499/month are not a trial-sized lead test",
+          "Weak fit for emergency or non-visual trades",
+          "Software + ads + seats can exceed Thumbtack spend before a hire",
+        ],
+      },
+      prosConsB: {
+        pros: [
+          "No membership fee; pay when matching contacts happen",
+          "Exact prices + weekly budget; pause by turning spend down",
+          "Broad local-service categories, not only remodel/design",
+          "Customer chooses you; limited competition (not exclusivity)",
+        ],
+        cons: [
+          "Does not replace estimating, scheduling, or invoicing software",
+          "Direct leads charge when the customer reaches out—targeting errors are expensive",
+          "No public national CPL; quality varies by zip",
+          "Refunds are specific cases, not “they hired someone else”",
+        ],
+      },
+      bestFor: [
+        {
+          heading: "Use both?",
+          body: "Operationally yes for a remodeler who generates contacts on Thumbtack (and elsewhere) and runs the job in Houzz Pro. Enter the customer manually. Track Thumbtack CAC separately from Houzz software and Houzz ads. Houzz Pro vs Angi is a different Houzz-ecosystem question if you are comparing directories, not this software-vs-marketplace split.",
+        },
+        {
+          heading: "When Thumbtack is the acquisition test",
+          body: "You need more jobs, you can answer fast, and you will not sign a 12-month software contract to “get leads.” Measure booked-job CAC after credits.",
+        },
+        {
+          heading: "When Houzz Pro is the operations test",
+          body: "You already have demand (referrals, Houzz profile, Google, Thumbtack) and the bottleneck is estimates, selections, and getting paid. Buy software for that bottleneck. Add Houzz ads only if you can afford the package and will measure Houzz-sourced booked jobs.",
+        },
+      ],
+      heroCallouts: [
+        {
+          label: "Winner for remodel/design software after the lead",
+          winner: "A",
+          reason: "CRM, estimates, projects, invoices, and payments are Houzz Pro’s product.",
+        },
+        {
+          label: "Winner for variable marketplace customer contacts",
+          winner: "B",
+          reason: "No membership fee; exact lead prices and a weekly budget.",
+        },
+        {
+          label: "Houzz ads are not the software seat",
+          winner: "A",
+          reason: "US pricing lists advertising from $499/month as an add-on.",
+        },
+      ],
+      faqs: [
+        {
+          q: "Is Houzz Pro better than Thumbtack?",
+          a: "They answer different jobs. Thumbtack sells marketplace contacts. Houzz Pro sells remodel/design software plus optional Houzz marketing. Compare booked-job CAC for acquisition and workflow fit for software—not a single winner.",
+        },
+        {
+          q: "Is Houzz Pro a lead-generation service? Does it provide leads?",
+          a: "It can, but that is not the whole product. A Houzz profile can receive inquiries. Targeted advertising is a separate package on the US pricing page. Software CRM can also store leads you add yourself. Houzz describes lead access as subscription/flat-rate, not pay-per-lead.",
+        },
+        {
+          q: "Does Houzz Pro charge per lead?",
+          a: "Not as a public Thumbtack-style exact price per contact. You pay for software, and separately for ads if you buy them. Confirm the quote.",
+        },
+        {
+          q: "Does Thumbtack have a monthly fee?",
+          a: "Thumbtack’s Pro page: no charge to join, no annual fees, no membership fees. You pay for leads under prices and a weekly budget.",
+        },
+        {
+          q: "Is Houzz Pro worth it just for leads?",
+          a: "Treat that as an advertising/profile question, not a reason to buy takeoffs and 3D plans. Compare Houzz ad spend to Thumbtack booked-job CAC. Software value is separate.",
+        },
+        {
+          q: "Can Houzz Pro replace Thumbtack? Can Thumbtack replace Houzz Pro?",
+          a: "Houzz software does not replace a pay-per-lead marketplace. Thumbtack does not replace Houzz Pro’s estimate/project/invoice stack. A remodeler often needs an acquisition channel and a job-running system.",
+        },
+        {
+          q: "Can I use Thumbtack leads in Houzz Pro?",
+          a: "Manually: Houzz Pro features say you can add leads by hand and track source. We did not find a native Thumbtack integration on Houzz’s features page.",
+        },
+        {
+          q: "Does Houzz Pro include advertising?",
+          a: "The US pricing page lists an Advertising Package as an add-on starting at $499/month. Teams includes some marketing tools (premium profile, email, website). Do not assume ads are in every software plan.",
+        },
+        {
+          q: "Which is better for remodelers, interior designers, or contractors?",
+          a: "Remodelers and designers: Houzz software and visual discovery often matter; Thumbtack can still buy extra jobs. General contractors: same split—PM software vs marketplace. Cleaners and many emergency trades: Thumbtack (or Google) is usually the acquisition comparison; Houzz Pro is the wrong category unless you also run design-build work.",
+        },
+        {
+          q: "Which is cheaper?",
+          a: "Not as a universal fact. Houzz software is a subscription (often annual). Houzz ads start at $499/month on the public US page. Thumbtack is variable. A month of Houzz ads can cost more than a cautious Thumbtack budget—or less than a hot week of expensive leads.",
+        },
+      ],
+      alternatives: [
+        {
+          name: "Houzz Pro review",
+          href: getLeadGenerationReviewUrl("houzz-pro"),
+          logoSrc: "/Logos/houzz.jpeg",
+          description: "Software plans, trial, and how Houzz marketing sits beside the subscription.",
+        },
+        {
+          name: "Thumbtack review",
+          href: getLeadGenerationReviewUrl("thumbtack"),
+          logoSrc: "/Logos/thumbtack.jpeg",
+          description: "Exact lead prices, weekly budget, and when a direct lead charges.",
+        },
+        {
+          name: "Google LSA vs Thumbtack",
+          href: getLeadGenerationCompareUrlFromSlug("google-local-services-ads-vs-thumbtack"),
+          logoSrc: "/Logos/google.jpeg",
+          description: "If the real question is Search/Maps demand vs Thumbtack marketplace contacts.",
+        },
+        {
+          name: "Bark vs Thumbtack",
+          href: getLeadGenerationCompareUrlFromSlug("bark-vs-thumbtack"),
+          logoSrc: "/Logos/bark.jpeg",
+          description: "Inspect-then-buy credits vs Thumbtack’s customer-initiated charge.",
+        },
+      ],
+      sidebarWinners: [
+        { label: "Remodel/design software after the hire", winner: "A" },
+        { label: "Variable marketplace contacts", winner: "B" },
+        { label: "No membership fee", winner: "B" },
+      ],
+      moreComparisons: lgMoreComparisons("houzz-pro-vs-thumbtack", "houzz-pro", "thumbtack", [
+        RELATED.lsaTb,
+        RELATED.barkTb,
+        RELATED.hzAngi,
+        RELATED.lsaHz,
+        RELATED.tbAngi,
+      ]),
+    }
   ),
   build(
     "google-local-services-ads-vs-yelp-ads",
@@ -807,121 +1076,272 @@ const entries: [string, ComparisonTemplateProps][] = [
     "google-local-services-ads-vs-thumbtack",
     "google-local-services-ads",
     "thumbtack",
-    "Google Local Services Ads meet homeowners at the moment they search on Google with Google Screened trust cues; Thumbtack aggregates marketplace demand across trades. Choose LSA when Google is your dominant discovery path; choose Thumbtack when you want diversified marketplace volume and category experimentation.",
+    "Google Local Services Ads and Thumbtack can both charge per lead. They are not the same product. LSA sells a seat in Google’s Search and Maps local-services auction. Thumbtack sells customer contacts inside Thumbtack’s marketplace. Compare them on how the customer arrives, what you can control before a charge, and cost per booked job—not on which logo sounds higher-intent.",
     {
+      pageHeading: "Google Local Services Ads vs Thumbtack (2026): Cost & Leads",
+      seoTitle: "Google Local Services Ads vs Thumbtack (2026): Cost & Leads | BeltStack",
+      seoDescription:
+        "Google LSA vs Thumbtack is not two interchangeable pay-per-lead sources. LSA is a Google Search/Maps auction you pay per valid lead. Thumbtack is a marketplace that charges when a customer contacts you under your targeting. Compare payment triggers, credits, and booked-job math.",
+      quickVerdictHeading: "Both can charge per lead. They intercept demand differently.",
+      quickVerdictSub: "Google sells auction visibility on Search and Maps. Thumbtack sells marketplace contacts.",
+      researchNote:
+        "Verified September 2026 from Google Local Services Help (how leads work, automated lead credits, bidding, ad rankings, Google Verified badge) and Thumbtack Help plus Thumbtack’s Pro page (pay-for-leads, exact lead prices, smarter-matching refunds, Thumbtack numbers, background checks). Google does not publish a national CPL. Thumbtack does not publish a national lead-price table. BeltStack has not run LSA campaigns, bought Thumbtack leads, disputed credits, or measured close rates.",
+      quickRecommendationA:
+        "Choose Google Local Services Ads when eligible customers already search Google for the job, you can complete Google’s screening, and you will staff calls/messages so auction responsiveness does not work against you.",
+      quickRecommendationB:
+        "Choose Thumbtack when you want marketplace demand with exact lead prices and a weekly budget, and you will keep job preferences tight so customer-initiated direct leads stay on work you actually take.",
       quickVerdictParagraphs: [
-        "Google Local Services Ads meet homeowners at the moment they search on Google with Google Screened trust cues; Thumbtack aggregates marketplace demand across trades. Choose LSA when Google is your dominant discovery path; choose Thumbtack when you want diversified marketplace volume and category experimentation.",
-        "BeltStack evaluates lead channels on operator reality: verification burden, dispute transparency, and whether your dispatch team can hit speed-to-lead SLAs—not on headline CPCs or lead counts alone.",
-        "Run a 30–60 day test with the same territories, after-hours coverage, and CRM dispositions. Pick the channel that wins on booked-job margin after credits, refunds, and no-shows.",
+        "Someone typing “emergency plumber near me” into Google is not doing the same thing as someone filling out a Thumbtack job. Google Local Services Ads (LSA) appear in Google Search and Maps results for eligible local services. You pay for valid leads—Google states you do not pay for ad clicks. Thumbtack’s Pro page says there is no charge to join, no annual fees, and no membership fees; you pay for leads from customers who choose you, with pricing and budget determining how many you get.",
+        "A “lead” is not defined the same way. Google charges after it assesses a valid contact from your LSA (call, message, voicemail engagement, booking, or a returned missed call that connects, per current Help). Thumbtack Help: when a customer reaches out to you directly from search results and the job matches your preferences, you auto-pay the exact lead price you set. Opportunities (also called open leads) work the other way: you reach out first and pay the shown price only if the customer responds.",
+        "Do not pick LSA because “Google leads are better.” Do not pick Thumbtack because it “looks cheaper.” Google publishes no national plumber or HVAC CPL. Thumbtack publishes no national rate card. The number that decides the channel is spend ÷ booked jobs (then gross profit after that CAC). A more expensive lead can win; a cheaper lead that never books can lose.",
       ],
-      heroCallouts: [
-        {
-          label: "High-intent Google Search & Maps",
-          winner: "A",
-          reason: "LSA appears alongside local results when homeowners are actively hiring.",
-        },
-        {
-          label: "Broad marketplace liquidity",
-          winner: "B",
-          reason: "Thumbtack pools many service categories in one buyer journey.",
-        },
-        { label: "Same-ecosystem trust badge", winner: "A", reason: "Google Screened reinforces verification inside Search and Maps." },
+      relationshipContext: {
+        heading: "Google LSA vs Thumbtack: what are you actually buying?",
+        paragraphs: [
+          "Google Local Services Ads: you are paying to compete in Google’s local-services auction when people search for relevant services on Google Search and Maps. You set an average weekly budget and a bidding mode (Maximize Leads, target cost per lead, or max per lead). Ads are ranked by an auction that Google documents as bid plus overall profile quality—not “pay more, always appear first.” Current screening uses the Google Verified badge (Google Help: a single badge replacing the older Google Guarantee / Google Screened split). The Google Money Back Guarantee associated with Google Guarantee was discontinued for services booked after December 7, 2025.",
+          "Thumbtack: you are paying for customer contacts generated inside Thumbtack’s marketplace. Customers search or submit a job on Thumbtack, see professionals, and choose whom to contact. You control services, job preferences, area, hours, an exact lead price per service, and a weekly budget. Thumbtack says customers choose pros directly, competition per lead is limited (it does not publish a headcount), and you communicate with the customer on the platform.",
+          "Typical LSA path: Google search → LSA results → customer evaluates the profile (reviews, photos, verification callouts) → call, message, or booking → Google assesses whether that contact is a valid lead → you pay if it is charged. Typical Thumbtack path: customer uses Thumbtack → describes the project → matches/sees professionals from targeting → customer contacts you (direct lead, auto-charge) or you contact an Opportunity (charge if they respond) → you compete to close the job.",
+          "What you control before a charge: On LSA, services, service area, hours, lead types (message and booking opt-in), bidding mode, and weekly budget. You do not inspect each searcher before paying. On Thumbtack, targeting and exact lead prices are the pre-charge filter for direct leads; Opportunities let you see a price before you reach out. Neither model is Bark-style “skip this card without paying” for every contact.",
+        ],
+      },
+      decisionGuideAHeading: "Choose Google Local Services Ads if…",
+      decisionGuideBHeading: "Choose Thumbtack if…",
+      decisionGuideA: [
+        "Your category and location are eligible, you can complete Google’s screening (public verified Google Business Profile plus category-specific license, insurance, and background checks where required), and you want to appear in Google Search/Maps local-services results.",
+        "Customers commonly start on Google for the work you sell—especially same-day or emergency searches—and you can answer the phone and messages during advertised hours.",
+        "You will treat Maximize Leads, target CPL, or max-per-lead as auction controls, not as a guaranteed CPL, and you will track charged leads vs booked jobs after credits.",
+        "You want reviews and profile quality to compound on Google surfaces customers already use—not only inside a marketplace app.",
       ],
+      decisionGuideB: [
+        "You want marketplace demand with no membership or annual fee (Thumbtack’s Pro page), exact lead prices, and a hard weekly spend cap that stops new leads when you hit it.",
+        "Job preferences, travel area, and hours can be set tightly enough that automatic direct-lead charges stay on work you actually take.",
+        "Customers in your category already shop Thumbtack for quotes and comparisons, and you can respond quickly after they reach out.",
+        "You will use Opportunities only when you are willing to pay if the customer replies—and you will not treat “limited competition” as exclusivity.",
+      ],
+      decisionGuideNeither: [
+        "You are not eligible for LSA and Thumbtack does not produce useful demand in your service/geo.",
+        "Gross profit cannot support paid-lead CAC after a realistic close rate—referrals, Google Business Profile, or owned inbound already fill the calendar cheaper.",
+        "You cannot answer calls or messages quickly. Google lists responsiveness (including missed calls) as an auction factor; Thumbtack still rewards the first viable reply.",
+        "You primarily need a CRM, a phone system, or long-cycle B2B selling—not consumer lead generation.",
+      ],
+      featureComparisonColumnLabel: "What you’re comparing",
+      featureComparisonSub:
+        "A lead is not the same event on both platforms. Read payment triggers and credit rules before you compare sticker CPL.",
       featureComparison: [
-        {
-          feature: "Where demand starts",
-          productA: "Google Search / Maps queries (service + location)",
-          productB: "Thumbtack marketplace browse + matching",
-          supportA: "supported",
-          supportB: "supported",
-          stronger: "A",
-        },
-        {
-          feature: "Verification / screening",
-          productA: "Google Screened requirements by category",
-          productB: "Profile, reviews, and marketplace policies",
-          supportA: "supported",
-          supportB: "partial",
-          stronger: "A",
-        },
-        {
-          feature: "Lead pricing model",
-          productA: "Pay per lead; varies by job type & market",
-          productB: "Pay per lead with budget controls",
-          supportA: "supported",
-          supportB: "supported",
-        },
-        {
-          feature: "Creative & landing needs",
-          productA: "Light—profile-led in Google surfaces",
-          productB: "Profile + responsiveness matter for win rate",
-          supportA: "supported",
-          supportB: "supported",
-        },
-        {
-          feature: "Best when urgency is high",
-          productA: "Very strong for “need someone today” intent",
-          productB: "Strong when homeowners use marketplace flows",
-          supportA: "supported",
-          supportB: "partial",
-          stronger: "A",
-        },
+        dim(
+          "Acquisition model",
+          "Pay-per-valid-lead auction on Google Search and Maps for eligible local services.",
+          "Pay-per-lead marketplace. No join/annual/membership fee on Thumbtack’s Pro page."
+        ),
+        dim(
+          "Where the customer starts",
+          "Google Search or Maps for a service (including “near me” and brand/direct-business search when enabled).",
+          "Thumbtack search or a submitted job; customers choose professionals on Thumbtack."
+        ),
+        dim(
+          "What creates a charge",
+          "A valid lead after Google’s assessment: answered call, message/email (US/Canada), voicemail or IVR engagement, booking (US/Canada), or a returned missed call that connects. Not a click.",
+          "Direct leads: customer reaches out from search results and the job matches your preferences—you auto-pay the exact price. Opportunities: you reach out; you pay only if the customer responds."
+        ),
+        dim(
+          "Price you set",
+          "Bidding mode: Maximize Leads (Google sets bids; Help recommends ~10 leads/week and ~2 weeks of learning), target CPL, or max per lead (manual ceiling). You may pay less than a max bid.",
+          "Exact lead price per service—the amount you pay unless a discount applies—plus a weekly budget. Hitting the budget stops new leads until next week (or you raise it)."
+        ),
+        dim(
+          "Budget behavior",
+          "Average weekly budget can overspend in a given week; monthly max = weekly × 30.4 ÷ 7. After monthly max, the ad stops until you change budget.",
+          "Weekly budget is a hard cap across services. Lead price × count must fit the weekly cap."
+        ),
+        dim(
+          "How you compete",
+          "Auction: bid + likelihood of a lead (responsiveness, search context, relevance, message/booking enabled) + profile quality (rating, reviews, response time, images, verification). Ranking is not guaranteed.",
+          "Customers choose you. Thumbtack says pricing and budget determine lead volume and that competition per lead is limited—no published competitor count."
+        ),
+        dim(
+          "Pre-charge targeting",
+          "Job types, service area, hours, message/booking opt-in, bidding, weekly budget. You cannot skip an individual searcher without paying if Google charges the lead.",
+          "Services, job preferences, area, hours, exact lead prices. Direct leads are not a per-card skip. Opportunities show a price before you reach out."
+        ),
+        dim(
+          "Phone / message / booking",
+          "Reports break out charged leads by call, message, and booking. Message leads typically cost less than phone (not always). Booking leads: US and Canada. Message price can factor in whether the customer contacted other LSA advertisers.",
+          "Direct customer communication on Thumbtack (messages; Thumbtack numbers on many direct leads). Some services are excluded from Thumbtack numbers for legal/regulatory reasons."
+        ),
+        dim(
+          "When a lead is bad",
+          "US/Canada: first assessment may not charge; charged leads may auto-credit (often within 30 days). Feedback survey may occasionally credit. Google no longer credits “job type not serviced” or “geo not serviced.” Research-only, cancellations, no response, and outside-hours valid leads are listed as not credited.",
+          "Refunds are Thumbtack credit. Automatic cases include duplicates within 7 days and some “Not what I do” declines under smarter lead matching. Thumbtack numbers: if the customer replies to no pro within 72 hours (and you stayed on-platform), Help describes a refund. Hired-someone-else is not an automatic refund."
+        ),
+        dim(
+          "Reviews / trust",
+          "Google Verified badge after screening. Profile quality includes rating, review count, photos. Google Business Profile must be public and verified. Verification is not a workmanship guarantee.",
+          "Account owners must pass a criminal background check. “Licensed pro” means Thumbtack verified a submitted license number against a public database. Thumbtack Guarantee is a customer reimbursement product (up to $2,500 money-back / $100,000 property damage, with conditions)—not a lead-quality SLA for you."
+        ),
+        dim(
+          "Biggest tradeoff",
+          "You intercept Google demand where many urgent jobs start—and you pay when Google calls the contact valid, including some outcomes that never book.",
+          "You get marketplace volume with a visible exact price and weekly cap—and you can be charged when a customer contacts you for a job you would never have bought from a feed."
+        ),
       ],
       pricingComparison:
-        "Google Local Services Ads bill per lead; the price is set by Google’s local auction and changes by job type, zip, and competition (no single public rate card). Thumbtack also bills per lead, with marketplace pricing that varies by category and market. Compare net cost per lead after disputes and credits, then the same cost per booked job—include CSR and scheduling time for both.",
+        "Neither vendor publishes a national cost-per-lead table. Google: pay per valid lead; prices vary by location, job type, lead type, and bidding mode. Thumbtack: the exact lead price you set, times volume, capped by weekly budget.",
+      pricingComparisonParagraphs: [
+        "Google currently lists three LSA bid modes. Maximize Leads lets Google set bids to get the most leads for your budget (Help recommends a budget sized for about 10 leads per week and notes about two weeks for the model to learn). Target cost per lead (tCPL) is automated bidding around an average you or Google set. Max per lead is a manual ceiling—the most you would pay; Google says you may pay less. Weekly budget is a target: some weeks underspend, some overspend, but you do not exceed monthly max (weekly × 30.4 ÷ 7). After monthly max, the ad does not show unless you raise budget. Message leads are typically priced lower than the matching phone lead. Google does not publish a US average plumber or HVAC CPL—do not use a blog’s number as yours.",
+        "Thumbtack Help: exact lead prices mean the price you set is what you pay unless a discount or promotion applies. You set a price per service; as you move the slider, Thumbtack shows an estimate of how many leads that service might produce. Weekly budget is the most you will spend across all services that week. Example Thumbtack publishes: $10 lead price and $90 weekly budget → 9 leads, then leads stop until next week unless you raise the budget. Minimum prices can change; prices near the minimum may increase automatically. There is still no public national CPL table.",
+        "To compare equivalent scope, do not match “$50 Google vs $50 Thumbtack” in the abstract. Match a calendar window, a spend cap, and the same CRM stages. Ask Google’s reports for charged vs credited leads by call/message/booking. Ask Thumbtack’s payment history for lead vs Opportunity charges and credits. Then compute booked-job CAC on both.",
+      ],
+      roiGuidance: {
+        heading: "Cost per lead is not the decision. Cost per booked job is.",
+        paragraphs: [
+          "Vendor fact: neither Google nor Thumbtack publishes your close rate. BeltStack illustrative model—replace every number with your invoices.",
+          "Channel scorecard (run separately): spend, leads, qualified leads, booked estimates, booked jobs, revenue, gross profit, credits/refunds, cost per lead, cost per qualified lead, cost per booked job, CAC, revenue/spend, gross profit/spend. Cost per booked job = lead spend ÷ booked jobs. A channel with fewer, more expensive leads can win if it books more work.",
+          "Illustrative only: Channel A (LSA-shaped) 20 charged leads × $45 = $900 spend, 5 booked jobs → $180 per booked job. Channel B (Thumbtack-shaped) 12 leads × $35 = $420 spend, 3 booked jobs → $140 per booked job. If Channel A’s five jobs are $4,000 replacements and Channel B’s three are $180 diagnostics, A can still be the better business. Invert the tickets and B wins. Do not crown a winner from CPL.",
+          "Maximum affordable lead cost (illustrative framework, not a Google or Thumbtack bid): gross profit per completed job × lead-to-job close rate × the share of that contribution you will spend on acquisition. Example: $600 gross profit × 25% close × 30% acquisition share = $45. That $45 is not a recommended LSA bid or Thumbtack max price. Substitute your average job, margin, close rate, and repeat-customer value. If your close rate is 10%, the same $600 and 30% share only supports $18.",
+          "These channels can run together. Tag source in CRM. Deduplicate the same customer who Googles you and also sends a Thumbtack request. Google Help notes about two weeks of bidding-model learning on Maximize Leads/tCPL—do not call a two-day sample a test. Use a window long enough to cover your sales cycle and at least a handful of booked jobs, not a generic 30-day slogan.",
+        ],
+        example: {
+          heading: "Emergency plumber vs house painter (behavior, not a winner table)",
+          body: "An emergency leak often starts as a Google search; LSA is structurally built for that query. A painter gathering three quotes may browse portfolios and marketplace options; Thumbtack’s customer-choice flow can fit that shopping. A landscaper selling a weekly route should judge CAC against season-one gross profit, not the first mow. A cleaner with high repeat value can afford a higher first-job CAC than a one-off junk haul. A roofer’s high ticket can support a high lead cost only if qualification is real—an unqualified $200 “lead” that never inspects is still a loss. None of these location or trade counts are vendor cutoffs.",
+        },
+      },
       prosConsA: {
-        pros: ["Captures Google-first homeowners", "Screened badge reduces friction on cold inbound"],
-        cons: ["Category and geo eligibility rules", "Auction pressure can spike in competitive metros"],
+        pros: [
+          "Meets customers on Google Search and Maps when they search for the service",
+          "Pay per valid lead, not per click (Google Help)",
+          "Google Verified screening; profile quality can also lower cost per lead (Google’s ranking article)",
+          "Weekly budget + monthly max; message/booking lead types when enabled",
+        ],
+        cons: [
+          "Category/geo eligibility and screening (often 3–4 weeks after documents)",
+          "You pay when Google calls the contact valid—even if the job never books",
+          "No public CPL; auction + usage can spike; Maximize Leads is not a price lock",
+          "Old “dispute every bad lead” workflow is not the current US/Canada system",
+        ],
       },
       prosConsB: {
-        pros: ["Single interface for many trades", "Useful when you want marketplace diversification"],
-        cons: ["Shared-lead dynamics in busy markets", "Quality varies by category and territory"],
+        pros: [
+          "No membership/annual/join fee (Thumbtack Pro page)",
+          "Exact lead prices plus a weekly cap you can see before volume runs",
+          "Targeting and Opportunities give different control surfaces than a pure auction",
+          "Customers who choose you—Thumbtack’s stated high-intent marketplace story",
+        ],
+        cons: [
+          "Direct-lead auto-charge when the customer reaches out under your preferences",
+          "No public national price sheet; minimums can move",
+          "Limited competition is not exclusivity; hired-someone-else is not an automatic refund",
+          "Thumbtack reviews and guarantee live on Thumbtack—they do not replace a Google profile",
+        ],
       },
       bestFor: [
         {
-          heading: "Choose Google LSA when",
-          body: "Your best customers say they “Googled you,” you can maintain Google’s verification requirements, and dispatch can answer calls within minutes during business hours.",
+          heading: "Can you use both?",
+          body: "Yes. They are independent acquisition channels, not substitutes you must pick forever. Run a controlled test: same service area and script, separate source tags, hard spend caps, and a scorecard of spend → qualified → booked → gross profit after credits. Keep the channel whose booked-job CAC clears your threshold; keep the other only if it still clears after overlapping customers are deduped. Do not invent a required 30-day duration—cover your sales cycle and Google’s stated ~two-week bidding learning if you use automated LSA bidding.",
         },
         {
-          heading: "Choose Thumbtack when",
-          body: "You want marketplace demand without building a separate Google Ads muscle, or you are testing multiple service lines where Thumbtack’s liquidity helps.",
+          heading: "Urgent trades (plumbing, HVAC service, electrical)",
+          body: "Google search is often the customer’s first move. LSA matches that environment if you answer during business hours—missed calls can hurt responsiveness in Google’s auction. Thumbtack can still produce jobs when customers start in the app; it is not “low quality” by default. Measure close rate by job type (emergency vs quote).",
+        },
+        {
+          heading: "Quote-driven and repeat work (painting, cleaning, landscaping, roofing)",
+          body: "Shoppers who compare two or three pros may use Thumbtack’s marketplace or Google’s LSA profiles. High tickets can support higher lead costs; repeat routes should use first-year gross profit, not the first visit. Qualification still matters more than which logo sent the name.",
         },
       ],
-      sidebarWinners: [
-        { label: "Google Search intent match", winner: "A" },
-        { label: "Cross-category experimentation", winner: "B" },
-        { label: "Trust signal inside Google UI", winner: "A" },
+      heroCallouts: [
+        {
+          label: "Winner for Google Search / Maps intercept",
+          winner: "A",
+          reason: "LSA is the product that appears in Google local-services results when eligible queries fire.",
+        },
+        {
+          label: "Winner for exact price + weekly cap",
+          winner: "B",
+          reason: "Thumbtack Help: the price you set is what you pay; weekly budget stops leads when hit.",
+        },
+        {
+          label: "Winner for inspect-then-pay (Opportunities only)",
+          winner: "B",
+          reason: "Open leads show a price; you pay if the customer responds. Direct leads still auto-charge on contact.",
+        },
       ],
       faqs: [
         {
-          q: "Google Local Services Ads vs Thumbtack: which is better for contractors?",
-          a: "If homeowners in your market start on Google for urgent repairs, LSA often matches intent more tightly. If you want marketplace volume across categories and can execute fast follow-up, Thumbtack can win. Validate with booked-job margin, not lead volume.",
+          q: "Is Google Local Services Ads better than Thumbtack?",
+          a: "It depends which demand you can intercept and what you pay per booked job. LSA fits eligible Google Search/Maps hiring. Thumbtack fits marketplace customers who choose a pro on Thumbtack. Compare charged spend after credits ÷ booked jobs—not lead volume or vendor marketing.",
         },
         {
-          q: "Do I need both?",
-          a: "Many teams run LSA as a primary Google channel and keep a marketplace as a secondary test—only if staffing can maintain separate SLAs and attribution in CRM.",
+          q: "Is Thumbtack cheaper than Google LSA?",
+          a: "Not as a universal fact. Google has no public national CPL. Thumbtack has exact account-level prices, not a published US average. A cheaper Thumbtack lead that does not book can cost more than a dearer LSA lead that does.",
         },
         {
-          q: "How do I attribute leads fairly?",
-          a: "Use unique numbers or call tracking, tag source in CRM, and review assisted conversions before cutting a channel that feeds branded search.",
+          q: "Does Google LSA charge per click or per lead?",
+          a: "Per valid lead, not per click. Google Help: you are charged for each valid lead from your Local Services ad. Lead types include calls, messages, and bookings (bookings US/Canada).",
         },
         {
-          q: "What should I read next?",
-          a: "Start with our guide on how Google Local Services Ads work, then speed-to-lead—response time is often the bottleneck, not the marketplace brand.",
+          q: "When does Thumbtack charge professionals?",
+          a: "Thumbtack Help: direct leads auto-pay when a customer reaches out from search results and the job matches your preferences. Opportunities: you contact first and pay the shown price only if the customer responds. Confirm current types in your Pro account.",
         },
         {
-          q: "Where are alternatives compared?",
-          a: "Use the ranked alternatives pages and individual reviews linked from this comparison for substitutes outside both ecosystems.",
+          q: "Can I use Google LSA and Thumbtack together?",
+          a: "Yes. Tag both in CRM, staff both, and compare booked-job CAC. Deduplicate overlap. Automated LSA bidding needs about two weeks of learning per Google Help—do not judge either channel on a handful of names.",
         },
+        {
+          q: "Which has better-quality leads?",
+          a: "BeltStack has not measured conversion rates. Structurally, LSA intercepts Google queries; Thumbtack intercepts marketplace requests. Multiple providers can be in play on both (Google even prices some message leads using whether the customer contacted other LSA advertisers). Use your booking and close rates.",
+        },
+        {
+          q: "Can I dispute bad Google LSA leads?",
+          a: "The current US/Canada system is automated assessment plus a lead feedback survey—not the older “immediately dispute every misfire” workflow. Invalid/low-quality contacts may not be charged; charged leads may auto-credit (often within 30 days). Google no longer supports credits for job type or geo not serviced. Feedback may occasionally produce a credit. Healthcare, tax specialists, and EMEA advertisers are excluded from those credits. Research-only customers, cancellations, and no-response are listed as not credited.",
+        },
+        {
+          q: "Does Google LSA guarantee jobs? Is Google Guaranteed the same as LSA?",
+          a: "No. LSA is the ad product. Google Verified is the current screening badge. Google Guarantee (including the consumer money-back benefit) is not the current badge system; Google discontinued that money-back guarantee for services booked after December 7, 2025. Verification is not a promise the lead will hire you.",
+        },
+        {
+          q: "How should I compare lead costs?",
+          a: "Spend after credits/refunds ÷ booked jobs, then gross profit after that CAC. Optionally cap bids with: gross profit × close rate × acquisition share. That formula is a planning tool, not a vendor price.",
+        },
+      ],
+      alternatives: [
+        {
+          name: "Google Local Services Ads review",
+          href: getLeadGenerationReviewUrl("google-local-services-ads"),
+          logoSrc: "/Logos/google.jpeg",
+          description: "Pay-per-valid-lead Google Search/Maps product, screening, and current credit rules.",
+        },
+        {
+          name: "Thumbtack review",
+          href: getLeadGenerationReviewUrl("thumbtack"),
+          logoSrc: "/Logos/thumbtack.jpeg",
+          description: "Marketplace targeting, exact lead prices, weekly budget, and refund rules.",
+        },
+        {
+          name: "Bark vs Thumbtack",
+          href: getLeadGenerationCompareUrlFromSlug("bark-vs-thumbtack"),
+          logoSrc: "/Logos/bark.jpeg",
+          description: "Inspect-then-buy credits vs Thumbtack’s customer-initiated direct leads.",
+        },
+        {
+          name: "Google LSA vs Angi",
+          href: getLeadGenerationCompareUrlFromSlug("google-local-services-ads-vs-angi"),
+          logoSrc: "/Logos/angi.jpeg",
+          description: "Google auction vs Angi Inc. directory/lead products—separate comparison.",
+        },
+      ],
+      sidebarWinners: [
+        { label: "Google Search / Maps intercept", winner: "A" },
+        { label: "Exact lead price + weekly hard cap", winner: "B" },
+        { label: "Reviews that live on Google", winner: "A" },
       ],
       moreComparisons: lgMoreComparisons(
         "google-local-services-ads-vs-thumbtack",
         "google-local-services-ads",
         "thumbtack",
-        [RELATED.lsaYelp, RELATED.tbAngi, RELATED.angiHa, RELATED.barkTb],
+        [RELATED.lsaYelp, RELATED.lsaAngi, RELATED.tbAngi, RELATED.barkTb, RELATED.tbHa],
         [
           { label: "How Google Local Services Ads work", href: "/lead-generation/guides/how-google-local-services-ads-work" },
-          { label: "Landing pages for paid lead campaigns", href: "/lead-generation/guides/landing-pages-for-paid-lead-campaigns" },
+          { label: "Paid vs organic leads", href: "/lead-generation/guides/paid-vs-organic-leads" },
+          { label: "Speed-to-lead for inbound inquiries", href: "/lead-generation/guides/speed-to-lead-for-inbound-inquiries" },
         ]
       ),
     }
@@ -930,111 +1350,274 @@ const entries: [string, ComparisonTemplateProps][] = [
     "google-local-services-ads-vs-angi",
     "google-local-services-ads",
     "angi",
-    "Google Local Services Ads intercept Google Search and Maps demand with screened listings; Angi pairs directory presence with lead products inside the Angi ecosystem for home services brands. Choose LSA for Google-native intent; choose Angi when bundled Angi marketing and directory reach justify the operational fit.",
+    "“Angi” is not one product. Google Local Services Ads (including accounts migrating into specialized Performance Max campaigns with pay-per-lead goals) sell a Search/Maps valid-lead. Angi Leads sell shared marketplace matches you pay for even if you lose the job. Angi Ads sell directory/profile advertising. Identify the Angi SKU on the contract before you compare cost.",
     {
+      pageHeading: "Google Local Services Ads vs Angi (2026): Cost & Leads",
+      seoTitle: "Google Local Services Ads vs Angi (2026): Cost & Leads | BeltStack",
+      seoDescription:
+        "Google LSA vs Angi is not two interchangeable lead sources. Google charges per valid Search/Maps contact. Angi Leads are shared marketplace matches; Angi Ads are directory advertising. Compare payment, contracts, and booked-job CAC.",
+      quickVerdictHeading: "First identify which Angi product. Then compare how you compete and pay.",
+      quickVerdictSub: "Google sells a Search/Maps valid-lead. Angi may be selling leads, ads, or both.",
+      researchNote:
+        "Verified September 2026 from Google Ads Help on Local Services Ads transitioning to Performance Max campaigns with pay-per-lead goals, Local Services Help (leads, credits, rankings, Google Verified), the Angi Pro Agreement (last updated May 11, 2026), Angi Help on lead credits (updated August 14, 2026), and Angi consumer/pro pages. Neither company publishes a national CPL. BeltStack has not run LSA or PMax pay-per-lead campaigns, bought Angi Leads or Ads, or measured close rates.",
+      quickRecommendationA:
+        "Choose Google’s local pay-per-lead system when eligible customers already search Google for the job, you can complete screening, and you want to pause/resume spend without an Angi-style subscription ETF—then track booked-job CAC after credits.",
+      quickRecommendationB:
+        "Choose Angi only after the quote names the product: Angi Leads if you can profit on shared matches you pay for even when you lose; Angi Ads if you want directory/profile visibility on Angi and the advertising term is acceptable.",
       quickVerdictParagraphs: [
-        "Google Local Services Ads intercept Google Search and Maps demand with screened listings; Angi pairs directory presence with lead products inside the Angi ecosystem for home services brands. Choose LSA for Google-native intent; choose Angi when bundled Angi marketing and directory reach justify the operational fit.",
-        "We weigh how each channel behaves in real metros: lead mix (repair vs replace), dispute handling, and whether your brand already has Angi profile equity.",
-        "Pilot with identical territories and CSR scripts. Decide on net margin per booked job after refunds and rework, not on top-of-funnel lead names.",
+        "A contractor searching “Google Local Services Ads vs Angi” is rarely comparing two identical lead SKUs. Google sells participation in local Search and Maps results: you pay when Google treats a customer contact from that ad as a valid lead—not when someone clicks. Angi Inc. sells more than one contractor acquisition product. The Angi Pro Agreement (HomeAdvisor, Inc. d/b/a Angi Pro) describes Leads—homeowner Service Requests that Angi may send to you, send your info to the homeowner, and/or facilitate as a connection—and separately describes directory profiles, enhanced profiles, and advertising. Angi consumer FAQ copy also describes paid advertising for Approved Pros on Angi websites, magazine, and call center.",
+        "Angi Leads are the closer apples-to-apples pay-per-contact comparison with Google. The Pro Agreement states leads are not guaranteed jobs, that a lead is frequently sent to several other approved pros (including Angi Services, Angi’s pre-priced job platform), and that you pay even if you do not win the job. Angi Ads are not “another lead network with a Google-like CPL.” They are advertising/profile exposure inside Angi. Comparing Google’s per-valid-lead invoice to an Angi Ads monthly commitment as if both were CPL is how contractors pick the wrong number.",
+        "Google’s management UI is also in motion. Google Ads Help: existing Local Services Ads are being migrated in phases into specialized Performance Max campaigns with pay-per-lead goals. That is not ordinary CPC Performance Max (those campaigns still serve YouTube, Gmail, and Display). Pay-per-valid-lead and Search/Maps placement stay. Budget and bidding controls change after migration. Some accounts remain on the legacy Local Services dashboard during the rollout. Confirm which console you are in before you copy a competitor’s bid settings.",
       ],
-      heroCallouts: [
-        { label: "Google-native demand capture", winner: "A", reason: "LSA meets searchers where they look for “near me” help." },
-        { label: "Angi brand + bundled programs", winner: "B", reason: "Angi can matter when homeowners already trust the directory path." },
-        { label: "Fast emergency intent", winner: "A", reason: "Search-led flows skew toward immediate needs." },
+      relationshipContext: {
+        heading: "What are you actually buying?",
+        paragraphs: [
+          "Google (legacy Local Services Ads or migrated pay-per-lead Performance Max): you are buying the chance for your Google Business Profile–based listing to appear in Google’s local-services results when someone searches on Search or Maps. Targeting is keywordless—categories, service types, and service area—not keyword lists. The homeowner picks a provider card. You pay if Google assesses a valid lead (call, message, or booking per current Help). Google Verified is the current screening badge. Google Guarantee money-back for services booked after December 7, 2025 is discontinued. A valid lead is not a booked job.",
+          "Angi Leads: you are buying connections from homeowner Service Requests that can arrive via angi.com, the Angi app, homeadvisor.com, phone, or third-party sites (Pro Agreement). Angi may give you the homeowner’s contact info, give the homeowner yours, or facilitate the conversation. You pay per lead or via a subscription/package that prepays for discounted leads. You do not get to inspect-and-skip each name after it matches your tasks and geography the way Bark does. The Pro FAQ states you pay even if you do not win the job.",
+          "Angi Ads / directory advertising: you are buying increased visibility in Angi search, directory, and related Angi surfaces for Approved Pros who meet advertising criteria (Angi’s consumer FAQ: typically a 3-star average and other eligibility; “Angi Approved” is described as including paying to advertise). This is not priced as Google’s per-valid-lead event. Angi does not publish a national Ads rate card. Term, auto-renewal, and any early termination fee live in the Contract you sign—not on a public price table.",
+          "Typical Google path: “roof repair near me” → Search/Maps local-services results → homeowner evaluates the profile → call/message/booking → valid-lead assessment → you pay if charged. Typical Angi Leads path: homeowner describes a project in the Angi/HomeAdvisor ecosystem → Angi matches/distributes → you and often other approved pros receive a Lead → you compete to contact and close → you are charged for the lead even if another pro wins. Typical Angi Ads path: homeowner browses Angi directory/search → sees advertised/Approved profiles → contacts the business they selected → you paid for advertising presence, not (in the Ads product) a Google-style per-lead meter. Do not blend Leads and Ads into one journey.",
+        ],
+      },
+      decisionGuideAHeading: "Choose Google Local Services Ads if…",
+      decisionGuideBHeading: "Choose Angi if…",
+      decisionGuideA: [
+        "Customers in your category start on Google Search or Maps, you are eligible, and you can finish screening (verified Google Business Profile plus category-specific checks).",
+        "You want to pay per valid contact and pause the campaign in-product (legacy inbox or Google Ads Enabled/Paused) without an Angi subscription ETF—confirm your signed Angi Contract if you are comparing commitments.",
+        "You will staff calls and messages during advertised hours. Google lists responsiveness, including missed calls, as an auction factor.",
+        "You will export performance before a PMax pay-per-lead migration if Google has scheduled your account—historical LSA campaign reports do not automatically move into Google Ads.",
       ],
+      decisionGuideB: [
+        "Angi Leads: you want incremental Angi/HomeAdvisor marketplace matches, your ticket and close rate can absorb paying for leads you lose, and you can answer shared opportunities fast. The Pro Agreement says a lead is frequently sent to several other approved pros.",
+        "Angi Ads: you want directory/profile visibility on Angi for homeowners who already use that brand, you meet Angi Approved/advertising eligibility, and you have read term, auto-renewal, and any ETF in writing.",
+        "The quote names the product (Leads vs Ads vs bundle vs Angi Services pre-priced work). If it only says “Angi,” do not sign until it does.",
+        "You will tag Angi separately from Google in CRM. HomeAdvisor is the same parent—see Angi vs HomeAdvisor—not a third independent vendor.",
+      ],
+      decisionGuideNeither: [
+        "Gross profit cannot cover paid CAC after a realistic close rate, or referrals/GBP already fill the calendar.",
+        "You cannot answer inbound leads quickly. Shared Angi Leads and Google’s responsiveness factor both punish slow follow-up.",
+        "You are not eligible for Google’s local pay-per-lead categories and Angi has weak demand or an unacceptable contract in your trade/geo.",
+        "You need a CRM or a phone system, not a lead-generation contract.",
+      ],
+      featureComparisonColumnLabel: "What you’re comparing",
+      featureComparisonSub:
+        "Do not compare Google’s valid-lead invoice to an Angi Ads monthly as if both were CPL. Split Angi Leads from Angi Ads.",
       featureComparison: [
-        {
-          feature: "Primary surface",
-          productA: "Google Search / Maps",
-          productB: "Angi directory + lead products",
-          supportA: "supported",
-          supportB: "supported",
-          stronger: "A",
-        },
-        {
-          feature: "Home services focus",
-          productA: "Eligible categories on Google",
-          productB: "Strong home-services positioning",
-          supportA: "partial",
-          supportB: "supported",
-          stronger: "B",
-        },
-        {
-          feature: "Trust / verification",
-          productA: "Google Screened",
-          productB: "Platform policies + reviews",
-          supportA: "supported",
-          supportB: "supported",
-        },
-        {
-          feature: "Operational load",
-          productA: "Google verification + LSA ops",
-          productB: "Profile, reviews, and lead handling",
-          supportA: "partial",
-          supportB: "partial",
-        },
-        {
-          feature: "Best for Google-first metros",
-          productA: "Very strong",
-          productB: "Moderate (depends on Angi usage locally)",
-          supportA: "supported",
-          supportB: "partial",
-          stronger: "A",
-        },
+        dim(
+          "What the product is",
+          "Local Search/Maps pay-per-valid-lead ads (legacy LSA dashboard or specialized PMax with pay-per-lead goals).",
+          "Two common contractor SKUs: Angi Leads (marketplace matches) and Angi Ads (directory/advertising). Confirm the Contract."
+        ),
+        dim(
+          "Where the customer starts",
+          "Google Search or Maps query for a local service (keywordless; service types + area).",
+          "Angi/HomeAdvisor sites, app, phone, or third-party requests Angi receives (Pro Agreement)."
+        ),
+        dim(
+          "What creates a charge",
+          "A valid lead Google assesses from the ad (call, message, booking)—not a click. Same model after PMax pay-per-lead migration.",
+          "Leads: you pay for Leads received (per-lead, subscription, or package) even if you do not win. Ads: advertising/profile commitment per the Contract—not Google’s per-lead event."
+        ),
+        dim(
+          "Lead distribution",
+          "Homeowner selects a provider card. They can still contact more than one business. Google prices some message leads using whether the customer contacted other LSA advertisers.",
+          "Pro Agreement: frequently sent to several other approved pros, including Angi Services. FAQ: competition limits; homeowner choice. Angi does not publish one official “always N contractors” number for every lead."
+        ),
+        dim(
+          "Budget / bidding",
+          "Legacy: average weekly budget (monthly max ≈ weekly × 30.4 ÷ 7) and Maximize Leads / tCPL / max per lead. Migrated: daily average budget (weekly ÷ 7); monthly cap = daily × 30.4; bidding defaults to Maximize Conversions; Google says manual max-per-lead and vertical-level tCPA are not supported.",
+          "Leads: pay-per-lead and/or auto-renewing Subscription that prepays discounted leads. Ads: quoted advertising. No public national rate card."
+        ),
+        dim(
+          "Contract / pause",
+          "No Angi-style ETF in Google’s public LSA/PMax-PPL Help. Pause Enabled/Paused (migrated) or stop the campaign; you still pay for valid leads already incurred.",
+          "Subscriptions can auto-renew; Angi may raise the Subscription Fee up to 10% on renewal. ETF if the signed Contract includes one. Cancel via Customer Care (877) 947-3639. Guidance on lead volume is an estimate, not a guarantee."
+        ),
+        dim(
+          "Pre-charge control",
+          "Categories/service types, service area, hours/ad schedule, message/booking opt-in, budget, bidding. You cannot skip an individual searcher after they contact you if Google charges the lead.",
+          "Tasks, geography, lead on/off (turning Leads off can reduce subscription value). You do not inspect each Lead before the match the way an inspect-then-buy marketplace does."
+        ),
+        dim(
+          "Credits / refunds",
+          "US/Canada: auto assessment; charged leads may auto-credit (~30 days). Feedback survey may occasionally credit. No credits for job type/geo not serviced. Research, cancel, no-response, outside-hours valid leads listed as not credited.",
+          "Angi Help (Aug 14, 2026): request within 45 days; attempted call within 24 hours; credits toward future leads, expire in 6 months. Eligible: bad contact, wrong ZIP vs profile, service mismatch, duplicate within 45 days, charged while paused. Annual subscriptions: report leads but credits not offered. Not eligible: no answer, hired another pro, changed mind, shopping, lost the job."
+        ),
+        dim(
+          "Reviews / verification",
+          "Google Verified after screening. GBP reviews and rating feed profile quality in the auction. Not a workmanship guarantee.",
+          "Angi Approved (consumer FAQ): typically 3.0+ rating if reviewed, owner background check (except labeled Approved Corporate), license attestation, and paying to advertise. Badging is at Angi’s discretion (Pro Agreement). Not a workmanship guarantee."
+        ),
+        dim(
+          "Reporting after Google migration",
+          "Google: historical LSA campaign performance reports do not automatically migrate to Google Ads. Save/export before your date. Lead history is described as moving into Google Ads Leads/Lead Manager.",
+          "Angi for Pros app / Leads tab for lead status and credit requests. Ask the rep what ROI reporting the specific product includes."
+        ),
+        dim(
+          "Biggest tradeoff",
+          "You intercept Google demand and pay when Google calls the contact valid—including contacts that never book. Migrated bidding is automated; you may lose legacy manual max-per-lead.",
+          "Leads: volume from a known homeowner brand, with shared competition and possible subscription/ETF. Ads: Angi visibility that is not a Google CPL. Mixing the two on one invoice hides CAC."
+        ),
       ],
       pricingComparison:
-        "Google LSA charges per lead via Google’s auction (varies by geography and service type). Angi often mixes per-lead fees with directory or marketing bundles, so statements can lump several charges together. Ask Angi for line-item per-lead and per-booking economics where possible; for LSA, pull cost per lead from the Ads interface—then run both through the same refund/dispute assumptions and cost per booked job.",
+        "Google does not publish a national CPL. Angi does not publish a national Leads or Ads rate card. Compare booked-job CAC after credits, using the product actually on the contract.",
+      pricingComparisonParagraphs: [
+        "Google: you see charges for valid leads. Prices vary by location, job type, lead type, and bidding. Legacy accounts set an average weekly budget. Migrated pay-per-lead PMax accounts get a daily average equal to historical weekly ÷ 7; monthly billing is capped at daily × 30.4. Google Ads Help: this specialized campaign type still charges for valid leads (calls, messages, bookings), not clicks, and still serves only Search and Maps—unlike standard Performance Max. Do not use a blog’s “average HVAC CPL.”",
+        "Angi Leads: Pro Agreement—pay per Lead, as part of a package, or via Subscription (prepay for discounted leads; term in the Contract). Guidance on how many leads you will get is an estimate. Angi Help credits expire in six months and do not apply to annual-subscription leads. Angi Inc. does not publish one national lead price.",
+        "Angi Ads: quoted advertising. Angi consumer FAQ describes paid advertising for eligible Approved Pros. Third-party monthly ranges are not BeltStack facts. Get line items: product name, geography, term, auto-renewal, ETF, what happens if you pause.",
+        "To compare equivalent scope: match a calendar window and CRM stages. Put Google charged-minus-credited spend next to Angi Leads spend after credits (and ETF/subscription if any) and Angi Ads spend if that is what you bought. Then booked jobs and gross profit. A $40 shared Angi Lead that loses to two other pros is not the same unit as a $40 Google valid-lead from a homeowner who tapped your card.",
+      ],
+      roiGuidance: {
+        heading: "Price per lead is not price per customer",
+        paragraphs: [
+          "Vendor fact: neither Google nor Angi publishes your close rate or a national CPL. BeltStack illustrative model—replace every number.",
+          "Scorecard each channel: spend, leads (or ad-attributed contacts), qualified, estimates, booked jobs, revenue, gross profit, credits, cost per lead, cost per booked job, gross profit/spend.",
+          "Illustrative only—not vendor averages: 15 Angi Leads × $40 = $600. If the Pro Agreement’s shared-lead pattern holds and you book 2 jobs, CAC is $300 per booked job. 10 Google valid-leads × $70 = $700. If you book 4 jobs, CAC is $175. Invert close rates and the ranking flips. Shared-lead math is why CPL lies: you paid for a name that several approved pros also received.",
+          "Maximum affordable lead cost (planning framework, not a bid): gross profit per completed job × lead-to-job close rate × the share of contribution you will spend on acquisition. Example: $800 × 20% × 25% = $40. Substitute your jobs. If Angi Leads close at 10% in your shop, the same $800 and 25% share only supports $20.",
+          "You can run Google and Angi together if staffing and contracts allow. Tag sources. Deduplicate the homeowner who Googled you and also submitted an Angi request. Do not split budget 50/50 by habit. Do not use a generic 30-day test: cover your sales cycle, and if your Google account just migrated, Google is still learning automated bids.",
+        ],
+        example: {
+          heading: "Urgent plumbing vs painting vs HVAC replacement (mechanics, not winners)",
+          body: "An emergency drain backup often starts as a Google query; Google’s Search/Maps intercept is built for that. A painter collecting three quotes may use Angi directory/search or an Angi Service Request that several pros receive—speed and a real estimate process matter more than which logo is cheaper per name. HVAC replacement can support a higher CAC than a $129 service call; it cannot support paying for every shared match you lose. None of these are official vendor cutoffs.",
+        },
+      },
       prosConsA: {
-        pros: ["High-intent Google traffic", "Screened badge at decision time"],
-        cons: ["Eligibility and category limits", "Auction volatility"],
+        pros: [
+          "Intercepts Google Search/Maps hiring demand",
+          "Pay per valid lead, not per click—same after specialized PMax pay-per-lead migration",
+          "Pause in-product without an Angi Subscription ETF (Google public Help)",
+          "Google Verified + GBP reviews sit on surfaces customers already use",
+        ],
+        cons: [
+          "Eligibility and screening time; not every trade/geo",
+          "Valid lead ≠ booked job; some outcomes are not credited",
+          "Phased migration: bidding/budget UI changes; historical LSA reports do not auto-migrate",
+          "No public CPL; auction can get expensive",
+        ],
       },
       prosConsB: {
-        pros: ["Directory depth for home services", "Familiar consumer path on Angi"],
-        cons: ["Less Google-native than LSA", "Bundle economics need finance review"],
+        pros: [
+          "Known homeowner brand; Leads plus Ads are distinct tools once named on the Contract",
+          "Directory/Approved presence for shoppers already on Angi",
+          "Task and ZIP controls; credit path for some invalid Leads (not for lost jobs)",
+          "Can sit beside Google rather than replacing it",
+        ],
+        cons: [
+          "“Angi” on a pitch may mean Leads, Ads, a bundle, or Angi Services",
+          "Leads frequently shared; you pay if you do not win",
+          "Subscriptions auto-renew; ETF possible; annual-subscription leads not credit-eligible per Help",
+          "No public national price list",
+        ],
       },
       bestFor: [
         {
-          heading: "Choose LSA when",
-          body: "Your pipeline already skews Google, you can pass screening, and you want leads tied to explicit local queries.",
+          heading: "Use both?",
+          body: "Operationally yes if you can staff both and the Angi Contract allows. Track Google and Angi as separate P&Ls. Keep the channel whose booked-job CAC and gross profit clear your threshold after credits. Angi Ads vs Angi Leads should be two lines, not one “Angi” bucket. Google LSA vs Thumbtack is a different marketplace comparison if you need an independent lead marketplace rather than Angi Inc.",
         },
         {
-          heading: "Choose Angi when",
-          body: "Angi is already part of your market’s research habit, or bundled programs align with how you sell larger tickets.",
+          heading: "When Google usually gets the first test",
+          body: "Eligible emergency and “near me” demand, a usable GBP, and a team that answers the phone. Migration does not change that job—it changes where you click Pause.",
+        },
+        {
+          heading: "When Angi Leads or Ads may still earn a line",
+          body: "Leads: you have margin for shared matches and will measure close rate by zip. Ads: Angi is already how some homeowners shortlist pros in your market and you accept an advertising term. If the salesperson will not separate Leads from Ads, you cannot compare either one to Google.",
         },
       ],
-      sidebarWinners: [
-        { label: "Google search intent", winner: "A" },
-        { label: "Home-services directory depth", winner: "B" },
-        { label: "Screened in-SERP trust", winner: "A" },
+      heroCallouts: [
+        {
+          label: "Winner for Google Search/Maps intercept",
+          winner: "A",
+          reason: "That is the product: local-services results on Search and Maps, pay per valid contact.",
+        },
+        {
+          label: "Winner for Angi directory/brand shoppers",
+          winner: "B",
+          reason: "Angi Ads/Approved profiles live in Angi search and directory—not on Google.",
+        },
+        {
+          label: "Name the Angi SKU first",
+          winner: "B",
+          reason: "Leads ≠ Ads. Comparing the wrong Angi product to Google produces a fake winner.",
+        },
       ],
       faqs: [
         {
-          q: "Should a remodeling contractor pick Google LSA or Angi?",
-          a: "If discovery is Google-led for urgent or high-intent searches, LSA is the tighter match. If your buyers research long cycles inside Angi portfolios, Angi may deserve more budget—test both on booked jobs, not clicks.",
+          q: "Is Google Local Services Ads better than Angi?",
+          a: "It depends which Angi product you were quoted and your booked-job CAC. Google intercepts Search/Maps queries and charges per valid lead. Angi Leads are marketplace matches you often share and pay for even if you lose. Angi Ads are advertising. Compare those units separately.",
         },
         {
-          q: "How do refunds compare?",
-          a: "Read each product’s dispute documentation for your categories. Model expected credit rates into cost per booked job.",
+          q: "Is Angi cheaper than Google LSA?",
+          a: "Not as a universal fact. Neither publishes a national CPL. A cheaper shared Angi Lead that does not book can cost more than a dearer Google valid-lead that does. Subscriptions and ETFs are part of Angi cost; they are not in Google’s public pay-per-lead Help.",
         },
         {
-          q: "Can I run both?",
-          a: "Yes, if you separate tracking and avoid double-paying for the same homeowner—use CRM source tags and call tracking.",
+          q: "Does Google charge per click or per lead?",
+          a: "Per valid lead, not per click—on both the legacy Local Services product and specialized Performance Max campaigns with pay-per-lead goals.",
         },
         {
-          q: "What should I read before I choose?",
-          a: "Read how to choose a lead generation platform and paid vs organic leads so you budget channels against referrals and SEO, not in isolation.",
+          q: "How does Angi charge contractors?",
+          a: "Leads: per Lead, package, or auto-renewing Subscription (Pro Agreement). Ads: advertising per the Contract. You pay for Leads even if you do not win the job.",
         },
         {
-          q: "Where are Angi alternatives?",
-          a: "Use the Angi alternatives page and related comparisons linked below.",
+          q: "Are Angi leads shared?",
+          a: "The Pro Agreement says a Lead is frequently sent to several other approved pros, including Angi Services, and that competition limits apply with homeowner choice. Angi does not publish one official headcount that applies to every lead. Do not use an old “always four contractors” blog figure as policy.",
         },
+        {
+          q: "Does Angi require a contract?",
+          a: "The onboarding Contract sets term. Subscriptions can auto-renew; an ETF may apply if the Contract includes one. Cancel via Customer Care. Google’s public LSA/PMax-PPL Help describes pausing the campaign; it does not describe an Angi-style ETF.",
+        },
+        {
+          q: "Can I use Google LSA and Angi together?",
+          a: "Yes if you staff both and tag CRM. Deduplicate overlap. Do not treat HomeAdvisor as a third company.",
+        },
+        {
+          q: "What happens if a Google lead is bad? Can I credit a bad Angi lead?",
+          a: "Google (US/CA): automated assessment and possible auto-credit; many “didn’t book” outcomes are not credited. Angi Help: some invalid-contact / wrong ZIP / mismatch / duplicate / paused-flow credits within 45 days if you called within 24 hours—not for no-answer, shopping, or lost jobs. Annual Angi subscriptions: credits not offered for those leads.",
+        },
+        {
+          q: "Is Google Guaranteed still a thing? What is Google Verified?",
+          a: "Google Verified is the current screening badge. Google Guarantee money-back was discontinued for services booked after December 7, 2025. Neither badge is a hire or workmanship guarantee.",
+        },
+        {
+          q: "Are Local Services Ads becoming Performance Max? Does that change how I pay?",
+          a: "Google is migrating existing LSA campaigns in phases into specialized Performance Max campaigns with pay-per-lead goals (US home/storefront categories began August 2026; broader groups late 2026; remaining/non-US in 2027). You still pay for valid leads, not clicks; ads still show on Search and Maps only. That is not standard CPC PMax. Migrated accounts: daily average budget, Maximize Conversions bidding, no manual max-per-lead / vertical tCPA. Historical LSA performance reports do not auto-migrate. Not every account has moved yet.",
+        },
+      ],
+      alternatives: [
+        {
+          name: "Google Local Services Ads review",
+          href: getLeadGenerationReviewUrl("google-local-services-ads"),
+          logoSrc: "/Logos/google.jpeg",
+          description: "Pay-per-valid-lead Search/Maps product, credits, and Google Verified.",
+        },
+        {
+          name: "Angi review",
+          href: getLeadGenerationReviewUrl("angi"),
+          logoSrc: "/Logos/angi.jpeg",
+          description: "Identify Ads vs Leads before you compare any quote to Google.",
+        },
+        {
+          name: "Angi vs HomeAdvisor",
+          href: getLeadGenerationCompareUrlFromSlug("angi-vs-homeadvisor"),
+          logoSrc: "/Logos/homeadvisor.jpeg",
+          description: "Same Angi Inc. ecosystem—ads/directory vs Angi Leads branding.",
+        },
+        {
+          name: "Google LSA vs Thumbtack",
+          href: getLeadGenerationCompareUrlFromSlug("google-local-services-ads-vs-thumbtack"),
+          logoSrc: "/Logos/thumbtack.jpeg",
+          description: "Google Search/Maps auction vs an independent marketplace (not Angi Inc.).",
+        },
+      ],
+      sidebarWinners: [
+        { label: "Google Search/Maps intercept", winner: "A" },
+        { label: "Angi directory/brand shoppers", winner: "B" },
+        { label: "Pause without a lead subscription ETF", winner: "A" },
       ],
       moreComparisons: lgMoreComparisons("google-local-services-ads-vs-angi", "google-local-services-ads", "angi", [
         RELATED.lsaTb,
+        RELATED.angiHa,
+        RELATED.tbAngi,
         RELATED.lsaHa,
         RELATED.lsaYelp,
-        RELATED.tbAngi,
-        RELATED.angiHa,
       ], [{ label: "How Google Local Services Ads work", href: "/lead-generation/guides/how-google-local-services-ads-work" }]),
     }
   ),

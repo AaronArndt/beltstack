@@ -15,7 +15,7 @@ const P = {
     visitUrl: "https://getjobber.com",
     bestForSummary: "Best overall for many contractors and home service teams.",
     rating: "4.6",
-    startingPrice: "From ~$69/mo",
+    startingPrice: "From $29/mo billed annually (Core, 1 user)",
   },
   "housecall-pro": {
     name: "Housecall Pro",
@@ -115,7 +115,7 @@ const P = {
     visitUrl: "https://connecteam.com",
     bestForSummary: "Deskless workforce scheduling, time tracking, and internal communication.",
     rating: "4.3",
-    startingPrice: "From ~$29/mo",
+    startingPrice: "Free up to 10 users; paid hubs from $29/mo",
   },
   "oracle-field-service": {
     name: "Oracle Field Service",
@@ -216,6 +216,18 @@ const BASE_FEATURE_ROWS: ComparisonTemplateProps["featureComparison"] = [
     supportB: "supported",
   },
 ];
+
+const dim = (
+  feature: string,
+  productA: string,
+  productB: string
+): ComparisonTemplateProps["featureComparison"][number] => ({
+  feature,
+  productA,
+  productB,
+  supportA: "text",
+  supportB: "text",
+});
 
 const comparisonEntries: [string, ComparisonTemplateProps][] = [
   // Jobber vs Housecall Pro
@@ -1509,83 +1521,254 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
 
   buildComparison("connecteam-vs-jobber", "connecteam", "jobber", {
     summaryParagraph:
-      "Connecteam and Jobber both touch field operations, but Connecteam leads with workforce tools—scheduling, time tracking, forms, and internal communication—while Jobber is a full contractor FSM for quotes, jobs, dispatch, invoicing, and customer workflows.",
+      "Connecteam vs Jobber is not two interchangeable field-service apps. Connecteam is built around the employee: shifts, time clocks, GPS/geofence attendance, forms, chat, training, and HR workflows. Jobber is built around the customer job: request → quote → schedule → invoice → payment. They overlap on scheduling, time, GPS, and forms—and then they diverge.",
+    pageHeading: "Connecteam vs Jobber (2026): Which Fits Your Workflow?",
+    seoTitle: "Connecteam vs Jobber (2026): Which Fits Your Workflow? | BeltStack",
+    seoDescription:
+      "Connecteam organizes deskless employees (schedule, time, comms, training). Jobber organizes customer jobs from request through payment. Compare workflows, pricing, and when to use both—not a checkbox feature tie.",
+    quickVerdictHeading: "Same-looking features, different object at the center.",
+    quickVerdictSub: "Connecteam’s primary record is the worker. Jobber’s primary record is the client job.",
+    researchNote:
+      "Verified September 2026 from Connecteam’s pricing page and Small Business Plan / invoicing Help articles, Connecteam’s integrations catalog, Jobber’s pricing page (getjobber.com/pricing), and Jobber Help on Client hub, recurring jobs, and automatic payments. BeltStack has not subscribed to either product, dispatched jobs in either app, or processed customer payments in Jobber.",
     quickRecommendationA:
-      "Choose Connecteam if your primary pain is deskless workforce coordination, compliance-friendly time tracking, and team communication—not full job-to-cash FSM.",
+      "Choose Connecteam when the operational problem is coordinating people—who works, when they clock, whether they completed the checklist, and how the company talks to them—not collecting a homeowner’s payment.",
     quickRecommendationB:
-      "Choose Jobber if you need an all-in-one field service platform for estimates through payment for typical contractor and home service workflows.",
+      "Choose Jobber when the operational problem is selling and completing customer work: requests, quotes, visits, invoices, and getting paid.",
     quickVerdictParagraphs: [
-      "Many teams use Connecteam alongside another system when they want strong frontline HR and ops without replacing accounting or invoicing depth.",
-      "Jobber remains the cleaner default when the goal is one modern FSM for small to mid-size contractors.",
-      "If you only buy one tool, match the gap: workforce vs full job lifecycle.",
+      "A service-business owner searching “Connecteam vs Jobber” often sees both products listed as field-service software. That label hides the buying decision. Connecteam’s current pricing page sells three hubs—Operations (time clock, job scheduling, forms, quick tasks), Communications (chat, updates, directory, surveys, knowledge base, help desk), and HR & Skills (time off, courses, quizzes, documents, recognition, hiring/onboarding). Jobber’s current pricing page sells Core, Connect, Grow, and Plus around client manager/CRM, Client hub, requests, online booking, quoting, scheduling, invoicing, and Jobber Payments.",
+      "Connecteam Help on invoicing is explicit: you set up the time clock and job scheduler, attach jobs (which Help says may represent customers, sites, projects, or roles), export Job Insights or the schedule list to Excel, and generate invoices elsewhere. That is not Jobber’s quote → Client hub approval → invoice → card/ACH path. Connecteam’s own comparison page (updated December 2025) likewise states it does not support built-in quotes and estimates.",
+      "Overlap is real: both schedule field work, track time, use location in some form, and attach checklists. The job those features serve is different. Connecteam scheduling answers who is working which shift. Jobber scheduling answers which customer visit is on the calendar and what happens after it. If you only buy one product, buy the system that matches the record you cannot afford to keep in a spreadsheet.",
     ],
+    relationshipContext: {
+      heading: "Same-looking features, different workflow",
+      paragraphs: [
+        "Connecteam’s typical path: hire/add the employee → publish a shift or job on the schedule (open shifts, repeating shifts on paid tiers) → employee clocks in on mobile or a kiosk (GPS stamp on paid Operations; geofence sites on Advanced+) → completes forms/checklists/tasks → uses chat, updates, or knowledge base → clocks out → manager approves timesheets and exports or sends hours to a payroll integration. Customers, if they appear, are usually labels on jobs or shift titles—not a pipeline of quotes and invoices.",
+        "Jobber’s typical path: customer submits a request or books online → office (or tech) builds a quote → client approves in Client hub (deposits possible with Jobber Payments) → job is scheduled/dispatched, with routing and recommendations on higher plans → tech runs the visit (notes, photos, checklists, timers) → invoice goes out → customer pays card, Tap to Pay, or ACH in Client hub, or a saved card is charged on recurring work (automatic payments on select plans). Follow-up lives in reminders, review/marketing tools, and (on Plus) Pipeline/Marketing Suite.",
+        "Using both is a real architecture, not a slogan. Jobber can own customers, properties, quotes, jobs, invoices, and payments. Connecteam can own employees, attendance, labor compliance-style time clocks, chat, training, and documents. There is no native Connecteam–Jobber product listed on either vendor’s first-party catalogs we reviewed. Zapier publishes Connecteam + Jobber zaps (for example, create a Connecteam job when a Jobber job is created). Connecteam Help: Zapier is available on Advanced or higher. Expect duplicate employee names and job labels unless you design the handoff. Do not assume timesheets, GPS, and invoices stay in lockstep without testing the zap.",
+      ],
+    },
+    decisionGuideAHeading: "Choose Connecteam if…",
+    decisionGuideBHeading: "Choose Jobber if…",
     decisionGuideA: [
-      "You need shift scheduling, time clocks, and checklists for many field employees.",
-      "You want internal comms and training flows more than customer-facing job portals.",
+      "Your bottleneck is labor: coverage, clock-ins, overtime/breaks, geofence attendance, or getting a large hourly crew onto one mobile app.",
+      "You need an employee workplace app—chat, company updates, directory, courses, quizzes, documents, time off—not a homeowner portal.",
+      "You have 10 or fewer users (active and archived count on the Small Business Plan) and Connecteam’s free-for-life plan actually covers the workforce tools you will use.",
+      "Quotes, Client hub, and card payments already live in another system—or you invoice from hours exported out of Connecteam.",
     ],
     decisionGuideB: [
-      "You need quotes, jobs, dispatch, invoicing, and customer management in one place.",
-      "You are optimizing contractor revenue workflows end-to-end.",
+      "A customer call or web request has to become a quote, a scheduled visit, an invoice, and a payment without leaving the product.",
+      "You sell recurring residential or light-commercial service (lawn, cleaning, HVAC maintenance) and need recurring jobs plus, on select plans, automatic payments on a saved card or ACH.",
+      "Technicians need the day’s customer jobs, not a hospitality-style shift board with open-shift claiming and 12 named schedules.",
+      "You will pay for users in Jobber’s plan bands (1 / 5 / 10 / 15 on the public pricing page) because the customer ledger is the system of record.",
     ],
-    ratingsComparison: [
-      { category: "Workforce & time tracking", productA: "4.6", productB: "4.2" },
-      { category: "Full contractor FSM depth", productA: "3.5", productB: "4.7" },
-      { category: "SMB ease of purchase", productA: "4.4", productB: "4.5" },
+    decisionGuideNeither: [
+      "You need enterprise home-service machinery (call center, pricebook depth, multi-location HVAC/plumbing at ServiceTitan scale)—neither product is that SKU.",
+      "You are a general contractor who needs project financials, change orders, and construction ERP. Jobber is home-service job software; Connecteam is workforce software.",
+      "You will not maintain two systems and you also will not pick one primary record. A half-implemented stack is worse than spreadsheets.",
+      "Consider using both if Jobber (or another FSM) already runs job-to-cash and you still cannot get hourly crews to clock, train, or read announcements—budget duplicate data and Zapier (Connecteam Advanced+) instead of assuming a native sync.",
     ],
+    featureComparisonColumnLabel: "What you’re comparing",
+    featureComparisonSub:
+      "A checkmark for “scheduling” or “forms” does not mean the same job. Read the workflow each row actually feeds.",
     featureComparison: [
-      ...BASE_FEATURE_ROWS,
-      {
-        feature: "Quotes, invoicing & customer payments",
-        productA: "Not the core product—often paired with other tools",
-        productB: "Core workflows with estimates through payment",
-        supportA: "partial",
-        supportB: "supported",
-        stronger: "B",
-      },
-      {
-        feature: "Time clocks & shift scheduling",
-        productA: "Built-in for deskless teams",
-        productB: "Supported via scheduling; less HR-suite depth",
-        supportA: "supported",
-        supportB: "partial",
-        stronger: "A",
-      },
+      dim(
+        "Primary object",
+        "The employee (and the shift/job they are assigned). Hubs are Operations, Communications, and HR & Skills.",
+        "The client and the job (request, quote, visit, invoice, payment). Plans are Core, Connect, Grow, Plus."
+      ),
+      dim(
+        "Customer CRM",
+        "Jobs can be named as customers, sites, projects, or roles (Connecteam Help). That is a label for time and schedule—not a quote/invoice/payment history.",
+        "Client manager/CRM, properties, requests, quotes, jobs, invoices, notes. Client hub is the self-serve customer surface."
+      ),
+      dim(
+        "Quotes / estimates",
+        "No built-in customer quoting. Connecteam’s own comparison page states it does not support quotes and estimates. Custom forms are not a substitute Client hub quote.",
+        "Professional quotes, templates, signature approvals, optional line items/markups on Grow, automated quote follow-up on Connect+."
+      ),
+      dim(
+        "Invoicing & payments",
+        "Help Center workflow: export Job Insights or schedule list to Excel and invoice elsewhere. No native customer payment portal on the product pages we reviewed.",
+        "Invoices, batch invoicing, reminders, Jobber Payments (pricing page lists 2.9% + 30¢ cards; 2.7% + 30¢ Tap to Pay; 1% ACH in the US). Automatic payments on select plans for recurring jobs."
+      ),
+      dim(
+        "Scheduling model",
+        "Workforce/shift scheduling: open shifts, repeating shifts, shift claiming, auto-scheduling on Expert, multiple named schedules on higher Operations tiers.",
+        "Customer visit/job scheduling, dispatch, route optimization, smart recommendations based on availability and travel (higher plans)."
+      ),
+      dim(
+        "Time tracking",
+        "Employee time clock: mobile, kiosk, GPS stamps, overtime/break-oriented controls, payroll-period tools, timesheet export. Geofence and breadcrumbs unlock on higher Operations plans.",
+        "Clock in/out of assessments and jobs. Automatic location timers / geofencing on Grow. Time is for job costing and payroll prep against customer work."
+      ),
+      dim(
+        "GPS / location",
+        "Clock-in/out GPS on paid Operations; up to 10 geofence sites on Advanced; unlimited geofence, breadcrumbs, and geofence auto clock-out on Expert+.",
+        "GPS waypoints on field actions; automatic visit timers; real-time tracking described with fleet-partner devices on the pricing feature list."
+      ),
+      dim(
+        "Forms / checklists",
+        "Operations forms and checklists attached to employee work; conditional fields on Advanced; shift attachments (photos, signatures, mileage) on higher tiers.",
+        "Job checklists and field documentation on the job record so the visit, quote, and invoice can reuse what the tech captured."
+      ),
+      dim(
+        "What the customer can do",
+        "Predominantly employee-facing. Advanced Operations can share a live schedule link. Booking appears via integrations such as Wix Bookings—not a Jobber-style Client hub.",
+        "Request work, book online, approve quotes, view appointments, pay invoices, tip, print receipts, request more work (Jobber Help: Client hub)."
+      ),
+      dim(
+        "What the field employee can do",
+        "Schedule, clock, forms, tasks, chat, updates, directory, knowledge base, courses, documents, time off, recognition—depending on hubs/plans.",
+        "See assigned jobs, notes, photos, timers, checklists; start/stop work; collect payment if permissions allow. Spanish-language tech app (Jobber pricing FAQ). Not a training/HR suite."
+      ),
+      dim(
+        "Recurring work",
+        "Repeating shifts/templates (Advanced+). Recurrence is employee coverage, not a customer billing contract.",
+        "Recurring jobs with per-visit or fixed-period invoicing (Jobber Help). Automatic card/ACH charges on select plans when a payment method is on file."
+      ),
+      dim(
+        "Payroll & accounting",
+        "Not payroll software. Paid Operations lists payroll integration; the Small Business feature table marks payroll integration as not included. Integrations catalog includes Gusto, Zapier, Xero, Paychex, QuickBooks-family tools, and others—confirm the live list.",
+        "Not payroll software. Pricing page: QuickBooks Online and Xero sync (Connect+ for QBO on the feature grid we fetched), Gusto timesheet/expense sync, Zapier, 100+ marketplace apps on Core."
+      ),
+      dim(
+        "Pricing architecture",
+        "Free Small Business Plan up to 10 users (active + archived). Hubs priced separately: Basic $29 / Advanced $49 / Expert $99 per hub per month billed yearly for the first 30 users (monthly list $35 / $59 / $119). Per-user add-on after 30. Limited plan is a separate free essentials tier for larger teams.",
+        "No free plan. 14-day trial on Grow features, no credit card. Core / Connect / Grow / Plus, billed monthly (no commitment), monthly with a 1-year term, or annual prepaid. Public page prices by included-user bands (1, 5, 10, 15). 16+ is “let’s chat.”"
+      ),
+      dim(
+        "Biggest tradeoff",
+        "Excellent employee system of record; you still need somewhere else to quote, invoice, and collect unless you stay on exports.",
+        "Excellent customer-job system of record; you will not get Connecteam-depth chat, courses, kiosk clocks, or hub-style HR in Jobber."
+      ),
     ],
     pricingComparison:
-      "Connecteam publishes approachable starting tiers; Jobber scales with plan features and seats. If you need both workforce and full FSM, model total software spend plus integration time.",
+      "Do not compare “$29 vs $29.” Connecteam’s $29 is one hub, up to 30 users, billed yearly. Jobber’s $29 is Core for one user, billed annually.",
+    pricingComparisonParagraphs: [
+      "Connecteam (pricing page, September 2026, USD): 14-day trial, no credit card. Small Business Plan is free for life for up to 10 users; Help states active and archived users both count, and that the plan includes the platform’s features with no catch on the FAQ—while the detailed Operations feature table still marks payroll integration as not included on Small Business. After 10 users you pick paid hubs (or the Limited free essentials plan for teams still under 30). Operations / Communications / HR & Skills are billed separately. Yearly Basic / Advanced / Expert: $29 / $49 / $99 per hub per month for the first 30 users (monthly: $35 / $59 / $119). Extra users after 30 are billed per user per hub (Operations Basic yearly example on the page: $0.80 per additional user per month). Buying all three hubs at Basic yearly is three subscriptions, not one $29 line.",
+      "Jobber (getjobber.com/pricing, September 2026, USD, standard rates after any intro promo): no free plan. 14-day full Grow trial, no credit card. Core (1 user): $29/mo billed annually, $39/mo on a 1-year monthly commitment, $49/mo with no commitment. Connect, Grow, and Plus are sold in user bands. Examples, billed annually: Connect 1 user $99/mo, Connect 5 users $149/mo, Connect 10 $229/mo, Connect 15 $299/mo. Grow 1 user $149/mo, Grow 5 $229/mo, Grow 10 $299/mo, Grow 15 $399/mo. Plus 5 users $399/mo, Plus 10 $449/mo, Plus 15 $529/mo. Month-to-month is higher. Feature gates matter: Core already includes quotes, invoices, online payments, Client hub, requests, and online booking; Connect adds automated reminders, auto-pay, checklists, QBO, time/expense; Grow adds richer quotes, job costing, two-way SMS, automatic time tracking. Jobber Payments card/ACH fees sit on top of subscription. Confirm the live configurator—the page also runs limited-time discounts we are not treating as the ongoing price.",
+      "BeltStack calculations using those published annual rates (not a quote): a 5-person crew on Connecteam Small Business Plan is $0 if they stay at or under 10 total users; the same 5 people on Jobber Connect’s 5-user annual band is $149/month. A 15-person crew on Connecteam Operations Advanced only is $49/month (still inside the 30-user block); Jobber Connect 15-user annual band is $299/month, Grow 15 is $399/month. Those dollars do not buy the same records. Add Communications or HR hubs on Connecteam, or Plus/payment fees on Jobber, before you call either one cheaper.",
+    ],
+    roiGuidance: {
+      heading: "Software cost is not the same problem",
+      paragraphs: [
+        "Price Connecteam against missed punches, overtime errors, and the cost of a second tool for announcements/training. Price Jobber against unquoted work, uninvoiced visits, slow payment, and the cost of a second tool for CRM. Adding both only pays if each system owns a different bottleneck.",
+        "Connecteam Help does not turn exported hours into a customer-facing invoice. Jobber does not replace an employee training library. Treat “we already pay for one, so skip the other” as a workflow decision, not a discount.",
+      ],
+      example: {
+        heading: "BeltStack illustrative example — not a vendor benchmark",
+        body: "A 15-cleaner company that already invoices in QuickBooks but cannot get reliable clock-ins is evaluating Connecteam Operations Advanced at $49/month yearly (published 30-user block) versus buying Jobber Grow at $399/month yearly for 15 users. Jobber would add Client hub and recurring billing they may not need if QBO already bills. Connecteam would not replace QBO invoices. The useful comparison is $49 of workforce software versus $399 of customer-job software—not “which FSM is cheaper.” If they need both recurring customer billing and a 20-person clock, model Jobber + Connecteam together, including Zapier and duplicate job names.",
+      },
+    },
     prosConsA: {
-      pros: ["Strong mobile workforce experience.", "Useful when compliance and coordination are the bottleneck."],
-      cons: ["Not a standalone replacement for full contractor FSM.", "May require another tool for job quoting and invoicing."],
+      pros: [
+        "Free Small Business Plan up to 10 users (Help: free for life; archived users count)",
+        "Hubs let you buy Operations without paying for HR, or the reverse",
+        "Time clock, kiosk, geofence, breadcrumbs, chat, courses, and documents on the employee app",
+        "Job Insights export can feed billing even without native invoices",
+      ],
+      cons: [
+        "Not a customer quote/invoice/payment system—Help’s invoicing article is an Excel export workflow",
+        "Paid price is per hub; three hubs at Expert is not $99 total",
+        "Small Business Plan feature table excludes payroll integration",
+        "Pairing with Jobber is Zapier (Advanced+), not a native two-way FSM sync",
+      ],
     },
     prosConsB: {
-      pros: ["End-to-end contractor workflows in one platform.", "Broad trade fit and polished SMB packaging."],
-      cons: ["Less dedicated workforce/HR depth than pure workforce suites."],
+      pros: [
+        "Request → quote → job → invoice → Client hub payment in one product, including on Core",
+        "Recurring jobs and, on select plans, automatic card/ACH charges",
+        "Published user-band pricing and a 14-day Grow trial with no credit card",
+        "QBO/Xero and Gusto connections for books and payroll prep",
+      ],
+      cons: [
+        "No free plan; a 15-person Connect/Grow bill is a different expense class than Connecteam’s 30-user hub block",
+        "Not an employee communications, training, or HR platform",
+        "Time/GPS are job-visit tools, not Connecteam’s attendance-compliance clock",
+        "Plus add-ons (Receptionist, Pipeline, Marketing Suite) and processing fees are extra decisions",
+      ],
     },
     bestFor: [
-      { heading: "Best for deskless workforce operations", body: "Connecteam when shifts, time tracking, and internal communication dominate." },
-      { heading: "Best for contractor FSM", body: "Jobber when you want quotes through payments without stitching multiple systems." },
+      {
+        heading: "Plumber (leaking pipe today)",
+        body: "The customer needs a request captured, a tech dispatched, and an invoice paid. That is Jobber’s path. Connecteam can clock the plumber and attach a safety checklist; it will not replace the customer invoice unless you export hours and bill somewhere else.",
+      },
+      {
+        heading: "HVAC (estimate, then install)",
+        body: "Quotes, optional line items, deposits, and converting an approved quote to a job are Jobber Grow/Connect features. Connecteam does not publish a customer estimate module.",
+      },
+      {
+        heading: "Cleaning company (20 cleaners, recurring homes)",
+        body: "You may need both layers: Jobber for the customer contract, recurring visits, and auto-pay; Connecteam for who is on which shift, GPS attendance, and the employee app. If you only have a payroll-hours problem and invoicing already works, Connecteam alone can be the buy. If you only have a “who did we bill this month?” problem, Jobber alone can be the buy.",
+      },
+      {
+        heading: "Landscaping (crews + routes + monthly billing)",
+        body: "Jobber recurring jobs and routing address the customer calendar. Connecteam repeating shifts and crew clocks address labor. Fit depends on whether missed invoices or missed punches cost more.",
+      },
+      {
+        heading: "Construction / general contractor",
+        body: "Connecteam is a plausible crew-and-safety layer. Jobber is still home-service job software, not a construction ERP. Do not buy this pair to replace project-financial tools.",
+      },
     ],
     alternatives: [
-      { name: "Zuper", href: getFieldServiceReviewUrl("zuper"), description: "Flexible modern FSM for configurable field workflows." },
-      { name: "Workiz", href: getFieldServiceReviewUrl("workiz"), description: "Budget-friendly FSM for small field teams." },
+      { name: "Housecall Pro", href: getFieldServiceReviewUrl("housecall-pro"), description: "Home-service FSM in the same customer-job category as Jobber—not a Connecteam substitute." },
+      { name: "Zuper", href: getFieldServiceReviewUrl("zuper"), description: "Configurable field-service workflows if you need FSM depth with more integration flexibility." },
+      { name: "Workiz", href: getFieldServiceReviewUrl("workiz"), description: "Smaller-team FSM when Jobber’s user-band price is the issue and you still need job-to-cash." },
     ],
     faqs: [
-      { q: "Can Connecteam replace Jobber?", a: "Usually not for full job-to-cash FSM. Many teams pair Connecteam with an FSM or use Jobber alone if workforce tooling is not the main gap." },
+      {
+        q: "Is Connecteam better than Jobber?",
+        a: "Only for the problem it is designed to own. Connecteam is better when the gap is employees, clocks, and internal communication. Jobber is better when the gap is customers, quotes, jobs, and payments. BeltStack is not declaring a universal winner.",
+      },
+      {
+        q: "Is Connecteam a CRM? Does it manage customers?",
+        a: "Connecteam Help allows jobs to represent customers, worksites, or projects so hours can be associated with a name. That is not Jobber’s client record with properties, quote history, invoices, and Client hub. Do not treat a job label as a field-service CRM.",
+      },
+      {
+        q: "Does Connecteam do invoicing or take customer payments?",
+        a: "Connecteam Help’s invoicing article is: capture time against jobs, then export Job Insights or the schedule list (Excel) and generate invoices outside Connecteam. We did not find a native customer payment portal equivalent to Jobber Payments on Connecteam’s current pricing/product pages.",
+      },
+      {
+        q: "Can Connecteam replace Jobber?",
+        a: "It can replace the overlapping labor layer (schedule, time, some job documentation). You lose customer requests, quoting, Client hub, invoicing, and online payments unless another system already does that work.",
+      },
+      {
+        q: "Can Jobber replace Connecteam?",
+        a: "It can replace overlapping job assignment and visit-level time/GPS. You lose Connecteam’s employee app depth: chat, training courses, document packs, time-off policies, kiosk clocks, and hub-style HR. Jobber’s pricing FAQ describes a Spanish tech app and timers—not an LMS.",
+      },
+      {
+        q: "Does Jobber track time and GPS?",
+        a: "Yes. Jobber’s pricing page lists time tracking on jobs/assessments, automatic location timers on Grow, GPS waypoints, and fleet-partner tracking. That time is tied to customer visits. It is not marketed as Connecteam’s attendance-compliance time clock.",
+      },
+      {
+        q: "Does Connecteam have a free plan? Does Jobber?",
+        a: "Connecteam: Small Business Plan is free for life up to 10 users (Help: active + archived). A Limited free essentials plan exists for larger teams under 30 after trial. Jobber: no free plan; 14-day Grow trial, no credit card required (Jobber pricing FAQ).",
+      },
+      {
+        q: "Which is cheaper for 10 employees?",
+        a: "Connecteam can be $0 on the Small Business Plan at 10 users. Jobber at 10 users on Connect billed annually is $229/month on the September 2026 pricing page ($299 Grow). That comparison is only valid if you did not need Jobber’s customer-job features—which is usually why people search this pair. Confirm live quotes.",
+      },
+      {
+        q: "Can I use Connecteam and Jobber together? Is there an integration?",
+        a: "Yes as a manual or Zapier stack: Jobber for customers/jobs/invoices, Connecteam for employees/time/comms. Zapier lists Connecteam + Jobber automations. Connecteam Help requires Advanced or higher for Zapier. We did not find a native first-party connector. You will likely maintain employees and job names in both places.",
+      },
     ],
     sidebarWinners: [
-      { label: "Winner for workforce & time tracking", winner: "A" },
-      { label: "Winner for full contractor FSM", winner: "B" },
+      { label: "Employee system of record", winner: "A" },
+      { label: "Customer-job system of record", winner: "B" },
+      { label: "Free plan for ≤10 users", winner: "A" },
     ],
     moreComparisons: [
       { label: "Connecteam vs Housecall Pro", href: getFieldServiceCompareUrl("connecteam-vs-housecall-pro") },
       { label: "Connecteam vs ServiceTitan", href: getFieldServiceCompareUrl("connecteam-vs-servicetitan") },
+      { label: "Jobber vs Housecall Pro", href: getFieldServiceCompareUrl("jobber-vs-housecall-pro") },
       { label: "Jobber vs ServiceTitan", href: getFieldServiceCompareUrl("jobber-vs-servicetitan") },
-      { label: "Zuper vs Jobber", href: getFieldServiceCompareUrl("zuper-vs-jobber") },
+      { label: "Jobber vs Workiz", href: getFieldServiceCompareUrl("jobber-vs-workiz") },
     ],
     relevantTradeLinks: RELEVANT_LINKS,
     heroCallouts: [
-      { label: "Best for workforce coordination", winner: "A", reason: "Connecteam centers deskless employees and schedules." },
-      { label: "Best for job-to-cash FSM", winner: "B", reason: "Jobber is built for contractor workflows end-to-end." },
+      { label: "When the gap is the crew", winner: "A", reason: "Connecteam’s hubs are built around employees, clocks, and internal comms." },
+      { label: "When the gap is the customer job", winner: "B", reason: "Jobber runs request → quote → visit → invoice → payment." },
     ],
   }),
 

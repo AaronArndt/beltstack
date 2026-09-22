@@ -16,7 +16,7 @@ function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: stri
 }
 
 const FAQ_ITEMS = [
-  { q: "How do Google Local Services Ads charge?", a: "LSA generally charges per lead interaction, not per click. Final economics still depend on category, location, and booked-job conversion quality." },
+  { q: "How do Google Local Services Ads charge?", a: "Google charges per valid lead from the Local Services ad, not per click. Prices vary by location, job type, lead type, and bidding mode. US/Canada accounts may receive automated credits on some poor-quality leads." },
   { q: "Why are my LSA leads expensive?", a: "Competition, weak profile trust signals, broad service areas, and poor response speed can all raise effective cost per booked job." },
   { q: "What should I run with LSA?", a: "Most teams run LSA with at least one marketplace or paid social channel plus owned SEO pages to reduce dependency risk." },
 ];
@@ -46,11 +46,11 @@ export default function HowGoogleLsaWorkPage() {
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
               <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">How Google Local Services Ads Work</h1>
-              <p className="mt-3 text-[#57534E]">Screening, budgets, disputes, and lead billing basics.</p>
+              <p className="mt-3 text-[#57534E]">Screening, budgets, automated lead credits, and pay-per-valid-lead billing.</p>
               <GuideLastUpdated date="March 25, 2026" />
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
-              <p>LSA shows a Google Screened listing for eligible categories. You set a weekly budget, receive calls/messages as leads, and can dispute misfires per policy.</p>
+              <p>LSA is a Google Search and Maps product for eligible local services. After screening, ads can show the Google Verified badge. You set an average weekly budget and a bidding mode, and you pay for valid leads (calls, messages, or bookings)—not clicks. In the US and Canada, Google assesses lead quality automatically and may issue credits; the older “dispute every misfire” workflow is not the current system.</p>
               <p>
                 <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
                   Best lead generation tools roundup
@@ -59,6 +59,11 @@ export default function HowGoogleLsaWorkPage() {
                 <Link href="/lead-generation/review/google-local-services-ads" className="font-semibold text-[#10B981] hover:underline">
                   Full Google LSA review
                 </Link>{" "}
+                ·{" "}
+                <Link href="/lead-generation/compare/google-local-services-ads-vs-thumbtack" className="font-semibold text-[#10B981] hover:underline">
+                  Google LSA vs Thumbtack comparison
+                </Link>
+                {" "}
                 ·{" "}
                 <Link href="/lead-generation/compare/google-local-services-ads-vs-yelp-ads" className="font-semibold text-[#10B981] hover:underline">
                   Google LSA vs Yelp Ads comparison

@@ -86,14 +86,14 @@ const JOBBER_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "fieldpulse", name: "FieldPulse", logoSrc: LOGOS.fieldpulse, rating: "4.4", bestFor: "dispatch-heavy trades", description: "Ops-forward FSM for growing contractor crews.", reviewHref: getFieldServiceReviewUrl("fieldpulse"), compareHref: getFieldServiceCompareUrl("fieldpulse-vs-jobber"), startingPrice: "From ~$99/mo", standoutFeature: "Dispatch; trade ops" },
   { slug: "zuper", name: "Zuper", logoSrc: LOGOS.zuper, rating: "4.4", bestFor: "flexible FSM", description: "Configurable field workflows and integrations.", reviewHref: getFieldServiceReviewUrl("zuper"), compareHref: getFieldServiceCompareUrl("zuper-vs-jobber"), startingPrice: "Custom / tiered", standoutFeature: "Flexible FSM" },
   { slug: "workiz", name: "Workiz", logoSrc: LOGOS.workiz, rating: "4.4", bestFor: "small teams", description: "Lower cost for small field teams.", reviewHref: getFieldServiceReviewUrl("workiz"), compareHref: getFieldServiceCompareUrl("jobber-vs-workiz"), startingPrice: "From ~$29/mo", standoutFeature: "Small teams; value" },
-  { slug: "connecteam", name: "Connecteam", logoSrc: LOGOS.connecteam, rating: "4.3", bestFor: "workforce & shifts", description: "Deskless workforce scheduling and time tracking—pair with FSM if needed.", reviewHref: getFieldServiceReviewUrl("connecteam"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber"), startingPrice: "From ~$29/mo", standoutFeature: "Workforce ops" },
+  { slug: "connecteam", name: "Connecteam", logoSrc: LOGOS.connecteam, rating: "4.3", bestFor: "workforce & shifts", description: "Employee scheduling, time clocks, and internal comms—not customer quotes or Jobber Payments.", reviewHref: getFieldServiceReviewUrl("connecteam"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber"), startingPrice: "Free up to 10 users; paid hubs from $29/mo", standoutFeature: "Workforce ops" },
   { slug: "servicetitan", name: "ServiceTitan", logoSrc: LOGOS.servicetitan, rating: "4.5", bestFor: "growing companies", description: "Enterprise-grade for larger operations.", reviewHref: getFieldServiceReviewUrl("servicetitan"), startingPrice: "Custom", standoutFeature: "Enterprise; depth" },
   { slug: "kickserv", name: "Kickserv", logoSrc: LOGOS.kickserv, rating: "4.3", bestFor: "small service businesses", description: "Straightforward FSM for small businesses.", reviewHref: getFieldServiceReviewUrl("kickserv"), compareHref: getFieldServiceCompareUrl("kickserv-vs-jobber"), startingPrice: "From ~$55/mo", standoutFeature: "Small business" },
   { slug: "service-fusion", name: "Service Fusion", logoSrc: LOGOS.servicefusion, rating: "4.4", bestFor: "HVAC & plumbing", description: "HVAC and plumbing value and depth.", reviewHref: getFieldServiceReviewUrl("service-fusion"), startingPrice: "From ~$99/mo", standoutFeature: "HVAC; plumbing" },
 ];
 
 const jobberOriginalRow: AlternativesTableRow = {
-  slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "overall contractors", startingPrice: "From ~$69/mo", standoutFeature: "All-in-one; balance", reviewHref: getFieldServiceReviewUrl("jobber"),
+  slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "overall contractors", startingPrice: "From $29/mo billed annually (Core, 1 user)", standoutFeature: "All-in-one; balance", reviewHref: getFieldServiceReviewUrl("jobber"),
 };
 
 const jobberPage: AlternativesTemplateProps = {
@@ -119,7 +119,7 @@ const jobberPage: AlternativesTemplateProps = {
     { productName: "FieldPulse", heading: "Best for dispatch-heavy trade crews", body: "FieldPulse emphasizes operational dispatch and technician workflows for growing contractors. Compare when operations—not only marketing—drive the evaluation.", reviewHref: getFieldServiceReviewUrl("fieldpulse"), compareHref: getFieldServiceCompareUrl("fieldpulse-vs-jobber") },
     { productName: "Zuper", heading: "Best for flexible field workflows", body: "Zuper suits teams that need configurable automations and integrations beyond templated SMB defaults.", reviewHref: getFieldServiceReviewUrl("zuper"), compareHref: getFieldServiceCompareUrl("zuper-vs-jobber") },
     { productName: "Workiz", heading: "Best for small teams", body: "Workiz offers lower cost for small field teams. For businesses that want core FSM without Jobber's price.", reviewHref: getFieldServiceReviewUrl("workiz"), compareHref: getFieldServiceCompareUrl("jobber-vs-workiz") },
-    { productName: "Connecteam", heading: "Best for workforce coordination", body: "Connecteam is workforce-first—pair with an FSM or choose Jobber alone if job-to-cash workflows are the main gap.", reviewHref: getFieldServiceReviewUrl("connecteam"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+    { productName: "Connecteam", heading: "Best for workforce coordination", body: "Connecteam is workforce-first (schedule, time, comms, training). Pair it with Jobber or choose Jobber alone if quotes-to-payment is the main gap. Connecteam Help invoices via hour exports, not a customer payment portal.", reviewHref: getFieldServiceReviewUrl("connecteam"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber") },
     { productName: "ServiceTitan", heading: "Best for growing companies", body: "ServiceTitan is enterprise-grade for larger operations. For companies that have outgrown Jobber's scale.", reviewHref: getFieldServiceReviewUrl("servicetitan") },
     { productName: "Kickserv", heading: "Best for small service businesses", body: "Kickserv is straightforward FSM for small businesses. Compare with Jobber for fit and price.", reviewHref: getFieldServiceReviewUrl("kickserv"), compareHref: getFieldServiceCompareUrl("kickserv-vs-jobber") },
     { productName: "Service Fusion", heading: "Best for HVAC & plumbing", body: "Service Fusion offers HVAC and plumbing value and depth. For trade-focused teams.", reviewHref: getFieldServiceReviewUrl("service-fusion") },
@@ -747,7 +747,7 @@ const buildopsPage: AlternativesTemplateProps = {
 
 // ——— Connecteam alternatives ———
 const CONNECTEAM_ALTERNATIVES: AlternativesTopPick[] = [
-  { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, rating: "4.6", bestFor: "full contractor FSM", description: "All-in-one job-to-cash workflows for contractors.", reviewHref: getFieldServiceReviewUrl("jobber"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber"), startingPrice: "From ~$69/mo", standoutFeature: "Full FSM" },
+  { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, rating: "4.6", bestFor: "full contractor FSM", description: "Customer jobs from request through payment—not a Connecteam-style employee app.", reviewHref: getFieldServiceReviewUrl("jobber"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber"), startingPrice: "From $29/mo billed annually (Core, 1 user)", standoutFeature: "Full FSM" },
   { slug: "zuper", name: "Zuper", logoSrc: LOGOS.zuper, rating: "4.4", bestFor: "flexible FSM", description: "Configurable field workflows when you need more than templates.", reviewHref: getFieldServiceReviewUrl("zuper"), startingPrice: "Custom / tiered", standoutFeature: "Flexible FSM" },
   { slug: "housecall-pro", name: "Housecall Pro", logoSrc: LOGOS.housecallpro, rating: "4.5", bestFor: "home service", description: "Home-service FSM with marketing and customer tools.", reviewHref: getFieldServiceReviewUrl("housecall-pro"), startingPrice: "From ~$49/mo", standoutFeature: "Home service" },
   { slug: "workiz", name: "Workiz", logoSrc: LOGOS.workiz, rating: "4.4", bestFor: "small teams", description: "Affordable FSM for small field teams.", reviewHref: getFieldServiceReviewUrl("workiz"), startingPrice: "From ~$29/mo", standoutFeature: "Value" },
@@ -778,14 +778,14 @@ const connecteamPage: AlternativesTemplateProps = {
       name: "Connecteam",
       logoSrc: LOGOS.connecteam,
       bestFor: "Deskless workforce",
-      startingPrice: "From ~$29/mo",
+      startingPrice: "Free up to 10 users; paid hubs from $29/mo",
       standoutFeature: "Workforce ops",
       reviewHref: getFieldServiceReviewUrl("connecteam"),
     },
     CONNECTEAM_ALTERNATIVES
   ),
   detailedAlternatives: [
-    { productName: "Jobber", heading: "Best full contractor FSM", body: "Jobber when you need estimates through payment in one system.", reviewHref: getFieldServiceReviewUrl("jobber"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber") },
+    { productName: "Jobber", heading: "Best full contractor FSM", body: "Jobber when you need estimates through payment in one system. It does not replace Connecteam chat, training, or kiosk time clocks.", reviewHref: getFieldServiceReviewUrl("jobber"), compareHref: getFieldServiceCompareUrl("connecteam-vs-jobber") },
     { productName: "Zuper", heading: "Best flexible field FSM", body: "Zuper when configurable workflows and integrations lead the evaluation.", reviewHref: getFieldServiceReviewUrl("zuper") },
     { productName: "Housecall Pro", heading: "Best home service marketing + FSM", body: "Housecall Pro for residential-focused teams.", reviewHref: getFieldServiceReviewUrl("housecall-pro") },
     { productName: "Workiz", heading: "Best value for small teams", body: "Workiz when budget matters and scope is lighter.", reviewHref: getFieldServiceReviewUrl("workiz") },
@@ -795,7 +795,7 @@ const connecteamPage: AlternativesTemplateProps = {
   relatedComparisons: [fsRel("connecteam-vs-jobber"), fsRel("zuper-vs-jobber")],
   relatedResources: defaultRelatedResources("Connecteam", getFieldServiceReviewUrl("connecteam")),
   faqItems: [
-    { q: "Can I use Jobber and Connecteam together?", a: "Yes—many teams pair workforce tools with FSM. Model integration overhead and whether one primary system is simpler." },
+    { q: "Can I use Jobber and Connecteam together?", a: "Yes as a two-system stack: Jobber for customers/quotes/invoices, Connecteam for employees/time/comms. Zapier lists automations; Connecteam Help requires Advanced or higher. There is no native first-party connector, so expect duplicate employee and job names unless you design the handoff." },
     { q: "What is the closest Connecteam alternative for FSM?", a: "Jobber is the closest common all-in-one FSM comparison; Zuper is a flexible alternative when integrations matter." },
   ],
 };
