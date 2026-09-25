@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { resolveCrmGuideSidebarRating } from "@/lib/data/crmCanonicalRating";
 
 export type GuideSidebarItem = {
   name: string;
@@ -24,12 +25,7 @@ type GuideSidebarProps = {
 function SidebarItem({ item }: { item: GuideSidebarItem }) {
   const [imgError, setImgError] = useState(false);
   const showLogo = item.logoSrc != null && item.logoSrc !== "" && !imgError;
-  const ratingStr =
-    item.rating != null
-      ? typeof item.rating === "number"
-        ? String(item.rating)
-        : item.rating
-      : null;
+  const ratingStr = resolveCrmGuideSidebarRating(item.reviewHref, item.rating) ?? null;
 
   return (
     <div className="flex flex-col gap-2 pt-4 first:pt-0 border-t border-neutral-100 first:border-t-0 first:pt-0">

@@ -69,7 +69,7 @@ export function BestWebsiteBuildersPageClient() {
               brochure or portfolio sites.
             </p>
             <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
-              We stress-test templates, editor friction, forms and booking, reviews and trust blocks, service-area structure,
+              We evaluate templates, editor friction, forms and booking, reviews and trust blocks, service-area structure,
               and recurring cost (plans plus essential apps). Whether you need a simple lead-generation site or a storefront
               alongside services, the picks below pair with our in-depth reviews and{" "}
               <Link href="/website-builders/compare" className={linkGreen}>
@@ -300,7 +300,7 @@ export function BestWebsiteBuildersPageClient() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

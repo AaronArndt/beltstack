@@ -12,7 +12,6 @@ type Props = { params: Promise<{ slug: string }> };
 
 function softwareApplicationSchema(slug: string, data: NonNullable<ReturnType<typeof getCrmReviewBySlug>>) {
   const url = `${SITE_URL}${getCrmReviewUrl(slug)}`;
-  const ratingNum = parseFloat(data.rating);
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -20,14 +19,6 @@ function softwareApplicationSchema(slug: string, data: NonNullable<ReturnType<ty
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     url,
-    ...(Number.isFinite(ratingNum) && {
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: ratingNum,
-        bestRating: 5,
-        reviewCount: 1,
-      },
-    }),
     ...(data.bestFor && { description: data.bestFor }),
   };
 }

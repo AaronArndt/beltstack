@@ -8,49 +8,17 @@ import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { sectionRuleAccent } from "@/lib/design-tokens";
-
-// ——— Design tokens (match payroll hub) ———
-// BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
+import { AFFILIATE_DISCLOSURE, formatEditorialDate, isFullIsoDate, vendorCtaRel } from "@/lib/editorial";
+import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 const btnSecondary =
   "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-[#1A2D48] transition-colors hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
-/** Shared BeltStack affiliate line (hubs, roundups, best-for). */
-const AFFILIATE_DISCLOSURE =
-  "We may earn a commission when you purchase through our links. This does not affect our recommendations.";
-
-const REPUTATION_MANAGEMENT_HREF = "/reputation-management";
-
-function methodologyCorpus(methodology: NonNullable<ReviewTemplateProps["methodology"]>): string {
-  return [methodology.title, methodology.sub, methodology.introParagraph ?? "", ...methodology.bullets].join(" ");
-}
-
-/** Skip copy that claims firsthand testing or experience BeltStack cannot substantiate. */
-function hasUnsupportedExperienceClaims(text: string): boolean {
-  const t = text.toLowerCase();
-  return (
-    /\bwe test\b/.test(t) ||
-    /\bwe tested\b/.test(t) ||
-    /\bwe stress-test/.test(t) ||
-    /\bwe stress test\b/.test(t) ||
-    /\bexperience-informed\b/.test(t) ||
-    /\bthrough the same workflows\b/.test(t) ||
-    /\bhands-on\b/.test(t) ||
-    /\bfirst[- ]?hand\b/.test(t) ||
-    /\bwe interviewed\b/.test(t) ||
-    /\bproprietary testing\b/.test(t)
-  );
-}
-
 function shouldRenderMethodology(
-  methodology: ReviewTemplateProps["methodology"],
-  categoryHref: string
+  methodology: ReviewTemplateProps["methodology"]
 ): methodology is NonNullable<ReviewTemplateProps["methodology"]> {
-  if (methodology == null) return false;
-  if (categoryHref === REPUTATION_MANAGEMENT_HREF) return false;
-  if (hasUnsupportedExperienceClaims(methodologyCorpus(methodology))) return false;
-  return true;
+  return methodology != null;
 }
 
 type ReviewNavLink = { label: string; href: string };
@@ -112,6 +80,8 @@ export type ReviewTemplateProps = {
   payrollTypes?: string;
   /** Optional disclosure line below hero CTA */
   disclosureLine?: string;
+  /** ISO date of last editorial review. Omit unless a human actually reviewed the page. */
+  lastReviewed?: string;
   /** Single paragraph (legacy) or use quickVerdictParagraphs for editorial */
   quickVerdict: string;
   /** Multi-paragraph quick verdict for editorial layout; overrides quickVerdict when set */
@@ -236,13 +206,13 @@ function ReviewJsonLd({
   category,
   rating,
   visitUrl,
-  currentYear,
+  lastReviewed,
 }: {
   toolName: string;
   category: string;
   rating: string;
   visitUrl?: string;
-  currentYear: number;
+  lastReviewed?: string;
 }) {
   const ratingNum = parseFloat(rating) || 5;
   const schema = {
@@ -264,7 +234,7 @@ function ReviewJsonLd({
           worstRating: 1,
         },
         author: { "@type": "Organization", name: "BeltStack" },
-        datePublished: `${currentYear}-01-01`,
+        ...(lastReviewed && isFullIsoDate(lastReviewed) ? { dateModified: lastReviewed } : {}),
         reviewBody: `${toolName} ${category} software review.`,
       },
     ],
@@ -319,14 +289,14 @@ export function ReviewTemplate({
   relatedReading,
   alternativesPageHref,
   alternativesPageLabel,
+  lastReviewed,
 }: ReviewTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const currentYear = new Date().getFullYear();
   const verdictParagraphs = quickVerdictParagraphs ?? [quickVerdict];
   const featureList = keyFeatures ?? features.map((name) => ({ name, description: "" }));
   const showContractorUse = contractorUse && contractorUse.length > 0;
   const showRatingBreakdown = ratingBreakdown && ratingBreakdown.length > 0;
-  const showMethodology = shouldRenderMethodology(methodology, categoryHref);
+  const showMethodology = shouldRenderMethodology(methodology);
   const extraDisclosure =
     disclosureLine != null &&
     disclosureLine !== "" &&
@@ -395,7 +365,7 @@ export function ReviewTemplate({
         category={category}
         rating={rating}
         visitUrl={visitUrl}
-        currentYear={currentYear}
+        lastReviewed={lastReviewed}
       />
       <main>
         {/* ——— Hero (centered in max-w-6xl) ——— */}
@@ -419,7 +389,7 @@ export function ReviewTemplate({
               />
             )}
             <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              {toolName} Review ({currentYear})
+              {toolName} Review ({SEO_YEAR})
             </h1>
             {/* Key stats row */}
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#57534E]">
@@ -445,7 +415,7 @@ export function ReviewTemplate({
                 <a
                   href={visitUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel={vendorCtaRel(visitUrl)}
                   className={btnPrimary}
                 >
                   Visit {toolName}
@@ -457,6 +427,11 @@ export function ReviewTemplate({
             </p>
             {extraDisclosure != null && (
               <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-[#57534E]">{extraDisclosure}</p>
+            )}
+            {lastReviewed != null && lastReviewed !== "" && (
+              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-[#57534E]">
+                Last reviewed {formatEditorialDate(lastReviewed)}
+              </p>
             )}
             </div>
           </div>
@@ -846,7 +821,7 @@ export function ReviewTemplate({
                     <a
                       href={visitUrl}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={vendorCtaRel(visitUrl)}
                       className={`block w-full text-center ${btnPrimary} text-sm py-2`}
                     >
                       Visit {toolName}

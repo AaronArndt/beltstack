@@ -118,7 +118,7 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 const METHODOLOGY_BULLETS = [
-  "We test accounting workflows: invoicing, expense tracking, reporting, and bank reconciliation.",
+  "We evaluate accounting software around invoicing, expense tracking, reporting, and bank reconciliation.",
   "We compare pricing tiers, limits, and add-ons so you can budget accurately.",
   "Reviews are written for small businesses, freelancers, and contractors.",
 ];

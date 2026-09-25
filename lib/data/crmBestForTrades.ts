@@ -14,6 +14,7 @@ import type {
   BestForTemplateProps,
 } from "@/components/best/BestForTemplate";
 import { getCrmCompareUrl, getCrmReviewUrl } from "@/lib/routes";
+import { applyCrmCanonicalBestForProps } from "@/lib/data/crmCanonicalRating";
 
 const CATEGORY = { href: "/crm", label: "CRM" };
 const SEE_ALSO = {
@@ -52,7 +53,7 @@ const CRM_PRODUCT_CORE = {
     name: "Pipedrive",
     logoSrc: "/Logos/pipedrive.jpeg",
     rating: "4.5",
-    startingPrice: "From $14.90/user/mo",
+    startingPrice: "From $14/user/mo billed annually",
     visitUrl: "https://www.pipedrive.com",
     defaultStandout: "Pipeline-first selling",
   },
@@ -217,7 +218,7 @@ function buildTradeProps(p: TradeConfig): BestForTemplateProps {
     (item, i, arr) => arr.findIndex((x) => x.href === item.href) === i
   );
 
-  return {
+  return applyCrmCanonicalBestForProps({
     title: p.title,
     subtitle: p.subtitle,
     useCase: p.useCase,
@@ -237,7 +238,7 @@ function buildTradeProps(p: TradeConfig): BestForTemplateProps {
     relatedComparisons: buildRelatedComparisons(featuredSlugs),
     relatedGuides,
     faqItems: p.faqItems,
-  };
+  });
 }
 
 const E = (heading: string, body: string): BestForEditorialBlock => ({ heading, body });

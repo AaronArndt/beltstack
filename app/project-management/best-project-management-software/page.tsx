@@ -305,7 +305,7 @@ export default function BestProjectManagementSoftwarePage() {
             <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                We test project management workflows: creating projects, assigning tasks, building views, and tracking deadlines.
+                We evaluate project management software around creating projects, assigning tasks, building views, and tracking deadlines.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
@@ -317,7 +317,7 @@ export default function BestProjectManagementSoftwarePage() {
               </li>
             </ul>
             <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.{" "}
               <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 Affiliate disclosure
               </Link>
@@ -341,7 +341,7 @@ export default function BestProjectManagementSoftwarePage() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

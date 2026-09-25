@@ -148,7 +148,7 @@ export default function CanIUseQuickBooksForMyLLCPage() {
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack tests QuickBooks for LLC-relevant workflows—separate banks, owner equity, accountant access—not legal entity advice. Our reviews are independent and workflow-based. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
+                      BeltStack evaluates QuickBooks around LLC-relevant workflows—separate banks, owner equity, accountant access—not legal entity advice. Our reviews are independent and workflow-based. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
                     </p>
                   </div>
                 </section>

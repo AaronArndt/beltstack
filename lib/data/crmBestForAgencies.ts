@@ -77,7 +77,7 @@ export const AGENCIES_PAGE_PROPS = {
       description:
         "Pipeline-first CRM for agency new-business and deal tracking. Clear stages and activity tracking when sales is the priority.",
       rating: "4.5",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       reviewHref: getCrmReviewUrl("pipedrive"),
       visitUrl: "https://www.pipedrive.com",
       logoSrc: LOGOS.pipedrive,
@@ -120,7 +120,7 @@ export const AGENCIES_PAGE_PROPS = {
       name: "Pipedrive",
       logoSrc: LOGOS.pipedrive,
       bestFor: "Sales pipelines",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       standoutFeature: "Pipeline and activity focus",
       reviewHref: getCrmReviewUrl("pipedrive"),
     },

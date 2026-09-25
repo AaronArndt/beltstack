@@ -8,6 +8,9 @@ import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { sectionRuleAccent } from "@/lib/design-tokens";
 import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardStartingPrice";
+import { overlayVerifiedStartingPriceFromHref } from "@/lib/data/verifiedStartingPrices";
+import { AFFILIATE_DISCLOSURE, formatEditorialDate, vendorCtaRel } from "@/lib/editorial";
+import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 
 // ——— Design tokens (match review template) ———
 
@@ -100,6 +103,8 @@ export type ComparisonTemplateProps = {
   roiGuidance?: { heading?: string; paragraphs: string[]; example?: { heading: string; body: string } };
   /** Optional research/verification note shown near the verdict. */
   researchNote?: string;
+  /** ISO date of last editorial review. Omit unless a human actually reviewed the page. */
+  lastReviewed?: string;
   /** Optional feature-table section subcopy. */
   featureComparisonSub?: string;
   /** Optional first-column header. Default: Feature. */
@@ -326,14 +331,14 @@ export function ComparisonTemplate({
   decisionGuideNeither,
   roiGuidance,
   researchNote,
+  lastReviewed,
   featureComparisonSub,
   featureComparisonColumnLabel,
   pricingComparisonParagraphs,
 }: ComparisonTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const currentYear = new Date().getFullYear();
   const title = `${productA.name} vs ${productB.name}`;
-  const heading = pageHeading ?? `${title} (${currentYear})`;
+  const heading = pageHeading ?? `${title} (${SEO_YEAR})`;
   const logoA = productA.logo ?? productA.logoSrc;
   const logoB = productB.logo ?? productB.logoSrc;
 
@@ -411,12 +416,18 @@ export function ComparisonTemplate({
                     )}
                     {productA.startingPrice != null && productA.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">
-                        {formatProductCardStartingPrice(productA.startingPrice)}
+                        {formatProductCardStartingPrice(
+                          overlayVerifiedStartingPriceFromHref(
+                            productA.slug,
+                            productA.startingPrice,
+                            categoryHref
+                          )
+                        )}
                       </p>
                     )}
                     <p className="mt-2 text-sm text-neutral-700 leading-relaxed">{productA.bestForSummary}</p>
                     {productA.visitUrl != null && productA.visitUrl !== "" && (
-                      <a href={productA.visitUrl} target="_blank" rel="noopener noreferrer" className={`mt-4 block w-full text-center ${btnPrimary} text-sm py-2`}>
+                      <a href={productA.visitUrl} target="_blank" rel={vendorCtaRel(productA.visitUrl)} className={`mt-4 block w-full text-center ${btnPrimary} text-sm py-2`}>
                         Visit {productA.name}
                       </a>
                     )}
@@ -429,17 +440,29 @@ export function ComparisonTemplate({
                     )}
                     {productB.startingPrice != null && productB.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">
-                        {formatProductCardStartingPrice(productB.startingPrice)}
+                        {formatProductCardStartingPrice(
+                          overlayVerifiedStartingPriceFromHref(
+                            productB.slug,
+                            productB.startingPrice,
+                            categoryHref
+                          )
+                        )}
                       </p>
                     )}
                     <p className="mt-2 text-sm text-neutral-700 leading-relaxed">{productB.bestForSummary}</p>
                     {productB.visitUrl != null && productB.visitUrl !== "" && (
-                      <a href={productB.visitUrl} target="_blank" rel="noopener noreferrer" className={`mt-4 block w-full text-center ${btnPrimary} text-sm py-2`}>
+                      <a href={productB.visitUrl} target="_blank" rel={vendorCtaRel(productB.visitUrl)} className={`mt-4 block w-full text-center ${btnPrimary} text-sm py-2`}>
                         Visit {productB.name}
                       </a>
                     )}
                   </div>
                 </div>
+                <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#57534E]">{AFFILIATE_DISCLOSURE}</p>
+                {lastReviewed != null && lastReviewed !== "" && (
+                  <p className="mt-1.5 max-w-3xl text-xs leading-relaxed text-[#57534E]">
+                    Last reviewed {formatEditorialDate(lastReviewed)}
+                  </p>
+                )}
                 <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-5">
                   <p className="text-[#1A2D48] text-sm font-semibold mb-3">Quick recommendation</p>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
@@ -1269,7 +1292,7 @@ export function ComparisonTemplate({
                       <a
                         href={productA.visitUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={vendorCtaRel(productA.visitUrl)}
                         className={`block w-full text-center ${btnPrimary} text-sm py-2`}
                       >
                         Visit {productA.name}
@@ -1287,7 +1310,7 @@ export function ComparisonTemplate({
                       <a
                         href={productB.visitUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={vendorCtaRel(productB.visitUrl)}
                         className={`block w-full text-center ${btnPrimary} text-sm py-2`}
                       >
                         Visit {productB.name}

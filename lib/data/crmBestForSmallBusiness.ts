@@ -77,7 +77,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
       description:
         "Pipeline-first CRM that keeps deals and activities front and center. Easy to adopt for sales-focused small teams.",
       rating: "4.5",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       reviewHref: getCrmReviewUrl("pipedrive"),
       visitUrl: "https://www.pipedrive.com",
       logoSrc: LOGOS.pipedrive,
@@ -120,7 +120,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
       name: "Pipedrive",
       logoSrc: LOGOS.pipedrive,
       bestFor: "Simple pipelines",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       standoutFeature: "Pipeline-first, activity tracking",
       reviewHref: getCrmReviewUrl("pipedrive"),
     },

@@ -28,7 +28,7 @@ const ACCOUNTING_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information. We evaluate accounting software for invoicing, bookkeeping, reporting, and tax prep.",
   bullets: [
-    "We test accounting workflows: invoicing, expense tracking, reporting, and bank reconciliation.",
+    "We evaluate accounting software around invoicing, expense tracking, reporting, and bank reconciliation.",
     "We compare pricing tiers, limits, and add-ons so you can budget accurately.",
     "Reviews are written for small businesses, freelancers, and contractors.",
   ],

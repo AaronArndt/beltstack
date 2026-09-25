@@ -145,7 +145,7 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack tests receipt attachment and mobile capture in QuickBooks trials; we do not provide tax or legal advice on retention periods. Our independent reviews note how well each platform supports documentation workflows. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
+                      BeltStack evaluates receipt attachment and mobile capture in QuickBooks using product documentation; we do not provide tax or legal advice on retention periods. Our independent reviews note how well each platform supports documentation workflows. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
                     </p>
                   </div>
                 </section>

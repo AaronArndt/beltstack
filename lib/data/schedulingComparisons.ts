@@ -35,7 +35,7 @@ const P = {
     visitUrl: "https://youcanbook.me",
     bestForSummary: "Good for teams and straightforward calendar-based booking; round-robin and team availability.",
     rating: "4.5",
-    startingPrice: "From ~$10/mo",
+    startingPrice: "Free",
   },
   setmore: {
     name: "Setmore",
@@ -55,7 +55,7 @@ const P = {
     visitUrl: "https://simplybook.me",
     bestForSummary: "Strong for customization and business-specific booking flows; good for appointment-heavy businesses.",
     rating: "4.4",
-    startingPrice: "From ~$8/mo",
+    startingPrice: "Free",
   },
   "square-appointments": {
     name: "Square Appointments",
@@ -226,7 +226,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { feature: "Brand recognition", productA: "Widely recognized", productB: "Less known", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Calendly has a free tier for one event type; paid plans start around $10/month per user. YouCanBook.me typically has no permanent free plan but offers paid plans starting around $10/month that include team features. For team use, YouCanBook.me often delivers more for the same or lower cost.",
+      "Calendly has a free tier for one event type; paid plans start around $10/month per user. YouCanBook.me has an ongoing free plan; Team is $16.20 per member per month billed annually ($18 monthly).",
     prosConsA: {
       pros: ["Simpler and more recognizable.", "Strong calendar sync and ecosystem.", "Free tier for solo use."],
       cons: ["Team features on paid tiers only.", "Can cost more for multi-person booking."],
@@ -371,7 +371,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { feature: "Free tier", productA: "No free plan", productB: "Free for solo", supportA: "none", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "SimplyBook.me plans typically start around $8/month; Setmore has a free plan and paid plans from around $9/month. SimplyBook.me often undercuts Acuity for similar customization; Setmore undercuts both when you use the free tier or a low-cost paid plan. Choose based on whether you need SimplyBook.me’s extra customization or Setmore’s free start.",
+      "SimplyBook.me has an ongoing free plan; paid Basic is listed in EUR and a USD usable amount is not published. Setmore has a free plan and paid plans from around $9/month.",
     prosConsA: {
       pros: ["Custom forms and industry templates.", "Multi-staff and multi-service.", "Competitive pricing for the feature set."],
       cons: ["Setup can take longer.", "UI less polished than top brands."],
@@ -390,7 +390,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     ],
     faqs: [
       { q: "SimplyBook.me vs Setmore for salons?", a: "SimplyBook.me offers more salon-focused templates and customization; Setmore has a free tier and is easier to start with. Choose based on how much customization you need." },
-      { q: "Which is cheaper?", a: "Setmore can be free for solo use; paid plans are similar. SimplyBook.me has no free plan but often undercuts Acuity for comparable customization." },
+      { q: "Which is cheaper?", a: "Setmore can be free for solo use. SimplyBook.me also has an ongoing free plan; paid Basic is listed in EUR and a USD usable amount is not published." },
     ],
     sidebarWinners: [
       { label: "Winner for customization", winner: "A" },

@@ -143,7 +143,7 @@ export default function DoYouHaveToBuyQuickBooksEveryYearPage() {
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack tracks QuickBooks pricing in workflow-based reviews—we test whether features justify subscription tiers for owners, not list every list price on Intuit&apos;s marketing page. Guides like this explain billing models; our{" "}
+                      BeltStack tracks QuickBooks pricing in workflow-based reviews—we evaluate whether features justify subscription tiers for owners, not list every list price on Intuit&apos;s marketing page. Guides like this explain billing models; our{" "}
                       <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link> covers fit and limits. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
                     </p>
                   </div>

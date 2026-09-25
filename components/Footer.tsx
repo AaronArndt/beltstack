@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
+import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 
 function FooterLogo({ className }: { className?: string }) {
   return (
@@ -47,9 +48,10 @@ const FOOTER_COMPARE_LINKS = [
 
 const FOOTER_COMPANY_LINKS = [
   { label: "About", href: "/about" },
+  { label: "Methodology", href: "/methodology" },
+  { label: "Pricing study", href: "/research/service-business-software-pricing" },
   { label: "Contact", href: "/contact" },
   { label: "Media Kit", href: "/media-kit" },
-  { label: "Methodology", href: "/methodology" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
   { label: "Browse by trade", href: "/software#browse-by-trade" },
@@ -114,10 +116,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t border-white/15 pt-8">
-          <p className="text-white/50 text-xs leading-relaxed">
-            We may earn commissions when you click vendor links or sign up through our site. That does not change how
-            we research, score, or rank products.
-          </p>
+          <p className="text-white/50 text-xs leading-relaxed">{AFFILIATE_DISCLOSURE}</p>
           <p className="mt-2 text-white/50 text-xs leading-relaxed">
             BeltStack publishes editorial software reviews and comparisons. Verify pricing and terms on each vendor’s site
             before you buy—offers change frequently.

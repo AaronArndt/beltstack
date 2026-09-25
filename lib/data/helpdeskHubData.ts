@@ -184,7 +184,7 @@ export const HELPDESK_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate helpdesk tools on ticketing and workflow, multi-channel support, automation, reporting, and fit for small businesses and growing teams.",
   bullets: [
-    "We test core workflows: creating and managing tickets, routing and automation, and viewing customer history.",
+    "We evaluate helpdesk software around creating and managing tickets, routing and automation, and viewing customer history.",
     "We compare pricing (per agent or per seat), channel support, and integration options so you understand total cost.",
     "We look at ease of use, reporting depth, and scalability for teams that expect to grow.",
   ],

@@ -77,7 +77,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Very easy if you already use QuickBooks", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs for employees and contractors. QuickBooks Payroll also uses tiered pricing with a base fee (around $30/month on Core) plus per-person fees. At entry level they're close; QuickBooks can be slightly cheaper for very small teams. Gusto's pricing is more transparent and consistent across plans; QuickBooks Payroll costs can rise with add-ons like time tracking and 1099 e-file. Compare total monthly cost at your headcount and factor in whether you need time tracking or benefits—both can affect the final bill.",
+      "Gusto uses published tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs for employees and contractors. QuickBooks Payroll also uses tiered pricing with a base fee ($50/month plus $7 per person on Workforce Payroll) plus per-person fees. At entry level they're close; QuickBooks can be slightly cheaper for very small teams. Gusto's pricing is more transparent and consistent across plans; QuickBooks Payroll costs can rise with add-ons like time tracking and 1099 e-file. Compare total monthly cost at your headcount and factor in whether you need time tracking or benefits—both can affect the final bill.",
     prosConsA: {
       pros: [
         "All-in-one payroll, benefits, and HR",
@@ -137,7 +137,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is QuickBooks Payroll cheaper than Gusto?",
-        a: "At entry level they're close; QuickBooks Payroll can be slightly cheaper for very small teams (e.g. base around $30/month vs Gusto's $49/month). Total cost depends on headcount, add-ons (time tracking, benefits), and plan tier. Compare your specific scenario—Gusto's pricing is more transparent and easy to project.",
+        a: "At entry level Gusto Simple is $49/month plus $6 per person; QuickBooks Workforce Payroll is $50/month plus $7 per person. Total cost depends on headcount, add-ons (time tracking, benefits), and plan tier. Compare your specific scenario.",
       },
       {
         q: "Which payroll tool is best for contractors?",
@@ -202,7 +202,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Gusto and OnPay are two of the most popular payroll options for small businesses and contractors. Gusto is the all-in-one play: more hiring tools, PTO, and benefits administration, with tiered plans that add features as you go. OnPay keeps it simple: one main plan, flat base-plus-per-person pricing, and solid payroll and benefits without the complexity.",
       "Gusto wins on breadth—HR tools, contractor self-service, and a modern interface are hard to beat. OnPay wins on clarity: you get predictable pricing, included support, and a short learning curve. Both handle W-2 and 1099 payroll with automatic tax filing; both integrate with QuickBooks and Xero. The choice often comes down to whether you want more features (Gusto) or more simplicity (OnPay).",
-      "Pricing is similar at entry—Gusto often starts around $49/month base and OnPay often around $40/month base, both plus per-person fees. OnPay's flat structure can be easier to project; Gusto's tiers let you add time tracking, PTO, and more as you grow. Choose Gusto if you want one platform that can grow with you and don't mind navigating plans. Choose OnPay if you want one straightforward plan and flat pricing.",
+      "Pricing is similar at entry—Gusto often starts around $49/month base and OnPay $49/month plus $6 per person base, both plus per-person fees. OnPay's flat structure can be easier to project; Gusto's tiers let you add time tracking, PTO, and more as you grow. Choose Gusto if you want one platform that can grow with you and don't mind navigating plans. Choose OnPay if you want one straightforward plan and flat pricing.",
     ],
     decisionGuideA: [
       "You want the most HR and benefits features in one platform (hiring, PTO, health, 401k).",
@@ -233,7 +233,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy; modern UI, guided setup", productB: "Simple setup; clean interface", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Gusto uses tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. Higher tiers add time tracking, PTO, and more. OnPay uses one main plan with a base fee (often around $40/month) plus a flat per-person rate—no tiers for core payroll. At similar headcounts the total can be close; OnPay is often easier to project because the structure doesn't change. Gusto gives you more features on higher tiers; OnPay keeps pricing simple. Compare total monthly cost at your headcount.",
+      "Gusto uses tiered pricing: a base fee (e.g. $49/month on Simple) plus per-person costs. Higher tiers add time tracking, PTO, and more. OnPay uses one main plan with a base fee ($49/month plus $6 per person) plus a flat per-person rate—no tiers for core payroll. At similar headcounts the total can be close; OnPay is often easier to project because the structure doesn't change. Gusto gives you more features on higher tiers; OnPay keeps pricing simple. Compare total monthly cost at your headcount.",
     prosConsA: {
       pros: [
         "All-in-one payroll, benefits, and HR",
@@ -292,7 +292,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is OnPay cheaper than Gusto?",
-        a: "At similar headcounts they can be close—Gusto often starts around $49/month base and OnPay often around $40/month base, both plus per-person fees. OnPay's flat structure is easier to project; Gusto's tiers mean your cost depends on which plan you're on. For straightforward payroll and benefits, OnPay often feels more predictable.",
+        a: "At similar headcounts they can be close—Gusto often starts around $49/month base and OnPay $49/month plus $6 per person base, both plus per-person fees. OnPay's flat structure is easier to project; Gusto's tiers mean your cost depends on which plan you're on. For straightforward payroll and benefits, OnPay often feels more predictable.",
       },
       {
         q: "Does OnPay have HR tools like Gusto?",
@@ -667,7 +667,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "QuickBooks Payroll and OnPay are both popular with small businesses. QuickBooks Payroll is the integration play: if you already run your books in QuickBooks, payroll posts to the right accounts and jobs with no sync or export. OnPay is the simplicity play: one plan, flat base-plus-per-person pricing, and solid payroll and benefits without tying you to Intuit.",
       "QuickBooks Payroll wins on workflow when you're deep in QuickBooks—labor cost flows straight into job costing, and you never leave the ecosystem. OnPay wins on clarity: no tier maze, included support, and you can use any accounting software. Both handle W-2 and 1099 payroll with automatic tax filing; both offer benefits. The choice often comes down to whether you're already on QuickBooks (QuickBooks Payroll) or want a standalone payroll tool with flat pricing (OnPay).",
-      "Pricing is comparable at entry—QuickBooks Payroll often starts around $30/month base; OnPay around $40/month base, both plus per-person fees. QuickBooks can be slightly cheaper at very small scale but costs can rise with add-ons (time tracking, 1099). OnPay's flat structure is easier to project. Choose QuickBooks Payroll if you live in QuickBooks. Choose OnPay if you want simplicity and don't want ecosystem lock-in.",
+      "Pricing is comparable at entry—QuickBooks Workforce Payroll is $50/month plus $7 per person; OnPay is $49/month plus $6 per person. QuickBooks costs can rise with add-ons (time tracking, 1099). OnPay's flat structure is easier to project. Choose QuickBooks Payroll if you live in QuickBooks. Choose OnPay if you want simplicity and don't want ecosystem lock-in.",
     ],
     decisionGuideA: [
       "You already use QuickBooks for accounting and want payroll in the same app.",
@@ -698,7 +698,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Very easy if you already use QuickBooks", productB: "Simple setup; clean interface", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "QuickBooks Payroll uses tiered pricing: a base fee (around $30/month on Core) plus per-person fees. Add-ons for time tracking and 1099 e-file can increase the total. OnPay uses one main plan: a base fee (often around $40/month) plus a flat per-person rate—no tiers for core payroll. At similar headcounts they can be close; OnPay is often easier to project because the structure doesn't change. QuickBooks can be slightly cheaper for very small teams; OnPay wins on pricing clarity. Compare total monthly cost at your headcount.",
+      "QuickBooks Payroll uses tiered pricing: a base fee ($50/month plus $7 per person on Workforce Payroll) plus per-person fees. Add-ons for time tracking and 1099 e-file can increase the total. OnPay uses one main plan: a base fee ($49/month plus $6 per person) plus a flat per-person rate—no tiers for core payroll. At similar headcounts they can be close; OnPay is often easier to project because the structure doesn't change. QuickBooks can be slightly cheaper for very small teams; OnPay wins on pricing clarity. Compare total monthly cost at your headcount.",
     prosConsA: {
       pros: [
         "Seamless integration with QuickBooks—no sync needed",
@@ -757,7 +757,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Is OnPay cheaper than QuickBooks Payroll?",
-        a: "At entry they can be close—QuickBooks Payroll sometimes has a lower base (e.g. around $30/mo) while OnPay is often around $40/mo base, both plus per-person fees. OnPay's flat structure is easier to project; QuickBooks costs can rise with add-ons. Compare total cost at your headcount.",
+        a: "At entry they can be close—QuickBooks Workforce Payroll is $50/month plus $7 per person; OnPay is $49/month plus $6 per person. OnPay's flat structure is easier to project; QuickBooks costs can rise with add-ons. Compare total cost at your headcount.",
       },
       {
         q: "Does OnPay integrate with QuickBooks?",
@@ -1008,7 +1008,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Full-featured; more traditional interface", productB: "Simple setup; clean, modern interface", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Paychex uses custom pricing: you get a quote based on headcount and services. OnPay uses published pricing: a base fee (often around $40/month) plus a flat per-person rate—no tiers. You can see OnPay's cost upfront; with Paychex you need to request a quote. For small headcounts, OnPay is often easier to budget and compare. Paychex justifies custom pricing with full-service support and optional dedicated reps. Compare a Paychex quote to OnPay's published total at your size.",
+      "Paychex uses custom pricing: you get a quote based on headcount and services. OnPay uses published pricing: a base fee ($49/month plus $6 per person) plus a flat per-person rate—no tiers. You can see OnPay's cost upfront; with Paychex you need to request a quote. For small headcounts, OnPay is often easier to budget and compare. Paychex justifies custom pricing with full-service support and optional dedicated reps. Compare a Paychex quote to OnPay's published total at your size.",
     prosConsA: {
       pros: [
         "Full-service support and optional dedicated reps",
@@ -1278,7 +1278,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Rippling is a full workforce platform: payroll, HR, benefits, and IT (device management, app provisioning) with strong automation. QuickBooks Payroll is payroll and tax filing inside QuickBooks—your labor costs flow straight into your books and job costing with no sync. Both handle W-2 and 1099 payroll with automatic tax filing.",
       "Rippling wins on breadth—if you want one system for payroll, onboarding, benefits, and IT admin, Rippling is built for that. QuickBooks Payroll wins on accounting integration: if you live in QuickBooks, payroll posts to the right accounts and jobs automatically. For businesses that don't use QuickBooks, Rippling (or Gusto) is usually a better fit. For those deep in QuickBooks, QuickBooks Payroll keeps everything in one place.",
-      "Pricing: QuickBooks Payroll uses published tiered pricing (e.g. around $30/month base plus per-person). Rippling typically uses quoted pricing. QuickBooks is easier to budget if you're already in the Intuit ecosystem. Rippling's value is in the full platform—get a quote and compare to QuickBooks Payroll plus any HR tools you'd add separately.",
+      "Pricing: QuickBooks Workforce Payroll is $50/month plus $7 per person. Rippling typically uses quoted pricing. QuickBooks is easier to budget if you're already in the Intuit ecosystem. Rippling's value is in the full platform—get a quote and compare to QuickBooks Payroll plus any HR tools you'd add separately.",
     ],
     decisionGuideA: [
       "You want payroll plus HR and IT/admin in one platform, not just payroll.",
@@ -1308,7 +1308,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use (QuickBooks users)", productA: "Separate product to learn", productB: "Familiar if you already use QuickBooks", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "QuickBooks Payroll uses published tiered pricing with a base fee (around $30/month on Core) plus per-person fees. Rippling typically uses custom or quoted pricing based on modules and headcount. For businesses already on QuickBooks, QuickBooks Payroll is easy to price; Rippling requires a quote. Compare a Rippling quote to your QuickBooks Payroll total if you're considering switching—and factor in whether you'd need separate HR or IT tools with QuickBooks.",
+      "QuickBooks Payroll uses published tiered pricing with a base fee ($50/month plus $7 per person on Workforce Payroll) plus per-person fees. Rippling typically uses custom or quoted pricing based on modules and headcount. For businesses already on QuickBooks, QuickBooks Payroll is easy to price; Rippling requires a quote. Compare a Rippling quote to your QuickBooks Payroll total if you're considering switching—and factor in whether you'd need separate HR or IT tools with QuickBooks.",
     prosConsA: {
       pros: ["Payroll, HR, and IT in one platform", "Strong automation and workflows", "Not locked into one accounting ecosystem", "Scales for growing companies"],
       cons: ["Quoted pricing; no single published rate", "Separate from QuickBooks—requires sync for job costing", "More complex than payroll-only tools"],
@@ -1488,7 +1488,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickVerdictParagraphs: [
       "Square Payroll and QuickBooks Payroll are ecosystem plays: Square Payroll sits inside Square (payments, POS, etc.); QuickBooks Payroll runs inside QuickBooks so payroll posts to your books and job costing automatically. Both handle W-2 and 1099 payroll with automatic tax filing. The choice is mainly which ecosystem you're in.",
       "Square Payroll wins if you're already on Square—one login, simple payroll, straightforward pricing. QuickBooks Payroll wins if you're already on QuickBooks—payroll and accounting in one place, labor cost on the right jobs. If you're not in either ecosystem, a standalone option like Gusto or OnPay may be a better fit than either.",
-      "Pricing is similar: both use published base-plus-per-person pricing (Square often around $35/month base, QuickBooks around $30/month on Core). Compare at your headcount and state. Choose Square Payroll if you're a Square user and want simple payroll. Choose QuickBooks Payroll if you're a QuickBooks user and want payroll and job costing together.",
+      "Pricing is similar: both use published base-plus-per-person pricing (Square often around $35/month base, QuickBooks $50/month plus $7 per person on Workforce Payroll). Compare at your headcount and state. Choose Square Payroll if you're a Square user and want simple payroll. Choose QuickBooks Payroll if you're a QuickBooks user and want payroll and job costing together.",
     ],
     decisionGuideA: [
       "You already use Square for payments, POS, or invoicing.",
@@ -1517,7 +1517,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Simple for Square users", productB: "Simple for QuickBooks users", supportA: "supported", supportB: "supported" },
     ],
     pricingComparison:
-      "Both use published pricing: Square Payroll often around $35/month base plus per-person fees; QuickBooks Payroll around $30/month on Core plus per-person. They're close at entry. Compare at your headcount; the main differentiator is ecosystem—Square vs QuickBooks—not price.",
+      "Both use published pricing: Square Payroll often around $35/month base plus per-person fees; QuickBooks Payroll $50/month plus $7 per person on Workforce Payroll plus per-person. They're close at entry. Compare at your headcount; the main differentiator is ecosystem—Square vs QuickBooks—not price.",
     prosConsA: {
       pros: ["Simple payroll inside Square", "One ecosystem for payments and payroll", "Straightforward pricing"],
       cons: ["Tied to Square; no native QuickBooks job costing", "Less accounting depth than QuickBooks Payroll"],
@@ -1694,9 +1694,9 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     quickRecommendationB:
       "Best for small businesses that want simple payroll with more features and flat pricing.",
     quickVerdictParagraphs: [
-      "Patriot Payroll offers low published pricing (often from around $17/month base) and compliant payroll and tax filing for W-2 and 1099. OnPay offers one main plan with flat pricing (often around $40/month base) and more built-in features: solid benefits, support included, and a clean interface. Both are straightforward; OnPay gives you more for a higher price.",
+      "Patriot Payroll offers low published pricing (often from around $17/month base) and compliant payroll and tax filing for W-2 and 1099. OnPay offers one main plan with flat pricing ($49/month plus $6 per person base) and more built-in features: solid benefits, support included, and a clean interface. Both are straightforward; OnPay gives you more for a higher price.",
       "Patriot wins on cost—if your main goal is to minimize monthly payroll expense, Patriot is the lower-price option. OnPay wins on features and clarity—flat pricing, no tier maze, and more HR and benefits than Patriot. For very cost-sensitive businesses, Patriot is a strong fit. For teams that want a bit more (benefits, support, simplicity) without the complexity of Gusto, OnPay is a good middle ground.",
-      "Pricing: Patriot's base is often around $17/month; OnPay's is typically around $40/month. You get more with OnPay—benefits, support, and a simpler structure. Compare total cost at your headcount and decide whether the extra features are worth the difference.",
+      "Pricing: Patriot Basic is $17/month plus $4 per worker (no tax filing); OnPay is $49/month plus $6 per person. You get more with OnPay—benefits, support, and full-service tax filing. Compare total cost at your headcount and decide whether the extra features are worth the difference.",
     ],
     decisionGuideA: [
       "Your top priority is the lowest possible payroll cost.",
@@ -1726,7 +1726,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { feature: "Ease of use", productA: "Simple; fewer options", productB: "Simple setup; clean interface", supportA: "supported", supportB: "supported", stronger: "B" },
     ],
     pricingComparison:
-      "Patriot Payroll uses low published pricing—often from around $17/month base plus per-person fees. OnPay uses one main plan with a base (typically around $40/month) plus a flat per-person rate. Patriot is the lower-cost option; OnPay adds more features and included support. For the tightest budget, Patriot wins. For more features and predictability, OnPay is worth the extra cost for many small businesses.",
+      "Patriot Basic Payroll is $17/month plus $4 per worker and does not include tax filing. Full Service is $37/month plus $5 per worker. OnPay is $49/month plus $6 per person with tax filing included. Patriot is the lower-cost advertised entry; OnPay adds more features and included support.",
     prosConsA: {
       pros: ["Lowest base pricing", "Straightforward payroll and tax filing", "Good for very small businesses"],
       cons: ["Fewer features than OnPay", "Basic support and benefits options", "Less polished interface"],
@@ -1750,7 +1750,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Best for 1099 contractors", href: getPayrollBestForUrl("1099-contractors") },
     ],
     faqs: [
-      { q: "Patriot Payroll vs OnPay: which is cheaper?", a: "Patriot Payroll is typically cheaper—often from around $17/month base. OnPay is usually around $40/month base. Patriot is for the tightest budget; OnPay gives you more features and support for the higher price." },
+      { q: "Patriot Payroll vs OnPay: which is cheaper?", a: "Patriot Basic is $17/month plus $4 per worker but does not include tax filing. OnPay is $49/month plus $6 per person with tax filing included. Compare advertised entry vs full-service usable cost." },
       { q: "Which has better features: Patriot or OnPay?", a: "OnPay has more features: included benefits (health, 401k), included support, and a cleaner interface. Patriot focuses on low-cost payroll basics. Choose OnPay for more features and simplicity; choose Patriot for lowest cost." },
     ],
     sidebarWinners: [
@@ -2166,7 +2166,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://www.surepayroll.com",
       bestForSummary: "Simple payroll with optional full-service; Paychex family.",
       rating: "4.2",
-      startingPrice: "$29/mo + $7/employee",
+      startingPrice: "$39/mo + $7/employee",
     },
     productB: {
       name: "Gusto",
@@ -2193,7 +2193,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     decisionGuideA: [
       "You want simple payroll with optional full-service.",
       "You prefer a well-known brand (Paychex family).",
-      "You want a published payroll-first price (currently $29/mo + $7 per employee on Full Service) rather than Gusto’s HR-inclusive tiers.",
+      "You want a published payroll-first price (currently $39/mo + $7 per employee on Full Service) rather than Gusto’s HR-inclusive tiers.",
     ],
     decisionGuideB: [
       "You want payroll, benefits, and HR in one platform.",
@@ -2210,10 +2210,10 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     featureComparison: [
       { feature: "Payroll", productA: "W-2 and 1099; simple or full-service", productB: "W-2 and 1099; full-featured", supportA: "supported", supportB: "supported", stronger: "B" },
       { feature: "HR and benefits", productA: "Basic", productB: "Strong; benefits and HR tools", supportA: "partial", supportB: "supported", stronger: "B" },
-      { feature: "Pricing", productA: "Published Full Service $29/mo + $7/EE", productB: "Published tiered (e.g. $49/mo base + per person)", supportA: "supported", supportB: "supported", stronger: "A" },
+      { feature: "Pricing", productA: "Published Full Service $39/mo + $7/EE", productB: "Published tiered (e.g. $49/mo base + per person)", supportA: "supported", supportB: "supported", stronger: "A" },
     ],
     pricingComparison:
-      "Both publish pricing. SurePayroll Full Service is currently $29/month plus $7 per employee (No Tax Filing is $20 + $4). Gusto uses published tiers (e.g. $49/month base plus per person). Compare at your headcount and whether you need Gusto’s HR/benefits in the same product.",
+      "Both publish pricing. SurePayroll Full Service is currently $39/month plus $7 per employee (No Tax Filing is $20 + $4). Gusto uses published tiers (e.g. $49/month base plus per person). Compare at your headcount and whether you need Gusto’s HR/benefits in the same product.",
     prosConsA: {
       pros: ["Simple payroll", "Full-service option", "Familiar brand", "Published Full Service pricing"],
       cons: ["Less HR and benefits", "Fewer integrations", "Year-end and add-on fees sit outside the headline rate"],
@@ -2235,7 +2235,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Best for contractors", href: getPayrollBestForUrl("contractors") },
     ],
     faqs: [
-      { q: "SurePayroll vs Gusto: which has more features?", a: "Gusto has more HR and benefits in the base product. SurePayroll is payroll-first with published Full Service pricing ($29/mo + $7 per employee). Choose Gusto for all-in-one; choose SurePayroll for simpler payroll and a lower published starting rate." },
+      { q: "SurePayroll vs Gusto: which has more features?", a: "Gusto has more HR and benefits in the base product. SurePayroll is payroll-first with published Full Service pricing ($39/mo + $7 per employee). Choose Gusto for all-in-one; choose SurePayroll for simpler payroll and a lower published starting rate." },
       { q: "Is SurePayroll part of Paychex?", a: "Yes. SurePayroll is part of the Paychex family, focused on small-business payroll." },
     ],
     sidebarWinners: [
@@ -2262,7 +2262,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       visitUrl: "https://www.surepayroll.com",
       bestForSummary: "Payroll-first product with published Full Service pricing for small employers.",
       rating: "4.2",
-      startingPrice: "$29/mo + $7/employee",
+      startingPrice: "$39/mo + $7/employee",
     },
     productB: {
       name: "ADP",
@@ -2292,7 +2292,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       "Pricing and product details verified August 2026 from SurePayroll’s published pricing page and ADP’s RUN Powered by ADP 1–49 payroll-packages documentation. ADP does not publish RUN dollar prices; this page does not treat third-party estimates as facts. BeltStack has not run payroll, filed taxes, migrated a client, or received an ADP quote through either platform.",
     quickVerdictParagraphs: [
       "For most small businesses comparing SurePayroll with ADP, the relevant ADP product is RUN Powered by ADP. ADP positions RUN for 1–49 employees. Workforce Now is ADP’s 50+ / midsize–enterprise product. TotalSource is a PEO. Roll by ADP is a separate simpler payroll line ADP has described with its own starting price. Comparing SurePayroll to “ADP” as one giant company is how this search goes wrong.",
-      "SurePayroll (a Paychex company) currently lists Full Service at $29/month plus $7 per employee: taxes calculated, filed, and deposited; W-2 and 1099; unlimited payroll runs; free 2-day direct deposit; cancel anytime. A cheaper No Tax Filing plan is $20 + $4 per employee if you file and deposit taxes yourself. RUN does not publish those numbers. You request pricing. Packages run Essential Payroll through HR Pro Payroll & HR. Tax filing is included across packages; W-2 and 1099 carry an additional fee; time, retirement, workers’ comp, and health insurance are add-ons.",
+      "SurePayroll (a Paychex company) currently lists Full Service at $39/month plus $7 per employee: taxes calculated, filed, and deposited; W-2 and 1099; unlimited payroll runs; free 2-day direct deposit; cancel anytime. A cheaper No Tax Filing plan is $20 + $4 per employee if you file and deposit taxes yourself. RUN does not publish those numbers. You request pricing. Packages run Essential Payroll through HR Pro Payroll & HR. Tax filing is included across packages; W-2 and 1099 carry an additional fee; time, retirement, workers’ comp, and health insurance are add-ons.",
       "Choose SurePayroll when the business is still payroll-shaped: a small crew, one or a few states, and a monthly cost you can calculate before talking to sales. Choose RUN when payroll is only the start—onboarding volume, HR helpdesk, recruiting, time and attendance, or a package path you expect to grow into. Do not pick on sticker price alone: SurePayroll’s published rate omits year-end forms, extra states, local taxes, and add-ons, and ADP’s quote can bundle services SurePayroll sells separately. If you will not use RUN’s HR stack, you are shopping complexity, not value.",
     ],
     relationshipContext: {
@@ -2308,7 +2308,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     decisionGuideBHeading: "Choose ADP (RUN) if…",
     decisionGuideA: [
       "Payroll and tax filing are the main problem; you do not need hiring, HR helpdesk, or workforce modules yet.",
-      "You want a published rate you can calculate before a sales call (currently $29/mo + $7 per employee on Full Service).",
+      "You want a published rate you can calculate before a sales call (currently $39/mo + $7 per employee on Full Service).",
       "You want unlimited payroll runs and cancel-anytime billing without a quote cycle.",
       "A small service crew (or mixed W-2 + 1099) in one primary state is the actual operation.",
       "You are willing to add timeclock, accounting export, extra states, and year-end forms as line items rather than a platform package.",
@@ -2339,7 +2339,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       "This table is SurePayroll vs RUN Powered by ADP. It is not SurePayroll vs Workforce Now or vs ADP TotalSource.",
     featureComparison: [
       textRow("Relevant product", "SurePayroll Full Service (Paychex company). No Tax Filing is a cheaper self-file plan.", "RUN Powered by ADP (1–49). Not Workforce Now (50+), TotalSource (PEO), or Roll."),
-      textRow("Pricing visibility", "Published: Full Service $29/mo + $7/employee; No Tax Filing $20 + $4/employee. Cancel anytime.", "Quote required. ADP lists four RUN packages and “Get pricing.” No public dollar card for RUN."),
+      textRow("Pricing visibility", "Published: Full Service $39/mo + $7/employee; No Tax Filing $20 + $4/employee. Cancel anytime.", "Quote required. ADP lists four RUN packages and “Get pricing.” No public dollar card for RUN."),
       textRow("Payroll tax filing", "Full Service: SurePayroll calculates, files, and deposits. No Tax Filing: you file and deposit.", "Included on all RUN packages: calculate, file, deposit, reconcile; ADP states it pays fines/penalties if it makes a tax-filing error."),
       textRow("Tax guarantees", "Full Service: No Penalty Tax Filing Guarantee (client still liable if at fault; client always pays the taxes). Self-service: Tax Calculation Guarantee.", "ADP: if ADP makes a tax filing error, it pays resulting fines/penalties. Client-caused errors are a different issue—read the service agreement."),
       textRow("Year-end W-2 / 1099", "Published annual fee: $50 base + $5 per form.", "W-2 and 1099 listed as an additional fee on every RUN package. Ask for the dollar amount in the quote."),
@@ -2357,9 +2357,9 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       textRow("Biggest tradeoff", "You can see the price. You do not get RUN’s HR package ladder or 24/7 support hours.", "You get ADP infrastructure and package depth. You cannot verify monthly cost from a public page, and unused HR modules are paid complexity."),
     ],
     pricingComparison:
-      "SurePayroll publishes Full Service at $29/month plus $7 per employee. ADP requires a RUN quote. Do not treat third-party “ADP starts at $X” figures as current RUN pricing.",
+      "SurePayroll publishes Full Service at $39/month plus $7 per employee. ADP requires a RUN quote. Do not treat third-party “ADP starts at $X” figures as current RUN pricing.",
     pricingComparisonParagraphs: [
-      "SurePayroll currently publishes two small-business plans. Full Service (listed as most popular) is $29/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, free 2-day direct deposit, auto-schedule, mobile for employers and employees, new-hire reporting, and free onboarding. No Tax Filing is $20/month plus $4 per employee with the same payroll features except you file and deposit taxes. First state is included; additional states are $9.99/month. Local taxes carry a separate fee. Year-end W-2 / 1099-NEC is billed annually at $50 plus $5 per form—not in the monthly calculator total. Optional add-ons include accounting integration at $4.99/month, timeclock from $5/month plus $3 per employee, employment law from $30/month, and custom 401(k). SurePayroll states cancel-anytime monthly billing. Household/nanny pricing is a different product (the pricing page listed $39/month including one employee) and is not this comparison.",
+      "SurePayroll currently publishes two small-business plans. Full Service (listed as most popular) is $39/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, free 2-day direct deposit, auto-schedule, mobile for employers and employees, new-hire reporting, and free onboarding. No Tax Filing is $20/month plus $4 per employee with the same payroll features except you file and deposit taxes. First state is included; additional states are $9.99/month. Local taxes carry a separate fee. Year-end W-2 / 1099-NEC is billed annually at $50 plus $5 per form—not in the monthly calculator total. Optional add-ons include accounting integration at $4.99/month, timeclock from $5/month plus $3 per employee, employment law from $30/month, and custom 401(k). SurePayroll states cancel-anytime monthly billing. Household/nanny pricing is a different product (the pricing page listed $39/month including one employee) and is not this comparison.",
       "ADP does not publish RUN package prices. The 1–49 payroll-packages page is “Get pricing.” ADP describes RUN pricing as tiered (four packages) versus custom pricing for Workforce Now—still without dollar amounts for RUN. ADP says payroll software pricing depends on how often you run payroll, how many people you pay, how often you add or remove payees, and add-on services. Off-cycle payroll is allowed but fees increase with frequency. W-2 and 1099 are an additional fee on every package. Contractors can be billed as a separate bundle (monthly base plus per-contractor plus year-end fees). Implementation fees are not listed as a public number. Confirm them on the quote. ADP’s 1–49 FAQ mentions Roll starting as low as $39/month plus $5 per employee; that is Roll, not RUN. Do not use it as a RUN or SurePayroll-vs-ADP price.",
       "What to ask ADP before you compare the price: (1) total monthly and annual cost for your headcount and pay frequency; (2) what is monthly vs per-payroll; (3) implementation or setup fees; (4) whether tax filing is included at the quoted package (it is on the public package table—confirm the quote matches); (5) W-2 and 1099 year-end dollar amounts; (6) extra-state or local-tax charges; (7) Time and Attendance, HR HelpDesk, ZipRecruiter, ATS, retirement, workers’ comp, and health-insurance add-on prices if you will use them; (8) contractor-bundle fees if you pay 1099s; (9) confirmation of no required long-term contract and how cancellation works on your order form; (10) support hours and whether anything is gated behind a higher package. Ask for the same scope SurePayroll Full Service already prices: tax filing, unlimited-equivalent run frequency, direct deposit, employee access, and year-end forms. Then add only the RUN modules you will use.",
     ],
@@ -2378,7 +2378,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
     },
     prosConsA: {
       pros: [
-        "Published Full Service price: $29/mo + $7 per employee",
+        "Published Full Service price: $39/mo + $7 per employee",
         "Unlimited payroll runs; cancel anytime",
         "Full Service tax filing plus a cheaper No Tax Filing plan if you self-file",
         "W-2 and 1099 on the same product; year-end fee is published",
@@ -2455,7 +2455,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       },
       {
         q: "Which is cheaper, SurePayroll or ADP?",
-        a: "SurePayroll Full Service is $29/month plus $7 per employee, plus extras (year-end $50 + $5/form, extra states $9.99/month, local-tax fee, add-ons). ADP does not publish RUN prices, so BeltStack cannot say ADP is higher or lower. Get a RUN quote for the same scope (tax filing, year-end forms, states, time, HR) and compare. Do not use Roll’s $39 + $5 example or old third-party ADP rates as RUN’s price.",
+        a: "SurePayroll Full Service is $39/month plus $7 per employee, plus extras (year-end $50 + $5/form, extra states $9.99/month, local-tax fee, add-ons). ADP does not publish RUN prices, so BeltStack cannot say ADP is higher or lower. Get a RUN quote for the same scope (tax filing, year-end forms, states, time, HR) and compare. Do not use Roll’s $39 + $5 example or old third-party ADP rates as RUN’s price.",
       },
       {
         q: "Does SurePayroll include tax filing?",
@@ -2484,7 +2484,7 @@ const comparisons: Record<string, ComparisonTemplateProps> = {
       { label: "Winner for HR/workforce packages", winner: "B" },
     ],
     heroCallouts: [
-      { label: "Winner for published payroll cost", winner: "A", reason: "SurePayroll lists Full Service at $29/mo + $7 per employee. RUN still requires a quote." },
+      { label: "Winner for published payroll cost", winner: "A", reason: "SurePayroll lists Full Service at $39/mo + $7 per employee. RUN still requires a quote." },
       { label: "Winner for payroll + HR infrastructure", winner: "B", reason: "RUN’s packages add onboarding, HR helpdesk, recruiting, and a path to Workforce Now—if you will use them." },
     ],
     moreComparisons: [

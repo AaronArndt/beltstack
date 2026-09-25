@@ -76,7 +76,7 @@ export const SALES_TEAMS_PAGE_PROPS = {
       description:
         "Pipeline-first CRM built for salespeople. Clear deal stages, activity tracking, and reporting so reps and managers see what's in play.",
       rating: "4.5",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       reviewHref: getCrmReviewUrl("pipedrive"),
       visitUrl: "https://www.pipedrive.com",
       logoSrc: LOGOS.pipedrive,
@@ -119,7 +119,7 @@ export const SALES_TEAMS_PAGE_PROPS = {
       name: "Pipedrive",
       logoSrc: LOGOS.pipedrive,
       bestFor: "Pipeline visibility",
-      startingPrice: "From $14.90/user/mo",
+      startingPrice: "From $14/user/mo billed annually",
       standoutFeature: "Deal stages, activity tracking",
       reviewHref: getCrmReviewUrl("pipedrive"),
     },

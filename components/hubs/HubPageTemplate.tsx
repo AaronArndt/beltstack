@@ -33,6 +33,8 @@ import {
   trustIndicatorListClass,
 } from "@/lib/design-tokens";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
+import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
+import { PRICING_STUDY_HUB_CATEGORIES, PRICING_STUDY_PATH } from "@/lib/research/pricing/publicationPaths";
 
 // ——— Design tokens (match homepage) ———
 const btnPrimary =
@@ -663,8 +665,22 @@ export function HubPageTemplate({
                 </li>
               ))}
             </ul>
+            {PRICING_STUDY_HUB_CATEGORIES.includes(
+              softwarePickCategory as (typeof PRICING_STUDY_HUB_CATEGORIES)[number],
+            ) ? (
+              <p className="mt-4 text-[#57534E] text-sm leading-relaxed">
+                For advertised list prices versus a frozen small-team workflow in this category, see our{" "}
+                <Link
+                  href={PRICING_STUDY_PATH}
+                  className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                >
+                  advertised vs usable pricing study
+                </Link>
+                .
+              </p>
+            ) : null}
             <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
+              {AFFILIATE_DISCLOSURE}{" "}
               <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 Affiliate disclosure
               </Link>
@@ -689,7 +705,7 @@ export function HubPageTemplate({
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              {AFFILIATE_DISCLOSURE}
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

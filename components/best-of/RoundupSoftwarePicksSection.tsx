@@ -5,6 +5,7 @@ import {
   type SoftwarePickCardContent,
   type SoftwarePickCategoryRouteHelpers,
 } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 import { sectionRuleAccent } from "@/lib/design-tokens";
 
 function formatRoundupRecommendationPricingLabel(startingPrice: string): string {
@@ -37,7 +38,14 @@ export function RoundupSoftwarePicksSection({
         {featured.map((pick) => (
           <SoftwarePickCard
             key={pick.slug}
-            {...toSoftwarePickCardProps(pick, routes, { id: `pick-${pick.slug}` })}
+            {...toSoftwarePickCardProps(
+              {
+                ...pick,
+                startingPrice: overlayVerifiedStartingPrice(pick.slug, pick.startingPrice),
+              },
+              routes,
+              { id: `pick-${pick.slug}` }
+            )}
           />
         ))}
       </div>
@@ -54,7 +62,9 @@ export function RoundupSoftwarePicksSection({
                 name={pick.name}
                 badge={pick.badge}
                 rating={pick.rating}
-                pricingLabel={formatRoundupRecommendationPricingLabel(pick.startingPrice)}
+                pricingLabel={formatRoundupRecommendationPricingLabel(
+                  overlayVerifiedStartingPrice(pick.slug, pick.startingPrice)
+                )}
                 body={roundupRecommendationBody(pick)}
                 reviewHref={routes.getReviewUrl(pick.slug)}
                 visitUrl={pick.visitUrl}

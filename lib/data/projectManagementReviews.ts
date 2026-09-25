@@ -27,7 +27,7 @@ const PROJECT_MANAGEMENT_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate project management tools for ease of use, collaboration, views, automation, and reporting.",
   bullets: [
-    "We test core workflows: creating projects, assigning tasks, building views, and tracking deadlines.",
+    "We evaluate project management software around creating projects, assigning tasks, building views, and tracking deadlines.",
     "We compare pricing tiers, user limits, automations, and storage so you understand total cost.",
     "We look at collaboration, reporting, and integrations with tools like time tracking, CRM, and documentation.",
   ],

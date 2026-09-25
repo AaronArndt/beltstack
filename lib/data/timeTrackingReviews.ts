@@ -1,5 +1,6 @@
 import { getTimeTrackingReviewUrl, getTimeTrackingCompareUrl, getTimeTrackingBestForUrl } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -21,7 +22,7 @@ const TIME_TRACKING_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate time tracking software for ease of use, reporting, integrations, and how well it supports billing and team workflows.",
   bullets: [
-    "We test core workflows: starting and stopping timers, editing time, approving timesheets, and exporting data.",
+    "We evaluate time tracking software around starting and stopping timers, editing time, approving timesheets, and exporting data.",
     "We compare pricing tiers, user limits, and billing features so you understand total cost for your team.",
     "We look at reporting, project visibility, and integrations with project management, invoicing, accounting, and payroll tools.",
   ],
@@ -149,7 +150,7 @@ const reviews: Record<string, ReviewData> = {
     categoryHref: "/time-tracking",
     features: [],
     rating: "4.4",
-    startingPrice: "$12/user/mo",
+    startingPrice: "Free",
     bestFor: "teams that want time tracking tied directly to invoicing",
     visitUrl: "https://www.getharvest.com",
     logoSrc: "/Logos/harvest.png",
@@ -198,9 +199,9 @@ const reviews: Record<string, ReviewData> = {
       { name: "Expenses", description: "Log and bill expenses alongside time entries." },
     ],
     pricingSummary:
-      "Harvest uses per-user pricing with a single main plan that includes time tracking, expenses, and invoicing.",
+      "Harvest has an ongoing free plan for 1 seat. Teams is $9/seat/month billed annually, or $11/seat/month billed monthly, and includes time tracking, expenses, and invoicing.",
     pricingTiers:
-      "There is a free plan for solo users with limited projects; most teams will need the paid plan at around $12/user/month. The model is simple, but total cost increases with team size.",
+      "There is a free plan for one seat. Most teams use Teams at $9/user/month billed annually ($11 monthly). The model is simple, but total cost increases with team size.",
     integrations: [],
     integrationsIntro:
       "Harvest integrates with project management tools, calendars, and accounting platforms, making it relatively easy to fit into an existing stack.",
@@ -353,7 +354,7 @@ const reviews: Record<string, ReviewData> = {
     categoryHref: "/time-tracking",
     features: [],
     rating: "4.4",
-    startingPrice: "$4.99/user/mo",
+    startingPrice: "$4.99/user/mo billed annually (2-user min.)",
     bestFor: "remote and field teams that need activity and location tracking",
     visitUrl: "https://hubstaff.com",
     logoSrc: "/Logos/hubstaff.jpeg",
@@ -403,9 +404,9 @@ const reviews: Record<string, ReviewData> = {
       { name: "Payroll & invoicing", description: "Optional built-in payroll and invoices based on tracked time." },
     ],
     pricingSummary:
-      "Hubstaff uses per-user pricing with several plans; monitoring and payroll features live on mid and higher tiers.",
+      "Hubstaff Starter is $4.99/user/month billed annually, or $7/user/month billed monthly, with a 2-user minimum. Monitoring and payroll features live on mid and higher tiers.",
     pricingTiers:
-      "Entry-level plans are competitively priced for remote teams that need monitoring. Advanced features like schedules, time-off, and payroll cost more; compare to Time Doctor and Clockify's higher tiers.",
+      "Starter is the advertised entry ($4.99 billed annually, 2-user minimum). Advanced features like schedules, time-off, and payroll cost more; compare to Time Doctor and Clockify's higher tiers.",
     integrations: [],
     integrationsIntro:
       "Hubstaff integrates with project, accounting, and payroll tools so that tracked time flows into existing systems.",
@@ -848,7 +849,12 @@ const reviews: Record<string, ReviewData> = {
 };
 
 export function getTimeTrackingReviewBySlug(slug: string): ReviewData | null {
-  return reviews[slug] ?? null;
+  const review = reviews[slug];
+  if (!review) return null;
+  return {
+    ...review,
+    startingPrice: overlayVerifiedStartingPrice(slug, review.startingPrice, "time-tracking"),
+  };
 }
 
 export function getTimeTrackingReviewSlugs(): string[] {

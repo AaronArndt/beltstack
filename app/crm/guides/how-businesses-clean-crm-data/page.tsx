@@ -130,7 +130,7 @@ export default function HowBusinessesCleanCrmDataPage() {
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers CRM</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack publishes independent CRM software reviews for small businesses and contractors. We test duplicate tools and reporting in trials, document pricing on published pages, and separate guides from paid placement—see <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>.
+                      BeltStack publishes independent CRM software reviews for small businesses and contractors. We evaluate duplicate-detection tools and reporting using vendor documentation, document pricing on published pages, and separate guides from paid placement—see <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>.
                     </p>
                     <p>Data hygiene advice here is operational, not legal—confirm retention and GDPR/CCPA obligations with counsel if you archive contacts.</p>
                   </div>

@@ -109,46 +109,65 @@ export default function TermsOfServicePage() {
                 Some links on BeltStack are affiliate links. This means we may earn a commission if you click a link or purchase a product through
                 certain links on our website, at no additional cost to you.
               </p>
-              <p>Compensation may influence:</p>
-              <ul>
-                <li>Product placement</li>
-                <li>Visibility</li>
-                <li>Promotional positioning</li>
-              </ul>
-              <p>However, compensation does not determine our editorial opinions or recommendations.</p>
-              <p>We may also receive compensation for:</p>
+              <p>
+                Affiliate relationships do not determine BeltStack editorial ratings, rankings, best-overall or best-for selections, or comparison
+                conclusions.
+              </p>
+              <p>We may also receive compensation for clearly labeled:</p>
               <ul>
                 <li>Sponsored content</li>
-                <li>Featured placements</li>
+                <li>Featured or promotional placements</li>
                 <li>Advertising partnerships</li>
                 <li>Vendor promotions</li>
               </ul>
-              <p>Sponsored content or promotional placements may be identified where appropriate.</p>
+              <p>
+                Sponsored or promotional placements, if used, will be identified as such and kept separate from editorial rankings and
+                recommendations. They will not change editorial scores. See our{" "}
+                <Link href="/methodology#affiliate-disclosure" className={linkClass}>
+                  methodology
+                </Link>
+                .
+              </p>
 
               <h2 id="editorial-independence">5. Editorial Independence</h2>
-              <p>BeltStack aims to provide useful and unbiased software research and recommendations.</p>
-              <p>Our rankings, comparisons, and recommendations may consider:</p>
+              <p>BeltStack aims to provide useful and independent software research and recommendations.</p>
+              <p>Our editorial ratings, rankings, comparisons, and recommendations may consider:</p>
               <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Ease of use</li>
-                <li>Market reputation</li>
-                <li>Target industries</li>
-                <li>User feedback</li>
-                <li>Research</li>
-                <li>Affiliate relationships</li>
-                <li>Commercial partnerships</li>
+                <li>Features and capabilities</li>
+                <li>Pricing and value</li>
+                <li>Ease of adoption and use</li>
+                <li>Support and documentation</li>
+                <li>Integrations</li>
+                <li>Fit for the business or workflow described on the page</li>
+                <li>Documented product information and other research</li>
               </ul>
-              <p>We reserve the right to determine how products are reviewed, ranked, categorized, or displayed.</p>
+              <p>
+                Affiliate relationships and commercial advertising do not determine those editorial conclusions. BeltStack reserves the right to
+                decide which products to cover and how to categorize them. Details are on our{" "}
+                <Link href="/methodology" className={linkClass}>
+                  methodology
+                </Link>{" "}
+                page.
+              </p>
 
               <h2 id="ai-assisted-content">6. AI-Assisted Content</h2>
               <p>
-                Certain content published on BeltStack may be generated, summarized, enhanced, or assisted using artificial intelligence (“AI”)
-                tools.
+                AI tools may assist with organizing research, analyzing information, drafting, editing, or maintaining structured content on
+                BeltStack.
               </p>
-              <p>AI-assisted content may contain inaccuracies, omissions, or outdated information.</p>
-              <p>Although content may be reviewed or edited by humans, BeltStack does not guarantee the accuracy or completeness of AI-assisted content.</p>
-              <p>Users should independently verify all information before making purchasing or operational decisions.</p>
+              <p>
+                Factual claims about pricing, product capabilities, contracts, policies, integrations, and material product differences are checked
+                against reliable sources, prioritizing official vendor documentation where it is available. Editorial recommendations remain
+                BeltStack judgments.
+              </p>
+              <p>
+                AI assistance can still introduce inaccuracies. BeltStack does not guarantee that every sentence is error-free. Users should
+                independently verify time-sensitive information before making purchasing or operational decisions. See our{" "}
+                <Link href="/methodology#ai-assisted-editorial-work" className={linkClass}>
+                  methodology
+                </Link>
+                .
+              </p>
 
               <h2 id="third-party">7. Third-Party Websites and Services</h2>
               <p>BeltStack may contain links to third-party websites, software vendors, products, or services.</p>

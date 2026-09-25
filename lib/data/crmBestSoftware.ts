@@ -6,6 +6,7 @@
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
 import type { SoftwarePickCardContent } from "@/lib/data/softwarePickCards/types";
 import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
+import { withCrmCanonicalPickRatings } from "@/lib/data/crmCanonicalRating";
 
 const LOGOS = {
   hubspot: "/Logos/hubspot.jpeg",
@@ -31,7 +32,7 @@ export type CrmComparisonTableRow = {
   reviewHref: string;
 };
 
-export const TOP_PICKS: BestCrmPick[] = [
+export const TOP_PICKS: BestCrmPick[] = withCrmCanonicalPickRatings([
   {
     slug: "hubspot",
     name: "HubSpot",
@@ -69,7 +70,7 @@ export const TOP_PICKS: BestCrmPick[] = [
     description:
       "Enterprise-grade CRM with extensive customization, AppExchange, and scale. Best when you need deep control and large teams.",
     rating: "4.5",
-    startingPrice: "From $25/user/mo",
+    startingPrice: "From $25/user/mo (paid Sales Cloud)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -129,7 +130,7 @@ export const TOP_PICKS: BestCrmPick[] = [
     description:
       "Sales-pipeline-focused CRM with clear deal stages and activity tracking. Built for teams that live in the pipeline.",
     rating: "4.5",
-    startingPrice: "From $14.90/user/mo",
+    startingPrice: "From $14/user/mo billed annually",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -159,7 +160,7 @@ export const TOP_PICKS: BestCrmPick[] = [
     description:
       "Work OS with CRM capabilities. Customizable boards and workflows suit teams that want flexibility beyond a traditional pipeline.",
     rating: "4.4",
-    startingPrice: "From $10/user/mo",
+    startingPrice: "From $12/user/mo billed annually",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -182,20 +183,20 @@ export const TOP_PICKS: BestCrmPick[] = [
     pricingSummary:
       "Monday offers multiple plans; CRM features are available from lower tiers. Price per seat; check current plans for the right feature set.",
   },
-];
+]);
 
 /** Comparison table: all 9 CRM tools. Columns: Tool, Best for, Starting price, Rating, Read review */
-export const COMPARISON_TABLE_ROWS: CrmComparisonTableRow[] = [
+export const COMPARISON_TABLE_ROWS: CrmComparisonTableRow[] = withCrmCanonicalPickRatings([
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, bestFor: "Best overall", startingPrice: "Free tier", rating: "4.6", reviewHref: getCrmReviewUrl("hubspot") },
-  { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, bestFor: "Enterprise teams", startingPrice: "From $25/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("salesforce") },
+  { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, bestFor: "Enterprise teams", startingPrice: "From $25/user/mo (paid Sales Cloud)", rating: "4.5", reviewHref: getCrmReviewUrl("salesforce") },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, bestFor: "Best value", startingPrice: "Free tier", rating: "4.4", reviewHref: getCrmReviewUrl("zoho-crm") },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, bestFor: "Sales pipelines", startingPrice: "From $14.90/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("pipedrive") },
-  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, bestFor: "Customizable workflows", startingPrice: "From $10/user/mo", rating: "4.4", reviewHref: getCrmReviewUrl("monday-crm") },
-  { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, bestFor: "AI-powered sales", startingPrice: "From $15/user/mo", rating: "4.3", reviewHref: getCrmReviewUrl("freshsales") },
-  { slug: "copper", name: "Copper", logoSrc: LOGOS.copper, bestFor: "Google Workspace users", startingPrice: "From $29/user/mo", rating: "4.4", reviewHref: getCrmReviewUrl("copper") },
-  { slug: "close", name: "Close", logoSrc: LOGOS.close, bestFor: "Inside sales & calling", startingPrice: "From $49/user/mo", rating: "4.5", reviewHref: getCrmReviewUrl("close") },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, bestFor: "Sales pipelines", startingPrice: "From $14/user/mo billed annually", rating: "4.5", reviewHref: getCrmReviewUrl("pipedrive") },
+  { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, bestFor: "Customizable workflows", startingPrice: "From $12/user/mo billed annually", rating: "4.4", reviewHref: getCrmReviewUrl("monday-crm") },
+  { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, bestFor: "AI-powered sales", startingPrice: "From $9/user/mo billed annually", rating: "4.3", reviewHref: getCrmReviewUrl("freshsales") },
+  { slug: "copper", name: "Copper", logoSrc: LOGOS.copper, bestFor: "Google Workspace users", startingPrice: "From $23/user/mo billed annually", rating: "4.4", reviewHref: getCrmReviewUrl("copper") },
+  { slug: "close", name: "Close", logoSrc: LOGOS.close, bestFor: "Inside sales & calling", startingPrice: "From $19/user/mo (Solo, 1 user)", rating: "4.5", reviewHref: getCrmReviewUrl("close") },
   { slug: "keap", name: "Keap", logoSrc: LOGOS.keap, bestFor: "Small business marketing + CRM", startingPrice: "From $159/mo", rating: "4.3", reviewHref: getCrmReviewUrl("keap") },
-];
+]);
 
 /** More CRM options (below table) — card style */
 export const MORE_CRM_OPTIONS: { slug: string; name: string; description: string; reviewHref: string; logoSrc: string }[] = [

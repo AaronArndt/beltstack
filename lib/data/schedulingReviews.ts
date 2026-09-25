@@ -4,6 +4,7 @@ import {
   getSchedulingBestForUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 type SchedulingReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -37,7 +38,7 @@ const SCHEDULING_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate scheduling tools on calendar sync, booking automation, reminders and notifications, team and multi-staff support, and integrations.",
   bullets: [
-    "We test core workflows: setting availability, sharing booking links, handling time zones, and managing reminders.",
+    "We evaluate scheduling software around setting availability, sharing booking links, handling time zones, and managing reminders.",
     "We compare pricing tiers, event types, staff limits, and feature sets so you understand total cost for your use case.",
     "We look at calendar integrations, payment and intake options, and how well each tool fits consultants, service businesses, and teams.",
   ],
@@ -229,7 +230,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     category: "Scheduling",
     categoryHref: SCHEDULING_HUB,
     rating: "4.5",
-    startingPrice: "From ~$10/mo",
+    startingPrice: "Free",
     bestFor: "teams that need round-robin booking, collective availability, or multiple staff without enterprise pricing",
     visitUrl: "https://youcanbook.me",
     logoSrc: LOGOS.youcanbookme,
@@ -262,7 +263,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     whoShouldAvoid:
       "Solo users who only need one event type may prefer Calendly’s free tier or a simpler tool. If you need heavy intake forms, packages, or payment flows like Acuity, YouCanBook.me is less focused on those.",
     pricingSummary:
-      "YouCanBook.me offers paid plans starting around $10/month that add team features, more booking types, and integrations. There is typically no permanent free plan, but trials are available. Compare with Calendly and Setmore for your team size.",
+      "YouCanBook.me has an ongoing free plan for one calendar connection. Team is $16.20 per member per month billed annually ($18 monthly) and is the first plan that covers five staff calendars.",
     pricingTiers:
       "Plans scale with the number of team members, booking types, and features like custom branding and integrations. Check YouCanBook.me’s pricing page for current tiers and limits.",
     costVsCompetitors:
@@ -285,7 +286,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     ],
     faqs: [
       { q: "Does YouCanBook.me support round-robin?", a: "Yes. YouCanBook.me supports round-robin booking so clients can book with any available team member, and you can distribute appointments evenly." },
-      { q: "How much does YouCanBook.me cost?", a: "YouCanBook.me’s paid plans typically start around $10/month and scale with team size and features. Check their site for current pricing." },
+      { q: "How much does YouCanBook.me cost?", a: "YouCanBook.me has an ongoing free plan for one calendar connection. Team is $16.20 per member per month billed annually ($18 monthly)." },
       { q: "YouCanBook.me vs Calendly?", a: "YouCanBook.me often costs less for team scheduling and includes round-robin; Calendly has stronger brand recognition and a simpler solo experience. Choose YouCanBook.me for team-first use, Calendly for simplicity and name recognition." },
     ],
     methodology: SCHEDULING_METHODOLOGY,
@@ -404,7 +405,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     category: "Scheduling",
     categoryHref: SCHEDULING_HUB,
     rating: "4.4",
-    startingPrice: "From ~$8/mo",
+    startingPrice: "Free",
     bestFor: "salons, fitness, and local services that want custom booking forms and industry templates at a lower price",
     visitUrl: "https://simplybook.me",
     logoSrc: LOGOS.simplybookme,
@@ -417,7 +418,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.5", explanation: "Custom forms, industry templates, multi-staff and multi-service. Good breadth for the price." },
-      { category: "Pricing", score: "4.6", explanation: "Plans start around $8/month; often cheaper than Acuity for similar capability." },
+      { category: "Pricing", score: "4.6", explanation: "Ongoing free plan for 1 provider. Paid Basic is listed in EUR; a USD usable amount is not published. Do not convert EUR to USD." },
       { category: "Ease of Use", score: "4.2", explanation: "More options mean more setup time. Once configured, clients get a solid experience." },
       { category: "Support", score: "4.3", explanation: "Documentation and support are adequate. Some users report a learning curve." },
       { category: "Integrations", score: "4.3", explanation: "Integrates with payment processors, calendars, and various third-party tools." },
@@ -437,7 +438,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     whoShouldAvoid:
       "Solo users who only need a single calendar link may find it overkill. Teams that prioritize the sleekest, most recognizable booking experience might prefer Calendly even at higher cost.",
     pricingSummary:
-      "SimplyBook.me plans start around $8/month and scale with staff, services, and features like payments and reminders. No free plan, but pricing is competitive with Setmore and below Acuity.",
+      "SimplyBook.me has an ongoing free plan for 1 provider. Paid Basic is listed in EUR on the official pricing page; a USD usable amount is not published. Do not convert EUR to USD.",
     pricingTiers:
       "Entry tiers cover a set number of bookings and staff; higher tiers add more capacity, custom branding, and advanced options. Check SimplyBook.me’s pricing for current limits.",
     costVsCompetitors:
@@ -459,7 +460,7 @@ const reviews: Record<string, SchedulingReviewData> = {
       { name: "Calendly", href: getSchedulingReviewUrl("calendly"), description: "Simpler setup and stronger brand recognition; less customization.", logoSrc: LOGOS.calendly },
     ],
     faqs: [
-      { q: "How much does SimplyBook.me cost?", a: "SimplyBook.me plans typically start around $8/month and scale with bookings, staff, and features. There is no free plan, but pricing is competitive." },
+      { q: "How much does SimplyBook.me cost?", a: "SimplyBook.me has an ongoing free plan for 1 provider. Paid Basic is listed in EUR on the official pricing page; a USD usable amount is not published." },
       { q: "Is SimplyBook.me good for salons?", a: "Yes. SimplyBook.me offers templates and features aimed at salons and similar service businesses, including multiple staff and service types." },
       { q: "SimplyBook.me vs Setmore?", a: "SimplyBook.me offers more customization and industry templates; Setmore has a free tier and is often simpler to set up. Choose SimplyBook.me for control and value, Setmore for simplicity and free entry." },
     ],
@@ -579,7 +580,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     category: "Scheduling",
     categoryHref: SCHEDULING_HUB,
     rating: "4.3",
-    startingPrice: "From ~$10/mo",
+    startingPrice: "Free",
     bestFor: "businesses with multiple staff or locations that need structured scheduling and industry-specific features",
     visitUrl: "https://www.appointy.com",
     logoSrc: LOGOS.appointy,
@@ -592,7 +593,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.4", explanation: "Multi-location, multi-staff, industry templates, and marketing tools. Good for growing service businesses." },
-      { category: "Pricing", score: "4.3", explanation: "Plans start around $10/month and scale with staff and locations. Competitive for the capability." },
+      { category: "Pricing", score: "4.3", explanation: "Ongoing free plan for 1 staff. Growth is $19.99/month billed annually plus $5/month per extra staff; Professional includes 5 staff." },
       { category: "Ease of Use", score: "4.2", explanation: "More structure means more setup. Suitable for teams that need the organization." },
       { category: "Support", score: "4.3", explanation: "Documentation and support available. Adequate for most businesses." },
       { category: "Integrations", score: "4.2", explanation: "Integrates with calendars, payments, and some third-party tools. Ecosystem is smaller than Calendly or Acuity." },
@@ -612,7 +613,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     whoShouldAvoid:
       "Solo practitioners or very small teams with one location may find Calendly or Setmore simpler and cheaper. If you need the deepest intake forms and packages, Acuity may still be a better fit.",
     pricingSummary:
-      "Appointy plans start around $10/month and scale with staff, locations, and features like payments and marketing. Check Appointy’s pricing page for current tiers and limits.",
+      "Appointy has an ongoing free plan for 1 staff. Growth is $19.99/month billed annually ($29.99 monthly) plus $5/month per extra staff. Professional includes 5 staff.",
     pricingTiers:
       "Entry tiers cover a set number of staff and locations; higher tiers add more capacity, advanced reporting, and marketing features. Verify current plan details on Appointy’s site.",
     costVsCompetitors:
@@ -635,7 +636,7 @@ const reviews: Record<string, SchedulingReviewData> = {
     ],
     faqs: [
       { q: "Does Appointy support multiple locations?", a: "Yes. Appointy supports multiple locations so you can manage availability and staff per location from one account." },
-      { q: "How much does Appointy cost?", a: "Appointy’s plans typically start around $10/month and scale with staff and locations. Check their pricing page for current tiers." },
+      { q: "How much does Appointy cost?", a: "Appointy has an ongoing free plan. Growth is $19.99/month billed annually ($29.99 monthly). Check their pricing page for current tiers." },
       { q: "Is Appointy good for salons?", a: "Yes. Appointy offers industry-focused features and templates for salons and similar service businesses with multiple staff and services." },
     ],
     methodology: SCHEDULING_METHODOLOGY,
@@ -750,7 +751,12 @@ const reviews: Record<string, SchedulingReviewData> = {
 };
 
 export function getSchedulingReviewBySlug(slug: string): SchedulingReviewData | null {
-  return reviews[slug] ?? null;
+  const review = reviews[slug];
+  if (!review) return null;
+  return {
+    ...review,
+    startingPrice: overlayVerifiedStartingPrice(slug, review.startingPrice, "scheduling"),
+  };
 }
 
 export function getSchedulingReviewSlugs(): string[] {

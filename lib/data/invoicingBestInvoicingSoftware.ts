@@ -24,7 +24,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     description:
       "Invoicing, time tracking, and expense management built for freelancers and service businesses. Professional invoices and recurring billing.",
     rating: "4.5",
-    startingPrice: "$19/mo",
+    startingPrice: "$23/mo",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -46,7 +46,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Reporting depth below full accounting tools",
     ],
     pricingSummary:
-      "FreshBooks uses tiered plans starting around $19/month; pricing scales by client count and features. Check current plans on FreshBooks' site.",
+      "FreshBooks Lite is $23/month. Higher tiers add more billable clients, team members, and features.",
   },
   {
     slug: "quickbooks",
@@ -148,7 +148,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     description:
       "Cloud invoicing and quoting with full accounting. Strong for growing teams that want one platform.",
     rating: "4.5",
-    startingPrice: "$15/mo",
+    startingPrice: "$25/mo",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -170,7 +170,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
       "Some features require higher tiers",
     ],
     pricingSummary:
-      "Xero offers tiered plans starting around $15/month; higher tiers add more users and features. Compare with invoicing-only tools if you don't need full accounting.",
+      "Xero Early is $25/month. Invoicing and quotes are included; higher tiers add more invoices, multi-currency, and advanced reporting.",
   },
   {
     slug: "invoice-ninja",
@@ -210,7 +210,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     description:
       "Proposals, contracts, scheduling, and invoicing for creative and service professionals who want client work in one place.",
     rating: "4.4",
-    startingPrice: "Quote",
+    startingPrice: "$29/mo billed annually",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -219,7 +219,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     compareSlugs: ["honeybook-vs-bonsai", "freshbooks-vs-wave", "freshbooks-vs-quickbooks"],
     standoutFeature: "Proposals, contracts, and client experience",
     editorialParagraph:
-      "HoneyBook is built for creatives and service businesses that sell projects, not just invoices. Proposals, contracts, and payments live in one client-facing workflow. Pricing is often quote-based; compare with Bonsai for a similar freelancer-focused model or FreshBooks if you prioritize time tracking and accounting depth.",
+      "HoneyBook is built for creatives and service businesses that sell projects, not just invoices. Proposals, contracts, and payments live in one client-facing workflow. Starter is $29/month billed annually; compare with Bonsai for a similar freelancer-focused model or FreshBooks if you prioritize time tracking and accounting depth.",
     pros: [
       "End-to-end client workflow: proposals through payment",
       "Strong fit for photographers, designers, and coaches",
@@ -228,11 +228,11 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     ],
     cons: [
       "Less pure accounting depth than QuickBooks or Xero",
-      "Quote-based pricing can be harder to compare upfront",
+      "Published pricing can be harder to compare than invoice-only tools",
       "May be more than you need for invoice-only use cases",
     ],
     pricingSummary:
-      "HoneyBook typically uses subscription pricing with tiers or quotes depending on plan. Compare with Bonsai and FreshBooks for total cost at your client volume.",
+      "HoneyBook Starter is $29/month billed annually, or $36/month billed monthly.",
   },
   {
     slug: "bonsai",
@@ -241,7 +241,7 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     description:
       "Contracts, proposals, and invoicing tailored to freelancers and small creative businesses that want paperwork and billing together.",
     rating: "4.3",
-    startingPrice: "Quote",
+    startingPrice: "$9/mo billed annually",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -259,11 +259,11 @@ export const TOP_PICKS: BestInvoicingPick[] = [
     ],
     cons: [
       "Not a replacement for full bookkeeping in QuickBooks or Xero",
-      "Quote-based or tiered pricing—verify current plans",
+      "Basic plan does not include invoicing; Essentials is required for invoices",
       "Narrower ecosystem than mainstream accounting tools",
     ],
     pricingSummary:
-      "Bonsai uses tiered or quote-based plans depending on edition. Compare with HoneyBook and FreshBooks for freelancer workflows and total cost.",
+      "Bonsai Basic is $9/month billed annually ($15 monthly) and does not include invoices. Essentials is $19/month billed annually ($25 monthly) and is the first plan with invoicing.",
   },
 ];
 
@@ -273,7 +273,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
     name: "FreshBooks",
     logoSrc: "/Logos/freshbooks.jpeg",
     bestFor: "Best overall",
-    startingPrice: "$19/mo",
+    startingPrice: "$23/mo",
     standoutFeature: "Invoicing, time tracking, ease of use",
     reviewHref: getInvoicingReviewUrl("freshbooks"),
   },
@@ -309,7 +309,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
     name: "Xero",
     logoSrc: "/Logos/xero.png",
     bestFor: "Accounting + invoicing",
-    startingPrice: "$15/mo",
+    startingPrice: "$25/mo",
     standoutFeature: "Full accounting, integrations",
     reviewHref: getInvoicingReviewUrl("xero"),
   },
@@ -325,7 +325,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
     slug: "honeybook",
     name: "HoneyBook",
     bestFor: "Service businesses / client workflows",
-    startingPrice: "Quote",
+    startingPrice: "$29/mo billed annually",
     standoutFeature: "Client management, proposals",
     reviewHref: getInvoicingReviewUrl("honeybook"),
   },
@@ -333,7 +333,7 @@ export const COMPARISON_TABLE_ROWS: ComparisonTableRow[] = [
     slug: "bonsai",
     name: "Bonsai",
     bestFor: "Freelancers / creative businesses",
-    startingPrice: "Quote",
+    startingPrice: "$9/mo billed annually",
     standoutFeature: "Contracts, proposals, invoicing",
     reviewHref: getInvoicingReviewUrl("bonsai"),
   },

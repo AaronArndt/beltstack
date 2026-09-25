@@ -337,7 +337,7 @@ export const FIELD_SERVICE_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate FSM tools on scheduling and dispatch, mobile experience, invoicing and payments, customer management, and reporting.",
   bullets: [
-    "We test core workflows: creating jobs, scheduling and dispatching technicians, sending estimates and invoices, and tracking payments.",
+    "We evaluate field service software around the workflows contractors actually need, including creating jobs, scheduling and dispatching technicians, sending estimates and invoices, and tracking payments.",
     "We compare pricing tiers, user limits, and feature sets so you understand total cost at your team size.",
     "We look at mobile apps for technicians, customer portals, and integrations with accounting and payment tools.",
   ],

@@ -215,7 +215,7 @@ export const PROJECT_MANAGEMENT_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate project management tools on how well they help small teams plan work, collaborate, and ship projects on time.",
   bullets: [
-    "We test core workflows: creating projects, assigning tasks, building views, and tracking deadlines.",
+    "We evaluate project management software around creating projects, assigning tasks, building views, and tracking deadlines.",
     "We compare pricing tiers, user limits, and automation caps so you understand total cost at your team size.",
     "We look at collaboration, reporting, and integrations with tools like time tracking, CRM, and documentation.",
   ],

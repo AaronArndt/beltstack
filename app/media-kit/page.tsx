@@ -152,9 +152,10 @@ export default function MediaKitPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Accuracy, transparency, and reader usefulness.">Editorial standards</SectionTitle>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">
-              BeltStack aims to provide helpful, accurate, and transparent software research. Compensation or commercial relationships may influence
-              placement or visibility where disclosed and appropriate, but our goal is for editorial opinions and recommendations to remain useful to
-              readers. For how we review products and handle affiliates, see{" "}
+              BeltStack aims to provide helpful, accurate, and transparent software research. Affiliate relationships do
+              not determine editorial ratings, rankings, or recommendations. Sponsored or promotional placements, if
+              used, will be labeled and kept separate from editorial recommendations. For how we review products and
+              handle affiliates, see{" "}
               <Link href="/methodology" className={linkClass}>
                 how we review software
               </Link>{" "}

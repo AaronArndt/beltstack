@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { BELTSTACK_RATING_TOOLTIP } from "@/lib/editorial";
 
 /** "How we rate" popover next to scores — matches review pages; hover + click; links to /methodology. */
 export function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right" }) {
@@ -58,8 +59,7 @@ export function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right"
         >
           <p className="text-sm font-semibold text-[#1A2D48]">How we rate</p>
           <p className="mt-1 text-xs leading-relaxed text-[#57534E]">
-            BeltStack ratings are editorial evaluations, not user-review averages. Scores combine pricing, features,
-            ease of use, support, and contractor fit. We review sources and update regularly.
+            {BELTSTACK_RATING_TOOLTIP}
           </p>
           <Link
             href="/methodology"

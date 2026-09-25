@@ -40,6 +40,7 @@ import {
   EMAIL_MARKETING_REGISTRY_SUPPLEMENT,
 } from "@/lib/data/emailMarketingBestEmailMarketingSoftware";
 import { TOP_PICKS as PAYMENT_PROCESSING_TOP_PICKS } from "@/lib/data/paymentProcessingBestPaymentProcessingSoftware";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 function toMap(picks: SoftwarePickCardContent[]): Map<string, SoftwarePickCardContent> {
   return new Map(picks.map((p) => [p.slug, p]));
@@ -70,11 +71,22 @@ const REGISTRY: Record<SoftwarePickCategory, Map<string, SoftwarePickCardContent
   "payment-processing": toMap(PAYMENT_PROCESSING_TOP_PICKS),
 };
 
+function withVerifiedPrice(
+  category: SoftwarePickCategory,
+  pick: SoftwarePickCardContent
+): SoftwarePickCardContent {
+  return {
+    ...pick,
+    startingPrice: overlayVerifiedStartingPrice(pick.slug, pick.startingPrice, category),
+  };
+}
+
 export function getSoftwarePick(
   category: SoftwarePickCategory,
   slug: string
 ): SoftwarePickCardContent | undefined {
-  return REGISTRY[category].get(slug);
+  const pick = REGISTRY[category].get(slug);
+  return pick ? withVerifiedPrice(category, pick) : undefined;
 }
 
 export function listSoftwarePicksBySlugs(
@@ -82,5 +94,8 @@ export function listSoftwarePicksBySlugs(
   slugs: readonly string[]
 ): SoftwarePickCardContent[] {
   const map = REGISTRY[category];
-  return slugs.map((s) => map.get(s)).filter((p): p is SoftwarePickCardContent => p != null);
+  return slugs
+    .map((s) => map.get(s))
+    .filter((p): p is SoftwarePickCardContent => p != null)
+    .map((p) => withVerifiedPrice(category, p));
 }

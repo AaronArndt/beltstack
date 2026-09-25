@@ -304,7 +304,7 @@ export const POS_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate POS tools on how well they help small businesses process sales, manage payments, and support inventory and reporting.",
   bullets: [
-    "We test core workflows: processing sales, accepting payments, managing items and inventory, and viewing reports.",
+    "We evaluate POS software around processing sales, accepting payments, managing items and inventory, and viewing reports.",
     "We compare pricing (software and hardware), payment processing rates, and add-ons so you understand total cost.",
     "We look at hardware compatibility, integrations with accounting and ecommerce, and multi-location support where relevant.",
   ],

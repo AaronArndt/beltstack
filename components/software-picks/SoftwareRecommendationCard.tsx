@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { vendorCtaRel } from "@/lib/editorial";
 
 export type SoftwareRecommendationCardProps = {
   id?: string;
@@ -71,7 +72,7 @@ export function SoftwareRecommendationCard({
             <a
               href={visitUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={vendorCtaRel(visitUrl)}
               className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline"
             >
               Visit site

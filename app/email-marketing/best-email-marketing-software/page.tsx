@@ -379,7 +379,7 @@ export default function BestEmailMarketingSoftwarePage() {
             <h3 id="best-email-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">We may earn a commission when you purchase through our links. This does not affect our recommendations.</p>
+            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.</p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it
             </button>

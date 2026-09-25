@@ -83,7 +83,7 @@ export default function DisadvantagesOfQuickBooksPage() {
                       QuickBooks Online is popular for good reason, but it is not flawless. BeltStack documents disadvantages transparently so you can weigh them against ecosystem fit—not because every business should switch.
                     </p>
                     <p>
-                      Our <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link> lists pros and cons from hands-on evaluation. Pair this guide with{" "}
+                      Our <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link> lists pros and cons from editorial evaluation. Pair this guide with{" "}
                       <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks worth it</Link>,{" "}
                       <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>monthly pricing</Link>, and{" "}
                       <Link href="/accounting/guides/when-should-a-business-stop-using-quickbooks" className={linkGreen}>when to stop using QuickBooks</Link> for a balanced decision.

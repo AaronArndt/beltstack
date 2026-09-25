@@ -54,9 +54,9 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     description:
       "Project-based time tracking with built-in invoicing and expenses. Ideal for agencies and service businesses that bill by the hour.",
     rating: "4.4",
-    startingPrice: "$12/user/mo",
+    startingPrice: "Free",
     hasFreeTrial: true,
-    hasFreePlan: false,
+    hasFreePlan: true,
     hasIntegrations: true,
     visitUrl: "https://www.getharvest.com",
     logoSrc: "/Logos/harvest.png",
@@ -76,7 +76,7 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Reporting depth below dedicated analytics tools",
     ],
     pricingSummary:
-      "Harvest charges per user (around $12/user/month); free tier is limited. Compare with Toggl or Clockify if you don't need built-in invoicing.",
+      "Harvest has an ongoing free plan for 1 seat. Teams is $9/seat/month billed annually, or $11/seat/month billed monthly.",
   },
   {
     slug: "clockify",
@@ -116,7 +116,7 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
     description:
       "Time tracking with productivity monitoring, GPS, and payroll. Built for distributed and field teams that need accountability.",
     rating: "4.4",
-    startingPrice: "$4.99/user/mo",
+    startingPrice: "$4.99/user/mo billed annually (2-user min.)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -138,7 +138,7 @@ export const TOP_PICKS: BestTimeTrackingPick[] = [
       "Overkill for teams that only need simple tracking",
     ],
     pricingSummary:
-      "Hubstaff starts around $4.99/user/month; higher tiers add more monitoring and payroll features. Compare with Toggl or Clockify if you don't need monitoring.",
+      "Hubstaff Starter is $4.99/user/month billed annually, or $7/user/month billed monthly, with a 2-user minimum.",
   },
 ];
 
@@ -157,7 +157,7 @@ export const COMPARISON_TABLE_ROWS: TimeTrackingComparisonTableRow[] = [
     name: "Harvest",
     logoSrc: "/Logos/harvest.png",
     bestFor: "Billing & invoicing",
-    startingPrice: "$12/user/mo",
+    startingPrice: "Free",
     standoutFeature: "Time → invoices workflow",
     reviewHref: getTimeTrackingReviewUrl("harvest"),
   },
@@ -175,7 +175,7 @@ export const COMPARISON_TABLE_ROWS: TimeTrackingComparisonTableRow[] = [
     name: "Hubstaff",
     logoSrc: "/Logos/hubstaff.jpeg",
     bestFor: "Remote / field teams",
-    startingPrice: "$4.99/user/mo",
+    startingPrice: "$4.99/user/mo billed annually (2-user min.)",
     standoutFeature: "Activity & GPS tracking",
     reviewHref: getTimeTrackingReviewUrl("hubstaff"),
   },

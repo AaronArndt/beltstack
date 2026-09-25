@@ -12,18 +12,12 @@ function softwareApplicationSchema(
   data: NonNullable<ReturnType<typeof getHrReviewBySlug>>
 ) {
   const url = `${SITE_URL}${getHrReviewUrl(slug)}`;
-  const ratingNum = parseFloat(data.rating);
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: data.toolName,
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: ratingNum,
-      ratingCount: 1,
-    },
     offers: {
       "@type": "Offer",
       price: data.startingPrice,

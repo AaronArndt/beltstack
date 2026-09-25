@@ -7,6 +7,7 @@
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
+import { applyCrmCanonicalComparison } from "@/lib/data/crmCanonicalRating";
 
 export function getCrmCompareUrlFromSlug(slug: string): string {
   return `/crm/compare/${slug}`;
@@ -32,7 +33,7 @@ const P = {
     visitUrl: "https://www.salesforce.com",
     bestForSummary: "Best for enterprise teams; powerful customization and reporting.",
     rating: "4.5",
-    startingPrice: "From $25/user/mo",
+    startingPrice: "From $25/user/mo (paid Sales Cloud)",
   },
   "zoho-crm": {
     name: "Zoho CRM",
@@ -52,7 +53,7 @@ const P = {
     visitUrl: "https://www.pipedrive.com",
     bestForSummary: "Best for sales pipelines; clean, focused sales workflow.",
     rating: "4.5",
-    startingPrice: "From $14.90/user/mo",
+    startingPrice: "From $14/user/mo billed annually",
   },
   "monday-crm": {
     name: "Monday",
@@ -62,7 +63,7 @@ const P = {
     visitUrl: "https://monday.com",
     bestForSummary: "Best for customizable workflows; flexible structure and project crossover.",
     rating: "4.4",
-    startingPrice: "From $10/user/mo",
+    startingPrice: "From $12/user/mo billed annually",
   },
   freshsales: {
     name: "Freshsales",
@@ -72,7 +73,7 @@ const P = {
     visitUrl: "https://www.freshworks.com/crm/sales",
     bestForSummary: "Good SMB CRM with AI and automation; value-oriented alternative.",
     rating: "4.3",
-    startingPrice: "From $15/user/mo",
+    startingPrice: "From $9/user/mo billed annually",
   },
   copper: {
     name: "Copper",
@@ -82,7 +83,7 @@ const P = {
     visitUrl: "https://www.copper.com",
     bestForSummary: "Good fit for Google Workspace users; CRM that lives in Gmail and Calendar.",
     rating: "4.4",
-    startingPrice: "From $29/user/mo",
+    startingPrice: "From $23/user/mo billed annually",
   },
   close: {
     name: "Close",
@@ -92,7 +93,7 @@ const P = {
     visitUrl: "https://www.close.com",
     bestForSummary: "Good fit for inside sales; built-in calling and pipeline in one place.",
     rating: "4.5",
-    startingPrice: "From $49/user/mo",
+    startingPrice: "From $19/user/mo (Solo, 1 user)",
   },
   keap: {
     name: "Keap",
@@ -453,7 +454,9 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
 const comparisons: Record<string, ComparisonTemplateProps> = Object.fromEntries(comparisonEntries);
 
 export function getCrmComparisonBySlug(slug: string): ComparisonTemplateProps | null {
-  return comparisons[slug] ?? null;
+  const page = comparisons[slug];
+  if (!page) return null;
+  return applyCrmCanonicalComparison(page);
 }
 
 export function getCrmComparisonSlugs(): string[] {

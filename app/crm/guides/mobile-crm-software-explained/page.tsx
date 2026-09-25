@@ -130,7 +130,7 @@ export default function MobileCrmSoftwareExplainedPage() {
                 <section id="eeat" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers CRM</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>BeltStack tests CRM mobile apps in independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>, <Link href="/crm" className={linkGreen}>CRM hub</Link>. App store ratings vary by OS version; trial on your team&apos;s phones.</p>
+                    <p>BeltStack reviews CRM mobile apps using vendor documentation and published product information—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>, <Link href="/crm" className={linkGreen}>CRM hub</Link>. App store ratings vary by OS version; trial on your team&apos;s phones.</p>
                   </div>
                 </section>
                 <section id="what-to-do-next" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

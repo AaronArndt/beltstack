@@ -32,7 +32,7 @@ const METHODOLOGY: LeadGenerationReviewData["methodology"] = {
   introParagraph: "We evaluate paid lead products for local trades: lead quality signals, dispute policies, speed-to-lead, and real economics—not vanity metrics.",
   bullets: [
     "We compare marketplace, search, and social lead models on intent and follow-up fit.",
-    "We stress-test pricing transparency and refund or credit rules.",
+    "We evaluate pricing transparency and refund or credit rules against published vendor policies.",
     "We map each tool to how service businesses actually book jobs in the field.",
   ],
 };

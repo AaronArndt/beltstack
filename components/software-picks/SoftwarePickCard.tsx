@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useId, useMemo, useState } from "react";
 import type { ReactNode } from "react";
+import { BELTSTACK_RATING_TOOLTIP, vendorCtaRel } from "@/lib/editorial";
 
 const MINT = "#E7F8F2";
 const GREEN = "#10B981";
@@ -98,7 +99,7 @@ function IconInfo({ className }: { className?: string }) {
         >
           <p className="font-sans text-xs font-semibold text-[#1A2D48]">Rating methodology</p>
           <p className="mt-1.5 font-sans text-xs leading-relaxed text-[#57534E] sm:text-sm">
-            Scores reflect hands-on testing and research across pricing, features, ease of use, support, and fit for the category. Our recommendations are editorial—vendors don’t pay for higher ratings or placement.
+            {BELTSTACK_RATING_TOOLTIP}
           </p>
           <Link
             href="/methodology"
@@ -414,7 +415,7 @@ export function SoftwarePickCard({
           {/* CTAs — equal sizing */}
           <div className="flex w-full min-w-0 max-w-full shrink-0 flex-col items-stretch gap-2.5 lg:w-auto lg:min-w-[220px] xl:min-w-[260px]">
             {visitUrl ? (
-              <a href={visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
+              <a href={visitUrl} target="_blank" rel={vendorCtaRel(visitUrl)} className={btnPrimary}>
                 Learn More
               </a>
             ) : null}

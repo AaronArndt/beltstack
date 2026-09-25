@@ -140,7 +140,7 @@ export default function HowHardIsItToLearnQuickBooksPage() {
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack scores QuickBooks on owner workflows we repeat in trials—invoicing, reconciliation, reporting—not on certification exam difficulty. Our guides describe learning curves honestly so you can decide DIY vs help. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
+                      BeltStack scores QuickBooks on owner workflows such as invoicing, reconciliation, and reporting—not on certification exam difficulty. Our guides describe learning curves honestly so you can decide DIY vs help. See <Link href="/methodology" className={linkGreen}>methodology</Link>.
                     </p>
                   </div>
                 </section>

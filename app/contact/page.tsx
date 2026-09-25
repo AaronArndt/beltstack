@@ -9,7 +9,7 @@ export const metadata: Metadata = siteMetadata({
   path: "/contact",
   title: "Contact BeltStack | Questions & Partnerships",
   description:
-    "Contact BeltStack for review questions, corrections, or partnership inquiries. Email support@beltstack.com for a fast response.",
+    "Contact BeltStack for review questions, corrections, or partnership inquiries.",
 });
 
 const EMAIL = "support@beltstack.com";
@@ -101,10 +101,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">Email us directly</h2>
-                  <p className="mt-1 text-sm text-[#57534E]">Fastest way to reach our team.</p>
-                </div>
-                <div className="shrink-0 rounded-lg bg-stone-50 px-3 py-1.5 text-xs font-medium text-[#57534E] ring-1 ring-stone-200/80">
-                  Typical reply: 1–2 business days
+                  <p className="mt-1 text-sm text-[#57534E]">Fastest way to reach BeltStack.</p>
                 </div>
               </div>
 
@@ -117,6 +114,18 @@ export default function ContactPage() {
                   {EMAIL}
                 </a>
               </div>
+
+              <p className="mt-6 text-sm leading-relaxed text-[#57534E]">
+                To submit a factual correction, pricing change, or product update, email{" "}
+                <a href={`mailto:${EMAIL}?subject=${encodeURIComponent("Correction for BeltStack")}`} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  {EMAIL}
+                </a>
+                . Include a supporting source when you can. BeltStack reviews submissions against reliable sources, preferring official vendor documentation, and updates pages when a correction is warranted. See{" "}
+                <Link href="/methodology#corrections" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  methodology
+                </Link>
+                .
+              </p>
 
               <div className="mt-8">
                 <ContactEmailActions />
@@ -138,7 +147,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-[#1A2D48] text-2xl font-bold sm:text-3xl">Start with a subject line</h2>
             <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-[#57534E] sm:text-base">
-              Pick what fits—we&apos;ll route it to the right person faster.
+              Pick a subject so we know what your message is about.
             </p>
             <ul className="mt-10 grid gap-4 sm:grid-cols-3">
               {topicLinks.map((t) => (

@@ -25,7 +25,7 @@ const P = {
     visitUrl: "https://housecallpro.com",
     bestForSummary: "Home service pros that care about customer experience and marketing.",
     rating: "4.5",
-    startingPrice: "From ~$49/mo",
+    startingPrice: "From $59/mo billed annually (Basic)",
   },
   servicetitan: {
     name: "ServiceTitan",
@@ -45,7 +45,7 @@ const P = {
     visitUrl: "https://servicefusion.com",
     bestForSummary: "Value-focused FSM for HVAC and plumbing teams.",
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "From $208/mo billed annually (Starter)",
   },
   workiz: {
     name: "Workiz",
@@ -55,7 +55,7 @@ const P = {
     visitUrl: "https://workiz.com",
     bestForSummary: "Smaller field teams that want dispatch and communication tools.",
     rating: "4.4",
-    startingPrice: "From ~$29/mo",
+    startingPrice: "Custom pricing",
   },
   kickserv: {
     name: "Kickserv",
@@ -65,7 +65,7 @@ const P = {
     visitUrl: "https://www.kickserv.com",
     bestForSummary: "Smaller service businesses that want CRM-style customer tracking.",
     rating: "4.3",
-    startingPrice: "From ~$55/mo",
+    startingPrice: "From $60/mo (Start)",
   },
   fieldpulse: {
     name: "FieldPulse",
@@ -75,7 +75,7 @@ const P = {
     visitUrl: "https://fieldpulse.com",
     bestForSummary: "Trade contractors that want dispatch depth without full enterprise FSM.",
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "Custom pricing",
   },
   servicetrade: {
     name: "ServiceTrade",

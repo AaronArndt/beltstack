@@ -1,12 +1,14 @@
 import type { SoftwarePickCardProps } from "@/components/software-picks/SoftwarePickCard";
 import { formatComparisonLinkLabelFromSlug } from "@/lib/utils/formatComparisonLinkLabel";
 import type { SoftwarePickCardContent } from "./types";
+import type { SoftwarePickCategory } from "./categories";
 import type { SoftwarePickCategoryRouteHelpers } from "./categoryRoutes";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 export function toSoftwarePickCardProps(
   pick: SoftwarePickCardContent,
   routes: SoftwarePickCategoryRouteHelpers,
-  overrides?: { id?: string; badgeText?: string }
+  overrides?: { id?: string; badgeText?: string; category?: SoftwarePickCategory }
 ): SoftwarePickCardProps {
   const comparisonLinks = pick.compareSlugs.slice(0, 3).map((slug) => ({
     href: routes.getCompareUrl(slug),
@@ -23,7 +25,11 @@ export function toSoftwarePickCardProps(
     highlightsExtra: pick.editorialParagraph,
     visitUrl: pick.visitUrl,
     reviewUrl: routes.getReviewUrl(pick.slug),
-    pricingStartLabel: pick.startingPrice,
+    pricingStartLabel: overlayVerifiedStartingPrice(
+      pick.slug,
+      pick.startingPrice,
+      overrides?.category
+    ),
     pricingDetails: pick.pricingSummary,
     pros: pick.pros,
     cons: pick.cons,
@@ -55,7 +61,7 @@ export function toHubComparisonTableRow(pick: SoftwarePickCardContent): {
   return {
     tool: pick.name,
     bestFor: comparisonTableBestForLabel(pick),
-    price: pick.startingPrice,
+    price: overlayVerifiedStartingPrice(pick.slug, pick.startingPrice),
     rating: pick.rating,
     slug: pick.slug,
     logoSrc: pick.logoSrc,

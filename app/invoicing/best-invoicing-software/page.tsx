@@ -20,6 +20,7 @@ import {
 } from "@/lib/data/invoicingBestInvoicingSoftware";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -142,7 +143,9 @@ export default function BestInvoicingSoftwarePage() {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">
+                        {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "invoicing")}
+                      </td>
                       <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
                         <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -247,6 +250,7 @@ export default function BestInvoicingSoftwarePage() {
           categoryLabel="invoicing software"
           compareHref="/invoicing/compare"
           guidesHref="/invoicing/guides"
+          includePricingStudyLink
         />
 
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
@@ -316,7 +320,7 @@ export default function BestInvoicingSoftwarePage() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

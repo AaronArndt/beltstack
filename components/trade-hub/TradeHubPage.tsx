@@ -20,6 +20,8 @@ import {
   trustIndicatorListClass,
 } from "@/lib/design-tokens";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
+import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
+import { PRICING_STUDY_PATH } from "@/lib/research/pricing/publicationPaths";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 
 const btnPrimary =
@@ -349,11 +351,20 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-relaxed text-[#57534E]">
-                We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
+                {AFFILIATE_DISCLOSURE}{" "}
                 <Link href="/methodology" className={`font-semibold ${linkGreen}`}>
                   Affiliate disclosure & methodology
                 </Link>
               </p>
+              {["hvac", "plumbing", "general-contractors"].includes(data.slug) ? (
+                <p className="mt-3 text-sm leading-relaxed text-[#57534E]">
+                  For advertised vs usable list prices across field service, payroll, and related tools, see our{" "}
+                  <Link href={PRICING_STUDY_PATH} className={`font-semibold ${linkGreen}`}>
+                    service-business software pricing study
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
           </section>
         )}
@@ -374,7 +385,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[#57534E]">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              {AFFILIATE_DISCLOSURE}
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

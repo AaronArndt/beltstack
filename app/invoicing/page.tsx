@@ -101,7 +101,7 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 const METHODOLOGY_BULLETS = [
-  "We test invoicing workflows: creating invoices, recurring billing, estimates, and payment collection.",
+  "We evaluate invoicing software around creating invoices, recurring billing, estimates, and payment collection.",
   "We compare pricing tiers, payment processing fees, and integrations with accounting tools.",
   "Reviews are written for freelancers, small businesses, agencies, and contractors.",
 ];

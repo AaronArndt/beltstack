@@ -25,7 +25,7 @@ const P = {
     visitUrl: "https://www.getharvest.com",
     bestForSummary: "Time tracking with built-in invoicing for agencies and service teams.",
     rating: "4.4",
-    startingPrice: "$12/user/mo",
+    startingPrice: "Free",
   },
   clockify: {
     name: "Clockify",
@@ -45,7 +45,7 @@ const P = {
     visitUrl: "https://hubstaff.com",
     bestForSummary: "Remote and field teams that want monitoring and GPS.",
     rating: "4.4",
-    startingPrice: "$4.99/user/mo",
+    startingPrice: "$4.99/user/mo billed annually (2-user min.)",
   },
   "time-doctor": {
     name: "Time Doctor",

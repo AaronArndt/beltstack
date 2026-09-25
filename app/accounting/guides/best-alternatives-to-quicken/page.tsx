@@ -135,7 +135,7 @@ export default function BestAlternativesToQuickenPage() {
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers Accounting Software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack publishes independent accounting software reviews and comparisons for small businesses and contractors. We test products in trials, document pricing from published list pages, and separate editorial guides from paid placement—see our <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> roundup.
+                      BeltStack publishes independent accounting software reviews and comparisons for small businesses and contractors. We research products using vendor documentation, document pricing from published list pages, and separate editorial guides from paid placement—see our <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> roundup.
                     </p>
                     <p>
                       Quicken pricing and features change; we update guides when product lines shift but always confirm checkout totals on vendor sites. BeltStack does not sell accounting software or provide tax advice—use our reviews to shortlist tools, then validate with your CPA for business entity and filing questions.

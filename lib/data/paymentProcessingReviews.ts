@@ -41,14 +41,14 @@ const SCENARIOS = [
 
 const METHODOLOGY: PaymentProcessingReviewData["methodology"] = {
   title: "How we review payment processing software",
-  sub: "Experience-informed, independent analysis for trades and local service businesses.",
+  sub: "Research-based, independent analysis for trades and local service businesses.",
   introParagraph:
-    "BeltStack reviews payment processors through the same workflows owners use daily: deposits after estimates, final swipes on site, emailed invoice links, chargebacks on disputed scopes, and month-end reconciliation in QuickBooks or Xero. We synthesize vendor documentation, published pricing, typical SMB feature sets, and common contractor use cases—we do not have access to your merchant statements, so always verify fees and contract terms with the processor before you commit.",
+    "BeltStack evaluates payment processors around the workflows owners actually need: deposits after estimates, final swipes on site, emailed invoice links, chargebacks on disputed scopes, and month-end reconciliation in QuickBooks or Xero. We synthesize vendor documentation, published pricing, typical SMB feature sets, and common contractor use cases—we do not have access to your merchant statements, so always verify fees and contract terms with the processor before you commit.",
   bullets: [
     "Channel fit first: we score how well each product serves card-present crews, card-not-present invoices, and web checkout—not a generic retail checklist.",
     "Pricing honesty: we emphasize effective rate (fees ÷ gross volume), refunds, chargebacks, and add-ons like instant payout or Billing—headline percentages are never the whole story.",
     "Operational reality: we look at dispute evidence workflows, payout timing, reserves, and whether integrations keep job IDs and line items attached to payments.",
-    "Independence: recommendations are editorial; vendors cannot pay for placement or ratings. We may earn affiliate commissions on some links—see site disclosure—without changing our scoring framework.",
+    "Independence: recommendations are editorial; vendors cannot pay for placement or ratings. We may earn affiliate commissions on some links—see site disclosure—without changing our ratings or rankings.",
     "Accuracy over hype: rates, plans, and regional availability change; we update reviews on a regular cadence and flag where you must confirm details with sales or your statement export.",
   ],
 };

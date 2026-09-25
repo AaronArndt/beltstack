@@ -474,7 +474,7 @@ export default function TimeTrackingPage() {
         introParagraph:
           "Our reviews are independent and updated regularly so you get current pricing and feature information.",
         bullets: [
-          "We test time tracking workflows: starting timers, editing entries, and reporting.",
+          "We evaluate time tracking software around starting timers, editing entries, and reporting.",
           "We compare pricing tiers, user limits, and add-ons so you can budget accurately.",
           "We focus on freelancers, agencies, consultants, and small businesses—not enterprise-only needs.",
         ],

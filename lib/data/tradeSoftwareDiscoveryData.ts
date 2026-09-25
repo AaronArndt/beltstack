@@ -1,4 +1,5 @@
-﻿import { emailMarketingLogoForSlug } from "@/lib/data/emailMarketingLogos";
+﻿import { getCrmCanonicalRating } from "@/lib/data/crmCanonicalRating";
+import { emailMarketingLogoForSlug } from "@/lib/data/emailMarketingLogos";
 import {
   getAccountingReviewUrl,
   getCrmReviewUrl,
@@ -752,10 +753,16 @@ export function pickProductsForTradeCategory(trade: DiscoveryTradeId, category: 
 export function productToDiscoveryCard(product: DiscoveryProduct, trade: DiscoveryTradeId): DiscoverySoftwareCard {
   const mod = product.tradeModifiers?.[trade];
   const bullets = mod?.bullets?.length ? mod.bullets : product.defaultBullets;
+  const crmSlug =
+    product.category === "crm" ? product.reviewHref.split("/").filter(Boolean).at(-1) : undefined;
+  const rating =
+    crmSlug != null
+      ? getCrmCanonicalRating(crmSlug, product.overallScore.toFixed(1))
+      : product.overallScore.toFixed(1);
   return {
     name: product.name,
     logoSrc: product.logoSrc,
-    rating: product.overallScore.toFixed(1),
+    rating,
     bullets,
     visitUrl: product.visitUrl,
     reviewHref: product.reviewHref,

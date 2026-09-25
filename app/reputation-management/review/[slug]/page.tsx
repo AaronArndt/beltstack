@@ -18,7 +18,6 @@ function softwareApplicationSchema(
   data: NonNullable<ReturnType<typeof getReputationManagementReviewBySlug>>
 ) {
   const url = `${SITE_URL}${getReputationManagementReviewUrl(slug)}`;
-  const ratingNum = parseFloat(data.rating);
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -26,14 +25,6 @@ function softwareApplicationSchema(
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     url,
-    ...(Number.isFinite(ratingNum) && {
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: ratingNum,
-        bestRating: 5,
-        reviewCount: 1,
-      },
-    }),
     ...(data.bestFor && { description: data.bestFor }),
   };
 }

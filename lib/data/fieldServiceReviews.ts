@@ -4,6 +4,7 @@ import {
   getFieldServiceBestForUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 type FieldServiceReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -50,7 +51,7 @@ const FIELD_SERVICE_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate field service management (FSM) tools on scheduling and dispatch, mobile experience, estimates and invoicing, payments, customer management, and reporting.",
   bullets: [
-    "We test core workflows: booking jobs, scheduling and dispatching technicians, sending estimates and invoices, and collecting payments.",
+    "We evaluate field service software around the workflows contractors actually need, including booking jobs, scheduling and dispatching technicians, sending estimates and invoices, and collecting payments.",
     "We compare pricing tiers, user limits, and feature sets so you understand total cost at your crew size and number of trucks.",
     "We look at mobile apps for techs in the field, customer communication, and integrations with accounting and payment processors.",
   ],
@@ -238,7 +239,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.5",
-    startingPrice: "From ~$49/mo",
+    startingPrice: "From $59/mo billed annually (Basic)",
     bestFor: "home service pros that want scheduling, dispatch, and marketing tools tuned to residential work",
     visitUrl: "https://housecallpro.com",
     logoSrc: LOGOS.housecallpro,
@@ -260,7 +261,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
         category: "Pricing",
         score: "4.4",
         explanation:
-          "Plans start around ~$49/month and scale with users. Good value for the mix of FSM and marketing, though you will pay more than for bare‑bones scheduling tools.",
+          "Basic is $59/month billed annually ($79 month-to-month) for 1 user. Higher plans add users and marketing tools.",
       },
       {
         category: "Ease of Use",
@@ -298,9 +299,9 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Contractors focused on large commercial or industrial jobs, with complex estimating and project management needs, may want a construction‑specific suite instead. Very large operations that need advanced reporting, call‑center tooling, or multi‑location governance might outgrow Housecall Pro and look at ServiceTitan.",
     pricingSummary:
-      "Housecall Pro’s pricing is tiered by users and features. Lower tiers focus on core scheduling, dispatch, and invoicing; higher tiers add automations, advanced reporting, and marketing tools. Expect to pay in a similar range to Jobber or Workiz for comparable team sizes.",
+      "Housecall Pro Basic is $59/month billed annually ($79 month-to-month) for 1 user. Essentials and Max add more included users. Confirm current plan names and inclusions on Housecall Pro’s pricing page.",
     pricingTiers:
-      "Entry plans cover a handful of users and core FSM features. Higher plans unlock more automation, advanced communications, and bulk marketing capabilities. Always verify current plan names and inclusions on the Housecall Pro website.",
+      "Basic includes 1 user. Essentials includes 5 users. Max includes 8 users, with extra users billed separately. Always verify current plan names and inclusions on the Housecall Pro website.",
     costVsCompetitors:
       "Compared with Jobber and Workiz, pricing is generally similar for small and mid‑size teams. Housecall Pro stands out when you specifically value its marketing and customer‑experience features; if you only need simple scheduling, a cheaper tool may suffice.",
     features: [],
@@ -366,7 +367,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
       },
       {
         q: "How is Housecall Pro priced?",
-        a: "Pricing is based on user count and features. Plans start around ~$49/month and increase as you add technicians and advanced options. Check the Housecall Pro site for current details.",
+        a: "Housecall Pro Basic is $59/month billed annually ($79 month-to-month) for 1 user. Essentials and Max add more included users. Check the Housecall Pro site for current details.",
       },
       {
         q: "Can Housecall Pro help with marketing?",
@@ -575,7 +576,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "From $208/mo billed annually (Starter)",
     bestFor: "HVAC and plumbing teams that want dispatch, jobs, and invoicing with strong trade‑specific workflows",
     visitUrl: "https://servicefusion.com",
     logoSrc: LOGOS.servicefusion,
@@ -597,7 +598,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
         category: "Pricing",
         score: "4.2",
         explanation:
-          "Plans start around ~$99/month. More than entry‑level FSM but less than enterprise platforms. Good value for teams that can use its depth.",
+          "Starter is $208/month billed annually ($245 month-to-month) with unlimited users. More than entry-level FSM but less than enterprise platforms.",
       },
       {
         category: "Ease of Use",
@@ -634,7 +635,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Solo operators or very small teams that mainly need simple scheduling and invoicing will be better off with lighter tools. Very large or multi‑branch operations that demand deep analytics and call‑center tooling might prefer ServiceTitan.",
     pricingSummary:
-      "Service Fusion uses tiered plans starting around ~$99/month. You pay more than bare‑bones scheduling apps but less than full enterprise FSM. For mid‑size HVAC and plumbing teams, the pricing is often reasonable relative to the value.",
+      "Service Fusion Starter is $208/month billed annually ($245 month-to-month) with unlimited users. For mid-size HVAC and plumbing teams, compare that list price to Jobber and Housecall Pro at your crew size.",
     pricingTiers:
       "Lower tiers cover core dispatch and invoicing for smaller teams. Upper tiers add advanced features such as GPS tracking, more automation, and possibly additional integrations. Confirm current packaging with Service Fusion’s sales team.",
     costVsCompetitors:
@@ -696,7 +697,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
       },
       {
         q: "How does Service Fusion pricing work?",
-        a: "Pricing is tiered and starts around ~$99/month. Plans scale with users and features. Expect to pay more than for basic scheduling apps but less than for ServiceTitan.",
+        a: "Service Fusion Starter is $208/month billed annually ($245 month-to-month) with unlimited users. Higher tiers add features. Check Service Fusion’s pricing page for current details.",
       },
       {
         q: "Service Fusion vs ServiceTitan: which is better?",
@@ -730,7 +731,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.4",
-    startingPrice: "From ~$29/mo",
+    startingPrice: "Custom pricing",
     bestFor: "small field service teams and cleaning companies that want affordable scheduling and job management",
     visitUrl: "https://workiz.com",
     logoSrc: LOGOS.workiz,
@@ -789,7 +790,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Larger contractors, or those planning to scale aggressively and add call‑center operations, may outgrow Workiz quickly and should look at Jobber, Housecall Pro, or ServiceTitan. Very feature‑hungry teams may find the platform limiting.",
     pricingSummary:
-      "Workiz offers relatively low starting prices, making it approachable for small and early‑stage businesses. Plans scale with user count and features, so costs will rise as you add techs and capabilities.",
+      "Workiz requires a quote; a public numeric starting price is not published on the official pricing page. Do not rely on third-party approximate dollar figures.",
     pricingTiers:
       "Entry‑level plans focus on core scheduling and job management. Higher tiers add more features and capacity. Always check Workiz’s current pricing to confirm limits and inclusions.",
     costVsCompetitors:
@@ -880,7 +881,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.3",
-    startingPrice: "From ~$55/mo",
+    startingPrice: "From $60/mo (Start)",
     bestFor: "small service businesses that want CRM‑style customer tracking and straightforward FSM",
     visitUrl: "https://www.kickserv.com",
     logoSrc: LOGOS.kickserv,
@@ -902,7 +903,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
         category: "Pricing",
         score: "4.3",
         explanation:
-          "Plans start around ~$55/month, positioning Kickserv as accessible for small teams that need more than a basic calendar.",
+          "Start is $60/month and includes 5 users. Higher plans add capacity (Run is $119/month for 10 users).",
       },
       {
         category: "Ease of Use",
@@ -939,7 +940,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Very small teams that only need a calendar and basic invoicing might use an even simpler tool. Large or rapidly scaling companies that need deep analytics, call‑center tools, or complex pricebooks should look at Jobber, ServiceTitan, or other enterprise‑leaning FSM.",
     pricingSummary:
-      "Kickserv’s pricing typically starts around ~$55/month, scaling with users and features. Costs are generally within reach for small and growing trades businesses.",
+      "Kickserv Start is $60/month. Costs generally stay within reach for small and growing trades businesses.",
     pricingTiers:
       "Lower tiers focus on a small number of users and core FSM features. Higher tiers may add more capacity and integrations. Always check Kickserv’s pricing page for current details.",
     costVsCompetitors:
@@ -1312,7 +1313,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.2",
-    startingPrice: "From ~$49/mo",
+    startingPrice: "From $169/mo (Pro)",
     bestFor: "contractors and technicians that want established FSM with job tracking and invoicing",
     visitUrl: "https://www.mhelpdesk.com",
     logoSrc: LOGOS.mhelpdesk,
@@ -1371,7 +1372,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Contractors that want the most modern UI, heavy marketing tools, or deep enterprise analytics may find more excitement in platforms like Jobber, Housecall Pro, or ServiceTitan.",
     pricingSummary:
-      "mHelpDesk pricing generally starts around the mid‑range for FSM tools, with costs scaling as you add users and features. It is neither the cheapest nor the most expensive option, which can be comfortable for established businesses.",
+      "mHelpDesk Pro is $169/month on the official help article. Higher named plans (Growth, Success) add user capacity. Extra-user amounts are not disclosed.",
     pricingTiers:
       "Tiered plans scale with users and feature sets. Check with mHelpDesk for the latest packaging and any add‑on costs.",
     costVsCompetitors:
@@ -1458,7 +1459,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     category: "Field service management",
     categoryHref: FIELD_SERVICE_HUB,
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "Custom pricing",
     bestFor: "trade contractors that want dispatch, job documentation, and mobile workflows without enterprise FSM complexity",
     visitUrl: "https://fieldpulse.com",
     logoSrc: LOGOS.fieldpulse,
@@ -1492,7 +1493,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Solo operators with only a few jobs per week, or teams that primarily want review generation and homeowner marketing automation, may find simpler or more marketing-led tools a better match.",
     pricingSummary:
-      "FieldPulse is generally sold in tiered monthly plans in the mid range for SMB FSM. Pricing scales with users, features, and sometimes vertical modules—get a written quote for your crew size.",
+      "FieldPulse requires a quote; a public numeric starting price is not published on the official pricing page.",
     pricingTiers:
       "Lower tiers focus on core scheduling and jobs; higher tiers add capacity, automation, and integrations. Confirm per-tech limits and onboarding costs.",
     costVsCompetitors:
@@ -1925,7 +1926,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     whoShouldAvoid:
       "Small contractors and local service businesses should compare ServiceTitan, Simpro, Jobber, or similar contractor-first tools instead.",
     pricingSummary:
-      "Oracle Field Service is sold with custom enterprise pricing. Budget implementation, integrations, and ongoing platform governance.",
+      "Oracle publishes catalog pricing for Oracle Fusion Field Service Cloud Service at $225 per pooled named user per month with a minimum of 360 units. That catalog is enterprise-scale; small-business usable pricing was not established. Do not treat $225 as a typical contractor monthly bill.",
     pricingTiers:
       "Account-based packaging—negotiate modules, regions, and service entitlements with Oracle and implementation partners.",
     costVsCompetitors:
@@ -2148,7 +2149,12 @@ const reviews: Record<string, FieldServiceReviewData> = {
 };
 
 export function getFieldServiceReviewBySlug(slug: string): FieldServiceReviewData | null {
-  return reviews[slug] ?? null;
+  const review = reviews[slug];
+  if (!review) return null;
+  return {
+    ...review,
+    startingPrice: overlayVerifiedStartingPrice(slug, review.startingPrice, "field-service"),
+  };
 }
 
 export function getFieldServiceReviewSlugs(): string[] {

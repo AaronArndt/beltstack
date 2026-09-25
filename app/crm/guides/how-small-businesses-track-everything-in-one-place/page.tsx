@@ -150,7 +150,7 @@ export default function HowSmallBusinessesTrackEverythingInOnePlacePage() {
                   <SectionTitle>How BeltStack evaluates CRM and business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack reviews CRM tools on pipeline usability, integration depth with accounting and email, and honest limits—not as pretend ERPs. We test native syncs and common middleware paths, and we rank products for small business workflows without paid placement. Accounting and payroll picks live in their own hubs so CRM scores stay comparable.
+                      BeltStack reviews CRM tools on pipeline usability, integration depth with accounting and email, and honest limits—not as pretend ERPs. We evaluate native syncs and common middleware paths against vendor documentation, and we rank products for small business workflows without paid placement. Accounting and payroll picks live in their own hubs so CRM scores stay comparable.
                     </p>
                   </div>
                 </section>

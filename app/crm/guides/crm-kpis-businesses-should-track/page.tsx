@@ -135,7 +135,7 @@ export default function CrmKpisBusinessesShouldTrackPage() {
                 <section id="eeat" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers CRM</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>BeltStack tests CRM reporting in independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>. KPI benchmarks in vendor decks are aspirational; measure your own baselines.</p>
+                    <p>BeltStack evaluates CRM reporting using product documentation—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>. KPI benchmarks in vendor decks are aspirational; measure your own baselines.</p>
                   </div>
                 </section>
                 <section id="what-to-do-next" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

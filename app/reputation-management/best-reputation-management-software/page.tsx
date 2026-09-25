@@ -188,7 +188,7 @@ export default function BestReputationManagementSoftwarePage() {
           <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg" role="dialog" aria-labelledby="best-rep-affiliate-title" aria-modal="true">
             <h3 id="best-rep-affiliate-title" className="text-[#1A2D48] text-lg font-bold">Affiliate disclosure</h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">We may earn a commission when you purchase through our links. This does not affect our recommendations.</p>
+            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.</p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>Got it</button>
           </div>
         </>

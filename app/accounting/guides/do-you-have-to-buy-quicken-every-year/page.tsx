@@ -122,7 +122,7 @@ export default function DoYouHaveToBuyQuickenEveryYearPage() {
                 <section id="eeat" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers Accounting Software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>BeltStack explains subscription models in editorial guides and tests products in independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>. Quicken billing terms change; confirm renewal dates in your account.</p>
+                    <p>BeltStack explains subscription models in editorial guides and researches products in independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>. Quicken billing terms change; confirm renewal dates in your account.</p>
                   </div>
                 </section>
                 <section id="what-to-do-next" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

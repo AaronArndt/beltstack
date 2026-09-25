@@ -96,7 +96,7 @@ export default function CanABeginnerUseQuickBooksPage() {
                       <Link href="/accounting/guides/do-you-still-need-an-accountant-if-you-use-quickbooks" className={linkGreen}>do you still need an accountant with QuickBooks</Link>.
                     </p>
                     <p>
-                      BeltStack tests software for owner workflows, not CPA exams. For difficulty expectations, read{" "}
+                      BeltStack evaluates software around owner workflows, not CPA exams. For difficulty expectations, read{" "}
                       <Link href="/accounting/guides/how-hard-is-it-to-learn-quickbooks" className={linkGreen}>how hard it is to learn QuickBooks</Link> and our{" "}
                       <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link>.
                     </p>
@@ -157,7 +157,7 @@ export default function CanABeginnerUseQuickBooksPage() {
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack writes beginner guides from hands-on workflow tests—invoicing, bank feeds, reconciliation—not feature checklists copied from vendor sites. Our reviews are independent; we compare QuickBooks to Wave, FreshBooks, and Xero on the same owner tasks. See{" "}
+                      BeltStack writes beginner guides around owner workflows such as invoicing, bank feeds, and reconciliation—not feature checklists copied from vendor sites. Our reviews are independent; we compare QuickBooks to Wave, FreshBooks, and Xero on the same owner tasks. See{" "}
                       <Link href="/methodology" className={linkGreen}>BeltStack methodology</Link>.
                     </p>
                   </div>

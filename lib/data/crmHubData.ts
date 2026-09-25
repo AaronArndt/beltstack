@@ -210,7 +210,7 @@ export const CRM_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information.",
   bullets: [
-    "We test CRM workflows: contact and lead management, pipeline stages, reporting, and automation.",
+    "We evaluate CRM software around the workflows small businesses actually need, including contact and lead management, pipeline stages, reporting, and automation.",
     "We compare pricing tiers, user limits, and add-ons so you can budget accurately.",
     "Reviews are written for small businesses, sales teams, and startups—not only enterprise needs.",
   ],

@@ -20,14 +20,14 @@ const GUIDES_HREF = "/seo-tools/guides";
 
 const METHODOLOGY: SeoToolsReviewData["methodology"] = {
   title: "How we review SEO tools",
-  sub: "Experience-informed analysis for local service businesses, trades, and agencies.",
+  sub: "Research-based analysis for local service businesses, trades, and agencies.",
   introParagraph:
-    "BeltStack reviews SEO software through the same workflows owners and marketers use: verifying a site in Search Console, tightening Google Business Profile, tracking Map Pack movement, fixing crawl errors after a redesign, and reporting to stakeholders who care about calls—not only keyword volume. We synthesize public pricing, documented features, and typical SMB use cases; we do not have access to your Search Console or ranking history, so always cross-check recommendations against your own property data and a qualified SEO or agency when stakes are high.",
+    "BeltStack evaluates SEO software around the workflows owners and marketers actually need: verifying a site in Search Console, tightening Google Business Profile, tracking Map Pack movement, fixing crawl errors after a redesign, and reporting to stakeholders who care about calls—not only keyword volume. We synthesize public pricing, documented features, and typical SMB use cases; we do not have access to your Search Console or ranking history, so always cross-check recommendations against your own property data and a qualified SEO or agency when stakes are high.",
   bullets: [
     "Local truth first: we score how each product supports GBP hygiene, service-area pages, reviews, citations, and grid-style local tracking—not generic national SERP vanity.",
     "Honest limits: paid suites complement but do not replace on-site content, backlinks where they matter, and operational follow-through; we say when a free baseline (especially Search Console) is enough before you subscribe.",
     "Pricing and quotas: we flag keyword limits, seats, locations, and crawl credits that bite growing teams—headline prices rarely match your cart at checkout.",
-    "Independence: rankings are editorial; vendors cannot pay for placement. We may earn affiliate commissions on some links—see site disclosure—without changing our scoring framework.",
+    "Independence: rankings are editorial; vendors cannot pay for placement. We may earn affiliate commissions on some links—see site disclosure—without changing our ratings or rankings.",
     "Accuracy: product surfaces and plans change; verify current terms with the vendor and your own exports before annual commitments.",
   ],
 };

@@ -71,7 +71,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "Scheduling, dispatch, and payments for home service businesses that want a modern, mobile-friendly FSM platform.",
     rating: "4.5",
-    startingPrice: "From ~$49/mo",
+    startingPrice: "From $59/mo billed annually (Basic)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -92,7 +92,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Pricing grows with users and add-ons",
     ],
     pricingSummary:
-      "Housecall Pro offers tiered plans starting around $49/month, scaling with seats and features such as advanced automations and marketing. Review current tiers to match your crew size and feature needs.",
+      "Housecall Pro Basic is $59/month billed annually ($79 month-to-month) for 1 user. Essentials and Max add more included users.",
   },
   {
     slug: "servicetitan",
@@ -131,7 +131,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "Field service management with scheduling, dispatch, and invoicing for HVAC, plumbing, and other trade businesses.",
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "From $208/mo billed annually (Starter)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -151,7 +151,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Smaller ecosystem than the largest players",
     ],
     pricingSummary:
-      "Service Fusion generally starts around $99/month with tiers that scale by users and features. Check current pricing and user limits before committing.",
+      "Service Fusion Starter is $208/month billed annually ($245 month-to-month) with unlimited users.",
   },
   {
     slug: "workiz",
@@ -160,7 +160,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "FSM platform for cleaning, locksmith, junk removal, and other service businesses that want straightforward job and schedule management.",
     rating: "4.4",
-    startingPrice: "From ~$29/mo",
+    startingPrice: "Custom pricing",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -180,7 +180,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Might be outgrown by rapidly scaling companies",
     ],
     pricingSummary:
-      "Workiz typically starts around $29/month with plans scaling by users and features. It can be one of the most budget-friendly ways to modernize scheduling and invoicing.",
+      "Workiz requires a quote; a public numeric starting price is not published on the official pricing page.",
   },
   {
     slug: "kickserv",
@@ -189,7 +189,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "Field service CRM and job management for small service businesses that want simple scheduling and customer tracking.",
     rating: "4.3",
-    startingPrice: "From ~$55/mo",
+    startingPrice: "From $60/mo (Start)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -209,7 +209,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "May be outgrown by rapidly scaling companies",
     ],
     pricingSummary:
-      "Kickserv offers tiered plans starting around $55/month. Plans vary by user count and features; check current tiers for exact pricing.",
+      "Kickserv Start is $60/month (5 users included). Higher plans add user capacity.",
   },
   {
     slug: "servicem8",
@@ -276,7 +276,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "Field service software for contractors and technicians that need job, schedule, and invoicing tools in one platform.",
     rating: "4.2",
-    startingPrice: "From ~$49/mo",
+    startingPrice: "From $169/mo (Pro)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -296,7 +296,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Advanced features may require higher tiers",
     ],
     pricingSummary:
-      "mHelpDesk typically starts around $49/month with plans scaling by users and features. Confirm current pricing and limits before you commit.",
+      "mHelpDesk Pro is $169/month on the official help article. Higher named plans add user capacity. Extra-user amounts are not disclosed.",
   },
   {
     slug: "fieldpulse",
@@ -305,7 +305,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "Field service and contractor platform with scheduling, dispatch, CRM-style customer records, and mobile workflows for trades that want structure without enterprise overhead.",
     rating: "4.4",
-    startingPrice: "From ~$99/mo",
+    startingPrice: "Custom pricing",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -325,7 +325,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
       "Implementation effort higher than bare-bones apps",
     ],
     pricingSummary:
-      "FieldPulse typically uses tiered monthly pricing in the mid range for SMB FSM; exact tiers vary by users and modules. Request a quote for your crew size and required features.",
+      "FieldPulse requires a quote; a public numeric starting price is not published on the official pricing page.",
   },
   {
     slug: "servicetrade",
@@ -535,18 +535,18 @@ export const TOP_PICKS: BestFieldServicePick[] = [
 /** Comparison table: major FSM tools (canonical picks). */
 export const COMPARISON_TABLE_ROWS: FieldServiceComparisonTableRow[] = [
   { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "Best overall for contractors", startingPrice: "From $29/mo billed annually (Core, 1 user)", rating: "4.6", reviewHref: getFieldServiceReviewUrl("jobber") },
-  { slug: "housecall-pro", name: "Housecall Pro", logoSrc: LOGOS.housecallpro, bestFor: "Home service pros", startingPrice: "From ~$49/mo", rating: "4.5", reviewHref: getFieldServiceReviewUrl("housecall-pro") },
+  { slug: "housecall-pro", name: "Housecall Pro", logoSrc: LOGOS.housecallpro, bestFor: "Home service pros", startingPrice: "From $59/mo billed annually (Basic)", rating: "4.5", reviewHref: getFieldServiceReviewUrl("housecall-pro") },
   { slug: "servicetitan", name: "ServiceTitan", logoSrc: LOGOS.servicetitan, bestFor: "Growing service companies", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("servicetitan") },
-  { slug: "service-fusion", name: "Service Fusion", logoSrc: LOGOS.servicefusion, bestFor: "HVAC & plumbing value", startingPrice: "From ~$99/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("service-fusion") },
-  { slug: "fieldpulse", name: "FieldPulse", logoSrc: LOGOS.fieldpulse, bestFor: "Growing trade contractors", startingPrice: "From ~$99/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("fieldpulse") },
+  { slug: "service-fusion", name: "Service Fusion", logoSrc: LOGOS.servicefusion, bestFor: "HVAC & plumbing value", startingPrice: "From $208/mo billed annually (Starter)", rating: "4.4", reviewHref: getFieldServiceReviewUrl("service-fusion") },
+  { slug: "fieldpulse", name: "FieldPulse", logoSrc: LOGOS.fieldpulse, bestFor: "Growing trade contractors", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("fieldpulse") },
   { slug: "servicetrade", name: "ServiceTrade", logoSrc: LOGOS.servicetrade, bestFor: "Commercial & compliance-heavy", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("servicetrade") },
   { slug: "workwave-service", name: "WorkWave Service", logoSrc: LOGOS["workwave-service"], bestFor: "Route & fleet-heavy ops", startingPrice: "Custom pricing", rating: "4.3", reviewHref: getFieldServiceReviewUrl("workwave-service") },
   { slug: "buildops", name: "BuildOps", logoSrc: LOGOS.buildops, bestFor: "Commercial mechanical scale", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("buildops") },
-  { slug: "workiz", name: "Workiz", logoSrc: LOGOS.workiz, bestFor: "Small field teams", startingPrice: "From ~$29/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("workiz") },
-  { slug: "kickserv", name: "Kickserv", logoSrc: LOGOS.kickserv, bestFor: "Small service businesses", startingPrice: "From ~$55/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("kickserv") },
+  { slug: "workiz", name: "Workiz", logoSrc: LOGOS.workiz, bestFor: "Small field teams", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("workiz") },
+  { slug: "kickserv", name: "Kickserv", logoSrc: LOGOS.kickserv, bestFor: "Small service businesses", startingPrice: "From $60/mo (Start)", rating: "4.3", reviewHref: getFieldServiceReviewUrl("kickserv") },
   { slug: "servicem8", name: "ServiceM8", logoSrc: LOGOS.servicem8, bestFor: "Mobile-first field service", startingPrice: "From ~$29/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("servicem8") },
   { slug: "fieldedge", name: "FieldEdge", logoSrc: LOGOS.fieldedge, bestFor: "HVAC & plumbing depth", startingPrice: "Custom pricing", rating: "4.3", reviewHref: getFieldServiceReviewUrl("fieldedge") },
-  { slug: "mhelpdesk", name: "mHelpDesk", logoSrc: LOGOS.mhelpdesk, bestFor: "Contractors & technicians", startingPrice: "From ~$49/mo", rating: "4.2", reviewHref: getFieldServiceReviewUrl("mhelpdesk") },
+  { slug: "mhelpdesk", name: "mHelpDesk", logoSrc: LOGOS.mhelpdesk, bestFor: "Contractors & technicians", startingPrice: "From $169/mo (Pro)", rating: "4.2", reviewHref: getFieldServiceReviewUrl("mhelpdesk") },
   { slug: "connecteam", name: "Connecteam", logoSrc: LOGOS.connecteam, bestFor: "Deskless workforce & ops", startingPrice: "From ~$29/mo", rating: "4.3", reviewHref: getFieldServiceReviewUrl("connecteam") },
   { slug: "oracle-field-service", name: "Oracle Field Service", logoSrc: LOGOS["oracle-field-service"], bestFor: "Enterprise field & asset", startingPrice: "Custom pricing", rating: "4.4", reviewHref: getFieldServiceReviewUrl("oracle-field-service") },
   { slug: "simpro", name: "Simpro", logoSrc: LOGOS.simpro, bestFor: "Trade & project-heavy ops", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("simpro") },

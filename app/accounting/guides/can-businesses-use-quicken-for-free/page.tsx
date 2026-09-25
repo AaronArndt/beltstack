@@ -129,7 +129,7 @@ export default function CanBusinessesUseQuickenForFreePage() {
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers Accounting Software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack publishes independent accounting software reviews for small businesses. We compare free and paid tiers in trials, document list pricing, and explain category fit in guides like this one—see <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>.
+                      BeltStack publishes independent accounting software reviews for small businesses. We compare free and paid tiers using published list pricing, and explain category fit in guides like this one—see <Link href="/methodology" className={linkGreen}>methodology</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>.
                     </p>
                     <p>We do not resell Quicken or Wave. Confirm current free-tier limits and trial terms on each vendor&apos;s site before migrating business data.</p>
                   </div>

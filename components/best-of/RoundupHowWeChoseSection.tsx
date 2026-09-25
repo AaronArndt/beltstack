@@ -1,13 +1,16 @@
 import Link from "next/link";
+import { PRICING_STUDY_PATH } from "@/lib/research/pricing/publicationPaths";
 
 export function RoundupHowWeChoseSection({
   categoryLabel,
   compareHref,
   guidesHref,
+  includePricingStudyLink = false,
 }: {
   categoryLabel: string;
   compareHref: string;
   guidesHref: string;
+  includePricingStudyLink?: boolean;
 }) {
   return (
     <section id="how-we-chose" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
@@ -25,6 +28,15 @@ export function RoundupHowWeChoseSection({
           <li>We prioritized workflow depth in core {categoryLabel} use cases, plus reporting and integration fit.</li>
           <li>We weighted operational relevance for service businesses, including trade-specific handoff and follow-up needs.</li>
         </ul>
+        {includePricingStudyLink ? (
+          <p className="mt-4 text-sm leading-relaxed text-[#57534E]">
+            For advertised list prices versus a frozen small-team workflow, see our{" "}
+            <Link href={PRICING_STUDY_PATH} className="font-semibold text-[#10B981] hover:underline">
+              service-business software pricing study
+            </Link>
+            .
+          </p>
+        ) : null}
         <p className="mt-4 text-sm leading-relaxed text-[#57534E]">
           Use our{" "}
           <Link href={compareHref} className="font-semibold text-[#10B981] hover:underline">

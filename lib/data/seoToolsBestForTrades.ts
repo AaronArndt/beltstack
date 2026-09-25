@@ -238,7 +238,7 @@ export function buildSeoToolsTradeProps(p: SeoToolsTradeConfig): BestForTemplate
     introParagraph: p.introParagraph,
     freshnessText: "Updated for 2026",
     topPicksSub: `Editorial top picks for ${label}. Confirm pricing, modules, and regional availability on each vendor’s site—our shortlist is a workflow map, not a substitute for your own invoice math.`,
-    editorialSub: `Experience-informed criteria for ${label}: Google Search Console as ground truth, honest limits of software vs field execution, and tying spend to calls or booked jobs—not vanity rankings.`,
+    editorialSub: `Editorial criteria for ${label}: Google Search Console as ground truth, honest limits of software vs field execution, and tying spend to calls or booked jobs—not vanity rankings.`,
     whyThesePicksSub: `Why ${n1}, ${n2}, and ${n3} lead this shortlist for ${label}.`,
     seeAlsoBlock: SEE_ALSO,
     featuredProducts,

@@ -88,9 +88,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
     description:
       "Team scheduling with round-robin, buffer time, and calendar integrations.",
     rating: "4.5",
-    startingPrice: "From ~$10/mo",
+    startingPrice: "Free",
     hasFreeTrial: true,
-    hasFreePlan: false,
+    hasFreePlan: true,
     hasIntegrations: true,
     visitUrl: "https://youcanbook.me",
     logoSrc: LOGOS.youcanbookme,
@@ -107,7 +107,7 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Some advanced features on higher tiers",
     ],
     pricingSummary:
-      "YouCanBook.me offers paid plans starting around $10/month that add team features, more booking types, and integrations.",
+      "YouCanBook.me has an ongoing free plan for one calendar. Team is $16.20 per member per month billed annually ($18 monthly).",
   },
   {
     slug: "setmore",
@@ -144,9 +144,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
     description:
       "Scheduling with custom booking forms, multiple staff, and industry templates.",
     rating: "4.4",
-    startingPrice: "From ~$8/mo",
+    startingPrice: "Free",
     hasFreeTrial: true,
-    hasFreePlan: false,
+    hasFreePlan: true,
     hasIntegrations: true,
     visitUrl: "https://simplybook.me",
     logoSrc: LOGOS.simplybookme,
@@ -163,7 +163,7 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "UI is functional but less polished than top brands",
     ],
     pricingSummary:
-      "SimplyBook.me plans start around $8/month and scale with staff, services, and features like payments and reminders.",
+      "SimplyBook.me has an ongoing free plan for 1 provider. Paid Basic is listed in EUR; a USD usable amount is not published.",
   },
   {
     slug: "square-appointments",
@@ -200,9 +200,9 @@ export const TOP_PICKS: BestSchedulingPick[] = [
     description:
       "Scheduling for businesses with multiple staff, locations, or high booking volume.",
     rating: "4.3",
-    startingPrice: "From ~$10/mo",
+    startingPrice: "Free",
     hasFreeTrial: true,
-    hasFreePlan: false,
+    hasFreePlan: true,
     hasIntegrations: true,
     visitUrl: "https://www.appointy.com",
     logoSrc: LOGOS.appointy,
@@ -219,7 +219,7 @@ export const TOP_PICKS: BestSchedulingPick[] = [
       "Learning curve for full feature set",
     ],
     pricingSummary:
-      "Appointy plans start around $10/month and scale with staff, locations, and features like payments and marketing.",
+      "Appointy has an ongoing free plan. Growth is $19.99/month billed annually ($29.99 monthly) for the sched-5 scenario.",
   },
   {
     slug: "zoho-bookings",
@@ -255,11 +255,11 @@ export const TOP_PICKS: BestSchedulingPick[] = [
 export const COMPARISON_TABLE_ROWS: SchedulingComparisonTableRow[] = [
   { slug: "calendly", name: "Calendly", logoSrc: LOGOS.calendly, bestFor: "Best overall for most users", startingPrice: "Free; from ~$10/mo", rating: "4.7", reviewHref: getSchedulingReviewUrl("calendly") },
   { slug: "acuity-scheduling", name: "Acuity Scheduling", logoSrc: LOGOS.acuity, bestFor: "Consultants & coaches", startingPrice: "From ~$16/mo", rating: "4.6", reviewHref: getSchedulingReviewUrl("acuity-scheduling") },
-  { slug: "youcanbookme", name: "YouCanBook.me", logoSrc: LOGOS.youcanbookme, bestFor: "Teams & round-robin", startingPrice: "From ~$10/mo", rating: "4.5", reviewHref: getSchedulingReviewUrl("youcanbookme") },
+  { slug: "youcanbookme", name: "YouCanBook.me", logoSrc: LOGOS.youcanbookme, bestFor: "Teams & round-robin", startingPrice: "Free", rating: "4.5", reviewHref: getSchedulingReviewUrl("youcanbookme") },
   { slug: "setmore", name: "Setmore", logoSrc: LOGOS.setmore, bestFor: "Service businesses", startingPrice: "Free; from ~$9/mo", rating: "4.4", reviewHref: getSchedulingReviewUrl("setmore") },
-  { slug: "simplybookme", name: "SimplyBook.me", logoSrc: LOGOS.simplybookme, bestFor: "Custom booking flows", startingPrice: "From ~$8/mo", rating: "4.4", reviewHref: getSchedulingReviewUrl("simplybookme") },
+  { slug: "simplybookme", name: "SimplyBook.me", logoSrc: LOGOS.simplybookme, bestFor: "Custom booking flows", startingPrice: "Free", rating: "4.4", reviewHref: getSchedulingReviewUrl("simplybookme") },
   { slug: "square-appointments", name: "Square Appointments", logoSrc: LOGOS.square, bestFor: "Square users", startingPrice: "Included with Square", rating: "4.3", reviewHref: getSchedulingReviewUrl("square-appointments") },
-  { slug: "appointy", name: "Appointy", logoSrc: LOGOS.appointy, bestFor: "Multi-location & staff", startingPrice: "From ~$10/mo", rating: "4.3", reviewHref: getSchedulingReviewUrl("appointy") },
+  { slug: "appointy", name: "Appointy", logoSrc: LOGOS.appointy, bestFor: "Multi-location & staff", startingPrice: "Free", rating: "4.3", reviewHref: getSchedulingReviewUrl("appointy") },
   { slug: "zoho-bookings", name: "Zoho Bookings", logoSrc: LOGOS.zoho, bestFor: "Zoho ecosystem", startingPrice: "From ~$8/mo", rating: "4.2", reviewHref: getSchedulingReviewUrl("zoho-bookings") },
 ];
 

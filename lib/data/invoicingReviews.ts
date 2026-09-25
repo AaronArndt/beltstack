@@ -4,6 +4,7 @@ import {
   getInvoicingBestForUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -25,7 +26,7 @@ const INVOICING_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information. We evaluate invoicing software for ease of use, recurring billing, payment collection, and integrations.",
   bullets: [
-    "We test invoicing workflows: creating invoices, recurring billing, estimates, and payment collection.",
+    "We evaluate invoicing software around creating invoices, recurring billing, estimates, and payment collection.",
     "We compare pricing tiers, payment processing fees, and integrations with accounting tools.",
     "Reviews are written for freelancers, small businesses, agencies, and contractors.",
   ],
@@ -37,7 +38,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Invoicing",
     categoryHref: "/invoicing",
     rating: "4.5",
-    startingPrice: "$19/mo",
+    startingPrice: "$23/mo",
     bestFor: "freelancers and service businesses",
     visitUrl: "https://www.freshbooks.com",
     logoSrc: "/Logos/freshbooks.jpeg",
@@ -50,7 +51,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.5", explanation: "Strong invoicing, time tracking, estimates, and client portal. Good for service businesses; less depth for full accounting." },
-      { category: "Pricing", score: "4.4", explanation: "Plans start around $19/month; tiered by clients and features. Transparent pricing." },
+      { category: "Pricing", score: "4.4", explanation: "Lite is $23/month. Plans are tiered by clients and features. Transparent pricing." },
       { category: "Ease of Use", score: "4.6", explanation: "One of the easiest invoicing tools to set up and use daily. Clear navigation and templates." },
       { category: "Support", score: "4.4", explanation: "Help center, email support, and optional phone. Generally responsive." },
       { category: "Integrations", score: "4.3", explanation: "Connects to accounting tools, payment processors, and productivity apps. Solid but smaller than QuickBooks ecosystem." },
@@ -72,7 +73,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need full bookkeeping, heavy reporting, or deep accounting integration may prefer QuickBooks or Xero. Those on a tight budget might prefer free options like Wave or Zoho Invoice.",
     pricingSummary:
-      "FreshBooks uses tiered plans starting around $19/month. Higher tiers add more billable clients, team members, and features. Compare plans against your client count and needs.",
+      "FreshBooks Lite is $23/month. Higher tiers add more billable clients, team members, and features. Compare plans against your client count and needs.",
     pricingTiers:
       "Lite covers basics for a limited number of clients; Plus and Premium add capacity and features. Check client limits and time tracking inclusion for your tier.",
     costVsCompetitors:
@@ -102,7 +103,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     faqs: [
       { q: "Is FreshBooks good for freelancers?", a: "Yes. FreshBooks is built for freelancers and service businesses: invoicing, time tracking, and client billing in one place. It's one of our top picks for solo pros." },
-      { q: "How much does FreshBooks cost?", a: "Plans start around $19/month and go up with client count and features. Check FreshBooks' site for current pricing and limits." },
+      { q: "How much does FreshBooks cost?", a: "FreshBooks Lite is $23/month. Higher tiers add more billable clients and features. Check FreshBooks' site for current limits." },
       { q: "Can FreshBooks do recurring invoices?", a: "Yes. FreshBooks supports recurring invoices so you can automate retainer and subscription billing." },
       { q: "Does FreshBooks integrate with QuickBooks?", a: "Yes. FreshBooks can sync with QuickBooks and other accounting tools so paid invoices flow into your books." },
     ],
@@ -395,7 +396,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Invoicing",
     categoryHref: "/invoicing",
     rating: "4.5",
-    startingPrice: "$15/mo",
+    startingPrice: "$25/mo",
     bestFor: "businesses needing invoicing plus broader accounting workflows",
     visitUrl: "https://www.xero.com",
     logoSrc: "/Logos/xero.png",
@@ -429,7 +430,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Solo freelancers who only need simple invoicing may find Xero more than they need. Consider Wave or FreshBooks for a lighter tool.",
     pricingSummary:
-      "Xero offers tiered plans starting around $15/month. Invoicing and quotes are included; higher tiers add more invoices, multi-currency, and advanced reporting.",
+      "Xero Early is $25/month. Invoicing and quotes are included; higher tiers add more invoices, multi-currency, and advanced reporting.",
     pricingTiers:
       "Entry tier covers basics; mid and upper tiers add capacity and features. Check limits on invoices and bills for your volume.",
     costVsCompetitors:
@@ -572,7 +573,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Invoicing",
     categoryHref: "/invoicing",
     rating: "4.4",
-    startingPrice: "Quote",
+    startingPrice: "$29/mo billed annually",
     bestFor: "client-service businesses and project-based workflows",
     visitUrl: "https://www.honeybook.com",
     logoSrc: "/Logos/honeybook.jpeg",
@@ -585,7 +586,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.5", explanation: "Strong proposals, contracts, invoicing, and client workflow. Less accounting depth." },
-      { category: "Pricing", score: "4.2", explanation: "Subscription pricing; typically quoted. Compare total cost for your workflow." },
+      { category: "Pricing", score: "4.2", explanation: "Starter is $29/month billed annually, or $36/month billed monthly. Published on HoneyBook's pricing page." },
       { category: "Ease of Use", score: "4.5", explanation: "Designed for client-facing workflows. Intuitive for service businesses." },
       { category: "Support", score: "4.3", explanation: "Help center and support. Community for creative professionals." },
       { category: "Integrations", score: "4.2", explanation: "Connects to calendars, payment processors, and some accounting tools. Focused on client workflow." },
@@ -598,7 +599,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     cons: [
       "Less focused on traditional accounting depth",
-      "Pricing is typically quote-based",
+      "Published pricing; Starter is $29/month billed annually",
       "Strongest for client-heavy businesses",
     ],
     bestForEditorial:
@@ -606,9 +607,9 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need full accounting, heavy reporting, or minimal client management might prefer QuickBooks, Xero, or a simpler invoicing tool like FreshBooks.",
     pricingSummary:
-      "HoneyBook uses subscription pricing; plans are typically quoted based on features and usage. Check HoneyBook's site for current pricing and trials.",
+      "HoneyBook Starter is $29/month billed annually, or $36/month billed monthly. Check HoneyBook's pricing page for current plans.",
     pricingTiers:
-      "Plans vary by features—proposals, contracts, invoicing, scheduling, and client capacity. Get a quote for your needs.",
+      "Plans vary by features—proposals, contracts, invoicing, scheduling, and client capacity. Starter is the advertised public entry.",
     costVsCompetitors:
       "HoneyBook is positioned for service and creative businesses. Compare with Bonsai and FreshBooks for similar client-workflow focus; compare with QuickBooks if you need more accounting.",
     features: [
@@ -658,7 +659,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Invoicing",
     categoryHref: "/invoicing",
     rating: "4.3",
-    startingPrice: "Quote",
+    startingPrice: "$9/mo billed annually",
     bestFor: "freelancers and solo service businesses",
     visitUrl: "https://www.hellobonsai.com",
     logoSrc: "/Logos/bonsai.jpeg",
@@ -692,9 +693,9 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need full accounting, heavy reporting, or large-team collaboration might prefer QuickBooks, Xero, or FreshBooks.",
     pricingSummary:
-      "Bonsai uses subscription pricing; plans vary by features such as proposals, contracts, and invoicing. Check Bonsai's site for current pricing.",
+      "Bonsai Basic is $9/month billed annually ($15 monthly) and does not include invoices. Essentials is $19/month billed annually ($25 monthly) and is the first plan with invoicing and payments.",
     pricingTiers:
-      "Plans typically include proposals, contracts, invoicing, and client management. Compare tiers for your workflow.",
+      "Basic has no invoices. Essentials adds invoices and payments. Higher plans add more workflow features. Compare tiers for your invoicing needs.",
     costVsCompetitors:
       "Bonsai is positioned for freelancers. Compare with HoneyBook for similar client workflow; compare with FreshBooks for more accounting and time tracking.",
     features: [
@@ -743,7 +744,12 @@ const reviews: Record<string, ReviewData> = {
 };
 
 export function getInvoicingReviewBySlug(slug: string): ReviewData | undefined {
-  return reviews[slug];
+  const review = reviews[slug];
+  if (!review) return undefined;
+  return {
+    ...review,
+    startingPrice: overlayVerifiedStartingPrice(slug, review.startingPrice, "invoicing"),
+  };
 }
 
 export function getInvoicingReviewSlugs(): string[] {

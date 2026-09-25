@@ -157,7 +157,7 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
                   <SectionTitle sub="Independent, workflow-based reviews.">How BeltStack Evaluates QuickBooks Guidance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack publishes independent accounting guides and workflow-based product reviews—we are not paid by Intuit to recommend QuickBooks. We test how owners run invoicing, bank reconciliation, and CPA handoffs in real trials, then link to our{" "}
+                      BeltStack publishes independent accounting guides and workflow-based product reviews—we are not paid by Intuit to recommend QuickBooks. We evaluate invoicing, bank reconciliation, and CPA handoff workflows against product documentation, then link to our{" "}
                       <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link> when you shortlist tools. Educational guides explain operational splits between software and advisors; tax elections belong with your CPA.
                     </p>
                     <p>

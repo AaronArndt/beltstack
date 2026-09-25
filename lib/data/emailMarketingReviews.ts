@@ -103,8 +103,8 @@ function review(
       introParagraph:
         "We evaluate tools on whether real offices can run them weekly—segmentation, automation ownership, and cost at your list size.",
       bullets: [
-        "We test mental models for follow-up after estimates and completed jobs.",
-        "We compare annualized cost against automation depth actually used.",
+        "We evaluate follow-up after estimates and completed jobs against documented product capabilities.",
+        "We compare annualized cost against documented automation depth.",
         "We prioritize integration paths into CRM, scheduling, and lead capture.",
       ],
     },

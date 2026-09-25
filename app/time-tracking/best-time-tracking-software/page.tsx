@@ -18,6 +18,7 @@ import {
 } from "@/lib/data/timeTrackingBestTimeTrackingSoftware";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -152,7 +153,9 @@ export default function BestTimeTrackingSoftwarePage() {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">
+                        {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "time-tracking")}
+                      </td>
                       <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
                         <Link
@@ -251,6 +254,7 @@ export default function BestTimeTrackingSoftwarePage() {
           categoryLabel="time tracking software"
           compareHref="/time-tracking/compare"
           guidesHref="/time-tracking/guides"
+          includePricingStudyLink
         />
 
         {/* ——— 6) Related comparisons ——— */}
@@ -335,7 +339,7 @@ export default function BestTimeTrackingSoftwarePage() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

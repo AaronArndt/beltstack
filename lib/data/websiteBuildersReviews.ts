@@ -33,7 +33,7 @@ const METHODOLOGY = {
   introParagraph:
     "We evaluate website builders for local lead generation, ease of updates, conversion features, and total cost for small service businesses—not generic marketing scorecards.",
   bullets: [
-    "We test form workflows, mobile UX, and call-to-action clarity for lead capture.",
+    "We evaluate website builders around form workflows, mobile UX, and call-to-action clarity for lead capture.",
     "We compare SEO controls, page speed fundamentals, and local visibility features.",
     "We evaluate pricing, add-ons, and long-term maintainability for owner-operators.",
   ],

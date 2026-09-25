@@ -265,7 +265,7 @@ export const INVENTORY_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly so you get current pricing and feature information. We evaluate inventory tools on how well they help small businesses track stock accurately, prevent stockouts, and manage orders across channels.",
   bullets: [
-    "We test core workflows: adding products, tracking stock movements, creating purchase and sales orders, and managing reorders.",
+    "We evaluate inventory software around adding products, tracking stock movements, creating purchase and sales orders, and managing reorders.",
     "We compare pricing tiers, user and location limits, and add-ons so you understand total cost at your size and complexity.",
     "We look at integrations with ecommerce, accounting, and shipping tools, plus reporting on stock, margins, and demand.",
   ],

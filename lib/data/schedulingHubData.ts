@@ -294,7 +294,7 @@ export const SCHEDULING_METHODOLOGY: {
   introParagraph:
     "Our reviews are independent and updated regularly. We evaluate scheduling tools on calendar integrations, booking automation, customer notifications, team and round-robin support, and reporting or integrations with CRM and invoicing.",
   bullets: [
-    "We test core workflows: setting up meeting types, syncing calendars, sending reminders, and handling team or round-robin booking.",
+    "We evaluate scheduling software around setting up meeting types, syncing calendars, sending reminders, and handling team or round-robin booking.",
     "We compare pricing tiers, booking limits, and feature sets so you understand cost at your volume.",
     "We look at integrations with calendar apps, CRM, payment processors, and video conferencing.",
   ],

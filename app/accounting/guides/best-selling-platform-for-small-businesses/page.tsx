@@ -134,7 +134,7 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack references market position when it helps readers orient, but review scores come from hands-on testing and SMB-specific criteria—not vendor revenue claims. We disclose when a lesser-known product outperforms a best-seller for a defined use case.
+                      BeltStack references market position when it helps readers orient, but review scores are editorial evaluations based on product research and SMB-specific criteria—not vendor revenue claims. We disclose when a lesser-known product outperforms a best-seller for a defined use case.
                     </p>
                   </div>
                 </section>

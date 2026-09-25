@@ -225,7 +225,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match real HVAC workflows: dispatch, recurring service, and cash collection.",
       "We consider integrations, mobile quality, and total cost—including add-ons and per-tech pricing.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -391,7 +391,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match real plumbing workflows: dispatch, mobile documentation, and cash collection.",
       "We weigh integrations, ease of adoption for techs, and total cost—including per-user fees and add-ons.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -546,7 +546,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match electrical workflows: mobile job documentation, time-to-payroll accuracy, and billing that reflects field reality.",
       "We weigh integrations, adoption by techs, and total cost—including per-user fees and compliance-related features.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -710,7 +710,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match landscaping realities: recurring routes, seasonal labor, and materials-heavy jobs when applicable.",
       "We consider integration quality, mobile usability for crews, and total cost across peak and slow seasons.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -860,7 +860,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match cleaning operations: booking reliability, crew coordination, and straightforward payroll as teams grow.",
       "We weigh ease of adoption for distributed workers and total cost as headcount fluctuates.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -1095,7 +1095,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match handyman workflows: short-cycle jobs, mobile updates, and same-day cash collection.",
       "We weigh integration quality, ease of adoption for small crews, and total cost as headcount and lead volume grow.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -1284,7 +1284,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match roofing workflows: production documentation, cash collection, and job-level visibility.",
       "We weigh integrations, field usability, and total cost—including per-user fees and seasonal seat changes.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -1453,7 +1453,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match painting workflows: estimate flow, crew coordination, and straightforward billing.",
       "We weigh adoption, integrations, and realistic pricing for seasonal or volatile headcount.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -1620,7 +1620,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match GC workflows: job financial visibility, document control, and labor tied to cost structure.",
       "We weigh integration realism, permissions, and total cost across PM, accounting, payroll, and time.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -1839,7 +1839,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match construction realities: jobsite documentation, portfolio control, and job financial visibility—not generic small-business checklists.",
       "We weigh integration paths, permissions, and total cost across field, PM, accounting, time, billing, and payroll.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 
@@ -2028,7 +2028,7 @@ export const TRADE_HUB_DEFINITIONS: Record<string, TradeHubDefinition> = {
     methodologyBullets: [
       "We prioritize tools that match restaurant operations: front-of-house flows, tipped payroll complexity, and financial visibility.",
       "We consider integration quality, hardware fit, and total cost across locations and add-ons.",
-      "Recommendations are editorial and independent; we may earn a commission when you purchase through our links.",
+      "Recommendations are editorial selections. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
     ],
   },
 };

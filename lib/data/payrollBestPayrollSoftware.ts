@@ -16,7 +16,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     comparisonTableBestFor: "Small trade businesses",
     description: "All-in-one payroll, benefits, and HR with transparent pricing and a modern interface. Strong for small businesses and contractors.",
     rating: "4.8",
-    startingPrice: "$49/mo",
+    startingPrice: "$49/mo + $6/person",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -39,7 +39,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
       "Less hand-holding than traditional providers",
     ],
     pricingSummary:
-      "Gusto uses base-plus-per-person pricing; plans often start around $49/month base plus per-employee fees. Add-ons for time tracking, benefits, and contractor payments may apply. Check current pricing for your team size.",
+      "Gusto uses base-plus-per-person pricing. Simple starts at $49/month plus $6 per person. Add-ons for time tracking, benefits, and contractor payments may apply. Check current pricing for your team size.",
   },
   {
     slug: "quickbooks-payroll",
@@ -48,7 +48,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     comparisonTableBestFor: "QuickBooks users",
     description: "Payroll that runs inside QuickBooks so your books and pay runs stay in one place. Ideal if you already use QuickBooks for accounting.",
     rating: "4.6",
-    startingPrice: "$30/mo",
+    startingPrice: "$50/mo + $7/person",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -71,7 +71,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
       "Less all-in-one HR than Gusto or Rippling",
     ],
     pricingSummary:
-      "QuickBooks Payroll plans start around $30/month; pricing varies by tier and add-ons like time tracking or tax filing. Compare plans on Intuit's site for your user count.",
+      "QuickBooks Workforce Payroll is $50/month plus $7 per person paid. Compare plans on Intuit's site for your user count.",
   },
   {
     slug: "onpay",
@@ -80,7 +80,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     comparisonTableBestFor: "Value-focused teams",
     description: "Straightforward payroll with flat pricing and no tier maze. Good for small teams that want simplicity and predictable costs.",
     rating: "4.5",
-    startingPrice: "$40/mo",
+    startingPrice: "$49/mo + $6/person",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -103,7 +103,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
       "Less name recognition with some accountants",
     ],
     pricingSummary:
-      "OnPay uses base-plus-per-person pricing, often around $40/month base. One main plan covers payroll and benefits; compare total cost at your headcount on OnPay's site.",
+      "OnPay is $49/month plus $6 per person. One main plan covers payroll and benefits; compare total cost at your headcount on OnPay's site.",
   },
   {
     slug: "adp",
@@ -210,7 +210,7 @@ export const TOP_PICKS: BestPayrollPick[] = [
     description:
       "Payroll add-on paired with Wave’s free accounting. Fits solopreneurs and very small teams that want minimal cost and simple pay runs.",
     rating: "4.3",
-    startingPrice: "Payroll add-on",
+    startingPrice: "$40/mo + $6/person",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -346,6 +346,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How much does payroll software cost?",
-    a: "Many providers charge a base fee plus per-person per month. Gusto often starts around $49/month base; OnPay often around $40/month base—both plus a few dollars per person; QuickBooks Payroll can start around $30/month; SurePayroll Full Service currently lists $29/month plus $7 per employee. ADP (RUN packages) and Paychex use quote-based pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
+    a: "Many providers charge a base fee plus per-person per month. Gusto is $49/month plus $6 per person; OnPay is $49/month plus $6 per person; QuickBooks Workforce Payroll is $50/month plus $7 per person; SurePayroll Full Service lists $39/month plus $7 per employee. ADP (RUN packages) and Paychex use quote-based pricing. Total cost depends on headcount and add-ons like time tracking or benefits.",
   },
 ];

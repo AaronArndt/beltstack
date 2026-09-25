@@ -3,6 +3,8 @@
  * Used by app/page.tsx for the software-discovery homepage.
  */
 
+import { getCrmCanonicalRating } from "@/lib/data/crmCanonicalRating";
+
 export type FeaturedSoftwareCard = {
   name: string;
   categoryLabel: string;
@@ -35,7 +37,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
   {
     name: "HubSpot",
     categoryLabel: "CRM",
-    rating: "4.6",
+    rating: getCrmCanonicalRating("hubspot", "4.6"),
     logoSrc: "/Logos/hubspot.jpeg",
     features: ["Sales pipeline", "Contact management", "Marketing integrations"],
     reviewHref: "/crm/review/hubspot",
@@ -181,7 +183,7 @@ export const LATEST_GUIDES = [
 export const TRUST_ITEMS = [
   {
     heading: "Editorial ratings",
-    body: "BeltStack ratings are editorial evaluations, not user-review averages. Scores combine pricing, features, ease of use, support, and contractor fit.",
+    body: "BeltStack ratings are editorial evaluations, not user-review averages. Scores consider pricing and value, features, ease of adoption, support, integrations, and workflow fit.",
   },
   {
     heading: "Built for small businesses",
@@ -189,7 +191,7 @@ export const TRUST_ITEMS = [
   },
   {
     heading: "Affiliate disclosure",
-    body: "We may earn a commission when you purchase through our links. This does not affect our recommendations.",
+    body: "BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.",
   },
 ] as const;
 

@@ -16,6 +16,7 @@ import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 import { ComparisonTeaserLinkCard } from "@/components/comparisons/ComparisonTeaserLinkCard";
 import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardStartingPrice";
+import { AFFILIATE_DISCLOSURE, vendorCtaRel } from "@/lib/editorial";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
 const btnPrimary =
@@ -172,7 +173,7 @@ function FeaturedCard({ pick }: { pick: BestForFeaturedProduct }) {
       </h3>
       <p className="mt-1 text-[#57534E] text-sm leading-relaxed">{pick.description}</p>
       <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-stone-100 pt-4">
-        <a href={pick.visitUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
+        <a href={pick.visitUrl} target="_blank" rel={vendorCtaRel(pick.visitUrl)} className={btnPrimary}>
           Visit site
         </a>
         <Link href={pick.reviewHref} className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -252,6 +253,7 @@ export function BestForTemplate({
                 Affiliate disclosure
               </button>
             </div>
+            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[#57534E]">{AFFILIATE_DISCLOSURE}</p>
             <div className="mt-5">
               <a href="#top-picks" className={btnPrimary}>
                 Jump to top picks
@@ -495,7 +497,7 @@ export function BestForTemplate({
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              {AFFILIATE_DISCLOSURE}
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

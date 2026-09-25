@@ -142,7 +142,7 @@ export default function WhatTechnologyMostSmallBusinessesUsePage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack reviews SMB technology by vertical workflow—books, pipeline, payroll runs—not generic &quot;tech stack&quot; listicles. We test mobile access, bank feeds, and integration depth, and we state clearly when a tool is common but not ideal for a niche. No paid ranking slots.
+                      BeltStack reviews SMB technology by vertical workflow—books, pipeline, payroll runs—not generic &quot;tech stack&quot; listicles. We evaluate mobile access, bank feeds, and integration depth, and we state clearly when a tool is common but not ideal for a niche. No paid ranking slots.
                     </p>
                   </div>
                 </section>

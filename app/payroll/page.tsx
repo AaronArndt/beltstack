@@ -98,7 +98,7 @@ const BY_TRADE_GROUPS = [
 ];
 
 const METHODOLOGY_BULLETS = [
-  "We test payroll workflows (W-2, 1099, multi-state) and rate ease of use for contractors.",
+  "We evaluate payroll software around W-2, 1099, and multi-state workflows, and how easy the product is for contractors to adopt.",
   "We compare published pricing, add-ons, and hidden fees so you can budget accurately.",
   "Reviews are written for trade businesses—job costing, compliance, and support matter.",
 ];

@@ -20,6 +20,7 @@ import {
 } from "@/lib/data/crmBestSoftware";
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -139,7 +140,9 @@ export default function BestCrmSoftwarePage() {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">
+                        {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "crm")}
+                      </td>
                       <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
@@ -222,6 +225,13 @@ export default function BestCrmSoftwarePage() {
           items={useCaseEditorialItems}
         />
 
+        <RoundupHowWeChoseSection
+          categoryLabel="CRM software"
+          compareHref="/crm/compare"
+          guidesHref="/crm/guides"
+          includePricingStudyLink
+        />
+
         {/* ——— 7) Related comparisons ——— */}
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -285,7 +295,7 @@ export default function BestCrmSoftwarePage() {
             <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                We test CRM workflows: contact and lead management, pipeline stages, reporting, and automation.
+                We evaluate CRM software around the workflows small businesses actually need, including contact and lead management, pipeline stages, reporting, and automation.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
@@ -297,7 +307,7 @@ export default function BestCrmSoftwarePage() {
               </li>
             </ul>
             <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.{" "}
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.{" "}
               <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 Affiliate disclosure
               </Link>
@@ -321,7 +331,7 @@ export default function BestCrmSoftwarePage() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

@@ -4,6 +4,7 @@
 
 import type { BestForTemplateProps } from "@/components/best/BestForTemplate";
 import { getCrmBestForUrl } from "@/lib/routes";
+import { applyCrmCanonicalBestForProps } from "@/lib/data/crmCanonicalRating";
 import { AGENCIES_PAGE_PROPS } from "@/lib/data/crmBestForAgencies";
 import { FREELANCERS_PAGE_PROPS } from "@/lib/data/crmBestForFreelancers";
 import { SALES_TEAMS_PAGE_PROPS } from "@/lib/data/crmBestForSalesTeams";
@@ -156,5 +157,6 @@ export function getCrmBestForHubLinks(): CrmBestForHubCard[] {
 }
 
 export function getCrmBestForPageProps(slug: string): BestForTemplateProps | undefined {
-  return CRM_BEST_FOR_PROPS_BY_SLUG[slug];
+  const props = CRM_BEST_FOR_PROPS_BY_SLUG[slug];
+  return props ? applyCrmCanonicalBestForProps(props) : undefined;
 }

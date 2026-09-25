@@ -1,5 +1,6 @@
 import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl, getPayrollTradeUrl } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 type ReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -65,7 +66,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.8",
-    startingPrice: "$49/mo",
+    startingPrice: "$49/mo + $6/person",
     bestFor: "small trade businesses and contractors who want all-in-one payroll, benefits, and HR",
     visitUrl: "https://gusto.com",
     logoSrc: "/Logos/gusto.jpeg",
@@ -287,7 +288,7 @@ const reviews: Record<string, ReviewData> = {
       introParagraph:
         "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information. We evaluate payroll software for contractor and trade-business workflows.",
       bullets: [
-        "We test payroll workflows (W-2, 1099, multi-state) and rate ease of use for contractors.",
+        "We evaluate payroll software around W-2, 1099, and multi-state workflows, and how easy the product is for contractors to adopt.",
         "We compare published pricing, add-ons, and hidden fees so you can budget accurately.",
         "We assess features that matter to trade businesses: job costing integration, contractor self-service, and compliance.",
         "Reviews are written for trade businesses—field crews, subcontractors, and seasonal workers are part of the picture.",
@@ -329,7 +330,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.6",
-    startingPrice: "$30/mo",
+    startingPrice: "$50/mo + $7/person",
     bestFor: "contractors and small businesses already using QuickBooks for accounting",
     visitUrl: "https://quickbooks.intuit.com/payroll",
     logoSrc: "/Logos/quickbooks.png",
@@ -352,7 +353,7 @@ const reviews: Record<string, ReviewData> = {
         category: "Pricing",
         score: "4.4",
         explanation:
-          "Competitive entry pricing (around $30/month base plus per-employee fees). Costs increase with plan tier and headcount; add-ons for time tracking and benefits can push the total up.",
+          "Workforce Payroll is $50/month plus $7 per person paid. Costs increase with plan tier and headcount.",
       },
       {
         category: "Ease of Use",
@@ -391,9 +392,9 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that don't use QuickBooks and don't plan to may find the ecosystem limiting. If you need deep HR, benefits administration, or a best-of-breed standalone payroll tool, consider Gusto or OnPay instead. Large or multi-entity setups may outgrow the pricing and feature set.",
     pricingSummary:
-      "QuickBooks Payroll pricing is tiered: a lower-cost Core tier and a higher-tier Premium option with more features. Base fees start around $30/month plus per-employee or per-contractor fees. Time tracking, 1099 preparation, and other add-ons can increase the total. Check Intuit's current pricing for your state and headcount.",
+      "QuickBooks Workforce Payroll is $50/month plus $7 per person paid. Premium and Elite add more features at higher base and per-person rates. Check Intuit's current pricing for your state and headcount.",
     pricingTiers:
-      "Core covers essential payroll and tax filing. Premium adds time tracking, project costing, and other tools. Add-ons include QuickBooks Time (time tracking), 1099 e-file, and benefits. Pricing varies by number of employees and state.",
+      "Workforce Payroll is $50/month plus $7 per person paid. Premium and Elite add more features at higher base and per-person rates.",
     costVsCompetitors:
       "QuickBooks Payroll is competitive on entry price, especially for very small teams already on QuickBooks. As you add people or features, compare total cost to Gusto and OnPay. The main value is workflow convenience if you stay in the QuickBooks ecosystem.",
     features: [
@@ -508,7 +509,7 @@ const reviews: Record<string, ReviewData> = {
       },
       {
         q: "How much does QuickBooks Payroll cost?",
-        a: "Pricing is tiered with a base fee (around $30/month for Core) plus per-employee or per-contractor fees. Premium plans and add-ons (time tracking, 1099, etc.) increase the total. Check Intuit's current pricing for your state and headcount.",
+        a: "Pricing is $50/month plus $7 per person paid on Workforce Payroll. Premium and Elite add more features at higher base and per-person rates. Check Intuit's current pricing for your state and headcount.",
       },
       {
         q: "Is QuickBooks Payroll good for construction businesses?",
@@ -533,7 +534,7 @@ const reviews: Record<string, ReviewData> = {
       introParagraph:
         "Our reviews are independent and updated on a regular cadence. We evaluate payroll software for contractor and trade-business workflows, including integration with accounting and job costing.",
       bullets: [
-        "We test payroll workflows (W-2, 1099, multi-state) and ease of use within the QuickBooks ecosystem.",
+        "We evaluate payroll software around W-2, 1099, and multi-state workflows, and ease of use within the QuickBooks ecosystem.",
         "We compare published pricing, add-ons, and total cost of ownership for small teams.",
         "We consider how well payroll ties into job costing, time tracking, and books for trade businesses.",
         "Reviews are written for contractors and small trade businesses—integration and workflow matter.",
@@ -578,7 +579,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.5",
-    startingPrice: "$40/mo",
+    startingPrice: "$49/mo + $6/person",
     bestFor: "small trade businesses that want a simpler, value-focused payroll platform",
     visitUrl: "https://onpay.com",
     logoSrc: "/Logos/onpay.jpeg",
@@ -639,7 +640,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need deep job costing or native QuickBooks-only workflows may prefer QuickBooks Payroll. Those requiring heavy HR, compliance, or enterprise-scale features may outgrow OnPay and should look at Gusto or ADP. If you're already locked into Intuit and want payroll inside QuickBooks, OnPay's integrations are good but not native.",
     pricingSummary:
-      "OnPay uses straightforward pricing: a monthly base fee (often around $40) plus a per-person rate for everyone you pay. There are no tiered plans for core payroll—you get the same feature set. Benefits administration and support are included. Check OnPay's current pricing for your state and headcount.",
+      "OnPay is $49/month plus $6 per worker. There are no tiered plans for core payroll—you get the same feature set. Benefits administration and support are included.",
     pricingTiers:
       "One main plan covers payroll, tax filing, direct deposit, and benefits administration. Add-ons may apply for certain benefits or services. The model is designed to stay simple and predictable as you add people.",
     costVsCompetitors:
@@ -756,7 +757,7 @@ const reviews: Record<string, ReviewData> = {
       },
       {
         q: "How much does OnPay cost?",
-        a: "OnPay uses flat pricing: a monthly base fee (typically around $40) plus a per-person rate for each employee or contractor you pay. There are no tiered plans for core payroll—you get the same features. Check OnPay's site for current rates in your state.",
+        a: "OnPay is $49/month plus $6 per person for each employee or contractor you pay. There are no tiered plans for core payroll—you get the same features. Check OnPay's site for current rates in your state.",
       },
       {
         q: "Is OnPay good for small businesses?",
@@ -781,7 +782,7 @@ const reviews: Record<string, ReviewData> = {
       introParagraph:
         "Our reviews are independent and updated on a regular cadence. We evaluate payroll software for contractor and trade-business workflows, including ease of use, pricing clarity, and integration with accounting.",
       bullets: [
-        "We test payroll workflows (W-2, 1099, multi-state) and ease of setup and ongoing use.",
+        "We evaluate payroll software around W-2, 1099, and multi-state workflows, plus setup and ongoing use.",
         "We compare published pricing and total cost for small teams—including flat vs tiered models.",
         "We consider support quality and whether help is included or gated by plan.",
         "Reviews are written for contractors and small trade businesses—simplicity and value matter.",
@@ -1458,7 +1459,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.3",
-    startingPrice: "$35/mo",
+    startingPrice: "$35/mo + $6/person paid",
     bestFor: "small businesses already using Square for payments or point of sale",
     visitUrl: "https://squareup.com/us/en/payroll",
     logoSrc: "/Logos/square.jpeg",
@@ -1494,7 +1495,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that don't use Square and don't plan to may get more value from Gusto or OnPay, which offer broader HR and integrations. If you need deep HR, benefits administration, or the strongest accounting integrations outside Square, look elsewhere.",
     pricingSummary:
-      "Square Payroll uses published pricing—typically a monthly base plus per-employee or per-contractor fee. Pricing is competitive for small teams. Check Square's current rates for your state and headcount.",
+      "Square full-service W-2 payroll is $35/month plus $6 per person paid that month. Contractor-only payroll is $6 per person paid with no $35 base. Check Square's current rates for your state.",
     pricingTiers:
       "Square offers payroll plans with clear base and per-person pricing. Add-ons may apply for certain features. Simpler structure than tiered products like Gusto.",
     costVsCompetitors:
@@ -1534,7 +1535,7 @@ const reviews: Record<string, ReviewData> = {
       sub: "Transparent process, contractor-focused criteria.",
       introParagraph: "Our reviews are independent and updated on a regular cadence. We evaluate payroll software for small businesses, including ease of use and ecosystem fit.",
       bullets: [
-        "We test payroll workflows and ease of setup.",
+        "We evaluate payroll software around core payroll workflows and ease of setup.",
         "We compare pricing and fit for small teams.",
         "We consider ecosystem lock-in and integration breadth.",
       ],
@@ -1571,7 +1572,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.2",
-    startingPrice: "$17/mo",
+    startingPrice: "$17/mo + $4/worker",
     bestFor: "budget-conscious small businesses that want simple payroll basics",
     visitUrl: "https://www.patriotsoftware.com/payroll",
     logoSrc: "/Logos/patriot.jpeg",
@@ -1579,7 +1580,7 @@ const reviews: Record<string, ReviewData> = {
     quickVerdict:
       "Patriot Payroll offers affordable, no-frills payroll for very small businesses. Low base pricing and straightforward features make it a fit for budget-conscious owners who don't need advanced HR or a big ecosystem.",
     quickVerdictParagraphs: [
-      "Patriot Payroll is built for small businesses that want to run payroll without paying for features they won't use. Base pricing is low (e.g. from around $17/month), and you get W-2 and 1099 payroll, tax filing, and direct deposit. The interface is simple and focused on the basics.",
+      "Patriot Payroll is built for small businesses that want to run payroll without paying for features they won't use. Basic Payroll is $17/month plus $4 per worker and does not include tax filing. Full Service is $37/month plus $5 per worker and files federal, state, and local payroll taxes. The interface is simple and focused on the basics.",
       "We like Patriot for affordability and clarity. If you have a handful of employees or contractors and just need reliable pay runs and tax compliance, Patriot can be a good value. The trade-off is fewer advanced features, fewer integrations, and less HR depth than Gusto, OnPay, or Rippling—so it's best when cost and simplicity matter most.",
       "Limitations: Not the best fit if you need robust HR, benefits administration, or deep integrations with accounting or time tools. Consider Gusto or OnPay if you want more features and are okay with higher cost.",
     ],
@@ -1607,7 +1608,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need robust HR, benefits, time tracking, or deep accounting integrations may find Patriot too limited. Consider Gusto or OnPay for more features, or QuickBooks Payroll if you're in the QuickBooks ecosystem.",
     pricingSummary:
-      "Patriot uses low published pricing—often a base fee (e.g. from around $17/month) plus per-employee or per-contractor fees. One of the more affordable options for very small teams. Check Patriot's site for current rates.",
+      "Patriot Basic Payroll is $17/month plus $4 per worker paid. Basic does not include tax filing. Full Service Payroll is $37/month plus $5 per worker paid and is the plan that files federal, state, and local payroll taxes.",
     pricingTiers:
       "Patriot offers straightforward payroll plans with clear base and per-person pricing. Add-ons for tax filing or other services may apply. Simpler structure than multi-tier products.",
     costVsCompetitors:
@@ -1638,7 +1639,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     faqs: [
       { q: "Does Patriot Payroll support 1099 contractors?", a: "Yes. Patriot handles both W-2 and 1099 payroll with tax filing. Contractor payments and 1099-NEC are supported." },
-      { q: "How much does Patriot Payroll cost?", a: "Patriot uses low published pricing—often from around $17/month base plus per-employee or per-contractor fees. Check Patriot's website for current rates in your state." },
+      { q: "How much does Patriot Payroll cost?", a: "Basic Payroll is $17/month plus $4 per worker and does not include tax filing. Full Service Payroll is $37/month plus $5 per worker and includes tax filing." },
       { q: "Is Patriot Payroll good for small business?", a: "Yes. Patriot is aimed at very small businesses and budget-conscious owners. It's a strong fit when you want affordable, simple payroll without advanced HR or many integrations." },
       { q: "How does Patriot compare to Gusto?", a: "Gusto offers more HR, benefits, and integrations with higher cost. Patriot offers lower cost and simpler payroll. Choose Patriot for budget and basics; choose Gusto for breadth and features." },
     ],
@@ -1906,7 +1907,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.2",
-    startingPrice: "$29/mo + $7/employee",
+    startingPrice: "$39/mo + $7/employee",
     bestFor: "small businesses that want simple payroll with optional full-service support from a well-known brand",
     visitUrl: "https://www.surepayroll.com",
     logoSrc: "/Logos/surepayroll.jpeg",
@@ -1914,13 +1915,13 @@ const reviews: Record<string, ReviewData> = {
     quickVerdict:
       "SurePayroll offers small-business payroll with a simple interface and optional full-service support. Part of the Paychex family; good for owners who want a recognizable name and straightforward payroll.",
     quickVerdictParagraphs: [
-      "SurePayroll is a small-business payroll product from the Paychex family. Full Service currently lists at $29/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, and free 2-day direct deposit. A No Tax Filing plan is $20 plus $4 per employee if you file and deposit taxes yourself. Billing is monthly; SurePayroll states you can cancel anytime.",
+      "SurePayroll is a small-business payroll product from the Paychex family. Full Service currently lists at $39/month plus $7 per employee and includes tax calculation, filing, and deposits, W-2 and 1099, unlimited payroll runs, and free 2-day direct deposit. A No Tax Filing plan is $20 plus $4 per employee if you file and deposit taxes yourself. Billing is monthly; SurePayroll states you can cancel anytime.",
       "We like SurePayroll for small businesses that want a payroll-first product with a published monthly number and the option to hand off tax filing. The brand is familiar and support is available. For a more self-serve all-in-one (payroll plus HR and benefits), Gusto or OnPay may still be a better fit even though SurePayroll now publishes rates too.",
       "Limitations: Less HR and benefits depth than Gusto. Year-end forms ($50 + $5 per form), extra states ($9.99/month), local taxes, timeclock, and accounting export are extra. Consider Gusto if you want one platform for payroll and HR.",
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.0", explanation: "Solid core payroll and tax filing; W-2 and 1099. Fewer bells and whistles than Gusto." },
-      { category: "Pricing", score: "4.0", explanation: "Published Full Service $29/mo + $7 per employee; extras (year-end, extra state, add-ons) sit outside the headline rate." },
+      { category: "Pricing", score: "4.0", explanation: "Published Full Service $39/mo + $7 per employee; extras (year-end, extra state, add-ons) sit outside the headline rate." },
       { category: "Ease of Use", score: "4.4", explanation: "Simple interface; optional full-service makes it easy to hand off payroll." },
       { category: "Support", score: "4.5", explanation: "Support and full-service options available; good for small businesses that want help." },
       { category: "Integrations", score: "4.0", explanation: "Integrates with accounting and other tools; less ecosystem depth than Gusto or QuickBooks Payroll." },
@@ -1941,9 +1942,9 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that want the most HR and benefits in one platform may prefer Gusto. If you need ADP RUN’s HR package ladder or 24/7 support, compare SurePayroll vs ADP rather than assuming SurePayroll is an ADP product.",
     pricingSummary:
-      "SurePayroll currently publishes Full Service at $29/month plus $7 per employee and No Tax Filing at $20 plus $4 per employee. Extra states are $9.99/month; year-end W-2/1099 is $50 plus $5 per form. Local taxes and add-ons (timeclock, accounting integration, employment law, 401(k)) are extra. Verified August 2026 on SurePayroll’s pricing page.",
+      "SurePayroll currently publishes Full Service at $39/month plus $7 per employee and No Tax Filing at $20 plus $4 per employee. Extra states are $9.99/month; year-end W-2/1099 is $50 plus $5 per form and is required for full-service year-end filing. Local taxes and add-ons (timeclock, accounting integration, employment law, 401(k)) are extra. Lower promotional rates were not used. Verified September 2026 on SurePayroll’s pricing page.",
     pricingTiers:
-      "Full Service (most popular): $29/mo + $7 per employee, with tax filing and deposits. No Tax Filing: $20/mo + $4 per employee. Household/nanny is a separate plan on the pricing page.",
+      "Full Service (most popular): $39/mo + $7 per employee, with tax filing and deposits. No Tax Filing: $20/mo + $4 per employee. Household/nanny is a separate plan on the pricing page.",
     costVsCompetitors:
       "SurePayroll sits in the small-business segment with published payroll-first pricing. Compare total cost to Gusto and OnPay at your headcount; Gusto still offers more HR in the base product.",
     features: [
@@ -1972,7 +1973,7 @@ const reviews: Record<string, ReviewData> = {
     ],
     faqs: [
       { q: "Does SurePayroll support 1099 contractors?", a: "Yes. SurePayroll handles both W-2 and 1099 payroll with tax filing. Contractor payments and 1099 forms are supported." },
-      { q: "How much does SurePayroll cost?", a: "Full Service is currently $29/month plus $7 per employee. No Tax Filing is $20 plus $4 per employee. Year-end forms are $50 plus $5 per form; extra states are $9.99/month. Check SurePayroll’s pricing page for add-ons and local-tax fees." },
+      { q: "How much does SurePayroll cost?", a: "Full Service is currently $39/month plus $7 per employee. No Tax Filing is $20 plus $4 per employee. Year-end forms are $50 plus $5 per form; extra states are $9.99/month. Check SurePayroll’s pricing page for add-ons and local-tax fees." },
       { q: "Is SurePayroll part of Paychex?", a: "Yes. SurePayroll is part of the Paychex family, focused on small-business payroll with a simpler product and optional full-service." },
       { q: "SurePayroll vs Gusto?", a: "Gusto offers more HR, benefits, and published pricing in an all-in-one. SurePayroll offers simpler payroll with optional full-service and a familiar brand. Choose Gusto for more features; choose SurePayroll for simplicity and full-service option." },
     ],
@@ -2016,7 +2017,7 @@ const reviews: Record<string, ReviewData> = {
     category: "Payroll",
     categoryHref: "/payroll",
     rating: "4.3",
-    startingPrice: "Free (accounting); payroll add-on",
+    startingPrice: "$40/mo + $6/person",
     bestFor: "micro businesses and solopreneurs who already use Wave's free accounting and want simple payroll add-on",
     visitUrl: "https://www.waveapps.com/payroll",
     logoSrc: "/Logos/wave.jpeg",
@@ -2051,7 +2052,7 @@ const reviews: Record<string, ReviewData> = {
     whoShouldAvoid:
       "Businesses that need robust HR, benefits administration, or deep job costing may prefer Gusto or QuickBooks Payroll. Wave fits smallest teams and Wave-ecosystem users.",
     pricingSummary:
-      "Wave's accounting is free; payroll is a paid add-on with base and per-person pricing. Check Wave's website for current payroll rates and state availability.",
+      "Wave accounting is free. US payroll is $40/month plus $6 per person. Check Wave's website for state availability.",
     pricingTiers:
       "Wave offers free accounting; payroll is a separate paid product with tiered or per-person pricing.",
     costVsCompetitors:
@@ -2123,7 +2124,12 @@ const reviews: Record<string, ReviewData> = {
 };
 
 export function getPayrollReviewBySlug(slug: string): ReviewData | null {
-  return reviews[slug] ?? null;
+  const review = reviews[slug];
+  if (!review) return null;
+  return {
+    ...review,
+    startingPrice: overlayVerifiedStartingPrice(slug, review.startingPrice, "payroll"),
+  };
 }
 
 export function getPayrollReviewSlugs(): string[] {

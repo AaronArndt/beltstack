@@ -134,7 +134,7 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack cites common tools when they reflect real SMB adoption, but reviews rank on workflow fit, pricing transparency, and support—not install base alone. We test alternatives to market leaders so smaller products get a fair hearing when they excel for a niche.
+                      BeltStack cites common tools when they reflect real SMB adoption, but reviews rank on workflow fit, pricing transparency, and support—not install base alone. We evaluate alternatives to market leaders so smaller products get a fair hearing when they excel for a niche.
                     </p>
                   </div>
                 </section>

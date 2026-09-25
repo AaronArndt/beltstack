@@ -6,13 +6,10 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { SoftwarePickCard } from "@/components/software-picks/SoftwarePickCard";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
-import {
-  getSoftwarePick,
-  getSoftwarePickCategoryRoutes,
-  toSoftwarePickCardProps,
-  type SoftwarePickCategory,
-} from "@/lib/data/softwarePickCards";
+import { getSoftwarePick, getSoftwarePickCategoryRoutes, toSoftwarePickCardProps, type SoftwarePickCategory } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPriceFromHref } from "@/lib/data/verifiedStartingPrices";
 import { sectionRuleAccent, tableBodyRow, tableHeadRow, tableShell } from "@/lib/design-tokens";
+import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 
 const btnPrimary =
   "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
@@ -132,6 +129,18 @@ export function AlternativesTemplate({
     [softwarePickCategory]
   );
 
+  const pricedAlternatives = topAlternatives.map((alt) => ({
+    ...alt,
+    startingPrice:
+      alt.startingPrice != null
+        ? overlayVerifiedStartingPriceFromHref(alt.slug, alt.startingPrice, categoryHref)
+        : alt.startingPrice,
+  }));
+  const pricedTableRows = comparisonTableRows.map((row) => ({
+    ...row,
+    startingPrice: overlayVerifiedStartingPriceFromHref(row.slug, row.startingPrice, categoryHref),
+  }));
+
   const breadcrumbLabel = `Best ${productName} alternatives`;
 
   return (
@@ -163,6 +172,7 @@ export function AlternativesTemplate({
             <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
               {subtitle}
             </p>
+            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[#57534E]">{AFFILIATE_DISCLOSURE}</p>
             <p className="mt-4 text-sm text-[#57534E]">
               <Link href={originalReviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
                 Read our {productName} review
@@ -215,7 +225,7 @@ export function AlternativesTemplate({
               Top {productName} alternatives
             </SectionTitle>
             <div className="mt-6 space-y-10">
-              {topAlternatives.map((alt) => {
+              {pricedAlternatives.map((alt) => {
                 const canonical =
                   softwarePickCategory != null && pickRoutes != null
                     ? getSoftwarePick(softwarePickCategory, alt.slug)
@@ -227,6 +237,7 @@ export function AlternativesTemplate({
                       {...toSoftwarePickCardProps(canonical, pickRoutes, {
                         id: `alt-${alt.slug}`,
                         badgeText: alt.bestFor,
+                        category: softwarePickCategory,
                       })}
                     />
                   );
@@ -299,7 +310,7 @@ export function AlternativesTemplate({
                   </tr>
                 </thead>
                 <tbody>
-                  {comparisonTableRows.map((row) => (
+                  {pricedTableRows.map((row) => (
                     <tr key={row.slug} className={tableBodyRow}>
                       <td className="px-4 py-4 font-semibold text-[#1A2D48]">
                         <div className="flex items-center gap-2">

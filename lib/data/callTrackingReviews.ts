@@ -31,7 +31,7 @@ const METHODOLOGY: CallTrackingReviewData["methodology"] = {
   introParagraph:
     "We evaluate call tracking for how it helps contractors and marketers prove which channels produce booked jobs—not vanity ring counts.",
   bullets: [
-    "We stress-test attribution for Google Ads, LSA, SEO pages, and directories.",
+    "We evaluate attribution for Google Ads, LSA, SEO pages, and directories using vendor documentation and published product information.",
     "We compare pricing that scales with numbers, minutes, and seats.",
     "We map tools to realistic CRM follow-up and QA habits.",
   ],

@@ -137,7 +137,7 @@ export default function DifferentTypesOfBusinessSoftwareExplainedPage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack tests products inside each category—accounting vs CRM vs payroll—not as a single &quot;best business app&quot; list. Reviewers document integrations, pricing at realistic headcount, and where tools break for solos versus teams. We do not sell ranking placement; recommendations come from hands-on workflow checks and published comparison criteria.
+                      BeltStack reviews products inside each category—accounting vs CRM vs payroll—not as a single &quot;best business app&quot; list. We document integrations, pricing at realistic headcount, and where tools break for solos versus teams using vendor documentation and published comparison criteria. We do not sell ranking placement.
                     </p>
                   </div>
                 </section>

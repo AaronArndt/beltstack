@@ -127,7 +127,7 @@ export default function WhatIsAnalyticalCrmPage() {
                 <section id="eeat" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Independent reviews, not vendor sales pages.">How BeltStack Covers CRM</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>BeltStack evaluates CRM reporting in trials for independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>. Report accuracy depends on your data hygiene.</p>
+                    <p>BeltStack evaluates CRM reporting using vendor documentation for independent reviews—<Link href="/methodology" className={linkGreen}>methodology</Link>, <Link href="/crm/best-crm-software" className={linkGreen}>best CRM software</Link>. Report accuracy depends on your data hygiene.</p>
                   </div>
                 </section>
                 <section id="what-to-do-next" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

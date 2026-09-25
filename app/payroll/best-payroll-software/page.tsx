@@ -21,6 +21,7 @@ import {
 import { resolveBestOfUseCaseEditorials } from "@/lib/bestOf/resolveBestOfUseCaseEditorials";
 import { getPayrollReviewUrl } from "@/lib/routes";
 import { getSoftwarePickCategoryRoutes } from "@/lib/data/softwarePickCards";
+import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
 
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/lib/design-tokens";
@@ -142,7 +143,9 @@ export default function BestPayrollSoftwarePage() {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-[#57534E]">{pick.badge}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{pick.startingPrice}</td>
+                      <td className="px-4 py-4 text-[#57534E]">
+                        {overlayVerifiedStartingPrice(pick.slug, pick.startingPrice, "payroll")}
+                      </td>
                       <td className="px-4 py-4 text-[#57534E]">{pick.payrollTypes}</td>
                       <td className="px-4 py-4 text-[#57534E]">{pick.standoutFeature}</td>
                       <td className="px-4 py-4">
@@ -188,7 +191,7 @@ export default function BestPayrollSoftwarePage() {
               <div>
                 <h3 className="font-bold text-[#1A2D48] text-base">Payroll types (W-2 / 1099 / mixed)</h3>
                 <p className="mt-1">
-                  Most small businesses need both W-2 employees and 1099 contractors. Choose a platform that handles both with clear tax treatment and forms. If you're contractor-only or mixed, ensure 1099 support and contractor self-service are included.
+                  Most small businesses need both W-2 employees and 1099 contractors. Choose a platform that handles both with clear tax treatment and forms. If you&apos;re contractor-only or mixed, ensure 1099 support and contractor self-service are included.
                 </p>
               </div>
               <div>
@@ -212,7 +215,7 @@ export default function BestPayrollSoftwarePage() {
               <div>
                 <h3 className="font-bold text-[#1A2D48] text-base">Integrations</h3>
                 <p className="mt-1">
-                  Payroll should connect to your accounting software (QuickBooks, Xero) and optionally time tracking. Native integration is better than manual export. If you're deep in QuickBooks, QuickBooks Payroll keeps everything in one place.
+                  Payroll should connect to your accounting software (QuickBooks, Xero) and optionally time tracking. Native integration is better than manual export. If you&apos;re deep in QuickBooks, QuickBooks Payroll keeps everything in one place.
                 </p>
               </div>
               <div>
@@ -263,6 +266,7 @@ export default function BestPayrollSoftwarePage() {
           categoryLabel="payroll software"
           compareHref="/payroll/compare"
           guidesHref="/payroll/guides"
+          includePricingStudyLink
         />
 
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
@@ -332,7 +336,7 @@ export default function BestPayrollSoftwarePage() {
               Affiliate disclosure
             </h3>
             <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
-              We may earn a commission when you purchase through our links. This does not affect our recommendations.
+              BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>
               Got it

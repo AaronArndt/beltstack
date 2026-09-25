@@ -718,6 +718,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     defaultEntry("/about", { changeFrequency: "monthly", priority: 0.7 }),
     defaultEntry("/contact", { changeFrequency: "monthly", priority: 0.7 }),
     defaultEntry("/methodology", { changeFrequency: "monthly", priority: 0.7 }),
+    defaultEntry("/research/service-business-software-pricing", { changeFrequency: "monthly", priority: 0.7 }),
     defaultEntry("/terms", { changeFrequency: "yearly", priority: 0.4 }),
     defaultEntry("/privacy", { changeFrequency: "yearly", priority: 0.4 }),
     defaultEntry("/media-kit", { changeFrequency: "monthly", priority: 0.5 }),

@@ -15,18 +15,12 @@ function softwareApplicationSchema(
   data: NonNullable<ReturnType<typeof getFieldServiceReviewBySlug>>
 ) {
   const url = `${SITE_URL}${getFieldServiceReviewUrl(slug)}`;
-  const ratingNum = parseFloat(data.rating);
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: data.toolName,
     applicationCategory: "FieldServiceManagementApplication",
     operatingSystem: "Web",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: ratingNum,
-      ratingCount: 1,
-    },
     offers: {
       "@type": "Offer",
       price: data.startingPrice,

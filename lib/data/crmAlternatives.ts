@@ -20,6 +20,7 @@ import type {
   AlternativesLink,
   AlternativesFaqItem,
 } from "@/components/alternatives/AlternativesTemplate";
+import { applyCrmCanonicalAlternatives } from "@/lib/data/crmCanonicalRating";
 
 const CATEGORY = { href: "/crm", label: "CRM" };
 const ROUNDUP_HREF = "/crm/best-crm-software";
@@ -82,7 +83,7 @@ function crmRel(slug: string) {
 const HUBSPOT_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise scale", description: "Maximum customization and app ecosystem for large teams.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise; AppExchange" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value & Zoho", description: "Full CRM at lower cost; strong for Zoho users.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value; Zoho suite" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first CRM without marketing hub.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("hubspot-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Sales pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first CRM without marketing hub.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("hubspot-vs-pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Sales pipeline" },
   { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexible workflows", description: "Boards and CRM in one; customizable.", reviewHref: getCrmReviewUrl("monday-crm"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"), startingPrice: "From $10/user/mo", standoutFeature: "Flexibility; boards" },
   { slug: "copper", name: "Copper", logoSrc: LOGOS.copper, rating: "4.4", bestFor: "Google Workspace", description: "Native Gmail and Calendar integration.", reviewHref: getCrmReviewUrl("copper"), compareHref: getCrmCompareUrl("copper-vs-hubspot"), startingPrice: "From $29/user/mo", standoutFeature: "Google native" },
 ];
@@ -136,7 +137,7 @@ const hubspotPage: AlternativesTemplateProps = {
 const SALESFORCE_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "SMB", description: "Free CRM and easier setup for small and mid-size teams.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-salesforce"), startingPrice: "Free tier", standoutFeature: "Free; ease of use" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at much lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value; Zoho" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Focused pipeline CRM without enterprise complexity.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline focus" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Focused pipeline CRM without enterprise complexity.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline focus" },
   { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Customizable boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards; workflows" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & value", description: "AI-powered sales CRM at competitive pricing.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI; value" },
 ];
@@ -181,7 +182,7 @@ const salesforcePage: AlternativesTemplateProps = {
 const ZOHO_CRM_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "marketing-sales", description: "Stronger marketing hub and polish; free CRM.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("hubspot-vs-zoho-crm"), startingPrice: "Free tier", standoutFeature: "Marketing; free tier" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum scale and app ecosystem.", reviewHref: getCrmReviewUrl("salesforce"), compareHref: getCrmCompareUrl("salesforce-vs-zoho-crm"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first; cleaner sales focus.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline-first; cleaner sales focus.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("zoho-crm-vs-pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and customizable workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI", description: "AI-powered sales and built-in communication.", reviewHref: getCrmReviewUrl("freshsales"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive"), startingPrice: "From $15/user/mo", standoutFeature: "AI; dialer" },
 ];
@@ -252,7 +253,7 @@ const pipedrivePage: AlternativesTemplateProps = {
   ],
   topAlternatives: PIPEDRIVE_ALTERNATIVES,
   comparisonTableRows: buildTableRows(
-    { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, bestFor: "sales pipeline", startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline", reviewHref: getCrmReviewUrl("pipedrive") },
+    { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, bestFor: "sales pipeline", startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline", reviewHref: getCrmReviewUrl("pipedrive") },
     PIPEDRIVE_ALTERNATIVES
   ),
   detailedAlternatives: [
@@ -280,7 +281,7 @@ const pipedrivePage: AlternativesTemplateProps = {
 const MONDAY_CRM_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "full CRM", description: "Traditional CRM with marketing and sales; free tier.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("monday-crm-vs-hubspot"), startingPrice: "Free tier", standoutFeature: "Marketing; free" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline-focused without boards.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline-focused without boards.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum customization and scale.", reviewHref: getCrmReviewUrl("salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI", description: "AI-powered sales CRM.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI" },
 ];
@@ -328,7 +329,7 @@ const mondayCrmPage: AlternativesTemplateProps = {
 // ——— Freshsales alternatives ———
 const FRESHSALES_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "all-in-one", description: "Free CRM and marketing hub.", reviewHref: getCrmReviewUrl("hubspot"), startingPrice: "Free tier", standoutFeature: "Free; marketing" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline focus without AI complexity.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline focus without AI complexity.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("freshsales-vs-pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM and free tier.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
   { slug: "close", name: "Close", logoSrc: LOGOS.close, rating: "4.5", bestFor: "inside sales", description: "Built-in calling and email.", reviewHref: getCrmReviewUrl("close"), startingPrice: "From $49/user/mo", standoutFeature: "Calling" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum scale and ecosystem.", reviewHref: getCrmReviewUrl("salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
@@ -374,7 +375,7 @@ const freshsalesPage: AlternativesTemplateProps = {
 const COPPER_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "all-in-one", description: "Free CRM and marketing; not Google-specific.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("copper-vs-hubspot"), startingPrice: "Free tier", standoutFeature: "Free; marketing" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM at lower cost; free tier.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline-focused; integrates with Google.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline-focused; integrates with Google.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "salesforce", name: "Salesforce", logoSrc: LOGOS.salesforce, rating: "4.5", bestFor: "enterprise", description: "Maximum scale; Google integrations.", reviewHref: getCrmReviewUrl("salesforce"), startingPrice: "From $25/user/mo", standoutFeature: "Enterprise" },
   { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
 ];
@@ -417,7 +418,7 @@ const copperPage: AlternativesTemplateProps = {
 
 // ——— Close alternatives ———
 const CLOSE_ALTERNATIVES: AlternativesTopPick[] = [
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline focus without dialer; lower cost.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("close-vs-pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "pipeline", description: "Pipeline focus without dialer; lower cost.", reviewHref: getCrmReviewUrl("pipedrive"), compareHref: getCrmCompareUrl("close-vs-pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "all-in-one", description: "Free CRM and marketing hub.", reviewHref: getCrmReviewUrl("hubspot"), startingPrice: "Free tier", standoutFeature: "Free; marketing" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & dialer", description: "AI and built-in communication; lower cost.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI; dialer" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM and free tier.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
@@ -464,7 +465,7 @@ const closePage: AlternativesTemplateProps = {
 const KEAP_ALTERNATIVES: AlternativesTopPick[] = [
   { slug: "hubspot", name: "HubSpot", logoSrc: LOGOS.hubspot, rating: "4.6", bestFor: "free & scale", description: "Free CRM and paid hubs; scales to larger teams.", reviewHref: getCrmReviewUrl("hubspot"), compareHref: getCrmCompareUrl("keap-vs-hubspot"), startingPrice: "Free tier", standoutFeature: "Free; scale" },
   { slug: "zoho-crm", name: "Zoho CRM", logoSrc: LOGOS.zoho, rating: "4.4", bestFor: "value", description: "Full CRM and marketing at lower cost.", reviewHref: getCrmReviewUrl("zoho-crm"), startingPrice: "Free tier", standoutFeature: "Value" },
-  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline focus; add marketing separately.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14.90/user/mo", standoutFeature: "Pipeline" },
+  { slug: "pipedrive", name: "Pipedrive", logoSrc: LOGOS.pipedrive, rating: "4.5", bestFor: "sales pipeline", description: "Pipeline focus; add marketing separately.", reviewHref: getCrmReviewUrl("pipedrive"), startingPrice: "From $14/user/mo billed annually", standoutFeature: "Pipeline" },
   { slug: "freshsales", name: "Freshsales", logoSrc: LOGOS.freshsales, rating: "4.3", bestFor: "AI & sales", description: "AI-powered sales CRM.", reviewHref: getCrmReviewUrl("freshsales"), startingPrice: "From $15/user/mo", standoutFeature: "AI" },
   { slug: "monday-crm", name: "Monday", logoSrc: LOGOS.monday, rating: "4.4", bestFor: "flexibility", description: "Boards and workflows.", reviewHref: getCrmReviewUrl("monday-crm"), startingPrice: "From $10/user/mo", standoutFeature: "Boards" },
 ];
@@ -518,7 +519,9 @@ const PAGES: Record<string, AlternativesTemplateProps> = {
 };
 
 export function getCrmAlternativesPage(slug: string): AlternativesTemplateProps | null {
-  return PAGES[slug] ?? null;
+  const page = PAGES[slug];
+  if (!page) return null;
+  return applyCrmCanonicalAlternatives(page);
 }
 
 export function getCrmAlternativesSlugs(): string[] {

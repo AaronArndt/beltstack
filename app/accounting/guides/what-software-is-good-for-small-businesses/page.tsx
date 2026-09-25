@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How does BeltStack pick good software?",
-    a: "We test workflows, compare pricing honestly, and write for owners—not vendor marketing. See best accounting software and vertical best-for pages.",
+    a: "We evaluate workflows, compare pricing honestly, and write for owners—not vendor marketing. See best accounting software and vertical best-for pages.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function WhatSoftwareIsGoodForSmallBusinessesPage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack scores tools after hands-on workflow tests—sending invoices, reconciling banks, moving deals—not brochure claims. We publish best-for pages by scenario (solo, growing team, industry) and comparisons with clear winners only when evidence supports it. Vendors cannot buy higher placement.
+                      BeltStack scores tools as editorial evaluations of workflows such as sending invoices, reconciling banks, and moving deals—not brochure claims. We publish best-for pages by scenario (solo, growing team, industry) and comparisons with clear winners only when evidence supports it. Vendors cannot buy higher placement.
                     </p>
                   </div>
                 </section>

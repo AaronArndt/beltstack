@@ -15,18 +15,12 @@ function softwareApplicationSchema(
   data: NonNullable<ReturnType<typeof getProjectManagementReviewBySlug>>
 ) {
   const url = `${SITE_URL}${getProjectManagementReviewUrl(slug)}`;
-  const ratingNum = parseFloat(data.rating);
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: data.toolName,
     applicationCategory: "ProjectManagementApplication",
     operatingSystem: "Web",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: ratingNum,
-      ratingCount: 1,
-    },
     offers: {
       "@type": "Offer",
       price: data.startingPrice,

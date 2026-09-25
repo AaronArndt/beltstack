@@ -146,7 +146,7 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                   <SectionTitle>How BeltStack evaluates business software</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      BeltStack tests accounting tools on maintenance workflows—bank feeds, reconciliation UX, receipt capture, and report clarity—not just signup flows. We recommend products that help owners stay current with less manual entry, and we note when a tool is better for accountants than DIY owners.
+                      BeltStack evaluates accounting tools around maintenance workflows—bank feeds, reconciliation UX, receipt capture, and report clarity—not just signup flows. We recommend products that help owners stay current with less manual entry, and we note when a tool is better for accountants than DIY owners.
                     </p>
                   </div>
                 </section>

@@ -7,6 +7,13 @@
 import { getCrmReviewUrl, getCrmCompareUrl, getCrmBestForUrl } from "@/lib/routes";
 import { ZOHO_CRM_LOGO } from "@/lib/data/crmLogos";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
+import { getCrmStandardizedScore } from "@/lib/data/crmStandardizedScores";
+import { overlayCrmStartingPrice } from "@/lib/data/crmCanonicalRating";
+import {
+  formatEditorialRating,
+  publishableOverallScore,
+  standardizedRatingBreakdown,
+} from "@/lib/editorial/scoring";
 
 export type CrmReviewData = Omit<ReviewTemplateProps, "categoryHref"> & { categoryHref: string };
 
@@ -56,7 +63,7 @@ const CRM_METHODOLOGY = {
   introParagraph:
     "Our reviews are independent and updated on a regular cadence so you get current pricing and feature information. We evaluate CRM software for contact management, pipeline, automation, and ease of use.",
   bullets: [
-    "We test CRM workflows: contact and lead management, pipeline stages, reporting, and automation.",
+    "We evaluate CRM software around the workflows small businesses actually need, including contact and lead management, pipeline stages, reporting, and automation.",
     "We compare pricing tiers, user limits, and add-ons so you can budget accurately.",
     "Reviews are written for small businesses, sales teams, and startups—not only enterprise needs.",
   ],
@@ -170,7 +177,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.5",
-    startingPrice: "From $25/user/mo",
+    startingPrice: "From $25/user/mo (paid Sales Cloud)",
     bestFor: "enterprise teams that need maximum customization, scale, and app ecosystem",
     visitUrl: "https://www.salesforce.com",
     logoSrc: LOGOS.salesforce,
@@ -183,7 +190,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.8", explanation: "Extensive out-of-the-box and customizable features. Leads, contacts, opportunities, custom objects, and automation. AppExchange extends with thousands of apps." },
-      { category: "Pricing", score: "4.2", explanation: "Per-user pricing starting around $25/user/month; higher editions cost more. Custom quotes common; total cost can be significant for large teams." },
+      { category: "Pricing", score: "4.2", explanation: "Paid Sales Cloud plans start at $25/user/month; higher editions cost more. Official materials conflict on Free Suite availability." },
       { category: "Ease of Use", score: "4.2", explanation: "Powerful but complex. Training and admin support help. New users often need time to learn; simpler CRMs are easier to adopt for small teams." },
       { category: "Support", score: "4.5", explanation: "Multiple support tiers and large partner ecosystem. Enterprise customers get dedicated options. Documentation and community are strong." },
       { category: "Integrations", score: "4.9", explanation: "AppExchange and APIs provide more integrations than any other CRM. Native and third-party apps cover virtually every use case." },
@@ -204,9 +211,9 @@ const reviews: Record<string, CrmReviewData> = {
     whoShouldAvoid:
       "Small teams and startups with simple pipelines will find Salesforce heavier and more expensive than necessary. If you want quick setup and published pricing, consider HubSpot or Zoho CRM. Teams that need strict sales-only focus without enterprise overhead may prefer Pipedrive or Close.",
     pricingSummary:
-      "Salesforce uses tiered per-user pricing. Entry-level Sales Cloud starts around $25/user/month; higher editions add more features and support. Exact cost depends on edition, user count, and add-ons. Contact Salesforce or a partner for a quote. Small teams can sometimes start on lower tiers; enterprise deals are typically custom.",
+      "Paid Sales Cloud plans start at $25/user/month (Starter Suite). Salesforce also lists a Free Suite, although official materials conflict on its current availability. Higher editions add more features and support. Exact cost depends on edition, user count, and add-ons.",
     pricingTiers:
-      "Essential, Professional, Enterprise, and Unlimited editions offer increasing features—custom objects, workflow, reporting, and support. Industry editions (e.g. Financial Services, Health) add vertical-specific features. Add-ons for marketing, service, and analytics are priced separately.",
+      "Starter Suite, Pro Suite, Core, Advanced, and Max editions offer increasing features—custom objects, workflow, reporting, and support. Industry editions (e.g. Financial Services, Health) add vertical-specific features. Add-ons for marketing, service, and analytics are priced separately.",
     costVsCompetitors:
       "Salesforce is typically the most expensive option for equivalent seats. You pay for breadth, customization, and ecosystem. HubSpot and Zoho CRM are more affordable for SMBs; Pipedrive and Close are cheaper for sales-only use. Compare total cost of ownership including implementation and training.",
     features: [
@@ -237,7 +244,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     faqs: [
       { q: "Is Salesforce worth it for startups?", a: "It depends. Startups with simple pipelines and limited budget often find HubSpot or Zoho CRM easier and more affordable. Salesforce can make sense if you have complex processes, plan to scale quickly, or need industry-specific apps. Compare total cost including implementation." },
-      { q: "How much does Salesforce cost?", a: "Sales Cloud starts around $25/user/month; higher editions cost more. Marketing, Service, and other clouds are priced separately. Many enterprises get custom quotes. Check Salesforce's pricing page or contact sales for your scenario." },
+      { q: "How much does Salesforce cost?", a: "Paid Sales Cloud plans start at $25/user/month. Salesforce also lists a Free Suite, although official materials conflict on its current availability. Higher editions and other clouds cost more." },
       { q: "What is Salesforce AppExchange?", a: "AppExchange is Salesforce's marketplace of apps and integrations. You can add prebuilt solutions for marketing, service, industry verticals, and more without building everything from scratch." },
       { q: "Can small businesses use Salesforce?", a: "Yes, but small businesses often find HubSpot or Zoho CRM easier and more cost-effective. Salesforce is built for scale; if you have a small team and simple process, a lighter CRM may be a better fit." },
     ],
@@ -357,7 +364,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.5",
-    startingPrice: "From $14.90/user/mo",
+    startingPrice: "From $14/user/mo billed annually",
     bestFor: "sales teams that want a pipeline-first CRM with activity tracking and clear deal stages",
     visitUrl: "https://www.pipedrive.com",
     logoSrc: LOGOS.pipedrive,
@@ -393,7 +400,7 @@ const reviews: Record<string, CrmReviewData> = {
     pricingSummary:
       "Pipedrive uses per-user monthly pricing with several tiers. Entry tier covers pipeline and core features; higher plans add automation, reporting, and integrations. No free plan, but a trial is available. Check Pipedrive's site for current pricing and limits.",
     pricingTiers:
-      "Essential covers pipeline, contacts, and basic reporting. Advanced adds automation and email; Professional adds more automation and support; Enterprise adds security and API. Compare tiers for your team size and need for automation.",
+      "Lite ($14/user/month billed annually) covers pipeline, contacts, and basic reporting. Growth ($39) adds automation; Premium ($59) and Ultimate ($79) add more automation, reporting, and support. Compare tiers for your team size and need for automation.",
     costVsCompetitors:
       "Pipedrive sits in the mid-range for sales CRM—more than Zoho CRM free tier, often less than HubSpot when you only need sales. You pay for focus: a clean pipeline tool without marketing hub. Good value for sales-only teams.",
     features: [
@@ -425,7 +432,7 @@ const reviews: Record<string, CrmReviewData> = {
     faqs: [
       { q: "Is Pipedrive good for small sales teams?", a: "Yes. Pipedrive is well suited to small sales teams. The pipeline is easy to set up and use, and pricing is clear. Many small teams choose it over heavier CRMs because it stays focused on deals and activities." },
       { q: "How does Pipedrive compare to HubSpot?", a: "Pipedrive is pipeline- and sales-focused; HubSpot adds a full marketing hub and free CRM. Choose Pipedrive for a dedicated sales tool; choose HubSpot if you want marketing automation and sales in one platform." },
-      { q: "Does Pipedrive have a free plan?", a: "Pipedrive does not offer a free plan. It does offer a trial so you can test the product. Paid plans start around $15/user/month. For a free CRM, consider HubSpot or Zoho CRM." },
+      { q: "Does Pipedrive have a free plan?", a: "Pipedrive does not offer a free plan. It does offer a trial so you can test the product. Paid plans start at $14/user/month billed annually on Lite. For a free CRM, consider HubSpot or Zoho CRM." },
       { q: "What CRM is best for pipeline management?", a: "Pipedrive is one of the best CRMs for pipeline management. It's built around the deal pipeline and activity tracking. HubSpot and Zoho CRM also have strong pipelines but add more beyond sales." },
     ],
     methodology: CRM_METHODOLOGY,
@@ -452,7 +459,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.4",
-    startingPrice: "From $10/user/mo",
+    startingPrice: "From $12/user/mo billed annually",
     bestFor: "teams that want customizable boards and workflows beyond a traditional pipeline",
     visitUrl: "https://monday.com",
     logoSrc: LOGOS.monday,
@@ -486,7 +493,7 @@ const reviews: Record<string, CrmReviewData> = {
     whoShouldAvoid:
       "Teams that want a ready-made pipeline with minimal setup should consider Pipedrive or HubSpot. If you need heavy marketing automation, HubSpot is a better fit. Strict sales-only teams with no project component may find Monday more than they need.",
     pricingSummary:
-      "Monday offers multiple plans; CRM features are available from lower tiers. Pricing is per user; higher plans add more automation, views, and integrations. Check Monday's pricing page for current plans and CRM-included tiers.",
+      "Monday CRM Basic is $12/user/month billed annually, or $18/user/month billed monthly. Higher plans add more automation, views, and integrations. Check Monday's pricing page for current CRM tiers.",
     pricingTiers:
       "Basic and Standard plans include boards and automation; CRM templates and features are available. Pro and Enterprise add more views, automation, and support. Compare tiers for your team size and need for advanced features.",
     costVsCompetitors:
@@ -545,7 +552,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.3",
-    startingPrice: "From $15/user/mo",
+    startingPrice: "From $9/user/mo billed annually",
     bestFor: "sales teams that want AI-powered features and built-in phone and email in one CRM",
     visitUrl: "https://www.freshworks.com/crm/sales",
     logoSrc: LOGOS.freshsales,
@@ -558,7 +565,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.4", explanation: "Pipeline, contacts, AI lead scoring, built-in phone and email. Good automation and reporting. Part of Freshworks suite." },
-      { category: "Pricing", score: "4.4", explanation: "Free tier available; paid plans are competitive. Per-user pricing; check tiers for AI and communication features." },
+      { category: "Pricing", score: "4.4", explanation: "Growth is $9/user/month billed annually. Paid plans are competitive. Per-user pricing; check tiers for AI and communication features." },
       { category: "Ease of Use", score: "4.4", explanation: "Clean interface and straightforward setup. AI features are easy to turn on. Generally easy for sales teams to adopt." },
       { category: "Support", score: "4.3", explanation: "Help center and support options. Freshworks has a reputation for responsive support. Adequate for SMB needs." },
       { category: "Integrations", score: "4.3", explanation: "Integrates with Freshworks products and many third-party tools. Fewer apps than HubSpot or Salesforce but covers typical sales stack." },
@@ -579,9 +586,9 @@ const reviews: Record<string, CrmReviewData> = {
     whoShouldAvoid:
       "Teams that need heavy marketing automation should consider HubSpot. Those that want the simplest pipeline-only tool may prefer Pipedrive. Enterprises that need maximum customization may choose Salesforce.",
     pricingSummary:
-      "Freshsales offers a free tier with limited users; paid plans add more users, AI, and communication features. Pricing is per user per month. Check Freshworks' site for current tiers and what's included in each.",
+      "Freshsales Growth is $9/user/month billed annually. Month-to-month Growth pricing is not published on the official plan cards. Higher tiers (Pro, Enterprise) add AI and communication features.",
     pricingTiers:
-      "Free supports basic CRM; paid tiers add AI (Freddy), built-in phone, email sequences, and more. Compare tiers for your team size and need for AI and communication tools.",
+      "Growth is the advertised entry on the official plan cards. Paid tiers add AI (Freddy), built-in phone, email sequences, and more. Compare tiers for your team size and need for AI and communication tools.",
     costVsCompetitors:
       "Freshsales is competitively priced with Pipedrive and mid-tier HubSpot for sales-only use. You get AI and built-in communication, which can replace separate tools. Compare total cost with your current stack.",
     features: [
@@ -611,7 +618,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     faqs: [
       { q: "What is Freshsales?", a: "Freshsales is a sales CRM by Freshworks. It includes contact and deal management, AI lead scoring, and built-in phone and email. It's aimed at SMB sales teams that want automation and communication in one tool." },
-      { q: "Does Freshsales have a free plan?", a: "Yes. Freshsales has a free tier with limited users and features. Paid plans add more users, AI (Freddy), and communication features. Check Freshworks' site for current limits." },
+      { q: "Does Freshsales have a free plan?", a: "Official plan cards start at Growth at $9/user/month billed annually. A free plan is not shown on those cards." },
       { q: "How does Freshsales compare to Pipedrive?", a: "Freshsales adds AI and built-in phone and email; Pipedrive is more pipeline-only. Choose Freshsales for AI and all-in-one communication; choose Pipedrive for simplicity and pipeline focus." },
       { q: "What CRM has built-in calling?", a: "Freshsales and Close both offer built-in calling in the CRM. HubSpot and others offer calling via integrations or add-ons. Compare features and pricing for your call volume." },
     ],
@@ -638,7 +645,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.4",
-    startingPrice: "From $29/user/mo",
+    startingPrice: "From $23/user/mo billed annually",
     bestFor: "teams that use Google Workspace and want CRM that lives in Gmail and Google Calendar",
     visitUrl: "https://www.copper.com",
     logoSrc: LOGOS.copper,
@@ -651,7 +658,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.4", explanation: "Full CRM with pipeline, contacts, and automation. Deep Gmail and Google Calendar integration. Reporting and mobile apps are good." },
-      { category: "Pricing", score: "4.2", explanation: "Per-user pricing starting around $29/user/month. No free plan. Higher than some competitors; justified by Google integration." },
+      { category: "Pricing", score: "4.2", explanation: "Per-user pricing: $23/user/month billed annually, or $29/user/month billed monthly. No free plan. Higher than some competitors; justified by Google integration." },
       { category: "Ease of Use", score: "4.6", explanation: "Very easy for Google Workspace users. Minimal context switching. Onboarding is smooth when Gmail and Calendar are already in use." },
       { category: "Support", score: "4.3", explanation: "Help center and support. Generally responsive. Google-centric documentation." },
       { category: "Integrations", score: "4.5", explanation: "Best-in-class Google Workspace integration. Other integrations via API and partners. Focus is on Google stack." },
@@ -672,7 +679,7 @@ const reviews: Record<string, CrmReviewData> = {
     whoShouldAvoid:
       "Teams that use Outlook or a mix of email systems will not get the same benefit. If you're not on Google Workspace, HubSpot or Zoho CRM may be more appropriate. Cost-conscious teams may prefer Zoho or Pipedrive.",
     pricingSummary:
-      "Copper uses per-user monthly pricing starting around $29/user/month. There is no free plan. Higher tiers add more automation and features. Check Copper's site for current pricing and plans.",
+      "Copper Basic is $23/user/month billed annually, or $29/user/month billed monthly. There is no free plan. Higher tiers add more automation and features.",
     pricingTiers:
       "Basic covers pipeline and core features; Professional adds automation and reporting; Business adds more customization and support. Compare tiers for your team size and need for automation.",
     costVsCompetitors:
@@ -704,7 +711,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     faqs: [
       { q: "Is Copper only for Google users?", a: "Copper is built for Google Workspace. The main value is deep Gmail and Calendar integration. If you use Outlook or another email system, you won't get the same experience—consider HubSpot or another CRM." },
-      { q: "How much does Copper cost?", a: "Copper pricing starts around $29/user/month. There is no free plan. Check Copper's site for current tiers and features." },
+      { q: "How much does Copper cost?", a: "Copper Basic is $23/user/month billed annually, or $29/user/month billed monthly. There is no free plan." },
       { q: "Does Copper work with Gmail?", a: "Yes. Copper integrates deeply with Gmail. You can see contact and deal context in Gmail and log emails automatically. It's one of the strongest Gmail CRMs available." },
       { q: "What CRM works best with Google Workspace?", a: "Copper is built specifically for Google Workspace. HubSpot and Zoho CRM also integrate with Gmail and Calendar but are not as Google-native. Choose Copper for the deepest Google experience." },
     ],
@@ -730,7 +737,7 @@ const reviews: Record<string, CrmReviewData> = {
     category: "CRM",
     categoryHref: "/crm",
     rating: "4.5",
-    startingPrice: "From $49/user/mo",
+    startingPrice: "From $19/user/mo (Solo, 1 user)",
     bestFor: "inside sales teams that spend time on the phone and want calling, email, and pipeline in one place",
     visitUrl: "https://www.close.com",
     logoSrc: LOGOS.close,
@@ -743,7 +750,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.5", explanation: "Pipeline, contacts, built-in calling, email, and SMS. Call recording and logging. Focused on inside sales workflow." },
-      { category: "Pricing", score: "4.2", explanation: "Per-user pricing starting around $49/user/month. Higher than many CRMs; includes dialer and communication tools." },
+      { category: "Pricing", score: "4.2", explanation: "Advertised entry is Solo at $19/user/month for one user. Teams use Essentials at $49/user/month, which includes the dialer and communication tools." },
       { category: "Ease of Use", score: "4.6", explanation: "Designed for reps who call and email daily. Minimal context switching. Easy to adopt for inside sales teams." },
       { category: "Support", score: "4.4", explanation: "Help center and support. Responsive for paid customers. Documentation is solid." },
       { category: "Integrations", score: "4.3", explanation: "Calendar, Zapier, and key sales tools. Fewer integrations than HubSpot or Salesforce; sufficient for inside sales stack." },
@@ -764,9 +771,9 @@ const reviews: Record<string, CrmReviewData> = {
     whoShouldAvoid:
       "Teams that need heavy marketing automation should consider HubSpot. Those that don't rely on phone may find Pipedrive or HubSpot sufficient at lower cost. Field sales or complex multi-touch processes may need a larger platform.",
     pricingSummary:
-      "Close uses per-user monthly pricing starting around $49/user/month. The price includes the dialer and communication features. Higher tiers add more features and support. Check Close's site for current pricing.",
+      "Close Solo is $19/user/month for one user. Essentials is $49/user/month and is the first team plan; it includes the dialer and communication features. Do not treat Solo as a team plan.",
     pricingTiers:
-      "Starter covers pipeline and calling; Basic and Professional add more communication and automation features. Compare tiers for your team size and need for call recording and advanced features.",
+      "Solo is limited to one user. Essentials is the first team plan at $49/user/month. Higher tiers add more communication and automation features.",
     costVsCompetitors:
       "Close is more expensive per user than Pipedrive or Zoho because it bundles a dialer and communication tools. If you're paying separately for a dialer and CRM, Close can consolidate cost. Compare total cost of your current stack.",
     features: [
@@ -796,7 +803,7 @@ const reviews: Record<string, CrmReviewData> = {
     ],
     faqs: [
       { q: "What is Close CRM?", a: "Close is a CRM built for inside sales. It includes a built-in dialer, email, and SMS so reps can call and email from one place. Pipeline and activity tracking are designed for call-heavy workflows." },
-      { q: "How much does Close cost?", a: "Close pricing starts around $49/user/month. The price includes the dialer and communication features. Check Close's site for current tiers." },
+      { q: "How much does Close cost?", a: "Close Solo is $19/user/month for one user. Teams pay $49/user/month on Essentials, which includes the dialer and communication features." },
       { q: "Is Close good for inside sales?", a: "Yes. Close is one of the best CRMs for inside sales. It's built for reps who make calls and send emails daily, with minimal context switching and built-in call logging." },
       { q: "Does Close have a built-in dialer?", a: "Yes. Close includes a built-in dialer. You can make calls from the CRM, log them automatically, and record calls on higher plans. No need for a separate dialer tool." },
     ],
@@ -913,7 +920,18 @@ const reviews: Record<string, CrmReviewData> = {
 };
 
 export function getCrmReviewBySlug(slug: string): CrmReviewData | null {
-  return reviews[slug] ?? null;
+  const review = reviews[slug];
+  if (!review) return null;
+  const score = getCrmStandardizedScore(slug);
+  const overall = score ? publishableOverallScore(score) : null;
+  if (score == null || overall == null) return review;
+  return {
+    ...review,
+    rating: formatEditorialRating(overall),
+    lastReviewed: review.lastReviewed ?? score.lastReviewed,
+    ratingBreakdown: standardizedRatingBreakdown(score),
+    startingPrice: overlayCrmStartingPrice(slug, review.startingPrice),
+  };
 }
 
 export function getCrmReviewSlugs(): string[] {

@@ -15,7 +15,7 @@ const P = {
     visitUrl: "https://www.freshbooks.com",
     bestForSummary: "Freelancers and service businesses; strong invoicing, time tracking, and ease of use.",
     rating: "4.5",
-    startingPrice: "$19/mo",
+    startingPrice: "$23/mo",
   },
   quickbooks: {
     name: "QuickBooks",
@@ -55,7 +55,7 @@ const P = {
     visitUrl: "https://www.xero.com",
     bestForSummary: "Businesses needing invoicing plus full accounting and strong integrations.",
     rating: "4.5",
-    startingPrice: "$15/mo",
+    startingPrice: "$25/mo",
   },
   "invoice-ninja": {
     name: "Invoice Ninja",
@@ -75,7 +75,7 @@ const P = {
     visitUrl: "https://www.honeybook.com",
     bestForSummary: "Client-service businesses; proposals, contracts, and invoicing in one workflow.",
     rating: "4.4",
-    startingPrice: "Quote",
+    startingPrice: "$29/mo billed annually",
   },
   bonsai: {
     name: "Bonsai",
@@ -85,7 +85,7 @@ const P = {
     visitUrl: "https://www.hellobonsai.com",
     bestForSummary: "Freelancers and solo service businesses; proposals, contracts, and invoicing.",
     rating: "4.3",
-    startingPrice: "Quote",
+    startingPrice: "$9/mo billed annually",
   },
 } as const;
 
@@ -181,7 +181,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "FreshBooks wins on ease of use and freelancer-focused features; QuickBooks wins on accounting depth and ecosystem size. Choose FreshBooks for invoicing-first workflows; QuickBooks when you want one platform for books and billing.",
     ],
-    "FreshBooks starts around $19/month; QuickBooks around $30/month. Both scale with tiers and add-ons. Compare client limits and accounting needs.",
+    "FreshBooks Lite is $23/month; QuickBooks around $30/month. Both scale with tiers and add-ons. Compare client limits and accounting needs.",
     [
       { label: "Winner for freelancers", winner: "A" },
       { label: "Winner for accounting integrations", winner: "B" },
@@ -197,7 +197,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "FreshBooks wins on features and polish; Wave wins on price—free core invoicing. Choose FreshBooks for better client workflow and time tracking; Wave for zero software cost.",
     ],
-    "FreshBooks starts around $19/month; Wave is free for core invoicing. Wave charges for payment processing and payroll add-ons.",
+    "FreshBooks Lite is $23/month; Wave is free for core invoicing. Wave charges for payment processing and payroll add-ons.",
     [
       { label: "Winner for features", winner: "A" },
       { label: "Winner for free option", winner: "B" },
@@ -229,7 +229,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "Zoho Invoice wins on value and automation; FreshBooks wins on freelancer-focused ease and market familiarity. Choose Zoho for lower cost and Zoho ecosystem; FreshBooks for simplicity and client tools.",
     ],
-    "Zoho Invoice has a free tier and paid plans from a low base; FreshBooks starts around $19/month. Compare client and invoice limits.",
+    "Zoho Invoice has a free tier and paid plans from a low base; FreshBooks Lite is $23/month. Compare client and invoice limits.",
     [
       { label: "Winner for value", winner: "A" },
       { label: "Winner for freelancers", winner: "B" },
@@ -245,7 +245,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "Xero wins on entry pricing and modern UI; QuickBooks wins on ecosystem size and accountant familiarity. Both are full-featured; choose by preference, price, and accountant support.",
     ],
-    "Xero starts around $15/month; QuickBooks around $30/month. Both add cost with higher tiers and add-ons.",
+    "Xero Early is $25/month; QuickBooks around $30/month. Both add cost with higher tiers and add-ons.",
     [
       { label: "Winner for entry pricing", winner: "A" },
       { label: "Winner for ecosystem", winner: "B" },
@@ -277,7 +277,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "FreshBooks wins on freelancer ease and invoicing focus; Xero wins on accounting depth and integrations. Choose FreshBooks for invoice-first workflows; Xero for one platform for books and billing.",
     ],
-    "FreshBooks starts around $19/month; Xero around $15/month. Xero scales with accounting features; FreshBooks with client count.",
+    "FreshBooks Lite is $23/month; Xero Early is $25/month. Xero scales with accounting features; FreshBooks with client count.",
     [
       { label: "Winner for freelancers", winner: "A" },
       { label: "Winner for accounting integrations", winner: "B" },
@@ -293,7 +293,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "Invoice Ninja wins on customization and open-source/self-host option; FreshBooks wins on ease of use and market familiarity. Choose Invoice Ninja for control; FreshBooks for simplicity.",
     ],
-    "Invoice Ninja has a free self-hosted option and paid cloud plans; FreshBooks starts around $19/month. Compare features and support needs.",
+    "Invoice Ninja has a free self-hosted option and paid cloud plans; FreshBooks Lite is $23/month. Compare features and support needs.",
     [
       { label: "Winner for customization", winner: "A" },
       { label: "Winner for ease of use", winner: "B" },
@@ -309,7 +309,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
     [
       "HoneyBook wins on client workflow depth and creative-industry focus; Bonsai wins on freelancer simplicity and straightforward pricing. Both suit client-facing professionals; choose by workflow and industry fit.",
     ],
-    "Both use subscription pricing; plans are often quoted. Compare features and pricing for your team size and workflow.",
+    "HoneyBook Starter is $29/month billed annually; Bonsai Basic is $9/month billed annually (invoices start on Essentials at $19 billed annually).",
     [
       { label: "Winner for client workflow depth", winner: "A" },
       { label: "Winner for freelancer simplicity", winner: "B" },
