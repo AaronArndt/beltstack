@@ -39,7 +39,7 @@ export const FEATURED_SOFTWARE: FeaturedSoftwareCard[] = [
     logoSrc: "/Logos/hubspot.jpeg",
     features: ["Sales pipeline", "Contact management", "Marketing integrations"],
     reviewHref: "/crm/review/hubspot",
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
   },
   {
     name: "Zendesk",

@@ -1816,7 +1816,7 @@ const reviews: Record<string, FieldServiceReviewData> = {
     ],
     ratingBreakdown: [
       { category: "Features", score: "4.2", explanation: "Strong workforce scheduling, time tracking, forms, and communication—not full FSM depth." },
-      { category: "Pricing", score: "4.3", explanation: "Accessible tiers; verify costs as you add modules and seats." },
+      { category: "Pricing", score: "4.3", explanation: "Free Small Business Plan for up to 10 users; paid hubs from $29/mo billed yearly—model all hubs and seats." },
       { category: "Ease of Use", score: "4.4", explanation: "Mobile-first; adoption is often easier than heavy FSM for pure workforce needs." },
       { category: "Support", score: "4.1", explanation: "Varies by plan—confirm onboarding for larger rollouts." },
       { category: "Integrations", score: "4.0", explanation: "Integrations exist; confirm your accounting/FSM pairing early." },

@@ -27,7 +27,7 @@ export const LEAD_GENERATION_GUIDES: LeadGenerationGuideItem[] = [
   {
     slug: "how-google-local-services-ads-work",
     title: "How Google Local Services Ads Work",
-    description: "Screening, bidding, and lead dispute basics for Google’s local paid lead product.",
+    description: "Screening, bidding, and automated lead credits for Google’s local paid lead product.",
     href: "/lead-generation/guides/how-google-local-services-ads-work",
   },
   {

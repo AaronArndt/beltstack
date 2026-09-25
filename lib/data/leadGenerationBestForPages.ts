@@ -28,7 +28,7 @@ const defaultFeaturedProducts: BestForFeaturedProduct[] = [
     slug: "google-local-services-ads",
     name: "Google Local Services Ads",
     badge: "Best for urgent search",
-    description: "Google-screened placements when homeowners search with immediate intent.",
+    description: "Google Verified placements when homeowners search with immediate intent.",
     rating: "4.5",
     startingPrice: "Pay per lead",
     reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"),
@@ -124,7 +124,7 @@ const LG_PRODUCT_BASE = {
     slug: "houzz-pro",
     name: "Houzz Pro",
     rating: "4.2",
-    startingPrice: "Subscription + ads",
+    startingPrice: "Software; ads extra from $499/mo",
     visitUrl: "https://www.houzz.com/pro",
     logoSrc: "/Logos/houzz.jpeg",
   },
@@ -824,7 +824,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
         {
           slug: "google-local-services-ads",
           badge: "Best for urgent search calls",
-          description: "Google-screened placements when homeowners search with immediate repair intent.",
+          description: "Google Verified placements when homeowners search with immediate repair intent.",
           tableBestFor: "High-intent local search",
           standoutFeature: "Screened local calls",
         },
@@ -883,7 +883,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
           badge: "Best for emergency search",
           description: "Screened Google placements when homeowners need a door fixed today.",
           tableBestFor: "Urgent local search",
-          standoutFeature: "Google Screened trust",
+          standoutFeature: "Google Verified trust",
         },
         {
           slug: "angi",
@@ -1232,7 +1232,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
           badge: "Best for urgent local search",
           description: "High-intent calls when homeowners search for excavation help now.",
           tableBestFor: "Search-led calls",
-          standoutFeature: "Google Screened",
+          standoutFeature: "Google Verified",
         },
         {
           slug: "thumbtack",
@@ -1289,7 +1289,7 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
           badge: "Best urgent Google intent",
           description: "Screened local calls from high-intent automotive service searches.",
           tableBestFor: "Search-first drivers",
-          standoutFeature: "Google Screened",
+          standoutFeature: "Google Verified",
         },
         {
           slug: "facebook-lead-ads",
@@ -1408,9 +1408,9 @@ export const LEAD_GENERATION_BEST_FOR_BY_SLUG: Record<string, BestForTemplatePro
         {
           slug: "google-local-services-ads",
           badge: "Best high-intent search",
-          description: "Google-screened calls when shoppers want cleaning help soon.",
+          description: "Google Verified calls when shoppers want cleaning help soon.",
           tableBestFor: "Urgent search intent",
-          standoutFeature: "Screened calls",
+          standoutFeature: "Verified calls",
         },
       ],
       [

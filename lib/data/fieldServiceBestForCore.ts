@@ -28,7 +28,7 @@ const FS_PRODUCT_CORE = {
     name: "Jobber",
     logoSrc: "/Logos/jobber.png",
     rating: "4.6",
-    startingPrice: "From ~$69/mo",
+    startingPrice: "From $29/mo billed annually (Core, 1 user)",
     visitUrl: "https://getjobber.com",
     defaultStandout: "Scheduling, dispatch, quotes, invoicing",
   },

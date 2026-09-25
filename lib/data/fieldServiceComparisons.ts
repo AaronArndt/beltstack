@@ -217,6 +217,40 @@ const BASE_FEATURE_ROWS: ComparisonTemplateProps["featureComparison"] = [
   },
 ];
 
+/** Connecteam is workforce software, not Jobber-class quoting/invoicing. Do not reuse BASE money rows. */
+const CONNECTEAM_VS_FSM_FEATURE_ROWS: ComparisonTemplateProps["featureComparison"] = [
+  {
+    feature: "Scheduling & dispatch",
+    productA: "Shifts, jobs, and employee scheduling",
+    productB: "Calendar and dispatch board",
+    supportA: "supported",
+    supportB: "supported",
+  },
+  {
+    feature: "Mobile app for technicians",
+    productA: "iOS and Android apps for field teams",
+    productB: "iOS and Android apps for field teams",
+    supportA: "supported",
+    supportB: "supported",
+  },
+  {
+    feature: "Estimates & invoicing",
+    productA: "No native customer quoting/invoicing; export workflow",
+    productB: "Create estimates and invoices from jobs",
+    supportA: "none",
+    supportB: "supported",
+    stronger: "B",
+  },
+  {
+    feature: "Online payments",
+    productA: "Not a customer payment product",
+    productB: "Cards/online payments",
+    supportA: "none",
+    supportB: "supported",
+    stronger: "B",
+  },
+];
+
 const dim = (
   feature: string,
   productA: string,
@@ -1801,15 +1835,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { category: "SMB ease of first purchase", productA: "4.4", productB: "4.5" },
     ],
     featureComparison: [
-      ...BASE_FEATURE_ROWS,
-      {
-        feature: "Quotes, invoicing & customer payments",
-        productA: "Not primary—pair with FSM or accounting",
-        productB: "Core workflows end-to-end",
-        supportA: "partial",
-        supportB: "supported",
-        stronger: "B",
-      },
+      ...CONNECTEAM_VS_FSM_FEATURE_ROWS,
       {
         feature: "Online booking & review campaigns",
         productA: "Not the product focus",
@@ -1918,7 +1944,7 @@ const comparisonEntries: [string, ComparisonTemplateProps][] = [
       { category: "Fit for very small teams (cost vs capability)", productA: "4.2", productB: "3.2" },
     ],
     featureComparison: [
-      ...BASE_FEATURE_ROWS,
+      ...CONNECTEAM_VS_FSM_FEATURE_ROWS,
       {
         feature: "Call-center & marketing attribution",
         productA: "Not in scope",

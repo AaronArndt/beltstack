@@ -272,7 +272,7 @@ export const EMAIL_MARKETING_REVIEWS: Record<string, EmailMarketingReviewData> =
     ],
   }),
 
-  "hubspot-email-marketing": review("hubspot-email-marketing", "HubSpot", "4.4", "Free–paid Marketing Hub tiers", "teams living inside HubSpot CRM", "https://www.hubspot.com/products/marketing", { label: "Mailchimp vs ActiveCampaign", slug: "mailchimp-vs-activecampaign" }, { label: "Klaviyo vs Mailchimp", slug: "klaviyo-vs-mailchimp" }, {
+  "hubspot-email-marketing": review("hubspot-email-marketing", "HubSpot", "4.4", "Free–paid Marketing Hub tiers", "teams living inside HubSpot CRM", "https://go.try-hubspot.com/L0dLoo", { label: "Mailchimp vs ActiveCampaign", slug: "mailchimp-vs-activecampaign" }, { label: "Klaviyo vs Mailchimp", slug: "klaviyo-vs-mailchimp" }, {
     quickVerdictParagraphs: [
       "Email in HubSpot makes sense when your company already treats HubSpot as the source of truth—contacts, tickets, deals, and dashboards should not fragment across tools.",
       "Campaign drag-and-drop editors are only part of the story; the real win is unified reporting from first form fill through closed job revenue when adoption is disciplined.",

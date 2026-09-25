@@ -43,7 +43,7 @@ export const TOP_PICKS: BestCrmPick[] = [
     hasFreeTrial: true,
     hasFreePlan: true,
     hasIntegrations: true,
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     logoSrc: LOGOS.hubspot,
     compareSlugs: ["hubspot-vs-salesforce", "hubspot-vs-zoho-crm", "monday-crm-vs-hubspot"],
     editorialParagraph:

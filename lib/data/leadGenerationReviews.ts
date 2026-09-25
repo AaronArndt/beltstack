@@ -288,7 +288,7 @@ const reviews: Record<string, LeadGenerationReviewData> = {
       alt("Angi", "angi", "Home services directories", "/Logos/angi.jpeg"),
     ],
     faqs: [
-      { q: "Bark vs Thumbtack: which should I choose?", a: "Bark if you want to inspect each request and skip without paying. Thumbtack if you want customers contacting you under targeting, max lead prices, and a weekly budget. Compare cost per booked job—see Bark vs Thumbtack." },
+      { q: "Bark vs Thumbtack: which should I choose?", a: "Bark if you want to inspect each request and skip without paying. Thumbtack if you want customers contacting you under targeting, exact lead prices, and a weekly budget. Compare cost per booked job—see Bark vs Thumbtack." },
       { q: "How should I manage Bark credit spend?", a: "Treat $2.35 as the credit unit, not CPL. Skip leads whose credit cost cannot fit expected gross profit. Use credits before the 3-month expiry. Unresponsive customers are not a return reason." },
       { q: "Are Bark leads lower quality?", a: "BeltStack has not measured conversion rates. Quality varies by category and market. Use Bark’s signals and your own close rate—do not assume they are worse or better than Thumbtack." },
       { q: "Where do I compare Bark alternatives?", a: "Use the Bark alternatives page, then validate against Bark vs Thumbtack and your own close-rate data." },

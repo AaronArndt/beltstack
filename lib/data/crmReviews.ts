@@ -70,7 +70,7 @@ const reviews: Record<string, CrmReviewData> = {
     rating: "4.6",
     startingPrice: "Free tier",
     bestFor: "small and mid-size businesses that want an all-in-one CRM with marketing, sales, and service",
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     logoSrc: LOGOS.hubspot,
     quickVerdict:
       "HubSpot is our top pick for most small businesses and sales teams: a free CRM core, clear upgrade path, and strong marketing and sales tools in one platform.",

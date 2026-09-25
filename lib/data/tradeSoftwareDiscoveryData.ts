@@ -267,7 +267,7 @@ const DISCOVERY_PRODUCTS: DiscoveryProduct[] = [
     category: "crm",
     name: "HubSpot",
     logoSrc: "/Logos/hubspot.jpeg",
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     reviewHref: getCrmReviewUrl("hubspot"),
     overallScore: 4.6,
     defaultBullets: ["Contact & deal pipeline", "Marketing + sales alignment", "Automation & integrations"],

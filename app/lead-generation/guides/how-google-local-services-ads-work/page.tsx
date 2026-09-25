@@ -50,7 +50,7 @@ export default function HowGoogleLsaWorkPage() {
               <GuideLastUpdated date="March 25, 2026" />
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
-              <p>LSA is a Google Search and Maps product for eligible local services. After screening, ads can show the Google Verified badge. You set an average weekly budget and a bidding mode, and you pay for valid leads (calls, messages, or bookings)—not clicks. In the US and Canada, Google assesses lead quality automatically and may issue credits; the older “dispute every misfire” workflow is not the current system.</p>
+              <p>LSA is a Google Search and Maps product for eligible local services. After screening, ads can show the Google Verified badge. Legacy Local Services accounts set an average weekly budget and a bidding mode. Some US accounts have migrated in phases into specialized Performance Max pay-per-lead campaigns in Google Ads (daily average budget; Maximize Conversions). You pay for valid leads (calls, messages, or bookings)—not clicks. In the US and Canada, Google assesses lead quality automatically and may issue credits; the older “dispute every misfire” workflow is not the current system.</p>
               <p>
                 <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
                   Best lead generation tools roundup

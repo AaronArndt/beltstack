@@ -29,7 +29,7 @@ const CRM_PRODUCT_CORE = {
     logoSrc: "/Logos/hubspot.jpeg",
     rating: "4.6",
     startingPrice: "Free tier",
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     defaultStandout: "Free CRM, marketing-sales alignment",
   },
   salesforce: {

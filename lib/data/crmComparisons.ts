@@ -19,7 +19,7 @@ const P = {
     slug: "hubspot",
     reviewHref: getCrmReviewUrl("hubspot"),
     logoSrc: "/Logos/hubspot.jpeg",
-    visitUrl: "https://www.hubspot.com",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     bestForSummary: "Best overall CRM for many SMBs; strong marketing and sales ecosystem.",
     rating: "4.6",
     startingPrice: "Free tier",

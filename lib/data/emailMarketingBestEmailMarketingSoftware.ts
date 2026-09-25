@@ -93,7 +93,7 @@ export const TOP_PICKS: BestEmailMarketingPick[] = [
     hasFreeTrial: true,
     hasFreePlan: true,
     hasIntegrations: true,
-    visitUrl: "https://www.hubspot.com/products/marketing",
+    visitUrl: "https://go.try-hubspot.com/L0dLoo",
     logoSrc: emailMarketingLogoForSlug("hubspot-email-marketing"),
     compareSlugs: ["mailchimp-vs-activecampaign", "mailchimp-vs-constant-contact", "klaviyo-vs-mailchimp"],
     standoutFeature: "Native CRM objects and unified contact timeline",

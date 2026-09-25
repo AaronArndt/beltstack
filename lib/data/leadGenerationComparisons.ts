@@ -23,7 +23,7 @@ const P = {
     reviewHref: getLeadGenerationReviewUrl("thumbtack"),
     logoSrc: "/Logos/thumbtack.jpeg",
     visitUrl: "https://www.thumbtack.com",
-    bestForSummary: "Pay-per-lead marketplace with targeting, max lead prices, and weekly budgets.",
+    bestForSummary: "Pay-per-lead marketplace with targeting, exact lead prices, and weekly budgets.",
     rating: "4.4",
     startingPrice: "No membership fee; pay per lead",
   },
@@ -209,7 +209,7 @@ function build(
       alternatives: [
         { name: "Thumbtack", href: getLeadGenerationReviewUrl("thumbtack"), logoSrc: "/Logos/thumbtack.jpeg", description: "Pay-per-lead marketplace for local pros." },
         { name: "Angi", href: getLeadGenerationReviewUrl("angi"), logoSrc: "/Logos/angi.jpeg", description: "Directory + lead products for home services." },
-        { name: "Google Local Services Ads", href: getLeadGenerationReviewUrl("google-local-services-ads"), logoSrc: "/Logos/google.jpeg", description: "Google-screened local lead ads." },
+        { name: "Google Local Services Ads", href: getLeadGenerationReviewUrl("google-local-services-ads"), logoSrc: "/Logos/google.jpeg", description: "Google Verified local lead ads." },
       ],
       faqs: [
         { q: `Which is better for contractors—${pa.name} or ${pb.name}?`, a: summary },
@@ -461,7 +461,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       ],
       alternatives: [
         { name: "Thumbtack", href: getLeadGenerationReviewUrl("thumbtack"), logoSrc: "/Logos/thumbtack.jpeg", description: "Independent pay-per-lead marketplace—actual alternative to Angi Leads." },
-        { name: "Google Local Services Ads", href: getLeadGenerationReviewUrl("google-local-services-ads"), logoSrc: "/Logos/google.jpeg", description: "Google-screened local search leads, independent of Angi Inc." },
+        { name: "Google Local Services Ads", href: getLeadGenerationReviewUrl("google-local-services-ads"), logoSrc: "/Logos/google.jpeg", description: "Google Verified local search leads, independent of Angi Inc." },
         { name: "Bark", href: getLeadGenerationReviewUrl("bark"), logoSrc: "/Logos/bark.jpeg", description: "Separate credit-style marketplace across many service categories." },
       ],
       faqs: [
@@ -529,7 +529,7 @@ const entries: [string, ComparisonTemplateProps][] = [
     "bark-vs-thumbtack",
     "bark",
     "thumbtack",
-    "Bark lets you inspect a matched request, see the credit cost, and pay only if you choose to contact. Thumbtack matches you from targeting preferences and, for direct leads, charges when a customer reaches out—controlled by max lead prices and a weekly budget, not by picking each lead from a feed.",
+    "Bark lets you inspect a matched request, see the credit cost, and pay only if you choose to contact. Thumbtack matches you from targeting preferences and, for direct leads, charges when a customer reaches out—controlled by exact lead prices and a weekly budget, not by picking each lead from a feed.",
     {
       pageHeading: "Bark vs Thumbtack (2026): Cost, Leads & Best Fit",
       seoTitle: "Bark vs Thumbtack (2026): Cost, Leads & Best Fit | BeltStack",
@@ -542,11 +542,11 @@ const entries: [string, ComparisonTemplateProps][] = [
       quickRecommendationA:
         "Choose Bark when you want to review each opportunity—job details, signals, and credit cost—and skip it without paying.",
       quickRecommendationB:
-        "Choose Thumbtack when you want preference-based matching, a weekly budget and max lead prices, and customers contacting you inside a marketplace with no membership fee.",
+        "Choose Thumbtack when you want preference-based matching, a weekly budget and exact lead prices, and customers contacting you inside a marketplace with no membership fee.",
       quickVerdictParagraphs: [
         "These are two independent marketplaces, not two skins of the same company. The decision is how a service professional acquires and pays for an opportunity: Bark is inspect-then-buy credits; Thumbtack is targeting plus budget, with a charge when a qualifying customer connection happens.",
         "On Bark (US Help Center and US pricing page, August 2026), you see matched leads for free. Credit cost is shown before you respond. You are charged credits only when you choose to contact. After that, Bark says you get the customer’s phone and email; follow-up messages are not extra. Bark states it does not take a commission. Standard credit price is $2.35; packs can lower the effective rate. Credits bought on or after November 1, 2025 expire after 3 months.",
-        "On Thumbtack, Thumbtack says there is no charge to join, no annual fees, and no membership fees. You set targeting preferences, a max/exact lead price per service, and a weekly budget. Thumbtack staff have stated that you are charged for direct leads the moment the customer reaches out—not after you browse a feed and opt in to that specific job. A non-responsive customer is not, by itself, a published refund reason.",
+        "On Thumbtack, Thumbtack says there is no charge to join, no annual fees, and no membership fees. You set targeting preferences, an exact lead price per service, and a weekly budget. Thumbtack staff have stated that you are charged for direct leads the moment the customer reaches out—not after you browse a feed and opt in to that specific job. A non-responsive customer is not, by itself, a published refund reason.",
         "Neither platform publishes a universal cost per booked job. The number that matters is marketplace spend ÷ booked jobs (then gross profit after that CAC). A $40 lead that books a $4,000 HVAC replacement is a different business than a $40 lead for a $120 one-time clean.",
       ],
       relationshipContext: {
@@ -567,7 +567,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       ],
       decisionGuideB: [
         "You want customers finding and contacting you inside a US local marketplace, with targeting and a weekly spend cap instead of a credit wallet.",
-        "You will maintain job preferences, travel area, hours, and max lead prices so automatic direct-lead charges stay on work you actually want.",
+        "You will maintain job preferences, travel area, hours, and exact lead prices so automatic direct-lead charges stay on work you actually want.",
         "Thumbtack has demand in your category and you can answer those conversations fast after the customer reaches out.",
         "You prefer no membership or annual platform fee (Thumbtack’s stated model) and will track spend against booked jobs, not raw lead count.",
       ],
@@ -586,7 +586,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         {
           label: "Customer reaches out; budget caps spend",
           winner: "B",
-          reason: "Thumbtack: targeting + max lead price + weekly budget; direct leads charged when the customer contacts you.",
+          reason: "Thumbtack: targeting + exact lead price + weekly budget; direct leads charged when the customer contacts you.",
         },
         {
           label: "Published credit price (not CPL)",
@@ -610,17 +610,17 @@ const entries: [string, ComparisonTemplateProps][] = [
         dim(
           "Pricing unit",
           "Credits. Standard US price $2.35/credit; packs can discount. Lead cost = credits × rate.",
-          "A lead price per connection. You set max/exact lead prices. No public national rate card."
+          "A lead price per connection. You set exact lead prices. No public national rate card."
         ),
         dim(
           "Inspect before paying?",
           "Yes. Cost and details are shown first. “Not interested” skips without credits.",
-          "You shape matches via targeting and max price. Direct-lead charges are not a per-card “buy this one” step."
+          "You shape matches via targeting and exact lead price. Direct-lead charges are not a per-card “buy this one” step."
         ),
         dim(
           "Spend controls",
           "Buy only the leads you want. Optional auto top-up and credit-pack subscriptions. Credits expire.",
-          "Weekly budget plus max lead prices. Thumbtack says budget/pricing determine lead volume."
+          "Weekly budget plus exact lead prices. Thumbtack says budget/pricing determine lead volume."
         ),
         dim(
           "Competition",
@@ -663,7 +663,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       pricingComparisonParagraphs: [
         "Bark (US, August 2026): standard price is $2.35 per credit. Packs can lower the effective rate. Every lead shows how many credits it takes before you respond. Factors Bark lists: service type, job size/scope, location/demand, and customer engagement. Example math (hypothetical): a lead that costs 12 credits at $2.35 is $28.20; the same lead at a discounted pack rate of $2.00 would be $24. A bulk pack is not cheaper if you cannot use the credits in 3 months.",
         "Bark also sells optional Credit Pack Subscriptions (set up with Customer Success; weekly or monthly delivery; lower per-credit than one-off packs). Auto top-up can refill a low balance without a full subscription. Elite Pro, if you buy it, currently includes a 20% credit-pack discount and two free leads per week that apply only to leads with no responses after 48 hours; those free leads reset Mondays and are not return-eligible.",
-        "Thumbtack: no published national price sheet. Official community guidance (2026) says Thumbtack uses exact lead prices: the price you set is what you pay unless a promotion applies. Max lead prices plus a weekly budget are the spend controls. Lead prices vary by service, job, and market. Do not use a blog’s “typical HVAC CPL” as your number. Read the range inside your pro account.",
+        "Thumbtack: no published national price sheet. Official community guidance (2026) says Thumbtack uses exact lead prices: the price you set is what you pay unless a promotion applies. Exact lead prices plus a weekly budget are the spend controls. Lead prices vary by service, job, and market. Do not use a blog’s “typical HVAC CPL” as your number. Read the range inside your pro account.",
         "Bark states no commission on the job. Thumbtack’s Pro page likewise emphasizes no membership/annual fees and paying for leads rather than a join fee. Neither claim is the same as “cheap leads.”",
       ],
       roiGuidance: {
@@ -694,7 +694,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       prosConsB: {
         pros: [
           "No membership, annual, or join fee (Thumbtack’s Pro page)",
-          "Weekly budget and max lead prices cap spend",
+          "Weekly budget and exact lead prices cap spend",
           "Customers who choose you—Thumbtack’s stated high-intent story",
           "Limited competition per lead (stated; no public headcount)",
         ],
@@ -702,7 +702,7 @@ const entries: [string, ComparisonTemplateProps][] = [
           "Direct-lead charge when the customer reaches out—you may pay for jobs you would have skipped on Bark",
           "No public national CPL; prices are account- and market-specific",
           "Non-response is not a published refund reason",
-          "Wrong targeting or max prices can buy volume you cannot staff",
+          "Wrong targeting or exact lead prices can buy volume you cannot staff",
         ],
       },
       bestFor: [
@@ -712,11 +712,11 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           heading: "Recurring work (cleaning, lawn, maintenance)",
-          body: "Judge CAC against the first year of the route, not the first visit. Bark lets you skip one-off tiny jobs if the credit price is high relative to a single clean. Thumbtack targeting and max prices should be set so you are not paying full freight for jobs you would never take. Track repeat rate in CRM or you will misread both channels.",
+          body: "Judge CAC against the first year of the route, not the first visit. Bark lets you skip one-off tiny jobs if the credit price is high relative to a single clean. Thumbtack targeting and exact lead prices should be set so you are not paying full freight for jobs you would never take. Track repeat rate in CRM or you will misread both channels.",
         },
         {
           heading: "Quoted projects (painting, remodeling, larger electrical)",
-          body: "Higher tickets can absorb a higher lead cost if you close. Bark’s job-size pricing means larger scopes cost more credits—compare that to expected gross profit before you tap respond. Thumbtack max lead prices should be set from contribution margin, not from “I want more volume.” Neither platform replaces a qualification script.",
+          body: "Higher tickets can absorb a higher lead cost if you close. Bark’s job-size pricing means larger scopes cost more credits—compare that to expected gross profit before you tap respond. Thumbtack exact lead prices should be set from contribution margin, not from “I want more volume.” Neither platform replaces a qualification script.",
         },
         {
           heading: "Can you run both?",
@@ -728,7 +728,7 @@ const entries: [string, ComparisonTemplateProps][] = [
           name: "Google Local Services Ads",
           href: getLeadGenerationReviewUrl("google-local-services-ads"),
           logoSrc: "/Logos/google.jpeg",
-          description: "Pay per Google-screened lead when search is already how customers find you.",
+          description: "Pay per Google Verified lead when search is already how customers find you.",
         },
         {
           name: "Angi",
@@ -748,7 +748,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           q: "When does Thumbtack charge me?",
-          a: "Thumbtack staff have said you are charged for direct leads the moment the customer reaches out. Targeting, max lead prices, and weekly budget determine what can reach you. Confirm current lead types and terms in your account.",
+          a: "Thumbtack staff have said you are charged for direct leads the moment the customer reaches out. Targeting, exact lead prices, and weekly budget determine what can reach you. Confirm current lead types and terms in your account.",
         },
         {
           q: "Do Bark credits expire?",
@@ -1098,10 +1098,10 @@ const entries: [string, ComparisonTemplateProps][] = [
       relationshipContext: {
         heading: "Google LSA vs Thumbtack: what are you actually buying?",
         paragraphs: [
-          "Google Local Services Ads: you are paying to compete in Google’s local-services auction when people search for relevant services on Google Search and Maps. You set an average weekly budget and a bidding mode (Maximize Leads, target cost per lead, or max per lead). Ads are ranked by an auction that Google documents as bid plus overall profile quality—not “pay more, always appear first.” Current screening uses the Google Verified badge (Google Help: a single badge replacing the older Google Guarantee / Google Screened split). The Google Money Back Guarantee associated with Google Guarantee was discontinued for services booked after December 7, 2025.",
+          "Google Local Services Ads: you are paying to compete in Google’s local-services auction when people search for relevant services on Google Search and Maps. Legacy Local Services accounts set an average weekly budget and a bidding mode (Maximize Leads, target cost per lead, or max per lead). Some US accounts have migrated in phases into specialized Performance Max pay-per-lead campaigns in Google Ads (daily average budget, Maximize Conversions; Google says manual max-per-lead and vertical-level tCPA are not supported). Ads are ranked by an auction that Google documents as bid plus overall profile quality—not “pay more, always appear first.” Current screening uses the Google Verified badge (Google Help: a single badge replacing the older Google Guarantee / Google Screened split). The Google Money Back Guarantee associated with Google Guarantee was discontinued for services booked after December 7, 2025.",
           "Thumbtack: you are paying for customer contacts generated inside Thumbtack’s marketplace. Customers search or submit a job on Thumbtack, see professionals, and choose whom to contact. You control services, job preferences, area, hours, an exact lead price per service, and a weekly budget. Thumbtack says customers choose pros directly, competition per lead is limited (it does not publish a headcount), and you communicate with the customer on the platform.",
           "Typical LSA path: Google search → LSA results → customer evaluates the profile (reviews, photos, verification callouts) → call, message, or booking → Google assesses whether that contact is a valid lead → you pay if it is charged. Typical Thumbtack path: customer uses Thumbtack → describes the project → matches/sees professionals from targeting → customer contacts you (direct lead, auto-charge) or you contact an Opportunity (charge if they respond) → you compete to close the job.",
-          "What you control before a charge: On LSA, services, service area, hours, lead types (message and booking opt-in), bidding mode, and weekly budget. You do not inspect each searcher before paying. On Thumbtack, targeting and exact lead prices are the pre-charge filter for direct leads; Opportunities let you see a price before you reach out. Neither model is Bark-style “skip this card without paying” for every contact.",
+          "What you control before a charge: On LSA, services, service area, hours, lead types (message and booking opt-in), bidding, and budget (legacy weekly or migrated daily average). You do not inspect each searcher before paying. On Thumbtack, targeting and exact lead prices are the pre-charge filter for direct leads; Opportunities let you see a price before you reach out. Neither model is Bark-style “skip this card without paying” for every contact.",
         ],
       },
       decisionGuideAHeading: "Choose Google Local Services Ads if…",
@@ -1109,7 +1109,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       decisionGuideA: [
         "Your category and location are eligible, you can complete Google’s screening (public verified Google Business Profile plus category-specific license, insurance, and background checks where required), and you want to appear in Google Search/Maps local-services results.",
         "Customers commonly start on Google for the work you sell—especially same-day or emergency searches—and you can answer the phone and messages during advertised hours.",
-        "You will treat Maximize Leads, target CPL, or max-per-lead as auction controls, not as a guaranteed CPL, and you will track charged leads vs booked jobs after credits.",
+        "You will treat bidding (legacy Maximize Leads / tCPL / max-per-lead, or migrated Maximize Conversions) as auction controls, not as a guaranteed CPL, and you will track charged leads vs booked jobs after credits.",
         "You want reviews and profile quality to compound on Google surfaces customers already use—not only inside a marketplace app.",
       ],
       decisionGuideB: [
@@ -1145,12 +1145,12 @@ const entries: [string, ComparisonTemplateProps][] = [
         ),
         dim(
           "Price you set",
-          "Bidding mode: Maximize Leads (Google sets bids; Help recommends ~10 leads/week and ~2 weeks of learning), target CPL, or max per lead (manual ceiling). You may pay less than a max bid.",
+          "Legacy: Maximize Leads (Google sets bids; Help recommends ~10 leads/week and ~2 weeks of learning), target CPL, or max per lead (manual ceiling). Migrated pay-per-lead PMax: Maximize Conversions; Google says no manual max-per-lead.",
           "Exact lead price per service—the amount you pay unless a discount applies—plus a weekly budget. Hitting the budget stops new leads until next week (or you raise it)."
         ),
         dim(
           "Budget behavior",
-          "Average weekly budget can overspend in a given week; monthly max = weekly × 30.4 ÷ 7. After monthly max, the ad stops until you change budget.",
+          "Legacy: average weekly budget can overspend in a given week; monthly max = weekly × 30.4 ÷ 7. Migrated: daily average budget; monthly cap = daily × 30.4. After the monthly cap, the ad stops until you change budget.",
           "Weekly budget is a hard cap across services. Lead price × count must fit the weekly cap."
         ),
         dim(
@@ -1160,7 +1160,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         ),
         dim(
           "Pre-charge targeting",
-          "Job types, service area, hours, message/booking opt-in, bidding, weekly budget. You cannot skip an individual searcher without paying if Google charges the lead.",
+          "Job types, service area, hours, message/booking opt-in, bidding, budget. You cannot skip an individual searcher without paying if Google charges the lead.",
           "Services, job preferences, area, hours, exact lead prices. Direct leads are not a per-card skip. Opportunities show a price before you reach out."
         ),
         dim(
@@ -1187,7 +1187,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       pricingComparison:
         "Neither vendor publishes a national cost-per-lead table. Google: pay per valid lead; prices vary by location, job type, lead type, and bidding mode. Thumbtack: the exact lead price you set, times volume, capped by weekly budget.",
       pricingComparisonParagraphs: [
-        "Google currently lists three LSA bid modes. Maximize Leads lets Google set bids to get the most leads for your budget (Help recommends a budget sized for about 10 leads per week and notes about two weeks for the model to learn). Target cost per lead (tCPL) is automated bidding around an average you or Google set. Max per lead is a manual ceiling—the most you would pay; Google says you may pay less. Weekly budget is a target: some weeks underspend, some overspend, but you do not exceed monthly max (weekly × 30.4 ÷ 7). After monthly max, the ad does not show unless you raise budget. Message leads are typically priced lower than the matching phone lead. Google does not publish a US average plumber or HVAC CPL—do not use a blog’s number as yours.",
+        "Legacy Local Services accounts list three bid modes. Maximize Leads lets Google set bids to get the most leads for your budget (Help recommends a budget sized for about 10 leads per week and notes about two weeks for the model to learn). Target cost per lead (tCPL) is automated bidding around an average you or Google set. Max per lead is a manual ceiling—the most you would pay; Google says you may pay less. Weekly budget is a target: some weeks underspend, some overspend, but you do not exceed monthly max (weekly × 30.4 ÷ 7). After monthly max, the ad does not show unless you raise budget. Migrated specialized Performance Max pay-per-lead accounts in Google Ads use a daily average budget and Maximize Conversions; Google says manual max-per-lead and vertical-level tCPA are not supported. Message leads are typically priced lower than the matching phone lead. Google does not publish a US average plumber or HVAC CPL—do not use a blog’s number as yours.",
         "Thumbtack Help: exact lead prices mean the price you set is what you pay unless a discount or promotion applies. You set a price per service; as you move the slider, Thumbtack shows an estimate of how many leads that service might produce. Weekly budget is the most you will spend across all services that week. Example Thumbtack publishes: $10 lead price and $90 weekly budget → 9 leads, then leads stop until next week unless you raise the budget. Minimum prices can change; prices near the minimum may increase automatically. There is still no public national CPL table.",
         "To compare equivalent scope, do not match “$50 Google vs $50 Thumbtack” in the abstract. Match a calendar window, a spend cap, and the same CRM stages. Ask Google’s reports for charged vs credited leads by call/message/booking. Ask Thumbtack’s payment history for lead vs Opportunity charges and credits. Then compute booked-job CAC on both.",
       ],
@@ -1197,7 +1197,7 @@ const entries: [string, ComparisonTemplateProps][] = [
           "Vendor fact: neither Google nor Thumbtack publishes your close rate. BeltStack illustrative model—replace every number with your invoices.",
           "Channel scorecard (run separately): spend, leads, qualified leads, booked estimates, booked jobs, revenue, gross profit, credits/refunds, cost per lead, cost per qualified lead, cost per booked job, CAC, revenue/spend, gross profit/spend. Cost per booked job = lead spend ÷ booked jobs. A channel with fewer, more expensive leads can win if it books more work.",
           "Illustrative only: Channel A (LSA-shaped) 20 charged leads × $45 = $900 spend, 5 booked jobs → $180 per booked job. Channel B (Thumbtack-shaped) 12 leads × $35 = $420 spend, 3 booked jobs → $140 per booked job. If Channel A’s five jobs are $4,000 replacements and Channel B’s three are $180 diagnostics, A can still be the better business. Invert the tickets and B wins. Do not crown a winner from CPL.",
-          "Maximum affordable lead cost (illustrative framework, not a Google or Thumbtack bid): gross profit per completed job × lead-to-job close rate × the share of that contribution you will spend on acquisition. Example: $600 gross profit × 25% close × 30% acquisition share = $45. That $45 is not a recommended LSA bid or Thumbtack max price. Substitute your average job, margin, close rate, and repeat-customer value. If your close rate is 10%, the same $600 and 30% share only supports $18.",
+          "Maximum affordable lead cost (illustrative framework, not a Google or Thumbtack bid): gross profit per completed job × lead-to-job close rate × the share of that contribution you will spend on acquisition. Example: $600 gross profit × 25% close × 30% acquisition share = $45. That $45 is not a recommended LSA bid or Thumbtack lead price. Substitute your average job, margin, close rate, and repeat-customer value. If your close rate is 10%, the same $600 and 30% share only supports $18.",
           "These channels can run together. Tag source in CRM. Deduplicate the same customer who Googles you and also sends a Thumbtack request. Google Help notes about two weeks of bidding-model learning on Maximize Leads/tCPL—do not call a two-day sample a test. Use a window long enough to cover your sales cycle and at least a handful of booked jobs, not a generic 30-day slogan.",
         ],
         example: {
@@ -1625,17 +1625,17 @@ const entries: [string, ComparisonTemplateProps][] = [
     "google-local-services-ads-vs-homeadvisor",
     "google-local-services-ads",
     "homeadvisor",
-    "Google Local Services Ads target explicit Google queries with screened placements; HomeAdvisor is a pay-per-lead marketplace for home services with its own buyer behavior. Prefer LSA when Google is the starting point; prefer HomeAdvisor when marketplace economics and category fit outperform in your zip codes.",
+    "Google Local Services Ads target explicit Google queries with Google Verified listings; HomeAdvisor is a pay-per-lead marketplace for home services with its own buyer behavior. Prefer LSA when Google is the starting point; prefer HomeAdvisor when marketplace economics and category fit outperform in your zip codes.",
     {
       quickVerdictParagraphs: [
-        "Google Local Services Ads target explicit Google queries with screened placements; HomeAdvisor is a pay-per-lead marketplace for home services with its own buyer behavior. Prefer LSA when Google is the starting point; prefer HomeAdvisor when marketplace economics and category fit outperform in your zip codes.",
+        "Google Local Services Ads target explicit Google queries with Google Verified listings; HomeAdvisor is a pay-per-lead marketplace for home services with its own buyer behavior. Prefer LSA when Google is the starting point; prefer HomeAdvisor when marketplace economics and category fit outperform in your zip codes.",
         "BeltStack treats marketplaces and Google surfaces as different intent funnels—compare dispute rules, exclusivity expectations, and how often leads match your crew’s actual service area.",
         "Use a disciplined pilot: same CSR script, same territories, same definition of a qualified lead. Winner = better margin per booked job.",
       ],
       heroCallouts: [
         { label: "Searcher on Google right now", winner: "A", reason: "LSA aligns with immediate local service searches." },
         { label: "Marketplace-native buyers", winner: "B", reason: "HomeAdvisor fits homeowners already in marketplace flows." },
-        { label: "In-Google verification badge", winner: "A", reason: "Google Screened is visible in Search/Maps." },
+        { label: "In-Google verification badge", winner: "A", reason: "Google Verified is visible in Search/Maps." },
       ],
       featureComparison: [
         {
@@ -1662,7 +1662,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Trust signals",
-          productA: "Google Screened",
+          productA: "Google Verified",
           productB: "Reviews + marketplace reputation",
           supportA: "supported",
           supportB: "supported",
@@ -1678,7 +1678,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       pricingComparison:
         "LSA is pay per lead, priced by Google’s auction (competition and job category move the number). HomeAdvisor is pay per lead with marketplace-set rates that also vary by trade and territory. Neither has one national price list—export actual cost per lead from each product for your zips, subtract credited or disputed leads, and compare cost per booked job including follow-up labor.",
       prosConsA: {
-        pros: ["Tight match to Google demand", "Screened badge at click time"],
+        pros: ["Tight match to Google demand", "Verified badge at click time"],
         cons: ["Not every trade or geo is eligible", "Requires responsive call handling"],
       },
       prosConsB: {
@@ -1698,7 +1698,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       sidebarWinners: [
         { label: "Google intent alignment", winner: "A" },
         { label: "Marketplace familiarity (home)", winner: "B" },
-        { label: "Screened SERP placement", winner: "A" },
+        { label: "Verified SERP placement", winner: "A" },
       ],
       faqs: [
         {
@@ -2396,17 +2396,17 @@ const entries: [string, ComparisonTemplateProps][] = [
     "google-local-services-ads-vs-bark",
     "google-local-services-ads",
     "bark",
-    "Google Local Services Ads capture Google Search and Maps intent with screened listings; Bark is a broad credit-based marketplace across categories. Choose LSA for Google-native, high-intent leads; choose Bark when multi-category marketplace buying is part of your growth tests.",
+    "Google Local Services Ads capture Google Search and Maps intent with Google Verified listings; Bark is a broad credit-based marketplace across categories. Choose LSA for Google-native, high-intent leads; choose Bark when multi-category marketplace buying is part of your growth tests.",
     {
       quickVerdictParagraphs: [
-        "Google Local Services Ads capture Google Search and Maps intent with screened listings; Bark is a broad credit-based marketplace across categories. Choose LSA for Google-native, high-intent leads; choose Bark when multi-category marketplace buying is part of your growth tests.",
+        "Google Local Services Ads capture Google Search and Maps intent with Google Verified listings; Bark is a broad credit-based marketplace across categories. Choose LSA for Google-native, high-intent leads; choose Bark when multi-category marketplace buying is part of your growth tests.",
         "These channels rarely substitute cleanly—LSA is search-led; Bark is marketplace-led. Your CRM should show which intent type closes for your ticket sizes.",
         "Pilot with the same dispatch rules and measure booked margin. LSA leads often expect immediate phone response; Bark may need stronger qualification.",
       ],
       heroCallouts: [
         { label: "Google intent capture", winner: "A", reason: "LSA meets explicit local queries." },
         { label: "Multi-category marketplace", winner: "B", reason: "Bark buys demand across services." },
-        { label: "Screened Google badge", winner: "A", reason: "Visible in Search and Maps UI." },
+        { label: "Google Verified badge", winner: "A", reason: "Visible in Search and Maps UI." },
       ],
       featureComparison: [
         {
@@ -2427,7 +2427,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Verification",
-          productA: "Google Screened",
+          productA: "Google Verified",
           productB: "Platform policies",
           supportA: "supported",
           supportB: "partial",
@@ -2672,7 +2672,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
       ],
       pricingComparison:
-        "Bark is credit-based marketplace buying (cost per lead comes from how fast you burn credits). Houzz Pro commonly combines a monthly subscription for software and pro presence with separate ad or lead spend. When comparing, add Houzz subscription plus promotional spend for the month and divide by leads or consultations; compare that all-in number to Bark credit cost divided by leads—both should be judged on cost per booked job.",
+        "Bark is credit-based marketplace buying (cost per lead comes from how fast you burn credits). Houzz Pro is remodel/design software; Houzz advertising is a separate spend (US page from $499/month). When comparing, add Houzz software plus any advertising for the month and divide by leads or consultations; compare that all-in number to Bark credit cost divided by leads—both should be judged on cost per booked job.",
       prosConsA: {
         pros: ["Flexible tests across categories", "Credit-based pacing"],
         cons: ["Can require aggressive filtering", "Quality inconsistency by line"],
@@ -2767,7 +2767,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Bundle / subscription clarity",
-          productA: "Often subscription + ads",
+          productA: "Software subscription; ads extra",
           productB: "Bundled programs vary",
           supportA: "partial",
           supportB: "partial",
@@ -2782,7 +2782,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
       ],
       pricingComparison:
-        "Houzz Pro typically includes a recurring subscription plus variable spend for visibility or leads—true acquisition cost must include both. Angi is usually lead- and program-driven: per-lead fees plus possible bundled marketing. Model Houzz as subscription plus ads, divided by leads; model Angi as unbundled lead fees divided by leads—then compare cost per booked job after disputes.",
+        "Houzz Pro software is a subscription; Houzz advertising is a separate spend (US page from $499/month)—do not treat the software fee as lead spend. Angi is usually lead- and program-driven: per-lead fees plus possible bundled marketing. Model Houzz software and ads separately; model Angi as unbundled lead fees divided by leads—then compare cost per booked job after disputes.",
       prosConsA: {
         pros: ["Strong for showcase portfolios", "Aligns with remodel planning behavior"],
         cons: ["Less natural for quick one-off trades", "Needs investment in visual content"],
@@ -2877,7 +2877,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Subscription / fees",
-          productA: "Common (platform + ads)",
+          productA: "Software; ads extra",
           productB: "Primarily per-lead",
           supportA: "supported",
           supportB: "supported",
@@ -2892,7 +2892,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
       ],
       pricingComparison:
-        "HomeAdvisor charges per lead for marketplace matches (rate varies by trade and territory). Houzz Pro usually has a fixed monthly subscription plus ad or lead spend, so you pay base cost even in slow weeks. You can allocate Houzz subscription across won projects if that matches your sales cycle, but still compare total Houzz spend divided by leads versus HomeAdvisor per-lead price times leads—normalized to gross margin per booked job after refunds.",
+        "HomeAdvisor charges per lead for marketplace matches (rate varies by trade and territory). Houzz Pro software is a subscription; Houzz advertising is a separate spend (US page from $499/month)—not marketplace per-lead billing. You can allocate Houzz software across won projects if that matches your sales cycle, but still compare total Houzz spend divided by leads versus HomeAdvisor per-lead price times leads—normalized to gross margin per booked job after refunds.",
       prosConsA: {
         pros: ["Excellent for showcase-driven sales", "Aligns with planning-stage homeowners"],
         cons: ["Needs ongoing visual content", "Less suited to purely transactional repair brands"],
@@ -2950,17 +2950,17 @@ const entries: [string, ComparisonTemplateProps][] = [
     "google-local-services-ads-vs-houzz-pro",
     "google-local-services-ads",
     "houzz-pro",
-    "Google Local Services Ads capture high-intent Google Search and Maps queries with Google Screened listings; Houzz Pro reaches homeowners in a visual, project-planning context. Choose LSA for urgent, search-led hiring; choose Houzz Pro when portfolio discovery and longer remodel cycles drive revenue.",
+    "Google Local Services Ads capture high-intent Google Search and Maps queries with Google Verified listings; Houzz Pro reaches homeowners in a visual, project-planning context. Choose LSA for urgent, search-led hiring; choose Houzz Pro when portfolio discovery and longer remodel cycles drive revenue.",
     {
       quickVerdictParagraphs: [
-        "Google Local Services Ads capture high-intent Google Search and Maps queries with Google Screened listings; Houzz Pro reaches homeowners in a visual, project-planning context. Choose LSA for urgent, search-led hiring; choose Houzz Pro when portfolio discovery and longer remodel cycles drive revenue.",
+        "Google Local Services Ads capture high-intent Google Search and Maps queries with Google Verified listings; Houzz Pro reaches homeowners in a visual, project-planning context. Choose LSA for urgent, search-led hiring; choose Houzz Pro when portfolio discovery and longer remodel cycles drive revenue.",
         "These channels measure success differently: LSA rewards call-ready intent; Houzz rewards visual trust and consultative follow-up.",
         "Pilot with the same territories. Compare booked margin and average ticket—not lead volume.",
       ],
       heroCallouts: [
         { label: "Google “near me” intent", winner: "A", reason: "LSA appears when homeowners search for immediate help." },
         { label: "Visual ideation feeds", winner: "B", reason: "Houzz users plan projects with photos." },
-        { label: "Screened badge in Google UI", winner: "A", reason: "Verification shows in Search and Maps." },
+        { label: "Verified badge in Google UI", winner: "A", reason: "Verification shows in Search and Maps." },
       ],
       featureComparison: [
         {
@@ -2989,7 +2989,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         {
           feature: "Pricing model",
           productA: "Pay per lead (auction)",
-          productB: "Subscription + ads (typical)",
+          productB: "Software; ads extra",
           supportA: "supported",
           supportB: "supported",
         },
@@ -3003,9 +3003,9 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
       ],
       pricingComparison:
-        "LSA is pay per lead with auction pricing (changes by zip, job type, and competition). Houzz Pro is usually subscription plus paid promotion, not a single per-lead price—you have a higher fixed floor and variable upside with ads. LSA spend tracks lead volume closely; Houzz can cost about the same in a quiet month as a busy one—compare fully loaded monthly spend divided by booked jobs (or by qualified consultations) for each.",
+        "LSA is pay per lead with auction pricing (changes by zip, job type, and competition). Houzz Pro software is a subscription; Houzz advertising is a separate spend (US page from $499/month)—not a single per-lead price. LSA spend tracks lead volume closely; Houzz software can cost about the same in a quiet month as a busy one—compare fully loaded monthly spend divided by booked jobs (or by qualified consultations) for each.",
       prosConsA: {
-        pros: ["High-intent Google traffic", "Screened trust in SERP"],
+        pros: ["High-intent Google traffic", "Verified badge in SERP"],
         cons: ["Eligibility limits", "Needs fast call handling"],
       },
       prosConsB: {
@@ -3025,7 +3025,7 @@ const entries: [string, ComparisonTemplateProps][] = [
       sidebarWinners: [
         { label: "Urgent Google search intent", winner: "A" },
         { label: "Portfolio-led remodel", winner: "B" },
-        { label: "Google Screened visibility", winner: "A" },
+        { label: "Google Verified visibility", winner: "A" },
       ],
       faqs: [
         {
@@ -3103,7 +3103,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
         {
           feature: "Budget type",
-          productA: "Subscription + ad spend typical",
+          productA: "Software; ads extra",
           productB: "Campaign budgets",
           supportA: "supported",
           supportB: "supported",
@@ -3118,7 +3118,7 @@ const entries: [string, ComparisonTemplateProps][] = [
         },
       ],
       pricingComparison:
-        "Houzz Pro normally combines subscription fees with advertising or boosted placement; Yelp Ads are campaign spend only (no Houzz-style software subscription). Total Houzz cost is subscription plus promotions; Yelp is your ad budget alone. Derive cost per lead on each as monthly spend divided by qualified inquiries, then compare cost per booked job and average ticket—Houzz can still win on higher-ticket remodel economics even when monthly spend looks larger.",
+        "Houzz Pro software is a subscription; Houzz advertising is a separate spend (US page from $499/month). Yelp Ads are campaign spend only (no Houzz-style software subscription). Total Houzz cost is software plus any promotions; Yelp is your ad budget alone. Derive cost per lead on each as monthly spend divided by qualified inquiries, then compare cost per booked job and average ticket—Houzz can still win on higher-ticket remodel economics even when monthly spend looks larger.",
       prosConsA: {
         pros: ["Built for showcase-driven remodel brands", "Aligns with visual research behavior"],
         cons: ["Requires strong photography", "Less plug-and-play than a simple Yelp boost"],

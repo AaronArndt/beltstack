@@ -55,7 +55,7 @@ export const SMALL_BUSINESS_PAGE_PROPS = {
       rating: "4.6",
       startingPrice: "Free tier",
       reviewHref: getCrmReviewUrl("hubspot"),
-      visitUrl: "https://www.hubspot.com",
+      visitUrl: "https://go.try-hubspot.com/L0dLoo",
       logoSrc: LOGOS.hubspot,
     },
     {

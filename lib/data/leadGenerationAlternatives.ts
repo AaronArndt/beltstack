@@ -145,7 +145,7 @@ const thumbtackAlts: AlternativesTopPick[] = [
     description: "Best when your customers start on Google with urgent intent.",
     reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"),
     startingPrice: "Pay per lead",
-    standoutFeature: "Google screened badge",
+    standoutFeature: "Google Verified badge",
   },
   {
     slug: "houzz-pro",
@@ -470,7 +470,7 @@ const houzzProPage = makeLeadGenAlternativesPage({
   slug: "houzz-pro",
   productName: "Houzz Pro",
   title: "Best Houzz Pro Alternatives (2026)",
-  subtitle: "If Houzz Pro’s portfolio-driven model is too narrow for your pipeline mix, these alternatives expand into marketplaces, Google intent demand, and lower-maintenance lead flows.",
+  subtitle: "If Houzz Pro’s remodel/design software (plus optional ads) is not the stack you need, these alternatives expand into marketplaces, Google intent demand, and other lead flows.",
   originalBestFor: "Remodel/design software plus optional Houzz ads",
   originalPricing: "Software plans; ads extra from $499/mo",
   originalStandout: "CRM through payment; ads sold separately",
@@ -486,7 +486,7 @@ const houzzProPage = makeLeadGenAlternativesPage({
   ],
   topAlternatives: [
     { slug: "thumbtack", name: "Thumbtack", logoSrc: "/Logos/thumbtack.jpeg", rating: "4.4", bestFor: "Broad marketplace demand", description: "Best for multi-trade local lead buying with flexible budgets.", reviewHref: getLeadGenerationReviewUrl("thumbtack"), compareHref: getLeadGenerationCompareUrl("houzz-pro-vs-thumbtack"), startingPrice: "Pay per lead", standoutFeature: "Category breadth" },
-    { slug: "google-local-services-ads", name: "Google Local Services Ads", logoSrc: "/Logos/google.jpeg", rating: "4.5", bestFor: "Urgent search leads", description: "Best for high-intent Google callers in eligible categories.", reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"), startingPrice: "Pay per lead", standoutFeature: "Google screened trust" },
+    { slug: "google-local-services-ads", name: "Google Local Services Ads", logoSrc: "/Logos/google.jpeg", rating: "4.5", bestFor: "Urgent search leads", description: "Best for high-intent Google callers in eligible categories.", reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"), startingPrice: "Pay per lead", standoutFeature: "Google Verified trust" },
     { slug: "angi", name: "Angi", logoSrc: "/Logos/angi.jpeg", rating: "4.3", bestFor: "Home-services brand demand", description: "Strong brand-backed residential lead options.", reviewHref: getLeadGenerationReviewUrl("angi"), compareHref: getLeadGenerationCompareUrl("thumbtack-vs-angi"), startingPrice: "Quote / bundles", standoutFeature: "Brand + bundled products" },
     { slug: "facebook-lead-ads", name: "Facebook Lead Ads", logoSrc: "/Logos/facebook.jpeg", rating: "4.1", bestFor: "Offer-driven paid social demand", description: "Useful for promos and seasonal campaigns with tight follow-up.", reviewHref: getLeadGenerationReviewUrl("facebook-lead-ads"), startingPrice: "Campaign budgets", standoutFeature: "Targeting + instant forms" },
   ],
@@ -591,7 +591,7 @@ const yelpAdsPage = makeLeadGenAlternativesPage({
     { heading: "Budget efficiency", body: "If cost per booked job drifts, split testing alternatives can recover margin." },
   ],
   topAlternatives: [
-    { slug: "google-local-services-ads", name: "Google Local Services Ads", logoSrc: "/Logos/google.jpeg", rating: "4.5", bestFor: "High-intent search calls", description: "Strongest Yelp replacement where urgent Google behavior dominates.", reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"), compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads"), startingPrice: "Pay per lead", standoutFeature: "Google Screened" },
+    { slug: "google-local-services-ads", name: "Google Local Services Ads", logoSrc: "/Logos/google.jpeg", rating: "4.5", bestFor: "High-intent search calls", description: "Strongest Yelp replacement where urgent Google behavior dominates.", reviewHref: getLeadGenerationReviewUrl("google-local-services-ads"), compareHref: getLeadGenerationCompareUrl("google-local-services-ads-vs-yelp-ads"), startingPrice: "Pay per lead", standoutFeature: "Google Verified" },
     { slug: "thumbtack", name: "Thumbtack", logoSrc: "/Logos/thumbtack.jpeg", rating: "4.4", bestFor: "Flexible marketplace volume", description: "Marketplace breadth for service categories beyond Yelp strength.", reviewHref: getLeadGenerationReviewUrl("thumbtack"), startingPrice: "Pay per lead", standoutFeature: "Category reach" },
     { slug: "angi", name: "Angi", logoSrc: "/Logos/angi.jpeg", rating: "4.3", bestFor: "Residential lead programs", description: "Brand-backed home-services alternative to Yelp-first strategies.", reviewHref: getLeadGenerationReviewUrl("angi"), startingPrice: "Quote / bundles", standoutFeature: "Brand demand" },
   ],

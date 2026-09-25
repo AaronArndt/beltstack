@@ -41,7 +41,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
     description:
       "All-in-one field service platform with scheduling, dispatch, invoicing, and customer management for home service businesses.",
     rating: "4.6",
-    startingPrice: "From ~$69/mo",
+    startingPrice: "From $29/mo billed annually (Core, 1 user)",
     hasFreeTrial: true,
     hasFreePlan: false,
     hasIntegrations: true,
@@ -534,7 +534,7 @@ export const TOP_PICKS: BestFieldServicePick[] = [
 
 /** Comparison table: major FSM tools (canonical picks). */
 export const COMPARISON_TABLE_ROWS: FieldServiceComparisonTableRow[] = [
-  { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "Best overall for contractors", startingPrice: "From ~$69/mo", rating: "4.6", reviewHref: getFieldServiceReviewUrl("jobber") },
+  { slug: "jobber", name: "Jobber", logoSrc: LOGOS.jobber, bestFor: "Best overall for contractors", startingPrice: "From $29/mo billed annually (Core, 1 user)", rating: "4.6", reviewHref: getFieldServiceReviewUrl("jobber") },
   { slug: "housecall-pro", name: "Housecall Pro", logoSrc: LOGOS.housecallpro, bestFor: "Home service pros", startingPrice: "From ~$49/mo", rating: "4.5", reviewHref: getFieldServiceReviewUrl("housecall-pro") },
   { slug: "servicetitan", name: "ServiceTitan", logoSrc: LOGOS.servicetitan, bestFor: "Growing service companies", startingPrice: "Custom pricing", rating: "4.5", reviewHref: getFieldServiceReviewUrl("servicetitan") },
   { slug: "service-fusion", name: "Service Fusion", logoSrc: LOGOS.servicefusion, bestFor: "HVAC & plumbing value", startingPrice: "From ~$99/mo", rating: "4.4", reviewHref: getFieldServiceReviewUrl("service-fusion") },
