@@ -2,6 +2,7 @@ import {
   getProjectManagementReviewUrl,
   getProjectManagementCompareUrl,
   getProjectManagementBestForUrl,
+  getProjectManagementAlternativeUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 
@@ -994,6 +995,187 @@ const reviews: Record<string, ProjectManagementReviewData> = {
       { label: "Time tracking software hub", href: "/time-tracking" },
       { label: "CRM software hub", href: "/crm" },
       { label: "Invoicing software hub", href: "/invoicing" },
+    ],
+  },
+  goodday: {
+    toolName: "GoodDay",
+    category: "Project management",
+    categoryHref: "/project-management",
+    rating: "4.4",
+    startingPrice: "Free for 15 users",
+    bestFor: "teams that want customizable projects, tasks, and later time or resource tracking in one workspace",
+    visitUrl: "https://www.goodday.work/",
+    logoSrc: "/Logos/goodday.jpeg",
+    quickVerdict:
+      "GoodDay is a work-management platform with a usable free plan for up to 15 people and a broad paid product. It fits teams that want project structure now and time, resources, or client modules later. It is a weak fit for a simple board or a docs-first workspace.",
+    quickVerdictParagraphs: [
+      "GoodDay (goodday.work) is work-management software for planning and tracking projects, not a wiki that happens to have a board. Folders and projects can nest without a published depth limit, and tasks support assignees, due dates, dependencies, and subtasks. List, board, table, calendar, timeline, document, and whiteboard views are on every plan. Custom statuses and workflows are too, so a small team can model a real process before paying.",
+      "The free plan stops short of the modules many teams eventually want. GoodDay's pricing page, checked in October 2026, puts Gantt and map views, time tracking, automations, custom fields, recurring items, and the API on Professional. Workload and resource planning, the finance and expense tools, CRM, the customer portal, and AI chat and agents start on Business. Enterprise is quote-based and is where GoodDay lists SAML single sign-on, custom roles, a private-cloud option, and HIPAA.",
+      "That split is the buying decision. A team of up to 15 can run projects on the free plan, then pay when it needs time reports or a Gantt. New accounts get a guided setup and an introductory tutorial, which helps because the product is wider than a task list. After that first session, GoodDay still needs a tight setup. Teams that enable every view and status will feel the weight. Teams that want a knowledge base as the center of the workspace should look at Notion. Teams that want one board and almost no configuration should look at Trello.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.5",
+        explanation:
+          "Projects, nested hierarchy, dependencies, custom workflows, and a large set of views are documented on the free plan. Time tracking, Gantt, automations, and custom fields start on Professional. Resource planning, CRM, finance, a customer portal, and AI start on Business. The breadth is real, and so is the gating.",
+      },
+      {
+        category: "Pricing",
+        score: "4.5",
+        explanation:
+          "Free for up to 15 members is a wider free plan than most project tools publish. Professional is $4 per user per month on annual billing or $6 monthly. Business is $7 or $10. Storage on the free plan is 1 GB, and two-factor authentication is marked for Business and above.",
+      },
+      {
+        category: "Ease of Use",
+        score: "4.2",
+        explanation:
+          "Account creation includes a guided introduction and an introductory tutorial, so the first session is easier to follow than a blank workspace. The product is still broad. Turning on every view, field, and status makes daily use heavier than a single board.",
+      },
+      {
+        category: "Integrations",
+        score: "4.3",
+        explanation:
+          "GoodDay documents native connections for Slack, Gmail, Google Drive, Docs, and Calendar, Dropbox, Box, GitHub, and GitLab, plus Zapier. The GoodDay API and webhooks are listed from Professional up. Custom SAML and Microsoft sign-on are Enterprise.",
+      },
+    ],
+    pros: [
+      "Free plan includes up to 15 members, unlimited tasks and projects, custom workflows, and dependencies",
+      "Action Required records who must take the next step on a work item, which helps handoffs",
+      "Guided account setup and an introductory tutorial make the first session easier to follow",
+      "Professional adds time tracking, Gantt, automations, custom fields, and API access at $4 per user per month on annual billing",
+      "Business adds workload planning, CRM, a customer portal, and finance tools without a separate product",
+    ],
+    cons: [
+      "Gantt, time tracking, automations, custom fields, and recurring tasks are not on the free plan",
+      "Resource planning, CRM, the customer portal, expenses, and AI require Business",
+      "Free storage is 1 GB, and two-factor authentication is marked for Business and above",
+      "The number of views and settings can outweigh the work if nobody owns the setup",
+      "Invoices and finance reports are marked Enterprise, so Business is not a full billing suite",
+    ],
+    bestForEditorial:
+      "GoodDay is a fit for small and mid-size teams that want one workspace for projects and tasks and expect to add time tracking or resource planning later. Service teams can start on projects, move to Professional for time reports, and use Business if they need a customer portal, CRM, or expense tracking. Product and engineering groups can use the documented sprint, backlog, and agile-board tools, with story points on Professional. It also suits teams leaving a docs-first tool because they need dependencies, a nested project tree, and a named next owner on each item.",
+    whoShouldAvoid:
+      "Choose Notion if the workspace is mainly pages, wikis, and databases, and project tracking is secondary. Choose Trello or Basecamp if you want a short setup and will not use custom workflows. Choose Asana or Monday if you want a more familiar project tool and do not need GoodDay's finance or CRM modules. Companies that require SAML, HIPAA, encryption at rest, or a private cloud need an Enterprise quote. Those controls are not on Professional or Business.",
+    pricingSummary:
+      "As of October 2026, GoodDay's pricing page lists a free plan for up to 15 members with 1 GB of storage. Professional is $6 per user per month billed monthly, or $4 per user per month billed annually, for up to 250 members. Business is $10 or $7 on the same monthly and annual split, for up to 350 members. The annual toggle is labeled as a 30% savings. Enterprise is request-a-quote. Confirm the live page before you buy. GoodDay also shows a separate small-team offer.",
+    pricingTiers:
+      "Free covers the work-management core: unlimited tasks, projects, and events, nested folders, Action Required, custom statuses and workflows, dependencies, dashboards, list, board, calendar, timeline, and whiteboard views, CSV import and export, mobile and desktop apps, and Google and Apple sign-on. Professional adds unlimited storage, Gantt and map views, time tracking, automations, custom fields and task types, story points, recurring tasks, public sharing, Big Screens, the API, webhooks, read-only access, and priority support. Business adds workload and resource planning, the finance module, expenses, approvals, baselines, request forms, CRM, a customer portal, custom branding, custom task IDs, AI chat and agents, advanced HR, two-factor authentication, and a success manager. Enterprise adds unlimited members, SAML, Microsoft sign-on, custom roles, encryption at rest, HIPAA, a private-cloud option, and invoices and finance reports. The comparison table marks goals and performance management for Business and Enterprise, while the Enterprise card also lists it, so confirm that module if you need it. Small-team annual packages are listed separately: Professional at $299 per year for 10 users or $399 for 15, and Business at $499 for 10 users or $599 for 15. GoodDay does not advertise a timed trial of the paid plans. You start free and upgrade from the subscription screen.",
+    costVsCompetitors:
+      "For a team that can stay inside the free limits, GoodDay costs nothing for up to 15 people, which is the main value argument against Asana, Monday, ClickUp, and Notion. Professional is the price to compare once you need time tracking and a Gantt chart. Business is the price to compare once you need resources, CRM, or a client portal. A low seat price is not the full system. ClickUp is the closest all-in-one alternative if you want docs and tasks configured in one workspace. Teamwork is the closer alternative if client billing is the point of the tool. Read the current plan pages, and our project management pricing guide, before you treat any of these numbers as permanent.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Nested projects and tasks",
+        description:
+          "Organize work in folders and projects that can nest, with subtasks, checklists, multiple assignees, due dates, and dependencies. GoodDay's help center says a child folder inherits access and views from its parent unless you override them. Dependencies are listed on every plan.",
+      },
+      {
+        name: "Action Required and My Work",
+        description:
+          "Action Required names the person responsible for the next step on a work item, which is more specific than a single assignee when work changes hands. My Work is the personal dashboard for what that person needs to handle. Both are on the free plan.",
+      },
+      {
+        name: "Views and custom workflows",
+        description:
+          "Switch the same work across list, board, table, calendar, timeline, documents, and whiteboard views. Custom statuses and workflows are on the free plan. Gantt and map views start on Professional. Workload and resource planning start on Business. Story points, custom task types, and custom fields also start on Professional, so agile teams should not assume the free plan includes estimation.",
+      },
+      {
+        name: "Time tracking and planning",
+        description:
+          "Professional adds a task timer, timesheets, and project time reports, plus Gantt planning and automations. Move to that plan if logged time or a schedule chart is a requirement, rather than assuming the free workspace includes them.",
+      },
+      {
+        name: "Resources, clients, and money",
+        description:
+          "Business is where GoodDay places workload views, a finance module, expense tracking, CRM, and a customer portal. Invoices and finance reports are marked Enterprise. Treat Business as operations and client visibility, and confirm invoicing on an Enterprise quote if you need to bill from the same system.",
+      },
+    ],
+    integrations: [
+      "Slack",
+      "Gmail and email",
+      "Google Drive, Docs, and Calendar",
+      "Google and Apple sign-on",
+      "Dropbox",
+      "Box",
+      "GitHub",
+      "GitLab",
+      "Zapier",
+      "GoodDay API (Professional and above)",
+      "CSV, Jira, Asana, and Trello import",
+    ],
+    integrationsIntro:
+      "GoodDay's integrations page lists native links to Slack, Gmail, Google Drive, Docs, and Calendar (including two-way calendar sync), Dropbox, Box, GitHub, and GitLab. It also lists Zapier and import paths from CSV, Jira, Asana, and Trello. The plan comparison puts general integrations on every plan, and the API and webhooks on Professional and above. Custom SAML single sign-on and Microsoft sign-on are Enterprise. iOS, Android, and desktop apps, including Windows, Mac, and Linux, are listed for every plan.",
+    contractorUse: [],
+    alternatives: [
+      {
+        name: "ClickUp",
+        href: getProjectManagementReviewUrl("clickup"),
+        description: "Another customizable all-in-one workspace, with docs and tasks in the same product and a similarly wide setup.",
+        logoSrc: "/Logos/clickup.jpeg",
+      },
+      {
+        name: "Asana",
+        href: getProjectManagementReviewUrl("asana"),
+        description: "A more opinionated project tool. Often the simpler default when you do not need CRM or finance in the same app.",
+        logoSrc: "/Logos/asuna.jpeg",
+      },
+      {
+        name: "Monday",
+        href: getProjectManagementReviewUrl("monday"),
+        description: "Board-first workflows and automations, for teams that want a visual system more than a nested project tree.",
+        logoSrc: "/Logos/monday.jpeg",
+      },
+      {
+        name: "Notion",
+        href: getProjectManagementReviewUrl("notion"),
+        description: "Pages, wikis, and databases first, with lighter project tracking. The better fit when documentation is the main job.",
+        logoSrc: "/Logos/notion.png",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is GoodDay free?",
+        a: "Yes. GoodDay's pricing page lists a free plan for up to 15 members, with unlimited tasks and projects, custom workflows, dependencies, and 1 GB of storage. Gantt charts, time tracking, automations, custom fields, recurring tasks, and the API start on Professional. There is no separate timed trial advertised on the pricing page. You start on the free plan and upgrade inside the product when you hit a paid feature.",
+      },
+      {
+        q: "Does GoodDay include time tracking and resource management?",
+        a: "Time tracking, including timers and time reports, is a Professional feature. Workload and resource planning are Business features. A free workspace can assign tasks and track deadlines, but it will not replace a timesheet or a capacity view.",
+      },
+      {
+        q: "Is GoodDay a good alternative to Notion?",
+        a: "It can be, when the problem with Notion is project structure. GoodDay is organized around projects, tasks, workflows, and a named next owner. It includes documents and notes, but it is not a wiki you reshape into a tracker. Stay with Notion if pages and databases are the product you actually use. Move toward GoodDay, Asana, or ClickUp if dependencies, hierarchy, and delivery views matter more than the document. Our Notion review and Notion alternatives roundup cover the docs-first side of that choice.",
+      },
+      {
+        q: "Does GoodDay have mobile and desktop apps?",
+        a: "Yes. GoodDay's features page lists iOS, Android, Windows, Mac, and Linux apps, and the plan comparison includes mobile and desktop apps on every plan, including Free.",
+      },
+      {
+        q: "Is GoodDay worth it?",
+        a: "Start on the free plan if you have up to 15 people and want project structure before you pay. Professional is the relevant plan if you need time tracking and a Gantt chart at $4 per user per month on annual billing, or $6 monthly. Business is the relevant plan if you will use resource planning, CRM, the customer portal, or the finance tools. A wiki, a single simple board, or enterprise security on a small-team budget points to a different product.",
+      },
+    ],
+    methodology: PROJECT_MANAGEMENT_METHODOLOGY,
+    compareLinks: [
+      { label: "Asana vs ClickUp", href: getProjectManagementCompareUrl("asana-vs-clickup") },
+      { label: "Notion vs Trello", href: getProjectManagementCompareUrl("notion-vs-trello") },
+    ],
+    compareSectionTitle: "Compare GoodDay with other project management software",
+    bestPayrollSoftwareHref: BEST_PROJECT_MANAGEMENT_HREF,
+    compareHubHref: PROJECT_MANAGEMENT_COMPARE_HUB,
+    compareHubLabel: "Compare project management software",
+    bestRoundupLabel: "Best project management software (2026) — full roundup",
+    bestForSectionTitle: "Best project management software for different use cases",
+    bestForSectionSub: "Find project management tools by scenario.",
+    scenarioLinks: PROJECT_MANAGEMENT_SCENARIO_LINKS,
+    guideHubHref: PROJECT_MANAGEMENT_GUIDES_HUB,
+    guideHubLabel: "Project management guides",
+    relatedReading: [
+      { label: "Notion alternatives", href: getProjectManagementAlternativeUrl("notion") },
+      { label: "Project management pricing guide", href: "/project-management/guides/project-management-pricing-guide" },
+      { label: "Kanban vs Scrum tools", href: "/project-management/guides/kanban-vs-scrum-tools" },
+      { label: "Time tracking software hub", href: "/time-tracking" },
+      { label: "CRM software hub", href: "/crm" },
     ],
   },
 };
