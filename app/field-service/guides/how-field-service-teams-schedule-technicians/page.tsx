@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -77,11 +77,11 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -112,10 +112,10 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Field Service Teams Schedule Technicians
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how service teams plan technician calendars, match skills and zones, and hand off to live
                     dispatch when the day changes.
                   </p>
@@ -178,38 +178,38 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Service windows</strong> — AM, PM, or timed arrivals promised
+                          <strong className="text-brand">Service windows</strong> — AM, PM, or timed arrivals promised
                           to customers and reflected in booking rules.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Skills and certifications</strong> — so only qualified techs
+                          <strong className="text-brand">Skills and certifications</strong> — so only qualified techs
                           receive regulated or specialty work.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Zones or territories</strong> — to keep drive time predictable
+                          <strong className="text-brand">Zones or territories</strong> — to keep drive time predictable
                           across the metro or service area.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Estimated job duration</strong> — by job type from historical
+                          <strong className="text-brand">Estimated job duration</strong> — by job type from historical
                           actuals, not optimistic defaults.
                         </span>
                       </li>
@@ -233,19 +233,19 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                     <p>A typical scheduling loop looks like this:</p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Job enters the queue</strong> — from booking, sales handoff,
+                        <strong className="text-brand">Job enters the queue</strong> — from booking, sales handoff,
                         or recurring maintenance generation.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Scheduler applies constraints</strong> — skills, zone, service
+                        <strong className="text-brand">Scheduler applies constraints</strong> — skills, zone, service
                         window, and drive from the prior stop or depot.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Assignment published</strong> — job appears on the technician
+                        <strong className="text-brand">Assignment published</strong> — job appears on the technician
                         mobile schedule; customer may receive confirmation or ETA updates.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Handoff to dispatch</strong> — live board takes over when
+                        <strong className="text-brand">Handoff to dispatch</strong> — live board takes over when
                         delays, parts holds, or same-day add-ons change the plan.
                       </li>
                     </ol>
@@ -278,29 +278,29 @@ export default function HowFieldServiceTeamsScheduleTechniciansPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Status sync to mobile</strong> — field updates reflect on the
+                          <strong className="text-brand">Status sync to mobile</strong> — field updates reflect on the
                           board so the office is not calling techs for every check-in.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Priority overrides</strong> — emergencies and SLA jobs bump
+                          <strong className="text-brand">Priority overrides</strong> — emergencies and SLA jobs bump
                           lower-priority work without orphaning customer communication.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Preserved job history</strong> — notes, photos, and billing
+                          <strong className="text-brand">Preserved job history</strong> — notes, photos, and billing
                           lines stay on the work order through reassignment.
                         </span>
                       </li>

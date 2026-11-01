@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowBusinessesMeasureSeoRoiPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Measure SEO ROI</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Measure SEO ROI</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical framework for tying organic search to booked revenue—not vanity rankings. Start with{" "}
                 <Link href="/seo-tools/guides/what-seo-actually-does-for-businesses" className={link}>
                   what SEO actually does for businesses
@@ -115,8 +115,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="outcome-first" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Start with outcomes, not keyword counts</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Start with outcomes, not keyword counts</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO ROI begins with a definition owners can defend: revenue or gross profit from customers who discovered you through organic search, minus the cost to earn and maintain that visibility. Rankings and traffic are inputs; closed jobs, signed contracts, and repeat purchases are outputs.
                 </p>
@@ -130,29 +130,29 @@ export default function HowBusinessesMeasureSeoRoiPage() {
               </section>
 
               <section id="data-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The measurement stack most SMBs actually need</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The measurement stack most SMBs actually need</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Three layers, each answering a different question:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — Which queries earn impressions and clicks, which pages index, and where CTR leaks. Free and non-negotiable for SEO diagnostics.
+                    <strong className="text-brand">Search Console</strong> — Which queries earn impressions and clicks, which pages index, and where CTR leaks. Free and non-negotiable for SEO diagnostics.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">On-site analytics</strong> — What visitors do after they land. See{" "}
+                    <strong className="text-brand">On-site analytics</strong> — What visitors do after they land. See{" "}
                     <Link href="/seo-tools/guides/is-google-analytics-an-seo-tool" className={link}>
                       is Google Analytics an SEO tool
                     </Link>{" "}
                     for how GA4 complements Search Console without replacing it.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">CRM or pipeline</strong> — Which leads became revenue, by source and campaign. Without this layer, organic and paid look equally profitable on a spreadsheet.
+                    <strong className="text-brand">CRM or pipeline</strong> — Which leads became revenue, by source and campaign. Without this layer, organic and paid look equally profitable on a spreadsheet.
                   </li>
                 </ul>
               </section>
 
               <section id="attribution" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Attribution without enterprise complexity</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Attribution without enterprise complexity</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Perfect multi-touch attribution is rare for a ten-person shop. Good-enough ROI uses consistent rules: UTM tags on content links, dynamic call tracking on key landing pages, a &quot;how did you hear about us?&quot; field at booking, and monthly reconciliation between Search Console top pages and CRM closed-won deals.
                 </p>
@@ -166,8 +166,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
               </section>
 
               <section id="cost-side" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Count the full cost side of the equation</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Count the full cost side of the equation</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   ROI fails when teams only track subscriptions and ignore labor. Include owner hours, writer fees, agency retainers, and tools such as{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -190,8 +190,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
               </section>
 
               <section id="reporting-cadence" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Monthly reporting cadence that surfaces ROI early</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Monthly reporting cadence that surfaces ROI early</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Weekly: fix one Search Console issue and log CRM leads tagged organic. Monthly: review impression growth on money keywords, compare cost per organic lead to{" "}
                   <Link href="/lead-generation/guides/paid-vs-organic-leads" className={link}>
@@ -209,8 +209,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
               </section>
 
               <section id="when-to-stop" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When ROI says pause, pivot, or double down</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When ROI says pause, pivot, or double down</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Pause when indexing is broken and nobody owns fixes—more content will not help. Pivot when organic leads convert but volume is flat; that is a visibility or local-pack problem, not a sales problem. Double down when cost per organic lead beats paid after six months of honest tagging and margins support more publishing or citation work.
                 </p>
@@ -218,8 +218,8 @@ export default function HowBusinessesMeasureSeoRoiPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

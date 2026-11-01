@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -70,19 +70,19 @@ export default function ProjectManagementForSmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Project Management</Link></li>
+                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Project Management</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Project Management for Small Business</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management for Small Business</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management for Small Business</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Choosing and using project management when you're a small team: features that matter, pricing, and how to get started without enterprise complexity.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -102,10 +102,10 @@ export default function ProjectManagementForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Small businesses adopt project management software to replace scattered to-dos and email threads with one system the whole team can use. Benefits include:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Single source of truth</strong> — Tasks, assignees, and due dates in one place instead of spreadsheets or personal lists. Everyone sees the same projects and next steps.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Visibility</strong> — See what's in progress, what's due soon, and who is responsible. Owners and team members can prioritize without asking around.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Automation</strong> — Reminders, status updates, and workflow rules reduce manual follow-up so nothing slips when everyone is busy.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Reporting</strong> — Progress and workload views without building spreadsheets. Useful for planning and spotting bottlenecks.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Single source of truth</strong> — Tasks, assignees, and due dates in one place instead of spreadsheets or personal lists. Everyone sees the same projects and next steps.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Visibility</strong> — See what's in progress, what's due soon, and who is responsible. Owners and team members can prioritize without asking around.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Automation</strong> — Reminders, status updates, and workflow rules reduce manual follow-up so nothing slips when everyone is busy.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Reporting</strong> — Progress and workload views without building spreadsheets. Useful for planning and spotting bottlenecks.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -114,10 +114,10 @@ export default function ProjectManagementForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Without a dedicated project management tool, small businesses often run into:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Missed deadlines</strong> — Tasks sit in inboxes or personal lists; no shared view of what's due when or who owns it.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Duplicate or conflicting data</strong> — Multiple people update different spreadsheets or notes; project status is unclear.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">No clear project view</strong> — Hard to see how many tasks are in progress, what's blocked, or who is overloaded.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Time spent on manual updates</strong> — Chasing status in email or meetings instead of doing the work.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Missed deadlines</strong> — Tasks sit in inboxes or personal lists; no shared view of what's due when or who owns it.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Duplicate or conflicting data</strong> — Multiple people update different spreadsheets or notes; project status is unclear.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">No clear project view</strong> — Hard to see how many tasks are in progress, what's blocked, or who is overloaded.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Time spent on manual updates</strong> — Chasing status in email or meetings instead of doing the work.</span></li>
                     </ul>
                     <p>Project management software addresses these by centralizing projects, tasks, and due dates so the team has one place to log and view progress. Our <Link href="/project-management/guides/how-to-choose-project-management-software" className={linkGreen}>how to choose project management software</Link> guide goes deeper on selection criteria.</p>
                   </div>
@@ -127,11 +127,11 @@ export default function ProjectManagementForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Small teams should prioritize features that match how they actually work and that they'll use every day. Avoid overbuying: start with core task and project management; add timeline views or advanced reporting only when you need them.</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Ease of use</strong> — Clear task list or board, simple assignment and due dates, short learning curve. If it's cumbersome, the team won't keep it updated.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">List and/or board view</strong> — At least one view that matches your workflow. Many small teams are fine with list + board; timeline is optional at first.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Published pricing or free tier</strong> — Transparent costs so you can budget. Free tiers from Asana, Trello, or Notion let you start without a credit card.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Comments and file attachments</strong> — Keep discussion and files in context so you don't lose them in email.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Basic reporting</strong> — Progress and workload views. You don't need enterprise dashboards to get value.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Ease of use</strong> — Clear task list or board, simple assignment and due dates, short learning curve. If it's cumbersome, the team won't keep it updated.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">List and/or board view</strong> — At least one view that matches your workflow. Many small teams are fine with list + board; timeline is optional at first.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Published pricing or free tier</strong> — Transparent costs so you can budget. Free tiers from Asana, Trello, or Notion let you start without a credit card.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Comments and file attachments</strong> — Keep discussion and files in context so you don't lose them in email.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Basic reporting</strong> — Progress and workload views. You don't need enterprise dashboards to get value.</span></li>
                     </ul>
                     <p>Our <Link href="/project-management/guides/how-to-choose-project-management-software" className={linkGreen}>how to choose project management software</Link> guide covers selection criteria in more detail.</p>
                   </div>
@@ -139,8 +139,8 @@ export default function ProjectManagementForSmallBusinessPage() {
                 <section id="simple-vs-upgrade" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="When basic PM is enough vs when to upgrade.">When Simple Project Management Is Enough vs When to Upgrade</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Simple is often enough</strong> when you have a small team (e.g. one to five people), straightforward work, and mainly need task and project tracking with due dates and maybe a board. Free or low-cost tiers from <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> can cover this for a long time.</p>
-                    <p><strong className="text-[#1A2D48]">Consider upgrading</strong> when you need more members than the free tier allows, when you want timeline or Gantt views for dependencies, when you need automation or advanced reporting, or when you want more storage. At that point, paid tiers of <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, or <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> add the capacity and views you need. Compare options in our <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link> and <Link href={getProjectManagementCompareUrl("notion-vs-trello")} className={linkGreen}>Notion vs Trello</Link> guides.</p>
+                    <p><strong className="text-brand">Simple is often enough</strong> when you have a small team (e.g. one to five people), straightforward work, and mainly need task and project tracking with due dates and maybe a board. Free or low-cost tiers from <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> can cover this for a long time.</p>
+                    <p><strong className="text-brand">Consider upgrading</strong> when you need more members than the free tier allows, when you want timeline or Gantt views for dependencies, when you need automation or advanced reporting, or when you want more storage. At that point, paid tiers of <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, or <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> add the capacity and views you need. Compare options in our <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link> and <Link href={getProjectManagementCompareUrl("notion-vs-trello")} className={linkGreen}>Notion vs Trello</Link> guides.</p>
                   </div>
                 </section>
                 <section id="recommendations" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

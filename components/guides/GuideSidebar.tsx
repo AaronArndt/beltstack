@@ -39,16 +39,16 @@ function SidebarItem({ item }: { item: GuideSidebarItem }) {
           />
         )}
         <div className="min-w-0 flex-1">
-          <h3 className="text-[#1A2D48] font-semibold text-sm leading-tight">{item.name}</h3>
+          <h3 className="text-brand font-semibold text-sm leading-tight">{item.name}</h3>
           {ratingStr != null && (
-            <p className="text-[#10B981] font-semibold text-sm mt-0.5">{ratingStr} rating</p>
+            <p className="text-brand font-semibold text-sm mt-0.5">{ratingStr} rating</p>
           )}
           {item.bestFor != null && item.bestFor !== "" && (
-            <p className="text-[#57534E] text-xs leading-snug mt-1">{item.bestFor}</p>
+            <p className="text-muted-foreground text-xs leading-snug mt-1">{item.bestFor}</p>
           )}
           <Link
             href={item.reviewHref}
-            className="inline-block mt-2 text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1 rounded"
+            className="inline-block mt-2 text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1 rounded"
           >
             Read review →
           </Link>
@@ -67,7 +67,7 @@ export function GuideSidebar({ title, items, stickyTop = 24, ariaLabel }: GuideS
     >
       <div className="border border-neutral-200/60 rounded-lg bg-white p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
         <p className="text-neutral-500 text-xs uppercase tracking-wide mb-1">Related reviews</p>
-        <h2 className="text-[#1A2D48] text-base font-semibold leading-tight">{title}</h2>
+        <h2 className="text-brand text-base font-semibold leading-tight">{title}</h2>
         <div className="mt-4 space-y-0">
           {items.map((item) => (
             <SidebarItem key={item.reviewHref} item={item} />

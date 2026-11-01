@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO vs Google: What&apos;s the Difference?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO vs Google: What&apos;s the Difference?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Google is where most customers search; SEO is how you earn visibility there without confusing the platform with the strategy. This guide separates Google&apos;s free owner tools, paid ads, and third-party SEO software so you buy the right thing. Explore products on the{" "}
                 <Link href="/seo-tools" className={link}>
                   SEO tools hub
@@ -119,10 +119,10 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="definitions" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Two different things people lump together</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Two different things people lump together</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  <strong className="text-[#1A2D48]">Google</strong> operates Search, Maps, Business Profile, Ads, and the algorithms that rank results. <strong className="text-[#1A2D48]">SEO</strong> (search engine optimization) is what you and your team do—publish helpful pages, keep listings accurate, earn reviews, fix technical errors—to align with how those algorithms reward relevance and trust.
+                  <strong className="text-brand">Google</strong> operates Search, Maps, Business Profile, Ads, and the algorithms that rank results. <strong className="text-brand">SEO</strong> (search engine optimization) is what you and your team do—publish helpful pages, keep listings accurate, earn reviews, fix technical errors—to align with how those algorithms reward relevance and trust.
                 </p>
                 <p className="mt-4">
                   Paying Google for ads does not automatically improve organic rankings. Hiring an “SEO package” from a random vendor is not the same as using Search Console correctly. Confusing the two leads to wasted spend: buying ads when the site cannot convert, or buying keyword tools when GBP is half-finished.
@@ -130,25 +130,25 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
               </section>
 
               <section id="google-products" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Google products owners actually touch</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Google products owners actually touch</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — Indexing, query impressions, sitemaps, and manual actions for your website. Essential for every property; read our{" "}
+                    <strong className="text-brand">Search Console</strong> — Indexing, query impressions, sitemaps, and manual actions for your website. Essential for every property; read our{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console review
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Business Profile</strong> — Maps and local pack presence. Pair with{" "}
+                    <strong className="text-brand">Google Business Profile</strong> — Maps and local pack presence. Pair with{" "}
                     <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
                       GBP optimization
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Ads</strong> — Sponsored placements; immediate traffic, ongoing cost per click.
+                    <strong className="text-brand">Google Ads</strong> — Sponsored placements; immediate traffic, ongoing cost per click.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -161,8 +161,8 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
               </section>
 
               <section id="third-party" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Where third-party SEO tools fit</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Where third-party SEO tools fit</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Vendors like{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -196,8 +196,8 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
               </section>
 
               <section id="organic-vs-paid" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Organic SEO vs Google Ads in practice</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Organic SEO vs Google Ads in practice</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Ads appear with a “Sponsored” label; organic and Map Pack results are earned. Ads work well for promos, new markets, or keywords you cannot rank for yet. SEO pays back when pages stay visible without daily bids—especially for high-intent service queries where click costs spike.
                 </p>
@@ -211,8 +211,8 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
               </section>
 
               <section id="execution" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A sane stack that respects the distinction</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A sane stack that respects the distinction</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Week one: verify Search Console, claim GBP, fix critical indexing issues from{" "}
                   <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -235,8 +235,8 @@ export default function SeoVsGoogleWhatsTheDifferencePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

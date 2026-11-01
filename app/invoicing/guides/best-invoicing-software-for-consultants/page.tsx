@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -65,19 +65,19 @@ export default function BestInvoicingSoftwareForConsultantsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Best Invoicing Software for Consultants</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Best Invoicing Software for Consultants</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Best Invoicing Software for Consultants</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Compare invoicing tools for consultants: hourly and retainer billing, time tracking, proposals, expense pass-through, and professional client invoices.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -109,11 +109,11 @@ export default function BestInvoicingSoftwareForConsultantsPage() {
                       Consultants juggle multiple billing models across clients. Software should make switching models painless—hourly this month, fixed milestone next—without duplicate setup or broken reporting.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Hourly, fixed-fee, and retainer billing support in one client record.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Time tracking tied to client projects and engagement codes.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Expense pass-through on invoices with receipt attachment when needed.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Automated reminders and online payment links with professional branding.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Optional proposals and contracts for new engagements.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Hourly, fixed-fee, and retainer billing support in one client record.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Time tracking tied to client projects and engagement codes.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Expense pass-through on invoices with receipt attachment when needed.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Automated reminders and online payment links with professional branding.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Optional proposals and contracts for new engagements.</span></li>
                     </ul>
                     <p>
                       Scope clarity reduces disputes. Reference SOW or PO numbers on every invoice and keep terms aligned with{" "}
@@ -140,9 +140,9 @@ export default function BestInvoicingSoftwareForConsultantsPage() {
                 <section id="billing-models" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Match software to how you charge.">Billing Models and Tool Fit</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Hourly:</strong> prioritize time tracking, billable rate rules, and fast conversion of hours to invoice lines.</p>
-                    <p><strong className="text-[#1A2D48]">Retainer:</strong> prioritize recurring schedules, clear period descriptions, and automated reminders when retainers slip overdue.</p>
-                    <p><strong className="text-[#1A2D48]">Fixed project:</strong> prioritize milestone invoices, deposit support, and change-order friendly line items.</p>
+                    <p><strong className="text-brand">Hourly:</strong> prioritize time tracking, billable rate rules, and fast conversion of hours to invoice lines.</p>
+                    <p><strong className="text-brand">Retainer:</strong> prioritize recurring schedules, clear period descriptions, and automated reminders when retainers slip overdue.</p>
+                    <p><strong className="text-brand">Fixed project:</strong> prioritize milestone invoices, deposit support, and change-order friendly line items.</p>
                     <p>
                       For time-based operations, see{" "}
                       <Link href="/time-tracking/guides/tracking-billable-hours" className={linkGreen}>tracking billable hours</Link>{" "}

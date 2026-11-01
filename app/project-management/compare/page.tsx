@@ -20,9 +20,9 @@ const POPULAR_SLUGS = [
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -62,11 +62,11 @@ export default function ProjectManagementCompareHubPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -75,7 +75,7 @@ export default function ProjectManagementCompareHubPage() {
                 <li>
                   <Link
                     href="/project-management"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Project Management
                   </Link>
@@ -86,26 +86,26 @@ export default function ProjectManagementCompareHubPage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Project Management Software Comparisons
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Compare popular project management tools side by side—including Asana, ClickUp, Monday, Trello, Notion,
               Wrike, and more. These head-to-head matchups break down features, pricing, and fit so you can choose the
               right platform for your team.
             </p>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               See our{" "}
               <Link
                 href="/project-management/best-project-management-software"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 best project management software
               </Link>{" "}
               roundup for top picks and our{" "}
               <Link
                 href="/project-management/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 project management guides
               </Link>{" "}
@@ -135,7 +135,7 @@ export default function ProjectManagementCompareHubPage() {
                   <Link
                     key={slug}
                     href={compareHref}
-                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       <img
@@ -143,7 +143,7 @@ export default function ProjectManagementCompareHubPage() {
                         alt=""
                         className="h-10 w-auto max-w-[80px] object-contain object-left"
                       />
-                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                      <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       <img
@@ -152,13 +152,13 @@ export default function ProjectManagementCompareHubPage() {
                         className="h-10 w-auto max-w-[80px] object-contain object-left"
                       />
                     </div>
-                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                    <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+                    <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       {summary}
                     </p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                    <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                       Compare →
                     </span>
                   </Link>
@@ -189,14 +189,14 @@ export default function ProjectManagementCompareHubPage() {
                       alt=""
                       className="h-10 w-auto max-w-[80px] object-contain object-left"
                     />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                    <h3 className="text-brand text-lg font-bold">Compare {label}</h3>
                   </div>
                   <ul className="mt-3 space-y-2">
                     {slugs.map(({ slug, label: linkLabel }) => (
                       <li key={slug}>
                         <Link
                           href={getProjectManagementCompareUrlFromSlug(slug)}
-                          className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="text-sm font-medium text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           {linkLabel}
                         </Link>
@@ -218,53 +218,53 @@ export default function ProjectManagementCompareHubPage() {
             <SectionTitle sub="Consistent criteria so you can compare with confidence.">
               How We Compare Project Management Software
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               Our project management comparisons use the same evaluation criteria across every head-to-head. We look at
               task and project structure, collaboration, views, automation, reporting, pricing, and integrations—so you
               see how each platform really stacks up for small businesses and growing teams.
             </p>
-            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-muted-foreground text-sm leading-relaxed">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Task and project structure</strong> — How each tool models projects,
+                <strong className="text-brand">Task and project structure</strong> — How each tool models projects,
                 tasks, subtasks, and dependencies.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Collaboration and views</strong> — Comments, files, notifications, and
+                <strong className="text-brand">Collaboration and views</strong> — Comments, files, notifications, and
                 the quality of board, list, timeline, and calendar views.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Automation and reporting</strong> — How well automations reduce manual
+                <strong className="text-brand">Automation and reporting</strong> — How well automations reduce manual
                 updates and whether managers get clear visibility into workload and project status.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   •
                 </span>
-                <strong className="text-[#1A2D48]">Pricing and limits</strong> — Free tiers, per-seat pricing, automation
+                <strong className="text-brand">Pricing and limits</strong> — Free tiers, per-seat pricing, automation
                 caps, and storage limits at common team sizes.
               </li>
             </ul>
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               For our full review process and affiliate disclosure, see our{" "}
               <Link
                 href="/methodology"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 methodology page
               </Link>
               . For deeper guides on how project management software works and how to choose tools, see our{" "}
               <Link
                 href="/project-management/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 project management guides
               </Link>

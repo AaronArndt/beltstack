@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/most-widely-used-business-software-categor
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Software Categories</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     The Most Widely Used Business Software Categories
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Which software categories SMBs adopt first—and the order that usually makes sense as you grow.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,13 +77,13 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      If you are comparing what &quot;most businesses use,&quot; you are usually prioritizing a budget or asking which problem to solve first—not chasing a single app that does everything. Market data consistently shows <strong className="text-[#1A2D48]">financial software at the center</strong> of small business adoption, with other categories following real triggers (hiring, pipeline volume, field crews).
+                      If you are comparing what &quot;most businesses use,&quot; you are usually prioritizing a budget or asking which problem to solve first—not chasing a single app that does everything. Market data consistently shows <strong className="text-brand">financial software at the center</strong> of small business adoption, with other categories following real triggers (hiring, pipeline volume, field crews).
                     </p>
                     <p>
                       Adoption patterns repeat: financial software first, then customer and people systems, then operations tools for scheduling, inventory, or field work. BeltStack maps each category to dedicated reviews so you compare apples to apples within one job—not overlapping product names.
                     </p>
                     <p>
-                      Use the ordered list below as a <strong className="text-[#1A2D48]">sequence guide</strong>, not a mandate. A solo freelancer may live on invoicing and payments for years; a shop with staff may need payroll before CRM. Pair this page with <Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>what programs you actually need</Link>.
+                      Use the ordered list below as a <strong className="text-brand">sequence guide</strong>, not a mandate. A solo freelancer may live on invoicing and payments for years; a shop with staff may need payroll before CRM. Pair this page with <Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>what programs you actually need</Link>.
                     </p>
                   </div>
                 </section>
@@ -91,11 +91,11 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
                   <SectionTitle sub="Typical adoption sequence.">Widely Used Categories (In Order)</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ol className="space-y-2 list-decimal list-inside">
-                      <li><strong className="text-[#1A2D48]">Accounting &amp; invoicing</strong> — <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link></li>
-                      <li><strong className="text-[#1A2D48]">Payments</strong> — <Link href="/payment-processing" className={linkGreen}>payment processing</Link></li>
-                      <li><strong className="text-[#1A2D48]">CRM &amp; sales</strong> — <Link href="/crm/best-crm-software" className={linkGreen}>best CRM</Link></li>
-                      <li><strong className="text-[#1A2D48]">Payroll &amp; HR</strong> — <Link href="/payroll" className={linkGreen}>payroll</Link>, <Link href="/hr" className={linkGreen}>HR</Link></li>
-                      <li><strong className="text-[#1A2D48]">Operations</strong> — scheduling, field service, inventory by industry</li>
+                      <li><strong className="text-brand">Accounting &amp; invoicing</strong> — <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link></li>
+                      <li><strong className="text-brand">Payments</strong> — <Link href="/payment-processing" className={linkGreen}>payment processing</Link></li>
+                      <li><strong className="text-brand">CRM &amp; sales</strong> — <Link href="/crm/best-crm-software" className={linkGreen}>best CRM</Link></li>
+                      <li><strong className="text-brand">Payroll &amp; HR</strong> — <Link href="/payroll" className={linkGreen}>payroll</Link>, <Link href="/hr" className={linkGreen}>HR</Link></li>
+                      <li><strong className="text-brand">Operations</strong> — scheduling, field service, inventory by industry</li>
                     </ol>
                     <p>Details: <Link href="/accounting/guides/what-software-is-most-commonly-used-by-small-businesses" className={linkGreen}>most commonly used software</Link>.</p>
                   </div>
@@ -104,13 +104,13 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
                   <SectionTitle sub="Match purchases to company stage.">Buying by Stage, Not by Hype</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Pre-revenue or side project:</strong> business bank, simple <Link href="/invoicing" className={linkGreen}>invoicing</Link> or free accounting, professional email.
+                      <strong className="text-brand">Pre-revenue or side project:</strong> business bank, simple <Link href="/invoicing" className={linkGreen}>invoicing</Link> or free accounting, professional email.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Steady revenue, no employees:</strong> full <Link href="/accounting" className={linkGreen}>accounting</Link>, <Link href="/payment-processing" className={linkGreen}>payments</Link>, consider <Link href="/crm" className={linkGreen}>CRM</Link> when leads slip through email.
+                      <strong className="text-brand">Steady revenue, no employees:</strong> full <Link href="/accounting" className={linkGreen}>accounting</Link>, <Link href="/payment-processing" className={linkGreen}>payments</Link>, consider <Link href="/crm" className={linkGreen}>CRM</Link> when leads slip through email.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Hiring and delivery complexity:</strong> <Link href="/payroll" className={linkGreen}>payroll</Link>, then <Link href="/scheduling" className={linkGreen}>scheduling</Link>, <Link href="/field-service" className={linkGreen}>field service</Link>, or <Link href="/project-management" className={linkGreen}>project management</Link> by industry.
+                      <strong className="text-brand">Hiring and delivery complexity:</strong> <Link href="/payroll" className={linkGreen}>payroll</Link>, then <Link href="/scheduling" className={linkGreen}>scheduling</Link>, <Link href="/field-service" className={linkGreen}>field service</Link>, or <Link href="/project-management" className={linkGreen}>project management</Link> by industry.
                     </p>
                   </div>
                 </section>
@@ -126,13 +126,13 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
                   <SectionTitle sub="Avoid these sequencing errors.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Copying a competitor&apos;s stack blindly.</strong> Their headcount, sales motion, and accountant may differ from yours.
+                      <strong className="text-brand">Copying a competitor&apos;s stack blindly.</strong> Their headcount, sales motion, and accountant may differ from yours.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Treating popularity as fit.</strong> See <Link href="/accounting/guides/what-software-is-most-commonly-used-by-small-businesses" className={linkGreen}>commonly used software</Link> versus <Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>what is good for your business</Link>.
+                      <strong className="text-brand">Treating popularity as fit.</strong> See <Link href="/accounting/guides/what-software-is-most-commonly-used-by-small-businesses" className={linkGreen}>commonly used software</Link> versus <Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>what is good for your business</Link>.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Ignoring integrations.</strong> Pick categories whose leaders connect to your accounting hub—especially CRM and payments.
+                      <strong className="text-brand">Ignoring integrations.</strong> Pick categories whose leaders connect to your accounting hub—especially CRM and payments.
                     </p>
                   </div>
                 </section>
@@ -148,12 +148,12 @@ export default function MostWidelyUsedBusinessSoftwareCategoriesPage() {
                   <SectionTitle sub="Deepen your stack plan.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-technology-most-small-businesses-use" className={linkGreen}>What technology most small businesses use</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-selling-platform-for-small-businesses" className={linkGreen}>Best-selling platforms by category</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/helpdesk" className={linkGreen}>Helpdesk software hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-technology-most-small-businesses-use" className={linkGreen}>What technology most small businesses use</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-selling-platform-for-small-businesses" className={linkGreen}>Best-selling platforms by category</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/helpdesk" className={linkGreen}>Helpdesk software hub</Link></span></li>
                     </ul>
                   </div>
                 </section>

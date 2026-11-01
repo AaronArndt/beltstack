@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Organic SEO vs Paid Search Explained</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Organic SEO vs Paid Search Explained</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 How earned and bought visibility differ on Google—speed, cost, control, and when to run both. Ground the organic side in{" "}
                 <Link href="/seo-tools/guides/what-seo-actually-does-for-businesses" className={link}>
                   what SEO actually does for businesses
@@ -115,19 +115,19 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="definitions" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Definitions: earned vs rented placement</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Definitions: earned vs rented placement</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  <strong className="text-[#1A2D48]">Organic SEO</strong> is the work that helps your site and listings appear in unpaid results—technical health, content, local signals, links, and reviews. You pay in labor and tools; you do not pay Google per click for that placement.
+                  <strong className="text-brand">Organic SEO</strong> is the work that helps your site and listings appear in unpaid results—technical health, content, local signals, links, and reviews. You pay in labor and tools; you do not pay Google per click for that placement.
                 </p>
                 <p className="mt-4">
-                  <strong className="text-[#1A2D48]">Paid search</strong> (Google Ads and similar) buys sponsored slots—often labeled &quot;Sponsored&quot;—through keyword auctions. You pay when users click (or in some models, when ads are shown). Turn spend off and that visibility disappears immediately.
+                  <strong className="text-brand">Paid search</strong> (Google Ads and similar) buys sponsored slots—often labeled &quot;Sponsored&quot;—through keyword auctions. You pay when users click (or in some models, when ads are shown). Turn spend off and that visibility disappears immediately.
                 </p>
               </section>
 
               <section id="serp-anatomy" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How both show up on the same SERP</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How both show up on the same SERP</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   A typical local query may show sponsored links at top and bottom, a Map Pack in the middle, and organic blue links below. Customers do not care which channel you prefer—they pick the listing that matches urgency, trust, and proximity. That is why many service businesses invest in{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -138,14 +138,14 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
               </section>
 
               <section id="speed-control" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Speed, control, and durability</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Speed, control, and durability</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Paid search</strong> — Fast to launch, precise budget caps, easy to pause. Costs rise with competition; visibility is rented.
+                    <strong className="text-brand">Paid search</strong> — Fast to launch, precise budget caps, easy to pause. Costs rise with competition; visibility is rented.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Organic SEO</strong> — Slower to peak, less daily budget control, harder to turn off without decay. Compounds when listings, content, and authority stay maintained.
+                    <strong className="text-brand">Organic SEO</strong> — Slower to peak, less daily budget control, harder to turn off without decay. Compounds when listings, content, and authority stay maintained.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -158,8 +158,8 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
               </section>
 
               <section id="cost-model" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Cost models owners should compare honestly</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Cost models owners should compare honestly</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Paid math is straightforward: media spend plus management divided by closed leads. Organic math includes owner time, agency or writer fees, and tools such as{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -189,8 +189,8 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measurement stacks differ—but CRM is shared</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measurement stacks differ—but CRM is shared</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Organic diagnostics start in{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -205,8 +205,8 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
               </section>
 
               <section id="blend-strategy" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A practical blend strategy for SMBs</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A practical blend strategy for SMBs</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Run paid when you have crew capacity and positive unit economics on high-intent keywords. Invest organic labor in GBP, citations, and service pages that keep working when ad budgets tighten. Use ads to test headlines and offers; promote winners on organic landing pages. Read{" "}
                   <Link href={getSeoToolsCompareUrl("brightlocal-vs-whitespark")} className={link}>
@@ -218,8 +218,8 @@ export default function OrganicSeoVsPaidSearchExplainedPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

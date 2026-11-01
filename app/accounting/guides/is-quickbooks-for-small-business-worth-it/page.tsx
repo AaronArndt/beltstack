@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/is-quickbooks-for-small-business-worth-it"
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function IsQuickBooksForSmallBusinessWorthItPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Is QuickBooks Worth It</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Is QuickBooks for Small Business Worth It?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     QuickBooks is worth it when organized books, reporting, and accountant familiarity save more time and risk than the subscription costs.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -80,7 +80,7 @@ export default function IsQuickBooksForSmallBusinessWorthItPage() {
                       &quot;Is QuickBooks worth it?&quot; usually means: <em>Will this subscription save me more time, tax stress, and accountant fees than it costs?</em> That is a fair question—QuickBooks is not the cheapest option, and plenty of owners pay for tiers they barely use.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">QuickBooks Online is worth it for many small businesses</strong>—not because it is perfect, but because it combines invoicing, expense tracking, bank reconciliation, and reporting in one place accountants recognize. The question is whether <em>your</em> business will use those features enough to justify the monthly bill and learning curve.
+                      <strong className="text-brand">QuickBooks Online is worth it for many small businesses</strong>—not because it is perfect, but because it combines invoicing, expense tracking, bank reconciliation, and reporting in one place accountants recognize. The question is whether <em>your</em> business will use those features enough to justify the monthly bill and learning curve.
                     </p>
                     <p>
                       Worth-it math includes hidden costs: payroll per employee, payment processing, and upgrading when you need inventory or multi-user access. Start with our{" "}
@@ -94,10 +94,10 @@ export default function IsQuickBooksForSmallBusinessWorthItPage() {
                   <SectionTitle sub="Signals QuickBooks pays for itself.">When QuickBooks Is Worth It</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Your bookkeeper or CPA already works in QuickBooks and can onboard you quickly.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>You reconcile bank feeds monthly and need P&amp;L, balance sheet, and cash flow without rebuilding spreadsheets.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>You rely on integrations—payroll, time tracking, ecommerce—that connect cleanly through the QuickBooks marketplace.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>You are growing past solo freelancing into employees, inventory, or multi-account banking.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Your bookkeeper or CPA already works in QuickBooks and can onboard you quickly.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>You reconcile bank feeds monthly and need P&amp;L, balance sheet, and cash flow without rebuilding spreadsheets.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>You rely on integrations—payroll, time tracking, ecommerce—that connect cleanly through the QuickBooks marketplace.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>You are growing past solo freelancing into employees, inventory, or multi-account banking.</span></li>
                     </ul>
                     <p>
                       See <Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>accounting for small business</Link> and{" "}
@@ -141,12 +141,12 @@ export default function IsQuickBooksForSmallBusinessWorthItPage() {
                   <SectionTitle sub="Continue with these guides and reviews.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/disadvantages-of-quickbooks" className={linkGreen}>Disadvantages of QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/cheapest-way-to-use-quickbooks" className={linkGreen}>Cheapest way to use QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-xero")} className={linkGreen}>QuickBooks vs Xero</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-a-beginner-use-quickbooks" className={linkGreen}>Can a beginner use QuickBooks?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/disadvantages-of-quickbooks" className={linkGreen}>Disadvantages of QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/cheapest-way-to-use-quickbooks" className={linkGreen}>Cheapest way to use QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-xero")} className={linkGreen}>QuickBooks vs Xero</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-a-beginner-use-quickbooks" className={linkGreen}>Can a beginner use QuickBooks?</Link></span></li>
                     </ul>
                   </div>
                 </section>

@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/what-software-is-most-commonly-used-by-sma
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Common SMB Software</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Software Is Most Commonly Used by Small Businesses?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     The accounting, payments, CRM, and productivity tools SMBs adopt most—and how to choose beyond popularity.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,10 +77,10 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      People search this when they want a <strong className="text-[#1A2D48]">safe default</strong>—the names they will not get fired for choosing, or what their accountant already knows. That is a reasonable starting point, but market share is not the same as best fit for your industry or size.
+                      People search this when they want a <strong className="text-brand">safe default</strong>—the names they will not get fired for choosing, or what their accountant already knows. That is a reasonable starting point, but market share is not the same as best fit for your industry or size.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Commonly used does not mean mandatory.</strong> Market share reflects accountant ecosystems, marketing reach, and free tiers—not your specific workflow. Use popularity as a starting shortlist, then compare on <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> and vertical hubs.
+                      <strong className="text-brand">Commonly used does not mean mandatory.</strong> Market share reflects accountant ecosystems, marketing reach, and free tiers—not your specific workflow. Use popularity as a starting shortlist, then compare on <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> and vertical hubs.
                     </p>
                     <p>
                       For whether a popular tool is right for you, read <Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>what software is good for small businesses</Link> and <Link href="/accounting/guides/best-selling-platform-for-small-businesses" className={linkGreen}>best-selling platforms by category</Link>.
@@ -90,10 +90,10 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
                 <section id="common" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Frequently seen tools by category.">Commonly Used Tools</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Accounting</strong> — QuickBooks, Xero, Wave, FreshBooks.</p>
-                    <p><strong className="text-[#1A2D48]">Payments</strong> — Square, Stripe, PayPal.</p>
-                    <p><strong className="text-[#1A2D48]">CRM</strong> — HubSpot, Salesforce, Pipedrive, Zoho.</p>
-                    <p><strong className="text-[#1A2D48]">Payroll</strong> — Gusto, QuickBooks Payroll, ADP (larger).</p>
+                    <p><strong className="text-brand">Accounting</strong> — QuickBooks, Xero, Wave, FreshBooks.</p>
+                    <p><strong className="text-brand">Payments</strong> — Square, Stripe, PayPal.</p>
+                    <p><strong className="text-brand">CRM</strong> — HubSpot, Salesforce, Pipedrive, Zoho.</p>
+                    <p><strong className="text-brand">Payroll</strong> — Gusto, QuickBooks Payroll, ADP (larger).</p>
                     <p>Category lens: <Link href="/accounting/guides/best-selling-platform-for-small-businesses" className={linkGreen}>best-selling platforms</Link>.</p>
                   </div>
                 </section>
@@ -120,13 +120,13 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
                   <SectionTitle sub="Defaults that backfire.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Choosing only because a friend uses it.</strong> Their entity type and sales tax nexus may differ.
+                      <strong className="text-brand">Choosing only because a friend uses it.</strong> Their entity type and sales tax nexus may differ.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Ignoring total cost.</strong> Popular accounting plus paid payroll plus payments fees adds up—model a year of spend.
+                      <strong className="text-brand">Ignoring total cost.</strong> Popular accounting plus paid payroll plus payments fees adds up—model a year of spend.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Skipping accountant input.</strong> Their familiarity often beats marginal feature differences.
+                      <strong className="text-brand">Skipping accountant input.</strong> Their familiarity often beats marginal feature differences.
                     </p>
                   </div>
                 </section>
@@ -142,12 +142,12 @@ export default function WhatSoftwareIsMostCommonlyUsedBySmallBusinessesPage() {
                   <SectionTitle sub="Move from names to decisions.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>What software is good for small businesses</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/examples-of-business-application-software" className={linkGreen}>Examples of business application software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you actually need</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>What software is good for small businesses</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/examples-of-business-application-software" className={linkGreen}>Examples of business application software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you actually need</Link></span></li>
                     </ul>
                   </div>
                 </section>

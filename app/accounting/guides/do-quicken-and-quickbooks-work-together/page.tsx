@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/do-quicken-and-quickbooks-work-together";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -63,21 +63,21 @@ export default function DoQuickenAndQuickBooksWorkTogetherPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Quicken + QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Do Quicken and QuickBooks Work Together?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     They complement personal vs business finance—but they do not replace each other or sync like one product.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -85,7 +85,7 @@ export default function DoQuickenAndQuickBooksWorkTogetherPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Quicken and QuickBooks work together only in the sense of a dual-tool workflow—not a unified integration.</strong> Historically both lived under Intuit, but they target different jobs. Use Quicken (or Simplifi) for household budgeting; use <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> for business books.
+                      <strong className="text-brand">Quicken and QuickBooks work together only in the sense of a dual-tool workflow—not a unified integration.</strong> Historically both lived under Intuit, but they target different jobs. Use Quicken (or Simplifi) for household budgeting; use <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> for business books.
                     </p>
                     <p>
                       Product differences: <Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link>. Owner pay: <Link href="/accounting/guides/how-should-an-llc-pay-themselves-in-quickbooks" className={linkGreen}>LLC pay in QuickBooks</Link>.
@@ -99,9 +99,9 @@ export default function DoQuickenAndQuickBooksWorkTogetherPage() {
                   <SectionTitle sub="How owners run both without commingling.">Practical Dual-Tool Workflow</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Separate banks</strong> — Personal checking in Quicken; business checking only in QuickBooks.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Document transfers</strong> — Owner draws or contributions recorded in QuickBooks when moving money between accounts.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">One business ledger</strong> — Do not duplicate business transactions in Quicken.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Separate banks</strong> — Personal checking in Quicken; business checking only in QuickBooks.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Document transfers</strong> — Owner draws or contributions recorded in QuickBooks when moving money between accounts.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">One business ledger</strong> — Do not duplicate business transactions in Quicken.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -132,10 +132,10 @@ export default function DoQuickenAndQuickBooksWorkTogetherPage() {
                   <SectionTitle sub="Related guides and product reviews.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-alternatives-to-quicken" className={linkGreen}>Best alternatives to Quicken</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/how-much-does-quicken-simplifi-cost" className={linkGreen}>Quicken Simplifi cost</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting" className={linkGreen}>Accounting software hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-alternatives-to-quicken" className={linkGreen}>Best alternatives to Quicken</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/how-much-does-quicken-simplifi-cost" className={linkGreen}>Quicken Simplifi cost</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting" className={linkGreen}>Accounting software hub</Link></span></li>
                     </ul>
                   </div>
                 </section>

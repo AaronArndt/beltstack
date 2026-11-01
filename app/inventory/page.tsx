@@ -19,20 +19,18 @@ import {
   INVENTORY_HUB_GUIDES_GRID,
 } from "@/lib/data/inventoryHubData";
 import { getInventoryReviewUrl } from "@/lib/routes";
-const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 // ——— Shared hub section title (matches other hubs) ———
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -46,7 +44,7 @@ function InventoryHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating inventory tools.">
         How to choose inventory management software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Inventory software sits between your shelves and your sales channels. This page is for{" "}
         <Link href="/inventory/best-for/small-business" className={linkGreen}>
           small businesses
@@ -78,31 +76,31 @@ function InventoryHowToChooseSection() {
         for head‑to‑head matchups, and the scenario links below to jump into specific use cases.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Inventory tracking capabilities</strong> — Make sure the tool can track
+            <strong className="text-brand">Inventory tracking capabilities</strong> — Make sure the tool can track
             on‑hand, committed, and available stock, support adjustments and cycle counts, and show who changed what and
             when.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Multi-channel sales integrations</strong> — If you sell through ecommerce,
+            <strong className="text-brand">Multi-channel sales integrations</strong> — If you sell through ecommerce,
             marketplaces, or retail, look for native integrations that pull in orders and push back stock to reduce
             overselling and manual updates.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Warehouse management tools</strong> — Even simple warehouses benefit from
+            <strong className="text-brand">Warehouse management tools</strong> — Even simple warehouses benefit from
             bins, picking, and packing. As you grow, features like multi‑warehouse support, scanners, and more advanced
             routing start to matter.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Purchase order management</strong> — Reorder points, purchase orders, and
+            <strong className="text-brand">Purchase order management</strong> — Reorder points, purchase orders, and
             vendor tracking should work together so you know what’s on order, what’s inbound, and when to restock
             without guessing.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Automation and reporting</strong> — Look for low‑stock alerts, automatic
+            <strong className="text-brand">Automation and reporting</strong> — Look for low‑stock alerts, automatic
             purchase suggestions, and reports on stock turns and margins. Integrations with{" "}
             <Link href="/accounting" className={linkGreen}>
               accounting
@@ -124,46 +122,46 @@ function InventoryEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in inventory management software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when businesses choose tools to track stock, prevent stockouts, and manage orders across channels.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Inventory tracking accuracy</h3>
+            <h3 className="text-brand text-lg font-semibold">Inventory tracking accuracy</h3>
             <p className="mt-1.5">
               The core job of inventory software is keeping on-hand counts accurate. Look for clear workflows for
               receiving, adjustments, and cycle counts, plus audit trails so you can see who changed what and when.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Multi-channel sales integration</h3>
+            <h3 className="text-brand text-lg font-semibold">Multi-channel sales integration</h3>
             <p className="mt-1.5">
               If you sell through ecommerce, marketplaces, and retail, your inventory system should pull orders from all
               channels and push back stock levels. This reduces overselling and manual updates between stores.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Purchase order management</h3>
+            <h3 className="text-brand text-lg font-semibold">Purchase order management</h3>
             <p className="mt-1.5">
               Reorder points, purchase orders, and vendor management keep shelves stocked. Check how the tool suggests
               reorders, tracks lead times, and shows what is on order versus available to sell.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Warehouse management features</h3>
+            <h3 className="text-brand text-lg font-semibold">Warehouse management features</h3>
             <p className="mt-1.5">
               For warehouses, basic bin locations, picking, and packing can save a lot of time. Some tools add wave
               picking, zone picking, or multi-warehouse support; others stay lightweight for a single stockroom.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Automation and integrations</h3>
+            <h3 className="text-brand text-lg font-semibold">Automation and integrations</h3>
             <p className="mt-1.5">
               Automations like low-stock alerts, automatic purchase orders, and syncing with{" "}
               <Link href="/accounting" className={linkGreen}>
@@ -179,34 +177,34 @@ function InventoryEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Accurate stock tracking with clear receive and adjust workflows
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Multi-channel order sync for ecommerce, retail, and wholesale
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Reorder points, purchase orders, and vendor tracking
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Basic warehouse features (bins, picking, packing) or deeper WMS if needed
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Integrations with accounting, ecommerce, and shipping tools
@@ -244,7 +242,7 @@ function InventoryGuidesSection() {
           <Link href="/inventory/guides" className={`${linkGreen} font-semibold`}>
             View all inventory guides →
           </Link>
-          <span className="mx-2 text-[#57534E]">·</span>
+          <span className="mx-2 text-muted-foreground">·</span>
           Read reviews:{" "}
           <Link href={getInventoryReviewUrl("zoho-inventory")} className={linkGreen}>
             Zoho Inventory
@@ -282,7 +280,7 @@ function InventoryPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -295,7 +293,7 @@ function InventoryPopularComparisonsSection() {
                     }}
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                   vs
                 </span>
                 {item.productB.logoSrc && (
@@ -309,51 +307,28 @@ function InventoryPopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/inventory/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all inventory comparisons →
         </Link>
       </p>
     </>
-  );
-}
-
-function InventoryBestRoundupCtaModule() {
-  return (
-    <div className="rounded-lg border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-emerald-50/80 to-teal-50/70 p-4 shadow-sm sm:p-5 lg:p-6">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
-        <img src="/Logos/SB_Crown.svg" alt="" aria-hidden className="mt-0.5 h-9 w-9 shrink-0" />
-        <div className="min-w-0 flex-1">
-          <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-[1.75rem]">
-            Compare the Best Inventory Management Software
-          </h2>
-          <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">
-            Find the right tool for your business with full rankings, detailed reviews, and side-by-side comparisons.
-          </p>
-        </div>
-        <div className="w-full sm:w-auto sm:min-w-[220px] sm:self-start">
-          <Link href="/inventory/best-inventory-software" className={`w-full text-center inline-flex items-center justify-center ${btnPrimary}`}>
-            View Full Rankings →
-          </Link>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -405,7 +380,13 @@ export default function InventoryPage() {
           blocks={INVENTORY_USE_CASE_EDITORIAL}
         />
       }
-      bestRoundupCustomContent={<InventoryBestRoundupCtaModule />}
+      bestRoundupBlock={{
+        title: "Compare the Best Inventory Management Software",
+        description:
+          "Find the right tool for your business with full rankings, detailed reviews, and side-by-side comparisons.",
+        linkText: "View Full Rankings →",
+        href: "/inventory/best-inventory-software",
+      }}
       bestRoundupPlacement="hero"
       featuredPicksRankingsLink={{
         label: "See full rankings →",

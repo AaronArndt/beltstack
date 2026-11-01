@@ -12,7 +12,7 @@ import {
 } from "@/lib/routes";
 
 const href = "/email-marketing/guides/email-marketing-vs-sms-marketing";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -50,7 +50,7 @@ export default function EmailMarketingVsSmsMarketingPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px] pt-8 pb-16">
                 <nav aria-label="Breadcrumb" className="pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link href="/" className="text-gray-500 hover:text-gray-900">
                         Home
@@ -75,8 +75,8 @@ export default function EmailMarketingVsSmsMarketingPage() {
                   </ol>
                 </nav>
                 <header className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Email Marketing vs SMS Marketing</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Email Marketing vs SMS Marketing</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                     Choose channels by intent: email carries depth; SMS carries urgency. Start tool comparisons in our{" "}
                     <Link href="/email-marketing/best-email-marketing-software" className={link}>
                       best email marketing software
@@ -101,8 +101,8 @@ export default function EmailMarketingVsSmsMarketingPage() {
                   </p>
                   <GuideLastUpdated date="March 25, 2026" />
                 </header>
-                <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-                  <h2 className="text-[#1A2D48] text-xl font-bold">Email: education, proof, and longer arcs</h2>
+                <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+                  <h2 className="text-brand text-xl font-bold">Email: education, proof, and longer arcs</h2>
                   <p className="mt-2">
                     Email fits tutorials, before/after stories, and multi-step nurture after complex estimates. It also houses receipts and detailed policy updates customers may need to forward. Keep HTML readable and link to mobile-friendly booking pages built with your{" "}
                     <Link href="/website-builders" className={link}>
@@ -110,11 +110,11 @@ export default function EmailMarketingVsSmsMarketingPage() {
                     </Link>
                     .
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">SMS: logistics and immediacy</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">SMS: logistics and immediacy</h2>
                   <p className="mt-2">
                     SMS shines for “technician en route,” access gate codes, and same-day schedule shifts—moments email opens too slowly to fix. Respect frequency caps; one poorly timed promo text damages trust faster than a skipped newsletter.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Operational pairing</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Operational pairing</h2>
                   <p className="mt-2">
                     Trigger SMS from field events when possible, while email explains the “why” behind memberships or seasonal programs. Align both with{" "}
                     <Link href="/crm" className={link}>
@@ -122,11 +122,11 @@ export default function EmailMarketingVsSmsMarketingPage() {
                     </Link>{" "}
                     tasks so sales sees the whole thread—not parallel silos arguing about attribution.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Vendor and cost reality</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Vendor and cost reality</h2>
                   <p className="mt-2">
                     Bundled stacks simplify billing but may lock features; best-of-breed email plus point SMS can win when deliverability teams differ. Model annual sends, international compliance, and failover needs before choosing.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Connect to acquisition and reviews</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Connect to acquisition and reviews</h2>
                   <p className="mt-2">
                     Leads from{" "}
                     <Link href="/lead-generation" className={link}>

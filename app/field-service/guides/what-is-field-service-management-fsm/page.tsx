@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const PAGE_HREF = "/field-service/guides/what-is-field-service-management-fsm";
 
@@ -77,11 +77,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -111,10 +111,10 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Is Field Service Management (FSM)?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn what field service management means, how it connects dispatch, technicians, work orders, and
                     customer operations—and how FSM software supports the full workflow.
                   </p>
@@ -216,11 +216,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Scheduling</strong> — Plan who is available, match skills to
+                          <strong className="text-brand">Scheduling</strong> — Plan who is available, match skills to
                           job type, and block time for travel and callbacks. See{" "}
                           <Link
                             href="/field-service/guides/how-technician-scheduling-software-works"
@@ -236,11 +236,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Dispatch</strong> — Adjust the day in real time when jobs
+                          <strong className="text-brand">Dispatch</strong> — Adjust the day in real time when jobs
                           run long, customers cancel, or emergencies appear. See{" "}
                           <Link href="/field-service/guides/how-dispatching-software-works" className={linkGreen}>
                             how dispatching software works
@@ -256,11 +256,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Work orders</strong> — Track each job from booked through
+                          <strong className="text-brand">Work orders</strong> — Track each job from booked through
                           complete with status, notes, and parts. See{" "}
                           <Link href="/field-service/guides/how-work-order-management-works" className={linkGreen}>
                             how work order management works
@@ -269,11 +269,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Mobile execution</strong> — Give technicians schedules,
+                          <strong className="text-brand">Mobile execution</strong> — Give technicians schedules,
                           forms, photos, and signatures in the field. See{" "}
                           <Link href="/field-service/guides/how-mobile-field-service-apps-work" className={linkGreen}>
                             how mobile field service apps work
@@ -282,11 +282,11 @@ export default function WhatIsFieldServiceManagementFsmPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Billing and reporting</strong> — Turn completed work into
+                          <strong className="text-brand">Billing and reporting</strong> — Turn completed work into
                           invoices and measure utilization, revenue per tech, and callback rates. The{" "}
                           <Link href="/invoicing" className={linkGreen}>
                             invoicing hub

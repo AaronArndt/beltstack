@@ -10,8 +10,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -87,17 +87,17 @@ export default function PayrollForElectriciansPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link>
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link>
+                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link>
+                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Payroll for Electricians</li>
@@ -106,10 +106,10 @@ export default function PayrollForElectriciansPage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Electricians
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how electrical contractors and electrician businesses manage payroll for crews, apprentices, office staff, and subcontractors, and how payroll software can simplify taxes, time tracking, and labor costs.
                   </p>
                   <GuideLastUpdated date="March 2026" />
@@ -123,10 +123,10 @@ export default function PayrollForElectriciansPage() {
                     </p>
                     <p>
                       To explore options for your business, see our{" "}
-                      <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software reviews</Link>,{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link>,{" "}
-                      <Link href={getPayrollBestForUrl("electricians")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for electricians</Link>, and{" "}
-                      <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparisons</Link>.
+                      <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software reviews</Link>,{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link>,{" "}
+                      <Link href={getPayrollBestForUrl("electricians")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for electricians</Link>, and{" "}
+                      <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparisons</Link>.
                     </p>
                   </div>
                 </section>
@@ -138,24 +138,24 @@ export default function PayrollForElectriciansPage() {
                     <p>Electrician payroll often involves:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly workers</strong> — Many electrician companies pay field technicians and apprentices by the hour, so accurate time tracking and overtime rules matter.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly workers</strong> — Many electrician companies pay field technicians and apprentices by the hour, so accurate time tracking and overtime rules matter.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Overtime</strong> — Overtime can be common on job sites; payroll must calculate it correctly and keep records for compliance.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Overtime</strong> — Overtime can be common on job sites; payroll must calculate it correctly and keep records for compliance.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Office staff and field workers</strong> — Companies may have both office/admin staff and field crews with different pay structures and schedules.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Office staff and field workers</strong> — Companies may have both office/admin staff and field crews with different pay structures and schedules.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">1099 subcontractors</strong> — Some businesses also use subcontractors for specialty work or peak capacity, adding contractor payments and 1099 reporting.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">1099 subcontractors</strong> — Some businesses also use subcontractors for specialty work or peak capacity, adding contractor payments and 1099 reporting.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Labor tracking by job site</strong> — Labor costs by job site may matter for profitability and estimating; payroll and accounting together can support that.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Labor tracking by job site</strong> — Labor costs by job site may matter for profitability and estimating; payroll and accounting together can support that.</span>
                       </li>
                     </ul>
                   </div>
@@ -167,36 +167,36 @@ export default function PayrollForElectriciansPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly payroll support</strong> — Reliable hourly pay and overtime calculations so field workers and apprentices are paid correctly.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly payroll support</strong> — Reliable hourly pay and overtime calculations so field workers and apprentices are paid correctly.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Overtime calculations</strong> — Automatic overtime rules (e.g. federal and state) so you stay compliant without manual math.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Overtime calculations</strong> — Automatic overtime rules (e.g. federal and state) so you stay compliant without manual math.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support if needed</strong> — If you pay 1099 subs: contractor payments and year-end 1099 forms in one system.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support if needed</strong> — If you pay 1099 subs: contractor payments and year-end 1099 forms in one system.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking integrations</strong> — Built-in or integrated time tracking so field hours flow into payroll accurately.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking integrations</strong> — Built-in or integrated time tracking so field hours flow into payroll accurately.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Accounting integrations</strong> — Sync to QuickBooks or other accounting software so payroll and labor cost flow into your books.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Accounting integrations</strong> — Sync to QuickBooks or other accounting software so payroll and labor cost flow into your books.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Easy setup for small teams</strong> — Simple onboarding and day-to-day pay runs so a small office can run payroll without dedicated HR.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Easy setup for small teams</strong> — Simple onboarding and day-to-day pay runs so a small office can run payroll without dedicated HR.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Support for growing businesses</strong> — Ability to scale as you add more field workers, job sites, or locations.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Support for growing businesses</strong> — Ability to scale as you add more field workers, job sites, or locations.</span>
                       </li>
                     </ul>
                   </div>
@@ -208,8 +208,8 @@ export default function PayrollForElectriciansPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       Electrical contractors may have mixed teams: W-2 employees (field technicians, apprentices, office staff) and 1099 subcontractors. Payroll systems should support both—employee pay runs with withholdings and employer taxes, and contractor payments with year-end 1099 forms. Apprentices and field workers often require accurate hourly payroll and overtime handling. Misclassification (treating employees as contractors or vice versa) and incorrect tax handling can create compliance issues and penalties. For more on how contractor businesses handle payroll and classification, see our{" "}
-                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll for contractors</Link> guide and our{" "}
-                      <Link href={getPayrollBestForUrl("1099-contractors")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for 1099 contractors</Link> guide.
+                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll for contractors</Link> guide and our{" "}
+                      <Link href={getPayrollBestForUrl("1099-contractors")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for 1099 contractors</Link> guide.
                     </p>
                   </div>
                 </section>
@@ -220,12 +220,12 @@ export default function PayrollForElectriciansPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       For curated picks and who each tool is best for, see our{" "}
-                      <Link href={getPayrollBestForUrl("electricians")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for electricians</Link> guide and our{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link> roundup. Likely strong fits for electricians include{" "}
-                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>, and{" "}
-                      <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link>—each with different strengths on QuickBooks integration, contractor support, and scalability.
+                      <Link href={getPayrollBestForUrl("electricians")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for electricians</Link> guide and our{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link> roundup. Likely strong fits for electricians include{" "}
+                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">OnPay</Link>, and{" "}
+                      <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling</Link>—each with different strengths on QuickBooks integration, contractor support, and scalability.
                     </p>
                   </div>
                 </section>
@@ -235,9 +235,9 @@ export default function PayrollForElectriciansPage() {
                   <SectionTitle sub="Why many electrician businesses choose QuickBooks Payroll.">Why QuickBooks Payroll Is Popular With Electricians</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Many small electrician businesses already use QuickBooks for accounting. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link> integrates with QuickBooks so payroll and bookkeeping work together—payroll posts to the right accounts and labor cost can flow into job costing. That can simplify admin and give you better visibility into labor and payroll for job profitability. If you’re comparing QuickBooks Payroll to other options, see our{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link> and{" "}
-                      <Link href={getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Square Payroll vs QuickBooks Payroll</Link> comparisons.
+                      Many small electrician businesses already use QuickBooks for accounting. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link> integrates with QuickBooks so payroll and bookkeeping work together—payroll posts to the right accounts and labor cost can flow into job costing. That can simplify admin and give you better visibility into labor and payroll for job profitability. If you’re comparing QuickBooks Payroll to other options, see our{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link> and{" "}
+                      <Link href={getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Square Payroll vs QuickBooks Payroll</Link> comparisons.
                     </p>
                   </div>
                 </section>
@@ -249,41 +249,41 @@ export default function PayrollForElectriciansPage() {
                     <p>When comparing providers, look at:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pricing</strong> — Base and per-person cost; add-ons for time tracking or 1099.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pricing</strong> — Base and per-person cost; add-ons for time tracking or 1099.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly payroll support</strong> — Accurate hourly pay and overtime; time tracking if needed.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly payroll support</strong> — Accurate hourly pay and overtime; time tracking if needed.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Overtime handling</strong> — Automatic overtime rules and compliance.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Overtime handling</strong> — Automatic overtime rules and compliance.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — If you pay 1099s: contractor payments and 1099 forms.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — If you pay 1099s: contractor payments and 1099 forms.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Tax automation</strong> — Full-service filing and deposits so you stay compliant.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Tax automation</strong> — Full-service filing and deposits so you stay compliant.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Accounting integrations</strong> — QuickBooks, Xero, or other tools you use for books and job costing.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Accounting integrations</strong> — QuickBooks, Xero, or other tools you use for books and job costing.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Ease of use</strong> — Setup, pay run workflow, and support for small teams.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Ease of use</strong> — Setup, pay run workflow, and support for small teams.</span>
                       </li>
                     </ul>
                     <p>
                       Our{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software comparisons</Link> hub and matchups like{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link>,{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs OnPay</Link>,{" "}
-                      <Link href={getPayrollCompareUrl("rippling-vs-gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling vs Gusto</Link>, and{" "}
-                      <Link href={getPayrollCompareUrl("rippling-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling vs QuickBooks Payroll</Link> help you evaluate these factors side by side.
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software comparisons</Link> hub and matchups like{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link>,{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs OnPay</Link>,{" "}
+                      <Link href={getPayrollCompareUrl("rippling-vs-gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling vs Gusto</Link>, and{" "}
+                      <Link href={getPayrollCompareUrl("rippling-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling vs QuickBooks Payroll</Link> help you evaluate these factors side by side.
                     </p>
                   </div>
                 </section>
@@ -295,28 +295,28 @@ export default function PayrollForElectriciansPage() {
                     <p>You may need a more capable platform when:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You have more field workers</strong> — Headcount or per-person limits make the current tool less viable.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You have more field workers</strong> — Headcount or per-person limits make the current tool less viable.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Admin complexity grows</strong> — Multiple job sites, approval workflows, or reporting needs exceed what basic payroll offers.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Admin complexity grows</strong> — Multiple job sites, approval workflows, or reporting needs exceed what basic payroll offers.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More need for reporting</strong> — Labor by job, custom reports, or integration with project management.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More need for reporting</strong> — Labor by job, custom reports, or integration with project management.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More multi-state or compliance complexity</strong> — You need robust multi-state payroll and compliance support.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More multi-state or compliance complexity</strong> — You need robust multi-state payroll and compliance support.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More need for HR tools or workforce management</strong> — Onboarding, benefits, workers’ comp, or scheduling in one place.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More need for HR tools or workforce management</strong> — Onboarding, benefits, workers’ comp, or scheduling in one place.</span>
                       </li>
                     </ul>
                     <p>
-                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link>, <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">ADP</Link>, and <Link href={getPayrollReviewUrl("paychex")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Paychex</Link> offer broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
+                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling</Link>, <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">ADP</Link>, and <Link href={getPayrollReviewUrl("paychex")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Paychex</Link> offer broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
                     </p>
                   </div>
                 </section>

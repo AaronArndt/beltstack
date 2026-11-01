@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/do-you-have-to-buy-quickbooks-every-year";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function DoYouHaveToBuyQuickBooksEveryYearPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">QuickBooks Every Year</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Do You Have to Buy QuickBooks Every Year?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     QuickBooks Online is a subscription—you pay while you use it. Here is how billing works and what happens when you stop.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -89,7 +89,7 @@ export default function DoYouHaveToBuyQuickBooksEveryYearPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">With QuickBooks Online, you do not buy perpetual software once—you subscribe.</strong> That means monthly or annual charges continue for as long as you keep the account active. It is similar to other cloud accounting tools, not a one-time boxed purchase from decades ago.
+                      <strong className="text-brand">With QuickBooks Online, you do not buy perpetual software once—you subscribe.</strong> That means monthly or annual charges continue for as long as you keep the account active. It is similar to other cloud accounting tools, not a one-time boxed purchase from decades ago.
                     </p>
                     <p>
                       The question usually comes from owners who remember Desktop CDs or want to know if they can pay once and own the file forever. Online stores data in Intuit&apos;s cloud; your access depends on an active subscription. Budget it like payroll or insurance—a recurring operating cost.
@@ -121,9 +121,9 @@ export default function DoYouHaveToBuyQuickBooksEveryYearPage() {
                       <Link href="/accounting/guides/how-to-switch-accounting-software" className={linkGreen}>how to switch accounting software</Link>.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Download P&amp;L, balance sheet, and general ledger for the tax year in progress.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Export customer, vendor, and chart of accounts lists if your new tool supports import.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile through the final month so opening balances migrate cleanly.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Download P&amp;L, balance sheet, and general ledger for the tax year in progress.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Export customer, vendor, and chart of accounts lists if your new tool supports import.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile through the final month so opening balances migrate cleanly.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -152,9 +152,9 @@ export default function DoYouHaveToBuyQuickBooksEveryYearPage() {
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Compare monthly vs annual billing in your Intuit account before renewal day.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Audit add-ons you no longer use—downgrade tiers if reports prove you do not need Plus or Advanced.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>If leaving, read <Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link> and plan migration with your CPA.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Compare monthly vs annual billing in your Intuit account before renewal day.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Audit add-ons you no longer use—downgrade tiers if reports prove you do not need Plus or Advanced.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>If leaving, read <Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link> and plan migration with your CPA.</span></li>
                     </ul>
                   </div>
                 </section>

@@ -8,15 +8,15 @@ import { getHelpdeskReviewUrl, getHelpdeskCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   { q: "What is the difference between helpdesk software and live chat?", a: "Helpdesk software manages the full support workflow: tickets, history, routing, and reporting across multiple channels (email, chat, social). Live chat software focuses on real-time chat only. Many helpdesks include live chat; some businesses use standalone chat for a single channel." },
@@ -39,21 +39,21 @@ export default function HelpdeskVsLiveChatPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                 <li aria-hidden>/</li>
                 <li className="text-gray-700 font-medium" aria-current="page">Helpdesk Software vs Live Chat</li>
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 Helpdesk Software vs Live Chat
               </h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 When you need ticketing and workflows versus real-time messaging—and when you need both.
               </p>
               <GuideLastUpdated date="March 13, 2026" />
@@ -81,9 +81,9 @@ export default function HelpdeskVsLiveChatPage() {
             <section id="when-to-use" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
               <SectionTitle sub="Choosing the right tool.">When to use one, the other, or both</SectionTitle>
               <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                <p><strong className="text-[#1A2D48]">Use a helpdesk</strong> when you have (or plan to have) multiple agents, need to track and assign conversations, want reporting on volume and response time, or support customers via email and chat (and possibly social). A helpdesk that includes chat gives you one place for all channels.</p>
-                <p><strong className="text-[#1A2D48]">Use standalone live chat</strong> only when you strictly need a single channel (chat), have very low volume, and don't need ticketing or reporting. Many businesses outgrow this quickly and move to a helpdesk.</p>
-                <p><strong className="text-[#1A2D48]">You don't need both</strong> in the sense of separate tools—a helpdesk that includes chat covers chat. Choose a helpdesk with strong chat (e.g. Zendesk, Intercom, Freshdesk) if you want real-time messaging and full support workflow in one platform.</p>
+                <p><strong className="text-brand">Use a helpdesk</strong> when you have (or plan to have) multiple agents, need to track and assign conversations, want reporting on volume and response time, or support customers via email and chat (and possibly social). A helpdesk that includes chat gives you one place for all channels.</p>
+                <p><strong className="text-brand">Use standalone live chat</strong> only when you strictly need a single channel (chat), have very low volume, and don't need ticketing or reporting. Many businesses outgrow this quickly and move to a helpdesk.</p>
+                <p><strong className="text-brand">You don't need both</strong> in the sense of separate tools—a helpdesk that includes chat covers chat. Choose a helpdesk with strong chat (e.g. Zendesk, Intercom, Freshdesk) if you want real-time messaging and full support workflow in one platform.</p>
               </div>
             </section>
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

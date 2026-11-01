@@ -19,7 +19,7 @@ export function TradeHubStackSummary({
 
   return (
     <div className="mt-8">
-      <h3 id={headingId} className="text-lg font-bold text-[#1A2D48] sm:text-xl">
+      <h3 id={headingId} className="text-lg font-bold text-brand sm:text-xl">
         {heading}
       </h3>
       <div
@@ -31,16 +31,16 @@ export function TradeHubStackSummary({
           className="hidden border-b border-stone-200 bg-stone-50 px-4 py-2.5 md:grid md:grid-cols-[minmax(10rem,1fr)_minmax(13rem,1.5fr)_minmax(0,1.1fr)_auto] md:gap-4"
           role="row"
         >
-          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-[#1A2D48]">
+          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-brand">
             Category
           </div>
-          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-[#1A2D48]">
+          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-brand">
             Recommended pick
           </div>
-          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-[#1A2D48]">
+          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-brand">
             Why it matters
           </div>
-          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-[#1A2D48] md:text-right">
+          <div role="columnheader" className="text-xs font-semibold uppercase tracking-wide text-brand md:text-right">
             Details
           </div>
         </div>
@@ -59,11 +59,11 @@ export function TradeHubStackSummary({
               role="row"
             >
               <div role="cell" className="min-w-0">
-                <div className="text-xs font-semibold uppercase tracking-wide text-[#57534E] md:hidden">Category</div>
-                <p className="text-sm font-semibold leading-snug text-[#1A2D48]">{item.heading}</p>
+                <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground md:hidden">Category</div>
+                <p className="text-sm font-semibold leading-snug text-brand">{item.heading}</p>
               </div>
               <div role="cell" className="min-w-0">
-                <div className="text-xs font-semibold uppercase tracking-wide text-[#57534E] md:hidden">
+                <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground md:hidden">
                   Recommended pick
                 </div>
                 {firstPick != null ? (
@@ -77,18 +77,18 @@ export function TradeHubStackSummary({
                         />
                       </span>
                     ) : null}
-                    <p className="min-w-0 text-base font-bold leading-snug text-[#1A2D48]">
+                    <p className="min-w-0 text-base font-bold leading-snug text-brand">
                       {firstPick.pick.name}
                     </p>
                   </div>
                 ) : null}
               </div>
               <div role="cell" className="min-w-0">
-                <div className="text-xs font-semibold uppercase tracking-wide text-[#57534E] md:hidden">
+                <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground md:hidden">
                   Why it matters
                 </div>
                 <p
-                  className="line-clamp-2 text-sm leading-snug text-[#57534E] md:line-clamp-1"
+                  className="line-clamp-2 text-sm leading-snug text-muted-foreground md:line-clamp-1"
                   title={item.body}
                 >
                   {item.body}
@@ -97,7 +97,7 @@ export function TradeHubStackSummary({
               <div role="cell" className="md:text-right">
                 <Link
                   href={preview.href}
-                  className="inline-block text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+                  className="inline-block text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
                   aria-label={linkAria}
                 >
                   {linkLabel}

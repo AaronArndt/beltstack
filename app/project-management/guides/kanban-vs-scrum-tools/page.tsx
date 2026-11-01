@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -71,19 +71,19 @@ export default function KanbanVsScrumToolsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Project Management</Link></li>
+                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Project Management</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Kanban vs Scrum Tools</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Kanban vs Scrum Tools</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Kanban vs Scrum Tools</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     When to use Kanban-style boards vs Scrum-style sprints, and which project management tools support each approach.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -102,22 +102,22 @@ export default function KanbanVsScrumToolsPage() {
                   <SectionTitle sub="Continuous flow and boards.">What Is Kanban?</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Kanban is a visual workflow method: work items move through columns (e.g. To Do, In Progress, Done). There are no fixed timeboxes—work flows continuously. Limits on how many items can be in a column (work-in-progress limits) help prevent overload. Kanban suits teams whose work arrives continuously or who prefer flexibility over fixed sprint cycles.</p>
-                    <p><strong className="text-[#1A2D48]">In software:</strong> A Kanban board has columns and cards. You create cards for tasks, move them through columns as work progresses, and optionally set WIP limits. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> is the most board-focused; <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, and <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link> offer board views alongside list and other views.</p>
+                    <p><strong className="text-brand">In software:</strong> A Kanban board has columns and cards. You create cards for tasks, move them through columns as work progresses, and optionally set WIP limits. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> is the most board-focused; <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, and <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link> offer board views alongside list and other views.</p>
                   </div>
                 </section>
                 <section id="scrum-basics" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Sprints and iterations.">What Is Scrum?</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Scrum is an iterative framework: work is done in fixed-length sprints (e.g. 2 weeks). Each sprint has planning (what goes in), daily standups, and a sprint review/retrospective. A backlog holds work that isn't in the current sprint. Scrum suits teams that want regular planning cycles and clear sprint goals.</p>
-                    <p><strong className="text-[#1A2D48]">In software:</strong> Tools that support Scrum typically offer a backlog, sprint planning (assign tasks to a sprint), and sprint views or burndown. Jira is the classic Scrum tool; <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link> has sprint features; <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> and <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> offer milestones or similar. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> can be used for Scrum by treating lists as backlog/sprint, but it doesn't have native sprint planning.</p>
+                    <p><strong className="text-brand">In software:</strong> Tools that support Scrum typically offer a backlog, sprint planning (assign tasks to a sprint), and sprint views or burndown. Jira is the classic Scrum tool; <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link> has sprint features; <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> and <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> offer milestones or similar. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> can be used for Scrum by treating lists as backlog/sprint, but it doesn't have native sprint planning.</p>
                   </div>
                 </section>
                 <section id="kanban-vs-scrum" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Choosing an approach.">Kanban vs Scrum: When to Use Which</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Choose Kanban</strong> when work is continuous, priorities change often, or you prefer not to commit to fixed sprint scope. Good for support queues, marketing workflows, and teams that like a simple board. Tools like <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> and board views in <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> fit well.</p>
-                    <p><strong className="text-[#1A2D48]">Choose Scrum</strong> when you want fixed iterations, sprint planning, and clear end-of-sprint deliverables. Good for product and dev teams that plan in cycles. Choose a tool with backlog and sprint support—<Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, or Jira.</p>
-                    <p><strong className="text-[#1A2D48]">Hybrid</strong> — Many teams use a board (Kanban-style) but also group work into milestones or sprints. Tools like Asana and ClickUp support both: board view for flow, plus milestones or sprints for planning. Compare in our <Link href={getProjectManagementCompareUrl("clickup-vs-trello")} className={linkGreen}>ClickUp vs Trello</Link> and <Link href={getProjectManagementCompareUrl("notion-vs-trello")} className={linkGreen}>Notion vs Trello</Link> pages.</p>
+                    <p><strong className="text-brand">Choose Kanban</strong> when work is continuous, priorities change often, or you prefer not to commit to fixed sprint scope. Good for support queues, marketing workflows, and teams that like a simple board. Tools like <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> and board views in <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> fit well.</p>
+                    <p><strong className="text-brand">Choose Scrum</strong> when you want fixed iterations, sprint planning, and clear end-of-sprint deliverables. Good for product and dev teams that plan in cycles. Choose a tool with backlog and sprint support—<Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, or Jira.</p>
+                    <p><strong className="text-brand">Hybrid</strong> — Many teams use a board (Kanban-style) but also group work into milestones or sprints. Tools like Asana and ClickUp support both: board view for flow, plus milestones or sprints for planning. Compare in our <Link href={getProjectManagementCompareUrl("clickup-vs-trello")} className={linkGreen}>ClickUp vs Trello</Link> and <Link href={getProjectManagementCompareUrl("notion-vs-trello")} className={linkGreen}>Notion vs Trello</Link> pages.</p>
                   </div>
                 </section>
                 <section id="tools-for-kanban" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

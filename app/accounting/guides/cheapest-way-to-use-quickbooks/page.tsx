@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/cheapest-way-to-use-quickbooks";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function CheapestWayToUseQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Cheapest QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Is the Cheapest Way to Use QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Right-size your plan, avoid unused add-ons, and use accountant or annual discounts—the practical ways to lower QuickBooks spend.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -80,7 +80,7 @@ export default function CheapestWayToUseQuickBooksPage() {
                       Owners searching for the cheapest QuickBooks usually want the real product—not a knockoff—and hope there is a coupon, wholesale path, or tier they are missing. There is no permanent free QuickBooks Online, but you can often pay less than the advertised sticker price.
                     </p>
                     <p>
-                      The cheapest way to use QuickBooks is <strong className="text-[#1A2D48]">not</strong> hunting a hidden free tier—it is paying for the <em>lowest plan that still covers your real workflows</em> and skipping payroll, time, and payment add-ons until you need them. Many businesses overbuy Plus or Advanced features they never open.
+                      The cheapest way to use QuickBooks is <strong className="text-brand">not</strong> hunting a hidden free tier—it is paying for the <em>lowest plan that still covers your real workflows</em> and skipping payroll, time, and payment add-ons until you need them. Many businesses overbuy Plus or Advanced features they never open.
                     </p>
                     <p>
                       Baseline pricing context: <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>what does QuickBooks cost per month</Link>. Full product detail: <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link>. If discounts still feel high, compare{" "}
@@ -94,11 +94,11 @@ export default function CheapestWayToUseQuickBooksPage() {
                   <SectionTitle sub="Tactics that actually lower your bill.">Ways to Pay Less for QuickBooks</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Start on the entry tier</strong> until you need multi-user access, inventory, or advanced reporting.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Buy through your accountant</strong> — firms on QuickBooks Online Accountant sometimes offer wholesale client subscriptions.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Use annual billing</strong> when you are confident you will stay 12+ months.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Keep payroll separate</strong> until headcount justifies bundled QuickBooks Payroll vs a third-party provider.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Audit integrations</strong> — redundant apps can force higher tiers; remove unused marketplace subscriptions.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Start on the entry tier</strong> until you need multi-user access, inventory, or advanced reporting.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Buy through your accountant</strong> — firms on QuickBooks Online Accountant sometimes offer wholesale client subscriptions.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Use annual billing</strong> when you are confident you will stay 12+ months.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Keep payroll separate</strong> until headcount justifies bundled QuickBooks Payroll vs a third-party provider.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Audit integrations</strong> — redundant apps can force higher tiers; remove unused marketplace subscriptions.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -135,12 +135,12 @@ export default function CheapestWayToUseQuickBooksPage() {
                   <SectionTitle sub="Continue with these guides and reviews.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>What does QuickBooks cost per month?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-i-get-quickbooks-for-free" className={linkGreen}>Can I get QuickBooks for free?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-wave")} className={linkGreen}>QuickBooks vs Wave</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/accounting-software-pricing" className={linkGreen}>Accounting software pricing</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>What does QuickBooks cost per month?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-i-get-quickbooks-for-free" className={linkGreen}>Can I get QuickBooks for free?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-wave")} className={linkGreen}>QuickBooks vs Wave</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-alternatives" className={linkGreen}>QuickBooks alternatives</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/accounting-software-pricing" className={linkGreen}>Accounting software pricing</Link></span></li>
                     </ul>
                   </div>
                 </section>

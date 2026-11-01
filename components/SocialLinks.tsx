@@ -8,13 +8,13 @@ const variantStyles: Record<
 > = {
   footer: {
     list: "flex flex-wrap items-center gap-3",
-    link: "inline-flex items-center gap-2 rounded-md text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A2D48]",
+    link: "inline-flex items-center gap-2 rounded-md text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand",
     icon: "h-5 w-5 shrink-0 text-white/80",
   },
   default: {
     list: "flex flex-wrap items-center gap-3",
-    link: "inline-flex items-center gap-2 rounded-md text-sm font-semibold text-[#10B981] transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2",
-    icon: "h-5 w-5 shrink-0 text-[#10B981]",
+    link: "inline-flex items-center gap-2 rounded-md text-sm font-semibold text-indigo transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2",
+    icon: "h-5 w-5 shrink-0 text-indigo",
   },
 };
 

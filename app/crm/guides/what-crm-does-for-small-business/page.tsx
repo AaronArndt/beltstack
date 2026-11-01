@@ -9,15 +9,15 @@ import { getCrmReviewUrl, getCrmCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -62,21 +62,21 @@ export default function WhatCrmDoesForSmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">What CRM Does for Small Business</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What CRM Actually Does for Small Businesses
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Concrete ways CRM helps small teams: one customer list, visible pipeline, timely follow-up, and simple reports—without enterprise complexity.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -95,11 +95,11 @@ export default function WhatCrmDoesForSmallBusinessPage() {
                   <SectionTitle sub="Jobs CRM takes off your plate.">Day-to-Day Jobs CRM Handles</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Remembers the customer for you</strong> — Last call, email thread, and notes live on the contact record instead of in one person’s head.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Shows what to work on today</strong> — Tasks and pipeline views surface deals that need action.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Keeps the team aligned</strong> — When a second person helps with sales or onboarding, they see the same stage and history.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Automates repetitive follow-up</strong> — Reminders and simple email sequences reduce &quot;I forgot to ping them&quot; moments.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Answers basic business questions</strong> — How much pipeline is open? Which deals are oldest? Who contacted this account last?</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Remembers the customer for you</strong> — Last call, email thread, and notes live on the contact record instead of in one person’s head.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Shows what to work on today</strong> — Tasks and pipeline views surface deals that need action.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Keeps the team aligned</strong> — When a second person helps with sales or onboarding, they see the same stage and history.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Automates repetitive follow-up</strong> — Reminders and simple email sequences reduce &quot;I forgot to ping them&quot; moments.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Answers basic business questions</strong> — How much pipeline is open? Which deals are oldest? Who contacted this account last?</span></li>
                     </ul>
                   </div>
                 </section>
@@ -107,10 +107,10 @@ export default function WhatCrmDoesForSmallBusinessPage() {
                   <SectionTitle sub="Spreadsheets and inbox vs CRM.">Before and After CRM (Typical Small Team)</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Before:</strong> Deals tracked in a shared sheet; follow-up depends on whoever checks it; owner manually compiles pipeline for planning meetings.
+                      <strong className="text-brand">Before:</strong> Deals tracked in a shared sheet; follow-up depends on whoever checks it; owner manually compiles pipeline for planning meetings.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">After:</strong> Deals move on a board; activities log from email; reminders fire automatically; pipeline value updates in real time. See <Link href="/crm/guides/crm-vs-spreadsheets" className={linkGreen}>CRM vs spreadsheets</Link> for the full comparison.
+                      <strong className="text-brand">After:</strong> Deals move on a board; activities log from email; reminders fire automatically; pipeline value updates in real time. See <Link href="/crm/guides/crm-vs-spreadsheets" className={linkGreen}>CRM vs spreadsheets</Link> for the full comparison.
                     </p>
                   </div>
                 </section>

@@ -10,15 +10,15 @@ import { getInventoryReviewUrl, getInventoryCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -52,11 +52,11 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -65,7 +65,7 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                     <li>
                       <Link
                         href="/inventory"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Inventory Management
                       </Link>
@@ -74,7 +74,7 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                     <li>
                       <Link
                         href="/inventory/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -88,10 +88,10 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best Inventory Software for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn why small businesses move beyond spreadsheets, which inventory tools are best for simple stock
                     tracking and reordering, and how to choose software that fits your size, channels, and budget.
                   </p>
@@ -159,21 +159,21 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                   <div className="space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Move off spreadsheets once errors are common.</strong>{" "}
+                          <strong className="text-brand">Move off spreadsheets once errors are common.</strong>{" "}
                           If you regularly oversell, lose items, or spend hours reconciling counts, inventory software is
                           overdue—even if your team is still small.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">
+                          <strong className="text-brand">
                             Start with simple tools, then grow into more power.
                           </strong>{" "}
                           Sortly is great for very simple, visual tracking; inFlow Inventory and Zoho Inventory add more
@@ -181,11 +181,11 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Integrations and ecosystem matter more over time.</strong>{" "}
+                          <strong className="text-brand">Integrations and ecosystem matter more over time.</strong>{" "}
                           A tool that plays nicely with your{" "}
                           <Link href="/accounting" className={linkGreen}>
                             accounting
@@ -212,29 +212,29 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Duplicate or stale data</strong> — Multiple copies of the same
+                          <strong className="text-brand">Duplicate or stale data</strong> — Multiple copies of the same
                           sheet float around in email or shared drives; nobody is sure which one is current.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Slow counts and updates</strong> — Cycle counts or receiving
+                          <strong className="text-brand">Slow counts and updates</strong> — Cycle counts or receiving
                           updates require manual edits, which are easy to skip when things are busy.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">No clear “available to sell” number</strong> — Spreadsheets
+                          <strong className="text-brand">No clear “available to sell” number</strong> — Spreadsheets
                           rarely distinguish between on-hand, committed, and available quantities, so overselling happens
                           more often as order volume grows.
                         </span>
@@ -269,7 +269,7 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                     </p>
                     <ul className="space-y-3 list-none">
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("zoho-inventory")} className={linkGreen}>
                             Zoho Inventory
                           </Link>{" "}
@@ -282,7 +282,7 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                         </p>
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("inflow-inventory")} className={linkGreen}>
                             inFlow Inventory
                           </Link>{" "}
@@ -295,7 +295,7 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                         </p>
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("sortly")} className={linkGreen}>
                             Sortly
                           </Link>{" "}
@@ -350,18 +350,18 @@ export default function BestInventorySoftwareForSmallBusinessGuidePage() {
                     </p>
                     <ol className="space-y-3 list-decimal list-inside">
                       <li>
-                        <strong className="text-[#1A2D48]">Map your channels and locations.</strong> Do you sell only
+                        <strong className="text-brand">Map your channels and locations.</strong> Do you sell only
                         from one store or site, or across multiple online channels and a storefront? Do you store items
                         in one room or multiple buildings? This determines whether tools like Sortly, inFlow, or
                         Zoho/Cin7 make sense.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Decide if you need order workflows now.</strong> If you
+                        <strong className="text-brand">Decide if you need order workflows now.</strong> If you
                         mainly need better counts and locations, Sortly can be enough. If purchase orders, sales orders,
                         and invoices already exist, lean toward inFlow or Zoho Inventory.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Consider your stack.</strong> If you&apos;re heavily tied to
+                        <strong className="text-brand">Consider your stack.</strong> If you&apos;re heavily tied to
                         QuickBooks,{" "}
                         <Link href={getInventoryReviewUrl("quickbooks-commerce")} className={linkGreen}>
                           QuickBooks Commerce

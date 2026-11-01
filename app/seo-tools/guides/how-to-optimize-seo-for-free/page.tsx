@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowToOptimizeSeoForFreePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowToOptimizeSeoForFreePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Optimize SEO for Free</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Optimize SEO for Free</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 You can cover most SMB SEO with Google&apos;s free tools, disciplined pages, and reviews—before you spend on Semrush or Ahrefs seats. This guide lists what to do weekly, what to skip, and when paid tools earn their keep. See the{" "}
                 <Link href="/seo-tools" className={link}>
                   SEO tools hub
@@ -119,25 +119,25 @@ export default function HowToOptimizeSeoForFreePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="free-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The free stack every owner should install</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The free stack every owner should install</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Google Search Console</strong> — Indexing, query impressions, clicks, and manual actions. Non-negotiable; details in our{" "}
+                    <strong className="text-brand">Google Search Console</strong> — Indexing, query impressions, clicks, and manual actions. Non-negotiable; details in our{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console review
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Business Profile</strong> — Maps visibility, calls, directions, and Q&A. Align with site copy via{" "}
+                    <strong className="text-brand">Google Business Profile</strong> — Maps visibility, calls, directions, and Q&A. Align with site copy via{" "}
                     <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
                       GBP optimization
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Analytics (or lightweight alternative)</strong> — Behavior after the click; pair with CRM source tags for booked jobs.
+                    <strong className="text-brand">Google Analytics (or lightweight alternative)</strong> — Behavior after the click; pair with CRM source tags for booked jobs.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -150,38 +150,38 @@ export default function HowToOptimizeSeoForFreePage() {
               </section>
 
               <section id="free-work" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">High-impact free work (in priority order)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">High-impact free work (in priority order)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-3 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Fix indexing blockers</strong> — Use URL Inspection and coverage reports; follow{" "}
+                    <strong className="text-brand">Fix indexing blockers</strong> — Use URL Inspection and coverage reports; follow{" "}
                     <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
                       technical SEO audit basics
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Publish or improve service pages</strong> — Unique H1s, scope, FAQs, photos, and internal links per{" "}
+                    <strong className="text-brand">Publish or improve service pages</strong> — Unique H1s, scope, FAQs, photos, and internal links per{" "}
                     <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
                       on-page SEO for local business
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Earn and respond to reviews</strong> — Steady recent reviews beat one burst from years ago.
+                    <strong className="text-brand">Earn and respond to reviews</strong> — Steady recent reviews beat one burst from years ago.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Mine Search Console queries</strong> — Expand pages where you already get impressions but rank on page two.
+                    <strong className="text-brand">Mine Search Console queries</strong> — Expand pages where you already get impressions but rank on page two.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Keep NAP consistent</strong> — Website footer, GBP, and top directories should match after any phone or address change.
+                    <strong className="text-brand">Keep NAP consistent</strong> — Website footer, GBP, and top directories should match after any phone or address change.
                   </li>
                 </ol>
               </section>
 
               <section id="free-research" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Free research tactics before you buy a suite</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Free research tactics before you buy a suite</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Type candidate keywords in Google and note autosuggest, People Also Ask, and which competitors own the Map Pack. Screenshot top organic pages for each service and list sections they cover that you do not. Search Console already shows real queries for your domain—start there instead of guessing.
                 </p>
@@ -199,16 +199,16 @@ export default function HowToOptimizeSeoForFreePage() {
               </section>
 
               <section id="what-to-skip" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What not to waste free time on</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What not to waste free time on</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Skip purchased link packages, fake GBP addresses, mass AI pages with no proof, and fifty duplicate city URLs. They create cleanup costs later. Also skip stacking overlapping free trials you will not action—one disciplined month on Search Console beats three unused dashboards.
                 </p>
               </section>
 
               <section id="when-to-pay" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When free stops being enough</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When free stops being enough</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Pay when competitor keyword lists, citation audits across many locations, or historical rank grids exceed manual capacity. Mid-market options like{" "}
                   <Link href={getSeoToolsReviewUrl("se-ranking")} className={link}>
@@ -243,8 +243,8 @@ export default function HowToOptimizeSeoForFreePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

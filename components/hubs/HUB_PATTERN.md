@@ -26,7 +26,7 @@ All software category hub pages (e.g. `/payroll`, `/accounting`) use **`HubPageT
 3. Define category-specific data: `KEY_TAKEAWAYS`, `TOP_PICKS` (FeaturedPick[]), `TABLE_ROWS` (ComparisonTableRow[]), scenario links, trade/industry links, comparisons, `FAQ_ITEMS`, `METHODOLOGY_BULLETS`.
 4. Implement section components that match payroll/accounting structure:
    - `IntroExtended` — single `<p>` or fragment
-   - `HowToChooseSection` — HubSectionTitle + paragraph with links + two-column grid of bullets (use `linkGreen` for links)
+   - `HowToChooseSection` — HubSectionTitle + paragraph with links + two-column grid of bullets (use `linkGreen`, which is now indigo text)
    - `GuidesSection` — HubSectionTitle + grid of guide cards (same card classes as payroll) + "Read our full reviews" line only. Do not add a "More options" subsection.
    - `PopularComparisonsSection` — HubSectionTitle + pill links
    - `FinderForm` (optional) — form with category-relevant dropdowns + "See results" button (use `btnPrimary`, `selectClass`)
@@ -38,9 +38,10 @@ All software category hub pages (e.g. `/payroll`, `/accounting`) use **`HubPageT
 
 - Section padding: `py-8 sm:py-11` (or `py-6 sm:py-8` for best roundup block; `py-8 sm:py-10` for finder)
 - Container: `max-w-7xl px-4 sm:px-6 lg:px-8`
-- Section title: `text-2xl font-bold sm:text-3xl`, underline `h-[2px] w-14 bg-[#10B981]`
+- Section title: `text-brand text-2xl font-bold sm:text-3xl`, underline `h-[2px] w-14 bg-terracotta` (`sectionRuleAccent` in `lib/design-tokens.ts`)
 - Card: `rounded-xl border border-slate-200 bg-white p-5 shadow-sm`, grid `gap-4` or `gap-5` (picks use `gap-5`)
-- Background striping: alternate `bg-[#F8FAFC]` and `bg-white` by section
+- Background striping: alternate `bg-background` (very light sage) and `bg-white` by section
+- Links: `text-indigo`. Primary buttons: `bg-brand text-white hover:bg-brand-hover`. Focus rings: `ring-indigo` on light surfaces, `ring-white` on deep teal.
 - Pill links: `rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold`, gap `gap-2.5`
 
 ## Reference

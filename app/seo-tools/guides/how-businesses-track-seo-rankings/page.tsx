@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowBusinessesTrackSeoRankingsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Track SEO Rankings</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Track SEO Rankings</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Search Console, rank trackers, and local grids—what to measure, how often, and which KPIs matter beyond position. For tool tiers, see{" "}
                 <Link href="/seo-tools/guides/how-much-seo-software-costs" className={link}>
                   how much SEO software costs
@@ -115,15 +115,15 @@ export default function HowBusinessesTrackSeoRankingsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="three-layers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Three layers businesses combine</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Three layers businesses combine</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Effective rank tracking stacks complementary sources—not one dashboard pretending to show everything:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — How Google reports your average position and clicks for queries that actually triggered impressions.
+                    <strong className="text-brand">Search Console</strong> — How Google reports your average position and clicks for queries that actually triggered impressions.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Rank trackers</strong> — Scheduled checks for a defined keyword list (
+                    <strong className="text-brand">Rank trackers</strong> — Scheduled checks for a defined keyword list (
                     <Link href={getSeoToolsReviewUrl("se-ranking")} className={link}>
                       SE Ranking
                     </Link>
@@ -138,7 +138,7 @@ export default function HowBusinessesTrackSeoRankingsPage() {
                     ).
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local grids</strong> — Map Pack sampling by geography via{" "}
+                    <strong className="text-brand">Local grids</strong> — Map Pack sampling by geography via{" "}
                     <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
                       BrightLocal
                     </Link>{" "}
@@ -152,8 +152,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </section>
 
               <section id="search-console" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Start with Search Console for query reality</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Start with Search Console for query reality</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                     Google Search Console
@@ -166,8 +166,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </section>
 
               <section id="keyword-list" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Build a short, revenue-linked keyword list</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Build a short, revenue-linked keyword list</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Businesses that track everything track nothing useful. Curate keywords from{" "}
                   <Link href="/seo-tools/guides/how-businesses-find-seo-keywords" className={link}>
@@ -181,8 +181,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </section>
 
               <section id="local-grids" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local businesses add Map Pack grids selectively</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local businesses add Map Pack grids selectively</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Organic URL rank and Map Pack rank diverge—especially for &quot;near me&quot; queries. Grid tools sample positions across coordinates so you see whether you dominate your home ZIP but disappear five miles out. That informs service-area honesty and where to collect reviews and photos.
                 </p>
@@ -200,8 +200,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </section>
 
               <section id="cadence" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Set a cadence and tie movement to actions</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Set a cadence and tie movement to actions</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Weekly: scan priority keywords and GBP insights for anomalies. Monthly: review Search Console trends, note page changes shipped, and correlate with rank direction. Document what you changed—a new service section, citation cleanup, review push—so the team learns cause and effect.
                 </p>
@@ -215,8 +215,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
               </section>
 
               <section id="kpis" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Pair rankings with outcomes that pay bills</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Pair rankings with outcomes that pay bills</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Leadership should see clicks, calls, form fills, and booked jobs—not position #4 vs #6 alone. Tag lead sources in{" "}
                   <Link href="/crm" className={link}>
@@ -239,8 +239,8 @@ export default function HowBusinessesTrackSeoRankingsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

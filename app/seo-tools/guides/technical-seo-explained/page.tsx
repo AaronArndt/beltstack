@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Semrush", logoSrc: "/Logos/semrush.jpeg", rating: "4.6", bestFor: "Site audits and crawl reports", reviewHref: getSeoToolsReviewUrl("semrush") },
@@ -55,7 +55,7 @@ export default function TechnicalSeoExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                     <li aria-hidden>/</li>
                     <li><Link href="/seo-tools" className="text-gray-500 hover:text-gray-900">SEO Tools</Link></li>
@@ -66,10 +66,10 @@ export default function TechnicalSeoExplainedPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Technical SEO Explained
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Crawling, indexing, site health, and performance—the foundation that lets on-page content and local listings actually show up in search.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -77,8 +77,8 @@ export default function TechnicalSeoExplainedPage() {
 
                 <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
                   <section id="crawl-index" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Crawl, index, rank—in that order</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Crawl, index, rank—in that order</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Search engines discover URLs by crawling links and sitemaps, store eligible pages in an index, then rank them for queries. Technical SEO ensures the first two steps work. If a service page is blocked by robots.txt, noindexed by mistake, or only reachable through JavaScript Google struggles to render, content quality cannot save you.
                     </p>
@@ -92,20 +92,20 @@ export default function TechnicalSeoExplainedPage() {
                   </section>
 
                   <section id="core-areas" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Core technical areas SMBs should understand</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Core technical areas SMBs should understand</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <ul className="mt-4 list-disc space-y-2 pl-5">
-                      <li><strong className="text-[#1A2D48]">Indexation</strong> — Which URLs Google stores; fix coverage errors and accidental noindex.</li>
-                      <li><strong className="text-[#1A2D48]">Site architecture</strong> — Logical URLs, internal links, and shallow click depth to money pages.</li>
-                      <li><strong className="text-[#1A2D48]">Performance</strong> — Mobile speed and Core Web Vitals affect UX and rankings.</li>
-                      <li><strong className="text-[#1A2D48]">Security</strong> — HTTPS is baseline; mixed content and expired certificates break trust.</li>
-                      <li><strong className="text-[#1A2D48]">Structured data</strong> — LocalBusiness schema can clarify entity data when implemented correctly.</li>
+                      <li><strong className="text-brand">Indexation</strong> — Which URLs Google stores; fix coverage errors and accidental noindex.</li>
+                      <li><strong className="text-brand">Site architecture</strong> — Logical URLs, internal links, and shallow click depth to money pages.</li>
+                      <li><strong className="text-brand">Performance</strong> — Mobile speed and Core Web Vitals affect UX and rankings.</li>
+                      <li><strong className="text-brand">Security</strong> — HTTPS is baseline; mixed content and expired certificates break trust.</li>
+                      <li><strong className="text-brand">Structured data</strong> — LocalBusiness schema can clarify entity data when implemented correctly.</li>
                     </ul>
                   </section>
 
                   <section id="audit" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Audits: free first, paid when complexity grows</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Audits: free first, paid when complexity grows</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Start with Search Console coverage and page experience reports. Run a prioritized checklist from{" "}
                       <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -124,8 +124,8 @@ export default function TechnicalSeoExplainedPage() {
                   </section>
 
                   <section id="tools" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">How technical SEO tools help</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">How technical SEO tools help</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Crawlers simulate Googlebot, flag redirect chains, duplicate titles, and broken links. They do not replace Search Console for indexing truth. Read{" "}
                       <Link href="/seo-tools/guides/how-technical-seo-tools-work" className={link}>
@@ -136,8 +136,8 @@ export default function TechnicalSeoExplainedPage() {
                   </section>
 
                   <section id="local" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Technical SEO and local visibility</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Technical SEO and local visibility</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Map Pack rankings still depend on a crawlable site that reinforces GBP categories and services. Thin doorway city pages and duplicate templates trigger quality issues. Align technical health with{" "}
                       <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -148,8 +148,8 @@ export default function TechnicalSeoExplainedPage() {
                   </section>
 
                   <section id="fix-order" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Fix order that avoids wasted content spend</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Fix order that avoids wasted content spend</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       (1) Indexing and HTTPS. (2) Mobile speed on top landing pages. (3) URL and redirect hygiene after any rebrand. (4) On-page and GBP work. Skipping step one while blogging weekly is a common failure mode—see{" "}
                       <Link href="/seo-tools/guides/common-seo-myths-explained" className={link}>
@@ -161,8 +161,8 @@ export default function TechnicalSeoExplainedPage() {
                 </div>
 
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-                  <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                  <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+                  <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
                   <GuideFaqSection faqs={FAQ} />
                 </section>
               </div>

@@ -10,15 +10,15 @@ import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Freshdesk", logoSrc: HELPDESK_LOGOS.freshdesk, rating: "4.5", bestFor: "Best value for small teams", reviewHref: getHelpdeskReviewUrl("freshdesk") },
@@ -64,21 +64,21 @@ export default function BestHelpdeskForSmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Best Helpdesk Software for Small Business</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best Helpdesk Software for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Why small businesses move beyond email inboxes and basic contact forms, and which helpdesk tools offer the best ease of use, pricing, and team collaboration.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />
@@ -96,10 +96,10 @@ export default function BestHelpdeskForSmallBusinessPage() {
                 <section id="key-takeaways" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="What matters most when choosing a helpdesk as a small business.">Key takeaways</SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Ease of use</strong> — Your team should be able to triage and reply without lengthy training. Prefer simple shared-inbox or ticket workflows over heavy configuration.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Pricing</strong> — Look for free tiers or low per-agent cost. Freshdesk and Zoho Desk offer free plans; Help Scout and others have clear per-user pricing so you can budget.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Simple automation</strong> — Assignment rules, canned responses, and basic SLA reminders reduce manual work without requiring complex setup.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Team collaboration</strong> — Internal notes, @mentions, and a single view of each customer conversation help small teams stay aligned.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Ease of use</strong> — Your team should be able to triage and reply without lengthy training. Prefer simple shared-inbox or ticket workflows over heavy configuration.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Pricing</strong> — Look for free tiers or low per-agent cost. Freshdesk and Zoho Desk offer free plans; Help Scout and others have clear per-user pricing so you can budget.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Simple automation</strong> — Assignment rules, canned responses, and basic SLA reminders reduce manual work without requiring complex setup.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Team collaboration</strong> — Internal notes, @mentions, and a single view of each customer conversation help small teams stay aligned.</span></li>
                   </ul>
                 </section>
                 <section id="why-move-beyond-email" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -112,9 +112,9 @@ export default function BestHelpdeskForSmallBusinessPage() {
                 <section id="recommended-tools" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Top picks for small business helpdesk.">Recommended helpdesk tools for small business</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Freshdesk</strong> — Free tier and low per-agent cost; full ticketing, multi-channel, and automation. Good fit when you want real helpdesk features without paying Zendesk-level prices. Read our <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Help Scout</strong> — Email-first shared inbox with minimal complexity. Strong for teams that don’t need many channels and want quick adoption. See our <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Zoho Desk</strong> — Affordable per-agent pricing and free tier; fits especially well if you already use Zoho. Solid ticketing and automation. <Link href={getHelpdeskReviewUrl("zoho-desk")} className={linkGreen}>Zoho Desk review</Link>.</p>
+                    <p><strong className="text-brand">Freshdesk</strong> — Free tier and low per-agent cost; full ticketing, multi-channel, and automation. Good fit when you want real helpdesk features without paying Zendesk-level prices. Read our <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk review</Link>.</p>
+                    <p><strong className="text-brand">Help Scout</strong> — Email-first shared inbox with minimal complexity. Strong for teams that don’t need many channels and want quick adoption. See our <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout review</Link>.</p>
+                    <p><strong className="text-brand">Zoho Desk</strong> — Affordable per-agent pricing and free tier; fits especially well if you already use Zoho. Solid ticketing and automation. <Link href={getHelpdeskReviewUrl("zoho-desk")} className={linkGreen}>Zoho Desk review</Link>.</p>
                     <p>For more options, see our <Link href="/helpdesk/best-helpdesk-software" className={linkGreen}>best helpdesk software</Link> roundup and <Link href="/helpdesk/compare" className={linkGreen}>helpdesk comparisons</Link>.</p>
                   </div>
                 </section>

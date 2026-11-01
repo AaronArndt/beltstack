@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function TheMostEffectiveSeoTechniquesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">The Most Effective SEO Techniques</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">The Most Effective SEO Techniques</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Practical techniques that still work in 2026—indexed in order of leverage for busy owners and lean marketing teams. Pair with{" "}
                 <Link href="/seo-tools/guides/how-seo-works" className={link}>
                   how SEO works
@@ -123,8 +123,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="technique-mindset" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Effective SEO is a sequence, not a bag of tricks</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Effective SEO is a sequence, not a bag of tricks</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Lists of “hacks” fail because they ignore order. You cannot optimize titles on pages Google never indexed, and you should not buy link packages before your service pages answer real questions. Effective techniques stack: diagnose, align intent, prove trust, measure, repeat.
                 </p>
@@ -142,8 +142,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="technique-one-indexing" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technique 1: Make every money page indexable</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technique 1: Make every money page indexable</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   In Search Console, resolve “Discovered – currently not indexed,” soft 404s, and redirect chains on service URLs. Submit an accurate sitemap; use canonical tags on parameterized URLs. This technique has zero glamour and maximum leverage—unindexed pages are invisible.
                 </p>
@@ -157,8 +157,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="technique-two-intent-pages" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technique 2: One strong page per intent cluster</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technique 2: One strong page per intent cluster</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Build service pages that mirror how customers search: scope, pricing signals, service area, licensing, FAQs, and proof (photos, reviews, case snippets). Pull phrasing from Search Console queries instead of guessing keywords. Internal link from blog posts and location pages to the service URL you want to rank.
                 </p>
@@ -172,8 +172,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="technique-three-gbp" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technique 3: Treat GBP as a weekly conversion surface</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technique 3: Treat GBP as a weekly conversion surface</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Update categories and services to match your site, add geo-tagged job photos, respond to every review, and post short updates customers would care about—not keyword spam. GBP actions often beat blog volume for emergency and “near me” demand.
                 </p>
@@ -195,8 +195,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="technique-four-reviews-citations" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technique 4: Reviews and citations without spam</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technique 4: Reviews and citations without spam</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Ask satisfied customers for Google reviews at the moment of success—text or email with a direct link. Keep NAP consistent across directories you actually care about; fix drift after phone or address changes. Whitespark-style citation research beats blasting hundreds of junk listings.
                 </p>
@@ -210,8 +210,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="technique-five-measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technique 5: Close the loop with Search Console every month</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technique 5: Close the loop with Search Console every month</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Export queries gaining impressions; rewrite titles and meta where CTR lags peers. Note pages losing clicks despite stable positions—refresh content or add FAQ schema where appropriate. Tie landing-page improvements to form fills or calls in Analytics so SEO reports booked work, not vanity rankings.
                 </p>
@@ -229,8 +229,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
               </section>
 
               <section id="techniques-to-skip" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Techniques to skip in 2026</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Techniques to skip in 2026</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Doorway city pages with duplicate copy, exact-match domain gimmicks, automated AI pages with no editorial review, paid link networks, and GBP keyword stuffing in business names. They create short spikes and long cleanup. Effective SEO matches the ranking factors Google rewards over years—not hours.
                 </p>
@@ -238,8 +238,8 @@ export default function TheMostEffectiveSeoTechniquesPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

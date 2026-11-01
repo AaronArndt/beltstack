@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -69,7 +69,7 @@ export default function HowSeoWorksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -94,8 +94,8 @@ export default function HowSeoWorksPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Works</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Works</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Crawling, indexing, ranking, and the practical signals Google weighs when it decides what to show—explained without myth or guaranteed formulas. Pair this mental model with{" "}
                 <Link href="/seo-tools/guides/how-to-perform-seo" className={link}>
                   how to perform SEO
@@ -115,8 +115,8 @@ export default function HowSeoWorksPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="crawl-index-rank" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Crawl, index, rank: the search engine loop</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Crawl, index, rank: the search engine loop</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google discovers URLs by following links and sitemaps, then crawls HTML and resources. Worthy pages enter the index—a searchable catalog of content Google might show. At query time, Google retrieves candidates, scores them, and assembles the SERP you see—including featured snippets, Maps packs, and ads on many queries.
                 </p>
@@ -130,20 +130,20 @@ export default function HowSeoWorksPage() {
               </section>
 
               <section id="ranking-signals" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Ranking signals you can influence</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Ranking signals you can influence</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Relevance</strong> — Does the page clearly answer the query? Titles, headings, body copy, and structured data help Google match intent.
+                    <strong className="text-brand">Relevance</strong> — Does the page clearly answer the query? Titles, headings, body copy, and structured data help Google match intent.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Quality and trust</strong> — Accurate information, visible authorship or business identity, reviews, and reputable links signal legitimacy.
+                    <strong className="text-brand">Quality and trust</strong> — Accurate information, visible authorship or business identity, reviews, and reputable links signal legitimacy.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Usability</strong> — Mobile-friendly layout, reasonable load times, and safe HTTPS. Technical issues can suppress otherwise good content.
+                    <strong className="text-brand">Usability</strong> — Mobile-friendly layout, reasonable load times, and safe HTTPS. Technical issues can suppress otherwise good content.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Context</strong> — Device, location, and personalization change results. Two searchers rarely see identical SERPs for local or personalized queries.
+                    <strong className="text-brand">Context</strong> — Device, location, and personalization change results. Two searchers rarely see identical SERPs for local or personalized queries.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -164,8 +164,8 @@ export default function HowSeoWorksPage() {
               </section>
 
               <section id="local-mechanics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How local SEO works differently</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How local SEO works differently</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   For many service queries, Google blends organic results with a Map Pack tied to Google Business Profile listings. Proximity matters: a strong plumber three miles away may outrank a weaker one across town. Prominence—reviews, links, and brand search—helps you compete beyond pure distance.
                 </p>
@@ -195,8 +195,8 @@ export default function HowSeoWorksPage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How to measure whether SEO is working</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How to measure whether SEO is working</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rankings alone mislead—personalization and SERP features shift daily. Better metrics: organic impressions and clicks in Search Console, conversions from organic landing pages, call and form volume from local listings, and branded search growth over quarters.
                 </p>
@@ -218,8 +218,8 @@ export default function HowSeoWorksPage() {
               </section>
 
               <section id="myths" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What SEO is not</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What SEO is not</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO is not a one-time plugin install, keyword density math, or buying bulk links. It is not instant, and no tool grants immunity from Google guidelines. Algorithm updates reward sites that consistently improve usefulness—not tactics designed to exploit loopholes.
                 </p>
@@ -238,8 +238,8 @@ export default function HowSeoWorksPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

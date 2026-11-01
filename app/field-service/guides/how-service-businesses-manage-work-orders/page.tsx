@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -77,11 +77,11 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -112,10 +112,10 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Service Businesses Manage Work Orders
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how service businesses manage work orders from intake through completion, documentation, and
                     billing handoff—without losing detail between office and field.
                   </p>
@@ -180,38 +180,38 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Standard intake fields</strong> — customer, site, scope,
+                          <strong className="text-brand">Standard intake fields</strong> — customer, site, scope,
                           priority, and access notes captured on every call or booking.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">One job, one record</strong> — avoid duplicate tickets when
+                          <strong className="text-brand">One job, one record</strong> — avoid duplicate tickets when
                           dispatch or sales re-enters the same visit.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Estimate or contract context</strong> — link approved quotes
+                          <strong className="text-brand">Estimate or contract context</strong> — link approved quotes
                           so technicians know what was sold.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Equipment and asset tags</strong> — serial numbers and prior
+                          <strong className="text-brand">Equipment and asset tags</strong> — serial numbers and prior
                           history visible before the truck rolls.
                         </span>
                       </li>
@@ -248,17 +248,17 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">En route</strong> — triggers ETA messages and board updates.
+                        <strong className="text-brand">En route</strong> — triggers ETA messages and board updates.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">On site</strong> — starts labor timers and confirms access.
+                        <strong className="text-brand">On site</strong> — starts labor timers and confirms access.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Waiting on parts or approval</strong> — pauses the job without
+                        <strong className="text-brand">Waiting on parts or approval</strong> — pauses the job without
                         losing context.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Complete</strong> — photos, signatures, and parts used belong
+                        <strong className="text-brand">Complete</strong> — photos, signatures, and parts used belong
                         on the work order before the crew leaves.
                       </li>
                     </ol>
@@ -290,29 +290,29 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Review rules</strong> — define who approves completed jobs
+                          <strong className="text-brand">Review rules</strong> — define who approves completed jobs
                           before invoice: office manager, owner, or automated thresholds for small tickets.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Line-item sync</strong> — approved labor, parts, and fees on
+                          <strong className="text-brand">Line-item sync</strong> — approved labor, parts, and fees on
                           the work order become invoice lines without re-keying.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Customer communication</strong> — completion summaries and
+                          <strong className="text-brand">Customer communication</strong> — completion summaries and
                           pay links tied to the same job record—see{" "}
                           <Link
                             href="/field-service/guides/how-field-service-software-improves-customer-communication"
@@ -356,29 +356,29 @@ export default function HowServiceBusinessesManageWorkOrdersPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Templates</strong> — standard checklists and line items
+                          <strong className="text-brand">Templates</strong> — standard checklists and line items
                           pre-loaded for tune-ups and inspections.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Auto-generation</strong> — upcoming visits appear on the
+                          <strong className="text-brand">Auto-generation</strong> — upcoming visits appear on the
                           schedule before customers call to ask why nobody showed.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Upsell hooks</strong> — findings on one visit create new
+                          <strong className="text-brand">Upsell hooks</strong> — findings on one visit create new
                           work orders without losing the maintenance thread.
                         </span>
                       </li>

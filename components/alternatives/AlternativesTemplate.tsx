@@ -12,7 +12,7 @@ import { sectionRuleAccent, tableBodyRow, tableHeadRow, tableShell } from "@/lib
 import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 export type AlternativesTopPick = {
   slug: string;
@@ -96,9 +96,9 @@ const DEFAULT_RELATED_COMPARISON_SUMMARY =
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -166,15 +166,15 @@ export function AlternativesTemplate({
                 />
               </div>
             )}
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {title}
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               {subtitle}
             </p>
-            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[#57534E]">{AFFILIATE_DISCLOSURE}</p>
-            <p className="mt-4 text-sm text-[#57534E]">
-              <Link href={originalReviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-muted-foreground">{AFFILIATE_DISCLOSURE}</p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <Link href={originalReviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 Read our {productName} review
               </Link>
               {" "}for full details on features, pricing, and pros and cons.
@@ -193,7 +193,7 @@ export function AlternativesTemplate({
             <SectionTitle sub="Who should switch and which alternative fits best.">
               Quick answer
             </SectionTitle>
-            <div className="mt-4 space-y-3 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <div className="mt-4 space-y-3 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               {quickAnswerParagraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
@@ -207,10 +207,10 @@ export function AlternativesTemplate({
             <SectionTitle sub="Common reasons teams look for a change.">
               Why people look for {productName} alternatives
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               {whyPeopleLookForAlternatives.map((block, i) => (
                 <div key={i}>
-                  <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
+                  <h3 className="font-bold text-brand text-base">{block.heading}</h3>
                   <p className="mt-1">{block.body}</p>
                 </div>
               ))}
@@ -249,34 +249,34 @@ export function AlternativesTemplate({
                   >
                     <div className="flex flex-wrap items-center gap-2">
                       <img src={alt.logoSrc} alt="" className="h-10 w-auto max-w-[100px] object-contain" />
-                      <span className="text-[#10B981] font-bold">{alt.rating}</span>
+                      <span className="text-brand font-bold">{alt.rating}</span>
                       {alt.startingPrice && (
-                        <span className="rounded-md border border-stone-200 bg-white px-2 py-0.5 text-xs font-medium text-[#57534E]">
+                        <span className="rounded-md border border-stone-200 bg-white px-2 py-0.5 text-xs font-medium text-muted-foreground">
                           {alt.startingPrice}
                         </span>
                       )}
                     </div>
-                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold">
+                    <h3 className="mt-3 text-brand text-xl font-bold">
                       <Link
                         href={alt.reviewHref}
-                        className="hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         {alt.name}
                       </Link>
                     </h3>
-                    <p className="mt-1 text-[#57534E] text-sm font-medium">Best for: {alt.bestFor}</p>
-                    <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{alt.description}</p>
+                    <p className="mt-1 text-muted-foreground text-sm font-medium">Best for: {alt.bestFor}</p>
+                    <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{alt.description}</p>
                     <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-stone-200 pt-4">
                       <Link
                         href={alt.reviewHref}
-                        className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Read review →
                       </Link>
                       {alt.compareHref && (
                         <Link
                           href={alt.compareHref}
-                          className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Compare →
                         </Link>
@@ -299,33 +299,33 @@ export function AlternativesTemplate({
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className={tableHeadRow}>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Software</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Software</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
                     {showPayrollTypesColumn && (
-                      <th className="px-4 py-3 font-bold text-[#1A2D48]">Payroll types</th>
+                      <th className="px-4 py-3 font-bold text-brand">Payroll types</th>
                     )}
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Standout feature</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Standout feature</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
                   {pricedTableRows.map((row) => (
                     <tr key={row.slug} className={tableBodyRow}>
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.startingPrice}</td>
                       {showPayrollTypesColumn && (
-                        <td className="px-4 py-4 text-[#57534E]">{row.payrollTypes ?? "—"}</td>
+                        <td className="px-4 py-4 text-muted-foreground">{row.payrollTypes ?? "—"}</td>
                       )}
-                      <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
-                        <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={row.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -346,17 +346,17 @@ export function AlternativesTemplate({
             <div className="mt-4 space-y-8">
               {detailedAlternatives.map((block, i) => (
                 <div key={i} id={`alt-${block.productName.toLowerCase().replace(/\s+/g, "-")}`}>
-                  <h3 className="text-[#1A2D48] text-lg font-bold">{block.productName}</h3>
-                  <p className="mt-1 font-medium text-[#57534E] text-sm">{block.heading}</p>
-                  <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{block.body}</p>
+                  <h3 className="text-brand text-lg font-bold">{block.productName}</h3>
+                  <p className="mt-1 font-medium text-muted-foreground text-sm">{block.heading}</p>
+                  <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{block.body}</p>
                   <p className="mt-3">
-                    <Link href={block.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    <Link href={block.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                       Read {block.productName} review
                     </Link>
                     {block.compareHref && (
                       <>
                         {" · "}
-                        <Link href={block.compareHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={block.compareHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Compare
                         </Link>
                       </>
@@ -374,10 +374,10 @@ export function AlternativesTemplate({
             <SectionTitle sub="What to look for when comparing options.">
               How to choose the right alternative
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               {howToChoose.map((block, i) => (
                 <div key={i}>
-                  <h3 className="font-bold text-[#1A2D48] text-base">{block.heading}</h3>
+                  <h3 className="font-bold text-brand text-base">{block.heading}</h3>
                   <p className="mt-1">{block.body}</p>
                 </div>
               ))}
@@ -402,7 +402,7 @@ export function AlternativesTemplate({
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                     >
                       {showLogoRow && (
                         <div className="flex items-center gap-3">
@@ -411,7 +411,7 @@ export function AlternativesTemplate({
                             alt=""
                             className="h-10 w-auto max-w-[80px] object-contain object-left"
                           />
-                          <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                          <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                             vs
                           </span>
                           <img
@@ -422,14 +422,14 @@ export function AlternativesTemplate({
                         </div>
                       )}
                       <h3
-                        className={`text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981] ${
+                        className={`text-brand text-xl font-bold group-hover:text-indigo ${
                           showLogoRow ? "mt-3" : ""
                         }`}
                       >
                         {item.label}
                       </h3>
-                      <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-                      <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                      <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+                      <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                         Compare →
                       </span>
                     </Link>
@@ -446,10 +446,10 @@ export function AlternativesTemplate({
             <SectionTitle sub="More ways to explore.">
               Related resources
             </SectionTitle>
-            <ul className="mt-4 space-y-2 text-sm text-[#57534E] leading-relaxed">
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
               {relatedResources.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href={link.href} className="font-semibold text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     {link.label}
                   </Link>
                 </li>

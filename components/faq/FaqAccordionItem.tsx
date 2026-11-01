@@ -26,7 +26,7 @@ export function FaqAccordionItem({
   isFirst,
   isLast,
   itemClassName = "border-b border-stone-200 last:border-b-0",
-  answerClassName = "text-[#57534E] text-sm leading-relaxed",
+  answerClassName = "text-muted-foreground text-sm leading-relaxed",
 }: FaqAccordionItemProps) {
   const baseId = useId();
   const panelId = `${baseId}-faq-panel`;
@@ -48,17 +48,17 @@ export function FaqAccordionItem({
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className={`flex min-h-[52px] w-full items-center justify-between gap-4 px-5 py-3 text-left transition-[background-color,box-shadow] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:px-6 ${topRadius} ${bottomRadiusWhenClosed} ${
+        className={`flex min-h-[52px] w-full items-center justify-between gap-4 px-5 py-3 text-left transition-[background-color,box-shadow] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 sm:px-6 ${topRadius} ${bottomRadiusWhenClosed} ${
           isOpen
-            ? "bg-[#E7F8F2]"
+            ? "bg-sage"
             : showGreenOutline
-              ? "bg-[#E7F8F2] shadow-[inset_0_0_0_1px_#10B981]"
-              : "bg-white hover:bg-[#E7F8F2]"
+              ? "bg-sage shadow-[inset_0_0_0_1px_var(--indigo)]"
+              : "bg-white hover:bg-sage"
         }`}
       >
-        <span className="font-semibold text-[#1A2D48] text-sm sm:text-base">{question}</span>
+        <span className="font-semibold text-brand text-sm sm:text-base">{question}</span>
         <svg
-          className={`h-5 w-5 shrink-0 text-[#57534E] transition-transform duration-200 ease-out ${
+          className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ease-out ${
             isOpen ? "-rotate-180" : ""
           }`}
           viewBox="0 0 24 24"

@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl, getFieldServiceCompareUrl } from "@/lib/route
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,11 +67,11 @@ export default function FieldServiceSoftwareForPlumbingPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -80,7 +80,7 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -89,7 +89,7 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -102,10 +102,10 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software for Plumbing Businesses
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How plumbing companies use FSM tools to schedule jobs, dispatch plumbers, keep customers informed,
                     and turn every completed job into an invoice—without drowning in paperwork.
                   </p>
@@ -163,13 +163,13 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                     <p>Good scheduling for plumbers means:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>A clear calendar that shows each plumber’s day and open gaps.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Easy drag‑and‑drop reassignments when emergencies come in or jobs run long.</span>
@@ -193,13 +193,13 @@ export default function FieldServiceSoftwareForPlumbingPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>See their schedule and job details on their phone.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Add photos, notes, and parts used, and mark jobs complete from the field.</span>

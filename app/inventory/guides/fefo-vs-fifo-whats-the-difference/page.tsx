@@ -10,15 +10,15 @@ import { getInventoryReviewUrl, getInventoryCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const PAGE_HREF = "/inventory/guides/fefo-vs-fifo-whats-the-difference";
 
@@ -56,21 +56,21 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Home
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Inventory Management
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Guides
                       </Link>
                     </li>
@@ -81,10 +81,10 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     FEFO vs FIFO: What&apos;s the Difference?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     First expired, first out vs first in, first out—when to use each rotation method, how they affect
                     waste and compliance, and what inventory software must track for dated stock.
                   </p>
@@ -140,7 +140,7 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
                   <SectionTitle sub="Oldest receipt first—simple and common.">FIFO Explained</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">First in, first out (FIFO)</strong> consumes or ships stock in the
+                      <strong className="text-brand">First in, first out (FIFO)</strong> consumes or ships stock in the
                       order it was received. It is easy to explain to warehouse staff, aligns with many accounting COGS
                       methods, and prevents dusty oldest cartons from sitting indefinitely—for products where time on shelf
                       is roughly correlated with receipt order.
@@ -156,7 +156,7 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
                   <SectionTitle sub="Earliest expiry wins the pick.">FEFO Explained</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">First expired, first out (FEFO)</strong> directs picks to the lot
+                      <strong className="text-brand">First expired, first out (FEFO)</strong> directs picks to the lot
                       with the soonest use-by or expiration date. A newer pallet with a later expiry may sit behind an older
                       lot that must ship first. Regulated categories and retail chargebacks make FEFO non-optional where dates
                       are on the label.
@@ -171,9 +171,9 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
                   <SectionTitle sub="Practical decision rules.">When to Use FIFO vs FEFO</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Use <strong className="text-[#1A2D48]">FEFO</strong> for food, beverages, nutraceuticals, cosmetics,
+                      Use <strong className="text-brand">FEFO</strong> for food, beverages, nutraceuticals, cosmetics,
                       chemicals with shelf stability, and any SKU with customer or regulator date requirements. Use{" "}
-                      <strong className="text-[#1A2D48]">FIFO</strong> for durable goods, most industrial MRO, and general
+                      <strong className="text-brand">FIFO</strong> for durable goods, most industrial MRO, and general
                       merchandise without expiry. Mixed warehouses should document zone rules so pickers do not apply FIFO
                       habits to cold-chain lanes.
                     </p>
@@ -191,19 +191,19 @@ export default function FefoVsFifoWhatsTheDifferencePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Mandatory expiry and lot on receipt for dated SKUs.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>FEFO pick suggestions and scan validation at pack stations.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Near-expiry reports for markdowns or donation before write-off.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Cycle counts by lot to catch hidden expired units in reserve locations.</span>
                       </li>
                     </ul>

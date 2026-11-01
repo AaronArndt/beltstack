@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -71,21 +71,21 @@ export default function ProjectManagementForConstructionAndContractorsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Home
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Project Management
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Guides
                       </Link>
                     </li>
@@ -96,10 +96,10 @@ export default function ProjectManagementForConstructionAndContractorsPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Project Management for Construction and Contractors
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How construction and trade businesses use PM software for jobs, crews, and handoffs—without drowning in
                     tools—and what to evaluate first when your work leaves the whiteboard.
                   </p>
@@ -145,29 +145,29 @@ export default function ProjectManagementForConstructionAndContractorsPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Job-centric visibility</strong> — Tasks and milestones grouped by
+                          <strong className="text-brand">Job-centric visibility</strong> — Tasks and milestones grouped by
                           project or phase, not only personal to-do lists, so the office and field align on priorities.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Accountability</strong> — Named owners and due dates reduce “I
+                          <strong className="text-brand">Accountability</strong> — Named owners and due dates reduce “I
                           thought someone else had it” when subs and internal crews overlap.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Documentation in context</strong> — Photos, specs, and change
+                          <strong className="text-brand">Documentation in context</strong> — Photos, specs, and change
                           notes stored on the job reduce disputes and speed closeout.
                         </span>
                       </li>
@@ -180,9 +180,9 @@ export default function ProjectManagementForConstructionAndContractorsPage() {
                   </SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Project management</strong> centers the plan: phases, tasks,
+                      <strong className="text-brand">Project management</strong> centers the plan: phases, tasks,
                       dependencies, and communication around delivering the job.{" "}
-                      <strong className="text-[#1A2D48]">Field service software</strong> centers execution in the field:
+                      <strong className="text-brand">Field service software</strong> centers execution in the field:
                       dispatch, work orders, technician routes, and often customer notifications—see our{" "}
                       <Link href="/field-service/guides/dispatch-and-capacity-planning-for-field-service" className={linkGreen}>
                         dispatch and capacity planning
@@ -202,38 +202,38 @@ export default function ProjectManagementForConstructionAndContractorsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Mobile experience</strong> — Can supers update tasks and upload
+                          <strong className="text-brand">Mobile experience</strong> — Can supers update tasks and upload
                           site photos without fighting the UI? Offline tolerance varies by product; test on real devices.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Permissions</strong> — Separate client-facing views from internal
+                          <strong className="text-brand">Permissions</strong> — Separate client-facing views from internal
                           punch lists if you collaborate with owners or architects.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Templates per job type</strong> — Residential remodel vs
+                          <strong className="text-brand">Templates per job type</strong> — Residential remodel vs
                           commercial TI vs service contracts should not be rebuilt from scratch every time.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Integrations</strong> — Accounting, estimating, CRM, or inventory
+                          <strong className="text-brand">Integrations</strong> — Accounting, estimating, CRM, or inventory
                           hooks reduce duplicate entry; confirm your stack is supported or API-accessible.
                         </span>
                       </li>

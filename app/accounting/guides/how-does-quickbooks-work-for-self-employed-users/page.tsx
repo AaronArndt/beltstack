@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/how-does-quickbooks-work-for-self-employed
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function HowDoesQuickBooksWorkForSelfEmployedUsersPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">QuickBooks Self-Employed</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Does QuickBooks Work for Self-Employed Users?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Expense tracking, mileage, invoicing, and tax prep for sole props—plus when to upgrade from Self-Employed to QuickBooks Online.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -80,7 +80,7 @@ export default function HowDoesQuickBooksWorkForSelfEmployedUsersPage() {
                       Self-employed owners—consultants, creatives, drivers, and side hustles—usually need three things from software: separate business money from personal spending, capture deductible expenses, and hand something readable to a CPA at tax time.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">QuickBooks for self-employed users centers on separating business money, capturing deductions, and preparing for Schedule C filing.</strong> Intuit&apos;s Self-Employed tier targets lighter workflows; <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> is the step up when you need full invoicing, bank reconciliation, and standard business reports.
+                      <strong className="text-brand">QuickBooks for self-employed users centers on separating business money, capturing deductions, and preparing for Schedule C filing.</strong> Intuit&apos;s Self-Employed tier targets lighter workflows; <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> is the step up when you need full invoicing, bank reconciliation, and standard business reports.
                     </p>
                     <p>
                       BeltStack reviews business accounting tools for owners—not tax software alone. Pair this guide with{" "}
@@ -94,10 +94,10 @@ export default function HowDoesQuickBooksWorkForSelfEmployedUsersPage() {
                   <SectionTitle sub="What self-employed users run monthly.">Typical Self-Employed Workflows</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Connect business bank and card feeds; tag transactions as business vs personal.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Log mileage and home office expenses where applicable.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Send invoices and track who paid you (stronger on QuickBooks Online).</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Export summaries for your CPA or TurboTax—confirm integration at purchase.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Connect business bank and card feeds; tag transactions as business vs personal.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Log mileage and home office expenses where applicable.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Send invoices and track who paid you (stronger on QuickBooks Online).</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Export summaries for your CPA or TurboTax—confirm integration at purchase.</span></li>
                     </ul>
                     <p>Cost: <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>what does QuickBooks cost per month</Link>. Worth it? <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks worth it</Link>.</p>
                   </div>
@@ -112,7 +112,7 @@ export default function HowDoesQuickBooksWorkForSelfEmployedUsersPage() {
                   <SectionTitle sub="Pick the SKU that matches your volume.">Self-Employed vs QuickBooks Online</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">QuickBooks Self-Employed</strong> fits lighter tracking—expenses, mileage, basic tax estimates—when you do not send many formal invoices or need full reconciliation. <strong className="text-[#1A2D48]">QuickBooks Online</strong> fits when you invoice clients, have multiple accounts, or want accountant-ready P&amp;L and balance sheet reports.
+                      <strong className="text-brand">QuickBooks Self-Employed</strong> fits lighter tracking—expenses, mileage, basic tax estimates—when you do not send many formal invoices or need full reconciliation. <strong className="text-brand">QuickBooks Online</strong> fits when you invoice clients, have multiple accounts, or want accountant-ready P&amp;L and balance sheet reports.
                     </p>
                     <p>
                       If you are unsure which side you are on, run a trial on the tier your CPA recommends. Pricing:{" "}
@@ -133,12 +133,12 @@ export default function HowDoesQuickBooksWorkForSelfEmployedUsersPage() {
                   <SectionTitle sub="Continue with these guides and reviews.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("freshbooks")} className={linkGreen}>FreshBooks review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-i-use-quickbooks-without-an-llc" className={linkGreen}>QuickBooks without an LLC</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingBestForUrl("freelancers")} className={linkGreen}>Best accounting for freelancers</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/cheapest-way-to-use-quickbooks" className={linkGreen}>Cheapest way to use QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("freshbooks")} className={linkGreen}>FreshBooks review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/can-i-use-quickbooks-without-an-llc" className={linkGreen}>QuickBooks without an LLC</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingBestForUrl("freelancers")} className={linkGreen}>Best accounting for freelancers</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/cheapest-way-to-use-quickbooks" className={linkGreen}>Cheapest way to use QuickBooks</Link></span></li>
                     </ul>
                   </div>
                 </section>

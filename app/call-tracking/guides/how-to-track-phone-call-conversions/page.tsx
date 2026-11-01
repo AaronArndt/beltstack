@@ -6,7 +6,7 @@ import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTra
 import { getCallTrackingBestForUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/how-to-track-phone-call-conversions";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -30,7 +30,7 @@ export default function HowToTrackPhoneCallConversionsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="min-w-0 max-w-[720px] pt-8 pb-16">
             <nav aria-label="Breadcrumb" className="pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -55,8 +55,8 @@ export default function HowToTrackPhoneCallConversionsPage() {
               </ol>
             </nav>
             <header className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Track Phone Call Conversions</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Track Phone Call Conversions</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 Define what counts as a qualified call, push outcomes into your CRM, and reconcile marketing sources with booked revenue—not raw ring volume. Start from our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
                   best call tracking software
@@ -81,8 +81,8 @@ export default function HowToTrackPhoneCallConversionsPage() {
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
-            <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-              <h2 className="text-[#1A2D48] text-xl font-bold">Define conversion stages</h2>
+            <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+              <h2 className="text-brand text-xl font-bold">Define conversion stages</h2>
               <p className="mt-2">
                 Start with a written definition: is a conversion a booked estimate, a qualified homeowner, or simply an answered call over 30 seconds? The tighter the definition, the more honest your
                 cost-per-acquisition math becomes. Track which lead sources are driving phone calls by pairing call data with{" "}
@@ -91,11 +91,11 @@ export default function HowToTrackPhoneCallConversionsPage() {
                 </Link>{" "}
                 you already pay for.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Wire CRM fields</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Wire CRM fields</h2>
               <p className="mt-2">
                 Every lead should carry a durable source value from call tracking or forms. Train reps to update outcomes within 24 hours so marketing sees lag but not permanent blind spots.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Close the loop monthly</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Close the loop monthly</h2>
               <p className="mt-2">
                 Compare spend, tracked calls, qualified leads, and booked jobs in one view. If a channel shows strong call volume but weak closes, fix scripts and targeting before increasing budget.
                 Pair with{" "}

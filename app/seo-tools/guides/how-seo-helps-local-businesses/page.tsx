@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowSeoHelpsLocalBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Helps Local Businesses</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Helps Local Businesses</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Why organic search matters for shops, clinics, and service companies—and what changes when geography is part of the query. For execution detail, see{" "}
                 <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
                   local SEO for service businesses
@@ -115,8 +115,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="discovery" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Discovery when customers search with intent</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Discovery when customers search with intent</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Local customers rarely browse randomly—they search with a problem, a place, and urgency. SEO helps your business appear in those moments on Google Maps, the local pack, and localized organic results. That is demand you did not pay per click to intercept, and it compounds as reviews, content, and listings strengthen over time.
                 </p>
@@ -130,8 +130,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </section>
 
               <section id="trust" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Trust signals that ads alone cannot fake</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Trust signals that ads alone cannot fake</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reviews, photos from real jobs, consistent business information across directories, and service pages that answer pre-call questions all reinforce credibility. Google weighs these heavily for local rankings; customers use them to choose between three similar listings. SEO work on GBP, citations, and on-site proof is reputation infrastructure—not a separate marketing project.
                 </p>
@@ -152,8 +152,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </section>
 
               <section id="website-role" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Your website closes the loop Maps starts</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Your website closes the loop Maps starts</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Many local journeys start on Maps and finish on your site—pricing context, insurance accepted, service area map, booking form. Thin or outdated pages lose clicks that GBP earned. Align categories and services on Google Business Profile with dedicated pages that load fast on mobile and match how people search in your city.
                 </p>
@@ -171,8 +171,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </section>
 
               <section id="economics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Economics: compounding leads vs rented attention</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Economics: compounding leads vs rented attention</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Paid ads stop delivering the moment you pause spend. Organic visibility decays slower when you maintain GBP, reviews, and core pages—labor and optional software replace per-click rent. That does not mean SEO is free; it means margin improves when cost per lead drops over a twelve-month horizon.
                 </p>
@@ -190,8 +190,8 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </section>
 
               <section id="research" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Research and competitive visibility</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Research and competitive visibility</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Local owners often guess which services to promote. SEO research—Search Console queries, competitor page gaps, local keyword modifiers—turns guesswork into a publishing queue. When manual research hits a wall,{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -206,29 +206,29 @@ export default function HowSeoHelpsLocalBusinessesPage() {
               </section>
 
               <section id="first-90-days" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">First 90 days: where local SEO help shows up fastest</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">First 90 days: where local SEO help shows up fastest</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Prioritize actions that move discovery and trust together:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Claim and complete GBP</strong> — Categories, services, photos, hours, and review responses weekly.
+                    <strong className="text-brand">Claim and complete GBP</strong> — Categories, services, photos, hours, and review responses weekly.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Fix NAP drift</strong> — One phone and address story across top directories and your site footer.
+                    <strong className="text-brand">Fix NAP drift</strong> — One phone and address story across top directories and your site footer.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Publish core service pages</strong> — Scope, area, proof, and FAQs—not ten thin city clones on day one.
+                    <strong className="text-brand">Publish core service pages</strong> — Scope, area, proof, and FAQs—not ten thin city clones on day one.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Measure in CRM</strong> — Source tags on calls and forms so you know SEO produced revenue, not just traffic.
+                    <strong className="text-brand">Measure in CRM</strong> — Source tags on calls and forms so you know SEO produced revenue, not just traffic.
                   </li>
                 </ul>
               </section>
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

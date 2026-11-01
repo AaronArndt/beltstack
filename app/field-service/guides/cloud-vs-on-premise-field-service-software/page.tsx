@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -59,20 +59,20 @@ export default function CloudVsOnPremiseFieldServiceSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Field Service</Link></li>
+                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Field Service</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Cloud vs On-Premise Field Service Software</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Cloud vs On-Premise Field Service Software</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Cloud vs On-Premise Field Service Software</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Compare cloud and on-premise field service software on deployment speed, mobile access, IT ownership, and total cost—so hosting supports dispatch instead of blocking it.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -112,20 +112,20 @@ export default function CloudVsOnPremiseFieldServiceSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Faster go-live</strong> — sign up, import customers, train dispatch in days not quarters.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Faster go-live</strong> — sign up, import customers, train dispatch in days not quarters.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Native mobile apps</strong> — built for offline job sites and app store updates.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Native mobile apps</strong> — built for offline job sites and app store updates.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Subscription predictability</strong> — opex instead of capital hardware cycles.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Subscription predictability</strong> — opex instead of capital hardware cycles.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Ecosystem integrations</strong> — accounting, payments, and CRM connectors maintained by vendors.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Ecosystem integrations</strong> — accounting, payments, and CRM connectors maintained by vendors.</span>
                       </li>
                     </ul>
                     <p>
@@ -146,20 +146,20 @@ export default function CloudVsOnPremiseFieldServiceSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Data residency mandates</strong> — contractual or regulatory requirements to keep data in-house.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Data residency mandates</strong> — contractual or regulatory requirements to keep data in-house.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Legacy IT standards</strong> — existing VMware or SQL operations teams prefer to own the stack.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Legacy IT standards</strong> — existing VMware or SQL operations teams prefer to own the stack.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Customization depth</strong> — heavy bespoke workflows sometimes pair with self-managed hosting.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Customization depth</strong> — heavy bespoke workflows sometimes pair with self-managed hosting.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Long procurement cycles</strong> — capital budgets versus monthly SaaS subscriptions.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Long procurement cycles</strong> — capital budgets versus monthly SaaS subscriptions.</span>
                       </li>
                     </ul>
                     <p>
@@ -200,16 +200,16 @@ export default function CloudVsOnPremiseFieldServiceSoftwarePage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">List non-negotiables</strong> — residency, audit requirements, approved vendor lists.
+                        <strong className="text-brand">List non-negotiables</strong> — residency, audit requirements, approved vendor lists.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Model total cost</strong> — subscription or licenses plus servers, backups, and admin hours.
+                        <strong className="text-brand">Model total cost</strong> — subscription or licenses plus servers, backups, and admin hours.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Trial mobile on live jobs</strong> — offline, photos, and status sync from the field.
+                        <strong className="text-brand">Trial mobile on live jobs</strong> — offline, photos, and status sync from the field.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Validate integrations</strong> — accounting, payments, and CRM handoffs your finance team needs.
+                        <strong className="text-brand">Validate integrations</strong> — accounting, payments, and CRM handoffs your finance team needs.
                       </li>
                     </ol>
                     <p>

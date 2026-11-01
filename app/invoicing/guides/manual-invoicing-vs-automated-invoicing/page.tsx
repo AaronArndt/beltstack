@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -57,19 +57,19 @@ export default function ManualInvoicingVsAutomatedInvoicingPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Manual Invoicing vs Automated Invoicing</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Manual Invoicing vs Automated Invoicing</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Manual Invoicing vs Automated Invoicing</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Compare manual invoicing and automated invoicing—pros, cons, hybrid models, and a decision framework for team size, volume, and cash flow goals.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -103,8 +103,8 @@ export default function ManualInvoicingVsAutomatedInvoicingPage() {
                     <p>
                       Manual invoicing usually means Word templates, PDFs, spreadsheets, or basic email attachments without workflow software. It is common in the first months of a business or for highly bespoke professional services.
                     </p>
-                    <p><strong className="text-[#1A2D48]">Pros:</strong> low setup cost, flexible for one-off custom billing, easy to start with minimal tooling, and full control over every line on unusual projects.</p>
-                    <p><strong className="text-[#1A2D48]">Cons:</strong> inconsistent formatting, missed reminders, slower reconciliation, no central status view, and higher risk of data entry mistakes as volume grows.</p>
+                    <p><strong className="text-brand">Pros:</strong> low setup cost, flexible for one-off custom billing, easy to start with minimal tooling, and full control over every line on unusual projects.</p>
+                    <p><strong className="text-brand">Cons:</strong> inconsistent formatting, missed reminders, slower reconciliation, no central status view, and higher risk of data entry mistakes as volume grows.</p>
                     <p>
                       Manual processes break down when more than one person sends invoices or when customers expect online payment links and predictable reminders. See{" "}
                       <Link href="/invoicing/guides/common-invoice-mistakes-small-businesses-make" className={linkGreen}>common invoice mistakes small businesses make</Link>{" "}
@@ -118,10 +118,10 @@ export default function ManualInvoicingVsAutomatedInvoicingPage() {
                     <p>
                       Automated invoicing uses dedicated software to generate invoices from templates or source data, send on schedule, trigger reminders, accept online payments, and sync status to accounting.
                     </p>
-                    <p><strong className="text-[#1A2D48]">Pros:</strong> faster billing cycles, standardized documents, automated reminders, better payment tracking, cleaner reporting, and less time on{" "}
+                    <p><strong className="text-brand">Pros:</strong> faster billing cycles, standardized documents, automated reminders, better payment tracking, cleaner reporting, and less time on{" "}
                       <Link href="/invoicing/guides/how-businesses-reconcile-invoices-and-payments" className={linkGreen}>reconciliation</Link>{" "}
                       when payments auto-apply.</p>
-                    <p><strong className="text-[#1A2D48]">Cons:</strong> setup time, subscription cost, learning curve for staff, and need for process governance on exceptions and credits.</p>
+                    <p><strong className="text-brand">Cons:</strong> setup time, subscription cost, learning curve for staff, and need for process governance on exceptions and credits.</p>
                     <p>
                       Compare tools on{" "}
                       <Link href="/invoicing/compare" className={linkGreen}>invoicing software comparisons</Link>{" "}
@@ -139,10 +139,10 @@ export default function ManualInvoicingVsAutomatedInvoicingPage() {
                       Automate when the cost of delays—late cash, errors, admin hours—exceeds software subscription and setup time. You do not need enterprise volume to benefit; a solo consultant with 15 monthly retainers often gains more from reminders and payment links than from another hour of manual chasing.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>You send more than 20–30 invoices per month.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>You run recurring retainers or maintenance plans.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Late payments are increasing despite good service delivery.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconciliation and close take multiple days each month.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>You send more than 20–30 invoices per month.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>You run recurring retainers or maintenance plans.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Late payments are increasing despite good service delivery.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconciliation and close take multiple days each month.</span></li>
                     </ul>
                     <p>
                       If you are switching platforms, see{" "}

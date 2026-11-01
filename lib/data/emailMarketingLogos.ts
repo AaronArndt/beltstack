@@ -13,7 +13,7 @@ export const EMAIL_MARKETING_LOGOS: Record<string, string> = {
   mailerlite: "/Logos/mailerlite.jpeg",
 };
 
-const FALLBACK_LOGO = "/Logos/BS_Logo_B.svg";
+const FALLBACK_LOGO = "/Logos/BS_Logo_GreenWhite.png";
 
 export function emailMarketingLogoForSlug(slug: string): string {
   return EMAIL_MARKETING_LOGOS[slug] ?? FALLBACK_LOGO;

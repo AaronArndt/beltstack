@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function WhySeoIsExpensivePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function WhySeoIsExpensivePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Why SEO Is Expensive</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Why SEO Is Expensive</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 SEO feels costly because it bundles ongoing labor, competitive markets, and trust assets—not because a single tool invoice is large. Put pricing in context with{" "}
                 <Link href="/seo-tools/guides/seo-pricing-explained" className={link}>
                   SEO pricing explained
@@ -115,8 +115,8 @@ export default function WhySeoIsExpensivePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="labor-not-logos" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Labor—not logos—drives most of the bill</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Labor—not logos—drives most of the bill</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   A Semrush or Ahrefs subscription is visible on a card statement; the hours to fix crawl errors, rewrite service pages, respond to reviews, and coordinate photos are not. Those hours repeat monthly because competitors also improve—and Google&apos;s bar for helpful content rises.
                 </p>
@@ -130,8 +130,8 @@ export default function WhySeoIsExpensivePage() {
               </section>
 
               <section id="compounding-work" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">SEO is compounding work, not a one-time purchase</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">SEO is compounding work, not a one-time purchase</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Unlike a brochure redesign, SEO does not finish. Search Console surfaces new queries; competitors publish; listings drift after phone changes. Stopping work for six months often erases momentum—especially in local Map Pack markets where reviews and photos need freshness.
                 </p>
@@ -145,8 +145,8 @@ export default function WhySeoIsExpensivePage() {
               </section>
 
               <section id="competition" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Competition raises the minimum viable program</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Competition raises the minimum viable program</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   In saturated metros, thin service pages and stale GBP profiles lose to operators with proof, video, and consistent review velocity. Technical debt from an old WordPress theme can make even good copy invisible—run{" "}
                   <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -168,8 +168,8 @@ export default function WhySeoIsExpensivePage() {
               </section>
 
               <section id="tools-misread" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Why tool spend is a smaller slice than you think</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Why tool spend is a smaller slice than you think</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Stacking overlapping suites is an avoidable expense—see{" "}
                   <Link href="/seo-tools/guides/how-to-budget-for-seo-tools-and-subscriptions" className={link}>
@@ -188,8 +188,8 @@ export default function WhySeoIsExpensivePage() {
               </section>
 
               <section id="lower-cost-without-shortcuts" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Lower cost without toxic shortcuts</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Lower cost without toxic shortcuts</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Start with{" "}
                   <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
@@ -204,8 +204,8 @@ export default function WhySeoIsExpensivePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

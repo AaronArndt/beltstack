@@ -9,8 +9,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -82,22 +82,22 @@ export default function HowPrevailingWagePayrollWorksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link></li>
+                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How Prevailing Wage Payroll Works</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Prevailing Wage Payroll Works
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how prevailing wage payroll works in real operations, including classifications, fringe treatment, and compliance controls for covered jobs.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -110,9 +110,9 @@ export default function HowPrevailingWagePayrollWorksPage() {
                     </p>
                     <p>
                       This guide focuses on practical execution for construction and trade contractors. For related topics, see{" "}
-                      <Link href="/payroll/guides/how-certified-payroll-works" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">how certified payroll works</Link>{" "}
+                      <Link href="/payroll/guides/how-certified-payroll-works" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">how certified payroll works</Link>{" "}
                       and{" "}
-                      <Link href="/payroll/guides/payroll-for-construction-companies" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll for construction companies</Link>.
+                      <Link href="/payroll/guides/payroll-for-construction-companies" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll for construction companies</Link>.
                     </p>
                   </div>
                 </section>
@@ -121,9 +121,9 @@ export default function HowPrevailingWagePayrollWorksPage() {
                   <SectionTitle sub="The three controls that drive most compliance outcomes.">Prevailing Wage Payroll Basics</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Classification-specific rates</strong> must match the work performed, not just employee title.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Geography and determination rules</strong> control required rates by project and location.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Fringe handling</strong> must reconcile to benefit plans or cash-in-lieu calculations.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Classification-specific rates</strong> must match the work performed, not just employee title.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Geography and determination rules</strong> control required rates by project and location.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Fringe handling</strong> must reconcile to benefit plans or cash-in-lieu calculations.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -156,10 +156,10 @@ export default function HowPrevailingWagePayrollWorksPage() {
                   <SectionTitle sub="Process controls that keep weekly runs clean.">Operational Controls That Matter Most</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Maintain a current rate matrix by project and classification.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Require supervisor approval on coded time before payroll close.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Run exception reports for rates below required minimums.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Archive payroll support docs by project week for audits.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Maintain a current rate matrix by project and classification.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Require supervisor approval on coded time before payroll close.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Run exception reports for rates below required minimums.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Archive payroll support docs by project week for audits.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -169,7 +169,7 @@ export default function HowPrevailingWagePayrollWorksPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       Software should support job-level time imports, classification-aware reporting, reliable audit exports, and admin workflows that catch rate mismatches before checks are issued. Compare options in the{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparison hub</Link>{" "}
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparison hub</Link>{" "}
                       and validate workflows with real project data, not only demo scenarios.
                     </p>
                   </div>

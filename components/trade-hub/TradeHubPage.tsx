@@ -25,17 +25,17 @@ import { PRICING_STUDY_PATH } from "@/lib/research/pricing/publicationPaths";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -96,18 +96,18 @@ function CategoryStackGroup({
       className={`scroll-mt-section ${index > 0 ? "border-t border-neutral-200/60 pt-12 sm:pt-16" : ""}`}
     >
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-        <h3 className="min-w-0 text-xl font-bold leading-snug tracking-tight text-[#1A2D48] sm:text-2xl sm:leading-tight">
+        <h3 className="min-w-0 text-xl font-bold leading-snug tracking-tight text-brand sm:text-2xl sm:leading-tight">
           {item.heading}
         </h3>
         <Link
           href={preview.href}
-          className="shrink-0 text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded sm:pt-1"
+          className="shrink-0 text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded sm:pt-1"
           aria-label={hubAria}
         >
           {hubLabel}
         </Link>
       </div>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-[15px] sm:leading-relaxed">{item.body}</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-[15px] sm:leading-relaxed">{item.body}</p>
       <div className="mt-6 space-y-4">
         {picks.map(({ slug, pick }) => (
           <SoftwareRecommendationCard
@@ -158,10 +158,10 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <Breadcrumb items={[{ label: "Home", href: "/" }, { label: data.breadcrumbLabel }]} className="mb-4" />
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">{data.title}</h1>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">{data.intro}</p>
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">{data.title}</h1>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted-foreground">{data.intro}</p>
             {data.heroCategoryLine != null && data.heroCategoryLine.length > 0 && (
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#57534E]">{data.heroCategoryLine}</p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">{data.heroCategoryLine}</p>
             )}
             <div className={`mt-4 ${trustIndicatorListClass}`}>
               <span className="flex items-center gap-2">
@@ -183,14 +183,14 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             </div>
 
             <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-4 shadow-sm sm:p-5">
-              <h2 className="text-sm font-bold uppercase tracking-wide text-[#1A2D48]">Key takeaways</h2>
+              <h2 className="text-sm font-bold uppercase tracking-wide text-brand">Key takeaways</h2>
               <ul className="mt-3 space-y-2">
                 {data.keyTakeaways.map((item) => (
                   <li key={item.anchor} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
                     <a
                       href={item.anchor}
-                      className="text-sm font-medium text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      className="text-sm font-medium text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     >
                       {item.label}
                     </a>
@@ -207,7 +207,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={data.categoryStackSectionSub}>{data.categoryStackSectionTitle}</SectionTitle>
             {data.categoryStackIntro != null && data.categoryStackIntro.length > 0 && (
-              <p className="mt-1 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">{data.categoryStackIntro}</p>
+              <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">{data.categoryStackIntro}</p>
             )}
             <TradeHubStackSummary
               heading={`Recommended software stack for ${data.breadcrumbLabel}`}
@@ -236,8 +236,8 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             <div className="mt-8 max-w-3xl space-y-10">
               {data.useCases.map((block) => (
                 <div key={block.title}>
-                  <h3 className="text-lg font-bold text-[#1A2D48] sm:text-xl">{block.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#57534E] sm:text-base">{block.body}</p>
+                  <h3 className="text-lg font-bold text-brand sm:text-xl">{block.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">{block.body}</p>
                   <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                     {block.links.map((l) => (
                       <Link key={l.href + l.label} href={l.href} className={`text-sm ${linkGreen}`}>
@@ -257,8 +257,8 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             <div className="mt-6 space-y-8">
               {data.howToChooseSubsections.map((sub) => (
                 <div key={sub.title}>
-                  <h3 className="text-lg font-semibold text-[#1A2D48]">{sub.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#57534E] sm:text-base">{sub.body}</p>
+                  <h3 className="text-lg font-semibold text-brand">{sub.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{sub.body}</p>
                 </div>
               ))}
             </div>
@@ -272,8 +272,8 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
               <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {data.identitySegments.map((seg) => (
                   <div key={seg.title} className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-                    <h3 className="text-base font-bold text-[#1A2D48]">{seg.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{seg.body}</p>
+                    <h3 className="text-base font-bold text-brand">{seg.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{seg.body}</p>
                     <ul className="mt-3 space-y-1.5">
                       {seg.links.map((l) => (
                         <li key={l.href}>
@@ -296,7 +296,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
             <div className="mt-6 space-y-8">
               {data.nextStepsGroups.map((group) => (
                 <div key={group.groupTitle}>
-                  <h3 className="text-base font-semibold text-[#1A2D48]">{group.groupTitle}</h3>
+                  <h3 className="text-base font-semibold text-brand">{group.groupTitle}</h3>
                   <ul className="mt-3 space-y-3">
                     {group.links.map((l) => (
                       <li key={l.href}>
@@ -304,7 +304,7 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
                           {l.label}
                         </Link>
                         {l.description != null && l.description.length > 0 && (
-                          <p className="mt-1 text-sm text-[#57534E]">{l.description}</p>
+                          <p className="mt-1 text-sm text-muted-foreground">{l.description}</p>
                         )}
                       </li>
                     ))}
@@ -340,24 +340,24 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
           <section id="methodology" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <SectionTitle sub={data.methodologySub}>{data.methodologyTitle ?? "How we review"}</SectionTitle>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#57534E]">
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
                 {data.methodologyBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#10B981]" aria-hidden>
+                    <span className="text-indigo" aria-hidden>
                       •
                     </span>
                     {bullet}
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm leading-relaxed text-[#57534E]">
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 {AFFILIATE_DISCLOSURE}{" "}
                 <Link href="/methodology" className={`font-semibold ${linkGreen}`}>
                   Affiliate disclosure & methodology
                 </Link>
               </p>
               {["hvac", "plumbing", "general-contractors"].includes(data.slug) ? (
-                <p className="mt-3 text-sm leading-relaxed text-[#57534E]">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   For advertised vs usable list prices across field service, payroll, and related tools, see our{" "}
                   <Link href={PRICING_STUDY_PATH} className={`font-semibold ${linkGreen}`}>
                     service-business software pricing study
@@ -374,17 +374,17 @@ export function TradeHubPage({ data }: { data: TradeHubDefinition }) {
 
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="trade-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="trade-affiliate-title" className="text-lg font-bold text-[#1A2D48]">
+            <h3 id="trade-affiliate-title" className="text-lg font-bold text-brand">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#57534E]">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {AFFILIATE_DISCLOSURE}
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

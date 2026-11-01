@@ -20,9 +20,9 @@ const POPULAR_SLUGS = [
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -59,15 +59,15 @@ export default function EmailMarketingCompareHubPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/email-marketing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/email-marketing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Email Marketing
                   </Link>
                 </li>
@@ -77,31 +77,31 @@ export default function EmailMarketingCompareHubPage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Email Marketing Software Comparisons
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Side-by-side guidance on Mailchimp, ActiveCampaign, Klaviyo, Constant Contact, Kit, and Brevo—written for contractors and local service teams choosing automation depth, bundles, and follow-up realism.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Start from the{" "}
-              <Link href="/email-marketing/best-email-marketing-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/email-marketing/best-email-marketing-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 best email marketing software
               </Link>{" "}
               roundup when you want the full shortlist, or open{" "}
-              <Link href="/email-marketing/best-for" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/email-marketing/best-for" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 best email marketing by scenario
               </Link>{" "}
               when trade or list size is the primary lens. Route paid demand through{" "}
-              <Link href="/lead-generation" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/lead-generation" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 lead generation programs
               </Link>{" "}
               before you automate inbox follow-up, then keep contacts organized in your{" "}
-              <Link href="/crm" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/crm" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 CRM
               </Link>{" "}
               and capture subscribers from{" "}
-              <Link href="/website-builders" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/website-builders" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 website builders
               </Link>
               .
@@ -121,18 +121,18 @@ export default function EmailMarketingCompareHubPage() {
                   <Link
                     key={slug}
                     href={compareHref}
-                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       <img src={data.productA.logoSrc} alt="" className="h-10 w-auto max-w-[80px] object-contain object-left" />
-                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                      <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       <img src={data.productB.logoSrc} alt="" className="h-10 w-auto max-w-[80px] object-contain object-left" />
                     </div>
-                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{title}</h3>
-                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+                    <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">{title}</h3>
+                    <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+                    <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
                   </Link>
                 );
               })}
@@ -148,14 +148,14 @@ export default function EmailMarketingCompareHubPage() {
                 <div key={key} className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
                   <div className="flex items-center gap-3">
                     <img src={getLogoFromProductMap(PRODUCT_LOGO_BY_SLUG, key)} alt="" className="h-10 w-auto max-w-[80px] object-contain object-left" />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                    <h3 className="text-brand text-lg font-bold">Compare {label}</h3>
                   </div>
                   <ul className="mt-3 space-y-2">
                     {slugs.map(({ slug, label: linkLabel }) => (
                       <li key={slug}>
                         <Link
                           href={getEmailMarketingCompareUrlFromSlug(slug)}
-                          className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="text-sm font-medium text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           {linkLabel}
                         </Link>
@@ -171,16 +171,16 @@ export default function EmailMarketingCompareHubPage() {
         <section id="how-we-compare" className="scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Consistent criteria across matchups.">How We Compare Email Marketing Software</SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               We evaluate automation your office will actually maintain, integration fit with CRM and scheduling, and pricing signals at realistic list growth—not abstract enterprise MAP checklists disconnected from booked-job workflows.
             </p>
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               Read our{" "}
-              <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/methodology" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 methodology page
               </Link>{" "}
               or explore{" "}
-              <Link href="/email-marketing/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/email-marketing/guides" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 email marketing guides
               </Link>
               .

@@ -26,18 +26,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const timeTrackingPickRoutes = getSoftwarePickCategoryRoutes("time-tracking");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -54,11 +54,11 @@ export default function BestTimeTrackingSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -67,7 +67,7 @@ export default function BestTimeTrackingSoftwarePage() {
                 <li>
                   <Link
                     href="/time-tracking"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Time Tracking
                   </Link>
@@ -78,13 +78,13 @@ export default function BestTimeTrackingSoftwarePage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Time Tracking Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If labor time affects payroll and profitability, the best time tracking software should capture accurate hours and make timesheet review fast for managers and owners.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared time capture options, payroll sync, reporting, pricing, and usability so the Key Takeaways shortlist supports accurate tool selection.
             </p>
             <RoundupHubLinksBlurb categoryPath="/time-tracking" categoryLabel="time tracking software" />
@@ -133,11 +133,11 @@ export default function BestTimeTrackingSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Software</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Standout feature</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Software</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Standout feature</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -146,21 +146,21 @@ export default function BestTimeTrackingSoftwarePage() {
                       key={row.slug}
                       className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80"
                     >
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "time-tracking")}
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
                         <Link
                           href={row.reviewHref}
-                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Read review
                         </Link>
@@ -182,9 +182,9 @@ export default function BestTimeTrackingSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose time tracking software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Billable vs non-billable time</h3>
+                <h3 className="font-bold text-brand text-base">Billable vs non-billable time</h3>
                 <p className="mt-1">
                   If you bill clients for time, choose a tracker that makes it easy to separate billable work from internal or
                   admin time, set billable rates, and report on how much of your week is truly billable. This matters most for
@@ -192,31 +192,31 @@ export default function BestTimeTrackingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Team size and workflows</h3>
+                <h3 className="font-bold text-brand text-base">Team size and workflows</h3>
                 <p className="mt-1">
                   Solo users can often use simple timers and manual timesheets. Larger teams may need approvals, project-level
                   budgets, and utilization reporting. Make sure the tool scales from individuals to teams without adding friction.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Integrations with invoicing and accounting</h3>
+                <h3 className="font-bold text-brand text-base">Integrations with invoicing and accounting</h3>
                 <p className="mt-1">
                   Time tracking rarely stands alone. If you invoice from{" "}
-                  <Link href="/invoicing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/invoicing" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     invoicing software
                   </Link>{" "}
                   or close your books in{" "}
-                  <Link href="/accounting" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/accounting" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     accounting software
                   </Link>
                   , look for exports or direct integrations so billable hours flow into invoices and your books automatically.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Payroll and timesheets</h3>
+                <h3 className="font-bold text-brand text-base">Payroll and timesheets</h3>
                 <p className="mt-1">
                   If you use time tracking to support{" "}
-                  <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     payroll
                   </Link>
                   , confirm that the tool exports hours cleanly or integrates with your payroll provider. This is especially
@@ -224,7 +224,7 @@ export default function BestTimeTrackingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Monitoring vs lightweight tracking</h3>
+                <h3 className="font-bold text-brand text-base">Monitoring vs lightweight tracking</h3>
                 <p className="mt-1">
                   Tools like Toggl Track and Clockify focus on simple timers and reports. Monitoring-heavy tools like Hubstaff and
                   Time Doctor add screenshots, GPS, and activity scores. Decide how much oversight you really need and match the
@@ -232,7 +232,7 @@ export default function BestTimeTrackingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Pricing and feature depth</h3>
+                <h3 className="font-bold text-brand text-base">Pricing and feature depth</h3>
                 <p className="mt-1">
                   Many trackers offer free tiers or low-cost plans for small teams, then add approvals, monitoring, and advanced
                   reporting on higher tiers. Compare total cost at your team size and avoid paying for monitoring or features you
@@ -266,10 +266,10 @@ export default function BestTimeTrackingSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               <Link
                 href="/time-tracking/compare"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 View time tracking comparisons
               </Link>{" "}
@@ -277,7 +277,7 @@ export default function BestTimeTrackingSoftwarePage() {
               software works and how to track billable hours, see our{" "}
               <Link
                 href="/time-tracking/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 time tracking guides
               </Link>
@@ -288,7 +288,7 @@ export default function BestTimeTrackingSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -325,7 +325,7 @@ export default function BestTimeTrackingSoftwarePage() {
       {affiliateOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/60"
+            className="fixed inset-0 z-50 bg-brand/60"
             aria-hidden
             onClick={() => setAffiliateOpen(false)}
           />
@@ -335,10 +335,10 @@ export default function BestTimeTrackingSoftwarePage() {
             aria-labelledby="best-time-tracking-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-time-tracking-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-time-tracking-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

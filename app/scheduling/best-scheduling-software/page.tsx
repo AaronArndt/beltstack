@@ -26,18 +26,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const schedulingPickRoutes = getSoftwarePickCategoryRoutes("scheduling");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -54,11 +54,11 @@ export default function BestSchedulingSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -67,24 +67,24 @@ export default function BestSchedulingSoftwarePage() {
                 <li>
                   <Link
                     href="/scheduling"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Scheduling
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best Scheduling Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Scheduling Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you coordinate people and appointments, the best scheduling software should keep availability, bookings, and team workloads synchronized throughout the workweek.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared booking workflows, team availability controls, automation, pricing, and usability so the Key Takeaways shortlist is clear and actionable.
             </p>
             <RoundupHubLinksBlurb categoryPath="/scheduling" categoryLabel="scheduling software" />
@@ -133,11 +133,11 @@ export default function BestSchedulingSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -146,21 +146,21 @@ export default function BestSchedulingSoftwarePage() {
                       key={row.slug}
                       className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80"
                     >
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "scheduling")}
                       </td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
                           href={row.reviewHref}
-                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Read review
                         </Link>
@@ -182,9 +182,9 @@ export default function BestSchedulingSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose scheduling software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Calendar integrations</h3>
+                <h3 className="font-bold text-brand text-base">Calendar integrations</h3>
                 <p className="mt-1">
                   Your scheduling tool should sync with the calendar you actually use—Google, Outlook, or Apple. Check
                   that availability updates in real time so you never double-book, and that time zones are handled
@@ -192,7 +192,7 @@ export default function BestSchedulingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Booking automation</h3>
+                <h3 className="font-bold text-brand text-base">Booking automation</h3>
                 <p className="mt-1">
                   Look for a simple booking link or embed so clients can pick a slot without emailing back and forth.
                   Optional features like buffer time between appointments, minimum notice, and different meeting types
@@ -200,7 +200,7 @@ export default function BestSchedulingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Customer notifications</h3>
+                <h3 className="font-bold text-brand text-base">Customer notifications</h3>
                 <p className="mt-1">
                   Automated reminders (email and SMS) reduce no-shows. Confirm whether you can customize messages and
                   send confirmations and reminders at the right time. Some tools also support intake forms or
@@ -208,7 +208,7 @@ export default function BestSchedulingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Team scheduling</h3>
+                <h3 className="font-bold text-brand text-base">Team scheduling</h3>
                 <p className="mt-1">
                   If more than one person takes bookings, look for round-robin or collective availability so clients
                   book with “any available team member” or choose a specific person. Multi-staff and multi-location
@@ -216,7 +216,7 @@ export default function BestSchedulingSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Reporting and integrations</h3>
+                <h3 className="font-bold text-brand text-base">Reporting and integrations</h3>
                 <p className="mt-1">
                   Basic reporting on bookings, no-shows, and revenue helps you spot trends. Integrations with your CRM,
                   payment processor, or invoicing software keep everything in sync so you don’t re-enter data or miss
@@ -251,10 +251,10 @@ export default function BestSchedulingSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               <Link
                 href="/scheduling/compare"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 View scheduling comparisons
               </Link>{" "}
@@ -262,7 +262,7 @@ export default function BestSchedulingSoftwarePage() {
               buying advice, see our{" "}
               <Link
                 href="/scheduling/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 scheduling guides
               </Link>
@@ -273,7 +273,7 @@ export default function BestSchedulingSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -310,7 +310,7 @@ export default function BestSchedulingSoftwarePage() {
       {affiliateOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/60"
+            className="fixed inset-0 z-50 bg-brand/60"
             aria-hidden
             onClick={() => setAffiliateOpen(false)}
           />
@@ -320,10 +320,10 @@ export default function BestSchedulingSoftwarePage() {
             aria-labelledby="best-scheduling-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-scheduling-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-scheduling-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

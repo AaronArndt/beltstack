@@ -10,8 +10,8 @@ import { getAccountingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -71,11 +71,11 @@ export default function AccountingSoftwarePricingGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -84,7 +84,7 @@ export default function AccountingSoftwarePricingGuidePage() {
                     <li>
                       <Link
                         href="/accounting"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Accounting
                       </Link>
@@ -93,7 +93,7 @@ export default function AccountingSoftwarePricingGuidePage() {
                     <li>
                       <Link
                         href="/accounting/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -107,10 +107,10 @@ export default function AccountingSoftwarePricingGuidePage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Accounting Software Pricing Guide
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Understand how accounting software providers price their plans, what drives costs, and how to compare
                     options based on your budget.
                   </p>
@@ -129,28 +129,28 @@ export default function AccountingSoftwarePricingGuidePage() {
                       This guide walks through common pricing models, what drives cost, and how to compare tools like{" "}
                       <Link
                         href={getAccountingReviewUrl("wave")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Wave
                       </Link>
                       ,{" "}
                       <Link
                         href={getAccountingReviewUrl("quickbooks-online")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online
                       </Link>
                       , and{" "}
                       <Link
                         href={getAccountingReviewUrl("xero")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Xero
                       </Link>{" "}
                       so you can budget with fewer surprises. For side-by-side breakdowns, see our{" "}
                       <Link
                         href="/accounting/compare"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         accounting software comparisons
                       </Link>
@@ -168,38 +168,38 @@ export default function AccountingSoftwarePricingGuidePage() {
                     <p>Most accounting platforms use one or more of these models:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Tiered monthly plans</strong> — Different feature bundles
+                          <strong className="text-brand">Tiered monthly plans</strong> — Different feature bundles
                           (e.g. Simple Start, Essentials, Plus) at increasing price points.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Per-user pricing</strong> — Plans that increase in cost as
+                          <strong className="text-brand">Per-user pricing</strong> — Plans that increase in cost as
                           you add more staff, accountants, or external collaborators.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Usage-based or transaction-based fees</strong> — Extra
+                          <strong className="text-brand">Usage-based or transaction-based fees</strong> — Extra
                           charges for online payments, invoices beyond a certain limit, or additional entities.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Free core plans with paid add-ons</strong> — As with Wave,
+                          <strong className="text-brand">Free core plans with paid add-ons</strong> — As with Wave,
                           where accounting is free and revenue comes from payment processing and payroll.
                         </span>
                       </li>
@@ -216,25 +216,25 @@ export default function AccountingSoftwarePricingGuidePage() {
                     <p>Key cost drivers include:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Adding more users, accountants, or bookkeepers to your account.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Needing advanced modules like inventory, job costing, or multi-entity support.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Turning on add-ons such as payroll, bill pay automation, or advanced reporting.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Processing a high volume of card payments or ACH transfers through built-in processors.</span>
@@ -263,14 +263,14 @@ export default function AccountingSoftwarePricingGuidePage() {
                       and then compare how tools like Wave, FreshBooks, Zoho Books,{" "}
                       <Link
                         href={getAccountingReviewUrl("quickbooks-online")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online
                       </Link>{" "}
                       and{" "}
                       <Link
                         href={getAccountingReviewUrl("xero")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Xero
                       </Link>{" "}
@@ -280,14 +280,14 @@ export default function AccountingSoftwarePricingGuidePage() {
                       For more detailed matchups, check our{" "}
                       <Link
                         href="/accounting/compare/quickbooks-online-vs-xero"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online vs Xero
                       </Link>{" "}
                       and{" "}
                       <Link
                         href="/accounting/compare/quickbooks-online-vs-freshbooks"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online vs FreshBooks
                       </Link>{" "}

@@ -8,15 +8,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -70,11 +70,11 @@ export default function HowToChooseFieldServiceSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -83,7 +83,7 @@ export default function HowToChooseFieldServiceSoftwarePage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -92,7 +92,7 @@ export default function HowToChooseFieldServiceSoftwarePage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -104,10 +104,10 @@ export default function HowToChooseFieldServiceSoftwarePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose Field Service Management Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Key factors when comparing field service platforms: scheduling and dispatch, mobile apps, invoicing,
                     customer management, and pricing.
                   </p>
@@ -147,31 +147,31 @@ export default function HowToChooseFieldServiceSoftwarePage() {
                     <p>These factors apply to most contractors and service companies. Weight them by your trade and size.</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Scheduling and dispatch</strong> — You should be able to see
+                          <strong className="text-brand">Scheduling and dispatch</strong> — You should be able to see
                           the whole day or week at a glance, assign jobs to technicians, and avoid double‑booking. Drag‑and‑drop
                           scheduling, recurring jobs, and basic route optimization matter more as you add trucks.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Mobile experience</strong> — Techs should see their schedule,
+                          <strong className="text-brand">Mobile experience</strong> — Techs should see their schedule,
                           job notes, and customer details, and update status from the field. Offline support and easy photo
                           upload reduce call‑backs to the office.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Estimates, invoices, and payments</strong> — Look for built-in
+                          <strong className="text-brand">Estimates, invoices, and payments</strong> — Look for built-in
                           estimates and invoices, plus the ability to take card payments on‑site or online. If you use{" "}
                           <Link href="/accounting" className={linkGreen}>
                             accounting software
@@ -180,11 +180,11 @@ export default function HowToChooseFieldServiceSoftwarePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Customer and equipment history</strong> — Good FSM tools keep
+                          <strong className="text-brand">Customer and equipment history</strong> — Good FSM tools keep
                           job history, equipment details, and notes per customer or property so any tech can show up prepared,
                           even if they have never been to the site before.
                         </span>

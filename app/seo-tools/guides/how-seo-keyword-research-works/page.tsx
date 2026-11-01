@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowSeoKeywordResearchWorksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowSeoKeywordResearchWorksPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Keyword Research Works</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Keyword Research Works</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 From customer language to page types—intent, modifiers, free data, and when Semrush or Ahrefs earns a seat. For a local, budget-conscious workflow, see{" "}
                 <Link href="/seo-tools/guides/local-keyword-research-without-enterprise-tools" className={link}>
                   local keyword research without enterprise tools
@@ -111,8 +111,8 @@ export default function HowSeoKeywordResearchWorksPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="purpose" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Keyword research connects searches to pages</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Keyword research connects searches to pages</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Keyword research is not a spreadsheet hobby—it is how you decide what your site should say and which URLs deserve to exist. The output is structure: a service page for &quot;water heater replacement,&quot; not a blog post buried three clicks deep because the phrase looked popular nationally.
                 </p>
@@ -122,27 +122,27 @@ export default function HowSeoKeywordResearchWorksPage() {
               </section>
 
               <section id="intent" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Intent beats volume</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Intent beats volume</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Every query carries a job. Informational searches want explanations; commercial searches compare options; transactional and local searches want a provider now. Ranking a how-to article for a &quot;hire now&quot; query wastes effort even if volume looks attractive.
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Head service terms</strong> — &quot;AC repair,&quot; &quot;roof replacement&quot; → primary service pages with scope, pricing signals, and CTAs.
+                    <strong className="text-brand">Head service terms</strong> — &quot;AC repair,&quot; &quot;roof replacement&quot; → primary service pages with scope, pricing signals, and CTAs.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Problem modifiers</strong> — &quot;no hot water,&quot; &quot;leaking pipe&quot; → focused sections or FAQs on the right service URL.
+                    <strong className="text-brand">Problem modifiers</strong> — &quot;no hot water,&quot; &quot;leaking pipe&quot; → focused sections or FAQs on the right service URL.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Geo modifiers</strong> — City or neighborhood only when you can add unique proof, not duplicate clones.
+                    <strong className="text-brand">Geo modifiers</strong> — City or neighborhood only when you can add unique proof, not duplicate clones.
                   </li>
                 </ul>
               </section>
 
               <section id="sources" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Where keyword ideas come from</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Where keyword ideas come from</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Start with sources you already own:
                 </p>
@@ -154,13 +154,13 @@ export default function HowSeoKeywordResearchWorksPage() {
                     — Queries that already earn impressions reveal how Google maps your site today.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Sales and dispatch</strong> — Phrases customers use before they know your brand.
+                    <strong className="text-brand">Sales and dispatch</strong> — Phrases customers use before they know your brand.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Competitor pages</strong> — Services they highlight in nav and titles (manual review is fine early on).
+                    <strong className="text-brand">Competitor pages</strong> — Services they highlight in nav and titles (manual review is fine early on).
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Paid tools</strong> —{" "}
+                    <strong className="text-brand">Paid tools</strong> —{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>{" "}
@@ -181,8 +181,8 @@ export default function HowSeoKeywordResearchWorksPage() {
               </section>
 
               <section id="local" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local keyword research adds geography and urgency</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local keyword research adds geography and urgency</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Local research layers service names with proximity and immediacy—&quot;near me,&quot; same-day, and city names tied to areas you actually serve. Those phrases should align with GBP categories and{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -200,8 +200,8 @@ export default function HowSeoKeywordResearchWorksPage() {
               </section>
 
               <section id="page-mapping" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Map keywords to page types, not endless lists</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Map keywords to page types, not endless lists</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   After you cluster phrases, assign each cluster one primary URL type. One service page should own the head term; supporting FAQs handle long-tail questions without cannibalizing the main URL. Internal links from blog posts should point to money pages when the intent is commercial.
                 </p>
@@ -215,8 +215,8 @@ export default function HowSeoKeywordResearchWorksPage() {
               </section>
 
               <section id="prioritize" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Prioritize what you can prove and maintain</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Prioritize what you can prove and maintain</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Score opportunities by business value, not tool difficulty scores alone: margin on the service, current impression share in Search Console, competitive density, and whether you have photos, licenses, or reviews to support the page. Deprioritize cities you do not truly serve—even if volume looks tempting.
                 </p>
@@ -224,8 +224,8 @@ export default function HowSeoKeywordResearchWorksPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

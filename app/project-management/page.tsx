@@ -28,15 +28,15 @@ const KEY_TAKEAWAYS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -46,32 +46,32 @@ function ProjectManagementEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in project management software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when businesses choose tools to keep projects, tasks, and collaboration on track.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Ease of use</h3>
+            <h3 className="text-brand text-lg font-semibold">Ease of use</h3>
             <p className="mt-1.5">
               Your team will live in this tool every day. Look for a clean interface, simple task entry, and views that
               make it obvious what is due this week. If adoption feels hard in a trial, it will be harder after rollout.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Collaboration</h3>
+            <h3 className="text-brand text-lg font-semibold">Collaboration</h3>
             <p className="mt-1.5">
               Comments, file attachments, and notifications keep work out of scattered email threads. Make sure people
               can see context quickly—who owns a task, what was decided, and what is blocked.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Task and project views</h3>
+            <h3 className="text-brand text-lg font-semibold">Task and project views</h3>
             <p className="mt-1.5">
               Most teams need more than one view: a Kanban board for flow, a list for bulk edits, and a timeline or
               calendar for deadlines. Choose a tool that supports the views your team actually uses instead of forcing
@@ -79,7 +79,7 @@ function ProjectManagementEducationSection() {
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Automation</h3>
+            <h3 className="text-brand text-lg font-semibold">Automation</h3>
             <p className="mt-1.5">
               Rules that move tasks, assign owners, or update fields can remove a lot of manual admin. Check how many
               automations are included on each plan and whether common workflows—like moving tasks when statuses change
@@ -87,7 +87,7 @@ function ProjectManagementEducationSection() {
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Reporting and integrations</h3>
+            <h3 className="text-brand text-lg font-semibold">Reporting and integrations</h3>
             <p className="mt-1.5">
               Small businesses usually need simple reporting on workload, due dates, and project status. Integrations
               with tools like{" "}
@@ -104,40 +104,40 @@ function ProjectManagementEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Tasks, projects, and due dates
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Multiple views (board, list, timeline)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Comments, files, and notifications
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Basic automations and templates
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Reporting on workload and project status
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Integrations with your existing stack
@@ -167,7 +167,7 @@ function ProjectManagementPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -177,7 +177,7 @@ function ProjectManagementPopularComparisonsSection() {
                     className="h-10 w-auto max-w-[80px] object-contain object-left"
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                   vs
                 </span>
                 {item.productB.logoSrc && (
@@ -188,23 +188,23 @@ function ProjectManagementPopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/project-management/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all project management comparisons →
         </Link>
@@ -219,7 +219,7 @@ function ProjectManagementHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating project management tools">
         How to Choose Project Management Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Project management software helps you keep projects, tasks, and deadlines organized so work actually ships on
         time. This page is for{" "}
         <Link href="/project-management/best-for/freelancers" className={linkGreen}>
@@ -256,29 +256,29 @@ function ProjectManagementHowToChooseSection() {
         to browse every use case, and the scenario links below to jump into specific use cases.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Team type and work style</strong> — Freelancers and tiny teams can often
+            <strong className="text-brand">Team type and work style</strong> — Freelancers and tiny teams can often
             work from a simple board; agencies and product teams usually need multiple projects, assignees, and
             timelines. Match the tool to how many people touch a project and how structured you want work to be.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Views</strong> — Make sure you get the views your team actually uses:
+            <strong className="text-brand">Views</strong> — Make sure you get the views your team actually uses:
             Kanban boards, lists, calendars, or timelines. Some tools lock certain views to higher tiers.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Collaboration</strong> — Comments, mentions, file attachments, and
+            <strong className="text-brand">Collaboration</strong> — Comments, mentions, file attachments, and
             notifications should feel easy—otherwise work will drift back into email and chat.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Automation and templates</strong> — Look for simple rules that move
+            <strong className="text-brand">Automation and templates</strong> — Look for simple rules that move
             tasks, assign owners, or create checklists for repeatable projects. This is often where tools start to feel
             very different in practice.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Integrations</strong> — Check how well the tool connects to{" "}
+            <strong className="text-brand">Integrations</strong> — Check how well the tool connects to{" "}
             <Link href="/time-tracking" className={linkGreen}>
               time tracking
             </Link>
@@ -297,7 +297,7 @@ function ProjectManagementHowToChooseSection() {
             if you use them. The more work that flows automatically, the less you retype.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Pricing and limits</strong> — Free tiers may cap projects, automations,
+            <strong className="text-brand">Pricing and limits</strong> — Free tiers may cap projects, automations,
             or collaborators. Compare total cost at your expected team size and project load, not just the headline
             price.
           </li>
@@ -331,7 +331,7 @@ function ProjectManagementGuidesSection() {
           <Link href="/project-management/guides" className={`${linkGreen} font-semibold`}>
             View all project management guides →
           </Link>
-          <span className="mx-2 text-[#57534E]">·</span>
+          <span className="mx-2 text-muted-foreground">·</span>
           Reviews:{" "}
           <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>
             Asana

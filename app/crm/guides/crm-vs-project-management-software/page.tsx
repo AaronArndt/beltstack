@@ -9,15 +9,15 @@ import { getCrmReviewUrl, getCrmCompareUrl, getProjectManagementReviewUrl, getPr
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -63,21 +63,21 @@ export default function CrmVsProjectManagementSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">CRM vs Project Management Software</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     CRM vs Project Management Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Revenue and relationships in CRM vs tasks and deliverables in project management—how the categories differ and when teams use both.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -96,10 +96,10 @@ export default function CrmVsProjectManagementSoftwarePage() {
                   <SectionTitle sub="Core purpose of each tool type.">What CRM and Project Management Each Do</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">CRM</strong> — Contacts, companies, opportunities, sales activities, quotes, and pipeline forecasting. Tools include <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link>, and <Link href={getCrmReviewUrl("copper")} className={linkGreen}>Copper</Link> (strong for Google Workspace teams).
+                      <strong className="text-brand">CRM</strong> — Contacts, companies, opportunities, sales activities, quotes, and pipeline forecasting. Tools include <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link>, and <Link href={getCrmReviewUrl("copper")} className={linkGreen}>Copper</Link> (strong for Google Workspace teams).
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Project management software</strong> — Tasks, subtasks, Gantt or Kanban views, dependencies, milestones, time tracking, and resource planning. Examples: <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>. See <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link>.
+                      <strong className="text-brand">Project management software</strong> — Tasks, subtasks, Gantt or Kanban views, dependencies, milestones, time tracking, and resource planning. Examples: <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>. See <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link>.
                     </p>
                   </div>
                 </section>
@@ -107,10 +107,10 @@ export default function CrmVsProjectManagementSoftwarePage() {
                   <SectionTitle sub="Where they diverge in practice.">CRM vs Project Management: Key Differences</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Unit of work</strong> — CRM: lead/deal. PM: task/project.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Success metric</strong> — CRM: win rate, pipeline, ARR. PM: on-time delivery, utilization, scope.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Typical owner</strong> — CRM: sales/BD. PM: PMO, producers, team leads.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Email integration</strong> — CRM emphasizes logging sales conversations; PM emphasizes task comments and attachments.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Unit of work</strong> — CRM: lead/deal. PM: task/project.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Success metric</strong> — CRM: win rate, pipeline, ARR. PM: on-time delivery, utilization, scope.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Typical owner</strong> — CRM: sales/BD. PM: PMO, producers, team leads.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Email integration</strong> — CRM emphasizes logging sales conversations; PM emphasizes task comments and attachments.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -118,7 +118,7 @@ export default function CrmVsProjectManagementSoftwarePage() {
                   <SectionTitle sub="Choosing one or both.">When You Need CRM, PM, or Both</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Use <strong className="text-[#1A2D48]">CRM alone</strong> when delivery is simple and sales pipeline is the main gap. Use <strong className="text-[#1A2D48]">PM alone</strong> when you have few new deals but complex delivery (internal teams). Use <strong className="text-[#1A2D48]">both</strong> when you win work in CRM and kick off a project template in PM when a deal closes.
+                      Use <strong className="text-brand">CRM alone</strong> when delivery is simple and sales pipeline is the main gap. Use <strong className="text-brand">PM alone</strong> when you have few new deals but complex delivery (internal teams). Use <strong className="text-brand">both</strong> when you win work in CRM and kick off a project template in PM when a deal closes.
                     </p>
                     <p>
                       <Link href="/crm/guides/crm-for-agencies" className={linkGreen}>CRM for agencies</Link> and <Link href="/project-management/guides/project-management-for-agencies" className={linkGreen}>project management for agencies</Link> walk through combined workflows. Avoid using PM boards as a long-term CRM substitute if you care about revenue reporting—see <Link href="/crm/guides/crm-vs-spreadsheets" className={linkGreen}>CRM vs spreadsheets</Link> for similar tradeoffs.

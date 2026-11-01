@@ -19,12 +19,12 @@ export default function ProjectManagementBestForHubPage() {
       tradeCards={getProjectManagementBestForHubTradeLinks()}
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href="/project-management" className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href="/project-management" className="font-semibold text-indigo hover:underline">
             Project management hub
           </Link>{" "}
           ·{" "}
-          <Link href="/project-management/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/project-management/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

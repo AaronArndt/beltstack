@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Semrush", logoSrc: "/Logos/semrush.jpeg", rating: "4.6", bestFor: "Enterprise-scale research and audits", reviewHref: getSeoToolsReviewUrl("semrush") },
@@ -55,7 +55,7 @@ export default function WhatIsEnterpriseSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                     <li aria-hidden>/</li>
                     <li><Link href="/seo-tools" className="text-gray-500 hover:text-gray-900">SEO Tools</Link></li>
@@ -66,10 +66,10 @@ export default function WhatIsEnterpriseSeoPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Is Enterprise SEO?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How large organizations run search as a coordinated program—technical scale, content governance, local footprints, and tooling beyond what a single-location SMB typically needs.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -77,8 +77,8 @@ export default function WhatIsEnterpriseSeoPage() {
 
                 <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
                   <section id="definition" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Enterprise SEO is a program, not a project</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Enterprise SEO is a program, not a project</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Enterprise SEO coordinates search visibility across large websites, multiple brands, countries, or franchise networks. Success depends on workflows—who owns templates, how releases are reviewed, how redirects are governed, and how executives see revenue impact—not on one consultant optimizing ten pages.
                     </p>
@@ -96,20 +96,20 @@ export default function WhatIsEnterpriseSeoPage() {
                   </section>
 
                   <section id="pillars" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Pillars at enterprise scale</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Pillars at enterprise scale</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <ul className="mt-4 list-disc space-y-2 pl-5">
-                      <li><strong className="text-[#1A2D48]">Technical platform</strong> — Crawl budget, JavaScript rendering, staging, hreflang, faceted navigation.</li>
-                      <li><strong className="text-[#1A2D48]">Content operations</strong> — Templates, legal review, translation, and internal linking standards.</li>
-                      <li><strong className="text-[#1A2D48]">Authority and PR</strong> — Link programs with brand and compliance guardrails.</li>
-                      <li><strong className="text-[#1A2D48]">Local at scale</strong> — Store locators, bulk GBP, citation APIs for franchises.</li>
-                      <li><strong className="text-[#1A2D48]">Measurement</strong> — Dashboards tying search to pipeline, not only rankings.</li>
+                      <li><strong className="text-brand">Technical platform</strong> — Crawl budget, JavaScript rendering, staging, hreflang, faceted navigation.</li>
+                      <li><strong className="text-brand">Content operations</strong> — Templates, legal review, translation, and internal linking standards.</li>
+                      <li><strong className="text-brand">Authority and PR</strong> — Link programs with brand and compliance guardrails.</li>
+                      <li><strong className="text-brand">Local at scale</strong> — Store locators, bulk GBP, citation APIs for franchises.</li>
+                      <li><strong className="text-brand">Measurement</strong> — Dashboards tying search to pipeline, not only rankings.</li>
                     </ul>
                   </section>
 
                   <section id="technical" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Technical complexity SMB guides skip</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Technical complexity SMB guides skip</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Enterprise sites fight index bloat, parameter URLs, and migration risk. Technical SEO explained covers concepts; enterprise teams add release checklists and automated monitoring. Read{" "}
                       <Link href="/seo-tools/guides/how-technical-seo-tools-work" className={link}>
@@ -124,8 +124,8 @@ export default function WhatIsEnterpriseSeoPage() {
                   </section>
 
                   <section id="tools" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Tooling and seat economics</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Tooling and seat economics</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Enterprise contracts for{" "}
                       <Link href={getSeoToolsReviewUrl("semrush")} className={link}>Semrush</Link>{" "}
@@ -146,8 +146,8 @@ export default function WhatIsEnterpriseSeoPage() {
                   </section>
 
                   <section id="org" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Organization and governance</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Organization and governance</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Enterprise SEO usually spans marketing, product, engineering, and legal. RACI clarity prevents shipping noindexed production pages or duplicate meta templates across regions. Reporting should connect to{" "}
                       <Link href="/seo-tools/guides/how-businesses-measure-seo-roi" className={link}>
@@ -162,8 +162,8 @@ export default function WhatIsEnterpriseSeoPage() {
                   </section>
 
                   <section id="when-not" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">When enterprise thinking is premature</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">When enterprise thinking is premature</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       A ten-page contractor site does not need hreflang governance. Buying enterprise crawl quotas before GBP and service pages are solid is shelfware. Scale process when URL count, locations, or team size create real coordination cost—not because enterprise sounds more professional.
                     </p>
@@ -171,8 +171,8 @@ export default function WhatIsEnterpriseSeoPage() {
                 </div>
 
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-                  <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                  <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+                  <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
                   <GuideFaqSection faqs={FAQ} />
                 </section>
               </div>

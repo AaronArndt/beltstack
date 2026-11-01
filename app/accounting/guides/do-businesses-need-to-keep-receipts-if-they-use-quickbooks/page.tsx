@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/do-businesses-need-to-keep-receipts-if-the
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Receipts &amp; QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Do Businesses Need to Keep Receipts if They Use QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Yes—QuickBooks records transactions; receipts prove them. Software does not eliminate document retention for taxes and audits.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -89,12 +89,12 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Businesses still need to keep receipts (or equivalent documentation) when they use QuickBooks.</strong> QuickBooks stores the accounting entry—amount, date, account, vendor—but tax authorities and auditors often want proof of what was purchased and whether it was a legitimate business expense.
+                      <strong className="text-brand">Businesses still need to keep receipts (or equivalent documentation) when they use QuickBooks.</strong> QuickBooks stores the accounting entry—amount, date, account, vendor—but tax authorities and auditors often want proof of what was purchased and whether it was a legitimate business expense.
                     </p>
                     <p>
                       Bank feeds in <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> show that money moved; they rarely prove business purpose, sales tax paid, or itemized details on their own. Attaching receipts at the transaction is how you connect the ledger to real-world proof.
                     </p>
-                    <p className="text-sm text-neutral-600 border-l-4 border-[#10B981] pl-4">
+                    <p className="text-sm text-neutral-600 border-l-4 border-indigo pl-4">
                       Retention periods and deduction rules vary—confirm requirements with your CPA. BeltStack covers software workflows, not tax law.
                     </p>
                     <p>
@@ -107,8 +107,8 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
                   <SectionTitle sub="Ledger entry vs supporting proof.">QuickBooks Records vs Receipts</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">QuickBooks</strong> — Categorized transaction, reconciliation status, financial reports.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Receipt</strong> — Itemized proof, business purpose, sales tax detail, warranty/support docs.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">QuickBooks</strong> — Categorized transaction, reconciliation status, financial reports.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Receipt</strong> — Itemized proof, business purpose, sales tax detail, warranty/support docs.</span></li>
                     </ul>
                     <p>
                       Good documentation lowers bookkeeper cleanup bills—see{" "}
@@ -123,9 +123,9 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
                       <Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>accounting for small business</Link>.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Use QuickBooks mobile capture or a synced receipt app for field purchases.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Name files consistently (date-vendor-amount) if you also store copies in Drive.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile monthly so unattached expenses surface before tax filing.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Use QuickBooks mobile capture or a synced receipt app for field purchases.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Name files consistently (date-vendor-amount) if you also store copies in Drive.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile monthly so unattached expenses surface before tax filing.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -153,9 +153,9 @@ export default function DoBusinessesNeedToKeepReceiptsIfTheyUseQuickBooksPage() 
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Attach receipts to this month&apos;s expenses before you reconcile.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA how many years to retain digital copies for your entity.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Read <Link href="/accounting/guides/quickbooks-vs-excel" className={linkGreen}>QuickBooks vs Excel</Link> if receipts still live in ad hoc folders outside your ledger.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Attach receipts to this month&apos;s expenses before you reconcile.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA how many years to retain digital copies for your entity.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Read <Link href="/accounting/guides/quickbooks-vs-excel" className={linkGreen}>QuickBooks vs Excel</Link> if receipts still live in ad hoc folders outside your ledger.</span></li>
                     </ul>
                   </div>
                 </section>

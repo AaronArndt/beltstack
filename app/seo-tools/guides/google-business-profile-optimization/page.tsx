@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function GoogleBusinessProfileOptimizationPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function GoogleBusinessProfileOptimizationPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Google Business Profile Optimization</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Google Business Profile Optimization</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A field guide to GBP for plumbers, HVAC, electricians, cleaners, and other service businesses that live in the Map Pack. Pair this with our{" "}
                 <Link href="/seo-tools/best-seo-tools" className={link}>
                   best SEO tools
@@ -115,10 +115,10 @@ export default function GoogleBusinessProfileOptimizationPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="why-gbp" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Why Google Business Profile is a conversion surface—not a directory listing</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Why Google Business Profile is a conversion surface—not a directory listing</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  Many owners treat GBP like a Yellow Pages line item. In reality, it is often the <strong className="text-[#1A2D48]">first screen</strong> a customer sees: photos, reviews, services, hours, and the call button. Optimization means making that screen accurate, persuasive, and actively maintained—not stuffing keywords.
+                  Many owners treat GBP like a Yellow Pages line item. In reality, it is often the <strong className="text-brand">first screen</strong> a customer sees: photos, reviews, services, hours, and the call button. Optimization means making that screen accurate, persuasive, and actively maintained—not stuffing keywords.
                 </p>
                 <p className="mt-4">
                   For how GBP fits into the full local stack, read{" "}
@@ -130,13 +130,13 @@ export default function GoogleBusinessProfileOptimizationPage() {
               </section>
 
               <section id="categories-services" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Categories and services: get relevance right</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Categories and services: get relevance right</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  Choose the <strong className="text-[#1A2D48]">primary category</strong> that best describes your core paid work. If you are 80% residential HVAC and occasionally commercial, residential should still lead unless you are strategically pivoting the whole business.
+                  Choose the <strong className="text-brand">primary category</strong> that best describes your core paid work. If you are 80% residential HVAC and occasionally commercial, residential should still lead unless you are strategically pivoting the whole business.
                 </p>
                 <p className="mt-4">
-                  Add <strong className="text-[#1A2D48]">services</strong> that mirror how customers ask for help—&quot;drain cleaning&quot; not just &quot;plumbing.&quot; These reinforce relevance between Maps and your{" "}
+                  Add <strong className="text-brand">services</strong> that mirror how customers ask for help—&quot;drain cleaning&quot; not just &quot;plumbing.&quot; These reinforce relevance between Maps and your{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
                     website service pages
                   </Link>
@@ -145,8 +145,8 @@ export default function GoogleBusinessProfileOptimizationPage() {
               </section>
 
               <section id="service-area" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Service area and address honesty</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Service area and address honesty</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service-area businesses should define regions you can serve on time and profitably. Over-stretching maps produces one-star &quot;never showed&quot; reviews that damage both rankings and ads. If you operate from a home office, follow Google&apos;s rules for address display—do not invent storefronts.
                 </p>
@@ -160,24 +160,24 @@ export default function GoogleBusinessProfileOptimizationPage() {
               </section>
 
               <section id="photos-media" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Photos, posts, and Q&amp;A</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Photos, posts, and Q&amp;A</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  Upload <strong className="text-[#1A2D48]">real job photos</strong> regularly: before/after, equipment, branded trucks, and finished installs. Rotate seasonal posts (spring tune-ups, storm prep) so the profile looks alive. Monitor <strong className="text-[#1A2D48]">Questions &amp; answers</strong>—seed common FAQs yourself so competitors or random users do not own the narrative.
+                  Upload <strong className="text-brand">real job photos</strong> regularly: before/after, equipment, branded trucks, and finished installs. Rotate seasonal posts (spring tune-ups, storm prep) so the profile looks alive. Monitor <strong className="text-brand">Questions &amp; answers</strong>—seed common FAQs yourself so competitors or random users do not own the narrative.
                 </p>
               </section>
 
               <section id="reviews" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Reviews and owner responses</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Reviews and owner responses</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Request reviews after successful jobs; make it easy with a short link or SMS template. Respond to every review: thank specifics, acknowledge problems professionally, and avoid robotic copy-paste. Prospects read responses as a preview of how you handle conflict.
                 </p>
               </section>
 
               <section id="website-bridge" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Bridge GBP to your website and CRM</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Bridge GBP to your website and CRM</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Use UTM parameters or call tracking numbers consistently so{" "}
                   <Link href="/crm" className={link}>
@@ -200,8 +200,8 @@ export default function GoogleBusinessProfileOptimizationPage() {
               </section>
 
               <section id="tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tools that help at scale</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tools that help at scale</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
                     BrightLocal
@@ -228,8 +228,8 @@ export default function GoogleBusinessProfileOptimizationPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

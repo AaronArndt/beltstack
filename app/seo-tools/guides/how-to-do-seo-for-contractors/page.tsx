@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -69,7 +69,7 @@ export default function HowToDoSeoForContractorsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -94,8 +94,8 @@ export default function HowToDoSeoForContractorsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Do SEO for Contractors</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Do SEO for Contractors</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical playbook for construction, remodeling, and trade businesses that want more calls from Google—without chasing vanity rankings. If you are comparing software, start with our{" "}
                 <Link href="/seo-tools/best-seo-tools" className={link}>
                   best SEO tools (2026) roundup
@@ -111,25 +111,25 @@ export default function HowToDoSeoForContractorsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="why-different" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Why contractor SEO is different</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Why contractor SEO is different</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Homeowners and property managers usually search with urgent or high-trust intent: &quot;emergency plumber near me,&quot; &quot;licensed electrician [city],&quot; or &quot;roof repair before rain.&quot; That means{" "}
-                  <strong className="text-[#1A2D48]">Google Maps (the local pack)</strong>, your{" "}
+                  <strong className="text-brand">Google Maps (the local pack)</strong>, your{" "}
                   <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
                     Google Business Profile
                   </Link>
-                  , and <strong className="text-[#1A2D48]">mobile-friendly service pages</strong> matter more than blog volume or national keyword trophies.
+                  , and <strong className="text-brand">mobile-friendly service pages</strong> matter more than blog volume or national keyword trophies.
                 </p>
                 <p className="mt-4">
-                  Contractors also live with <strong className="text-[#1A2D48]">seasonality, dispatch boundaries, and review sensitivity</strong>. SEO that ignores real service areas or slow phone answer rates will underperform no matter which tool you buy. Your job is to align what Google shows with how you actually operate.
+                  Contractors also live with <strong className="text-brand">seasonality, dispatch boundaries, and review sensitivity</strong>. SEO that ignores real service areas or slow phone answer rates will underperform no matter which tool you buy. Your job is to align what Google shows with how you actually operate.
                 </p>
               </section>
 
               <section id="foundations" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 1: Foundations (free before you buy)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-                <h3 className="text-[#1A2D48] text-base font-semibold mt-0">Google Search Console</h3>
+                <h2 className="text-brand text-xl font-bold">Phase 1: Foundations (free before you buy)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
+                <h3 className="text-brand text-base font-semibold mt-0">Google Search Console</h3>
                 <p className="mt-2">
                   Install and verify Search Console on your primary domain. It shows which queries drive impressions, which pages lose clicks, and whether Google can crawl important URLs. Read our{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -145,15 +145,15 @@ export default function HowToDoSeoForContractorsPage() {
                   </Link>
                   .
                 </p>
-                <h3 className="text-[#1A2D48] text-base font-semibold mt-6">Google Business Profile</h3>
+                <h3 className="text-brand text-base font-semibold mt-6">Google Business Profile</h3>
                 <p className="mt-2">
-                  Claim one profile per legitimate business location. Choose the <strong className="text-[#1A2D48]">most specific primary category</strong> that matches how you get paid (not how you describe yourself in conversation). Add real project photos, accurate hours, and service lists. Deep dive:{" "}
+                  Claim one profile per legitimate business location. Choose the <strong className="text-brand">most specific primary category</strong> that matches how you get paid (not how you describe yourself in conversation). Add real project photos, accurate hours, and service lists. Deep dive:{" "}
                   <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
                     Google Business Profile optimization guide
                   </Link>
                   .
                 </p>
-                <h3 className="text-[#1A2D48] text-base font-semibold mt-6">NAP consistency</h3>
+                <h3 className="text-brand text-base font-semibold mt-6">NAP consistency</h3>
                 <p className="mt-2">
                   Pick one legal business name, one phone number for customer calls, and one canonical address format. Use them on your site, GBP, and major directories. Inconsistent citations confuse Google and customers; fix listings before paying for citation tools. When scale matters, compare{" "}
                   <Link href={getSeoToolsCompareUrl("brightlocal-vs-whitespark")} className={link}>
@@ -164,8 +164,8 @@ export default function HowToDoSeoForContractorsPage() {
               </section>
 
               <section id="website" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 2: Website structure that converts</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 2: Website structure that converts</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Every core trade line deserves a dedicated page: what you do, where you work, proof (photos, licenses, warranties), and a clear call—call, text, or short form. Avoid thin &quot;city stamp&quot; pages that only swap the metro name. Our{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -191,8 +191,8 @@ export default function HowToDoSeoForContractorsPage() {
               </section>
 
               <section id="reputation" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 3: Reviews, photos, and trust</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 3: Reviews, photos, and trust</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reviews influence both click-through rate in Maps and homeowner confidence. Ask after successful jobs; respond to every review with specifics (not copy-paste spam). Upload fresh job-site photos weekly when possible—Google and users both treat stale profiles as inactive.
                 </p>
@@ -210,8 +210,8 @@ export default function HowToDoSeoForContractorsPage() {
               </section>
 
               <section id="tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 4: When to add paid SEO tools</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 4: When to add paid SEO tools</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Add software when you have a weekly operator and a clear job: track rankings across ZIPs, audit crawl errors after a redesign, research competitor service pages, or report to a franchise owner. If Maps and citations are your bottleneck, prioritize{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -245,14 +245,14 @@ export default function HowToDoSeoForContractorsPage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 5: Measurement and pipeline</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 5: Measurement and pipeline</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Tag lead source in your{" "}
                   <Link href="/crm" className={link}>
                     CRM
                   </Link>{" "}
-                  (organic, Maps, paid, referral) so you can compare <strong className="text-[#1A2D48]">cost per booked job</strong>, not cost per click. SEO wins show up as improved organic or GBP-sourced deals over quarters—if you need faster tests while SEO compounds, use the{" "}
+                  (organic, Maps, paid, referral) so you can compare <strong className="text-brand">cost per booked job</strong>, not cost per click. SEO wins show up as improved organic or GBP-sourced deals over quarters—if you need faster tests while SEO compounds, use the{" "}
                   <Link href="/lead-generation" className={link}>
                     lead generation hub
                   </Link>{" "}
@@ -265,7 +265,7 @@ export default function HowToDoSeoForContractorsPage() {
               </section>
 
               <section id="checklist" className="scroll-mt-section rounded-lg border border-stone-200 bg-stone-50/80 p-5">
-                <h2 className="text-[#1A2D48] text-lg font-bold">30-day contractor SEO checklist</h2>
+                <h2 className="text-brand text-lg font-bold">30-day contractor SEO checklist</h2>
                 <ul className="mt-3 list-disc space-y-2 pl-5">
                   <li>Verify Search Console; fix any critical coverage errors on money pages.</li>
                   <li>Audit GBP category, services, service area, and photos; post 4+ new job photos.</li>
@@ -277,8 +277,8 @@ export default function HowToDoSeoForContractorsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

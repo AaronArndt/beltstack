@@ -25,17 +25,17 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const websiteBuilderRoutes = getSoftwarePickCategoryRoutes("website-builders");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -51,24 +51,24 @@ export function BestWebsiteBuildersPageClient() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                 <li aria-hidden>/</li>
                 <li><Link href="/website-builders" className="text-gray-500 hover:text-gray-900">Website Builders</Link></li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">Best Website Builders</li>
+                <li className="text-brand font-medium" aria-current="page">Best Website Builders</li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Website Builders (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               The best website builder for a small business, contractor, or home services company is the one your team
               will actually update after launch—without sacrificing local SEO, fast mobile pages, or obvious quote-and-call
               paths. This guide ranks top drag-and-drop and hosted platforms for real-world service workflows, not generic
               brochure or portfolio sites.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We evaluate templates, editor friction, forms and booking, reviews and trust blocks, service-area structure,
               and recurring cost (plans plus essential apps). Whether you need a simple lead-generation site or a storefront
               alongside services, the picks below pair with our in-depth reviews and{" "}
@@ -77,7 +77,7 @@ export function BestWebsiteBuildersPageClient() {
               </Link>{" "}
               so you can choose confidently for 2026.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               New to evaluation criteria? Start with the{" "}
               <Link href="/website-builders" className={linkGreen}>
                 website builders hub
@@ -119,21 +119,21 @@ export function BestWebsiteBuildersPageClient() {
             <SectionTitle sub="Side-by-side at a glance.">Compare website builders</SectionTitle>
             <div className="mt-4 overflow-x-auto rounded-md border border-slate-200 bg-white shadow-sm">
               <table className="w-full min-w-[640px] text-left text-sm">
-                <thead><tr className="border-b border-slate-200 bg-slate-50"><th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th><th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th><th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th><th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th><th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th></tr></thead>
+                <thead><tr className="border-b border-slate-200 bg-slate-50"><th className="px-4 py-3 font-bold text-brand">Tool</th><th className="px-4 py-3 font-bold text-brand">Best for</th><th className="px-4 py-3 font-bold text-brand">Starting price</th><th className="px-4 py-3 font-bold text-brand">Rating</th><th className="px-4 py-3 font-bold text-brand">Review</th></tr></thead>
                 <tbody>
                   {COMPARISON_TABLE_ROWS.map((row) => (
                     <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80">
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.startingPrice}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
-                        <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={row.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -165,44 +165,44 @@ export function BestWebsiteBuildersPageClient() {
         <section id="how-to-choose" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="What to look for when you compare options.">How to choose website builder software</SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Lead capture and mobile conversion</h3>
+                <h3 className="font-bold text-brand text-base">Lead capture and mobile conversion</h3>
                 <p className="mt-1">
                   Service businesses live on calls, short forms, and booked jobs. Prioritize click-to-call, quote requests, and
                   above-the-fold trust (reviews, licenses) on small screens. If mobile edits are painful, your site will go stale.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Local SEO and service-area structure</h3>
+                <h3 className="font-bold text-brand text-base">Local SEO and service-area structure</h3>
                 <p className="mt-1">
                   You need editable titles and descriptions, clean URLs, fast images, and room to grow service-area or location
                   pages. Evaluate how easily non-technical owners can add services and areas as the business expands.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Templates, editor, and maintenance ownership</h3>
+                <h3 className="font-bold text-brand text-base">Templates, editor, and maintenance ownership</h3>
                 <p className="mt-1">
                   Pick a builder your team will actually update after launch. Balance template quality with editor learning curve:
                   design-forward brands may prefer polished defaults; operators may prefer speed and app breadth over pixel control.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Total cost (plan + apps + renewal)</h3>
+                <h3 className="font-bold text-brand text-base">Total cost (plan + apps + renewal)</h3>
                 <p className="mt-1">
                   Model bookings, forms, marketing, and ecommerce add-ons at year two—not just promo entry pricing. Watch renewal
                   rates on budget hosts and confirm what is included before you migrate content.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Integrations and handoff to CRM</h3>
+                <h3 className="font-bold text-brand text-base">Integrations and handoff to CRM</h3>
                 <p className="mt-1">
                   Most service businesses pair the site with CRM and quoting. Check native integrations or Zapier-style paths so
                   leads do not die in inbox forward chains.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Ecommerce vs content-first fit</h3>
+                <h3 className="font-bold text-brand text-base">Ecommerce vs content-first fit</h3>
                 <p className="mt-1">
                   If you sell products, memberships, or plans online, a commerce-first builder may win. If the site is mostly
                   lead-gen and trust content, avoid paying for storefront depth you will not use.
@@ -226,7 +226,7 @@ export function BestWebsiteBuildersPageClient() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -238,7 +238,7 @@ export function BestWebsiteBuildersPageClient() {
         <section id="related-comparisons" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">Related comparisons</SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               <Link href="/website-builders/compare" className={linkGreen}>
                 View website builder comparisons
               </Link>{" "}
@@ -253,7 +253,7 @@ export function BestWebsiteBuildersPageClient() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -286,7 +286,7 @@ export function BestWebsiteBuildersPageClient() {
       {affiliateOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/60"
+            className="fixed inset-0 z-50 bg-brand/60"
             aria-hidden
             onClick={() => setAffiliateOpen(false)}
           />
@@ -296,10 +296,10 @@ export function BestWebsiteBuildersPageClient() {
             aria-labelledby="best-website-builders-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-website-builders-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-website-builders-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

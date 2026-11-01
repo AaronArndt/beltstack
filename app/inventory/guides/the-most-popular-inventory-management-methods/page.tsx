@@ -10,15 +10,15 @@ import { getInventoryReviewUrl, getInventoryCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -56,21 +56,21 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Home
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Inventory Management
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Guides
                       </Link>
                     </li>
@@ -81,10 +81,10 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     The Most Popular Inventory Management Methods
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     FIFO, perpetual tracking, ABC analysis, reorder points, and JIT—how the most common inventory methods
                     work, when each fits, and how software supports them without reinventing operations.
                   </p>
@@ -132,15 +132,15 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
                   <SectionTitle sub="How value and quantity hit the books.">Costing and Recording Methods</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">FIFO</strong> (first in, first out) assumes the oldest units sell
-                      first—common for rising-cost environments and many tax treatments. <strong className="text-[#1A2D48]">Weighted
+                      <strong className="text-brand">FIFO</strong> (first in, first out) assumes the oldest units sell
+                      first—common for rising-cost environments and many tax treatments. <strong className="text-brand">Weighted
                       average</strong> recalculates unit cost after each purchase, smoothing volatility.{" "}
-                      <strong className="text-[#1A2D48]">LIFO</strong> is rarer for smaller operators and restricted in
+                      <strong className="text-brand">LIFO</strong> is rarer for smaller operators and restricted in
                       several jurisdictions; confirm with your accountant before modeling it.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Perpetual inventory</strong> updates on-hand quantity with each
-                      receipt, sale, and adjustment in near real time. <strong className="text-[#1A2D48]">Periodic</strong>{" "}
+                      <strong className="text-brand">Perpetual inventory</strong> updates on-hand quantity with each
+                      receipt, sale, and adjustment in near real time. <strong className="text-brand">Periodic</strong>{" "}
                       inventory adjusts the ledger only at count intervals—simpler on paper but blind between counts.
                       Modern inventory apps are built for perpetual tracking; periodic-only workflows usually signal a
                       process gap, not a deliberate strategy.
@@ -151,7 +151,7 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
                   <SectionTitle sub="Day-to-day control without constant fire drills.">Operating Discipline: ABC, Counts, and Reorder Points</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">ABC analysis</strong> ranks SKUs by revenue, margin, or pick
+                      <strong className="text-brand">ABC analysis</strong> ranks SKUs by revenue, margin, or pick
                       frequency so effort concentrates where errors hurt most. Pair it with cycle counting: A items counted
                       often, C items less often but not never. That rhythm is detailed in{" "}
                       <Link href="/inventory/guides/cycle-counting-and-inventory-accuracy" className={linkGreen}>
@@ -159,8 +159,8 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
                       </Link>.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Reorder points and min/max</strong> trigger purchases when stock
-                      crosses a threshold—often lead time demand plus safety stock. <strong className="text-[#1A2D48]">EOQ</strong>{" "}
+                      <strong className="text-brand">Reorder points and min/max</strong> trigger purchases when stock
+                      crosses a threshold—often lead time demand plus safety stock. <strong className="text-brand">EOQ</strong>{" "}
                       (economic order quantity) balances ordering cost against holding cost for stable, high-volume lines.
                       Start with simple min/max on top sellers; refine with EOQ only where data supports it.
                     </p>
@@ -187,19 +187,19 @@ export default function TheMostPopularInventoryManagementMethodsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Costing method configuration (FIFO, average) with audit-friendly adjustment history.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Reorder alerts, purchase suggestions, and vendor lead-time fields per SKU.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>ABC tags and scheduled count batches tied to location or class.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Channel-level availability when you sell beyond one storefront.</span>
                       </li>
                     </ul>

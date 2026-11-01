@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -71,19 +71,19 @@ export default function ProjectManagementPricingGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Project Management</Link></li>
+                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Project Management</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Project Management Software Pricing Guide</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management Software Pricing Guide</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management Software Pricing Guide</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Understand how project management tools are priced: free tiers, per-user plans, and what to expect at your team size.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -101,10 +101,10 @@ export default function ProjectManagementPricingGuidePage() {
                 <section id="pricing-models" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="How project management tools charge.">Common Pricing Models</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Free tier</strong> — Many tools offer a free plan with limited members, projects, or features. <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, and <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> have free tiers that are enough for very small teams to run basic task and project views. Limits vary: e.g. number of users, number of projects, or lack of timeline/automation.</p>
-                    <p><strong className="text-[#1A2D48]">Per user per month</strong> — The most common paid model. You pay a set price per member per month (e.g. $10/user). Cost scales with team size. Minimum seats may apply (e.g. 5 users). Guest or read-only users are sometimes free or discounted.</p>
-                    <p><strong className="text-[#1A2D48]">Flat monthly</strong> — Some tools (e.g. <Link href={getProjectManagementReviewUrl("basecamp")} className={linkGreen}>Basecamp</Link>) charge a flat fee regardless of user count. This can be cheaper for larger teams and simpler to budget.</p>
-                    <p><strong className="text-[#1A2D48]">Enterprise / custom</strong> — Large organizations often get custom pricing, extra security, and dedicated support. Contact sales for quotes.</p>
+                    <p><strong className="text-brand">Free tier</strong> — Many tools offer a free plan with limited members, projects, or features. <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, and <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> have free tiers that are enough for very small teams to run basic task and project views. Limits vary: e.g. number of users, number of projects, or lack of timeline/automation.</p>
+                    <p><strong className="text-brand">Per user per month</strong> — The most common paid model. You pay a set price per member per month (e.g. $10/user). Cost scales with team size. Minimum seats may apply (e.g. 5 users). Guest or read-only users are sometimes free or discounted.</p>
+                    <p><strong className="text-brand">Flat monthly</strong> — Some tools (e.g. <Link href={getProjectManagementReviewUrl("basecamp")} className={linkGreen}>Basecamp</Link>) charge a flat fee regardless of user count. This can be cheaper for larger teams and simpler to budget.</p>
+                    <p><strong className="text-brand">Enterprise / custom</strong> — Large organizations often get custom pricing, extra security, and dedicated support. Contact sales for quotes.</p>
                   </div>
                 </section>
                 <section id="what-changes-by-tier" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -112,12 +112,12 @@ export default function ProjectManagementPricingGuidePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>As you move from free to paid tiers, you typically get:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">More members</strong> — Higher or unlimited user limits.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">More views</strong> — Timeline, Gantt, or calendar often on paid tiers. List and board are common on free.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Automation</strong> — Rules or workflows (e.g. when status changes, assign someone) are often limited or paid.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Storage</strong> — File attachment limits may increase with tier.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Reporting</strong> — Dashboards and advanced reports are often on higher tiers.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Support</strong> — Email or chat support; enterprise may get dedicated success manager.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">More members</strong> — Higher or unlimited user limits.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">More views</strong> — Timeline, Gantt, or calendar often on paid tiers. List and board are common on free.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Automation</strong> — Rules or workflows (e.g. when status changes, assign someone) are often limited or paid.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Storage</strong> — File attachment limits may increase with tier.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Reporting</strong> — Dashboards and advanced reports are often on higher tiers.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Support</strong> — Email or chat support; enterprise may get dedicated success manager.</span></li>
                     </ul>
                     <p>Check each vendor's pricing page for exact limits. Our <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link>, and <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link> reviews summarize current tiers and pricing.</p>
                   </div>
@@ -132,8 +132,8 @@ export default function ProjectManagementPricingGuidePage() {
                 <section id="free-vs-paid" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="When free is enough vs when to pay.">When Free Is Enough vs When to Pay</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Free is often enough</strong> when you have a small team (e.g. 2–5 people), a small number of projects, and only need list and/or board views. Many teams run on <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> free for a long time.</p>
-                    <p><strong className="text-[#1A2D48]">Consider paid</strong> when you need more members, timeline or Gantt views, more automation, advanced reporting, or more storage. Paid tiers of <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, or <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> typically start in the $8–15/user/month range; compare in <Link href={getProjectManagementCompareUrl("asana-vs-monday")} className={linkGreen}>Asana vs Monday</Link> and <Link href={getProjectManagementCompareUrl("monday-vs-wrike")} className={linkGreen}>Monday vs Wrike</Link>.</p>
+                    <p><strong className="text-brand">Free is often enough</strong> when you have a small team (e.g. 2–5 people), a small number of projects, and only need list and/or board views. Many teams run on <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> free for a long time.</p>
+                    <p><strong className="text-brand">Consider paid</strong> when you need more members, timeline or Gantt views, more automation, advanced reporting, or more storage. Paid tiers of <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, or <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> typically start in the $8–15/user/month range; compare in <Link href={getProjectManagementCompareUrl("asana-vs-monday")} className={linkGreen}>Asana vs Monday</Link> and <Link href={getProjectManagementCompareUrl("monday-vs-wrike")} className={linkGreen}>Monday vs Wrike</Link>.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

@@ -35,9 +35,9 @@ export type BestForHubTemplateProps = {
 function DirectorySectionTitle({ children, sub }: { children: ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub != null && sub.length > 0 ? <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p> : null}
+      {sub != null && sub.length > 0 ? <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p> : null}
     </div>
   );
 }
@@ -55,13 +55,13 @@ function DirectoryGrid({
         <Link
           key={item.href}
           href={item.href}
-          className="group flex min-h-[44px] flex-col rounded-lg border border-stone-200 bg-white px-4 py-3.5 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+          className="group flex min-h-[44px] flex-col rounded-lg border border-stone-200 bg-white px-4 py-3.5 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
         >
-          <h3 className="text-sm font-bold leading-snug text-[#1A2D48] group-hover:text-[#10B981] sm:text-base">
+          <h3 className="text-sm font-bold leading-snug text-brand group-hover:text-indigo sm:text-base">
             {item.label}
           </h3>
-          <p className="mt-1 flex-1 text-sm leading-relaxed text-[#57534E]">{item.description}</p>
-          <span className="mt-2.5 text-sm font-semibold text-[#10B981] group-hover:underline">{cardCta}</span>
+          <p className="mt-1 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+          <span className="mt-2.5 text-sm font-semibold text-indigo group-hover:underline">{cardCta}</span>
         </Link>
       ))}
     </div>
@@ -91,7 +91,7 @@ export function BestForHubRelatedLinks({
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="rounded font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+                className="rounded font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo"
               >
                 {link.label}
               </Link>
@@ -139,16 +139,16 @@ export function BestForHubTemplate({
                 { label: breadcrumbCurrent },
               ]}
             />
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {title}
             </h1>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">{intro}</p>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted-foreground">{intro}</p>
             {roundupLink != null ? (
-              <p className="mt-5 max-w-3xl rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm text-[#57534E]">
+              <p className="mt-5 max-w-3xl rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm text-muted-foreground">
                 Looking for the overall ranking?{" "}
                 <Link
                   href={roundupLink.href}
-                  className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                 >
                   {roundupLink.label} →
                 </Link>

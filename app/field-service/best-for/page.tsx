@@ -21,8 +21,8 @@ export default function FieldServiceBestForHubPage() {
       ungroupedSub="Jump to a scenario."
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href="/field-service/compare" className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href="/field-service/compare" className="font-semibold text-indigo hover:underline">
             All field service comparisons
           </Link>
         </p>

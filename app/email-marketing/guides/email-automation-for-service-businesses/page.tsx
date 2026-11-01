@@ -8,7 +8,7 @@ import { EMAIL_MARKETING_GUIDE_SIDEBAR_ITEMS } from "@/lib/data/emailMarketingGu
 import { getEmailMarketingBestForUrl, getEmailMarketingReviewUrl } from "@/lib/routes";
 
 const href = "/email-marketing/guides/email-automation-for-service-businesses";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   { q: "What is the first automation most service businesses should ship?", a: "A post-job thank-you with clear next steps (warranty, maintenance, referral ask) beats a complex 12-email fantasy map nobody maintains." },
@@ -25,7 +25,7 @@ export default function EmailAutomationForServiceBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px] pt-8 pb-16">
                 <nav aria-label="Breadcrumb" className="pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li><li aria-hidden>/</li>
                     <li><Link href="/email-marketing" className="text-gray-500 hover:text-gray-900">Email Marketing</Link></li><li aria-hidden>/</li>
                     <li><Link href="/email-marketing/guides" className="text-gray-500 hover:text-gray-900">Guides</Link></li><li aria-hidden>/</li>
@@ -33,26 +33,26 @@ export default function EmailAutomationForServiceBusinessesPage() {
                   </ol>
                 </nav>
                 <header className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">Email Automation for Service Businesses</h1>
-                  <p className="mt-3 text-[#57534E]">
+                  <h1 className="text-brand text-3xl font-bold sm:text-4xl">Email Automation for Service Businesses</h1>
+                  <p className="mt-3 text-muted-foreground">
                     Welcome flows, post-job follow-up, maintenance reminders, and win-back—sequences your office can own without a full marketing department.
                   </p>
                   <GuideLastUpdated date="March 29, 2026" />
                 </header>
-                <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-                  <h2 className="text-[#1A2D48] text-xl font-bold">Trigger from real job data</h2>
+                <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+                  <h2 className="text-brand text-xl font-bold">Trigger from real job data</h2>
                   <p className="mt-2">
                     Strong automation keys off CRM or field-service milestones: job completed, estimate sent, membership expiring. Align with{" "}
                     <Link href="/crm" className={link}>CRM</Link> practices before scaling branches.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Tool fit</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Tool fit</h2>
                   <p className="mt-2">
                     <Link href={getEmailMarketingReviewUrl("activecampaign")} className={link}>ActiveCampaign</Link> and{" "}
                     <Link href={getEmailMarketingReviewUrl("hubspot-email-marketing")} className={link}>HubSpot</Link> emphasize CRM-aware automation;{" "}
                     <Link href={getEmailMarketingReviewUrl("mailchimp")} className={link}>Mailchimp</Link> suits lighter stacks. Scenario:{" "}
                     <Link href={getEmailMarketingBestForUrl("contractors")} className={link}>email marketing for contractors</Link>.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Pair with deliverability and consent</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Pair with deliverability and consent</h2>
                   <p className="mt-2">
                     Before heavy automation, confirm <Link href="/email-marketing/guides/email-deliverability-spf-dkim-dmarc" className={link}>SPF, DKIM, and DMARC</Link> and{" "}
                     <Link href="/email-marketing/guides/email-marketing-consent-and-can-spam" className={link}>CAN-SPAM basics</Link>.

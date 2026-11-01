@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowTechnicalSeoToolsWorkPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Technical SEO Tools Work</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Technical SEO Tools Work</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Crawlers, audits, and monitoring—how technical SEO software discovers site issues and how that differs from content or local tooling. Start with{" "}
                 <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
                   technical SEO audit basics for small business
@@ -115,8 +115,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="crawl-loop" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The crawl-audit-fix loop</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The crawl-audit-fix loop</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Technical SEO tools start by spidering URLs from your sitemap, internal links, and seed lists you provide. They record HTTP status, redirect hops, title tags, meta robots, canonical tags, hreflang, and dozens of other signals into an issue queue ranked by severity.
                 </p>
@@ -126,8 +126,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </section>
 
               <section id="search-console-layer" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Search Console is the ground truth layer</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Search Console is the ground truth layer</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Paid crawlers simulate bots;{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -145,8 +145,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </section>
 
               <section id="suite-crawlers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How suite crawlers differ</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How suite crawlers differ</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                     Semrush
@@ -171,8 +171,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </section>
 
               <section id="issue-priorities" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Prioritizing what tools surface</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Prioritizing what tools surface</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Indexing and render blockers on revenue URLs—service pages, location pages, checkout paths.</li>
                   <li>HTTPS, mixed content, and redirect chains that waste crawl budget.</li>
@@ -188,8 +188,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </section>
 
               <section id="monitoring" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Monitoring and change alerts</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Monitoring and change alerts</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Beyond one-off audits, technical tools can schedule recrawls and email when new 404s appear or robots.txt changes. That matters after agency handoffs, plugin updates, or when a developer pushes a staging robots file to production—a surprisingly common SMB failure mode.
                 </p>
@@ -203,8 +203,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
               </section>
 
               <section id="limits" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What technical tools cannot see</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What technical tools cannot see</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Crawlers may not execute JavaScript identically to Google, may respect different rate limits, and cannot judge whether your service copy convinces a homeowner to call. They also will not fix Google Business Profile duplicates or earn reviews—local execution still lives outside the crawl graph.
                 </p>
@@ -212,8 +212,8 @@ export default function HowTechnicalSeoToolsWorkPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -8,15 +8,15 @@ import { getSchedulingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -48,21 +48,21 @@ export default function CalendlyAlternativesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Scheduling</Link></li>
+                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Scheduling</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Calendly Alternatives</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Calendly Alternatives
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Alternatives to Calendly for different needs: more customization, lower cost, better team scheduling, or stronger intake forms and packages.
                   </p>
                   <GuideLastUpdated date="March 12, 2026" />
@@ -86,13 +86,13 @@ export default function CalendlyAlternativesPage() {
                   <SectionTitle sub="Match the tool to your priority.">Alternatives by Use Case</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">More customization and intake forms:</strong> <Link href={getSchedulingReviewUrl("acuity-scheduling")} className={linkGreen}>Acuity Scheduling</Link> offers custom forms, packages, and group classes. <Link href={getSchedulingReviewUrl("simplybookme")} className={linkGreen}>SimplyBook.me</Link> delivers similar flexibility at a lower price. Both are strong Calendly alternatives when you need more than a simple booking link.
+                      <strong className="text-brand">More customization and intake forms:</strong> <Link href={getSchedulingReviewUrl("acuity-scheduling")} className={linkGreen}>Acuity Scheduling</Link> offers custom forms, packages, and group classes. <Link href={getSchedulingReviewUrl("simplybookme")} className={linkGreen}>SimplyBook.me</Link> delivers similar flexibility at a lower price. Both are strong Calendly alternatives when you need more than a simple booking link.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Team scheduling and round-robin:</strong> <Link href={getSchedulingReviewUrl("youcanbookme")} className={linkGreen}>YouCanBook.me</Link> is built for teams, with round-robin and collective availability often at a lower cost than Calendly’s team tiers. See our <Link href="/scheduling/compare/calendly-vs-youcanbookme" className={linkGreen}>Calendly vs YouCanBook.me</Link> comparison.
+                      <strong className="text-brand">Team scheduling and round-robin:</strong> <Link href={getSchedulingReviewUrl("youcanbookme")} className={linkGreen}>YouCanBook.me</Link> is built for teams, with round-robin and collective availability often at a lower cost than Calendly’s team tiers. See our <Link href="/scheduling/compare/calendly-vs-youcanbookme" className={linkGreen}>Calendly vs YouCanBook.me</Link> comparison.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Free or low-cost start:</strong> <Link href={getSchedulingReviewUrl("setmore")} className={linkGreen}>Setmore</Link> has a free tier for solo use and paid plans that stay competitive. Good for service businesses and anyone who wants to minimize cost while still getting reminders and payments.
+                      <strong className="text-brand">Free or low-cost start:</strong> <Link href={getSchedulingReviewUrl("setmore")} className={linkGreen}>Setmore</Link> has a free tier for solo use and paid plans that stay competitive. Good for service businesses and anyone who wants to minimize cost while still getting reminders and payments.
                     </p>
                   </div>
                 </section>

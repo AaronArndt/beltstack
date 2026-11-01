@@ -10,8 +10,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -86,17 +86,17 @@ export default function PayrollForSmallBusinessPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link>
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link>
+                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link>
+                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Payroll for Small Business</li>
@@ -105,10 +105,10 @@ export default function PayrollForSmallBusinessPage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how small businesses manage payroll, what features matter most, and how payroll software helps simplify taxes, employee payments, and compliance.
                   </p>
                   <GuideLastUpdated date="March 2026" />
@@ -122,10 +122,10 @@ export default function PayrollForSmallBusinessPage() {
                     </p>
                     <p>
                       The right payroll tool depends on factors like number of employees, whether you pay contractors, payroll frequency, software integrations (e.g. accounting), and pricing. To explore options, see our{" "}
-                      <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software reviews</Link>,{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link>,{" "}
-                      <Link href={getPayrollBestForUrl("small-business")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for small business</Link>, and{" "}
-                      <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparisons</Link>.
+                      <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software reviews</Link>,{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link>,{" "}
+                      <Link href={getPayrollBestForUrl("small-business")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for small business</Link>, and{" "}
+                      <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparisons</Link>.
                     </p>
                   </div>
                 </section>
@@ -137,24 +137,24 @@ export default function PayrollForSmallBusinessPage() {
                     <p>Small businesses use payroll software to:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Run payroll accurately</strong> — Calculate gross pay, withholdings, and net pay without manual errors. Software applies current tax rates and wage bases.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Run payroll accurately</strong> — Calculate gross pay, withholdings, and net pay without manual errors. Software applies current tax rates and wage bases.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">File payroll taxes</strong> — Submit federal and state returns and make tax deposits on schedule. Full-service providers handle this so you stay compliant.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">File payroll taxes</strong> — Submit federal and state returns and make tax deposits on schedule. Full-service providers handle this so you stay compliant.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pay employees by direct deposit</strong> — Send net pay to employee bank accounts via ACH. Most platforms support direct deposit and optional check or pay card.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pay employees by direct deposit</strong> — Send net pay to employee bank accounts via ACH. Most platforms support direct deposit and optional check or pay card.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Generate pay stubs</strong> — Provide employees with itemized statements of gross pay, deductions, and net pay for each pay period.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Generate pay stubs</strong> — Provide employees with itemized statements of gross pay, deductions, and net pay for each pay period.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Keep payroll records organized</strong> — Store pay history, tax filings, and reports in one place for audits, year-end, and reference.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Keep payroll records organized</strong> — Store pay history, tax filings, and reports in one place for audits, year-end, and reference.</span>
                       </li>
                     </ul>
                   </div>
@@ -166,28 +166,28 @@ export default function PayrollForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Simple setup</strong> — Onboarding that doesn’t require a long sales cycle or IT support. You should be able to add employees, enter tax info, and run a first payroll without jumping through hoops.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Simple setup</strong> — Onboarding that doesn’t require a long sales cycle or IT support. You should be able to add employees, enter tax info, and run a first payroll without jumping through hoops.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Easy-to-understand pricing</strong> — Clear base and per-person fees so you can budget. Avoid opaque or custom-only pricing unless you need enterprise features.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Easy-to-understand pricing</strong> — Clear base and per-person fees so you can budget. Avoid opaque or custom-only pricing unless you need enterprise features.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Automated tax filing</strong> — The provider files returns and makes deposits so you don’t have to track deadlines or forms yourself.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Automated tax filing</strong> — The provider files returns and makes deposits so you don’t have to track deadlines or forms yourself.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — If you pay 1099 contractors, the platform should handle contractor payments and 1099 forms.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — If you pay 1099 contractors, the platform should handle contractor payments and 1099 forms.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Integrations with accounting software</strong> — Sync to QuickBooks, Xero, or other tools so payroll flows into your books without re-entry.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Integrations with accounting software</strong> — Sync to QuickBooks, Xero, or other tools so payroll flows into your books without re-entry.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Good customer support</strong> — Responsive help when you have questions about setup, a pay run, or taxes. Phone, chat, or email—depending on what you prefer.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Good customer support</strong> — Responsive help when you have questions about setup, a pay run, or taxes. Phone, chat, or email—depending on what you prefer.</span>
                       </li>
                     </ul>
                   </div>
@@ -199,24 +199,24 @@ export default function PayrollForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Limited admin time</strong> — Owners or office managers often wear multiple hats. Payroll software that is quick to run and doesn’t require constant troubleshooting frees up time.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Limited admin time</strong> — Owners or office managers often wear multiple hats. Payroll software that is quick to run and doesn’t require constant troubleshooting frees up time.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Handling payroll taxes correctly</strong> — Withholdings, employer taxes, and filing deadlines are easy to get wrong manually. Software reduces errors and keeps you on schedule.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Handling payroll taxes correctly</strong> — Withholdings, employer taxes, and filing deadlines are easy to get wrong manually. Software reduces errors and keeps you on schedule.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Switching from spreadsheets or manual payroll</strong> — Moving to software means entering data once and trusting the system. Choosing a provider with a smooth onboarding process helps.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Switching from spreadsheets or manual payroll</strong> — Moving to software means entering data once and trusting the system. Choosing a provider with a smooth onboarding process helps.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Managing both employees and contractors</strong> — Mixed W-2 and 1099 pay requires a platform that supports both and keeps reporting clear.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Managing both employees and contractors</strong> — Mixed W-2 and 1099 pay requires a platform that supports both and keeps reporting clear.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Choosing between lower-cost and more full-featured providers</strong> — Budget options may lack HR or benefits; full-featured tools cost more. Match the product to what you actually need.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Choosing between lower-cost and more full-featured providers</strong> — Budget options may lack HR or benefits; full-featured tools cost more. Match the product to what you actually need.</span>
                       </li>
                     </ul>
                   </div>
@@ -228,12 +228,12 @@ export default function PayrollForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       For a curated list of top picks and who each tool is best for, see our{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link> roundup and our{" "}
-                      <Link href={getPayrollBestForUrl("small-business")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for small business</Link> guide. Example tools that often fit small teams include{" "}
-                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Patriot Payroll</Link>, and{" "}
-                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link>—each with different strengths on pricing, ease of use, and integrations.
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link> roundup and our{" "}
+                      <Link href={getPayrollBestForUrl("small-business")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for small business</Link> guide. Example tools that often fit small teams include{" "}
+                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">OnPay</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Patriot Payroll</Link>, and{" "}
+                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link>—each with different strengths on pricing, ease of use, and integrations.
                     </p>
                   </div>
                 </section>
@@ -243,8 +243,8 @@ export default function PayrollForSmallBusinessPage() {
                   <SectionTitle sub="What small teams care about when it comes to cost.">How Pricing Affects Small Businesses</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Small teams often care about <strong className="text-[#1A2D48]">base monthly fees</strong>—the fixed cost before per-person charges—and <strong className="text-[#1A2D48]">per-employee pricing</strong>, which can add up as you grow. Watch for <strong className="text-[#1A2D48]">hidden payroll tax or filing fees</strong>; some entry-level plans charge extra for tax filing or 1099s. Finally, consider whether you need HR features (onboarding, PTO, benefits)—<strong className="text-[#1A2D48]">paying for HR you don’t use</strong> can inflate the bill. For a deeper look at how payroll software is priced, see our{" "}
-                      <Link href="/payroll/guides/payroll-software-pricing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software pricing guide</Link>.
+                      Small teams often care about <strong className="text-brand">base monthly fees</strong>—the fixed cost before per-person charges—and <strong className="text-brand">per-employee pricing</strong>, which can add up as you grow. Watch for <strong className="text-brand">hidden payroll tax or filing fees</strong>; some entry-level plans charge extra for tax filing or 1099s. Finally, consider whether you need HR features (onboarding, PTO, benefits)—<strong className="text-brand">paying for HR you don’t use</strong> can inflate the bill. For a deeper look at how payroll software is priced, see our{" "}
+                      <Link href="/payroll/guides/payroll-software-pricing" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software pricing guide</Link>.
                     </p>
                   </div>
                 </section>
@@ -254,9 +254,9 @@ export default function PayrollForSmallBusinessPage() {
                   <SectionTitle sub="When your accounting or payments ecosystem drives the choice.">Best Payroll Software for Small Business Owners Using QuickBooks or Square</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Ecosystem fit matters: if you already run your books in QuickBooks or your payments and POS in Square, payroll that lives in the same system can simplify workflow. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link> posts payroll to your QuickBooks accounts and job costing automatically. <Link href={getPayrollReviewUrl("square-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Square Payroll</Link> sits inside your Square account so payroll and payments are in one place. Compare options in our{" "}
-                      <Link href={getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Square Payroll vs QuickBooks Payroll</Link> and{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link> comparisons.
+                      Ecosystem fit matters: if you already run your books in QuickBooks or your payments and POS in Square, payroll that lives in the same system can simplify workflow. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link> posts payroll to your QuickBooks accounts and job costing automatically. <Link href={getPayrollReviewUrl("square-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Square Payroll</Link> sits inside your Square account so payroll and payments are in one place. Compare options in our{" "}
+                      <Link href={getPayrollCompareUrl("square-payroll-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Square Payroll vs QuickBooks Payroll</Link> and{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link> comparisons.
                     </p>
                   </div>
                 </section>
@@ -268,35 +268,35 @@ export default function PayrollForSmallBusinessPage() {
                     <p>When comparing providers, look at:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Price</strong> — Base fee plus per-person cost; any add-ons for tax filing, 1099s, or HR.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Price</strong> — Base fee plus per-person cost; any add-ons for tax filing, 1099s, or HR.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Tax automation</strong> — Full-service filing and deposits vs. DIY or extra fees.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Tax automation</strong> — Full-service filing and deposits vs. DIY or extra fees.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — Paying 1099s and generating 1099 forms.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — Paying 1099s and generating 1099 forms.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">HR features</strong> — Onboarding, PTO, benefits—only if you need them.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">HR features</strong> — Onboarding, PTO, benefits—only if you need them.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Ease of use</strong> — Setup and day-to-day pay runs; quality of support.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Ease of use</strong> — Setup and day-to-day pay runs; quality of support.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Integrations</strong> — QuickBooks, Xero, time tracking, or other tools you use.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Integrations</strong> — QuickBooks, Xero, time tracking, or other tools you use.</span>
                       </li>
                     </ul>
                     <p>
                       Our{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software comparisons</Link> hub and head-to-head pages like{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs OnPay</Link> and{" "}
-                      <Link href={getPayrollCompareUrl("patriot-payroll-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Patriot Payroll vs OnPay</Link> help you evaluate these factors side by side.
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software comparisons</Link> hub and head-to-head pages like{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs OnPay</Link> and{" "}
+                      <Link href={getPayrollCompareUrl("patriot-payroll-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Patriot Payroll vs OnPay</Link> help you evaluate these factors side by side.
                     </p>
                   </div>
                 </section>
@@ -308,28 +308,28 @@ export default function PayrollForSmallBusinessPage() {
                     <p>You may need a more capable platform when:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You have more employees</strong> — Per-person cost or feature limits make the current tool less viable.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You have more employees</strong> — Per-person cost or feature limits make the current tool less viable.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You need multi-state payroll</strong> — Multiple state withholdings, unemployment, or local taxes require robust compliance.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You need multi-state payroll</strong> — Multiple state withholdings, unemployment, or local taxes require robust compliance.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You want benefits administration</strong> — Health, 401(k), or other benefits integrated with payroll.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You want benefits administration</strong> — Health, 401(k), or other benefits integrated with payroll.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You need HR support</strong> — Onboarding, compliance, PTO, or performance tools in one place.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You need HR support</strong> — Onboarding, compliance, PTO, or performance tools in one place.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking or admin complexity grows</strong> — Integrated time tracking, approval workflows, or multi-location reporting become important.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking or admin complexity grows</strong> — Integrated time tracking, approval workflows, or multi-location reporting become important.</span>
                       </li>
                     </ul>
                     <p>
-                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link> or <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">ADP</Link> may make more sense as the business grows—they offer broader HR, compliance, and scalability, often with custom pricing. Compare your current needs to what each platform provides before switching.
+                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling</Link> or <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">ADP</Link> may make more sense as the business grows—they offer broader HR, compliance, and scalability, often with custom pricing. Compare your current needs to what each platform provides before switching.
                     </p>
                   </div>
                 </section>

@@ -124,14 +124,14 @@ const METHODOLOGY_BULLETS = [
 ];
 
 // ——— Section components (match payroll hub) ———
-const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+const linkGreen = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -158,19 +158,19 @@ function AccountingHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating accounting tools">
         How to Choose Accounting Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Accounting software helps you track income and expenses, run reports, and prepare for taxes. This page is for <Link href={`${ACCOUNTING_BEST_FOR_BASE}/small-business`} className={linkGreen}>small businesses</Link>, <Link href={`${ACCOUNTING_BEST_FOR_BASE}/freelancers`} className={linkGreen}>freelancers</Link>, and <Link href={`${ACCOUNTING_BEST_FOR_BASE}/contractors`} className={linkGreen}>contractors</Link>. For a curated shortlist see our <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> roundup; use the <Link href="/accounting/compare" className={linkGreen}>comparison table</Link>, <Link href={`${ACCOUNTING_GUIDES_BASE}/how-accounting-software-works`} className={linkGreen}>guides</Link>, and scenario picks below.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
-          <li><strong className="text-[#1A2D48]">Business type</strong> — Freelancers often need simple invoicing; small businesses need full books, reports, and tax prep. Some businesses prefer dedicated <Link href="/invoicing" className={linkGreen}>invoicing software</Link> instead of full accounting tools. Match the tool to your size and complexity.</li>
-          <li><strong className="text-[#1A2D48]">Invoicing and expenses</strong> — Look for clear invoicing, expense tracking, and receipt capture. See our <Link href={`${ACCOUNTING_GUIDES_BASE}/accounting-for-small-business`} className={linkGreen}>accounting for small business</Link> guide.</li>
-          <li><strong className="text-[#1A2D48]">Integrations</strong> — Bank feeds, <Link href="/payroll" className={linkGreen}>payroll</Link>, and ecommerce integrations keep books in sync. Check that your accounting software connects to the tools you already use.</li>
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
+          <li><strong className="text-brand">Business type</strong> — Freelancers often need simple invoicing; small businesses need full books, reports, and tax prep. Some businesses prefer dedicated <Link href="/invoicing" className={linkGreen}>invoicing software</Link> instead of full accounting tools. Match the tool to your size and complexity.</li>
+          <li><strong className="text-brand">Invoicing and expenses</strong> — Look for clear invoicing, expense tracking, and receipt capture. See our <Link href={`${ACCOUNTING_GUIDES_BASE}/accounting-for-small-business`} className={linkGreen}>accounting for small business</Link> guide.</li>
+          <li><strong className="text-brand">Integrations</strong> — Bank feeds, <Link href="/payroll" className={linkGreen}>payroll</Link>, and ecommerce integrations keep books in sync. Check that your accounting software connects to the tools you already use.</li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
-          <li><strong className="text-[#1A2D48]">Reporting and tax</strong> — P&amp;L, balance sheet, and tax-ready reports matter for year-end and filing. <Link href={`${ACCOUNTING_GUIDES_BASE}/how-accounting-software-works`} className={linkGreen}>How accounting software works</Link>.</li>
-          <li><strong className="text-[#1A2D48]">Pricing</strong> — Many products use tiered plans by features or transaction volume; compare at your expected usage. <Link href={`${ACCOUNTING_GUIDES_BASE}/quickbooks-alternatives`} className={linkGreen}>QuickBooks alternatives</Link>.</li>
-          <li><strong className="text-[#1A2D48]">Accounting vs bookkeeping</strong> — Full accounting adds reporting and tax prep to bookkeeping basics. <Link href={`${ACCOUNTING_GUIDES_BASE}/accounting-vs-bookkeeping`} className={linkGreen}>Accounting vs bookkeeping</Link> explains the difference.</li>
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
+          <li><strong className="text-brand">Reporting and tax</strong> — P&amp;L, balance sheet, and tax-ready reports matter for year-end and filing. <Link href={`${ACCOUNTING_GUIDES_BASE}/how-accounting-software-works`} className={linkGreen}>How accounting software works</Link>.</li>
+          <li><strong className="text-brand">Pricing</strong> — Many products use tiered plans by features or transaction volume; compare at your expected usage. <Link href={`${ACCOUNTING_GUIDES_BASE}/quickbooks-alternatives`} className={linkGreen}>QuickBooks alternatives</Link>.</li>
+          <li><strong className="text-brand">Accounting vs bookkeeping</strong> — Full accounting adds reporting and tax prep to bookkeeping basics. <Link href={`${ACCOUNTING_GUIDES_BASE}/accounting-vs-bookkeeping`} className={linkGreen}>Accounting vs bookkeeping</Link> explains the difference.</li>
         </ul>
       </div>
     </>
@@ -248,7 +248,7 @@ function AccountingPopularComparisonsSection() {
             <Link
               key={slug}
               href={compareHref}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -261,9 +261,9 @@ function AccountingPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {data.productB.logoSrc ? (
                   <img
                     src={data.productB.logoSrc}
@@ -274,24 +274,24 @@ function AccountingPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
-        <Link href="/accounting/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
+      <p className="mt-3 text-sm text-muted-foreground">
+        <Link href="/accounting/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded">
           View all accounting comparisons →
         </Link>
       </p>
@@ -303,57 +303,57 @@ function AccountingEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in accounting software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">What matters when businesses choose accounting tools.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">What businesses should look for in accounting software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">What matters when businesses choose accounting tools.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Invoicing and expense tracking</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Invoicing and expense tracking</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Good accounting software lets you create invoices, track expenses, and capture receipts. Look for bank feeds, categorization, and reports that tie to tax categories so you stay organized for filing.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Financial reports and tax prep</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Financial reports and tax prep</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               P&amp;L, balance sheet, and cash flow reports help you understand the business. Tax-ready reports and export to your accountant or tax software reduce year-end work. Choose a tool that matches your reporting needs.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Integrations and scalability</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Integrations and scalability</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Accounting often needs to connect to payroll, ecommerce, or time tracking. Check that your platform integrates with the tools you use today and can grow with you—without forcing a migration later.
             </p>
           </div>
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Invoicing and payments
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Expense tracking and receipts
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Bank and credit card feeds
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 P&amp;L and balance sheet
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Tax-ready reports
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Integrations (payroll, ecommerce)
               </li>
             </ul>

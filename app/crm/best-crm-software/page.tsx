@@ -28,18 +28,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const crmPickRoutes = getSoftwarePickCategoryRoutes("crm");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -56,31 +56,31 @@ export default function BestCrmSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     CRM
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best CRM Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best CRM Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you manage leads and follow-up, the best CRM software should keep pipeline activity, customer history, and next actions visible from first contact to closed work.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared ease of use, automation, pricing, lead workflow depth, and collaboration features so the Key Takeaways shortlist maps to real buying decisions.
             </p>
             <RoundupHubLinksBlurb categoryPath="/crm" categoryLabel="crm software" />
@@ -123,29 +123,29 @@ export default function BestCrmSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_TABLE_ROWS.map((row) => (
                     <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80">
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "crm")}
                       </td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
-                        <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={row.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -183,33 +183,33 @@ export default function BestCrmSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose CRM software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Ease of use</h3>
+                <h3 className="font-bold text-brand text-base">Ease of use</h3>
                 <p className="mt-1">
                   Your team will use the CRM daily. Look for a clear pipeline, simple contact and deal entry, and minimal training time. Free trials help you judge whether your sales process fits the tool.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Sales pipeline management</h3>
+                <h3 className="font-bold text-brand text-base">Sales pipeline management</h3>
                 <p className="mt-1">
                   Stages, deal values, and activity tracking should match how you sell. Some CRMs are built for strict pipeline stages; others are more flexible. Choose one that supports your stages and reporting needs.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Automation and workflows</h3>
+                <h3 className="font-bold text-brand text-base">Automation and workflows</h3>
                 <p className="mt-1">
                   Workflow automation can move deals, send reminders, and assign tasks. Compare how much automation is included at each price tier and whether it fits your volume.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Integrations with marketing tools</h3>
+                <h3 className="font-bold text-brand text-base">Integrations with marketing tools</h3>
                 <p className="mt-1">
                   CRM often sits alongside email, calendar, and marketing platforms. Check that your CRM integrates with the apps you already use so data stays in sync.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Reporting and analytics</h3>
+                <h3 className="font-bold text-brand text-base">Reporting and analytics</h3>
                 <p className="mt-1">
                   Pipeline value, conversion by stage, and activity reports help you manage sales. Ensure the CRM offers the reports and dashboards you need without expensive add-ons.
                 </p>
@@ -238,12 +238,12 @@ export default function BestCrmSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
-              <Link href="/crm/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
+              <Link href="/crm/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 View CRM comparisons
               </Link>
               {" "}to compare platforms side-by-side, or jump to a specific comparison below. For guides on CRM and sales pipelines, see our{" "}
-              <Link href="/crm/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/crm/guides" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 CRM guides
               </Link>.
             </p>
@@ -252,7 +252,7 @@ export default function BestCrmSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -289,26 +289,26 @@ export default function BestCrmSoftwarePage() {
             <SectionTitle sub="Transparent process, small-business–focused criteria.">
               How we review CRM software
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
               Our reviews are independent and updated on a regular cadence so you get current pricing and feature information.
             </p>
-            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-muted-foreground text-sm leading-relaxed">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 We evaluate CRM software around the workflows small businesses actually need, including contact and lead management, pipeline stages, reporting, and automation.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 We compare pricing tiers, user limits, and add-ons so you can budget accurately.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 Reviews are written for small businesses, sales teams, and startups—not only enterprise needs.
               </li>
             </ul>
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.{" "}
-              <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/methodology" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 Affiliate disclosure
               </Link>
             </p>
@@ -320,17 +320,17 @@ export default function BestCrmSoftwarePage() {
 
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-crm-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-crm-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-crm-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

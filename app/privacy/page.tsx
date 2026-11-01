@@ -11,10 +11,10 @@ export const metadata: Metadata = siteMetadata({
 });
 
 const linkClass =
-  "font-semibold text-[#10B981] underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const articleProseClass =
-  "prose prose-neutral max-w-none text-sm leading-relaxed text-[#57534E] sm:text-base [&_h2]:mt-10 [&_h2]:scroll-mt-[calc(var(--navbar-h)+1rem)] [&_h2]:border-b [&_h2]:border-stone-200/80 [&_h2]:pb-2 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-[#1A2D48] [&_h2]:first:mt-0 [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-[#1A2D48] [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5";
+  "prose prose-neutral max-w-none text-sm leading-relaxed text-muted-foreground sm:text-base [&_h2]:mt-10 [&_h2]:scroll-mt-[calc(var(--navbar-h)+1rem)] [&_h2]:border-b [&_h2]:border-stone-200/80 [&_h2]:pb-2 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-brand [&_h2]:first:mt-0 [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-brand [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -23,11 +23,11 @@ export default function PrivacyPolicyPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 transition-colors hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 transition-colors hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -38,10 +38,10 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Privacy Policy
             </h1>
-            <p className="mt-3 text-sm font-medium text-[#57534E] sm:text-base">Effective Date: May 12, 2026</p>
+            <p className="mt-3 text-sm font-medium text-muted-foreground sm:text-base">Effective Date: May 12, 2026</p>
           </div>
         </section>
 
@@ -236,8 +236,8 @@ export default function PrivacyPolicyPage() {
 
         <section className="border-t border-stone-200/80 bg-stone-50 py-8 sm:py-10">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg font-bold text-[#1A2D48]">Related pages</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#57534E]">
+            <h2 className="text-lg font-bold text-brand">Related pages</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
               <li>
                 <Link href="/terms" className={linkClass}>
                   Terms of Service

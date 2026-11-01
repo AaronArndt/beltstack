@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/quicken-vs-quickbooks";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function QuickenVsQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Quicken vs QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Quicken vs QuickBooks: What Is the Difference?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Quicken is built for personal and household money management. QuickBooks is built for business books—invoicing, vendors, reporting, and accountant access.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -80,7 +80,7 @@ export default function QuickenVsQuickBooksPage() {
                       Search results lump Quicken and QuickBooks together because both names start with &quot;Quick&quot; and both lived under Intuit for years. That overlap confuses new business owners who already use Quicken at home and wonder if they can extend it for LLC or freelance books.
                     </p>
                     <p>
-                      The names sound alike, but <strong className="text-[#1A2D48]">Quicken and QuickBooks solve different problems</strong>. If you run a registered business, send invoices, pay contractors, or file business taxes, QuickBooks Online (or another business accounting platform) is the appropriate category—not Quicken.
+                      The names sound alike, but <strong className="text-brand">Quicken and QuickBooks solve different problems</strong>. If you run a registered business, send invoices, pay contractors, or file business taxes, QuickBooks Online (or another business accounting platform) is the appropriate category—not Quicken.
                     </p>
                     <p>
                       Quicken remains popular for budgeting, tracking mortgages and investments, and household cash flow. QuickBooks handles double-entry business accounting, sales tax, 1099 workflows, and integrations with payroll and ecommerce. Our{" "}
@@ -93,10 +93,10 @@ export default function QuickenVsQuickBooksPage() {
                   <SectionTitle sub="Side-by-side at a glance.">Quicken vs QuickBooks at a Glance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Primary user</strong> — Quicken: individuals and families. QuickBooks: owners, bookkeepers, and accountants running a business.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Invoicing &amp; AR</strong> — QuickBooks includes client invoicing and payment tracking; Quicken is not designed as a billing system.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Reporting</strong> — QuickBooks delivers P&amp;L, balance sheet, and cash flow for operations and tax prep. Quicken focuses on personal net worth and spending categories.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Ecosystem</strong> — QuickBooks connects to payroll, time tracking, and hundreds of business apps. Quicken does not replace that stack.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Primary user</strong> — Quicken: individuals and families. QuickBooks: owners, bookkeepers, and accountants running a business.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Invoicing &amp; AR</strong> — QuickBooks includes client invoicing and payment tracking; Quicken is not designed as a billing system.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Reporting</strong> — QuickBooks delivers P&amp;L, balance sheet, and cash flow for operations and tax prep. Quicken focuses on personal net worth and spending categories.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Ecosystem</strong> — QuickBooks connects to payroll, time tracking, and hundreds of business apps. Quicken does not replace that stack.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -104,7 +104,7 @@ export default function QuickenVsQuickBooksPage() {
                   <SectionTitle sub="Pick the right product category first.">Which Should You Choose?</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Choose <strong className="text-[#1A2D48]">Quicken</strong> if you are managing personal finances only and do not need business-grade books. Choose <strong className="text-[#1A2D48]">QuickBooks</strong> (or{" "}
+                      Choose <strong className="text-brand">Quicken</strong> if you are managing personal finances only and do not need business-grade books. Choose <strong className="text-brand">QuickBooks</strong> (or{" "}
                       <Link href={getAccountingReviewUrl("xero")} className={linkGreen}>Xero</Link>,{" "}
                       <Link href={getAccountingReviewUrl("freshbooks")} className={linkGreen}>FreshBooks</Link>,{" "}
                       <Link href={getAccountingReviewUrl("wave")} className={linkGreen}>Wave</Link>) when you have a business entity or sole proprietorship with real revenue and expenses.
@@ -142,12 +142,12 @@ export default function QuickenVsQuickBooksPage() {
                   <SectionTitle sub="Continue with these guides and reviews.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/do-quicken-and-quickbooks-work-together" className={linkGreen}>Do Quicken and QuickBooks work together?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-alternatives-to-quicken" className={linkGreen}>Best alternatives to Quicken</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>What does QuickBooks cost per month?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/do-quicken-and-quickbooks-work-together" className={linkGreen}>Do Quicken and QuickBooks work together?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/best-alternatives-to-quicken" className={linkGreen}>Best alternatives to Quicken</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>What does QuickBooks cost per month?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
                     </ul>
                   </div>
                 </section>

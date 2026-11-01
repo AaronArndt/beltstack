@@ -10,8 +10,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -86,17 +86,17 @@ export default function PayrollForConstructionCompaniesPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link>
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link>
+                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link>
+                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Payroll for Construction Companies</li>
@@ -105,10 +105,10 @@ export default function PayrollForConstructionCompaniesPage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Construction Companies
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how construction companies manage payroll for field crews, office staff, and subcontractors, and how payroll software can simplify tax filing, labor tracking, and compliance.
                   </p>
                   <GuideLastUpdated date="March 2026" />
@@ -122,10 +122,10 @@ export default function PayrollForConstructionCompaniesPage() {
                     </p>
                     <p>
                       To explore options for your company, see our{" "}
-                      <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software reviews</Link>,{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link>,{" "}
-                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for construction</Link>, and{" "}
-                      <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparisons</Link>.
+                      <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software reviews</Link>,{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link>,{" "}
+                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for construction</Link>, and{" "}
+                      <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparisons</Link>.
                     </p>
                   </div>
                 </section>
@@ -137,24 +137,24 @@ export default function PayrollForConstructionCompaniesPage() {
                     <p>Construction payroll often involves:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Multiple job sites</strong> — Crews may work at different locations; labor cost may need to be tracked by job or project for estimating and profitability.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Multiple job sites</strong> — Crews may work at different locations; labor cost may need to be tracked by job or project for estimating and profitability.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly workers</strong> — Field crews are often paid by the hour, so accurate time tracking and overtime rules matter.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly workers</strong> — Field crews are often paid by the hour, so accurate time tracking and overtime rules matter.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Overtime</strong> — Construction work frequently triggers overtime. Payroll must calculate it correctly and keep records for compliance.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Overtime</strong> — Construction work frequently triggers overtime. Payroll must calculate it correctly and keep records for compliance.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">W-2 employees vs 1099 subcontractors</strong> — Mixing both in one business adds complexity: different pay runs, tax treatment, and reporting (e.g. 1099s at year-end).</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">W-2 employees vs 1099 subcontractors</strong> — Mixing both in one business adds complexity: different pay runs, tax treatment, and reporting (e.g. 1099s at year-end).</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Administrative burden</strong> — Office managers and owners must keep payroll, tax filings, and labor reporting under control without a large back office. Software that automates calculations and filing reduces that burden.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Administrative burden</strong> — Office managers and owners must keep payroll, tax filings, and labor reporting under control without a large back office. Software that automates calculations and filing reduces that burden.</span>
                       </li>
                     </ul>
                   </div>
@@ -166,32 +166,32 @@ export default function PayrollForConstructionCompaniesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — Pay 1099 subcontractors and generate 1099-NEC forms. Contractor self-service is a plus.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — Pay 1099 subcontractors and generate 1099-NEC forms. Contractor self-service is a plus.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking integration</strong> — Built-in or integrated time tracking so hourly and overtime pay is accurate and can feed job costing.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking integration</strong> — Built-in or integrated time tracking so hourly and overtime pay is accurate and can feed job costing.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Job costing or labor reporting</strong> — Reports that tie labor cost to jobs or departments help with estimating and profitability.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Job costing or labor reporting</strong> — Reports that tie labor cost to jobs or departments help with estimating and profitability.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Direct deposit</strong> — Pay employees and often contractors by ACH for speed and convenience.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Direct deposit</strong> — Pay employees and often contractors by ACH for speed and convenience.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Accounting integration</strong> — Sync to QuickBooks or other accounting software so payroll flows into your books and, where supported, job costing.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Accounting integration</strong> — Sync to QuickBooks or other accounting software so payroll flows into your books and, where supported, job costing.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Ease of use for small teams</strong> — Simple setup and day-to-day pay runs so a small office can run payroll without dedicated HR.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Ease of use for small teams</strong> — Simple setup and day-to-day pay runs so a small office can run payroll without dedicated HR.</span>
                       </li>
                     </ul>
                   </div>
@@ -203,8 +203,8 @@ export default function PayrollForConstructionCompaniesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       Many construction businesses pay both employees and subcontractors. Payroll tools should support both cleanly: W-2 pay runs with withholdings and employer taxes, and 1099 contractor payments with year-end 1099 forms. Misclassification (treating employees as contractors or vice versa) and incorrect tax handling can create compliance issues and penalties. For more on how contractor businesses handle payroll and classification, see our{" "}
-                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll for contractors</Link> guide and our{" "}
-                      <Link href={getPayrollBestForUrl("1099-contractors")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for 1099 contractors</Link> guide.
+                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll for contractors</Link> guide and our{" "}
+                      <Link href={getPayrollBestForUrl("1099-contractors")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for 1099 contractors</Link> guide.
                     </p>
                   </div>
                 </section>
@@ -215,12 +215,12 @@ export default function PayrollForConstructionCompaniesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       For curated picks and who each tool is best for, see our{" "}
-                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for construction</Link> guide and our{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link> roundup. Likely strong fits for construction include{" "}
-                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>, and{" "}
-                      <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">ADP</Link>—each with different strengths on job costing, contractor support, and scalability.
+                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for construction</Link> guide and our{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link> roundup. Likely strong fits for construction include{" "}
+                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">OnPay</Link>, and{" "}
+                      <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">ADP</Link>—each with different strengths on job costing, contractor support, and scalability.
                     </p>
                   </div>
                 </section>
@@ -230,8 +230,8 @@ export default function PayrollForConstructionCompaniesPage() {
                   <SectionTitle sub="Why many construction companies choose QuickBooks Payroll.">Why QuickBooks Payroll Is Popular in Construction</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Many construction businesses already use QuickBooks for accounting and job costing. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link> integrates with QuickBooks so payroll posts to the right accounts and labor cost flows into job costing without manual re-entry. That can simplify admin and keep books and payroll in one place. If you’re comparing QuickBooks Payroll to a standalone option, see our{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link> comparison.
+                      Many construction businesses already use QuickBooks for accounting and job costing. <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link> integrates with QuickBooks so payroll posts to the right accounts and labor cost flows into job costing without manual re-entry. That can simplify admin and keep books and payroll in one place. If you’re comparing QuickBooks Payroll to a standalone option, see our{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link> comparison.
                     </p>
                   </div>
                 </section>
@@ -243,36 +243,36 @@ export default function PayrollForConstructionCompaniesPage() {
                     <p>When comparing providers, look at:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Payroll tax automation</strong> — Full-service filing and deposits vs. extra fees or DIY.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Payroll tax automation</strong> — Full-service filing and deposits vs. extra fees or DIY.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — Paying 1099s and 1099 forms; contractor self-service.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — Paying 1099s and 1099 forms; contractor self-service.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Labor reporting</strong> — Reports by job, department, or project for estimating and profitability.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Labor reporting</strong> — Reports by job, department, or project for estimating and profitability.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking integrations</strong> — Built-in or integrated time tracking for hourly and overtime.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking integrations</strong> — Built-in or integrated time tracking for hourly and overtime.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pricing</strong> — Base and per-person cost; add-ons for time tracking or 1099.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pricing</strong> — Base and per-person cost; add-ons for time tracking or 1099.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Accounting integrations</strong> — QuickBooks, Xero, or other tools you use for job costing and books.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Accounting integrations</strong> — QuickBooks, Xero, or other tools you use for job costing and books.</span>
                       </li>
                     </ul>
                     <p>
                       Our{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software comparisons</Link> hub and matchups like{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs OnPay</Link>,{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs ADP</Link>, and{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link> help you evaluate these factors side by side.
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software comparisons</Link> hub and matchups like{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs OnPay</Link>,{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs ADP</Link>, and{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link> help you evaluate these factors side by side.
                     </p>
                   </div>
                 </section>
@@ -284,28 +284,28 @@ export default function PayrollForConstructionCompaniesPage() {
                     <p>You may need a more capable platform when:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">You have more crews</strong> — Headcount and per-person cost or feature limits make the current tool less viable.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">You have more crews</strong> — Headcount and per-person cost or feature limits make the current tool less viable.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Admin complexity grows</strong> — Multiple locations, approval workflows, or reporting needs exceed what basic payroll offers.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Admin complexity grows</strong> — Multiple locations, approval workflows, or reporting needs exceed what basic payroll offers.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Multi-state work</strong> — You need robust multi-state payroll and compliance support.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Multi-state work</strong> — You need robust multi-state payroll and compliance support.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More HR needs</strong> — Onboarding, compliance, benefits, or workers’ comp administration in one place.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More HR needs</strong> — Onboarding, compliance, benefits, or workers’ comp administration in one place.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More reporting needs</strong> — Custom reports, labor analytics, or integration with project management tools.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More reporting needs</strong> — Custom reports, labor analytics, or integration with project management tools.</span>
                       </li>
                     </ul>
                     <p>
-                      Larger or growing construction companies may prefer <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link>, <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">ADP</Link>, or <Link href={getPayrollReviewUrl("paychex")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Paychex</Link> for broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
+                      Larger or growing construction companies may prefer <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling</Link>, <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">ADP</Link>, or <Link href={getPayrollReviewUrl("paychex")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Paychex</Link> for broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
                     </p>
                   </div>
                 </section>

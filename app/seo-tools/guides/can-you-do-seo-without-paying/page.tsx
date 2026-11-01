@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function CanYouDoSeoWithoutPayingPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Can You Do SEO Without Paying?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Can You Do SEO Without Paying?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Yes—most small businesses can run a credible SEO program with Google&apos;s free tools and consistent execution. This guide is the no-subscription playbook; for tool comparisons see{" "}
                 <Link href="/seo-tools/guides/free-vs-paid-seo-tools" className={link}>
                   free vs paid SEO tools
@@ -115,8 +115,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="pay-means" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Without paying means no software bills—not no work</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Without paying means no software bills—not no work</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   You can avoid Semrush, Ahrefs, and agency retainers and still improve rankings. You cannot avoid fixing your site, updating GBP, earning reviews, and publishing pages that match how customers search. &quot;Without paying&quot; trades subscription cost for calendar time—usually the owner&apos;s.
                 </p>
@@ -130,8 +130,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
               </section>
 
               <section id="zero-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The zero-subscription stack</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The zero-subscription stack</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -140,13 +140,13 @@ export default function CanYouDoSeoWithoutPayingPage() {
                     — Verify ownership, fix coverage issues, expand pages that already earn impressions.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Business Profile</strong> — Categories, services, photos, posts, and review responses for Maps visibility.
+                    <strong className="text-brand">Google Business Profile</strong> — Categories, services, photos, posts, and review responses for Maps visibility.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Your website</strong> — Fast mobile pages, clear service scope, trust signals, and internal links between related services.
+                    <strong className="text-brand">Your website</strong> — Fast mobile pages, clear service scope, trust signals, and internal links between related services.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Manual SERP research</strong> — Autocomplete, People Also Ask, and competitor page outlines—no credits required.
+                    <strong className="text-brand">Manual SERP research</strong> — Autocomplete, People Also Ask, and competitor page outlines—no credits required.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -159,17 +159,17 @@ export default function CanYouDoSeoWithoutPayingPage() {
               </section>
 
               <section id="weekly-cadence" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A weekly cadence that costs $0 in software</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A weekly cadence that costs $0 in software</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-3 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Monday</strong> — Search Console coverage and top query changes; fix one technical or indexing issue.
+                    <strong className="text-brand">Monday</strong> — Search Console coverage and top query changes; fix one technical or indexing issue.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Midweek</strong> — GBP photo or post; respond to every new review.
+                    <strong className="text-brand">Midweek</strong> — GBP photo or post; respond to every new review.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Friday</strong> — Improve one service page: add FAQ, proof, or internal link from homepage.
+                    <strong className="text-brand">Friday</strong> — Improve one service page: add FAQ, proof, or internal link from homepage.
                   </li>
                 </ol>
                 <p className="mt-4">
@@ -178,8 +178,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
               </section>
 
               <section id="limits" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Where the no-pay approach stops scaling</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Where the no-pay approach stops scaling</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Multi-location citation drift, deep backlink gap analysis, and historical rank tracking across dozens of city-service pairs exceed manual capacity. At that point paying for one suite—or hiring help—is rational, not vanity.
                 </p>
@@ -205,8 +205,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
               </section>
 
               <section id="avoid-traps" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Free traps that cost more later</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Free traps that cost more later</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Bought link packages, fake GBP locations, mass AI pages with no proof, and duplicate city doorway URLs create penalties and cleanup bills. They are not &quot;free SEO&quot;—they are cheap shortcuts. Stay with Search Console truth, honest service areas, and real customer reviews.
                 </p>
@@ -214,8 +214,8 @@ export default function CanYouDoSeoWithoutPayingPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

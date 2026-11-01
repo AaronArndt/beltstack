@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function TheMostImportantSeoRankingFactorsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">The Most Important SEO Ranking Factors</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">The Most Important SEO Ranking Factors</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Which signals actually move rankings in 2026—and how to prioritize fixes when you cannot do everything at once. Ground this in{" "}
                 <Link href="/seo-tools/guides/how-seo-works" className={link}>
                   how SEO works
@@ -123,8 +123,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="how-google-evaluates" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How Google evaluates pages (without a secret checklist)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How Google evaluates pages (without a secret checklist)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google does not publish a ranked list of 200 factors with weights. It crawls the web, indexes eligible pages, and orders results for each query using relevance, quality, usability, and context—including location for local intent. Think in systems: can Google find and trust your page, and does it satisfy the searcher better than alternatives?
                 </p>
@@ -138,8 +138,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </section>
 
               <section id="technical-foundation" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Technical foundation: crawl, index, render</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Technical foundation: crawl, index, render</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Before content or links matter, Google must access clean URLs:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>HTTPS, mobile-friendly layout, and reasonable Core Web Vitals</li>
@@ -157,8 +157,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </section>
 
               <section id="content-relevance" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Content relevance and search intent</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Content relevance and search intent</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rankings follow intent. A page targeting &quot;emergency plumber&quot; needs different proof than one targeting &quot;how to replace a faucet.&quot; Match the query type: service pages for transactional local searches, guides for informational terms, comparison pages for commercial research.
                 </p>
@@ -176,8 +176,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </section>
 
               <section id="authority-trust" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Authority, trust, and off-site signals</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Authority, trust, and off-site signals</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Links from relevant sites, brand mentions, and consistent business listings tell Google you are a legitimate operator—not a fly-by-night domain. Reviews on Google and industry platforms add social proof, especially for local services.
                 </p>
@@ -191,8 +191,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </section>
 
               <section id="local-factors" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local ranking factors: GBP, proximity, prominence</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local ranking factors: GBP, proximity, prominence</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   For Map Pack and localized organic results, Google weighs relevance (categories and services), distance (user to business), and prominence (reviews, links, engagement). An optimized Google Business Profile aligned with service pages is non-negotiable for service businesses.
                 </p>
@@ -210,8 +210,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
               </section>
 
               <section id="prioritize-fixes" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How to prioritize when everything feels important</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How to prioritize when everything feels important</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Run a simple triage each month: (1) indexing and manual actions in Search Console, (2) top service pages with impression growth but weak CTR, (3) GBP accuracy and review responses, (4) one content or link opportunity from competitor research. That sequence matches{" "}
                   <Link href="/seo-tools/guides/how-to-perform-seo" className={link}>
@@ -230,8 +230,8 @@ export default function TheMostImportantSeoRankingFactorsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -9,14 +9,14 @@ import { getWebsiteBuildersReviewUrl, getWebsiteBuildersCompareUrl } from "@/lib
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 const href = "/website-builders/guides/website-builder-pricing-and-hidden-costs";
 
 const FAQ = [
@@ -40,7 +40,7 @@ export default function WebsiteBuilderPricingHiddenCostsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li><li aria-hidden>/</li>
                     <li><Link href="/website-builders" className="text-gray-500 hover:text-gray-900">Website Builders</Link></li><li aria-hidden>/</li>
                     <li><Link href="/website-builders/guides" className="text-gray-500 hover:text-gray-900">Guides</Link></li><li aria-hidden>/</li>
@@ -48,8 +48,8 @@ export default function WebsiteBuilderPricingHiddenCostsPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Website Builder Pricing &amp; Hidden Costs</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Website Builder Pricing &amp; Hidden Costs</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Subscriptions, domains, apps, and payment fees—how to budget the full first-year cost of a builder-backed site for a local business.
                   </p>
                   <GuideLastUpdated date="March 29, 2026" />
@@ -68,11 +68,11 @@ export default function WebsiteBuilderPricingHiddenCostsPage() {
                 <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Line items to put in a spreadsheet.">Common cost buckets</SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
-                    <li className="flex gap-2"><span className="text-[#10B981] shrink-0">•</span><span>Domain registration and WHOIS privacy</span></li>
-                    <li className="flex gap-2"><span className="text-[#10B981] shrink-0">•</span><span>Business email (workspace or forwarding)</span></li>
-                    <li className="flex gap-2"><span className="text-[#10B981] shrink-0">•</span><span>Premium templates, fonts, or stock libraries</span></li>
-                    <li className="flex gap-2"><span className="text-[#10B981] shrink-0">•</span><span>Booking, CRM form, chat, or review widgets</span></li>
-                    <li className="flex gap-2"><span className="text-[#10B981] shrink-0">•</span><span>Payment processing and chargeback risk for online sales</span></li>
+                    <li className="flex gap-2"><span className="text-indigo shrink-0">•</span><span>Domain registration and WHOIS privacy</span></li>
+                    <li className="flex gap-2"><span className="text-indigo shrink-0">•</span><span>Business email (workspace or forwarding)</span></li>
+                    <li className="flex gap-2"><span className="text-indigo shrink-0">•</span><span>Premium templates, fonts, or stock libraries</span></li>
+                    <li className="flex gap-2"><span className="text-indigo shrink-0">•</span><span>Booking, CRM form, chat, or review widgets</span></li>
+                    <li className="flex gap-2"><span className="text-indigo shrink-0">•</span><span>Payment processing and chargeback risk for online sales</span></li>
                   </ul>
                 </section>
                 <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

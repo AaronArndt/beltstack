@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowBusinessesFindSeoKeywordsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Find SEO Keywords</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Find SEO Keywords</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Practical sources—from customer calls to Search Console and competitor pages—and when paid tools earn a seat. For the research framework, see{" "}
                 <Link href="/seo-tools/guides/how-seo-keyword-research-works" className={link}>
                   how SEO keyword research works
@@ -115,8 +115,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="start-with-customers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Start with how customers describe the job</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Start with how customers describe the job</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   The best keyword lists begin outside SEO tools. Dispatch notes, sales call summaries, and review text reveal the phrases people use before they know your brand—&quot;no hot water,&quot; &quot;roof leak after storm,&quot; &quot;HVAC not cooling upstairs.&quot; Those modifiers often become FAQ sections, GBP services, or dedicated service pages.
                 </p>
@@ -126,8 +126,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </section>
 
               <section id="search-console" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Use Search Console to see what Google already associates with you</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Use Search Console to see what Google already associates with you</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                     Google Search Console
@@ -136,13 +136,13 @@ export default function HowBusinessesFindSeoKeywordsPage() {
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">High impressions, low clicks</strong> — Title or meta may not match intent; the page may rank on page two.
+                    <strong className="text-brand">High impressions, low clicks</strong> — Title or meta may not match intent; the page may rank on page two.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Unexpected queries</strong> — Google maps you to phrases you never optimized for; decide whether to strengthen or redirect that intent.
+                    <strong className="text-brand">Unexpected queries</strong> — Google maps you to phrases you never optimized for; decide whether to strengthen or redirect that intent.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Missing services</strong> — Competitors rank for jobs you perform but your nav never names.
+                    <strong className="text-brand">Missing services</strong> — Competitors rank for jobs you perform but your nav never names.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -151,8 +151,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </section>
 
               <section id="competitors" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Learn from competitor page structure</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Learn from competitor page structure</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Manual competitor review still works for most SMBs: open three local rivals, note which services appear in main navigation, how they title area pages, and what proof they show. You are not copying—you are validating which page types Google rewards in your market.
                 </p>
@@ -174,8 +174,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </section>
 
               <section id="local-modifiers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Layer local modifiers only where you can prove coverage</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Layer local modifiers only where you can prove coverage</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service businesses add geography and urgency: city names, &quot;near me,&quot; same-day, and emergency variants. Those phrases should align with GBP categories and{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -193,8 +193,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </section>
 
               <section id="map-to-pages" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Map findings to page types, then ship</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Map findings to page types, then ship</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Cluster phrases by intent and assign one primary URL type per cluster: core service page, selective area page with unique proof, or FAQ block on an existing URL. The framework in{" "}
                   <Link href="/seo-tools/guides/how-seo-keyword-research-works" className={link}>
@@ -212,8 +212,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
               </section>
 
               <section id="when-tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to add paid keyword tools</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to add paid keyword tools</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Upgrade when free sources cannot answer: estimated volume at scale, competitor keyword exports, content gap analysis across dozens of URLs, or multi-location service-and-city matrices. Read{" "}
                   <Link href="/seo-tools/guides/are-seo-tools-worth-it" className={link}>
@@ -229,8 +229,8 @@ export default function HowBusinessesFindSeoKeywordsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

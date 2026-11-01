@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/does-google-have-something-like-quickbooks
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function DoesGoogleHaveSomethingLikeQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Google vs QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Does Google Have Something Like QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     No native Google QuickBooks competitor exists. Here is how Workspace compares—and which accounting platforms fill the gap.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -80,7 +80,7 @@ export default function DoesGoogleHaveSomethingLikeQuickBooksPage() {
                       Owners who live in Gmail and Drive often hope Google ships a QuickBooks competitor so everything stays under one brand. That product does not exist—and the gap is not just marketing. QuickBooks is built for double-entry books, tax reporting, and accountant handoffs; Google Workspace is built for documents and collaboration.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Google does not offer something like QuickBooks Online</strong>—no chart of accounts, no automated bank reconciliation, no standard P&amp;L and balance sheet package built into Workspace. QuickBooks is purpose-built small business accounting; Google is productivity and cloud storage.
+                      <strong className="text-brand">Google does not offer something like QuickBooks Online</strong>—no chart of accounts, no automated bank reconciliation, no standard P&amp;L and balance sheet package built into Workspace. QuickBooks is purpose-built small business accounting; Google is productivity and cloud storage.
                     </p>
                     <p>
                       Owners who want a single Google-branded stack often use Sheets plus manual entry until complexity forces a change. That works for side projects; it breaks down with payroll, multi-account banking, inventory, and year-end tax prep. Read{" "}
@@ -94,10 +94,10 @@ export default function DoesGoogleHaveSomethingLikeQuickBooksPage() {
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>QuickBooks Online typically includes:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Bank and card feeds with categorization and reconciliation</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Invoicing, estimates, and payment tracking tied to accounts receivable</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Tax-ready reports and accountant access</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Integrations with payroll, time tracking, and ecommerce</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Bank and card feeds with categorization and reconciliation</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Invoicing, estimates, and payment tracking tied to accounts receivable</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Tax-ready reports and accountant access</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Integrations with payroll, time tracking, and ecommerce</span></li>
                     </ul>
                     <p>
                       Google Workspace does not replace any of that. Our{" "}
@@ -112,10 +112,10 @@ export default function DoesGoogleHaveSomethingLikeQuickBooksPage() {
                   <SectionTitle sub="Tools to evaluate when you wanted a Google + accounting bundle.">Best QuickBooks-Style Options</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">QuickBooks Online</strong> remains the default when you need the largest US ecosystem.{" "}
-                      <strong className="text-[#1A2D48]">Xero</strong> is the most cited full alternative.{" "}
-                      <strong className="text-[#1A2D48]">Wave</strong> fits free accounting.{" "}
-                      <strong className="text-[#1A2D48]">Zoho Books</strong> fits teams already on Zoho CRM. See{" "}
+                      <strong className="text-brand">QuickBooks Online</strong> remains the default when you need the largest US ecosystem.{" "}
+                      <strong className="text-brand">Xero</strong> is the most cited full alternative.{" "}
+                      <strong className="text-brand">Wave</strong> fits free accounting.{" "}
+                      <strong className="text-brand">Zoho Books</strong> fits teams already on Zoho CRM. See{" "}
                       <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software (2026)</Link> and{" "}
                       <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks for small business worth it</Link> before you commit. Pricing detail:{" "}
                       <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>what does QuickBooks cost per month</Link>.
@@ -147,12 +147,12 @@ export default function DoesGoogleHaveSomethingLikeQuickBooksPage() {
                   <SectionTitle sub="Continue with these guides and reviews.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/does-google-have-a-bookkeeping-program" className={linkGreen}>Does Google have a bookkeeping program?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-xero")} className={linkGreen}>QuickBooks vs Xero</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/disadvantages-of-quickbooks" className={linkGreen}>Disadvantages of QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/does-google-have-a-bookkeeping-program" className={linkGreen}>Does Google have a bookkeeping program?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getAccountingCompareUrl("quickbooks-online-vs-xero")} className={linkGreen}>QuickBooks vs Xero</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/disadvantages-of-quickbooks" className={linkGreen}>Disadvantages of QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
                     </ul>
                   </div>
                 </section>

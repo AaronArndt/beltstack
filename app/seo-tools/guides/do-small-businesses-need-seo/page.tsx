@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function DoSmallBusinessesNeedSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function DoSmallBusinessesNeedSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Do Small Businesses Need SEO?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Do Small Businesses Need SEO?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 When organic search matters for your category, what “need” means in practice, and how little you can start with before paid tools or agencies make sense. For foundations, read{" "}
                 <Link href="/seo-tools/guides/seo-for-beginners-a-complete-guide" className={link}>
                   SEO for beginners
@@ -123,25 +123,25 @@ export default function DoSmallBusinessesNeedSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="short-answer" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The short answer: usually yes, often lightly</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The short answer: usually yes, often lightly</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Most small businesses need SEO because buyers research on Google before they call, visit, or add to cart. You do not need a six-figure program—you need accurate listings, a crawlable site, and pages that match how people search. Ignoring that cedes demand to competitors who show up in Maps and organic results while you rely on luck and word of mouth alone.
                 </p>
               </section>
 
               <section id="when-it-matters" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When SEO matters most for SMBs</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When SEO matters most for SMBs</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">High-intent local services</strong> — Emergency trades, home services, clinics, and professional services where “near me” and city modifiers drive calls.
+                    <strong className="text-brand">High-intent local services</strong> — Emergency trades, home services, clinics, and professional services where “near me” and city modifiers drive calls.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Considered purchases</strong> — Owners compare options online even if they buy offline; you need proof pages, not just a homepage.
+                    <strong className="text-brand">Considered purchases</strong> — Owners compare options online even if they buy offline; you need proof pages, not just a homepage.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Seasonal or cyclical demand</strong> — Organic can smooth valleys when referrals slow; ads alone get expensive if you pause spend.
+                    <strong className="text-brand">Seasonal or cyclical demand</strong> — Organic can smooth valleys when referrals slow; ads alone get expensive if you pause spend.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -154,8 +154,8 @@ export default function DoSmallBusinessesNeedSeoPage() {
               </section>
 
               <section id="when-you-can-wait" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When you can defer heavy SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When you can defer heavy SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   You can defer big content programs if you are capacity-constrained and already booked from a waitlist—but still protect branded search and fix indexing errors via{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -166,16 +166,16 @@ export default function DoSmallBusinessesNeedSeoPage() {
               </section>
 
               <section id="seo-vs-ads" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">SEO vs ads: need both or either?</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">SEO vs ads: need both or either?</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Ads buy immediate visibility; SEO earns placement that does not reset when you stop bidding. Small businesses with thin margins often start with Maps and on-site basics, add ads when crews have capacity, and measure both in CRM. Neither replaces the other—they answer different time horizons.
                 </p>
               </section>
 
               <section id="minimum-viable" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Minimum viable SEO for a small business</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Minimum viable SEO for a small business</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Verify site ownership and fix crawl or mobile issues Search Console surfaces.</li>
                   <li>Claim GBP; align categories, services, photos, and review responses with real work.</li>
@@ -193,8 +193,8 @@ export default function DoSmallBusinessesNeedSeoPage() {
               </section>
 
               <section id="tools-and-help" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tools and help: what to add when basics stall</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tools and help: what to add when basics stall</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Add{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -222,8 +222,8 @@ export default function DoSmallBusinessesNeedSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

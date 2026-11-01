@@ -28,18 +28,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 
 // ——— Design tokens (match hub / compare pages) ———
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -58,31 +58,31 @@ export default function BestPayrollSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Payroll
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best Payroll Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Payroll Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you run payroll for mixed teams, the best payroll software should handle employees and contractors accurately while reducing filing risk and manual correction work.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared payroll usability, compliance support, contractor handling, pricing, and integrations so the Key Takeaways shortlist is ready for final evaluation.
             </p>
             <RoundupHubLinksBlurb categoryPath="/payroll" categoryLabel="payroll software" />
@@ -125,31 +125,31 @@ export default function BestPayrollSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Software</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Payroll types</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Standout feature</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Software</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Payroll types</th>
+                    <th className="px-4 py-3 font-bold text-brand">Standout feature</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
                   {TOP_PICKS.map((pick) => (
                     <tr key={pick.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80">
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={pick.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {pick.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{pick.badge}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{pick.badge}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(pick.slug, pick.startingPrice, "payroll")}
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{pick.payrollTypes}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{pick.standoutFeature}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{pick.payrollTypes}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{pick.standoutFeature}</td>
                       <td className="px-4 py-4">
-                        <Link href={getPayrollReviewUrl(pick.slug)} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={getPayrollReviewUrl(pick.slug)} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -187,45 +187,45 @@ export default function BestPayrollSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose payroll software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Payroll types (W-2 / 1099 / mixed)</h3>
+                <h3 className="font-bold text-brand text-base">Payroll types (W-2 / 1099 / mixed)</h3>
                 <p className="mt-1">
                   Most small businesses need both W-2 employees and 1099 contractors. Choose a platform that handles both with clear tax treatment and forms. If you&apos;re contractor-only or mixed, ensure 1099 support and contractor self-service are included.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Contractor support</h3>
+                <h3 className="font-bold text-brand text-base">Contractor support</h3>
                 <p className="mt-1">
                   Look for 1099 payment runs, automatic tax forms (e.g. 1099-NEC), and a contractor portal so subs can view pay stubs and documents. Some tools charge extra for 1099 e-file—check before you commit.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Tax automation</h3>
+                <h3 className="font-bold text-brand text-base">Tax automation</h3>
                 <p className="mt-1">
                   Full-service payroll should calculate, file, and deposit federal and state payroll taxes. Confirm that tax filing and deposits are included and that the provider takes responsibility for accuracy and deadlines.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">HR and benefits features</h3>
+                <h3 className="font-bold text-brand text-base">HR and benefits features</h3>
                 <p className="mt-1">
                   If you offer health insurance or 401(k), choose a payroll provider that can run benefits and deductions in sync with payroll. Onboarding, compliance docs, and PTO tracking may be included or add-ons.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Integrations</h3>
+                <h3 className="font-bold text-brand text-base">Integrations</h3>
                 <p className="mt-1">
                   Payroll should connect to your accounting software (QuickBooks, Xero) and optionally time tracking. Native integration is better than manual export. If you&apos;re deep in QuickBooks, QuickBooks Payroll keeps everything in one place.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Ease of use</h3>
+                <h3 className="font-bold text-brand text-base">Ease of use</h3>
                 <p className="mt-1">
                   Setup, running pay runs, and adding employees or contractors should be straightforward. Read reviews and try demos if possible. Modern tools like Gusto and OnPay are built for self-serve; ADP and Paychex offer more hand-holding with custom pricing.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Pricing transparency</h3>
+                <h3 className="font-bold text-brand text-base">Pricing transparency</h3>
                 <p className="mt-1">
                   Prefer published base + per-person pricing when you can budget upfront. Providers like ADP and Paychex use custom quotes—get a quote and compare total cost to Gusto or OnPay at your headcount.
                 </p>
@@ -252,7 +252,7 @@ export default function BestPayrollSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -274,12 +274,12 @@ export default function BestPayrollSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
-              <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
+              <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 View payroll comparisons
               </Link>
               {" "}to compare platforms side-by-side, or jump to a specific comparison below. For guides on pricing, 1099 contractors, hourly workers, and more, see our{" "}
-              <Link href="/payroll/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/payroll/guides" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 payroll guides
               </Link>.
             </p>
@@ -288,7 +288,7 @@ export default function BestPayrollSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -325,17 +325,17 @@ export default function BestPayrollSoftwarePage() {
       {/* Affiliate modal */}
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-payroll-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-payroll-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-payroll-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

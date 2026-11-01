@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowToRankInGoogleMapsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowToRankInGoogleMapsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Rank in Google Maps</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Rank in Google Maps</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 What moves the local pack for contractors, home services, and local operators—and what is outside your control. See the{" "}
                 <Link href="/seo-tools/best-seo-tools" className={link}>
                   best SEO tools
@@ -123,22 +123,22 @@ export default function HowToRankInGoogleMapsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="three-factors" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Relevance, distance, and prominence—in plain language</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Relevance, distance, and prominence—in plain language</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Google&apos;s local ranking framework boils down to three ideas:</p>
                 <ul className="mt-3 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Relevance</strong> — Does your profile and website clearly show you offer the service the user wants? Categories, services, page titles, and content all feed relevance.
+                    <strong className="text-brand">Relevance</strong> — Does your profile and website clearly show you offer the service the user wants? Categories, services, page titles, and content all feed relevance.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Distance</strong> — How far is the searcher from your service area or address? You cannot cheat proximity without violating guidelines; optimize the territory you legitimately cover.
+                    <strong className="text-brand">Distance</strong> — How far is the searcher from your service area or address? You cannot cheat proximity without violating guidelines; optimize the territory you legitimately cover.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Prominence</strong> — How well-known and trusted does your business appear online? Reviews, links, mentions, and consistent citations contribute here.
+                    <strong className="text-brand">Prominence</strong> — How well-known and trusted does your business appear online? Reviews, links, mentions, and consistent citations contribute here.
                   </li>
                 </ul>
                 <p className="mt-4">
-                  Practical programs improve <strong className="text-[#1A2D48]">relevance and prominence every week</strong> while keeping service areas honest. For full-stack context, see{" "}
+                  Practical programs improve <strong className="text-brand">relevance and prominence every week</strong> while keeping service areas honest. For full-stack context, see{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
                     local SEO for service businesses
                   </Link>
@@ -147,30 +147,30 @@ export default function HowToRankInGoogleMapsPage() {
               </section>
 
               <section id="gbp-levers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Highest-impact GBP levers you control</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Highest-impact GBP levers you control</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-2 list-decimal space-y-3 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Correct primary category</strong> tied to how you earn revenue.
+                    <strong className="text-brand">Correct primary category</strong> tied to how you earn revenue.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Complete services list</strong> aligned with site pages.
+                    <strong className="text-brand">Complete services list</strong> aligned with site pages.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Photo stream</strong> of real work—uploads should continue after the first setup week.
+                    <strong className="text-brand">Photo stream</strong> of real work—uploads should continue after the first setup week.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Review velocity and owner replies</strong> that show professionalism.
+                    <strong className="text-brand">Review velocity and owner replies</strong> that show professionalism.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Accurate hours, phone, and appointment links</strong> so Google trusts engagement signals.
+                    <strong className="text-brand">Accurate hours, phone, and appointment links</strong> so Google trusts engagement signals.
                   </li>
                 </ol>
               </section>
 
               <section id="website-signals" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Website signals that reinforce Maps</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Website signals that reinforce Maps</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Your site should echo GBP: same brand name variants, phone, core services, and geography. Strong{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -185,8 +185,8 @@ export default function HowToRankInGoogleMapsPage() {
               </section>
 
               <section id="measure-grids" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measure with grids—then fix the underlying asset</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measure with grids—then fix the underlying asset</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rank grids show where you are weak relative to competitors. Use them to decide which ZIPs need better landing pages, more reviews from jobs in that area, or adjusted service-area settings—not to chase spammy tactics.
                 </p>
@@ -219,8 +219,8 @@ export default function HowToRankInGoogleMapsPage() {
               </section>
 
               <section id="avoid" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tactics that backfire</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tactics that backfire</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="list-disc space-y-2 pl-5">
                   <li>Keyword stuffing in the business name or fake suite numbers.</li>
                   <li>Duplicate profiles for the same crew/territory.</li>
@@ -238,8 +238,8 @@ export default function HowToRankInGoogleMapsPage() {
               </section>
 
               <section id="blend-paid" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When Maps is not enough: blend with paid demand</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When Maps is not enough: blend with paid demand</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Organic Maps gains can lag urgent revenue needs. Layer{" "}
                   <Link href="/lead-generation" className={link}>
@@ -259,8 +259,8 @@ export default function HowToRankInGoogleMapsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

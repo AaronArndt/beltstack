@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -69,7 +69,7 @@ export default function HowToPerformSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -94,8 +94,8 @@ export default function HowToPerformSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Perform SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Perform SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A repeatable execution playbook: diagnose, prioritize, implement, and measure—without chasing vanity metrics or buying tools before you know the bottleneck. Ground the process in{" "}
                 <Link href="/seo-tools/guides/how-seo-works" className={link}>
                   how SEO works
@@ -115,8 +115,8 @@ export default function HowToPerformSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="diagnose" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Step 1: Diagnose with free data first</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Step 1: Diagnose with free data first</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Before keyword lists, confirm Google can index your property. In{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -142,8 +142,8 @@ export default function HowToPerformSeoPage() {
               </section>
 
               <section id="research" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Step 2: Research intent and priorities</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Step 2: Research intent and priorities</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Build a short list of queries tied to services you actually sell—not editorial topics for traffic alone. Map each query to an existing URL or a planned page. For local modifiers, use Search Console plus{" "}
                   <Link href="/seo-tools/guides/local-keyword-research-without-enterprise-tools" className={link}>
@@ -165,8 +165,8 @@ export default function HowToPerformSeoPage() {
               </section>
 
               <section id="implement-on-site" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Step 3: Implement on-site and on-page fixes</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Step 3: Implement on-site and on-page fixes</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Tackle money pages first: unique titles, one clear H1, scannable sections answering pre-sale questions, internal links from related content, and fast mobile rendering. Local businesses should mirror GBP services on dedicated pages—see{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -180,8 +180,8 @@ export default function HowToPerformSeoPage() {
               </section>
 
               <section id="local-execution" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Step 4: Execute local SEO when geography matters</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Step 4: Execute local SEO when geography matters</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service-area businesses should run GBP, website, and citations as one program—details in{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -211,8 +211,8 @@ export default function HowToPerformSeoPage() {
               </section>
 
               <section id="measure-iterate" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Step 5: Measure, report, and iterate monthly</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Step 5: Measure, report, and iterate monthly</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Track impressions, clicks, and conversions—not rank alone. Document what changed each month: new page, GBP category fix, review campaign, technical patch. When growth stalls, return to diagnosis rather than buying another tool tier.
                 </p>
@@ -235,8 +235,8 @@ export default function HowToPerformSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

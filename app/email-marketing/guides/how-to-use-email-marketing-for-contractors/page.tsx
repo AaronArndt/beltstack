@@ -12,7 +12,7 @@ import {
 } from "@/lib/routes";
 
 const href = "/email-marketing/guides/how-to-use-email-marketing-for-contractors";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -50,7 +50,7 @@ export default function HowToUseEmailMarketingForContractorsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px] pt-8 pb-16">
                 <nav aria-label="Breadcrumb" className="pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link href="/" className="text-gray-500 hover:text-gray-900">
                         Home
@@ -75,8 +75,8 @@ export default function HowToUseEmailMarketingForContractorsPage() {
                   </ol>
                 </nav>
                 <header className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">How to Use Email Marketing for Contractors</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">How to Use Email Marketing for Contractors</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                     Contractors win email when messages mirror real job milestones—estimates, dispatch, completion, membership renewals—not random promotions. Start with our{" "}
                     <Link href="/email-marketing/best-email-marketing-software" className={link}>
                       best email marketing software
@@ -101,8 +101,8 @@ export default function HowToUseEmailMarketingForContractorsPage() {
                   </p>
                   <GuideLastUpdated date="March 25, 2026" />
                 </header>
-                <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-                  <h2 className="text-[#1A2D48] text-xl font-bold">Map journeys to job truth</h2>
+                <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+                  <h2 className="text-brand text-xl font-bold">Map journeys to job truth</h2>
                   <p className="mt-2">
                     Sketch flows on paper before touching an ESP: estimate sent, no response in five business days, job scheduled, job completed, membership expiring in 30 days. If your{" "}
                     <Link href="/crm" className={link}>
@@ -110,11 +110,11 @@ export default function HowToUseEmailMarketingForContractorsPage() {
                     </Link>{" "}
                     cannot emit those states, fix stages first—otherwise automation becomes guesswork that trains customers to ignore you.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Segment by economics, not vanity</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Segment by economics, not vanity</h2>
                   <p className="mt-2">
                     Residential tune-ups, emergency premiums, commercial bids, and large retrofit projects deserve separate message tone and CTAs. Blending them produces weak offers that underperform for everyone. Tag by service line and ticket band when possible; at minimum separate “prospect,” “active maintenance,” and “dormant.”
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Integrate capture with field habits</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Integrate capture with field habits</h2>
                   <p className="mt-2">
                     Techs should confirm email consent when finishing jobs— verbal-only lists decay. Pair paper cards with QR codes that land on double opt-in pages from your{" "}
                     <Link href="/website-builders" className={link}>
@@ -122,11 +122,11 @@ export default function HowToUseEmailMarketingForContractorsPage() {
                     </Link>
                     . Feed new subscribers into the same CRM you use for dispatch so sales sees opens before calling.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Run seasonal campaigns during quiet weeks</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Run seasonal campaigns during quiet weeks</h2>
                   <p className="mt-2">
                     Build shoulder-season pushes when the office can QA copy, not during your busiest heat wave or freeze. Pre-write three variations (urgency, educational, membership) so you are not inventing tone under pressure.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Coordinate with leads and SEO</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Coordinate with leads and SEO</h2>
                   <p className="mt-2">
                     Email rescues leads that{" "}
                     <Link href="/lead-generation" className={link}>

@@ -8,9 +8,9 @@ import { ACCOUNTING_GUIDES } from "@/lib/data/accountingGuides";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -21,11 +21,11 @@ function GuideCard({ title, href, description }: GuideCardProps) {
   return (
     <Link
       href={href}
-      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
     >
-      <h3 className="text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{title}</h3>
-      <p className="mt-2 text-[#57534E] text-sm leading-relaxed">{description}</p>
-      <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+      <h3 className="text-brand text-xl font-bold group-hover:text-indigo">{title}</h3>
+      <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{description}</p>
+      <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
         Read guide →
       </span>
     </Link>
@@ -40,11 +40,11 @@ export default function AccountingGuidesPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -53,7 +53,7 @@ export default function AccountingGuidesPage() {
                 <li>
                   <Link
                     href="/accounting"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Accounting
                   </Link>
@@ -64,27 +64,27 @@ export default function AccountingGuidesPage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Accounting Software Guides
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Learn how accounting software works, how much it costs, how it compares to bookkeeping tools, and how to
               choose the right software for your business.
             </p>
             <GuideLastUpdated date="March 8, 2026" />
-            <p className="mt-5 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-5 text-muted-foreground text-base leading-relaxed max-w-3xl">
               These guides help business owners understand accounting software, pricing, bookkeeping workflows, invoicing,
               and choosing the right accounting platform. You can also explore our{" "}
               <Link
                 href="/accounting"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 accounting software hub
               </Link>{" "}
               and{" "}
               <Link
                 href="/accounting/compare"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 accounting software comparisons
               </Link>{" "}

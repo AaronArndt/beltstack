@@ -29,15 +29,15 @@ const KEY_TAKEAWAYS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -49,7 +49,7 @@ function HrHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating HR tools">
         How to Choose HR Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         HR software centralizes employee data, hiring, onboarding, payroll, benefits, and compliance so you can manage people operations in one place. Use our{" "}
         <Link href="/hr/best-hr-software" className={linkGreen}>
           best HR software
@@ -61,26 +61,26 @@ function HrHowToChooseSection() {
         for head-to-head matchups, and the scenario links below to narrow by company size and need.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Company size</strong> — Freelancers and solos need lightweight tools; small and growing businesses need payroll and benefits; larger teams may consider PEOs or enterprise HRIS.
+            <strong className="text-brand">Company size</strong> — Freelancers and solos need lightweight tools; small and growing businesses need payroll and benefits; larger teams may consider PEOs or enterprise HRIS.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Payroll and benefits</strong> — Many HR platforms bundle payroll and benefits administration. Decide if you want all-in-one (e.g. Gusto, Rippling) or HRIS plus separate payroll.
+            <strong className="text-brand">Payroll and benefits</strong> — Many HR platforms bundle payroll and benefits administration. Decide if you want all-in-one (e.g. Gusto, Rippling) or HRIS plus separate payroll.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Hiring and onboarding</strong> — Look for applicant tracking, offer management, and onboarding workflows if you hire frequently.
+            <strong className="text-brand">Hiring and onboarding</strong> — Look for applicant tracking, offer management, and onboarding workflows if you hire frequently.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Global teams</strong> — If you hire or pay people in multiple countries, consider global payroll and EOR solutions like Deel or Rippling.
+            <strong className="text-brand">Global teams</strong> — If you hire or pay people in multiple countries, consider global payroll and EOR solutions like Deel or Rippling.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Compliance and PEO</strong> — Compliance support and PEO options (e.g. Justworks, TriNet) can reduce risk and give access to better benefits for small teams.
+            <strong className="text-brand">Compliance and PEO</strong> — Compliance support and PEO options (e.g. Justworks, TriNet) can reduce risk and give access to better benefits for small teams.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Integrations</strong> — HR tools often integrate with{" "}
+            <strong className="text-brand">Integrations</strong> — HR tools often integrate with{" "}
             <Link href="/accounting" className={linkGreen}>accounting</Link>,{" "}
             <Link href="/payroll" className={linkGreen}>payroll</Link>, and time tracking; check that your stack connects.
           </li>
@@ -141,42 +141,42 @@ function HrEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in HR software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when small businesses, startups, and growing teams choose tools to manage people operations, payroll, and compliance.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Ease of use</h3>
+            <h3 className="text-brand text-lg font-semibold">Ease of use</h3>
             <p className="mt-1.5">
               HR software should be straightforward for admins and employees: easy setup, clear workflows for onboarding and time off, and self-service where appropriate. Look for a clean interface and good support or help resources.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Employee onboarding</h3>
+            <h3 className="text-brand text-lg font-semibold">Employee onboarding</h3>
             <p className="mt-1.5">
               New-hire onboarding should guide employees through paperwork, documents, and role setup. Strong tools offer checklists, e-signatures, and automatic provisioning so new hires are ready on day one.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Payroll and benefits integration</h3>
+            <h3 className="text-brand text-lg font-semibold">Payroll and benefits integration</h3>
             <p className="mt-1.5">
               When HR and payroll live in one system, employee data stays in sync and you avoid double entry. Benefits administration (health, 401k, etc.) should integrate so enrollment and deductions flow correctly.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Compliance support</h3>
+            <h3 className="text-brand text-lg font-semibold">Compliance support</h3>
             <p className="mt-1.5">
               HR software should help with compliance: tax withholdings, new-hire reporting, and staying current with labor laws. PEOs and full-service platforms often bundle compliance support and updates.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Automation and integrations</h3>
+            <h3 className="text-brand text-lg font-semibold">Automation and integrations</h3>
             <p className="mt-1.5">
               Look for automation of repetitive tasks (approvals, reminders, reporting) and integrations with accounting, time tracking, and other tools so your HR data stays connected across the business.
             </p>
@@ -184,30 +184,30 @@ function HrEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Employee database & org chart
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Hiring & onboarding workflows
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Payroll & tax (or integration)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Benefits administration
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Time off & PTO tracking
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Compliance & reporting
               </li>
             </ul>
@@ -235,7 +235,7 @@ function HrPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -245,7 +245,7 @@ function HrPopularComparisonsSection() {
                     className="h-10 w-auto max-w-[80px] object-contain object-left"
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {item.productB.logoSrc && (
                   <img
                     src={item.productB.logoSrc}
@@ -254,23 +254,23 @@ function HrPopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/hr/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all HR comparisons →
         </Link>

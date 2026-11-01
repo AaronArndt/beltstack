@@ -16,7 +16,7 @@ export function RoundupTopPicksSummary({
     <section id="top-picks" className="scroll-mt-section border-b border-stone-200/80 bg-white py-5 sm:py-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-4 sm:mb-5">
-          <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">Our top picks</h2>
+          <h2 className="text-brand text-2xl font-bold sm:text-3xl">Our top picks</h2>
           <div className={sectionRuleAccent} aria-hidden />
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -36,20 +36,15 @@ export function RoundupTopPicksSummary({
                     />
                   ) : null}
                   <div className="min-w-0">
-                    <h3 className="break-words text-lg font-bold leading-snug text-[#1A2D48]">{pick.name}</h3>
+                    <h3 className="break-words text-lg font-bold leading-snug text-brand">{pick.name}</h3>
                     {pick.rating ? (
-                      <p className="mt-1 text-sm font-semibold text-[#10B981]">{pick.rating}</p>
+                      <p className="mt-1 text-sm font-semibold text-brand">{pick.rating}</p>
                     ) : null}
                   </div>
                 </div>
                 {pick.badge ? (
                   <p
-                    className="mt-3 inline-flex max-w-full border px-2.5 py-1 text-xs font-bold leading-snug text-[#10B981]"
-                    style={{
-                      backgroundColor: "#E7F8F2",
-                      borderColor: "#10B981",
-                      borderRadius: 5,
-                    }}
+                    className="mt-3 inline-flex max-w-full rounded-md border border-terracotta/40 bg-terracotta/30 px-2.5 py-1 text-xs font-bold leading-snug text-brand"
                   >
                     {pick.badge}
                   </p>
@@ -57,7 +52,7 @@ export function RoundupTopPicksSummary({
                 <p className="mt-3">
                   <Link
                     href={reviewUrl}
-                    className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Read Review
                   </Link>

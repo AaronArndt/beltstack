@@ -6,7 +6,7 @@ import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTra
 import { getCallTrackingBestForUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/call-tracking-vs-google-analytics";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -30,7 +30,7 @@ export default function CallTrackingVsGoogleAnalyticsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="min-w-0 max-w-[720px] pt-8 pb-16">
             <nav aria-label="Breadcrumb" className="pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -55,8 +55,8 @@ export default function CallTrackingVsGoogleAnalyticsPage() {
               </ol>
             </nav>
             <header className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Call Tracking vs Google Analytics</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Call Tracking vs Google Analytics</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 GA4 helps you understand site behavior; call tracking ties real phone conversations to marketing sources with telco-level detail. Most growing service businesses end up using both—with
                 clear ownership of what counts as a conversion. See our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
@@ -74,18 +74,18 @@ export default function CallTrackingVsGoogleAnalyticsPage() {
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
-            <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-              <h2 className="text-[#1A2D48] text-xl font-bold">What GA4 does well</h2>
+            <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+              <h2 className="text-brand text-xl font-bold">What GA4 does well</h2>
               <p className="mt-2">
                 Funnels, landing page performance, and cross-device paths are GA4 strengths—especially when Search Console and ads accounts are linked. It is weaker when buyers pick up the phone and
                 never complete a thank-you page.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">What call tracking adds</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">What call tracking adds</h2>
               <p className="mt-2">
                 Keyword-level or session-level call context, recordings (where allowed), and native CRM integrations are the usual reasons teams add CallRail-class stacks. The goal is not duplicate
                 dashboards—it is cleaner answers to which campaigns earn booked jobs.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Practical split</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Practical split</h2>
               <p className="mt-2">
                 Let GA4 own site analytics; let call tracking own telephony attribution exports into CRM and ads platforms. Document the handoff so finance does not reconcile two conflicting conversion
                 totals at month-end. Measure calls generated from organic traffic with our{" "}

@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What SEO Actually Does for Businesses</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What SEO Actually Does for Businesses</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 SEO is not magic placement—it is how you show up when customers search, earn trust before the first call, and build a lead channel that does not reset when you pause ad spend. For tool picks and workflows, see the{" "}
                 <Link href="/seo-tools" className={link}>
                   SEO tools hub
@@ -123,20 +123,20 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="outcomes" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The outcomes owners care about</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The outcomes owners care about</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Strip away jargon and SEO does three practical jobs: it puts you in front of people already looking for what you sell, it pre-sells with reviews and helpful pages before they contact you, and it lowers customer acquisition cost over time compared with rent-only channels like paid social or lead marketplaces.
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Discovery</strong> — Organic results and Maps when someone types &quot;emergency plumber near me&quot; or &quot;HVAC maintenance [city].&quot;
+                    <strong className="text-brand">Discovery</strong> — Organic results and Maps when someone types &quot;emergency plumber near me&quot; or &quot;HVAC maintenance [city].&quot;
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Credibility</strong> — Star ratings, photos from real jobs, licensing details, and FAQs that answer objections.
+                    <strong className="text-brand">Credibility</strong> — Star ratings, photos from real jobs, licensing details, and FAQs that answer objections.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Efficiency</strong> — Clicks you do not pay for on every visit, especially once core pages rank in multiple neighborhoods.
+                    <strong className="text-brand">Efficiency</strong> — Clicks you do not pay for on every visit, especially once core pages rank in multiple neighborhoods.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -149,8 +149,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
               </section>
 
               <section id="local-vs-national" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local service businesses vs everyone else</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local service businesses vs everyone else</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   If you dispatch technicians or visit job sites, geography dominates: Google Business Profile, Map Pack rankings, and city-specific service pages matter more than a national blog strategy. Read{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -164,8 +164,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
               </section>
 
               <section id="website-role" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What your website must do in the SEO story</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What your website must do in the SEO story</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Listings and ads can generate calls, but your site is where you prove scope, pricing signals, warranties, and service areas in depth. Weak on-page work wastes GBP clicks. Use{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -183,8 +183,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
               </section>
 
               <section id="tools-and-competition" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When research tools change the economics</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When research tools change the economics</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Search Console tells you what Google already shows for your domain. Paid suites like{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -210,8 +210,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
               </section>
 
               <section id="realistic-expectations" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Set expectations your team can keep</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Set expectations your team can keep</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO rewards consistency: monthly GBP updates, review responses, one meaningful site improvement, and fixing errors Search Console flags. It punishes shortcuts—fake locations, purchased links, duplicate city pages with no unique proof.
                 </p>
@@ -234,8 +234,8 @@ export default function WhatSeoActuallyDoesForBusinessesPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

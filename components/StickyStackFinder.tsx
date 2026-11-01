@@ -50,8 +50,8 @@ export function StickyStackFinder({
   };
 
   const selectClass =
-    "w-full h-11 rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-sm text-[#1A2D48] focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
-  const labelClass = "block text-xs font-semibold text-[#1A2D48] mb-1";
+    "w-full h-11 rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-sm text-brand focus:border-stone-300 focus:ring-1 focus:ring-stone-200 focus:outline-none";
+  const labelClass = "block text-xs font-semibold text-brand mb-1";
 
   return (
     <>
@@ -110,7 +110,7 @@ export function StickyStackFinder({
             </div>
             <button
               type="submit"
-              className="shrink-0 self-end rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="shrink-0 self-end rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               See Results
             </button>
@@ -121,7 +121,7 @@ export function StickyStackFinder({
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="rounded-md bg-[#10B981] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="rounded-md bg-brand px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               Find your stack
             </button>
@@ -133,7 +133,7 @@ export function StickyStackFinder({
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/40 md:hidden"
+            className="fixed inset-0 z-50 bg-brand/40 md:hidden"
             aria-hidden
             onClick={() => setMobileOpen(false)}
           />
@@ -145,7 +145,7 @@ export function StickyStackFinder({
           >
             <h3
               id="sticky-stack-drawer-title"
-              className="text-[#1A2D48] text-lg font-bold"
+              className="text-brand text-lg font-bold"
             >
               Find your stack
             </h3>
@@ -191,7 +191,7 @@ export function StickyStackFinder({
               </div>
               <button
                 type="submit"
-                className="rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                className="rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
               >
                 See Results
               </button>

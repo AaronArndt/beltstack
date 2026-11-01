@@ -45,7 +45,7 @@ export function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right"
         aria-label="How we rate"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className="ml-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#57534E]/50 bg-[#57534E]/10 text-[10px] font-semibold text-[#57534E] transition-colors hover:border-[#10B981] hover:bg-[#10B981]/10 hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+        className="ml-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-muted-foreground/50 bg-muted-foreground/10 text-[10px] font-semibold text-muted-foreground transition-colors hover:border-indigo hover:bg-sage hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
       >
         i
       </button>
@@ -57,13 +57,13 @@ export function RatingInfoTooltip({ align = "left" }: { align?: "left" | "right"
             align === "right" ? "left-auto right-0" : "left-0"
           }`}
         >
-          <p className="text-sm font-semibold text-[#1A2D48]">How we rate</p>
-          <p className="mt-1 text-xs leading-relaxed text-[#57534E]">
+          <p className="text-sm font-semibold text-brand">How we rate</p>
+          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
             {BELTSTACK_RATING_TOOLTIP}
           </p>
           <Link
             href="/methodology"
-            className="mt-2 inline-block rounded text-xs font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+            className="mt-2 inline-block rounded text-xs font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo"
             onClick={() => setOpen(false)}
           >
             Read methodology →

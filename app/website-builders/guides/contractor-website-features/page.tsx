@@ -9,8 +9,8 @@ import { getWebsiteBuildersReviewUrl, getWebsiteBuildersCompareUrl, getWebsiteBu
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -69,7 +69,7 @@ export default function ContractorWebsiteFeaturesGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li><li aria-hidden>/</li>
                     <li><Link href="/website-builders" className="text-gray-500 hover:text-gray-900">Website Builders</Link></li><li aria-hidden>/</li>
                     <li><Link href="/website-builders/guides" className="text-gray-500 hover:text-gray-900">Guides</Link></li><li aria-hidden>/</li>
@@ -77,8 +77,8 @@ export default function ContractorWebsiteFeaturesGuidePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Contractor Website Features</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Contractor Website Features</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                     The contractor website feature checklist that drives local rankings, phone calls, and booked jobs. Use this guide if you are searching for what a high-converting HVAC, plumbing, roofing, or general contractor website needs in 2026.
                   </p>
                   <GuideLastUpdated date="March 25, 2026" />
@@ -87,9 +87,9 @@ export default function ContractorWebsiteFeaturesGuidePage() {
                 <section className="pt-8 pb-8 space-y-4 text-[15px] leading-relaxed text-neutral-700">
                   <p>
                     Strong contractor websites are conversion systems, not design portfolios. Visitors should understand your services, service area, trust signals, and next step within seconds on mobile. Start with our{" "}
-                    <Link href="/website-builders/best-website-builders" className="font-semibold text-[#10B981] hover:underline">best website builders roundup</Link>{" "}
+                    <Link href="/website-builders/best-website-builders" className="font-semibold text-indigo hover:underline">best website builders roundup</Link>{" "}
                     and{" "}
-                    <Link href={getWebsiteBuildersBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">best website builder for contractors</Link>{" "}
+                    <Link href={getWebsiteBuildersBestForUrl("contractors")} className="font-semibold text-indigo hover:underline">best website builder for contractors</Link>{" "}
                     picks if you are still selecting a platform.
                   </p>
                 </section>
@@ -125,13 +125,13 @@ export default function ContractorWebsiteFeaturesGuidePage() {
                     </p>
                     <p>
                       For platform-specific decisions, compare{" "}
-                      <Link href={getWebsiteBuildersCompareUrl("wix-vs-squarespace")} className="font-semibold text-[#10B981] hover:underline">Wix vs Squarespace</Link>{" "}
+                      <Link href={getWebsiteBuildersCompareUrl("wix-vs-squarespace")} className="font-semibold text-indigo hover:underline">Wix vs Squarespace</Link>{" "}
                       and{" "}
-                      <Link href={getWebsiteBuildersCompareUrl("webflow-vs-wix")} className="font-semibold text-[#10B981] hover:underline">Webflow vs Wix</Link>
+                      <Link href={getWebsiteBuildersCompareUrl("webflow-vs-wix")} className="font-semibold text-indigo hover:underline">Webflow vs Wix</Link>
                       . Then validate fit in the full{" "}
-                      <Link href={getWebsiteBuildersReviewUrl("wix")} className="font-semibold text-[#10B981] hover:underline">Wix review</Link>{" "}
+                      <Link href={getWebsiteBuildersReviewUrl("wix")} className="font-semibold text-indigo hover:underline">Wix review</Link>{" "}
                       and{" "}
-                      <Link href={getWebsiteBuildersReviewUrl("squarespace")} className="font-semibold text-[#10B981] hover:underline">Squarespace review</Link>
+                      <Link href={getWebsiteBuildersReviewUrl("squarespace")} className="font-semibold text-indigo hover:underline">Squarespace review</Link>
                       .
                     </p>
                   </div>

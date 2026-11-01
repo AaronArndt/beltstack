@@ -51,7 +51,7 @@ export function RoundupSoftwarePicksSection({
       </div>
       {rest.length > 0 ? (
         <div className="mt-10">
-          <h3 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">Other software we recommend</h3>
+          <h3 className="text-brand text-xl font-bold sm:text-2xl">Other software we recommend</h3>
           <div className={sectionRuleAccent} aria-hidden />
           <div className="mt-6 space-y-4">
             {rest.map((pick) => (

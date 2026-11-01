@@ -19,7 +19,7 @@ import { getWebsiteBuildersComparisonBySlug } from "@/lib/data/websiteBuildersCo
 import { getWebsiteBuildersReviewUrl, getLeadGenerationBestForUrl } from "@/lib/routes";
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const KEY_TAKEAWAYS = [
   { label: "Best overall for local operators: Wix", anchor: "#pick-wix" },
@@ -33,9 +33,9 @@ const KEY_TAKEAWAYS = [
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -168,7 +168,7 @@ function PopularComparisonsSection() {
             <Link
               key={slug}
               href={href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -181,9 +181,9 @@ function PopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-lg font-medium text-[#57534E]" aria-hidden>
+                <span className="text-lg font-medium text-muted-foreground" aria-hidden>
                   vs
                 </span>
                 {data.productB.logoSrc ? (
@@ -196,17 +196,17 @@ function PopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-xl font-bold text-[#1A2D48] group-hover:text-[#10B981]">{title}</h3>
-              <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-[#57534E]">{summary}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+              <h3 className="mt-3 text-xl font-bold text-brand group-hover:text-indigo">{title}</h3>
+              <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link href="/website-builders/compare" className={linkGreen}>
           View all website builder comparisons →
         </Link>
@@ -219,27 +219,27 @@ function WebsiteBuildersEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in website builder software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">What matters when service businesses choose a website platform.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">What businesses should look for in website builder software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">What matters when service businesses choose a website platform.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="space-y-6 lg:col-span-2">
           <div>
-            <h3 className="text-lg font-semibold text-[#1A2D48]">Lead capture and mobile conversion</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-[#57534E]">
+            <h3 className="text-lg font-semibold text-brand">Lead capture and mobile conversion</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
               Most local revenue still starts with a call, form, or quote request. Your builder should make click-to-call, short forms, and service-area clarity obvious on small screens—without burying trust content (reviews, licenses, guarantees) where nobody scrolls.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-[#1A2D48]">Local SEO and service-page architecture</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-[#57534E]">
+            <h3 className="text-lg font-semibold text-brand">Local SEO and service-page architecture</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
               Rankings follow structure: dedicated pages per primary service, clean URLs, editable titles and descriptions, and fast-loaded images. Evaluate how easily you can add locations and service routes as you grow—not just how pretty the homepage template is.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-[#1A2D48]">Maintenance ownership and total cost</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-[#57534E]">
+            <h3 className="text-lg font-semibold text-brand">Maintenance ownership and total cost</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
               The best platform is one your team actually updates after launch. Model subscription cost plus bookings, forms, marketing apps, and ecommerce add-ons. If you need{" "}
               <Link href="/website-builders/guides/website-builders-vs-wordpress" className={linkGreen}>
                 WordPress-level flexibility
@@ -250,40 +250,40 @@ function WebsiteBuildersEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-lg font-semibold text-[#1A2D48]">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-lg font-semibold text-brand">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Quote/contact forms and clear CTAs
               </li>
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Service and service-area pages
               </li>
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Reviews, galleries, and trust proof
               </li>
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Editable SEO metadata and URL control
               </li>
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Mobile performance and simple editing
               </li>
               <li className="flex items-start gap-2">
-                <span className="shrink-0 text-[#10B981]" aria-hidden>
+                <span className="shrink-0 text-indigo" aria-hidden>
                   ✓
                 </span>
                 Integrations (analytics, booking, CRM handoff)

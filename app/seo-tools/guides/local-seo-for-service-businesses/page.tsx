@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function LocalSeoForServiceBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Local SEO for Service Businesses</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Local SEO for Service Businesses</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 How listings, your website, and reputation work together so nearby customers find you on Google Maps and search. For tool shortlists, see{" "}
                 <Link href="/seo-tools/best-for/local-seo" className={link}>
                   best SEO tools for local SEO
@@ -119,18 +119,18 @@ export default function LocalSeoForServiceBusinessesPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="pillars" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The three pillars of local SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The three pillars of local SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Think of local SEO as three loops that should reinforce each other every month:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Discovery surfaces</strong> — Google Business Profile, Maps, and the local pack. This is where many emergency and &quot;near me&quot; searches convert to a call.
+                    <strong className="text-brand">Discovery surfaces</strong> — Google Business Profile, Maps, and the local pack. This is where many emergency and &quot;near me&quot; searches convert to a call.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Your website</strong> — Service and area pages that match how people search, load fast on mobile, and prove trust. Tie pages to GBP services and categories.
+                    <strong className="text-brand">Your website</strong> — Service and area pages that match how people search, load fast on mobile, and prove trust. Tie pages to GBP services and categories.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Authority signals</strong> — Reviews, relevant local links, consistent NAP on trusted directories, and brand mentions. These help Google trust that you are the real operator in that market.
+                    <strong className="text-brand">Authority signals</strong> — Reviews, relevant local links, consistent NAP on trusted directories, and brand mentions. These help Google trust that you are the real operator in that market.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -143,8 +143,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </section>
 
               <section id="gbp-and-site" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Google Business Profile and your site must agree</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Google Business Profile and your site must agree</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Mismatches hurt rankings and confuse customers: GBP lists &quot;water heater install&quot; but your site only mentions &quot;plumbing repair,&quot; or your site targets cities your GBP service area does not cover. Align{" "}
                   <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
@@ -166,8 +166,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </section>
 
               <section id="citations" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Citations and data accuracy</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Citations and data accuracy</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Citations are mentions of your business name, address, and phone on directories and industry sites. They matter most when you are correcting drift after a rebrand, merger, or phone change—or when you manage many locations and cannot manually spot every bad listing.
                 </p>
@@ -189,8 +189,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </section>
 
               <section id="content" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Content that matches local intent</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Content that matches local intent</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service pages should answer the questions a homeowner asks before calling: scope, pricing signals, timeline, service area, insurance or licensing, and proof. FAQs and short video embeds can lift relevance without stuffing keywords. If you are researching what competitors rank for, use{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -209,8 +209,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </section>
 
               <section id="blend-channels" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Blend organic local SEO with other growth channels</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Blend organic local SEO with other growth channels</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Local SEO compounds but rarely fills tomorrow&apos;s board. Pair it with paid lead products or ads when you have capacity and measurement. Start with{" "}
                   <Link href="/lead-generation/guides/lead-generation-strategies-for-local-business" className={link}>
@@ -233,8 +233,8 @@ export default function LocalSeoForServiceBusinessesPage() {
               </section>
 
               <section id="contractors" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Trade-specific entry point</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Trade-specific entry point</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   If you run a crew-based trade, read{" "}
                   <Link href="/seo-tools/guides/how-to-do-seo-for-contractors" className={link}>
@@ -246,8 +246,8 @@ export default function LocalSeoForServiceBusinessesPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

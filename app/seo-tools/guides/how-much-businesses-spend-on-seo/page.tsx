@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Much Businesses Spend on SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Much Businesses Spend on SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Realistic ranges for DIY owners, software subscriptions, and agency retainers—and what actually drives the bill. For line-item tool math, see{" "}
                 <Link href="/seo-tools/guides/seo-pricing-explained" className={link}>
                   SEO pricing explained
@@ -115,17 +115,17 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="three-buckets" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Three buckets: labor, software, and outsourced SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Three buckets: labor, software, and outsourced SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   &quot;SEO spend&quot; usually mixes three line items that get quoted as one number. Separating them keeps expectations honest:
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Internal labor</strong> — Owner or staff time on pages, GBP, reviews, and Search Console. Often the largest cost even at $0 in software.
+                    <strong className="text-brand">Internal labor</strong> — Owner or staff time on pages, GBP, reviews, and Search Console. Often the largest cost even at $0 in software.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Software</strong> — Suites like{" "}
+                    <strong className="text-brand">Software</strong> — Suites like{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>{" "}
@@ -140,7 +140,7 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
                     before buying overlapping products.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Agency or freelancer fees</strong> — Execution you do not staff internally: content, technical fixes, outreach, or reporting.
+                    <strong className="text-brand">Agency or freelancer fees</strong> — Execution you do not staff internally: content, technical fixes, outreach, or reporting.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -149,14 +149,14 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
               </section>
 
               <section id="typical-ranges" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Typical monthly ranges by approach</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Typical monthly ranges by approach</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   These are planning bands for U.S. service businesses and SMB ecommerce—not guarantees. Competitive metros and crowded trades sit at the high end.
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">$0–$100</strong> —{" "}
+                    <strong className="text-brand">$0–$100</strong> —{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console
                     </Link>
@@ -167,20 +167,20 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">$100–$500</strong> — One paid suite or local tool plus modest content or contractor help.
+                    <strong className="text-brand">$100–$500</strong> — One paid suite or local tool plus modest content or contractor help.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">$500–$2,500</strong> — Hybrid: internal owner plus part-time specialist or focused agency sprint on technical and local fixes.
+                    <strong className="text-brand">$500–$2,500</strong> — Hybrid: internal owner plus part-time specialist or focused agency sprint on technical and local fixes.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">$2,500–$10,000+</strong> — Ongoing agency programs with content, links, and multi-location reporting—common in legal, medical, and franchise systems.
+                    <strong className="text-brand">$2,500–$10,000+</strong> — Ongoing agency programs with content, links, and multi-location reporting—common in legal, medical, and franchise systems.
                   </li>
                 </ul>
               </section>
 
               <section id="what-drives-cost" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What drives cost up or down</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What drives cost up or down</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Number of service lines and cities, site size, technical debt, and how aggressive competitors are on content and reviews all move the needle. A single-location plumber in a mid-size market can outrank with strong GBP and ten solid pages; a multi-state HVAC brand needs citation governance and rank history tools that a solo operator skips.
                 </p>
@@ -194,8 +194,8 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
               </section>
 
               <section id="software-vs-agency" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Software spend vs agency retainers</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Software spend vs agency retainers</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Buying Semrush does not publish your service pages. Hiring an agency does not replace owning Search Console access. Many businesses overspend on dashboards while underinvesting in the pages and reviews that actually rank in Maps.
                 </p>
@@ -205,8 +205,8 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
               </section>
 
               <section id="measure-roi" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measure spend against booked work</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measure spend against booked work</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Total SEO spend should be judged against cost per qualified lead or booked job from organic and Maps—not keyword count tracked. Tag sources in your CRM, compare six-month trends in Search Console landing pages, and revisit tool renewals when nobody logged in last month.
                 </p>
@@ -225,8 +225,8 @@ export default function HowMuchBusinessesSpendOnSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

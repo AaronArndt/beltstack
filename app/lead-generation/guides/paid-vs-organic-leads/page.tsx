@@ -9,8 +9,8 @@ import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSi
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -39,7 +39,7 @@ export default function PaidVsOrganicLeadsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/">Home</Link></li><li aria-hidden>/</li>
                 <li><Link href="/lead-generation">Lead Generation</Link></li><li aria-hidden>/</li>
                 <li><Link href="/lead-generation/guides">Guides</Link></li><li aria-hidden>/</li>
@@ -47,10 +47,10 @@ export default function PaidVsOrganicLeadsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">Paid vs Organic Leads</h1>
-              <p className="mt-3 text-[#57534E]">
+              <h1 className="text-brand text-3xl font-bold sm:text-4xl">Paid vs Organic Leads</h1>
+              <p className="mt-3 text-muted-foreground">
                 When to rent demand—and when to invest in inbound assets. Pair this with our{" "}
-                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-indigo hover:underline">
                   best lead generation tools roundup
                 </Link>{" "}
                 for paid-channel shortlists.
@@ -60,19 +60,19 @@ export default function PaidVsOrganicLeadsPage() {
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
               <p>Paid leads fill this week; organic builds equity over months. Use paid while you strengthen site, reviews, and CRM—but never skip measurement on either side.</p>
               <p>
-                <Link href="/website-builders/best-website-builders" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/website-builders/best-website-builders" className="font-semibold text-indigo hover:underline">
                   Best website builders
                 </Link>{" "}
                 support organic capture; marketplaces and search ads solve immediate pipeline gaps—see{" "}
-                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-[#10B981] hover:underline">
+                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-indigo hover:underline">
                   Thumbtack
                 </Link>{" "}
                 and{" "}
-                <Link href={getLeadGenerationReviewUrl("angi")} className="font-semibold text-[#10B981] hover:underline">
+                <Link href={getLeadGenerationReviewUrl("angi")} className="font-semibold text-indigo hover:underline">
                   Angi
                 </Link>{" "}
                 reviews. For trade context, read{" "}
-                <Link href="/lead-generation/best-for/home-services" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/best-for/home-services" className="font-semibold text-indigo hover:underline">
                   best lead generation for home services
                 </Link>
                 .
@@ -91,9 +91,9 @@ export default function PaidVsOrganicLeadsPage() {
               <SectionTitle sub="How local operators usually sequence channels.">Common channel mix playbook</SectionTitle>
               <p className="text-[15px] leading-relaxed text-neutral-700">
                 Most teams start with one marketplace or search-intent paid channel (like{" "}
-                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-[#10B981] hover:underline">Google Local Services Ads</Link>{" "}
+                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-indigo hover:underline">Google Local Services Ads</Link>{" "}
                 or{" "}
-                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-[#10B981] hover:underline">Thumbtack</Link>
+                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-indigo hover:underline">Thumbtack</Link>
                 ), then use organic channels to reduce dependence over time. Organic content works best when paired with call tracking and fast follow-up workflows in CRM.
               </p>
             </section>

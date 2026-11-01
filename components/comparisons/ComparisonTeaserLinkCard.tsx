@@ -34,7 +34,7 @@ export function ComparisonTeaserLinkCard({
   return (
     <Link
       href={href}
-      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+      className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
     >
       {showLogoRow && (
         <div className="flex items-center gap-3">
@@ -48,9 +48,9 @@ export function ComparisonTeaserLinkCard({
               }}
             />
           ) : (
-            <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{leftLabel}</span>
+            <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{leftLabel}</span>
           )}
-          <span className="text-lg font-medium text-[#57534E]" aria-hidden>
+          <span className="text-lg font-medium text-muted-foreground" aria-hidden>
             vs
           </span>
           {productBLogoSrc ? (
@@ -63,17 +63,17 @@ export function ComparisonTeaserLinkCard({
               }}
             />
           ) : (
-            <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{rightLabel}</span>
+            <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{rightLabel}</span>
           )}
         </div>
       )}
       <h3
-        className={`text-xl font-bold text-[#1A2D48] group-hover:text-[#10B981] ${showLogoRow ? "mt-3" : ""}`}
+        className={`text-xl font-bold text-brand group-hover:text-indigo ${showLogoRow ? "mt-3" : ""}`}
       >
         {label}
       </h3>
-      <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-[#57534E]">{displaySummary}</p>
-      <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+      <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{displaySummary}</p>
+      <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
         Compare →
       </span>
     </Link>

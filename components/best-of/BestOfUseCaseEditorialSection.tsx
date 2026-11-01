@@ -6,15 +6,15 @@ import { sectionRuleAccent } from "@/lib/design-tokens";
 function SectionTitle({ children, sub }: { children: ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
 
 const linkClass =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const defaultSectionClassName =
   "scroll-mt-section border-b border-stone-200/80 bg-white py-8 sm:py-11";
@@ -49,8 +49,8 @@ export function BestOfUseCaseEditorialSection({
         <div className="mt-6 max-w-3xl space-y-10">
           {items.map((item) => (
             <div key={item.href}>
-              <h3 className="text-lg font-bold text-[#1A2D48] sm:text-xl">{item.label}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#57534E] sm:text-base">{item.paragraph}</p>
+              <h3 className="text-lg font-bold text-brand sm:text-xl">{item.label}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">{item.paragraph}</p>
               <p className="mt-4">
                 <Link href={item.href} className={`text-sm ${linkClass}`}>
                   {item.ctaLabel} →

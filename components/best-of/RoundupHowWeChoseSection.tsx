@@ -16,34 +16,34 @@ export function RoundupHowWeChoseSection({
     <section id="how-we-chose" className="scroll-mt-section border-b border-stone-200/80 bg-background py-8 sm:py-11">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-4 sm:mb-5">
-          <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">How we chose these tools</h2>
-          <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-          <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+          <h2 className="text-brand text-2xl font-bold sm:text-3xl">How we chose these tools</h2>
+          <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+          <p className="mt-1 text-muted-foreground text-sm sm:text-base">
             Editorial methodology focused on small service businesses, trade operators, and practical day-to-day workflows.
           </p>
         </div>
-        <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#57534E]">
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
           <li>We evaluated usability, setup effort, and team adoption speed for non-enterprise operators.</li>
           <li>We compared pricing transparency, scaling behavior, and real upgrade pressure as teams grow.</li>
           <li>We prioritized workflow depth in core {categoryLabel} use cases, plus reporting and integration fit.</li>
           <li>We weighted operational relevance for service businesses, including trade-specific handoff and follow-up needs.</li>
         </ul>
         {includePricingStudyLink ? (
-          <p className="mt-4 text-sm leading-relaxed text-[#57534E]">
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             For advertised list prices versus a frozen small-team workflow, see our{" "}
-            <Link href={PRICING_STUDY_PATH} className="font-semibold text-[#10B981] hover:underline">
+            <Link href={PRICING_STUDY_PATH} className="font-semibold text-indigo hover:underline">
               service-business software pricing study
             </Link>
             .
           </p>
         ) : null}
-        <p className="mt-4 text-sm leading-relaxed text-[#57534E]">
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           Use our{" "}
-          <Link href={compareHref} className="font-semibold text-[#10B981] hover:underline">
+          <Link href={compareHref} className="font-semibold text-indigo hover:underline">
             comparison pages
           </Link>{" "}
           for head-to-head analysis and{" "}
-          <Link href={guidesHref} className="font-semibold text-[#10B981] hover:underline">
+          <Link href={guidesHref} className="font-semibold text-indigo hover:underline">
             category guides
           </Link>{" "}
           for deeper implementation context.

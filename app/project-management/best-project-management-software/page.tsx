@@ -27,18 +27,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const projectManagementPickRoutes = getSoftwarePickCategoryRoutes("project-management");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -55,31 +55,31 @@ export default function BestProjectManagementSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Project Management
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best Project Management Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Project Management Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you manage active jobs and handoffs, the best project management software should keep tasks, timelines, collaboration, and progress reporting practical for small teams.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared collaboration features, workflow flexibility, usability, pricing, and reporting so the Key Takeaways shortlist gives a focused starting point.
             </p>
             <RoundupHubLinksBlurb categoryPath="/project-management" categoryLabel="project management software" />
@@ -122,27 +122,27 @@ export default function BestProjectManagementSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Read review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand">Read review</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_TABLE_ROWS.map((row) => (
                     <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80">
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.startingPrice}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
-                        <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={row.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -182,51 +182,51 @@ export default function BestProjectManagementSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose project management software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Team size</h3>
+                <h3 className="font-bold text-brand text-base">Team size</h3>
                 <p className="mt-1">
                   Solos and very small teams often need less structure—Trello or Notion can be enough. As you add people, look for tools that scale: clear roles, permissions, and views that don’t get noisy. Enterprise-style tools like Wrike suit large or multi-portfolio teams; Asana and Monday fit mid-size teams well.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Complexity of work</h3>
+                <h3 className="font-bold text-brand text-base">Complexity of work</h3>
                 <p className="mt-1">
                   Simple task lists and boards don’t require dependencies or Gantt charts. For projects with phases, handoffs, and deadlines, choose a tool that supports timelines, dependencies, and milestones. Monday, Asana, and ClickUp offer more structure; Trello and Notion are lighter.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Collaboration needs</h3>
+                <h3 className="font-bold text-brand text-base">Collaboration needs</h3>
                 <p className="mt-1">
                   If your team needs comments, @mentions, file sharing, and status updates in one place, pick a tool that makes collaboration central. Asana, Monday, and ClickUp are built for this; Trello and Notion support it but with a lighter project layer.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Views (list, board, timeline, docs)</h3>
+                <h3 className="font-bold text-brand text-base">Views (list, board, timeline, docs)</h3>
                 <p className="mt-1">
                   Different views suit different workflows: list for task lists, board for Kanban, timeline for Gantt-style planning, and docs for wikis and specs. Asana and Monday offer multiple views; ClickUp and Notion add docs and databases. Trello is board-first with optional power-ups.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Automation</h3>
+                <h3 className="font-bold text-brand text-base">Automation</h3>
                 <p className="mt-1">
                   Automations can move tasks, send reminders, and update status. Compare how many automations are included at each tier and whether they fit your process. Monday and ClickUp are strong here; Asana has solid automation on paid plans; Trello uses Power-Ups.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Reporting</h3>
+                <h3 className="font-bold text-brand text-base">Reporting</h3>
                 <p className="mt-1">
                   If you need dashboards, workload views, or progress reports, check that the tool offers the reports you need without expensive add-ons. Asana, Monday, and ClickUp have built-in reporting; Wrike and Smartsheet go deeper for portfolio and grid-style reporting.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Integrations</h3>
+                <h3 className="font-bold text-brand text-base">Integrations</h3>
                 <p className="mt-1">
                   PM tools often sit alongside calendar, time tracking, CRM, and communication apps. Ensure your chosen tool integrates with the apps you already use so status and due dates stay in sync. Most top tools offer native integrations and Zapier or API options.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Price</h3>
+                <h3 className="font-bold text-brand text-base">Price</h3>
                 <p className="mt-1">
                   Free tiers are common (Asana, ClickUp, Trello, Notion); paid plans add seats, views, and automation. Compare total cost at your team size—per-seat pricing can add up. Flat-price options like Basecamp simplify budgeting for smaller teams.
                 </p>
@@ -248,12 +248,12 @@ export default function BestProjectManagementSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
-              <Link href="/project-management/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
+              <Link href="/project-management/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 View project management comparisons
               </Link>
               {" "}to compare platforms side-by-side, or jump to a specific comparison below. For guides on project management and workflows, see our{" "}
-              <Link href="/project-management/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/project-management/guides" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 project management guides
               </Link>.
             </p>
@@ -262,7 +262,7 @@ export default function BestProjectManagementSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -299,26 +299,26 @@ export default function BestProjectManagementSoftwarePage() {
             <SectionTitle sub="Transparent process, small-business–focused criteria.">
               How we review project management software
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
               Our reviews are independent and updated on a regular cadence so you get current pricing and feature information.
             </p>
-            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-muted-foreground text-sm leading-relaxed">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 We evaluate project management software around creating projects, assigning tasks, building views, and tracking deadlines.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 We compare pricing tiers, user limits, and automation caps so you can budget accurately.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
                 Reviews are written for small businesses, freelancers, agencies, and remote teams—not only enterprise needs.
               </li>
             </ul>
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.{" "}
-              <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/methodology" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 Affiliate disclosure
               </Link>
             </p>
@@ -330,17 +330,17 @@ export default function BestProjectManagementSoftwarePage() {
 
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-pm-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-pm-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-pm-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

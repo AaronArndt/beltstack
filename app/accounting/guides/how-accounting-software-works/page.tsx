@@ -10,8 +10,8 @@ import { getAccountingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -71,11 +71,11 @@ export default function HowAccountingSoftwareWorksPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -84,7 +84,7 @@ export default function HowAccountingSoftwareWorksPage() {
                     <li>
                       <Link
                         href="/accounting"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Accounting
                       </Link>
@@ -93,7 +93,7 @@ export default function HowAccountingSoftwareWorksPage() {
                     <li>
                       <Link
                         href="/accounting/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -107,10 +107,10 @@ export default function HowAccountingSoftwareWorksPage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Accounting Software Works
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how accounting software tracks income and expenses, supports invoicing and reporting, and helps
                     you stay organized for taxes.
                   </p>
@@ -131,35 +131,35 @@ export default function HowAccountingSoftwareWorksPage() {
                       explore our{" "}
                       <Link
                         href="/accounting"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         accounting software hub
                       </Link>{" "}
                       and{" "}
                       <Link
                         href="/accounting/compare"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         accounting software comparisons
                       </Link>
                       , or read in-depth reviews of{" "}
                       <Link
                         href={getAccountingReviewUrl("quickbooks-online")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online
                       </Link>
                       ,{" "}
                       <Link
                         href={getAccountingReviewUrl("xero")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Xero
                       </Link>
                       , and{" "}
                       <Link
                         href={getAccountingReviewUrl("freshbooks")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         FreshBooks
                       </Link>
@@ -180,47 +180,47 @@ export default function HowAccountingSoftwareWorksPage() {
                     <p>Most small business accounting platforms focus on a few core jobs:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Tracking income and expenses</strong> — Categorizing bank
+                          <strong className="text-brand">Tracking income and expenses</strong> — Categorizing bank
                           transactions so you can see where money comes from and where it goes.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Managing invoicing and customer payments</strong> — Sending
+                          <strong className="text-brand">Managing invoicing and customer payments</strong> — Sending
                           invoices, recording payments, and following up on past-due balances.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Supporting bill pay and vendor management</strong> — Logging
+                          <strong className="text-brand">Supporting bill pay and vendor management</strong> — Logging
                           bills, tracking what you owe, and scheduling payments.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Producing financial reports</strong> — Generating profit and
+                          <strong className="text-brand">Producing financial reports</strong> — Generating profit and
                           loss, balance sheet, aging, and cash flow reports on demand.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Helping with reconciliation and tax prep</strong> — Matching
+                          <strong className="text-brand">Helping with reconciliation and tax prep</strong> — Matching
                           bank activity and giving your accountant cleaner books for tax filings.
                         </span>
                       </li>
@@ -240,23 +240,23 @@ export default function HowAccountingSoftwareWorksPage() {
                     <p>The day-to-day workflow usually looks like this:</p>
                     <ol className="space-y-3 list-decimal list-inside">
                       <li>
-                        <strong className="text-[#1A2D48]">Connect bank and credit card accounts</strong> so
+                        <strong className="text-brand">Connect bank and credit card accounts</strong> so
                         transactions flow into your ledger automatically instead of manual data entry.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Categorize and reconcile transactions</strong> by assigning
+                        <strong className="text-brand">Categorize and reconcile transactions</strong> by assigning
                         income and expense categories and matching bank activity to invoices and bills.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Send invoices and record customer payments</strong> for work
+                        <strong className="text-brand">Send invoices and record customer payments</strong> for work
                         you complete, optionally enabling online payment links for faster collection.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Log bills and schedule payments</strong> so you have a clear
+                        <strong className="text-brand">Log bills and schedule payments</strong> so you have a clear
                         view of upcoming cash outflows.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Run reports regularly</strong> to check profitability, track
+                        <strong className="text-brand">Run reports regularly</strong> to check profitability, track
                         margins, and share updated numbers with your accountant or advisors.
                       </li>
                     </ol>
@@ -276,47 +276,47 @@ export default function HowAccountingSoftwareWorksPage() {
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Reliable bank feeds and reconciliation tools</strong> so
+                          <strong className="text-brand">Reliable bank feeds and reconciliation tools</strong> so
                           you can trust that your books match your bank accounts.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Invoicing and accounts receivable features</strong> to help
+                          <strong className="text-brand">Invoicing and accounts receivable features</strong> to help
                           you send polished invoices and follow up on unpaid balances.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Expense tracking and receipt capture</strong> for keeping
+                          <strong className="text-brand">Expense tracking and receipt capture</strong> for keeping
                           documentation organized and deductible expenses easy to substantiate.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Reporting and dashboards</strong> that are understandable
+                          <strong className="text-brand">Reporting and dashboards</strong> that are understandable
                           even if you are not an accountant.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Integrations with payroll and payments</strong> so payroll
+                          <strong className="text-brand">Integrations with payroll and payments</strong> so payroll
                           runs, merchant processing, or ecommerce orders flow into your books without extra work.
                         </span>
                       </li>
@@ -339,21 +339,21 @@ export default function HowAccountingSoftwareWorksPage() {
                       Our reviews of{" "}
                       <Link
                         href={getAccountingReviewUrl("quickbooks-online")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online
                       </Link>
                       ,{" "}
                       <Link
                         href={getAccountingReviewUrl("xero")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Xero
                       </Link>
                       , and{" "}
                       <Link
                         href={getAccountingReviewUrl("freshbooks")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         FreshBooks
                       </Link>{" "}

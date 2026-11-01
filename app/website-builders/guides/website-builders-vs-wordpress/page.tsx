@@ -9,8 +9,8 @@ import { getWebsiteBuildersReviewUrl, getWebsiteBuildersCompareUrl } from "@/lib
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -38,7 +38,7 @@ export default function WebsiteBuildersVsWordpressGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li><li aria-hidden>/</li>
                 <li><Link href="/website-builders" className="text-gray-500 hover:text-gray-900">Website Builders</Link></li><li aria-hidden>/</li>
                 <li><Link href="/website-builders/guides" className="text-gray-500 hover:text-gray-900">Guides</Link></li><li aria-hidden>/</li>
@@ -46,8 +46,8 @@ export default function WebsiteBuildersVsWordpressGuidePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Website Builders vs WordPress</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Website Builders vs WordPress</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 How hosted website builders compare with WordPress for service businesses deciding between easier operations and deeper long-term control.
               </p>
               <GuideLastUpdated date="March 25, 2026" />
@@ -74,13 +74,13 @@ export default function WebsiteBuildersVsWordpressGuidePage() {
               <SectionTitle sub="Useful pages for final shortlist decisions.">Related comparisons and reviews</SectionTitle>
               <p className="text-[15px] leading-relaxed text-neutral-700">
                 Start with{" "}
-                <Link href={getWebsiteBuildersCompareUrl("wix-vs-squarespace")} className="font-semibold text-[#10B981] hover:underline">Wix vs Squarespace</Link>{" "}
+                <Link href={getWebsiteBuildersCompareUrl("wix-vs-squarespace")} className="font-semibold text-indigo hover:underline">Wix vs Squarespace</Link>{" "}
                 and{" "}
-                <Link href={getWebsiteBuildersCompareUrl("webflow-vs-wix")} className="font-semibold text-[#10B981] hover:underline">Webflow vs Wix</Link>
+                <Link href={getWebsiteBuildersCompareUrl("webflow-vs-wix")} className="font-semibold text-indigo hover:underline">Webflow vs Wix</Link>
                 , then validate decisions in the{" "}
-                <Link href={getWebsiteBuildersReviewUrl("wordpress")} className="font-semibold text-[#10B981] hover:underline">WordPress review</Link>{" "}
+                <Link href={getWebsiteBuildersReviewUrl("wordpress")} className="font-semibold text-indigo hover:underline">WordPress review</Link>{" "}
                 and{" "}
-                <Link href={getWebsiteBuildersReviewUrl("wix")} className="font-semibold text-[#10B981] hover:underline">Wix review</Link>
+                <Link href={getWebsiteBuildersReviewUrl("wix")} className="font-semibold text-indigo hover:underline">Wix review</Link>
                 .
               </p>
             </section>

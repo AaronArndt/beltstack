@@ -28,15 +28,15 @@ const KEY_TAKEAWAYS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -46,42 +46,42 @@ function FieldServiceEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in field service software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when contractors and service companies choose tools to schedule jobs, dispatch technicians, and get paid.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Scheduling and dispatch</h3>
+            <h3 className="text-brand text-lg font-semibold">Scheduling and dispatch</h3>
             <p className="mt-1.5">
               Look for a clear calendar and dispatch board so you can assign jobs to technicians, see who is available, and avoid double-booking. Drag-and-drop scheduling and route optimization save time as your team grows.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Mobile apps for technicians</h3>
+            <h3 className="text-brand text-lg font-semibold">Mobile apps for technicians</h3>
             <p className="mt-1.5">
               Technicians need to view their schedule, update job status, capture signatures, and add notes or photos from the field. A solid mobile app keeps office and field in sync and reduces call-backs for status updates.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Invoicing and payments</h3>
+            <h3 className="text-brand text-lg font-semibold">Invoicing and payments</h3>
             <p className="mt-1.5">
               Generate estimates and invoices from jobs, send them by email or customer portal, and accept online payments. Recurring billing for maintenance contracts and integration with accounting software help you get paid faster and keep books straight.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Customer management</h3>
+            <h3 className="text-brand text-lg font-semibold">Customer management</h3>
             <p className="mt-1.5">
               Keep customer details, job history, and property information in one place. Customer portals let clients book, view estimates, and pay online. Good FSM tools replace scattered spreadsheets and sticky notes with a single source of truth.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Reporting and automation</h3>
+            <h3 className="text-brand text-lg font-semibold">Reporting and automation</h3>
             <p className="mt-1.5">
               Reports on revenue, job completion, technician productivity, and pipeline help you run the business. Automations—like sending reminders when a job is scheduled or triggering an invoice when work is marked complete—reduce manual follow-up.
             </p>
@@ -89,30 +89,30 @@ function FieldServiceEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Scheduling and dispatch board
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Mobile app for technicians
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Estimates and invoicing
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Customer and property records
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Online payments
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Basic reporting
               </li>
             </ul>
@@ -129,7 +129,7 @@ function FieldServiceHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating field service tools">
         How to Choose Field Service Management Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Field service software helps you schedule jobs, dispatch technicians, and keep invoicing and customer details
         in one place. This hub is for contractors and service businesses that send teams into the field. Start with
         the{" "}
@@ -155,25 +155,25 @@ function FieldServiceHowToChooseSection() {
         round out product research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Trade and team size</strong> — Solo contractors and small crews can
+            <strong className="text-brand">Trade and team size</strong> — Solo contractors and small crews can
             often start with a lighter tool; growing HVAC, plumbing, and electrical companies may need advanced
             dispatch, multi-truck routing, and reporting.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Scheduling and dispatch</strong> — Make sure the schedule and dispatch
+            <strong className="text-brand">Scheduling and dispatch</strong> — Make sure the schedule and dispatch
             board are easy to read and update. Drag-and-drop scheduling, recurring jobs, and route planning matter as
             your calendar fills up.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Mobile app experience</strong> — Techs should be able to see their day,
+            <strong className="text-brand">Mobile app experience</strong> — Techs should be able to see their day,
             get job details, add photos and notes, and mark work complete from their phone without calling the office.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Estimates, invoicing, and payments</strong> — Look for built-in
+            <strong className="text-brand">Estimates, invoicing, and payments</strong> — Look for built-in
             estimates, invoices, and the ability to take card payments on-site or online. Integration with{" "}
             <Link href="/accounting" className={linkGreen}>
               accounting software
@@ -181,17 +181,17 @@ function FieldServiceHowToChooseSection() {
             keeps books up to date.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Customer and property history</strong> — A good FSM system stores
+            <strong className="text-brand">Customer and property history</strong> — A good FSM system stores
             equipment, service history, and notes by customer and property so any tech can show up prepared.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Pricing and add-ons</strong> — Plans often scale by users, jobs, or
+            <strong className="text-brand">Pricing and add-ons</strong> — Plans often scale by users, jobs, or
             features like marketing and advanced reporting. Compare total cost at your current and expected crew size.
           </li>
         </ul>
       </div>
-      <p className="mt-6 text-sm text-[#57534E] max-w-3xl leading-relaxed">
-        <span className="font-semibold text-[#1A2D48]">Alternatives guides: </span>
+      <p className="mt-6 text-sm text-muted-foreground max-w-3xl leading-relaxed">
+        <span className="font-semibold text-brand">Alternatives guides: </span>
         If you are evaluating a specific vendor, see substitutes and comparison links for{" "}
         {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
           <span key={item.href}>
@@ -236,7 +236,7 @@ function FieldServiceGuidesSection() {
             Comparisons
           </Link>
           {" · "}
-          <span className="text-[#57534E]">Alternatives: </span>
+          <span className="text-muted-foreground">Alternatives: </span>
           {FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.map((item, i) => (
             <span key={item.href}>
               {i > 0 && " · "}
@@ -268,7 +268,7 @@ function FieldServicePopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -278,7 +278,7 @@ function FieldServicePopularComparisonsSection() {
                     className="h-10 w-auto max-w-[80px] object-contain object-left"
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {item.productB.logoSrc && (
                   <img
                     src={item.productB.logoSrc}
@@ -287,23 +287,23 @@ function FieldServicePopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/field-service/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all field service comparisons →
         </Link>

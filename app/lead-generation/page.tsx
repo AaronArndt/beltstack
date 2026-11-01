@@ -104,14 +104,14 @@ const METHODOLOGY_BULLETS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -173,7 +173,7 @@ function LeadGenHowToChooseSection() {
   return (
     <>
       <HubSectionTitle sub="Key factors when buying leads">How to Choose Lead Generation Tools</HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Lead products only work with fast phone/SMS response and honest CPA math. Use the{" "}
         <Link href="#compare" className={linkGreen}>
           comparison table
@@ -197,30 +197,30 @@ function LeadGenHowToChooseSection() {
         round out vendor research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Speed to lead</strong> — Shared leads reward the first quality response. Fix routing before scaling spend.
+            <strong className="text-brand">Speed to lead</strong> — Shared leads reward the first quality response. Fix routing before scaling spend.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Disputes &amp; refunds</strong> — Learn credit windows per vendor. Bad matches are a ops problem until you normalize policies.
+            <strong className="text-brand">Disputes &amp; refunds</strong> — Learn credit windows per vendor. Bad matches are a ops problem until you normalize policies.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Intent fit</strong> — Google LSA captures search intent; directories capture browsers; social captures offers. Match channel to customer research behavior.
+            <strong className="text-brand">Intent fit</strong> — Google LSA captures search intent; directories capture browsers; social captures offers. Match channel to customer research behavior.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">CPA reality</strong> — Model cost per booked job, not cost per name.{" "}
+            <strong className="text-brand">CPA reality</strong> — Model cost per booked job, not cost per name.{" "}
             <Link href="/lead-generation/guides/paid-vs-organic-leads" className={linkGreen}>
               Paid vs organic leads
             </Link>
             .
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Owned marketing</strong> — Leads are rented; keep reviews, site, and CRM hygiene so vendors aren’t your only pipeline.
+            <strong className="text-brand">Owned marketing</strong> — Leads are rented; keep reviews, site, and CRM hygiene so vendors aren’t your only pipeline.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Verification</strong> — LSA and some directories require background checks and licensing proof—budget onboarding time.
+            <strong className="text-brand">Verification</strong> — LSA and some directories require background checks and licensing proof—budget onboarding time.
           </li>
         </ul>
       </div>
@@ -293,7 +293,7 @@ function LeadGenPopularComparisonsSection() {
             <Link
               key={slug}
               href={href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -306,9 +306,9 @@ function LeadGenPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                   vs
                 </span>
                 {data.productB.logoSrc ? (
@@ -321,17 +321,17 @@ function LeadGenPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{title}</h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">{title}</h3>
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link href="/lead-generation/compare" className={linkGreen}>
           View all lead generation comparisons →
         </Link>
@@ -363,55 +363,55 @@ function LeadGenEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What service businesses should look for in lead products</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">Focus on economics, intent, and operations—not hype.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">What service businesses should look for in lead products</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">Focus on economics, intent, and operations—not hype.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Booked-job CPA first</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Booked-job CPA first</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Divide spend by booked jobs with healthy margin—not by lead volume. Refunds and disputes belong in the model.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Intent match</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Intent match</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Emergency trades behave differently from design-heavy remodels. Pick the channel that matches how buyers choose vendors.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Speed and CRM discipline</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Speed and CRM discipline</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Tag duplicates, log outcomes, and enforce follow-up SLAs—marketplaces penalize slow responders.
             </p>
           </div>
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Dispute / credit windows documented
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Call/SMS routing tested
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 CRM source tagging per vendor
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Weekly cap while testing

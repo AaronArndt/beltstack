@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -57,19 +57,19 @@ export default function BillingVsInvoicingGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Billing vs Invoicing</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Billing vs Invoicing: What&apos;s the Difference?</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Billing vs Invoicing: What&apos;s the Difference?</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Understand how billing and invoicing differ in real operations, and why the distinction matters for payment speed, reporting, and customer communication.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -101,10 +101,10 @@ export default function BillingVsInvoicingGuidePage() {
                 <section id="definitions" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Clear definitions reduce process confusion.">Definitions: Billing vs Invoicing</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Invoicing</strong> is document-level: issuing an invoice with line items, terms, and due date. It answers “how much does this customer owe for this delivery or period?” A well-built invoice also includes the fields payers need for approval—see{" "}
+                    <p><strong className="text-brand">Invoicing</strong> is document-level: issuing an invoice with line items, terms, and due date. It answers “how much does this customer owe for this delivery or period?” A well-built invoice also includes the fields payers need for approval—see{" "}
                       <Link href="/invoicing/guides/what-should-be-included-on-an-invoice" className={linkGreen}>what should be included on an invoice</Link>.
                     </p>
-                    <p><strong className="text-[#1A2D48]">Billing</strong> is system-level: managing all charges and payment obligations for an account, often including recurring invoices, credits, adjustments, and statements. Billing decides what to charge, when to charge it, and how balances roll forward—even when no single invoice has been sent yet.</p>
+                    <p><strong className="text-brand">Billing</strong> is system-level: managing all charges and payment obligations for an account, often including recurring invoices, credits, adjustments, and statements. Billing decides what to charge, when to charge it, and how balances roll forward—even when no single invoice has been sent yet.</p>
                     <p>
                       A practical example: a marketing agency on a monthly retainer has a billing cycle (recurring fee, usage overages, credits for paused work) and invoicing steps (generate the monthly invoice, attach line detail, send with payment link). The retainer amount might be set in billing rules; the invoice is how the customer sees and pays it.
                     </p>
@@ -121,10 +121,10 @@ export default function BillingVsInvoicingGuidePage() {
                       The right emphasis depends on how you sell and deliver. A business that only invoices after discrete jobs may rarely think about “billing” as a separate function—but it still has billing decisions (rates, deposits, write-offs) even if they live in spreadsheets.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Project-based services</strong> usually emphasize invoicing after milestones or completion. Billing here is often contract-based: approved scope, change orders, and retainage. Progress and standard invoices are common—see milestone patterns in your contract before you send.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Subscription and retainer models</strong> lean more on billing workflows with recurring schedules, proration, upgrades, and account balances. Invoicing becomes the customer-facing output of those rules each cycle.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Mixed models</strong> need both: recurring billing plus ad-hoc invoices for extra work. Without a single source of truth, customers may receive overlapping charges or miss add-on fees entirely.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Product plus services</strong> may bill for shipped goods on one schedule and professional services on another. Terms and payment methods should be consistent on every document—see{" "}
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Project-based services</strong> usually emphasize invoicing after milestones or completion. Billing here is often contract-based: approved scope, change orders, and retainage. Progress and standard invoices are common—see milestone patterns in your contract before you send.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Subscription and retainer models</strong> lean more on billing workflows with recurring schedules, proration, upgrades, and account balances. Invoicing becomes the customer-facing output of those rules each cycle.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Mixed models</strong> need both: recurring billing plus ad-hoc invoices for extra work. Without a single source of truth, customers may receive overlapping charges or miss add-on fees entirely.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Product plus services</strong> may bill for shipped goods on one schedule and professional services on another. Terms and payment methods should be consistent on every document—see{" "}
                         <Link href="/invoicing/guides/invoice-terms-explained" className={linkGreen}>invoice terms explained</Link>.
                       </span></li>
                     </ul>
@@ -162,9 +162,9 @@ export default function BillingVsInvoicingGuidePage() {
                       Document a simple RACI: who owns billing rules, who drafts invoices, who approves exceptions, and who owns collections. Even a one-page internal SOP prevents the “I thought you sent it” failure mode as teams grow.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Use one numbering and customer record system so invoices and account balances always tie back to the same client profile.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile billing cycles monthly: recurring charges generated, invoices sent, payments received, credits applied.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Review{" "}
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Use one numbering and customer record system so invoices and account balances always tie back to the same client profile.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile billing cycles monthly: recurring charges generated, invoices sent, payments received, credits applied.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Review{" "}
                         <Link href="/invoicing/guides/common-invoice-mistakes-small-businesses-make" className={linkGreen}>common invoice mistakes</Link>{" "}
                         quarterly—most are repeatable and fixable with templates.
                       </span></li>

@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/can-you-run-payroll-in-quicken";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function CanYouRunPayrollInQuickenPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Quicken Payroll</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Can You Run Payroll in Quicken?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     No—Quicken is not payroll software. Here is what to use for W-2 and contractor pay when you have employees.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,10 +77,10 @@ export default function CanYouRunPayrollInQuickenPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      This question usually comes from someone already using Quicken at home who hired a first employee—or from confusion between <strong className="text-[#1A2D48]">Quicken and QuickBooks</strong> because the names sound alike. The answer is short: business payroll does not belong in Quicken.
+                      This question usually comes from someone already using Quicken at home who hired a first employee—or from confusion between <strong className="text-brand">Quicken and QuickBooks</strong> because the names sound alike. The answer is short: business payroll does not belong in Quicken.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">You cannot run compliant business payroll inside Quicken.</strong> Quicken tracks personal spending, investments, and household budgets. Payroll requires tax tables, withholding, direct deposit, quarterly filings, and year-end W-2/1099 forms—features payroll platforms automate.
+                      <strong className="text-brand">You cannot run compliant business payroll inside Quicken.</strong> Quicken tracks personal spending, investments, and household budgets. Payroll requires tax tables, withholding, direct deposit, quarterly filings, and year-end W-2/1099 forms—features payroll platforms automate.
                     </p>
                     <p>
                       Compare <Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link>. Business books and payroll sync live in <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> plus <Link href="/payroll" className={linkGreen}>payroll software</Link> like <Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto</Link> or <Link href={getPayrollReviewUrl("onpay")} className={linkGreen}>OnPay</Link>.
@@ -116,13 +116,13 @@ export default function CanYouRunPayrollInQuickenPage() {
                   <SectionTitle sub="Risky workarounds.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Paying employees with personal checks</strong> and hoping Quicken categorization is enough for audits.
+                      <strong className="text-brand">Paying employees with personal checks</strong> and hoping Quicken categorization is enough for audits.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Using online calculators</strong> without filing—underpayment penalties accumulate.
+                      <strong className="text-brand">Using online calculators</strong> without filing—underpayment penalties accumulate.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Treating 1099 contractors like W-2</strong> without proper classification review.
+                      <strong className="text-brand">Treating 1099 contractors like W-2</strong> without proper classification review.
                     </p>
                   </div>
                 </section>
@@ -138,12 +138,12 @@ export default function CanYouRunPayrollInQuickenPage() {
                   <SectionTitle sub="Payroll and books that belong together.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll software hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto review</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/how-small-businesses-maintain-their-accounts" className={linkGreen}>How to maintain accounts</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you need</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll software hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto review</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quicken-vs-quickbooks" className={linkGreen}>Quicken vs QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/how-small-businesses-maintain-their-accounts" className={linkGreen}>How to maintain accounts</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you need</Link></span></li>
                     </ul>
                   </div>
                 </section>

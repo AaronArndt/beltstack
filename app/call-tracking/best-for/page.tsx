@@ -52,12 +52,12 @@ export default function CallTrackingBestForHubPage() {
       tradeCards={CALL_TRACKING_TRADE_CARDS}
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href={getCallTrackingBestForUrl("hvac")} className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href={getCallTrackingBestForUrl("hvac")} className="font-semibold text-indigo hover:underline">
             Best for HVAC businesses
           </Link>{" "}
           ·{" "}
-          <Link href="/call-tracking/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/call-tracking/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

@@ -9,8 +9,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -82,22 +82,22 @@ export default function HowConstructionPayrollDiffersPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link></li>
+                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How Construction Payroll Differs</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Construction Payroll Differs
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how construction payroll differs from standard payroll operations and what systems contractors need for labor visibility and compliance.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -110,7 +110,7 @@ export default function HowConstructionPayrollDiffersPage() {
                     </p>
                     <p>
                       This guide breaks down the practical differences and how to evaluate payroll tools accordingly. For deeper public-works context, see{" "}
-                      <Link href="/payroll/guides/how-certified-payroll-works" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">how certified payroll works</Link>.
+                      <Link href="/payroll/guides/how-certified-payroll-works" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">how certified payroll works</Link>.
                     </p>
                   </div>
                 </section>
@@ -150,7 +150,7 @@ export default function HowConstructionPayrollDiffersPage() {
                     </p>
                     <p>
                       See{" "}
-                      <Link href="/payroll/guides/how-prevailing-wage-payroll-works" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">how prevailing wage payroll works</Link>{" "}
+                      <Link href="/payroll/guides/how-prevailing-wage-payroll-works" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">how prevailing wage payroll works</Link>{" "}
                       for detailed mechanics.
                     </p>
                   </div>
@@ -164,7 +164,7 @@ export default function HowConstructionPayrollDiffersPage() {
                     </p>
                     <p>
                       For classification-oriented planning, review{" "}
-                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll for contractors</Link>.
+                      <Link href="/payroll/guides/payroll-for-contractors" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll for contractors</Link>.
                     </p>
                   </div>
                 </section>
@@ -173,16 +173,16 @@ export default function HowConstructionPayrollDiffersPage() {
                   <SectionTitle sub="How buying criteria should change for construction teams.">What to Look For in Construction Payroll Software</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reliable time-to-payroll integration by project and class.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Construction-ready reporting for labor, rates, and reconciliation.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Compliance support for prevailing wage and certified payroll workflows.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Scalability for growing crews, locations, and payroll approvals.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reliable time-to-payroll integration by project and class.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Construction-ready reporting for labor, rates, and reconciliation.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Compliance support for prevailing wage and certified payroll workflows.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Scalability for growing crews, locations, and payroll approvals.</span></li>
                     </ul>
                     <p>
                       Compare options in our{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">comparison hub</Link>{" "}
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">comparison hub</Link>{" "}
                       and curated{" "}
-                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for construction</Link>{" "}
+                      <Link href={getPayrollBestForUrl("construction")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for construction</Link>{" "}
                       page.
                     </p>
                   </div>

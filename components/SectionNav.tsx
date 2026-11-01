@@ -41,7 +41,7 @@ export function SectionNav({
             {i > 0 && <span className="text-stone-300" aria-hidden>|</span>}
             <Link
               href={item.href}
-              className="rounded px-2 py-1.5 text-sm font-medium text-[#57534E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+              className="rounded px-2 py-1.5 text-sm font-medium text-muted-foreground hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
               onClick={(e) => {
                 const id = item.href.replace(/^#/, "");
                 const el = document.getElementById(id);

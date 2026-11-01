@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -77,11 +77,11 @@ export default function HowBusinessesManageFieldTechniciansPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -112,10 +112,10 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Businesses Manage Field Technicians
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how service companies coordinate technicians with scheduling, mobile workflows, communication
                     standards, and performance visibility.
                   </p>
@@ -185,19 +185,19 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Morning capacity review</strong> — confirm trucks, skills, and
+                        <strong className="text-brand">Morning capacity review</strong> — confirm trucks, skills, and
                         parts for high-priority work.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Publish the day</strong> — schedules and routes land on
+                        <strong className="text-brand">Publish the day</strong> — schedules and routes land on
                         technician apps with clear service windows.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Live dispatch adjustments</strong> — delays and add-ons
+                        <strong className="text-brand">Live dispatch adjustments</strong> — delays and add-ons
                         reassigned on the board without losing job history.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">End-of-day review</strong> — completions, callbacks, and
+                        <strong className="text-brand">End-of-day review</strong> — completions, callbacks, and
                         documentation gaps become coaching topics, not surprises.
                       </li>
                     </ol>
@@ -226,38 +226,38 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Status transitions</strong> — en route, on site, complete—
+                          <strong className="text-brand">Status transitions</strong> — en route, on site, complete—
                           visible to customers and dispatch for ETA accuracy.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Required checklists</strong> — safety, install quality, or
+                          <strong className="text-brand">Required checklists</strong> — safety, install quality, or
                           warranty terms by job type.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Photos and signatures</strong> — attached to the work order
+                          <strong className="text-brand">Photos and signatures</strong> — attached to the work order
                           for disputes, renewals, and upsell proof.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Labor and parts on the job</strong> — so invoicing pulls
+                          <strong className="text-brand">Labor and parts on the job</strong> — so invoicing pulls
                           actuals instead of guesswork back at the office.
                         </span>
                       </li>
@@ -287,38 +287,38 @@ export default function HowBusinessesManageFieldTechniciansPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">On-time arrival rate</strong> — scheduling and routing quality
+                          <strong className="text-brand">On-time arrival rate</strong> — scheduling and routing quality
                           show up here first.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Revenue or billable hours per tech day</strong> — utilization
+                          <strong className="text-brand">Revenue or billable hours per tech day</strong> — utilization
                           without ignoring drive time.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Callback percentage</strong> — quality signal paired with
+                          <strong className="text-brand">Callback percentage</strong> — quality signal paired with
                           ride-alongs or job audits.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Documentation completion</strong> — photos, signatures, and
+                          <strong className="text-brand">Documentation completion</strong> — photos, signatures, and
                           closed work orders before end of day.
                         </span>
                       </li>

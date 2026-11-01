@@ -6,7 +6,7 @@ import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTra
 import { getCallTrackingBestForUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/how-call-tracking-works";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -30,7 +30,7 @@ export default function HowCallTrackingWorksPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="min-w-0 max-w-[720px] pt-8 pb-16">
             <nav aria-label="Breadcrumb" className="pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -55,8 +55,8 @@ export default function HowCallTrackingWorksPage() {
               </ol>
             </nav>
             <header className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Call Tracking Works</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Call Tracking Works</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 A practical overview of swap scripts, number pools, integrations, and QA—for teams that need trustworthy attribution, not vanity ring counts. Start from our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
                   best call tracking software
@@ -81,18 +81,18 @@ export default function HowCallTrackingWorksPage() {
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
-            <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-              <h2 className="text-[#1A2D48] text-xl font-bold">Swap script + session context</h2>
+            <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+              <h2 className="text-brand text-xl font-bold">Swap script + session context</h2>
               <p className="mt-2">
                 Most SMB stacks install a JavaScript snippet that listens for phone links and text on the page. When a visitor arrives from a tagged campaign or organic entry point, the tool serves a
                 tracking number and associates the eventual call with that session where possible.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Number pools</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Number pools</h2>
               <p className="mt-2">
                 High-traffic sites may use pools of numbers so concurrent visitors each get unique or semi-unique identifiers. Pool sizing affects cost—right-size against real concurrent sessions, not
                 theoretical peak marketing slides.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">CRM and ads handoffs</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">CRM and ads handoffs</h2>
               <p className="mt-2">
                 The best implementations push call events (and dispositions) into the CRM so marketing and ops share one definition of a qualified lead. Without that bridge, dashboards look busy while
                 pipeline truth stays opaque. Send and manage call leads in your{" "}

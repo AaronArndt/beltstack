@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowAiIsChangingSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowAiIsChangingSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How AI Is Changing SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How AI Is Changing SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 What AI search features and generative workflows mean for SMBs—not hype, but what to keep doing. Ground strategy in{" "}
                 <Link href="/seo-tools/guides/what-seo-actually-does-for-businesses" className={link}>
                   what SEO actually does for businesses
@@ -115,8 +115,8 @@ export default function HowAiIsChangingSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="serp-shifts" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How AI is changing the SERP—not the crawl</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How AI is changing the SERP—not the crawl</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google still discovers pages through links and sitemaps, evaluates relevance and quality, and chooses what to show. What changed is presentation: AI-generated summaries, richer snippets, and more zero-click answers on informational queries. Your site can rank while earning fewer visits on some topics—that is a measurement problem as much as a ranking problem.
                 </p>
@@ -130,8 +130,8 @@ export default function HowAiIsChangingSeoPage() {
               </section>
 
               <section id="content-production" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">AI in content production: speed vs differentiation</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">AI in content production: speed vs differentiation</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Teams use AI to draft outlines, meta descriptions, FAQ blocks, and internal link suggestions. The risk is sameness: ten competitors publishing interchangeable &quot;ultimate guides&quot; without local photos, licensing details, or job-site proof. AI should compress labor on structure; humans still supply what Google and customers use to trust a business.
                 </p>
@@ -149,8 +149,8 @@ export default function HowAiIsChangingSeoPage() {
               </section>
 
               <section id="local-durability" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Why local and service SEO remain durable</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Why local and service SEO remain durable</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   When a pipe bursts, customers still search with urgency and choose based on proximity, reviews, and response time—not a paragraph summary. Map Pack, call buttons, and localized service pages retain strong commercial intent. Follow{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -176,8 +176,8 @@ export default function HowAiIsChangingSeoPage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measure leads, not AI anxiety</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measure leads, not AI anxiety</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   AI chatter pushes teams toward vanity metrics. Keep the stack practical: Search Console for search performance, on-site analytics for behavior—read{" "}
                   <Link href="/seo-tools/guides/is-google-analytics-an-seo-tool" className={link}>
@@ -196,28 +196,28 @@ export default function HowAiIsChangingSeoPage() {
               </section>
 
               <section id="workflow" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A sane AI-augmented SEO workflow for SMBs</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A sane AI-augmented SEO workflow for SMBs</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Monthly rhythm that uses AI without outsourcing judgment:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Diagnose</strong> — Export Search Console queries; let AI cluster themes, but you decide which pages map to revenue.
+                    <strong className="text-brand">Diagnose</strong> — Export Search Console queries; let AI cluster themes, but you decide which pages map to revenue.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Draft</strong> — AI outlines service or area pages; you add pricing signals, licensing, photos, and FAQs from real jobs.
+                    <strong className="text-brand">Draft</strong> — AI outlines service or area pages; you add pricing signals, licensing, photos, and FAQs from real jobs.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Ship local proof</strong> — GBP posts, review responses, and citation checks stay manual or tool-assisted—not fully automated.
+                    <strong className="text-brand">Ship local proof</strong> — GBP posts, review responses, and citation checks stay manual or tool-assisted—not fully automated.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Review pipeline</strong> — Tag organic leads in CRM; pause content themes that rank but never convert.
+                    <strong className="text-brand">Review pipeline</strong> — Tag organic leads in CRM; pause content themes that rank but never convert.
                   </li>
                 </ul>
               </section>
 
               <section id="what-not-to-do" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What not to do when AI hype spikes</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What not to do when AI hype spikes</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Do not flood your site with undifferentiated AI pages, ignore indexing errors because &quot;SEO is dead,&quot; or buy three overlapping AI writing subscriptions. Do not abandon organic for paid without tagging—many local businesses still win on Maps and service pages while competitors chase generic content volume.
                 </p>
@@ -225,8 +225,8 @@ export default function HowAiIsChangingSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

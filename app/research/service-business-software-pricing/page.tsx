@@ -37,7 +37,7 @@ export const metadata: Metadata = siteMetadata({
 });
 
 const linkClass =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const JUMP = [
   { href: "#key-findings", label: "Key findings" },
@@ -59,23 +59,23 @@ const JUMP = [
 function SectionTitle({ id, children, sub }: { id: string; children: React.ReactNode; sub?: string }) {
   return (
     <div id={id} className="scroll-mt-section mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub ? <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p> : null}
+      {sub ? <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p> : null}
     </div>
   );
 }
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <aside className="mt-4 rounded-md border border-[#10B981]/30 bg-[#10B981]/5 px-4 py-3 text-sm leading-relaxed text-[#1A2D48]">
+    <aside className="mt-4 rounded-md border border-sage bg-sage/5 px-4 py-3 text-sm leading-relaxed text-brand">
       {children}
     </aside>
   );
 }
 
 function Prose({ children }: { children: React.ReactNode }) {
-  return <p className="mt-3 text-[#57534E] text-sm leading-relaxed max-w-3xl sm:text-base">{children}</p>;
+  return <p className="mt-3 text-muted-foreground text-sm leading-relaxed max-w-3xl sm:text-base">{children}</p>;
 }
 
 export default function ServiceBusinessSoftwarePricingPage() {
@@ -146,41 +146,41 @@ export default function ServiceBusinessSoftwarePricingPage() {
                 { label: "Advertised vs. usable pricing" },
               ]}
             />
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#10B981]">Original research</p>
-            <h1 className="mt-2 text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo">Original research</p>
+            <h1 className="mt-2 text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {PRICING_STUDY_H1}
             </h1>
-            <p className="mt-4 text-[#57534E] text-base leading-relaxed max-w-3xl sm:text-lg">
+            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-3xl sm:text-lg">
               Among BeltStack-reviewed products with public advertised and usable prices, the named plan on the price page is often not the plan required to run that category&apos;s frozen small-team workflow — but this is not true in every category.
             </p>
-            <p className="mt-3 text-sm font-medium text-[#1A2D48]">
+            <p className="mt-3 text-sm font-medium text-brand">
               {study.products} products · {study.categories} categories · Prices verified {study.verifiedDisplay}
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Advertised plan ≠ usable plan</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Advertised plan ≠ usable plan</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">
                   {study.comparable.numerator} of {study.comparable.denominator}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#57534E]">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   Products with both public advertised and usable prices that required a different named plan for the smaller study scenario.
                 </p>
               </article>
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Field service usable price is a quote</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Field service usable price is a quote</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">
                   {study.fsmQuote.numerator} of {study.fsmQuote.denominator}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#57534E]">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   BeltStack-reviewed field-service products requiring a quote for the usable workflow.
                 </p>
               </article>
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Free scheduling plan still usable at 5 staff</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Free scheduling plan still usable at 5 staff</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">
                   {study.schedulingFree.survivors.length} of {study.schedulingFree.advertised}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#57534E]">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   Among scheduling products advertising an ongoing free plan.
                 </p>
               </article>
@@ -194,7 +194,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
               </a>
             </div>
             <nav aria-label="On this page" className="mt-6 border-t border-stone-200 pt-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">On this page</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">On this page</p>
               <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                 {JUMP.map((item) => (
                   <li key={item.href}>
@@ -213,12 +213,12 @@ export default function ServiceBusinessSoftwarePricingPage() {
             <SectionTitle id="key-findings" sub="What this sample shows, with denominators attached.">
               Key findings
             </SectionTitle>
-            <ul className="mt-4 space-y-3 text-[#57534E] text-sm leading-relaxed sm:text-base max-w-3xl">
+            <ul className="mt-4 space-y-3 text-muted-foreground text-sm leading-relaxed sm:text-base max-w-3xl">
               <li>
-                <strong className="text-[#1A2D48]">{study.comparable.numerator} of {study.comparable.denominator}</strong> comparable products — those with both a public advertised entry price and a public usable scenario price — required a different named plan for the smaller frozen workflow.
+                <strong className="text-brand">{study.comparable.numerator} of {study.comparable.denominator}</strong> comparable products — those with both a public advertised entry price and a public usable scenario price — required a different named plan for the smaller frozen workflow.
               </li>
               <li>
-                <strong className="text-[#1A2D48]">{study.fsmQuote.numerator} of {study.fsmQuote.denominator}</strong> field-service products required a quote for usable pricing. Only {study.fsmVisibility.public} of {study.fsmQuote.denominator} had a publicly calculable usable dollar value.
+                <strong className="text-brand">{study.fsmQuote.numerator} of {study.fsmQuote.denominator}</strong> field-service products required a quote for usable pricing. Only {study.fsmVisibility.public} of {study.fsmQuote.denominator} had a publicly calculable usable dollar value.
               </li>
               <li>
                 Among {study.schedulingFree.advertised} scheduling products advertising an ongoing free plan, only {study.schedulingFree.survivors.length} remained free and usable at five staff calendars: {study.schedulingFree.survivors.join(", ")}.
@@ -248,10 +248,10 @@ export default function ServiceBusinessSoftwarePricingPage() {
               What advertised vs. usable means
             </SectionTitle>
             <Prose>
-              <strong className="text-[#1A2D48]">Advertised entry</strong> is the lowest publicly listed ongoing recurring price for a named plan available to a new US customer. A true ongoing free plan is recorded as $0. Time-limited trials are not treated as free. Promotional discounts were ignored.
+              <strong className="text-brand">Advertised entry</strong> is the lowest publicly listed ongoing recurring price for a named plan available to a new US customer. A true ongoing free plan is recorded as $0. Time-limited trials are not treated as free. Promotional discounts were ignored.
             </Prose>
             <Prose>
-              <strong className="text-[#1A2D48]">Usable entry</strong> is the lowest publicly priced named plan that satisfies the frozen category workflow at the scenario size. Where that plan is sold per seat, per employee, or as a base-plus-unit formula, the study records the resulting scenario total as a monthly equivalent.
+              <strong className="text-brand">Usable entry</strong> is the lowest publicly priced named plan that satisfies the frozen category workflow at the scenario size. Where that plan is sold per seat, per employee, or as a base-plus-unit formula, the study records the resulting scenario total as a monthly equivalent.
             </Prose>
             <Prose>
               &quot;Usable&quot; does not mean best, recommended, or ideal. It means the minimum qualifying plan under the published methodology. A higher-priced plan may be a better operational fit. This study does not rank products and does not replace BeltStack editorial recommendations.
@@ -269,50 +269,50 @@ export default function ServiceBusinessSoftwarePricingPage() {
             </SectionTitle>
             <div className="overflow-x-auto rounded-md border border-slate-200 bg-white shadow-sm">
               <table className="min-w-[640px] w-full text-left text-sm">
-                <caption className="px-3 py-3 text-left text-sm text-[#57534E]">
+                <caption className="px-3 py-3 text-left text-sm text-muted-foreground">
                   These scenarios are not economically equivalent. Category medians should not be interpreted as a ranking of which software category is more or less expensive.
                 </caption>
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th scope="col" className="px-3 py-2.5 font-semibold text-[#1A2D48]">Category</th>
-                    <th scope="col" className="px-3 py-2.5 font-semibold text-[#1A2D48]">Smaller scenario</th>
-                    <th scope="col" className="px-3 py-2.5 font-semibold text-[#1A2D48]">Larger scenario</th>
-                    <th scope="col" className="px-3 py-2.5 font-semibold text-[#1A2D48]">Frozen workflow</th>
+                    <th scope="col" className="px-3 py-2.5 font-semibold text-brand">Category</th>
+                    <th scope="col" className="px-3 py-2.5 font-semibold text-brand">Smaller scenario</th>
+                    <th scope="col" className="px-3 py-2.5 font-semibold text-brand">Larger scenario</th>
+                    <th scope="col" className="px-3 py-2.5 font-semibold text-brand">Frozen workflow</th>
                   </tr>
                 </thead>
-                <tbody className="text-[#57534E]">
+                <tbody className="text-muted-foreground">
                   <tr className="border-b border-slate-100">
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">CRM</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">CRM</th>
                     <td className="px-3 py-2.5">5 seats</td>
                     <td className="px-3 py-2.5">10 seats</td>
                     <td className="px-3 py-2.5">Contacts, pipeline, tasks, history</td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">Field service</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">Field service</th>
                     <td className="px-3 py-2.5">1 office + 4 field</td>
                     <td className="px-3 py-2.5">2 office + 8 field</td>
                     <td className="px-3 py-2.5">Customer/job records, scheduling, dispatch, mobile, native invoice, payment workflow</td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">Payroll</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">Payroll</th>
                     <td className="px-3 py-2.5">5 employees</td>
                     <td className="px-3 py-2.5">10 employees</td>
                     <td className="px-3 py-2.5">Full-service payroll with tax calculation/filing, direct deposit, W-2, stubs/self-service</td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">Invoicing</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">Invoicing</th>
                     <td className="px-3 py-2.5">Invoicing workspace</td>
                     <td className="px-3 py-2.5">—</td>
                     <td className="px-3 py-2.5">Create, send, and track invoices; customers; accept or record payment</td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">Scheduling</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">Scheduling</th>
                     <td className="px-3 py-2.5">5 staff calendars</td>
                     <td className="px-3 py-2.5">—</td>
                     <td className="px-3 py-2.5">Appointments and calendars — not field dispatch</td>
                   </tr>
                   <tr>
-                    <th scope="row" className="px-3 py-2.5 font-medium text-[#1A2D48]">Time tracking</th>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-brand">Time tracking</th>
                     <td className="px-3 py-2.5">5 users</td>
                     <td className="px-3 py-2.5">10 users</td>
                     <td className="px-3 py-2.5">Time entry, timesheets, export/basic reporting</td>
@@ -559,16 +559,16 @@ export default function ServiceBusinessSoftwarePricingPage() {
             </Prose>
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Public pricing</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">{study.visibilityCounts.public}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Public pricing</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">{study.visibilityCounts.public}</p>
               </article>
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Partial pricing</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">{study.visibilityCounts.partial}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Partial pricing</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">{study.visibilityCounts.partial}</p>
               </article>
               <article className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#57534E]">Quote required</p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-[#1A2D48]">{study.visibilityCounts.quote}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Quote required</p>
+                <p className="mt-2 text-3xl font-bold tabular-nums text-brand">{study.visibilityCounts.quote}</p>
               </article>
             </div>
             <Prose>
@@ -587,7 +587,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
             </Prose>
             {(["crm", "field-service", "payroll", "invoicing", "scheduling", "time-tracking"] as const).map((category) => (
               <div key={category} className="mt-8">
-                <h3 className="mb-3 text-lg font-bold text-[#1A2D48]">{CATEGORY_LABELS[category]}</h3>
+                <h3 className="mb-3 text-lg font-bold text-brand">{CATEGORY_LABELS[category]}</h3>
                 <CategoryDataTable
                   caption={`${CATEGORY_LABELS[category]} advertised vs usable pricing, verified ${study.verifiedDisplay}`}
                   smallerHeader={
@@ -618,7 +618,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
                 />
               </div>
             ))}
-            <p className="mt-6 text-sm leading-relaxed text-[#57534E] max-w-3xl">{AFFILIATE_DISCLOSURE}</p>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-w-3xl">{AFFILIATE_DISCLOSURE}</p>
           </div>
         </section>
 
@@ -627,39 +627,39 @@ export default function ServiceBusinessSoftwarePricingPage() {
             <SectionTitle id="methodology" sub="Methodology version 1.0 · dataset edition 2026.">
               Methodology
             </SectionTitle>
-            <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-[#57534E] sm:text-base">
+            <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
               <p>
-                <strong className="text-[#1A2D48]">Sample.</strong> Software BeltStack reviews in six frozen categories: CRM, field service, payroll, invoicing, scheduling, and time tracking. {study.products} category-product identities and {study.rows} product×scenario rows. This is not a market census.
+                <strong className="text-brand">Sample.</strong> Software BeltStack reviews in six frozen categories: CRM, field service, payroll, invoicing, scheduling, and time tracking. {study.products} category-product identities and {study.rows} product×scenario rows. This is not a market census.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Date.</strong> Prices verified {study.verifiedDisplay}. Snapshot, not live pricing. Future vendor price changes do not rewrite this edition.
+                <strong className="text-brand">Date.</strong> Prices verified {study.verifiedDisplay}. Snapshot, not live pricing. Future vendor price changes do not rewrite this edition.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Sources.</strong> Official catalog, pricing page, help/pricing documentation, vendor announcement, and checkout. Third-party sources did not supply final pricing facts. Some official pages required browser verification.
+                <strong className="text-brand">Sources.</strong> Official catalog, pricing page, help/pricing documentation, vendor announcement, and checkout. Third-party sources did not supply final pricing facts. Some official pages required browser verification.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Advertised entry.</strong> Lowest public ongoing recurring named-plan price available to a new US customer. True free = $0. Trials are not free. Promotions ignored.
+                <strong className="text-brand">Advertised entry.</strong> Lowest public ongoing recurring named-plan price available to a new US customer. True free = $0. Trials are not free. Promotions ignored.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Usable entry.</strong> Lowest publicly priced named plan meeting the frozen category workflow at scenario size. Not best, recommended, or ideal.
+                <strong className="text-brand">Usable entry.</strong> Lowest publicly priced named plan meeting the frozen category workflow at scenario size. Not best, recommended, or ideal.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Cadence.</strong> Annual-billed monthly equivalent is used for normalized comparison where appropriate. Actual billing cadence is retained in the dataset.
+                <strong className="text-brand">Cadence.</strong> Annual-billed monthly equivalent is used for normalized comparison where appropriate. Actual billing cadence is retained in the dataset.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Add-ons.</strong> Only required, public, and calculable add-ons are included in scenario cost.
+                <strong className="text-brand">Add-ons.</strong> Only required, public, and calculable add-ons are included in scenario cost.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Transaction fees.</strong> Excluded from subscription scenario cost.
+                <strong className="text-brand">Transaction fees.</strong> Excluded from subscription scenario cost.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Non-numeric statuses.</strong> Quote required, price unavailable, not publicly disclosed, doesn&apos;t meet this workflow, and official sources conflict are never encoded as $0. They are excluded from medians.
+                <strong className="text-brand">Non-numeric statuses.</strong> Quote required, price unavailable, not publicly disclosed, doesn&apos;t meet this workflow, and official sources conflict are never encoded as $0. They are excluded from medians.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Median.</strong> Same category and scenario. Numeric N must be at least 5. Quote, unknown, and not-disclosed values are excluded.
+                <strong className="text-brand">Median.</strong> Same category and scenario. Numeric N must be at least 5. Quote, unknown, and not-disclosed values are excluded.
               </p>
               <p>
-                <strong className="text-[#1A2D48]">Payroll.</strong> Headline median uses the full-service class only. PEO/EOR products remain in the dataset and tables.
+                <strong className="text-brand">Payroll.</strong> Headline median uses the full-service class only. PEO/EOR products remain in the dataset and tables.
               </p>
               <p>
                 Related BeltStack policy:{" "}
@@ -675,7 +675,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
         <section className="border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle id="limitations">Limitations</SectionTitle>
-            <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#57534E] sm:text-base">
+            <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
               <li>BeltStack-reviewed sample, not a market census.</li>
               <li>US public list prices.</li>
               <li>Verified {study.verifiedDisplay}.</li>
@@ -706,7 +706,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
               <a href={PRICING_STUDY_CSV_PATH} className={linkClass} download>
                 Download the dataset (CSV)
               </a>
-              <span className="ml-2 text-sm text-[#57534E]">{study.csv.filename}</span>
+              <span className="ml-2 text-sm text-muted-foreground">{study.csv.filename}</span>
             </p>
           </div>
         </section>
@@ -714,7 +714,7 @@ export default function ServiceBusinessSoftwarePricingPage() {
         <section className="border-b border-stone-200/80 bg-background py-8 sm:py-11">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle id="cite">How to cite this research</SectionTitle>
-            <blockquote className="mt-4 max-w-3xl rounded-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-[#1A2D48] sm:text-base">
+            <blockquote className="mt-4 max-w-3xl rounded-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-brand sm:text-base">
               BeltStack. &quot;2026 Advertised vs. Usable Pricing Study.&quot; {study.products} products BeltStack reviews across six software categories. Prices verified {study.verifiedDisplay}. {CANONICAL}
             </blockquote>
             <Prose>

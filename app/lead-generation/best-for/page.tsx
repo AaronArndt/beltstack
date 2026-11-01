@@ -164,12 +164,12 @@ export default function LeadGenerationBestForHubPage() {
       tradeCards={LEAD_GEN_TRADE_CARDS}
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href={getLeadGenerationBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href={getLeadGenerationBestForUrl("contractors")} className="font-semibold text-indigo hover:underline">
             Best for contractors
           </Link>{" "}
           ·{" "}
-          <Link href="/lead-generation/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/lead-generation/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

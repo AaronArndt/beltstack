@@ -20,12 +20,12 @@ export default function PaymentProcessingBestForHubPage() {
       ungroupedSub="Jump to a scenario."
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href={getPaymentProcessingBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href={getPaymentProcessingBestForUrl("contractors")} className="font-semibold text-indigo hover:underline">
             Best payment processing for contractors
           </Link>{" "}
           ·{" "}
-          <Link href="/payment-processing/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/payment-processing/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -70,27 +70,27 @@ export default function HowToChooseProjectManagementSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link>
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Project Management</Link>
+                      <Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Project Management</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link>
+                      <Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How to Choose Project Management Software</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose Project Management Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Key factors when comparing project management platforms: team size, views, automation, pricing, and how to avoid common mistakes.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -111,33 +111,33 @@ export default function HowToChooseProjectManagementSoftwarePage() {
                     <p>These factors apply to most teams. Weight them by your size, workflow, and goals.</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Ease of use</strong> — Your team will use the tool daily. Look for clear task and project views, simple assignment and due dates, and a short learning curve. If adoption is low, project data will be wrong. Free trials help you judge; involve at least one person who will use it every day.
+                          <strong className="text-brand">Ease of use</strong> — Your team will use the tool daily. Look for clear task and project views, simple assignment and due dates, and a short learning curve. If adoption is low, project data will be wrong. Free trials help you judge; involve at least one person who will use it every day.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Views (list, board, timeline)</strong> — You need at least one view that matches how you think about work. List views suit sequential tasks; boards suit Kanban-style flow; timeline or Gantt views suit projects with dependencies. Many tools offer multiple views—ensure the ones you need are on the tier you can afford.
+                          <strong className="text-brand">Views (list, board, timeline)</strong> — You need at least one view that matches how you think about work. List views suit sequential tasks; boards suit Kanban-style flow; timeline or Gantt views suit projects with dependencies. Many tools offer multiple views—ensure the ones you need are on the tier you can afford.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Pricing</strong> — Free tiers (Asana, Trello, ClickUp, Notion) vs per-user paid. Watch for member limits, storage, and add-ons (automation, advanced views, reporting). Model total cost at your current and likely future team size.
+                          <strong className="text-brand">Pricing</strong> — Free tiers (Asana, Trello, ClickUp, Notion) vs per-user paid. Watch for member limits, storage, and add-ons (automation, advanced views, reporting). Model total cost at your current and likely future team size.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Collaboration</strong> — Comments, @mentions, file attachments, and real-time updates. Check that your team can communicate in context without switching to email or chat for every update.
+                          <strong className="text-brand">Collaboration</strong> — Comments, @mentions, file attachments, and real-time updates. Check that your team can communicate in context without switching to email or chat for every update.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Integrations</strong> — Calendar, time tracking, communication (Slack, Teams), and any other tools you use. Data should flow without manual re-entry.
+                          <strong className="text-brand">Integrations</strong> — Calendar, time tracking, communication (Slack, Teams), and any other tools you use. Data should flow without manual re-entry.
                         </span>
                       </li>
                     </ul>
@@ -147,13 +147,13 @@ export default function HowToChooseProjectManagementSoftwarePage() {
                   <SectionTitle sub="Matching the tool to your team.">Team Size and Complexity</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Solo or very small teams</strong> (e.g. freelancers, founder-led) often need simple task and project tracking with due dates and maybe a board view. Free tiers from <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> are usually enough. Avoid enterprise platforms that require dedicated admin or long implementation.
+                      <strong className="text-brand">Solo or very small teams</strong> (e.g. freelancers, founder-led) often need simple task and project tracking with due dates and maybe a board view. Free tiers from <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link>, or <Link href={getProjectManagementReviewUrl("notion")} className={linkGreen}>Notion</Link> are usually enough. Avoid enterprise platforms that require dedicated admin or long implementation.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Growing teams</strong> (e.g. 5–20 people) need project visibility, multiple views, and reporting so managers can see progress and workload. Tools like <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, or <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> scale to this size with clear pricing. Consider automation (status updates, assignments) to keep data clean.
+                      <strong className="text-brand">Growing teams</strong> (e.g. 5–20 people) need project visibility, multiple views, and reporting so managers can see progress and workload. Tools like <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, <Link href={getProjectManagementReviewUrl("clickup")} className={linkGreen}>ClickUp</Link>, <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, or <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> scale to this size with clear pricing. Consider automation (status updates, assignments) to keep data clean.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Larger or complex organizations</strong> may need portfolio views, resource planning, advanced reporting, and strict permissions. <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> and enterprise tiers of Asana or Monday serve this segment but add cost and complexity—only move here when you have dedicated admin or implementation support.
+                      <strong className="text-brand">Larger or complex organizations</strong> may need portfolio views, resource planning, advanced reporting, and strict permissions. <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> and enterprise tiers of Asana or Monday serve this segment but add cost and complexity—only move here when you have dedicated admin or implementation support.
                     </p>
                   </div>
                 </section>
@@ -161,10 +161,10 @@ export default function HowToChooseProjectManagementSoftwarePage() {
                   <SectionTitle sub="Lists, boards, and timelines.">Views and Workflows</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">List view</strong> — Tasks in a list with assignees, due dates, and status. Good for to-dos and sequential work. Most tools offer this. <strong className="text-[#1A2D48]">Board (Kanban) view</strong> — Columns for stages (To Do, In Progress, Done). Good for flow-based work. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> and <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> excel here; see our <Link href="/project-management/guides/kanban-vs-scrum-tools" className={linkGreen}>Kanban vs Scrum tools</Link> guide for more.
+                      <strong className="text-brand">List view</strong> — Tasks in a list with assignees, due dates, and status. Good for to-dos and sequential work. Most tools offer this. <strong className="text-brand">Board (Kanban) view</strong> — Columns for stages (To Do, In Progress, Done). Good for flow-based work. <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> and <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> excel here; see our <Link href="/project-management/guides/kanban-vs-scrum-tools" className={linkGreen}>Kanban vs Scrum tools</Link> guide for more.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Timeline / Gantt</strong> — Bars on a calendar for start and end dates, often with dependencies. Essential when you have multi-step projects and need to see critical path. <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, and <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> offer timeline views on paid tiers. Choose a tool whose view model matches how you plan—compare in <Link href={getProjectManagementCompareUrl("asana-vs-monday")} className={linkGreen}>Asana vs Monday</Link> and <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link>.
+                      <strong className="text-brand">Timeline / Gantt</strong> — Bars on a calendar for start and end dates, often with dependencies. Essential when you have multi-step projects and need to see critical path. <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link>, <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link>, and <Link href={getProjectManagementReviewUrl("wrike")} className={linkGreen}>Wrike</Link> offer timeline views on paid tiers. Choose a tool whose view model matches how you plan—compare in <Link href={getProjectManagementCompareUrl("asana-vs-monday")} className={linkGreen}>Asana vs Monday</Link> and <Link href={getProjectManagementCompareUrl("asana-vs-clickup")} className={linkGreen}>Asana vs ClickUp</Link>.
                     </p>
                   </div>
                 </section>
@@ -173,27 +173,27 @@ export default function HowToChooseProjectManagementSoftwarePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Overbuying</strong> — Choosing enterprise PM software when a simpler tool (Trello, Asana free, Notion) would suffice. You pay for complexity and features you won't use; adoption often suffers.
+                          <strong className="text-brand">Overbuying</strong> — Choosing enterprise PM software when a simpler tool (Trello, Asana free, Notion) would suffice. You pay for complexity and features you won't use; adoption often suffers.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Ignoring adoption</strong> — If the team won't use the tool, project data will be wrong and the investment is wasted. Prioritize ease of use and involve users in the selection; run a trial with a real project before committing.
+                          <strong className="text-brand">Ignoring adoption</strong> — If the team won't use the tool, project data will be wrong and the investment is wasted. Prioritize ease of use and involve users in the selection; run a trial with a real project before committing.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Skipping trials</strong> — A demo or free trial with a real project and real tasks reveals fit better than feature lists. Test creating projects, assigning work, and switching views in your actual workflow.
+                          <strong className="text-brand">Skipping trials</strong> — A demo or free trial with a real project and real tasks reveals fit better than feature lists. Test creating projects, assigning work, and switching views in your actual workflow.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Underestimating total cost</strong> — Per-user fees and add-ons (automation, storage, integrations) can add up. Model cost at your expected team size for the next 12–18 months; see our <Link href="/project-management/guides/project-management-pricing-guide" className={linkGreen}>project management pricing guide</Link>.
+                          <strong className="text-brand">Underestimating total cost</strong> — Per-user fees and add-ons (automation, storage, integrations) can add up. Model cost at your expected team size for the next 12–18 months; see our <Link href="/project-management/guides/project-management-pricing-guide" className={linkGreen}>project management pricing guide</Link>.
                         </span>
                       </li>
                     </ul>

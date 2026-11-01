@@ -26,9 +26,9 @@ const POPULAR_SLUGS = [
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -76,11 +76,11 @@ export default function PosCompareHubPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -89,7 +89,7 @@ export default function PosCompareHubPage() {
                 <li>
                   <Link
                     href="/pos"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     POS Software
                   </Link>
@@ -100,33 +100,33 @@ export default function PosCompareHubPage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               POS Software Comparisons
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Compare popular POS systems side by side—including Square, Shopify POS, Lightspeed, Clover,
               Toast, TouchBistro, Vend, and more. These head-to-head matchups break down payments, inventory,
               restaurant vs retail fit, hardware, and pricing so you can choose the right platform for your business.
             </p>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               See our{" "}
               <Link
                 href="/pos/best-pos-software"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 best POS software
               </Link>{" "}
               roundup for top picks,{" "}
               <Link
                 href="/pos/best-for"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 best POS by use case
               </Link>{" "}
               for picks by business type, and our{" "}
               <Link
                 href="/pos/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 POS guides
               </Link>{" "}
@@ -156,7 +156,7 @@ export default function PosCompareHubPage() {
                   <Link
                     key={slug}
                     href={compareHref}
-                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       {data.productA.logoSrc && (
@@ -166,7 +166,7 @@ export default function PosCompareHubPage() {
                           className="h-10 w-auto max-w-[80px] object-contain object-left"
                         />
                       )}
-                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                      <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       {data.productB.logoSrc && (
@@ -177,13 +177,13 @@ export default function PosCompareHubPage() {
                         />
                       )}
                     </div>
-                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                    <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+                    <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       {summary}
                     </p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                    <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                       Compare →
                     </span>
                   </Link>
@@ -214,14 +214,14 @@ export default function PosCompareHubPage() {
                       alt=""
                       className="h-10 w-auto max-w-[80px] object-contain object-left"
                     />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                    <h3 className="text-brand text-lg font-bold">Compare {label}</h3>
                   </div>
                   <ul className="mt-3 space-y-2">
                     {slugs.map(({ slug, label: linkLabel }) => (
                       <li key={slug}>
                         <Link
                           href={getPosCompareUrlFromSlug(slug)}
-                          className="text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="text-sm font-medium text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           {linkLabel}
                         </Link>
@@ -243,51 +243,51 @@ export default function PosCompareHubPage() {
             <SectionTitle sub="Consistent criteria so you can compare with confidence.">
               How We Compare POS Software
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               Our POS comparisons use the same evaluation criteria across every head-to-head. We look at payment
               processing capabilities, inventory management features, reporting and analytics, integrations and
               ecosystem, and pricing transparency—so you see how each platform really stacks up for retail stores,
               restaurants, and small businesses.
             </p>
-            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-muted-foreground text-sm leading-relaxed">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                <strong className="text-[#1A2D48]">Payment processing capabilities</strong> — How each system
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
+                <strong className="text-brand">Payment processing capabilities</strong> — How each system
                 handles cards, contactless, and alternative payments; processing rates and transparency.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                <strong className="text-[#1A2D48]">Inventory management features</strong> — Item and stock management,
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
+                <strong className="text-brand">Inventory management features</strong> — Item and stock management,
                 low-stock alerts, and integration with accounting or dedicated inventory tools.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                <strong className="text-[#1A2D48]">Reporting and analytics</strong> — Sales by item, period, and
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
+                <strong className="text-brand">Reporting and analytics</strong> — Sales by item, period, and
                 channel; dashboards and exports for operations and reconciliation.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                <strong className="text-[#1A2D48]">Integrations and ecosystem</strong> — Connections to accounting,
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
+                <strong className="text-brand">Integrations and ecosystem</strong> — Connections to accounting,
                 ecommerce, payroll, and third-party apps; how well the POS fits your stack.
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
-                <strong className="text-[#1A2D48]">Pricing transparency</strong> — Software and hardware costs,
+                <span className="text-indigo shrink-0" aria-hidden>•</span>
+                <strong className="text-brand">Pricing transparency</strong> — Software and hardware costs,
                 processing rates, and total cost of ownership at typical business sizes.
               </li>
             </ul>
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               For our full review process and affiliate disclosure, see our{" "}
               <Link
                 href="/methodology"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 methodology page
               </Link>
               . For deeper guides on how POS software works and how to choose tools, see our{" "}
               <Link
                 href="/pos/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 POS guides
               </Link>

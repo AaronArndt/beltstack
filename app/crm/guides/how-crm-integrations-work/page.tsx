@@ -9,15 +9,15 @@ import { getCrmReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -60,21 +60,21 @@ export default function HowCrmIntegrationsWorkPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How CRM Integrations Work</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How CRM Integrations Work
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How CRM connects to email, marketing, billing, support, and operations tools—and how to plan integrations so data stays consistent.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -93,21 +93,21 @@ export default function HowCrmIntegrationsWorkPage() {
                   <SectionTitle sub="How systems talk.">Integration Methods</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Native connectors</strong> — Prebuilt apps in the CRM marketplace.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">OAuth sync</strong> — Gmail, Outlook, calendars authorize read/write scopes.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Webhooks and APIs</strong> — Custom events for developers or iPaaS tools.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">CSV import/export</strong> — Migration and batch updates; see <Link href="/crm/guides/how-businesses-migrate-to-a-new-crm" className={linkGreen}>CRM migration</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Native connectors</strong> — Prebuilt apps in the CRM marketplace.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">OAuth sync</strong> — Gmail, Outlook, calendars authorize read/write scopes.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Webhooks and APIs</strong> — Custom events for developers or iPaaS tools.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">CSV import/export</strong> — Migration and batch updates; see <Link href="/crm/guides/how-businesses-migrate-to-a-new-crm" className={linkGreen}>CRM migration</Link>.</span></li>
                     </ul>
                   </div>
                 </section>
                 <section id="common-stacks" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Typical connection patterns.">Common CRM Integration Patterns</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Email and calendar</strong> — Log conversations on contact records.</p>
-                    <p><strong className="text-[#1A2D48]">Marketing</strong> — Forms and campaigns sync leads; <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Support</strong> — Tickets on accounts; <Link href="/crm/guides/crm-vs-helpdesk-software" className={linkGreen}>CRM vs helpdesk</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Billing and ERP</strong> — Invoices and orders; <Link href="/crm/guides/crm-vs-erp" className={linkGreen}>CRM vs ERP</Link>, <Link href="/accounting" className={linkGreen}>accounting software</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Field service</strong> — Jobs after close; <Link href="/crm/guides/crm-vs-field-service-software" className={linkGreen}>CRM vs field service</Link>.</p>
+                    <p><strong className="text-brand">Email and calendar</strong> — Log conversations on contact records.</p>
+                    <p><strong className="text-brand">Marketing</strong> — Forms and campaigns sync leads; <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</p>
+                    <p><strong className="text-brand">Support</strong> — Tickets on accounts; <Link href="/crm/guides/crm-vs-helpdesk-software" className={linkGreen}>CRM vs helpdesk</Link>.</p>
+                    <p><strong className="text-brand">Billing and ERP</strong> — Invoices and orders; <Link href="/crm/guides/crm-vs-erp" className={linkGreen}>CRM vs ERP</Link>, <Link href="/accounting" className={linkGreen}>accounting software</Link>.</p>
+                    <p><strong className="text-brand">Field service</strong> — Jobs after close; <Link href="/crm/guides/crm-vs-field-service-software" className={linkGreen}>CRM vs field service</Link>.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

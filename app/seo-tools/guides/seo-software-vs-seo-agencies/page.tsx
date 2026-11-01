@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Software vs SEO Agencies</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Software vs SEO Agencies</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Tools compress research; agencies sell execution—how to choose based on bandwidth, market competition, and what you can prove in Search Console. For cost context, see{" "}
                 <Link href="/seo-tools/guides/seo-pricing-explained" className={link}>
                   SEO pricing explained
@@ -115,8 +115,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="two-different-products" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Software and agencies solve different problems</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Software and agencies solve different problems</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO software is infrastructure: keyword databases, crawlers, rank trackers, and report templates. An SEO agency is outsourced labor—people who interpret data, write pages, fix technical issues, manage citations, and coordinate with your team.
                 </p>
@@ -126,14 +126,14 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </section>
 
               <section id="software-fit" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When SEO software is the right bet</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When SEO software is the right bet</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Owner-operated local services</strong> — You control GBP, reviews, and core pages; you need research speed, not a retainer.
+                    <strong className="text-brand">Owner-operated local services</strong> — You control GBP, reviews, and core pages; you need research speed, not a retainer.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">In-house marketer on staff</strong> — One person can run Search Console plus a single suite (
+                    <strong className="text-brand">In-house marketer on staff</strong> — One person can run Search Console plus a single suite (
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>{" "}
@@ -144,7 +144,7 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
                     ) without duplicating agency workflows.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local Maps bottleneck</strong> —{" "}
+                    <strong className="text-brand">Local Maps bottleneck</strong> —{" "}
                     <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
                       BrightLocal
                     </Link>{" "}
@@ -161,8 +161,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </section>
 
               <section id="agency-fit" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When an agency earns the retainer</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When an agency earns the retainer</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Agencies justify cost when the work exceeds internal capacity or expertise: platform migrations, manual actions or penalty recovery, large content programs, multilingual sites, or multi-location ops where citation drift and rank grids need dedicated hours.
                 </p>
@@ -172,8 +172,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </section>
 
               <section id="cost-comparison" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Compare total cost, not sticker prices</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Compare total cost, not sticker prices</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   A flagship suite subscription is often a fraction of one agency retainer—but owner time has a real hourly cost too.{" "}
                   <Link href="/seo-tools/guides/seo-pricing-explained" className={link}>
@@ -199,8 +199,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </section>
 
               <section id="hybrid" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Hybrid models that work</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Hybrid models that work</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Many growing businesses keep internal control of GBP, reviews, and customer-facing proof while an agency handles technical remediation or content sprints. Your team owns{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -218,8 +218,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
               </section>
 
               <section id="evaluate-proposals" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Evaluate proposals with the same scorecard</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Evaluate proposals with the same scorecard</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Ask software and agency options the same questions: What ships monthly? How do you measure success in Search Console and pipeline? Who owns GBP accuracy and review responses?
                 </p>
@@ -234,8 +234,8 @@ export default function SeoSoftwareVsSeoAgenciesPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

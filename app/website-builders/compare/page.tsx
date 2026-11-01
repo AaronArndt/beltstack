@@ -23,9 +23,9 @@ const POPULAR_SLUGS = [
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -57,7 +57,7 @@ export default function WebsiteBuildersCompareHubPage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                 <li aria-hidden>/</li>
                 <li><Link href="/website-builders" className="text-gray-500 hover:text-gray-900">Website Builders</Link></li>
@@ -65,10 +65,10 @@ export default function WebsiteBuildersCompareHubPage() {
                 <li className="text-gray-700 font-medium" aria-current="page">Comparisons</li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Compare Website Builders
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               Side-by-side comparisons focused on service-business websites, conversion workflows, and local SEO fit.
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function WebsiteBuildersCompareHubPage() {
                   <Link
                     key={slug}
                     href={getWebsiteBuildersCompareUrlFromSlug(slug)}
-                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-stone-300 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       <img
@@ -96,7 +96,7 @@ export default function WebsiteBuildersCompareHubPage() {
                         alt=""
                         className="h-10 w-auto max-w-[80px] object-contain object-left"
                       />
-                      <span className="text-lg font-medium text-[#57534E]" aria-hidden>
+                      <span className="text-lg font-medium text-muted-foreground" aria-hidden>
                         vs
                       </span>
                       <img
@@ -105,9 +105,9 @@ export default function WebsiteBuildersCompareHubPage() {
                         className="h-10 w-auto max-w-[80px] object-contain object-left"
                       />
                     </div>
-                    <h3 className="mt-3 text-xl font-bold text-[#1A2D48] group-hover:text-[#10B981]">{title}</h3>
-                    <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-[#57534E]">{summary}</p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+                    <h3 className="mt-3 text-xl font-bold text-brand group-hover:text-indigo">{title}</h3>
+                    <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+                    <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
                   </Link>
                 );
               })}
@@ -127,12 +127,12 @@ export default function WebsiteBuildersCompareHubPage() {
                       alt=""
                       className="h-10 w-auto max-w-[80px] object-contain object-left"
                     />
-                    <h3 className="text-[#1A2D48] text-lg font-bold">Compare {label}</h3>
+                    <h3 className="text-brand text-lg font-bold">Compare {label}</h3>
                   </div>
                   <ul className="mt-3 space-y-2">
                     {slugs.map((item) => (
                       <li key={item.slug}>
-                        <Link href={getWebsiteBuildersCompareUrlFromSlug(item.slug)} className="text-sm font-medium text-[#10B981] hover:underline">
+                        <Link href={getWebsiteBuildersCompareUrlFromSlug(item.slug)} className="text-sm font-medium text-indigo hover:underline">
                           {item.label}
                         </Link>
                       </li>

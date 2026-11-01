@@ -29,18 +29,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const invoicingPickRoutes = getSoftwarePickCategoryRoutes("invoicing");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -57,15 +57,15 @@ export default function BestInvoicingSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Home
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
                 <li>
-                  <Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Invoicing
                   </Link>
                 </li>
@@ -75,13 +75,13 @@ export default function BestInvoicingSoftwarePage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Invoicing Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If cash flow depends on timely billing, the best invoicing software should speed up invoice creation, automate reminders, and make payment collection easier for your team.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared billing workflows, payment options, automation, pricing, and reporting so the Key Takeaways shortlist can guide a confident purchase decision.
             </p>
             <RoundupHubLinksBlurb categoryPath="/invoicing" categoryLabel="invoicing software" />
@@ -124,17 +124,17 @@ export default function BestInvoicingSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Software</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Standout feature</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Software</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Standout feature</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_TABLE_ROWS.map((row) => (
                     <tr key={row.slug} className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80">
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           {row.logoSrc != null && (
                             <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
@@ -142,13 +142,13 @@ export default function BestInvoicingSoftwarePage() {
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "invoicing")}
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.standoutFeature}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.standoutFeature}</td>
                       <td className="px-4 py-4">
-                        <Link href={row.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                        <Link href={row.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                           Read review
                         </Link>
                       </td>
@@ -188,48 +188,48 @@ export default function BestInvoicingSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose invoicing software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Freelancer vs team workflows</h3>
+                <h3 className="font-bold text-brand text-base">Freelancer vs team workflows</h3>
                 <p className="mt-1">
                   Solo pros often need simple invoicing and time tracking; teams may need approval flows, client portals, and project billing. Match the tool to your size and how you bill. See our{" "}
-                  <Link href="/invoicing/guides/best-invoicing-software-for-freelancers" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best invoicing software for freelancers</Link> guide.
+                  <Link href="/invoicing/guides/best-invoicing-software-for-freelancers" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best invoicing software for freelancers</Link> guide.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Recurring invoices</h3>
+                <h3 className="font-bold text-brand text-base">Recurring invoices</h3>
                 <p className="mt-1">
                   Retainers and subscriptions need recurring invoices that send automatically. Most tools support this; compare how easy it is to set up and whether you can customize frequency and amounts.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Estimates and proposals</h3>
+                <h3 className="font-bold text-brand text-base">Estimates and proposals</h3>
                 <p className="mt-1">
                   Many tools let you create estimates or proposals and convert them to invoices with one click. Helpful for project-based work and agencies. Check that the workflow fits how you sell.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Online payments</h3>
+                <h3 className="font-bold text-brand text-base">Online payments</h3>
                 <p className="mt-1">
                   Accept card and ACH via payment links or embedded buttons. Compare processing fees and supported methods. Some tools use built-in processing; others integrate with Stripe or PayPal. See our{" "}
-                  <Link href="/invoicing/guides/how-invoicing-software-works" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">how invoicing software works</Link> guide for an overview.
+                  <Link href="/invoicing/guides/how-invoicing-software-works" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">how invoicing software works</Link> guide for an overview.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Invoice customization</h3>
+                <h3 className="font-bold text-brand text-base">Invoice customization</h3>
                 <p className="mt-1">
                   Your brand, payment terms, and line items should be easy to customize. Look for professional templates and the ability to add your logo and fields. Client-facing quality matters.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Accounting integrations</h3>
+                <h3 className="font-bold text-brand text-base">Accounting integrations</h3>
                 <p className="mt-1">
                   If you use QuickBooks, Xero, or other books, check that your invoicing tool syncs so paid invoices flow into your accounts. Or choose full accounting software with built-in invoicing. Our{" "}
-                  <Link href="/invoicing/guides/invoicing-software-vs-accounting-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">invoicing software vs accounting software</Link> guide explains the trade-offs.
+                  <Link href="/invoicing/guides/invoicing-software-vs-accounting-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">invoicing software vs accounting software</Link> guide explains the trade-offs.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Reporting and price</h3>
+                <h3 className="font-bold text-brand text-base">Reporting and price</h3>
                 <p className="mt-1">
                   Basic reporting (aged receivables, revenue by period) helps you stay on top of cash flow. Compare total cost for your expected volume—some tools are free or low-cost for light use; others charge per invoice or user.
                 </p>
@@ -258,12 +258,12 @@ export default function BestInvoicingSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
-              <Link href="/invoicing/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
+              <Link href="/invoicing/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 View invoicing comparisons
               </Link>
               {" "}to compare platforms side-by-side, or jump to a specific comparison below. For guides on how invoicing software works, freelancer picks, and invoicing vs accounting, see our{" "}
-              <Link href="/invoicing/guides" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/invoicing/guides" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 invoicing guides
               </Link>.
             </p>
@@ -272,7 +272,7 @@ export default function BestInvoicingSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -309,17 +309,17 @@ export default function BestInvoicingSoftwarePage() {
       {/* Affiliate modal */}
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-lg"
             role="dialog"
             aria-labelledby="best-invoicing-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-invoicing-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-invoicing-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

@@ -164,12 +164,12 @@ export default function EmailMarketingBestForHubPage() {
       tradeCards={EMAIL_TRADE_CARDS}
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href={getEmailMarketingBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href={getEmailMarketingBestForUrl("contractors")} className="font-semibold text-indigo hover:underline">
             Best email marketing for contractors
           </Link>{" "}
           ·{" "}
-          <Link href="/email-marketing/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/email-marketing/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

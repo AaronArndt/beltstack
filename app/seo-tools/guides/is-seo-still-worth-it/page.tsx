@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function IsSeoStillWorthItPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function IsSeoStillWorthItPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is SEO Still Worth It?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is SEO Still Worth It?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 An honest look at whether organic search still earns its place in 2026—what changed, what did not, and how to decide for your market. Ground the decision in{" "}
                 <Link href="/seo-tools/guides/what-seo-actually-does-for-businesses" className={link}>
                   what SEO actually does for businesses
@@ -123,25 +123,25 @@ export default function IsSeoStillWorthItPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="still-worth-it" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Why SEO is still worth it for most SMBs</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Why SEO is still worth it for most SMBs</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Search volume did not disappear—interfaces changed. Buyers still look up services, compare providers, and validate brands before they call. Organic visibility is one of the few marketing channels where improvement sticks: fix indexing, earn reviews, align GBP with your site, and you keep benefiting after the work is done. Paid ads reset when spend stops.
                 </p>
               </section>
 
               <section id="what-changed" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What changed—and what did not</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What changed—and what did not</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Changed</strong> — More SERP features, AI summaries, and zero-click behavior on informational queries.
+                    <strong className="text-brand">Changed</strong> — More SERP features, AI summaries, and zero-click behavior on informational queries.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Unchanged</strong> — High-intent local and commercial queries still drive calls, forms, and visits; Google still rewards relevance, quality, and trust.
+                    <strong className="text-brand">Unchanged</strong> — High-intent local and commercial queries still drive calls, forms, and visits; Google still rewards relevance, quality, and trust.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Implication</strong> — Chase pages that book work, not vanity blog traffic that never converts.
+                    <strong className="text-brand">Implication</strong> — Chase pages that book work, not vanity blog traffic that never converts.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -154,8 +154,8 @@ export default function IsSeoStillWorthItPage() {
               </section>
 
               <section id="local-still-strong" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local SEO is still especially worth it</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local SEO is still especially worth it</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service businesses still win jobs from Maps and “near me” intent. The playbook in{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -185,16 +185,16 @@ export default function IsSeoStillWorthItPage() {
               </section>
 
               <section id="when-not-worth" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When SEO is not worth prioritizing</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When SEO is not worth prioritizing</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Deprioritize heavy SEO if you are chronically overbooked and cannot hire, if search has no volume for your offer, or if you will not maintain listings and site health. Also beware agency packages that report rankings without tying to revenue—SEO is worth it when tied to booked jobs, not PDF dashboards.
                 </p>
               </section>
 
               <section id="roi-framework" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A simple ROI framework</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A simple ROI framework</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>List core services and cities where you want more demand.</li>
                   <li>Check Search Console impressions for those themes—are you visible at all?</li>
@@ -216,8 +216,8 @@ export default function IsSeoStillWorthItPage() {
               </section>
 
               <section id="tools-and-execution" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tools do not make SEO worth it—execution does</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tools do not make SEO worth it—execution does</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Subscriptions without weekly tasks are waste. SEO becomes worth it when someone owns Search Console fixes, review responses, and page updates. Use{" "}
                   <Link href="/seo-tools/compare" className={link}>
@@ -237,8 +237,8 @@ export default function IsSeoStillWorthItPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

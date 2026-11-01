@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowMuchSeoSoftwareCostsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowMuchSeoSoftwareCostsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Much SEO Software Costs</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Much SEO Software Costs</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 What drives SEO software pricing—seats, keywords, crawls, and local add-ons—and how to model spend without stale dollar amounts in blog copy. Pair this with{" "}
                 <Link href="/seo-tools/guides/how-to-budget-for-seo-tools-and-subscriptions" className={link}>
                   how to budget for SEO tools and subscriptions
@@ -115,20 +115,20 @@ export default function HowMuchSeoSoftwareCostsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="cost-drivers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What actually drives SEO software cost</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What actually drives SEO software cost</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Seats</strong> — Shared logins violate terms and break audit trails; budget per person running exports.
+                    <strong className="text-brand">Seats</strong> — Shared logins violate terms and break audit trails; budget per person running exports.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Tracked keywords</strong> — National brands track thousands; a plumber may need dozens tied to money pages.
+                    <strong className="text-brand">Tracked keywords</strong> — National brands track thousands; a plumber may need dozens tied to money pages.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Crawl credits</strong> — Large ecommerce or multi-domain setups burn credits faster than a five-page site.
+                    <strong className="text-brand">Crawl credits</strong> — Large ecommerce or multi-domain setups burn credits faster than a five-page site.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local grids</strong> — Map Pack rank tracking by ZIP scales cost; sample representative grids instead of blanket coverage.
+                    <strong className="text-brand">Local grids</strong> — Map Pack rank tracking by ZIP scales cost; sample representative grids instead of blanket coverage.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -145,17 +145,17 @@ export default function HowMuchSeoSoftwareCostsPage() {
               </section>
 
               <section id="tiers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Typical tier shapes (not price quotes)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Typical tier shapes (not price quotes)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  <strong className="text-[#1A2D48]">Free Google stack</strong> — Search Console plus GBP for many SMBs. See{" "}
+                  <strong className="text-brand">Free Google stack</strong> — Search Console plus GBP for many SMBs. See{" "}
                   <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
                     how to optimize SEO for free
                   </Link>
                   .
                 </p>
                 <p className="mt-4">
-                  <strong className="text-[#1A2D48]">Mid-market suites</strong> —{" "}
+                  <strong className="text-brand">Mid-market suites</strong> —{" "}
                   <Link href={getSeoToolsReviewUrl("se-ranking")} className={link}>
                     SE Ranking
                   </Link>{" "}
@@ -166,7 +166,7 @@ export default function HowMuchSeoSoftwareCostsPage() {
                   for structured tracking without flagship depth on every seat.
                 </p>
                 <p className="mt-4">
-                  <strong className="text-[#1A2D48]">Flagship research</strong> —{" "}
+                  <strong className="text-brand">Flagship research</strong> —{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                     Semrush
                   </Link>{" "}
@@ -181,7 +181,7 @@ export default function HowMuchSeoSoftwareCostsPage() {
                   once—not both forever.
                 </p>
                 <p className="mt-4">
-                  <strong className="text-[#1A2D48]">Local specialists</strong> —{" "}
+                  <strong className="text-brand">Local specialists</strong> —{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
                     BrightLocal
                   </Link>{" "}
@@ -194,8 +194,8 @@ export default function HowMuchSeoSoftwareCostsPage() {
               </section>
 
               <section id="worth-it" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Cost only matters next to usage</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Cost only matters next to usage</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   The expensive mistake is paying for two suites and using neither. Read{" "}
                   <Link href="/seo-tools/guides/are-seo-tools-worth-it" className={link}>
@@ -210,8 +210,8 @@ export default function HowMuchSeoSoftwareCostsPage() {
               </section>
 
               <section id="technical-before-tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Fix technical basics before you upscale tools</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Fix technical basics before you upscale tools</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Crawl budgets and audit exports highlight problems your team must still fix. Run{" "}
                   <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -222,8 +222,8 @@ export default function HowMuchSeoSoftwareCostsPage() {
               </section>
 
               <section id="worksheet" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Simple worksheet rows for finance</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Simple worksheet rows for finance</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>Base subscription × seats actually used</li>
                   <li>Keyword and location caps—with 20% headroom for growth</li>
@@ -246,8 +246,8 @@ export default function HowMuchSeoSoftwareCostsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

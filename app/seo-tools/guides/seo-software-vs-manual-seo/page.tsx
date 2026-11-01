@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoSoftwareVsManualSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function SeoSoftwareVsManualSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Software vs Manual SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Software vs Manual SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Free Google tools and owner time vs paid suites—what manual workflows cover, where software saves hours, and when to upgrade. Start with{" "}
                 <Link href="/seo-tools/guides/can-you-do-seo-yourself" className={link}>
                   can you do SEO yourself
@@ -115,8 +115,8 @@ export default function SeoSoftwareVsManualSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="manual-baseline" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Manual SEO is the baseline most SMBs should master first</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Manual SEO is the baseline most SMBs should master first</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Manual SEO means using{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -138,20 +138,20 @@ export default function SeoSoftwareVsManualSeoPage() {
               </section>
 
               <section id="what-manual-covers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What manual workflows handle well</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What manual workflows handle well</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Single-location local SEO</strong> — GBP, citations you can spot-check, core service pages, review velocity.
+                    <strong className="text-brand">Single-location local SEO</strong> — GBP, citations you can spot-check, core service pages, review velocity.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Query discovery</strong> — Search Console exports for content ideas without volume estimates.
+                    <strong className="text-brand">Query discovery</strong> — Search Console exports for content ideas without volume estimates.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Technical basics</strong> — HTTPS, mobile usability, sitemap submission via free tools.
+                    <strong className="text-brand">Technical basics</strong> — HTTPS, mobile usability, sitemap submission via free tools.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Competitor spot checks</strong> — Manual review of rival nav and titles when you track fewer than a dozen rivals.
+                    <strong className="text-brand">Competitor spot checks</strong> — Manual review of rival nav and titles when you track fewer than a dozen rivals.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -164,8 +164,8 @@ export default function SeoSoftwareVsManualSeoPage() {
               </section>
 
               <section id="what-software-adds" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What SEO software adds on top</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What SEO software adds on top</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Paid tools compress work that becomes painful manually: site-wide crawls, keyword volume and difficulty at scale, backlink indexes, historical rank tracking, and scheduled reports for stakeholders.{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -191,8 +191,8 @@ export default function SeoSoftwareVsManualSeoPage() {
               </section>
 
               <section id="breaking-points" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Breaking points where manual methods fail</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Breaking points where manual methods fail</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Manual SEO breaks down when:
                 </p>
@@ -216,8 +216,8 @@ export default function SeoSoftwareVsManualSeoPage() {
               </section>
 
               <section id="upgrade-path" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A sensible upgrade path</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A sensible upgrade path</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Phase 1: Search Console + GBP + three strong service pages. Phase 2: add rank tracking (
                   <Link href={getSeoToolsReviewUrl("se-ranking")} className={link}>
@@ -239,8 +239,8 @@ export default function SeoSoftwareVsManualSeoPage() {
               </section>
 
               <section id="stay-manual" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tasks that should stay manual either way</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tasks that should stay manual either way</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Review responses, job-site photos, verifying dispatch areas, and sales-informed page copy stay human. Tools inform priorities; operators prove credibility. Measure both paths in booked jobs through your{" "}
                   <Link href="/crm" className={link}>
@@ -252,8 +252,8 @@ export default function SeoSoftwareVsManualSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -6,7 +6,7 @@ import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTra
 import { getCallTrackingBestForUrl, getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/call-tracking-for-contractors";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -30,7 +30,7 @@ export default function CallTrackingForContractorsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="min-w-0 max-w-[720px] pt-8 pb-16">
             <nav aria-label="Breadcrumb" className="pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -55,8 +55,8 @@ export default function CallTrackingForContractorsPage() {
               </ol>
             </nav>
             <header className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Call Tracking for Contractors</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Call Tracking for Contractors</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 Dispatch-heavy trades need source truth on emergency and estimate calls. Our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
                   best call tracking software
@@ -77,8 +77,8 @@ export default function CallTrackingForContractorsPage() {
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
-            <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-              <h2 className="text-[#1A2D48] text-xl font-bold">Start with CRM stages</h2>
+            <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+              <h2 className="text-brand text-xl font-bold">Start with CRM stages</h2>
               <p className="mt-2">
                 Tag the marketing source on create, then require reps to move deals to booked/won/lost with reasons. Call tracking fills the top of that funnel with honest channel names; CRM tells you
                 whether those channels produce revenue. Send inbound call leads into your{" "}
@@ -87,11 +87,11 @@ export default function CallTrackingForContractorsPage() {
                 </Link>{" "}
                 with source tags intact—otherwise attribution stops at the dial.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Speed-to-lead still wins</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Speed-to-lead still wins</h2>
               <p className="mt-2">
                 Attribution does not replace answering fast—especially for LSA and marketplace leads. Pair tracking with routing rules your crew will actually follow on nights and weekends.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Cross-links that matter</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Cross-links that matter</h2>
               <p className="mt-2">
                 Track calls coming from your website and paid programs together: compare{" "}
                 <Link href="/lead-generation" className={link}>

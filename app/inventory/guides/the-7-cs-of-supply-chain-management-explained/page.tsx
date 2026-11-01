@@ -10,15 +10,15 @@ import { getInventoryReviewUrl, getInventoryCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const PAGE_HREF = "/inventory/guides/the-7-cs-of-supply-chain-management-explained";
 
@@ -56,21 +56,21 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Home
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Inventory Management
                       </Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href="/inventory/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Guides
                       </Link>
                     </li>
@@ -81,10 +81,10 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     The 7 Cs of Supply Chain Management Explained
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Cash, cost, consistency, control, customer, communication, and commitment—the seven Cs framework for
                     evaluating supply chain health and how inventory systems support each pillar.
                   </p>
@@ -146,9 +146,9 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
                   <SectionTitle sub="Working capital and total landed cost.">Cash and Cost</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Cash</strong> asks how much capital inventory ties up and how
+                      <strong className="text-brand">Cash</strong> asks how much capital inventory ties up and how
                       fast it turns. Slow movers, oversized MOQs, and blanket safety stock are silent cash drains.{" "}
-                      <strong className="text-[#1A2D48]">Cost</strong> includes purchase price, freight, duties, shrink,
+                      <strong className="text-brand">Cost</strong> includes purchase price, freight, duties, shrink,
                       obsolescence, and the labor to receive and count—not only unit cost on the PO.
                     </p>
                     <p>
@@ -161,8 +161,8 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
                   <SectionTitle sub="Predictable execution and trustworthy data.">Consistency and Control</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Consistency</strong> is stable fill rates and lead times customers
-                      can plan around. <strong className="text-[#1A2D48]">Control</strong> is governance: who can adjust
+                      <strong className="text-brand">Consistency</strong> is stable fill rates and lead times customers
+                      can plan around. <strong className="text-brand">Control</strong> is governance: who can adjust
                       stock, how receipts close, and how variances are investigated. Weak control shows up as phantom
                       inventory and channels that disagree on available quantity.
                     </p>
@@ -176,10 +176,10 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
                   <SectionTitle sub="Market outcomes and partner behavior.">Customer, Communication, and Commitment</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Customer</strong> translates chain performance into OTIF,
-                      backorders, and return rates. <strong className="text-[#1A2D48]">Communication</strong> is shared
+                      <strong className="text-brand">Customer</strong> translates chain performance into OTIF,
+                      backorders, and return rates. <strong className="text-brand">Communication</strong> is shared
                       forecasts, ASN accuracy, and exception alerts—not email archaeology.{" "}
-                      <strong className="text-[#1A2D48]">Commitment</strong> is whether suppliers and 3PLs honor
+                      <strong className="text-brand">Commitment</strong> is whether suppliers and 3PLs honor
                       capacity and date promises when demand spikes.
                     </p>
                     <p>
@@ -194,19 +194,19 @@ export default function The7CsOfSupplyChainManagementExplainedPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Velocity and aging reports for cash and cost conversations.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Reorder points, safety stock, and vendor lead times for consistency.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Roles, approvals, and audit trails for control.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Integrations to sales and purchasing for communication with the rest of the stack.</span>
                       </li>
                     </ul>

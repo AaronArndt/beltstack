@@ -10,8 +10,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -87,17 +87,17 @@ export default function PayrollForLandscapingBusinessesPage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
-                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link>
+                      <Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link>
+                      <Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li>
-                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link>
+                      <Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link>
                     </li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Payroll for Landscaping Businesses</li>
@@ -106,10 +106,10 @@ export default function PayrollForLandscapingBusinessesPage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Landscaping Businesses
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how landscaping businesses manage payroll for crews, seasonal workers, and subcontractors, and how payroll software can simplify tax filing, time tracking, and labor costs.
                   </p>
                   <GuideLastUpdated date="March 2026" />
@@ -123,10 +123,10 @@ export default function PayrollForLandscapingBusinessesPage() {
                     </p>
                     <p>
                       To explore options for your business, see our{" "}
-                      <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software reviews</Link>,{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link>,{" "}
-                      <Link href={getPayrollBestForUrl("landscaping")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for landscaping</Link>, and{" "}
-                      <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparisons</Link>.
+                      <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software reviews</Link>,{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link>,{" "}
+                      <Link href={getPayrollBestForUrl("landscaping")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for landscaping</Link>, and{" "}
+                      <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparisons</Link>.
                     </p>
                   </div>
                 </section>
@@ -138,20 +138,20 @@ export default function PayrollForLandscapingBusinessesPage() {
                     <p>Landscaping payroll often involves:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly employees</strong> — Crews are commonly paid by the hour, so accurate time tracking and overtime rules matter.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly employees</strong> — Crews are commonly paid by the hour, so accurate time tracking and overtime rules matter.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Seasonal staffing</strong> — Busy seasons mean more workers; off-seasons mean fewer. Payroll volume and admin change throughout the year.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Seasonal staffing</strong> — Busy seasons mean more workers; off-seasons mean fewer. Payroll volume and admin change throughout the year.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Overtime and changing schedules</strong> — Long days and variable hours can increase overtime and make scheduling—and payroll—more complex.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Overtime and changing schedules</strong> — Long days and variable hours can increase overtime and make scheduling—and payroll—more complex.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Subcontractors</strong> — Some companies also use 1099 subcontractors for specialty work or peak capacity, adding contractor payments and 1099 reporting to the mix.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Subcontractors</strong> — Some companies also use 1099 subcontractors for specialty work or peak capacity, adding contractor payments and 1099 reporting to the mix.</span>
                       </li>
                     </ul>
                   </div>
@@ -163,32 +163,32 @@ export default function PayrollForLandscapingBusinessesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Easy payroll for hourly workers</strong> — Support for hourly pay, overtime, and (where needed) time tracking so pay is accurate.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Easy payroll for hourly workers</strong> — Support for hourly pay, overtime, and (where needed) time tracking so pay is accurate.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Support for seasonal staffing</strong> — Simple onboarding and offboarding so you can add or remove workers as the season changes without extra hassle.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Support for seasonal staffing</strong> — Simple onboarding and offboarding so you can add or remove workers as the season changes without extra hassle.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support if needed</strong> — If you pay 1099 subcontractors, look for 1099 payments and year-end 1099 forms in one system.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support if needed</strong> — If you pay 1099 subcontractors, look for 1099 payments and year-end 1099 forms in one system.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Payroll tax automation</strong> — Full-service tax filing and deposits so you stay compliant without manual deadlines.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking integrations</strong> — Built-in or integrated time tracking so crew hours flow into payroll correctly.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking integrations</strong> — Built-in or integrated time tracking so crew hours flow into payroll correctly.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Accounting integrations</strong> — Sync to QuickBooks or other accounting software so payroll flows into your books.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Accounting integrations</strong> — Sync to QuickBooks or other accounting software so payroll flows into your books.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Simple pricing for small teams</strong> — Transparent base and per-person costs so you know what you pay as crew size changes.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Simple pricing for small teams</strong> — Transparent base and per-person costs so you know what you pay as crew size changes.</span>
                       </li>
                     </ul>
                   </div>
@@ -200,8 +200,8 @@ export default function PayrollForLandscapingBusinessesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       Some landscaping businesses hire more workers during busy seasons and scale back in the off-season. Payroll systems should make it easy to add or remove employees without locking you into long-term contracts or complex setup. Seasonal payroll still requires tax compliance and accurate recordkeeping—withholdings, employer taxes, and filings apply whenever you pay W-2 employees. For more on how small businesses run payroll and stay compliant, see our{" "}
-                      <Link href="/payroll/guides/payroll-for-small-business" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll for small business</Link> guide and our{" "}
-                      <Link href="/payroll/guides/payroll-taxes-explained" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll tax filing explained</Link> guide.
+                      <Link href="/payroll/guides/payroll-for-small-business" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll for small business</Link> guide and our{" "}
+                      <Link href="/payroll/guides/payroll-taxes-explained" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll tax filing explained</Link> guide.
                     </p>
                   </div>
                 </section>
@@ -212,12 +212,12 @@ export default function PayrollForLandscapingBusinessesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       For curated picks and who each tool is best for, see our{" "}
-                      <Link href={getPayrollBestForUrl("landscaping")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for landscaping</Link> guide and our{" "}
-                      <Link href="/payroll/best-payroll-software" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll software</Link> roundup. Likely strong fits for landscaping include{" "}
-                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>,{" "}
-                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link>, and{" "}
-                      <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Patriot Payroll</Link>—each with different strengths on pricing, seasonal flexibility, and ease of use.
+                      <Link href={getPayrollBestForUrl("landscaping")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for landscaping</Link> guide and our{" "}
+                      <Link href="/payroll/best-payroll-software" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll software</Link> roundup. Likely strong fits for landscaping include{" "}
+                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">OnPay</Link>,{" "}
+                      <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link>, and{" "}
+                      <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Patriot Payroll</Link>—each with different strengths on pricing, seasonal flexibility, and ease of use.
                     </p>
                   </div>
                 </section>
@@ -228,7 +228,7 @@ export default function PayrollForLandscapingBusinessesPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
                       Many landscaping businesses are small and cost-sensitive. Payroll pricing that scales with employee count—clear base fees and per-person costs—helps you budget as crew size changes with the season. Paying for extra HR or admin features you don’t use may not make sense. For a breakdown of how providers price their services and what to expect, see our{" "}
-                      <Link href="/payroll/guides/payroll-software-pricing" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software pricing guide</Link>.
+                      <Link href="/payroll/guides/payroll-software-pricing" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software pricing guide</Link>.
                     </p>
                   </div>
                 </section>
@@ -240,36 +240,36 @@ export default function PayrollForLandscapingBusinessesPage() {
                     <p>When comparing providers, look at:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pricing</strong> — Base and per-person cost; how it scales as you add or remove seasonal workers.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pricing</strong> — Base and per-person cost; how it scales as you add or remove seasonal workers.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly payroll support</strong> — Accurate hourly pay and overtime; time tracking if needed.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly payroll support</strong> — Accurate hourly pay and overtime; time tracking if needed.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Seasonal staffing flexibility</strong> — Easy to add and remove employees without long-term commitment.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Seasonal staffing flexibility</strong> — Easy to add and remove employees without long-term commitment.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Contractor support</strong> — If you pay 1099s: contractor payments and 1099 forms.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Contractor support</strong> — If you pay 1099s: contractor payments and 1099 forms.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Tax automation</strong> — Full-service filing and deposits so you stay compliant.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Tax automation</strong> — Full-service filing and deposits so you stay compliant.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Integrations</strong> — Time tracking, accounting (e.g. QuickBooks), and any other tools you use.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Integrations</strong> — Time tracking, accounting (e.g. QuickBooks), and any other tools you use.</span>
                       </li>
                     </ul>
                     <p>
                       Our{" "}
-                      <Link href={getPayrollCompareUrl()} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll software comparisons</Link> hub and matchups like{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs OnPay</Link>,{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link>, and{" "}
-                      <Link href={getPayrollCompareUrl("patriot-payroll-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Patriot Payroll vs OnPay</Link> help you evaluate these factors side by side.
+                      <Link href={getPayrollCompareUrl()} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll software comparisons</Link> hub and matchups like{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs OnPay</Link>,{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link>, and{" "}
+                      <Link href={getPayrollCompareUrl("patriot-payroll-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Patriot Payroll vs OnPay</Link> help you evaluate these factors side by side.
                     </p>
                   </div>
                 </section>
@@ -281,28 +281,28 @@ export default function PayrollForLandscapingBusinessesPage() {
                     <p>You may need a more capable platform when:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Crews are growing</strong> — Headcount or per-person limits make the current tool less viable.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Crews are growing</strong> — Headcount or per-person limits make the current tool less viable.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Scheduling gets more complex</strong> — Multiple job sites, more overtime, or approval workflows exceed what basic payroll offers.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Scheduling gets more complex</strong> — Multiple job sites, more overtime, or approval workflows exceed what basic payroll offers.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More admin time on payroll</strong> — You’re spending too much time on manual steps, corrections, or reporting.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More admin time on payroll</strong> — You’re spending too much time on manual steps, corrections, or reporting.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More contractor use</strong> — You need robust 1099 support, contractor self-service, or better reporting on labor mix.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More contractor use</strong> — You need robust 1099 support, contractor self-service, or better reporting on labor mix.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">More reporting or HR needs</strong> — Custom reports, labor analytics, onboarding, benefits, or workers’ comp in one place.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">More reporting or HR needs</strong> — Custom reports, labor analytics, onboarding, benefits, or workers’ comp in one place.</span>
                       </li>
                     </ul>
                     <p>
-                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Rippling</Link> and <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">ADP</Link> offer broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
+                      Tools like <Link href={getPayrollReviewUrl("rippling")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Rippling</Link> and <Link href={getPayrollReviewUrl("adp")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">ADP</Link> offer broader HR, compliance, and scalability—often with custom pricing. Compare your current needs to what each platform provides before switching.
                     </p>
                   </div>
                 </section>

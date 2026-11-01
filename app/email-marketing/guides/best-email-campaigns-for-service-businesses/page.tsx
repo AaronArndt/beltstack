@@ -12,7 +12,7 @@ import {
 } from "@/lib/routes";
 
 const href = "/email-marketing/guides/best-email-campaigns-for-service-businesses";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -50,7 +50,7 @@ export default function BestEmailCampaignsForServiceBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px] pt-8 pb-16">
                 <nav aria-label="Breadcrumb" className="pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link href="/" className="text-gray-500 hover:text-gray-900">
                         Home
@@ -75,8 +75,8 @@ export default function BestEmailCampaignsForServiceBusinessesPage() {
                   </ol>
                 </nav>
                 <header className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Best Email Campaigns for Service Businesses</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Best Email Campaigns for Service Businesses</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                     High-performing service brands choreograph a small set of proven plays—then measure honestly. Pick software using our{" "}
                     <Link href="/email-marketing/best-email-marketing-software" className={link}>
                       best email marketing software
@@ -101,24 +101,24 @@ export default function BestEmailCampaignsForServiceBusinessesPage() {
                   </p>
                   <GuideLastUpdated date="March 25, 2026" />
                 </header>
-                <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-                  <h2 className="text-[#1A2D48] text-xl font-bold">Always-on: post-job gratitude and next step</h2>
+                <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+                  <h2 className="text-brand text-xl font-bold">Always-on: post-job gratitude and next step</h2>
                   <p className="mt-2">
                     Thank customers, summarize work performed, link warranty or care instructions, then offer a logical next appointment window. This email should feel operational—not like an ad blast—so deliverability stays strong.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Estimate nurture with deadlines</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Estimate nurture with deadlines</h2>
                   <p className="mt-2">
                     For stalled bids, sequence two or three concise reminders with calendar links and objection-handling FAQs (“how long crews are on site,” financing basics). Pull recipients from sends when CRM marks won/lost.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Seasonal and membership pushes</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Seasonal and membership pushes</h2>
                   <p className="mt-2">
                     Plan tune-up windows early; pre-write copy variants for heat-dominated vs freeze risk weeks. Membership campaigns should restate tangible benefits (priority scheduling, waived fees) instead of vague “VIP” fluff.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Win-back for dormant customers</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Win-back for dormant customers</h2>
                   <p className="mt-2">
                     Target customers inactive 12–18 months with proof you remember their property (“last coil service date”) when data allows. Offer inspection or safety checks before margin-killing coupons.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Referral loops that respect relationships</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Referral loops that respect relationships</h2>
                   <p className="mt-2">
                     Ask after high-NPS moments; provide shareable copy and a single CTA. Cross-link to{" "}
                     <Link href="/reputation-management" className={link}>
@@ -126,7 +126,7 @@ export default function BestEmailCampaignsForServiceBusinessesPage() {
                     </Link>{" "}
                     when reviews—not friend referrals—are the goal.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Funnel alignment</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Funnel alignment</h2>
                   <p className="mt-2">
                     Campaigns only work if acquisition matches messaging: sync{" "}
                     <Link href="/lead-generation" className={link}>

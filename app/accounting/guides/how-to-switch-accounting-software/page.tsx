@@ -10,8 +10,8 @@ import { getAccountingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -67,11 +67,11 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -80,7 +80,7 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/accounting"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Accounting
                       </Link>
@@ -89,7 +89,7 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/accounting/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -103,10 +103,10 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Switch Accounting Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how to plan a move from one accounting platform to another, migrate your data, and go live with
                     minimal disruption.
                   </p>
@@ -125,21 +125,21 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                       to something like{" "}
                       <Link
                         href={getAccountingReviewUrl("quickbooks-online")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         QuickBooks Online
                       </Link>
                       ,{" "}
                       <Link
                         href={getAccountingReviewUrl("xero")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Xero
                       </Link>
                       , or{" "}
                       <Link
                         href={getAccountingReviewUrl("zoho-books")}
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Zoho Books
                       </Link>{" "}
@@ -156,19 +156,19 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Outgrowing a basic or free tool that no longer supports your complexity.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Needing better reporting, multi-entity support, or integrations.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Wanting to align with the tools your accountant or finance team prefers.</span>
@@ -190,19 +190,19 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                     <p>Before moving data, you will want to:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Bring your existing books up to date and reconcile bank accounts.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Decide on a cutover date (often month- or year-beginning).</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>Export key lists (chart of accounts, customers, vendors, items) from your current system.</span>
@@ -212,14 +212,14 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                       If you are moving because your tools are too limited, you can use our{" "}
                       <Link
                         href="/accounting"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         accounting software hub
                       </Link>{" "}
                       and{" "}
                       <Link
                         href="/accounting/compare"
-                        className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         comparisons
                       </Link>{" "}
@@ -236,23 +236,23 @@ export default function HowToSwitchAccountingSoftwareGuidePage() {
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ol className="space-y-3 list-decimal list-inside">
                       <li>
-                        <strong className="text-[#1A2D48]">Confirm your destination platform</strong> and sign up for the
+                        <strong className="text-brand">Confirm your destination platform</strong> and sign up for the
                         appropriate plan (e.g. QuickBooks Online, Xero, Zoho Books).
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Set up your chart of accounts</strong> in the new system, either
+                        <strong className="text-brand">Set up your chart of accounts</strong> in the new system, either
                         importing your existing chart or cleaning it up during migration.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Import customers, vendors, and opening balances</strong> as of
+                        <strong className="text-brand">Import customers, vendors, and opening balances</strong> as of
                         the cutover date.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Bring over open invoices and bills</strong> so your new system
+                        <strong className="text-brand">Bring over open invoices and bills</strong> so your new system
                         reflects who owes you and whom you owe.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Reconnect bank feeds and payment apps</strong> and run a test
+                        <strong className="text-brand">Reconnect bank feeds and payment apps</strong> and run a test
                         reconciliation to ensure everything lines up.
                       </li>
                     </ol>

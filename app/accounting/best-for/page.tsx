@@ -19,12 +19,12 @@ export default function AccountingBestForPage() {
       tradeCards={getAccountingBestForHubTradeLinks()}
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href="/accounting" className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href="/accounting" className="font-semibold text-indigo hover:underline">
             Accounting hub
           </Link>{" "}
           ·{" "}
-          <Link href="/accounting/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/accounting/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

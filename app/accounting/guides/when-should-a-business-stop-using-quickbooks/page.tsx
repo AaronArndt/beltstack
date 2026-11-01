@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/when-should-a-business-stop-using-quickboo
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function WhenShouldABusinessStopUsingQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Stop Using QuickBooks</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     When Should a Business Stop Using QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Signs it is time to switch—cost, fit, complexity, and team adoption—and how to plan a move without breaking your books.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -105,10 +105,10 @@ export default function WhenShouldABusinessStopUsingQuickBooksPage() {
                   <SectionTitle sub="Common triggers for switching.">Signs You Should Consider Leaving</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Rising cost</strong> — tiers and add-ons exceed value; see <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>QuickBooks pricing</Link>.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Low adoption</strong> — team avoids the tool; books stay in Excel or email.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Wrong size</strong> — too heavy for solos or too limited for multi-entity/global ops.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Better ecosystem fit</strong> — you standardize on Zoho, Xero, or industry software.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Rising cost</strong> — tiers and add-ons exceed value; see <Link href="/accounting/guides/what-does-quickbooks-cost-per-month" className={linkGreen}>QuickBooks pricing</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Low adoption</strong> — team avoids the tool; books stay in Excel or email.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Wrong size</strong> — too heavy for solos or too limited for multi-entity/global ops.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Better ecosystem fit</strong> — you standardize on Zoho, Xero, or industry software.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -126,10 +126,10 @@ export default function WhenShouldABusinessStopUsingQuickBooksPage() {
                   <SectionTitle sub="Answer before you cancel.">Owner Decision Checklist</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Are books reconciled through last month, or are we migrating mess?</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Did we try a lower QuickBooks tier or removing unused add-ons?</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Does our CPA support the target platform&apos;s import path?</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Can we run one parallel month in the new system before cutover?</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Are books reconciled through last month, or are we migrating mess?</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Did we try a lower QuickBooks tier or removing unused add-ons?</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Does our CPA support the target platform&apos;s import path?</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Can we run one parallel month in the new system before cutover?</span></li>
                     </ul>
                     <p>
                       If the issue is learning curve, see <Link href="/accounting/guides/can-a-beginner-use-quickbooks" className={linkGreen}>can a beginner use QuickBooks</Link> and{" "}
@@ -140,10 +140,10 @@ export default function WhenShouldABusinessStopUsingQuickBooksPage() {
                 <section id="migration-timeline" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Reduce cutover risk.">A Simple Migration Timeline</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">T-30 days</strong> — Clean categorization, reconcile, export chart of accounts and balances.</p>
-                    <p><strong className="text-[#1A2D48]">T-14 days</strong> — Set up new company file, import lists, connect banks.</p>
-                    <p><strong className="text-[#1A2D48]">T-0</strong> — Run new invoices and expenses in the new system; keep QuickBooks read-only for reference.</p>
-                    <p><strong className="text-[#1A2D48]">T+30 days</strong> — Reconcile first full month; cancel QuickBooks after CPA confirms opening balances.</p>
+                    <p><strong className="text-brand">T-30 days</strong> — Clean categorization, reconcile, export chart of accounts and balances.</p>
+                    <p><strong className="text-brand">T-14 days</strong> — Set up new company file, import lists, connect banks.</p>
+                    <p><strong className="text-brand">T-0</strong> — Run new invoices and expenses in the new system; keep QuickBooks read-only for reference.</p>
+                    <p><strong className="text-brand">T+30 days</strong> — Reconcile first full month; cancel QuickBooks after CPA confirms opening balances.</p>
                   </div>
                 </section>
                 <section id="methodology" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -160,9 +160,9 @@ export default function WhenShouldABusinessStopUsingQuickBooksPage() {
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Shortlist two alternatives on <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which platform they prefer to support at tax time.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Export data before turning off renewal—see <Link href="/accounting/guides/do-you-have-to-buy-quickbooks-every-year" className={linkGreen}>what happens when you stop paying</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Shortlist two alternatives on <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which platform they prefer to support at tax time.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Export data before turning off renewal—see <Link href="/accounting/guides/do-you-have-to-buy-quickbooks-every-year" className={linkGreen}>what happens when you stop paying</Link>.</span></li>
                     </ul>
                   </div>
                 </section>

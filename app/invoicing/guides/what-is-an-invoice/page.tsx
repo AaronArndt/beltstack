@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -57,19 +57,19 @@ export default function WhatIsAnInvoiceGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">What Is an Invoice?</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is an Invoice?</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is an Invoice?</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn what an invoice is, how businesses use invoices in real workflows, and how invoices connect to payment collection and accounting.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -105,11 +105,11 @@ export default function WhatIsAnInvoiceGuidePage() {
                       A good invoice does four jobs at once: it documents delivery, states what is owed, gives the customer a clear way to pay, and gives your team a tracking ID for follow-up. When any of those jobs is weak, collections slow down even if the underlying work was excellent.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Formal delivery record:</strong> ties revenue to completed scope, hours, or shipped goods—critical when customers question what they are paying for.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Payment expectations:</strong> states amount, currency, due date, and accepted methods so AP teams can schedule payment without back-and-forth.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Collections and disputes:</strong> provides a reference number, line detail, and terms your team can cite if payment is late or contested.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Accounting input:</strong> feeds reconciliation, revenue recognition timing, and A/R aging reports when synced with your books.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Customer experience:</strong> professional, consistent invoices signal operational maturity—especially when paired with online payment options.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Formal delivery record:</strong> ties revenue to completed scope, hours, or shipped goods—critical when customers question what they are paying for.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Payment expectations:</strong> states amount, currency, due date, and accepted methods so AP teams can schedule payment without back-and-forth.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Collections and disputes:</strong> provides a reference number, line detail, and terms your team can cite if payment is late or contested.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Accounting input:</strong> feeds reconciliation, revenue recognition timing, and A/R aging reports when synced with your books.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Customer experience:</strong> professional, consistent invoices signal operational maturity—especially when paired with online payment options.</span></li>
                     </ul>
                     <p>
                       As volume grows, invoices stop being one-off PDFs and become part of a managed lifecycle.{" "}
@@ -124,9 +124,9 @@ export default function WhatIsAnInvoiceGuidePage() {
                     <p>
                       Small businesses often mix document types in email threads, which creates disputes at payment time. Each document has a distinct job; using the wrong one—or sending an invoice when the customer expected a quote—erodes trust and slows AP approval.
                     </p>
-                    <p><strong className="text-[#1A2D48]">Invoice:</strong> requests payment for delivered work or goods. It should match approved scope and carry terms the customer can act on.</p>
-                    <p><strong className="text-[#1A2D48]">Receipt:</strong> confirms payment has been made. It is proof of settlement, not a new request for funds. Many invoicing tools generate receipts automatically when online payments clear.</p>
-                    <p><strong className="text-[#1A2D48]">Estimate or quote:</strong> proposes pricing before work starts. It is not typically a final tax or payment-demand document in the same way as a standard invoice—though some regions treat pro forma documents differently; see{" "}
+                    <p><strong className="text-brand">Invoice:</strong> requests payment for delivered work or goods. It should match approved scope and carry terms the customer can act on.</p>
+                    <p><strong className="text-brand">Receipt:</strong> confirms payment has been made. It is proof of settlement, not a new request for funds. Many invoicing tools generate receipts automatically when online payments clear.</p>
+                    <p><strong className="text-brand">Estimate or quote:</strong> proposes pricing before work starts. It is not typically a final tax or payment-demand document in the same way as a standard invoice—though some regions treat pro forma documents differently; see{" "}
                       <Link href="/invoicing/guides/different-types-of-invoices-explained" className={linkGreen}>different types of invoices explained</Link>.
                     </p>
                     <p>
@@ -166,9 +166,9 @@ export default function WhatIsAnInvoiceGuidePage() {
                       New teams often under-invest in invoice quality because the document feels administrative. In practice, invoice defects are one of the cheapest problems to fix and one of the most expensive to ignore.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Waiting days or weeks after delivery before sending the invoice—every day of delay extends DSO.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Using inconsistent terms across quotes, contracts, and invoices.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Skipping itemized lines for project work, which triggers AP questions.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Waiting days or weeks after delivery before sending the invoice—every day of delay extends DSO.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Using inconsistent terms across quotes, contracts, and invoices.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Skipping itemized lines for project work, which triggers AP questions.</span></li>
                     </ul>
                     <p>
                       For a fuller checklist, see{" "}

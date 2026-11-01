@@ -9,15 +9,15 @@ import { getProjectManagementReviewUrl, getProjectManagementCompareUrl } from "@
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -70,19 +70,19 @@ export default function ProjectManagementForRemoteTeamsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Project Management</Link></li>
+                    <li><Link href="/project-management" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Project Management</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/project-management/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Project Management for Remote Teams</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management for Remote Teams</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Project Management for Remote Teams</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How remote and distributed teams use project management software to stay aligned and deliver work on time.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -102,11 +102,11 @@ export default function ProjectManagementForRemoteTeamsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Remote teams use project management software to create a shared view of work and progress. Benefits include:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Single source of truth</strong> — Tasks, assignees, and due dates in one place so everyone knows what's happening without asking in chat or meetings.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Async updates</strong> — Status changes and comments in the tool so people in different time zones can catch up when they start work.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Clear ownership</strong> — Assignees and due dates reduce ambiguity about who is responsible for what.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Context in one place</strong> — Comments and files on tasks so context isn't lost in email or scattered chat threads.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Timeline and calendar views</strong> — Help coordinate deadlines and handoffs across time zones.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Single source of truth</strong> — Tasks, assignees, and due dates in one place so everyone knows what's happening without asking in chat or meetings.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Async updates</strong> — Status changes and comments in the tool so people in different time zones can catch up when they start work.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Clear ownership</strong> — Assignees and due dates reduce ambiguity about who is responsible for what.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Context in one place</strong> — Comments and files on tasks so context isn't lost in email or scattered chat threads.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Timeline and calendar views</strong> — Help coordinate deadlines and handoffs across time zones.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -115,11 +115,11 @@ export default function ProjectManagementForRemoteTeamsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>When evaluating project management software for remote work, prioritize:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Task and project visibility</strong> — List, board, or timeline so everyone can see what's in progress and what's due. <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> and <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> offer multiple views; <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> is board-first.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Comments and @mentions</strong> — Keep discussion on tasks so context isn't lost. Notifications help remote team members stay in the loop.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Real-time or frequent updates</strong> — So the tool reflects current state without manual refresh. Most modern tools support this.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Integrations</strong> — Slack, Microsoft Teams, or email so the team can get updates where they already work. Calendar integration helps with deadlines and availability.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Mobile access</strong> — So team members can check and update from anywhere. Most cloud tools offer mobile apps.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Task and project visibility</strong> — List, board, or timeline so everyone can see what's in progress and what's due. <Link href={getProjectManagementReviewUrl("asana")} className={linkGreen}>Asana</Link> and <Link href={getProjectManagementReviewUrl("monday")} className={linkGreen}>Monday</Link> offer multiple views; <Link href={getProjectManagementReviewUrl("trello")} className={linkGreen}>Trello</Link> is board-first.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Comments and @mentions</strong> — Keep discussion on tasks so context isn't lost. Notifications help remote team members stay in the loop.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Real-time or frequent updates</strong> — So the tool reflects current state without manual refresh. Most modern tools support this.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Integrations</strong> — Slack, Microsoft Teams, or email so the team can get updates where they already work. Calendar integration helps with deadlines and availability.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Mobile access</strong> — So team members can check and update from anywhere. Most cloud tools offer mobile apps.</span></li>
                     </ul>
                     <p>Our <Link href="/project-management/guides/how-to-choose-project-management-software" className={linkGreen}>how to choose project management software</Link> guide covers general criteria; our <Link href="/project-management/guides/kanban-vs-scrum-tools" className={linkGreen}>Kanban vs Scrum tools</Link> guide can help if you're deciding between board-based and sprint-based workflows.</p>
                   </div>

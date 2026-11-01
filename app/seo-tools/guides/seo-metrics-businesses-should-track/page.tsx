@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Metrics Businesses Should Track</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Metrics Businesses Should Track</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Which KPIs matter for SMBs—indexing, clicks, local actions, and pipeline—and which vanity numbers to drop. Build dashboards with{" "}
                 <Link href="/seo-tools/guides/how-seo-reporting-software-works" className={link}>
                   how SEO reporting software works
@@ -119,18 +119,18 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="pyramid" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The metrics pyramid: health, visibility, outcomes</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The metrics pyramid: health, visibility, outcomes</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Strong programs measure in layers—each layer explains the next:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Health</strong> — Indexed money pages, crawl errors, HTTPS, sitemap coverage. Without health, visibility metrics lie.
+                    <strong className="text-brand">Health</strong> — Indexed money pages, crawl errors, HTTPS, sitemap coverage. Without health, visibility metrics lie.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Visibility</strong> — Impressions, average position, and priority keyword trends from Search Console and rank trackers.
+                    <strong className="text-brand">Visibility</strong> — Impressions, average position, and priority keyword trends from Search Console and rank trackers.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Outcomes</strong> — Clicks, calls, form fills, and booked jobs attributed to organic or Maps in CRM.
+                    <strong className="text-brand">Outcomes</strong> — Clicks, calls, form fills, and booked jobs attributed to organic or Maps in CRM.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -143,8 +143,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
               </section>
 
               <section id="search-console" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Search Console metrics every owner should know</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Search Console metrics every owner should know</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                     Google Search Console
@@ -161,8 +161,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
               </section>
 
               <section id="local-metrics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local businesses add GBP and grid metrics</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local businesses add GBP and grid metrics</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   For Maps-dependent revenue, track GBP actions: calls, direction requests, website taps, and photo views. Sample Map Pack positions in representative ZIPs—not every block—via{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -180,8 +180,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
               </section>
 
               <section id="reporting" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Package metrics for stakeholders</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Package metrics for stakeholders</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Monthly reviews should lead with outcomes, show visibility trends, and end with three fixes for next month.{" "}
                   <Link href="/seo-tools/guides/how-seo-reporting-software-works" className={link}>
@@ -199,8 +199,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
               </section>
 
               <section id="roi" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When metrics say SEO is working—or not</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When metrics say SEO is working—or not</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO is working when non-branded impressions and clicks trend up on money pages and CRM shows organic or Maps-sourced jobs at acceptable margin. It is struggling when audits repeat the same indexing errors, or visibility rises without pipeline impact—often a targeting or conversion problem, not “Google hates us.”
                 </p>
@@ -215,8 +215,8 @@ export default function SeoMetricsBusinessesShouldTrackPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

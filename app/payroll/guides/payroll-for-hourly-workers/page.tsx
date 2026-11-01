@@ -9,8 +9,8 @@ import { getPayrollReviewUrl, getPayrollCompareUrl, getPayrollBestForUrl } from 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -84,22 +84,22 @@ export default function PayrollForHourlyWorkersPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Payroll</Link></li>
+                    <li><Link href="/payroll" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Payroll</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/payroll/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Payroll for Hourly Workers</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Payroll for Hourly Workers
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how payroll software handles hourly pay, overtime, and time tracking—and how to choose a platform that keeps hourly payroll accurate and compliant.
                   </p>
                   <GuideLastUpdated date="March 2026" />
@@ -112,9 +112,9 @@ export default function PayrollForHourlyWorkersPage() {
                     </p>
                     <p>
                       Explore our{" "}
-                      <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll reviews</Link>,{" "}
-                      <Link href={getPayrollBestForUrl("hourly-employees")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best payroll for hourly employees</Link>, and{" "}
-                      <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">payroll comparisons</Link> to compare options.
+                      <Link href="/payroll" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll reviews</Link>,{" "}
+                      <Link href={getPayrollBestForUrl("hourly-employees")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best payroll for hourly employees</Link>, and{" "}
+                      <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">payroll comparisons</Link> to compare options.
                     </p>
                   </div>
                 </section>
@@ -123,7 +123,7 @@ export default function PayrollForHourlyWorkersPage() {
                   <SectionTitle sub="How payroll software treats hourly pay.">Hourly Pay vs Salary in Payroll Software</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Payroll software lets you set each employee as <strong className="text-[#1A2D48]">hourly</strong> or <strong className="text-[#1A2D48]">salaried</strong>. For hourly workers, you enter hours worked each pay period (or sync from a time-tracking tool). The system applies the hourly rate, calculates overtime when applicable (e.g. time-and-a-half after 40 hours per week under federal rules), and withholds taxes on the total. For salaried workers, you typically enter a fixed amount per pay period. Both types can coexist in the same payroll run.
+                      Payroll software lets you set each employee as <strong className="text-brand">hourly</strong> or <strong className="text-brand">salaried</strong>. For hourly workers, you enter hours worked each pay period (or sync from a time-tracking tool). The system applies the hourly rate, calculates overtime when applicable (e.g. time-and-a-half after 40 hours per week under federal rules), and withholds taxes on the total. For salaried workers, you typically enter a fixed amount per pay period. Both types can coexist in the same payroll run.
                     </p>
                     <p>
                       State overtime rules can differ (e.g. daily overtime in California). Good payroll software applies the correct rules for each worker’s state. Check that your provider supports the states where your hourly employees work.
@@ -135,11 +135,11 @@ export default function PayrollForHourlyWorkersPage() {
                   <SectionTitle sub="Getting hours into payroll.">Time Tracking and Hourly Payroll</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      You can run hourly payroll in two main ways: <strong className="text-[#1A2D48]">manual entry</strong> (enter hours per employee each pay period) or <strong className="text-[#1A2D48]">time tracking</strong> (hours flow from a time clock or app into payroll). Manual entry is fine for a few hourly workers; time tracking reduces errors and saves time when you have many hourly employees or need to track by job or location.
+                      You can run hourly payroll in two main ways: <strong className="text-brand">manual entry</strong> (enter hours per employee each pay period) or <strong className="text-brand">time tracking</strong> (hours flow from a time clock or app into payroll). Manual entry is fine for a few hourly workers; time tracking reduces errors and saves time when you have many hourly employees or need to track by job or location.
                     </p>
                     <p>
-                      Many payroll platforms offer built-in time tracking or integrate with tools like QuickBooks Time, When I Work, or TSheets. <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link> and <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link> are strong options for hourly payroll with time tracking or integrations. See our{" "}
-                      <Link href={getPayrollBestForUrl("hourly-employees")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">best for hourly employees</Link> guide for more.
+                      Many payroll platforms offer built-in time tracking or integrate with tools like QuickBooks Time, When I Work, or TSheets. <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link> and <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link> are strong options for hourly payroll with time tracking or integrations. See our{" "}
+                      <Link href={getPayrollBestForUrl("hourly-employees")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">best for hourly employees</Link> guide for more.
                     </p>
                   </div>
                 </section>
@@ -149,24 +149,24 @@ export default function PayrollForHourlyWorkersPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Hourly rate and overtime</strong> — Support for multiple rates and automatic overtime calculation (federal and state).</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Hourly rate and overtime</strong> — Support for multiple rates and automatic overtime calculation (federal and state).</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Time tracking</strong> — Built-in or integrated time tracking so hours flow into pay runs accurately.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Time tracking</strong> — Built-in or integrated time tracking so hours flow into pay runs accurately.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pay stubs</strong> — Clear breakdown of hours, rates, overtime, and deductions.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pay stubs</strong> — Clear breakdown of hours, rates, overtime, and deductions.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Tax filing</strong> — Automatic withholding and tax filing so you stay compliant.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Tax filing</strong> — Automatic withholding and tax filing so you stay compliant.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Job or department reporting (optional)</strong> — If you need to allocate labor cost by job, look for reporting or accounting integration (e.g. QuickBooks job costing).</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Job or department reporting (optional)</strong> — If you need to allocate labor cost by job, look for reporting or accounting integration (e.g. QuickBooks job costing).</span>
                       </li>
                     </ul>
                   </div>
@@ -176,9 +176,9 @@ export default function PayrollForHourlyWorkersPage() {
                   <SectionTitle sub="Strong options for hourly payroll.">Best Payroll Software for Hourly Workers</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto</Link>, <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">OnPay</Link>, and <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">QuickBooks Payroll</Link> all support hourly pay and overtime well. Gusto and QuickBooks offer time tracking (built-in or via QuickBooks Time). <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Patriot Payroll</Link> is a lower-cost option for straightforward hourly payroll. Compare in our{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs OnPay</Link> and{" "}
-                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Gusto vs QuickBooks Payroll</Link> articles.
+                      <Link href={getPayrollReviewUrl("gusto")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto</Link>, <Link href={getPayrollReviewUrl("onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">OnPay</Link>, and <Link href={getPayrollReviewUrl("quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">QuickBooks Payroll</Link> all support hourly pay and overtime well. Gusto and QuickBooks offer time tracking (built-in or via QuickBooks Time). <Link href={getPayrollReviewUrl("patriot-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Patriot Payroll</Link> is a lower-cost option for straightforward hourly payroll. Compare in our{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-onpay")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs OnPay</Link> and{" "}
+                      <Link href={getPayrollCompareUrl("gusto-vs-quickbooks-payroll")} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Gusto vs QuickBooks Payroll</Link> articles.
                     </p>
                   </div>
                 </section>

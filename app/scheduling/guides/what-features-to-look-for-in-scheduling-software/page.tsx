@@ -9,15 +9,15 @@ import { getSchedulingCompareUrl, getSchedulingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -59,21 +59,21 @@ export default function WhatFeaturesToLookForInSchedulingSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pb-4 pt-8">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Scheduling</Link></li>
+                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Scheduling</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="font-medium text-gray-700" aria-current="page">Scheduling features</li>
                   </ol>
                 </nav>
                 <section className="border-b border-neutral-200/60 pb-6">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Features to Look for in Scheduling Software
                   </h1>
-                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">
+                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted-foreground">
                     A practical feature checklist for booking, reminders, team routing, payments, and integrations—so
                     you score vendors against your workflow instead of their marketing page.
                   </p>
@@ -145,20 +145,20 @@ export default function WhatFeaturesToLookForInSchedulingSoftwarePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="list-none space-y-2">
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Two-way calendar sync</strong> — Google, Microsoft, or Apple; real-time busy blocks so personal and work calendars do not double-book.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Two-way calendar sync</strong> — Google, Microsoft, or Apple; real-time busy blocks so personal and work calendars do not double-book.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Booking link and embed</strong> — Shareable URLs, website embeds, and multiple event types with duration, buffer, and minimum notice rules.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Booking link and embed</strong> — Shareable URLs, website embeds, and multiple event types with duration, buffer, and minimum notice rules.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Timezone handling</strong> — Guest-local display in confirmations; critical for remote consultants and distributed teams.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Timezone handling</strong> — Guest-local display in confirmations; critical for remote consultants and distributed teams.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Intake forms and custom questions</strong> — Screen job type before the slot is taken; compare <Link href={getSchedulingCompareUrl("calendly-vs-acuity-scheduling")} className={linkGreen}>Calendly vs Acuity</Link> on form depth.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Intake forms and custom questions</strong> — Screen job type before the slot is taken; compare <Link href={getSchedulingCompareUrl("calendly-vs-acuity-scheduling")} className={linkGreen}>Calendly vs Acuity</Link> on form depth.</span>
                       </li>
                     </ul>
                   </div>
@@ -192,20 +192,20 @@ export default function WhatFeaturesToLookForInSchedulingSoftwarePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="list-none space-y-2">
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Round-robin and collective availability</strong> — Fair distribution with skill or location filters; see <Link href="/scheduling/guides/scheduling-software-for-teams" className={linkGreen}>scheduling software for teams</Link> and <Link href={getSchedulingCompareUrl("calendly-vs-youcanbookme")} className={linkGreen}>Calendly vs YouCanBook.me</Link>.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Round-robin and collective availability</strong> — Fair distribution with skill or location filters; see <Link href="/scheduling/guides/scheduling-software-for-teams" className={linkGreen}>scheduling software for teams</Link> and <Link href={getSchedulingCompareUrl("calendly-vs-youcanbookme")} className={linkGreen}>Calendly vs YouCanBook.me</Link>.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Payments and packages</strong> — Deposits, prepay, and multi-session packages for consultants; <Link href="/scheduling/guides/best-scheduling-software-for-consultants" className={linkGreen}>best scheduling for consultants</Link> covers typical stacks.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Payments and packages</strong> — Deposits, prepay, and multi-session packages for consultants; <Link href="/scheduling/guides/best-scheduling-software-for-consultants" className={linkGreen}>best scheduling for consultants</Link> covers typical stacks.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Integrations and API</strong> — CRM, video, Stripe or Square, webhooks; native beats Zapier-only for high volume.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Integrations and API</strong> — CRM, video, Stripe or Square, webhooks; native beats Zapier-only for high volume.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Reporting and admin</strong> — Export bookings, staff utilization, and no-show rates; role-based access when multiple locations book.</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
+                        <span><strong className="text-brand">Reporting and admin</strong> — Export bookings, staff utilization, and no-show rates; role-based access when multiple locations book.</span>
                       </li>
                     </ul>
                     <p>

@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowToSeoYourWebsitePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowToSeoYourWebsitePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to SEO Your Website</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to SEO Your Website</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical sequence for small business sites: make pages discoverable, trustworthy, and aligned with how customers search—without buying tools you will not use. Start free with our{" "}
                 <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                   Google Search Console review
@@ -123,8 +123,8 @@ export default function HowToSeoYourWebsitePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="phase-one" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 1: Make sure Google can see and trust the site</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 1: Make sure Google can see and trust the site</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Before keywords, confirm basics: HTTPS, mobile-friendly layout, no accidental noindex on money pages, and a sitemap submitted in{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -144,8 +144,8 @@ export default function HowToSeoYourWebsitePage() {
               </section>
 
               <section id="phase-two" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 2: Build pages that match search intent</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 2: Build pages that match search intent</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Each core service deserves a page with a specific H1, proof (photos, reviews, licenses), FAQs, and internal links to related services. Local businesses should follow{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -159,8 +159,8 @@ export default function HowToSeoYourWebsitePage() {
               </section>
 
               <section id="phase-three" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 3: Connect listings, reviews, and local signals</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 3: Connect listings, reviews, and local signals</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   For location-based businesses, the website is only half the system. Optimize{" "}
                   <Link href="/seo-tools/guides/google-business-profile-optimization" className={link}>
@@ -175,8 +175,8 @@ export default function HowToSeoYourWebsitePage() {
               </section>
 
               <section id="phase-four" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 4: Research competitors and fix gaps</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 4: Research competitors and fix gaps</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   When free data is not enough, run a trial on your domain with{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -206,8 +206,8 @@ export default function HowToSeoYourWebsitePage() {
               </section>
 
               <section id="maintenance" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Phase 5: Monthly maintenance that sticks</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Phase 5: Monthly maintenance that sticks</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO your website once and drift loses ground. Each month: review Search Console performance, respond to reviews, add one meaningful site improvement (new FAQ section, updated photos, fixed broken links), and check GBP for seasonal services. Understand why SEO matters commercially in{" "}
                   <Link href="/seo-tools/guides/what-seo-actually-does-for-businesses" className={link}>
@@ -226,8 +226,8 @@ export default function HowToSeoYourWebsitePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

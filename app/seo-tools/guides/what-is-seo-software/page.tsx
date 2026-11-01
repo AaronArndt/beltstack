@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -69,7 +69,7 @@ export default function WhatIsSeoSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -94,8 +94,8 @@ export default function WhatIsSeoSoftwarePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is SEO Software?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is SEO Software?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 SEO software is the toolkit marketers and owners use to research search demand, audit websites, track rankings, and report on organic growth. It turns scattered browser tabs into repeatable workflows—whether you run a local service company or a content team. For product shortlists, see the{" "}
                 <Link href="/seo-tools/best-seo-tools" className={link}>
                   best SEO tools roundup
@@ -115,8 +115,8 @@ export default function WhatIsSeoSoftwarePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="definition" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What SEO software actually does</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What SEO software actually does</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   At its core, SEO software answers four questions: what people search for, whether your site can be crawled and indexed, how you compare to competitors, and whether your work is moving rankings over time. Modules vary by vendor—keyword databases, site crawlers, backlink indexes, rank trackers, content optimizers, and white-label reporting—but the job is the same: reduce guesswork.
                 </p>
@@ -130,12 +130,12 @@ export default function WhatIsSeoSoftwarePage() {
               </section>
 
               <section id="categories" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Common categories of SEO tools</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Common categories of SEO tools</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Most stacks mix a few of these layers rather than one magic platform:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">All-in-one suites</strong> —{" "}
+                    <strong className="text-brand">All-in-one suites</strong> —{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>
@@ -150,13 +150,13 @@ export default function WhatIsSeoSoftwarePage() {
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local SEO specialists</strong> — BrightLocal and Whitespark focus on citations, listing accuracy, and Map Pack rank grids. Service businesses with geography-heavy demand often add these before enterprise keyword modules.
+                    <strong className="text-brand">Local SEO specialists</strong> — BrightLocal and Whitespark focus on citations, listing accuracy, and Map Pack rank grids. Service businesses with geography-heavy demand often add these before enterprise keyword modules.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Technical crawlers</strong> — Deep site audits for duplicate content, redirect chains, and template bugs. Overlaps with suite crawlers but can be sharper for large sites.
+                    <strong className="text-brand">Technical crawlers</strong> — Deep site audits for duplicate content, redirect chains, and template bugs. Overlaps with suite crawlers but can be sharper for large sites.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Rank trackers</strong> — Daily or weekly position checks by keyword and location. Costs scale with keyword count and geo granularity—budget accordingly using our{" "}
+                    <strong className="text-brand">Rank trackers</strong> — Daily or weekly position checks by keyword and location. Costs scale with keyword count and geo granularity—budget accordingly using our{" "}
                     <Link href="/seo-tools/guides/how-to-budget-for-seo-tools-and-subscriptions" className={link}>
                       SEO tools budget guide
                     </Link>
@@ -166,8 +166,8 @@ export default function WhatIsSeoSoftwarePage() {
               </section>
 
               <section id="who-needs-it" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Who needs SEO software—and when</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Who needs SEO software—and when</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   A single-location plumber with ten service pages may never need Ahrefs credits. A franchise with forty markets, an agency managing twenty clients, or an ecommerce brand with ten thousand SKUs will drown without structured crawls and rank history. The tipping point is usually volume: too many URLs, cities, or competitors for manual checks.
                 </p>
@@ -185,8 +185,8 @@ export default function WhatIsSeoSoftwarePage() {
               </section>
 
               <section id="evaluation" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How to evaluate vendors without overspending</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How to evaluate vendors without overspending</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Start from your workflow, not a feature checklist. If weekly deliverables are GBP posts and citation fixes, a local specialist pays off faster than another keyword database. If your bottleneck is content gaps against three national competitors, prioritize suite depth and backlink data. Run trials on live properties so crawl limits and export formats match reality.
                 </p>
@@ -208,8 +208,8 @@ export default function WhatIsSeoSoftwarePage() {
               </section>
 
               <section id="limits" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What SEO software cannot replace</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What SEO software cannot replace</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Software will not write trustworthy service pages, earn legitimate reviews, fix a broken sales process, or compensate for a site that loads slowly on mobile. It also cannot override Google&apos;s quality guidelines—automated link schemes and AI spam still fail. Treat alerts as a prioritized to-do list owned by a human who understands the business.
                 </p>
@@ -224,8 +224,8 @@ export default function WhatIsSeoSoftwarePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -10,15 +10,15 @@ import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Zendesk", logoSrc: HELPDESK_LOGOS.zendesk, rating: "4.5", bestFor: "Full helpdesk, scale", reviewHref: getHelpdeskReviewUrl("zendesk") },
@@ -48,21 +48,21 @@ export default function HelpdeskForSaaSPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Helpdesk Software for SaaS Companies</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Helpdesk Software for SaaS Companies
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Ticketing, customer lifecycle context, integrations, self-serve support, and scaling support operations for product-led businesses.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />
@@ -76,18 +76,18 @@ export default function HelpdeskForSaaSPage() {
                 <section id="key-takeaways" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="What SaaS support teams need.">Key takeaways</SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Ticketing and workflow</strong> — Track conversations, assign them, and maintain SLAs as volume grows. Integrate with product and billing so agents have context.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Customer lifecycle context</strong> — See plan, usage, and history so support can give accurate, personalized answers without asking the customer to repeat themselves.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Integrations</strong> — Connect to your product, CRM, and billing. Many SaaS teams use Intercom, Zendesk, or Help Scout with Segment, Stripe, or their app's API.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Self-serve and scale</strong> — Help center and bots deflect common questions; human support handles the rest. Plan for both as you grow.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Ticketing and workflow</strong> — Track conversations, assign them, and maintain SLAs as volume grows. Integrate with product and billing so agents have context.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Customer lifecycle context</strong> — See plan, usage, and history so support can give accurate, personalized answers without asking the customer to repeat themselves.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Integrations</strong> — Connect to your product, CRM, and billing. Many SaaS teams use Intercom, Zendesk, or Help Scout with Segment, Stripe, or their app's API.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Self-serve and scale</strong> — Help center and bots deflect common questions; human support handles the rest. Plan for both as you grow.</span></li>
                   </ul>
                 </section>
                 <section id="recommended-tools" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Top helpdesk tools for SaaS.">Recommended helpdesk tools for SaaS</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Zendesk</strong> — Full helpdesk with strong reporting and ecosystem. Fits SaaS teams that need multi-channel and scale. <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Intercom</strong> — Built for product-led support; in-app messaging, chat, and bots. Strong for SaaS that wants conversational support in the product. <Link href={getHelpdeskReviewUrl("intercom")} className={linkGreen}>Intercom review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Help Scout</strong> — Simpler shared inbox and docs; good when you want ease of use and email-first workflow. <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout review</Link>.</p>
+                    <p><strong className="text-brand">Zendesk</strong> — Full helpdesk with strong reporting and ecosystem. Fits SaaS teams that need multi-channel and scale. <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk review</Link>.</p>
+                    <p><strong className="text-brand">Intercom</strong> — Built for product-led support; in-app messaging, chat, and bots. Strong for SaaS that wants conversational support in the product. <Link href={getHelpdeskReviewUrl("intercom")} className={linkGreen}>Intercom review</Link>.</p>
+                    <p><strong className="text-brand">Help Scout</strong> — Simpler shared inbox and docs; good when you want ease of use and email-first workflow. <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout review</Link>.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

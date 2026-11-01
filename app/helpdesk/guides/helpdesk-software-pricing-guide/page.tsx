@@ -8,15 +8,15 @@ import { getHelpdeskReviewUrl, getHelpdeskCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   { q: "How much does helpdesk software cost per month?", a: "Many platforms charge per agent (or per seat), often $15–25/agent/month for entry tiers. Freshdesk and Zoho Desk have free tiers; Zendesk typically starts around $19/agent. Some tools (e.g. Intercom) also factor in contact or conversation volume. See our helpdesk reviews for current pricing." },
@@ -39,21 +39,21 @@ export default function HelpdeskPricingGuidePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                 <li aria-hidden>/</li>
                 <li className="text-gray-700 font-medium" aria-current="page">Helpdesk Software Pricing Guide</li>
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 Helpdesk Software Pricing Guide
               </h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Pricing tiers, per-agent costs, automation and add-ons, hidden costs, and when advanced platforms make sense.
               </p>
               <GuideLastUpdated date="March 13, 2026" />
@@ -67,9 +67,9 @@ export default function HelpdeskPricingGuidePage() {
             <section id="pricing-models" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
               <SectionTitle sub="How helpdesks charge.">Pricing models</SectionTitle>
               <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                <p><strong className="text-[#1A2D48]">Per agent (or per seat)</strong> — Most common. You pay for each person who uses the helpdesk to reply to customers. Entry tiers are often $15–25/agent/month. Adding agents scales cost linearly. Compare per-agent price and what's included (channels, automation, reporting) at each tier.</p>
-                <p><strong className="text-[#1A2D48]">Per user</strong> — Some tools (e.g. Help Scout, Front) charge per user rather than per agent. Similar idea: more seats, higher cost. Check whether "user" includes agents only or also teammates who need read-only or occasional access.</p>
-                <p><strong className="text-[#1A2D48]">Usage-based</strong> — Intercom and some others factor in contacts or conversations. Cost can scale with volume even if agent count stays the same. Useful for modeling when support volume is high.</p>
+                <p><strong className="text-brand">Per agent (or per seat)</strong> — Most common. You pay for each person who uses the helpdesk to reply to customers. Entry tiers are often $15–25/agent/month. Adding agents scales cost linearly. Compare per-agent price and what's included (channels, automation, reporting) at each tier.</p>
+                <p><strong className="text-brand">Per user</strong> — Some tools (e.g. Help Scout, Front) charge per user rather than per agent. Similar idea: more seats, higher cost. Check whether "user" includes agents only or also teammates who need read-only or occasional access.</p>
+                <p><strong className="text-brand">Usage-based</strong> — Intercom and some others factor in contacts or conversations. Cost can scale with volume even if agent count stays the same. Useful for modeling when support volume is high.</p>
               </div>
             </section>
             <section id="tiers-and-addons" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

@@ -7,7 +7,7 @@
 export function TrustIndicatorMark({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`inline-block h-2 w-2 shrink-0 rounded-full bg-[#10B981] ${className}`}
+      className={`inline-block h-2 w-2 shrink-0 rounded-full bg-indigo ${className}`}
       aria-hidden
     />
   );

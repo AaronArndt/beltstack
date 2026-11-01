@@ -28,15 +28,15 @@ const KEY_TAKEAWAYS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -48,7 +48,7 @@ function SchedulingHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating scheduling tools">
         How to Choose Scheduling Software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Scheduling software automates appointment booking so clients can book time with you or your team without
         back-and-forth emails or calls. This page is for consultants, coaches, service businesses, and teams. Use our{" "}
         <Link href="/scheduling/best-scheduling-software" className={linkGreen}>
@@ -65,36 +65,36 @@ function SchedulingHowToChooseSection() {
         and scenario links below to narrow by use case.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Team size and booking volume</strong> — Solo freelancers and small
+            <strong className="text-brand">Team size and booking volume</strong> — Solo freelancers and small
             teams often need simple one-person booking; growing teams need round-robin, collective availability, or
             multi-location support.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Calendar sync</strong> — Your scheduler should sync with Google
+            <strong className="text-brand">Calendar sync</strong> — Your scheduler should sync with Google
             Calendar, Outlook, or other calendars you use so availability stays accurate and double-booking is
             avoided.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Meeting types and customization</strong> — Look for buffer time,
+            <strong className="text-brand">Meeting types and customization</strong> — Look for buffer time,
             intake forms, and the ability to offer different session lengths or package types (e.g. for coaches or
             consultants).
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Reminders and no-shows</strong> — Automated email or SMS reminders
+            <strong className="text-brand">Reminders and no-shows</strong> — Automated email or SMS reminders
             reduce no-shows. Confirm and reschedule/cancel flows keep everyone aligned.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Payments and integrations</strong> — If you take payment at booking,
+            <strong className="text-brand">Payments and integrations</strong> — If you take payment at booking,
             check that the tool supports your processor. Integrations with{" "}
             <Link href="/crm" className={linkGreen}>CRM</Link> or{" "}
             <Link href="/invoicing" className={linkGreen}>invoicing software</Link> help keep your stack connected.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Pricing</strong> — Many tools offer a free tier; paid plans scale by
+            <strong className="text-brand">Pricing</strong> — Many tools offer a free tier; paid plans scale by
             meeting types, team members, or features. Compare total cost at your expected volume.
           </li>
         </ul>
@@ -155,42 +155,42 @@ function SchedulingEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in scheduling software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when consultants, service businesses, and teams choose tools to automate appointment booking and calendar management.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Calendar integrations</h3>
+            <h3 className="text-brand text-lg font-semibold">Calendar integrations</h3>
             <p className="mt-1.5">
               Your scheduling tool should sync with Google Calendar, Outlook, or other calendars you use so booked slots stay accurate and double-booking is avoided. Two-way sync is standard on most platforms.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Booking automation</h3>
+            <h3 className="text-brand text-lg font-semibold">Booking automation</h3>
             <p className="mt-1.5">
               Look for customizable meeting types, buffer time between appointments, and the ability to set availability by day or week. Good tools let clients pick a time and confirm without email ping-pong.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Customer notifications</h3>
+            <h3 className="text-brand text-lg font-semibold">Customer notifications</h3>
             <p className="mt-1.5">
               Automated reminders (email or SMS) reduce no-shows. Confirmation and reschedule/cancel flows keep everyone aligned. Some tools also support intake forms or questionnaires before the appointment.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Team scheduling</h3>
+            <h3 className="text-brand text-lg font-semibold">Team scheduling</h3>
             <p className="mt-1.5">
               If multiple people take bookings, you need team or round-robin scheduling so the right person gets the appointment. Shared availability and collective meeting types are common on team plans.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Reporting and integrations</h3>
+            <h3 className="text-brand text-lg font-semibold">Reporting and integrations</h3>
             <p className="mt-1.5">
               Basic reporting on bookings, no-shows, and revenue helps you run the business. Integrations with CRM, invoicing, or video conferencing (Zoom, Meet) keep your stack connected.
             </p>
@@ -198,30 +198,30 @@ function SchedulingEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Calendar sync (Google, Outlook)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Custom meeting types & availability
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Reminders & confirmations
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Team or round-robin (if needed)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Payments & intake forms (optional)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 CRM or video integrations
               </li>
             </ul>
@@ -249,7 +249,7 @@ function SchedulingPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -259,7 +259,7 @@ function SchedulingPopularComparisonsSection() {
                     className="h-10 w-auto max-w-[80px] object-contain object-left"
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {item.productB.logoSrc && (
                   <img
                     src={item.productB.logoSrc}
@@ -268,23 +268,23 @@ function SchedulingPopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/scheduling/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all scheduling comparisons →
         </Link>

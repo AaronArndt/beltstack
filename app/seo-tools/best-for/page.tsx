@@ -24,12 +24,12 @@ export default function SeoToolsBestForHubPage() {
       ungroupedSub="Jump to a scenario."
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href={getSeoToolsBestForUrl("contractors")} className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href={getSeoToolsBestForUrl("contractors")} className="font-semibold text-indigo hover:underline">
             Best for contractors
           </Link>{" "}
           ·{" "}
-          <Link href="/seo-tools/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/seo-tools/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

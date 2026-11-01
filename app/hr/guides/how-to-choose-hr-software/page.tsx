@@ -9,15 +9,15 @@ import { getHrReviewUrl, getHrCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -95,11 +95,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -108,7 +108,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/hr"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         HR
                       </Link>
@@ -117,7 +117,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                     <li>
                       <Link
                         href="/hr/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -129,10 +129,10 @@ export default function HowToChooseHrSoftwareGuidePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose HR Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Key factors when comparing HR platforms: company size, payroll integration, hiring and onboarding
                     features, compliance support, and automation.
                   </p>
@@ -191,21 +191,21 @@ export default function HowToChooseHrSoftwareGuidePage() {
                     <p>These factors apply to most organizations. Weight them by your size and complexity.</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Company size and structure.</strong> Solo founder with a
+                          <strong className="text-brand">Company size and structure.</strong> Solo founder with a
                           few employees vs a 100-person team with managers and multiple locations require different
                           levels of sophistication.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Payroll and benefits.</strong> Decide whether HR should
+                          <strong className="text-brand">Payroll and benefits.</strong> Decide whether HR should
                           include payroll (as in{" "}
                           <Link href={getHrReviewUrl("gusto")} className={linkGreen}>
                             Gusto
@@ -222,11 +222,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Hiring footprint.</strong> Local-only teams can use
+                          <strong className="text-brand">Hiring footprint.</strong> Local-only teams can use
                           simpler tools; multi-state or global teams should evaluate platforms like{" "}
                           <Link href={getHrReviewUrl("rippling")} className={linkGreen}>
                             Rippling
@@ -239,11 +239,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Employee experience.</strong> Self-service portals, mobile
+                          <strong className="text-brand">Employee experience.</strong> Self-service portals, mobile
                           apps, and clear pay history reduce HR tickets and improve trust.
                         </span>
                       </li>
@@ -260,11 +260,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
                     <p>Map your size and growth plans to the right tier of HR software:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Under ~25 employees.</strong> All-in-one HR and payroll
+                          <strong className="text-brand">Under ~25 employees.</strong> All-in-one HR and payroll
                           platforms like{" "}
                           <Link href={getHrReviewUrl("gusto")} className={linkGreen}>
                             Gusto
@@ -273,11 +273,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">25–250 employees.</strong> HRIS-forward tools like{" "}
+                          <strong className="text-brand">25–250 employees.</strong> HRIS-forward tools like{" "}
                           <Link href={getHrReviewUrl("bamboohr")} className={linkGreen}>
                             BambooHR
                           </Link>{" "}
@@ -289,11 +289,11 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Larger or highly regulated organizations.</strong> You may
+                          <strong className="text-brand">Larger or highly regulated organizations.</strong> You may
                           need enterprise-grade HR suites or PEO support like{" "}
                           <Link href={getHrReviewUrl("trinet")} className={linkGreen}>
                             TriNet
@@ -346,7 +346,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                     <p>Use a structured process instead of relying on demos alone:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -370,7 +370,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -379,7 +379,7 @@ export default function HowToChooseHrSoftwareGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>

@@ -10,15 +10,15 @@ import { getInventoryReviewUrl, getInventoryCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -52,11 +52,11 @@ export default function InventorySoftwareForEcommerceGuidePage() {
               <div className="max-w-[720px]">
                 {/* ——— Breadcrumb ——— */}
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -65,7 +65,7 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                     <li>
                       <Link
                         href="/inventory"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Inventory Management
                       </Link>
@@ -74,7 +74,7 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                     <li>
                       <Link
                         href="/inventory/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -88,10 +88,10 @@ export default function InventorySoftwareForEcommerceGuidePage() {
 
                 {/* ——— Hero ——— */}
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Inventory Software for Ecommerce
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how ecommerce brands use inventory software to keep stock in sync across channels, reduce
                     overselling, and connect storefronts, warehouses, and accounting.
                   </p>
@@ -150,11 +150,11 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                   </SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                         •
                       </span>
                       <span>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           Inventory platforms sit between storefronts and warehouses.
                         </strong>{" "}
                         They collect orders from channels and push back accurate availability, so each store reflects
@@ -162,21 +162,21 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                         •
                       </span>
                       <span>
-                        <strong className="text-[#1A2D48]">The right tool depends on scale.</strong> Smaller
+                        <strong className="text-brand">The right tool depends on scale.</strong> Smaller
                         ecommerce-led businesses often start with Zoho Inventory; more complex, multi-channel brands look
                         at Cin7 or Finale Inventory as volume and channel count increase.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                         •
                       </span>
                       <span>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           Warehouses, channels, and accounting must all see the same numbers.
                         </strong>{" "}
                         Good ecommerce inventory software integrates with storefronts, shipping tools, and accounting
@@ -198,31 +198,31 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                     <p>Common triggers include:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Overselling during promotions</strong> — One channel sells
+                          <strong className="text-brand">Overselling during promotions</strong> — One channel sells
                           inventory that another has already committed because there&apos;s no central “available to
                           sell” number.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Channel-specific inventory rules</strong> — You want to
+                          <strong className="text-brand">Channel-specific inventory rules</strong> — You want to
                           allocate stock differently across marketplaces, DTC, and wholesale, which is nearly impossible
                           when each channel manages its own inventory.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">One warehouse, many channels</strong> — Warehouse teams
+                          <strong className="text-brand">One warehouse, many channels</strong> — Warehouse teams
                           pick and pack based on what&apos;s physically on shelves, while channels allocate based on
                           stale numbers.
                         </span>
@@ -254,7 +254,7 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-3 list-none">
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("cin7")} className={linkGreen}>
                             Cin7
                           </Link>{" "}
@@ -267,7 +267,7 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                         </p>
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("zoho-inventory")} className={linkGreen}>
                             Zoho Inventory
                           </Link>{" "}
@@ -280,7 +280,7 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                         </p>
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">
+                        <strong className="text-brand">
                           <Link href={getInventoryReviewUrl("finale-inventory")} className={linkGreen}>
                             Finale Inventory
                           </Link>{" "}
@@ -319,20 +319,20 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Single-store, low volume</strong> — You may be able to stay
+                          <strong className="text-brand">Single-store, low volume</strong> — You may be able to stay
                           on storefront-native inventory or start with Zoho Inventory and grow into it.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Multi-channel, moderate volume</strong> — Zoho Inventory and
+                          <strong className="text-brand">Multi-channel, moderate volume</strong> — Zoho Inventory and
                           Cin7 are strong candidates; compare them directly in{" "}
                           <Link href={getInventoryCompareUrl("zoho-inventory-vs-cin7")} className={linkGreen}>
                             Zoho Inventory vs Cin7
@@ -341,11 +341,11 @@ export default function InventorySoftwareForEcommerceGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">High volume, complex warehouses</strong> — Finale Inventory,
+                          <strong className="text-brand">High volume, complex warehouses</strong> — Finale Inventory,
                           Unleashed, or Cin7 may all be contenders; your decision will depend on how much emphasis you put
                           on costing and reporting versus channel and POS workflows.
                         </span>

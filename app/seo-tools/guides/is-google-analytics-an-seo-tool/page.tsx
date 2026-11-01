@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is Google Analytics an SEO Tool?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is Google Analytics an SEO Tool?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Analytics measures what happens after the click; Search Console shows how Google Search sends that click. Here is where each fits in an SEO stack, what Analytics cannot do, and when to add Semrush or local tools. See also{" "}
                 <Link href="/seo-tools/guides/does-google-have-seo-tools" className={link}>
                   does Google have SEO tools
@@ -123,8 +123,8 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="analytics-role" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What Google Analytics actually measures</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What Google Analytics actually measures</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google Analytics (GA4) is a web analytics product. It tracks sessions, users, events, conversions, and acquisition channels—including organic search as a bucket. It helps you answer: Did SEO traffic grow? Which landing pages convert? Where do users drop off?
                 </p>
@@ -142,15 +142,15 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </section>
 
               <section id="search-console-vs-analytics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Search Console vs Analytics for SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Search Console vs Analytics for SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Use both; they are complementary, not interchangeable:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — Query impressions, average position, indexing coverage, sitemaps, Core Web Vitals field data, and manual penalties.
+                    <strong className="text-brand">Search Console</strong> — Query impressions, average position, indexing coverage, sitemaps, Core Web Vitals field data, and manual penalties.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Analytics</strong> — Landing-page engagement, goal completions, e-commerce or lead events, and multi-channel attribution after the visit starts.
+                    <strong className="text-brand">Analytics</strong> — Landing-page engagement, goal completions, e-commerce or lead events, and multi-channel attribution after the visit starts.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -163,8 +163,8 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </section>
 
               <section id="what-analytics-misses" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What Analytics does not replace</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What Analytics does not replace</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Analytics will not crawl your site for broken links, audit hreflang, estimate keyword difficulty, or track Map Pack rank by grid. It will not show competitor backlinks or content gaps. When those jobs matter, teams add{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -187,8 +187,8 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </section>
 
               <section id="local-measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local SEO: Analytics plus GBP and specialists</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local SEO: Analytics plus GBP and specialists</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service businesses should tag phone clicks, form submits, and booking events in Analytics, then segment organic and Google Business Profile referrals. GBP Insights shows Maps actions Analytics may undercount if UTM discipline is weak.
                 </p>
@@ -210,8 +210,8 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </section>
 
               <section id="seo-workflow" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A practical SEO measurement workflow</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A practical SEO measurement workflow</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Monthly rhythm: pull Search Console for queries gaining impressions but low CTR—rewrite titles and meta. In Analytics, check organic landing pages with high exits and low events—fix content or CTAs. Log changes so you know which fix moved booked jobs, not just sessions.
                 </p>
@@ -225,20 +225,20 @@ export default function IsGoogleAnalyticsAnSeoToolPage() {
               </section>
 
               <section id="stack-recommendations" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Minimum stack vs growth stack</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Minimum stack vs growth stack</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
-                  <strong className="text-[#1A2D48]">Minimum:</strong> Search Console + GA4 + Business Profile (if local) + on-page discipline. That covers visibility diagnostics and conversion proof without a subscription.
+                  <strong className="text-brand">Minimum:</strong> Search Console + GA4 + Business Profile (if local) + on-page discipline. That covers visibility diagnostics and conversion proof without a subscription.
                 </p>
                 <p className="mt-4">
-                  <strong className="text-[#1A2D48]">Growth:</strong> Add one research suite (Semrush or Ahrefs) when competitor content and keyword gaps block you, plus BrightLocal or Whitespark when Maps and citations need systematic tracking. Analytics stays in the stack either way—it is not swapped out by paid SEO software.
+                  <strong className="text-brand">Growth:</strong> Add one research suite (Semrush or Ahrefs) when competitor content and keyword gaps block you, plus BrightLocal or Whitespark when Maps and citations need systematic tracking. Analytics stays in the stack either way—it is not swapped out by paid SEO software.
                 </p>
               </section>
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

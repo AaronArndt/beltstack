@@ -9,15 +9,15 @@ import { getHrReviewUrl, getHrCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -92,11 +92,11 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -105,7 +105,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                     <li>
                       <Link
                         href="/hr"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         HR
                       </Link>
@@ -114,7 +114,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                     <li>
                       <Link
                         href="/hr/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -126,10 +126,10 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best HR Software for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How small businesses choose HR software that covers payroll, benefits, onboarding, and people ops
                     without overpaying for enterprise features they will never use.
                   </p>
@@ -179,41 +179,41 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                   <div className="space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Match HR software to stage.</strong> Very small teams may
+                          <strong className="text-brand">Match HR software to stage.</strong> Very small teams may
                           only need payroll; once you manage PTO, onboarding, and documents, all-in-one HR software
                           becomes worth it.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Prioritize usability and payroll fit.</strong> If your
+                          <strong className="text-brand">Prioritize usability and payroll fit.</strong> If your
                           team cannot navigate the HR portal or payroll feels clunky, adoption will suffer. Test
                           employee self-service and pay runs early.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Watch per-employee pricing.</strong> Most vendors charge a
+                          <strong className="text-brand">Watch per-employee pricing.</strong> Most vendors charge a
                           base fee plus a per-employee price. Model cost at your expected headcount in 12–24 months,
                           not just today.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Use reviews and comparisons.</strong> Our{" "}
+                          <strong className="text-brand">Use reviews and comparisons.</strong> Our{" "}
                           <Link href="/hr/best-hr-software" className={linkGreen}>
                             best HR software
                           </Link>{" "}
@@ -252,11 +252,11 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Central employee records.</strong> A single profile per
+                          <strong className="text-brand">Central employee records.</strong> A single profile per
                           employee that stores contact details, job information, documents, and comp history. Tools like{" "}
                           <Link href={getHrReviewUrl("bamboohr")} className={linkGreen}>
                             BambooHR
@@ -265,30 +265,30 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Onboarding and offboarding.</strong> Checklists, e-sign
+                          <strong className="text-brand">Onboarding and offboarding.</strong> Checklists, e-sign
                           documents, and tasks to get new hires productive quickly—and to remove access cleanly when
                           people leave.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Time off and attendance.</strong> PTO requests, approvals,
+                          <strong className="text-brand">Time off and attendance.</strong> PTO requests, approvals,
                           and balances in one place, ideally syncing to calendars and payroll.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Payroll integration.</strong> Either native payroll (as in{" "}
+                          <strong className="text-brand">Payroll integration.</strong> Either native payroll (as in{" "}
                           <Link href={getHrReviewUrl("gusto")} className={linkGreen}>
                             Gusto
                           </Link>
@@ -366,7 +366,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                     <p>Use a simple, repeatable process instead of chasing features.</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -375,7 +375,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -391,7 +391,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -400,7 +400,7 @@ export default function BestHrSoftwareForSmallBusinessGuidePage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>

@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -57,19 +57,19 @@ export default function InvoiceTermsExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Invoice Terms Explained</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Invoice Terms Explained (Net 30, Due on Receipt, etc.)</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Invoice Terms Explained (Net 30, Due on Receipt, etc.)</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn what common invoice terms mean and how to choose payment terms that balance conversion, customer experience, and cash flow.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -104,14 +104,14 @@ export default function InvoiceTermsExplainedPage() {
                     <p>
                       Customers recognize these labels—but many interpret them differently. Always pair the label with a concrete due date and currency so there is no ambiguity in AP systems or portal uploads.
                     </p>
-                    <p><strong className="text-[#1A2D48]">Due on Receipt:</strong> Payment expected immediately when the invoice is received. Common for deposits, rush work, or first engagements before trust is established.</p>
-                    <p><strong className="text-[#1A2D48]">Net 7 / Net 15 / Net 30:</strong> Payment due 7, 15, or 30 days after the invoice date (confirm calendar vs business days in your contract). Net 30 remains the B2B default in many industries.</p>
-                    <p><strong className="text-[#1A2D48]">End of Month (EOM):</strong> Payment due at month end regardless of issue date—useful when customers batch AP runs monthly but can extend DSO for early-month invoices.</p>
-                    <p><strong className="text-[#1A2D48]">Milestone terms:</strong> Payments tied to delivery phases on larger jobs—often paired with progress invoices; see{" "}
+                    <p><strong className="text-brand">Due on Receipt:</strong> Payment expected immediately when the invoice is received. Common for deposits, rush work, or first engagements before trust is established.</p>
+                    <p><strong className="text-brand">Net 7 / Net 15 / Net 30:</strong> Payment due 7, 15, or 30 days after the invoice date (confirm calendar vs business days in your contract). Net 30 remains the B2B default in many industries.</p>
+                    <p><strong className="text-brand">End of Month (EOM):</strong> Payment due at month end regardless of issue date—useful when customers batch AP runs monthly but can extend DSO for early-month invoices.</p>
+                    <p><strong className="text-brand">Milestone terms:</strong> Payments tied to delivery phases on larger jobs—often paired with progress invoices; see{" "}
                       <Link href="/invoicing/guides/different-types-of-invoices-explained" className={linkGreen}>different types of invoices explained</Link>.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">2/10 Net 30 (early payment discount):</strong> 2% discount if paid within 10 days, otherwise full amount due in 30. Useful when you can trade margin for speed—disclose math clearly on the invoice.
+                      <strong className="text-brand">2/10 Net 30 (early payment discount):</strong> 2% discount if paid within 10 days, otherwise full amount due in 30. Useful when you can trade margin for speed—disclose math clearly on the invoice.
                     </p>
                   </div>
                 </section>
@@ -122,10 +122,10 @@ export default function InvoiceTermsExplainedPage() {
                       Terms are a pricing and risk decision, not only accounting convention. Shorter terms improve cash flow but can reduce win rate if competitors offer longer Net periods—know your market norm before you change policy.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">New or higher-risk customers:</strong> Due on Receipt, Net 7, or deposits before large spend—see deposit patterns in milestone billing guides.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Enterprise B2B:</strong> align with their procurement cycle; fighting Net 60 with Net 15 on the invoice alone rarely works—negotiate in contract.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Complex projects:</strong> milestone terms that match delivery and approval workload reduce disputes on progress bills.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Trusted repeat customers:</strong> longer Net may be acceptable if send quality and reminders are strong—track actual pay behavior, not assumptions.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">New or higher-risk customers:</strong> Due on Receipt, Net 7, or deposits before large spend—see deposit patterns in milestone billing guides.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Enterprise B2B:</strong> align with their procurement cycle; fighting Net 60 with Net 15 on the invoice alone rarely works—negotiate in contract.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Complex projects:</strong> milestone terms that match delivery and approval workload reduce disputes on progress bills.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Trusted repeat customers:</strong> longer Net may be acceptable if send quality and reminders are strong—track actual pay behavior, not assumptions.</span></li>
                     </ul>
                     <p>
                       Document agreed terms in the quote and contract, then enforce the same language on the invoice. Mismatches between contract Net 45 and invoice Net 30 are a common AP rejection reason.
@@ -158,9 +158,9 @@ export default function InvoiceTermsExplainedPage() {
                       Print the due date in bold near the total—not only in footer terms. AP clerks scan totals first; burying the date costs you days.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Sync reminder schedules to term type (Net 30 vs Due on Receipt need different cadences).</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Review actual days-to-pay by customer quarterly and adjust terms or credit limits.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Keep terms consistent across quote, contract, invoice, and customer portal profiles.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Sync reminder schedules to term type (Net 30 vs Due on Receipt need different cadences).</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Review actual days-to-pay by customer quarterly and adjust terms or credit limits.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Keep terms consistent across quote, contract, invoice, and customer portal profiles.</span></li>
                     </ul>
                     <p>
                       For full lifecycle controls, see{" "}

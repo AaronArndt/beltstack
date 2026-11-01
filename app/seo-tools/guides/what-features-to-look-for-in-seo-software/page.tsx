@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Features to Look for in SEO Software</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Features to Look for in SEO Software</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical feature checklist—audits, keywords, rank tracking, local grids, and reporting—mapped to real SMB workflows. Define categories in{" "}
                 <Link href="/seo-tools/guides/what-is-seo-software" className={link}>
                   what is SEO software
@@ -115,8 +115,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="start-with-bottleneck" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Start with your bottleneck, not the feature list</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Start with your bottleneck, not the feature list</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Vendors sell overlapping modules—site audit, keyword magic, backlink explorer, content optimizer, social poster. Most small businesses need two or three capabilities done well: verify indexing, research what customers search, and track whether fixes move visibility in target cities.
                 </p>
@@ -130,14 +130,14 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </section>
 
               <section id="core-features" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Core features most teams evaluate</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Core features most teams evaluate</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Site audit and crawl</strong> — Finds broken links, duplicate metadata, and indexing risks. Essential after redesigns; optional for five-page brochure sites already healthy in Search Console.
+                    <strong className="text-brand">Site audit and crawl</strong> — Finds broken links, duplicate metadata, and indexing risks. Essential after redesigns; optional for five-page brochure sites already healthy in Search Console.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Keyword research</strong> — Volume, difficulty, and SERP context for service and location pages. Tools like{" "}
+                    <strong className="text-brand">Keyword research</strong> — Volume, difficulty, and SERP context for service and location pages. Tools like{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>{" "}
@@ -148,13 +148,13 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
                     differ more in workflow than raw database size—trial both on your metro.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Rank tracking</strong> — Historical position by keyword and location. Confirm how many keywords and cities your tier includes before annual billing.
+                    <strong className="text-brand">Rank tracking</strong> — Historical position by keyword and location. Confirm how many keywords and cities your tier includes before annual billing.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Backlink analysis</strong> — Matters when competitors win on links and content depth, less when you are fighting purely local Map Pack battles.
+                    <strong className="text-brand">Backlink analysis</strong> — Matters when competitors win on links and content depth, less when you are fighting purely local Map Pack battles.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Reporting and exports</strong> — White-label PDFs for agencies; simple CSV for owners. See{" "}
+                    <strong className="text-brand">Reporting and exports</strong> — White-label PDFs for agencies; simple CSV for owners. See{" "}
                     <Link href="/seo-tools/guides/how-seo-reporting-software-works" className={link}>
                       how SEO reporting software works
                     </Link>{" "}
@@ -164,8 +164,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </section>
 
               <section id="local-features" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local SEO features when geography drives revenue</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local SEO features when geography drives revenue</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Service businesses should evaluate Map Pack rank grids, citation monitoring, GBP audit helpers, and review tracking—not only national keyword databases.{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -191,8 +191,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </section>
 
               <section id="quotas" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Quotas and limits that bite at checkout</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Quotas and limits that bite at checkout</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Headline pricing rarely matches your cart. Check user seats, projects or domains, keywords tracked, crawl credits per month, and local locations billed separately. Growing franchises hit limits faster than solo operators expect.
                 </p>
@@ -218,8 +218,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </section>
 
               <section id="trial-checklist" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Trial checklist before you annualize</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Trial checklist before you annualize</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Connect Search Console and run an audit on your live domain—not a demo property.</li>
                   <li>Import your top 25 keywords and verify local SERP accuracy for cities you serve.</li>
@@ -235,8 +235,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
               </section>
 
               <section id="anti-patterns" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Features that sound good but rarely ship results</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Features that sound good but rarely ship results</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Vanity site health scores, unlimited AI content credits, and social scheduling bundled into SEO suites rarely fix why a plumber does not rank. Prefer tools that expose reproducible issues—specific URLs, specific queries, specific grid cells—and skip platforms that hide methodology behind a single number.
                 </p>
@@ -244,8 +244,8 @@ export default function WhatFeaturesToLookForInSeoSoftwarePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function LocalSeoForBeginnersPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function LocalSeoForBeginnersPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Local SEO for Beginners</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Local SEO for Beginners</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A plain-language start for Maps, listings, and local website basics—what to do first, what to ignore, and when specialist tools help. Read{" "}
                 <Link href="/seo-tools/guides/seo-for-beginners-a-complete-guide" className={link}>
                   SEO for beginners
@@ -123,8 +123,8 @@ export default function LocalSeoForBeginnersPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="what-local-seo-is" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What local SEO is (without jargon)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What local SEO is (without jargon)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Local SEO is how you show up when someone nearby searches for what you sell—on Google Maps, in the local pack, and in organic results with city or “near me” intent. It is not a separate internet; it is Google matching relevance, distance, and trust signals to a real business that serves that area.
                 </p>
@@ -138,8 +138,8 @@ export default function LocalSeoForBeginnersPage() {
               </section>
 
               <section id="first-thirty-days" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Your first 30 days: a beginner checklist</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Your first 30 days: a beginner checklist</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Claim Google Business Profile; choose primary category and services that match real work.</li>
                   <li>Verify{" "}
@@ -155,8 +155,8 @@ export default function LocalSeoForBeginnersPage() {
               </section>
 
               <section id="gbp-basics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Google Business Profile basics beginners miss</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Google Business Profile basics beginners miss</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   GBP is often your highest-converting surface for local search. Beginners under-invest in photos, Q&A, and weekly posts; they over-invest in keyword-stuffed business names that risk suspension. Keep the name legal, align services with your website, and set a realistic service area if you travel to customers.
                 </p>
@@ -174,8 +174,8 @@ export default function LocalSeoForBeginnersPage() {
               </section>
 
               <section id="website-basics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Website basics that support Maps</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Website basics that support Maps</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Your site should confirm what GBP promises: same phone, services, and geography. Beginners fail when the site lists three cities but GBP lists one, or when the only “SEO” page is a generic homepage. Read{" "}
                   <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
@@ -186,8 +186,8 @@ export default function LocalSeoForBeginnersPage() {
               </section>
 
               <section id="citations-reviews" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Citations and reviews for beginners</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Citations and reviews for beginners</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Citations are your business listed on directories and industry sites with consistent NAP. Reviews are proof you operate where you say you do. Beginners should fix obvious duplicate listings and earn steady review flow before buying citation software.
                 </p>
@@ -213,8 +213,8 @@ export default function LocalSeoForBeginnersPage() {
               </section>
 
               <section id="next-steps" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Next steps after the basics</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Next steps after the basics</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Graduate from beginner mode to an operating rhythm: monthly citation checks for multi-location brands, competitor page reviews, and Search Console queries that deserve new or refreshed pages. The{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -226,8 +226,8 @@ export default function LocalSeoForBeginnersPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoPricingExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function SeoPricingExplainedPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Pricing Explained</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO Pricing Explained</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 How agency retainers, in-house labor, and SEO software subscriptions fit together—and how to evaluate quotes without chasing vanity rankings. For stack planning, see{" "}
                 <Link href="/seo-tools/guides/how-to-budget-for-seo-tools-and-subscriptions" className={link}>
                   how to budget for SEO tools and subscriptions
@@ -115,25 +115,25 @@ export default function SeoPricingExplainedPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="three-buckets" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Three buckets in every SEO budget</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Three buckets in every SEO budget</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Tools</strong> — Research, crawls, rank tracking, local grids. See{" "}
+                    <strong className="text-brand">Tools</strong> — Research, crawls, rank tracking, local grids. See{" "}
                     <Link href="/seo-tools/guides/how-much-seo-software-costs" className={link}>
                       how much SEO software costs
                     </Link>{" "}
                     for what drives subscription tiers.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Labor</strong> — Owner time, freelancers, or agency retainers. This is usually the largest line—and why{" "}
+                    <strong className="text-brand">Labor</strong> — Owner time, freelancers, or agency retainers. This is usually the largest line—and why{" "}
                     <Link href="/seo-tools/guides/why-seo-is-expensive" className={link}>
                       SEO feels expensive
                     </Link>{" "}
                     even when software looks affordable.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Assets</strong> — Photography, landing pages, citation cleanup, and proof content that builds trust.
+                    <strong className="text-brand">Assets</strong> — Photography, landing pages, citation cleanup, and proof content that builds trust.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -146,8 +146,8 @@ export default function SeoPricingExplainedPage() {
               </section>
 
               <section id="agency-vs-diy" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Agency pricing vs DIY</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Agency pricing vs DIY</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Agencies price for strategy, production, and reporting cadence. DIY prices your time instead of a retainer—but only works if someone owns weekly execution. Read{" "}
                   <Link href="/seo-tools/guides/can-you-do-seo-yourself" className={link}>
@@ -165,8 +165,8 @@ export default function SeoPricingExplainedPage() {
               </section>
 
               <section id="what-drives-quotes" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What drives higher or lower quotes</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What drives higher or lower quotes</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>Number of locations and citation complexity</li>
                   <li>Competitive keywords and content depth required</li>
@@ -184,8 +184,8 @@ export default function SeoPricingExplainedPage() {
               </section>
 
               <section id="free-first" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Free-first pricing strategy</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Free-first pricing strategy</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Search Console and Google Business Profile are free; execution is not. Start with{" "}
                   <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
@@ -208,8 +208,8 @@ export default function SeoPricingExplainedPage() {
               </section>
 
               <section id="evaluate-proposals" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How to evaluate an SEO proposal</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How to evaluate an SEO proposal</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Ask for a 90-day plan with shipped artifacts, not just KPI promises:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>Technical fixes tied to Search Console coverage</li>
@@ -228,8 +228,8 @@ export default function SeoPricingExplainedPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

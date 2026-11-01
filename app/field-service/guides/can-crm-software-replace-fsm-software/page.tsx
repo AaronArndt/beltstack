@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -77,11 +77,11 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -112,10 +112,10 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Can CRM Software Replace FSM Software?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn when CRM can cover field operations, where dedicated field service management still wins, and
                     how to avoid buying the wrong system for dispatch-heavy teams.
                   </p>
@@ -180,38 +180,38 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Lead and opportunity tracking</strong> — source, stage, and
+                          <strong className="text-brand">Lead and opportunity tracking</strong> — source, stage, and
                           next-step discipline across reps.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Account and contact history</strong> — emails, notes, and
+                          <strong className="text-brand">Account and contact history</strong> — emails, notes, and
                           commercial relationships in one timeline.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Forecasting and reporting</strong> — pipeline weight, close
+                          <strong className="text-brand">Forecasting and reporting</strong> — pipeline weight, close
                           rates, and rep performance for leadership.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Marketing automation hooks</strong> — nurture sequences
+                          <strong className="text-brand">Marketing automation hooks</strong> — nurture sequences
                           before a lead becomes a booked job.
                         </span>
                       </li>
@@ -238,38 +238,38 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Live dispatch boards</strong> — skills, zones, map views,
+                          <strong className="text-brand">Live dispatch boards</strong> — skills, zones, map views,
                           and reassignment when jobs slip or emergencies arrive.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Technician mobile execution</strong> — checklists, photos,
+                          <strong className="text-brand">Technician mobile execution</strong> — checklists, photos,
                           signatures, offline queues, and status sync back to the office.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Work order lifecycle</strong> — scheduled through invoiced
+                          <strong className="text-brand">Work order lifecycle</strong> — scheduled through invoiced
                           without manual exports or duplicate customer records.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Service billing depth</strong> — estimates, deposits,
+                          <strong className="text-brand">Service billing depth</strong> — estimates, deposits,
                           price books, and accounting sync tied to completed field work.
                         </span>
                       </li>
@@ -304,15 +304,15 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Win in CRM</strong> — opportunity closes; account and contact
+                        <strong className="text-brand">Win in CRM</strong> — opportunity closes; account and contact
                         details are complete.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Create or sync the job in FSM</strong> — scope, site address,
+                        <strong className="text-brand">Create or sync the job in FSM</strong> — scope, site address,
                         and promised service window carry over without retyping.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Execute in the field</strong> — scheduling, dispatch, and
+                        <strong className="text-brand">Execute in the field</strong> — scheduling, dispatch, and
                         mobile updates stay in FSM; see{" "}
                         <Link href="/field-service/guides/how-field-service-teams-schedule-technicians" className={linkGreen}>
                           how field service teams schedule technicians
@@ -320,7 +320,7 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                         .
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Close the loop in CRM</strong> — optional for commercial
+                        <strong className="text-brand">Close the loop in CRM</strong> — optional for commercial
                         teams tracking expansion, renewals, or account health after the job.
                       </li>
                     </ol>
@@ -347,29 +347,29 @@ export default function CanCrmSoftwareReplaceFsmSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">CRM-first signal</strong> — pipeline hygiene and conversion
+                          <strong className="text-brand">CRM-first signal</strong> — pipeline hygiene and conversion
                           are the constraint; field volume is low or appointment-only.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">FSM-first signal</strong> — same-day dispatch, skills
+                          <strong className="text-brand">FSM-first signal</strong> — same-day dispatch, skills
                           matching, or recurring routes drive daily firefighting.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Both signal</strong> — dedicated sales team plus multiple
+                          <strong className="text-brand">Both signal</strong> — dedicated sales team plus multiple
                           trucks; define ownership before buying two overlapping suites.
                         </span>
                       </li>

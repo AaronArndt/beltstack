@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowSmallBusinessesUseSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowSmallBusinessesUseSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Small Businesses Use SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Small Businesses Use SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Practical patterns owners use to get found on Google without an enterprise team—free diagnostics, local listings, modest content, and paid tools only when research stops scaling. Start with{" "}
                 <Link href="/seo-tools/guides/seo-for-beginners-a-complete-guide" className={link}>
                   SEO for beginners
@@ -119,8 +119,8 @@ export default function HowSmallBusinessesUseSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="operating-model" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">SEO as an operating model, not a project</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">SEO as an operating model, not a project</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Successful small businesses treat SEO like bookkeeping: small recurring tasks that compound. Weekly you might respond to reviews, check Search Console for coverage errors, and note which service pages gained impressions. Monthly you refresh one priority page, audit a competitor’s top queries, and confirm listings still show the right phone number.
                 </p>
@@ -134,8 +134,8 @@ export default function HowSmallBusinessesUseSeoPage() {
               </section>
 
               <section id="free-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The free stack most SMBs start with</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The free stack most SMBs start with</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Before any subscription, wire up{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -145,20 +145,20 @@ export default function HowSmallBusinessesUseSeoPage() {
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Indexing truth</strong> — Are important URLs indexed? Are there mobile or HTTPS issues blocking crawl?
+                    <strong className="text-brand">Indexing truth</strong> — Are important URLs indexed? Are there mobile or HTTPS issues blocking crawl?
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Query reality</strong> — Which searches already show your brand or services, even at low positions?
+                    <strong className="text-brand">Query reality</strong> — Which searches already show your brand or services, even at low positions?
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Maps conversion</strong> — Calls, direction requests, and website clicks from GBP—not vanity views.
+                    <strong className="text-brand">Maps conversion</strong> — Calls, direction requests, and website clicks from GBP—not vanity views.
                   </li>
                 </ul>
               </section>
 
               <section id="local-pattern" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How service businesses layer local SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How service businesses layer local SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Plumbers, HVAC, cleaners, and similar trades usually win through Maps plus aligned website pages—not national blog volume. Follow{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -184,8 +184,8 @@ export default function HowSmallBusinessesUseSeoPage() {
               </section>
 
               <section id="content-and-research" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Content and research at SMB scale</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Content and research at SMB scale</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   You do not need fifty blog posts. You need clear service pages that answer scope, pricing signals, timeline, and service area—and occasional refreshes when Search Console shows rising impressions with weak click-through. When competitor research or keyword mapping eats evenings, add{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -200,8 +200,8 @@ export default function HowSmallBusinessesUseSeoPage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measurement owners actually use</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measurement owners actually use</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rankings are a diagnostic; booked jobs are the outcome. Tag leads in{" "}
                   <Link href="/crm" className={link}>
@@ -212,8 +212,8 @@ export default function HowSmallBusinessesUseSeoPage() {
               </section>
 
               <section id="when-to-upgrade" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to upgrade tools or help</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to upgrade tools or help</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Upgrade when a specific gap costs more than software: multi-location citation cleanup, consistent rank grids, technical crawl issues beyond your skill, or content research across many services. Use{" "}
                   <Link href="/seo-tools/compare" className={link}>
@@ -229,8 +229,8 @@ export default function HowSmallBusinessesUseSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

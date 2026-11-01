@@ -91,7 +91,7 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function TimeTrackingIntroExtended() {
   return (
@@ -118,23 +118,23 @@ function TimeTrackingHowToChooseSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">How to choose time tracking software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">How to choose time tracking software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when freelancers, agencies, and small businesses pick time tracking tools.
         </p>
       </div>
       <div className="mt-4 grid gap-6 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Billable vs non-billable time</h3>
+            <h3 className="text-brand text-lg font-semibold">Billable vs non-billable time</h3>
             <p className="mt-1.5">
               Choose a tool that lets you tag time as billable or internal work, set billable rates, and report on how much of
               your week is truly billable. That’s essential for freelancers, agencies, and consultants.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Integrations and exports</h3>
+            <h3 className="text-brand text-lg font-semibold">Integrations and exports</h3>
             <p className="mt-1.5">
               Time tracking rarely lives alone. Look for exports or integrations with your{" "}
               <Link href="/invoicing" className={linkGreen}>
@@ -152,7 +152,7 @@ function TimeTrackingHowToChooseSection() {
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Monitoring vs culture</h3>
+            <h3 className="text-brand text-lg font-semibold">Monitoring vs culture</h3>
             <p className="mt-1.5">
               Decide how much monitoring you really need. Basic tracking (like Toggl or Clockify) is enough for many teams.
               Monitoring-heavy tools (like Hubstaff or Time Doctor) add screenshots and GPS but require clear communication and
@@ -162,22 +162,22 @@ function TimeTrackingHowToChooseSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Quick checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Quick checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Billable rates and basic reporting
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Exports or integrations with invoicing/accounting
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Clear policy on monitoring (if used)
@@ -194,23 +194,23 @@ function TimeTrackingEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What businesses should look for in time tracking software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">What businesses should look for in time tracking software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when businesses choose time tracking tools for billing, payroll, and productivity.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Billable vs non-billable time</h3>
+            <h3 className="text-brand text-lg font-semibold">Billable vs non-billable time</h3>
             <p className="mt-1.5">
               Pick software that makes it easy to separate billable and internal time, set billable rates, and report on how much of
               your week is truly billable. That&apos;s essential for freelancers, agencies, and consultants that invoice by the hour.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Integrations with invoicing, accounting, and payroll</h3>
+            <h3 className="text-brand text-lg font-semibold">Integrations with invoicing, accounting, and payroll</h3>
             <p className="mt-1.5">
               Time tracking rarely stands alone. Look for exports or integrations with your{" "}
               <Link href="/invoicing" className={linkGreen}>
@@ -228,7 +228,7 @@ function TimeTrackingEducationSection() {
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Monitoring vs lightweight tracking</h3>
+            <h3 className="text-brand text-lg font-semibold">Monitoring vs lightweight tracking</h3>
             <p className="mt-1.5">
               Decide how much monitoring you really need. Lightweight tools like Toggl Track or Clockify focus on timers and
               reporting; monitoring-heavy tools like Hubstaff or Time Doctor add screenshots and GPS. Match the tool to your culture
@@ -238,22 +238,22 @@ function TimeTrackingEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Billable rates and basic reporting
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Exports or integrations with invoicing, accounting, and payroll
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Clear policy on monitoring for remote and field teams
@@ -313,9 +313,9 @@ function TimeTrackingGuidesSection() {
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -343,7 +343,7 @@ function TimeTrackingPopularComparisonsSection() {
             <Link
               key={slug}
               href={compareHref}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -356,9 +356,9 @@ function TimeTrackingPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {data.productB.logoSrc ? (
                   <img
                     src={data.productB.logoSrc}
@@ -369,26 +369,26 @@ function TimeTrackingPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/time-tracking/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all time tracking comparisons →
         </Link>

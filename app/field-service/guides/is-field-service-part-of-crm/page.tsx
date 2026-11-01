@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -59,20 +59,20 @@ export default function IsFieldServicePartOfCrmPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Field Service</Link></li>
+                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Field Service</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Is Field Service Part of CRM?</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is Field Service Part of CRM?</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is Field Service Part of CRM?</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Clarify where field service ends and CRM begins, how vendor modules blur the line, and how service businesses combine both without duplicate data or dispatch confusion.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -111,20 +111,20 @@ export default function IsFieldServicePartOfCrmPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Lead capture and qualification</strong> — web forms, campaigns, and inbound routing.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Lead capture and qualification</strong> — web forms, campaigns, and inbound routing.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Pipeline stages and forecasting</strong> — deal probability, owners, and next steps.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Pipeline stages and forecasting</strong> — deal probability, owners, and next steps.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Account and contact relationships</strong> — parent companies, sites, and communication history.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Account and contact relationships</strong> — parent companies, sites, and communication history.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Marketing automation</strong> — email sequences, lists, and attribution where included.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Marketing automation</strong> — email sequences, lists, and attribution where included.</span>
                       </li>
                     </ul>
                     <p>
@@ -144,20 +144,20 @@ export default function IsFieldServicePartOfCrmPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Scheduling and dispatch</strong> — boards, skills, zones, and live reassignment.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Scheduling and dispatch</strong> — boards, skills, zones, and live reassignment.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Work orders and mobile execution</strong> — checklists, photos, signatures, and status sync.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Work orders and mobile execution</strong> — checklists, photos, signatures, and status sync.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Estimates and service billing</strong> — quote approval through invoice from job lines.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Estimates and service billing</strong> — quote approval through invoice from job lines.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Technician and route visibility</strong> — capacity, backlog, and job history per site.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Technician and route visibility</strong> — capacity, backlog, and job history per site.</span>
                       </li>
                     </ul>
                     <p>
@@ -180,16 +180,16 @@ export default function IsFieldServicePartOfCrmPage() {
                     <p>Typical overlap zones include:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Appointments and calendars</strong> — CRM calendars rarely replace dispatch boards under same-day pressure.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Appointments and calendars</strong> — CRM calendars rarely replace dispatch boards under same-day pressure.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Quotes and proposals</strong> — may originate in CRM or FSM depending on who sells the job.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Quotes and proposals</strong> — may originate in CRM or FSM depending on who sells the job.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Service history</strong> — technicians need job-level detail; account managers need relationship context.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Service history</strong> — technicians need job-level detail; account managers need relationship context.</span>
                       </li>
                     </ul>
                     <p>
@@ -211,16 +211,16 @@ export default function IsFieldServicePartOfCrmPage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Map entities</strong> — account, contact, site, opportunity, work order, invoice.
+                        <strong className="text-brand">Map entities</strong> — account, contact, site, opportunity, work order, invoice.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Pick a source of truth</strong> — one master for addresses and customer legal name.
+                        <strong className="text-brand">Pick a source of truth</strong> — one master for addresses and customer legal name.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Define status handoffs</strong> — e.g., &quot;Closed won&quot; triggers job creation or scheduling queue.
+                        <strong className="text-brand">Define status handoffs</strong> — e.g., &quot;Closed won&quot; triggers job creation or scheduling queue.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Close the loop</strong> — job outcomes and revenue sync back for account expansion reporting.
+                        <strong className="text-brand">Close the loop</strong> — job outcomes and revenue sync back for account expansion reporting.
                       </li>
                     </ol>
                     <p>

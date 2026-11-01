@@ -10,15 +10,15 @@ import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Gorgias", logoSrc: HELPDESK_LOGOS.gorgias, rating: "4.5", bestFor: "Ecommerce, Shopify/Magento", reviewHref: getHelpdeskReviewUrl("gorgias") },
@@ -50,21 +50,21 @@ export default function HelpdeskForEcommercePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Helpdesk Software for Ecommerce</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Helpdesk Software for Ecommerce
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Order-related support, customer history, integrations with storefronts, and handling high message volume.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />
@@ -78,18 +78,18 @@ export default function HelpdeskForEcommercePage() {
                 <section id="key-takeaways" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="What ecommerce support teams need.">Key takeaways</SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Order-related support</strong> — Look for order lookup, shipping status, and the ability to process refunds or create returns from the helpdesk. Reduces context switching and resolution time.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Customer history</strong> — Full order and conversation history in one place so agents don't ask customers to repeat themselves.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Storefront integrations</strong> — Native or deep integration with Shopify, Magento, or your platform. The best ecommerce helpdesks surface store data inside the ticket.</span></li>
-                    <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">High message volume</strong> — Macros, canned responses, and automation (e.g. routing by order status) help teams handle peak volume without burning out.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Order-related support</strong> — Look for order lookup, shipping status, and the ability to process refunds or create returns from the helpdesk. Reduces context switching and resolution time.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Customer history</strong> — Full order and conversation history in one place so agents don't ask customers to repeat themselves.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Storefront integrations</strong> — Native or deep integration with Shopify, Magento, or your platform. The best ecommerce helpdesks surface store data inside the ticket.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">High message volume</strong> — Macros, canned responses, and automation (e.g. routing by order status) help teams handle peak volume without burning out.</span></li>
                   </ul>
                 </section>
                 <section id="recommended-tools" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Top helpdesk tools for ecommerce.">Recommended helpdesk tools for ecommerce</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Gorgias</strong> — Built for ecommerce with deep Shopify and Magento integration; order context and macros in the ticket. Best when support revolves around orders and the store. <Link href={getHelpdeskReviewUrl("gorgias")} className={linkGreen}>Gorgias review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Zendesk</strong> — Full helpdesk with a large app ecosystem; Shopify and ecommerce integrations available. Scales for high volume. <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk review</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Freshdesk</strong> — Good value and store integrations; solid option when you want helpdesk depth without Gorgias-level ecommerce focus. <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk review</Link>.</p>
+                    <p><strong className="text-brand">Gorgias</strong> — Built for ecommerce with deep Shopify and Magento integration; order context and macros in the ticket. Best when support revolves around orders and the store. <Link href={getHelpdeskReviewUrl("gorgias")} className={linkGreen}>Gorgias review</Link>.</p>
+                    <p><strong className="text-brand">Zendesk</strong> — Full helpdesk with a large app ecosystem; Shopify and ecommerce integrations available. Scales for high volume. <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk review</Link>.</p>
+                    <p><strong className="text-brand">Freshdesk</strong> — Good value and store integrations; solid option when you want helpdesk depth without Gorgias-level ecommerce focus. <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk review</Link>.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

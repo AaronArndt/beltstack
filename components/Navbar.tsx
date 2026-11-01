@@ -160,19 +160,19 @@ const INDUSTRY_NAV_ITEMS = getAllTradeHubDefinitions().map((def) => ({
 }));
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const navItemClass =
-  "text-[14px] font-semibold text-[#1A2D48] hover:text-[#0f2440] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "text-[14px] font-semibold text-brand hover:text-indigo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function LogoIcon({ className }: { className?: string }) {
   return (
     <img
-      src="/Logos/BS_Logo_B.svg"
+      src="/Logos/BS_Logo_GreenWhite.png"
       alt=""
       className={className}
-      width={45}
-      height={38}
+      width={36}
+      height={36}
       aria-hidden
     />
   );
@@ -181,7 +181,7 @@ function LogoIcon({ className }: { className?: string }) {
 function Chevron({ open }: { open: boolean }) {
   return (
     <svg
-      className={`ml-1 h-3.5 w-3.5 shrink-0 text-[#57534E] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      className={`ml-1 h-3.5 w-3.5 shrink-0 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180" : ""}`}
       fill="none"
       stroke="currentColor"
       strokeWidth={2.75}
@@ -198,7 +198,7 @@ function Chevron({ open }: { open: boolean }) {
 function ChevronRight() {
   return (
     <svg
-      className="h-3.5 w-3.5 shrink-0 text-[#57534E]"
+      className="h-3.5 w-3.5 shrink-0 text-muted-foreground"
       fill="none"
       stroke="currentColor"
       strokeWidth={2.75}
@@ -215,7 +215,7 @@ function ChevronRight() {
 function ChevronLeft() {
   return (
     <svg
-      className="h-3.5 w-3.5 shrink-0 text-[#57534E]"
+      className="h-3.5 w-3.5 shrink-0 text-muted-foreground"
       fill="none"
       stroke="currentColor"
       strokeWidth={2.75}
@@ -243,14 +243,14 @@ function SoftwarePanelContent({
         {SOFTWARE_COLUMNS.map((col) => (
           <div key={col.id} className="min-w-0" onPointerEnter={() => onColumnHover(col.id)}>
             <div className="w-full">
-              <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#57534E]">
+              <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
                 {col.label}
               </p>
               {/* Full-width rule; subtle stone accent on hover column */}
               <div className="relative w-full pt-px">
                 <div className="h-px w-full bg-stone-200" aria-hidden />
                 <div
-                  className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-[#10B981] transition-transform duration-300 ease-out ${
+                  className={`pointer-events-none absolute left-0 top-0 h-0.5 w-full max-w-full origin-left bg-indigo transition-transform duration-300 ease-out ${
                     activeColumn === col.id ? "scale-x-100" : "scale-x-0"
                   }`}
                   aria-hidden
@@ -263,12 +263,12 @@ function SoftwarePanelContent({
                   key={item.href}
                   href={item.href}
                   role="menuitem"
-                  className="group block rounded-sm bg-transparent px-2 py-1 transition-colors hover:bg-[#E7F8F2] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                  className="group block rounded-sm bg-transparent px-2 py-1 transition-colors hover:bg-sage focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
                 >
-                  <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#0d9668]">
+                  <span className="text-sm font-semibold text-brand transition-colors group-hover:text-indigo-hover">
                     {item.title}
                   </span>
-                  <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#44403c]">
+                  <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground transition-colors group-hover:text-[#44403c]">
                     {item.description}
                   </p>
                 </Link>
@@ -280,7 +280,7 @@ function SoftwarePanelContent({
                       <Link
                         role="menuitem"
                         href={link.href}
-                        className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         {link.label}
                       </Link>
@@ -293,7 +293,7 @@ function SoftwarePanelContent({
         ))}
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/software" className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/software" className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
           View all software categories →
         </Link>
       </div>
@@ -307,7 +307,7 @@ function IndustriesPanelContent() {
       <div className="grid grid-cols-2 gap-8">
         {INDUSTRY_NAV_GROUPED.map((group) => (
           <div key={group.title} className="min-w-0">
-            <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-[#57534E]">{group.title}</p>
+            <p className="pb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">{group.title}</p>
             <div className="relative w-full pt-px">
               <div className="h-px w-full bg-stone-200" aria-hidden />
             </div>
@@ -317,7 +317,7 @@ function IndustriesPanelContent() {
                   <Link
                     href={item.href}
                     role="menuitem"
-                    className="block rounded-sm px-2 py-1.5 text-sm font-semibold text-[#10B981] transition-colors hover:bg-[#E7F8F2] hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                    className="block rounded-sm px-2 py-1.5 text-sm font-semibold text-brand transition-colors hover:bg-sage hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
                   >
                     {item.label}
                   </Link>
@@ -331,25 +331,25 @@ function IndustriesPanelContent() {
   );
 }
 
-// ——— Comparisons panel: 2 columns + featured, no icons, emerald links ———
+// ——— Comparisons panel: 2 columns + featured, no icons, indigo links ———
 function ComparisonsPanelContent() {
   return (
     <div className="w-full min-w-0 shrink-0">
       <div className="grid grid-cols-2 gap-8">
         <div>
-          <p className="text-[11px] font-medium uppercase tracking-wider text-[#57534E]">Types</p>
+          <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Types</p>
           <ul className="mt-3 space-y-0">
             {COMPARISON_TYPES.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 role="menuitem"
-                className="group block rounded-md py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1"
+                className="group block rounded-md py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
               >
-                <span className="text-sm font-semibold text-[#10B981] transition-colors group-hover:text-[#0d9668]">
+                <span className="text-sm font-semibold text-brand transition-colors group-hover:text-indigo-hover">
                   {item.title}
                 </span>
-                <p className="mt-0.5 text-[13px] leading-snug text-[#57534E] transition-colors group-hover:text-[#44403c]">
+                <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground transition-colors group-hover:text-[#44403c]">
                   {item.description}
                 </p>
               </Link>
@@ -357,28 +357,28 @@ function ComparisonsPanelContent() {
           </ul>
         </div>
         <div>
-          <p className="text-[11px] font-medium uppercase tracking-wider text-[#57534E]">Featured</p>
+          <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Featured</p>
           <ul className="mt-3 space-y-2">
             {TOP_PICKS_MINI.map((item) => (
               <li key={item.tool} className="flex items-center justify-between gap-2">
                 <Link
                   role="menuitem"
                   href="/comparisons"
-                  className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                 >
                   {item.tool}
                 </Link>
-                <span className="text-sm text-[#57534E] tabular-nums">{item.rating}</span>
+                <span className="text-sm text-muted-foreground tabular-nums">{item.rating}</span>
               </li>
             ))}
           </ul>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
             How we review
           </Link>
         </div>
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/comparisons" className="text-sm font-semibold text-[#10B981] transition-colors hover:text-[#0d9668] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+        <Link href="/comparisons" className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
           See all comparisons →
         </Link>
       </div>
@@ -658,9 +658,9 @@ export default function Navbar() {
         ref={containerRef}
         className="relative mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
       >
-        <Link href="/" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
+        <Link href="/" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded">
           <LogoIcon className="h-9 w-auto shrink-0" />
-          <span className="text-[#1A2D48] text-base font-bold">BeltStack</span>
+          <span className="text-brand text-base font-bold">BeltStack</span>
         </Link>
 
         <div className="flex items-center">
@@ -677,13 +677,13 @@ export default function Navbar() {
                   setActiveSoftwareColumn(null);
                 }}
                 onClick={() => openMenu("software")}
-                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "software" ? "text-[#0f2440]" : ""}`}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "software" ? "text-indigo" : ""}`}
                 aria-expanded={open && activeMenu === "software"}
                 aria-haspopup="true"
               >
                 <span className="relative inline-block">
                   Software
-                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-[#10B981] transition-transform duration-200 origin-left ${open && activeMenu === "software" ? "scale-x-100" : "scale-x-0"}`} />
+                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-indigo transition-transform duration-200 origin-left ${open && activeMenu === "software" ? "scale-x-100" : "scale-x-0"}`} />
                 </span>
                 <Chevron open={open && activeMenu === "software"} />
               </button>
@@ -694,13 +694,13 @@ export default function Navbar() {
                   setActiveSoftwareColumn(null);
                 }}
                 onClick={() => openMenu("industries")}
-                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "industries" ? "text-[#0f2440]" : ""}`}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "industries" ? "text-indigo" : ""}`}
                 aria-expanded={open && activeMenu === "industries"}
                 aria-haspopup="true"
               >
                 <span className="relative inline-block">
                   Industries
-                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-[#10B981] transition-transform duration-200 origin-left ${open && activeMenu === "industries" ? "scale-x-100" : "scale-x-0"}`} />
+                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-indigo transition-transform duration-200 origin-left ${open && activeMenu === "industries" ? "scale-x-100" : "scale-x-0"}`} />
                 </span>
                 <Chevron open={open && activeMenu === "industries"} />
               </button>
@@ -711,13 +711,13 @@ export default function Navbar() {
                   setActiveSoftwareColumn(null);
                 }}
                 onClick={() => openMenu("comparisons")}
-                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "comparisons" ? "text-[#0f2440]" : ""}`}
+                className={`relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass} ${open && activeMenu === "comparisons" ? "text-indigo" : ""}`}
                 aria-expanded={open && activeMenu === "comparisons"}
                 aria-haspopup="true"
               >
                 <span className="relative inline-block">
                   Comparisons
-                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-[#10B981] transition-transform duration-200 origin-left ${open && activeMenu === "comparisons" ? "scale-x-100" : "scale-x-0"}`} />
+                  <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-indigo transition-transform duration-200 origin-left ${open && activeMenu === "comparisons" ? "scale-x-100" : "scale-x-0"}`} />
                 </span>
                 <Chevron open={open && activeMenu === "comparisons"} />
               </button>
@@ -726,7 +726,7 @@ export default function Navbar() {
               <Link key={href} href={href} className={`group relative inline-flex items-center px-2.5 py-2 xl:px-3 ${navItemClass}`}>
                 <span className="relative inline-block">
                   {label}
-                  <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#10B981] scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
+                  <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-indigo scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
                 </span>
               </Link>
             ))}
@@ -764,8 +764,8 @@ export default function Navbar() {
         {/* eslint-enable react-hooks/refs */}
 
         <div className="flex items-center gap-3">
-          <div className="searchContainer hidden sm:flex items-center rounded-md border border-stone-200 bg-white px-3 py-2 text-[#1A2D48] transition-all duration-150 focus-within:border-[#10B981]">
-            <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+          <div className="searchContainer hidden sm:flex items-center rounded-md border border-stone-200 bg-white px-3 py-2 text-brand transition-all duration-150 focus-within:border-indigo">
+            <svg className="h-4 w-4 shrink-0 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -773,7 +773,7 @@ export default function Navbar() {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="searchInput w-32 border-0 bg-transparent pl-2 text-sm focus:outline-none focus:ring-0 focus:shadow-none placeholder:text-[#57534E] md:w-40"
+              className="searchInput w-32 border-0 bg-transparent pl-2 text-sm focus:outline-none focus:ring-0 focus:shadow-none placeholder:text-muted-foreground md:w-40"
               aria-label="Search"
             />
           </div>
@@ -783,7 +783,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-[#1A2D48] hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] lg:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-brand hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo lg:hidden"
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav-panel"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -813,7 +813,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("software")}
-                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-haspopup="true"
                   >
                     Software
@@ -822,7 +822,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("industries")}
-                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-haspopup="true"
                   >
                     Industries
@@ -831,7 +831,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("comparisons")}
-                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="flex min-h-11 w-full items-center justify-between py-2.5 text-left text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-haspopup="true"
                   >
                     Comparisons
@@ -842,13 +842,13 @@ export default function Navbar() {
                       key={href}
                       href={href}
                       onClick={closeMobileMenu}
-                      className="flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      className="flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     >
                       {label}
                     </Link>
                   ))}
-                  <div className="searchContainer mt-2 flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-[#10B981]">
-                    <svg className="h-4 w-4 shrink-0 text-[#57534E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <div className="searchContainer mt-2 flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 transition-all duration-150 focus-within:border-indigo">
+                    <svg className="h-4 w-4 shrink-0 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <input
@@ -871,19 +871,19 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("root")}
-                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-label="Back to main menu"
                   >
                     <ChevronLeft />
                     Back
                   </button>
-                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Software</h2>
+                  <h2 className="mb-1 text-[15px] font-bold text-brand">Software</h2>
                   {SOFTWARE_CATEGORIES.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded-sm"
                     >
                       {item.title}
                     </Link>
@@ -891,7 +891,7 @@ export default function Navbar() {
                   <Link
                     href="/software"
                     onClick={closeMobileMenu}
-                    className="mt-1 flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-[#10B981] hover:text-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                    className="mt-1 flex min-h-11 items-center py-2.5 text-[15px] font-semibold text-indigo hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded-sm"
                   >
                     View all software →
                   </Link>
@@ -903,19 +903,19 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("root")}
-                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-label="Back to main menu"
                   >
                     <ChevronLeft />
                     Back
                   </button>
-                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Industries</h2>
+                  <h2 className="mb-1 text-[15px] font-bold text-brand">Industries</h2>
                   {INDUSTRY_NAV_ITEMS.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded-sm"
                     >
                       {item.label}
                     </Link>
@@ -928,19 +928,19 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("root")}
-                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="mb-1 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     aria-label="Back to main menu"
                   >
                     <ChevronLeft />
                     Back
                   </button>
-                  <h2 className="mb-1 text-[15px] font-bold text-[#1A2D48]">Comparisons</h2>
+                  <h2 className="mb-1 text-[15px] font-bold text-brand">Comparisons</h2>
                   {COMPARISON_NAV_ITEMS.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-[#1A2D48] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded-sm"
+                      className="flex min-h-11 items-center border-b border-stone-100 py-2.5 text-[15px] font-semibold text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded-sm"
                     >
                       {item.label}
                     </Link>

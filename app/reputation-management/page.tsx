@@ -57,7 +57,7 @@ const METHODOLOGY_BULLETS = [
   "We prioritize conversion and trust outcomes for contractors and home-service teams.",
 ];
 
-const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+const linkGreen = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function IntroExtended() {
   return (
@@ -104,21 +104,21 @@ function PopularComparisonsSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">Popular Reputation Management Comparisons</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">Side-by-side fit, pricing signals, and workflow trade-offs.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">Popular Reputation Management Comparisons</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">Side-by-side fit, pricing signals, and workflow trade-offs.</p>
       </div>
       <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map(({ slug, href, data }) => (
-          <Link key={slug} href={href} className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2">
+          <Link key={slug} href={href} className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2">
             <div className="flex items-center gap-3">
               <img src={data.productA.logoSrc} alt="" className="h-10 w-auto max-w-[80px] object-contain object-left" />
-              <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+              <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
               <img src={data.productB.logoSrc} alt="" className="h-10 w-auto max-w-[80px] object-contain object-left" />
             </div>
-            <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{data.productA.name} vs {data.productB.name}</h3>
-            <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{data.summaryParagraph.slice(0, 140)}{data.summaryParagraph.length > 140 ? "…" : ""}</p>
-            <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+            <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">{data.productA.name} vs {data.productB.name}</h3>
+            <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{data.summaryParagraph.slice(0, 140)}{data.summaryParagraph.length > 140 ? "…" : ""}</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
           </Link>
         ))}
       </div>

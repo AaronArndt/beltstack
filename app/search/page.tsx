@@ -39,13 +39,13 @@ function SearchPageContent() {
     <>
       <section className="border-b border-stone-200 bg-stone-50">
           <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-            <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h1 className="text-center text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Search Results
             </h1>
-            <p className="mt-2 text-center text-[#57534E] text-sm sm:text-base">
+            <p className="mt-2 text-center text-muted-foreground text-sm sm:text-base">
               {query ? (
                 <>
-                  Results for <span className="font-semibold text-[#1A2D48]">"{query}"</span>
+                  Results for <span className="font-semibold text-brand">"{query}"</span>
                 </>
               ) : (
                 "Type to search reviews, comparisons, roundups, and guides."
@@ -62,12 +62,12 @@ function SearchPageContent() {
         <section className="py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {query && results.length === 0 && (
-              <p className="text-center text-[#57534E] text-sm">
+              <p className="text-center text-muted-foreground text-sm">
                 No results found. Try searching for a software name or category.
               </p>
             )}
             {!query && (
-              <p className="text-center text-[#57534E] text-sm">
+              <p className="text-center text-muted-foreground text-sm">
                 Start by searching for a software name, category, or use case.
               </p>
             )}
@@ -76,7 +76,7 @@ function SearchPageContent() {
               if (!items || items.length === 0) return null;
               return (
                 <div key={sectionType} className="mt-8 first:mt-0">
-                  <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">{sectionType}s</h2>
+                  <h2 className="text-brand text-xl font-bold sm:text-2xl">{sectionType}s</h2>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {items.map((item) => (
                       <SearchResultCard key={`${item.href}-${item.title}`} item={item} />
@@ -96,10 +96,10 @@ function SearchPageFallback() {
     <>
       <section className="border-b border-stone-200 bg-stone-50">
         <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-          <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          <h1 className="text-center text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             Search Results
           </h1>
-          <p className="mt-2 text-center text-[#57534E] text-sm sm:text-base">
+          <p className="mt-2 text-center text-muted-foreground text-sm sm:text-base">
             Type to search reviews, comparisons, roundups, and guides.
           </p>
           <SearchAutocomplete initialQuery="" autoNavigateToResults={false} onSubmitQuery={() => {}} />
@@ -107,7 +107,7 @@ function SearchPageFallback() {
       </section>
       <section className="py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-[#57534E] text-sm">
+          <p className="text-center text-muted-foreground text-sm">
             Start by searching for a software name, category, or use case.
           </p>
         </div>

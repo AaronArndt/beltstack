@@ -15,7 +15,7 @@ import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 // ——— Design tokens (match review template) ———
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 export type ComparisonFeatureRow = {
   feature: string;
@@ -249,7 +249,7 @@ const COMPARISON_GUIDE_META: Record<
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
@@ -266,14 +266,14 @@ function FeatureCell({
   text: string;
   isStronger: boolean;
 }) {
-  const bgClass = isStronger ? "bg-[#ECFDF5]" : "";
+  const bgClass = isStronger ? "bg-sage/70" : "";
   const level = support ?? "supported";
   return (
     <td className={`py-3 px-4 text-neutral-700 align-middle ${bgClass}`}>
       <span className="flex items-center gap-2">
         {level === "text" && null}
         {level === "supported" && (
-          <span className="text-[#10B981] shrink-0" aria-hidden title="Supported">
+          <span className="text-indigo shrink-0" aria-hidden title="Supported">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
@@ -400,7 +400,7 @@ export function ComparisonTemplate({
                   ]}
                   className="mb-4"
                 />
-                <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                   {heading}
                 </h1>
                 <p className="mt-4 text-[15px] leading-relaxed text-neutral-700">
@@ -410,9 +410,9 @@ export function ComparisonTemplate({
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="rounded-lg border border-stone-200/80 bg-white p-6 shadow-sm">
                     {logoA && <img src={logoA} alt="" className="h-10 w-auto max-w-[100px] object-contain mb-3" />}
-                    <h2 className="text-[#1A2D48] text-lg font-bold">{productA.name}</h2>
+                    <h2 className="text-brand text-lg font-bold">{productA.name}</h2>
                     {productA.rating != null && productA.rating !== "" && (
-                      <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productA.rating}</span> rating</p>
+                      <p className="mt-1 text-sm text-muted-foreground"><span className="text-brand font-semibold">{productA.rating}</span> rating</p>
                     )}
                     {productA.startingPrice != null && productA.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">
@@ -434,9 +434,9 @@ export function ComparisonTemplate({
                   </div>
                   <div className="rounded-lg border border-stone-200/80 bg-white p-6 shadow-sm">
                     {logoB && <img src={logoB} alt="" className="h-10 w-auto max-w-[100px] object-contain mb-3" />}
-                    <h2 className="text-[#1A2D48] text-lg font-bold">{productB.name}</h2>
+                    <h2 className="text-brand text-lg font-bold">{productB.name}</h2>
                     {productB.rating != null && productB.rating !== "" && (
-                      <p className="mt-1 text-sm text-[#57534E]"><span className="text-[#10B981] font-semibold">{productB.rating}</span> rating</p>
+                      <p className="mt-1 text-sm text-muted-foreground"><span className="text-brand font-semibold">{productB.rating}</span> rating</p>
                     )}
                     {productB.startingPrice != null && productB.startingPrice !== "" && (
                       <p className="text-sm text-neutral-700 mt-0.5">
@@ -457,20 +457,20 @@ export function ComparisonTemplate({
                     )}
                   </div>
                 </div>
-                <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#57534E]">{AFFILIATE_DISCLOSURE}</p>
+                <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">{AFFILIATE_DISCLOSURE}</p>
                 {lastReviewed != null && lastReviewed !== "" && (
-                  <p className="mt-1.5 max-w-3xl text-xs leading-relaxed text-[#57534E]">
+                  <p className="mt-1.5 max-w-3xl text-xs leading-relaxed text-muted-foreground">
                     Last reviewed {formatEditorialDate(lastReviewed)}
                   </p>
                 )}
                 <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-5">
-                  <p className="text-[#1A2D48] text-sm font-semibold mb-3">Quick recommendation</p>
+                  <p className="text-brand text-sm font-semibold mb-3">Quick recommendation</p>
                   <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                     <li>
-                      <span className="font-semibold text-[#1A2D48]">{productA.name}:</span> {quickRecommendationA}
+                      <span className="font-semibold text-brand">{productA.name}:</span> {quickRecommendationA}
                     </li>
                     <li>
-                      <span className="font-semibold text-[#1A2D48]">{productB.name}:</span> {quickRecommendationB}
+                      <span className="font-semibold text-brand">{productB.name}:</span> {quickRecommendationB}
                     </li>
                   </ul>
                 </div>
@@ -499,20 +499,20 @@ export function ComparisonTemplate({
                       ))}
                     </div>
                     {researchNote != null && researchNote !== "" && (
-                      <p className="mt-5 text-xs leading-relaxed text-[#57534E]">{researchNote}</p>
+                      <p className="mt-5 text-xs leading-relaxed text-muted-foreground">{researchNote}</p>
                     )}
                   </div>
                   <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                    <Link href={productA.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    <Link href={productA.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                       See our full {productA.name} review →
                     </Link>
-                    <Link href={productB.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                    <Link href={productB.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                       See our full {productB.name} review →
                     </Link>
                   </div>
                   {heroCallouts != null && heroCallouts.length > 0 && (
                     <div className="mt-6">
-                      <p className="text-[#1A2D48] text-sm font-semibold mb-3">Comparison summary</p>
+                      <p className="text-brand text-sm font-semibold mb-3">Comparison summary</p>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         {heroCallouts.map((item, i) => {
                           const winnerName = item.winner === "A" ? productA.name : productB.name;
@@ -521,10 +521,10 @@ export function ComparisonTemplate({
                               key={i}
                               className="rounded-lg border border-stone-200/80 bg-white p-4"
                             >
-                              <p className="text-[#57534E] text-xs font-semibold uppercase tracking-wide mb-1">
+                              <p className="text-muted-foreground text-xs font-semibold uppercase tracking-wide mb-1">
                                 {item.label}
                               </p>
-                              <p className="text-[#1A2D48] font-semibold text-sm mb-1">{winnerName}</p>
+                              <p className="text-brand font-semibold text-sm mb-1">{winnerName}</p>
                               <p className="text-neutral-700 text-sm leading-relaxed">{item.reason}</p>
                             </div>
                           );
@@ -552,13 +552,13 @@ export function ComparisonTemplate({
                     <div className="grid gap-6 sm:grid-cols-2">
                       {decisionGuideA != null && decisionGuideA.length > 0 && (
                         <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">
+                          <h3 className="text-brand text-lg font-semibold mb-3">
                             {decisionGuideAHeading ?? `Choose ${productA.name} if:`}
                           </h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideA.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                                <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                                 {item}
                               </li>
                             ))}
@@ -567,13 +567,13 @@ export function ComparisonTemplate({
                       )}
                       {decisionGuideB != null && decisionGuideB.length > 0 && (
                         <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                          <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">
+                          <h3 className="text-brand text-lg font-semibold mb-3">
                             {decisionGuideBHeading ?? `Choose ${productB.name} if:`}
                           </h3>
                           <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                             {decisionGuideB.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                                <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                                 {item}
                               </li>
                             ))}
@@ -583,11 +583,11 @@ export function ComparisonTemplate({
                     </div>
                     {decisionGuideNeither != null && decisionGuideNeither.length > 0 && (
                       <div className="mt-6 rounded-lg border border-stone-200/80 bg-white p-6">
-                        <h3 className="text-[#1A2D48] text-lg font-semibold mb-3">Consider neither if:</h3>
+                        <h3 className="text-brand text-lg font-semibold mb-3">Consider neither if:</h3>
                         <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                           {decisionGuideNeither.map((item, i) => (
                             <li key={i} className="flex items-start gap-2">
-                              <span className="text-[#1A2D48] shrink-0 mt-0.5" aria-hidden>•</span>
+                              <span className="text-brand shrink-0 mt-0.5" aria-hidden>•</span>
                               {item}
                             </li>
                           ))}
@@ -605,17 +605,17 @@ export function ComparisonTemplate({
                       <table className="w-full min-w-[320px] text-sm">
                         <thead>
                           <tr className="border-b border-slate-200 bg-slate-50">
-                            <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">Category</th>
-                            <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productA.name}</th>
-                            <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productB.name}</th>
+                            <th className="text-left py-3 px-4 font-semibold text-brand align-middle">Category</th>
+                            <th className="text-left py-3 px-4 font-semibold text-brand align-middle">{productA.name}</th>
+                            <th className="text-left py-3 px-4 font-semibold text-brand align-middle">{productB.name}</th>
                           </tr>
                         </thead>
                         <tbody>
                           {ratingsComparison.map((row, i) => (
                             <tr key={i} className="border-b border-slate-100 last:border-b-0 transition-colors hover:bg-slate-50/80">
-                              <td className="py-3 px-4 font-medium text-[#1A2D48] align-middle">{row.category}</td>
-                              <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-[#10B981] font-semibold">{row.productA}</span></td>
-                              <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-[#10B981] font-semibold">{row.productB}</span></td>
+                              <td className="py-3 px-4 font-medium text-brand align-middle">{row.category}</td>
+                              <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-brand font-semibold">{row.productA}</span></td>
+                              <td className="py-3 px-4 text-neutral-700 align-middle"><span className="text-brand font-semibold">{row.productB}</span></td>
                             </tr>
                           ))}
                         </tbody>
@@ -628,9 +628,9 @@ export function ComparisonTemplate({
                 <section id="feature-comparison" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub={featureComparisonSub ?? "Side-by-side feature check."}>Feature comparison</SectionTitle>
                   {!hideFeatureSupportLegend && (
-                  <p className="mb-4 text-xs text-[#57534E]">
+                  <p className="mb-4 text-xs text-muted-foreground">
                     <span className="inline-flex items-center gap-1.5 mr-4">
-                      <span className="text-[#10B981]" aria-hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="inline-block"><polyline points="20 6 9 17 4 12" /></svg></span>
+                      <span className="text-indigo" aria-hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="inline-block"><polyline points="20 6 9 17 4 12" /></svg></span>
                       Supported
                     </span>
                     <span className="inline-flex items-center gap-1.5 mr-4">
@@ -647,15 +647,15 @@ export function ComparisonTemplate({
                     <table className="w-full min-w-[480px] text-sm">
                       <thead>
                         <tr className="border-b border-slate-200 bg-slate-50">
-                          <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] w-[40%] align-middle">{featureComparisonColumnLabel ?? "Feature"}</th>
-                          <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productA.name}</th>
-                          <th className="text-left py-3 px-4 font-semibold text-[#1A2D48] align-middle">{productB.name}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-brand w-[40%] align-middle">{featureComparisonColumnLabel ?? "Feature"}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-brand align-middle">{productA.name}</th>
+                          <th className="text-left py-3 px-4 font-semibold text-brand align-middle">{productB.name}</th>
                         </tr>
                       </thead>
                       <tbody>
                         {featureComparison.map((row, i) => (
                           <tr key={i} className="border-b border-slate-100 last:border-b-0 transition-colors hover:bg-slate-50/80">
-                            <td className="py-3 px-4 font-medium text-[#1A2D48] align-middle">{row.feature}</td>
+                            <td className="py-3 px-4 font-medium text-brand align-middle">{row.feature}</td>
                             <FeatureCell
                               support={row.supportA}
                               text={row.productA}
@@ -695,7 +695,7 @@ export function ComparisonTemplate({
                     </div>
                     {roiGuidance.example != null && (
                       <div className="mt-6 rounded-lg border border-stone-200/80 bg-slate-50 p-6">
-                        <h3 className="text-[#1A2D48] text-lg font-semibold mb-2">{roiGuidance.example.heading}</h3>
+                        <h3 className="text-brand text-lg font-semibold mb-2">{roiGuidance.example.heading}</h3>
                         <p className="text-[15px] leading-relaxed text-neutral-700">{roiGuidance.example.body}</p>
                       </div>
                     )}
@@ -707,25 +707,25 @@ export function ComparisonTemplate({
                   <SectionTitle sub="Strengths and trade-offs.">Pros and cons</SectionTitle>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                      <h3 className="text-[#1A2D48] text-lg font-semibold">{productA.name}</h3>
+                      <h3 className="text-brand text-lg font-semibold">{productA.name}</h3>
                       <div className="mt-3 grid gap-4">
                         <div>
-                          <p className="text-[#1A2D48] text-xs font-semibold uppercase tracking-wide mb-1">Pros</p>
+                          <p className="text-brand text-xs font-semibold uppercase tracking-wide mb-1">Pros</p>
                           <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
                             {prosConsA.pros.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                                <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                                 {item}
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <p className="text-[#1A2D48] text-xs font-semibold uppercase tracking-wide mb-1">Cons</p>
+                          <p className="text-brand text-xs font-semibold uppercase tracking-wide mb-1">Cons</p>
                           <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
                             {prosConsA.cons.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#1A2D48] shrink-0 mt-0.5" aria-hidden>•</span>
+                                <span className="text-brand shrink-0 mt-0.5" aria-hidden>•</span>
                                 {item}
                               </li>
                             ))}
@@ -734,25 +734,25 @@ export function ComparisonTemplate({
                       </div>
                     </div>
                     <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                      <h3 className="text-[#1A2D48] text-lg font-semibold">{productB.name}</h3>
+                      <h3 className="text-brand text-lg font-semibold">{productB.name}</h3>
                       <div className="mt-3 grid gap-4">
                         <div>
-                          <p className="text-[#1A2D48] text-xs font-semibold uppercase tracking-wide mb-1">Pros</p>
+                          <p className="text-brand text-xs font-semibold uppercase tracking-wide mb-1">Pros</p>
                           <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
                             {prosConsB.pros.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                                <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                                 {item}
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <p className="text-[#1A2D48] text-xs font-semibold uppercase tracking-wide mb-1">Cons</p>
+                          <p className="text-brand text-xs font-semibold uppercase tracking-wide mb-1">Cons</p>
                           <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
                             {prosConsB.cons.map((item, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <span className="text-[#1A2D48] shrink-0 mt-0.5" aria-hidden>•</span>
+                                <span className="text-brand shrink-0 mt-0.5" aria-hidden>•</span>
                                 {item}
                               </li>
                             ))}
@@ -769,7 +769,7 @@ export function ComparisonTemplate({
                   <div className="space-y-6">
                     {bestFor.map((item, i) => (
                       <div key={i}>
-                        <h3 className="text-[#1A2D48] font-semibold mb-2">{item.heading}</h3>
+                        <h3 className="text-brand font-semibold mb-2">{item.heading}</h3>
                         <p className="text-[15px] leading-relaxed text-neutral-700">{item.body}</p>
                       </div>
                     ))}
@@ -784,26 +784,26 @@ export function ComparisonTemplate({
                       <Link
                         key={alt.href}
                         href={alt.href}
-                        className="flex flex-col rounded-lg border border-stone-200/80 bg-white p-5 shadow-sm hover:border-[#10B981]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                        className="flex flex-col rounded-lg border border-stone-200/80 bg-white p-5 shadow-sm hover:border-indigo/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                       >
                         {alt.logoSrc != null && alt.logoSrc !== "" && (
                           <img src={alt.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain mb-3" />
                         )}
-                        <span className="text-[#1A2D48] font-semibold">{alt.name}</span>
+                        <span className="text-brand font-semibold">{alt.name}</span>
                         {alt.description != null && alt.description !== "" && (
                           <p className="mt-1 text-sm text-neutral-700 leading-relaxed flex-1">{alt.description}</p>
                         )}
-                        <span className="mt-2 text-sm font-medium text-[#10B981]">Read review →</span>
+                        <span className="mt-2 text-sm font-medium text-indigo">Read review →</span>
                       </Link>
                     ))}
                   </div>
                   {moreComparisons != null && moreComparisons.length > 0 && (
                     <div className="mt-8 pt-6 border-t border-neutral-200/60">
-                      <p className="text-[#1A2D48] font-semibold mb-3">More comparisons</p>
+                      <p className="text-brand font-semibold mb-3">More comparisons</p>
                       <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                         {moreComparisons.map((c) => (
                           <li key={c.href}>
-                            <Link href={c.href} className="text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                            <Link href={c.href} className="text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                               {c.label}
                             </Link>
                           </li>
@@ -821,12 +821,12 @@ export function ComparisonTemplate({
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <Link href={productA.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href={productA.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Full {productA.name} review →
                       </Link>
                     </li>
                     <li>
-                      <Link href={productB.reviewHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                      <Link href={productB.reviewHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                         Full {productB.name} review →
                       </Link>
                     </li>
@@ -842,24 +842,24 @@ export function ComparisonTemplate({
                       <SectionTitle sub="Find the right fit by use case or trade.">{guideSection.sectionTitle}</SectionTitle>
                       <ul className="space-y-2 text-sm text-neutral-700 leading-relaxed">
                         <li>
-                          <Link href={guideSection.roundupHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                          <Link href={guideSection.roundupHref} className="font-semibold text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                             {guideSection.roundupLabel}
                           </Link>
                         </li>
                         <li>
-                          <Link href={compareHubHref} className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                          <Link href={compareHubHref} className="font-semibold text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                             Compare {categoryLabel.toLowerCase()} software
                           </Link>
                         </li>
                         <li>
-                          <Link href={guidesHref} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                          <Link href={guidesHref} className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                             {guideSection.guidesLabel}
                           </Link>
                         </li>
                         {relevantTradeLinks != null && relevantTradeLinks.length > 0
                           ? relevantTradeLinks.map((link) => (
                               <li key={link.href}>
-                                <Link href={link.href} className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                <Link href={link.href} className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                   {link.label}
                                 </Link>
                               </li>
@@ -867,32 +867,32 @@ export function ComparisonTemplate({
                           : categoryHref === "/payroll" && (
                               <>
                                 <li>
-                                  <Link href="/payroll/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/contractors" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for contractors
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/payroll/best-for/construction" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/construction" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for construction
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/payroll/best-for/hvac" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/hvac" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for HVAC
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/payroll/best-for/plumbing" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/plumbing" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for plumbing
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/payroll/best-for/landscaping" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/landscaping" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for landscaping
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/payroll/best-for/electricians" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                                  <Link href="/payroll/best-for/electricians" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                     Best for electricians
                                   </Link>
                                 </li>
@@ -901,17 +901,17 @@ export function ComparisonTemplate({
                         {categoryHref === "/accounting" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
-                              <Link href="/accounting/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/accounting/best-for/freelancers" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for freelancers
                               </Link>
                             </li>
                             <li>
-                              <Link href="/accounting/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/accounting/best-for/small-business" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for small business
                               </Link>
                             </li>
                             <li>
-                              <Link href="/accounting/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/accounting/best-for/contractors" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for contractors
                               </Link>
                             </li>
@@ -920,27 +920,27 @@ export function ComparisonTemplate({
                         {categoryHref === "/invoicing" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
-                              <Link href="/invoicing/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/invoicing/best-for/freelancers" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for freelancers
                               </Link>
                             </li>
                             <li>
-                              <Link href="/invoicing/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/invoicing/best-for/small-business" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for small business
                               </Link>
                             </li>
                             <li>
-                              <Link href="/invoicing/best-for/agencies" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/invoicing/best-for/agencies" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for agencies
                               </Link>
                             </li>
                             <li>
-                              <Link href="/invoicing/best-for/contractors" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/invoicing/best-for/contractors" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for contractors
                               </Link>
                             </li>
                             <li>
-                              <Link href="/invoicing/best-for/consultants" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/invoicing/best-for/consultants" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for consultants
                               </Link>
                             </li>
@@ -951,7 +951,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/lead-generation/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best lead generation for contractors
                               </Link>
@@ -959,7 +959,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/lead-generation/best-for/hvac"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best for HVAC
                               </Link>
@@ -967,7 +967,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/lead-generation/best-for/plumbing"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best for plumbing
                               </Link>
@@ -975,7 +975,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/lead-generation/best-for/home-services"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best for home services
                               </Link>
@@ -985,34 +985,34 @@ export function ComparisonTemplate({
                         {categoryHref === "/crm" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
-                              <Link href="/crm/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/crm/best-for/freelancers" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for freelancers
                               </Link>
                             </li>
                             <li>
-                              <Link href="/crm/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/crm/best-for/small-business" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for small business
                               </Link>
                             </li>
                             <li>
-                              <Link href="/crm/best-for/startups" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/crm/best-for/startups" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for startups
                               </Link>
                             </li>
                             <li>
-                              <Link href="/crm/best-for/agencies" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/crm/best-for/agencies" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for agencies
                               </Link>
                             </li>
                             <li>
-                              <Link href="/crm/best-for/sales-teams" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/crm/best-for/sales-teams" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for sales teams
                               </Link>
                             </li>
                             <li>
                               <Link
                                 href="/lead-generation/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Lead generation tools for contractors
                               </Link>
@@ -1024,7 +1024,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/website-builders/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best website builders for contractors
                               </Link>
@@ -1032,7 +1032,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/website-builders/best-for/small-business"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best website builders for small business
                               </Link>
@@ -1040,7 +1040,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/website-builders/best-for/home-services"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best website builders for home services
                               </Link>
@@ -1052,7 +1052,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/seo-tools/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best SEO tools for contractors
                               </Link>
@@ -1060,7 +1060,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/seo-tools/best-for/local-seo"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best SEO tools for local SEO
                               </Link>
@@ -1068,7 +1068,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/seo-tools/best-for/small-business"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best SEO tools for small business
                               </Link>
@@ -1076,7 +1076,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/seo-tools/best-for/hvac"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best SEO tools for HVAC
                               </Link>
@@ -1088,7 +1088,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/call-tracking/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best call tracking for contractors
                               </Link>
@@ -1096,7 +1096,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/call-tracking/best-for/small-business"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best call tracking for small business
                               </Link>
@@ -1104,7 +1104,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/call-tracking/best-for/home-services"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best call tracking for home services
                               </Link>
@@ -1112,7 +1112,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/call-tracking/best-for/hvac"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best call tracking for HVAC
                               </Link>
@@ -1124,7 +1124,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/payment-processing/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best payment processing for contractors
                               </Link>
@@ -1132,7 +1132,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/payment-processing/best-for/small-business"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best payment processing for small business
                               </Link>
@@ -1140,7 +1140,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/payment-processing/best-for/home-services"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best payment processing for home services
                               </Link>
@@ -1148,7 +1148,7 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/payment-processing/best-for/hvac"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best payment processing for HVAC
                               </Link>
@@ -1160,25 +1160,25 @@ export function ComparisonTemplate({
                             <li>
                               <Link
                                 href="/field-service/best-for/contractors"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best field service software for contractors
                               </Link>
                             </li>
                             <li>
-                              <Link href="/field-service/best-for/hvac" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/field-service/best-for/hvac" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for HVAC
                               </Link>
                             </li>
                             <li>
-                              <Link href="/field-service/best-for/plumbing" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/field-service/best-for/plumbing" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for plumbing
                               </Link>
                             </li>
                             <li>
                               <Link
                                 href="/field-service/best-for/electricians"
-                                className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                                className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                               >
                                 Best for electricians
                               </Link>
@@ -1188,17 +1188,17 @@ export function ComparisonTemplate({
                         {categoryHref === "/hr" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
-                              <Link href="/hr/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/hr/best-for/small-business" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best HR software for small business
                               </Link>
                             </li>
                             <li>
-                              <Link href="/hr/best-for/freelancers" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/hr/best-for/freelancers" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for freelancers
                               </Link>
                             </li>
                             <li>
-                              <Link href="/hr/best-for/startups" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/hr/best-for/startups" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for startups
                               </Link>
                             </li>
@@ -1207,17 +1207,17 @@ export function ComparisonTemplate({
                         {categoryHref === "/inventory" && (relevantTradeLinks == null || relevantTradeLinks.length === 0) && (
                           <>
                             <li>
-                              <Link href="/inventory/best-for/small-business" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/inventory/best-for/small-business" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best inventory software for small business
                               </Link>
                             </li>
                             <li>
-                              <Link href="/inventory/best-for/ecommerce" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/inventory/best-for/ecommerce" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for ecommerce
                               </Link>
                             </li>
                             <li>
-                              <Link href="/inventory/best-for/retail" className="text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                              <Link href="/inventory/best-for/retail" className="text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                                 Best for retail
                               </Link>
                             </li>
@@ -1262,16 +1262,16 @@ export function ComparisonTemplate({
                   <div className="space-y-2 mb-4">
                     {productA.rating != null && productA.rating !== "" && (
                       <p className="text-sm align-middle">
-                        <span className="text-[#57534E] text-xs">{productA.name}:</span>{" "}
-                        <span className="text-[#10B981] font-semibold">{productA.rating}</span>
-                        <span className="text-[#57534E] text-xs ml-1">rating</span>
+                        <span className="text-muted-foreground text-xs">{productA.name}:</span>{" "}
+                        <span className="text-brand font-semibold">{productA.rating}</span>
+                        <span className="text-muted-foreground text-xs ml-1">rating</span>
                       </p>
                     )}
                     {productB.rating != null && productB.rating !== "" && (
                       <p className="text-sm align-middle">
-                        <span className="text-[#57534E] text-xs">{productB.name}:</span>{" "}
-                        <span className="text-[#10B981] font-semibold">{productB.rating}</span>
-                        <span className="text-[#57534E] text-xs ml-1">rating</span>
+                        <span className="text-muted-foreground text-xs">{productB.name}:</span>{" "}
+                        <span className="text-brand font-semibold">{productB.rating}</span>
+                        <span className="text-muted-foreground text-xs ml-1">rating</span>
                       </p>
                     )}
                   </div>
@@ -1280,7 +1280,7 @@ export function ComparisonTemplate({
                   {sidebarWinners.map((w, i) => (
                     <li key={i} className="text-sm">
                       <span className="text-neutral-500">{w.label}</span>
-                      <span className="ml-1 font-semibold text-[#1A2D48]">
+                      <span className="ml-1 font-semibold text-brand">
                         → {w.winner === "A" ? productA.name : productB.name}
                       </span>
                     </li>
@@ -1300,7 +1300,7 @@ export function ComparisonTemplate({
                     )}
                     <Link
                       href={productA.reviewHref}
-                      className="block text-center text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      className="block text-center text-sm font-medium text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     >
                       View full {productA.name} review →
                     </Link>
@@ -1318,14 +1318,14 @@ export function ComparisonTemplate({
                     )}
                     <Link
                       href={productB.reviewHref}
-                      className="block text-center text-sm font-medium text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                      className="block text-center text-sm font-medium text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                     >
                       View full {productB.name} review →
                     </Link>
                   </div>
                   <Link
                     href={categoryHref}
-                    className="block w-full text-center text-sm font-medium text-[#57534E] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded pt-1"
+                    className="block w-full text-center text-sm font-medium text-muted-foreground hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded pt-1"
                   >
                     ← {categoryLabel} hub
                   </Link>

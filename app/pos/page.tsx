@@ -21,16 +21,16 @@ import {
 import { getPosReviewUrl } from "@/lib/routes";
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 // ——— Shared hub section title (matches other hubs) ———
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub != null && sub.length > 0 && (
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>
       )}
     </div>
   );
@@ -44,7 +44,7 @@ function PosHowToChooseSection() {
       <HubSectionTitle sub="Key factors when evaluating POS systems.">
         How to choose POS software
       </HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         POS software sits at the heart of in-person (and often online) sales. This page is for{" "}
         <Link href="/pos/best-for/retail" className={linkGreen}>
           retail stores
@@ -80,23 +80,23 @@ function PosHowToChooseSection() {
         for how to choose and use tools, and the scenario links below to jump into specific use cases.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Payment processing</strong> — Check whether the POS includes or integrates a payment processor, what rates apply, and if you can use your own processor.
+            <strong className="text-brand">Payment processing</strong> — Check whether the POS includes or integrates a payment processor, what rates apply, and if you can use your own processor.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Inventory and reporting</strong> — Look for item management, stock levels, low-stock alerts, and sales reports so you can run the register and understand performance.
+            <strong className="text-brand">Inventory and reporting</strong> — Look for item management, stock levels, low-stock alerts, and sales reports so you can run the register and understand performance.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Hardware compatibility</strong> — Confirm which terminals, tablets, or peripherals (printers, cash drawers) are supported and whether hardware is included or sold separately.
+            <strong className="text-brand">Hardware compatibility</strong> — Confirm which terminals, tablets, or peripherals (printers, cash drawers) are supported and whether hardware is included or sold separately.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Ecommerce and multi-location</strong> — If you sell online or have multiple locations, ensure the POS syncs inventory and orders across channels and sites.
+            <strong className="text-brand">Ecommerce and multi-location</strong> — If you sell online or have multiple locations, ensure the POS syncs inventory and orders across channels and sites.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Integrations</strong> — Many businesses need the POS to connect to{" "}
+            <strong className="text-brand">Integrations</strong> — Many businesses need the POS to connect to{" "}
             <Link href="/accounting" className={linkGreen}>
               accounting
             </Link>{" "}
@@ -136,7 +136,7 @@ function PosGuidesSection() {
           <Link href="/pos/guides" className={`${linkGreen} font-semibold`}>
             View all POS guides →
           </Link>
-          <span className="mx-2 text-[#57534E]">·</span>
+          <span className="mx-2 text-muted-foreground">·</span>
           Reviews:{" "}
           <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>
             Square
@@ -161,42 +161,42 @@ function PosEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">
           What businesses should look for in POS software
         </h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">
           What matters when businesses choose tools to process sales, accept payments, and support day-to-day operations.
         </p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
-        <div className="lg:col-span-2 space-y-6 text-sm text-[#57534E] leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-sm text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Payment processing integration</h3>
+            <h3 className="text-brand text-lg font-semibold">Payment processing integration</h3>
             <p className="mt-1.5">
               Most POS systems bundle or partner with a payment processor so you can accept cards and other methods at the register. Compare processing rates, contract terms, and whether you can use your own processor if needed.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Inventory management features</h3>
+            <h3 className="text-brand text-lg font-semibold">Inventory management features</h3>
             <p className="mt-1.5">
               Look for item and variant management, stock levels, reorder alerts, and the ability to receive and adjust inventory. Deeper POS systems support purchase orders and multi-location stock sync.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Hardware compatibility</h3>
+            <h3 className="text-brand text-lg font-semibold">Hardware compatibility</h3>
             <p className="mt-1.5">
               Confirm which devices the POS runs on (tablets, terminals, computers) and which peripherals—receipt printers, cash drawers, barcode scanners—are supported. Some providers sell hardware bundles; others are bring-your-own-device.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Sales reporting and analytics</h3>
+            <h3 className="text-brand text-lg font-semibold">Sales reporting and analytics</h3>
             <p className="mt-1.5">
               Useful POS systems offer sales by period, by product or category, and by payment type. Dashboards and exports help you understand trends and reconcile with bank deposits and accounting.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Multi-location management</h3>
+            <h3 className="text-brand text-lg font-semibold">Multi-location management</h3>
             <p className="mt-1.5">
               If you have or plan to have multiple locations, check that the POS supports multi-store inventory, consolidated reporting, and consistent settings across sites. Some tools add location-based permissions and transfer workflows.
             </p>
@@ -204,26 +204,26 @@ function PosEducationSection() {
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Key features checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Key features checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Payment processing (cards, contactless, etc.)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Item and inventory management with stock levels
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Hardware that fits your setup (terminals, tablets, printers)
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Sales reporting and basic analytics
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>✓</span>
+                <span className="text-indigo shrink-0" aria-hidden>✓</span>
                 Multi-location support if you have more than one site
               </li>
             </ul>
@@ -252,7 +252,7 @@ function PosPopularComparisonsSection() {
             <Link
               key={item.slug}
               href={item.href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {item.productA.logoSrc && (
@@ -265,7 +265,7 @@ function PosPopularComparisonsSection() {
                     }}
                   />
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>vs</span>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>vs</span>
                 {item.productB.logoSrc && (
                   <img
                     src={item.productB.logoSrc}
@@ -277,23 +277,23 @@ function PosPopularComparisonsSection() {
                   />
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                 {title}
               </h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                 {summary}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                 Compare →
               </span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link
           href="/pos/compare"
-          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
         >
           View all POS comparisons →
         </Link>

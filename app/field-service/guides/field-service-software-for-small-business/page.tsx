@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl, getFieldServiceCompareUrl } from "@/lib/route
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -71,11 +71,11 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -84,7 +84,7 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -93,7 +93,7 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -106,10 +106,10 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Field Service Software for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Why small service businesses adopt field service management (FSM) tools, what they replace, and how
                     to choose software that fits a small crew without adding unnecessary complexity.
                   </p>
@@ -175,31 +175,31 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                     <p>We hear the same triggers from small contractors again and again:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Missed or double‑booked appointments</strong> — Jobs live
+                          <strong className="text-brand">Missed or double‑booked appointments</strong> — Jobs live
                           in the owner’s head, a paper notebook, and a basic calendar. When that breaks down, crews show
                           up twice or not at all.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Late or missing invoices</strong> — Techs text the office
+                          <strong className="text-brand">Late or missing invoices</strong> — Techs text the office
                           when a job is done, but paperwork piles up. Weeks later, you realize several jobs were never
                           invoiced.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Too many disconnected tools</strong> — One app for
+                          <strong className="text-brand">Too many disconnected tools</strong> — One app for
                           scheduling, another for invoices, another for payments, plus email and text. None of them
                           share a single view of customers or jobs.
                         </span>
@@ -226,11 +226,11 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Scheduling and dispatch</strong> — A drag‑and‑drop
+                          <strong className="text-brand">Scheduling and dispatch</strong> — A drag‑and‑drop
                           calendar or dispatch board that lets you assign jobs, move them when customers reschedule, and
                           see who is free.{" "}
                           <Link href={getFieldServiceReviewUrl("jobber")} className={linkGreen}>
@@ -244,11 +244,11 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Quoting and invoicing</strong> — Build estimates, convert
+                          <strong className="text-brand">Quoting and invoicing</strong> — Build estimates, convert
                           them to jobs, then turn completed work into invoices in a few clicks. Tools like Jobber,
                           Housecall Pro, and{" "}
                           <Link href={getFieldServiceReviewUrl("workiz")} className={linkGreen}>
@@ -258,11 +258,11 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Customer communication</strong> — Appointment reminders,
+                          <strong className="text-brand">Customer communication</strong> — Appointment reminders,
                           on‑the‑way texts, and simple follow‑ups reduce no‑shows and make your business look more
                           professional than manual phone calls alone.
                         </span>
@@ -290,7 +290,7 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                     <p>As a rule of thumb:</p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
@@ -299,7 +299,7 @@ export default function FieldServiceSoftwareForSmallBusinessPage() {
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>

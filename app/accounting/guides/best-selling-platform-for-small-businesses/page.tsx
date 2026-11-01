@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/best-selling-platform-for-small-businesses
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Best-Selling Platforms</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Is the Best Selling Platform for Small Businesses?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Best-selling depends on category—accounting, ecommerce, payments—not one product for every business.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,7 +77,7 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      &quot;Best selling platform&quot; sounds like one answer—QuickBooks? Shopify? Microsoft?—but the question only makes sense <strong className="text-[#1A2D48]">inside a category</strong>. Accounting leaders differ from ecommerce leaders differ from CRM leaders. You are usually looking for a safe default before you read feature comparisons.
+                      &quot;Best selling platform&quot; sounds like one answer—QuickBooks? Shopify? Microsoft?—but the question only makes sense <strong className="text-brand">inside a category</strong>. Accounting leaders differ from ecommerce leaders differ from CRM leaders. You are usually looking for a safe default before you read feature comparisons.
                     </p>
                     <p>
                       Searchers often mean &quot;what do most businesses buy?&quot; There is no single best-selling platform across all functions—compare within category. BeltStack cites market leaders from independent reviews, not paid rankings.
@@ -90,11 +90,11 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
                 <section id="by-category" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Leaders by software type.">Best-Selling by Category</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Accounting</strong> — <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> (US leader); <Link href={getAccountingReviewUrl("xero")} className={linkGreen}>Xero</Link> strong internationally.</p>
-                    <p><strong className="text-[#1A2D48]">Payments / POS</strong> — Square, Stripe (<Link href="/payment-processing" className={linkGreen}>payments</Link>).</p>
-                    <p><strong className="text-[#1A2D48]">Ecommerce</strong> — Shopify (<Link href="/website-builders" className={linkGreen}>website builders</Link>).</p>
-                    <p><strong className="text-[#1A2D48]">CRM</strong> — HubSpot, Salesforce (<Link href="/crm" className={linkGreen}>CRM hub</Link>).</p>
-                    <p><strong className="text-[#1A2D48]">Productivity</strong> — Microsoft 365, Google Workspace (<Link href="/accounting/guides/most-common-types-of-office-software" className={linkGreen}>office software</Link>).</p>
+                    <p><strong className="text-brand">Accounting</strong> — <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> (US leader); <Link href={getAccountingReviewUrl("xero")} className={linkGreen}>Xero</Link> strong internationally.</p>
+                    <p><strong className="text-brand">Payments / POS</strong> — Square, Stripe (<Link href="/payment-processing" className={linkGreen}>payments</Link>).</p>
+                    <p><strong className="text-brand">Ecommerce</strong> — Shopify (<Link href="/website-builders" className={linkGreen}>website builders</Link>).</p>
+                    <p><strong className="text-brand">CRM</strong> — HubSpot, Salesforce (<Link href="/crm" className={linkGreen}>CRM hub</Link>).</p>
+                    <p><strong className="text-brand">Productivity</strong> — Microsoft 365, Google Workspace (<Link href="/accounting/guides/most-common-types-of-office-software" className={linkGreen}>office software</Link>).</p>
                   </div>
                 </section>
                 <section id="when-leaders" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -120,13 +120,13 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
                   <SectionTitle sub="Buying the logo, not the job.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Assuming one brand covers payroll, CRM, and books equally well.</strong> Many are strong in one category with add-ons elsewhere.
+                      <strong className="text-brand">Assuming one brand covers payroll, CRM, and books equally well.</strong> Many are strong in one category with add-ons elsewhere.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Paying for enterprise tiers too early.</strong> Start where your transaction volume actually sits.
+                      <strong className="text-brand">Paying for enterprise tiers too early.</strong> Start where your transaction volume actually sits.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Ignoring regional fit.</strong> Xero share vs QuickBooks varies by country and advisor pool.
+                      <strong className="text-brand">Ignoring regional fit.</strong> Xero share vs QuickBooks varies by country and advisor pool.
                     </p>
                   </div>
                 </section>
@@ -142,12 +142,12 @@ export default function BestSellingPlatformForSmallBusinessesPage() {
                   <SectionTitle sub="Compare within your category.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/examples-of-business-application-software" className={linkGreen}>Examples of business application software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/most-widely-used-business-software-categories" className={linkGreen}>Widely used categories</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/best-crm-software" className={linkGreen}>Best CRM software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/examples-of-business-application-software" className={linkGreen}>Examples of business application software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/most-widely-used-business-software-categories" className={linkGreen}>Widely used categories</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>Is QuickBooks worth it?</Link></span></li>
                     </ul>
                   </div>
                 </section>

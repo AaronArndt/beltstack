@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -59,20 +59,20 @@ export default function FreeVsPaidFieldServiceSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Field Service</Link></li>
+                    <li><Link href="/field-service" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Field Service</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/field-service/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Free vs Paid Field Service Software</li>
                   </ol>
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Free vs Paid Field Service Software</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Free vs Paid Field Service Software</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Compare free and paid field service software: plan limits, true total cost, upgrade triggers, and when paid dispatch and mobile workflows beat spreadsheet workarounds.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -110,19 +110,19 @@ export default function FreeVsPaidFieldServiceSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Owner-operator or solo tech with low same-day change volume.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Simple appointment calendar without a live dispatch board.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Testing digital quotes and invoices before rolling out to a crew.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Seasonal or side-business volume below typical free-tier job caps.</span>
                       </li>
                     </ul>
@@ -145,20 +145,20 @@ export default function FreeVsPaidFieldServiceSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">User and technician caps</strong> — second truck or office admin may require upgrade.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">User and technician caps</strong> — second truck or office admin may require upgrade.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Job or client limits</strong> — busy weeks hit ceilings quickly.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Job or client limits</strong> — busy weeks hit ceilings quickly.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Basic reporting</strong> — no backlog, utilization, or revenue-by-tech views.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Basic reporting</strong> — no backlog, utilization, or revenue-by-tech views.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                        <span><strong className="text-[#1A2D48]">Limited integrations</strong> — accounting, CRM, or payment sync behind paywalls.</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span><strong className="text-brand">Limited integrations</strong> — accounting, CRM, or payment sync behind paywalls.</span>
                       </li>
                     </ul>
                     <p>
@@ -178,19 +178,19 @@ export default function FreeVsPaidFieldServiceSoftwarePage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Same-day emergencies and reassignments are daily, not rare.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Technicians need offline mobile, photos, and signatures on every job.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Recurring maintenance contracts need automated scheduling and reminders.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
                         <span>Finance needs job-level revenue sync without CSV exports.</span>
                       </li>
                     </ul>
@@ -212,16 +212,16 @@ export default function FreeVsPaidFieldServiceSoftwarePage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Baseline your free workflow</strong> — count scheduling conflicts and average days-to-invoice.
+                        <strong className="text-brand">Baseline your free workflow</strong> — count scheduling conflicts and average days-to-invoice.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Trial paid during peak week</strong> — inject a no-show and a same-day emergency.
+                        <strong className="text-brand">Trial paid during peak week</strong> — inject a no-show and a same-day emergency.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Include integration value</strong> — accounting and CRM handoffs reduce double entry.
+                        <strong className="text-brand">Include integration value</strong> — accounting and CRM handoffs reduce double entry.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Plan the upgrade path</strong> — export customers and open jobs before hitting caps.
+                        <strong className="text-brand">Plan the upgrade path</strong> — export customers and open jobs before hitting caps.
                       </li>
                     </ol>
                     <p>

@@ -8,7 +8,7 @@ export type BreadcrumbItem = {
 };
 
 const LINK_CLASS =
-  "text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 const CURRENT_CLASS = "text-gray-700 font-medium";
 
 type BreadcrumbProps = {

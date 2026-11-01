@@ -9,15 +9,15 @@ import { getCrmReviewUrl, getCrmCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -64,21 +64,21 @@ export default function WhatDoesCrmStandForPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">What Does CRM Stand For</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Does CRM Stand For
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     CRM stands for customer relationship management. This guide explains the meaning of the acronym, how businesses use the term in practice, and how it connects to CRM software products you evaluate and buy.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -86,7 +86,7 @@ export default function WhatDoesCrmStandForPage() {
                 <section className="pt-8 pb-8">
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      If you are researching CRM for the first time, the acronym is usually the starting point: <strong className="text-[#1A2D48]">customer relationship management</strong>. The phrase describes a discipline—knowing who your customers and prospects are, what you have discussed, what you promised, and what should happen next—not a single app feature.
+                      If you are researching CRM for the first time, the acronym is usually the starting point: <strong className="text-brand">customer relationship management</strong>. The phrase describes a discipline—knowing who your customers and prospects are, what you have discussed, what you promised, and what should happen next—not a single app feature.
                     </p>
                     <p>
                       In everyday business language, people say &quot;CRM&quot; to mean either that discipline or the software that supports it. Vendors such as <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("salesforce")} className={linkGreen}>Salesforce</Link>, and <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> sell CRM software; your team still owns the relationships. For a full product overview, read <Link href="/crm/guides/what-is-crm-software" className={linkGreen}>what is CRM software</Link>; for mechanics, see <Link href="/crm/guides/how-crm-software-works" className={linkGreen}>how CRM software works</Link>.
@@ -97,9 +97,9 @@ export default function WhatDoesCrmStandForPage() {
                   <SectionTitle sub="Breaking down the acronym.">What Customer Relationship Management Means</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Customer</strong> — Anyone you sell or serve: buyers, accounts, leads, and sometimes partners. CRM systems hold a record for each person or company.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Relationship</strong> — The history of touchpoints: calls, emails, meetings, support issues, and deal progress. Good CRM makes that history visible to the whole team.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Management</strong> — Organizing, prioritizing, and improving those interactions: pipeline stages, tasks, automation, and reporting so revenue work is repeatable.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Customer</strong> — Anyone you sell or serve: buyers, accounts, leads, and sometimes partners. CRM systems hold a record for each person or company.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Relationship</strong> — The history of touchpoints: calls, emails, meetings, support issues, and deal progress. Good CRM makes that history visible to the whole team.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Management</strong> — Organizing, prioritizing, and improving those interactions: pipeline stages, tasks, automation, and reporting so revenue work is repeatable.</span></li>
                     </ul>
                     <p>
                       The goal is not to log data for its own sake. It is to sell and serve more consistently—fewer dropped follow-ups, clearer handoffs, and forecasts leadership can trust. That is why <Link href="/crm/guides/why-businesses-need-crm-software" className={linkGreen}>businesses adopt CRM software</Link> as volume and team size grow.
@@ -122,9 +122,9 @@ export default function WhatDoesCrmStandForPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>CRM is often confused with adjacent systems. Quick distinctions:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">ERP</strong> — Enterprise resource planning; finance, inventory, and operations. See <Link href="/crm/guides/crm-vs-erp" className={linkGreen}>CRM vs ERP</Link>.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Marketing automation</strong> — Campaigns and nurturing; often paired with CRM. See <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Helpdesk / support software</strong> — Post-sale tickets and SLAs. See <Link href="/crm/guides/crm-vs-helpdesk-software" className={linkGreen}>CRM vs helpdesk software</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">ERP</strong> — Enterprise resource planning; finance, inventory, and operations. See <Link href="/crm/guides/crm-vs-erp" className={linkGreen}>CRM vs ERP</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Marketing automation</strong> — Campaigns and nurturing; often paired with CRM. See <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Helpdesk / support software</strong> — Post-sale tickets and SLAs. See <Link href="/crm/guides/crm-vs-helpdesk-software" className={linkGreen}>CRM vs helpdesk software</Link>.</span></li>
                     </ul>
                   </div>
                 </section>

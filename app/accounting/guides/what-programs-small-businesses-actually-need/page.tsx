@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/what-programs-small-businesses-actually-ne
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Programs SMBs Need</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Programs Small Businesses Actually Need
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     A practical starter stack—and what to postpone until revenue, headcount, or complexity justify another subscription.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,10 +77,10 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      This question usually comes from overwhelmed owners staring at a dozen free trials—or from someone starting a company who wants a <strong className="text-[#1A2D48]">minimum viable stack</strong>, not an enterprise catalog. The goal is to cover legal and financial basics without subscribing to every category on a comparison site.
+                      This question usually comes from overwhelmed owners staring at a dozen free trials—or from someone starting a company who wants a <strong className="text-brand">minimum viable stack</strong>, not an enterprise catalog. The goal is to cover legal and financial basics without subscribing to every category on a comparison site.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Most small businesses need fewer programs than software vendors suggest.</strong> Start with money and customers; add operations tools when pain is daily, not hypothetical.
+                      <strong className="text-brand">Most small businesses need fewer programs than software vendors suggest.</strong> Start with money and customers; add operations tools when pain is daily, not hypothetical.
                     </p>
                     <p>
                       Contrast with popularity lists: <Link href="/accounting/guides/what-software-is-most-commonly-used-by-small-businesses" className={linkGreen}>most commonly used software</Link> and <Link href="/accounting/guides/what-software-is-good-for-small-businesses" className={linkGreen}>what software is good</Link> for fit—not just market share.
@@ -91,9 +91,9 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
                   <SectionTitle sub="Buy these first.">Starter Stack</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Business bank + <Link href={getAccountingReviewUrl("wave")} className={linkGreen}>Wave</Link> or <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Google Workspace or Microsoft 365</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Payment processor (<Link href="/payment-processing" className={linkGreen}>payments hub</Link>)</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Business bank + <Link href={getAccountingReviewUrl("wave")} className={linkGreen}>Wave</Link> or <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Google Workspace or Microsoft 365</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Payment processor (<Link href="/payment-processing" className={linkGreen}>payments hub</Link>)</span></li>
                     </ul>
                   </div>
                 </section>
@@ -107,16 +107,16 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
                   <SectionTitle sub="Buy when the pain is recurring.">Triggers for Each Next Program</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">CRM:</strong> when you lose track of who to call back or duplicate contacts across email and texts. Start with <Link href="/crm/best-crm-software" className={linkGreen}>best CRM</Link> shortlists.
+                      <strong className="text-brand">CRM:</strong> when you lose track of who to call back or duplicate contacts across email and texts. Start with <Link href="/crm/best-crm-software" className={linkGreen}>best CRM</Link> shortlists.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Payroll:</strong> first W-2 hire—not paying yourself as owner-draw only. See <Link href="/payroll" className={linkGreen}>payroll hub</Link>; do not use personal finance apps for tax withholding.
+                      <strong className="text-brand">Payroll:</strong> first W-2 hire—not paying yourself as owner-draw only. See <Link href="/payroll" className={linkGreen}>payroll hub</Link>; do not use personal finance apps for tax withholding.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Scheduling / field service:</strong> when double-bookings or missed routes cost you money weekly. Hubs: <Link href="/scheduling" className={linkGreen}>scheduling</Link>, <Link href="/field-service" className={linkGreen}>field service</Link>.
+                      <strong className="text-brand">Scheduling / field service:</strong> when double-bookings or missed routes cost you money weekly. Hubs: <Link href="/scheduling" className={linkGreen}>scheduling</Link>, <Link href="/field-service" className={linkGreen}>field service</Link>.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Helpdesk:</strong> when support tickets live in personal inboxes and SLAs matter. See <Link href="/helpdesk" className={linkGreen}>helpdesk</Link>.
+                      <strong className="text-brand">Helpdesk:</strong> when support tickets live in personal inboxes and SLAs matter. See <Link href="/helpdesk" className={linkGreen}>helpdesk</Link>.
                     </p>
                   </div>
                 </section>
@@ -132,13 +132,13 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
                   <SectionTitle sub="Subscription traps to avoid.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Annual contracts before a 30-day trial on real data.</strong>
+                      <strong className="text-brand">Annual contracts before a 30-day trial on real data.</strong>
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Duplicate billing (invoicing in two places).</strong> Pick one AR path into accounting.
+                      <strong className="text-brand">Duplicate billing (invoicing in two places).</strong> Pick one AR path into accounting.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Ignoring your accountant&apos;s stack.</strong> Their familiarity with QuickBooks or Xero often saves fees—see <Link href="/accounting/guides/how-small-businesses-maintain-their-accounts" className={linkGreen}>maintaining accounts</Link>.
+                      <strong className="text-brand">Ignoring your accountant&apos;s stack.</strong> Their familiarity with QuickBooks or Xero often saves fees—see <Link href="/accounting/guides/how-small-businesses-maintain-their-accounts" className={linkGreen}>maintaining accounts</Link>.
                     </p>
                   </div>
                 </section>
@@ -154,12 +154,12 @@ export default function WhatProgramsSmallBusinessesActuallyNeedPage() {
                   <SectionTitle sub="Starter stack and beyond.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-is-business-software" className={linkGreen}>What is business software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/invoicing" className={linkGreen}>Invoicing hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-technology-most-small-businesses-use" className={linkGreen}>Technology most SMBs use</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/guides/how-small-businesses-track-everything-in-one-place" className={linkGreen}>Track everything in one place</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-is-business-software" className={linkGreen}>What is business software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/invoicing" className={linkGreen}>Invoicing hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payment-processing" className={linkGreen}>Payment processing</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-technology-most-small-businesses-use" className={linkGreen}>Technology most SMBs use</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/crm/guides/how-small-businesses-track-everything-in-one-place" className={linkGreen}>Track everything in one place</Link></span></li>
                     </ul>
                   </div>
                 </section>

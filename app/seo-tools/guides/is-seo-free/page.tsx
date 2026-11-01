@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function IsSeoFreePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function IsSeoFreePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is SEO Free?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Is SEO Free?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Organic search does not charge per click—but SEO is rarely free in total cost. This guide separates Google&apos;s free surfaces from labor and optional software. For hands-on steps, see{" "}
                 <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
                   how to optimize SEO for free
@@ -115,8 +115,8 @@ export default function IsSeoFreePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="what-free-means" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What &quot;free&quot; actually means in SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What &quot;free&quot; actually means in SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google does not sell organic rankings. You cannot pay the search engine for the top blue link the way you fund Google Ads. That is what people mean when they say SEO is free: no placement auction for standard organic results.
                 </p>
@@ -126,21 +126,21 @@ export default function IsSeoFreePage() {
               </section>
 
               <section id="google-free" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What Google gives you at no charge</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What Google gives you at no charge</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Inclusion in Search and Maps</strong> — No listing fee for organic surfaces (ads are separate).
+                    <strong className="text-brand">Inclusion in Search and Maps</strong> — No listing fee for organic surfaces (ads are separate).
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — Performance, indexing, and enhancement data for sites you verify. See our{" "}
+                    <strong className="text-brand">Search Console</strong> — Performance, indexing, and enhancement data for sites you verify. See our{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console review
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Business Profile</strong> — Maps presence, Q&A, photos, and insights on customer actions.
+                    <strong className="text-brand">Business Profile</strong> — Maps presence, Q&A, photos, and insights on customer actions.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -153,14 +153,14 @@ export default function IsSeoFreePage() {
               </section>
 
               <section id="hidden-costs" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The costs people forget</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The costs people forget</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Labor</strong> — Research, writing, GBP updates, review requests, and fixing Search Console issues.
+                    <strong className="text-brand">Labor</strong> — Research, writing, GBP updates, review requests, and fixing Search Console issues.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Software</strong> — Optional but common:{" "}
+                    <strong className="text-brand">Software</strong> — Optional but common:{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>
@@ -175,10 +175,10 @@ export default function IsSeoFreePage() {
                     if you add one suite.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Production</strong> — Photography, video, web dev, and copy—often outsourced even when tools stay free.
+                    <strong className="text-brand">Production</strong> — Photography, video, web dev, and copy—often outsourced even when tools stay free.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Agency retainers</strong> — Full programs when internal capacity runs out. See{" "}
+                    <strong className="text-brand">Agency retainers</strong> — Full programs when internal capacity runs out. See{" "}
                     <Link href="/seo-tools/guides/how-much-businesses-spend-on-seo" className={link}>
                       how much businesses spend on SEO
                     </Link>{" "}
@@ -188,8 +188,8 @@ export default function IsSeoFreePage() {
               </section>
 
               <section id="seo-vs-ads" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">SEO vs paid search: different cost curves</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">SEO vs paid search: different cost curves</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google Ads bills while campaigns run—stop paying and traffic stops immediately. SEO compounds more slowly but can keep producing leads from pages and listings you maintain. Neither is truly &quot;set and forget.&quot; Ads optimize budgets; SEO optimizes assets.
                 </p>
@@ -199,8 +199,8 @@ export default function IsSeoFreePage() {
               </section>
 
               <section id="practical-path" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A practical path from free to paid</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A practical path from free to paid</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Phase one: maximize Google&apos;s free stack—details in{" "}
                   <Link href="/seo-tools/guides/can-you-do-seo-without-paying" className={link}>
@@ -224,8 +224,8 @@ export default function IsSeoFreePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

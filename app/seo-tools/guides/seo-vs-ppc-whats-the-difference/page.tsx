@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                     <li aria-hidden>/</li>
                     <li><Link href="/seo-tools" className="text-gray-500 hover:text-gray-900">SEO Tools</Link></li>
@@ -84,10 +84,10 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     SEO vs PPC: What&apos;s the Difference?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     How organic SEO and pay-per-click differ on cost, speed, control, and measurement—and when service businesses run both instead of treating them as interchangeable.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -95,8 +95,8 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
 
                 <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
                   <section id="overview" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">SEO and PPC answer different questions</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">SEO and PPC answer different questions</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       SEO is the discipline of earning visibility in unpaid search results and local surfaces like Google Maps. PPC is buying sponsored placement—typically through Google Ads—where you pay per click or impression. Customers see both on the same page; your job is to decide how much to invest in each based on capacity, margin, and how fast you need leads.
                     </p>
@@ -114,19 +114,19 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                   </section>
 
                   <section id="comparison" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Side-by-side comparison</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Side-by-side comparison</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <ul className="mt-4 list-disc space-y-2 pl-5">
-                      <li><strong className="text-[#1A2D48]">Speed</strong> — PPC can generate calls within days; SEO often needs weeks for GBP fixes and months for competitive keywords.</li>
-                      <li><strong className="text-[#1A2D48]">Cost structure</strong> — PPC has direct media cost; SEO has labor, content, listings, and optional tools.</li>
-                      <li><strong className="text-[#1A2D48]">Control</strong> — PPC offers budget caps and pause buttons; SEO offers compounding visibility you maintain rather than rent.</li>
-                      <li><strong className="text-[#1A2D48]">Measurement</strong> — Ads platform for PPC; Search Console and CRM tagging for SEO.</li>
+                      <li><strong className="text-brand">Speed</strong> — PPC can generate calls within days; SEO often needs weeks for GBP fixes and months for competitive keywords.</li>
+                      <li><strong className="text-brand">Cost structure</strong> — PPC has direct media cost; SEO has labor, content, listings, and optional tools.</li>
+                      <li><strong className="text-brand">Control</strong> — PPC offers budget caps and pause buttons; SEO offers compounding visibility you maintain rather than rent.</li>
+                      <li><strong className="text-brand">Measurement</strong> — Ads platform for PPC; Search Console and CRM tagging for SEO.</li>
                     </ul>
                   </section>
 
                   <section id="local" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Local businesses: Maps, SEO, and Local Services Ads</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Local businesses: Maps, SEO, and Local Services Ads</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Local intent often splits three ways: Map Pack (organic local SEO), sponsored local services ads, and standard search ads pointing to landing pages. Organic local work—GBP, citations, reviews, service pages—is covered in{" "}
                       <Link href="/seo-tools/guides/how-seo-helps-local-businesses" className={link}>
@@ -143,8 +143,8 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                   </section>
 
                   <section id="tools" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Where SEO software fits (and does not)</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Where SEO software fits (and does not)</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Research suites—{" "}
                       <Link href={getSeoToolsReviewUrl("semrush")} className={link}>Semrush</Link>,{" "}
@@ -156,8 +156,8 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                   </section>
 
                   <section id="blend" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">Blending SEO and PPC without double-counting wins</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">Blending SEO and PPC without double-counting wins</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Use PPC to test offers and fill slow weeks; use SEO to build durable Map Pack and organic presence. Tag every lead in{" "}
                       <Link href="/crm" className={link}>CRM</Link>{" "}
@@ -170,8 +170,8 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                   </section>
 
                   <section id="when-choose" className="scroll-mt-section">
-                    <h2 className="text-[#1A2D48] text-xl font-bold">When to lean SEO, PPC, or both</h2>
-                    <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                    <h2 className="text-brand text-xl font-bold">When to lean SEO, PPC, or both</h2>
+                    <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                     <p>
                       Lean PPC when you need volume immediately and unit economics work at current CPCs. Lean SEO when you can invest three to six months and want margin without perpetual auction pressure. Run both when you have crew capacity and can measure booked jobs from each channel honestly.
                     </p>
@@ -179,8 +179,8 @@ export default function SeoVsPpcWhatsTheDifferencePage() {
                 </div>
 
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-                  <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-                  <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                  <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+                  <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
                   <GuideFaqSection faqs={FAQ} />
                 </section>
               </div>

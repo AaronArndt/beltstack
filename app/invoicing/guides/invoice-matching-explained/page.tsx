@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -65,19 +65,19 @@ export default function InvoiceMatchingExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Invoice Matching Explained</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Invoice Matching Explained</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Invoice Matching Explained</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn what invoice matching is, how 2-way and 3-way matching work, and why AP teams use matching to prevent overpayments, duplicates, and fraud before cash goes out the door.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -126,10 +126,10 @@ export default function InvoiceMatchingExplainedPage() {
                   <SectionTitle sub="Common matching models by control level.">2-Way vs 3-Way Matching</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Two-way matching</strong> compares the vendor invoice to a purchase order or approved contract. It confirms you agreed to the price and quantity being billed. Service businesses, agencies, and vendors without formal receiving often use two-way matching because there is no physical receipt to verify.
+                      <strong className="text-brand">Two-way matching</strong> compares the vendor invoice to a purchase order or approved contract. It confirms you agreed to the price and quantity being billed. Service businesses, agencies, and vendors without formal receiving often use two-way matching because there is no physical receipt to verify.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Three-way matching</strong> adds a receiving report, packing slip, or delivery confirmation. AP checks that what was billed matches what was ordered and what actually arrived. Businesses with inventory, materials, or warehouse operations typically require three-way matching to avoid paying for short shipments or items still in transit.
+                      <strong className="text-brand">Three-way matching</strong> adds a receiving report, packing slip, or delivery confirmation. AP checks that what was billed matches what was ordered and what actually arrived. Businesses with inventory, materials, or warehouse operations typically require three-way matching to avoid paying for short shipments or items still in transit.
                     </p>
                     <p>
                       Some organizations use four-way matching when inspection or quality acceptance is required before payment—common in construction, manufacturing, and regulated procurement. The fourth document is an inspection sign-off in addition to PO, receipt, and invoice.
@@ -147,10 +147,10 @@ export default function InvoiceMatchingExplainedPage() {
                       Matching is one of the highest-return AP controls because it prevents errors at the point of payment rather than after cash has left. Recovery from duplicate or incorrect vendor payments is slow, relationship-sensitive, and sometimes impossible.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reduces duplicate and incorrect payments before disbursement.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Improves audit readiness with a documented approval trail.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Supports cleaner month-end close and more accurate cash forecasting.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Strengthens vendor accountability on pricing and fulfillment.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reduces duplicate and incorrect payments before disbursement.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Improves audit readiness with a documented approval trail.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Supports cleaner month-end close and more accurate cash forecasting.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Strengthens vendor accountability on pricing and fulfillment.</span></li>
                     </ul>
                     <p>
                       Finance leaders also use matching data to spot recurring vendor issues—systematic overbilling, late deliveries billed at full PO quantity, or POs created after the fact to justify invoices. Those patterns inform vendor negotiations and procurement policy updates.

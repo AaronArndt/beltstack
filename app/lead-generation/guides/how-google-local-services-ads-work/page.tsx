@@ -8,8 +8,8 @@ import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSi
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
@@ -37,7 +37,7 @@ export default function HowGoogleLsaWorkPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/">Home</Link></li><li aria-hidden>/</li>
                 <li><Link href="/lead-generation">Lead Generation</Link></li><li aria-hidden>/</li>
                 <li><Link href="/lead-generation/guides">Guides</Link></li><li aria-hidden>/</li>
@@ -45,37 +45,37 @@ export default function HowGoogleLsaWorkPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold sm:text-4xl">How Google Local Services Ads Work</h1>
-              <p className="mt-3 text-[#57534E]">Screening, budgets, automated lead credits, and pay-per-valid-lead billing.</p>
+              <h1 className="text-brand text-3xl font-bold sm:text-4xl">How Google Local Services Ads Work</h1>
+              <p className="mt-3 text-muted-foreground">Screening, budgets, automated lead credits, and pay-per-valid-lead billing.</p>
               <GuideLastUpdated date="March 25, 2026" />
             </section>
             <section className="py-8 space-y-4 text-[15px] text-neutral-700 leading-relaxed">
               <p>LSA is a Google Search and Maps product for eligible local services. After screening, ads can show the Google Verified badge. Legacy Local Services accounts set an average weekly budget and a bidding mode. Some US accounts have migrated in phases into specialized Performance Max pay-per-lead campaigns in Google Ads (daily average budget; Maximize Conversions). You pay for valid leads (calls, messages, or bookings)—not clicks. In the US and Canada, Google assesses lead quality automatically and may issue credits; the older “dispute every misfire” workflow is not the current system.</p>
               <p>
-                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-indigo hover:underline">
                   Best lead generation tools roundup
                 </Link>{" "}
                 ·{" "}
-                <Link href="/lead-generation/review/google-local-services-ads" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/review/google-local-services-ads" className="font-semibold text-indigo hover:underline">
                   Full Google LSA review
                 </Link>{" "}
                 ·{" "}
-                <Link href="/lead-generation/compare/google-local-services-ads-vs-thumbtack" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/compare/google-local-services-ads-vs-thumbtack" className="font-semibold text-indigo hover:underline">
                   Google LSA vs Thumbtack comparison
                 </Link>
                 {" "}
                 ·{" "}
-                <Link href="/lead-generation/compare/google-local-services-ads-vs-yelp-ads" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/compare/google-local-services-ads-vs-yelp-ads" className="font-semibold text-indigo hover:underline">
                   Google LSA vs Yelp Ads comparison
                 </Link>
               </p>
               <p>
                 Marketplace contrast:{" "}
-                <Link href="/lead-generation/review/thumbtack" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/review/thumbtack" className="font-semibold text-indigo hover:underline">
                   Thumbtack review
                 </Link>
                 . Trade scenario:{" "}
-                <Link href="/lead-generation/best-for/plumbing" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/best-for/plumbing" className="font-semibold text-indigo hover:underline">
                   best lead generation for plumbers
                 </Link>
                 .
@@ -94,9 +94,9 @@ export default function HowGoogleLsaWorkPage() {
               <SectionTitle sub="How to compare LSA with other channels fairly.">LSA vs marketplaces and social</SectionTitle>
               <p className="text-[15px] leading-relaxed text-neutral-700">
                 Compare LSA against marketplace channels with one scorecard: same response SLA, same qualification script, and same CRM outcome stages. Use this with{" "}
-                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-[#10B981] hover:underline">paid vs organic leads</Link>{" "}
+                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-indigo hover:underline">paid vs organic leads</Link>{" "}
                 and{" "}
-                <Link href="/lead-generation/guides/how-to-choose-a-lead-generation-platform" className="font-semibold text-[#10B981] hover:underline">platform selection checklist</Link>{" "}
+                <Link href="/lead-generation/guides/how-to-choose-a-lead-generation-platform" className="font-semibold text-indigo hover:underline">platform selection checklist</Link>{" "}
                 before scaling.
               </p>
             </section>

@@ -9,15 +9,15 @@ import { getInvoicingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -57,19 +57,19 @@ export default function WhatIsInvoiceManagementPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Invoicing</Link></li>
+                    <li><Link href="/invoicing" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Invoicing</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/invoicing/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">What Is Invoice Management?</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is Invoice Management?</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is Invoice Management?</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn what invoice management includes, why it matters for finance operations, and how small businesses can build a scalable invoicing process.
                   </p>
                   <GuideLastUpdated date="May 2026" />
@@ -105,17 +105,17 @@ export default function WhatIsInvoiceManagementPage() {
                       Each stage has a measurable output. Treat invoice management like a pipeline: defects prevented early are cheaper than collections labor later.
                     </p>
                     <ol className="space-y-3 list-decimal list-inside">
-                      <li><strong className="text-[#1A2D48]">Create</strong> from work, order, or contract data—pull line items from approved scope when possible.</li>
-                      <li><strong className="text-[#1A2D48]">Validate</strong> required fields, tax, and pricing logic against quote or rate card.</li>
-                      <li><strong className="text-[#1A2D48]">Approve</strong> through workflows where risk warrants—see{" "}
+                      <li><strong className="text-brand">Create</strong> from work, order, or contract data—pull line items from approved scope when possible.</li>
+                      <li><strong className="text-brand">Validate</strong> required fields, tax, and pricing logic against quote or rate card.</li>
+                      <li><strong className="text-brand">Approve</strong> through workflows where risk warrants—see{" "}
                         <Link href="/invoicing/guides/how-invoice-approval-workflows-work" className={linkGreen}>how invoice approval workflows work</Link>.
                       </li>
-                      <li><strong className="text-[#1A2D48]">Send</strong> with clear terms and payment options per{" "}
+                      <li><strong className="text-brand">Send</strong> with clear terms and payment options per{" "}
                         <Link href="/invoicing/guides/invoice-terms-explained" className={linkGreen}>invoice terms explained</Link>{" "}
                         and online pay guidance.
                       </li>
-                      <li><strong className="text-[#1A2D48]">Track and remind</strong> on status; escalate overdue balances with a defined cadence.</li>
-                      <li><strong className="text-[#1A2D48]">Collect and reconcile</strong> in accounting—match payments, fees, and credits to invoice numbers.</li>
+                      <li><strong className="text-brand">Track and remind</strong> on status; escalate overdue balances with a defined cadence.</li>
+                      <li><strong className="text-brand">Collect and reconcile</strong> in accounting—match payments, fees, and credits to invoice numbers.</li>
                     </ol>
                     <p>
                       Recurring and progress models add branches to this lifecycle—see{" "}
@@ -132,11 +132,11 @@ export default function WhatIsInvoiceManagementPage() {
                       Controls should scale with risk—not with headcount alone. A five-person agency and a fifty-person firm may use the same principles but different thresholds for auto-approve and escalation.
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Template standards:</strong> mandatory fields and terms locked per invoice type.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Risk-based approvals:</strong> human review for exceptions, auto-path for routine sends.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Collections visibility:</strong> aging buckets, owner per account, and reminder automation.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Audit trail:</strong> revisions, approvers, and dispute notes tied to invoice numbers.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Payment channels:</strong> online pay plus clear offline instructions—see{" "}
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Template standards:</strong> mandatory fields and terms locked per invoice type.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Risk-based approvals:</strong> human review for exceptions, auto-path for routine sends.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Collections visibility:</strong> aging buckets, owner per account, and reminder automation.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Audit trail:</strong> revisions, approvers, and dispute notes tied to invoice numbers.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Payment channels:</strong> online pay plus clear offline instructions—see{" "}
                         <Link href="/invoicing/guides/how-online-invoice-payments-work" className={linkGreen}>how online invoice payments work</Link>.
                       </span></li>
                     </ul>
@@ -176,9 +176,9 @@ export default function WhatIsInvoiceManagementPage() {
                       Run weekly A/R review: top overdue accounts, disputed invoices, and invoices stuck in draft or approval. Assign one owner per overdue account—not “the team.”
                     </p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Measure delivery-to-send time and dispute rate, not only total invoiced.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Keep quote, contract, and invoice language aligned so AP approvals are routine.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile processor deposits and bank cash weekly during payment rollout.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Measure delivery-to-send time and dispute rate, not only total invoiced.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Keep quote, contract, and invoice language aligned so AP approvals are routine.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile processor deposits and bank cash weekly during payment rollout.</span></li>
                     </ul>
                     <p>
                       Invoice management succeeds when operations and finance share metrics—not when finance alone “owns collections” after a broken send.

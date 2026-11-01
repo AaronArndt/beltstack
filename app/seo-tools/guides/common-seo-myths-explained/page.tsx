@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function CommonSeoMythsExplainedPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function CommonSeoMythsExplainedPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Common SEO Myths Explained</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Common SEO Myths Explained</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Myths that waste SMB budgets—AI obsolescence, tool magic, keyword density, instant rankings—and what to do instead. Validate with{" "}
                 <Link href="/seo-tools/guides/is-seo-still-worth-it" className={link}>
                   is SEO still worth it
@@ -119,8 +119,8 @@ export default function CommonSeoMythsExplainedPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="myth-ai-dead" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Myth: AI killed SEO</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Myth: AI killed SEO</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reality: search behavior shifted—more summaries, more zero-click on informational queries—but buyers still research services, compare providers, and call businesses they trust. SEO now prioritizes pages that convert and surfaces Google can cite: fast, crawlable, locally provable.
                 </p>
@@ -134,8 +134,8 @@ export default function CommonSeoMythsExplainedPage() {
               </section>
 
               <section id="myth-tools-rank" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Myth: Buying tools guarantees rankings</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Myth: Buying tools guarantees rankings</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reality:{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -157,8 +157,8 @@ export default function CommonSeoMythsExplainedPage() {
               </section>
 
               <section id="myth-keywords" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Myth: More keywords and density equal more traffic</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Myth: More keywords and density equal more traffic</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reality: Google matches intent and quality—not a target keyword count. Businesses win with focused service pages, honest FAQs, and GBP services aligned to the site. Tracking hundreds of irrelevant phrases creates anxiety in monthly PDFs.
                 </p>
@@ -176,8 +176,8 @@ export default function CommonSeoMythsExplainedPage() {
               </section>
 
               <section id="myth-instant" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Myth: SEO works overnight</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Myth: SEO works overnight</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reality: indexing fixes can show in weeks; trust and competitive terms take months. Vendors promising page-one in days often sell risky links, fake traffic, or mislabeled ads—not sustainable organic growth.
                 </p>
@@ -195,8 +195,8 @@ export default function CommonSeoMythsExplainedPage() {
               </section>
 
               <section id="myth-technical" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Myth: Content alone fixes a broken site</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Myth: Content alone fixes a broken site</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reality: publishing blogs while money pages are noindexed or slow is a common trap. Technical health is not optional—it is the floor. Run{" "}
                   <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -214,8 +214,8 @@ export default function CommonSeoMythsExplainedPage() {
               </section>
 
               <section id="fact-test" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">How to test any SEO claim</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">How to test any SEO claim</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Ask for URLs, dates, and screenshots from your own properties—not competitor anecdotes. Reproduce advice in Search Console: did indexing improve? Did impressions on a specific service page climb after a rewrite? Do CRM tags show more organic jobs?
                 </p>
@@ -230,8 +230,8 @@ export default function CommonSeoMythsExplainedPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

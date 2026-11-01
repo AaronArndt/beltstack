@@ -12,7 +12,7 @@ import {
 } from "@/lib/routes";
 
 const href = "/email-marketing/guides/email-marketing-for-local-business";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -50,7 +50,7 @@ export default function EmailMarketingForLocalBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px] pt-8 pb-16">
                 <nav aria-label="Breadcrumb" className="pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link href="/" className="text-gray-500 hover:text-gray-900">
                         Home
@@ -75,8 +75,8 @@ export default function EmailMarketingForLocalBusinessPage() {
                   </ol>
                 </nav>
                 <header className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Email Marketing for Local Business</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Email Marketing for Local Business</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                     Local operators succeed when email reinforces real proximity—honest service areas, familiar tech faces, and helpful seasonal advice. Compare vendors in our{" "}
                     <Link href="/email-marketing/best-email-marketing-software" className={link}>
                       best email marketing software
@@ -101,16 +101,16 @@ export default function EmailMarketingForLocalBusinessPage() {
                   </p>
                   <GuideLastUpdated date="March 25, 2026" />
                 </header>
-                <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-                  <h2 className="text-[#1A2D48] text-xl font-bold">Earn permission at every touchpoint</h2>
+                <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+                  <h2 className="text-brand text-xl font-bold">Earn permission at every touchpoint</h2>
                   <p className="mt-2">
                     Counter staff, estimators, and online forms should explain what subscribers receive—maintenance tips, exclusive booking windows, storm prep—not vague “updates.” Double opt-in remains the cleanest audit trail when disputes arise.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Keep creative specific and scannable</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Keep creative specific and scannable</h2>
                   <p className="mt-2">
                     Mobile readers decide in seconds. Lead with the outcome (“Keep pipes flowing this freeze season”) and one bold CTA to book or call. Avoid cluttering footers with seven unrelated services unless you segment.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Bridge website traffic and the inbox</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Bridge website traffic and the inbox</h2>
                   <p className="mt-2">
                     High-converting pages from your{" "}
                     <Link href="/website-builders" className={link}>
@@ -118,7 +118,7 @@ export default function EmailMarketingForLocalBusinessPage() {
                     </Link>{" "}
                     should feed tagged lists—service line, urgency, commercial vs residential—so follow-up resonates. Pair blog or FAQ content with a single downloadable checklist to grow subscribers ethically.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Coordinate CRM and marketing lists</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Coordinate CRM and marketing lists</h2>
                   <p className="mt-2">
                     Marketing fatigue happens when sales still calls aggressively while nurture runs. Align suppression rules in your{" "}
                     <Link href="/crm" className={link}>
@@ -126,7 +126,7 @@ export default function EmailMarketingForLocalBusinessPage() {
                     </Link>{" "}
                     so open opportunities do not receive blind win-back blasts.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Measure neighborhood impact honestly</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Measure neighborhood impact honestly</h2>
                   <p className="mt-2">
                     Track booked jobs influenced by campaigns, not open rate trophies. Combine UTM discipline with{" "}
                     <Link href="/lead-generation" className={link}>
@@ -138,7 +138,7 @@ export default function EmailMarketingForLocalBusinessPage() {
                     </Link>{" "}
                     so you know which neighborhoods and intents actually respond.
                   </p>
-                  <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Layer reputation moments carefully</h2>
+                  <h2 className="text-brand text-xl font-bold mt-8">Layer reputation moments carefully</h2>
                   <p className="mt-2">
                     Review requests belong in email when you can personalize the story of the job. Connect timing with{" "}
                     <Link href="/reputation-management" className={link}>

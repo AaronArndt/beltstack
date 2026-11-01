@@ -15,7 +15,7 @@ type Props = {
 };
 
 const typeBadgeClass =
-  "inline-flex items-center rounded-md bg-[#10B981]/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20";
+  "inline-flex items-center rounded-md border border-terracotta/40 bg-terracotta/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand";
 
 function highlightMatch(text: string, query: string) {
   const normalizedQuery = query.trim();
@@ -109,7 +109,7 @@ export function SearchAutocomplete({
         <label htmlFor="global-search" className="sr-only">
           Search software or category
         </label>
-        <div className="searchContainer flex flex-col gap-3 sm:flex-row sm:rounded-lg border border-stone-200 bg-white transition-all duration-150 focus-within:border-[#10B981] sm:shadow-sm">
+        <div className="searchContainer flex flex-col gap-3 sm:flex-row sm:rounded-lg border border-stone-200 bg-white transition-all duration-150 focus-within:border-indigo sm:shadow-sm">
           <input
             id="global-search"
             name="beltstack-search-input"
@@ -127,21 +127,21 @@ export function SearchAutocomplete({
               setTimeout(() => setIsFocused(false), 100);
             }}
             onKeyDown={handleKeyDown}
-            className="searchInput min-w-0 flex-1 rounded-lg border-0 bg-transparent px-4 py-3.5 text-[#1A2D48] placeholder:text-[#57534E] focus:outline-none focus:ring-0 focus:shadow-none sm:rounded-none"
+            className="searchInput min-w-0 flex-1 rounded-lg border-0 bg-transparent px-4 py-3.5 text-brand placeholder:text-muted-foreground focus:outline-none focus:ring-0 focus:shadow-none sm:rounded-none"
             aria-autocomplete="list"
             aria-controls="global-search-suggestions"
             aria-expanded={hasSuggestions}
           />
           <button
             type="submit"
-            className="searchButton rounded-lg border-l border-transparent bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus:ring-0 sm:rounded-none sm:mx-1 sm:my-1 sm:shrink-0"
+            className="searchButton rounded-lg border-l border-transparent bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus:ring-0 sm:rounded-none sm:mx-1 sm:my-1 sm:shrink-0"
           >
             Search
           </button>
         </div>
       </form>
       {hintText && (
-        <p className="mt-2 text-center text-[#57534E] text-sm">
+        <p className="mt-2 text-center text-muted-foreground text-sm">
           {hintText}
         </p>
       )}
@@ -165,10 +165,10 @@ export function SearchAutocomplete({
                     index === activeIndex ? "bg-background" : "hover:bg-stone-50"
                   }`}
                 >
-                  <span className="text-[#1A2D48] font-semibold">
+                  <span className="text-brand font-semibold">
                     {highlightMatch(item.title, query)}
                   </span>
-                  <span className="mt-0.5 flex items-center gap-2 text-[11px] text-[#57534E]">
+                  <span className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
                     <span className={typeBadgeClass}>{item.type}</span>
                     <span>{item.category}</span>
                   </span>

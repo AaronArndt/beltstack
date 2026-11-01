@@ -6,7 +6,7 @@ import { RelatedCallTrackingResources } from "@/components/guides/RelatedCallTra
 import { getCallTrackingBestForUrl, getCallTrackingCompareUrl, getCallTrackingReviewUrl } from "@/lib/routes";
 
 const href = "/call-tracking/guides/what-is-call-tracking";
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ = [
   {
@@ -30,7 +30,7 @@ export default function WhatIsCallTrackingPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="min-w-0 max-w-[720px] pt-8 pb-16">
             <nav aria-label="Breadcrumb" className="pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -55,8 +55,8 @@ export default function WhatIsCallTrackingPage() {
               </ol>
             </nav>
             <header className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is Call Tracking?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">What Is Call Tracking?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
                 Call tracking connects inbound phone calls to the marketing touch that caused them—search ads, SEO pages, directories, or campaigns—using dynamic numbers, session data, and integrations. For
                 product picks, start with our{" "}
                 <Link href="/call-tracking/best-call-tracking-software" className={link}>
@@ -82,8 +82,8 @@ export default function WhatIsCallTrackingPage() {
               </p>
               <GuideLastUpdated date="March 24, 2026" />
             </header>
-            <div className="prose prose-neutral mt-8 max-w-none text-[#57534E] text-base leading-relaxed">
-              <h2 className="text-[#1A2D48] text-xl font-bold">Why service businesses use it</h2>
+            <div className="prose prose-neutral mt-8 max-w-none text-muted-foreground text-base leading-relaxed">
+              <h2 className="text-brand text-xl font-bold">Why service businesses use it</h2>
               <p className="mt-2">
                 Contractors live on the phone. Without attribution, every ring looks the same—so you cannot defend LSA spend, prune bad keywords, or prove which SEO pages earn booked jobs. Call tracking
                 makes source data operational, especially when paired with CRM stages. Track which lead sources drive phone calls with our{" "}
@@ -96,7 +96,7 @@ export default function WhatIsCallTrackingPage() {
                 </Link>
                 .
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">Dynamic number insertion (DNI)</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">Dynamic number insertion (DNI)</h2>
               <p className="mt-2">
                 DNI swaps the number shown on your website based on the visitor&apos;s session or campaign parameters. That lets platforms map calls back to keywords, landing pages, or ads. Implementation
                 quality matters—broken scripts create inconsistent reporting. Read{" "}
@@ -105,7 +105,7 @@ export default function WhatIsCallTrackingPage() {
                 </Link>{" "}
                 for setup habits.
               </p>
-              <h2 className="text-[#1A2D48] text-xl font-bold mt-8">How tools differ</h2>
+              <h2 className="text-brand text-xl font-bold mt-8">How tools differ</h2>
               <p className="mt-2">
                 Some products emphasize marketing dashboards (CallRail-class), others emphasize lead-level rollups across calls, forms, and chats (WhatConverts-class), and others target deep paid-search
                 analytics (CallTrackingMetrics-class). Compare{" "}

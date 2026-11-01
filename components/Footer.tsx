@@ -5,18 +5,18 @@ import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 function FooterLogo({ className }: { className?: string }) {
   return (
     <img
-      src="/Logos/BS_Logo_W.svg"
+      src="/Logos/BS_Logo_WhiteGreen.png"
       alt=""
       className={className}
-      width={120}
-      height={105}
+      width={48}
+      height={48}
       aria-hidden
     />
   );
 }
 
 const linkClass =
-  "text-sm text-white/60 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A2D48] rounded";
+  "text-sm text-white/60 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand rounded";
 
 const FOOTER_SOFTWARE_LINKS = [
   { label: "All categories", href: "/software" },
@@ -59,13 +59,13 @@ const FOOTER_COMPANY_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#1A2D48] text-white">
+    <footer className="border-t-[3px] border-terracotta bg-brand text-white">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+              className="inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand rounded"
             >
               <FooterLogo className="h-12 w-auto" />
             </Link>

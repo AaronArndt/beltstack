@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/how-should-an-llc-pay-themselves-in-quickb
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function HowShouldAnLLCPayThemselvesInQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">LLC Owner Pay</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Should an LLC Pay Themselves in QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Owner draws, payroll, and distributions in QuickBooks depend on how your LLC is taxed—set up accounts with your CPA first.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -89,12 +89,12 @@ export default function HowShouldAnLLCPayThemselvesInQuickBooksPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">How an LLC pays the owner in QuickBooks follows tax classification, not the software.</strong> QuickBooks records the transaction—draw, payroll check, or distribution—but your CPA decides which method is correct for your LLC.
+                      <strong className="text-brand">How an LLC pays the owner in QuickBooks follows tax classification, not the software.</strong> QuickBooks records the transaction—draw, payroll check, or distribution—but your CPA decides which method is correct for your LLC.
                     </p>
                     <p>
                       Owners often conflate &quot;money in my pocket&quot; with the right accounting entry. QuickBooks will happily categorize owner transfers wrong if equity accounts are not set up first. Fix classification at setup, not at tax time.
                     </p>
-                    <p className="text-sm text-neutral-600 border-l-4 border-[#10B981] pl-4">
+                    <p className="text-sm text-neutral-600 border-l-4 border-indigo pl-4">
                       BeltStack provides software guidance, not tax or legal advice. Confirm owner compensation, reasonable salary, and entity elections with a qualified CPA before changing payroll or equity accounts.
                     </p>
                     <p>
@@ -106,18 +106,18 @@ export default function HowShouldAnLLCPayThemselvesInQuickBooksPage() {
                 <section id="by-tax-type" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Common patterns—not tax advice.">By LLC Tax Treatment (Overview)</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Disregarded / single-member LLC</strong> — Owner draws from business bank to personal; record against owner equity or draw accounts.</p>
-                    <p><strong className="text-[#1A2D48]">Partnership-taxed LLC</strong> — Distributions and guaranteed payments to members; partnership reporting is CPA-driven.</p>
-                    <p><strong className="text-[#1A2D48]">S corp election</strong> — W-2 salary via payroll plus distributions; reasonable compensation rules apply.</p>
+                    <p><strong className="text-brand">Disregarded / single-member LLC</strong> — Owner draws from business bank to personal; record against owner equity or draw accounts.</p>
+                    <p><strong className="text-brand">Partnership-taxed LLC</strong> — Distributions and guaranteed payments to members; partnership reporting is CPA-driven.</p>
+                    <p><strong className="text-brand">S corp election</strong> — W-2 salary via payroll plus distributions; reasonable compensation rules apply.</p>
                   </div>
                 </section>
                 <section id="quickbooks-steps" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Recording pay correctly in the file.">QuickBooks Setup Basics</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Use separate business and personal banks—never commingle without documenting transfers.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Map owner pay to equity/draw or payroll expense accounts your CPA defines.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Enable <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Payroll</Link> or a connected provider like <Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto</Link> when W-2 wages are required.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Use separate business and personal banks—never commingle without documenting transfers.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Map owner pay to equity/draw or payroll expense accounts your CPA defines.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Enable <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Payroll</Link> or a connected provider like <Link href={getPayrollReviewUrl("gusto")} className={linkGreen}>Gusto</Link> when W-2 wages are required.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -145,9 +145,9 @@ export default function HowShouldAnLLCPayThemselvesInQuickBooksPage() {
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which accounts to create before your first owner transfer.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Set up <Link href="/accounting/guides/can-i-use-quickbooks-for-my-llc" className={linkGreen}>QuickBooks for your LLC</Link> with a dedicated business bank only.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>If you are new to the tool, read <Link href="/accounting/guides/can-a-beginner-use-quickbooks" className={linkGreen}>can a beginner use QuickBooks</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which accounts to create before your first owner transfer.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Set up <Link href="/accounting/guides/can-i-use-quickbooks-for-my-llc" className={linkGreen}>QuickBooks for your LLC</Link> with a dedicated business bank only.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>If you are new to the tool, read <Link href="/accounting/guides/can-a-beginner-use-quickbooks" className={linkGreen}>can a beginner use QuickBooks</Link>.</span></li>
                     </ul>
                   </div>
                 </section>

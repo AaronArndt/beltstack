@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -69,7 +69,7 @@ export default function SeoForBeginnersCompleteGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -94,8 +94,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO for Beginners: A Complete Guide</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">SEO for Beginners: A Complete Guide</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical starting path for owners and marketers: what SEO is, how Google decides what to show, the first fixes that matter, and when to add tools beyond free Google products. Browse the{" "}
                 <Link href="/seo-tools/guides" className={link}>
                   SEO guides library
@@ -115,8 +115,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="basics" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">SEO basics: what you are optimizing for</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">SEO basics: what you are optimizing for</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO is not about fooling an algorithm—it is about aligning your site and listings with what searchers want. Google crawls pages, indexes what it trusts, and ranks results by relevance, quality, and context (including location for many queries). Your job is to remove barriers to crawling, publish clear answers, and earn signals that you are a legitimate option.
                 </p>
@@ -130,25 +130,25 @@ export default function SeoForBeginnersCompleteGuidePage() {
               </section>
 
               <section id="three-pillars" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The three pillars every beginner should learn</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The three pillars every beginner should learn</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Technical SEO</strong> — Can Google access, render, and index your pages? HTTPS, sitemaps, mobile usability, and clean URLs live here. Start with{" "}
+                    <strong className="text-brand">Technical SEO</strong> — Can Google access, render, and index your pages? HTTPS, sitemaps, mobile usability, and clean URLs live here. Start with{" "}
                     <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
                       technical SEO audit basics
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">On-page SEO</strong> — Titles, headings, body copy, internal links, and media that match search intent. Local businesses should read{" "}
+                    <strong className="text-brand">On-page SEO</strong> — Titles, headings, body copy, internal links, and media that match search intent. Local businesses should read{" "}
                     <Link href="/seo-tools/guides/on-page-seo-for-local-business" className={link}>
                       on-page SEO for local business
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Off-page signals</strong> — Reviews, citations, brand mentions, and links that vouch for you. For service companies,{" "}
+                    <strong className="text-brand">Off-page signals</strong> — Reviews, citations, brand mentions, and links that vouch for you. For service companies,{" "}
                     <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
                       local SEO for service businesses
                     </Link>{" "}
@@ -165,8 +165,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
               </section>
 
               <section id="first-30-days" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Your first 30 days: a beginner checklist</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Your first 30 days: a beginner checklist</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Claim Search Console and submit your sitemap; fix critical indexing errors.</li>
                   <li>Audit Google Business Profile (if local): categories, services, photos, and NAP match your site.</li>
@@ -196,8 +196,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
               </section>
 
               <section id="content-intent" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Content and search intent for beginners</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Content and search intent for beginners</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Every page should map to one primary intent: learn something, compare options, or hire/buy now. A blog post titled &quot;how to fix a leaky faucet&quot; serves a different searcher than &quot;emergency plumber near me.&quot; Match format to intent—guides for learning, service pages for commercial queries, location pages when geography matters.
                 </p>
@@ -211,8 +211,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
               </section>
 
               <section id="tools-and-next" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to add paid tools and what to read next</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to add paid tools and what to read next</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Free Google products carry most beginners surprisingly far. Pay when you need scale: competitor gap analysis, multi-location rank tracking, automated crawl monitoring, or client reporting. Understand categories in{" "}
                   <Link href="/seo-tools/guides/what-is-seo-software" className={link}>
@@ -239,8 +239,8 @@ export default function SeoForBeginnersCompleteGuidePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

@@ -236,12 +236,12 @@ export default function PayrollBestForPage() {
       ungroupedSub="Jump to a scenario."
       cardCta="Open →"
       directoryFooter={
-        <p className="text-sm text-[#57534E]">
-          <Link href="/payroll" className="font-semibold text-[#10B981] hover:underline">
+        <p className="text-sm text-muted-foreground">
+          <Link href="/payroll" className="font-semibold text-indigo hover:underline">
             Payroll hub
           </Link>{" "}
           ·{" "}
-          <Link href="/payroll/compare" className="font-semibold text-[#10B981] hover:underline">
+          <Link href="/payroll/compare" className="font-semibold text-indigo hover:underline">
             All comparisons
           </Link>
         </p>

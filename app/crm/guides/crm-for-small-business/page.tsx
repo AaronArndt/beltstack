@@ -9,14 +9,14 @@ import { getCrmReviewUrl, getCrmCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
-const linkGreen = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+const linkGreen = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   { q: "Do small businesses need CRM?", a: "Small businesses that have more than a handful of leads or customers benefit from CRM. It keeps contacts and deals in one place and scales as you grow. Free tiers from HubSpot or Zoho CRM make it easy to start without a big commitment." },
@@ -54,19 +54,19 @@ export default function CrmForSmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">CRM for Small Business</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">CRM for Small Business</h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">CRM for Small Business</h1>
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Choosing and using CRM when you're a small team: features that matter, pricing, and how to get started without enterprise complexity.
                   </p>
                   <GuideLastUpdated date="March 8, 2026" />
@@ -86,10 +86,10 @@ export default function CrmForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Small businesses adopt CRM to replace scattered contact lists and deal tracking with one system the whole team can use. Benefits include:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Single source of truth</strong> — Contacts and deal status in one place instead of spreadsheets, email, or personal notes. Everyone sees the same pipeline and next steps.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Pipeline visibility</strong> — See what's in each stage, total value, and what to do next. Owners and reps can prioritize follow-up without asking around.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Automation</strong> — Reminders, email sequences, and workflow rules reduce manual follow-up so deals don't slip when everyone is busy.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Reporting</strong> — Pipeline value and conversion reports without building and maintaining spreadsheets. Useful for planning and spotting bottlenecks.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Single source of truth</strong> — Contacts and deal status in one place instead of spreadsheets, email, or personal notes. Everyone sees the same pipeline and next steps.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Pipeline visibility</strong> — See what's in each stage, total value, and what to do next. Owners and reps can prioritize follow-up without asking around.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Automation</strong> — Reminders, email sequences, and workflow rules reduce manual follow-up so deals don't slip when everyone is busy.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Reporting</strong> — Pipeline value and conversion reports without building and maintaining spreadsheets. Useful for planning and spotting bottlenecks.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -98,10 +98,10 @@ export default function CrmForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Without a dedicated CRM, small businesses often run into:</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Lost or forgotten follow-ups</strong> — Leads sit in inboxes or spreadsheets; no shared view of who was contacted when or what's next.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Duplicate or conflicting data</strong> — Multiple people update different spreadsheets or notes; pipeline value and stage are unclear.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">No clear pipeline view</strong> — Hard to see how many deals are in each stage, total pipeline value, or which deals need attention.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Time spent on manual updates</strong> — Copying data between tools, updating spreadsheets, and chasing status updates instead of selling.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Lost or forgotten follow-ups</strong> — Leads sit in inboxes or spreadsheets; no shared view of who was contacted when or what's next.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Duplicate or conflicting data</strong> — Multiple people update different spreadsheets or notes; pipeline value and stage are unclear.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">No clear pipeline view</strong> — Hard to see how many deals are in each stage, total pipeline value, or which deals need attention.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Time spent on manual updates</strong> — Copying data between tools, updating spreadsheets, and chasing status updates instead of selling.</span></li>
                     </ul>
                     <p>A CRM addresses these by centralizing contacts, deals, and activities so the team has one place to log and view progress. Our <Link href="/crm/guides/crm-vs-spreadsheets" className={linkGreen}>CRM vs spreadsheets</Link> guide goes deeper on when to make the switch.</p>
                   </div>
@@ -111,11 +111,11 @@ export default function CrmForSmallBusinessPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>Small teams should prioritize features that match how they actually sell and that they'll use every day. Avoid overbuying: start with core contact and deal management; add marketing automation or advanced reporting only when you need them.</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Ease of use</strong> — Clear pipeline view, simple data entry, and a short learning curve. If it's cumbersome, reps won't keep it updated.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Pipeline and stages</strong> — Deal stages that match your sales process. Customizable pipelines and activity tracking so you see next steps at a glance.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Published pricing or free tier</strong> — Transparent costs so you can budget. Free tiers from HubSpot or Zoho CRM let you start without a credit card.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Email and calendar integration</strong> — Log emails and meetings from Gmail or Outlook so activities stay in the CRM without double entry.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Basic reporting</strong> — Pipeline value, deals by stage, and activity reports. You don't need enterprise dashboards to get value.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Ease of use</strong> — Clear pipeline view, simple data entry, and a short learning curve. If it's cumbersome, reps won't keep it updated.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Pipeline and stages</strong> — Deal stages that match your sales process. Customizable pipelines and activity tracking so you see next steps at a glance.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Published pricing or free tier</strong> — Transparent costs so you can budget. Free tiers from HubSpot or Zoho CRM let you start without a credit card.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Email and calendar integration</strong> — Log emails and meetings from Gmail or Outlook so activities stay in the CRM without double entry.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Basic reporting</strong> — Pipeline value, deals by stage, and activity reports. You don't need enterprise dashboards to get value.</span></li>
                     </ul>
                     <p>Our <Link href="/crm/guides/how-to-choose-crm-software" className={linkGreen}>how to choose CRM software</Link> guide covers selection criteria in more detail.</p>
                   </div>
@@ -123,8 +123,8 @@ export default function CrmForSmallBusinessPage() {
                 <section id="simple-vs-upgrade" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="When basic CRM is enough vs when to upgrade.">When Simple CRM Is Enough vs When to Upgrade</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Simple CRM is often enough</strong> when you have a small team (e.g. one to five people), a straightforward sales process, and mainly need contact and deal tracking with reminders and basic reporting. Free or low-cost tiers from <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>, or <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> can cover this for a long time.</p>
-                    <p><strong className="text-[#1A2D48]">Consider upgrading</strong> when you need more users than the free tier allows, when you want email sequences or workflow automation to move deals and send reminders automatically, or when you need marketing tools (email campaigns, landing pages, lead nurturing) in the same platform. At that point, paid hubs (e.g. HubSpot Sales or Marketing Hub) or higher tiers (Zoho CRM Professional, Pipedrive Advanced) add the capacity and features you need. Compare options in our <Link href={getCrmCompareUrl("hubspot-vs-zoho-crm")} className={linkGreen}>HubSpot vs Zoho CRM</Link> and <Link href={getCrmCompareUrl("hubspot-vs-pipedrive")} className={linkGreen}>HubSpot vs Pipedrive</Link> guides.</p>
+                    <p><strong className="text-brand">Simple CRM is often enough</strong> when you have a small team (e.g. one to five people), a straightforward sales process, and mainly need contact and deal tracking with reminders and basic reporting. Free or low-cost tiers from <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>, or <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> can cover this for a long time.</p>
+                    <p><strong className="text-brand">Consider upgrading</strong> when you need more users than the free tier allows, when you want email sequences or workflow automation to move deals and send reminders automatically, or when you need marketing tools (email campaigns, landing pages, lead nurturing) in the same platform. At that point, paid hubs (e.g. HubSpot Sales or Marketing Hub) or higher tiers (Zoho CRM Professional, Pipedrive Advanced) add the capacity and features you need. Compare options in our <Link href={getCrmCompareUrl("hubspot-vs-zoho-crm")} className={linkGreen}>HubSpot vs Zoho CRM</Link> and <Link href={getCrmCompareUrl("hubspot-vs-pipedrive")} className={linkGreen}>HubSpot vs Pipedrive</Link> guides.</p>
                   </div>
                 </section>
                 <section id="recommendations" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
@@ -136,7 +136,7 @@ export default function CrmForSmallBusinessPage() {
                 <section id="pricing" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="What small teams care about when it comes to cost.">How CRM Pricing Affects Small Businesses</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p>Small teams often care about <strong className="text-[#1A2D48]">free vs paid</strong>—HubSpot and Zoho CRM offer free tiers with limited users or records, which is enough for many to start. <strong className="text-[#1A2D48]">Per-user pricing</strong> on paid plans can add up as you grow; watch for base fees plus per-seat cost. <strong className="text-[#1A2D48]">Add-ons</strong> (marketing automation, extra storage, advanced reporting) can increase the bill—only add what you need. Finally, consider <strong className="text-[#1A2D48]">total cost at your expected team size</strong> in 12–18 months so you don't outgrow a tier too quickly. Our comparison pages and individual <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>, and <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> reviews break down pricing in detail.</p>
+                    <p>Small teams often care about <strong className="text-brand">free vs paid</strong>—HubSpot and Zoho CRM offer free tiers with limited users or records, which is enough for many to start. <strong className="text-brand">Per-user pricing</strong> on paid plans can add up as you grow; watch for base fees plus per-seat cost. <strong className="text-brand">Add-ons</strong> (marketing automation, extra storage, advanced reporting) can increase the bill—only add what you need. Finally, consider <strong className="text-brand">total cost at your expected team size</strong> in 12–18 months so you don't outgrow a tier too quickly. Our comparison pages and individual <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link>, <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>, and <Link href={getCrmReviewUrl("pipedrive")} className={linkGreen}>Pipedrive</Link> reviews break down pricing in detail.</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

@@ -1,9 +1,9 @@
 import { formatUsd, isNumericPublic, type ChartMoneyPoint, type DualScenarioPoint } from "@/lib/research/pricing/publication";
 
 const advertisedBar = "bg-slate-500";
-const usableBar = "bg-[#10B981]";
-const smallerBar = "bg-[#1A2D48]";
-const largerBar = "bg-[#10B981]";
+const usableBar = "bg-indigo";
+const smallerBar = "bg-brand";
+const largerBar = "bg-indigo";
 
 function maxAmount(values: Array<number | null | undefined>): number {
   let max = 0;
@@ -33,20 +33,20 @@ function MoneyBar({
   if (amount === null) {
     return (
       <div className="flex items-center gap-2 min-h-[1.35rem]">
-        <span className="w-[4.75rem] shrink-0 text-xs text-[#57534E]">{label}</span>
-        <span className="text-xs leading-snug text-[#57534E]">{missingLabel ?? "Not published"}</span>
+        <span className="w-[4.75rem] shrink-0 text-xs text-muted-foreground">{label}</span>
+        <span className="text-xs leading-snug text-muted-foreground">{missingLabel ?? "Not published"}</span>
       </div>
     );
   }
   const pct = amount === 0 ? 1.8 : Math.max((amount / max) * 100, 2.5);
   return (
     <div className="flex items-center gap-2 min-h-[1.35rem]">
-      <span className="w-[4.75rem] shrink-0 text-xs text-[#57534E]">{label}</span>
+      <span className="w-[4.75rem] shrink-0 text-xs text-muted-foreground">{label}</span>
       <div className="flex min-w-0 flex-1 items-center gap-2">
         <div className="h-4 min-w-0 flex-1 overflow-hidden rounded-sm bg-stone-100" aria-hidden>
           <div className={`h-full ${barClass}`} style={{ width: `${Math.min(pct, 100)}%` }} />
         </div>
-        <span className="w-[4.25rem] shrink-0 text-right text-xs font-semibold tabular-nums text-[#1A2D48]">
+        <span className="w-[4.25rem] shrink-0 text-right text-xs font-semibold tabular-nums text-brand">
           {formatUsd(amount)}
         </span>
       </div>
@@ -73,12 +73,12 @@ function ChartFrame({
 }) {
   return (
     <figure className="rounded-md border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-      <figcaption className="text-[#1A2D48] text-base font-bold sm:text-lg">{title}</figcaption>
-      {question ? <p className="mt-1 text-sm leading-relaxed text-[#57534E]">{question}</p> : null}
-      <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#57534E]">{axis}</p>
+      <figcaption className="text-brand text-base font-bold sm:text-lg">{title}</figcaption>
+      {question ? <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{question}</p> : null}
+      <p className="mt-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">{axis}</p>
       <div className="mt-3">{legend}</div>
       <div className="mt-4 space-y-4">{children}</div>
-      {footnote ? <div className="mt-4 text-sm leading-relaxed text-[#57534E]">{footnote}</div> : null}
+      {footnote ? <div className="mt-4 text-sm leading-relaxed text-muted-foreground">{footnote}</div> : null}
       <div className="sr-only">{equivalent}</div>
     </figure>
   );
@@ -86,7 +86,7 @@ function ChartFrame({
 
 function Swatch({ className, label }: { className: string; label: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs text-[#57534E]">
+    <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
       <span className={`h-2.5 w-2.5 rounded-sm ${className}`} aria-hidden />
       {label}
     </span>
@@ -149,7 +149,7 @@ export function AdvertisedUsableBarChart({
     >
       {series.map((point) => (
         <div key={point.slug}>
-          <p className="text-sm font-semibold text-[#1A2D48]">{point.productName}</p>
+          <p className="text-sm font-semibold text-brand">{point.productName}</p>
           <div className="mt-1 space-y-1">
             <MoneyBar
               label="Advertised"
@@ -225,10 +225,10 @@ export function DualScenarioBarChart({
     >
       {series.map((point) => (
         <div key={point.slug}>
-          <p className="text-sm font-semibold text-[#1A2D48]">
+          <p className="text-sm font-semibold text-brand">
             {point.productName}
             {point.annotation ? (
-              <span className="ml-2 font-normal text-xs text-[#57534E]">{point.annotation}</span>
+              <span className="ml-2 font-normal text-xs text-muted-foreground">{point.annotation}</span>
             ) : null}
           </p>
           <div className="mt-1 space-y-1">
@@ -264,8 +264,8 @@ export function FsmVisibilityChart({
 }) {
   const total = publicN + quoteN + unavailableN + doesntMeetN;
   const segments = [
-    { key: "public", n: publicN, label: "Public usable price", className: "bg-[#10B981]", names: publicNames },
-    { key: "quote", n: quoteN, label: "Quote required", className: "bg-[#1A2D48]", pattern: true, names: quoteNames },
+    { key: "public", n: publicN, label: "Public usable price", className: "bg-indigo", names: publicNames },
+    { key: "quote", n: quoteN, label: "Quote required", className: "bg-brand", pattern: true, names: quoteNames },
     { key: "unavailable", n: unavailableN, label: "Price unavailable / not disclosed", className: "bg-slate-400", names: unavailableNames },
     { key: "na", n: doesntMeetN, label: "Doesn't meet this workflow", className: "bg-stone-300", names: doesntMeetNames },
   ];
@@ -301,7 +301,7 @@ export function FsmVisibilityChart({
         {segments.map((segment) => (
           <div
             key={segment.key}
-            className={`${segment.className} ${segment.pattern ? "bg-[repeating-linear-gradient(135deg,#1A2D48_0_6px,#23405f_6px_12px)]" : ""} flex items-center justify-center text-[11px] font-semibold text-white`}
+            className={`${segment.className} ${segment.pattern ? "bg-[repeating-linear-gradient(135deg,#012C2A_0_6px,#0B3F3C_6px_12px)]" : ""} flex items-center justify-center text-[11px] font-semibold text-white`}
             style={{ width: `${(segment.n / total) * 100}%` }}
           >
             <span className="px-1 tabular-nums">{segment.n}</span>
@@ -311,10 +311,10 @@ export function FsmVisibilityChart({
       <div className="grid gap-3 sm:grid-cols-2">
         {segments.map((segment) => (
           <div key={segment.key}>
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#1A2D48]">
+            <p className="text-xs font-semibold uppercase tracking-wide text-brand">
               {segment.label} · {segment.n}
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-[#57534E]">{segment.names.join(", ")}</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{segment.names.join(", ")}</p>
           </div>
         ))}
       </div>

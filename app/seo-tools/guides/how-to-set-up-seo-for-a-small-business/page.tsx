@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Set Up SEO for a Small Business</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Set Up SEO for a Small Business</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical setup sequence: verify Google properties, fix crawlability, align listings with your site, publish core service pages, and add tools only when free data is not enough. Start with{" "}
                 <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
                   how to optimize SEO for free
@@ -115,39 +115,39 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="setup-order" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The setup order that actually sticks</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The setup order that actually sticks</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Small businesses fail SEO when they randomize tactics. Use this sequence so each step unlocks the next:</p>
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Measurement</strong> — Verify{" "}
+                    <strong className="text-brand">Measurement</strong> — Verify{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console
                     </Link>{" "}
                     and confirm sitemaps submit cleanly.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Technical hygiene</strong> — HTTPS, mobile usability, and noindex mistakes. See{" "}
+                    <strong className="text-brand">Technical hygiene</strong> — HTTPS, mobile usability, and noindex mistakes. See{" "}
                     <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
                       technical SEO audit basics for small business
                     </Link>
                     .
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local surfaces</strong> — Google Business Profile, accurate NAP, and service-area honesty for crews.
+                    <strong className="text-brand">Local surfaces</strong> — Google Business Profile, accurate NAP, and service-area honesty for crews.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Core pages</strong> — One strong page per money service with proof, FAQs, and a clear call path.
+                    <strong className="text-brand">Core pages</strong> — One strong page per money service with proof, FAQs, and a clear call path.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Ongoing cadence</strong> — Weekly Search Console checks, review responses, and one improvement shipped per month.
+                    <strong className="text-brand">Ongoing cadence</strong> — Weekly Search Console checks, review responses, and one improvement shipped per month.
                   </li>
                 </ol>
               </section>
 
               <section id="free-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Start with the free stack</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Start with the free stack</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Search Console shows which queries earn impressions; Google Business Profile drives Maps visibility for local buyers. That pair covers most setup work before you spend on research suites. Our{" "}
                   <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
@@ -165,8 +165,8 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
               </section>
 
               <section id="site-and-gbp" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Align your website and Google Business Profile</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Align your website and Google Business Profile</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Setup is not complete until listings and pages tell the same story: services, cities you truly cover, phone numbers, and hours. Mismatches confuse customers and weaken rankings. For service companies,{" "}
                   <Link href="/seo-tools/guides/local-seo-for-service-businesses" className={link}>
@@ -177,8 +177,8 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
               </section>
 
               <section id="when-to-add-tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to add paid SEO tools</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to add paid SEO tools</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Add software when a bottleneck costs more than the subscription—competitor gaps you cannot see in Search Console, citation drift across locations, or rank tracking across multiple services. Compare{" "}
                   <Link href={getSeoToolsCompareUrl("semrush-vs-ahrefs")} className={link}>
@@ -204,8 +204,8 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
               </section>
 
               <section id="first-30-days" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Your first 30 days after setup</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Your first 30 days after setup</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>Week 1: Fix crawl errors and publish or improve your top service page.</li>
                   <li>Week 2: GBP photos, Q&amp;A, and review response template.</li>
@@ -223,8 +223,8 @@ export default function HowToSetUpSeoForASmallBusinessPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

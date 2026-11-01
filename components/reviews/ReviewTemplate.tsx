@@ -11,9 +11,9 @@ import { sectionRuleAccent } from "@/lib/design-tokens";
 import { AFFILIATE_DISCLOSURE, formatEditorialDate, isFullIsoDate, vendorCtaRel } from "@/lib/editorial";
 import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-[#1A2D48] transition-colors hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-brand transition-colors hover:border-indigo hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 function shouldRenderMethodology(
   methodology: ReviewTemplateProps["methodology"]
@@ -24,9 +24,9 @@ function shouldRenderMethodology(
 type ReviewNavLink = { label: string; href: string };
 
 const editorialLinkClass =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 const secondaryNavLinkClass =
-  "text-[#1A2D48] hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const SCENARIO_PREVIEW_LIMIT = 6;
 
@@ -157,7 +157,7 @@ export type ReviewTemplateProps = {
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
@@ -388,25 +388,25 @@ export function ReviewTemplate({
                 className="h-16 w-auto max-w-[160px] object-contain object-left mb-4"
               />
             )}
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {toolName} Review ({SEO_YEAR})
             </h1>
             {/* Key stats row */}
-            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#57534E]">
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5 align-baseline">
-                <span className="text-[#10B981] font-bold">{rating}</span>
+                <span className="text-brand font-bold">{rating}</span>
                 <span>BeltStack rating</span>
                 <RatingInfoTooltip />
               </span>
               <span>
-                <span className="font-semibold text-[#1A2D48]">Best for:</span> {bestFor}
+                <span className="font-semibold text-brand">Best for:</span> {bestFor}
               </span>
               <span>
-                <span className="font-semibold text-[#1A2D48]">Starting price:</span> {startingPrice}
+                <span className="font-semibold text-brand">Starting price:</span> {startingPrice}
               </span>
               {payrollTypes != null && payrollTypes !== "" && (
                 <span>
-                  <span className="font-semibold text-[#1A2D48]">Payroll types:</span> {payrollTypes}
+                  <span className="font-semibold text-brand">Payroll types:</span> {payrollTypes}
                 </span>
               )}
             </div>
@@ -422,14 +422,14 @@ export function ReviewTemplate({
                 </a>
               </div>
             )}
-            <p className="mt-3 max-w-[720px] text-xs leading-relaxed text-[#57534E]">
+            <p className="mt-3 max-w-[720px] text-xs leading-relaxed text-muted-foreground">
               {AFFILIATE_DISCLOSURE}
             </p>
             {extraDisclosure != null && (
-              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-[#57534E]">{extraDisclosure}</p>
+              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-muted-foreground">{extraDisclosure}</p>
             )}
             {lastReviewed != null && lastReviewed !== "" && (
-              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-[#57534E]">
+              <p className="mt-1.5 max-w-[720px] text-xs leading-relaxed text-muted-foreground">
                 Last reviewed {formatEditorialDate(lastReviewed)}
               </p>
             )}
@@ -467,8 +467,8 @@ export function ReviewTemplate({
                     {ratingBreakdown!.map((item, i) => (
                       <li key={i} className="flex flex-col gap-1.5">
                         <div className="flex items-baseline justify-between gap-4">
-                          <h3 className="text-[#1A2D48] font-semibold">{item.category}</h3>
-                          <span className="text-[#10B981] font-bold shrink-0">{item.score}</span>
+                          <h3 className="text-brand font-semibold">{item.category}</h3>
+                          <span className="text-indigo font-bold shrink-0">{item.score}</span>
                         </div>
                         <p className="text-neutral-700 text-sm leading-relaxed">{item.explanation}</p>
                       </li>
@@ -482,22 +482,22 @@ export function ReviewTemplate({
                 <SectionTitle sub="What we liked and what to watch for.">Pros and cons</SectionTitle>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                    <h3 className="text-[#1A2D48] text-lg font-semibold">Pros</h3>
+                    <h3 className="text-brand text-lg font-semibold">Pros</h3>
                     <ul className="mt-3 space-y-2 text-sm text-neutral-700 leading-relaxed">
                       {pros.map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                          <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                           {item}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="rounded-lg border border-stone-200/80 bg-white p-6">
-                    <h3 className="text-[#1A2D48] text-lg font-semibold">Cons</h3>
+                    <h3 className="text-brand text-lg font-semibold">Cons</h3>
                     <ul className="mt-3 space-y-2 text-sm text-neutral-700 leading-relaxed">
                       {cons.map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-[#1A2D48] shrink-0 mt-0.5" aria-hidden>•</span>
+                          <span className="text-brand shrink-0 mt-0.5" aria-hidden>•</span>
                           {item}
                         </li>
                       ))}
@@ -513,7 +513,7 @@ export function ReviewTemplate({
                   <p>{bestForEditorial ?? bestFor}</p>
                   {whoShouldAvoid != null && whoShouldAvoid !== "" && (
                     <div className="pt-5 mt-5 border-t border-neutral-200/60">
-                      <h3 className="text-[#1A2D48] font-semibold mb-2">Who should avoid it</h3>
+                      <h3 className="text-brand font-semibold mb-2">Who should avoid it</h3>
                       <p className="leading-relaxed">{whoShouldAvoid}</p>
                     </div>
                   )}
@@ -527,7 +527,7 @@ export function ReviewTemplate({
                   <p>{pricingSummary}</p>
                   {pricingTiers != null && pricingTiers !== "" && <p>{pricingTiers}</p>}
                   {costVsCompetitors != null && costVsCompetitors !== "" && <p>{costVsCompetitors}</p>}
-                  <p className="text-[#1A2D48] font-semibold">Starting price: {startingPrice}</p>
+                  <p className="text-brand font-semibold">Starting price: {startingPrice}</p>
                 </div>
               </section>
 
@@ -537,7 +537,7 @@ export function ReviewTemplate({
                 <ul className="space-y-4">
                   {featureList.map((item, i) => (
                     <li key={i} className="flex flex-col gap-1">
-                      <span className="text-[#1A2D48] font-medium">{item.name}</span>
+                      <span className="text-brand font-medium">{item.name}</span>
                       {item.description !== "" && (
                         <p className="text-neutral-700 text-sm leading-relaxed">{item.description}</p>
                       )}
@@ -555,7 +555,7 @@ export function ReviewTemplate({
                 <ul className="flex flex-wrap gap-2">
                   {integrations.map((name, i) => (
                     <li key={i}>
-                      <span className="inline-flex rounded-md border border-neutral-200/60 bg-white px-3 py-1.5 text-sm font-medium text-[#1A2D48]">
+                      <span className="inline-flex rounded-md border border-neutral-200/60 bg-white px-3 py-1.5 text-sm font-medium text-brand">
                         {name}
                       </span>
                     </li>
@@ -570,7 +570,7 @@ export function ReviewTemplate({
                   <ul className="space-y-2 text-[15px] leading-relaxed text-neutral-700">
                     {contractorUse!.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-1" aria-hidden>•</span>
+                        <span className="text-indigo shrink-0 mt-1" aria-hidden>•</span>
                         {item}
                       </li>
                     ))}
@@ -583,7 +583,7 @@ export function ReviewTemplate({
                 <SectionTitle sub="Other options we review.">Alternatives</SectionTitle>
                 {alternativesPageHref != null && alternativesPageLabel != null && (
                   <p className="mb-4 text-sm text-neutral-700 leading-relaxed">
-                    <Link href={alternativesPageHref} className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded">
+                    <Link href={alternativesPageHref} className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded">
                       {alternativesPageLabel}
                     </Link>
                     {" — full comparison, pricing, and who each option suits."}
@@ -607,7 +607,7 @@ export function ReviewTemplate({
                       <div className="min-w-0 flex-1">
                         <Link
                           href={alt.href}
-                          className="text-[#1A2D48] font-semibold hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+                          className="text-brand font-semibold hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
                         >
                           {alt.name}
                         </Link>
@@ -752,7 +752,7 @@ export function ReviewTemplate({
                   <ul className="space-y-2 text-[15px] leading-relaxed text-neutral-700">
                     {methodology.bullets.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-1" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-1" aria-hidden>
                           •
                         </span>
                         <span className="min-w-0 break-words">{item}</span>
@@ -762,7 +762,7 @@ export function ReviewTemplate({
                   <p className="mt-5">
                     <Link
                       href="/methodology"
-                      className="inline-block rounded text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                      className="inline-block rounded text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                     >
                       Read our full review methodology →
                     </Link>
@@ -790,11 +790,11 @@ export function ReviewTemplate({
                         className="h-12 w-auto max-w-[140px] object-contain object-left"
                       />
                     )}
-                    <h2 className="text-[#1A2D48] text-lg font-semibold leading-tight">{toolName}</h2>
+                    <h2 className="text-brand text-lg font-semibold leading-tight">{toolName}</h2>
                   </div>
                   <div className="flex items-baseline gap-1">
                     <div>
-                      <p className="text-emerald-600 text-2xl font-semibold leading-none">{rating}</p>
+                      <p className="text-brand text-2xl font-semibold leading-none">{rating}</p>
                       <p className="text-neutral-500 text-xs mt-0.5">BeltStack rating</p>
                     </div>
                     <RatingInfoTooltip align="right" />
@@ -804,14 +804,14 @@ export function ReviewTemplate({
                   </div>
                   <div>
                     <p className="text-neutral-500 text-xs">Starting price</p>
-                    <p className="text-[#1A2D48] font-semibold text-sm">{startingPrice}</p>
+                    <p className="text-brand font-semibold text-sm">{startingPrice}</p>
                   </div>
                   <div>
                     <p className="text-neutral-500 text-xs mb-2">Key highlights</p>
                     <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
                       {pros.slice(0, 5).map((p, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>✓</span>
+                          <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
                           {p}
                         </li>
                       ))}

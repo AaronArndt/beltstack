@@ -70,14 +70,14 @@ const METHODOLOGY_BULLETS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function HubSectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub != null && sub.length > 0 && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub != null && sub.length > 0 && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -138,7 +138,7 @@ function SeoToolsHowToChooseSection() {
   return (
     <>
       <HubSectionTitle sub="Key factors when buying SEO software">How to Choose SEO Tools</HubSectionTitle>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         SEO tools only help when someone uses them weekly and execution keeps pace—GBP photos, reviews, and service pages still win Map Pack. Use the{" "}
         <Link href="#compare" className={linkGreen}>
           comparison table
@@ -162,30 +162,30 @@ function SeoToolsHowToChooseSection() {
         round out vendor research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Search Console baseline</strong> — Verify every property before you buy; free data should anchor decisions.
+            <strong className="text-brand">Search Console baseline</strong> — Verify every property before you buy; free data should anchor decisions.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Local vs national</strong> — Map Pack work often needs BrightLocal or Whitespark—not just a keyword suite.
+            <strong className="text-brand">Local vs national</strong> — Map Pack work often needs BrightLocal or Whitespark—not just a keyword suite.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Limit math</strong> — Tracked keywords, locations, and seats drive renewals; model annual cost honestly.
+            <strong className="text-brand">Limit math</strong> — Tracked keywords, locations, and seats drive renewals; model annual cost honestly.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">One primary suite</strong> — Avoid paying for Semrush and Ahrefs simultaneously until usage justifies it.{" "}
+            <strong className="text-brand">One primary suite</strong> — Avoid paying for Semrush and Ahrefs simultaneously until usage justifies it.{" "}
             <Link href="/seo-tools/compare/semrush-vs-ahrefs" className={linkGreen}>
               Semrush vs Ahrefs
             </Link>
             .
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Content + links</strong> — When backlinks steer strategy, Ahrefs or Semrush depth matters; pair with on-site execution.
+            <strong className="text-brand">Content + links</strong> — When backlinks steer strategy, Ahrefs or Semrush depth matters; pair with on-site execution.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Measure calls</strong> — Rankings that never produce booked jobs are vanity—track pipeline impact in your{" "}
+            <strong className="text-brand">Measure calls</strong> — Rankings that never produce booked jobs are vanity—track pipeline impact in your{" "}
             <Link href="/crm" className={linkGreen}>
               CRM
             </Link>
@@ -262,7 +262,7 @@ function SeoToolsPopularComparisonsSection() {
             <Link
               key={slug}
               href={href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -275,9 +275,9 @@ function SeoToolsPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                   vs
                 </span>
                 {data.productB.logoSrc ? (
@@ -290,17 +290,17 @@ function SeoToolsPopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{title}</h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">{title}</h3>
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link href="/seo-tools/compare" className={linkGreen}>
           View all SEO tool comparisons →
         </Link>
@@ -332,55 +332,55 @@ function SeoToolsEducationSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">What service businesses should look for in SEO software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">Focus on execution fit, local measurement, and honest limits—not buzzwords.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">What service businesses should look for in SEO software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">Focus on execution fit, local measurement, and honest limits—not buzzwords.</p>
       </div>
       <div className="mt-4 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2 space-y-6">
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">GBP + site work first</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">GBP + site work first</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Tools surface issues; they do not replace review responses, photos, categories, and accurate service areas.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Match software to your bottleneck</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">Match software to your bottleneck</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               Map Pack operators often need local platforms; content-led teams need keyword and link intelligence—avoid buying everything at once.
             </p>
           </div>
           <div>
-            <h3 className="text-[#1A2D48] text-lg font-semibold">CRM and lead context</h3>
-            <p className="mt-1.5 text-[#57534E] text-sm leading-relaxed">
+            <h3 className="text-brand text-lg font-semibold">CRM and lead context</h3>
+            <p className="mt-1.5 text-muted-foreground text-sm leading-relaxed">
               When organic traffic converts, tag sources in your CRM so SEO time ties to booked jobs—not just rankings.
             </p>
           </div>
         </div>
         <div>
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
-            <h3 className="text-[#1A2D48] text-lg font-semibold">Checklist</h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#57534E]">
+            <h3 className="text-brand text-lg font-semibold">Checklist</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Search Console verified
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 GBP categories + service areas accurate
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Core city + service pages live
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-[#10B981] shrink-0" aria-hidden>
+                <span className="text-indigo shrink-0" aria-hidden>
                   ✓
                 </span>
                 Weekly SEO owner assigned

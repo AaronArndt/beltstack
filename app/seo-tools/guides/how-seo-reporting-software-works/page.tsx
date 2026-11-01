@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowSeoReportingSoftwareWorksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Reporting Software Works</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How SEO Reporting Software Works</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 How rank trackers, crawlers, and local grids feed dashboards—and what to report so owners and clients act instead of filing PDFs. For stack choices, see{" "}
                 <Link href="/seo-tools/best-seo-tools" className={link}>
                   best SEO tools
@@ -115,8 +115,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="what-reporting-does" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What SEO reporting software actually does</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What SEO reporting software actually does</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reporting tools sit on top of data collection: rank trackers poll SERPs for your keyword list, site crawlers snapshot URLs and errors, and local platforms run grid scans around coordinates you choose. The software normalizes that into charts, white-label PDFs, and email digests so you are not exporting CSVs by hand every month.
                 </p>
@@ -130,14 +130,14 @@ export default function HowSeoReportingSoftwareWorksPage() {
               </section>
 
               <section id="data-sources" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Where the numbers come from</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Where the numbers come from</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Google Search Console</strong> — Impressions, clicks, average position, and indexing status from Google directly. Every serious report should anchor here, even when you pay for third-party rank data.
+                    <strong className="text-brand">Google Search Console</strong> — Impressions, clicks, average position, and indexing status from Google directly. Every serious report should anchor here, even when you pay for third-party rank data.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Rank trackers</strong> — Scheduled SERP checks in{" "}
+                    <strong className="text-brand">Rank trackers</strong> — Scheduled SERP checks in{" "}
                     <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
                       Semrush
                     </Link>
@@ -148,10 +148,10 @@ export default function HowSeoReportingSoftwareWorksPage() {
                     , or similar tools. Useful for competitor context; treat as estimates, not gospel.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Site crawlers</strong> — Audit exports showing broken links, duplicate titles, and redirect chains. Pair crawl deltas with Search Console coverage when you ship template changes.
+                    <strong className="text-brand">Site crawlers</strong> — Audit exports showing broken links, duplicate titles, and redirect chains. Pair crawl deltas with Search Console coverage when you ship template changes.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local grids</strong> — Map Pack position by ZIP from{" "}
+                    <strong className="text-brand">Local grids</strong> — Map Pack position by ZIP from{" "}
                     <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
                       BrightLocal
                     </Link>{" "}
@@ -165,8 +165,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
               </section>
 
               <section id="report-anatomy" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Anatomy of a useful SEO report</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Anatomy of a useful SEO report</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Strong reports answer three questions: what changed, why it might matter, and what we will do next. Open with a half-page summary for busy owners; bury detail in appendices only if someone asked for it.
                 </p>
@@ -180,8 +180,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
               </section>
 
               <section id="agency-vs-inhouse" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Agency white-label vs in-house dashboards</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Agency white-label vs in-house dashboards</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Agencies often need PDF branding, multi-client project folders, and scheduled sends on the first of the month. In-house teams usually need fewer seats but clearer task ownership—one person owns Search Console weekly, another owns local grids.
                 </p>
@@ -199,8 +199,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
               </section>
 
               <section id="automation-limits" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Automation limits worth knowing</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Automation limits worth knowing</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Scheduled reports cannot replace judgment. Rank trackers miss personalized results; crawlers may not render JavaScript the way Google does; local grids sample points, not every block. Use reports to prioritize human work—GBP photos, service page rewrites, review responses—not to declare victory because a dashboard turned green.
                 </p>
@@ -215,8 +215,8 @@ export default function HowSeoReportingSoftwareWorksPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

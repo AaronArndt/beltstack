@@ -27,18 +27,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const posPickRoutes = getSoftwarePickCategoryRoutes("pos");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -55,11 +55,11 @@ export default function BestPosSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -68,24 +68,24 @@ export default function BestPosSoftwarePage() {
                 <li>
                   <Link
                     href="/pos"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     POS Software
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best POS Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best POS Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you run in-person transactions, the best POS software should support reliable checkout, clear reporting, and hardware workflows that fit your business model.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared checkout workflows, hardware flexibility, reporting, pricing, and integration fit so the Key Takeaways shortlist supports smarter vendor shortlisting.
             </p>
             <RoundupHubLinksBlurb categoryPath="/pos" categoryLabel="pos software" />
@@ -134,11 +134,11 @@ export default function BestPosSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -147,19 +147,19 @@ export default function BestPosSoftwarePage() {
                       key={row.slug}
                       className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80"
                     >
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.startingPrice}</td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.startingPrice}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
                           href={row.reviewHref}
-                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Read review
                         </Link>
@@ -204,9 +204,9 @@ export default function BestPosSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose POS software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Payment processing compatibility</h3>
+                <h3 className="font-bold text-brand text-base">Payment processing compatibility</h3>
                 <p className="mt-1">
                   Most POS systems bundle or partner with a payment processor so you can accept cards and other methods
                   at the register. Compare processing rates, contract terms, and whether you can use your own processor
@@ -214,7 +214,7 @@ export default function BestPosSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Inventory management integration</h3>
+                <h3 className="font-bold text-brand text-base">Inventory management integration</h3>
                 <p className="mt-1">
                   Look for item and variant management, stock levels, reorder alerts, and the ability to receive and
                   adjust inventory. If you use separate inventory or accounting software, check that the POS integrates
@@ -222,7 +222,7 @@ export default function BestPosSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Hardware support</h3>
+                <h3 className="font-bold text-brand text-base">Hardware support</h3>
                 <p className="mt-1">
                   Confirm which devices the POS runs on—tablets, terminals, or computers—and which peripherals
                   (receipt printers, cash drawers, barcode scanners) are supported. Some providers sell hardware
@@ -230,7 +230,7 @@ export default function BestPosSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Reporting and analytics</h3>
+                <h3 className="font-bold text-brand text-base">Reporting and analytics</h3>
                 <p className="mt-1">
                   Useful POS systems offer sales by period, by product or category, and by payment type. Dashboards and
                   exports help you understand trends and reconcile with bank deposits and accounting. Compare how much
@@ -238,7 +238,7 @@ export default function BestPosSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Multi-location capabilities</h3>
+                <h3 className="font-bold text-brand text-base">Multi-location capabilities</h3>
                 <p className="mt-1">
                   If you have or plan to have multiple locations, check that the POS supports multi-store inventory,
                   consolidated reporting, and consistent settings across sites. Some tools add location-based
@@ -271,10 +271,10 @@ export default function BestPosSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               <Link
                 href="/pos/compare"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 View POS comparisons
               </Link>{" "}
@@ -285,7 +285,7 @@ export default function BestPosSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -322,7 +322,7 @@ export default function BestPosSoftwarePage() {
       {affiliateOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/60"
+            className="fixed inset-0 z-50 bg-brand/60"
             aria-hidden
             onClick={() => setAffiliateOpen(false)}
           />
@@ -332,10 +332,10 @@ export default function BestPosSoftwarePage() {
             aria-labelledby="best-pos-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-pos-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-pos-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

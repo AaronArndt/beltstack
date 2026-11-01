@@ -11,7 +11,7 @@ export const metadata: Metadata = siteMetadata({
 });
 
 const linkClass =
-  "font-semibold text-[#10B981] underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 export default function TermsOfServicePage() {
   return (
@@ -20,11 +20,11 @@ export default function TermsOfServicePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 transition-colors hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 transition-colors hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -35,10 +35,10 @@ export default function TermsOfServicePage() {
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Terms of Service
             </h1>
-            <p className="mt-3 text-sm font-medium text-[#57534E] sm:text-base">
+            <p className="mt-3 text-sm font-medium text-muted-foreground sm:text-base">
               Effective Date: May 12, 2026
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
 
         <section className="border-t border-stone-200/80 bg-white py-8 sm:py-12">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <article className="prose prose-neutral max-w-none text-sm leading-relaxed text-[#57534E] sm:text-base [&_h2]:mt-10 [&_h2]:scroll-mt-[calc(var(--navbar-h)+1rem)] [&_h2]:border-b [&_h2]:border-stone-200/80 [&_h2]:pb-2 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-[#1A2D48] [&_h2]:first:mt-0 [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5">
+            <article className="prose prose-neutral max-w-none text-sm leading-relaxed text-muted-foreground sm:text-base [&_h2]:mt-10 [&_h2]:scroll-mt-[calc(var(--navbar-h)+1rem)] [&_h2]:border-b [&_h2]:border-stone-200/80 [&_h2]:pb-2 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-brand [&_h2]:first:mt-0 [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5">
               <p>
                 Welcome to BeltStack (“BeltStack,” “we,” “our,” or “us”). These Terms of Service (“Terms”) govern your access to and use of the
                 BeltStack website and any related content, features, tools, or services (collectively, the “Services”).
@@ -252,13 +252,13 @@ export default function TermsOfServicePage() {
               </ul>
 
               <h2 id="disclaimer-warranties">11. Disclaimer of Warranties</h2>
-              <p className="text-[#1A2D48] font-semibold uppercase tracking-wide">
+              <p className="text-brand font-semibold uppercase tracking-wide">
                 THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.
               </p>
-              <p className="text-[#1A2D48] font-semibold uppercase tracking-wide">
+              <p className="text-brand font-semibold uppercase tracking-wide">
                 TO THE MAXIMUM EXTENT PERMITTED BY LAW, BELTSTACK DISCLAIMS ALL WARRANTIES, INCLUDING:
               </p>
-              <ul className="font-semibold uppercase tracking-wide text-[#1A2D48]">
+              <ul className="font-semibold uppercase tracking-wide text-brand">
                 <li>MERCHANTABILITY</li>
                 <li>FITNESS FOR A PARTICULAR PURPOSE</li>
                 <li>NON-INFRINGEMENT</li>
@@ -275,27 +275,27 @@ export default function TermsOfServicePage() {
               </ul>
 
               <h2 id="limitation-liability">12. Limitation of Liability</h2>
-              <p className="text-[#1A2D48] font-semibold uppercase tracking-wide">
+              <p className="text-brand font-semibold uppercase tracking-wide">
                 TO THE MAXIMUM EXTENT PERMITTED BY LAW, BELTSTACK AND ITS OWNERS, AFFILIATES, PARTNERS, EMPLOYEES, CONTRACTORS, OR LICENSORS SHALL
                 NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:
               </p>
-              <ul className="font-semibold uppercase tracking-wide text-[#1A2D48]">
+              <ul className="font-semibold uppercase tracking-wide text-brand">
                 <li>Lost profits</li>
                 <li>Lost revenue</li>
                 <li>Business interruption</li>
                 <li>Data loss</li>
                 <li>Loss of goodwill</li>
               </ul>
-              <p className="font-semibold uppercase tracking-wide text-[#1A2D48]">
+              <p className="font-semibold uppercase tracking-wide text-brand">
                 arising out of or related to:
               </p>
-              <ul className="font-semibold uppercase tracking-wide text-[#1A2D48]">
+              <ul className="font-semibold uppercase tracking-wide text-brand">
                 <li>Your use of the Services</li>
                 <li>Reliance on content</li>
                 <li>Third-party software or services</li>
                 <li>Errors or omissions</li>
               </ul>
-              <p className="text-[#1A2D48] font-semibold uppercase tracking-wide">
+              <p className="text-brand font-semibold uppercase tracking-wide">
                 IN NO EVENT SHALL BELTSTACK’S TOTAL LIABILITY EXCEED ONE HUNDRED U.S. DOLLARS ($100).
               </p>
 
@@ -358,8 +358,8 @@ export default function TermsOfServicePage() {
 
         <section className="border-t border-stone-200/80 bg-stone-50 py-8 sm:py-10">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg font-bold text-[#1A2D48]">Related pages</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#57534E]">
+            <h2 className="text-lg font-bold text-brand">Related pages</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
               <li>
                 <Link href="/privacy" className={linkClass}>
                   Privacy Policy

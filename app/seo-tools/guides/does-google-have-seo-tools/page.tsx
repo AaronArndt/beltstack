@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function DoesGoogleHaveSeoToolsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Does Google Have SEO Tools?</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Does Google Have SEO Tools?</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Google ships free owner tools—not a paid SEO package. Here is what Search Console, Business Profile, Analytics, and PageSpeed cover, what they omit, and when third-party suites still earn a line item. For context, read{" "}
                 <Link href="/seo-tools/guides/seo-vs-google-whats-the-difference" className={link}>
                   SEO vs Google: what&apos;s the difference
@@ -119,8 +119,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="google-vs-seo-software" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Google tools vs SEO software</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Google tools vs SEO software</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google is a search engine and ad platform. SEO is the work you do to earn visibility in organic and local results. Google gives site owners free dashboards to see how Google treats their properties—it does not sell a Semrush-style subscription. That distinction trips up owners who expect one “Google SEO” product inside Ads or Workspace.
                 </p>
@@ -138,21 +138,21 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </section>
 
               <section id="free-google-stack" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The free Google stack site owners use</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The free Google stack site owners use</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Four Google products cover most SMB SEO monitoring without a credit card:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Search Console</strong> — Indexing, coverage errors, search performance, sitemaps, and manual actions. This is the non-negotiable baseline.
+                    <strong className="text-brand">Search Console</strong> — Indexing, coverage errors, search performance, sitemaps, and manual actions. This is the non-negotiable baseline.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Business Profile</strong> — Maps and local pack presence, reviews, photos, and call or direction actions.
+                    <strong className="text-brand">Google Business Profile</strong> — Maps and local pack presence, reviews, photos, and call or direction actions.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Google Analytics</strong> — Traffic sources and on-site conversions; useful for ROI, not for crawl diagnostics.
+                    <strong className="text-brand">Google Analytics</strong> — Traffic sources and on-site conversions; useful for ROI, not for crawl diagnostics.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">PageSpeed Insights / Lighthouse</strong> — Core Web Vitals and performance fixes that affect rankings and UX.
+                    <strong className="text-brand">PageSpeed Insights / Lighthouse</strong> — Core Web Vitals and performance fixes that affect rankings and UX.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -165,8 +165,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </section>
 
               <section id="what-google-omits" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What Google&apos;s tools do not give you</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What Google&apos;s tools do not give you</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Google will not show competitor keyword portfolios, full backlink graphs, or rank grids across ZIP codes. It will not audit your site against 200+ technical checks in one export, and Search Console query data is sampled and incomplete at the long tail. Those gaps are why agencies and growing in-house teams add{" "}
                   <Link href={getSeoToolsReviewUrl("semrush")} className={link}>
@@ -189,8 +189,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </section>
 
               <section id="local-google-tools" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Local SEO: Google plus specialist add-ons</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Local SEO: Google plus specialist add-ons</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Business Profile handles discovery on Maps; Search Console handles your website. Neither tracks citation drift across directories or Map Pack rank by neighborhood grid. That is where{" "}
                   <Link href={getSeoToolsReviewUrl("brightlocal")} className={link}>
@@ -209,8 +209,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </section>
 
               <section id="execution-cadence" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Turn Google data into an execution cadence</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Turn Google data into an execution cadence</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Owning the tools is not SEO. Weekly, pull Search Console for new coverage issues and queries gaining impressions; update GBP with photos or Q&A; fix one on-page gap on a service page. Monthly, review which pages lose clicks despite stable impressions—a title or meta refresh often beats buying another keyword module.
                 </p>
@@ -224,8 +224,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
               </section>
 
               <section id="when-to-upgrade" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to keep Google-only vs upgrade</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to keep Google-only vs upgrade</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Stay Google-only while you are fixing fundamentals: verified Search Console, clean indexing, aligned GBP, and core service pages. Upgrade when you need systematic competitor research, client-ready audits, multi-location rank reporting, or agency-scale project limits. Most owners overspend on suites before they exhaust Search Console and on-page work—{" "}
                   <Link href="/seo-tools/guides/how-to-optimize-seo-for-free" className={link}>
@@ -237,8 +237,8 @@ export default function DoesGoogleHaveSeoToolsPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

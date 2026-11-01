@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function CommonSeoMistakesBusinessesMakePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Common SEO Mistakes Businesses Make</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Common SEO Mistakes Businesses Make</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Recurring errors that cap organic growth—indexing neglect, GBP drift, thin location pages, tool shelfware, and measuring rankings instead of booked work. Fix fundamentals with{" "}
                 <Link href="/seo-tools/guides/how-to-set-up-seo-for-a-small-business" className={link}>
                   how to set up SEO for a small business
@@ -115,8 +115,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="set-and-forget" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Treating SEO as launch-and-forget</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Treating SEO as launch-and-forget</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Many owners pay for a site rebuild, tick “SEO” off the list, and wonder why leads flatline. Search algorithms, competitors, and your own catalog change constantly. Without a weekly Search Console check and monthly content or listing touch, decay is the default state.
                 </p>
@@ -130,8 +130,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="indexing-blindness" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Ignoring indexing and technical health</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Ignoring indexing and technical health</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Publishing new service pages while old templates carry accidental noindex tags is more common than teams admit—especially after CMS migrations or agency handoffs.{" "}
                   <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
@@ -157,8 +157,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="local-mismatch" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">GBP, website, and citations that disagree</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">GBP, website, and citations that disagree</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Different phone numbers on GBP, the website footer, and Yelp; service areas that promise counties you do not dispatch to; categories copied from a competitor without matching licenses—these mistakes erode trust with Google and with callers who get voicemail chaos.
                 </p>
@@ -188,8 +188,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="thin-pages" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Thin and duplicate location content</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Thin and duplicate location content</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Auto-generating “Plumber in [City]” pages for every town in a 100-mile radius feels productive but often produces duplicates with no photos, reviews, or local proof. Google demotes the cluster; humans bounce when the page could apply anywhere.
                 </p>
@@ -203,8 +203,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="tool-mistakes" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Tool mistakes: overlap, shelfware, and score chasing</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Tool mistakes: overlap, shelfware, and score chasing</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Paying for Semrush and Ahrefs simultaneously without distinct owners, buying enterprise crawl tiers for eight-page sites, or obsessing over a green audit score while money URLs stay excluded from the index—these patterns burn budget without shipping fixes.
                 </p>
@@ -222,8 +222,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="measurement" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Measuring rankings instead of revenue</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Measuring rankings instead of revenue</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rank trackers are leading indicators; they are not the business outcome. Teams celebrate moving from position nine to six while call volume flatlines because the page does not convert or the phone routes to a full mailbox.
                 </p>
@@ -241,8 +241,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
               </section>
 
               <section id="recovery" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">A practical recovery order</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">A practical recovery order</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ol className="mt-4 list-decimal space-y-2 pl-5">
                   <li>Verify Search Console ownership and fix indexing blockers on top service URLs.</li>
                   <li>Reconcile GBP, website NAP, and top citations to one phone and service area story.</li>
@@ -254,8 +254,8 @@ export default function CommonSeoMistakesBusinessesMakePage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

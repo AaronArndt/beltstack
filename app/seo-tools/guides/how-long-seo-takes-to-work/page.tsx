@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowLongSeoTakesToWorkPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowLongSeoTakesToWorkPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Long SEO Takes to Work</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Long SEO Takes to Work</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 Realistic timelines for indexing fixes, local visibility, and compounding organic growth—and what actually moves the clock. Ground expectations with{" "}
                 <Link href="/seo-tools/guides/is-seo-still-worth-it" className={link}>
                   is SEO still worth it
@@ -119,8 +119,8 @@ export default function HowLongSeoTakesToWorkPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="honest-answer" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">The honest answer: it depends on the starting line</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">The honest answer: it depends on the starting line</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   SEO is not a switch—it is a loop of fixes Google must recrawl, re-evaluate, and trust over time. A brand-new domain in a crowded market should expect months, not days. A local plumber with a broken GBP and no service pages can see Maps and query movement faster once listings and core pages align.
                 </p>
@@ -134,17 +134,17 @@ export default function HowLongSeoTakesToWorkPage() {
               </section>
 
               <section id="phases" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Typical phases most SMBs experience</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Typical phases most SMBs experience</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Weeks 1–4</strong> — Baseline audit, Search Console setup, GBP accuracy, fix indexing blockers. You may see coverage improvements before rankings move.
+                    <strong className="text-brand">Weeks 1–4</strong> — Baseline audit, Search Console setup, GBP accuracy, fix indexing blockers. You may see coverage improvements before rankings move.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Weeks 4–12</strong> — Service pages, internal links, review velocity, citation cleanup. Impressions often climb before average position improves.
+                    <strong className="text-brand">Weeks 4–12</strong> — Service pages, internal links, review velocity, citation cleanup. Impressions often climb before average position improves.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Months 3–12+</strong> — Compounding authority, content depth, and consistent GBP activity. Competitive head terms lag; long-tail and local modifiers respond sooner.
+                    <strong className="text-brand">Months 3–12+</strong> — Compounding authority, content depth, and consistent GBP activity. Competitive head terms lag; long-tail and local modifiers respond sooner.
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -161,8 +161,8 @@ export default function HowLongSeoTakesToWorkPage() {
               </section>
 
               <section id="what-speeds-up" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">What speeds SEO up (and what does not)</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">What speeds SEO up (and what does not)</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Speed comes from removing blockers and matching intent—not from buying more keyword exports. Weekly GBP posts, review responses, and one concrete site fix beat an annual content sprint nobody maintains. Avoid patterns in{" "}
                   <Link href="/seo-tools/guides/common-seo-mistakes-businesses-make" className={link}>
@@ -188,8 +188,8 @@ export default function HowLongSeoTakesToWorkPage() {
               </section>
 
               <section id="reporting" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Set reporting that matches the timeline</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Set reporting that matches the timeline</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Stakeholders panic when month-one reports show flat positions but rising impressions—that is often normal. Structure monthly narratives around what shipped (indexing fixes, new service sections, citation work) and leading indicators from Search Console and GBP.{" "}
                   <Link href="/seo-tools/guides/how-seo-reporting-software-works" className={link}>
@@ -200,8 +200,8 @@ export default function HowLongSeoTakesToWorkPage() {
               </section>
 
               <section id="when-to-reassess" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">When to reassess—not quit</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">When to reassess—not quit</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Reassess after 90 days of consistent execution if impressions and leads are flat: wrong keywords, weak pages, or a market with little search demand. Do not reassess because rankings wobbled after a redesign—give Google time to recrawl and compare pre/post in Search Console.
                 </p>
@@ -220,8 +220,8 @@ export default function HowLongSeoTakesToWorkPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

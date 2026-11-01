@@ -5,21 +5,21 @@ import { useId, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { BELTSTACK_RATING_TOOLTIP, vendorCtaRel } from "@/lib/editorial";
 
-const MINT = "#E7F8F2";
-const GREEN = "#10B981";
+const MINT = "var(--sage)";
+const GREEN = "var(--brand)";
 const RED_X = "#FF0000";
 
 /* Same height + width for primary / secondary CTAs (matches hub button feel) */
 const btnBase =
-  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-md px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
+  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-md px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
 
-const btnPrimary = `${btnBase} bg-[#10B981] text-white hover:bg-[#0d9668]`;
+const btnPrimary = `${btnBase} bg-brand text-white hover:bg-brand-hover`;
 
-const btnSecondary = `${btnBase} border border-[#10B981] bg-white text-[#10B981] hover:bg-[#E7F8F2]`;
+const btnSecondary = `${btnBase} border border-indigo bg-white text-indigo hover:bg-sage`;
 
 /** Section / label titles — match hub (e.g. Key takeaways, FAQ) */
 const sectionTitleClass =
-  "font-sans text-sm font-bold uppercase tracking-wide text-[#1A2D48]";
+  "font-sans text-sm font-bold uppercase tracking-wide text-brand";
 
 export type SoftwarePickCardComparisonLink = {
   href: string;
@@ -82,7 +82,7 @@ function IconInfo({ className }: { className?: string }) {
     <div className={`group relative inline-flex shrink-0 ${className ?? ""}`}>
       <button
         type="button"
-        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-stone-300 font-sans text-[11px] font-bold text-[#57534E] transition-colors hover:border-slate-400 hover:text-[#1A2D48] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-stone-300 font-sans text-[11px] font-bold text-muted-foreground transition-colors hover:border-slate-400 hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo"
         aria-describedby={tooltipId}
         aria-label="How we calculate ratings"
       >
@@ -97,13 +97,13 @@ function IconInfo({ className }: { className?: string }) {
           role="tooltip"
           className="pointer-events-auto rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-left shadow-lg"
         >
-          <p className="font-sans text-xs font-semibold text-[#1A2D48]">Rating methodology</p>
-          <p className="mt-1.5 font-sans text-xs leading-relaxed text-[#57534E] sm:text-sm">
+          <p className="font-sans text-xs font-semibold text-brand">Rating methodology</p>
+          <p className="mt-1.5 font-sans text-xs leading-relaxed text-muted-foreground sm:text-sm">
             {BELTSTACK_RATING_TOOLTIP}
           </p>
           <Link
             href="/methodology"
-            className="mt-2 inline-block font-sans text-xs font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1 sm:text-sm"
+            className="mt-2 inline-block font-sans text-xs font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1 sm:text-sm"
           >
             How we review software →
           </Link>
@@ -165,7 +165,7 @@ function StarRatingRow({ rating }: { rating?: string }) {
           </svg>
         ))}
       </div>
-      <span className="font-sans text-base font-bold text-[#1A2D48]">{capped.toFixed(1)}</span>
+      <span className="font-sans text-base font-bold text-brand">{capped.toFixed(1)}</span>
       <IconInfo />
     </div>
   );
@@ -242,15 +242,15 @@ function AccordionBlock({
         onClick={onToggle}
         className={`flex min-h-[52px] w-full items-center justify-between gap-4 px-5 py-3 text-left transition-[background-color,box-shadow] duration-150 sm:px-6 ${bottomRadiusWhenClosed} ${
           isOpen
-            ? "bg-[#E7F8F2]"
+            ? "bg-sage"
             : showGreenOutline
-              ? "bg-[#E7F8F2] shadow-[inset_0_0_0_1px_#10B981]"
-              : "bg-white hover:bg-[#E7F8F2]"
+              ? "bg-sage shadow-[inset_0_0_0_1px_var(--indigo)]"
+              : "bg-white hover:bg-sage"
         }`}
       >
         <span className={sectionTitleClass}>{label}</span>
         <svg
-          className={`h-5 w-5 shrink-0 text-[#57534E] transition-transform duration-200 ease-out ${
+          className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ease-out ${
             isOpen ? "-rotate-180" : ""
           }`}
           viewBox="0 0 24 24"
@@ -337,7 +337,7 @@ export function SoftwarePickCard({
   return (
     <article
       id={id}
-      className="min-w-0 max-w-full overflow-hidden rounded-lg border border-stone-200/90 bg-white font-sans antialiased text-[#1A2D48] shadow-sm"
+      className="min-w-0 max-w-full overflow-hidden rounded-lg border border-stone-200/90 bg-white font-sans antialiased text-brand shadow-sm"
     >
       <div
         className={`px-6 pt-6 ${paragraphs.length > 0 ? "pb-2" : "pb-6"}`}
@@ -345,15 +345,15 @@ export function SoftwarePickCard({
         {badgeText ? (
           <div className="mb-3">
             <span
-              className="inline-flex items-center gap-2.5 border px-3.5 py-2 font-sans text-sm font-bold leading-snug tracking-wide text-[#10B981] sm:text-[15px]"
+              className="inline-flex items-center gap-2.5 border px-3.5 py-2 font-sans text-sm font-bold leading-snug tracking-wide text-brand sm:text-[15px]"
               style={{
                 backgroundColor: MINT,
-                borderColor: GREEN,
+                borderColor: "var(--terracotta)",
                 borderRadius: 5,
               }}
             >
               <img
-                src="/Logos/SB_Crown.svg"
+                src="/Logos/BS_Crown.svg"
                 alt=""
                 width={26}
                 height={21}
@@ -378,14 +378,14 @@ export function SoftwarePickCard({
               />
             ) : (
               <div
-                className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-lg border border-stone-200 bg-stone-50 font-sans text-sm font-bold text-[#57534E]"
+                className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-lg border border-stone-200 bg-stone-50 font-sans text-sm font-bold text-muted-foreground"
                 aria-hidden
               >
                 {name.slice(0, 2).toUpperCase()}
               </div>
             )}
             <div className="min-w-0">
-              <h3 className="break-words text-[32px] font-bold leading-tight tracking-tight text-[#1A2D48]">
+              <h3 className="break-words text-[32px] font-bold leading-tight tracking-tight text-brand">
                 {name}
               </h3>
               <div className="mt-1.5">
@@ -429,7 +429,7 @@ export function SoftwarePickCard({
       {paragraphs.length > 0 ? (
         <div className="px-6 pb-6 pt-1">
           <p className={sectionTitleClass}>Highlights</p>
-          <div className="mt-3 space-y-3 text-[14px] leading-relaxed text-[#57534E]">
+          <div className="mt-3 space-y-3 text-[14px] leading-relaxed text-muted-foreground">
             {paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -446,7 +446,7 @@ export function SoftwarePickCard({
           onToggle={() => toggle("pros-cons")}
         >
           {pros.length === 0 && cons.length === 0 ? (
-            <p className="text-sm leading-relaxed text-[#57534E]">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               See the full review for detailed pros and cons.
             </p>
           ) : (
@@ -455,7 +455,7 @@ export function SoftwarePickCard({
                 <p className={sectionTitleClass}>Pros</p>
                 <ul className="mt-3 space-y-2.5">
                   {pros.map((item, idx) => (
-                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#57534E]">
+                    <li key={idx} className="flex gap-2 text-sm leading-snug text-muted-foreground">
                       <span className="mt-0.5 shrink-0">
                         <IconCheck className="h-5 w-5" />
                       </span>
@@ -468,7 +468,7 @@ export function SoftwarePickCard({
                 <p className={sectionTitleClass}>Cons</p>
                 <ul className="mt-3 space-y-2.5">
                   {cons.map((item, idx) => (
-                    <li key={idx} className="flex gap-2 text-sm leading-snug text-[#57534E]">
+                    <li key={idx} className="flex gap-2 text-sm leading-snug text-muted-foreground">
                       <span className="mt-0.5 shrink-0">
                         <IconX className="h-5 w-5" />
                       </span>
@@ -488,23 +488,23 @@ export function SoftwarePickCard({
           isOpen={openSection === "pricing"}
           onToggle={() => toggle("pricing")}
         >
-          <ul className="list-none space-y-2 text-sm leading-relaxed text-[#57534E]">
+          <ul className="list-none space-y-2 text-sm leading-relaxed text-muted-foreground">
             <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
               <span>{hasFreeTrial ? "Free trial" : "No free trial"}</span>
             </li>
             <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
               <span>{hasFreePlan ? "Free plan" : "No free plan"}</span>
             </li>
             {pricingExplanation ? (
               <li className="flex items-center gap-2 pt-1">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
                 <span>{pricingExplanation}</span>
               </li>
             ) : (
               <li className="flex items-center gap-2 pt-1">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
                 <span>
                   See current plans on the vendor site; starting price: {pricingStartLabel ?? "varies"}.
                 </span>
@@ -526,7 +526,7 @@ export function SoftwarePickCard({
               <p className={sectionTitleClass}>Review</p>
               <Link
                 href={reviewUrl}
-                className="mt-2 inline-block font-sans text-sm font-semibold text-[#10B981] underline underline-offset-2 hover:text-[#0d9668]"
+                className="mt-2 inline-block font-sans text-sm font-semibold text-brand underline underline-offset-2 hover:text-indigo-hover"
               >
                 {reviewLinkLabel}
               </Link>
@@ -536,12 +536,12 @@ export function SoftwarePickCard({
               {alternativesUrl ? (
                 <Link
                   href={alternativesUrl}
-                  className="mt-2 inline-block font-sans text-sm font-semibold text-[#10B981] underline underline-offset-2 hover:text-[#0d9668]"
+                  className="mt-2 inline-block font-sans text-sm font-semibold text-brand underline underline-offset-2 hover:text-indigo-hover"
                 >
                   {alternativesLinkLabel}
                 </Link>
               ) : (
-                <p className="mt-2 text-sm text-[#57534E]">See the category hub for alternatives.</p>
+                <p className="mt-2 text-sm text-muted-foreground">See the category hub for alternatives.</p>
               )}
             </div>
             <div>
@@ -552,7 +552,7 @@ export function SoftwarePickCard({
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="font-sans text-sm font-semibold text-[#10B981] underline underline-offset-2 hover:text-[#0d9668]"
+                        className="font-sans text-sm font-semibold text-brand underline underline-offset-2 hover:text-indigo-hover"
                       >
                         {link.label}
                       </Link>
@@ -560,7 +560,7 @@ export function SoftwarePickCard({
                   ))}
                 </ul>
               ) : (
-                <p className="mt-2 text-sm text-[#57534E]">Browse comparisons from the category compare hub.</p>
+                <p className="mt-2 text-sm text-muted-foreground">Browse comparisons from the category compare hub.</p>
               )}
             </div>
           </div>

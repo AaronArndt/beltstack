@@ -38,9 +38,9 @@ import { PRICING_STUDY_HUB_CATEGORIES, PRICING_STUDY_PATH } from "@/lib/research
 
 // ——— Design tokens (match homepage) ———
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnPill =
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const JUMP_LINKS_EXPLORE = { label: "Explore", href: "#explore" };
 const JUMP_LINKS_HOW_TO_CHOOSE = { label: "How to choose", href: "#how-to-choose" };
@@ -186,9 +186,9 @@ export type HubPageTemplateProps = {
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -204,17 +204,17 @@ function HubExploreNav({
   return (
     <section id="explore" className="scroll-mt-section border-b border-stone-200/80 bg-white py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-[#1A2D48] text-xl font-bold sm:text-2xl">Explore {categoryLabel}</h2>
+        <h2 className="text-brand text-xl font-bold sm:text-2xl">Explore {categoryLabel}</h2>
         <div className={sectionRuleAccent} aria-hidden />
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <li key={item.href} className="min-w-0">
               <Link
                 href={item.href}
-                className="flex h-full items-center rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-[#1A2D48] hover:border-[#10B981] hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                className="flex h-full items-center rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-brand hover:border-indigo hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
               >
                 <span className="min-w-0">{item.label}</span>
-                <span className="ml-1 shrink-0 text-[#10B981]" aria-hidden>
+                <span className="ml-1 shrink-0 text-indigo" aria-hidden>
                   →
                 </span>
               </Link>
@@ -246,18 +246,18 @@ function buildHubExploreItems({
 
 function BestRoundupCard({ block }: { block: { title: string; description: string; linkText: string; href: string } }) {
   return (
-    <div className="rounded-lg border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-emerald-50/80 to-teal-50/70 p-4 shadow-sm sm:p-5 lg:p-6">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
-        <img src="/Logos/SB_Crown.svg" alt="" aria-hidden className="mt-0.5 h-9 w-9 shrink-0" />
-        <div className="min-w-0 flex-1">
-          <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-[1.75rem]">{block.title}</h2>
-          <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-[#57534E] sm:text-base">{block.description}</p>
+    <div className="rounded-lg border border-stone-200 bg-white px-4 py-3 shadow-sm sm:px-5 sm:py-3.5">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2.5">
+            <img src="/Logos/BS_Crown.svg" alt="" aria-hidden className="h-9 w-9 shrink-0 object-contain" />
+            <h2 className="text-brand text-lg font-bold leading-snug sm:text-xl">{block.title}</h2>
+          </div>
+          <p className="mt-1 pl-[2.875rem] text-sm leading-relaxed text-muted-foreground">{block.description}</p>
         </div>
-        <div className="w-full sm:w-auto sm:min-w-[220px] sm:self-start">
-          <Link href={block.href} className={`w-full text-center inline-flex items-center justify-center ${btnPrimary}`}>
-            {block.linkText}
-          </Link>
-        </div>
+        <Link href={block.href} className={`inline-flex w-full shrink-0 items-center justify-center text-center sm:w-auto ${btnPrimary}`}>
+          {block.linkText}
+        </Link>
       </div>
     </div>
   );
@@ -329,14 +329,14 @@ export function HubPageTemplate({
               ]}
               className="mb-4"
             />
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
               {title}
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               {intro}
             </p>
             {introExtended != null && (
-              <div className="mt-4 text-[#57534E] text-base leading-relaxed max-w-3xl space-y-3">
+              <div className="mt-4 text-muted-foreground text-base leading-relaxed max-w-3xl space-y-3">
                 {introExtended}
               </div>
             )}
@@ -370,14 +370,14 @@ export function HubPageTemplate({
             <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
               <div className={keyTakeawaysAside != null ? "grid gap-4 lg:grid-cols-[minmax(280px,420px)_minmax(0,1fr)] lg:items-start lg:gap-3" : ""}>
                 <div>
-                  <h2 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide">Key takeaways</h2>
+                  <h2 className="text-brand text-sm font-bold uppercase tracking-wide">Key takeaways</h2>
                   <ul className="mt-3 space-y-2">
                     {keyTakeaways.map((item) => (
                       <li key={item.anchor} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo" aria-hidden />
                         <a
                           href={item.anchor}
-                          className="text-[#1A2D48] text-sm font-medium hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="text-brand text-sm font-medium hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           {item.label}
                         </a>
@@ -434,14 +434,14 @@ export function HubPageTemplate({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-4 sm:mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
               <div>
-                <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{featuredPicksTitle}</h2>
+                <h2 className="text-brand text-2xl font-bold sm:text-3xl">{featuredPicksTitle}</h2>
                 <div className={sectionRuleAccent} aria-hidden />
-                <p className="mt-1 text-[#57534E] text-sm sm:text-base">{featuredPicksSub}</p>
+                <p className="mt-1 text-muted-foreground text-sm sm:text-base">{featuredPicksSub}</p>
               </div>
               {featuredPicksRankingsLink != null && (
                 <Link
                   href={featuredPicksRankingsLink.href}
-                  className="shrink-0 text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+                  className="shrink-0 text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
                 >
                   {featuredPicksRankingsLink.label}
                 </Link>
@@ -478,7 +478,7 @@ export function HubPageTemplate({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={comparisonTable.subtitle}>{comparisonTable.title}</SectionTitle>
             {comparisonTableIntro != null && comparisonTableIntro.length > 0 && (
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
                 {comparisonTableIntro}
               </p>
             )}
@@ -486,7 +486,7 @@ export function HubPageTemplate({
               <p className="mt-2">
                 <Link
                   href={comparisonTableRankingsLink.href}
-                  className="text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded"
+                  className="text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded"
                 >
                   {comparisonTableRankingsLink.label}
                 </Link>
@@ -496,17 +496,17 @@ export function HubPageTemplate({
               <table className="w-full min-w-[600px] text-left text-sm">
                 <thead>
                   <tr className={tableHeadRow}>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]"></th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand"></th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonTable.rows.map((row) => (
                     <tr key={row.slug} className={tableBodyRow}>
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           {row.logoSrc != null && (
                             <img
@@ -518,13 +518,13 @@ export function HubPageTemplate({
                           <span>{row.tool}</span>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.price}</td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">{row.price}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
                           href={`${comparisonTable.detailsLinkBase}${row.slug}`}
-                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Read review
                         </Link>
@@ -546,7 +546,7 @@ export function HubPageTemplate({
               <>
                 <SectionTitle sub={scenarioLinks.sectionSub}>{scenarioLinks.sectionTitle}</SectionTitle>
                 {scenarioLinks.description != null && (
-                  <p className="mt-1 text-[#57534E] text-sm">{scenarioLinks.description}</p>
+                  <p className="mt-1 text-muted-foreground text-sm">{scenarioLinks.description}</p>
                 )}
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {scenarioLinks.links.map(({ label, href }, index) => (
@@ -555,7 +555,7 @@ export function HubPageTemplate({
                       href={href}
                       className={
                         scenarioLinks.highlightFirstLink === true && index === 0
-                          ? "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-[#10B981] bg-[#10B981]/10 px-4 py-2.5 text-sm font-bold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                          ? "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-indigo bg-sage px-4 py-2.5 text-sm font-bold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                           : btnPill
                       }
                     >
@@ -576,7 +576,7 @@ export function HubPageTemplate({
               <div className="mt-4 space-y-6">
                 {tradeLinks.groups.map((group) => (
                   <div key={group.groupLabel}>
-                    <h3 className="text-[#1A2D48] text-sm font-bold uppercase tracking-wide text-[#57534E] mb-2.5">
+                    <h3 className="text-brand text-sm font-bold uppercase tracking-wide text-muted-foreground mb-2.5">
                       {group.groupLabel}
                     </h3>
                     <div className="flex flex-wrap items-center gap-2.5">
@@ -653,14 +653,14 @@ export function HubPageTemplate({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle sub={methodology.sub}>{methodology.title}</SectionTitle>
             {methodology.introParagraph != null && (
-              <p className="mt-2 text-[#57534E] text-sm leading-relaxed">
+              <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
                 {methodology.introParagraph}
               </p>
             )}
-            <ul className="mt-4 space-y-2 text-[#57534E] text-sm leading-relaxed">
+            <ul className="mt-4 space-y-2 text-muted-foreground text-sm leading-relaxed">
               {methodology.bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-[#10B981] shrink-0" aria-hidden>•</span>
+                  <span className="text-indigo shrink-0" aria-hidden>•</span>
                   {bullet}
                 </li>
               ))}
@@ -668,20 +668,20 @@ export function HubPageTemplate({
             {PRICING_STUDY_HUB_CATEGORIES.includes(
               softwarePickCategory as (typeof PRICING_STUDY_HUB_CATEGORIES)[number],
             ) ? (
-              <p className="mt-4 text-[#57534E] text-sm leading-relaxed">
+              <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                 For advertised list prices versus a frozen small-team workflow in this category, see our{" "}
                 <Link
                   href={PRICING_STUDY_PATH}
-                  className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                 >
                   advertised vs usable pricing study
                 </Link>
                 .
               </p>
             ) : null}
-            <p className="mt-5 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
               {AFFILIATE_DISCLOSURE}{" "}
-              <Link href="/methodology" className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+              <Link href="/methodology" className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                 Affiliate disclosure
               </Link>
             </p>
@@ -694,17 +694,17 @@ export function HubPageTemplate({
       {/* Affiliate modal */}
       {affiliateOpen && (
         <>
-          <div className="fixed inset-0 z-50 bg-[#1A2D48]/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
+          <div className="fixed inset-0 z-50 bg-brand/60" aria-hidden onClick={() => setAffiliateOpen(false)} />
           <div
             className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white p-6 shadow-md"
             role="dialog"
             aria-labelledby="hub-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="hub-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="hub-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               {AFFILIATE_DISCLOSURE}
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

@@ -10,15 +10,15 @@ import { HELPDESK_LOGOS } from "@/lib/data/helpdeskHubData";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const SIDEBAR_ITEMS: GuideSidebarItem[] = [
   { name: "Zendesk", logoSrc: HELPDESK_LOGOS.zendesk, rating: "4.5", bestFor: "Full helpdesk", reviewHref: getHelpdeskReviewUrl("zendesk") },
@@ -51,21 +51,21 @@ export default function HowToChooseHelpdeskSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Helpdesk</Link></li>
+                    <li><Link href="/helpdesk" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Helpdesk</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/helpdesk/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How to Choose Helpdesk Software</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How to Choose Helpdesk Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Key factors when comparing helpdesk platforms: company size, support volume, channels, automation, reporting, integrations, and budget.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />
@@ -81,22 +81,22 @@ export default function HowToChooseHelpdeskSoftwarePage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>These factors apply to most teams. Weight them by your size, channels, and goals.</p>
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Company size and support volume</strong> — How many agents? How many conversations per month? Free or low-cost tiers (Freshdesk, Zoho Desk) suit small teams; higher volume may need more automation and reporting.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Channels</strong> — Email only, or email + chat + social + phone? Help Scout is email-first; Zendesk and Freshdesk offer full multi-channel. Match the tool to the channels you use today and plan to add.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Automation and routing</strong> — Rules for assignment, prioritization, and canned responses. More volume usually means more need for automation. Compare what's included at each tier.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Reporting</strong> — Response time, resolution time, volume by channel, CSAT. Ensure you can get the views you need for SLAs and team performance.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Integrations</strong> — CRM (Salesforce, HubSpot), ecommerce (Shopify, Magento), and collaboration (Slack). Check that your stack is supported so context flows into the ticket.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Budget</strong> — Per-agent vs per-user pricing; free tiers; add-ons for channels or advanced features. Model total cost at your current and likely future team size.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Company size and support volume</strong> — How many agents? How many conversations per month? Free or low-cost tiers (Freshdesk, Zoho Desk) suit small teams; higher volume may need more automation and reporting.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Channels</strong> — Email only, or email + chat + social + phone? Help Scout is email-first; Zendesk and Freshdesk offer full multi-channel. Match the tool to the channels you use today and plan to add.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Automation and routing</strong> — Rules for assignment, prioritization, and canned responses. More volume usually means more need for automation. Compare what's included at each tier.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Reporting</strong> — Response time, resolution time, volume by channel, CSAT. Ensure you can get the views you need for SLAs and team performance.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Integrations</strong> — CRM (Salesforce, HubSpot), ecommerce (Shopify, Magento), and collaboration (Slack). Check that your stack is supported so context flows into the ticket.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Budget</strong> — Per-agent vs per-user pricing; free tiers; add-ons for channels or advanced features. Model total cost at your current and likely future team size.</span></li>
                     </ul>
                   </div>
                 </section>
                 <section id="decision-guidance" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Narrowing your choice.">Decision guidance</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Email-only, small team</strong> — <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout</Link> or a simple shared inbox may be enough. You get customer context and collaboration without multi-channel complexity.</p>
-                    <p><strong className="text-[#1A2D48]">Multi-channel, growing team</strong> — <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk</Link> or <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk</Link> offer full ticketing, chat, social, and automation. Freshdesk often costs less; Zendesk has the larger ecosystem.</p>
-                    <p><strong className="text-[#1A2D48]">Ecommerce-first</strong> — <Link href={getHelpdeskReviewUrl("gorgias")} className={linkGreen}>Gorgias</Link> is built for Shopify and Magento with order context in the ticket. Zendesk and Freshdesk integrate with stores but are general-purpose.</p>
-                    <p><strong className="text-[#1A2D48]">Product-led / SaaS</strong> — <Link href={getHelpdeskReviewUrl("intercom")} className={linkGreen}>Intercom</Link> is messaging-first with in-app support; Zendesk and Help Scout also fit. Choose by whether you want conversational UX (Intercom) or ticket-centric (Zendesk).</p>
+                    <p><strong className="text-brand">Email-only, small team</strong> — <Link href={getHelpdeskReviewUrl("help-scout")} className={linkGreen}>Help Scout</Link> or a simple shared inbox may be enough. You get customer context and collaboration without multi-channel complexity.</p>
+                    <p><strong className="text-brand">Multi-channel, growing team</strong> — <Link href={getHelpdeskReviewUrl("freshdesk")} className={linkGreen}>Freshdesk</Link> or <Link href={getHelpdeskReviewUrl("zendesk")} className={linkGreen}>Zendesk</Link> offer full ticketing, chat, social, and automation. Freshdesk often costs less; Zendesk has the larger ecosystem.</p>
+                    <p><strong className="text-brand">Ecommerce-first</strong> — <Link href={getHelpdeskReviewUrl("gorgias")} className={linkGreen}>Gorgias</Link> is built for Shopify and Magento with order context in the ticket. Zendesk and Freshdesk integrate with stores but are general-purpose.</p>
+                    <p><strong className="text-brand">Product-led / SaaS</strong> — <Link href={getHelpdeskReviewUrl("intercom")} className={linkGreen}>Intercom</Link> is messaging-first with in-app support; Zendesk and Help Scout also fit. Choose by whether you want conversational UX (Intercom) or ticket-centric (Zendesk).</p>
                   </div>
                 </section>
                 <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">

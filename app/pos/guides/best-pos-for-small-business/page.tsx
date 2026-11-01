@@ -10,15 +10,15 @@ import { getPosReviewUrl, getPosCompareUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -48,21 +48,21 @@ export default function BestPosForSmallBusinessGuidePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/pos" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">POS Software</Link></li>
+                    <li><Link href="/pos" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">POS Software</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/pos/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/pos/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Best POS for Small Business</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Best POS for Small Business
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Why small businesses move beyond cash registers, what to look for in a POS, and which systems offer the best ease of use, pricing, and payment integrations.
                   </p>
                   <GuideLastUpdated date="March 13, 2026" />
@@ -88,16 +88,16 @@ export default function BestPosForSmallBusinessGuidePage() {
                   <SectionTitle sub="What matters most when choosing a POS as a small business.">Key takeaways</SectionTitle>
                   <ul className="space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                      <span><strong className="text-[#1A2D48]">Ease of use and quick setup</strong> matter more than feature count. Your team should be able to run the register and pull basic reports without lengthy training.</span>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                      <span><strong className="text-brand">Ease of use and quick setup</strong> matter more than feature count. Your team should be able to run the register and pull basic reports without lengthy training.</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                      <span><strong className="text-[#1A2D48]">Pricing transparency</strong> helps you budget. Prefer systems with clear software and processing costs over long-term contracts or hidden fees.</span>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                      <span><strong className="text-brand">Pricing transparency</strong> helps you budget. Prefer systems with clear software and processing costs over long-term contracts or hidden fees.</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span>
-                      <span><strong className="text-[#1A2D48]">Payment integrations</strong> should support the ways you take money today—cards, contactless, and optionally online or invoicing—so you’re not juggling multiple tools.</span>
+                      <span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span>
+                      <span><strong className="text-brand">Payment integrations</strong> should support the ways you take money today—cards, contactless, and optionally online or invoicing—so you’re not juggling multiple tools.</span>
                     </li>
                   </ul>
                 </section>
@@ -116,7 +116,7 @@ export default function BestPosForSmallBusinessGuidePage() {
                   <SectionTitle sub="Features that matter for SMBs.">What to look for in a small business POS</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Prioritize <strong className="text-[#1A2D48]">ease of use</strong>: staff should be able to ring sales, apply discounts, and process refunds with minimal training. <strong className="text-[#1A2D48]">Pricing</strong> should be clear—whether that’s free software plus transaction fees (Square) or a monthly bundle (Clover). <strong className="text-[#1A2D48">Payment processing</strong> should be built in or easy to connect so you’re not maintaining a separate gateway. Basic <strong className="text-[#1A2D48]">inventory and reporting</strong> help you see what’s selling and what’s low in stock; you can add deeper inventory or multi-location later if needed.
+                      Prioritize <strong className="text-brand">ease of use</strong>: staff should be able to ring sales, apply discounts, and process refunds with minimal training. <strong className="text-brand">Pricing</strong> should be clear—whether that’s free software plus transaction fees (Square) or a monthly bundle (Clover). <strong className="text-brand">Payment processing</strong> should be built in or easy to connect so you’re not maintaining a separate gateway. Basic <strong className="text-brand">inventory and reporting</strong> help you see what’s selling and what’s low in stock; you can add deeper inventory or multi-location later if needed.
                     </p>
                     <p>
                       If you already sell online or plan to, consider a POS that unifies in-person and online sales (e.g. <Link href={getPosReviewUrl("shopify-pos")} className={linkGreen}>Shopify POS</Link>). If you’re in-person only and want the lowest commitment, <Link href={getPosReviewUrl("square-pos")} className={linkGreen}>Square</Link> or <Link href={getPosReviewUrl("clover-pos")} className={linkGreen}>Clover</Link> are solid choices.

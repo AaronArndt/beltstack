@@ -9,15 +9,15 @@ import { getFieldServiceReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -77,11 +77,11 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Home
                       </Link>
@@ -90,7 +90,7 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                     <li>
                       <Link
                         href="/field-service"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Field Service
                       </Link>
@@ -99,7 +99,7 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                     <li>
                       <Link
                         href="/field-service/guides"
-                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                        className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         Guides
                       </Link>
@@ -112,10 +112,10 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                 </nav>
 
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Businesses Reduce Missed Appointments
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Learn how businesses reduce missed appointments with better scheduling, reminders, dispatch controls,
                     and customer communication.
                   </p>
@@ -176,38 +176,38 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Realistic job duration</strong> — pad estimates for
+                          <strong className="text-brand">Realistic job duration</strong> — pad estimates for
                           diagnostics, access issues, and parts runs.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Zone or skill-based assignment</strong> — match tech
+                          <strong className="text-brand">Zone or skill-based assignment</strong> — match tech
                           capability and geography before promising times.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Same-day buffers</strong> — hold slack for emergencies
+                          <strong className="text-brand">Same-day buffers</strong> — hold slack for emergencies
                           instead of packing every slot.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Honest time windows</strong> — align what CSRs promise with
+                          <strong className="text-brand">Honest time windows</strong> — align what CSRs promise with
                           what routes can deliver.
                         </span>
                       </li>
@@ -241,29 +241,29 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                     </p>
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Booking confirmation</strong> — immediate acknowledgment
+                          <strong className="text-brand">Booking confirmation</strong> — immediate acknowledgment
                           with date, window, and prep instructions.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Two-way confirm/reschedule</strong> — let customers reply
+                          <strong className="text-brand">Two-way confirm/reschedule</strong> — let customers reply
                           instead of no-showing silently.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">En-route ETA</strong> — triggered when the tech marks en
+                          <strong className="text-brand">En-route ETA</strong> — triggered when the tech marks en
                           route in the{" "}
                           <Link href="/field-service/guides/how-mobile-field-service-apps-work" className={linkGreen}>
                             mobile app
@@ -296,19 +296,19 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                     </p>
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
-                        <strong className="text-[#1A2D48]">Flag late jobs early</strong> — board alerts when a stop runs
+                        <strong className="text-brand">Flag late jobs early</strong> — board alerts when a stop runs
                         past its window.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Reassign or compress</strong> — move downstream appointments
+                        <strong className="text-brand">Reassign or compress</strong> — move downstream appointments
                         to another tech or call customers with new times.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Update status on mobile</strong> — field crews keep the board
+                        <strong className="text-brand">Update status on mobile</strong> — field crews keep the board
                         truthful so the office is not guessing.
                       </li>
                       <li>
-                        <strong className="text-[#1A2D48]">Log the reason</strong> — no-show, access denied, or parts
+                        <strong className="text-brand">Log the reason</strong> — no-show, access denied, or parts
                         delay on the work order for reporting.
                       </li>
                     </ol>
@@ -336,29 +336,29 @@ export default function HowBusinessesReduceMissedAppointmentsPage() {
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Show rate by channel</strong> — compare online booking vs
+                          <strong className="text-brand">Show rate by channel</strong> — compare online booking vs
                           phone intake vs recurring contracts.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">Missed-visit reasons</strong> — categorize customer no-show,
+                          <strong className="text-brand">Missed-visit reasons</strong> — categorize customer no-show,
                           overbooking, and tech delay separately.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>
+                        <span className="text-indigo shrink-0 mt-0.5" aria-hidden>
                           •
                         </span>
                         <span>
-                          <strong className="text-[#1A2D48]">On-time arrival</strong> — pair with{" "}
+                          <strong className="text-brand">On-time arrival</strong> — pair with{" "}
                           <Link href="/field-service/guides/how-businesses-track-field-employees" className={linkGreen}>
                             field employee tracking
                           </Link>{" "}

@@ -9,15 +9,15 @@ import { getCrmReviewUrl, getCrmBestForUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -63,21 +63,21 @@ export default function WhatBusinessesUseCrmSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">What Businesses Use CRM Software</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     What Businesses Use CRM Software
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     CRM is not only for large sales organizations. This guide covers which industries, team types, and company sizes adopt CRM—and how use cases differ from startups to enterprise.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -96,11 +96,11 @@ export default function WhatBusinessesUseCrmSoftwarePage() {
                   <SectionTitle sub="Who logs in daily.">Teams and Roles That Use CRM</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Sales reps and account executives</strong> — Pipeline, activities, quotes, and quota tracking.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Sales managers and RevOps</strong> — Forecasting, coaching from activity data, and process enforcement.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Marketing</strong> — Lead handoff, campaign attribution, and nurture (often in the same platform as CRM, e.g. HubSpot).</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Founders and owners</strong> — Visibility without chasing updates in Slack or email.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Customer success</strong> — Renewal risk, expansion, and account health alongside support tools.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Sales reps and account executives</strong> — Pipeline, activities, quotes, and quota tracking.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Sales managers and RevOps</strong> — Forecasting, coaching from activity data, and process enforcement.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Marketing</strong> — Lead handoff, campaign attribution, and nurture (often in the same platform as CRM, e.g. HubSpot).</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Founders and owners</strong> — Visibility without chasing updates in Slack or email.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Customer success</strong> — Renewal risk, expansion, and account health alongside support tools.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -108,10 +108,10 @@ export default function WhatBusinessesUseCrmSoftwarePage() {
                   <SectionTitle sub="Common adoption patterns.">Industries and Business Models</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">B2B software and services</strong> — Longer cycles, multiple stakeholders, demo-to-close tracking.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Agencies and consultancies</strong> — Multiple client pipelines; see <Link href="/crm/guides/crm-for-consultants" className={linkGreen}>CRM for consultants</Link>.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Real estate and professional services</strong> — Relationship-heavy, referral-driven follow-up.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Distribution and field sales</strong> — Often pair CRM with <Link href="/crm/guides/crm-vs-field-service-software" className={linkGreen}>field service software</Link> for operations.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">B2B software and services</strong> — Longer cycles, multiple stakeholders, demo-to-close tracking.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Agencies and consultancies</strong> — Multiple client pipelines; see <Link href="/crm/guides/crm-for-consultants" className={linkGreen}>CRM for consultants</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Real estate and professional services</strong> — Relationship-heavy, referral-driven follow-up.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Distribution and field sales</strong> — Often pair CRM with <Link href="/crm/guides/crm-vs-field-service-software" className={linkGreen}>field service software</Link> for operations.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -119,10 +119,10 @@ export default function WhatBusinessesUseCrmSoftwarePage() {
                   <SectionTitle sub="How needs change as you grow.">Company Size and Maturity</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Startups and small teams</strong> prioritize speed, free tiers, and simple pipelines—often <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> or <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>. See <Link href={getCrmBestForUrl("small-business")} className={linkGreen}>best CRM for small business</Link>.
+                      <strong className="text-brand">Startups and small teams</strong> prioritize speed, free tiers, and simple pipelines—often <Link href={getCrmReviewUrl("hubspot")} className={linkGreen}>HubSpot</Link> or <Link href={getCrmReviewUrl("zoho-crm")} className={linkGreen}>Zoho CRM</Link>. See <Link href={getCrmBestForUrl("small-business")} className={linkGreen}>best CRM for small business</Link>.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Mid-market</strong> adds role-based permissions, integrations, and RevOps discipline. <strong className="text-[#1A2D48]">Enterprise</strong> emphasizes customization, security, and global rollout—categories where <Link href={getCrmReviewUrl("salesforce")} className={linkGreen}>Salesforce</Link> is common.
+                      <strong className="text-brand">Mid-market</strong> adds role-based permissions, integrations, and RevOps discipline. <strong className="text-brand">Enterprise</strong> emphasizes customization, security, and global rollout—categories where <Link href={getCrmReviewUrl("salesforce")} className={linkGreen}>Salesforce</Link> is common.
                     </p>
                     <p>
                       If you are deciding whether CRM is worth it at your stage, read <Link href="/crm/guides/why-businesses-need-crm-software" className={linkGreen}>why businesses need CRM software</Link> and <Link href="/crm/guides/what-crm-does-for-small-business" className={linkGreen}>what CRM does for small business</Link>.

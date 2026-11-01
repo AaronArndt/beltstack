@@ -9,15 +9,15 @@ import { getSchedulingReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -59,21 +59,21 @@ export default function CloudVsOnPremiseSchedulingSoftwarePage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pb-4 pt-8">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Scheduling</Link></li>
+                    <li><Link href="/scheduling" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Scheduling</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/scheduling/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="font-medium text-gray-700" aria-current="page">Cloud vs On-Premise Scheduling Software</li>
                   </ol>
                 </nav>
                 <section className="border-b border-neutral-200/60 pb-6">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Cloud vs On-Premise Scheduling Software
                   </h1>
-                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#57534E]">
+                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted-foreground">
                     Compare cloud and on-premise scheduling software on deployment speed, mobile access, IT ownership,
                     and total cost—so hosting supports booking instead of blocking it.
                   </p>
@@ -130,23 +130,23 @@ export default function CloudVsOnPremiseSchedulingSoftwarePage() {
                     </p>
                     <ul className="list-none space-y-2">
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Faster go-live</strong> — connect calendars, publish a
+                          <strong className="text-brand">Faster go-live</strong> — connect calendars, publish a
                           link, and test reminders in days.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Always-current features</strong> — routing, payments, and
+                          <strong className="text-brand">Always-current features</strong> — routing, payments, and
                           integrations improve without upgrade projects.
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-0.5 shrink-0 text-[#10B981]" aria-hidden>•</span>
+                        <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>•</span>
                         <span>
-                          <strong className="text-[#1A2D48]">Low IT overhead</strong> — no database admin for a booking
+                          <strong className="text-brand">Low IT overhead</strong> — no database admin for a booking
                           page most solos need.
                         </span>
                       </li>

@@ -16,42 +16,42 @@ import { POS_POPULAR_COMPARISONS } from "@/lib/data/posHubData";
 import { FIELD_SERVICE_POPULAR_COMPARISONS } from "@/lib/data/fieldServiceHubData";
 import { sectionRuleAccent } from "@/lib/design-tokens";
 import { TradeSoftwareDiscoverySection } from "@/components/home/TradeSoftwareDiscoverySection";
+import { Layers } from "lucide-react";
 
-// ——— Design tokens (reference) ———
-// BG: #F5F5F4 | Navy: #1A2D48 | Emerald: #10B981 | Subtle: #57534E
-// Borders: stone-200 / neutral (warm-neutral chrome)
+// Page bands use sage-soft. Headings and primary buttons use brand (deep teal).
+// Links and focus use indigo. Editorial badges and the trust-band dots use terracotta.
 
-/** Homepage hero — use-case tiles (custom artwork in /public/Logos). */
+/** Homepage hero — use-case tiles (artwork in /public/Logos/BeltStack_HeroIconsNew). */
 const HERO_USE_CASE_TILES = [
   {
     title: "Get paid & invoicing",
     href: "/invoicing",
-    iconSrc: "/Logos/getpaidandpricing.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/getpaidandpricing.png",
   },
   {
     title: "Run payroll & hiring",
     href: "/payroll",
-    iconSrc: "/Logos/runpayrollandhiring.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/runpayrollandhiring.png",
   },
   {
     title: "Manage jobs & crews",
     href: "/field-service",
-    iconSrc: "/Logos/managecrewsandjobs.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/managecrewsandjobs.png",
   },
   {
     title: "Get more leads",
     href: "/lead-generation",
-    iconSrc: "/Logos/getmoreleads.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/getmoreleads.png",
   },
   {
     title: "Track finances",
     href: "/accounting",
-    iconSrc: "/Logos/trackfinances.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/trackfinances.png",
   },
   {
     title: "Build your website",
     href: "/website-builders",
-    iconSrc: "/Logos/buildyourwebsite.png",
+    iconSrc: "/Logos/BeltStack_HeroIconsNew/buildyourwebsite.png",
   },
 ] as const;
 
@@ -62,20 +62,20 @@ const HERO_SECONDARY_LINKS = [
 ] as const;
 
 const heroUseCaseTileClass =
-  "group flex h-full flex-col items-center rounded-md border border-stone-200 bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(26,45,72,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-[#10B981] hover:shadow-[0_10px_28px_rgba(26,45,72,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "group flex h-full flex-col items-center rounded-md border border-stone-200 bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(1,44,42,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-indigo hover:shadow-[0_10px_28px_rgba(1,44,42,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const heroSecondaryLinkClass =
-  "inline-flex min-h-11 items-center rounded-sm px-1.5 py-2 text-sm font-medium text-[#1A2D48] underline-offset-[3px] transition-colors duration-200 hover:text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-1";
+  "inline-flex min-h-11 items-center rounded-sm px-1.5 py-2 text-sm font-medium text-indigo underline-offset-[3px] transition-colors duration-200 hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1";
 
 const categoryCardClass =
-  "group flex flex-col rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-[#10B981]/40 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "group flex flex-col rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition-all duration-200 hover:border-indigo/40 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
       <div className={sectionRuleAccent} aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -109,18 +109,72 @@ const HOMEPAGE_POPULAR_COMPARISON_CARDS: PopularComparisonCard[] = POPULAR_COMPA
   return null;
 }).filter(Boolean) as PopularComparisonCard[];
 
+const trustIconClass = "mt-0.5 h-6 w-6 shrink-0 text-terracotta";
+
+function TrustMark({ heading }: { heading: string }) {
+  if (heading === "Editorial ratings") {
+    return (
+      <svg viewBox="0 0 24 24" className={trustIconClass} aria-hidden fill="currentColor">
+        <path d="M12 2.2 14.9 8l6.4.9-4.6 4.5 1.1 6.3L12 16.8 6.2 19.7l1.1-6.3L2.7 8.9 9.1 8 12 2.2z" />
+      </svg>
+    );
+  }
+  if (heading === "Built for small businesses") {
+    return <Layers className={trustIconClass} aria-hidden />;
+  }
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={trustIconClass}
+      aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+      <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+      <path d="m21 3 1 11h-2" />
+      <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+      <path d="M3 4h8" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <main>
         {/* ——— 1) Hero ——— */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-7xl px-4 pb-10 pt-10 sm:px-6 sm:pb-10 sm:pt-12 lg:px-8 lg:pb-12 lg:pt-14">
-            <h1 className="text-center text-[#1A2D48] text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+        <section className="relative overflow-hidden bg-white">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-24 -top-16 h-56 w-[36rem] rounded-full bg-sage/55 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-16 top-0 h-48 w-[32rem] rounded-full bg-sage/40 blur-3xl"
+          />
+          <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-10 sm:px-6 sm:pb-10 sm:pt-12 lg:px-8 lg:pb-12 lg:pt-14">
+            <h1 className="text-center text-brand text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
               <span className="block">Find the Best Software for</span>
-              <span className="block">Your Business</span>
+              <span className="relative inline-block">
+                Your Business
+                <svg
+                  aria-hidden
+                  viewBox="0 0 100 12"
+                  preserveAspectRatio="none"
+                  className="pointer-events-none absolute right-0 top-[calc(100%-0.2em)] h-3 w-[68%] text-terracotta"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M0 7.6Q52 8.4 100 3.2L100 5.4Q52 10.6 0 10.4Z"
+                  />
+                </svg>
+              </span>
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-[#57534E] text-base leading-relaxed sm:mt-5 sm:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground text-base leading-relaxed sm:mt-5 sm:text-lg">
               Compare software for payroll, CRM, marketing, and operations — tailored to your business.
             </p>
 
@@ -129,7 +183,7 @@ export default function Home() {
                 <Link key={href} href={href} className={heroUseCaseTileClass}>
                   <div className="relative mx-auto mb-4 flex h-[92px] w-full max-w-[112px] items-center justify-center">
                     <span
-                      className="absolute left-1/2 top-1/2 h-[72px] w-[88px] -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-[2rem] bg-[#10B981]/18"
+                      className="absolute left-1/2 top-1/2 h-[72px] w-[88px] -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-[2rem] bg-sage/80"
                       aria-hidden
                     />
                     <Image
@@ -140,7 +194,7 @@ export default function Home() {
                       className="relative z-[1] h-[4.5rem] w-auto max-w-[5.5rem] object-contain"
                     />
                   </div>
-                  <span className="text-[#1A2D48] text-sm font-bold leading-snug sm:text-[0.9375rem]">{title}</span>
+                  <span className="text-brand text-sm font-bold leading-snug sm:text-[0.9375rem]">{title}</span>
                 </Link>
               ))}
             </div>
@@ -149,7 +203,7 @@ export default function Home() {
               className="mx-auto mt-8 max-w-6xl text-center sm:mt-10"
               aria-label="Browse BeltStack"
             >
-              <p className="text-sm text-[#57534E]">Or browse directly:</p>
+              <p className="text-sm text-muted-foreground">Or browse directly:</p>
               <ul className="mt-1 flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
                 {HERO_SECONDARY_LINKS.map(({ label, href }, index) => (
                   <li key={href} className="flex items-center">
@@ -179,12 +233,12 @@ export default function Home() {
             <div className="mt-4 space-y-8">
               {HOMEPAGE_CATEGORY_GROUPS.map((group) => (
                 <div key={group.title}>
-                  <h3 className="text-xs font-bold uppercase tracking-wide text-[#1A2D48]">{group.title}</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-wide text-brand">{group.title}</h3>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {group.categories.map(({ label, href, description }) => (
                       <Link key={href} href={href} className={categoryCardClass}>
-                        <span className="font-semibold text-[#1A2D48] group-hover:text-[#10B981]">{label}</span>
-                        <span className="mt-0.5 text-[#57534E] text-sm">{description}</span>
+                        <span className="font-semibold text-brand group-hover:text-indigo">{label}</span>
+                        <span className="mt-0.5 text-muted-foreground text-sm">{description}</span>
                       </Link>
                     ))}
                   </div>
@@ -210,7 +264,7 @@ export default function Home() {
                   <Link
                     key={card.slug}
                     href={card.href}
-                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                    className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                   >
                     <div className="flex items-center gap-3">
                       {card.productA.logoSrc ? (
@@ -223,9 +277,9 @@ export default function Home() {
                           }}
                         />
                       ) : (
-                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{card.productA.name}</span>
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{card.productA.name}</span>
                       )}
-                      <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                      <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                         vs
                       </span>
                       {card.productB.logoSrc ? (
@@ -238,14 +292,14 @@ export default function Home() {
                           }}
                         />
                       ) : (
-                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{card.productB.name}</span>
+                        <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{card.productB.name}</span>
                       )}
                     </div>
-                    <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">
+                    <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">
                       {title}
                     </h3>
-                    <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">
+                    <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+                    <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">
                       Compare →
                     </span>
                   </Link>
@@ -253,12 +307,12 @@ export default function Home() {
               })}
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
-              <span className="text-[#57534E]">More:</span>
+              <span className="text-muted-foreground">More:</span>
               {COMPARE_HUB_LINKS.map(({ label, href }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="min-h-11 inline-flex items-center font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                  className="min-h-11 inline-flex items-center font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                 >
                   {label}
                 </Link>
@@ -279,15 +333,15 @@ export default function Home() {
                   key={guide.href}
                   className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
                 >
-                  <span className="rounded-md bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981] border border-[#10B981]/20 w-fit">
+                  <span className="rounded-md border border-terracotta/40 bg-terracotta/30 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-brand w-fit">
                     {guide.category}
                   </span>
-                  <h3 className="mt-3 line-clamp-2 text-lg font-semibold leading-snug text-[#1A2D48]">
-                    <Link href={guide.href} className="group-hover:underline hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <h3 className="mt-3 line-clamp-2 text-lg font-semibold leading-snug text-brand">
+                    <Link href={guide.href} className="group-hover:underline hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                       {guide.title}
                     </Link>
                   </h3>
-                  <Link href={guide.href} className="mt-4 inline-block text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">
+                  <Link href={guide.href} className="mt-4 inline-block text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
                     Read more →
                   </Link>
                 </article>
@@ -297,7 +351,7 @@ export default function Home() {
         </section>
 
         {/* ——— 5) Why Trust BeltStack ——— */}
-        <section className="bg-[#1A2D48] py-14 sm:py-16" aria-labelledby="trust-heading">
+        <section className="bg-brand py-14 sm:py-16" aria-labelledby="trust-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 id="trust-heading" className="text-white text-2xl font-bold sm:text-3xl">
               Why Trust BeltStack
@@ -306,7 +360,7 @@ export default function Home() {
             <div className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
               {TRUST_ITEMS.map((item) => (
                 <div key={item.heading} className="flex items-start gap-4">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#10B981]" aria-hidden />
+                  <TrustMark heading={item.heading} />
                   <div>
                     <h3 className="text-white text-lg font-bold">{item.heading}</h3>
                     <p className="mt-1 text-white/80 text-sm leading-relaxed">{item.body}</p>
@@ -316,7 +370,7 @@ export default function Home() {
             </div>
             <Link
               href="/methodology"
-              className="mt-8 inline-flex min-h-11 items-center text-sm font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A2D48] rounded"
+              className="mt-8 inline-flex min-h-11 items-center text-sm font-semibold text-sage hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2 focus-visible:ring-offset-brand rounded"
             >
               See our methodology →
             </Link>

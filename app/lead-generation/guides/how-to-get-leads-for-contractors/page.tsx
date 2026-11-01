@@ -29,7 +29,7 @@ export default function HowToGetLeadsForContractorsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li><Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
                 <li aria-hidden>/</li>
                 <li><Link href="/lead-generation" className="text-gray-500 hover:text-gray-900">Lead Generation</Link></li>
@@ -40,10 +40,10 @@ export default function HowToGetLeadsForContractorsPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Get Leads for Contractors</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How to Get Leads for Contractors</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical path for trade businesses evaluating marketplaces, Google Local Services Ads, and complementary channels. Use our{" "}
-                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-[#10B981] hover:underline">
+                <Link href="/lead-generation/best-lead-generation-tools" className="font-semibold text-indigo hover:underline">
                   best lead generation tools roundup
                 </Link>{" "}
                 for ranked picks, then dive into product reviews when you shortlist.
@@ -56,16 +56,16 @@ export default function HowToGetLeadsForContractorsPage() {
                 Build a simple SLA (phone + SMS), then test one marketplace and one search channel where eligible.
               </p>
               <p>
-                Use our <Link href="/lead-generation/best-for/contractors" className="font-semibold text-[#10B981] hover:underline">best lead generation tools for contractors</Link> picks, the{" "}
-                <Link href="/lead-generation/compare/thumbtack-vs-angi" className="font-semibold text-[#10B981] hover:underline">Thumbtack vs Angi comparison</Link>, and full reviews such as{" "}
-                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-[#10B981] hover:underline">Thumbtack</Link> and{" "}
-                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-[#10B981] hover:underline">Google Local Services Ads</Link> when you shortlist.
-                Once calls flow, tighten follow-up with our <Link href="/crm" className="font-semibold text-[#10B981] hover:underline">CRM software hub</Link>.
+                Use our <Link href="/lead-generation/best-for/contractors" className="font-semibold text-indigo hover:underline">best lead generation tools for contractors</Link> picks, the{" "}
+                <Link href="/lead-generation/compare/thumbtack-vs-angi" className="font-semibold text-indigo hover:underline">Thumbtack vs Angi comparison</Link>, and full reviews such as{" "}
+                <Link href={getLeadGenerationReviewUrl("thumbtack")} className="font-semibold text-indigo hover:underline">Thumbtack</Link> and{" "}
+                <Link href={getLeadGenerationReviewUrl("google-local-services-ads")} className="font-semibold text-indigo hover:underline">Google Local Services Ads</Link> when you shortlist.
+                Once calls flow, tighten follow-up with our <Link href="/crm" className="font-semibold text-indigo hover:underline">CRM software hub</Link>.
               </p>
             </section>
             <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">Contractor lead channel mix</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">Contractor lead channel mix</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <ul className="mt-4 space-y-2 list-none text-[15px] leading-relaxed text-neutral-700">
                 <li>• Intent channel: Google LSA (when eligible) for urgent calls.</li>
                 <li>• Marketplace channel: Thumbtack/Angi for additional volume.</li>
@@ -74,19 +74,19 @@ export default function HowToGetLeadsForContractorsPage() {
               </ul>
             </section>
             <section className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">What to do after your first 30 days</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">What to do after your first 30 days</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <p className="mt-4 text-[15px] leading-relaxed text-neutral-700">
                 Keep the top-performing channel on booked-job margin, cut weak categories, and improve response scripts before increasing budget. Use{" "}
-                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-[#10B981] hover:underline">paid vs organic leads</Link>{" "}
+                <Link href="/lead-generation/guides/paid-vs-organic-leads" className="font-semibold text-indigo hover:underline">paid vs organic leads</Link>{" "}
                 to rebalance spend and{" "}
-                <Link href="/call-tracking" className="font-semibold text-[#10B981] hover:underline">call tracking software</Link>{" "}
+                <Link href="/call-tracking" className="font-semibold text-indigo hover:underline">call tracking software</Link>{" "}
                 to validate source quality.
               </p>
             </section>
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

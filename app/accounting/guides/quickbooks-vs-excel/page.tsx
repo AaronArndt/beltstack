@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/quickbooks-vs-excel";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function QuickBooksVsExcelPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">QuickBooks vs Excel</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     QuickBooks vs Excel: Which Is Better?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Excel is flexible; QuickBooks is built for reconciled books and accountant handoffs. Here is when each wins.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -89,7 +89,7 @@ export default function QuickBooksVsExcelPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">QuickBooks is usually better than Excel once a business has regular revenue, multiple expenses, and a business bank account.</strong> Excel shines for models and one-off analysis; QuickBooks shines for double-entry structure, bank reconciliation, and repeatable month-end close.
+                      <strong className="text-brand">QuickBooks is usually better than Excel once a business has regular revenue, multiple expenses, and a business bank account.</strong> Excel shines for models and one-off analysis; QuickBooks shines for double-entry structure, bank reconciliation, and repeatable month-end close.
                     </p>
                     <p>
                       Many owners start in spreadsheets because Excel is already on their laptop. The friction appears when invoices, expenses, and bank balances diverge—and fixing formulas takes longer than categorizing bank feeds in{" "}
@@ -106,11 +106,11 @@ export default function QuickBooksVsExcelPage() {
                   <SectionTitle sub="Side-by-side for small business.">QuickBooks vs Excel at a Glance</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Bank reconciliation</strong> — QuickBooks automates matching; Excel is manual.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Invoicing &amp; AR</strong> — QuickBooks tracks open invoices; Excel needs custom tracking.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Error risk</strong> — Formula breaks in Excel; miscategorization in QuickBooks—both need discipline.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">CPA handoff</strong> — Accountants strongly prefer QuickBooks or Xero exports over raw spreadsheets.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Cost</strong> — Excel may be cheaper in license fees; QuickBooks subscription often saves CPA cleanup time.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Bank reconciliation</strong> — QuickBooks automates matching; Excel is manual.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Invoicing &amp; AR</strong> — QuickBooks tracks open invoices; Excel needs custom tracking.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Error risk</strong> — Formula breaks in Excel; miscategorization in QuickBooks—both need discipline.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">CPA handoff</strong> — Accountants strongly prefer QuickBooks or Xero exports over raw spreadsheets.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Cost</strong> — Excel may be cheaper in license fees; QuickBooks subscription often saves CPA cleanup time.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -118,8 +118,8 @@ export default function QuickBooksVsExcelPage() {
                   <SectionTitle sub="Pick the right tool for your stage.">When to Use Each</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Use Excel</strong> for budgets, forecasts, and scenario models—export QuickBooks reports into Sheets or Excel for analysis.{" "}
-                      <strong className="text-[#1A2D48]">Use QuickBooks</strong> as the ledger when you invoice customers, pay vendors, and file business taxes.
+                      <strong className="text-brand">Use Excel</strong> for budgets, forecasts, and scenario models—export QuickBooks reports into Sheets or Excel for analysis.{" "}
+                      <strong className="text-brand">Use QuickBooks</strong> as the ledger when you invoice customers, pay vendors, and file business taxes.
                     </p>
                     <p>
                       Evaluate <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks worth it</Link> and{" "}
@@ -151,9 +151,9 @@ export default function QuickBooksVsExcelPage() {
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>If you invoice customers monthly, trial <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> for one reconciliation cycle.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Keep Excel for forecasts; export P&amp;L from QuickBooks when you need scenario planning.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which format they prefer before tax season—see <Link href="/accounting/guides/do-you-still-need-an-accountant-if-you-use-quickbooks" className={linkGreen}>accountant vs QuickBooks</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>If you invoice customers monthly, trial <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> for one reconciliation cycle.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Keep Excel for forecasts; export P&amp;L from QuickBooks when you need scenario planning.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Ask your CPA which format they prefer before tax season—see <Link href="/accounting/guides/do-you-still-need-an-accountant-if-you-use-quickbooks" className={linkGreen}>accountant vs QuickBooks</Link>.</span></li>
                     </ul>
                   </div>
                 </section>

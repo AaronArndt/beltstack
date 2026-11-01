@@ -27,18 +27,18 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const fieldServicePickRoutes = getSoftwarePickCategoryRoutes("field-service");
 
 const btnPrimary =
-  "rounded-md bg-[#10B981] px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#0d9668] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-[#10B981]/70 bg-white px-5 py-2.5 text-base font-bold text-[#10B981] transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2";
+  "rounded-md border border-indigo/70 bg-white px-5 py-2.5 text-base font-bold text-indigo transition-colors hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <div className="mb-4 sm:mb-5">
-      <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-      {sub && <p className="mt-1 text-[#57534E] text-sm sm:text-base">{sub}</p>}
+      <h2 className="text-brand text-2xl font-bold sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+      {sub && <p className="mt-1 text-muted-foreground text-sm sm:text-base">{sub}</p>}
     </div>
   );
 }
@@ -55,11 +55,11 @@ export default function BestFieldServiceSoftwarePage() {
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Home
                   </Link>
@@ -68,24 +68,24 @@ export default function BestFieldServiceSoftwarePage() {
                 <li>
                   <Link
                     href="/field-service"
-                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     Field Service
                   </Link>
                 </li>
                 <li aria-hidden>/</li>
-                <li className="text-[#1A2D48] font-medium" aria-current="page">
+                <li className="text-brand font-medium" aria-current="page">
                   Best Field Service Management Software
                 </li>
               </ol>
             </nav>
-            <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Best Field Service Management Software (2026)
             </h1>
-            <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
               If you dispatch field teams, the best field service software should keep scheduling, job details, invoicing, and technician updates aligned across office and crew workflows.
             </p>
-            <p className="mt-2 text-[#57534E] text-base leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-base leading-relaxed max-w-3xl">
               We compared scheduling controls, mobile usability, invoicing workflows, integrations, and pricing so the Key Takeaways shortlist reflects real operational fit.
             </p>
             <RoundupHubLinksBlurb categoryPath="/field-service" categoryLabel="field service software" />
@@ -134,11 +134,11 @@ export default function BestFieldServiceSoftwarePage() {
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Tool</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Best for</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Starting price</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Rating</th>
-                    <th className="px-4 py-3 font-bold text-[#1A2D48]">Review</th>
+                    <th className="px-4 py-3 font-bold text-brand">Tool</th>
+                    <th className="px-4 py-3 font-bold text-brand">Best for</th>
+                    <th className="px-4 py-3 font-bold text-brand">Starting price</th>
+                    <th className="px-4 py-3 font-bold text-brand">Rating</th>
+                    <th className="px-4 py-3 font-bold text-brand">Review</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -147,21 +147,21 @@ export default function BestFieldServiceSoftwarePage() {
                       key={row.slug}
                       className="border-b border-slate-100 last:border-0 transition-colors hover:bg-slate-50/80"
                     >
-                      <td className="px-4 py-4 font-semibold text-[#1A2D48]">
+                      <td className="px-4 py-4 font-semibold text-brand">
                         <div className="flex items-center gap-2">
                           <img src={row.logoSrc} alt="" className="h-8 w-auto max-w-[80px] object-contain" />
                           {row.name}
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-[#57534E]">{row.bestFor}</td>
-                      <td className="px-4 py-4 text-[#57534E]">
+                      <td className="px-4 py-4 text-muted-foreground">{row.bestFor}</td>
+                      <td className="px-4 py-4 text-muted-foreground">
                         {overlayVerifiedStartingPrice(row.slug, row.startingPrice, "field-service")}
                       </td>
-                      <td className="px-4 py-4 font-semibold text-[#10B981]">{row.rating}</td>
+                      <td className="px-4 py-4 font-semibold text-brand">{row.rating}</td>
                       <td className="px-4 py-4">
                         <Link
                           href={row.reviewHref}
-                          className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                          className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                         >
                           Read review
                         </Link>
@@ -183,9 +183,9 @@ export default function BestFieldServiceSoftwarePage() {
             <SectionTitle sub="What to look for when you compare options.">
               How to choose field service management software
             </SectionTitle>
-            <div className="mt-4 space-y-4 text-[#57534E] text-sm leading-relaxed">
+            <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Scheduling and dispatch</h3>
+                <h3 className="font-bold text-brand text-base">Scheduling and dispatch</h3>
                 <p className="mt-1">
                   Make sure the calendar and dispatch board are easy to read and update. Look for drag-and-drop
                   scheduling, recurring jobs, and route planning so you can keep technicians busy without double‑booking
@@ -193,7 +193,7 @@ export default function BestFieldServiceSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Mobile apps for technicians</h3>
+                <h3 className="font-bold text-brand text-base">Mobile apps for technicians</h3>
                 <p className="mt-1">
                   Technicians should be able to see their day, job details, notes, and customer history on their phone,
                   update status, capture photos, and collect signatures. A solid mobile app keeps the office informed
@@ -201,7 +201,7 @@ export default function BestFieldServiceSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Invoicing and payments</h3>
+                <h3 className="font-bold text-brand text-base">Invoicing and payments</h3>
                 <p className="mt-1">
                   The best FSM tools turn completed jobs into estimates and invoices in a few clicks. Check whether you
                   can send invoices by email or customer portal, accept card payments, and sync with your accounting
@@ -209,7 +209,7 @@ export default function BestFieldServiceSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Customer management</h3>
+                <h3 className="font-bold text-brand text-base">Customer management</h3>
                 <p className="mt-1">
                   Look for a clear view of customer and property history—past jobs, equipment, notes, and agreements. That
                   way, any tech can show up prepared, even if they have never been to the property before, and office
@@ -217,7 +217,7 @@ export default function BestFieldServiceSoftwarePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#1A2D48] text-base">Automation and reporting</h3>
+                <h3 className="font-bold text-brand text-base">Automation and reporting</h3>
                 <p className="mt-1">
                   Automations like appointment reminders, follow‑up texts, and triggers that send invoices when jobs are
                   marked complete reduce manual admin. Reporting on revenue, job completion, technician utilization, and
@@ -252,10 +252,10 @@ export default function BestFieldServiceSoftwarePage() {
             <SectionTitle sub="Head-to-head comparisons to narrow your choice.">
               Related comparisons
             </SectionTitle>
-            <p className="mt-2 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+            <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-3xl">
               <Link
                 href="/field-service/compare"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 View field service comparisons
               </Link>{" "}
@@ -263,7 +263,7 @@ export default function BestFieldServiceSoftwarePage() {
               buying advice, see our{" "}
               <Link
                 href="/field-service/guides"
-                className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
               >
                 field service guides
               </Link>
@@ -273,7 +273,7 @@ export default function BestFieldServiceSoftwarePage() {
                   {i > 0 && (i === FIELD_SERVICE_ALTERNATIVES_QUICK_LINKS.length - 1 ? ", or " : ", ")}
                   <Link
                     href={item.href}
-                    className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+                    className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                   >
                     {item.label} alternatives
                   </Link>
@@ -286,7 +286,7 @@ export default function BestFieldServiceSoftwarePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#1A2D48] transition-all hover:border-[#1A2D48] hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -323,7 +323,7 @@ export default function BestFieldServiceSoftwarePage() {
       {affiliateOpen && (
         <>
           <div
-            className="fixed inset-0 z-50 bg-[#1A2D48]/60"
+            className="fixed inset-0 z-50 bg-brand/60"
             aria-hidden
             onClick={() => setAffiliateOpen(false)}
           />
@@ -333,10 +333,10 @@ export default function BestFieldServiceSoftwarePage() {
             aria-labelledby="best-fsm-affiliate-title"
             aria-modal="true"
           >
-            <h3 id="best-fsm-affiliate-title" className="text-[#1A2D48] text-lg font-bold">
+            <h3 id="best-fsm-affiliate-title" className="text-brand text-lg font-bold">
               Affiliate disclosure
             </h3>
-            <p className="mt-3 text-[#57534E] text-sm leading-relaxed">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               BeltStack may earn a commission when you purchase through links on our site. Affiliate relationships do not determine our ratings, rankings, or recommendations.
             </p>
             <button type="button" onClick={() => setAffiliateOpen(false)} className={`mt-4 ${btnPrimary}`}>

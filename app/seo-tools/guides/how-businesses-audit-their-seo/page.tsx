@@ -6,7 +6,7 @@ import { GuideLastUpdated } from "@/components/guides/GuideLastUpdated";
 import { GuideSidebar, type GuideSidebarItem } from "@/components/guides/GuideSidebar";
 import { RelatedSeoToolsResources } from "@/components/guides/RelatedSeoToolsResources";
 
-const link = "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+const link = "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const GUIDE_SIDEBAR_ITEMS: GuideSidebarItem[] = [
   {
@@ -73,7 +73,7 @@ export default function HowBusinessesAuditTheirSeoPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
             <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
+              <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
                 <li>
                   <Link href="/" className="text-gray-500 hover:text-gray-900">
                     Home
@@ -98,8 +98,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
               </ol>
             </nav>
             <section className="pb-6 border-b border-neutral-200/60">
-              <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Audit Their SEO</h1>
-              <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+              <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">How Businesses Audit Their SEO</h1>
+              <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                 A practical audit stack—Search Console, crawlers, local listings, and content checks—and how to turn findings into a fix list leadership will fund. Start with{" "}
                 <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
                   technical SEO audit basics
@@ -119,12 +119,12 @@ export default function HowBusinessesAuditTheirSeoPage() {
 
             <div className="pt-8 pb-8 space-y-10 text-[15px] leading-relaxed text-neutral-700">
               <section id="audit-layers" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Four layers businesses combine</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Four layers businesses combine</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>Effective audits stack complementary checks—each answers a different failure mode:</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>
-                    <strong className="text-[#1A2D48]">Index and crawl health</strong> — Can Google fetch and index money pages? Start in{" "}
+                    <strong className="text-brand">Index and crawl health</strong> — Can Google fetch and index money pages? Start in{" "}
                     <Link href={getSeoToolsReviewUrl("google-search-console")} className={link}>
                       Google Search Console
                     </Link>
@@ -139,13 +139,13 @@ export default function HowBusinessesAuditTheirSeoPage() {
                     when URL count exceeds manual review.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Query and page fit</strong> — Which URLs earn impressions for services you sell vs informational noise you will never convert?
+                    <strong className="text-brand">Query and page fit</strong> — Which URLs earn impressions for services you sell vs informational noise you will never convert?
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Local surfaces</strong> — GBP categories, service areas, NAP consistency, and citation drift for Maps-dependent businesses.
+                    <strong className="text-brand">Local surfaces</strong> — GBP categories, service areas, NAP consistency, and citation drift for Maps-dependent businesses.
                   </li>
                   <li>
-                    <strong className="text-[#1A2D48]">Outcomes</strong> — Clicks, calls, and CRM-tagged leads—not rank tables alone. Align metrics with{" "}
+                    <strong className="text-brand">Outcomes</strong> — Clicks, calls, and CRM-tagged leads—not rank tables alone. Align metrics with{" "}
                     <Link href="/seo-tools/guides/seo-metrics-businesses-should-track" className={link}>
                       SEO metrics businesses should track
                     </Link>
@@ -155,8 +155,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
               </section>
 
               <section id="technical-first" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Run technical checks before content debates</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Run technical checks before content debates</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Teams often argue about blog topics while service pages sit noindexed or behind redirect chains. Follow{" "}
                   <Link href="/seo-tools/guides/technical-seo-audit-basics-for-small-business" className={link}>
@@ -174,8 +174,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
               </section>
 
               <section id="local-audit" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Add a local audit when Maps drives revenue</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Add a local audit when Maps drives revenue</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   For service businesses, audit GBP against the website: services listed, photos, Q&A, review velocity, and whether the site targets the same geography. Sample Map Pack grids in priority ZIPs via BrightLocal or Whitespark when organic URL rank does not explain call volume changes.
                 </p>
@@ -189,8 +189,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
               </section>
 
               <section id="deliverable" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Turn the audit into a 30-day fix list</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Turn the audit into a 30-day fix list</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Rank issues by revenue impact: indexing blockers first, then money-page content and GBP alignment, then citations and link opportunities. Assign owners and dates—an audit without assignments becomes shelfware, a pattern in{" "}
                   <Link href="/seo-tools/guides/common-seo-mistakes-businesses-make" className={link}>
@@ -208,8 +208,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
               </section>
 
               <section id="cadence" className="scroll-mt-section">
-                <h2 className="text-[#1A2D48] text-xl font-bold">Audit cadence and when SEO is worth continuing</h2>
-                <div className="mt-2 mb-4 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+                <h2 className="text-brand text-xl font-bold">Audit cadence and when SEO is worth continuing</h2>
+                <div className="mt-2 mb-4 h-[2px] w-14 bg-terracotta" aria-hidden />
                 <p>
                   Quarterly audits catch drift; event-driven audits catch migrations and rebrands. If repeated audits surface the same unfixed indexing errors, pause new content until execution discipline improves.
                 </p>
@@ -224,8 +224,8 @@ export default function HowBusinessesAuditTheirSeoPage() {
             </div>
 
             <section id="faqs" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
-              <h2 className="text-[#1A2D48] text-2xl font-bold">FAQs</h2>
-              <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+              <h2 className="text-brand text-2xl font-bold">FAQs</h2>
+              <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
               <GuideFaqSection faqs={FAQ} />
             </section>
               </div>

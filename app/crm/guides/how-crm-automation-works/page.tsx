@@ -9,15 +9,15 @@ import { getCrmReviewUrl } from "@/lib/routes";
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 const FAQ_ITEMS = [
   {
@@ -61,21 +61,21 @@ export default function HowCrmAutomationWorksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">CRM</Link></li>
+                    <li><Link href="/crm" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">CRM</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/crm/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">How CRM Automation Works</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How CRM Automation Works
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     CRM automation explained: triggers, workflows, email sequences, and lead routing—and how to deploy automation without hurting data quality or buyer trust.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -94,9 +94,9 @@ export default function HowCrmAutomationWorksPage() {
                   <SectionTitle sub="Triggers, conditions, actions.">Building Blocks of CRM Automation</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Trigger</strong> — Record created, field updated, stage changed, date reached.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Condition</strong> — Optional filters (source, territory, deal size).</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-[#1A2D48]">Action</strong> — Assign, task, email, Slack alert, field update.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Trigger</strong> — Record created, field updated, stage changed, date reached.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Condition</strong> — Optional filters (source, territory, deal size).</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><strong className="text-brand">Action</strong> — Assign, task, email, Slack alert, field update.</span></li>
                     </ul>
                     <p>Foundation: <Link href="/crm/guides/how-crm-software-works" className={linkGreen}>how CRM software works</Link>.</p>
                   </div>
@@ -104,19 +104,19 @@ export default function HowCrmAutomationWorksPage() {
                 <section id="types" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Common automation patterns.">Workflows, Sequences, and Routing</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
-                    <p><strong className="text-[#1A2D48]">Workflows</strong> react to CRM events—e.g. create a task when a deal sits in proposal stage seven days.</p>
-                    <p><strong className="text-[#1A2D48]">Email sequences</strong> send a timed series until reply or manual stop; often used for outbound and nurture. Distinguish from broad marketing campaigns in <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</p>
-                    <p><strong className="text-[#1A2D48]">Lead routing</strong> assigns new leads round-robin or by territory—pairs with <Link href="/crm/guides/how-businesses-track-leads-using-crm" className={linkGreen}>lead tracking</Link>.</p>
+                    <p><strong className="text-brand">Workflows</strong> react to CRM events—e.g. create a task when a deal sits in proposal stage seven days.</p>
+                    <p><strong className="text-brand">Email sequences</strong> send a timed series until reply or manual stop; often used for outbound and nurture. Distinguish from broad marketing campaigns in <Link href="/crm/guides/crm-vs-marketing-automation" className={linkGreen}>CRM vs marketing automation</Link>.</p>
+                    <p><strong className="text-brand">Lead routing</strong> assigns new leads round-robin or by territory—pairs with <Link href="/crm/guides/how-businesses-track-leads-using-crm" className={linkGreen}>lead tracking</Link>.</p>
                   </div>
                 </section>
                 <section id="best-practices" className="scroll-mt-section border-t border-neutral-200/60 pt-12 pb-12">
                   <SectionTitle sub="Deploy safely.">Best Practices and Pitfalls</SectionTitle>
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Automate one process at a time; document who owns maintenance.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Keep emails personalizable; avoid obvious bulk tone.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Exclude existing customers from prospect sequences.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Review automation reports monthly for errors and volume.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Automate one process at a time; document who owns maintenance.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Keep emails personalizable; avoid obvious bulk tone.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Exclude existing customers from prospect sequences.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Review automation reports monthly for errors and volume.</span></li>
                     </ul>
                     <p>Sales impact ties to <Link href="/crm/guides/how-crm-software-improves-sales" className={linkGreen}>how CRM improves sales</Link> and <Link href="/crm/guides/how-sales-pipeline-management-works" className={linkGreen}>pipeline management</Link>.</p>
                   </div>

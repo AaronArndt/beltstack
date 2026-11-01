@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/do-you-still-need-an-accountant-if-you-use
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -67,21 +67,21 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">QuickBooks &amp; Accountants</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     Do You Still Need an Accountant if You Use QuickBooks?
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     QuickBooks handles day-to-day books; accountants still matter for taxes, review, and judgment calls software cannot make alone.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -89,7 +89,7 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Yes—many businesses still need an accountant or bookkeeper even with QuickBooks.</strong> Software automates categorization, invoicing, and reports; it does not replace tax law expertise, entity planning, or independent review of whether your books are right.
+                      <strong className="text-brand">Yes—many businesses still need an accountant or bookkeeper even with QuickBooks.</strong> Software automates categorization, invoicing, and reports; it does not replace tax law expertise, entity planning, or independent review of whether your books are right.
                     </p>
                     <p>
                       Owners often ask this after buying <Link href={getAccountingReviewUrl("quickbooks-online")} className={linkGreen}>QuickBooks Online</Link> hoping to eliminate professional fees entirely. In practice, QuickBooks reduces data-entry labor; it does not answer whether an expense is deductible, how much salary an S corp owner should take, or how to fix a reconciliation that has been wrong for six months.
@@ -106,10 +106,10 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
                   <SectionTitle sub="What you can handle inside QuickBooks.">What QuickBooks Replaces</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Data entry from bank feeds and receipt capture</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Invoicing, payment tracking, and basic AR/AP</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Standard P&amp;L, balance sheet, and cash flow reports</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Export packages for tax prep when books are clean</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Data entry from bank feeds and receipt capture</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Invoicing, payment tracking, and basic AR/AP</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Standard P&amp;L, balance sheet, and cash flow reports</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Export packages for tax prep when books are clean</span></li>
                     </ul>
                     <p>See <Link href="/accounting/guides/what-do-small-businesses-use-quickbooks-for" className={linkGreen}>what small businesses use QuickBooks for</Link>.</p>
                   </div>
@@ -118,12 +118,12 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
                   <SectionTitle sub="Where professional help still pays off.">What Accountants Still Do</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Business and personal tax returns, estimated taxes, and multi-state filings</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Year-end adjusting entries, depreciation schedules, and loan covenant reporting</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Entity structure (LLC, S corp election) and owner compensation strategy</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Audit or IRS response when documentation and methodology matter</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Business and personal tax returns, estimated taxes, and multi-state filings</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Year-end adjusting entries, depreciation schedules, and loan covenant reporting</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Entity structure (LLC, S corp election) and owner compensation strategy</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Audit or IRS response when documentation and methodology matter</span></li>
                     </ul>
-                    <p className="text-sm text-neutral-600 border-l-4 border-[#10B981] pl-4">
+                    <p className="text-sm text-neutral-600 border-l-4 border-indigo pl-4">
                       BeltStack covers software workflows, not tax or legal advice—confirm filing obligations and entity decisions with a licensed CPA.
                     </p>
                   </div>
@@ -170,9 +170,9 @@ export default function DoYouStillNeedAnAccountantIfYouUseQuickBooksPage() {
                   <SectionTitle sub="Practical next steps for owners.">What to Do Next</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Invite your CPA or ProAdvisor into QuickBooks with accountant access—not shared passwords.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile last month before deciding whether you need monthly bookkeeping help.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Read <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks worth it</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> if you have not committed to a platform yet.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Invite your CPA or ProAdvisor into QuickBooks with accountant access—not shared passwords.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile last month before deciding whether you need monthly bookkeeping help.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Read <Link href="/accounting/guides/is-quickbooks-for-small-business-worth-it" className={linkGreen}>is QuickBooks worth it</Link> and <Link href="/accounting/best-accounting-software" className={linkGreen}>best accounting software</Link> if you have not committed to a platform yet.</span></li>
                     </ul>
                   </div>
                 </section>

@@ -32,7 +32,7 @@ export function SoftwareRecommendationCard({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
         <Link
           href={reviewHref}
-          className="flex shrink-0 justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] sm:justify-start"
+          className="flex shrink-0 justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo sm:justify-start"
           aria-label={`${name} — read full review`}
         >
           <img
@@ -43,29 +43,29 @@ export function SoftwareRecommendationCard({
         </Link>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-lg font-bold text-[#1A2D48]">
+            <h3 className="text-lg font-bold text-brand">
               <Link
                 href={reviewHref}
-                className="rounded hover:text-[#10B981] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981]"
+                className="rounded hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo"
               >
                 {name}
               </Link>
             </h3>
-            <span className="rounded-md border border-[#10B981]/20 bg-[#10B981]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#10B981]">
+            <span className="rounded-md border border-terracotta/40 bg-terracotta/30 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-brand">
               {badge}
             </span>
-            <span className="text-sm font-bold text-[#10B981]">{rating}</span>
+            <span className="text-sm font-bold text-brand">{rating}</span>
             {pricingLabel ? (
-              <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-[#57534E]">
+              <span className="rounded-md border border-stone-200 bg-stone-50 px-2 py-0.5 text-xs font-medium text-muted-foreground">
                 {pricingLabel}
               </span>
             ) : null}
           </div>
-          <p className="mt-2 text-sm leading-relaxed text-[#57534E]">{body}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
           <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
             <Link
               href={reviewHref}
-              className="font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded"
+              className="font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
             >
               Read full review →
             </Link>
@@ -73,7 +73,7 @@ export function SoftwareRecommendationCard({
               href={visitUrl}
               target="_blank"
               rel={vendorCtaRel(visitUrl)}
-              className="font-semibold text-[#1A2D48] hover:text-[#10B981] hover:underline"
+              className="font-semibold text-brand hover:text-indigo hover:underline"
             >
               Visit site
             </a>

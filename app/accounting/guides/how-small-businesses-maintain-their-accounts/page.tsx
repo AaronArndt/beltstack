@@ -11,15 +11,15 @@ const PAGE_HREF = "/accounting/guides/how-small-businesses-maintain-their-accoun
 function SectionTitle({ children, sub }: { children: React.ReactNode; sub?: string }) {
   return (
     <header className="mb-5 mt-0">
-      <h2 className="text-[#1A2D48] text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
-      <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
+      <h2 className="text-brand text-2xl font-bold leading-tight sm:text-3xl">{children}</h2>
+      <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
       {sub && <p className="mt-1.5 text-neutral-500 text-sm sm:text-base leading-relaxed">{sub}</p>}
     </header>
   );
 }
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const FAQ_ITEMS = [
   {
@@ -55,21 +55,21 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
             <article className="min-w-0 lg:col-span-8">
               <div className="max-w-[720px]">
                 <nav aria-label="Breadcrumb" className="pt-8 pb-4">
-                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-[#57534E]">
-                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Home</Link></li>
+                  <ol className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
+                    <li><Link href="/" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Home</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Accounting</Link></li>
+                    <li><Link href="/accounting" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Accounting</Link></li>
                     <li aria-hidden>/</li>
-                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] rounded">Guides</Link></li>
+                    <li><Link href="/accounting/guides" className="text-gray-500 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">Guides</Link></li>
                     <li aria-hidden>/</li>
                     <li className="text-gray-700 font-medium" aria-current="page">Maintain Accounts</li>
                   </ol>
                 </nav>
                 <section className="pb-6 border-b border-neutral-200/60">
-                  <h1 className="text-[#1A2D48] text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  <h1 className="text-brand text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                     How Small Businesses Maintain Their Accounts
                   </h1>
-                  <p className="mt-3 text-[#57534E] text-base leading-relaxed max-w-3xl">
+                  <p className="mt-3 text-muted-foreground text-base leading-relaxed max-w-3xl">
                     Monthly habits, reconciliation, and software that keep small business books accurate—not just at tax time.
                   </p>
                   <GuideLastUpdated date="May 26, 2026" />
@@ -77,10 +77,10 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                 <section className="pt-8 pb-8">
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      Owners search this when books have slipped—boxes of receipts, unexplained bank balances, or a CPA asking for cleanup before tax season. You want to know <strong className="text-[#1A2D48]">what &quot;maintaining accounts&quot; actually involves</strong> beyond buying software once.
+                      Owners search this when books have slipped—boxes of receipts, unexplained bank balances, or a CPA asking for cleanup before tax season. You want to know <strong className="text-brand">what &quot;maintaining accounts&quot; actually involves</strong> beyond buying software once.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Maintaining accounts means keeping your books current, reconciled, and ready for decisions and tax filing.</strong> Software handles the ledger; owners and bookkeepers supply discipline—separate business banking, timely categorization, and monthly close.
+                      <strong className="text-brand">Maintaining accounts means keeping your books current, reconciled, and ready for decisions and tax filing.</strong> Software handles the ledger; owners and bookkeepers supply discipline—separate business banking, timely categorization, and monthly close.
                     </p>
                     <p>
                       Foundation: <Link href="/accounting/guides/how-accounting-software-works" className={linkGreen}>how accounting software works</Link> and <Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>accounting for small business</Link>. Role clarity: <Link href="/accounting/guides/accounting-vs-bookkeeping" className={linkGreen}>accounting vs bookkeeping</Link>.
@@ -91,10 +91,10 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                   <SectionTitle sub="What healthy maintenance looks like.">Monthly Maintenance Habits</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Connect bank feeds; categorize transactions within the month.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile every business account to the statement balance.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Review P&amp;L and cash flow; chase overdue invoices.</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span>Attach receipts—see <Link href="/accounting/guides/do-businesses-need-to-keep-receipts-if-they-use-quickbooks" className={linkGreen}>keeping receipts</Link>.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Connect bank feeds; categorize transactions within the month.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Reconcile every business account to the statement balance.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Review P&amp;L and cash flow; chase overdue invoices.</span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span>Attach receipts—see <Link href="/accounting/guides/do-businesses-need-to-keep-receipts-if-they-use-quickbooks" className={linkGreen}>keeping receipts</Link>.</span></li>
                     </ul>
                   </div>
                 </section>
@@ -110,13 +110,13 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                   <SectionTitle sub="A repeatable month-end rhythm.">Step-by-Step Monthly Close</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Week 1–3:</strong> Categorize transactions as they post; attach receipts for expenses over your policy threshold; send invoices and record payments promptly.
+                      <strong className="text-brand">Week 1–3:</strong> Categorize transactions as they post; attach receipts for expenses over your policy threshold; send invoices and record payments promptly.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Month-end:</strong> Reconcile every business account to the statement balance; review uncategorized items; run profit-and-loss and balance sheet; note overdue AR and large variances.
+                      <strong className="text-brand">Month-end:</strong> Reconcile every business account to the statement balance; review uncategorized items; run profit-and-loss and balance sheet; note overdue AR and large variances.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Quarterly:</strong> Share reports with your bookkeeper or CPA; adjust estimated taxes if needed; confirm payroll and sales tax filings posted correctly from <Link href="/payroll" className={linkGreen}>payroll</Link> and <Link href="/payment-processing" className={linkGreen}>payments</Link> tools.
+                      <strong className="text-brand">Quarterly:</strong> Share reports with your bookkeeper or CPA; adjust estimated taxes if needed; confirm payroll and sales tax filings posted correctly from <Link href="/payroll" className={linkGreen}>payroll</Link> and <Link href="/payment-processing" className={linkGreen}>payments</Link> tools.
                     </p>
                   </div>
                 </section>
@@ -132,13 +132,13 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                   <SectionTitle sub="Habits that break books.">Common Mistakes</SectionTitle>
                   <div className="max-w-[720px] space-y-4 text-[15px] leading-relaxed text-neutral-700">
                     <p>
-                      <strong className="text-[#1A2D48]">Mixing personal and business spending</strong> on one card without clear rules.
+                      <strong className="text-brand">Mixing personal and business spending</strong> on one card without clear rules.
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Skipping reconciliation</strong> because balances &quot;look close enough.&quot;
+                      <strong className="text-brand">Skipping reconciliation</strong> because balances &quot;look close enough.&quot;
                     </p>
                     <p>
-                      <strong className="text-[#1A2D48]">Letting AR age</strong> without follow-up—cash flow looks fine on paper until it does not.
+                      <strong className="text-brand">Letting AR age</strong> without follow-up—cash flow looks fine on paper until it does not.
                     </p>
                   </div>
                 </section>
@@ -154,12 +154,12 @@ export default function HowSmallBusinessesMaintainTheirAccountsPage() {
                   <SectionTitle sub="Books, tools, and stack.">What to do next</SectionTitle>
                   <div className="max-w-[720px] space-y-3 text-[15px] leading-relaxed text-neutral-700">
                     <ul className="space-y-2 list-none">
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>Accounting for small business</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/invoicing" className={linkGreen}>Invoicing hub</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you need</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-vs-excel" className={linkGreen}>QuickBooks vs Excel</Link></span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#10B981] shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/best-accounting-software" className={linkGreen}>Best accounting software</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/accounting-for-small-business" className={linkGreen}>Accounting for small business</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/invoicing" className={linkGreen}>Invoicing hub</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/what-programs-small-businesses-actually-need" className={linkGreen}>What programs you need</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/accounting/guides/quickbooks-vs-excel" className={linkGreen}>QuickBooks vs Excel</Link></span></li>
+                      <li className="flex items-start gap-2"><span className="text-indigo shrink-0 mt-0.5" aria-hidden>•</span><span><Link href="/payroll" className={linkGreen}>Payroll hub</Link></span></li>
                     </ul>
                   </div>
                 </section>

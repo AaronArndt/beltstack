@@ -58,7 +58,7 @@ const METHODOLOGY_BULLETS = [
 ];
 
 const linkGreen =
-  "font-semibold text-[#10B981] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 rounded";
+  "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function IntroExtended() {
   return (
@@ -185,9 +185,9 @@ function PopularComparisonsSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">Popular Payment Processing Comparisons</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">Side-by-side pricing context, scenarios, and recommendations.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">Popular Payment Processing Comparisons</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">Side-by-side pricing context, scenarios, and recommendations.</p>
       </div>
       <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map(({ slug, href, data }) => {
@@ -198,7 +198,7 @@ function PopularComparisonsSection() {
             <Link
               key={slug}
               href={href}
-              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2"
+              className="group flex flex-col rounded-lg border border-stone-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-sm hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               <div className="flex items-center gap-3">
                 {data.productA.logoSrc ? (
@@ -211,9 +211,9 @@ function PopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productA.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productA.name}</span>
                 )}
-                <span className="text-[#57534E] text-lg font-medium" aria-hidden>
+                <span className="text-muted-foreground text-lg font-medium" aria-hidden>
                   vs
                 </span>
                 {data.productB.logoSrc ? (
@@ -226,17 +226,17 @@ function PopularComparisonsSection() {
                     }}
                   />
                 ) : (
-                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-[#57534E]">{data.productB.name}</span>
+                  <span className="flex h-10 min-w-[60px] items-center text-sm font-medium text-muted-foreground">{data.productB.name}</span>
                 )}
               </div>
-              <h3 className="mt-3 text-[#1A2D48] text-xl font-bold group-hover:text-[#10B981]">{title}</h3>
-              <p className="mt-1 text-[#57534E] text-sm leading-relaxed line-clamp-3">{summary}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#10B981] group-hover:underline">Compare →</span>
+              <h3 className="mt-3 text-brand text-xl font-bold group-hover:text-indigo">{title}</h3>
+              <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">{summary}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-indigo group-hover:underline">Compare →</span>
             </Link>
           );
         })}
       </div>
-      <p className="mt-3 text-sm text-[#57534E]">
+      <p className="mt-3 text-sm text-muted-foreground">
         <Link href="/payment-processing/compare" className={linkGreen}>
           View all payment processing comparisons →
         </Link>
@@ -249,11 +249,11 @@ function HowToChooseSection() {
   return (
     <>
       <div className="mb-4 sm:mb-5">
-        <h2 className="text-[#1A2D48] text-2xl font-bold sm:text-3xl">How to Choose Payment Processing Software</h2>
-        <div className="mt-2 h-[2px] w-14 bg-[#10B981]" aria-hidden />
-        <p className="mt-1 text-[#57534E] text-sm sm:text-base">Channels, fees, and reconciliation—not buzzwords.</p>
+        <h2 className="text-brand text-2xl font-bold sm:text-3xl">How to Choose Payment Processing Software</h2>
+        <div className="mt-2 h-[2px] w-14 bg-terracotta" aria-hidden />
+        <p className="mt-1 text-muted-foreground text-sm sm:text-base">Channels, fees, and reconciliation—not buzzwords.</p>
       </div>
-      <p className="mt-1 text-[#57534E] text-sm leading-relaxed max-w-3xl">
+      <p className="mt-1 text-muted-foreground text-sm leading-relaxed max-w-3xl">
         Use the{" "}
         <Link href="#compare" className={linkGreen}>
           comparison table
@@ -277,30 +277,30 @@ function HowToChooseSection() {
         round out vendor research.
       </p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Card-present vs online</strong> — Match the processor to where dollars actually enter; split stacks only with policy.
+            <strong className="text-brand">Card-present vs online</strong> — Match the processor to where dollars actually enter; split stacks only with policy.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Effective rate discipline</strong> — Export statements monthly; marketing percentages lie politely.
+            <strong className="text-brand">Effective rate discipline</strong> — Export statements monthly; marketing percentages lie politely.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Invoicing alignment</strong> — Line items and job IDs should flow to receipts your bookkeeper recognizes.
+            <strong className="text-brand">Invoicing alignment</strong> — Line items and job IDs should flow to receipts your bookkeeper recognizes.
           </li>
         </ul>
-        <ul className="space-y-2.5 text-sm text-[#57534E]">
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
           <li>
-            <strong className="text-[#1A2D48]">Hardware reality</strong> — Budget readers, chargers, and replacement cycles—not only software seats.
+            <strong className="text-brand">Hardware reality</strong> — Budget readers, chargers, and replacement cycles—not only software seats.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">Stripe vs Square</strong> — Start with our{" "}
+            <strong className="text-brand">Stripe vs Square</strong> — Start with our{" "}
             <Link href="/payment-processing/compare/stripe-vs-square" className={linkGreen}>
               Stripe vs Square
             </Link>{" "}
             comparison for channel-based choice.
           </li>
           <li>
-            <strong className="text-[#1A2D48]">POS depth</strong> — Counter-heavy retail may need our{" "}
+            <strong className="text-brand">POS depth</strong> — Counter-heavy retail may need our{" "}
             <Link href="/pos" className={linkGreen}>
               POS hub
             </Link>{" "}
