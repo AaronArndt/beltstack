@@ -5,6 +5,7 @@ import { siteMetadata } from "@/lib/seo/siteMetadata";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ScrollToTopButton />
+        <Analytics />
       </body>
     </html>
   );
