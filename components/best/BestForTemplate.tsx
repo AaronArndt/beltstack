@@ -11,6 +11,7 @@ import {
   tableShell,
   trustIndicatorAffiliateButtonClass,
   trustIndicatorListClass,
+  vendorCtaButtonClass,
 } from "@/lib/design-tokens";
 import { TrustIndicatorMark } from "@/components/trust/TrustIndicatorMark";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
@@ -19,8 +20,10 @@ import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardSta
 import { AFFILIATE_DISCLOSURE, vendorCtaRel } from "@/lib/editorial";
 
 // ——— Design tokens (match best-payroll-software / hub) ———
-const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+const btnChrome =
+  "rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+const btnPrimary = `${btnChrome} bg-brand text-base font-semibold text-white hover:bg-brand-hover`;
+const btnVendor = `${btnChrome} ${vendorCtaButtonClass}`;
 
 const DEFAULT_RELATED_COMPARISON_SUMMARY =
   "Side-by-side features, pricing, and recommendations to help you choose the right fit.";
@@ -173,7 +176,7 @@ function FeaturedCard({ pick }: { pick: BestForFeaturedProduct }) {
       </h3>
       <p className="mt-1 text-muted-foreground text-sm leading-relaxed">{pick.description}</p>
       <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-stone-100 pt-4">
-        <a href={pick.visitUrl} target="_blank" rel={vendorCtaRel(pick.visitUrl)} className={btnPrimary}>
+        <a href={pick.visitUrl} target="_blank" rel={vendorCtaRel(pick.visitUrl)} className={btnVendor}>
           Visit site
         </a>
         <Link href={pick.reviewHref} className="text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">

@@ -160,7 +160,7 @@ const INDUSTRY_NAV_ITEMS = getAllTradeHubDefinitions().map((def) => ({
 }));
 
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const navItemClass =
   "text-[14px] font-semibold text-brand hover:text-indigo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";

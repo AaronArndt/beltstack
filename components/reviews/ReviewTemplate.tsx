@@ -7,13 +7,13 @@ import { RatingInfoTooltip } from "@/components/RatingInfoTooltip";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
-import { sectionRuleAccent } from "@/lib/design-tokens";
+import { sectionRuleAccent, vendorCtaButtonClass } from "@/lib/design-tokens";
 import { AFFILIATE_DISCLOSURE, formatEditorialDate, isFullIsoDate, vendorCtaRel } from "@/lib/editorial";
 import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  `rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 ${vendorCtaButtonClass}`;
 const btnSecondary =
-  "rounded-md border border-stone-200 bg-white px-5 py-2.5 text-base font-bold text-brand transition-colors hover:border-indigo hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md border border-brand bg-white px-5 py-2.5 text-base font-bold text-brand transition-colors hover:bg-sage-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 function shouldRenderMethodology(
   methodology: ReviewTemplateProps["methodology"]

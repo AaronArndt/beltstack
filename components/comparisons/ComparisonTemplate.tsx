@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Footer } from "@/components/Footer";
 import { ReviewSectionNav } from "@/components/ReviewSectionNav";
 import { FaqAccordionItem } from "@/components/faq/FaqAccordionItem";
-import { sectionRuleAccent } from "@/lib/design-tokens";
+import { sectionRuleAccent, vendorCtaButtonClass } from "@/lib/design-tokens";
 import { formatProductCardStartingPrice } from "@/lib/utils/formatProductCardStartingPrice";
 import { overlayVerifiedStartingPriceFromHref } from "@/lib/data/verifiedStartingPrices";
 import { AFFILIATE_DISCLOSURE, formatEditorialDate, vendorCtaRel } from "@/lib/editorial";
@@ -15,7 +15,7 @@ import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 // ——— Design tokens (match review template) ———
 
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  `rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 ${vendorCtaButtonClass}`;
 
 export type ComparisonFeatureRow = {
   feature: string;

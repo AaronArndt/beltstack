@@ -11,6 +11,9 @@
   --indigo: #1c1798;
   --indigo-hover: #120e6b;
   --terracotta: #dc9f79;
+  /* Filled CTAs, including outbound vendor buttons, use the primary deep teal. */
+  --vendor-cta: var(--brand);
+  --vendor-cta-hover: var(--brand-hover);
   /* Page bands. White sections stay bg-white. */
   --background: var(--sage-soft);
   --foreground: var(--brand);
@@ -43,6 +46,8 @@
   --color-indigo: var(--indigo);
   --color-indigo-hover: var(--indigo-hover);
   --color-terracotta: var(--terracotta);
+  --color-vendor-cta: var(--vendor-cta);
+  --color-vendor-cta-hover: var(--vendor-cta-hover);
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 

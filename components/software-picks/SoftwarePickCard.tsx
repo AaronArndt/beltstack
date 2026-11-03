@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useId, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { BELTSTACK_RATING_TOOLTIP, vendorCtaRel } from "@/lib/editorial";
+import { secondaryButtonClass, vendorCtaButtonClass } from "@/lib/design-tokens";
 
 const MINT = "var(--sage)";
 const GREEN = "var(--brand)";
@@ -11,11 +12,11 @@ const RED_X = "#FF0000";
 
 /* Same height + width for primary / secondary CTAs (matches hub button feel) */
 const btnBase =
-  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-md px-6 py-2.5 font-sans text-sm font-bold shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 sm:min-w-[220px] sm:text-base";
+  "inline-flex w-full min-h-[48px] min-w-0 max-w-full items-center justify-center rounded-md px-6 py-2.5 font-sans shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 sm:min-w-[220px]";
 
-const btnPrimary = `${btnBase} bg-brand text-white hover:bg-brand-hover`;
+const btnPrimary = `${btnBase} ${vendorCtaButtonClass}`;
 
-const btnSecondary = `${btnBase} border border-indigo bg-white text-indigo hover:bg-sage`;
+const btnSecondary = `${btnBase} ${secondaryButtonClass}`;
 
 /** Section / label titles — match hub (e.g. Key takeaways, FAQ) */
 const sectionTitleClass =

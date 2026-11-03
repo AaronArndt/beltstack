@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { RatingInfoTooltip } from "@/components/RatingInfoTooltip";
-import { sectionRuleAccent } from "@/lib/design-tokens";
+import { sectionRuleAccent, vendorCtaButtonClass } from "@/lib/design-tokens";
 import { getAllTradeHubDefinitions } from "@/lib/data/tradeHubs";
 import {
   DISCOVERY_CATEGORIES,
@@ -20,7 +20,7 @@ import {
 
 /** Match Featured Software / homepage CTA classes */
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  `rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 ${vendorCtaButtonClass}`;
 
 const readReviewLinkClass =
   "text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";

@@ -12,7 +12,7 @@ import { sectionRuleAccent, tableBodyRow, tableHeadRow, tableShell } from "@/lib
 import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 export type AlternativesTopPick = {
   slug: string;
