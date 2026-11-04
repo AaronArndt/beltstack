@@ -110,7 +110,7 @@ export function StickyStackFinder({
             </div>
             <button
               type="submit"
-              className="shrink-0 self-end rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
+              className="shrink-0 self-end rounded-md bg-emerald px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               See Results
             </button>
@@ -121,7 +121,7 @@ export function StickyStackFinder({
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
+              className="rounded-md bg-emerald px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
             >
               Find your stack
             </button>
@@ -191,7 +191,7 @@ export function StickyStackFinder({
               </div>
               <button
                 type="submit"
-                className="rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
+                className="rounded-md bg-emerald px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
               >
                 See Results
               </button>

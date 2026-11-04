@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
 /** Default social / link-preview image (PNG for iMessage, Facebook, etc.). */
-export const DEFAULT_OG_IMAGE = "/Logos/BS_Logo_GreenWhite.png";
+export const DEFAULT_OG_IMAGE = "/Logos/BS_Logo_B.png";
 
 /**
  * Year shown on commercial-intent titles (reviews, comparisons, hubs).

@@ -13,7 +13,7 @@ import { SEO_YEAR } from "@/lib/seo/siteMetadata";
 const btnPrimary =
   `rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 ${vendorCtaButtonClass}`;
 const btnSecondary =
-  "rounded-md border border-brand bg-white px-5 py-2.5 text-base font-bold text-brand transition-colors hover:bg-sage-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md border border-emerald bg-white px-5 py-2.5 text-base font-bold text-emerald transition-colors hover:bg-sage-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 function shouldRenderMethodology(
   methodology: ReviewTemplateProps["methodology"]

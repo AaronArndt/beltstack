@@ -18,40 +18,40 @@ import { sectionRuleAccent } from "@/lib/design-tokens";
 import { TradeSoftwareDiscoverySection } from "@/components/home/TradeSoftwareDiscoverySection";
 import { Layers } from "lucide-react";
 
-// Page bands use sage-soft. Headings and primary buttons use brand (deep teal).
-// Links and focus use indigo. Editorial badges and the trust-band dots use terracotta.
+// Page canvas is stone. Headings and the trust band use navy.
+// Buttons, links, focus, and the hero underline use emerald. Hover surfaces use mint.
 
-/** Homepage hero — use-case tiles (artwork in /public/Logos/BeltStack_HeroIconsNew). */
+/** Homepage hero — use-case tiles (original artwork in /public/Logos/HeroIcons_previous). */
 const HERO_USE_CASE_TILES = [
   {
     title: "Get paid & invoicing",
     href: "/invoicing",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/getpaidandpricing.png",
+    iconSrc: "/Logos/HeroIcons_previous/getpaidandpricing.png",
   },
   {
     title: "Run payroll & hiring",
     href: "/payroll",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/runpayrollandhiring.png",
+    iconSrc: "/Logos/HeroIcons_previous/runpayrollandhiring.png",
   },
   {
     title: "Manage jobs & crews",
     href: "/field-service",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/managecrewsandjobs.png",
+    iconSrc: "/Logos/HeroIcons_previous/managecrewsandjobs.png",
   },
   {
     title: "Get more leads",
     href: "/lead-generation",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/getmoreleads.png",
+    iconSrc: "/Logos/HeroIcons_previous/getmoreleads.png",
   },
   {
     title: "Track finances",
     href: "/accounting",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/trackfinances.png",
+    iconSrc: "/Logos/HeroIcons_previous/trackfinances.png",
   },
   {
     title: "Build your website",
     href: "/website-builders",
-    iconSrc: "/Logos/BeltStack_HeroIconsNew/buildyourwebsite.png",
+    iconSrc: "/Logos/HeroIcons_previous/buildyourwebsite.png",
   },
 ] as const;
 
@@ -62,7 +62,7 @@ const HERO_SECONDARY_LINKS = [
 ] as const;
 
 const heroUseCaseTileClass =
-  "group flex h-full flex-col items-center rounded-md border border-stone-200 bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(1,44,42,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-indigo hover:shadow-[0_10px_28px_rgba(1,44,42,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "group flex h-full flex-col items-center rounded-md border border-stone-200 bg-white px-2 pb-5 pt-6 text-center shadow-[0_4px_18px_rgba(26,45,72,0.07)] transition-[box-shadow,border-color] duration-300 ease-out hover:border-indigo hover:shadow-[0_10px_28px_rgba(26,45,72,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const heroSecondaryLinkClass =
   "inline-flex min-h-11 items-center rounded-sm px-1.5 py-2 text-sm font-medium text-indigo underline-offset-[3px] transition-colors duration-200 hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1";
@@ -150,11 +150,11 @@ export default function Home() {
         <section className="relative overflow-hidden bg-white">
           <div
             aria-hidden
-            className="pointer-events-none absolute -left-24 -top-16 h-56 w-[36rem] rounded-full bg-sage/55 blur-3xl"
+            className="pointer-events-none absolute -left-24 -top-16 h-56 w-[36rem] rounded-full bg-[#CEDFCF]/55 blur-3xl"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-16 top-0 h-48 w-[32rem] rounded-full bg-sage/40 blur-3xl"
+            className="pointer-events-none absolute -right-16 top-0 h-48 w-[32rem] rounded-full bg-[#CEDFCF]/40 blur-3xl"
           />
           <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-10 sm:px-6 sm:pb-10 sm:pt-12 lg:px-8 lg:pb-12 lg:pt-14">
             <h1 className="text-center text-brand text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
@@ -183,7 +183,7 @@ export default function Home() {
                 <Link key={href} href={href} className={heroUseCaseTileClass}>
                   <div className="relative mx-auto mb-4 flex h-[92px] w-full max-w-[112px] items-center justify-center">
                     <span
-                      className="absolute left-1/2 top-1/2 h-[72px] w-[88px] -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-[2rem] bg-sage/80"
+                      className="absolute left-1/2 top-1/2 h-[72px] w-[88px] -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-[2rem] bg-[#CEDFCF]/80"
                       aria-hidden
                     />
                     <Image

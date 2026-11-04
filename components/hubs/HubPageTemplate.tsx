@@ -38,7 +38,7 @@ import { PRICING_STUDY_HUB_CATEGORIES, PRICING_STUDY_PATH } from "@/lib/research
 
 // ——— Design tokens (match homepage) ———
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md bg-emerald px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnPill =
   "inline-flex shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-brand transition-all hover:border-brand hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
@@ -250,7 +250,7 @@ function BestRoundupCard({ block }: { block: { title: string; description: strin
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         <div className="min-w-0">
           <div className="flex items-center gap-2.5">
-            <img src="/Logos/BS_Crown.svg" alt="" aria-hidden className="h-9 w-9 shrink-0 object-contain" />
+            <img src="/Logos/SB_Crown.svg" alt="" aria-hidden className="h-9 w-9 shrink-0 object-contain" />
             <h2 className="text-brand text-lg font-bold leading-snug sm:text-xl">{block.title}</h2>
           </div>
           <p className="mt-1 pl-[2.875rem] text-sm leading-relaxed text-muted-foreground">{block.description}</p>

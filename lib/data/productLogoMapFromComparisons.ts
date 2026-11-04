@@ -1,6 +1,6 @@
 import type { ComparisonTemplateProps } from "@/components/comparisons/ComparisonTemplate";
 
-const DEFAULT_FALLBACK = "/Logos/BS_Logo_GreenWhite.png";
+const DEFAULT_FALLBACK = "/Logos/BS_Logo_B.png";
 
 /** Build slug → logo URL from all comparisons in a category (first seen wins). */
 export function productLogoMapFromComparisons(

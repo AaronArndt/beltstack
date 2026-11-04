@@ -6,8 +6,8 @@ import type { ReactNode } from "react";
 import { BELTSTACK_RATING_TOOLTIP, vendorCtaRel } from "@/lib/editorial";
 import { secondaryButtonClass, vendorCtaButtonClass } from "@/lib/design-tokens";
 
-const MINT = "var(--sage)";
-const GREEN = "var(--brand)";
+const MINT = "var(--mint)";
+const GREEN = "var(--emerald)";
 const RED_X = "#FF0000";
 
 /* Same height + width for primary / secondary CTAs (matches hub button feel) */
@@ -354,7 +354,7 @@ export function SoftwarePickCard({
               }}
             >
               <img
-                src="/Logos/BS_Crown.svg"
+                src="/Logos/SB_Crown.svg"
                 alt=""
                 width={26}
                 height={21}

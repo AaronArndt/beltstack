@@ -26,9 +26,9 @@ import { trustIndicatorAffiliateButtonClass, trustIndicatorListClass } from "@/l
 const timeTrackingPickRoutes = getSoftwarePickCategoryRoutes("time-tracking");
 
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md bg-emerald px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const btnSecondary =
-  "rounded-md border border-brand bg-white px-5 py-2.5 text-base font-bold text-brand transition-colors hover:bg-sage-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md border border-emerald bg-white px-5 py-2.5 text-base font-bold text-emerald transition-colors hover:bg-sage-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 const linkGreen =
   "font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 

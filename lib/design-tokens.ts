@@ -1,27 +1,26 @@
 /**
- * BeltStack color roles live in `app/globals.css` (`brand`, `sage`, `indigo`, `terracotta`).
- * Indigo is `#1C1798`, with hover `#120E6B`, for text links and focus.
- * Use these class strings in shared components so section and table patterns stay consistent.
+ * BeltStack color roles live in `app/globals.css`.
+ * Navy `#1A2D48` is structure. Emerald `#10B981` (hover `#0D9668`) is buttons, links, and accents.
+ * Mint `#E7F8F2` is selected and hover surfaces. The page canvas is stone `#F5F5F4`.
  */
 
-/** Short section underline — terracotta, decorative only. */
-export const sectionRuleAccent = "mt-2 h-[2px] w-14 bg-terracotta";
+/** Short section underline — emerald accent. */
+export const sectionRuleAccent = "mt-2 h-[2px] w-14 bg-emerald";
 
 /**
  * Filled CTA buttons, including outbound vendor links.
- * Deep teal fill, white label. Pair with existing padding, radius, and shadow.
- * Text links stay indigo.
+ * Emerald fill, white label, 14px semibold. Pair with existing padding, radius, and shadow.
  */
 export const vendorCtaButtonClass =
-  "bg-vendor-cta text-sm font-semibold text-white hover:bg-vendor-cta-hover";
+  "bg-emerald text-sm font-semibold text-white hover:bg-emerald-hover";
 
 /**
  * Outlined CTA buttons (for example Read Review beside Learn More).
- * White fill, deep teal label and border. Hover uses the light sage surface.
+ * White fill, emerald label and border. Hover uses mint.
  * 14px semibold, matching the filled CTA label.
  */
 export const secondaryButtonClass =
-  "border border-brand bg-white text-sm font-semibold text-brand hover:bg-sage-soft";
+  "border border-emerald bg-white text-sm font-semibold text-emerald hover:bg-mint";
 
 /** Comparison / data table wrapper — slate borders for clarity vs soft stone page bands */
 export const tableShell =
@@ -34,11 +33,11 @@ export const tableBodyRow =
 
 /**
  * Trust / validation hero rows (Updated monthly, Independent reviews, Affiliate disclosure).
- * Deep teal text. Do not use for article body lists.
+ * Navy text. Do not use for article body lists.
  */
 export const trustIndicatorListClass =
   "flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm font-medium text-brand";
 
-/** Affiliate disclosure trigger in a trust row — hover uses indigo for affordance */
+/** Affiliate disclosure trigger in a trust row — hover uses emerald for affordance */
 export const trustIndicatorAffiliateButtonClass =
   "flex items-center gap-2 text-left text-sm font-medium text-brand hover:text-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";

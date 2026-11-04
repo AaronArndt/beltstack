@@ -11,5 +11,5 @@ const WEBSITE_BUILDER_LOGO_BY_SLUG: Record<string, string> = {
 };
 
 export function getWebsiteBuilderLogoSrc(slug: string): string {
-  return WEBSITE_BUILDER_LOGO_BY_SLUG[slug] ?? "/Logos/BS_Logo_GreenWhite.png";
+  return WEBSITE_BUILDER_LOGO_BY_SLUG[slug] ?? "/Logos/BS_Logo_B.png";
 }

@@ -160,15 +160,15 @@ const INDUSTRY_NAV_ITEMS = getAllTradeHubDefinitions().map((def) => ({
 }));
 
 const btnPrimary =
-  "rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
+  "rounded-md bg-emerald px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
 
 const navItemClass =
-  "text-[14px] font-semibold text-brand hover:text-indigo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
+  "text-[14px] font-semibold text-brand hover:text-brand-hover transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2 rounded";
 
 function LogoIcon({ className }: { className?: string }) {
   return (
     <img
-      src="/Logos/BS_Logo_GreenWhite.png"
+      src="/Logos/BS_Logo_B.svg"
       alt=""
       className={className}
       width={36}
@@ -265,7 +265,7 @@ function SoftwarePanelContent({
                   role="menuitem"
                   className="group block rounded-sm bg-transparent px-2 py-1 transition-colors hover:bg-sage focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
                 >
-                  <span className="text-sm font-semibold text-brand transition-colors group-hover:text-indigo-hover">
+                  <span className="text-sm font-semibold text-indigo transition-colors group-hover:text-indigo-hover">
                     {item.title}
                   </span>
                   <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground transition-colors group-hover:text-[#44403c]">
@@ -280,7 +280,7 @@ function SoftwarePanelContent({
                       <Link
                         role="menuitem"
                         href={link.href}
-                        className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
+                        className="text-sm font-semibold text-indigo transition-colors hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                       >
                         {link.label}
                       </Link>
@@ -293,7 +293,7 @@ function SoftwarePanelContent({
         ))}
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/software" className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
+        <Link href="/software" className="text-sm font-semibold text-indigo transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
           View all software categories →
         </Link>
       </div>
@@ -317,7 +317,7 @@ function IndustriesPanelContent() {
                   <Link
                     href={item.href}
                     role="menuitem"
-                    className="block rounded-sm px-2 py-1.5 text-sm font-semibold text-brand transition-colors hover:bg-sage hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
+                    className="block rounded-sm px-2 py-1.5 text-sm font-semibold text-indigo transition-colors hover:bg-sage hover:text-indigo-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
                   >
                     {item.label}
                   </Link>
@@ -346,7 +346,7 @@ function ComparisonsPanelContent() {
                 role="menuitem"
                 className="group block rounded-md py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-1"
               >
-                <span className="text-sm font-semibold text-brand transition-colors group-hover:text-indigo-hover">
+                <span className="text-sm font-semibold text-indigo transition-colors group-hover:text-indigo-hover">
                   {item.title}
                 </span>
                 <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground transition-colors group-hover:text-[#44403c]">
@@ -364,7 +364,7 @@ function ComparisonsPanelContent() {
                 <Link
                   role="menuitem"
                   href="/comparisons"
-                  className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
+                  className="text-sm font-semibold text-indigo transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded"
                 >
                   {item.tool}
                 </Link>
@@ -372,13 +372,13 @@ function ComparisonsPanelContent() {
               </li>
             ))}
           </ul>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-semibold text-indigo transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
             How we review
           </Link>
         </div>
       </div>
       <div className="mt-4 border-t border-stone-200 pt-4">
-        <Link href="/comparisons" className="text-sm font-semibold text-brand transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
+        <Link href="/comparisons" className="text-sm font-semibold text-indigo transition-colors hover:text-indigo-hover hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded">
           See all comparisons →
         </Link>
       </div>

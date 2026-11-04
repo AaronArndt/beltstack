@@ -5,7 +5,7 @@ import { AFFILIATE_DISCLOSURE } from "@/lib/editorial";
 function FooterLogo({ className }: { className?: string }) {
   return (
     <img
-      src="/Logos/BS_Logo_WhiteGreen.png"
+      src="/Logos/BS_Logo_W.svg"
       alt=""
       className={className}
       width={48}

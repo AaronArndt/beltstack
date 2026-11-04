@@ -22,7 +22,7 @@ import { AFFILIATE_DISCLOSURE, vendorCtaRel } from "@/lib/editorial";
 // ——— Design tokens (match best-payroll-software / hub) ———
 const btnChrome =
   "rounded-md px-5 py-2.5 shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2";
-const btnPrimary = `${btnChrome} bg-brand text-base font-semibold text-white hover:bg-brand-hover`;
+const btnPrimary = `${btnChrome} bg-emerald text-base font-semibold text-white hover:bg-emerald-hover`;
 const btnVendor = `${btnChrome} ${vendorCtaButtonClass}`;
 
 const DEFAULT_RELATED_COMPARISON_SUMMARY =

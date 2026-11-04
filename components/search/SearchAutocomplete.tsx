@@ -134,7 +134,7 @@ export function SearchAutocomplete({
           />
           <button
             type="submit"
-            className="searchButton rounded-lg border-l border-transparent bg-brand px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-hover focus:outline-none focus:ring-0 sm:rounded-none sm:mx-1 sm:my-1 sm:shrink-0"
+            className="searchButton rounded-lg border-l border-transparent bg-emerald px-5 py-2.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-emerald-hover focus:outline-none focus:ring-0 sm:rounded-none sm:mx-1 sm:my-1 sm:shrink-0"
           >
             Search
           </button>

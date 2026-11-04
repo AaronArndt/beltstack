@@ -1,23 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  /* BeltStack palette. Use the theme utilities (bg-brand, text-indigo, …) in components.
-     Deep teal = structure and primary actions. Indigo = links and focus.
-     Sage = selected and supporting surfaces. Terracotta = editorial accents only. */
-  --brand: #012c2a;
-  --brand-hover: #0b3f3c;
-  --sage: #cedfcf;
-  --sage-soft: #f6f9f6;
-  --indigo: #1c1798;
-  --indigo-hover: #120e6b;
-  --terracotta: #dc9f79;
-  /* Filled CTAs, including outbound vendor buttons, use the primary deep teal. */
-  --vendor-cta: var(--brand);
-  --vendor-cta-hover: var(--brand-hover);
-  /* Page bands. White sections stay bg-white. */
-  --background: var(--sage-soft);
-  --foreground: var(--brand);
-  /* Secondary copy — retained stone neutral. Passes AA on white and sage-soft. */
+  /* Original BeltStack palette. Utility names kept so current layouts stay in place.
+     Navy = headings, navigation, footer, and structure.
+     Emerald = buttons, links, focus, and accents.
+     Mint = selected and hover surfaces. Stone = page canvas. */
+  --navy: #1a2d48;
+  --navy-hover: #0f2440;
+  --emerald: #10b981;
+  --emerald-hover: #0d9668;
+  --mint: #e7f8f2;
+  --canvas: #f5f5f4;
+  --brand: var(--navy);
+  --brand-hover: var(--navy-hover);
+  --sage: var(--mint);
+  --sage-soft: var(--mint);
+  --indigo: var(--emerald);
+  --indigo-hover: var(--emerald-hover);
+  --terracotta: var(--emerald);
+  --vendor-cta: var(--emerald);
+  --vendor-cta-hover: var(--emerald-hover);
+  /* Page canvas is stone. White sections stay bg-white. */
+  --background: var(--canvas);
+  --foreground: var(--navy);
+  /* Secondary copy — stone-600. Passes AA on white and the stone canvas. */
   --muted-foreground: #57534e;
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   /* Offsets for sticky/fixed bars (navbar = 64px mobile, 72px desktop) */
@@ -41,6 +47,10 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-brand: var(--brand);
   --color-brand-hover: var(--brand-hover);
+  --color-navy: var(--navy);
+  --color-emerald: var(--emerald);
+  --color-emerald-hover: var(--emerald-hover);
+  --color-mint: var(--mint);
   --color-sage: var(--sage);
   --color-sage-soft: var(--sage-soft);
   --color-indigo: var(--indigo);
@@ -69,7 +79,7 @@ html {
   scroll-margin-top: var(--scroll-margin-below-sticky);
 }
 
-/* Focus visible for accessibility — indigo interactive accent */
+/* Focus visible for accessibility — emerald interactive accent */
 *:focus-visible {
   outline: 2px solid var(--indigo);
   outline-offset: 2px;

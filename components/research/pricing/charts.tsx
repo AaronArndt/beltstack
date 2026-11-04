@@ -301,7 +301,7 @@ export function FsmVisibilityChart({
         {segments.map((segment) => (
           <div
             key={segment.key}
-            className={`${segment.className} ${segment.pattern ? "bg-[repeating-linear-gradient(135deg,#012C2A_0_6px,#0B3F3C_6px_12px)]" : ""} flex items-center justify-center text-[11px] font-semibold text-white`}
+            className={`${segment.className} ${segment.pattern ? "bg-[repeating-linear-gradient(135deg,#1A2D48_0_6px,#23405f_6px_12px)]" : ""} flex items-center justify-center text-[11px] font-semibold text-white`}
             style={{ width: `${(segment.n / total) * 100}%` }}
           >
             <span className="px-1 tabular-nums">{segment.n}</span>
