@@ -915,6 +915,213 @@ const reviews: Record<string, PosReviewData> = {
       { label: "POS software comparisons", href: POS_COMPARE_HUB },
     ],
   },
+
+  // logoSrc omitted until public/Logos/ftx-pos.png is added. See POS_LOGOS.
+  "ftx-pos": {
+    toolName: "FTx POS",
+    category: POS_CATEGORY,
+    categoryHref: POS_CATEGORY_HREF,
+    rating: "4.2",
+    startingPrice: "From $0/mo with FTx payments, or $99/mo standalone",
+    bestFor:
+      "convenience, tobacco, liquor, and grocery retailers that need a pricebook and multi-store inventory more than a simple card register",
+    visitUrl: "https://goftx.com/",
+    quickVerdict:
+      "FTx POS is a retail system for high-SKU stores, not a general register. Qualifying merchants can start at $0 a month with FTx Card Payments. Standalone software is $99, $179, or $299 a month. Hardware, processing, and most ecosystem products are extra.",
+    quickVerdictParagraphs: [
+      "FTx POS is a cloud retail point of sale built around a pricebook, a register, and a back office called Control Center. The company says it has worked with retailers for more than 18 years and that the same system runs from one store to chains in the thousands. Those are the company's figures. The product itself is aimed at convenience stores, tobacco and vape shops, liquor stores, grocery and mini marts, bodegas, and fuel-and-convenience sites, where the hard part is the catalog, the promotions, and the stock, not the card swipe.",
+      "The pricing page, checked in November 2026, publishes two prices for the same three plans. With FTx Card Payments, Core, Pro, and Enterprise are listed starting at $0 a month for qualifying merchants, with discounts based on volume. Without that bundle, Core is $99 a month, Pro starts at $179, and Enterprise starts at $299. In-person processing is listed starting at 2.59% + $0.10. Online is listed starting at 3.75% + $0.35. Neither rate is a promise for every merchant. Hardware is quoted or leased separately. A $0 software line does not make the register free.",
+      "What you get depends on the plan. Core covers the register, taxes and tenders, roles, a basic inventory set, core discounts, floor pricing, shift reconciliation, and lottery reconciliation. Pro is where a multi-store pricebook, transfers, inventory counts, EDI, a time clock, manufacturer discounts, and scan-data reporting show up. Enterprise adds suggested ordering, automatic EDI receiving, gift cards, commissions, scheduling, and a digital-signage integration. Ecommerce, loyalty, age verification, Klaviyo, QuickBooks, and the shared product database are listed as add-ons.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.6",
+        explanation:
+          "The register, pricebook, and c-store tools go further than a general POS. Lottery reconciliation is on Core. Scan data, manufacturer discounts, transfers, and EDI start on Pro. Ecommerce, loyalty, and age verification are add-ons, not lines in the plan list.",
+      },
+      {
+        category: "Pricing",
+        score: "3.9",
+        explanation:
+          "Standalone prices are published: $99, $179, and $299 a month, plus extra registers on Pro and Enterprise. The $0 price requires a qualifying FTx Card Payments bundle, and the card rate is a starting rate. Hardware is separate.",
+      },
+      {
+        category: "Ease of Use",
+        score: "3.8",
+        explanation:
+          "The new register interface is offered on Windows and Android, and panels can be customized. Control Center is a full back office. Every account includes one-to-one onboarding and FTx Academy, which is the setup path for a system this large.",
+      },
+      {
+        category: "Integrations",
+        score: "4.2",
+        explanation:
+          "FTx Card Payments is built in. Named third-party options include NAB, EPX, and Datacap NETepay. QuickBooks, Klaviyo, FTx Commerce, Loyal-n-Save, and FTx Identity are real products, and the pricing page prices most of them as add-ons.",
+      },
+      {
+        category: "Reporting",
+        score: "4.4",
+        explanation:
+          "Core includes basic reports, a transactional export, and lottery reconciliation. Pro adds advanced and custom reports plus manufacturer scan data. Sales forecasting is listed with the add-ons, not inside the three plan cards.",
+      },
+    ],
+    pros: [
+      "A retail pricebook with mass cost and price updates, and multi-store support, transfers, counts, and EDI on Pro",
+      "Convenience-store work that general registers skip: lottery reconciliation on Core, and Altria, RJR, and ITG discounts and scan data on Pro",
+      "Published standalone prices of $99, $179, and $299 a month, and a $0 software price when you qualify with FTx Card Payments",
+      "You can run FTx Card Payments or a supported processor, and the software plan is month to month",
+      "Windows and Android registers, with LANDI, HP, and PAX hardware quoted separately",
+    ],
+    cons: [
+      "$0 a month is for qualifying merchants on FTx Card Payments, and 2.59% + $0.10 is a starting in-person rate, not a rate every store receives",
+      "Pro and Enterprise charge for extra registers, starting at $129 and $199 a month, and hardware is a purchase or a 3- or 4-year lease",
+      "Ecommerce, loyalty, age verification, Klaviyo, QuickBooks, digital price tags, and the product database are add-ons",
+      "Multi-store, EDI, inventory counts, transfers, the time clock, and scan data start on Pro, not Core",
+      "The suite is more system than a one-counter shop needs, and it is not a restaurant POS",
+    ],
+    bestForEditorial:
+      "FTx POS fits a convenience store, tobacco or vape shop, liquor store, grocery or mini mart, bodega, or fuel-and-convenience site that lives in a large, fast-changing catalog. A single store can run Core if the job is checkout, basic stock, and lottery reconciliation. A retailer with more than one location, vendor EDI, or tobacco scan-data programs is looking at Pro. Enterprise is the tier for suggested ordering, scheduling, and commissions. A clothing boutique or a cafe that only needs to ring sales will get more system than it uses.",
+    whoShouldAvoid:
+      "Skip it for a restaurant. Table service, courses, and a kitchen screen are not what this product is built around. Skip it if the store already runs on Shopify and the online catalog is the business. Shopify POS keeps that catalog in one place. Skip it if you want software at $0 with no processing qualification and a reader you can buy for a small fixed price. Square is the simpler comparison. A general shop that wants an app market rather than a c-store pricebook should look at Clover or Lightspeed.",
+    pricingSummary:
+      "As of November 2026, the FTx pricing page lists Core, Pro, and Enterprise two ways. Bundled with FTx Card Payments, each plan is shown starting at $0 a month for qualifying merchants, with the discount based on volume. The product page says a single store and a chain can both qualify. Qualification is still required, so do not budget $0 until FTx confirms the account. Standalone, Core is $99 a month, Pro starts at $179, and Enterprise starts at $299. The page says to ask about bundles and annual discounts. It does not publish the annual dollar amount. Software plans are month to month, with no long-term software contract, and you can cancel from the plan. A hardware lease is a separate 3- or 4-year term.",
+    pricingTiers:
+      "In-person processing on FTx Card Payments starts at 2.59% + $0.10. Online starts at 3.75% + $0.35. Both are starting rates. The company's own writing says the rate you get depends on eligibility and the agreement. There is no separate monthly fee just for using FTx to process, and you can keep a supported processor instead. Named options are NAB, EPX, and Datacap NETepay. The page also says a third-party gateway can be used. Confirm that your current processor is on the supported list before you drop FTx Card Payments, because standalone software is the $99 to $299 path. Pro lists each additional POS starting at $129 a month. Enterprise lists each additional POS starting at $199. The Core card does not publish an extra-register price. Hardware is not in the software price. The hardware pages sell LANDI, HP, and PAX gear by quote, with a 3- or 4-year lease or a lease-to-own that ends in a $1 buyout. An FTx blog lists some PAX pinpads at $299 to $650 and marks several of those figures as subject to change. Use a current quote. Every account includes remote troubleshooting, phone or email support, a ticket portal, one-to-one onboarding, and FTx Academy. Add-ons, including ecommerce, loyalty, age verification, Klaviyo, digital price tags, a handheld, warehouse tools, and QuickBooks, are priced separately.",
+    costVsCompetitors:
+      "Judge FTx on the whole bill: software, the card rate, each extra register, hardware, and the add-ons you actually turn on. A qualifying high-volume store can put the software line at $0 and pay through processing. A store that keeps its own processor pays $99 to $299 before the second register and before any add-on. Square's software can be free without a volume test, and its hardware has published device prices, with less of the c-store pricebook. Lightspeed and Clover are the retail comparisons when you want inventory and more than one store without tobacco scan data. FTx publishes more of the plan split than many POS vendors. It does not publish a sample monthly total for a typical convenience store, so the quote is the number that matters.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Checkout",
+        description:
+          "The register runs on Windows and Android in the current cloud interface. Cashiers scan or search items, change quantity, and see quantity on hand, cost, retail, excise tax, and the taxes that apply. Discounts can be automatic for an item or a percent off a department when the cashier is allowed to apply it. Tax-exempt sales are a button on the ticket. Tenders and tax rates are configurable by product grouping, and roles control who can do what on the register, in Control Center, and on a handheld. The panel layout is customizable. House accounts, on Core, cover tax-exempt status, invoice terms, department discounts, and department limits for wholesale-style customers.",
+      },
+      {
+        name: "Inventory and the pricebook",
+        description:
+          "Control Center is where the catalog lives: products, vendor parts, costs, and retail prices. Core includes a basic inventory set, floor pricing so a discount cannot push a price under a set minimum, and Zebra or Dymo label printing. Pro adds inventory counts on a handheld, store transfers, EDI for vendor orders and invoices, sale limits and time-of-day restrictions, and a mass update that can apply cost changes inside a threshold and reprice to a margin. Enterprise adds suggested ordering and scheduled EDI receiving. A shared product database, FTx Pulse, is listed as an add-on, not as a line on the three plan cards. For a convenience store, this is the difference between retyping a price book and pushing a cost change across the cooler and the counter.",
+      },
+      {
+        name: "More than one store",
+        description:
+          "Multi-store support and a single pricebook across locations are Pro features, along with multi-zone pricing so cost and retail rules can differ by store. Transfers move stock between locations. Corporate messaging is also on Pro. Warehouse integration for larger chains is on the add-on list, not in the Pro card. A one-store retailer does not need this. A retailer opening a second site does, and it is not included in the $99 Core plan.",
+      },
+      {
+        name: "Reports",
+        description:
+          "Core includes basic reports, a flat-file export of sales for DVR systems that accept that file, and lottery reconciliation for sales, inventory, and payouts. Pro includes advanced reports, custom reports, and manufacturer loyalty and scan-data reporting for Altria, RJR, and ITG. The add-on list also names manufacturer scan data and BI sales forecasting, so confirm in the quote that the scan-data program you need is inside Pro and that forecasting is not a separate charge.",
+      },
+      {
+        name: "Staff",
+        description:
+          "Roles and permissions are on Core. The time clock, from the register or a handheld, is on Pro. Employee scheduling and commission reporting are on Enterprise. The product page also mentions third-party payroll as a connection, separate from the clock. A store that only needs to limit who can discount stays on Core. A store that builds a weekly schedule is on Enterprise.",
+      },
+      {
+        name: "Loyalty, age checks, and the rest of the suite",
+        description:
+          "The register can show loyalty campaigns on an item and apply customer pricing when a customer is attached to the sale. Loyal-n-Save, the loyalty product, is an add-on, as are FTx Commerce for the online shop, FTx Identity for age checks in the store and online, Klaviyo for email and SMS, digital signage, digital price tags, and smarttill for a cash drawer that counts itself. Enterprise lists integrated gift cards and a digital-signage integration, and the add-on menu lists gift cards and digital signage again. Treat those as confirmed only for the quote you receive. Shift reconciliation on Core is the built-in drawer count. smarttill is extra hardware.",
+      },
+    ],
+    integrations: [
+      "FTx Card Payments",
+      "NAB, EPX, and Datacap NETepay",
+      "QuickBooks (add-on)",
+      "Klaviyo (add-on)",
+      "FTx Commerce (add-on)",
+      "Loyal-n-Save (add-on)",
+      "FTx Identity (add-on)",
+      "smarttill",
+      "FTx Pulse product database (add-on)",
+      "Digital price tags (add-on)",
+      "Warehouse integration (add-on)",
+    ],
+    integrationsIntro:
+      "FTx sells a suite, and the pricing page separates the plan from the add-ons. Card processing is either FTx Card Payments or a supported processor. The product FAQ names NAB, EPX, and Datacap NETepay, and also says a third-party gateway can be used. Confirm yours. QuickBooks, Klaviyo, ecommerce, loyalty, age verification, the shared product database, digital price tags, a handheld scanner, and warehouse tools are on the add-on list. Scan-data reporting is written into Pro. Lottery reconciliation is written into Core. Digital signage and gift cards appear both on the Enterprise card and on the add-on list.",
+    alternatives: [
+      {
+        name: "Square",
+        href: getPosReviewUrl("square-pos"),
+        description:
+          "Free software and published hardware prices, for a store that does not need a c-store pricebook or scan data.",
+        logoSrc: POS_LOGOS.square,
+      },
+      {
+        name: "Lightspeed",
+        href: getPosReviewUrl("lightspeed-pos"),
+        description:
+          "Retail inventory and more than one location, without FTx's tobacco and lottery modules.",
+        logoSrc: POS_LOGOS.lightspeed,
+      },
+      {
+        name: "Shopify POS",
+        href: getPosReviewUrl("shopify-pos"),
+        description:
+          "The better fit when the online store is already on Shopify and the register should share that catalog.",
+        logoSrc: POS_LOGOS.shopify,
+      },
+      {
+        name: "Clover",
+        href: getPosReviewUrl("clover-pos"),
+        description:
+          "A general-purpose register with an app market, for a shop that is not built around a convenience pricebook.",
+        logoSrc: POS_LOGOS.clover,
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does FTx POS cost?",
+        a: "The pricing page, checked in November 2026, lists two prices. With FTx Card Payments, Core, Pro, and Enterprise start at $0 a month for qualifying merchants. Standalone, Core is $99 a month, Pro starts at $179, and Enterprise starts at $299. Extra registers start at $129 on Pro and $199 on Enterprise. Hardware, processing, and add-ons are separate.",
+      },
+      {
+        q: "Is the $0 a month plan actually free?",
+        a: "No. It is a software price for merchants who qualify for a volume discount and take FTx Card Payments. You still pay the processing rate, which starts at 2.59% + $0.10 in person and 3.75% + $0.35 online, and you still buy or lease hardware. A store that does not qualify, or that keeps another processor, pays the standalone software price.",
+      },
+      {
+        q: "Can I keep my current card processor?",
+        a: "Yes, if that processor is supported. FTx names NAB, EPX, and Datacap NETepay, and the product page also refers to a third-party gateway. Using your own processor is the standalone software price, from $99 a month. Confirm the processor before you sign.",
+      },
+      {
+        q: "Does FTx POS include inventory for more than one store?",
+        a: "Core includes basic inventory. A shared pricebook, store transfers, handheld counts, and EDI start on Pro. Suggested ordering and automatic EDI receiving start on Enterprise. Warehouse integration is an add-on.",
+      },
+      {
+        q: "Is FTx POS a good fit for a convenience store?",
+        a: "That is the retail type the product is built for. Lottery reconciliation is on Core. Manufacturer discounts and scan data for Altria, RJR, and ITG are on Pro. Age verification is FTx Identity, listed as an add-on. It is a poor fit for a restaurant and for a shop that only needs a simple card register.",
+      },
+      {
+        q: "Is hardware included?",
+        a: "No. LANDI, HP, PAX, and smarttill gear is quoted separately. FTx offers a 3- or 4-year lease and a lease-to-own that ends in a $1 buyout. The software plan can be canceled month to month. A hardware lease cannot.",
+      },
+    ],
+    methodology: POS_METHODOLOGY,
+    compareLinks: [
+      { label: "Square vs Lightspeed", href: getPosCompareUrl("square-pos-vs-lightspeed-pos") },
+      { label: "Shopify POS vs Lightspeed", href: getPosCompareUrl("shopify-pos-vs-lightspeed-pos") },
+      { label: "Square vs Clover", href: getPosCompareUrl("square-pos-vs-clover-pos") },
+    ],
+    compareSectionTitle: "Compare FTx POS with other POS software",
+    bestPayrollSoftwareHref: BEST_POS_SOFTWARE_HREF,
+    compareHubHref: POS_COMPARE_HUB,
+    compareHubLabel: "Compare POS software",
+    bestRoundupLabel: "Best POS software (2026) — full roundup",
+    bestForSectionTitle: "Best POS software for different use cases",
+    bestForSectionSub: "Find POS software by use case and business type.",
+    scenarioLinks: POS_SCENARIO_LINKS,
+    guideHubHref: POS_GUIDES_HUB,
+    guideHubLabel: "POS guides",
+    relatedReading: [
+      { label: "POS software hub", href: "/pos" },
+      { label: "Best POS software", href: BEST_POS_SOFTWARE_HREF },
+      { label: "Best POS for retail", href: getPosBestForUrl("retail") },
+      { label: "Best POS for multi-location", href: getPosBestForUrl("multi-location") },
+      { label: "Retail POS software guide", href: "/pos/guides/retail-pos-software-guide" },
+      { label: "POS software pricing guide", href: "/pos/guides/pos-software-pricing-guide" },
+      { label: "POS and inventory", href: "/pos/guides/pos-inventory-integration" },
+      { label: "POS vs a payment processor", href: "/pos/guides/pos-vs-payment-processor" },
+      { label: "Employee time clocks and POS", href: "/pos/guides/employee-time-clocks-and-labor-with-pos" },
+      { label: "Inventory software hub", href: "/inventory" },
+    ],
+  },
 };
 
 export function getPosReviewBySlug(slug: string): PosReviewData | null {

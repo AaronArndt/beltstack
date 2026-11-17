@@ -27,6 +27,11 @@ const LOGOS = {
   copper: "/Logos/copper.png",
   close: "/Logos/close.jpeg",
   keap: "/Logos/keap.jpeg",
+  // LeadMino logo is not in the repo yet. When the official file arrives, save it as
+  // public/Logos/leadmino.png (PNG or JPEG, same folder as the other CRM logos)
+  // and add: leadmino: "/Logos/leadmino.png",
+  // Then set logoSrc: LOGOS.leadmino on the leadmino review.
+  // Leave logoSrc unset until that file exists so the review template does not request a missing image.
 } as const;
 
 const BEST_CRM_SOFTWARE_HREF = "/crm/best-crm-software";
@@ -916,6 +921,212 @@ const reviews: Record<string, CrmReviewData> = {
     scenarioLinks: CRM_SCENARIO_LINKS,
     guideHubHref: CRM_GUIDES_HUB,
     guideHubLabel: "CRM guides",
+  },
+
+  // logoSrc omitted until public/Logos/leadmino.png is added. See LOGOS above.
+  leadmino: {
+    toolName: "LeadMino",
+    category: "CRM",
+    categoryHref: "/crm",
+    rating: "4.2",
+    startingPrice: "$12/user/month",
+    bestFor:
+      "small sales teams that want incoming leads kept separate from the deal pipeline, with a single seat and no card to start",
+    visitUrl: "https://leadmino.com/",
+    quickVerdict:
+      "LeadMino is a sales CRM for turning inquiries into deals and follow-ups. Starter is $12 per user per month, with one seat allowed and a 14-day trial that does not ask for a card. It is a weak fit if you need Outlook today, published AI or calling prices, or a field-service system.",
+    quickVerdictParagraphs: [
+      "LeadMino is a CRM for leads, contacts, companies, and deals. The pricing page, checked in November 2026, lists Starter at $12 per seat per month, Growth at $24, and Scale at $49. There is no seat minimum and no setup fee. A new workspace gets 14 days before anything is charged, and the page says a card is not required to begin. The core record is the path from an inquiry to a qualified deal: a lead stays out of the active pipeline until someone converts it, and the history comes with the conversion.",
+      "That split is the product. The leads inbox is for raw inquiries, with source, status, value, owner, and score. The deal board is a drag-and-drop pipeline with ordered stages, value, probability, expected close date, won and lost outcomes, and a required reason when a deal is lost. Pipeline, list, and forecast are the views on the deal side. Activities sit on the record: calls, meetings, and tasks, with a My Day list of what is overdue and what is coming up. A small team that loses inquiries in a shared inbox or a spreadsheet is the buyer this is built for.",
+      "The limits are plan gates and unfinished connections. Starter includes 3 pipelines and a few automation rules. Custom reports and forecasting start on Growth, at 10 pipelines. Scale goes to 25 pipelines and adds custom roles, audit access, and team routing. AI is optional. Starter sells it as a paid add-on. Growth and Scale include an allowance the pricing page does not size in numbers, and extra AI, SMS, and calling are separate usage charges. The integrations page marks Gmail, Google Calendar, Slack, Google Sheets, webhooks, and API keys as at launch. It still marks Outlook, Outlook Calendar, Trello, Google Drive, Zapier, and three chat or outreach tools as coming soon, even though the pricing table already says Gmail/Outlook sync.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.3",
+        explanation:
+          "Leads, contacts, companies, deals, tasks, and reminders are on every plan. Pipelines are capped at 3, 10, or 25. Custom reports and forecasting start on Growth. Automation on Starter is a few rules. The features page is explicit that the CRM works with AI turned off.",
+      },
+      {
+        category: "Pricing",
+        score: "4.5",
+        explanation:
+          "Starter at $12 per user has no seat minimum and a 14-day trial without a card. Annual billing is advertised at up to 25% off, without a published yearly dollar amount on the cards we checked. AI, SMS, and calling sit outside the seat price.",
+      },
+      {
+        category: "Ease of Use",
+        score: "4.2",
+        explanation:
+          "The interface separates an unqualified lead from a deal, and it puts overdue and upcoming work on a My Day view. CSV import includes column mapping and an error review before the file is committed.",
+      },
+      {
+        category: "Integrations",
+        score: "3.7",
+        explanation:
+          "Gmail, Google Calendar, Slack, Google Sheets, webhooks, and REST API keys are labeled at launch. Outlook, Zapier, Trello, and Google Drive are labeled coming soon. The pricing page still lists Gmail/Outlook sync, so Microsoft mail should be treated as unavailable until the integrations page changes that label.",
+      },
+      {
+        category: "Reporting",
+        score: "4.0",
+        explanation:
+          "Starter includes standard sales reports. Growth adds custom reports and forecasting. Scale adds team-level reporting. Reports can be filtered by date, pipeline, owner, source, and stage, and exported to CSV within the viewer's permissions.",
+      },
+    ],
+    pros: [
+      "Starter is $12 per user, with one seat allowed and a 14-day trial that does not require a card",
+      "Leads stay out of the pipeline until they are converted, and the history moves with the conversion",
+      "Tasks, reminders, and a My Day view are included on every plan",
+      "CSV import includes column mapping and an error review before the file is committed",
+      "The core CRM is documented as usable with AI disabled; AI is an add-on on Starter and an allowance on Growth and Scale",
+    ],
+    cons: [
+      "Pipelines stop at 3 on Starter, 10 on Growth, and 25 on Scale, and custom reports start on Growth",
+      "Outlook, Zapier, Trello, and Google Drive are still marked coming soon, while the pricing page already names Outlook sync",
+      "AI, SMS, and calling are extra usage charges, and the included AI amounts are not published as numbers",
+      "Starter automation is only a few rules; advanced workflows and team routing are on higher plans",
+      "This is a sales CRM, not scheduling, dispatch, invoicing, or field service",
+    ],
+    bestForEditorial:
+      "LeadMino fits a small sales team, an agency, a consultant, or a local service business that lives on incoming inquiries and needs one place for the next follow-up. A solo operator can start on one Starter seat. A startup leaving a spreadsheet gets leads, a pipeline, and reminders without a five-seat minimum. A contractor can use it to track bids and customers. It does not replace a field-service tool for dispatch, job scheduling, or invoicing. Pair it with those systems, or look at a field-service product, when the work is the visit rather than the sale.",
+    whoShouldAvoid:
+      "Choose HubSpot or Zoho CRM if you need a larger app catalog, marketing automation, or a free CRM tier. Choose Pipedrive if you want a pipeline tool with a longer public track record. Skip LeadMino if the team is on Microsoft 365 today and cannot wait: the integrations page still marks Outlook and Outlook Calendar as coming soon. Skip it if you need a saved operations stack for crews, routes, and invoices. Scale is the plan for custom roles and an audit trail review. It is not an enterprise CRM in the Salesforce sense.",
+    pricingSummary:
+      "As of November 2026, LeadMino's pricing page lists three per-seat monthly plans. Starter is $12, Growth is $24, and Scale is $49. Billing is per workspace, so everyone in the same workspace is on the same plan. There is no setup fee and no minimum number of seats. The page says Starter does not cap how many people can join. You upgrade when you need more pipelines, fields, or automation, not because a fourth person was added. Yearly billing is described as saving up to 25% versus monthly, depending on the plan. The cards we checked quote the monthly price, so confirm the annual charge before you buy. Directory sites that list a five-seat cap on Starter disagree with this page. Use the vendor page.",
+    pricingTiers:
+      "Starter includes leads, contacts, companies, and deals, CSV import and export, tasks and reminders, up to 3 pipelines, basic custom fields, a few automation rules, standard sales reports, and email support. Gmail sync is listed at one mailbox per user. Growth adds up to 10 pipelines, a higher email-sync allowance, more custom fields, advanced workflow automation, custom reports and forecasting, a small included AI allowance, and guided setup. Scale adds up to 25 pipelines, the highest email and field allowances, advanced workflows with team routing, team-level reporting, custom roles, audit access, a larger AI allowance, and priority support. The pricing page says AI on Starter is an optional paid add-on, and that extra AI, SMS, and calling are topped up separately from the seat price. It does not publish the message counts or per-minute rates. Nothing is charged automatically when the 14-day trial ends. The page says you get a reminder first. Cancel from billing settings and export before or after. Seat changes are prorated.",
+    costVsCompetitors:
+      "At $12 per user with no seat minimum, Starter is the price to compare with Pipedrive and with a spreadsheet plus a shared inbox. You buy that price with 3 pipelines, basic fields, and a short list of automation rules. Growth at $24 is the price once you need forecasting and more than a few workflows. Scale at $49 is the price for custom roles and team routing, still per seat, still without a published enterprise quote. HubSpot's free CRM is the comparison if the budget is zero and you can accept HubSpot's limits. Freshsales publishes a lower annual starting price and a longer product history. LeadMino's seat price is predictable. The usage bill for AI, SMS, and calling is not, until the allowance numbers are on the pricing page.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Leads inbox",
+        description:
+          "Unqualified inquiries stay out of the active pipeline. Capture a lead by hand, from a CSV, or from an integration. Each lead carries source, status, value, owner, and score, and the list filters on those fields. Converting a lead creates a deal and keeps the history. The features page describes this as the step that keeps a rep's board limited to people worth working.",
+      },
+      {
+        name: "Deal pipelines",
+        description:
+          "Deals sit on a drag-and-drop board with ordered stages you configure. A deal has value, probability, expected close date, and source. Won and lost are outcomes, and a lost deal requires a reason. Stage changes are kept, and the board shows deal aging. Pipeline, list, and forecast are the documented views. How many pipelines you can open depends on the plan: 3, 10, or 25. The features page says you can have as many pipelines as the process needs. The pricing page is the cap.",
+      },
+      {
+        name: "Contacts and companies",
+        description:
+          "A person is tied to a company, to deals, and to communication. Records hold custom fields, tags, notes, and file attachments. A company view shows open and won deal value. CSV import maps columns and shows errors before the import is finished. Saved filters and bulk owner or tag updates are listed for keeping a shared book of business current when more than one person sells.",
+      },
+      {
+        name: "Tasks, calendar, and My Day",
+        description:
+          "Calls, meetings, and tasks are scheduled on the record they belong to. Views are a list, a calendar, and a timeline on the record. Each activity can be open, completed, overdue, or rescheduled, and reminders fire in the app before the time passes. My Day collects what is overdue and what is coming up, which is the screen for a team that drops follow-ups.",
+      },
+      {
+        name: "Automation and AI",
+        description:
+          "Workflows use a trigger, a condition, and an action. Documented triggers are lead created, deal stage changed, and deal won or lost. Actions include assigning an owner, creating an activity, and sending a template email. A workflow can sit in draft or active, and runs are logged with retries and failure reasons. Starter includes a few rules. Advanced workflows start on Growth. Team routing starts on Scale. AI can draft or rewrite email from CRM context, summarize a record, and suggest a next step. Outputs are editable and labeled. The CRM is documented as fully usable when AI is off.",
+      },
+      {
+        name: "Reports, roles, and security",
+        description:
+          "Built-in reports cover pipeline performance, won and lost deals, forecast, activity, and lead conversion, filtered by date, pipeline, owner, source, and stage. Custom reports and forecasting start on Growth. Team-level reporting starts on Scale. Roles on the features page are organization admin, sales manager, and sales representative, with view, create, edit, and delete rights and visibility of own, team, or organization records. Custom roles and audit access are Scale. The security page describes tenant isolation on every query, encryption in transit and at rest, optional two-factor authentication, and encrypted stored credentials.",
+      },
+    ],
+    integrations: [
+      "Gmail / Google Workspace (at launch)",
+      "Google Calendar (at launch)",
+      "Slack (at launch)",
+      "Google Sheets (at launch)",
+      "Webhooks (at launch)",
+      "REST API keys (at launch)",
+      "Outlook / Microsoft 365 (coming soon)",
+      "Outlook Calendar (coming soon)",
+      "Zapier (coming soon)",
+      "Trello (coming soon)",
+      "Google Drive (coming soon)",
+    ],
+    integrationsIntro:
+      "LeadMino's integrations page, checked in November 2026, splits connections into at launch and coming soon. At launch: Gmail and Google Workspace, Google Calendar, Slack, Google Sheets, signed webhooks, and scoped REST API keys. Gmail logs sent and received mail on the contact, lead, or deal, and you can reply from the CRM. Slack posts new-lead, stage-change, and won or lost alerts to a channel or a direct message. Coming soon: Outlook and Microsoft 365, Outlook Calendar, Trello, Google Drive, Zapier, Chatboq, Chatdrill, and Mailtracko. Do not buy on the assumption that those are connected. The pricing page lists Gmail/Outlook two-way sync, and the features page describes a Microsoft connection. The integrations page is the one that still says coming soon. Until that label changes, plan on Google mail and calendar, not Microsoft.",
+    alternatives: [
+      {
+        name: "Pipedrive",
+        href: getCrmReviewUrl("pipedrive"),
+        description:
+          "A pipeline CRM with a longer record, if the question is deal stages and activity rather than a separate leads inbox.",
+        logoSrc: LOGOS.pipedrive,
+      },
+      {
+        name: "HubSpot",
+        href: getCrmReviewUrl("hubspot"),
+        description:
+          "A broader CRM with a free tier and a large app catalog, if LeadMino's coming-soon integrations or pipeline caps are the blocker.",
+        logoSrc: LOGOS.hubspot,
+      },
+      {
+        name: "Zoho CRM",
+        href: getCrmReviewUrl("zoho-crm"),
+        description:
+          "A lower-cost CRM inside the Zoho suite, if you want more apps than a sales pipeline and you already use Zoho.",
+        logoSrc: LOGOS.zoho,
+      },
+      {
+        name: "Close",
+        href: getCrmReviewUrl("close"),
+        description:
+          "A calling-centered sales CRM, if phone outreach is the job and LeadMino's calling charges are still unpublished.",
+        logoSrc: LOGOS.close,
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does LeadMino cost?",
+        a: "LeadMino's pricing page, checked in November 2026, lists Starter at $12 per user per month, Growth at $24, and Scale at $49. There is no seat minimum. Annual billing is described as up to 25% off, and the monthly cards are what the page shows, so confirm the yearly total. AI, SMS, and calling are extra usage charges. The page does not publish the allowance sizes or the rates.",
+      },
+      {
+        q: "Does LeadMino have a free trial?",
+        a: "Yes. Every new workspace gets 14 days. The pricing page says a credit card is not required, nothing is charged without confirmation, and you get a reminder before the trial ends. You can export your data if you cancel.",
+      },
+      {
+        q: "Does LeadMino work with Outlook?",
+        a: "Not according to the integrations page, which marks Outlook and Outlook Calendar as coming soon. Gmail and Google Calendar are marked at launch. The pricing page lists Gmail/Outlook sync in one line. Treat Microsoft mail and calendar as unavailable until the integrations page moves them to at launch.",
+      },
+      {
+        q: "Is AI required to use LeadMino?",
+        a: "No. The features and pricing pages say the CRM works with AI off. On Starter, AI is an optional paid add-on. Growth and Scale include a monthly allowance you can top up. Documented uses are email drafts, rewrites, record summaries, and a suggested next step. Each output can be edited.",
+      },
+      {
+        q: "Is LeadMino a field service platform?",
+        a: "No. It tracks leads, contacts, companies, deals, and follow-ups. It does not dispatch crews, schedule jobs, or invoice the work. A contractor can use it for the sale. The visit still needs a field-service or scheduling tool.",
+      },
+      {
+        q: "Is LeadMino worth it for a small business?",
+        a: "It is worth a trial when the team is small, the process is a few pipelines, and the mail is Gmail. The single-seat price and the lead-to-deal split are the reasons to try it. It is a weaker bet if you need Outlook, Zapier, or a published price for calling and AI before you commit.",
+      },
+    ],
+    methodology: CRM_METHODOLOGY,
+    compareLinks: [
+      { label: "HubSpot vs Pipedrive", href: getCrmCompareUrl("hubspot-vs-pipedrive") },
+      { label: "Freshsales vs Pipedrive", href: getCrmCompareUrl("freshsales-vs-pipedrive") },
+      { label: "Close vs Pipedrive", href: getCrmCompareUrl("close-vs-pipedrive") },
+    ],
+    compareSectionTitle: "Compare LeadMino with other CRM software",
+    bestPayrollSoftwareHref: BEST_CRM_SOFTWARE_HREF,
+    compareHubHref: CRM_COMPARE_HUB,
+    compareHubLabel: "Compare CRM software",
+    bestRoundupLabel: "Best CRM software (2026) — full roundup",
+    bestForSectionTitle: "Best CRM software for different use cases",
+    bestForSectionSub: "Find CRM software by scenario.",
+    scenarioLinks: CRM_SCENARIO_LINKS,
+    guideHubHref: CRM_GUIDES_HUB,
+    guideHubLabel: "CRM guides",
+    relatedReading: [
+      { label: "CRM software hub", href: "/crm" },
+      { label: "Best CRM software", href: BEST_CRM_SOFTWARE_HREF },
+      { label: "How businesses track leads using a CRM", href: "/crm/guides/how-businesses-track-leads-using-crm" },
+      { label: "How sales pipeline management works", href: "/crm/guides/how-sales-pipeline-management-works" },
+      { label: "CRM for small business", href: "/crm/guides/crm-for-small-business" },
+      { label: "CRM vs spreadsheets", href: "/crm/guides/crm-vs-spreadsheets" },
+      { label: "Lead management explained", href: "/crm/guides/lead-management-explained" },
+      { label: "CRM vs field service software", href: "/crm/guides/crm-vs-field-service-software" },
+      { label: "How much CRM software costs", href: "/crm/guides/how-much-crm-software-costs" },
+    ],
   },
 };
 

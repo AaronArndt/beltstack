@@ -2,6 +2,7 @@ import {
   getSchedulingReviewUrl,
   getSchedulingCompareUrl,
   getSchedulingBestForUrl,
+  getPosReviewUrl,
 } from "@/lib/routes";
 import type { ReviewTemplateProps } from "@/components/reviews/ReviewTemplate";
 import { overlayVerifiedStartingPrice } from "@/lib/data/verifiedStartingPrices";
@@ -17,6 +18,8 @@ const LOGOS = {
   square: "/Logos/square.jpeg",
   appointy: "/Logos/appointy.jpeg",
   zoho: "/Logos/zoho.png",
+  booksy: "/Logos/booksy.jpeg",
+  sevenShifts: "/Logos/7shifts.jpeg",
 } as const;
 
 const SCHEDULING_HUB = "/scheduling";
@@ -746,6 +749,386 @@ const reviews: Record<string, SchedulingReviewData> = {
       { label: "Compare scheduling software", href: SCHEDULING_COMPARE_HUB },
       { label: "Scheduling guides", href: SCHEDULING_GUIDES_HUB },
       { label: "Best scheduling software by use case", href: "/scheduling/best-for" },
+    ],
+  },
+
+  booksy: {
+    toolName: "Booksy Biz",
+    category: "Scheduling",
+    categoryHref: SCHEDULING_HUB,
+    rating: "4.1",
+    startingPrice: "$29.99/month for one user",
+    bestFor:
+      "solo barbers, stylists, and nail techs who want online booking and a beauty marketplace in the same subscription",
+    visitUrl: "https://biz.booksy.com/",
+    logoSrc: LOGOS.booksy,
+    quickVerdict:
+      "Booksy Biz is booking software for beauty and wellness, with a consumer marketplace attached. One user is $29.99 a month and every extra staff calendar is $20. Boost is optional and bills 30% of a new Boost client's first visit, capped at $100.",
+    quickVerdictParagraphs: [
+      "Booksy Biz is appointment software for barbers, hairstylists, nail technicians, and salon owners. Clients book from a profile, an Instagram or Facebook button, Google, or the Booksy consumer app. The business runs the calendar, checkout, client notes, and marketing from Booksy Biz on a phone, and the heavier tools on the web or a tablet. A general scheduler such as Calendly manages people you already know. Booksy also lists the business where people are searching for a barber or a nail tech.",
+      "The US pricing page, checked in November 2026, is one subscription: $29.99 a month plus tax for one user, and $20 a month for each additional user. There is no second tier for gift cards, memberships, waitlists, or reporting. SMS marketing includes 2,000 messages a month. Confirmations and reminders are not counted against that. A 14-day trial does not ask for a card. The pricing page does not publish an unlimited-staff price. An April 2026 brief that listed $119.99 for unlimited staff does not match this page.",
+      "The marketplace listing is included, and you can turn visibility off and keep the booking tools. Booksy's own pages do not agree on the audience size: the about page says 44 million users, the features page says 44 million clients, and the marketplace page says 65 million customers. Booksy also says a listing does not guarantee new clients. Boost is the paid visibility layer. It has no monthly fee. A client who books for the first time while Boost is on can trigger a one-time 30% charge on that first visit, with a $10 floor and a $100 cap. Later visits are not charged.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.5",
+        explanation:
+          "Booking, reminders, deposits, a waitlist, client profiles, forms, gift cards, memberships, and marketing sit in the one subscription. Inventory and shifts are documented on the web and tablet. The phone app covers the calendar, clients, checkout, and marketing.",
+      },
+      {
+        category: "Pricing",
+        score: "4.3",
+        explanation:
+          "One user at $29.99 with the feature list included is a clear solo price. Each extra user is $20, so a five-person team is $109.99 before tax and processing. Boost, card rates, readers, and the 1.5% fast payout are separate.",
+      },
+      {
+        category: "Ease of Use",
+        score: "4.2",
+        explanation:
+          "The trial starts from a registration form, with no card, and clients book themselves once services and hours are set. The phone app and the web tools are not the same product surface, so a salon owner still needs the browser for inventory and shifts.",
+      },
+      {
+        category: "Support",
+        score: "4.0",
+        explanation:
+          "Booksy publishes a help center for Boost, payouts, inventory, and calendar import, and the pricing page says the trial includes setup guidance. Published response times are not on that page.",
+      },
+      {
+        category: "Integrations",
+        score: "3.6",
+        explanation:
+          "Instagram, Facebook, and Reserve with Google are booking buttons. Google and Apple calendars come in as a file import, not a live sync. The public pages do not offer a shop-owner API key, a Zapier app, or an Albato connector.",
+      },
+    ],
+    pros: [
+      "A beauty marketplace listing is included, and visibility can be turned off without losing the booking tools",
+      "One subscription covers booking, reminders, waitlists, forms, gift cards, memberships, and 2,000 marketing texts a month",
+      "Card reader, Tap to Pay, and keyed payments are built in, with a free next-business-day payout",
+      "Deposits, cancellation fees, and a waitlist are the no-show tools, and clients are not charged a booking fee",
+      "A solo user stays at $29.99 a month, with a 14-day trial and no card required",
+    ],
+    cons: [
+      "Each extra staff user is $20 a month, and the current pricing page has no unlimited-staff price",
+      "Boost can bill 30% of a new client's first visit, with a $10 minimum and a $100 cap, and only if you leave it on",
+      "Inventory and shifts are on the web and tablet, not in the phone app",
+      "Google Calendar is a one-time file import, not a two-way sync, and there is no public Zapier or Albato connector",
+      "The marketplace is for beauty and wellness search. A consultant or a clinic is outside the audience Booksy is built to attract",
+    ],
+    bestForEditorial:
+      "Booksy fits a solo barber, stylist, or nail tech, and a small salon that wants clients to book without a phone tag and wants to be findable by people already searching Booksy. A one-chair shop pays $29.99 and can leave Boost off. A shop adding chairs pays $20 for each extra calendar. Wellness providers who sell appointments the same way, such as a lash or brow tech, are in the same product. A consultant, a medical office, or a team that needs live Google Calendar sync and a CRM connection should use a general scheduler.",
+    whoShouldAvoid:
+      "Skip Booksy if the work is not a bookable beauty or wellness service. The marketplace will not fill a consulting calendar. Skip it if the team is large and the $20 staff fee is the budget problem: five users are $109.99 a month before tax, processing, and any Boost charges. Skip it if bookings must stay in two-way sync with Google Calendar or flow into another CRM. Square Appointments is the comparison when you already take payments on Square and do not need Booksy's marketplace. Setmore and Acuity are the comparison when you want scheduling without a beauty app.",
+    pricingSummary:
+      "As of November 2026, Booksy's US pricing page lists $29.99 a month plus tax for one user and $20 a month for each additional user. Two users are $49.99. Five users are $109.99. Those totals are the published per-user math, and Booksy's own pricing article uses the same figures. The page does not list a flat unlimited-staff plan. The subscription is month to month and can be canceled. A 14-day trial does not require a card. Tax is extra. Payment processing, card readers, and Boost are not inside the $29.99.",
+    pricingTiers:
+      "There is one feature set. Booking, marketing, client tools, reports, waitlists, forms, gift cards, memberships, and no-show tools are listed as included. Marketing texts include 2,000 a month. Appointment confirmations and reminders are separate and are not metered. Gift cards and no-show charges use the standard mobile processing rate. Mobile and keyed payments are 2.69% + $0.30. The Booksy card reader is 2.49% + $0.10. Tap to Pay is 2.49% + $0.20. The Stripe Reader M2 is $53.10 plus shipping. The Stripe Reader S710 is $299 plus shipping. Next-business-day payouts are free, with some exclusions. A fast payout, in 30 minutes or less, costs 1.5% of the payout and only covers that day's Booksy-processed funds, paid to a verified debit card. Boost has no monthly fee. If a client books for the first time while Boost is on, Booksy charges 30% of that first visit, at least $10 and at most $100. A $50 haircut is a $15 charge in Booksy's own example. Tips are not included. A later visit by that client is not charged. Mark a no-show the same day or the Boost charge can still apply. Clients who book through your own profile link are how Booksy says you avoid the Boost fee while it is on. New clients who find you with Boost off are not commissioned.",
+    costVsCompetitors:
+      "A solo user at $29.99 is the price to set next to Square Appointments and Setmore, with processing and a reader on top if you take cards in the chair. The staff line is the part that moves: each calendar is another $20, and nothing on the current page caps that. Boost is a customer-acquisition cost, not a software cost, and it only applies to first visits Booksy attributes while the feature is on. Calendly and Acuity do not sell a beauty marketplace, and they do not bill a commission on a haircut. They also do not put the shop in front of people searching for a barber.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Online booking",
+        description:
+          "Clients see open times and book themselves, including from the Booksy app. Confirmations and reminders are included and are not drawn from the marketing-text allowance. The calendar can be color-coded, and appointments can be moved on the grid. You can accept or decline a request and block a client. A waitlist is included for slots that open up. Reserve with Google, an Instagram Book Now button, and a Facebook booking button are the other doors into the same calendar.",
+      },
+      {
+        name: "Marketplace and Boost",
+        description:
+          "The listing is part of the subscription. Clients search for a service and a place, then open a profile with services, prices, photos, and reviews. Booksy's about page says 44 million users. The marketplace page says 65 million customers and also says new clients are not guaranteed, because discovery depends on location, demand, and the profile. You can hide the listing and keep using Booksy to book people you already have. Boost is optional extra visibility, including a recommended placement. It is free to switch on and bills only a qualifying first visit.",
+      },
+      {
+        name: "Payments and no-shows",
+        description:
+          "Checkout can be a keyed or mobile charge, Tap to Pay on the phone, or a Booksy card reader. Deposits and cancellation fees are the published no-show tools, and they process at the mobile rate. They do not collect every missed appointment by themselves. A waitlist is the other tool when a slot opens. Standard payouts are the next business day. The 30-minute payout is the 1.5% option, limited to funds processed in Booksy that day.",
+      },
+      {
+        name: "Clients, marketing, and the back office",
+        description:
+          "A client record holds contact details, booking history, photos, and notes. Custom forms and liability waivers are included. Gift cards and memberships are included, with processing fees on the card sale. Message blasts use the 2,000-text allowance. Inventory, including stock by location, is documented as a web and tablet tool for the owner, a manager, or a receptionist. Shifts and time off are marked as a web and tablet feature. The phone app is the calendar, clients, checkout, and marketing. Deeper reports are on the web and tablet. Booksy's feature page says the web product includes more than 16 revenue reports. A help article puts the newer report set above 20.",
+      },
+    ],
+    integrations: [
+      "Reserve with Google",
+      "Instagram booking button",
+      "Facebook booking button",
+      "Google and Apple calendar file import",
+      "Booksy card reader and Tap to Pay",
+    ],
+    integrationsIntro:
+      "Booksy's public connections are booking doors and a calendar file, not a sync platform. Instagram and Facebook add a book button. Reserve with Google lists the business on Search and Maps. A Google or Apple calendar can be imported from an .ics file of up to 5,000 events. Imported events become walk-in appointments on the person who uploaded the file, from the start of the current month through two years ahead. That is not a live two-way sync. The US product pages do not list a Square connection. Booksy processes its own cards. Albato's published app directory does not list Booksy, and Booksy does not give a shop a self-serve API key or a Zapier app. Client data leaves through the product's own export, not through an automation connector.",
+    alternatives: [
+      {
+        name: "Square Appointments",
+        href: getSchedulingReviewUrl("square-appointments"),
+        description:
+          "Appointments inside Square payments, for a shop that already runs on Square and does not need Booksy's marketplace.",
+        logoSrc: LOGOS.square,
+      },
+      {
+        name: "Setmore",
+        href: getSchedulingReviewUrl("setmore"),
+        description:
+          "A lower-priced scheduler with a free tier, for a service business that is not trying to be found in a beauty app.",
+        logoSrc: LOGOS.setmore,
+      },
+      {
+        name: "Acuity Scheduling",
+        href: getSchedulingReviewUrl("acuity-scheduling"),
+        description:
+          "Intake forms and packages for consultants and coaches, without a barber marketplace.",
+        logoSrc: LOGOS.acuity,
+      },
+      {
+        name: "SimplyBook.me",
+        href: getSchedulingReviewUrl("simplybookme"),
+        description:
+          "A customizable booking site for salons and local services that want the calendar more than the consumer app.",
+        logoSrc: LOGOS.simplybookme,
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does Booksy cost?",
+        a: "Booksy's US pricing page, checked in November 2026, lists $29.99 a month plus tax for one user and $20 a month for each additional user. Five users are $109.99 before tax. Processing, card readers, and Boost are extra. The page does not list an unlimited-staff price.",
+      },
+      {
+        q: "What does Booksy Boost cost?",
+        a: "Boost has no monthly fee. If a client books for the first time while Boost is on, Booksy charges 30% of that first visit, at least $10 and at most $100. A later visit is not charged. Mark a no-show the same day or the fee can still be billed. Clients who book through your own profile link are excluded, according to Booksy.",
+      },
+      {
+        q: "Does Booksy charge for every new client?",
+        a: "No. Booksy says it does not take a commission on clients who find you through your own marketing, or on Booksy when Boost is off. The 30% charge is only for a first visit Booksy attributes while Boost is on.",
+      },
+      {
+        q: "Will Booksy's marketplace fill the book?",
+        a: "Booksy says it can, and also says it is not guaranteed. Discovery depends on the city, demand, and the profile. Booksy's pages cite 44 million and 65 million for the audience, so treat either figure as the company's, not a promise of bookings. You can hide the listing and still take appointments.",
+      },
+      {
+        q: "What are Booksy's card rates?",
+        a: "Mobile and keyed payments are 2.69% + $0.30. The Booksy card reader is 2.49% + $0.10. Tap to Pay is 2.49% + $0.20. Next-business-day payouts are free. A payout in 30 minutes costs 1.5% and only covers that day's Booksy payments, sent to a verified debit card.",
+      },
+      {
+        q: "Can I run Booksy from the phone?",
+        a: "The phone app covers the calendar, clients, checkout, and marketing. Inventory is documented as web and tablet only. Shifts and the deeper reports are on the web and tablet as well.",
+      },
+    ],
+    methodology: SCHEDULING_METHODOLOGY,
+    compareLinks: [
+      { label: "Square Appointments vs Acuity", href: getSchedulingCompareUrl("square-appointments-vs-acuity-scheduling") },
+      { label: "Acuity vs Setmore", href: getSchedulingCompareUrl("acuity-scheduling-vs-setmore") },
+      { label: "SimplyBook.me vs Setmore", href: getSchedulingCompareUrl("simplybookme-vs-setmore") },
+    ],
+    compareSectionTitle: "Compare Booksy with other scheduling software",
+    bestPayrollSoftwareHref: SCHEDULING_BEST_SOFTWARE,
+    compareHubHref: SCHEDULING_COMPARE_HUB,
+    compareHubLabel: "Compare scheduling software",
+    bestRoundupLabel: "Best scheduling software (2026) — full roundup",
+    bestForSectionTitle: "Best scheduling software for different use cases",
+    bestForSectionSub: "Find scheduling tools by scenario.",
+    scenarioLinks: SCHEDULING_SCENARIO_LINKS,
+    guideHubHref: SCHEDULING_GUIDES_HUB,
+    guideHubLabel: "Scheduling guides",
+    relatedReading: [
+      { label: "Scheduling software hub", href: SCHEDULING_HUB },
+      { label: "Best scheduling software", href: SCHEDULING_BEST_SOFTWARE },
+      { label: "Best for service businesses", href: getSchedulingBestForUrl("service-business") },
+      { label: "Best for freelancers", href: getSchedulingBestForUrl("freelancers") },
+      { label: "Scheduling for salons and spas", href: "/scheduling/guides/how-scheduling-software-helps-salons-and-spas" },
+      { label: "How scheduling software reduces no-shows", href: "/scheduling/guides/how-scheduling-software-reduces-no-shows" },
+      { label: "Online booking software", href: "/scheduling/guides/online-booking-software-explained" },
+      { label: "How appointment reminders work", href: "/scheduling/guides/how-appointment-reminders-work" },
+      { label: "How much scheduling software costs", href: "/scheduling/guides/how-much-scheduling-software-costs" },
+      { label: "Appointment scheduling for service businesses", href: "/scheduling/guides/appointment-scheduling-for-service-businesses" },
+    ],
+  },
+
+  "7shifts": {
+    toolName: "7shifts",
+    category: "Scheduling",
+    categoryHref: SCHEDULING_HUB,
+    rating: "4.2",
+    startingPrice: "Free for 1 location, or from $39.99/location/mo billed annually",
+    bestFor:
+      "restaurants that schedule hourly staff against sales and need a time clock, labor tools, and a POS connection",
+    visitUrl: "https://www.7shifts.com/",
+    logoSrc: LOGOS.sevenShifts,
+    quickVerdict:
+      "7shifts is restaurant workforce software: schedules, a time clock, labor cost, and team chat. Comp is free for one location and 15 people. Paid plans run $44.99 to $149.99 per location each month. Payroll is a separate product, and two 7shifts pages describe its price differently.",
+    quickVerdictParagraphs: [
+      "7shifts is built for the restaurant schedule, not for booking a guest a table. Managers publish shifts, employees set availability and request time off, and the phone app shows the schedule. A time clock, labor cost against POS sales, tips, and tasks sit on higher plans. It does not take guest orders or keep the books. 7shifts says more than 55,000 restaurants use it. That figure is the company's.",
+      "The plans page, checked in November 2026, lists four plans, priced per location, with 10% off for annual billing. Comp is free, one location, up to 15 employees: basic scheduling, availability, time off, and one-way announcements. Essentials is $44.99 a month, or $39.99 billed annually, for up to 30 employees, and adds templates, team chat, a basic time clock, and custom permissions. Pro is $89.99, or $79.99 billed annually, with unlimited employees on this page, plus labor cost and compliance tools, role wages, PTO balances, and a manager log book. Premium is $149.99, or $134.99 billed annually, and adds tip management, task lists, an hourly labor forecast, and labor recommendations. A new account gets 14 days of Pro with no card. After that, the account moves to Comp, a paid plan, or it expires.",
+      "A second location is another full subscription. Franchise pricing is a quote. Payroll is not the scheduling fee. One payroll page prices 7shifts Payroll at $39.99 per location plus $6 per employee paid, added to any paid plan. Another says Payroll is included in Premium and still charges $6 per employee paid, and that the same $39.99 location fee applies on Essentials or Pro. That page also caps Pro at 60 employees, while the plans page says Pro is unlimited. Use the plans page for the scheduling price, and confirm the payroll line and the Pro headcount before you buy.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.5",
+        explanation:
+          "Scheduling, availability, and shift trades start on the free plan. Chat, a time clock, labor cost, tips, and tasks are plan-gated. The product is a workforce system for restaurants, not a POS.",
+      },
+      {
+        category: "Pricing",
+        score: "3.8",
+        explanation:
+          "Comp is free inside a 15-person, one-location limit. Paid plans are per location, from $39.99 to $134.99 a month on annual billing. Tip management, tasks, and the manager log can be add-ons. Payroll is extra, and the published payroll price is not the same on every 7shifts page.",
+      },
+      {
+        category: "Ease of Use",
+        score: "4.2",
+        explanation:
+          "The phone app carries the schedule, announcements, and chat on the plans that include them. The 14-day trial opens Pro without a card. POS connections are set up in the web app, and some systems need the POS vendor in the loop.",
+      },
+      {
+        category: "Support",
+        score: "4.0",
+        explanation:
+          "The plan comparison lists chat and live support for the first 60 days. The payroll pages say implementation and a payroll specialist are included with that product. Ongoing support after 60 days is not spelled out on the plans page.",
+      },
+      {
+        category: "Integrations",
+        score: "4.4",
+        explanation:
+          "Self-serve POS connections include Toast, Square, Clover, TouchBistro, Lightspeed, SpotOn, and Shift4. Silverware, CAKE, Revel, and Squirrel need the POS partner and about seven days. Toast charges its own $50 per location for integration access.",
+      },
+    ],
+    pros: [
+      "Schedules, availability, time off, shift trades, and the phone app start on the free Comp plan",
+      "Labor cost and compliance tools on Pro use POS sales, so the schedule can be checked against what the store is actually doing",
+      "Self-serve connections for Toast, Square, Clover, TouchBistro, Lightspeed, SpotOn, and Shift4",
+      "Tip management and task lists can be bought alone or taken inside Premium",
+      "A 14-day Pro trial does not ask for a card, and a paid plan is month to month unless you take an enterprise term",
+    ],
+    cons: [
+      "Comp stops at one location and 15 employees, and it does not include team chat or a time clock",
+      "Every paid plan is per location, so a second restaurant is a second subscription",
+      "Payroll is not in the scheduling price, and 7shifts publishes two different payroll offers",
+      "The plans page says Pro has unlimited employees. A payroll landing page still says Pro stops at 60",
+      "Toast's integration access is a Toast charge of $50 per location, on top of 7shifts",
+    ],
+    bestForEditorial:
+      "7shifts fits an independent restaurant, cafe, coffee shop, bar, quick-service counter, or full-service dining room that builds a weekly schedule around hourly roles and wants that schedule on the employee's phone. A single site with 15 or fewer people can stay on Comp if chat and a time clock are not required. A site that needs the clock, templates, and messaging is on Essentials, up to 30 people. Labor cost, overtime warnings, role wages, and PTO balances are the reason to move to Pro. Premium is the plan when tips, task lists, and the hourly forecast should be in the subscription instead of add-ons. A group or franchise should ask for the enterprise quote rather than multiplying the card price and hoping it holds.",
+    whoShouldAvoid:
+      "Skip 7shifts if the business is not a restaurant. The labor tools assume shifts, roles, tips, and a POS. A salon or a clinic that needs guest booking is looking at a different product. Skip it if you need a register: 7shifts does not replace Toast, Square, or Clover. Skip it if the only job is a simple staff rota and the per-location price is more than that rota is worth. And do not buy Premium assuming payroll is a settled line item until 7shifts confirms whether the $39.99 location fee is included.",
+    pricingSummary:
+      "As of November 2026, 7shifts prices new customers per location. Comp is free for one location and up to 15 employees. Essentials is $44.99 a month, or $39.99 a month billed annually, up to 30 employees. Pro is $89.99, or $79.99 billed annually. Premium is $149.99, or $134.99 billed annually. Annual billing is the advertised 10% discount. The plans page says these are new-customer prices and can change. Payment is by card, or ACH on request. Cancel and you are billed for the current month unless an enterprise term says otherwise. There is no published setup fee for the scheduling product.",
+    pricingTiers:
+      "Comp includes building and publishing a schedule, shift offers, trades, and open shifts, availability, time off, the mobile app, and one-way announcements. Essentials adds schedule templates, approval of availability changes, paid and unpaid breaks on the schedule, team chat, SMS reminders, a basic time clock on a tablet, computer, phone, or POS, punch edits, a tip-declaration prompt, and custom permissions. Pro adds labor compliance and labor cost tools, wages by role, PTO and sick balances, break tracking, overtime notices, and the manager log book. Premium adds tip management, task management, permission templates, an advanced hourly labor forecast, labor recommendations, and deeper reporting. Tip management is also $49.99 per location as an add-on, plus $1 per instant tip payout, paid by the restaurant or the employee. Task lists are $12.99 per location. The manager log book is $14.99 per location on plans that do not already include it. Payroll, on one product page, is $39.99 per location plus $6 per employee paid and can be added to any paid plan, with free onboarding. A second page says Premium includes payroll and still charges the $6, and that Essentials and Pro add payroll at $39.99 plus $6. Confirm that line. The same page lists QuickBooks as the accounting connection for payroll journals.",
+    costVsCompetitors:
+      "Judge 7shifts by the location count first. One small restaurant can start at $0 and pay only when it needs chat, a clock, or labor math. Two sites on Pro, billed monthly, are $179.98 before payroll, tips, or tasks. That is the published location price times two, not a negotiated enterprise rate. A guest-booking tool such as Square Appointments does not do this job. A general staff scheduler may be cheaper when you do not need POS sales in the labor budget. 7shifts is the product when the schedule and the sales should sit in one place, and the POS on your counter is one it actually connects.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Scheduling",
+        description:
+          "Managers build and publish a schedule. Employees offer a shift, trade, or claim an open one, and they submit availability and time off. That set is on Comp. Essentials adds templates, a manager's approval on availability changes, and paid or unpaid breaks on the schedule. The comparison also lists sections, stations, and a weather forecast as scheduling context on the advanced set. The phone app shows the published schedule, hours, and time off. A second location needs its own subscription. Comp cannot be the plan for a group.",
+      },
+      {
+        name: "Time clock and attendance",
+        description:
+          "A time clock starts on Essentials: tablet, computer, phone, or the POS, with punch edits and a prompt for employees to declare tips. Pro is where role wages, PTO accruals, and break tracking sit, along with the labor-compliance tools. Those include a warning before overtime, a block on clocking in away from the restaurant, and state labor-law tools with custom attestations. Timecards are the bridge to payroll. They are not payroll. Comp has no clock. A 2026 plan notice says Comp accounts lose 7punches.",
+      },
+      {
+        name: "Labor cost",
+        description:
+          "Pro is the plan that names labor cost and compliance. The idea is to set a labor target against projected sales and see scheduled labor next to sales the POS already recorded. Premium adds an hourly forecast and labor recommendations, and the comparison lists schedules that can be generated from those targets. None of this saves labor by itself. It shows the gap between the roster and the sales. POS sales have to be connected, and that connection is configured in the web app. Budgeting by department is listed with the labor tools. Confirm it is on the plan you are quoted, because the plan cards name labor cost on Pro and the hourly forecast on Premium.",
+      },
+      {
+        name: "Chat, tips, tasks, and the team record",
+        description:
+          "Essentials adds individual and group chat, SMS reminders for new schedules and shift-pool requests, read receipts on announcements, and shift notes. Comp is one-way announcements only. Pro adds a record of sick days, late arrivals, and no-shows, recognition, stored documents, certification expiry, shift feedback, and a performance note over time, plus the manager log book. Premium, or the add-ons, cover tip pools and task lists. Tip management can pay tips instantly, send them to payroll, and show employees a mobile tip report. Hiring tools, including job posts and interview scheduling, are not on Comp. The comparison lists them without a plan name, so confirm the tier.",
+      },
+    ],
+    integrations: [
+      "Toast",
+      "Square",
+      "Clover",
+      "TouchBistro",
+      "Lightspeed L-Series, U-Series, and K-Series",
+      "SpotOn",
+      "Shift4 (POSitouch, Harbortouch, Future POS)",
+      "Silverware, CAKE, Revel, and Squirrel",
+      "7shifts Payroll",
+      "QuickBooks (payroll journals)",
+    ],
+    integrationsIntro:
+      "A POS connection is how 7shifts gets sales and, when you turn it on, actual labor. The help center lists a self-serve setup for Toast, Square, TouchBistro, Clover, Lightspeed, SpotOn, and the Shift4 family. Silverware, CAKE, Revel, and Squirrel start in 7shifts and finish with the POS partner, in about seven days. You map roles, import employees, and choose sales, labor, and schedule enforcement if that POS supports it. Settings live in the web app. Connecting does not rewrite the POS. Toast bills $50 per location for its own integration access, and Toast wage sync is hourly roles only. The plan comparison splits basic integrations (POS, timecards, API) from advanced ones (schedule enforcement and payroll). Confirm schedule enforcement is on your plan. Payroll can sync tips and hours. It is priced separately from the scheduling subscription, and the two payroll pages do not describe that price the same way.",
+    alternatives: [
+      {
+        name: "Square Appointments",
+        href: getSchedulingReviewUrl("square-appointments"),
+        description:
+          "Guest booking inside Square, for a shop that needs appointments. It is not a restaurant labor schedule.",
+        logoSrc: LOGOS.square,
+      },
+      {
+        name: "Booksy Biz",
+        href: getSchedulingReviewUrl("booksy"),
+        description:
+          "Client booking and a marketplace for barbers and salons, not hourly restaurant labor.",
+        logoSrc: LOGOS.booksy,
+      },
+      {
+        name: "Toast",
+        href: getPosReviewUrl("toast-pos"),
+        description:
+          "The restaurant POS. 7shifts connects to it for sales and labor. Toast still runs the register.",
+        logoSrc: "/Logos/toast.png",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does 7shifts cost?",
+        a: "The plans page, checked in November 2026, lists Comp at $0 for one location and up to 15 employees. Essentials is $44.99 per location each month, or $39.99 billed annually, up to 30 employees. Pro is $89.99, or $79.99 annually. Premium is $149.99, or $134.99 annually. A second location is another subscription. Franchise pricing is a quote.",
+      },
+      {
+        q: "Is there a free 7shifts plan?",
+        a: "Yes. Comp is free for a single location with up to 15 employees. It includes basic scheduling, availability, time off, shift trades, the mobile app, and one-way announcements. Team chat and the time clock start on Essentials. New accounts also get 14 days of Pro with no card. If you do not pick Comp or a paid plan when the trial ends, the account expires.",
+      },
+      {
+        q: "Does 7shifts include payroll?",
+        a: "Not in the scheduling price. One payroll page lists $39.99 per location plus $6 per employee paid, added to any paid plan. Another says Payroll is included in Premium, still plus $6 per employee, and that Essentials and Pro add it at $39.99 plus $6. Confirm which offer applies to the plan you are buying.",
+      },
+      {
+        q: "Does 7shifts work with Toast and Square?",
+        a: "Yes. Both are self-serve connections, along with Clover, TouchBistro, Lightspeed, SpotOn, and Shift4. The link can bring in sales and labor. Toast charges $50 per location for Toast integration access. Schedule enforcement depends on the POS and on your 7shifts plan.",
+      },
+      {
+        q: "Can one 7shifts account cover several restaurants?",
+        a: "Each location is priced on its own. Comp is limited to one location. Groups and franchises are told to contact sales for a quote. The plans page does not publish a volume discount.",
+      },
+      {
+        q: "Is 7shifts a restaurant POS?",
+        a: "No. It schedules staff, clocks time, and, on higher plans, compares labor with POS sales. Orders, payments, and the guest check stay in the POS.",
+      },
+    ],
+    methodology: SCHEDULING_METHODOLOGY,
+    compareLinks: [
+      { label: "Square Appointments vs Acuity", href: getSchedulingCompareUrl("square-appointments-vs-acuity-scheduling") },
+      { label: "Acuity vs Setmore", href: getSchedulingCompareUrl("acuity-scheduling-vs-setmore") },
+      { label: "SimplyBook.me vs Setmore", href: getSchedulingCompareUrl("simplybookme-vs-setmore") },
+    ],
+    compareSectionTitle: "Compare 7shifts with other scheduling software",
+    bestPayrollSoftwareHref: SCHEDULING_BEST_SOFTWARE,
+    compareHubHref: SCHEDULING_COMPARE_HUB,
+    compareHubLabel: "Compare scheduling software",
+    bestRoundupLabel: "Best scheduling software (2026) — full roundup",
+    bestForSectionTitle: "Best scheduling software for different use cases",
+    bestForSectionSub: "Find scheduling tools by scenario.",
+    scenarioLinks: SCHEDULING_SCENARIO_LINKS,
+    guideHubHref: SCHEDULING_GUIDES_HUB,
+    guideHubLabel: "Scheduling guides",
+    relatedReading: [
+      { label: "Scheduling software hub", href: SCHEDULING_HUB },
+      { label: "Best scheduling software", href: SCHEDULING_BEST_SOFTWARE },
+      { label: "Best for teams", href: getSchedulingBestForUrl("teams") },
+      { label: "Scheduling for restaurants", href: "/scheduling/guides/how-scheduling-software-helps-restaurants" },
+      { label: "How shift scheduling works", href: "/scheduling/guides/how-shift-scheduling-software-works" },
+      { label: "Appointments vs employee scheduling", href: "/scheduling/guides/appointment-scheduling-vs-employee-scheduling" },
+      { label: "How scheduling affects labor cost", href: "/scheduling/guides/how-scheduling-software-affects-labor-costs" },
+      { label: "Employee scheduling laws", href: "/scheduling/guides/employee-scheduling-laws-businesses-should-know" },
+      { label: "Time clocks and POS", href: "/pos/guides/employee-time-clocks-and-labor-with-pos" },
+      { label: "POS software hub", href: "/pos" },
     ],
   },
 };

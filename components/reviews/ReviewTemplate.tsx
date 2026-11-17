@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useId, useLayoutEffect, useRef, useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { RatingInfoTooltip } from "@/components/RatingInfoTooltip";
 import { Footer } from "@/components/Footer";
@@ -29,6 +29,281 @@ const secondaryNavLinkClass =
   "text-brand hover:text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo rounded";
 
 const SCENARIO_PREVIEW_LIMIT = 6;
+const GLANCE_HIGHLIGHT_CAP = 5;
+/** Room for the Read more control before it is mounted, so the list does not jump. */
+const GLANCE_TOGGLE_RESERVE = 32;
+const GLANCE_VIEWPORT_GAP = 24;
+
+function stackedHighlightHeight(items: HTMLElement[], count: number): number {
+  if (count <= 0 || items.length === 0) return 0;
+  const last = items[Math.min(count, items.length) - 1];
+  return last.getBoundingClientRect().bottom - items[0].getBoundingClientRect().top;
+}
+
+function highlightsThatFit(items: HTMLElement[], room: number): number {
+  let count = 0;
+  for (let i = 1; i <= items.length; i++) {
+    if (stackedHighlightHeight(items, i) > room + 1) break;
+    count = i;
+  }
+  return count;
+}
+
+type GlanceLayout = {
+  maxHeight: number | null;
+  needsToggle: boolean;
+  scrollable: boolean;
+  collapsedCount: number;
+};
+
+function ReviewAtAGlance({
+  toolName,
+  logoSrc,
+  rating,
+  bestFor,
+  startingPrice,
+  pros,
+  visitUrl,
+  stickyTop,
+}: {
+  toolName: string;
+  logoSrc?: string;
+  rating: string;
+  bestFor: string;
+  startingPrice: string;
+  pros: string[];
+  visitUrl?: string;
+  stickyTop: number;
+}) {
+  const highlights = pros.slice(0, GLANCE_HIGHLIGHT_CAP);
+  const listId = useId();
+  const asideRef = useRef<HTMLElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const [expanded, setExpanded] = useState(false);
+  const [scrolledToEnd, setScrolledToEnd] = useState(true);
+  const [layout, setLayout] = useState<GlanceLayout>({
+    maxHeight: null,
+    needsToggle: false,
+    scrollable: false,
+    collapsedCount: GLANCE_HIGHLIGHT_CAP,
+  });
+
+  useLayoutEffect(() => {
+    const aside = asideRef.current;
+    const card = cardRef.current;
+    const list = listRef.current;
+    if (!aside || !card || !list) return;
+
+    const measure = () => {
+      if (aside.getBoundingClientRect().width === 0) return;
+
+      const listTopWithin = list.getBoundingClientRect().top - aside.getBoundingClientRect().top;
+      const footerHeight = footerRef.current?.getBoundingClientRect().height ?? 0;
+      const cardStyle = window.getComputedStyle(card);
+      const cardPadBottom = parseFloat(cardStyle.paddingBottom) || 0;
+      const cardBorderBottom = parseFloat(cardStyle.borderBottomWidth) || 0;
+      let room =
+        window.innerHeight -
+        stickyTop -
+        GLANCE_VIEWPORT_GAP -
+        listTopWithin -
+        footerHeight -
+        cardPadBottom -
+        cardBorderBottom;
+
+      const items = Array.from(list.children) as HTMLElement[];
+      const fullHeight = stackedHighlightHeight(items, items.length);
+      const toggleShown = toggleRef.current != null;
+      const fits = fullHeight <= room + 1;
+
+      if (!fits && !toggleShown && items.length > 1) room -= GLANCE_TOGGLE_RESERVE;
+      if (fits && toggleShown && toggleRef.current) {
+        room += toggleRef.current.offsetHeight + 12;
+      }
+
+      const roomForList = Math.max(0, Math.floor(room));
+      const fitCount = highlightsThatFit(items, roomForList);
+      const overflows = fitCount < items.length;
+      const nextNeedsToggle = overflows && items.length > 1;
+      const collapsedCount = overflows ? Math.max(1, fitCount) : items.length;
+      const collapsedHeight = stackedHighlightHeight(items, collapsedCount);
+      const maxHeight = !overflows
+        ? null
+        : !expanded
+          ? Math.ceil(Math.min(collapsedHeight, roomForList))
+          : roomForList;
+      const scrollable =
+        maxHeight != null &&
+        (expanded || collapsedHeight > roomForList + 1) &&
+        fullHeight > maxHeight + 1;
+
+      setLayout((prev) =>
+        prev.maxHeight === maxHeight &&
+        prev.needsToggle === nextNeedsToggle &&
+        prev.scrollable === scrollable &&
+        prev.collapsedCount === collapsedCount
+          ? prev
+          : { maxHeight, needsToggle: nextNeedsToggle, scrollable, collapsedCount }
+      );
+      if (!nextNeedsToggle && expanded) setExpanded(false);
+
+      const el = listRef.current;
+      if (el) {
+        setScrolledToEnd(!scrollable || el.scrollTop + el.clientHeight >= el.scrollHeight - 2);
+      }
+    };
+
+    let cancelled = false;
+    const safeMeasure = () => {
+      if (!cancelled) measure();
+    };
+
+    safeMeasure();
+    const observer = new ResizeObserver(safeMeasure);
+    observer.observe(card);
+    if (footerRef.current) observer.observe(footerRef.current);
+    window.addEventListener("resize", safeMeasure);
+    void document.fonts?.ready.then(safeMeasure);
+
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+      window.removeEventListener("resize", safeMeasure);
+    };
+  }, [bestFor, expanded, highlights.length, rating, startingPrice, stickyTop, toolName]);
+
+  const showToggle = layout.needsToggle;
+  const collapsed = showToggle && !expanded;
+
+  return (
+    <aside
+      ref={asideRef}
+      className="hidden lg:block lg:sticky lg:col-span-4 lg:w-full lg:self-start lg:pt-8"
+      aria-label="At a glance"
+      style={{ top: stickyTop }}
+    >
+      <div
+        ref={cardRef}
+        className="rounded-lg border border-neutral-200/60 bg-white p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]"
+      >
+        <p className="mb-4 text-xs uppercase tracking-wide text-neutral-500">At a glance</p>
+        <div className="space-y-4">
+          <div className="flex flex-col gap-2">
+            {logoSrc != null && logoSrc !== "" && (
+              <img src={logoSrc} alt="" className="h-12 w-auto max-w-[140px] object-contain object-left" />
+            )}
+            <h2 className="text-lg font-semibold leading-tight text-brand">{toolName}</h2>
+          </div>
+          <div className="flex items-baseline gap-1">
+            <div>
+              <p className="text-2xl font-semibold leading-none text-brand">{rating}</p>
+              <p className="mt-0.5 text-xs text-neutral-500">BeltStack rating</p>
+            </div>
+            <RatingInfoTooltip align="right" />
+          </div>
+          <p className="text-sm leading-relaxed text-neutral-700">{bestFor}</p>
+          <div>
+            <p className="text-xs text-neutral-500">Starting price</p>
+            <p className="text-sm font-semibold text-brand">{startingPrice}</p>
+          </div>
+        </div>
+
+        {highlights.length > 0 && (
+          <div className="mt-4">
+            <p className="mb-2 text-xs text-neutral-500" id={`${listId}-label`}>
+              Key highlights
+            </p>
+            <div className="relative">
+              <ul
+                ref={listRef}
+                id={listId}
+                aria-labelledby={`${listId}-label`}
+                className={`space-y-1.5 text-sm leading-relaxed text-neutral-700 ${
+                  layout.scrollable
+                    ? "overflow-y-auto overscroll-y-contain pr-1"
+                    : layout.maxHeight != null
+                      ? "overflow-hidden"
+                      : ""
+                }`}
+                style={layout.maxHeight != null ? { maxHeight: layout.maxHeight } : undefined}
+                tabIndex={layout.scrollable ? 0 : undefined}
+                onScroll={(event) => {
+                  const el = event.currentTarget;
+                  setScrolledToEnd(el.scrollTop + el.clientHeight >= el.scrollHeight - 2);
+                }}
+              >
+                {highlights.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2"
+                    aria-hidden={collapsed && i >= layout.collapsedCount ? true : undefined}
+                  >
+                    <span className="mt-0.5 shrink-0 text-indigo" aria-hidden>
+                      ✓
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              {layout.scrollable && !scrolledToEnd && (
+                <span
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-white to-transparent"
+                  aria-hidden
+                />
+              )}
+            </div>
+          </div>
+        )}
+
+        {(showToggle || (visitUrl != null && visitUrl !== "")) && (
+          <div ref={footerRef} className="space-y-3 pt-4">
+            {showToggle && (
+              <button
+                ref={toggleRef}
+                type="button"
+                className="inline-flex items-center gap-1 rounded text-sm font-semibold text-indigo hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo focus-visible:ring-offset-2"
+                aria-expanded={expanded}
+                aria-controls={listId}
+                onClick={() => {
+                  setExpanded((open) => {
+                    if (open && listRef.current) listRef.current.scrollTop = 0;
+                    return !open;
+                  });
+                  setScrolledToEnd(false);
+                }}
+              >
+                {expanded ? "Show less" : "Read more"}
+                <svg
+                  viewBox="0 0 20 20"
+                  aria-hidden
+                  className={`h-3.5 w-3.5 shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                >
+                  <path d="M5 7.5 10 12.5 15 7.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            )}
+            {visitUrl != null && visitUrl !== "" && (
+              <a
+                href={visitUrl}
+                target="_blank"
+                rel={vendorCtaRel(visitUrl)}
+                className={`block w-full py-2 text-center text-sm ${btnPrimary}`}
+              >
+                Visit {toolName}
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </aside>
+  );
+}
 
 function uniqueNavLinks(links: ReviewNavLink[]): ReviewNavLink[] {
   const seen = new Set<string>();
@@ -773,63 +1048,16 @@ export function ReviewTemplate({
               </div>
             </article>
 
-            {/* ——— Sidebar: At a glance (desktop only), col-span-4 ——— */}
-            <aside
-              className="hidden lg:block lg:sticky lg:col-span-4 lg:self-start lg:pt-8 lg:w-full"
-              aria-label="At a glance"
-              style={{ top: `${SIDEBAR_STICKY_TOP}px` }}
-            >
-              <div className="border border-neutral-200/60 rounded-lg bg-white p-5 shadow-[0_1px_3px_0_rgba(0,0,0,0.06)]">
-                <p className="text-neutral-500 text-xs uppercase tracking-wide mb-4">At a glance</p>
-                <div className="space-y-4">
-                  <div className="flex flex-col gap-2">
-                    {logoSrc != null && logoSrc !== "" && (
-                      <img
-                        src={logoSrc}
-                        alt=""
-                        className="h-12 w-auto max-w-[140px] object-contain object-left"
-                      />
-                    )}
-                    <h2 className="text-brand text-lg font-semibold leading-tight">{toolName}</h2>
-                  </div>
-                  <div className="flex items-baseline gap-1">
-                    <div>
-                      <p className="text-brand text-2xl font-semibold leading-none">{rating}</p>
-                      <p className="text-neutral-500 text-xs mt-0.5">BeltStack rating</p>
-                    </div>
-                    <RatingInfoTooltip align="right" />
-                  </div>
-                  <div>
-                    <p className="text-neutral-700 text-sm leading-relaxed">{bestFor}</p>
-                  </div>
-                  <div>
-                    <p className="text-neutral-500 text-xs">Starting price</p>
-                    <p className="text-brand font-semibold text-sm">{startingPrice}</p>
-                  </div>
-                  <div>
-                    <p className="text-neutral-500 text-xs mb-2">Key highlights</p>
-                    <ul className="space-y-1.5 text-sm text-neutral-700 leading-relaxed">
-                      {pros.slice(0, 5).map((p, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-indigo shrink-0 mt-0.5" aria-hidden>✓</span>
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {visitUrl != null && visitUrl !== "" && (
-                    <a
-                      href={visitUrl}
-                      target="_blank"
-                      rel={vendorCtaRel(visitUrl)}
-                      className={`block w-full text-center ${btnPrimary} text-sm py-2`}
-                    >
-                      Visit {toolName}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </aside>
+            <ReviewAtAGlance
+              toolName={toolName}
+              logoSrc={logoSrc}
+              rating={rating}
+              bestFor={bestFor}
+              startingPrice={startingPrice}
+              pros={pros}
+              visitUrl={visitUrl}
+              stickyTop={SIDEBAR_STICKY_TOP}
+            />
           </div>
         </div>
       </main>

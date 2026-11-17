@@ -1518,6 +1518,208 @@ const reviews: Record<string, InventoryReviewData> = {
       { label: "Inventory software comparisons", href: INVENTORY_COMPARE_HUB },
     ],
   },
+
+  // logoSrc omitted until public/Logos/inventoryquick.png is added. See INVENTORY_LOGOS.
+  inventoryquick: {
+    toolName: "InventoryQuick",
+    category: INVENTORY_CATEGORY,
+    categoryHref: INVENTORY_CATEGORY_HREF,
+    rating: "4.3",
+    startingPrice: "$19/month",
+    bestFor:
+      "small teams that want flat-priced stock tracking, orders, and phone barcode scanning without a per-user fee",
+    visitUrl: "https://inventoryquick.com/",
+    quickVerdict:
+      "InventoryQuick is flat-priced inventory software for small teams leaving spreadsheets. Purchase orders, transfers, CSV import, and phone barcode scanning start at $19 a month. It is a weak fit if you need a saved bill of materials, a reorder point for each location, or a long trial.",
+    quickVerdictParagraphs: [
+      "InventoryQuick is inventory software for items, locations, and orders. The pricing page, checked in November 2026, lists Starter at $19 a month for 250 items, 5 locations, and 2 users. Every published plan includes purchase orders, sales orders, transfers, CSV import and export, and barcode scanning from a phone camera or a desktop webcam. The price is flat for the plan. You do not pay another seat fee until you pass that plan's user cap.",
+      "We created an InventoryQuick Pro account, looked through the interface, built a small fictional item list, and uploaded a sample spreadsheet. The upload was quick and the path was seamless. Every column in that file mapped, and InventoryQuick showed a summary we could edit before the import was finalized. For a team leaving Excel, the catalog does not have to be typed in by hand, and you can check the mapped columns before they are saved.",
+      "The buying decision is the cap, then the feature gate. Pro is $49 for 500 items, 5 locations, and 3 users, and that is where tool check-out starts. Business is $149 for 5,000 items, 50 locations, and 15 users, and that is where demand forecasting and the API start. Work orders and cut-list import are Enterprise, at $349 a month. InventoryQuick's own MRP page says there is no saved or multi-level bill of materials. Low-stock alerts use one reorder point on total stock, not a separate point for each location.",
+    ],
+    ratingBreakdown: [
+      {
+        category: "Features",
+        score: "4.3",
+        explanation:
+          "Items, categories, orders, transfers, partial receipts, and camera scanning are on every plan. Forecasting, price monitoring, recurring orders, and the API start on Business. Work orders are Enterprise only, and InventoryQuick says they are not a saved bill of materials, a routing system, or lot and serial traceability.",
+      },
+      {
+        category: "Pricing",
+        score: "4.5",
+        explanation:
+          "Starter at $19 and Business at $149 are flat, with no per-user fee inside the plan's user cap. The cap is the real price: 250 items and 2 users on Starter, 500 items and 3 users on Pro. The web trial is 7 days and asks for a card before it starts.",
+      },
+      {
+        category: "Ease of Use",
+        score: "4.3",
+        explanation:
+          "In a Pro account, a sample spreadsheet uploaded quickly. Columns mapped, and a summary let us edit the result before it was finalized. The product is organized around items, locations, and orders, with phone and desktop apps listed on every plan.",
+      },
+      {
+        category: "Integrations",
+        score: "3.9",
+        explanation:
+          "CSV import and export are on every plan. Starter has no integration slot on the comparison table. Pro includes 2, Business 5, and Enterprise unlimited. The REST API starts on Business and webhooks start on Enterprise. This is not a live multi-channel order hub.",
+      },
+      {
+        category: "Reporting",
+        score: "4.2",
+        explanation:
+          "An analytics dashboard is listed on every plan. Demand forecasting starts on Business. Enterprise adds committed demand from open work orders. A low-stock alert compares on-hand stock with one reorder point, and InventoryQuick says that alert does not include quantity already committed to jobs.",
+      },
+    ],
+    pros: [
+      "Flat monthly price, with no extra per-user fee inside the plan's user cap",
+      "Purchase orders, sales orders, transfers, and CSV import are on every plan, including Starter",
+      "Barcode scanning from a phone camera or desktop webcam is listed on every plan",
+      "Bulk add and edit, SMS alerts, and email support are marked on every plan in the comparison table",
+      "The Enterprise MRP page states what work orders do not include, including a saved bill of materials",
+    ],
+    cons: [
+      "Starter stops at 250 items, 5 locations, and 2 users; Pro stops at 500 items, 5 locations, and 3 users",
+      "Each nested place counts as a location, so aisle, rack, and shelf can use up a 5-location plan",
+      "The web trial lasts 7 days, and InventoryQuick says you enter a card to start it",
+      "Low-stock alerts use total on-hand stock, not a reorder point for each location",
+      "Work orders and cut lists are Enterprise only, and there is no saved or multi-level bill of materials",
+    ],
+    bestForEditorial:
+      "InventoryQuick fits a small retailer, a stockroom, or a service business that needs item counts, a short list of places, and purchase orders without a per-seat price. A contractor can use Pro check-out to see who has a tool, as long as the shop, trucks, and job sites stay inside the location cap. It also fits a team leaving a spreadsheet, because CSV import is on the $19 plan. It is a weak fit for a seller that needs live storefront sync, and for a shop that needs one reorder point per warehouse.",
+    whoShouldAvoid:
+      "Choose Zoho Inventory or inFlow if you want a broader order system and you will pass a few hundred items or three users. Choose Katana or Fishbowl if production needs a saved bill of materials, routings, or lot traceability. InventoryQuick's MRP page says it does not do those, and it names Katana, MRPeasy, and Fishbowl as the tools that do. Skip it if you need scheduled cycle counts. A recount is recorded as an inventory adjustment, not as a count sheet or a cycle-count schedule.",
+    pricingSummary:
+      "As of November 2026, InventoryQuick's pricing page lists four flat monthly plans. Starter is $19 for up to 250 items, 5 locations, and 2 users. Pro is $49 for 500 items, 5 locations, and 3 users. Business is $149 for 5,000 items, 50 locations, and 15 users. Enterprise is $349 with unlimited items, locations, and users. The page shows a yearly toggle labeled as a 17% savings. The plan cards we checked still quote the monthly price, so confirm the annual charge on the live page. The homepage also says there is no annual contract. Web prices are billed through Stripe. InventoryQuick says subscriptions bought in the iOS app are billed by Apple, the App Store price is not always the same number, and the in-app plan list is not always the full web lineup.",
+    pricingTiers:
+      "Starter includes the IQ Assistant at 25 messages a month, unlimited purchase orders, sales orders, and transfers, partial receipts, GST or VAT on purchase orders, last cost and average cost, CSV import and export, categories, barcode scanning, the mobile apps, an analytics dashboard, bulk add and edit, SMS alerts, and email support. Pro adds tool and equipment check-out, photo recognition at 10 scans a month, 100 assistant messages, and 2 integrations. Business adds demand forecasting, price monitoring for 25 items, recurring orders, the API, 5 integrations, 500 assistant messages, 100 photo scans, 5,000 items, 50 locations, and 15 users. Enterprise adds work orders, cut-list import from Excel or CSV, forecasting against open jobs, webhooks, and unlimited items, locations, users, and assistant messages. A new account gets 7 days before the first charge. On the web you pick a plan and enter a card. In the iOS and Android apps, Apple or Google holds the payment method and you are not charged during the 7 days. If the subscription does not continue, InventoryQuick says the account becomes read-only and the data is kept. It also says the first payment can be refunded if you email support within 7 days of that charge.",
+    costVsCompetitors:
+      "Starter at $19 is the price to compare with a spreadsheet and with lighter trackers such as Sortly. You buy that price with a 250-item cap and 2 users. Pro at $49 still has 3 users and 500 items, so a fourth person or a larger catalog means Business at $149. Business is the price to compare for a team of up to 15, because the fee does not rise per person inside that cap. Zoho Inventory is the closer all-around alternative if you want marketplace connections and can start without a card. Katana and Fishbowl are the comparison once the question is production rather than stock and purchase orders. Read the current plan page, and our inventory software comparisons, before you treat any of these amounts as permanent.",
+    features: [],
+    keyFeatures: [
+      {
+        name: "Items, categories, and locations",
+        description:
+          "Track on-hand quantities by item and by location, and group items with categories. Locations can nest, from a warehouse down to an aisle, rack, and shelf, or from a job site to a truck. InventoryQuick says each level counts as its own location. Starter and Pro include 5, Business 50, and Enterprise does not cap the count. Stock quantity is visible per location. Team members can see every location. Roles control who can edit, transfer, or adjust.",
+      },
+      {
+        name: "CSV import and export",
+        description:
+          "Import and export are on every plan, including Starter. A CSV can come from exports of Shopify, Square, Amazon, QuickBooks, Zoho, Cin7, and other systems. That is a file import, not a live connection to those products. In a Pro account, a sample spreadsheet uploaded quickly instead of typing the catalog by hand. Every column mapped, and InventoryQuick showed a summary we could edit before finalizing the import. Export is available if you leave, so the data can come back out as a file.",
+      },
+      {
+        name: "Purchase orders, sales orders, and transfers",
+        description:
+          "Purchase orders, partial receipts, sales orders, and transfers are on every plan. A partial receipt leaves the order open for what has not arrived, and records last cost and a weighted average cost. Sales orders can be tied to customers. Transfers move quantity between locations and keep a record of who moved it. Recurring orders start on Business. Draft purchase orders from open work orders are an Enterprise workflow, and a person still approves the draft.",
+      },
+      {
+        name: "Barcode scanning and recounts",
+        description:
+          "Scanning is on every plan, from the phone camera or a desktop webcam, for CODE128, EAN-13, UPC-A, and QR codes. Set a current location and the scan adjusts stock there, and it can show quantity at every location. The scan is of the item barcode, not a shelf or bin label. A recount writes the difference into item history, including an inventory-count reason. That is an adjustment, not a scheduled cycle count.",
+      },
+      {
+        name: "Check-out, forecasting, and the assistant",
+        description:
+          "Tool and equipment check-out starts on Pro. Items can be assigned to people, crews, or job sites, and the audit trail records who has them. Demand forecasting and price monitoring start on Business. Price monitoring covers 25 items on Business and is unlimited on Enterprise. The IQ Assistant is on every plan, capped at 25 messages a month on Starter, 100 on Pro, 500 on Business, and unlimited on Enterprise. Photo recognition, which is separate from barcode scanning, starts on Pro at 10 photos a month.",
+      },
+      {
+        name: "Work orders and cut lists",
+        description:
+          "Work orders and cut-list import are Enterprise only. You attach an Excel or CSV cut list to a job. InventoryQuick says it detects SKU and quantity, keeps other columns such as length or gauge on the line, and treats outstanding material as committed demand. It can draft a purchase order for what the job is short. The same page says there is no saved or multi-level bill of materials, no shop-floor scheduling, no capacity planning or routings, no labor tracking, no lot or serial traceability, and no nesting or yield optimization. On a lower plan, existing work orders can be opened or deleted. Creating or editing them requires Enterprise.",
+      },
+    ],
+    integrations: [
+      "CSV import and export",
+      "REST API (Business and above)",
+      "Webhooks (Enterprise)",
+      "Email alerts",
+      "SMS alerts",
+      "Google sign-in",
+      "Photo recognition (Pro and above)",
+    ],
+    integrationsIntro:
+      "InventoryQuick's connections are files, alerts, and an API, not a storefront hub. CSV import and export are on every plan. Shopify, Square, Amazon, QuickBooks, Zoho, and Cin7 are named as file sources you can import from, not as live syncs. The comparison table gives Starter no integration slot, Pro 2, Business 5, and Enterprise unlimited. The REST API starts on Business. Webhooks start on Enterprise. Low-stock email and opt-in SMS are marked on every plan. Sign-in can use Google through Auth0. Photo recognition starts on Pro.",
+    contractorUse: [],
+    alternatives: [
+      {
+        name: "Sortly",
+        href: getInventoryReviewUrl("sortly"),
+        description:
+          "A simpler visual tracker for photos, barcodes, and where an item sits, if you do not need purchase orders and sales orders as the center of the product.",
+        logoSrc: INVENTORY_LOGOS.sortly,
+      },
+      {
+        name: "Zoho Inventory",
+        href: getInventoryReviewUrl("zoho-inventory"),
+        description:
+          "A broader small-business system when you want ecommerce and accounting connections, and you expect to grow past a few hundred items.",
+        logoSrc: INVENTORY_LOGOS.zoho,
+      },
+      {
+        name: "inFlow Inventory",
+        href: getInventoryReviewUrl("inflow-inventory"),
+        description:
+          "A small-business inventory tool with deeper purchasing and selling if InventoryQuick's item and user caps are the problem.",
+        logoSrc: INVENTORY_LOGOS.inflow,
+      },
+      {
+        name: "Katana",
+        href: getInventoryReviewUrl("katana"),
+        description:
+          "The manufacturing alternative when you need a saved bill of materials. InventoryQuick's MRP page points shops with that requirement toward Katana, MRPeasy, or Fishbowl.",
+        logoSrc: INVENTORY_LOGOS.katana,
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does InventoryQuick cost?",
+        a: "InventoryQuick's pricing page, checked in November 2026, lists Starter at $19 a month, Pro at $49, Business at $149, and Enterprise at $349. Those are flat fees, not per user, inside each plan's user cap: 2, 3, 15, and unlimited. Item caps are 250, 500, 5,000, and unlimited. A yearly toggle is labeled as a 17% savings. Confirm the annual amount on the live page. Prices inside the iOS app are billed by Apple and may differ.",
+      },
+      {
+        q: "Does InventoryQuick have a free trial?",
+        a: "Yes, for 7 days. You pick a plan first. On the web you enter a card, and the card is not charged during the trial. In the iOS and Android apps, Apple or Google holds the payment method. If you do not continue, the account becomes read-only and your data stays.",
+      },
+      {
+        q: "Does InventoryQuick include a bill of materials?",
+        a: "No. InventoryQuick's MRP page says there is no saved or multi-level bill of materials. Enterprise work orders carry a material list for that job, including a cut list imported from Excel or CSV. Outstanding quantities become committed demand. Shops that need a reusable or nested BOM are pointed to Katana, MRPeasy, or Fishbowl.",
+      },
+      {
+        q: "Can InventoryQuick scan barcodes with a phone?",
+        a: "Yes, on every plan, using the phone camera or a desktop webcam. Supported formats are CODE128, EAN-13, UPC-A, and QR. You set a current location so the scan applies to that place. The scan is of the item, not a shelf or bin label.",
+      },
+      {
+        q: "Is InventoryQuick worth it for a small business?",
+        a: "It is worth a trial when the catalog fits in 250 or 500 items, the team fits in 2 or 3 people, and you want orders and a CSV import at a flat price. Price Business before you commit if you will pass those caps. It is not worth it when the requirement is a bill of materials, per-location reorder points, or live ecommerce sync.",
+      },
+      {
+        q: "Does InventoryQuick warn you when one location is low?",
+        a: "Not as a separate alert for that location. The multi-location page says the reorder point measures total stock across locations, and the item view shows where the remaining quantity sits. On Enterprise, committed quantity from open work orders shows in the forecast. InventoryQuick says the low-stock alert itself compares on-hand stock with the reorder point and does not include material already committed to jobs.",
+      },
+    ],
+    methodology: INVENTORY_METHODOLOGY,
+    compareLinks: [
+      { label: "Sortly vs inFlow", href: getInventoryCompareUrl("sortly-vs-inflow-inventory") },
+      { label: "inFlow vs Zoho Inventory", href: getInventoryCompareUrl("inflow-inventory-vs-zoho-inventory") },
+      { label: "Fishbowl vs Katana", href: getInventoryCompareUrl("fishbowl-vs-katana") },
+    ],
+    compareSectionTitle: "Compare InventoryQuick with other inventory software",
+    bestPayrollSoftwareHref: BEST_INVENTORY_SOFTWARE_HREF,
+    compareHubHref: INVENTORY_COMPARE_HUB,
+    compareHubLabel: "Compare inventory software",
+    bestRoundupLabel: "Best inventory management software (2026) — full roundup",
+    bestForSectionTitle: "Best inventory management software for different use cases",
+    bestForSectionSub: "Find inventory tools by use case and business type.",
+    scenarioLinks: INVENTORY_SCENARIO_LINKS,
+    guideHubHref: INVENTORY_GUIDES_HUB,
+    guideHubLabel: "Inventory management guides",
+    relatedReading: [
+      { label: "Inventory management hub", href: "/inventory" },
+      { label: "Best inventory management software", href: BEST_INVENTORY_SOFTWARE_HREF },
+      { label: "Spreadsheet vs inventory software", href: "/inventory/guides/spreadsheet-vs-inventory-management-software" },
+      { label: "How small businesses manage inventory", href: "/inventory/guides/how-small-businesses-manage-inventory" },
+      { label: "Inventory software for manufacturing", href: "/inventory/guides/inventory-software-for-manufacturing" },
+      { label: "Barcode inventory systems explained", href: "/inventory/guides/barcode-inventory-systems-explained" },
+      { label: "Cycle counting and inventory accuracy", href: "/inventory/guides/cycle-counting-and-inventory-accuracy" },
+      { label: "Inventory management for contractors", href: "/inventory/guides/inventory-management-for-contractors" },
+    ],
+  },
 };
 
 export function getInventoryReviewBySlug(slug: string): InventoryReviewData | null {
